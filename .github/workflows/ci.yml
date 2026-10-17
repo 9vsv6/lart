@@ -82,6 +82,9 @@ jobs:
           fi
 
       - name: Typecheck
+        env:
+          # tsc exceeds Node's default heap on this project.
+          NODE_OPTIONS: --max-old-space-size=6144
         run: vp run typecheck
 
       - name: Test
