@@ -239,15 +239,32 @@ jobs:
       - name: Fetch libmpv (Windows)
         if: contains(matrix.platform.runner, 'windows')
         shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          base=https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20260610
-          for asset in mpv-dev-x86_64-20260610-git-304426c.7z mpv-dev-x86_64-v3-20260610-git-304426c.7z; do
-            if curl -fsSL --retry 4 -o "$RUNNER_TEMP/mpv-dev.7z" "$base/$asset"; then break; fi
-          done
-          test -s "$RUNNER_TEMP/mpv-dev.7z"
+          repo=shinchiro/mpv-winbuild-cmake
+          tag=20260610
+          gh release view "$tag" -R "$repo" > /dev/null 2>&1 || tag=$(gh release view -R "$repo" --json tagName --jq .tagName)
+          assets=$(gh release view "$tag" -R "$repo" --json assets --jq '.assets[].name')
+          echo "$repo $tag assets:"; echo "$assets"
+          asset=$(echo "$assets" | grep -E '^mpv-dev-x86_64-[0-9].*\.7z$' | head -1 || true)
+          [ -n "$asset" ] || asset=$(echo "$assets" | grep -E '^mpv-dev-x86_64.*\.7z$' | head -1 || true)
+          test -n "$asset"
+          gh release download "$tag" -R "$repo" -p "$asset" -O "$RUNNER_TEMP/mpv-dev.7z"
           7z e -y "$RUNNER_TEMP/mpv-dev.7z" -o"src-tauri/libmpv" libmpv-2.dll -r
           sha256sum "$RUNNER_TEMP/mpv-dev.7z" src-tauri/libmpv/libmpv-2.dll
+          # fetch-mpv.mjs pins mpv.exe to 20260610; when that release is gone, take
+          # mpv.exe from the same release as the DLL (fetch-mpv skips a present file).
+          if [ "$tag" != 20260610 ]; then
+            player=$(echo "$assets" | grep -E '^mpv-x86_64-[0-9].*\.7z$' | head -1 || true)
+            test -n "$player"
+            gh release download "$tag" -R "$repo" -p "$player" -O "$RUNNER_TEMP/mpv.7z"
+            7z e -y "$RUNNER_TEMP/mpv.7z" -o"$RUNNER_TEMP/mpv" mpv.exe -r
+            mkdir -p src-tauri/binaries
+            cp "$RUNNER_TEMP/mpv/mpv.exe" src-tauri/binaries/mpv-x86_64-pc-windows-msvc.exe
+            sha256sum "$RUNNER_TEMP/mpv.7z" src-tauri/binaries/mpv-x86_64-pc-windows-msvc.exe
+          fi
 
       # setup:libmpv only knows Harbor's retired download, so it is left out.
       - name: Prepare build assets
