@@ -17,7 +17,7 @@ def resign(app: Path, entitlements: Path) -> None:
     values = plistlib.loads(entitlements.read_bytes())
     if values.get("com.apple.security.cs.disable-library-validation") is not True:
         raise RuntimeError("Entitlements must enable disable-library-validation for bundled ad-hoc libraries")
-    executable = app / "Contents/MacOS/harbor"
+    executable = app / "Contents/MacOS/lart"
     frameworks = app / "Contents/Frameworks"
     libraries = sorted(frameworks.glob("*.dylib"))
     if not executable.is_file() or not any(path.name.startswith("libmpv.") for path in libraries):

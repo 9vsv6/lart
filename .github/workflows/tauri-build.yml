@@ -1,11 +1,9 @@
 name: tauri-build
 
+# Harbor's release pipeline, kept for reference. It still expects Harbor's
+# binary names, so v* tags are built by lart-build.yml instead.
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - "v*"
-      - "V*"
 
 permissions:
   contents: read
