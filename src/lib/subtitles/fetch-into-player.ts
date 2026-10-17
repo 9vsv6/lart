@@ -242,6 +242,8 @@ export async function fetchSubtitlesIntoPlayer(
   const rankedResults = (results: SubResult[]) =>
     results
       .filter((result) => isSafeProviderSubtitleUrl(result.url))
+      // Translation offers are listed for the user to pick, never fetched in the background.
+      .filter((result) => !isGeneratedLangLabel(result.lang))
       .filter((r) => langScore(r.lang ?? "", p.langs) >= 0)
       .sort((a, b) => {
         const language = langScore(b.lang ?? "", p.langs) - langScore(a.lang ?? "", p.langs);

@@ -1187,6 +1187,8 @@ export function createMpvBridge(mpvOptions?: MpvOptions): PlayerBridge {
       }
     },
     async addSubtitle(url, lang, title, select, metadata, origin = "manual"): Promise<boolean> {
+      // Loading a translation offer starts a translation job; only a manual pick may.
+      if (metadata?.translation && (select === false || origin !== "manual")) return false;
       const requestMediaRevision = mediaRevision;
       const requestLoadId = mediaLoadId;
       const wantsSelection = (select ?? true) && mainSubtitleSelection.claim(mediaRevision, origin);

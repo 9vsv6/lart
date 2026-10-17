@@ -842,6 +842,8 @@ export function createHtml5Bridge(options: Html5BridgeOptions = {}): PlayerBridg
     setVideoEq() {},
     setAnime4kShaders() {},
     async addSubtitle(url, lang, title, select, metadata, origin = "manual"): Promise<boolean> {
+      // Loading a translation offer starts a translation job; only a manual pick may.
+      if (metadata?.translation && (select === false || origin !== "manual")) return false;
       const requestMediaRevision = mediaRevision;
       const id = `ext-${subTracks.length}-${Date.now()}`;
       const selectionRequest =
