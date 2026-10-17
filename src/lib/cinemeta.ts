@@ -84,10 +84,13 @@ export function persistableAddonOrigin(origin: unknown): AddonOrigin | undefined
   if (!origin || typeof origin !== "object") return undefined;
   const value = origin as { id?: unknown; name?: unknown; logo?: unknown; base?: unknown };
   if (typeof value.id !== "string" || !value.id) return undefined;
-  // The base is what a saved row is resolved and played through: an addon's manifest address, or
-  // the plugin catalogue it came from. Without it a plugin row saved to the library loses which
-  // plugin listed it, and playing it asks every plugin instead of that one.
-  const base = typeof value.base === "string" && value.base ? value.base : undefined;
+  // A plugin row keeps its catalogue base (PLUGIN_ADDON_PREFIX in streams/plugins/addon.ts),
+  // so playing it asks the plugin that listed it. An addon's manifest address is never
+  // persisted: configured addresses often carry an API key, and the row finds its addon by id.
+  const base =
+    typeof value.base === "string" && value.base.startsWith("harbor-plugin://")
+      ? value.base
+      : undefined;
   return {
     id: value.id,
     name: typeof value.name === "string" && value.name ? value.name : value.id,

@@ -51,25 +51,27 @@ test("a catalogue that is no longer here pins nothing", () => {
   const forced = [{ base: PROVIDER_BASE, id: "capstan:vega:abc" }];
   assert.equal(pinnedPluginUrl(forced, [httpAddon]), undefined);
   assert.equal(
-    pinnedPluginUrl([{ base: "https://v3-cinemeta.strem.io", id: "tt0137523" }], [
-      httpAddon,
-      pluginAddon,
-      otherPlugin,
-    ]),
+    pinnedPluginUrl(
+      [{ base: "https://v3-cinemeta.strem.io", id: "tt0137523" }],
+      [httpAddon, pluginAddon, otherPlugin],
+    ),
     undefined,
     "a row from a normal addon leaves every plugin free",
   );
   assert.equal(pinnedPluginUrl(undefined, [pluginAddon]), undefined);
 });
 
-test("a saved row keeps the base it is resolved and played through", () => {
-  assert.deepEqual(
-    persistableAddonOrigin({ id: "k", name: "n", base: PROVIDER_BASE }),
-    { id: "k", name: "n", logo: undefined, base: PROVIDER_BASE },
-  );
+test("a saved plugin row keeps the catalogue base it is played through", () => {
+  assert.deepEqual(persistableAddonOrigin({ id: "k", name: "n", base: PROVIDER_BASE }), {
+    id: "k",
+    name: "n",
+    logo: undefined,
+    base: PROVIDER_BASE,
+  });
+  // Addon manifest addresses can carry credentials; the row finds its addon by id.
   assert.deepEqual(
     persistableAddonOrigin({ id: "k", name: "n", base: "https://v3-cinemeta.strem.io" }),
-    { id: "k", name: "n", logo: undefined, base: "https://v3-cinemeta.strem.io" },
+    { id: "k", name: "n", logo: undefined },
   );
   const without = persistableAddonOrigin({ id: "k", name: "n" });
   assert.ok(without && !("base" in without), "no base stored, none invented");
