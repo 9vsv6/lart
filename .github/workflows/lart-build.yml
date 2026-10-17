@@ -24,8 +24,10 @@ permissions:
 
 env:
   NODE_OPTIONS: --max-old-space-size=6144
-  # Only excuses a checkout with no extension compat layer at all; a layer that
-  # is present is still built and verified.
+  # The extension compat layer needs jars that are not on Maven Central
+  # (android-extension-compat/tools/deps.sh), so CI builds without extension
+  # support: point the stage at no layer and declare that deliberately.
+  HARBOR_CAPSTAN_SRC: ${{ github.workspace }}/.no-capstan-layer
   HARBOR_CAPSTAN_OPTIONAL: "1"
 
 concurrency:
