@@ -133,3 +133,6 @@ dev.log*
 # Built APKs and installers
 /releases/
 !/LART.md
+
+# Shipped with the engine's corresponding source.
+!tools/pokemon-engine/README.md
