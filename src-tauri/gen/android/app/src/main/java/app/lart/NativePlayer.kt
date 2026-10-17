@@ -175,15 +175,28 @@ class NativePlayer(
           Format_NO_VALUE -> ""
           else -> "${f.channelCount}ch"
         }
-        val codec = (f.sampleMimeType ?: "").substringAfter("/").uppercase()
-        val name = listOfNotNull(f.label, f.language?.uppercase(), codec, channels)
+        val codec = when (val mime = f.sampleMimeType ?: "") {
+          "audio/mp4a-latm" -> "AAC"
+          "audio/eac3", "audio/eac3-joc" -> "DD+"
+          "audio/ac3" -> "Dolby Digital"
+          "audio/true-hd" -> "TrueHD"
+          "audio/vnd.dts", "audio/vnd.dts.hd" -> "DTS"
+          else -> mime.substringAfter("/").uppercase()
+        }
+        // "und" is the container's "undetermined"; it reads as noise.
+        val lang = f.language?.takeUnless { it.equals("und", true) }
+        val name = listOfNotNull(f.label, lang?.uppercase(), codec, channels)
           .filter { it.isNotBlank() }
+          .distinct()
           .joinToString(" · ")
         audio.put(
           JSONObject()
             .put("id", "$g:$t")
             .put("label", name.ifBlank { "Audio ${audio.length() + 1}" })
-            .put("lang", f.language ?: "")
+            .put("lang", lang ?: "")
+            .put("title", f.label ?: "")
+            .put("codec", codec)
+            .put("channels", channels)
             .put("selected", group.isTrackSelected(t))
             .put("supported", group.isTrackSupported(t)),
         )

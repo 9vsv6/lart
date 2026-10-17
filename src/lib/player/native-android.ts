@@ -5,7 +5,16 @@ import { isPhoneApp } from "@/lib/platform";
 // else (subtitles, tracks, progress, the controls), and talks to the native
 // player through a <video> element whose media API is redirected here.
 
-type NativeAudio = { id: string; label: string; lang: string; selected: boolean; supported: boolean };
+type NativeAudio = {
+  id: string;
+  label: string;
+  lang: string;
+  title?: string;
+  codec?: string;
+  channels?: string;
+  selected: boolean;
+  supported: boolean;
+};
 
 type NativeState = {
   pos: number;
@@ -157,6 +166,9 @@ export function createNativeVideo(): NativeVideoElement {
         id: a.id,
         label: a.label,
         language: a.lang,
+        title: a.title,
+        codec: a.codec,
+        channels: a.channels,
         get enabled() {
           return a.selected;
         },

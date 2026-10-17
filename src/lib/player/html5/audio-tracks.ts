@@ -23,10 +23,15 @@ export function readAudioTracks(v: HTMLVideoElement): TrackInfo[] {
   const out: TrackInfo[] = [];
   for (let i = 0; i < tracks.length; i++) {
     const t = tracks[i];
+    // The Android native player also reports title, codec and channels.
+    const extra = t as { id?: string; title?: string; codec?: string; channels?: string };
     out.push({
-      id: (t as { id?: string }).id || String(i),
+      id: extra.id || String(i),
       label: t.label || t.language || `Audio ${i + 1}`,
       lang: t.language || undefined,
+      title: extra.title || undefined,
+      codec: extra.codec || undefined,
+      channels: extra.channels || undefined,
       kind: "audio",
       selected: t.enabled,
     });

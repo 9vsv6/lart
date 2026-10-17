@@ -247,8 +247,8 @@ export function StreamSwitcher({
     filterToPreferred && preferredLangs.length > 0 ? matchedStreams : addonFilteredList;
   const matchCurrent = useMemo(() => {
     const norm = (v?: string | null) => (v ?? "").trim().toLowerCase();
-    return (s: ScoredStream): boolean => {
-      if (isCurrentStream(s, currentUrl, currentInfoHash, currentFileIdx)) return true;
+    const exact = (s: ScoredStream) => isCurrentStream(s, currentUrl, currentInfoHash, currentFileIdx);
+    const loose = (s: ScoredStream): boolean => {
       if (!currentRef) return false;
       const ref = currentRef;
       if (ref.infoHash) return false;
@@ -259,7 +259,14 @@ export function StreamSwitcher({
       const sizeMatch = ref.size == null || s.size == null || ref.size === s.size;
       return addonMatch && resMatch && sizeMatch;
     };
-  }, [currentUrl, currentInfoHash, currentFileIdx, currentRef]);
+    // The loose match is only trusted when it singles out one stream: without
+    // sizes, every release of a title from one addon looks the same, and all
+    // of them would show as playing and refuse to be picked.
+    const hasExact = allStreams.some(exact);
+    const looseHits = hasExact ? [] : allStreams.filter(loose);
+    const looseOne = looseHits.length === 1 ? looseHits[0] : null;
+    return (s: ScoredStream): boolean => exact(s) || s === looseOne;
+  }, [allStreams, currentUrl, currentInfoHash, currentFileIdx, currentRef]);
   const currentStream = useMemo(
     () => allStreams.find((s) => matchCurrent(s)) ?? null,
     [allStreams, matchCurrent],

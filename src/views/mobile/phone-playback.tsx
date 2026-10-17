@@ -19,7 +19,7 @@ const AddonsView = lazy(() =>
  * screen, over the touch UI.
  */
 export function PhonePlayback() {
-  const { picker, player, topKind, canGoBack, goBack, setView, exitPlayer } = useView();
+  const { picker, player, topKind, canGoBack, goBack, setView, exitPlayback } = useView();
   const page = topKind === "settings" || topKind === "addons" ? topKind : null;
   usePhoneBackButton({
     hasPlayer: !!player,
@@ -28,16 +28,17 @@ export function PhonePlayback() {
     canGoBack,
     goBack,
     goHome: () => setView("home"),
-    exitPlayer,
+    exitPlayback,
   });
   const playerActive = !!player && !player.sportsDocked && !player.pipDocked;
   usePlayerWindowMode(playerActive);
+  useHideUnderlay(playerActive);
   if (!isPhoneApp()) return null;
   // Portaled to <body>: the shell sits in its own z-30 stacking context, and
   // the mobile detail sheet is a z-50 body portal that would otherwise cover
   // these layers no matter their z-index.
   return createPortal(
-    <>
+    <div data-phone-overlays>
       {page && !playerActive && (
         <div
           className="fixed inset-0 z-[60] flex flex-col overflow-hidden bg-canvas"
@@ -84,9 +85,32 @@ export function PhonePlayback() {
           </Suspense>
         </div>
       )}
-    </>,
+    </div>,
     document.body,
   );
+}
+
+/**
+ * While the player is open, hide everything already on the page (the app and
+ * any open detail sheet, which is its own body portal). The loading screen is
+ * translucent and native video draws behind a transparent page, so anything
+ * left visible would show through. Layers the player opens later (menus,
+ * dialogs) are added after this runs and stay visible.
+ */
+function useHideUnderlay(active: boolean) {
+  useEffect(() => {
+    if (!active || !isPhoneApp()) return;
+    const hidden: Array<[HTMLElement, string]> = [];
+    for (const el of Array.from(document.body.children)) {
+      if (!(el instanceof HTMLElement) || el.hasAttribute("data-phone-overlays")) continue;
+      if (el.tagName === "SCRIPT" || el.tagName === "STYLE") continue;
+      hidden.push([el, el.style.visibility]);
+      el.style.visibility = "hidden";
+    }
+    return () => {
+      for (const [el, visibility] of hidden) el.style.visibility = visibility;
+    };
+  }, [active]);
 }
 
 type LartAndroidBridge = { setPlayerMode(on: boolean): void };
@@ -111,7 +135,7 @@ type BackState = {
   canGoBack: boolean;
   goBack: () => void;
   goHome: () => void;
-  exitPlayer: () => void;
+  exitPlayback: () => void;
 };
 
 /** True while a modal dialog is on screen; those close on Escape. */
@@ -122,9 +146,9 @@ function dialogOpen(): boolean {
 }
 
 /**
- * Android's back gesture: close an open dialog, then the player, the picker or
- * page, then follow the webview's history, and only leave the app when there
- * is nothing left. Settings and addons are opened with setView, which replaces
+ * Android's back gesture: close an open dialog, then the player (with its
+ * picker), the picker or page, then follow the webview's history, and only
+ * leave the app when there is nothing left. Settings and addons are opened with setView, which replaces
  * the view stack, so with nothing to pop they return to the base view.
  */
 function usePhoneBackButton(next: BackState) {
@@ -138,12 +162,19 @@ function usePhoneBackButton(next: BackState) {
       .then(({ onBackButtonPress, exit }) =>
         onBackButtonPress(({ canGoBack }) => {
           const s = state.current;
-          if (dialogOpen()) {
-            const target = document.activeElement ?? document.body;
-            target.dispatchEvent(
+          const escape = () =>
+            (document.activeElement ?? document.body).dispatchEvent(
               new KeyboardEvent("keydown", { key: "Escape", code: "Escape", bubbles: true }),
             );
-          } else if (s.hasPlayer) s.exitPlayer();
+          if (dialogOpen()) escape();
+          else if (s.hasPlayer) {
+            // The player's own Esc path saves the resume point and closes the
+            // picker too; going back to the picker would just autoplay again.
+            escape();
+            window.setTimeout(() => {
+              if (state.current.hasPlayer) state.current.exitPlayback();
+            }, 400);
+          }
           else if (s.hasPicker) s.goBack();
           else if (s.hasPage) {
             if (s.canGoBack) s.goBack();

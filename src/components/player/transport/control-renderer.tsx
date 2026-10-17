@@ -1,4 +1,5 @@
 import { togglePictureBar } from "@/lib/player/picture-bar";
+import { nativeVideoAvailable } from "@/lib/player/native-android";
 import { t as translate } from "@/lib/i18n";
 import { StremioVolume } from "./stremio-volume";
 import {
@@ -456,7 +457,8 @@ export function renderControl(id: PlayerControlId, ctx: ControlContext): ReactNo
         ) : null)
       );
     case "audio-menu": {
-      if (ctx.tight || ctx.engine === "html5") return null;
+      // A WebView cannot switch audio tracks; the Android native player can.
+      if (ctx.tight || (ctx.engine === "html5" && !nativeVideoAvailable())) return null;
       return (
         <AudioMenu
           tracks={ctx.snap.audioTracks}
