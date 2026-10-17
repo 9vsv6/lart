@@ -48,7 +48,8 @@ export function changeLibraryPreferences(profile: string, ids: string[], patch: 
 }
 function writeLibraryPreferences(profile: string, transform: (store: LibraryPreferences) => LibraryPreferences): Promise<LibraryPreferences> {
   const key = libraryPreferenceKey(profile), commit = () => { const next = transform(readLibraryPreferences(profile)), raw = JSON.stringify(next); if (new TextEncoder().encode(raw).length > MAX_BYTES) throw Error("library_prefs_limit"); localStorage.setItem(key, raw); if (typeof window !== "undefined") window.dispatchEvent(new CustomEvent(LIBRARY_PREFERENCES_CHANGED,{detail:profile})); return next; };
-  const pending = (writes.get(key) ?? Promise.resolve()).catch(() => {}).then(() => typeof navigator !== "undefined" && navigator.locks ? navigator.locks.request(key, commit) : commit());
+  // async: a lock whose callback throws synchronously is never released on some runtimes (Node 24).
+  const pending = (writes.get(key) ?? Promise.resolve()).catch(() => {}).then(() => typeof navigator !== "undefined" && navigator.locks ? navigator.locks.request(key, async () => commit()) : commit());
   writes.set(key, pending); void pending.finally(() => { if (writes.get(key) === pending) writes.delete(key); }).catch(() => {}); return pending;
 }
 export type LibraryTitleChange = { id: string; title: string | null; expectedTitle?: string | null };

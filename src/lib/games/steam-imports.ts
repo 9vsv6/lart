@@ -49,6 +49,7 @@ export function changeSteamImports(profile: string, add: ImportedSteamGame[], re
     if (typeof window !== "undefined") window.dispatchEvent(new CustomEvent(STEAM_IMPORTS_CHANGED, { detail: profile }));
     return { data, added };
   };
-  const pending = (writes.get(key) ?? Promise.resolve()).catch(() => {}).then(() => typeof navigator !== "undefined" && navigator.locks ? navigator.locks.request(key, { signal }, commit) : commit());
+  // async: a lock whose callback throws synchronously is never released on some runtimes (Node 24).
+  const pending = (writes.get(key) ?? Promise.resolve()).catch(() => {}).then(() => typeof navigator !== "undefined" && navigator.locks ? navigator.locks.request(key, { signal }, async () => commit()) : commit());
   writes.set(key, pending); void pending.finally(() => { if (writes.get(key) === pending) writes.delete(key); }).catch(() => {}); return pending;
 }

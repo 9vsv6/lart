@@ -66,8 +66,9 @@ export function observeLauncherIdentities(scan: LauncherScan): Promise<LauncherS
     if (updated !== raw) localStorage.setItem(launcherIdentityKey, updated);
     return next.scan;
   };
+  // async: a lock whose callback throws synchronously is never released on some runtimes (Node 24).
   const result = pending.catch(() => {}).then(() => typeof navigator !== "undefined" && navigator.locks
-    ? navigator.locks.request(launcherIdentityKey, commit) : commit());
+    ? navigator.locks.request(launcherIdentityKey, async () => commit()) : commit());
   pending = result;
   return result;
 }
