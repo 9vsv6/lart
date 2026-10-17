@@ -144,6 +144,7 @@ export type MpvOptions = {
   fullDownload?: boolean;
   separateDisplay?: MonitorInfo | null;
   separateCoverTaskbar?: boolean;
+  cacheDir?: string;
   getEmbedRect?: () => Promise<MpvRect | null> | MpvRect | null;
 };
 
@@ -161,6 +162,7 @@ function mpvReuseConfigKey(options: MpvOptions | undefined, hdrToSdr: boolean): 
     forceYuv420p: options?.forceYuv420p === true,
     extraOptions: options?.extraOptions ?? "",
     fullDownload: options?.fullDownload === true,
+    cacheDir: options?.cacheDir?.trim() ?? "",
   });
 }
 
@@ -987,6 +989,7 @@ export function createMpvBridge(mpvOptions?: MpvOptions): PlayerBridge {
             extraOptions: opts.extraOptions || undefined,
             separateDisplay: opts.embed === true ? null : (opts.separateDisplay ?? null),
             separateCoverTaskbar: opts.separateCoverTaskbar ?? true,
+            cacheDir: opts.cacheDir?.trim() || null,
           },
         });
         preparedSubtitleCleanups.clearBefore(activeLoadId);
