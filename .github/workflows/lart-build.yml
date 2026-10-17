@@ -48,12 +48,13 @@ jobs:
           distribution: temurin
           java-version: "21"
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
+      # The runner image ships the Android SDK and its command-line tools.
       - name: Install Android platform and NDK
         run: |
-          sdkmanager --install "platforms;android-36" "build-tools;36.0.0" "ndk;27.2.12479018"
+          set -euo pipefail
+          sdkmanager="$(ls -d "$ANDROID_HOME"/cmdline-tools/*/bin | sort -V | tail -1)/sdkmanager"
+          yes | "$sdkmanager" --licenses > /dev/null || true
+          "$sdkmanager" --install "platforms;android-36" "build-tools;36.0.0" "ndk;27.2.12479018"
           echo "NDK_HOME=$ANDROID_HOME/ndk/27.2.12479018" >> "$GITHUB_ENV"
 
       - name: Setup Rust
