@@ -30,9 +30,9 @@
  *   linux  aarch64: github.com/BtbN/FFmpeg-Builds latest ffmpeg-master-latest-linuxarm64-gpl.tar.xz
  *                   (was johnvansickle.com, which 415-blocks CI/automated GETs. BtbN is a
  *                    static standalone build hosted on GitHub releases, same as yt-dlp above.)
- *   macOS  (both) : evermeet.cx/ffmpeg/getrelease/ffmpeg/zip  and  .../ffprobe/zip
- *                   (evermeet ships x86_64; on Apple Silicon it runs under Rosetta.
- *                   For a native arm64 static build use osxexperts.net instead.)
+ *   macOS  (both) : osxexperts.net/ffmpeg6arm.zip, ffprobe6arm.zip (and *6intel.zip)
+ *                   (native static builds per architecture. evermeet.cx, used before,
+ *                    now answers 410 Gone.)
  *   windows x86_64: gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip
  *                   (alt: github.com/BtbN/FFmpeg-Builds latest win64-gpl zip)
  *
@@ -77,7 +77,7 @@ const mb = (p) => (statSync(p).size / 1048576).toFixed(0);
 
 const YTDLP = "https://github.com/yt-dlp/yt-dlp/releases/latest/download";
 const BTBN = "https://github.com/BtbN/FFmpeg-Builds/releases/download/latest";
-const EVERMEET = "https://evermeet.cx/ffmpeg/getrelease";
+const OSXEXPERTS = "https://www.osxexperts.net";
 const GYAN = "https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip";
 const UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36";
 
@@ -92,15 +92,15 @@ const SOURCES = {
   ffmpeg: {
     "x86_64-unknown-linux-gnu": { kind: "tar.xz", url: `${BTBN}/ffmpeg-master-latest-linux64-gpl.tar.xz`, member: "ffmpeg" },
     "aarch64-unknown-linux-gnu": { kind: "tar.xz", url: `${BTBN}/ffmpeg-master-latest-linuxarm64-gpl.tar.xz`, member: "ffmpeg" },
-    "x86_64-apple-darwin": { kind: "zip", url: `${EVERMEET}/ffmpeg/zip`, member: "ffmpeg" },
-    "aarch64-apple-darwin": { kind: "zip", url: `${EVERMEET}/ffmpeg/zip`, member: "ffmpeg" },
+    "x86_64-apple-darwin": { kind: "zip", url: `${OSXEXPERTS}/ffmpeg6intel.zip`, member: "ffmpeg" },
+    "aarch64-apple-darwin": { kind: "zip", url: `${OSXEXPERTS}/ffmpeg6arm.zip`, member: "ffmpeg" },
     "x86_64-pc-windows-msvc": { kind: "zip", url: GYAN, member: "ffmpeg.exe" },
   },
   ffprobe: {
     "x86_64-unknown-linux-gnu": { kind: "tar.xz", url: `${BTBN}/ffmpeg-master-latest-linux64-gpl.tar.xz`, member: "ffprobe" },
     "aarch64-unknown-linux-gnu": { kind: "tar.xz", url: `${BTBN}/ffmpeg-master-latest-linuxarm64-gpl.tar.xz`, member: "ffprobe" },
-    "x86_64-apple-darwin": { kind: "zip", url: `${EVERMEET}/ffprobe/zip`, member: "ffprobe" },
-    "aarch64-apple-darwin": { kind: "zip", url: `${EVERMEET}/ffprobe/zip`, member: "ffprobe" },
+    "x86_64-apple-darwin": { kind: "zip", url: `${OSXEXPERTS}/ffprobe6intel.zip`, member: "ffprobe" },
+    "aarch64-apple-darwin": { kind: "zip", url: `${OSXEXPERTS}/ffprobe6arm.zip`, member: "ffprobe" },
     "x86_64-pc-windows-msvc": { kind: "zip", url: GYAN, member: "ffprobe.exe" },
   },
 };
@@ -183,7 +183,7 @@ function hint(name) {
     `[binaries]      ${name}-${triple}${EXE} into src-tauri/binaries/ by hand.`,
   ];
   if (name === "yt-dlp") lines.push("[binaries]      source: github.com/yt-dlp/yt-dlp/releases/latest");
-  else lines.push("[binaries]      static builds: johnvansickle.com (linux), evermeet.cx / osxexperts.net (macOS), gyan.dev or BtbN (windows)");
+  else lines.push("[binaries]      static builds: johnvansickle.com (linux), osxexperts.net (macOS), gyan.dev or BtbN (windows)");
   return lines.join("\n");
 }
 
