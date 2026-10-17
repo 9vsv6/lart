@@ -313,7 +313,7 @@ fn actual_process_termination_recovers_both_folder_boundaries_and_committed_stat
         fs::write(f.0.join("Mods/Farm/config.json"), b"survives process death").unwrap();
         let mut child = Command::new(std::env::current_exe().unwrap())
             .args([
-                "stardew_store::tests::crash_worker",
+                crash_worker_test().as_str(),
                 "--ignored",
                 "--exact",
                 "--nocapture",
@@ -382,7 +382,7 @@ fn interrupted_recovery_does_not_overwrite_later_edits() {
         install(&store, "1.0.0");
     }
     let mut child = Command::new(std::env::current_exe().unwrap())
-        .args(["stardew_store::tests::crash_worker", "--ignored", "--exact"])
+        .args([crash_worker_test().as_str(), "--ignored", "--exact"])
         .env("HARBOR_STARDEW_CRASH_ROOT", &f.0)
         .env("HARBOR_STARDEW_CRASH_AT", "moved1")
         .stdout(Stdio::null())
@@ -406,4 +406,9 @@ fn interrupted_recovery_does_not_overwrite_later_edits() {
     assert_eq!(store.recover().unwrap_err(), "stardew_changed");
     assert_eq!(fs::read(&edited).unwrap(), b"edited after crash");
     assert!(store.pending().unwrap());
+}
+
+/// The crash worker's full test name, so the spawned binary runs exactly it.
+fn crash_worker_test() -> String {
+    format!("{}::crash_worker", module_path!().split_once("::").unwrap().1)
 }

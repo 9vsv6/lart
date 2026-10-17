@@ -194,7 +194,10 @@ async fn six_real_process_exit_boundaries_recover_one_operation_without_renderer
             let mut child = Command::new(std::env::current_exe().unwrap())
                 .args([
                     "--exact",
-                    "p2p::preparation_tests::intake::acquisition_exit_child",
+                    &format!(
+                        "{}::acquisition_exit_child",
+                        module_path!().split_once("::").unwrap().1
+                    ),
                     "--nocapture",
                 ])
                 .env("HARBOR_PREPARATION_EXIT_ROOT", &root)
