@@ -233,8 +233,29 @@ jobs:
       - name: Install JavaScript dependencies
         run: pnpm install --frozen-lockfile
 
+      # Harbor's pinned libmpv-2.dll release is gone. Take the DLL from the mpv-dev
+      # package of the shinchiro release that fetch-mpv.mjs already uses for mpv.exe,
+      # and log its digest so each build records what it shipped.
+      - name: Fetch libmpv (Windows)
+        if: contains(matrix.platform.runner, 'windows')
+        shell: bash
+        run: |
+          set -euo pipefail
+          base=https://github.com/shinchiro/mpv-winbuild-cmake/releases/download/20260610
+          for asset in mpv-dev-x86_64-20260610-git-304426c.7z mpv-dev-x86_64-v3-20260610-git-304426c.7z; do
+            if curl -fsSL --retry 4 -o "$RUNNER_TEMP/mpv-dev.7z" "$base/$asset"; then break; fi
+          done
+          test -s "$RUNNER_TEMP/mpv-dev.7z"
+          7z e -y "$RUNNER_TEMP/mpv-dev.7z" -o"src-tauri/libmpv" libmpv-2.dll -r
+          sha256sum "$RUNNER_TEMP/mpv-dev.7z" src-tauri/libmpv/libmpv-2.dll
+
+      # setup:libmpv only knows Harbor's retired download, so it is left out.
       - name: Prepare build assets
-        run: pnpm run setup
+        run: |
+          pnpm run setup:binaries
+          pnpm run setup:mpv
+          pnpm run setup:fonts
+          pnpm run setup:capstan
 
       - name: Prepare bundled macOS libraries
         if: contains(matrix.platform.runner, 'macos')
