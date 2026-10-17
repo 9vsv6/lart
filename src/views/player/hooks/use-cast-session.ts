@@ -76,13 +76,13 @@ function buildActionableCastError(
     return {
       title: t("Enable Roku Network Access"),
       message: t(
-        "Your Roku is set to block control requests from apps on your network, so Harbor can't reach it. This is a one-time setting on the Roku.",
+        "Your Roku is set to block control requests from apps on your network, so Lart can't reach it. This is a one-time setting on the Roku.",
       ),
       steps: [
         t("On your Roku remote, press Home."),
         t("Open Settings, then System, then Advanced system settings."),
         t('Select "Control by mobile apps" and set Network access to "Default".'),
-        t("Come back to Harbor and try casting again."),
+        t("Come back to Lart and try casting again."),
       ],
       deviceName,
     };
@@ -91,7 +91,7 @@ function buildActionableCastError(
     return {
       title: t("Couldn't reach this Roku"),
       message: t(
-        "Harbor found something at this address that looked like a Roku, but it didn't respond like one. The device may be offline or another product picked up the same broadcast.",
+        "Lart found something at this address that looked like a Roku, but it didn't respond like one. The device may be offline or another product picked up the same broadcast.",
       ),
       steps: [
         t("Make sure the Roku is powered on and on the same Wi-Fi as your computer."),
@@ -111,7 +111,7 @@ function buildActionableCastError(
         t("On your Roku, open Streaming Channels from the home screen."),
         t('Search for "Media Assistant" (channel ID 782875, free).'),
         t("Install it."),
-        t("Come back to Harbor and try casting again."),
+        t("Come back to Lart and try casting again."),
       ],
       deviceName,
     };
@@ -120,11 +120,11 @@ function buildActionableCastError(
     return {
       title: t("Install ffmpeg"),
       message: t(
-        "Harbor uses ffmpeg to convert streams into formats TVs can play. It's a one-time install and Harbor will pick it up automatically.",
+        "Lart uses ffmpeg to convert streams into formats TVs can play. It's a one-time install and Lart will pick it up automatically.",
       ),
       steps: [
         localizedFfmpegInstallStep(),
-        t("Restart Harbor after the install completes."),
+        t("Restart Lart after the install completes."),
         t("Open the cast menu and try this device again."),
       ],
       deviceName,

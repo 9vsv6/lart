@@ -4,9 +4,9 @@ import type { ReleaseNote } from "./release-notes";
 // accidentally show the latest feed's notes for a different installation.
 const notes: Record<string, ReleaseNote> = {
   "0.999.4": {
-    title: "Harbor Experimental 0.0.4",
+    title: "Lart Experimental 0.0.4",
     intro:
-      "An early look at changes for Harbor’s next beta. Back up Harbor before testing; this build is not a replacement for the regular beta.",
+      "An early look at changes for Lart’s next beta. Back up Lart before testing; this build is not a replacement for the regular beta.",
     sections: [
       {
         heading: "What’s new",
@@ -32,7 +32,7 @@ const notes: Record<string, ReleaseNote> = {
       {
         heading: "Please test",
         items: [
-          "Reopen these notes after restarting Harbor and with the network disconnected.",
+          "Reopen these notes after restarting Lart and with the network disconnected.",
           "Open an actor from X-Ray, browse movies and TV shows, then close or go Back. Check keyboard/controller activation and that playback stays in place.",
           "Switch Arabic → English → Arabic, reopen the subtitle menu, and select Off while subtitles load. Check Live Try after seeking and pause/resume.",
           "Check TV navigation in English and Arabic, list order/description persistence, ebook voices, and Linux desktop media controls.",
@@ -42,7 +42,7 @@ const notes: Record<string, ReleaseNote> = {
       {
         heading: "Thank you",
         items: [
-          "Credits: kalashnikxvxiii, O1Abdulrahman, anmol210202, pengunnn, OwaisByte, Thunderhawkk, uddx7, Talal1011 and the Harbor contributors.",
+          "Credits: kalashnikxvxiii, O1Abdulrahman, anmol210202, pengunnn, OwaisByte, Thunderhawkk, uddx7, Talal1011 and the Lart contributors.",
           "Report issues at harborsystem.online with your build, OS and reproduction steps. Remove passwords, tokens and private URLs before sharing logs or screenshots.",
         ],
       },

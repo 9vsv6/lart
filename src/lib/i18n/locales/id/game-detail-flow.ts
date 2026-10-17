@@ -1,7 +1,7 @@
 export default {
   "games.details.broadcastPause": "Jeda siaran",
   "games.details.broadcastResume": "Putar siaran",
-  "games.details.broadcastPlay": "Tonton di Harbor",
+  "games.details.broadcastPlay": "Tonton di Lart",
   "games.details.watchRun": "Tonton run",
   "games.details.viewRun": "Lihat run",
   "games.details.runVideo": "Video run",

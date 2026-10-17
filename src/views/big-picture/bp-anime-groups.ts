@@ -172,7 +172,7 @@ export function buildBpAnimeGroups(input: BpAnimeGroupInput): BpAnimeGroup[] {
       state: input.malState,
       group: "yourMalLists",
       title: malName,
-      offline: t("Connect MyAnimeList in Harbor on your computer to see your lists here."),
+      offline: t("Connect MyAnimeList in Lart on your computer to see your lists here."),
       empty: t("No entries on your MyAnimeList lists yet."),
       failed: t("Couldn't reach MyAnimeList. Check the connection and reopen Big Picture."),
       rows: input.malRails.map((rail) => ({
@@ -193,7 +193,7 @@ export function buildBpAnimeGroups(input: BpAnimeGroupInput): BpAnimeGroup[] {
       state: input.anilistState,
       group: "yourAnilistLists",
       title: anilistName,
-      offline: t("Connect AniList in Harbor on your computer to see your lists here."),
+      offline: t("Connect AniList in Lart on your computer to see your lists here."),
       empty: t("No entries on your AniList lists yet."),
       failed: t("Couldn't reach AniList. Check the connection and reopen Big Picture."),
       rows: input.anilistRails.map((rail) => ({

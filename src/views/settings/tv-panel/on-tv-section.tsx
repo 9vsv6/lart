@@ -41,7 +41,7 @@ const ITEMS: Item[] = [
     title: "Watch together",
     detail: "Starting or joining a room. It has to happen on the device that is playing.",
     jump: "relay",
-    jumpLabel: "Harbor Relay",
+    jumpLabel: "Lart Relay",
   },
   {
     title: "Other devices",

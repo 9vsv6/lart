@@ -257,7 +257,7 @@ export default {
   "games.gw2.partial": "Some item details are unavailable. Reward prices are still included.",
   "games.gw2.guide": "Vault guide",
   "games.gw2.checked": "Checked {date}",
-  "games.gw2.scope": "Saved in this Harbor profile. Each selection totals one offer; your wallet, purchase limits and expansion access are not checked. Confirm availability and buy in game.",
+  "games.gw2.scope": "Saved in this Lart profile. Each selection totals one offer; your wallet, purchase limits and expansion access are not checked. Confirm availability and buy in game.",
   "games.gw2.total": "Planned total",
   "games.gw2.currency": "Astral Acclaim",
   "games.gw2.selected": "{count} offers selected",

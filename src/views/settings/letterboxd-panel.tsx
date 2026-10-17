@@ -191,7 +191,7 @@ export function LetterboxdPanel() {
     <Section
       title={t("Letterboxd")}
       subtitle={t(
-        "Bring your Letterboxd watchlist, diary, liked films and lists into Harbor through the Stremboxd bridge.",
+        "Bring your Letterboxd watchlist, diary, liked films and lists into Lart through the Stremboxd bridge.",
       )}
     >
       <ToggleRow
@@ -214,7 +214,7 @@ export function LetterboxdPanel() {
                       "Public mode reads your account with nothing but your username. You get your watchlist, liked films, popular this week and the Top 250, and no password is needed.",
                     )
                   : t(
-                      "Full mode signs in with your Letterboxd password so your diary, friends activity and personal ratings work too. The password goes only to Stremboxd to fetch a token, and Harbor never stores it.",
+                      "Full mode signs in with your Letterboxd password so your diary, friends activity and personal ratings work too. The password goes only to Stremboxd to fetch a token, and Lart never stores it.",
                     )
               }
             >
@@ -251,7 +251,7 @@ export function LetterboxdPanel() {
               <SettingRow
                 wide
                 label={t("Letterboxd password")}
-                desc={t("Sent once to Stremboxd to obtain a sign-in token. Harbor never keeps it.")}
+                desc={t("Sent once to Stremboxd to obtain a sign-in token. Lart never keeps it.")}
                 warn={loginError ?? undefined}
               >
                 <input
@@ -345,7 +345,7 @@ export function LetterboxdPanel() {
             <SRow
               title={t("About Stremboxd")}
               description={t(
-                "Opens stremboxd.com, the community bridge that reads Letterboxd on Harbor's behalf.",
+                "Opens stremboxd.com, the community bridge that reads Letterboxd on Lart's behalf.",
               )}
               trailing={<ExternalLink size={18} className="text-ink-subtle" />}
               onClick={() => openUrl("https://stremboxd.com/configure")}

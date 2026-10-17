@@ -88,13 +88,13 @@ export function BadgesTab() {
 
       <Section
         title={t("Badge art")}
-        subtitle={t("Every format badge Harbor can show on streams. Pick one to swap its art, hide it, or put it back. Changes apply everywhere badges appear.")}
+        subtitle={t("Every format badge Lart can show on streams. Pick one to swap its art, hide it, or put it back. Changes apply everywhere badges appear.")}
       >
         {overrideCount > 0 && (
           <SettingRow
             icon={<Palette size={18} strokeWidth={2} />}
             label={t("Badges you have changed")}
-            desc={t("{n} badges use art you picked instead of Harbor's default.", { n: overrideCount })}
+            desc={t("{n} badges use art you picked instead of Lart's default.", { n: overrideCount })}
           />
         )}
         {GROUPS.map((g, gi) => (

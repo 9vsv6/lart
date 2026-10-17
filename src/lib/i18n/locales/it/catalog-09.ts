@@ -94,8 +94,8 @@ const catalog09: Record<string, string> = {
   Tournaments: "Tornei",
   "Towering Roles": "Ruoli monumentali",
   Track: "Segui",
-  "Track everything you watch, see your watchlist, and get personalized recommendations on Harbor's home page. Free at trakt.tv.":
-    "Tieni traccia di tutto ciò che guardi, consulta la tua Lista e ricevi consigli personalizzati nella home page di Harbor. Gratis su trakt.tv.",
+  "Track everything you watch, see your watchlist, and get personalized recommendations on Lart's home page. Free at trakt.tv.":
+    "Tieni traccia di tutto ciò che guardi, consulta la tua Lista e ricevi consigli personalizzati nella home page di Lart. Gratis su trakt.tv.",
   "Track people": "Segui persone",
   "Track people ({n})": "Segui persone ({n})",
   "Track switching isn't supported on the current engine. The file's default audio is playing.":
@@ -171,8 +171,8 @@ const catalog09: Record<string, string> = {
   "Trending on {site}": "Di tendenza su {site}",
   "Trending on {source}": "Di tendenza su {source}",
   "Trending shows": "Serie di tendenza",
-  "Trending tracks star growth across your Harbor visits. Open the addons page again tomorrow and the top risers will appear here.":
-    "La sezione Di tendenza monitora l'aumento delle stelle tra le tue visite a Harbor. Torna domani alla pagina degli Add-on e qui vedrai quelli in maggiore ascesa.",
+  "Trending tracks star growth across your Lart visits. Open the addons page again tomorrow and the top risers will appear here.":
+    "La sezione Di tendenza monitora l'aumento delle stelle tra le tue visite a Lart. Torna domani alla pagina degli Add-on e qui vedrai quelli in maggiore ascesa.",
   "Trending · Cinemeta": "Di tendenza · Cinemeta",
   "Trending, Popular, In Theaters, and the per service rails.":
     "Di tendenza, Popolari, Al cinema e le sezioni per ogni servizio.",
@@ -204,12 +204,12 @@ const catalog09: Record<string, string> = {
   "Try deploy again": "Riprova la distribuzione",
   "Try it": "Provalo",
   "Try it for ${n}": "Provalo a ${n}",
-  "Try signing in to Stremio so Harbor can use your addon collection. Older or foreign titles often need Torrentio + a debrid addon to find anything.":
-    "Prova ad accedere a Stremio, così Harbor potrà usare la tua raccolta di Add-on. Per trovare risultati con titoli meno recenti o stranieri, spesso servono Torrentio e un Add-on debrid.",
+  "Try signing in to Stremio so Lart can use your addon collection. Older or foreign titles often need Torrentio + a debrid addon to find anything.":
+    "Prova ad accedere a Stremio, così Lart potrà usare la tua raccolta di Add-on. Per trovare risultati con titoli meno recenti o stranieri, spesso servono Torrentio e un Add-on debrid.",
   "Trying source {n}": "Tentativo con la fonte {n}",
   Tubi: "Tubi",
-  "Tuck clean, native-looking window buttons into the top corner, with hover labels. On macOS they become traffic-light dots. Blends into Harbor while feeling like your system's own title bar.":
-    "Inserisci nell'angolo superiore pulsanti della finestra ordinati e dall'aspetto nativo, con etichette al passaggio del mouse. Su macOS diventano pallini a semaforo. Si integrano con Harbor e sembrano parte della barra del titolo del sistema.",
+  "Tuck clean, native-looking window buttons into the top corner, with hover labels. On macOS they become traffic-light dots. Blends into Lart while feeling like your system's own title bar.":
+    "Inserisci nell'angolo superiore pulsanti della finestra ordinati e dall'aspetto nativo, con etichette al passaggio del mouse. Su macOS diventano pallini a semaforo. Si integrano con Lart e sembrano parte della barra del titolo del sistema.",
   Tue: "Mar",
   Tune: "Regola",
   "Tune anime": "Regola gli anime",
@@ -226,8 +226,8 @@ const catalog09: Record<string, string> = {
   "Turn Anime4K upscaling on. Only active when shaders are available.":
     "Attiva l'upscaling Anime4K. Funziona solo quando sono disponibili gli shader.",
   "Turn It Up": "Alza il volume",
-  "Turn anime back on in Harbor's content settings to browse it here.":
-    "Riattiva gli anime nelle impostazioni dei contenuti di Harbor per sfogliarli qui.",
+  "Turn anime back on in Lart's content settings to browse it here.":
+    "Riattiva gli anime nelle impostazioni dei contenuti di Lart per sfogliarli qui.",
   "Turn it on in Player layout": "Attivalo in Layout del player",
   "Turn off": "Disattiva",
   "Turn off Auto Sync before changing subtitle FPS.":
@@ -237,8 +237,8 @@ const catalog09: Record<string, string> = {
     "Disattiva per una griglia più pulita. Gli indicatori del punteggio si gestiscono separatamente qui sotto.",
   "Turn off mobile data so your phone uses Wi-Fi.":
     "Disattiva i dati mobili affinché il telefono usi il Wi-Fi.",
-  "Turn off the native window title bar above to use Harbor's hybrid bar instead.":
-    "Disattiva qui sopra la barra del titolo nativa della finestra per usare quella ibrida di Harbor.",
+  "Turn off the native window title bar above to use Lart's hybrid bar instead.":
+    "Disattiva qui sopra la barra del titolo nativa della finestra per usare quella ibrida di Lart.",
   "Turn off to hide the sync badge during playback.":
     "Disattiva per nascondere l'indicatore di sincronizzazione durante la riproduzione.",
   "Turn off what you do not have": "Disattiva ciò che non hai",
@@ -267,15 +267,15 @@ const catalog09: Record<string, string> = {
   Turnovers: "Ribaltoni",
   "Turns off the fancy scaling and effects so video just plays. The lightest on your machine. Pick this if anything ever stutters or your fan screams.":
     "Disattiva il ridimensionamento avanzato e gli effetti, così il video viene semplicemente riprodotto. È l'opzione più leggera per il computer. Sceglila se noti scatti o se la ventola gira al massimo.",
-  "Turns the season button into a full panel: order tabs (Aired, DVD, Absolute, and any the show has) plus a season table with air-date ranges and episode counts. On by default for anime through Harbor's TVDB service, no key needed. Add your own TVDB key to use it for regular shows too.":
-    "Trasforma il pulsante della Stagione in un pannello completo: schede per l'ordine (Messa in onda, DVD, Assoluto e qualsiasi altro disponibile per la Serie), più una tabella delle Stagioni con intervalli delle date di messa in onda e numero di Episodi. È attivo per impostazione predefinita per gli anime tramite il servizio TVDB di Harbor, senza bisogno di una chiave. Aggiungi una tua chiave TVDB per usarlo anche con le Serie normali.",
+  "Turns the season button into a full panel: order tabs (Aired, DVD, Absolute, and any the show has) plus a season table with air-date ranges and episode counts. On by default for anime through Lart's TVDB service, no key needed. Add your own TVDB key to use it for regular shows too.":
+    "Trasforma il pulsante della Stagione in un pannello completo: schede per l'ordine (Messa in onda, DVD, Assoluto e qualsiasi altro disponibile per la Serie), più una tabella delle Stagioni con intervalli delle date di messa in onda e numero di Episodi. È attivo per impostazione predefinita per gli anime tramite il servizio TVDB di Lart, senza bisogno di una chiave. Aggiungi una tua chiave TVDB per usarlo anche con le Serie normali.",
   "Turns your phone into a remote for this computer: play, pause, seek, volume, and casting, all from the couch. Open the Wi-Fi address on your phone's browser.":
     "Trasforma il telefono in un telecomando per questo computer: Riproduci, Pausa, spostamento nel video, volume e trasmissione, tutto dal divano. Apri l'indirizzo Wi-Fi nel browser del telefono.",
   "Twist Endings": "Finali a sorpresa",
   "Two columns": "Due colonne",
   "Two pages": "Due pagine",
-  "Two paths: Harbor handles the deploy for you, or you do it yourself with wrangler.":
-    "Due possibilità: Harbor gestisce la distribuzione per te oppure puoi farlo direttamente con wrangler.",
+  "Two paths: Lart handles the deploy for you, or you do it yourself with wrangler.":
+    "Due possibilità: Lart gestisce la distribuzione per te oppure puoi farlo direttamente con wrangler.",
   "Two-factor authentication code": "Codice di autenticazione a due fattori",
   Type: "Tipo",
   "Type a key on this TV": "Premi un tasto su questa TV",
@@ -285,7 +285,7 @@ const catalog09: Record<string, string> = {
   "Type on your keyboard or tap the digits above.":
     "Digita sulla tastiera o tocca le cifre qui sopra.",
   "Type on your phone": "Digita sul telefono",
-  "Type the code showing on that Harbor.": "Digita il codice mostrato su quell'Harbor.",
+  "Type the code showing on that Lart.": "Digita il codice mostrato su quell'Lart.",
   "Type the same 4-digit PIN again.": "Digita di nuovo lo stesso PIN di 4 cifre.",
   "Type the same PIN one more time.": "Digita ancora una volta lo stesso PIN.",
   "Type what you want in plain language and let a model find it. Bring your own API key from either service.":
@@ -303,8 +303,8 @@ const catalog09: Record<string, string> = {
   "URL + EPG saved": "URL + EPG salvati",
   "URL cannot be empty": "L'URL non può essere vuoto",
   "URL is saved and ready to share.": "L'URL è salvato e pronto per essere condiviso.",
-  "URL on r/Stremio or wherever your community lives. Other Harbor users paste it into Settings, Harbor Relay,":
-    "URL su r/Stremio o ovunque si trovi la tua community. Gli altri utenti di Harbor lo incollano in Impostazioni, Harbor Relay,",
+  "URL on r/Stremio or wherever your community lives. Other Lart users paste it into Settings, Lart Relay,":
+    "URL su r/Stremio o ovunque si trovi la tua community. Gli altri utenti di Lart lo incollano in Impostazioni, Lart Relay,",
   "URL or path": "URL o percorso",
   "URL saved": "URL salvato",
   "URLs can carry debrid keys or tokens; reveal when you need to copy":
@@ -354,10 +354,10 @@ const catalog09: Record<string, string> = {
   Unreachable: "Non raggiungibile",
   "Unsaved changes to your layout, time format and volume style.":
     "Modifiche non salvate al layout, al formato dell'ora e allo stile del volume.",
-  "Unsupported profile version ({version}). Update Harbor or use an older profile.":
-    "Versione del profilo non supportata ({version}). Aggiorna Harbor o usa un profilo precedente.",
-  "Until you pair, that Harbor ignores anything this computer sends it.":
-    "Finché non esegui l'abbinamento, quell'Harbor ignora tutto ciò che questo computer gli invia.",
+  "Unsupported profile version ({version}). Update Lart or use an older profile.":
+    "Versione del profilo non supportata ({version}). Aggiorna Lart o usa un profilo precedente.",
+  "Until you pair, that Lart ignores anything this computer sends it.":
+    "Finché non esegui l'abbinamento, quell'Lart ignora tutto ciò che questo computer gli invia.",
   "Until {time} · {dur}": "Fino alle {time} · {dur}",
   Untitled: "Senza titolo",
   "Untitled addon": "Add-on senza titolo",
@@ -414,8 +414,8 @@ const catalog09: Record<string, string> = {
   "Updates & backup": "Aggiornamenti e backup",
   "Updates & rollback": "Aggiornamenti e ripristino",
   Updating: "Aggiornamento",
-  "Updating separated settings per profile, which may have reset your theme and keys. Harbor still has your old setup saved. Bring it back on this profile, then reload.":
-    "Stiamo separando le Impostazioni per profilo, quindi il tema e i tasti potrebbero essere stati reimpostati. Harbor conserva ancora la configurazione precedente. Ripristinala in questo profilo, quindi ricarica.",
+  "Updating separated settings per profile, which may have reset your theme and keys. Lart still has your old setup saved. Bring it back on this profile, then reload.":
+    "Stiamo separando le Impostazioni per profilo, quindi il tema e i tasti potrebbero essere stati reimpostati. Lart conserva ancora la configurazione precedente. Ripristinala in questo profilo, quindi ricarica.",
   "Updating {name}": "Aggiornamento di {name}",
   "Updating…": "Aggiornamento…",
   "Upgrade subtitles when better ones load":
@@ -441,8 +441,8 @@ const catalog09: Record<string, string> = {
   "Use AniList avatar": "Usa l'avatar di AniList",
   "Use Cinemeta for title metadata": "Usa Cinemeta per i metadati dei titoli",
   "Use Cinemeta instead": "Usa invece Cinemeta",
-  "Use Harbor's built-in engine (beta)": "Usa il motore integrato di Harbor (beta)",
-  "Use Harbor's public relay": "Usa il relay pubblico di Harbor",
+  "Use Lart's built-in engine (beta)": "Usa il motore integrato di Lart (beta)",
+  "Use Lart's public relay": "Usa il relay pubblico di Lart",
   "Use MyAnimeList avatar": "Usa l'avatar di MyAnimeList",
   "Use Simkl avatar": "Usa l'avatar di Simkl",
   "Use Trakt avatar": "Usa l'avatar di Trakt",
@@ -452,12 +452,12 @@ const catalog09: Record<string, string> = {
   "Use a different Stremio account": "Usa un altro account Stremio",
   "Use a different URL": "Usa un altro URL",
   "Use a different key": "Usa un'altra chiave",
-  "Use a game controller to browse Harbor and control playback. Tune the sticks and see the button map.":
-    "Usa un controller di gioco per navigare in Harbor e controllare la riproduzione. Regola gli stick e consulta la mappatura dei pulsanti.",
-  "Use a game controller to browse Harbor and control playback. Works with Xbox, PlayStation, and most USB or Bluetooth gamepads.":
-    "Usa un controller di gioco per navigare in Harbor e controllare la riproduzione. Compatibile con Xbox, PlayStation e la maggior parte dei gamepad USB o Bluetooth.",
-  "Use a gamepad or remote to move around Harbor":
-    "Usa un gamepad o un telecomando per navigare in Harbor",
+  "Use a game controller to browse Lart and control playback. Tune the sticks and see the button map.":
+    "Usa un controller di gioco per navigare in Lart e controllare la riproduzione. Regola gli stick e consulta la mappatura dei pulsanti.",
+  "Use a game controller to browse Lart and control playback. Works with Xbox, PlayStation, and most USB or Bluetooth gamepads.":
+    "Usa un controller di gioco per navigare in Lart e controllare la riproduzione. Compatibile con Xbox, PlayStation e la maggior parte dei gamepad USB o Bluetooth.",
+  "Use a gamepad or remote to move around Lart":
+    "Usa un gamepad o un telecomando per navigare in Lart",
   "Use a separate Stremio account": "Usa un account Stremio separato",
   "Use addon order": "Usa l'ordine degli Add-on",
   "Use an existing relay": "Usa un relay esistente",
@@ -473,20 +473,20 @@ const catalog09: Record<string, string> = {
   "Use in Nuvio": "Usa in Nuvio",
   "Use it": "Usalo",
   "Use liquid glass": "Usa liquid glass",
-  "Use liquid glass for the search pill and row scroll arrows. The appearance settings below are shared by glass surfaces across Harbor.":
-    "Usa liquid glass per il campo di ricerca e le frecce di scorrimento delle righe. Le Impostazioni estetiche qui sotto sono condivise da tutte le superfici in vetro di Harbor.",
+  "Use liquid glass for the search pill and row scroll arrows. The appearance settings below are shared by glass surfaces across Lart.":
+    "Usa liquid glass per il campo di ricerca e le frecce di scorrimento delle righe. Le Impostazioni estetiche qui sotto sono condivise da tutte le superfici in vetro di Lart.",
   "Use live web context": "Usa il contesto web in tempo reale",
   "Use live web context (Jina Reader)": "Usa il contesto web in tempo reale (Jina Reader)",
   "Use model": "Usa il modello",
   "Use mpv engine": "Usa il motore mpv",
-  "Use my AniList avatar as my Harbor avatar": "Usa il mio avatar di AniList come avatar di Harbor",
-  "Use my Simkl avatar as my Harbor avatar": "Usa il mio avatar di Simkl come avatar di Harbor",
-  "Use my Trakt avatar as my Harbor avatar": "Usa il mio avatar di Trakt come avatar di Harbor",
+  "Use my AniList avatar as my Lart avatar": "Usa il mio avatar di AniList come avatar di Lart",
+  "Use my Simkl avatar as my Lart avatar": "Usa il mio avatar di Simkl come avatar di Lart",
+  "Use my Trakt avatar as my Lart avatar": "Usa il mio avatar di Trakt come avatar di Lart",
   "Use my own server": "Usa il mio server",
   "Use my photo": "Usa la mia foto",
   "Use my style": "Usa il mio stile",
-  "Use the arrow keys and Enter to move focus through Harbor. Turn this off to keep arrow keys free and disable focus navigation everywhere.":
-    "Usa i tasti freccia ed Enter per spostare il focus in Harbor. Disattiva questa opzione per lasciare liberi i tasti freccia e disabilitare ovunque la navigazione tramite focus.",
+  "Use the arrow keys and Enter to move focus through Lart. Turn this off to keep arrow keys free and disable focus navigation everywhere.":
+    "Usa i tasti freccia ed Enter per spostare il focus in Lart. Disattiva questa opzione per lasciare liberi i tasti freccia e disabilitare ovunque la navigazione tramite focus.",
   "Use the button below. If you are not signed in yet TMDB says you do not have permission, which is normal. Click the link in that message to sign in.":
     "Usa il pulsante qui sotto. Se non hai ancora effettuato l'accesso, TMDB segnalerà che non hai l'autorizzazione: è normale. Fai clic sul link nel messaggio per Accedere.",
   "Use the download arrow next to any chapter to save it for reading offline.":
@@ -501,17 +501,17 @@ const catalog09: Record<string, string> = {
   "Use this icon for all states": "Usa questa icona per tutti gli stati",
   "Use your API key to Translate Chapters to Your Language. Get a key from the":
     "Usa la tua chiave API per tradurre i capitoli nella tua lingua. Ottieni una chiave da",
-  "Use your Harbor color": "Usa il tuo colore Harbor",
-  "Use your operating system's native title bar and window buttons instead of Harbor's built-in ones. Handy if the in-app buttons ever feel out of reach, like during playback.":
-    "Usa la barra del titolo e i pulsanti della finestra nativi del sistema operativo al posto di quelli integrati in Harbor. È utile se i pulsanti nell'app risultano difficili da raggiungere, ad esempio durante la riproduzione.",
+  "Use your Lart color": "Usa il tuo colore Lart",
+  "Use your operating system's native title bar and window buttons instead of Lart's built-in ones. Handy if the in-app buttons ever feel out of reach, like during playback.":
+    "Usa la barra del titolo e i pulsanti della finestra nativi del sistema operativo al posto di quelli integrati in Lart. È utile se i pulsanti nell'app risultano difficili da raggiungere, ad esempio durante la riproduzione.",
   "Use your own image as the app icon": "Usa una tua immagine come icona dell'app",
   "Use {color} for the line tracker": "Usa {color} per la linea dell'indicatore di avanzamento",
   "Use {color} ink": "Usa l'inchiostro {color}",
   "Used at 55% / 25% alpha.": "Usato con valori alfa del 55% / 25%.",
   "Used for streaming availability and the Now Playing release window.":
     "Usato per la disponibilità in streaming e la finestra delle uscite di In riproduzione.",
-  "Used for streaming availability and the Now Playing release window. Pick a country and Harbor can match the interface, metadata, and subtitle languages to it.":
-    "Usato per la disponibilità in streaming e la finestra delle uscite di In riproduzione. Scegli un Paese e Harbor potrà adattarvi l'interfaccia e le lingue di metadati e Sottotitoli.",
+  "Used for streaming availability and the Now Playing release window. Pick a country and Lart can match the interface, metadata, and subtitle languages to it.":
+    "Usato per la disponibilità in streaming e la finestra delle uscite di In riproduzione. Scegli un Paese e Lart potrà adattarvi l'interfaccia e le lingue di metadati e Sottotitoli.",
   "Used for your cursor in Watch Together, your draw color, and your name pill in chat.":
     "Usato per il cursore in Watch Together, il colore del disegno e l'etichetta del tuo nome in chat.",
   "Used to lift Time's Up and to leave the kids space.":
@@ -524,8 +524,8 @@ const catalog09: Record<string, string> = {
   "Usernames can only use letters, numbers and underscores, 3 to 24 long.":
     "I nomi utente possono contenere solo lettere, numeri e trattini bassi e devono avere da 3 a 24 caratteri.",
   "Uses your theme's accent color.": "Usa il colore di accento del tema.",
-  "Using AIOStreams or another aggregator addon? Its own sorting and filtering happen inside the addon before Harbor ever sees the results, then Harbor applies the stream filter and result order above on top. If results look thinner than expected, keep one side permissive: either relax the addon's internal filters or set Harbor's stream filter to Balanced or Off.":
-    "Usi AIOStreams o un altro Add-on aggregatore? L'ordinamento e i filtri interni vengono applicati nell'Add-on prima che Harbor riceva i risultati, poi Harbor applica anche il filtro degli stream e l'ordine dei risultati impostati sopra. Se i risultati sono meno numerosi del previsto, mantieni permissivo uno dei due lati: riduci i filtri interni dell'Add-on oppure imposta il filtro degli stream di Harbor su Bilanciato o Disattivato.",
+  "Using AIOStreams or another aggregator addon? Its own sorting and filtering happen inside the addon before Lart ever sees the results, then Lart applies the stream filter and result order above on top. If results look thinner than expected, keep one side permissive: either relax the addon's internal filters or set Lart's stream filter to Balanced or Off.":
+    "Usi AIOStreams o un altro Add-on aggregatore? L'ordinamento e i filtri interni vengono applicati nell'Add-on prima che Lart riceva i risultati, poi Lart applica anche il filtro degli stream e l'ordine dei risultati impostati sopra. Se i risultati sono meno numerosi del previsto, mantieni permissivo uno dei due lati: riduci i filtri interni dell'Add-on oppure imposta il filtro degli stream di Lart su Bilanciato o Disattivato.",
   VA: "VA",
   "VHS-era classics": "Classici dell'era VHS",
   VOLUME: "VOLUME",
@@ -605,8 +605,8 @@ const catalog09: Record<string, string> = {
   "WWII on Film": "La Seconda guerra mondiale al cinema",
   "Wait for the upload to finish. The relay URL gets written to":
     "Attendi il completamento del caricamento. L'URL del relay viene scritto in",
-  "Wait for the upload to finish. The relay URL gets written to {code} in Harbor settings.":
-    "Attendi il completamento del caricamento. L'URL del relay viene scritto in {code} nelle Impostazioni di Harbor.",
+  "Wait for the upload to finish. The relay URL gets written to {code} in Lart settings.":
+    "Attendi il completamento del caricamento. L'URL del relay viene scritto in {code} nelle Impostazioni di Lart.",
   "Waiting for Trakt…": "In attesa di Trakt…",
   "Waiting for the host to start": "In attesa che l'host avvii la sessione",
   "Waiting for the next line": "In attesa della riga successiva",
@@ -617,8 +617,8 @@ const catalog09: Record<string, string> = {
     "In attesa che la TV trasmetta i dati necessari. Ci vorrà un momento.",
   "Waive any overtime claim": "Rinunciare a qualsiasi compenso per gli straordinari",
   Walks: "Passeggiate",
-  "Want a badge that moves? Drop in a GIF up to 8 MB. Harbor shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
-    "Vuoi un distintivo animato? Carica una GIF fino a 8 MB. Harbor la ridimensiona e la converte in un formato animato leggero, così resta nitida e si carica rapidamente. Scegli un'animazione breve e in loop.",
+  "Want a badge that moves? Drop in a GIF up to 8 MB. Lart shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
+    "Vuoi un distintivo animato? Carica una GIF fino a 8 MB. Lart la ridimensiona e la converte in un formato animato leggero, così resta nitida e si carica rapidamente. Scegli un'animazione breve e in loop.",
   "Want to change the ratio mid-playback? The live aspect button is hidden by default to keep the player tidy.":
     "Vuoi cambiare le proporzioni durante la riproduzione? Il pulsante delle proporzioni in tempo reale è nascosto per impostazione predefinita, così il player resta ordinato.",
   "Want to fix it yourself?": "Vuoi risolvere il problema da solo?",
@@ -635,8 +635,8 @@ const catalog09: Record<string, string> = {
   "Watch Together needs a relay.": "Guarda insieme richiede un relay.",
   "Watch Together panel": "Pannello Guarda insieme",
   "Watch Together relay": "Relay di Guarda insieme",
-  "Watch Together rooms are routed through Harbor's hosted relay.":
-    "Le stanze di Guarda insieme passano dal relay gestito da Harbor.",
+  "Watch Together rooms are routed through Lart's hosted relay.":
+    "Le stanze di Guarda insieme passano dal relay gestito da Lart.",
   "Watch Together rooms drop after 6 hours": "Le stanze di Guarda insieme si chiudono dopo 6 ore",
   "Watch again": "Guarda di nuovo",
   "Watch from the beginning": "Guarda dall'inizio",
@@ -657,8 +657,8 @@ const catalog09: Record<string, string> = {
   "Watched on Trakt": "Visto su Trakt",
   "Watched {ago}": "Visto {ago}",
   Watching: "In visione",
-  "Watching for ad, analytics, and tracking requests. Harbor itself sends zero telemetry.":
-    "Rilevamento delle richieste pubblicitarie, di analisi e di tracciamento. Harbor non invia alcun dato di telemetria.",
+  "Watching for ad, analytics, and tracking requests. Lart itself sends zero telemetry.":
+    "Rilevamento delle richieste pubblicitarie, di analisi e di tracciamento. Lart non invia alcun dato di telemetria.",
   "Watching right now": "In visione ora",
   Watchlist: "Lista",
   "Watchlist ({n})": "Lista ({n})",
@@ -689,10 +689,10 @@ const catalog09: Record<string, string> = {
   "We'll show a one-time recovery key right after you sign up. Save it: it's the only way back in if you forget your password.":
     "Mostreremo una chiave di recupero monouso subito dopo la registrazione. Salvala: è l'unico modo per rientrare se dimentichi la password.",
   Weak: "Debole",
-  "Wear your Simkl profile picture across Harbor instead of the default.":
-    "Usa in Harbor l'immagine del profilo Simkl al posto di quella predefinita.",
-  "Wear your Trakt profile picture across Harbor instead of the default.":
-    "Usa in Harbor l'immagine del profilo Trakt al posto di quella predefinita.",
+  "Wear your Simkl profile picture across Lart instead of the default.":
+    "Usa in Lart l'immagine del profilo Simkl al posto di quella predefinita.",
+  "Wear your Trakt profile picture across Lart instead of the default.":
+    "Usa in Lart l'immagine del profilo Trakt al posto di quella predefinita.",
   Web: "Web",
   "Web build": "Build web",
   Webhooks: "Webhook",
@@ -719,8 +719,8 @@ const catalog09: Record<string, string> = {
   "What everyone has been quietly binging this week.":
     "Quello che tutti stanno guardando senza dirlo questa settimana.",
   "What everyone is reading": "Le letture più popolari",
-  "What fills the hero. Trending is a fresh top list from Harbor, refreshed through the day. Classic uses your own Home rows.":
-    "Cosa occupa l'area in evidenza. Tendenze mostra una nuova classifica di Harbor, aggiornata durante il giorno. Classico usa le righe della tua Home.",
+  "What fills the hero. Trending is a fresh top list from Lart, refreshed through the day. Classic uses your own Home rows.":
+    "Cosa occupa l'area in evidenza. Tendenze mostra una nuova classifica di Lart, aggiornata durante il giorno. Classico usa le righe della tua Home.",
   "What fullscreen does": "Cosa fa la modalità a schermo intero",
   "What gets blurred": "Cosa viene sfocato",
   "What gets sent": "Cosa viene inviato",
@@ -763,8 +763,8 @@ const catalog09: Record<string, string> = {
   "Whatever's left at year-end": "L'importo residuo a fine anno",
   'When Esc would close the player, show a quick confirm first. You can tick "Don\'t ask me again" in that prompt to always leave on Esc.':
     'Quando Esc sta per chiudere il player, mostra prima una breve conferma. Nel messaggio puoi selezionare "Non chiedermelo più" per uscire sempre con Esc.',
-  "When Harbor sits idle in the foreground, it drifts through cinematic backdrops with a clock and what's trending. Any movement or key brings you back. Off by default.":
-    "Quando Harbor resta inattivo in primo piano, scorrono sfondi cinematografici con l'ora e i titoli di tendenza. Basta un movimento o premere un tasto per tornare. Disattivato per impostazione predefinita.",
+  "When Lart sits idle in the foreground, it drifts through cinematic backdrops with a clock and what's trending. Any movement or key brings you back. Off by default.":
+    "Quando Lart resta inattivo in primo piano, scorrono sfondi cinematografici con l'ora e i titoli di tendenza. Basta un movimento o premere un tasto per tornare. Disattivato per impostazione predefinita.",
   "When a flagged ad plays, a Skip button slides in so you jump straight past it.":
     "Quando viene riprodotta una pubblicità segnalata, compare il pulsante Salta per superarla subito.",
   "When a movie or episode starts, briefly show its Common Sense Media parental guide (violence, nudity, profanity, substances) with severity. Fades on its own.":
@@ -773,30 +773,30 @@ const catalog09: Record<string, string> = {
     "All'avvio di un Film o di un Episodio, mostra brevemente la guida per genitori di IMDb (violenza, linguaggio volgare, sostanze, scene spaventose e altro) con il livello di gravità. Scompare da sola.",
   "When a new episode airs": "Quando esce un nuovo Episodio",
   "When a new season premieres": "Quando debutta una nuova Stagione",
-  "When a release ships multiple audio tracks, Harbor selects the first match from this list.":
-    "Se una versione include più tracce audio, Harbor seleziona la prima corrispondenza in questo elenco.",
-  "When a subtitle runs early or late, Harbor measures the speech and corrects the timing on its own.":
-    "Se un sottotitolo è in anticipo o in ritardo, Harbor analizza il parlato e ne corregge automaticamente la sincronizzazione.",
-  "When a subtitle runs early or late, Harbor measures the speech and corrects the timing on its own. Off by default.":
-    "Se un sottotitolo è in anticipo o in ritardo, Harbor analizza il parlato e ne corregge automaticamente la sincronizzazione. Disattivato per impostazione predefinita.",
+  "When a release ships multiple audio tracks, Lart selects the first match from this list.":
+    "Se una versione include più tracce audio, Lart seleziona la prima corrispondenza in questo elenco.",
+  "When a subtitle runs early or late, Lart measures the speech and corrects the timing on its own.":
+    "Se un sottotitolo è in anticipo o in ritardo, Lart analizza il parlato e ne corregge automaticamente la sincronizzazione.",
+  "When a subtitle runs early or late, Lart measures the speech and corrects the timing on its own. Off by default.":
+    "Se un sottotitolo è in anticipo o in ritardo, Lart analizza il parlato e ne corregge automaticamente la sincronizzazione. Disattivato per impostazione predefinita.",
   "When a title is in your local library": "Quando un titolo è nella libreria locale",
   "When an episode ends, automatically start the next one. Off lets the episode finish and stop.":
     "Alla fine di un Episodio, avvia automaticamente quello successivo. Se l'opzione è disattivata, l'Episodio termina e la riproduzione si ferma.",
-  "When auto-playing the next episode, keep the same release/source you were just watching instead of Harbor's top-ranked stream. Falls back to the best stream if that source isn't available.":
-    "Durante la riproduzione automatica dell'Episodio successivo, mantiene la stessa versione o fonte appena usata invece dello stream con il punteggio più alto di Harbor. Se la fonte non è disponibile, passa allo stream migliore.",
+  "When auto-playing the next episode, keep the same release/source you were just watching instead of Lart's top-ranked stream. Falls back to the best stream if that source isn't available.":
+    "Durante la riproduzione automatica dell'Episodio successivo, mantiene la stessa versione o fonte appena usata invece dello stream con il punteggio più alto di Lart. Se la fonte non è disponibile, passa allo stream migliore.",
   "When in fullscreen, Esc leaves fullscreen instead of closing the player. Press Esc again to close. Turn off to make Esc always close.":
     "A schermo intero, Esc esce dalla modalità a schermo intero invece di chiudere il player. Premi di nuovo Esc per chiuderlo. Disattiva l'opzione per fare in modo che Esc chiuda sempre il player.",
   "When off, a P2P transfer stops the moment you close or switch the stream, so nothing keeps downloading in the background. Turn on to let it keep going after you leave; manage or pause those from the Downloads tab.": "Se l'opzione è disattivata, un trasferimento P2P si interrompe non appena chiudi o cambi stream, così nulla continua a scaricarsi in background. Attivala per farlo proseguire anche dopo l'uscita; puoi gestire o mettere in pausa questi download dalla scheda Download.",
-  "When on, a connected controller moves focus around Harbor and drives the player. Turn it off to ignore all controllers.":
-    "Se l'opzione è attivata, un controller collegato sposta lo stato attivo in Harbor e controlla il player. Disattivala per ignorare tutti i controller.",
+  "When on, a connected controller moves focus around Lart and drives the player. Turn it off to ignore all controllers.":
+    "Se l'opzione è attivata, un controller collegato sposta lo stato attivo in Lart e controlla il player. Disattivala per ignorare tutti i controller.",
   "When people share a collection it shows up here. Build one you love and share it, that is how it starts.":
     "Quando qualcuno condivide una raccolta, questa appare qui. Creane una che ami e condividila: è così che tutto comincia.",
-  "When playback starts, Harbor automatically finds and loads a subtitle in one of these languages, so you never have to search by hand. The first available match wins, so put your main language first.":
-    "All'avvio della riproduzione, Harbor trova e carica automaticamente un sottotitolo in una di queste lingue, così non dovrai mai cercarlo manualmente. Viene usata la prima corrispondenza disponibile, quindi metti per prima la lingua principale.",
-  "When playback starts, Harbor finds and loads a subtitle in one of these languages automatically. The first available match wins, so put your main language first.":
-    "All'avvio della riproduzione, Harbor trova e carica automaticamente un sottotitolo in una di queste lingue. Viene usata la prima corrispondenza disponibile, quindi metti per prima la lingua principale.",
-  "When playback starts, Harbor finds and loads a subtitle in one of these languages. The first available match wins, so put your main language first.":
-    "All'avvio della riproduzione, Harbor trova e carica un sottotitolo in una di queste lingue. Viene usata la prima corrispondenza disponibile, quindi metti per prima la lingua principale.",
+  "When playback starts, Lart automatically finds and loads a subtitle in one of these languages, so you never have to search by hand. The first available match wins, so put your main language first.":
+    "All'avvio della riproduzione, Lart trova e carica automaticamente un sottotitolo in una di queste lingue, così non dovrai mai cercarlo manualmente. Viene usata la prima corrispondenza disponibile, quindi metti per prima la lingua principale.",
+  "When playback starts, Lart finds and loads a subtitle in one of these languages automatically. The first available match wins, so put your main language first.":
+    "All'avvio della riproduzione, Lart trova e carica automaticamente un sottotitolo in una di queste lingue. Viene usata la prima corrispondenza disponibile, quindi metti per prima la lingua principale.",
+  "When playback starts, Lart finds and loads a subtitle in one of these languages. The first available match wins, so put your main language first.":
+    "All'avvio della riproduzione, Lart trova e carica un sottotitolo in una di queste lingue. Viene usata la prima corrispondenza disponibile, quindi metti per prima la lingua principale.",
   "When the Up Next pill appears before an episode ends. Auto scales to the episode length, so short episodes stop prompting so early. Off hides it.":
     "Quando compare il riquadro Prossimo Episodio prima della fine di un Episodio. Auto adatta i tempi alla durata dell'Episodio, così negli episodi brevi non appare troppo presto. Se l'opzione è disattivata, il riquadro viene nascosto.",
   "When the audio already matches your subtitle language, pick a forced track (foreign dialogue and signs only) instead of full subtitles. If the file has no forced track, subtitles stay off.":
@@ -808,10 +808,10 @@ const catalog09: Record<string, string> = {
     "Quando finisce l'ultimo Episodio disponibile (Nascondi / Timer)",
   "When time's up, the ship sails away until a parent unlocks it.":
     "Allo scadere del tempo, la nave salpa finché un genitore non la sblocca.",
-  "When you back out of a title, Harbor saves a frame so the Continue Watching card looks like the spot you left.":
-    "Quando esci da un titolo, Harbor salva un fotogramma, così la scheda Continua a guardare mostra il punto in cui eri arrivato.",
-  "When you back out of a title, Harbor saves a frame so the Continue Watching card looks like the spot you left. Tune how long they stick around, or wipe them all.":
-    "Quando esci da un titolo, Harbor salva un fotogramma, così la scheda Continua a guardare mostra il punto in cui eri arrivato. Scegli per quanto tempo conservarli oppure eliminali tutti.",
+  "When you back out of a title, Lart saves a frame so the Continue Watching card looks like the spot you left.":
+    "Quando esci da un titolo, Lart salva un fotogramma, così la scheda Continua a guardare mostra il punto in cui eri arrivato.",
+  "When you back out of a title, Lart saves a frame so the Continue Watching card looks like the spot you left. Tune how long they stick around, or wipe them all.":
+    "Quando esci da un titolo, Lart salva un fotogramma, così la scheda Continua a guardare mostra il punto in cui eri arrivato. Scegli per quanto tempo conservarli oppure eliminali tutti.",
   "When you exit fullscreen, return the window to exactly where it was. Turn off to center it on screen instead.":
     "Quando esci dalla modalità a schermo intero, riporta la finestra esattamente dov'era. Disattiva l'opzione per centrarla sullo schermo.",
   "When you exit playback, keep the window fullscreen instead of dropping back to a window. Turn off to leave fullscreen automatically whenever the player closes.":
@@ -830,8 +830,8 @@ const catalog09: Record<string, string> = {
     "Quando riapri una Serie che stavi già esplorando, torna subito al punto in cui eri arrivato, di solito la Lista degli episodi, invece di ripartire dall'inizio. Il passaggio avviene prima che la pagina appaia, senza lampeggi.",
   "When you resume something you were watching, replay the exact stream you last used (same addon and source) instead of opening the picker again. Turn off to always choose fresh.":
     "Quando riprendi qualcosa che stavi guardando, riutilizza esattamente lo stream precedente, con lo stesso Add-on e la stessa fonte, invece di riaprire il selettore. Disattiva l'opzione per scegliere sempre da capo.",
-  "Where Harbor saves videos when you hit Download in the player. Pick any folder, including one on a different drive.":
-    "Dove Harbor salva i video quando premi Download nel player. Puoi scegliere qualsiasi cartella, anche su un'altra unità.",
+  "Where Lart saves videos when you hit Download in the player. Pick any folder, including one on a different drive.":
+    "Dove Lart salva i video quando premi Download nel player. Puoi scegliere qualsiasi cartella, anche su un'altra unità.",
   "Where alerts go": "Dove arrivano gli avvisi",
   "Where do you want to start?": "Da dove vuoi iniziare?",
   "Where files live": "Dove si trovano i file",
@@ -855,8 +855,8 @@ const catalog09: Record<string, string> = {
   "Where you watch from": "Da dove guardi",
   "Where your data lives": "Dove si trovano i tuoi dati",
   "Where your video comes from": "Da dove proviene il video",
-  "Whether Harbor reports playback to Simkl while you watch.":
-    "Se Harbor comunica a Simkl la riproduzione mentre guardi.",
+  "Whether Lart reports playback to Simkl while you watch.":
+    "Se Lart comunica a Simkl la riproduzione mentre guardi.",
   "Whether finishing an episode updates your AniList progress.":
     "Se terminare un episodio aggiorna i tuoi progressi su AniList.",
   "Whether subtitles are showing the moment a video starts.":
@@ -877,20 +877,20 @@ const catalog09: Record<string, string> = {
   "Which order": "In quale ordine",
   "Which service names the track when you tap Identify song in the player.":
     "Quale servizio identifica il brano quando tocchi Identifica brano nel lettore.",
-  "Which subtitle Harbor lands on when more than one is available.":
-    "Quale sottotitolo sceglie Harbor quando ne è disponibile più di uno.",
+  "Which subtitle Lart lands on when more than one is available.":
+    "Quale sottotitolo sceglie Lart quando ne è disponibile più di uno.",
   "Which subtitle languages, in order?": "Quali lingue dei sottotitoli, in ordine?",
   "While auto-sync is on": "Quando la sincronizzazione automatica è attiva",
-  "While beta updates are on, Harbor offers the newest build again on its next check. Turn beta updates off above to stay on an earlier one.":
-    "Quando gli aggiornamenti beta sono attivi, Harbor ripropone la build più recente al controllo successivo. Disattivali qui sopra per restare su una build precedente.",
+  "While beta updates are on, Lart offers the newest build again on its next check. Turn beta updates off above to stay on an earlier one.":
+    "Quando gli aggiornamenti beta sono attivi, Lart ripropone la build più recente al controllo successivo. Disattivali qui sopra per restare su una build precedente.",
   "While the world's asleep": "Mentre il mondo dorme",
   "While you watch": "Mentre guardi",
   White: "Bianco",
   "Who can join": "Chi può partecipare",
   "Who is breaking out this week. Live, with weekly movement.":
     "Chi sta emergendo questa settimana. Dati in tempo reale, con variazioni settimanali.",
-  "Who keeps the lights on, what Harbor is built on, and where to put money if you want to.":
-    "Chi tiene tutto acceso, su cosa si basa Harbor e dove donare, se vuoi.",
+  "Who keeps the lights on, what Lart is built on, and where to put money if you want to.":
+    "Chi tiene tutto acceso, su cosa si basa Lart e dove donare, se vuoi.",
   "Who keeps this running": "Chi manda avanti tutto questo",
   "Who pays for the servers": "Chi paga i server",
   "Who pays for the servers, and where to put money if you want to.":
@@ -1015,13 +1015,13 @@ const catalog09: Record<string, string> = {
   "You are done.": "Hai finito.",
   "You are not a member yet. Accept to join and take part.":
     "Non sei ancora membro. Accetta per unirti e partecipare.",
-  "You are not signed in to a Harbor account, so nothing here can reach the TV.":
-    "Non hai effettuato l'accesso a un account Harbor, quindi nulla da qui può raggiungere la TV.",
+  "You are not signed in to a Lart account, so nothing here can reach the TV.":
+    "Non hai effettuato l'accesso a un account Lart, quindi nulla da qui può raggiungere la TV.",
   "You are rating too fast, try again in a moment":
     "Stai assegnando valutazioni troppo velocemente. Riprova tra poco.",
   "You are set up": "È tutto configurato",
-  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Harbor bundles and endorses no sites; it only runs the config you supply.":
-    "Sei l'unico responsabile di ciò che colleghi e del rispetto del copyright e dei termini di ciascun sito. Harbor non include né promuove alcun sito, ma esegue solo la configurazione che fornisci.",
+  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Lart bundles and endorses no sites; it only runs the config you supply.":
+    "Sei l'unico responsabile di ciò che colleghi e del rispetto del copyright e dei termini di ciascun sito. Lart non include né promuove alcun sito, ma esegue solo la configurazione che fornisci.",
   'You buy something "in installments". That means you:':
     "Acquisti qualcosa a rate. Significa che:",
   "You can always mute or stop a song from the card itself.":
@@ -1056,8 +1056,8 @@ const catalog09: Record<string, string> = {
   "You make an insurance claim. Before the insurer pays out, you usually:":
     "Presenti una richiesta di risarcimento. Prima che la compagnia assicurativa paghi, di solito devi:",
   "You might like": "Potrebbero piacerti",
-  "You must install this addon in your Stremio account first so Harbor can fetch its works.":
-    "Devi prima installare questo Add-on nel tuo account Stremio, così Harbor potrà recuperarne i contenuti.",
+  "You must install this addon in your Stremio account first so Lart can fetch its works.":
+    "Devi prima installare questo Add-on nel tuo account Stremio, così Lart potrà recuperarne i contenuti.",
   "You only ever pay the minimum on a credit card each month. Over time you:":
     "Ogni mese versi soltanto l'importo minimo dovuto sulla carta di credito. Nel tempo:",
   "You own the content": "Possiedi i contenuti",
@@ -1092,8 +1092,8 @@ const catalog09: Record<string, string> = {
   'You\'re given "power of attorney" for a relative. You can:':
     "Un parente ti conferisce una procura. Puoi:",
   "You're in": "Sei dentro",
-  "You're modding your own client. Custom JS has full access to your Harbor session. Only paste code you wrote or fully trust.":
-    "Stai modificando il tuo client. Il codice JS personalizzato ha accesso completo alla tua sessione Harbor. Incolla solo codice scritto da te o di cui ti fidi completamente.",
+  "You're modding your own client. Custom JS has full access to your Lart session. Only paste code you wrote or fully trust.":
+    "Stai modificando il tuo client. Il codice JS personalizzato ha accesso completo alla tua sessione Lart. Incolla solo codice scritto da te o di cui ti fidi completamente.",
   "You're offline": "Sei offline",
   "You're offline. Your downloads still play.": "Sei offline. Puoi comunque riprodurre i download.",
   "You're on the latest build. Earlier builds show up here as new versions ship.":
@@ -1120,13 +1120,13 @@ const catalog09: Record<string, string> = {
   "Your Continue Watching, your watchlist and your addons.":
     "Continua a guardare, la tua Lista e i tuoi Add-on.",
   "Your Discovery Queue": "La tua coda Scoperte",
-  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Harbor. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
-    "Il tuo HTML e CSS vengono visualizzati in un frame in modalità sandbox, completamente isolato dal resto di Harbor. Scrivili come una piccola pagina autonoma. Il carattere e lo sfondo della pagina si impostano separatamente con i controlli qui sopra e si applicano all'intero profilo.",
-  "Your Harbor account": "Il tuo account Harbor",
-  "Your Harbor account is separate from your Stremio sign in. Create one free or sign in from Settings.":
-    "Il tuo account Harbor è separato dall'accesso a Stremio. Creane uno gratis o accedi dalle Impostazioni.",
-  "Your Harbor account is signed in on the TV.":
-    "Hai effettuato l'accesso al tuo account Harbor sulla TV.",
+  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Lart. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
+    "Il tuo HTML e CSS vengono visualizzati in un frame in modalità sandbox, completamente isolato dal resto di Lart. Scrivili come una piccola pagina autonoma. Il carattere e lo sfondo della pagina si impostano separatamente con i controlli qui sopra e si applicano all'intero profilo.",
+  "Your Lart account": "Il tuo account Lart",
+  "Your Lart account is separate from your Stremio sign in. Create one free or sign in from Settings.":
+    "Il tuo account Lart è separato dall'accesso a Stremio. Creane uno gratis o accedi dalle Impostazioni.",
+  "Your Lart account is signed in on the TV.":
+    "Hai effettuato l'accesso al tuo account Lart sulla TV.",
   "Your IP or device is blocked. Some providers geo restrict or limit how many devices can connect at once.":
     "Il tuo IP o dispositivo è bloccato. Alcuni provider applicano restrizioni geografiche o limitano il numero di dispositivi collegabili contemporaneamente.",
   "Your Letterboxd password": "La tua password di Letterboxd",
@@ -1135,8 +1135,8 @@ const catalog09: Record<string, string> = {
   "Your MAL Lists": "Le tue liste MAL",
   "Your MAL: {name}": "Il tuo MAL: {name}",
   "Your MyAnimeList is empty": "Il tuo MyAnimeList è vuoto",
-  "Your Roku is set to block control requests from apps on your network, so Harbor can't reach it. This is a one-time setting on the Roku.":
-    "Il tuo Roku è impostato per bloccare le richieste di controllo dalle app sulla tua rete, quindi Harbor non può raggiungerlo. Devi modificare questa impostazione sul Roku una sola volta.",
+  "Your Roku is set to block control requests from apps on your network, so Lart can't reach it. This is a one-time setting on the Roku.":
+    "Il tuo Roku è impostato per bloccare le richieste di controllo dalle app sulla tua rete, quindi Lart non può raggiungerlo. Devi modificare questa impostazione sul Roku una sola volta.",
   "Your Simkl plan-to-watch list has no episodes airing this month. Switch to All upcoming to browse everything.":
     "La tua lista da guardare di Simkl non contiene episodi in onda questo mese. Seleziona Tutte le prossime uscite per vedere tutto.",
   "Your Streaming": "Il tuo streaming",
@@ -1171,8 +1171,8 @@ const catalog09: Record<string, string> = {
     "I tuoi Add-on hanno restituito risultati per «{q}», ma nessuno può essere aperto qui.",
   "Your avatar, banner, and how the whole profile is styled.":
     "Il tuo avatar, il banner e lo stile dell'intero profilo.",
-  "Your avatar, name, and handle across Harbor.":
-    "Il tuo avatar, il tuo nome e il tuo handle su Harbor.",
+  "Your avatar, name, and handle across Lart.":
+    "Il tuo avatar, il tuo nome e il tuo handle su Lart.",
   "Your award pack": "Il tuo pacchetto di premi",
   "Your badge pack": "Il tuo pacchetto di distintivi",
   "Your bank locked the account": "La banca ha bloccato il conto",
@@ -1204,9 +1204,9 @@ const catalog09: Record<string, string> = {
     "I tuoi amici non hanno ancora condiviso nulla. La condivisione delle attività è disattivata per impostazione predefinita.",
   "Your groups": "I tuoi gruppi",
   "Your handle": "Il tuo handle",
-  "Your handle across Harbor, and your verified status.":
-    "Il tuo handle su Harbor e il tuo stato di verifica.",
-  "Your handle across Harbor.": "Il tuo handle su Harbor.",
+  "Your handle across Lart, and your verified status.":
+    "Il tuo handle su Lart e il tuo stato di verifica.",
+  "Your handle across Lart.": "Il tuo handle su Lart.",
   "Your handle, your themes, your settings. Signed in once, waiting on the next machine you open.":
     "Il tuo handle, i tuoi temi, le tue impostazioni. Accedi una volta e ritrova tutto sul prossimo dispositivo che usi.",
   "Your holiday plans": "I tuoi programmi per le ferie",

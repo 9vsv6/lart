@@ -22,7 +22,7 @@ export function PrivacyTab() {
         <Section
           title={t("Discord Rich Presence")}
           subtitle={t(
-            "Control what appears on your Discord profile while you use Harbor.",
+            "Control what appears on your Discord profile while you use Lart.",
           )}
         >
           <DiscordPresenceRow />
@@ -70,7 +70,7 @@ function DiscordPresenceRow() {
           />
           <ToggleRow
             label={t("Show while browsing")}
-            sub={t("Display 'Browsing Harbor' when nothing is playing.")}
+            sub={t("Display 'Browsing Lart' when nothing is playing.")}
             value={settings.discordShowWhenBrowsing}
             onChange={(discordShowWhenBrowsing) => update({ discordShowWhenBrowsing })}
           />
@@ -89,7 +89,7 @@ function DiscordPresenceRow() {
           <ToggleRow
             label={t("Show what you are listening to")}
             sub={t(
-              "Share the track, artist and album art while music plays, with a Listen in Harbor button.",
+              "Share the track, artist and album art while music plays, with a Listen in Lart button.",
             )}
             value={settings.discordMusicPresence}
             onChange={(discordMusicPresence) => update({ discordMusicPresence })}

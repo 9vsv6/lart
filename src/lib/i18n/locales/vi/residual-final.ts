@@ -15,10 +15,10 @@ const residualFinal: Record<string, string> = {
   "No PiP session. Closing.": "Không có phiên PiP. Đang đóng.",
   "Failed to read session: {message}": "Không thể đọc phiên: {message}",
   "Subtitle {number}": "Phụ đề {number}",
-  "Harbor Relay Documentation": "Tài liệu Harbor Relay",
-  "Harbor Relay docs": "Tài liệu Harbor Relay",
-  "Harbor test message ({service}). If you can read this, your webhook is wired up.":
-    "Tin nhắn thử nghiệm Harbor ({service}). Nếu bạn đọc được nội dung này, webhook đã được kết nối.",
+  "Lart Relay Documentation": "Tài liệu Lart Relay",
+  "Lart Relay docs": "Tài liệu Lart Relay",
+  "Lart test message ({service}). If you can read this, your webhook is wired up.":
+    "Tin nhắn thử nghiệm Lart ({service}). Nếu bạn đọc được nội dung này, webhook đã được kết nối.",
   "Use a TTF, OTF, WOFF or WOFF2 file.": "Dùng tệp TTF, OTF, WOFF hoặc WOFF2.",
   "That font is over 32 MB. Try a lighter file.":
     "Phông chữ này lớn hơn 32 MB. Hãy thử tệp nhẹ hơn.",
@@ -28,7 +28,7 @@ const residualFinal: Record<string, string> = {
   "Browsing the theme library": "Đang duyệt thư viện giao diện",
   "This theme is missing a color ({color}).": "Giao diện này thiếu một màu ({color}).",
   "This file isn't a readable theme.": "Không thể đọc tệp giao diện này.",
-  "This file isn't a Harbor theme.": "Tệp này không phải giao diện Harbor.",
+  "This file isn't a Lart theme.": "Tệp này không phải giao diện Lart.",
   "Theme is missing a name.": "Giao diện chưa có tên.",
   "This theme's preview colors look invalid.":
     "Màu xem trước của giao diện này có vẻ không hợp lệ.",
@@ -69,10 +69,10 @@ const residualFinal: Record<string, string> = {
   "+15s": "+15 giây",
   "Connecting to": "Đang kết nối với",
   "Paused on": "Đang tạm dừng tại",
-  "Harbor queried 1 addon and got nothing back":
-    "Harbor đã truy vấn 1 tiện ích bổ sung nhưng không nhận được kết quả nào",
-  "Harbor queried {n} addons and got nothing back":
-    "Harbor đã truy vấn {n} tiện ích bổ sung nhưng không nhận được kết quả nào",
+  "Lart queried 1 addon and got nothing back":
+    "Lart đã truy vấn 1 tiện ích bổ sung nhưng không nhận được kết quả nào",
+  "Lart queried {n} addons and got nothing back":
+    "Lart đã truy vấn {n} tiện ích bổ sung nhưng không nhận được kết quả nào",
   "Tried IDs: {ids}": "Đã thử các ID: {ids}",
   " · +{n} more": " · +{n} mục nữa",
   "sketchy files": "tệp đáng ngờ",
@@ -90,10 +90,10 @@ const residualFinal: Record<string, string> = {
   "wrong movie": "sai phim",
   "1 source · 0 made it through": "1 nguồn · 0 nguồn vượt qua",
   "{n} sources · 0 made it through": "{n} nguồn · 0 nguồn vượt qua",
-  "Harbor blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
-    "Theo mặc định, Harbor chặn các tệp đáng ngờ và bản phát hành không khớp. Với phim bộ cũ và tựa phim khác thường, bộ lọc đôi khi quá chặt.",
-  "No clean release has surfaced yet. This may be too new. Harbor's filters dropped everything that came back as wrong-movie noise.":
-    "Chưa có bản phát hành sạch nào xuất hiện. Nội dung này có thể còn quá mới. Bộ lọc của Harbor đã loại bỏ mọi kết quả nhiễu không đúng phim.",
+  "Lart blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
+    "Theo mặc định, Lart chặn các tệp đáng ngờ và bản phát hành không khớp. Với phim bộ cũ và tựa phim khác thường, bộ lọc đôi khi quá chặt.",
+  "No clean release has surfaced yet. This may be too new. Lart's filters dropped everything that came back as wrong-movie noise.":
+    "Chưa có bản phát hành sạch nào xuất hiện. Nội dung này có thể còn quá mới. Bộ lọc của Lart đã loại bỏ mọi kết quả nhiễu không đúng phim.",
   "Create a custom filter": "Tạo bộ lọc tùy chỉnh",
   Remux: "Remux",
   Debrid: "Debrid",
@@ -200,18 +200,18 @@ const residualFinal: Record<string, string> = {
     "{title} chặn việc nhúng từ bên ngoài trang web.",
   "That's a normal security setting. Use the button below to open it in your browser instead.":
     "Đây là cài đặt bảo mật bình thường. Hãy dùng nút bên dưới để mở trong trình duyệt.",
-  "You're leaving Harbor": "Bạn sắp rời Harbor",
-  "This link goes to an external site that Harbor does not control or vouch for. Triple-check the address before you continue, and never enter your Harbor password anywhere but Harbor.":
-    "Liên kết này dẫn đến một trang web bên ngoài mà Harbor không kiểm soát hoặc bảo chứng. Hãy kiểm tra kỹ địa chỉ ba lần trước khi tiếp tục và tuyệt đối không nhập mật khẩu Harbor ở bất kỳ đâu ngoài Harbor.",
+  "You're leaving Lart": "Bạn sắp rời Lart",
+  "This link goes to an external site that Lart does not control or vouch for. Triple-check the address before you continue, and never enter your Lart password anywhere but Lart.":
+    "Liên kết này dẫn đến một trang web bên ngoài mà Lart không kiểm soát hoặc bảo chứng. Hãy kiểm tra kỹ địa chỉ ba lần trước khi tiếp tục và tuyệt đối không nhập mật khẩu Lart ở bất kỳ đâu ngoài Lart.",
   Destination: "Đích đến",
   "Only continue if you fully trust this link":
     "Chỉ tiếp tục nếu bạn hoàn toàn tin tưởng liên kết này",
-  "Harbor can open only HTTP or HTTPS destinations.":
-    "Harbor chỉ có thể mở các đích đến HTTP hoặc HTTPS.",
-  "Harbor cannot open links that include embedded credentials.":
-    "Harbor không thể mở liên kết chứa thông tin đăng nhập được nhúng.",
-  "Harbor could not verify this destination.": "Harbor không thể xác minh đích đến này.",
-  "Harbor's temporary viewer requires HTTPS.": "Trình xem tạm thời của Harbor yêu cầu HTTPS.",
+  "Lart can open only HTTP or HTTPS destinations.":
+    "Lart chỉ có thể mở các đích đến HTTP hoặc HTTPS.",
+  "Lart cannot open links that include embedded credentials.":
+    "Lart không thể mở liên kết chứa thông tin đăng nhập được nhúng.",
+  "Lart could not verify this destination.": "Lart không thể xác minh đích đến này.",
+  "Lart's temporary viewer requires HTTPS.": "Trình xem tạm thời của Lart yêu cầu HTTPS.",
   "Source mode": "Chế độ nguồn",
   "Use debrid/addon sources and fall back to peer-to-peer":
     "Dùng nguồn debrid/tiện ích bổ sung và chuyển sang P2P khi cần",
@@ -228,8 +228,8 @@ const residualFinal: Record<string, string> = {
     "Không thể kết nối đến máy chủ phát từ xa. Hãy kiểm tra địa chỉ trong Cài đặt.",
   "No playable video file was found in this torrent.":
     "Không tìm thấy tệp video có thể phát trong torrent này.",
-  "Direct torrent play needs the Harbor desktop app.":
-    "Phát torrent trực tiếp cần ứng dụng Harbor cho máy tính.",
+  "Direct torrent play needs the Lart desktop app.":
+    "Phát torrent trực tiếp cần ứng dụng Lart cho máy tính.",
   "The streaming engine is still starting up. Give it a moment and press Play again.":
     "Công cụ phát vẫn đang khởi động. Hãy đợi một lát rồi nhấn Phát lại.",
   "Could not find any peers for this torrent yet. It may be dead or very low on seeders.":
@@ -262,22 +262,22 @@ const residualFinal: Record<string, string> = {
   "A local folder": "Thư mục cục bộ",
   "Advanced: build a plugin": "Nâng cao: tạo plugin",
   "Also Known As": "Còn được biết đến với tên",
-  "Back in Harbor: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
-    "Quay lại Harbor: Manga > Thiết lập nguồn > Máy chủ của bạn, rồi dán địa chỉ máy chủ (ví dụ {localUrl}, hoặc địa chỉ IP LAN nếu máy chủ chạy trên thiết bị khác, chẳng hạn {lanUrl}).",
+  "Back in Lart: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
+    "Quay lại Lart: Manga > Thiết lập nguồn > Máy chủ của bạn, rồi dán địa chỉ máy chủ (ví dụ {localUrl}, hoặc địa chỉ IP LAN nếu máy chủ chạy trên thiết bị khác, chẳng hạn {lanUrl}).",
   "Controller preview": "Xem trước tay cầm",
   "Couldn't save that font. It may be invalid, or storage is full.":
     "Không thể lưu phông chữ đó. Phông chữ có thể không hợp lệ hoặc bộ nhớ đã đầy.",
   "Download and run Suwayomi Server:": "Tải xuống và chạy Suwayomi Server:",
-  "Every source you enable in Suwayomi then shows up in Harbor. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
-    "Mọi nguồn bạn bật trong Suwayomi đều sẽ xuất hiện trong Harbor. Suwayomi luôn cập nhật các tiện ích mở rộng khi trang web thay đổi để chúng tiếp tục hoạt động.",
+  "Every source you enable in Suwayomi then shows up in Lart. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
+    "Mọi nguồn bạn bật trong Suwayomi đều sẽ xuất hiện trong Lart. Suwayomi luôn cập nhật các tiện ích mở rộng khi trang web thay đổi để chúng tiếp tục hoạt động.",
   "Everything else, through your own server (Suwayomi)":
     "Mọi nguồn khác, thông qua máy chủ riêng của bạn (Suwayomi)",
   "Expand {title} image": "Phóng to ảnh của {title}",
-  "Getting manga sources into Harbor": "Thêm nguồn manga vào Harbor",
-  "Harbor also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Harbor repository. Only install plugins from repositories you trust.":
-    "Harbor cũng có môi trường chạy plugin thử nghiệm. Nếu muốn viết plugin nguồn, hãy xem {path} trong kho mã Harbor. Chỉ cài đặt plugin từ những kho mã bạn tin cậy.",
-  "Harbor ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Harbor. There are two ways to add sources.":
-    "Harbor không đi kèm manga hay trình thu thập dữ liệu nào. Đây là một ứng dụng đọc. Bạn tự thêm nguồn và nội dung trong các nguồn đó thuộc về bên vận hành nguồn, không phải Harbor. Có hai cách để thêm nguồn.",
+  "Getting manga sources into Lart": "Thêm nguồn manga vào Lart",
+  "Lart also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Lart repository. Only install plugins from repositories you trust.":
+    "Lart cũng có môi trường chạy plugin thử nghiệm. Nếu muốn viết plugin nguồn, hãy xem {path} trong kho mã Lart. Chỉ cài đặt plugin từ những kho mã bạn tin cậy.",
+  "Lart ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Lart. There are two ways to add sources.":
+    "Lart không đi kèm manga hay trình thu thập dữ liệu nào. Đây là một ứng dụng đọc. Bạn tự thêm nguồn và nội dung trong các nguồn đó thuộc về bên vận hành nguồn, không phải Lart. Có hai cách để thêm nguồn.",
   "Import failed": "Nhập dữ liệu thất bại",
   "It serves a web UI at {url}": "Máy chủ cung cấp giao diện web tại {url}",
   "Manga > Set up a source > Local folder, and choose a folder of manga you already own (CBZ files or folders of images).":
@@ -317,8 +317,8 @@ const residualFinal: Record<string, string> = {
   heard: "đã nghe",
   of: "trên",
   orig: "gốc",
-  "Open the signed-in user's own Harbor profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
-    "Mở ngay hồ sơ Harbor của chính người dùng đã đăng nhập khi tên định danh của họ được tải xong. Trả về true khi bắt đầu điều hướng và false trong các trường hợp còn lại.",
+  "Open the signed-in user's own Lart profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
+    "Mở ngay hồ sơ Lart của chính người dùng đã đăng nhập khi tên định danh của họ được tải xong. Trả về true khi bắt đầu điều hướng và false trong các trường hợp còn lại.",
   "AI search failed.": "Tìm kiếm bằng AI thất bại.",
   "Add a debrid provider in Settings first.":
     "Trước tiên, hãy thêm nhà cung cấp debrid trong Cài đặt.",
@@ -331,9 +331,9 @@ const residualFinal: Record<string, string> = {
     "Không thể chuẩn bị nguồn P2P này. Có thể không có peer nào truy cập được. Hãy thử lại hoặc chọn nguồn khác.",
   "Direct torrent streaming is turned off. Turn it on in Settings > P2P & servers to stream torrents without a debrid.":
     "Tính năng phát torrent trực tiếp đang tắt. Hãy bật trong Cài đặt > P2P và máy chủ để phát torrent mà không cần debrid.",
-  "Harbor could not open your browser.": "Harbor không thể mở trình duyệt của bạn.",
-  "Harbor's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
-    "Công cụ ngang hàng của Harbor đang khởi động. Trạng thái này sẽ tự hết sau vài giây, sau đó nút Phát sẽ hoạt động.",
+  "Lart could not open your browser.": "Lart không thể mở trình duyệt của bạn.",
+  "Lart's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
+    "Công cụ ngang hàng của Lart đang khởi động. Trạng thái này sẽ tự hết sau vài giây, sau đó nút Phát sẽ hoạt động.",
   Minus: "Dấu trừ",
   "None of your debrid services could deliver a working file. Pick another stream.":
     "Không dịch vụ debrid nào của bạn có thể cung cấp tệp hoạt động. Hãy chọn luồng khác.",
@@ -361,8 +361,8 @@ const residualFinal: Record<string, string> = {
     "Đây là tệp NZB thô. Tệp cần được tải xuống trước bằng SABnzbd hoặc NZBGet rồi mới phát.",
   "This source isn't ready on your debrid yet. Try it again in a moment or pick another.":
     "Nguồn này chưa sẵn sàng trên dịch vụ debrid của bạn. Hãy thử lại sau giây lát hoặc chọn nguồn khác.",
-  "This source only opens in an external browser, not in Harbor's player.":
-    "Nguồn này chỉ mở được trong trình duyệt bên ngoài, không mở được trong trình phát của Harbor.",
+  "This source only opens in an external browser, not in Lart's player.":
+    "Nguồn này chỉ mở được trong trình duyệt bên ngoài, không mở được trong trình phát của Lart.",
   "This stream has no playable source.": "Luồng này không có nguồn nào có thể phát.",
   "This stream isn't cached on your debrid yet. Try a different one from the list.":
     "Luồng này chưa được lưu vào bộ nhớ đệm trên dịch vụ debrid của bạn. Hãy thử một luồng khác trong danh sách.",
@@ -377,16 +377,16 @@ const residualFinal: Record<string, string> = {
     "Khóa debrid của bạn đã bị từ chối. Hãy kiểm tra khóa trong Cài đặt.",
   "Your debrid served a placeholder/error video instead of the real file. Pick another stream.":
     "Dịch vụ debrid của bạn đã trả về video giữ chỗ hoặc video báo lỗi thay vì tệp thật. Hãy chọn luồng khác.",
-  "Your debrid service doesn't support queueing torrents from Harbor yet.":
-    "Dịch vụ debrid của bạn chưa hỗ trợ xếp torrent từ Harbor vào hàng đợi.",
+  "Your debrid service doesn't support queueing torrents from Lart yet.":
+    "Dịch vụ debrid của bạn chưa hỗ trợ xếp torrent từ Lart vào hàng đợi.",
   "Your debrid subscription has expired.": "Gói đăng ký debrid của bạn đã hết hạn.",
   "Your debrid took too long to respond. Hit Play again, or try another stream.":
     "Dịch vụ debrid của bạn phản hồi quá lâu. Hãy nhấn Phát lại hoặc thử luồng khác.",
   "Your {name} subscription looks expired.": "Gói đăng ký {name} của bạn có vẻ đã hết hạn.",
   "{name} is over its traffic or fair-use limit right now.":
     "{name} hiện đã vượt quá giới hạn lưu lượng hoặc sử dụng hợp lý.",
-  "{name} is rate-limiting Harbor right now.":
-    "{name} hiện đang giới hạn tần suất yêu cầu của Harbor.",
+  "{name} is rate-limiting Lart right now.":
+    "{name} hiện đang giới hạn tần suất yêu cầu của Lart.",
   "{name} is temporarily unavailable (server error).":
     "{name} tạm thời không khả dụng (lỗi máy chủ).",
   "{name} rejected your API key.": "{name} đã từ chối khóa API của bạn.",
@@ -406,7 +406,7 @@ const residualFinal: Record<string, string> = {
   "Automatic refresh": "Tự động làm mới",
   "Available in {name}": "Có trong {name}",
   "Bring your own server-rendered library aboard.":
-    "Đưa thư viện được kết xuất từ máy chủ của bạn vào Harbor.",
+    "Đưa thư viện được kết xuất từ máy chủ của bạn vào Lart.",
   "Browse addon sources": "Duyệt nguồn từ tiện ích bổ sung",
   "Build your own library": "Xây dựng thư viện riêng",
   "Cached titles from this server will also be removed. Your media on the server will not be changed.":
@@ -419,8 +419,8 @@ const residualFinal: Record<string, string> = {
   "Connect Jellyfin, Emby, or Plex in Streaming sources.":
     "Kết nối Jellyfin, Emby hoặc Plex trong Nguồn phát trực tuyến.",
   "Connect and sync": "Kết nối và đồng bộ",
-  "Connect books you own, reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "Kết nối sách bạn sở hữu, các nguồn đọc và dịch vụ siêu dữ liệu. Harbor giữ cho kệ sách nhất quán trong khi mọi nguồn vẫn do bạn kiểm soát.",
+  "Connect books you own, reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "Kết nối sách bạn sở hữu, các nguồn đọc và dịch vụ siêu dữ liệu. Lart giữ cho kệ sách nhất quán trong khi mọi nguồn vẫn do bạn kiểm soát.",
   "Connect home server": "Kết nối máy chủ gia đình",
   "Connect now": "Kết nối ngay",
   "Connect server": "Kết nối máy chủ",
@@ -432,18 +432,18 @@ const residualFinal: Record<string, string> = {
   Disable: "Tắt",
   "Download media": "Tải nội dung đa phương tiện",
   "Download selected ({n})": "Tải xuống mục đã chọn ({n})",
-  "Edge voices need the Harbor desktop app. Reading with the device voice.":
-    "Giọng Edge cần ứng dụng Harbor trên máy tính. Đang đọc bằng giọng nói của thiết bị.",
+  "Edge voices need the Lart desktop app. Reading with the device voice.":
+    "Giọng Edge cần ứng dụng Lart trên máy tính. Đang đọc bằng giọng nói của thiết bị.",
   "Edit home server": "Chỉnh sửa máy chủ gia đình",
   Enrichment: "Bổ sung dữ liệu",
   "Every…": "Mỗi…",
   "Featured book": "Sách nổi bật",
-  "Harbor does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Harbor open it.":
-    "Harbor không lưu trữ bất kỳ cuốn sách nào. Hãy mở một thư mục trên thiết bị này, cài đặt tiện ích nguồn hoặc kết nối máy chủ riêng. Siêu dữ liệu có thể mô tả sách, nhưng Harbor cần nguồn để mở sách.",
-  "Harbor opens Plex in your browser. Your Plex password is never entered in Harbor.":
-    "Harbor mở Plex trong trình duyệt. Mật khẩu Plex của bạn không bao giờ được nhập vào Harbor.",
-  "Harbor tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
-    "Harbor thử HTTP, HTTPS, proxy ngược và cổng mặc định của nhà cung cấp. Thông tin đăng nhập được lưu riêng.",
+  "Lart does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Lart open it.":
+    "Lart không lưu trữ bất kỳ cuốn sách nào. Hãy mở một thư mục trên thiết bị này, cài đặt tiện ích nguồn hoặc kết nối máy chủ riêng. Siêu dữ liệu có thể mô tả sách, nhưng Lart cần nguồn để mở sách.",
+  "Lart opens Plex in your browser. Your Plex password is never entered in Lart.":
+    "Lart mở Plex trong trình duyệt. Mật khẩu Plex của bạn không bao giờ được nhập vào Lart.",
+  "Lart tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
+    "Lart thử HTTP, HTTPS, proxy ngược và cổng mặc định của nhà cung cấp. Thông tin đăng nhập được lưu riêng.",
   "Home server": "Máy chủ gia đình",
   "Home server quality": "Chất lượng máy chủ gia đình",
   "Home servers": "Máy chủ gia đình",
@@ -469,7 +469,7 @@ const residualFinal: Record<string, string> = {
   "Prefer this device": "Ưu tiên thiết bị này",
   "Preferred home server": "Máy chủ gia đình ưu tiên",
   "Preparing narration audio": "Đang chuẩn bị âm thanh thuyết minh",
-  "Read eBooks in Harbor": "Đọc eBook trong Harbor",
+  "Read eBooks in Lart": "Đọc eBook trong Lart",
   "Refresh interval in days": "Khoảng thời gian làm mới tính theo ngày",
   "Refresh policy": "Chính sách làm mới",
   "Remove folder?": "Gỡ thư mục?",

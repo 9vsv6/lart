@@ -95,8 +95,8 @@ const discovery: Record<string, string> = {
     "首页焦点横幅预告片会带声音播放，角落提供静音按钮；播放结束后会显示重播按钮。自动轮播会暂停，使其停留在当前推荐影片。",
   "The ratings row on a title's detail page, next to runtime and genre.":
     "影片详情页中位于时长和类型旁边的评分栏。",
-  "The resolution Harbor downloads for each image when you export a title's metadata next to the file on disk.":
-    "将影片元数据导出到磁盘上的媒体文件旁时，Harbor 为每张图片下载的分辨率。",
+  "The resolution Lart downloads for each image when you export a title's metadata next to the file on disk.":
+    "将影片元数据导出到磁盘上的媒体文件旁时，Lart 为每张图片下载的分辨率。",
   "These badges are drawn on posters as you browse. RPDB, in the keys above, is a separate option that bakes scores into the poster image itself.":
     "浏览时，这些徽章会显示在海报上。上方密钥设置中的 RPDB 是独立选项，会将评分直接嵌入海报图片。",
   "Home hero": "首页焦点横幅",
@@ -108,16 +108,16 @@ const discovery: Record<string, string> = {
   "Only show streams in my languages": "仅显示符合我的语言设置的视频流",
   "By default, addon rails that duplicate the built-in ones (Trending, Popular, Top Rated, etc.) are merged so you don't see the same row twice. Turn this on to show every one, duplicates and all.":
     "默认情况下，与内置内容栏（趋势、热门、评分最高等）重复的插件内容栏会合并，以免同一内容栏出现两次。开启此项可显示所有内容栏，包括重复项。",
-  "When you back out of a title, Harbor saves a frame so the Continue Watching card looks like the spot you left. Tune how long they stick around, or wipe them all.":
-    "退出某个作品时，Harbor 会保存一帧画面，让“继续观看”卡片显示你离开时的位置。你可以调整这些画面的保留时间，也可以全部清除。",
+  "When you back out of a title, Lart saves a frame so the Continue Watching card looks like the spot you left. Tune how long they stick around, or wipe them all.":
+    "退出某个作品时，Lart 会保存一帧画面，让“继续观看”卡片显示你离开时的位置。你可以调整这些画面的保留时间，也可以全部清除。",
   "When you finish an episode, the Home Continue Watching card moves on to the next episode instead of sitting at 0 minutes left.":
     "看完一集后，首页的“继续观看”卡片会切换到下一集，而不是停留在剩余 0 分钟。",
   "Show Rotten Tomatoes score on cards": "在卡片上显示 Rotten Tomatoes 评分",
   "Show MAL score on cards": "在卡片上显示 MAL 评分",
   "Cleaner grid for when your poster service already prints the title onto the artwork.":
     "如果海报服务已将标题印在图片上，可使用更简洁的网格布局。",
-  "When you back out of a title, Harbor saves a frame so the Continue Watching card looks like the spot you left.":
-    "退出某个作品时，Harbor 会保存一帧画面，让“继续观看”卡片显示你离开时的位置。",
+  "When you back out of a title, Lart saves a frame so the Continue Watching card looks like the spot you left.":
+    "退出某个作品时，Lart 会保存一帧画面，让“继续观看”卡片显示你离开时的位置。",
   "Hero carousel, Top 10, Trending, In Theaters, per-service rails.":
     "主视觉轮播、Top 10、热门趋势、院线热映及各服务专属内容栏。",
   "Let your Discord friends see what you are watching, with the show poster and a live progress bar.":
@@ -142,8 +142,8 @@ const discovery: Record<string, string> = {
   "A specific genre releases": "特定类型有新内容上线",
   "Any new movie": "任意新电影",
   "Any genre": "任意类型",
-  "Let your Discord friends see what you are watching, with the show poster and a live progress bar. Desktop only, and only your own Discord client is involved (nothing touches a Harbor server).":
-    "让 Discord 好友看到你正在观看的内容，包括节目海报和实时进度条。仅支持桌面端，且只会使用你自己的 Discord 客户端，不会连接 Harbor 服务器。",
+  "Let your Discord friends see what you are watching, with the show poster and a live progress bar. Desktop only, and only your own Discord client is involved (nothing touches a Lart server).":
+    "让 Discord 好友看到你正在观看的内容，包括节目海报和实时进度条。仅支持桌面端，且只会使用你自己的 Discord 客户端，不会连接 Lart 服务器。",
   "Translate series and movie posters to Arabic if available on TMDB":
     "如果 TMDB 提供阿拉伯语版本，则将剧集和电影海报切换为阿拉伯语海报",
   "If enabled, posters will display the Arabic title. Disable this to keep the original English poster.":
@@ -160,8 +160,8 @@ const discovery: Record<string, string> = {
   "Title text": "标题文字",
   "Show on Discord": "在 Discord 上显示",
   "Show what you are listening to": "显示正在收听的内容",
-  "Share the track, artist and album art while music plays, with a Listen in Harbor button.":
-    "播放音乐时分享曲目、艺人和专辑封面，并附上“Listen in Harbor”按钮。",
+  "Share the track, artist and album art while music plays, with a Listen in Lart button.":
+    "播放音乐时分享曲目、艺人和专辑封面，并附上“Listen in Lart”按钮。",
   "Hide the title": "隐藏标题",
   "Show 'Watching something' with no show name or poster.":
     "显示“正在观看内容”，不显示节目名称或海报。",
@@ -197,19 +197,19 @@ const discovery: Record<string, string> = {
   "AI search": "AI 搜索",
   "Show pages": "作品页面",
   "How a show or movie detail page behaves when you open it.": "打开剧集或电影详情页时的页面行为。",
-  "Everything Harbor saves lives on this computer. If space runs low, clear a cache below; Harbor rebuilds them as you browse.":
-    "Harbor 保存的所有内容都存放在这台电脑上。如果空间不足，可清除下方缓存；Harbor 会在你浏览时重新生成。",
+  "Everything Lart saves lives on this computer. If space runs low, clear a cache below; Lart rebuilds them as you browse.":
+    "Lart 保存的所有内容都存放在这台电脑上。如果空间不足，可清除下方缓存；Lart 会在你浏览时重新生成。",
   "Resurface picks for the home rail. Rebuilds overnight.":
     "用于在首页横栏重新展示推荐内容。每晚重新生成。",
-  "Harbor's built-in OpenSubtitles search, on by default. If you install an OpenSubtitles addon, this steps aside automatically so your results are never duplicated.":
-    "Harbor 内置的 OpenSubtitles 搜索，默认开启。如果你安装了 OpenSubtitles 插件，此功能会自动停用，避免结果重复。",
+  "Lart's built-in OpenSubtitles search, on by default. If you install an OpenSubtitles addon, this steps aside automatically so your results are never duplicated.":
+    "Lart 内置的 OpenSubtitles 搜索，默认开启。如果你安装了 OpenSubtitles 插件，此功能会自动停用，避免结果重复。",
   "Featured source": "精选内容来源",
-  "When Harbor sits idle in the foreground, it drifts through cinematic backdrops with a clock and what's trending. Any movement or key brings you back. Off by default.":
-    "当 Harbor 在前台闲置时，会轮播电影感背景，并显示时钟和热门趋势。移动鼠标或按任意键即可返回。默认关闭。",
-  "Turn off the native window title bar above to use Harbor's hybrid bar instead.":
-    "关闭上方的原生窗口标题栏，改用 Harbor 的混合标题栏。",
-  "Tuck clean, native-looking window buttons into the top corner, with hover labels. On macOS they become traffic-light dots. Blends into Harbor while feeling like your system's own title bar.":
-    "将简洁的原生风格窗口按钮置于顶角，悬停时显示标签。在 macOS 上，它们会变成交通灯圆点。既能融入 Harbor，又保持系统原生标题栏的观感。",
+  "When Lart sits idle in the foreground, it drifts through cinematic backdrops with a clock and what's trending. Any movement or key brings you back. Off by default.":
+    "当 Lart 在前台闲置时，会轮播电影感背景，并显示时钟和热门趋势。移动鼠标或按任意键即可返回。默认关闭。",
+  "Turn off the native window title bar above to use Lart's hybrid bar instead.":
+    "关闭上方的原生窗口标题栏，改用 Lart 的混合标题栏。",
+  "Tuck clean, native-looking window buttons into the top corner, with hover labels. On macOS they become traffic-light dots. Blends into Lart while feeling like your system's own title bar.":
+    "将简洁的原生风格窗口按钮置于顶角，悬停时显示标签。在 macOS 上，它们会变成交通灯圆点。既能融入 Lart，又保持系统原生标题栏的观感。",
   "True fullscreen covers the whole screen and hides the taskbar. Maximize fills the screen but keeps the taskbar and title bar, so you can still switch apps.":
     "真全屏会覆盖整个屏幕并隐藏任务栏。最大化会填满屏幕，但保留任务栏和标题栏，方便你切换应用。",
   "Browse ElfHosted": "浏览 ElfHosted",
@@ -222,7 +222,7 @@ const discovery: Record<string, string> = {
   "Show {count} more": "再显示 {count} 个",
   "Search by handle or name to add people to this group.":
     "按用户名或姓名搜索，将对方添加到此群组。",
-  "{title} on Harbor": "Harbor 上的《{title}》",
+  "{title} on Lart": "Lart 上的《{title}》",
   "Featured lists": "精选列表",
   "Pick up to {max} badges to show by your name. Tap in the order you want them to appear.":
     "最多选择 {max} 枚徽章显示在你的名字旁。请按所需显示顺序点选。",
@@ -265,8 +265,8 @@ const discovery: Record<string, string> = {
     "暂无提醒。使用剧集页面上的时钟，即可获知新剧集和新一季的消息。",
   "Scanning the catalog": "正在扫描目录",
   "to search now": "立即搜索",
-  "Choose up to 5 movies or shows you already like. Harbor uses them to tune your featured picks and recommendations. Totally optional.":
-    "最多选择 5 部你已经喜欢的电影或剧集。Harbor 会用它们来优化精选内容和推荐。完全可选。",
+  "Choose up to 5 movies or shows you already like. Lart uses them to tune your featured picks and recommendations. Totally optional.":
+    "最多选择 5 部你已经喜欢的电影或剧集。Lart 会用它们来优化精选内容和推荐。完全可选。",
   "Remove from Home": "从主屏幕移除",
   "Add to Home Screen": "添加到主屏幕",
   "Show me 3 others": "再看 3 部其他电影",
@@ -298,8 +298,8 @@ const discovery: Record<string, string> = {
   "Trending on {site}": "{site} 热门内容",
   "Browse sources": "浏览内容源",
   "No lists to show": "没有可显示的列表",
-  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "这是 Mangayomi 仓库。目前尚不支持原生导入。要使用目前最丰富的内容目录，请运行 Suwayomi 服务器，然后在“服务器”部分将 Harbor 连接到该服务器。",
+  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "这是 Mangayomi 仓库。目前尚不支持原生导入。要使用目前最丰富的内容目录，请运行 Suwayomi 服务器，然后在“服务器”部分将 Lart 连接到该服务器。",
   "Search {name}": "搜索 {name}",
   "Show filters": "显示筛选条件",
   "Pin the catalogs you want up top, hide the ones you never open, and reorder your pinned rails. Your browse view updates instantly.":
@@ -387,8 +387,8 @@ const discovery: Record<string, string> = {
   "Loading the catalog": "正在加载目录",
   "Curated for popularity and reliability. No paid placements. Install anything else by URL on the Browse tab.":
     "按热门度和可靠性精选，无付费推广。可在“浏览”标签页中通过 URL 安装其他任意插件。",
-  "Trending tracks star growth across your Harbor visits. Open the addons page again tomorrow and the top risers will appear here.":
-    "趋势会根据您多次访问 Harbor 期间的星标增长情况进行统计。明天再次打开插件页面，涨幅最高的插件就会显示在这里。",
+  "Trending tracks star growth across your Lart visits. Open the addons page again tomorrow and the top risers will appear here.":
+    "趋势会根据您多次访问 Lart 期间的星标增长情况进行统计。明天再次打开插件页面，涨幅最高的插件就会显示在这里。",
   "Clear the search to see all {n} installed.": "清除搜索即可查看全部 {n} 个已安装插件。",
   "Free key unlocks Trending, In Theaters, and per-service catalogs. 60 seconds.":
     "免费密钥可解锁“热门趋势”、“正在上映”和各流媒体服务目录。仅需 60 秒。",
@@ -400,13 +400,13 @@ const discovery: Record<string, string> = {
     "焦点推荐、热门前 10、热门趋势、正在上映及各流媒体服务内容栏。你的插件内容栏将依次显示在下方。",
   "Free, two-minute signup. Unlocks Trending, In Theaters Now, Top Rated, and per-streaming catalogs (Netflix, Disney+, Hulu, …). Your key stays on this machine.":
     "免费注册，仅需两分钟。可解锁“热门趋势”、“正在上映”、“高分内容”和各流媒体平台目录（Netflix、Disney+、Hulu 等）。密钥仅保存在此设备上。",
-  "Harbor pulls the most popular titles each service has right now. Toggle off anything you don't subscribe to.":
-    "Harbor 会获取各服务当前最热门的内容。请关闭未订阅的服务。",
+  "Lart pulls the most popular titles each service has right now. Toggle off anything you don't subscribe to.":
+    "Lart 会获取各服务当前最热门的内容。请关闭未订阅的服务。",
   "Show as a row on": "在以下页面显示为内容栏",
   "Search by recipient or title…": "按获奖者或作品名称搜索…",
   "Search winners or categories…": "搜索获奖者或奖项类别…",
   "Search addons": "搜索插件",
-  "Stremio addon, packaged into Harbor's catalog.": "打包到 Harbor 目录中的 Stremio 插件。",
+  "Stremio addon, packaged into Lart's catalog.": "打包到 Lart 目录中的 Stremio 插件。",
   "Show full documentation": "显示完整文档",
   "The order also decides which addon's rows win on your Home screen.":
     "此顺序还决定哪个插件的内容栏优先显示在首页上。",
@@ -457,8 +457,8 @@ const discovery: Record<string, string> = {
     "浏览特定服务的内容需要 TMDB 密钥。选择“全部”/“电影”/“剧集”可通过 Cinemeta 浏览。",
   Show: "显示",
   "Show {n} more reviews": "再显示 {n} 条评论",
-  "Show a Skip Intro / Skip Credits button when Harbor detects one. Turn this off to never show it. You can also tap the X on the button to dismiss a wrong one for the rest of the episode.":
-    "Harbor 检测到片头或片尾时，显示“跳过片头”或“跳过片尾”按钮。关闭后将不再显示。也可点按按钮上的 X，在本集剩余时间内忽略错误识别。",
+  "Show a Skip Intro / Skip Credits button when Lart detects one. Turn this off to never show it. You can also tap the X on the button to dismiss a wrong one for the rest of the episode.":
+    "Lart 检测到片头或片尾时，显示“跳过片头”或“跳过片尾”按钮。关闭后将不再显示。也可点按按钮上的 X，在本集剩余时间内忽略错误识别。",
   "Show audience score on cards": "在卡片上显示观众评分",
   "Show comments on detail pages": "在详情页显示评论",
   "Show email": "显示电子邮箱",
@@ -519,8 +519,8 @@ const discovery: Record<string, string> = {
   "Browse public groups": "浏览公开群组",
   "Drop your export here, or click to browse": "将导出文件拖到此处，或点击浏览",
   "Featured order": "精选排序",
-  "How long Harbor waits for each addon to return streams. Aggregators that search many sources can need 45s or more. Results appear as each addon answers, so a longer wait never delays the fast ones.":
-    "Harbor 等待每个插件返回播放源的时长。搜索多个来源的聚合器可能需要 45 秒或更久。每个插件一有响应就会显示结果，因此更长的等待时间不会拖慢响应较快的插件。",
+  "How long Lart waits for each addon to return streams. Aggregators that search many sources can need 45s or more. Results appear as each addon answers, so a longer wait never delays the fast ones.":
+    "Lart 等待每个插件返回播放源的时长。搜索多个来源的聚合器可能需要 45 秒或更久。每个插件一有响应就会显示结果，因此更长的等待时间不会拖慢响应较快的插件。",
   "If you already rated a title, the imported score replaces it.":
     "如果你已为某个作品评分，导入的评分将替换原评分。",
   "On by default: once you've watched every episode that has aired, the show leaves Continue Watching and returns when a new episode drops. Turn it off to keep caught-up shows on the row.":
@@ -538,7 +538,7 @@ const discovery: Record<string, string> = {
     "顶部显示主视觉，随后是前 10、热门、院线热映和你的服务内容行。",
   "Aggregators that search many sources can need 45s or more. Results appear as each addon answers, so a longer wait never delays the fast ones. Raise this if an addon usually shows nothing until you hit refresh a few times.":
     "可搜索多个来源的聚合插件可能需要 45 秒或更久。每个插件返回结果后都会立即显示，因此延长等待时间不会拖慢响应较快的插件。如果某个插件通常要刷新几次才显示内容，请提高此值。",
-  "Asking that Harbor to show a code": "正在让那台 Harbor 显示验证码",
+  "Asking that Lart to show a code": "正在让那台 Lart 显示验证码",
   "Couldn't reach TMDB for {genre} titles.": "无法从 TMDB 获取 {genre} 类作品。",
   "Cycle the backdrop on show pages": "在节目页面轮换背景图",
   "Deeper cuts from every catalog and add-on you have installed.":
@@ -554,9 +554,9 @@ const discovery: Record<string, string> = {
   "Genre shelves are built from TMDB. Add a key in Setup to fill this one.":
     "类型内容架由 TMDB 生成。请在“设置”中添加密钥，即可在此内容架中显示内容。",
   "Glow and title": "光效和标题",
-  "Harbor couldn't reach the catalog servers.": "Harbor 无法连接目录服务器。",
-  "Harbor leads with one big title. Classic leads with rows.":
-    "Harbor 以一部主打作品开场。经典布局则以多行内容开场。",
+  "Lart couldn't reach the catalog servers.": "Lart 无法连接目录服务器。",
+  "Lart leads with one big title. Classic leads with rows.":
+    "Lart 以一部主打作品开场。经典布局则以多行内容开场。",
   "Headings above every row on Home.": "首页每个内容行上方的标题。",
   "Home catalogs": "首页目录",
   "How should the home screen read?": "首页内容应如何呈现？",
@@ -610,15 +610,15 @@ const discovery: Record<string, string> = {
     "当电影或剧集也存在于本地磁盘时，按下播放后的处理方式。",
   "Show rank numbers on the cards. Drag the titles below to set the order.":
     "在卡片上显示排名编号。拖动下方作品以调整顺序。",
-  "Shared collections from across Harbor will show up here soon.":
-    "Harbor 中的共享合集很快会显示在这里。",
+  "Shared collections from across Lart will show up here soon.":
+    "Lart 中的共享合集很快会显示在这里。",
   "Show 1 reply": "显示 1 条回复",
   "Show More info button": "显示“更多信息”按钮",
   "Show {count} replies": "显示 {count} 条回复",
   "We'll show a one-time recovery key right after you sign up. Save it: it's the only way back in if you forget your password.":
     "注册后，我们会立即显示一次恢复密钥。请妥善保存：如果忘记密码，这是重新登录的唯一方式。",
   "Couldn't load this title.": "无法加载此作品。",
-  "Search Harbor": "搜索 Harbor",
+  "Search Lart": "搜索 Lart",
   "Start typing to search movies and series.": "输入内容以搜索电影和剧集。",
   "Start typing to search movies, series and everything your addons carry.":
     "输入内容以搜索电影、剧集及插件提供的所有内容。",
@@ -648,7 +648,7 @@ const discovery: Record<string, string> = {
   "Configuring {title}": "正在配置 {title}",
   "Setup · {title}": "设置 · {title}",
   "Loading {title}": "正在加载 {title}",
-  "{title} won't load inside Harbor.": "无法在 Harbor 内加载 {title}。",
+  "{title} won't load inside Lart.": "无法在 Lart 内加载 {title}。",
   "Popular titles from the installed source": "已安装来源中的热门书目",
   "Stop auto-downloading {title}": "停止自动下载 {title}",
   "Create a folder by movie or series name": "按电影或剧集名称创建文件夹",
@@ -676,7 +676,7 @@ const discovery: Record<string, string> = {
   "repo.json identifies and versions the plugin. Filtering, title cleanup, volumes, chapters, dates, and views are returned by example.plugin.js.":
     "repo.json 用于标识插件及其版本。筛选、标题清理、分卷、章节、日期和浏览次数均由 example.plugin.js 返回。",
   "Search chapters": "搜索章节",
-  "Send this title to your Harbor app": "将此作品发送到你的 Harbor 应用",
+  "Send this title to your Lart app": "将此作品发送到你的 Lart 应用",
   "No episodes to show here yet.": "这里暂时没有可显示的剧集。",
   "{title} trailer": "{title} 预告片",
   "Actor, title, genre": "演员、片名、类型",
@@ -708,8 +708,8 @@ const discovery: Record<string, string> = {
   HOME: "主场",
   "View {title}": "查看 {title}",
   "Couldn't load this catalog": "无法加载此目录",
-  "Harbor couldn't reach the catalog servers. Check your connection and try again.":
-    "Harbor 无法连接目录服务器。请检查网络连接后重试。",
+  "Lart couldn't reach the catalog servers. Check your connection and try again.":
+    "Lart 无法连接目录服务器。请检查网络连接后重试。",
   "Couldn't load Discover": "无法加载“发现”",
   "The best {genre} movies and shows, updated constantly.": "精选 {genre} 电影和剧集，持续更新。",
   "No {genre} titles to show right now. Try switching between Movies and TV Shows.":
@@ -725,8 +725,8 @@ const discovery: Record<string, string> = {
   "Unknown title": "未知标题",
   "Back to home": "返回首页",
   "Search on display": "在屏幕上搜索",
-  "Highly recommended. This is what gives you the full Harbor experience: Popular, Trending, In Theaters, and per-service rails. Free at":
-    "强烈推荐。它能带来完整的 Harbor 体验：热门、趋势、院线热映以及各服务的专属内容栏。可在此免费获取",
+  "Highly recommended. This is what gives you the full Lart experience: Popular, Trending, In Theaters, and per-service rails. Free at":
+    "强烈推荐。它能带来完整的 Lart 体验：热门、趋势、院线热映以及各服务的专属内容栏。可在此免费获取",
   "AllDebrid deprecated their cache-check endpoint, so streams may show as unknown until you actually hit Play.":
     "AllDebrid 已弃用其缓存检查端点，因此在您实际点击“播放”之前，流可能会显示为未知。",
   "Browse all {count} themes. Apply in one click.": "浏览全部 {count} 个主题，一键应用。",

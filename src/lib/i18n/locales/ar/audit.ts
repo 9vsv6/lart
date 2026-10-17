@@ -10,8 +10,8 @@ const audit: Record<string, string> = {
     "هل لديك حساب TMDB بالفعل؟ سجّل الدخول وتجاوز الخطوات التالية. وإلا فاضغط «تسجيل» وأدخل اسم مستخدم وكلمة مرور وبريدًا إلكترونيًا.",
   "Back on TMDB, click your avatar in the top right and choose Settings from the menu.":
     "بعد العودة إلى TMDB، اضغط صورتك الشخصية أعلى اليسار واختر «الإعدادات» من القائمة.",
-  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Harbor. Harbor saves it on its own.":
-    "بعد العودة إلى صفحة API، مرّر إلى الأسفل. انسخ القيمة الموجودة تحت API Key والصقها في Harbor. سيحفظها Harbor تلقائيًا.",
+  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Lart. Lart saves it on its own.":
+    "بعد العودة إلى صفحة API، مرّر إلى الأسفل. انسخ القيمة الموجودة تحت API Key والصقها في Lart. سيحفظها Lart تلقائيًا.",
   "Bring your own keys": "استخدم مفاتيح API الخاصة بك",
   "Choose API in the sidebar": "اختر API من الشريط الجانبي",
   "Click Activate in the email": "اضغط «تفعيل» في رسالة البريد الإلكتروني",
@@ -36,8 +36,8 @@ const audit: Record<string, string> = {
   "Right after registering TMDB tells you the account is not active yet. Nothing is broken, the email is on its way.":
     "بعد التسجيل مباشرةً، يخبرك TMDB بأن الحساب لم يُفعّل بعد. لا توجد مشكلة، فرسالة التفعيل في طريقها إليك.",
   "Say it is for personal use": "حدّد أنه للاستخدام الشخصي",
-  "Sets streaming availability and the Now Playing release window. Pick a country and Harbor offers to match the interface, metadata, subtitle, and audio languages to it.":
-    "يحدّد توفر خدمات البث ونافذة إصدارات «يُعرض الآن». اختر بلدًا وسيعرض Harbor مطابقة لغات الواجهة والبيانات الوصفية والترجمة والصوت معه.",
+  "Sets streaming availability and the Now Playing release window. Pick a country and Lart offers to match the interface, metadata, subtitle, and audio languages to it.":
+    "يحدّد توفر خدمات البث ونافذة إصدارات «يُعرض الآن». اختر بلدًا وسيعرض Lart مطابقة لغات الواجهة والبيانات الوصفية والترجمة والصوت معه.",
   "Sign in, or make an account": "سجّل الدخول أو أنشئ حسابًا",
   "TMDB Rating": "تقييم TMDB",
   "TMDB asks what the key is for. Choose Yes, this is for my own personal use only.":
@@ -68,13 +68,13 @@ const audit: Record<string, string> = {
   "repo.json identifies and versions the plugin. Filtering, title cleanup, volumes, chapters, dates, and views are returned by example.plugin.js.":
     "يعرّف repo.json الإضافة وإصدارها. ويتولى example.plugin.js إرجاع التصفية وتنظيف العناوين والمجلدات والفصول والتواريخ والمشاهدات.",
 
-  "Changing the metadata language reloads Harbor so the new language takes effect. Apply when you're done with the options above.":
-    "يؤدي تغيير لغة البيانات الوصفية إلى إعادة تحميل Harbor لتطبيق اللغة الجديدة. اضغط «تطبيق» بعد الانتهاء من الخيارات أعلاه.",
+  "Changing the metadata language reloads Lart so the new language takes effect. Apply when you're done with the options above.":
+    "يؤدي تغيير لغة البيانات الوصفية إلى إعادة تحميل Lart لتطبيق اللغة الجديدة. اضغط «تطبيق» بعد الانتهاء من الخيارات أعلاه.",
   "Cursor speed": "سرعة المؤشر",
-  "Export your Harbor setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
-    "صدّر إعداد Harbor إلى ملف واحد وحدّد بدقة ما يتضمنه. لا تستعيد عملية الاستعادة إلا ما يحتويه الملف، ولا تتضمن بيانات تسجيل الدخول إلى Stremio مطلقًا.",
-  "How quickly the Harbor cursor moves with the right stick.":
-    "سرعة تحرك مؤشر Harbor باستخدام العصا اليمنى.",
+  "Export your Lart setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
+    "صدّر إعداد Lart إلى ملف واحد وحدّد بدقة ما يتضمنه. لا تستعيد عملية الاستعادة إلا ما يحتويه الملف، ولا تتضمن بيانات تسجيل الدخول إلى Stremio مطلقًا.",
+  "How quickly the Lart cursor moves with the right stick.":
+    "سرعة تحرك مؤشر Lart باستخدام العصا اليمنى.",
   "Keyboard size": "حجم لوحة المفاتيح",
   "On shows titles in your metadata language (English by default). Off keeps titles in English.":
     "عند التفعيل، تظهر العناوين بلغة البيانات الوصفية، وهي الإنجليزية افتراضيًا. وعند التعطيل، تبقى العناوين بالإنجليزية.",
@@ -107,19 +107,19 @@ const audit: Record<string, string> = {
   "System UI": "واجهة النظام",
   "Webhooks (Discord / Telegram)": "خطافات الويب (Discord / Telegram)",
 
-  "Finish updating Harbor": "إكمال تحديث Harbor",
+  "Finish updating Lart": "إكمال تحديث Lart",
   "Download and run the installer to finish updating. If it keeps failing, run it as administrator once.":
     "نزّل برنامج التثبيت وشغّله لإكمال التحديث. إذا استمر الفشل، فشغّله مرة واحدة بصلاحيات المسؤول.",
   "Restart to update": "إعادة التشغيل للتحديث",
   "Update ready": "التحديث جاهز",
-  "Harbor {version} downloaded but did not install on its own.":
-    "تم تنزيل Harbor {version} لكنه لم يُثبّت تلقائيًا.",
+  "Lart {version} downloaded but did not install on its own.":
+    "تم تنزيل Lart {version} لكنه لم يُثبّت تلقائيًا.",
   "Big Picture": "وضع الشاشة الكبيرة",
   Dismiss: "تجاهل",
   "Download installer": "تنزيل برنامج التثبيت",
   "Install and reopen": "التثبيت وإعادة الفتح",
-  "Harbor is closing. Harbor Setup will finish and reopen it.":
-    "جارٍ إغلاق Harbor. سيكمل Harbor Setup التثبيت ثم يعيد فتحه.",
+  "Lart is closing. Lart Setup will finish and reopen it.":
+    "جارٍ إغلاق Lart. سيكمل Lart Setup التثبيت ثم يعيد فتحه.",
 
   "Broadcast networks": "شبكات البث",
   News: "الأخبار",
@@ -170,22 +170,22 @@ const audit: Record<string, string> = {
   "A local folder": "مجلد محلي",
   "Advanced: build a plugin": "متقدم: إنشاء إضافة",
   "Also Known As": "يُعرف أيضًا باسم",
-  "Back in Harbor: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
-    "ارجع إلى Harbor ثم انتقل إلى «المانغا > إعداد مصدر > خادمك»، والصق عنوان الخادم، مثل {localUrl}، أو عنوان IP على الشبكة المحلية إذا كان يعمل على جهاز آخر، مثل {lanUrl}.",
+  "Back in Lart: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
+    "ارجع إلى Lart ثم انتقل إلى «المانغا > إعداد مصدر > خادمك»، والصق عنوان الخادم، مثل {localUrl}، أو عنوان IP على الشبكة المحلية إذا كان يعمل على جهاز آخر، مثل {lanUrl}.",
   "Controller preview": "معاينة جهاز التحكم",
   "Couldn't save that font. It may be invalid, or storage is full.":
     "تعذّر حفظ هذا الخط. قد يكون غير صالح أو قد تكون مساحة التخزين ممتلئة.",
   "Download and run Suwayomi Server:": "نزّل Suwayomi Server وشغّله:",
-  "Every source you enable in Suwayomi then shows up in Harbor. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
-    "سيظهر في Harbor كل مصدر تفعّله في Suwayomi. ويحدّث Suwayomi إضافاته عند تغيّر المواقع لتستمر في العمل.",
+  "Every source you enable in Suwayomi then shows up in Lart. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
+    "سيظهر في Lart كل مصدر تفعّله في Suwayomi. ويحدّث Suwayomi إضافاته عند تغيّر المواقع لتستمر في العمل.",
   "Everything else, through your own server (Suwayomi)":
     "كل المصادر الأخرى عبر خادمك الخاص (Suwayomi)",
   "Expand {title} image": "تكبير صورة {title}",
-  "Getting manga sources into Harbor": "إضافة مصادر المانغا إلى Harbor",
-  "Harbor also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Harbor repository. Only install plugins from repositories you trust.":
-    "يتضمن Harbor أيضًا بيئة تشغيل تجريبية للإضافات. إذا أردت كتابة إضافة مصدر، فراجع {path} في مستودع Harbor. لا تثبّت إلا إضافات من مستودعات تثق بها.",
-  "Harbor ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Harbor. There are two ways to add sources.":
-    "لا يأتي Harbor بأي مانغا أو أدوات كشط، فهو قارئ فقط. أنت تضيف المصادر، ومحتوى تلك المصادر يخص الجهات التي تديرها لا Harbor. توجد طريقتان لإضافة المصادر.",
+  "Getting manga sources into Lart": "إضافة مصادر المانغا إلى Lart",
+  "Lart also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Lart repository. Only install plugins from repositories you trust.":
+    "يتضمن Lart أيضًا بيئة تشغيل تجريبية للإضافات. إذا أردت كتابة إضافة مصدر، فراجع {path} في مستودع Lart. لا تثبّت إلا إضافات من مستودعات تثق بها.",
+  "Lart ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Lart. There are two ways to add sources.":
+    "لا يأتي Lart بأي مانغا أو أدوات كشط، فهو قارئ فقط. أنت تضيف المصادر، ومحتوى تلك المصادر يخص الجهات التي تديرها لا Lart. توجد طريقتان لإضافة المصادر.",
   "Import failed": "فشل الاستيراد",
   "It serves a web UI at {url}": "يوفّر واجهة ويب على {url}",
   "Manga > Set up a source > Local folder, and choose a folder of manga you already own (CBZ files or folders of images).":
@@ -220,8 +220,8 @@ const audit: Record<string, string> = {
   "didn't see that coming": "لم أتوقع ذلك",
   "no way 😂": "غير معقول 😂",
   "this scene is wild": "هذا المشهد لا يُصدَّق",
-  "Open the signed-in user's own Harbor profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
-    "يفتح الملف الشخصي للمستخدم المسجّل دخوله في Harbor فور تحميل معرّفه. ويُرجع true عند بدء الانتقال وfalse خلاف ذلك.",
+  "Open the signed-in user's own Lart profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
+    "يفتح الملف الشخصي للمستخدم المسجّل دخوله في Lart فور تحميل معرّفه. ويُرجع true عند بدء الانتقال وfalse خلاف ذلك.",
   "AI search failed.": "فشل البحث بالذكاء الاصطناعي.",
   "Add a debrid provider in Settings first.": "أضف أولًا موفّر خدمة debrid في الإعدادات.",
   "Cancelled.": "أُلغيت العملية.",
@@ -233,9 +233,9 @@ const audit: Record<string, string> = {
     "تعذّر تجهيز مصدر P2P هذا. قد لا تتوفر له أقران يمكن الاتصال بهم. حاول مجددًا أو اختر مصدرًا آخر.",
   "Direct torrent streaming is turned off. Turn it on in Settings > P2P & servers to stream torrents without a debrid.":
     "تم تعطيل البث المباشر للتورنت. فعّله من «الإعدادات > P2P والخوادم» لبث ملفات التورنت من دون خدمة debrid.",
-  "Harbor could not open your browser.": "تعذّر على Harbor فتح المتصفح.",
-  "Harbor's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
-    "يجري تجهيز محرك الند للند في Harbor. سيزول هذا تلقائيًا خلال بضع ثوانٍ، ثم سيعمل زر التشغيل.",
+  "Lart could not open your browser.": "تعذّر على Lart فتح المتصفح.",
+  "Lart's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
+    "يجري تجهيز محرك الند للند في Lart. سيزول هذا تلقائيًا خلال بضع ثوانٍ، ثم سيعمل زر التشغيل.",
   Minus: "ناقص",
   "None of your debrid services could deliver a working file. Pick another stream.":
     "لم تتمكن أي من خدمات debrid لديك من توفير ملف يعمل. اختر بثًا آخر.",
@@ -263,8 +263,8 @@ const audit: Record<string, string> = {
     "هذا ملف NZB خام. يجب تنزيله أولًا عبر SABnzbd أو NZBGet، ثم تشغيله.",
   "This source isn't ready on your debrid yet. Try it again in a moment or pick another.":
     "مصدر البث هذا غير جاهز بعد في خدمة debrid لديك. حاول مجددًا بعد قليل أو اختر مصدرًا آخر.",
-  "This source only opens in an external browser, not in Harbor's player.":
-    "لا يمكن فتح هذا المصدر إلا في متصفح خارجي، وليس في مشغّل Harbor.",
+  "This source only opens in an external browser, not in Lart's player.":
+    "لا يمكن فتح هذا المصدر إلا في متصفح خارجي، وليس في مشغّل Lart.",
   "This stream has no playable source.": "لا يحتوي هذا البث على مصدر قابل للتشغيل.",
   "This stream isn't cached on your debrid yet. Try a different one from the list.":
     "لم يُخزّن هذا البث مؤقتًا بعد في خدمة debrid لديك. اختر بثًا آخر من القائمة.",
@@ -279,15 +279,15 @@ const audit: Record<string, string> = {
     "رُفض مفتاح خدمة debrid. تحقّق منه في الإعدادات.",
   "Your debrid served a placeholder/error video instead of the real file. Pick another stream.":
     "قدّمت خدمة debrid مقطعًا مؤقتًا أو مقطع خطأ بدل الملف الحقيقي. اختر بثًا آخر.",
-  "Your debrid service doesn't support queueing torrents from Harbor yet.":
-    "لا تدعم خدمة debrid لديك إضافة ملفات التورنت إلى قائمة الانتظار من Harbor حتى الآن.",
+  "Your debrid service doesn't support queueing torrents from Lart yet.":
+    "لا تدعم خدمة debrid لديك إضافة ملفات التورنت إلى قائمة الانتظار من Lart حتى الآن.",
   "Your debrid subscription has expired.": "انتهت صلاحية اشتراكك في خدمة debrid.",
   "Your debrid took too long to respond. Hit Play again, or try another stream.":
     "استغرقت خدمة debrid وقتًا أطول من اللازم للاستجابة. اضغط «تشغيل» مجددًا أو جرّب بثًا آخر.",
   "Your {name} subscription looks expired.": "يبدو أن اشتراكك في {name} منتهي الصلاحية.",
   "{name} is over its traffic or fair-use limit right now.":
     "تجاوزت خدمة {name} حاليًا حد حركة البيانات أو الاستخدام العادل.",
-  "{name} is rate-limiting Harbor right now.": "تفرض خدمة {name} حاليًا حدًا على معدل طلبات Harbor.",
+  "{name} is rate-limiting Lart right now.": "تفرض خدمة {name} حاليًا حدًا على معدل طلبات Lart.",
   "{name} is temporarily unavailable (server error).":
     "خدمة {name} غير متاحة مؤقتًا (خطأ في الخادم).",
   "{name} rejected your API key.": "رفضت خدمة {name} مفتاح API الخاص بك.",
@@ -318,8 +318,8 @@ const audit: Record<string, string> = {
   "Connect Jellyfin, Emby, or Plex in Streaming sources.":
     "صِل Jellyfin أو Emby أو Plex من «مصادر البث».",
   "Connect and sync": "الاتصال والمزامنة",
-  "Connect books you own, reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "صِل الكتب التي تملكها ومصادر القراءة وخدمات البيانات الوصفية. يحافظ Harbor على اتساق الرف، بينما يبقى كل مصدر تحت سيطرتك.",
+  "Connect books you own, reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "صِل الكتب التي تملكها ومصادر القراءة وخدمات البيانات الوصفية. يحافظ Lart على اتساق الرف، بينما يبقى كل مصدر تحت سيطرتك.",
   "Connect home server": "توصيل خادم منزلي",
   "Connect now": "الاتصال الآن",
   "Connect server": "توصيل الخادم",
@@ -331,18 +331,18 @@ const audit: Record<string, string> = {
   Disable: "تعطيل",
   "Download media": "تنزيل الوسائط",
   "Download selected ({n})": "تنزيل المحدد ({n})",
-  "Edge voices need the Harbor desktop app. Reading with the device voice.":
-    "تتطلب أصوات Edge تطبيق Harbor لسطح المكتب. ستتم القراءة بصوت الجهاز.",
+  "Edge voices need the Lart desktop app. Reading with the device voice.":
+    "تتطلب أصوات Edge تطبيق Lart لسطح المكتب. ستتم القراءة بصوت الجهاز.",
   "Edit home server": "تعديل الخادم المنزلي",
   Enrichment: "إثراء البيانات",
   "Every…": "كل…",
   "Featured book": "كتاب مميز",
-  "Harbor does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Harbor open it.":
-    "لا يستضيف Harbor أي كتب. افتح مجلدًا على هذا الجهاز، أو ثبّت امتداد مصدر، أو صِل خادمك الخاص. يمكن للبيانات الوصفية أن تصف الكتاب، لكن المصدر هو ما يتيح لـ Harbor فتحه.",
-  "Harbor opens Plex in your browser. Your Plex password is never entered in Harbor.":
-    "يفتح Harbor موقع Plex في متصفحك. لا تُدخل كلمة مرور Plex الخاصة بك في Harbor مطلقًا.",
-  "Harbor tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
-    "يجرّب Harbor بروتوكولي HTTP وHTTPS والوكلاء العكسيين والمنفذ الافتراضي للموفّر. تُخزّن بيانات الاعتماد بشكل منفصل.",
+  "Lart does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Lart open it.":
+    "لا يستضيف Lart أي كتب. افتح مجلدًا على هذا الجهاز، أو ثبّت امتداد مصدر، أو صِل خادمك الخاص. يمكن للبيانات الوصفية أن تصف الكتاب، لكن المصدر هو ما يتيح لـ Lart فتحه.",
+  "Lart opens Plex in your browser. Your Plex password is never entered in Lart.":
+    "يفتح Lart موقع Plex في متصفحك. لا تُدخل كلمة مرور Plex الخاصة بك في Lart مطلقًا.",
+  "Lart tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
+    "يجرّب Lart بروتوكولي HTTP وHTTPS والوكلاء العكسيين والمنفذ الافتراضي للموفّر. تُخزّن بيانات الاعتماد بشكل منفصل.",
   "Home server": "خادم منزلي",
   "Home server quality": "جودة الخادم المنزلي",
   "Home servers": "الخوادم المنزلية",
@@ -368,7 +368,7 @@ const audit: Record<string, string> = {
   "Prefer this device": "تفضيل هذا الجهاز",
   "Preferred home server": "الخادم المنزلي المفضّل",
   "Preparing narration audio": "جارٍ تجهيز صوت السرد",
-  "Read eBooks in Harbor": "قراءة الكتب الإلكترونية في Harbor",
+  "Read eBooks in Lart": "قراءة الكتب الإلكترونية في Lart",
   "Refresh interval in days": "الفاصل الزمني للتحديث بالأيام",
   "Refresh policy": "سياسة التحديث",
   "Remove folder?": "إزالة المجلد؟",

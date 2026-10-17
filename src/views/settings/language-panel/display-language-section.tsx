@@ -11,7 +11,7 @@ export function DisplayLanguageSection() {
     <Section
       title={t("Display language")}
       subtitle={t(
-        "The language of Harbor's menus, buttons, and labels. Audio, subtitles, and title information have their own language settings.",
+        "The language of Lart's menus, buttons, and labels. Audio, subtitles, and title information have their own language settings.",
       )}
     >
       <div className="grid grid-cols-[repeat(auto-fill,minmax(min(100%,320px),1fr))] gap-2.5">

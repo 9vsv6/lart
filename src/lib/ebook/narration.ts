@@ -25,9 +25,9 @@ type NativeNarrationResult = {
 };
 const CACHE = "harbor-ebook-edge-narration-v1";
 const CACHE_MAX_AGE = 30 * 24 * 60 * 60 * 1_000;
-const CACHED_AT = "X-Harbor-Cached-At";
-const CACHED_VOICE = "X-Harbor-Voice";
-const CACHED_LOCALE = "X-Harbor-Locale";
+const CACHED_AT = "X-Lart-Cached-At";
+const CACHED_VOICE = "X-Lart-Voice";
+const CACHED_LOCALE = "X-Lart-Locale";
 let voicesRequest: Promise<EdgeNarrationVoice[]> | null = null;
 
 export function narrationWordCount(text: string, locale: string): number {
@@ -79,7 +79,7 @@ export async function synthesizeNarration(
   onProgress: (progress: NarrationProgress) => void,
 ): Promise<{ blob: Blob; boundaries: NarrationBoundary[] }> {
   if (!("__TAURI_INTERNALS__" in window)) {
-    throw new Error("Direct Edge TTS is available in the Harbor desktop app");
+    throw new Error("Direct Edge TTS is available in the Lart desktop app");
   }
   const cache = "caches" in globalThis ? await caches.open(CACHE) : null;
   const cacheKey = new Request(

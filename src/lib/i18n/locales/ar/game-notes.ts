@@ -27,6 +27,6 @@ export default {
   "games.notes.import": "استيراد JSON",
   "games.notes.export": "تصدير نسخة احتياطية",
   "games.notes.unsaved": "تغييرات غير محفوظة",
-  "games.notes.local": "محفوظ في ملف Harbor هذا",
+  "games.notes.local": "محفوظ في ملف Lart هذا",
   "games.notes.importGuide": "نسخ إلى ملاحظاتي"
 };

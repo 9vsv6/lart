@@ -25,8 +25,8 @@ const inventory: Record<string, string> = {
   Actor: "Acteur",
   "Already have a TMDB login? Sign in and skip ahead. Otherwise press Register and fill in a username, password and email.":
     "Vous avez déjà un compte TMDB ? Connectez-vous pour passer directement à la suite. Sinon, appuyez sur S’inscrire et saisissez un nom d’utilisateur, un mot de passe et une adresse e-mail.",
-  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Harbor. Harbor saves it on its own.":
-    "De retour sur la page de l’API, faites défiler jusqu’en bas. Copiez la valeur sous Clé API et collez-la dans Harbor. Harbor l’enregistre automatiquement.",
+  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Lart. Lart saves it on its own.":
+    "De retour sur la page de l’API, faites défiler jusqu’en bas. Copiez la valeur sous Clé API et collez-la dans Lart. Lart l’enregistre automatiquement.",
   "Back on TMDB, click your avatar in the top right and choose Settings from the menu.":
     "De retour sur TMDB, cliquez sur votre avatar en haut à droite, puis choisissez Paramètres dans le menu.",
   BL: "BL",
@@ -35,8 +35,8 @@ const inventory: Record<string, string> = {
   Bromance: "Bromance",
   center: "centre",
   CGI: "CGI",
-  "Changing the metadata language reloads Harbor so the new language takes effect. Apply when you're done with the options above.":
-    "Changer la langue des métadonnées recharge Harbor afin d’appliquer la nouvelle langue. Appliquez les changements une fois les options ci-dessus réglées.",
+  "Changing the metadata language reloads Lart so the new language takes effect. Apply when you're done with the options above.":
+    "Changer la langue des métadonnées recharge Lart afin d’appliquer la nouvelle langue. Appliquez les changements une fois les options ci-dessus réglées.",
   Character: "Personnage",
   "Choose API in the sidebar": "Sélectionnez API dans la barre latérale",
   "Click Activate in the email": "Cliquez sur Activer dans l’e-mail",
@@ -49,8 +49,8 @@ const inventory: Record<string, string> = {
   Detecting: "Détection",
   Ending: "Fin",
   Excellence: "Excellence",
-  "Export your Harbor setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
-    "Exportez votre configuration Harbor dans un seul fichier, en choisissant précisément son contenu. La restauration ne rétablit que ce que contient le fichier. Vos identifiants Stremio sont toujours exclus.",
+  "Export your Lart setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
+    "Exportez votre configuration Lart dans un seul fichier, en choisissant précisément son contenu. La restauration ne rétablit que ce que contient le fichier. Vos identifiants Stremio sont toujours exclus.",
   Fight: "Combat",
   "Fill in the details, then Subscribe": "Renseignez les informations, puis sélectionnez S’abonner",
   Film: "Film",
@@ -64,8 +64,8 @@ const inventory: Record<string, string> = {
   GL: "GL",
   Heartwarming: "Réconfortant",
   Hero: "Bandeau principal",
-  "How quickly the Harbor cursor moves with the right stick.":
-    "Vitesse du curseur Harbor avec le stick droit.",
+  "How quickly the Lart cursor moves with the right stick.":
+    "Vitesse du curseur Lart avec le stick droit.",
   Isekai: "Isekai",
   "Jina Reader": "Jina Reader",
   "Keyboard size": "Taille du clavier",
@@ -95,8 +95,8 @@ const inventory: Record<string, string> = {
   Score: "Note",
   service: "service",
   services: "services",
-  "Sets streaming availability and the Now Playing release window. Pick a country and Harbor offers to match the interface, metadata, subtitle, and audio languages to it.":
-    "Définit la disponibilité des contenus en streaming et la période de sortie dans En cours de lecture. Choisissez un pays et Harbor vous proposera d’adapter la langue de l’interface, des métadonnées, des sous-titres et de l’audio.",
+  "Sets streaming availability and the Now Playing release window. Pick a country and Lart offers to match the interface, metadata, subtitle, and audio languages to it.":
+    "Définit la disponibilité des contenus en streaming et la période de sortie dans En cours de lecture. Choisissez un pays et Lart vous proposera d’adapter la langue de l’interface, des métadonnées, des sous-titres et de l’audio.",
   Short: "Court",
   "Show a lock control in the player that blocks mouse, keyboard, remote, and media-key input until you unlock it.":
     "Afficher dans le lecteur une commande de verrouillage qui bloque la souris, le clavier, la télécommande et les touches multimédias jusqu’au déverrouillage.",

@@ -81,7 +81,7 @@ export async function getCastServerStatus(): Promise<CastServerStatus | null> {
 }
 
 export async function restartCastServer(): Promise<string | null> {
-  if (!isTauri) return "Harbor's streaming server only runs in the desktop app.";
+  if (!isTauri) return "Lart's streaming server only runs in the desktop app.";
   try {
     await invoke("cast_server_restart");
     probeCache = null;

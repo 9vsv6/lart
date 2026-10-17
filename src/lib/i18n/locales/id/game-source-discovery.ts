@@ -11,7 +11,7 @@ export default {
 
   "games.sources.batch.failedFile": "Tidak dapat menyiapkan {file}.",
 
-  "games.sources.batch.restart": "Mulai ulang Harbor setelah memperbarui untuk mengunduh file terpilih sekaligus.",
+  "games.sources.batch.restart": "Mulai ulang Lart setelah memperbarui untuk mengunduh file terpilih sekaligus.",
 
   "games.torrent.start": "Unduh file",
 
@@ -19,7 +19,7 @@ export default {
 
   "games.sources.verification.action": "Verifikasi sumber",
 
-  "games.sources.verification.waiting": "Selesaikan verifikasi di jendela sumber. Harbor akan memeriksa katalognya setelah itu.",
+  "games.sources.verification.waiting": "Selesaikan verifikasi di jendela sumber. Lart akan memeriksa katalognya setelah itu.",
 
   "games.sources.source_verify_busy": "Sumber lain sedang diverifikasi. Selesaikan atau tutup jendelanya terlebih dahulu.",
 
@@ -27,31 +27,31 @@ export default {
 
   "games.sources.source_verify_timeout": "Waktu verifikasi habis. Coba lagi saat Anda siap.",
 
-  "games.sources.source_verify_unavailable": "Perbarui dan mulai ulang Harbor untuk memverifikasi sumber ini.",
+  "games.sources.source_verify_unavailable": "Perbarui dan mulai ulang Lart untuk memverifikasi sumber ini.",
 
   "games.sources.browser.direct": "Unduh langsung",
 
   "games.sources.site.title": "Buka sebuah situs",
-  "games.sources.site.note": "Tempel halaman unduhan dari situs mana pun. Harbor membukanya di jendelanya sendiri, kamu memilih berkasnya di sana, lalu terunduh ke Harbor.",
+  "games.sources.site.note": "Tempel halaman unduhan dari situs mana pun. Lart membukanya di jendelanya sendiri, kamu memilih berkasnya di sana, lalu terunduh ke Lart.",
   "games.sources.site.url": "Tautan halaman",
   "games.sources.site.open": "Buka situs",
   "games.sources.site.invalid": "Itu harus tautan https publik.",
-  "games.sources.browser.intro": "Tidak perlu akun debrid. Pilih berkas di {host}, lalu tentukan lokasi penyimpanannya di Harbor.",
-  "games.sources.browser.fallback": "Jika unduhan tidak mulai sendiri, gunakan tautan cadangan yang ditampilkan {host}. Harbor tetap menangkap berkasnya.",
+  "games.sources.browser.intro": "Tidak perlu akun debrid. Pilih berkas di {host}, lalu tentukan lokasi penyimpanannya di Lart.",
+  "games.sources.browser.fallback": "Jika unduhan tidak mulai sendiri, gunakan tautan cadangan yang ditampilkan {host}. Lart tetap menangkap berkasnya.",
 
   "games.sources.browser.choose": "Pilih berkas di {host}",
 
-  "games.sources.browser.waiting": "Pilih berkas di jendela {host}. Harbor akan menanyakan lokasi penyimpanannya.",
+  "games.sources.browser.waiting": "Pilih berkas di jendela {host}. Lart akan menanyakan lokasi penyimpanannya.",
 
-  "games.sources.browser.selected": "Siap diunduh di Harbor",
+  "games.sources.browser.selected": "Siap diunduh di Lart",
 
   "games.sources.browser.another": "Pilih berkas lain",
 
-  "games.sources.browser.failed": "{host} tidak dapat meneruskan berkas ini ke Harbor. Coba lagi atau buka di {host}.",
+  "games.sources.browser.failed": "{host} tidak dapat meneruskan berkas ini ke Lart. Coba lagi atau buka di {host}.",
 
   "games.sources.browser.timeout": "Waktu pemilihan berkas habis. Buka {host} lagi untuk memilih berkas.",
 
-  "games.sources.browser.restart": "Mulai ulang Harbor setelah memperbarui untuk mengunduh langsung dari {host}.",
+  "games.sources.browser.restart": "Mulai ulang Lart setelah memperbarui untuk mengunduh langsung dari {host}.",
 
   "games.sources.retrySavedCatalog": "Coba lagi katalog tersimpan",
 
@@ -99,13 +99,13 @@ export default {
 
   "games.sources.platform.other": "Versi {platform} · tidak native di {host}",
 
-  "games.sources.platform.otherNote": "Pilih versi untuk sistem operasi Anda. Harbor tidak dapat memasang atau menjalankan paket ini secara native di perangkat ini.",
+  "games.sources.platform.otherNote": "Pilih versi untuk sistem operasi Anda. Lart tidak dapat memasang atau menjalankan paket ini secara native di perangkat ini.",
 
   "games.sources.platform.unknown": "Platform tidak disebutkan",
 
   "games.sources.platform.unknownNote": "Sumber tidak menyebutkan sistem operasi paket. Periksa informasi penerbit sebelum mengunduh.",
 
-  "games.sources.platform.browseNote": "Gunakan Harbor desktop untuk mengunduh dan mengelola berkas game lokal.",
+  "games.sources.platform.browseNote": "Gunakan Lart desktop untuk mengunduh dan mengelola berkas game lokal.",
 
   "games.sources.platform.browse": "Versi {platform}",
 
@@ -117,9 +117,9 @@ export default {
 
   "games.sources.art.torrent": "Unduhan torrent",
 
-  "games.sources.art.engine": "Mesin torrent Harbor",
+  "games.sources.art.engine": "Mesin torrent Lart",
 
-  "games.sources.art.reviewTorrent": "Unduh di Harbor",
+  "games.sources.art.reviewTorrent": "Unduh di Lart",
 
 
 
@@ -167,7 +167,7 @@ export default {
 
   "games.sources.discovery.change": "Ubah tautan",
 
-  "games.sources.discovery.harbor": "Katalog Harbor",
+  "games.sources.discovery.harbor": "Katalog Lart",
 
   "games.sources.discovery.community": "Katalog yang kompatibel dengan Hydra",
 
@@ -175,7 +175,7 @@ export default {
 
   "games.sources.discovery.reviewNote": "Hanya entri katalog yang disimpan. Berkas diunduh saat Anda memilihnya.",
 
-  "games.sources.source_no_catalog": "Situs ini tidak menerbitkan tautan katalog yang dapat dibaca Harbor. Tempel tautan katalog JSON-nya.",
+  "games.sources.source_no_catalog": "Situs ini tidak menerbitkan tautan katalog yang dapat dibaca Lart. Tempel tautan katalog JSON-nya.",
 
   "games.sources.source_url": "Masukkan alamat situs, URL katalog HTTP(S), atau tautan pemasangan Hydra.",
 
@@ -229,7 +229,7 @@ export default {
 
   "games.sources.links.account": "Layanan menolak koneksi. Periksa kuncinya di pengaturan Sumber.",
 
-  "games.sources.links.rate": "Layanan meminta Harbor menunggu. Coba lagi sebentar.",
+  "games.sources.links.rate": "Layanan meminta Lart menunggu. Coba lagi sebentar.",
 
   "games.sources.links.limit": "Layanan mengembalikan terlalu banyak file untuk ditinjau sekaligus.",
 
@@ -241,7 +241,7 @@ export default {
 
   "games.sources.links.destination": "Pilih tujuan",
 
-  "games.sources.links.desktop": "Buka Harbor desktop untuk mengunduh file.",
+  "games.sources.links.desktop": "Buka Lart desktop untuk mengunduh file.",
 
   "games.sources.web.web": "Unduhan web",
 
@@ -267,7 +267,7 @@ export default {
 
   "games.sources.web.again": "Mulai tugas lain",
 
-  "games.sources.web.storage": "Harbor tidak dapat menyimpan tugas ini. Tugas tidak akan dikirim ulang secara otomatis.",
+  "games.sources.web.storage": "Lart tidak dapat menyimpan tugas ini. Tugas tidak akan dikirim ulang secara otomatis.",
 
   "games.sources.web.preparing": "Menyiapkan di TorBox",
 
@@ -353,7 +353,7 @@ export default {
 
   "games.sources.pm.select": "Gunakan transfer ini",
 
-  "games.sources.pm.review": "Pilih transfer yang kamu kirim. Harbor tidak dapat mencocokkan sumbernya secara otomatis.",
+  "games.sources.pm.review": "Pilih transfer yang kamu kirim. Lart tidak dapat mencocokkan sumbernya secara otomatis.",
 
   "games.sources.pm.retry": "Coba ulang transfer",
 

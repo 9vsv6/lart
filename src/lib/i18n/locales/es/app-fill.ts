@@ -1,6 +1,6 @@
 const appFill: Record<string, string> = {
-  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Harbor problem: pick another source, or give it a minute to finish caching and try again.":
-    "Que aparezca “En caché” solo significa que tu complemento cree que ese archivo ya está guardado en tu servicio de debrid y listo para reproducirse al instante. Esa indicación no siempre es correcta: a veces el archivo aún no está disponible. Cuando eso ocurre, la fuente no se inicia o reproduce un breve clip dañado. No es un problema de Harbor: elige otra fuente o espera un minuto a que termine de almacenarse en caché e inténtalo de nuevo.",
+  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Lart problem: pick another source, or give it a minute to finish caching and try again.":
+    "Que aparezca “En caché” solo significa que tu complemento cree que ese archivo ya está guardado en tu servicio de debrid y listo para reproducirse al instante. Esa indicación no siempre es correcta: a veces el archivo aún no está disponible. Cuando eso ocurre, la fuente no se inicia o reproduce un breve clip dañado. No es un problema de Lart: elige otra fuente o espera un minuto a que termine de almacenarse en caché e inténtalo de nuevo.",
   "{count} films, in the order you picked them. Nothing plays until you start.":
     "{count} películas, en el orden que elegiste. Nada se reproduce hasta que inicies.",
   "{count} in queue": "{count} en cola",
@@ -107,8 +107,8 @@ const appFill: Record<string, string> = {
   "Choose 1 of 3": "Elige 1 de 3",
   "Choose another source": "Elige otra fuente",
   "Choose subtitles": "Elegir subtítulos",
-  "Choose up to 5 movies or shows you already like. Harbor uses them to tune your featured picks and recommendations. Totally optional.":
-    "Elige hasta 5 películas o series que ya te gusten. Harbor las usa para ajustar tus selecciones destacadas y recomendaciones. Es totalmente opcional.",
+  "Choose up to 5 movies or shows you already like. Lart uses them to tune your featured picks and recommendations. Totally optional.":
+    "Elige hasta 5 películas o series que ya te gusten. Lart las usa para ajustar tus selecciones destacadas y recomendaciones. Es totalmente opcional.",
   "Choose what shows, what stays hidden, and what sits up top.":
     "Elige qué se muestra, qué permanece oculto y qué aparece arriba.",
   "Choose your starting film": "Elige tu película inicial",
@@ -224,8 +224,8 @@ const appFill: Record<string, string> = {
   "Finding the one": "Buscando el indicado",
   "Fix a section": "Corregir una sección",
   "Fix one section": "Corregir una sección",
-  "Folders Harbor imported your movies and shows from. Rescan to pick up new files.":
-    "Carpetas desde las que Harbor importó tus películas y series. Vuelve a escanearlas para detectar archivos nuevos.",
+  "Folders Lart imported your movies and shows from. Rescan to pick up new files.":
+    "Carpetas desde las que Lart importó tus películas y series. Vuelve a escanearlas para detectar archivos nuevos.",
   "Font name can only use letters, numbers, and spaces.":
     "El nombre de la fuente solo puede contener letras, números y espacios.",
   "For reliable HDR on this display, switch to True HDR, separate window in Settings.":
@@ -246,22 +246,22 @@ const appFill: Record<string, string> = {
     "Agrupa las películas y series que quieras tener a mano.",
   "Groups are where people watch and read together. Start one and invite your friends.":
     "Los grupos son espacios donde las personas ven y leen juntas. Crea uno e invita a tus amigos.",
-  "Harbor account": "Cuenta de Harbor",
-  "Harbor checks a few times a day while it's open and lets you know here.":
-    "Harbor comprueba si hay novedades varias veces al día mientras está abierto y te avisa aquí.",
-  "Harbor couldn't analyze the audio for this source. Try again or adjust it manually.":
-    "Harbor no pudo analizar el audio de esta fuente. Inténtalo de nuevo o ajústalo manualmente.",
-  "Harbor couldn't find a reliable timing correction for this subtitle.":
-    "Harbor no pudo encontrar un ajuste de sincronización confiable para este subtítulo.",
-  "Harbor does not host any manga or any sources. Connect a self-hosted server you run, install a source plugin from a repository you trust, or open a folder you already have.":
-    "Harbor no aloja ningún manga ni ninguna fuente. Conecta un servidor autoalojado que administres, instala un complemento de fuentes desde un repositorio de confianza o abre una carpeta que ya tengas.",
-  "Harbor does not host any manga. Add a source plugin from a repository you trust, connect your own server, or open a local folder. You can turn this off anytime in Settings.":
-    "Harbor no aloja ningún manga. Agrega un complemento de fuentes desde un repositorio de confianza, conecta tu propio servidor o abre una carpeta local. Puedes desactivar esta opción en cualquier momento desde Configuración.",
-  "Harbor is closing. Harbor Setup will finish and reopen it.":
-    "Harbor se está cerrando. El instalador de Harbor terminará el proceso y volverá a abrirlo.",
-  "Harbor Setup did not finish updating Harbor. Nothing was changed.":
-    "El instalador de Harbor no terminó de actualizar Harbor. No se modificó nada.",
-  "Harbor Voyages": "Travesías de Harbor",
+  "Lart account": "Cuenta de Lart",
+  "Lart checks a few times a day while it's open and lets you know here.":
+    "Lart comprueba si hay novedades varias veces al día mientras está abierto y te avisa aquí.",
+  "Lart couldn't analyze the audio for this source. Try again or adjust it manually.":
+    "Lart no pudo analizar el audio de esta fuente. Inténtalo de nuevo o ajústalo manualmente.",
+  "Lart couldn't find a reliable timing correction for this subtitle.":
+    "Lart no pudo encontrar un ajuste de sincronización confiable para este subtítulo.",
+  "Lart does not host any manga or any sources. Connect a self-hosted server you run, install a source plugin from a repository you trust, or open a folder you already have.":
+    "Lart no aloja ningún manga ni ninguna fuente. Conecta un servidor autoalojado que administres, instala un complemento de fuentes desde un repositorio de confianza o abre una carpeta que ya tengas.",
+  "Lart does not host any manga. Add a source plugin from a repository you trust, connect your own server, or open a local folder. You can turn this off anytime in Settings.":
+    "Lart no aloja ningún manga. Agrega un complemento de fuentes desde un repositorio de confianza, conecta tu propio servidor o abre una carpeta local. Puedes desactivar esta opción en cualquier momento desde Configuración.",
+  "Lart is closing. Lart Setup will finish and reopen it.":
+    "Lart se está cerrando. El instalador de Lart terminará el proceso y volverá a abrirlo.",
+  "Lart Setup did not finish updating Lart. Nothing was changed.":
+    "El instalador de Lart no terminó de actualizar Lart. No se modificó nada.",
+  "Lart Voyages": "Travesías de Lart",
   "Heads up: most IPTV providers cap how many streams an account can run at the same time. If other devices or players are using these credentials, close them and try again.":
     "Atención: la mayoría de los proveedores de IPTV limitan cuántas fuentes puede reproducir una cuenta al mismo tiempo. Si otros dispositivos o reproductores están usando estas credenciales, ciérralos e inténtalo de nuevo.",
   "Hidden sections": "Secciones ocultas",
@@ -303,7 +303,7 @@ const appFill: Record<string, string> = {
   "Jump here": "Ir aquí",
   "Jump to now": "Ir al momento actual",
   "Keep anyway": "Conservar de todos modos",
-  "Keep controlling Harbor in the background": "Seguir controlando Harbor en segundo plano",
+  "Keep controlling Lart in the background": "Seguir controlando Lart en segundo plano",
   "Keep going in the manga behind the anime you've been watching":
     "Seguir avanzando en el manga después del anime que has estado viendo",
   "Keep it": "Conservarlo",
@@ -347,8 +347,8 @@ const appFill: Record<string, string> = {
     "Se movieron {n} complementos a tu cuenta de Stremio. Ahora se sincronizan dondequiera que inicies sesión.",
   "Moved 1 addon to your Stremio account. It now syncs everywhere you sign in.":
     "Se movió 1 complemento a tu cuenta de Stremio. Ahora se sincroniza dondequiera que inicies sesión.",
-  "Moved, but Harbor couldn't confirm the result. Reload to see the current state.":
-    "Se movió, pero Harbor no pudo confirmar el resultado. Vuelve a cargar para ver el estado actual.",
+  "Moved, but Lart couldn't confirm the result. Reload to see the current state.":
+    "Se movió, pero Lart no pudo confirmar el resultado. Vuelve a cargar para ver el estado actual.",
   "My List": "Mi lista",
   "My Lists": "Mis listas",
   "New episodes": "Nuevos episodios",
@@ -372,8 +372,8 @@ const appFill: Record<string, string> = {
   "No lists to show": "No hay listas para mostrar",
   "No lists yet. Create your first one below.": "Aún no hay listas. Crea la primera abajo.",
   "No matches. Try another title.": "No hay coincidencias. Prueba con otro título.",
-  "No metadata addon detected. Harbor is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
-    "No se detectó ningún complemento de metadatos. Harbor recurrirá a Cinemeta para que los títulos sigan cargando, pero vuelve a activar esta opción a menos que estés instalando uno.",
+  "No metadata addon detected. Lart is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
+    "No se detectó ningún complemento de metadatos. Lart recurrirá a Cinemeta para que los títulos sigan cargando, pero vuelve a activar esta opción a menos que estés instalando uno.",
   "No more films to add. Start with what you picked.":
     "No hay más películas para agregar. Empieza con las que elegiste.",
   "No new subtitles found beyond what is already listed.":
@@ -390,8 +390,8 @@ const appFill: Record<string, string> = {
   "No sources match your filter": "Ninguna fuente coincide con tu filtro",
   "No streams match": "Ninguna fuente coincide",
   "No subtitles": "Sin subtítulos",
-  "No subtitles found. Start anyway, Harbor keeps looking while you watch.":
-    "No se encontraron subtítulos. Inicia de todos modos; Harbor seguirá buscando mientras miras.",
+  "No subtitles found. Start anyway, Lart keeps looking while you watch.":
+    "No se encontraron subtítulos. Inicia de todos modos; Lart seguirá buscando mientras miras.",
   "No subtitles found. Try another title above, or adjust the season and episode.":
     "No se encontraron subtítulos. Prueba con otro título arriba o ajusta la temporada y el episodio.",
   "No Suwayomi server at this address": "No hay ningún servidor de Suwayomi en esta dirección",
@@ -403,13 +403,13 @@ const appFill: Record<string, string> = {
   "Not now": "Ahora no",
   "Not right?": "¿No es correcto?",
   "Nothing found here": "No se encontró nada aquí",
-  "Nothing is uploaded and nothing ships with Harbor. Everything stays on this device and you are responsible for the images you add.":
-    "No se sube nada y Harbor no incluye nada. Todo permanece en este dispositivo y eres responsable de las imágenes que agregues.",
+  "Nothing is uploaded and nothing ships with Lart. Everything stays on this device and you are responsible for the images you add.":
+    "No se sube nada y Lart no incluye nada. Todo permanece en este dispositivo y eres responsable de las imágenes que agregues.",
   "Nothing posted yet": "Aún no se publicó nada",
   "Nothing to show yet": "Aún no hay nada que mostrar",
   "Nothing yet": "Aún no hay nada",
-  "Off by default, so your controller only drives Harbor while it is the focused window. Leave it off if you play games with the same controller.":
-    "Desactivado de forma predeterminada, para que tu control solo controle Harbor mientras sea la ventana activa. Déjalo desactivado si juegas con el mismo control.",
+  "Off by default, so your controller only drives Lart while it is the focused window. Leave it off if you play games with the same controller.":
+    "Desactivado de forma predeterminada, para que tu control solo controle Lart mientras sea la ventana activa. Déjalo desactivado si juegas con el mismo control.",
   "Off keeps your font, background, and canvas as a private preview.":
     "Desactivado mantiene tu fuente, fondo y lienzo como vista previa privada.",
   "On a voyage": "De viaje",
@@ -443,8 +443,8 @@ const appFill: Record<string, string> = {
   "Pinned to top": "Fijado arriba",
   "Playback pauses when the timer runs out. Works for movies too: one movie counts as one episode.":
     "La reproducción se pausa cuando termina el temporizador. También funciona con películas: una película cuenta como un episodio.",
-  "Point Harbor at your self-hosted library to browse and install sources":
-    "Conecta Harbor a tu biblioteca autoalojada para explorar e instalar fuentes",
+  "Point Lart at your self-hosted library to browse and install sources":
+    "Conecta Lart a tu biblioteca autoalojada para explorar e instalar fuentes",
   "Poster reset to default": "Restablecer el póster predeterminado",
   "Posts are not available yet": "Las publicaciones aún no están disponibles",
   "Preparing your images": "Preparando tus imágenes",
@@ -454,10 +454,10 @@ const appFill: Record<string, string> = {
   "Public group": "Grupo público",
   "Public groups": "Grupos públicos",
   "Pulling posters and ratings": "Obteniendo pósteres y calificaciones",
-  "Quit Harbor": "Salir de Harbor",
+  "Quit Lart": "Salir de Lart",
   "Ranking the best matches": "Ordenando las mejores coincidencias",
   "Read from your phone": "Leer desde tu teléfono",
-  "Read manga in Harbor": "Leer manga en Harbor",
+  "Read manga in Lart": "Leer manga en Lart",
   "Read more": "Leer más",
   "Read the Manga": "Leer el manga",
   "Reading subtitles...": "Leyendo subtítulos...",
@@ -554,7 +554,7 @@ const appFill: Record<string, string> = {
     "Mostrando {shown} de {total} series. Desplázate para cargar más.",
   "Showing all sources.": "Mostrando todas las fuentes.",
   "Showing keyword matches instead": "Mostrando en su lugar las coincidencias de palabras clave",
-  "Skip, let Harbor choose": "Omitir y dejar que Harbor elija",
+  "Skip, let Lart choose": "Omitir y dejar que Lart elija",
   "Sleep at end": "Suspender al finalizar",
   "Some copies of new releases have ads spliced into the video itself. This is experimental: the community marks where those ads are so others can skip them.":
     "Algunas copias de estrenos recientes tienen anuncios insertados en el propio video. Esta función es experimental: la comunidad marca dónde están esos anuncios para que otros puedan omitirlos.",
@@ -602,41 +602,41 @@ const appFill: Record<string, string> = {
   "The primary manages profiles and can't be deleted. Transfer it here to delete the old one.":
     "El perfil principal administra los perfiles y no se puede eliminar. Transfiere esa función aquí para eliminar el anterior.",
   "The server could not load that repository": "El servidor no pudo cargar ese repositorio",
-  "The ship is sailing away. Thanks for watching with Harbor, it's time to listen to your grown-ups.":
-    "El barco está zarpando. Gracias por ver contenido con Harbor; es hora de escuchar a los adultos responsables.",
-  "The timing checks disagreed, so Harbor left the subtitle unchanged.":
-    "Las comprobaciones de sincronización no coincidieron, así que Harbor no modificó el subtítulo.",
+  "The ship is sailing away. Thanks for watching with Lart, it's time to listen to your grown-ups.":
+    "El barco está zarpando. Gracias por ver contenido con Lart; es hora de escuchar a los adultos responsables.",
+  "The timing checks disagreed, so Lart left the subtitle unchanged.":
+    "Las comprobaciones de sincronización no coincidieron, así que Lart no modificó el subtítulo.",
   "The timing difference was too large to correct safely. Try another subtitle.":
     "La diferencia de sincronización era demasiado grande para corregirla de forma segura. Prueba otro subtítulo.",
   "There isn't enough readable dialogue in this subtitle to measure its timing.":
     "Este subtítulo no contiene suficiente diálogo legible para medir su sincronización.",
   "There wasn't enough matching dialogue to make a safe correction.":
     "No hubo suficiente diálogo coincidente para realizar una corrección segura.",
-  "These avatars are Harbor originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
-    "Estos avatares son originales de Harbor. Los paquetes importados se guardan solo en este dispositivo: tú eliges su contenido y eres responsable de él.",
-  "This doesn't look like a Harbor plugin repo. Harbor expects a JSON file shaped { name, plugins: [ ... ] }.":
-    "Esto no parece un repositorio de complementos de Harbor. Harbor espera un archivo JSON con la estructura { name, plugins: [ ... ] }.",
+  "These avatars are Lart originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
+    "Estos avatares son originales de Lart. Los paquetes importados se guardan solo en este dispositivo: tú eliges su contenido y eres responsable de él.",
+  "This doesn't look like a Lart plugin repo. Lart expects a JSON file shaped { name, plugins: [ ... ] }.":
+    "Esto no parece un repositorio de complementos de Lart. Lart espera un archivo JSON con la estructura { name, plugins: [ ... ] }.",
   "This group has not written a description yet.": "Este grupo aún no ha escrito una descripción.",
   "This group's feed could not be loaded. Try again in a moment.":
     "No se pudo cargar el feed de este grupo. Inténtalo de nuevo en un momento.",
-  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Harbor can't import them.":
-    "Este es un repositorio de Mangayomi, pero sus fuentes usan Dart o no son de manga, así que Harbor no puede importarlas.",
-  "This is a Mangayomi repo. Harbor runs its JavaScript sources natively. Import them to add these sources to your manga library.":
-    "Este es un repositorio de Mangayomi. Harbor ejecuta sus fuentes JavaScript de forma nativa. Impórtalas para agregar estas fuentes a tu biblioteca de manga.",
-  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "Este es un repositorio de Mangayomi. La importación nativa aún no es compatible. Para acceder hoy al catálogo más amplio, ejecuta un servidor Suwayomi y conecta Harbor desde la sección Servidores.",
-  "This is a Paperback (iOS) repo, which Harbor can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
-    "Este es un repositorio de Paperback (iOS), que Harbor no puede usar. Para obtener fuentes en computadoras, conecta un servidor Suwayomi desde la sección Servidores.",
-  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Harbor can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "Este es un repositorio de Tachiyomi / Mihon. Estas son extensiones de Android (APK), así que Harbor no puede ejecutarlas directamente. Para usar estas fuentes en computadoras, ejecuta un servidor Suwayomi y conecta Harbor desde la sección Servidores.",
+  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Lart can't import them.":
+    "Este es un repositorio de Mangayomi, pero sus fuentes usan Dart o no son de manga, así que Lart no puede importarlas.",
+  "This is a Mangayomi repo. Lart runs its JavaScript sources natively. Import them to add these sources to your manga library.":
+    "Este es un repositorio de Mangayomi. Lart ejecuta sus fuentes JavaScript de forma nativa. Impórtalas para agregar estas fuentes a tu biblioteca de manga.",
+  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "Este es un repositorio de Mangayomi. La importación nativa aún no es compatible. Para acceder hoy al catálogo más amplio, ejecuta un servidor Suwayomi y conecta Lart desde la sección Servidores.",
+  "This is a Paperback (iOS) repo, which Lart can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
+    "Este es un repositorio de Paperback (iOS), que Lart no puede usar. Para obtener fuentes en computadoras, conecta un servidor Suwayomi desde la sección Servidores.",
+  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Lart can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "Este es un repositorio de Tachiyomi / Mihon. Estas son extensiones de Android (APK), así que Lart no puede ejecutarlas directamente. Para usar estas fuentes en computadoras, ejecuta un servidor Suwayomi y conecta Lart desde la sección Servidores.",
   "This is the primary profile": "Este es el perfil principal",
   "This list is full ({max} items)": "Esta lista está llena ({max} elementos)",
-  "This one also replaces Harbor's bundled players and tools, so it installs through Harbor Setup. Harbor closes, the installer finishes, then Harbor reopens.":
-    "Este también reemplaza los reproductores y las herramientas incluidos con Harbor, por lo que se instala mediante Harbor Setup. Harbor se cierra, el instalador finaliza y luego Harbor vuelve a abrirse.",
-  "This one installs through Harbor Setup, but the update manifest carries no signature for it. Harbor will not run an installer it cannot verify. Download it and run it yourself.":
-    "Este se instala mediante Harbor Setup, pero el manifiesto de actualización no incluye una firma para él. Harbor no ejecutará un instalador que no pueda verificar. Descárgalo y ejecútalo por tu cuenta.",
-  "This server is too old to add repos from Harbor":
-    "Este servidor es demasiado antiguo para agregar repositorios desde Harbor",
+  "This one also replaces Lart's bundled players and tools, so it installs through Lart Setup. Lart closes, the installer finishes, then Lart reopens.":
+    "Este también reemplaza los reproductores y las herramientas incluidos con Lart, por lo que se instala mediante Lart Setup. Lart se cierra, el instalador finaliza y luego Lart vuelve a abrirse.",
+  "This one installs through Lart Setup, but the update manifest carries no signature for it. Lart will not run an installer it cannot verify. Download it and run it yourself.":
+    "Este se instala mediante Lart Setup, pero el manifiesto de actualización no incluye una firma para él. Lart no ejecutará un instalador que no pueda verificar. Descárgalo y ejecútalo por tu cuenta.",
+  "This server is too old to add repos from Lart":
+    "Este servidor es demasiado antiguo para agregar repositorios desde Lart",
   "This server lists no extensions": "Este servidor no incluye extensiones",
   "This server needs a username and password":
     "Este servidor necesita un nombre de usuario y una contraseña",
@@ -680,7 +680,7 @@ const appFill: Record<string, string> = {
   "Updated {when}": "Actualizado {when}",
   "Use a better match": "Usar una coincidencia mejor",
   "Use Cinemeta for title metadata": "Usar Cinemeta para los metadatos de títulos",
-  "Use your Harbor color": "Usar tu color de Harbor",
+  "Use your Lart color": "Usar tu color de Lart",
   "Variable timing corrected": "Sincronización variable corregida",
   "View my profile": "Ver mi perfil",
   "Voyage complete": "Viaje completado",
@@ -716,8 +716,8 @@ const appFill: Record<string, string> = {
   "Your friends have not shared anything yet. Activity sharing is off by default.":
     "Tus amigos aún no compartieron nada. Compartir actividad está desactivado de forma predeterminada.",
   "Your groups": "Tus grupos",
-  "Your handle across Harbor, and your verified status.":
-    "Tu identificador en Harbor y tu estado de verificación.",
+  "Your handle across Lart, and your verified status.":
+    "Tu identificador en Lart y tu estado de verificación.",
   "Your MyAnimeList is empty": "Tu lista de MyAnimeList está vacía",
   "Your queue": "Tu cola",
   "Your queue is empty. Add movies or shows and they'll play back-to-back here.":

@@ -36,7 +36,7 @@ const musicListeningLab: Record<string, string> = {
   "music.lab.crossfeed": "ヘッドホンクロスフィード",
   "music.lab.crossfeedHelp":
     "各ステレオチャンネルの一部をフィルター処理して反対側に混ぜ、ヘッドホンの左右分離を緩和します。0%でオフ。",
-  "music.lab.bypass": "Harbor DSPを迂回",
+  "music.lab.bypass": "Lart DSPを迂回",
   "music.lab.bypassHelp":
     "適用後、EQ、プリアンプ、クロスフィード、バランス、ReplayGainを迂回します。出力設定と再生音量は有効なままです。ビットパーフェクト再生を検証する機能ではありません。",
   "music.lab.exclusive": "排他出力を要求",

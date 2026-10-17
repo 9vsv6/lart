@@ -55,8 +55,8 @@ const catalog: Record<string, string> = {
   "Add a custom award type": "Tambahkan jenis penghargaan khusus",
   "Add a display name first. It is the name shown on your profile.":
     "Tambahkan nama tampilan terlebih dahulu. Nama ini akan ditampilkan di profil Anda.",
-  "Add a series above and Harbor will grab each new episode as it airs, on your terms.":
-    "Tambahkan serial di atas dan Harbor akan mengambil setiap episode baru saat tayang, sesuai ketentuan Anda.",
+  "Add a series above and Lart will grab each new episode as it airs, on your terms.":
+    "Tambahkan serial di atas dan Lart akan mengambil setiap episode baru saat tayang, sesuai ketentuan Anda.",
   "Add a series to auto-download": "Tambahkan serial untuk diunduh otomatis",
   "Add an M3U or Xtream playlist in Settings → Live TV to use the guide.":
     "Tambahkan playlist M3U atau Xtream di Pengaturan → TV Langsung untuk menggunakan panduan.",
@@ -72,11 +72,11 @@ const catalog: Record<string, string> = {
   "Add to Shelf": "Tambahkan ke Rak",
   "Add to tile {n}": "Tambahkan ke ubin {n}",
   "Add to your watchlist": "Tambahkan ke daftar tontonan Anda",
-  "Add trusted eBook sources from a Harbor-compatible repository.":
-    "Tambahkan sumber eBook tepercaya dari repositori yang kompatibel dengan Harbor.",
+  "Add trusted eBook sources from a Lart-compatible repository.":
+    "Tambahkan sumber eBook tepercaya dari repositori yang kompatibel dengan Lart.",
   "Add up to 6 screenshots so people can see your theme in action. Optional, but they sell it.":
     "Tambahkan hingga 6 tangkapan layar agar orang dapat melihat tema Anda saat digunakan. Opsional, tetapi dapat membuatnya lebih menarik.",
-  "Added to Harbor": "Ditambahkan ke Harbor",
+  "Added to Lart": "Ditambahkan ke Lart",
   "Added to Shelf": "Ditambahkan ke Rak",
   "Added to downloads": "Ditambahkan ke unduhan",
   "Added to library": "Ditambahkan ke perpustakaan",
@@ -179,8 +179,8 @@ const catalog: Record<string, string> = {
     "Hubungkan perpustakaan yang dirender server dengan konfigurasi sumber Anda sendiri.",
   "Bring friends here": "Ajak teman ke sini",
   "Bring friends to {label}": "Ajak teman ke {label}",
-  "Bring trusted source packages aboard through Harbor’s isolated extension worker.":
-    "Tambahkan paket sumber tepercaya melalui worker ekstensi terisolasi Harbor.",
+  "Bring trusted source packages aboard through Lart’s isolated extension worker.":
+    "Tambahkan paket sumber tepercaya melalui worker ekstensi terisolasi Lart.",
   "British Independent Film Awards": "Penghargaan Film Independen Britania",
   "Browse 1 theme. Apply in one click.": "Jelajahi 1 tema. Terapkan dengan sekali klik.",
   "Browse all": "Jelajahi semua",
@@ -205,8 +205,8 @@ const catalog: Record<string, string> = {
     "CSS, HTML, dan JS yang diterapkan di seluruh aplikasi. Opsional untuk tata letak bawaan, wajib untuk chrome khusus.",
   "Cache on {provider}": "Cache di {provider}",
   "Cached on {providers}": "Tersimpan di cache {providers}",
-  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Harbor feature, so your chrome never goes stale when Harbor adds menu items.":
-    "Panggil ini dari pengendali onclick atau JS tema Anda. Semuanya stabil dan aman: masing-masing menjalankan fitur Harbor yang sebenarnya, sehingga chrome Anda tidak pernah kedaluwarsa saat Harbor menambahkan item menu.",
+  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Lart feature, so your chrome never goes stale when Lart adds menu items.":
+    "Panggil ini dari pengendali onclick atau JS tema Anda. Semuanya stabil dan aman: masing-masing menjalankan fitur Lart yang sebenarnya, sehingga chrome Anda tidak pernah kedaluwarsa saat Lart menambahkan item menu.",
   "Cancel Edge TTS generation": "Batalkan pembuatan Edge TTS",
   "Cancel audio generation": "Batalkan pembuatan audio",
   Cancelled: "Dibatalkan",
@@ -256,7 +256,7 @@ const catalog: Record<string, string> = {
     "Tutup menu pemeran, lalu buka kembali untuk memindai ulang jaringan.",
   "Close zoom controls": "Tutup kontrol zoom",
   "Colors, layout, and fonts. No code.": "Warna, tata letak, dan font. Tanpa kode.",
-  "Come back to Harbor and try casting again.": "Kembali ke Harbor dan coba casting lagi.",
+  "Come back to Lart and try casting again.": "Kembali ke Lart dan coba casting lagi.",
   "Community index": "Indeks komunitas",
   "Complete book": "Buku lengkap",
   "Complete-chapter generation progress": "Progres pembuatan bab lengkap",
@@ -267,8 +267,8 @@ const catalog: Record<string, string> = {
   "Configuring {title}": "Mengonfigurasi {title}",
   "Congrats! Tap to view your badges.": "Selamat! Ketuk untuk melihat lencana Anda.",
   "Connect a source": "Hubungkan sumber",
-  "Connect books you own, trusted reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "Hubungkan buku milik Anda, sumber bacaan tepercaya, dan layanan metadata. Harbor menjaga rak tetap tertata sementara setiap sumber tetap dalam kendali Anda.",
+  "Connect books you own, trusted reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "Hubungkan buku milik Anda, sumber bacaan tepercaya, dan layanan metadata. Lart menjaga rak tetap tertata sementara setiap sumber tetap dalam kendali Anda.",
   "Connect to your computer to manage your library.":
     "Hubungkan ke komputer untuk mengelola perpustakaan Anda.",
   "Connect to your computer to switch": "Hubungkan ke komputer untuk beralih",
@@ -276,7 +276,7 @@ const catalog: Record<string, string> = {
   "Connecting...": "Menghubungkan...",
   Contents: "Daftar isi",
   "Continue Reading": "Lanjutkan Membaca",
-  "Continue in Harbor": "Lanjutkan di Harbor",
+  "Continue in Lart": "Lanjutkan di Lart",
   "Continue in browser": "Lanjutkan di browser",
   "Continue your bookmarks": "Lanjutkan dari bookmark Anda",
   "Copied!": "Disalin!",
@@ -362,12 +362,12 @@ const catalog: Record<string, string> = {
   "Didn't catch that": "Tidak terdengar jelas",
   "Direct link": "Tautan langsung",
   "Direct stream": "Stream langsung",
-  "Direct torrent play needs the Harbor desktop app.":
-    "Pemutaran torrent langsung memerlukan aplikasi desktop Harbor.",
+  "Direct torrent play needs the Lart desktop app.":
+    "Pemutaran torrent langsung memerlukan aplikasi desktop Lart.",
   "Disc Source": "Sumber Disk",
   Discard: "Buang",
-  "Dispatched on window. Listen from your theme JS to react to Harbor's lifecycle.":
-    "Dikirim ke window. Dengarkan dari JS tema Anda untuk merespons siklus hidup Harbor.",
+  "Dispatched on window. Listen from your theme JS to react to Lart's lifecycle.":
+    "Dikirim ke window. Dengarkan dari JS tema Anda untuk merespons siklus hidup Lart.",
   "Display the artist and album under the title on the card.":
     "Tampilkan artis dan album di bawah judul pada kartu.",
   "Distinguished fiction honored by the Pulitzer Prize":
@@ -390,8 +390,8 @@ const catalog: Record<string, string> = {
   "Drop a theme file here or click to browse.":
     "Letakkan file tema di sini atau klik untuk menelusuri.",
   "Drop a {extension}": "Letakkan {extension}",
-  "Drop in art at any resolution. Harbor resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
-    "Masukkan gambar dengan resolusi apa pun. Harbor akan mengubah ukuran dan mengompresi gambar yang terlalu besar, sehingga tidak ada yang dilewati karena ukurannya. PNG persegi dengan latar belakang transparan memberikan hasil terbaik.",
+  "Drop in art at any resolution. Lart resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
+    "Masukkan gambar dengan resolusi apa pun. Lart akan mengubah ukuran dan mengompresi gambar yang terlalu besar, sehingga tidak ada yang dilewati karena ukurannya. PNG persegi dengan latar belakang transparan memberikan hasil terbaik.",
   "Drop many images, GIFs, or a .zip at once. Name each file after its slot ({example}) and we match them. Any size is fine, we resize big images and keep animated GIFs light.":
     "Letakkan banyak gambar, GIF, atau file .zip sekaligus. Beri nama setiap file sesuai slotnya ({example}), lalu kami akan mencocokkannya. Ukuran apa pun boleh, kami akan mengubah ukuran gambar besar dan menjaga agar GIF animasi tetap ringan.",
   "Drop the About and Custom labels so an embed fills the card cleanly.":
@@ -451,7 +451,7 @@ const catalog: Record<string, string> = {
   English: "Inggris",
   "English (default)": "Inggris (default)",
   "Enhanced liquid glass": "Efek kaca cair yang disempurnakan",
-  "Enter Harbor": "Masuk ke Harbor",
+  "Enter Lart": "Masuk ke Lart",
   "Enter URL": "Masukkan URL",
   "Enter a URL or path.": "Masukkan URL atau jalur.",
   "Enter a name and a valid https:// URL.": "Masukkan nama dan https:// URL yang valid.",
@@ -525,56 +525,56 @@ const catalog: Record<string, string> = {
     "Menyeimbangkan dialog pelan dan adegan aksi keras dengan penormal dinamis.",
   "Every 15 min": "Setiap 15 menit",
   "Every 30 min": "Setiap 30 menit",
-  "Every Harbor that announces itself on this network appears here as it answers, with the theme it is wearing.":
-    "Setiap Harbor yang mengumumkan keberadaannya di jaringan ini akan muncul di sini saat merespons, beserta tema yang sedang digunakannya.",
+  "Every Lart that announces itself on this network appears here as it answers, with the theme it is wearing.":
+    "Setiap Lart yang mengumumkan keberadaannya di jaringan ini akan muncul di sini saat merespons, beserta tema yang sedang digunakannya.",
   "Every addon": "Setiap addon",
   "Every collection": "Setiap koleksi",
   "Every color token, stable selector, {api} call, live hook (bell, account menu, avatar, status dot, unread badge), and copy-paste recipe.":
     "Setiap token warna, pemilih stabil, panggilan {api}, hook langsung (lonceng, menu akun, avatar, titik status, lencana belum dibaca), dan resep siap salin-tempel.",
   "Every episode of the season uses that same release.":
     "Setiap episode dalam musim ini menggunakan rilis yang sama.",
-  "Every format badge Harbor can show on streams. Click one to swap its art, hide it, or reset it. Changes apply everywhere badges appear.":
-    "Semua lencana format yang dapat ditampilkan Harbor pada stream. Klik salah satunya untuk mengganti gambarnya, menyembunyikannya, atau meresetnya. Perubahan berlaku di mana pun lencana muncul.",
+  "Every format badge Lart can show on streams. Click one to swap its art, hide it, or reset it. Changes apply everywhere badges appear.":
+    "Semua lencana format yang dapat ditampilkan Lart pada stream. Klik salah satunya untuk mengganti gambarnya, menyembunyikannya, atau meresetnya. Perubahan berlaku di mana pun lencana muncul.",
   "Every launch": "Setiap peluncuran",
   "Every row": "Setiap baris",
   "Every saga in one place. Search anything: if it exists, it's here.":
     "Semua saga di satu tempat. Cari apa saja: jika ada, semuanya ada di sini.",
   "Every saga, in order": "Setiap saga, secara berurutan",
-  "Every shortcut Harbor responds to. Click a binding to rebind it.":
-    "Semua pintasan yang dikenali Harbor. Klik tombol pintasan untuk mengaturnya ulang.",
+  "Every shortcut Lart responds to. Click a binding to rebind it.":
+    "Semua pintasan yang dikenali Lart. Klik tombol pintasan untuk mengaturnya ulang.",
   "Every slot name": "Setiap nama slot",
-  "Every source Harbor tried failed to start. Pick a different one, or try again in a moment.":
-    "Semua sumber yang dicoba Harbor gagal dimulai. Pilih sumber lain, atau coba lagi sebentar lagi.",
-  "Every surface in Harbor maps to one of these 12 variables.":
-    "Setiap permukaan di Harbor dipetakan ke salah satu dari 12 variabel ini.",
+  "Every source Lart tried failed to start. Pick a different one, or try again in a moment.":
+    "Semua sumber yang dicoba Lart gagal dimulai. Pilih sumber lain, atau coba lagi sebentar lagi.",
+  "Every surface in Lart maps to one of these 12 variables.":
+    "Setiap permukaan di Lart dipetakan ke salah satu dari 12 variabel ini.",
   "Every theme is sandboxed, scanned, and reviewed before it reaches the library, so you can try any look without a second thought.":
     "Setiap tema diisolasi, dipindai, dan ditinjau sebelum masuk ke perpustakaan, jadi Anda dapat mencoba tampilan apa pun tanpa khawatir.",
-  "Every theme you share gets a private owner token. On the device where you shared it, Harbor saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
-    "Setiap tema yang Anda bagikan mendapat token pemilik pribadi. Di perangkat tempat Anda membagikannya, Harbor menyimpannya secara otomatis, sehingga tema tersebut muncul di sini dan dapat diklaim dengan satu ketukan. Untuk mengklaim tema dari perangkat lain, tempel token tersebut di bawah. Bagikan tema baru kini langsung menautkannya ke akun Anda, jadi Anda tidak perlu melakukan ini lagi.",
-  "Every variable, selector, hook, and recipe for building custom Harbor themes.":
-    "Setiap variabel, pemilih, hook, dan resep untuk membuat tema Harbor kustom.",
-  "Every winner Harbor ships, browsable offline by year and category.":
-    "Semua pemenang yang disertakan Harbor, dapat ditelusuri secara offline berdasarkan tahun dan kategori.",
+  "Every theme you share gets a private owner token. On the device where you shared it, Lart saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
+    "Setiap tema yang Anda bagikan mendapat token pemilik pribadi. Di perangkat tempat Anda membagikannya, Lart menyimpannya secara otomatis, sehingga tema tersebut muncul di sini dan dapat diklaim dengan satu ketukan. Untuk mengklaim tema dari perangkat lain, tempel token tersebut di bawah. Bagikan tema baru kini langsung menautkannya ke akun Anda, jadi Anda tidak perlu melakukan ini lagi.",
+  "Every variable, selector, hook, and recipe for building custom Lart themes.":
+    "Setiap variabel, pemilih, hook, dan resep untuk membuat tema Lart kustom.",
+  "Every winner Lart ships, browsable offline by year and category.":
+    "Semua pemenang yang disertakan Lart, dapat ditelusuri secara offline berdasarkan tahun dan kategori.",
   Everyone: "Semua orang",
   "Everyone else": "Semua orang lainnya",
   "Everyone is loaded in. Press play to start watching.":
     "Semua orang sudah siap. Tekan putar untuk mulai menonton.",
   "Everyone loses access. This cannot be undone.":
     "Semua orang akan kehilangan akses. Tindakan ini tidak dapat dibatalkan.",
-  "Everyone on this Harbor": "Semua orang di Harbor ini",
-  "Everyone who uses this Harbor gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
-    "Setiap pengguna Harbor ini mendapatkan riwayat tontonan, avatar, warna, dan PIN opsional sendiri. Ganti kapan saja.",
+  "Everyone on this Lart": "Semua orang di Lart ini",
+  "Everyone who uses this Lart gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
+    "Setiap pengguna Lart ini mendapatkan riwayat tontonan, avatar, warna, dan PIN opsional sendiri. Ganti kapan saja.",
   Everything: "Semuanya",
-  "Everything Harbor saves lives on this computer. If space runs low, clear a cache below; Harbor rebuilds them as you browse.":
-    "Semua yang disimpan Harbor berada di komputer ini. Jika ruang hampir habis, bersihkan cache di bawah; Harbor akan membuatnya kembali saat Anda menjelajah.",
+  "Everything Lart saves lives on this computer. If space runs low, clear a cache below; Lart rebuilds them as you browse.":
+    "Semua yang disimpan Lart berada di komputer ini. Jika ruang hampir habis, bersihkan cache di bawah; Lart akan membuatnya kembali saat Anda menjelajah.",
   "Everything else, via your own server": "Semua lainnya, melalui server Anda sendiri",
   "Everything from {year}, sorted across trending, top rated, and hidden gems.":
     "Semua dari {year}, diurutkan berdasarkan yang sedang tren, berperingkat tertinggi, dan permata tersembunyi.",
   "Everything here is already in your account.": "Semua yang ada di sini sudah ada di akun Anda.",
   "Everything here took effect straight away, and it is saved on this device.":
     "Semua perubahan di sini langsung diterapkan dan disimpan di perangkat ini.",
-  "Everything on this page is written to your Harbor account. Your TV reads it on its next check-in, so you can set the whole thing up from here and never touch the remote.":
-    "Semua yang ada di halaman ini disimpan ke akun Harbor Anda. TV Anda akan membacanya saat pemeriksaan berikutnya, jadi Anda dapat mengatur semuanya dari sini tanpa perlu menyentuh remote.",
+  "Everything on this page is written to your Lart account. Your TV reads it on its next check-in, so you can set the whole thing up from here and never touch the remote.":
+    "Semua yang ada di halaman ini disimpan ke akun Lart Anda. TV Anda akan membacanya saat pemeriksaan berikutnya, jadi Anda dapat mengatur semuanya dari sini tanpa perlu menyentuh remote.",
   "Everything on this page of {genre} is hidden by your anime filter.":
     "Semua di halaman {genre} ini disembunyikan oleh filter anime Anda.",
   "Everything originally in {name}: movies and series across every genre, era, and hidden gems.":
@@ -583,8 +583,8 @@ const catalog: Record<string, string> = {
   "Everything releasing this month from TMDB": "Semua yang dirilis bulan ini dari TMDB",
   "Everything you pick is saved into one file. Restoring it later only touches what is in the file. Your Stremio sign-in is always left out.":
     "Semua yang Anda pilih disimpan dalam satu file. Saat dipulihkan nanti, hanya data dalam file tersebut yang akan terpengaruh. Data masuk Stremio Anda selalu dikecualikan.",
-  "Everything you save here stays in this browser. Your Stremio login, API keys, watch progress, picker cache, dismissed tips. Harbor servers never see any of it. Clearing your browser data wipes it.":
-    "Semua yang Anda simpan di sini tetap berada di browser ini. Data masuk Stremio, kunci API, progres tontonan, cache pemilih, tips yang ditutup. Server Harbor tidak pernah melihat semua itu. Menghapus data browser akan menghapusnya.",
+  "Everything you save here stays in this browser. Your Stremio login, API keys, watch progress, picker cache, dismissed tips. Lart servers never see any of it. Clearing your browser data wipes it.":
+    "Semua yang Anda simpan di sini tetap berada di browser ini. Data masuk Stremio, kunci API, progres tontonan, cache pemilih, tips yang ditutup. Server Lart tidak pernah melihat semua itu. Menghapus data browser akan menghapusnya.",
   "Everything your addons offer, shown as posters. Scroll, search, or filter to what you want.":
     "Semua yang ditawarkan addon Anda, ditampilkan sebagai poster. Gulir, cari, atau filter untuk menemukan yang Anda inginkan.",
   Excellence: "Keunggulan",
@@ -632,12 +632,12 @@ const catalog: Record<string, string> = {
   "Export my setup": "Ekspor pengaturan saya",
   "Export player log": "Ekspor log pemutar",
   "Export to Trakt": "Ekspor ke Trakt",
-  "Export your Harbor setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
-    "Ekspor pengaturan Harbor Anda ke satu file - pilih dengan tepat apa saja yang disertakan. Pemulihan hanya mengembalikan isi file tersebut. Informasi masuk Stremio Anda selalu dikecualikan.",
-  "Export your entire Harbor setup to a single file, then restore it on a new computer or keep it as a backup.":
-    "Ekspor seluruh pengaturan Harbor Anda ke satu file, lalu pulihkan di komputer baru atau simpan sebagai cadangan.",
-  "Export your entire Harbor setup to a single file, then restore it on a new computer or keep it as a backup. Everything is included except your Stremio sign-in.":
-    "Ekspor seluruh pengaturan Harbor Anda ke satu file, lalu pulihkan di komputer baru atau simpan sebagai cadangan. Semuanya disertakan kecuali informasi masuk Stremio Anda.",
+  "Export your Lart setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
+    "Ekspor pengaturan Lart Anda ke satu file - pilih dengan tepat apa saja yang disertakan. Pemulihan hanya mengembalikan isi file tersebut. Informasi masuk Stremio Anda selalu dikecualikan.",
+  "Export your entire Lart setup to a single file, then restore it on a new computer or keep it as a backup.":
+    "Ekspor seluruh pengaturan Lart Anda ke satu file, lalu pulihkan di komputer baru atau simpan sebagai cadangan.",
+  "Export your entire Lart setup to a single file, then restore it on a new computer or keep it as a backup. Everything is included except your Stremio sign-in.":
+    "Ekspor seluruh pengaturan Lart Anda ke satu file, lalu pulihkan di komputer baru atau simpan sebagai cadangan. Semuanya disertakan kecuali informasi masuk Stremio Anda.",
   "Export your setup": "Ekspor pengaturan Anda",
   "Export {n} sections": "Ekspor {n} bagian",
   Exported: "Diekspor",
@@ -684,8 +684,8 @@ const catalog: Record<string, string> = {
   Family: "Keluarga",
   "Family Favorites": "Favorit Keluarga",
   "Family Heart": "Hati Keluarga",
-  "Fan-made avatars for personal use. Harbor claims no rights to these characters; they belong to their creators and studios, shown here under fair use. Every one is optimized down to a tiny WebP.":
-    "Avatar buatan penggemar untuk penggunaan pribadi. Harbor tidak mengklaim hak atas karakter ini; karakter tersebut adalah milik kreator dan studionya, dan ditampilkan di sini berdasarkan penggunaan wajar. Semuanya dioptimalkan menjadi WebP berukuran sangat kecil.",
+  "Fan-made avatars for personal use. Lart claims no rights to these characters; they belong to their creators and studios, shown here under fair use. Every one is optimized down to a tiny WebP.":
+    "Avatar buatan penggemar untuk penggunaan pribadi. Lart tidak mengklaim hak atas karakter ini; karakter tersebut adalah milik kreator dan studionya, dan ditampilkan di sini berdasarkan penggunaan wajar. Semuanya dioptimalkan menjadi WebP berukuran sangat kecil.",
   "Fanart.tv": "Fanart.tv",
   "Fanart.tv · logos and backdrops": "Fanart.tv · logo dan latar",
   Fantasy: "Fantasi",
@@ -745,7 +745,7 @@ const catalog: Record<string, string> = {
   Fight: "Pertarungan",
   File: "File",
   "File another": "Ajukan lagi",
-  "File is not a Harbor layout profile.": "File ini bukan profil tata letak Harbor.",
+  "File is not a Lart layout profile.": "File ini bukan profil tata letak Lart.",
   "File it with the government": "Daftarkan ke pemerintah",
   Filename: "Nama file",
   "Filename hidden": "Nama file disembunyikan",
@@ -825,11 +825,11 @@ const catalog: Record<string, string> = {
     "Setelah satu episode selesai, kartu akan beralih ke episode berikutnya, bukan tetap menampilkan sisa 0 mnt.",
   "Finish creating my account": "Selesaikan pembuatan akun saya",
   "Finish later": "Selesaikan nanti",
-  "Finish setting up Harbor": "Selesaikan penyiapan Harbor",
+  "Finish setting up Lart": "Selesaikan penyiapan Lart",
   "Finish setup on your phone": "Selesaikan penyiapan di ponsel Anda",
-  "Finish the install above first. Flipping this on now won't do anything until Harbor can find SVP's engine.":
-    "Selesaikan penginstalan di atas terlebih dahulu. Mengaktifkannya sekarang tidak akan berpengaruh sampai Harbor dapat menemukan mesin SVP.",
-  "Finish updating Harbor": "Selesaikan pembaruan Harbor",
+  "Finish the install above first. Flipping this on now won't do anything until Lart can find SVP's engine.":
+    "Selesaikan penginstalan di atas terlebih dahulu. Mengaktifkannya sekarang tidak akan berpengaruh sampai Lart dapat menemukan mesin SVP.",
+  "Finish updating Lart": "Selesaikan pembaruan Lart",
   Finished: "Selesai",
   "Finishing an anime episode updates your AniList progress. Forward only: it never lowers a count you already have.":
     "Menyelesaikan episode anime akan memperbarui progres AniList Anda. Hanya maju: jumlah yang sudah ada tidak akan pernah dikurangi.",
@@ -880,10 +880,10 @@ const catalog: Record<string, string> = {
   Folder: "Folder",
   "Folder picker is only available in the desktop app":
     "Pemilih folder hanya tersedia di aplikasi desktop",
-  "Folder selection is available in the Harbor app": "Pemilihan folder tersedia di aplikasi Harbor",
+  "Folder selection is available in the Lart app": "Pemilihan folder tersedia di aplikasi Lart",
   Folders: "Folder",
-  "Folders Harbor imported your movies and shows from. Rescan to pick up new files.":
-    "Folder tempat Harbor mengimpor film dan acara Anda. Pindai ulang untuk menemukan file baru.",
+  "Folders Lart imported your movies and shows from. Rescan to pick up new files.":
+    "Folder tempat Lart mengimpor film dan acara Anda. Pindai ulang untuk menemukan file baru.",
   "Follow them out?": "Ikuti mereka keluar?",
   "Following addon order": "Mengikuti urutan addon",
   Font: "Font",
@@ -901,14 +901,14 @@ const catalog: Record<string, string> = {
   "For giving more than $100 to charity.": "Untuk menyumbang lebih dari $100 ke badan amal.",
   "For laptop speakers and headphones. Movies mixed for 5.1 or 7.1 surround can sound hollow or have quiet dialogue on two speakers. This folds them down properly.":
     "Untuk speaker laptop dan headphone. Film yang di-mix untuk surround 5.1 atau 7.1 dapat terdengar hampa atau dialognya terlalu pelan di dua speaker. Opsi ini menurunkan mix dengan benar.",
-  "For now, please open this site on a desktop, or build Harbor from source.":
-    "Untuk saat ini, buka situs ini di desktop, atau build Harbor dari kode sumber.",
+  "For now, please open this site on a desktop, or build Lart from source.":
+    "Untuk saat ini, buka situs ini di desktop, atau build Lart dari kode sumber.",
   "For reliable HDR on this display, switch to True HDR, separate window in Settings.":
     "Agar HDR andal di layar ini, beralihlah ke True HDR, jendela terpisah di Pengaturan.",
   "For series and anime, keep playing the rest of the season from the release you first picked. Applies whether Play is instant or manual.":
     "Untuk serial dan anime, lanjutkan memutar sisa musim dari rilisan yang pertama kali Anda pilih. Berlaku baik saat Putar berlangsung instan maupun manual.",
-  "For the hardest files and the Try again button, Harbor transcribes a little speech on your device and lines the subtitle up to the actual words. Needs a build with the asr-whisper feature and downloads a small model the first time you use it.":
-    "Untuk file yang paling sulit dan tombol Coba lagi, Harbor mentranskripsikan sedikit ucapan di perangkat Anda lalu menyelaraskan subtitle dengan kata-kata yang sebenarnya. Memerlukan build dengan fitur asr-whisper dan akan mengunduh model kecil saat pertama kali digunakan.",
+  "For the hardest files and the Try again button, Lart transcribes a little speech on your device and lines the subtitle up to the actual words. Needs a build with the asr-whisper feature and downloads a small model the first time you use it.":
+    "Untuk file yang paling sulit dan tombol Coba lagi, Lart mentranskripsikan sedikit ucapan di perangkat Anda lalu menyelaraskan subtitle dengan kata-kata yang sebenarnya. Memerlukan build dengan fitur asr-whisper dan akan mengunduh model kecil saat pertama kali digunakan.",
   "For the manual path:": "Untuk cara manual:",
   "For the manual path: {code} 20+ and {code} CLI.":
     "Untuk cara manual: {code} 20+ dan CLI {code}.",

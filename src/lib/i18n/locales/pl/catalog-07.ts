@@ -3,7 +3,7 @@ const catalog07: Record<string, string> = {
   "Jina API key (optional)": "Klucz API Jina (opcjonalnie)",
   "Jina Reader": "Jina Reader",
   Join: "Dołącz",
-  "Join Harbor": "Dołącz do Harbor",
+  "Join Lart": "Dołącz do Lart",
   "Join group": "Dołącz do grupy",
   "Join the same network your TV is on, not the guest one.":
     "Połącz się z tą samą siecią co telewizor, a nie z siecią dla gości.",
@@ -49,14 +49,14 @@ const catalog07: Record<string, string> = {
   "Keep Continue Watching private to each profile":
     "Zachowaj prywatność listy Oglądaj dalej w każdym profilu",
   "Keep Dolby Vision, HDR10, HLG. Drop SDR.": "Zachowaj Dolby Vision, HDR10 i HLG. Odrzuć SDR.",
-  "Keep Harbor a click away. Close it to the system tray instead of quitting, and control it from the tray menu. These also mirror into the tray menu live.":
-    "Miej Harbor zawsze pod ręką. Zamykaj aplikację do zasobnika systemowego zamiast ją wyłączać i steruj nią z menu zasobnika. Te ustawienia są również na bieżąco odzwierciedlane w menu zasobnika.",
+  "Keep Lart a click away. Close it to the system tray instead of quitting, and control it from the tray menu. These also mirror into the tray menu live.":
+    "Miej Lart zawsze pod ręką. Zamykaj aplikację do zasobnika systemowego zamiast ją wyłączać i steruj nią z menu zasobnika. Te ustawienia są również na bieżąco odzwierciedlane w menu zasobnika.",
   "Keep Watching": "Oglądaj dalej",
   "Keep anime in the Anime room only": "Pokazuj anime tylko w sekcji Anime",
   "Keep anyway": "Użyj mimo to",
   "Keep at most": "Zachowaj maksymalnie",
   "Keep cached files for": "Przechowuj pliki w pamięci podręcznej przez",
-  "Keep controlling Harbor in the background": "Steruj Harbor także w tle",
+  "Keep controlling Lart in the background": "Steruj Lart także w tle",
   "Keep downloading after you leave": "Kontynuuj pobieranie po wyjściu",
   "Keep editing": "Kontynuuj edycję",
   "Keep frames for": "Zachowuj klatki przez",
@@ -70,7 +70,7 @@ const catalog07: Record<string, string> = {
   "Keep picking": "Wybieraj dalej",
   "Keep same source on next episode": "Zachowaj to samo źródło w następnym odcinku",
   "Keep setting up": "Kontynuuj konfigurację",
-  "Keep the Harbor window above other windows.": "Utrzymuj okno Harbor nad innymi oknami.",
+  "Keep the Lart window above other windows.": "Utrzymuj okno Lart nad innymi oknami.",
   "Keep the Library Watchlist tab limited to titles you added in Stremio. Turn this off to also include anything Stremio auto-added when you pressed play.":
     "Ogranicz kartę Lista do obejrzenia w Bibliotece do tytułów dodanych w Stremio. Wyłącz tę opcję, aby uwzględnić również pozycje automatycznie dodane przez Stremio po rozpoczęciu odtwarzania.",
   "Keep the clock on screen when the player is not fullscreen.":
@@ -87,18 +87,18 @@ const catalog07: Record<string, string> = {
   "Keep watching": "Oglądaj dalej",
   "Keep your local time visible during fullscreen playback and choose how it looks.":
     "Wyświetlaj lokalny czas podczas odtwarzania pełnoekranowego i wybierz wygląd zegara.",
-  "Keeping Harbor's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Harbor stays funded at the same time.":
-    "Utrzymanie backendu Harbor w sieci naprawdę kosztuje, a ElfHosted pokrywa te wydatki, aby społeczność nie musiała tego robić. Najlepszym sposobem na podtrzymanie tego wsparcia jest wykupienie subskrypcji, która nie jest darowizną. Otrzymasz odpowiednią infrastrukturę do własnej konfiguracji, a Harbor jednocześnie zachowa finansowanie.",
-  "Keeps HDR inside Harbor with the controls floating above the video. Subtitles render on the video. If the control bar does not appear, press Esc or use separate window.":
-    "Zachowuje HDR w Harbor, a elementy sterujące wyświetla nad obrazem wideo. Napisy są renderowane na obrazie. Jeśli pasek sterowania się nie pojawi, naciśnij Esc lub użyj oddzielnego okna.",
-  "Keeps Harbor embedded but lifts the HDR video onto its own opaque plane with the controls floating above, so Windows shows true HDR without the brightness slider dimming it. Needs HDR-to-SDR tonemapping off.":
-    "Pozostawia Harbor osadzony, ale przenosi obraz HDR na osobną nieprzezroczystą warstwę z elementami sterującymi nad nią. Dzięki temu system Windows wyświetla prawdziwy HDR bez przyciemniania przez suwak jasności. Wymaga wyłączenia mapowania tonów HDR do SDR.",
+  "Keeping Lart's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Lart stays funded at the same time.":
+    "Utrzymanie backendu Lart w sieci naprawdę kosztuje, a ElfHosted pokrywa te wydatki, aby społeczność nie musiała tego robić. Najlepszym sposobem na podtrzymanie tego wsparcia jest wykupienie subskrypcji, która nie jest darowizną. Otrzymasz odpowiednią infrastrukturę do własnej konfiguracji, a Lart jednocześnie zachowa finansowanie.",
+  "Keeps HDR inside Lart with the controls floating above the video. Subtitles render on the video. If the control bar does not appear, press Esc or use separate window.":
+    "Zachowuje HDR w Lart, a elementy sterujące wyświetla nad obrazem wideo. Napisy są renderowane na obrazie. Jeśli pasek sterowania się nie pojawi, naciśnij Esc lub użyj oddzielnego okna.",
+  "Keeps Lart embedded but lifts the HDR video onto its own opaque plane with the controls floating above, so Windows shows true HDR without the brightness slider dimming it. Needs HDR-to-SDR tonemapping off.":
+    "Pozostawia Lart osadzony, ale przenosi obraz HDR na osobną nieprzezroczystą warstwę z elementami sterującymi nad nią. Dzięki temu system Windows wyświetla prawdziwy HDR bez przyciemniania przez suwak jasności. Wymaga wyłączenia mapowania tonów HDR do SDR.",
   "Keeps fetching the full torrent in the background, even when paused, so you can pre-buffer big remuxes and scrub a finished file with no re-downloading. Uses more bandwidth and disk; cleaned up when you switch or close like normal.":
     "Kontynuuje pobieranie całego torrentu w tle, nawet po wstrzymaniu, dzięki czemu można wstępnie zbuforować duże remuksy i przewijać ukończony plik bez ponownego pobierania. Zużywa więcej przepustowości i miejsca na dysku. Pliki są usuwane po zmianie źródła lub zamknięciu, tak jak zwykle.",
   "Keeps the malware/year/episode-mismatch checks but allows season packs and oversized files. Same as hitting Search wider in the picker.":
     "Zachowuje kontrolę pod kątem złośliwego oprogramowania oraz niezgodności roku i odcinka, ale dopuszcza pakiety sezonów i zbyt duże pliki. Działa tak samo jak wybranie opcji „Szukaj szerzej” w oknie wyboru.",
-  "Keeps the web's memory alive. Harbor would be poorer without it.":
-    "Chroni pamięć internetu. Bez niej Harbor byłby uboższy.",
+  "Keeps the web's memory alive. Lart would be poorer without it.":
+    "Chroni pamięć internetu. Bez niej Lart byłby uboższy.",
   "Keeps watching through playback and gently re-nudges the timing if the subtitle slips out of sync partway through.":
     "Monitoruje odtwarzanie i delikatnie koryguje synchronizację, jeśli napisy zaczną się rozjeżdżać w trakcie filmu.",
   "Kept. Your TV gets your account when you continue.":
@@ -164,10 +164,10 @@ const catalog07: Record<string, string> = {
   Later: "Później",
   Latest: "Najnowsze",
   "Laugh Out Loud": "Śmiech na całego",
-  "Launch straight into Big Picture when Harbor starts":
-    "Po uruchomieniu Harbor od razu przechodź do Big Picture",
-  "Launch straight into Big Picture when Harbor starts. Press Esc at any time to leave.":
-    "Po uruchomieniu Harbor od razu przechodź do Big Picture. Aby wyjść, w dowolnym momencie naciśnij Esc.",
+  "Launch straight into Big Picture when Lart starts":
+    "Po uruchomieniu Lart od razu przechodź do Big Picture",
+  "Launch straight into Big Picture when Lart starts. Press Esc at any time to leave.":
+    "Po uruchomieniu Lart od razu przechodź do Big Picture. Aby wyjść, w dowolnym momencie naciśnij Esc.",
   Layout: "Układ",
   "Layout editor": "Edytor układu",
   "Layout name": "Nazwa układu",
@@ -186,8 +186,8 @@ const catalog07: Record<string, string> = {
   "Leave Big Picture": "Opuść Big Picture",
   "Leave Big Picture and open settings": "Opuść tryb Big Picture i otwórz ustawienia",
   "Leave a comment. No links.": "Dodaj komentarz. Bez linków.",
-  "Leave blank to use Harbor's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.":
-    "Pozostaw to pole puste, aby używać serwera społeczności Harbor. Wpisz URL, aby zamiast niego używać własnego serwera. Poniższy tryb prywatny w obu przypadkach blokuje wszelką komunikację.",
+  "Leave blank to use Lart's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.":
+    "Pozostaw to pole puste, aby używać serwera społeczności Lart. Wpisz URL, aby zamiast niego używać własnego serwera. Poniższy tryb prywatny w obu przypadkach blokuje wszelką komunikację.",
   "Leave empty to use your RPDB key above. Or paste":
     "Pozostaw puste, aby użyć powyższego klucza RPDB. Możesz też wkleić",
   "Leave everything below it alone. Scroll down, click {b1}, then {b2}. Copy the long string it shows you (you only see it once) and bring it back here.":
@@ -200,15 +200,15 @@ const catalog07: Record<string, string> = {
     "Pozostaw wyraźny aktualnie oglądany odcinek i rozmywaj tylko kolejne.",
   "Leave the show?": "Opuścić serial?",
   "Leave the video": "Opuść odtwarzacz",
-  "Leave this blank to use Harbor's own community server, or enter the address of a server you run yourself.":
-    "Pozostaw to pole puste, aby użyć własnego serwera społeczności Harbor, lub wpisz adres samodzielnie uruchomionego serwera.",
+  "Leave this blank to use Lart's own community server, or enter the address of a server you run yourself.":
+    "Pozostaw to pole puste, aby użyć własnego serwera społeczności Lart, lub wpisz adres samodzielnie uruchomionego serwera.",
   "Leave what you're watching?": "Opuścić oglądany materiał?",
   "Leave without saving?": "Opuścić bez zapisywania?",
   Left: "Do lewej",
   "Left edge": "Lewa krawędź",
   "Left to right": "Od lewej do prawej",
-  "Leftover installers from past updates, cached trailers, and casting scratch files. Harbor clears old ones on launch, keeping only the most recent installer.":
-    "Pozostałe instalatory z wcześniejszych aktualizacji, zwiastuny w pamięci podręcznej i pliki robocze przesyłania. Harbor usuwa stare pliki przy uruchomieniu, zachowując tylko najnowszy instalator.",
+  "Leftover installers from past updates, cached trailers, and casting scratch files. Lart clears old ones on launch, keeping only the most recent installer.":
+    "Pozostałe instalatory z wcześniejszych aktualizacji, zwiastuny w pamięci podręcznej i pliki robocze przesyłania. Lart usuwa stare pliki przy uruchomieniu, zachowując tylko najnowszy instalator.",
   Legal: "Informacje prawne",
   Length: "Długość",
   "Leone, Corbucci, dust and dynamite": "Leone, Corbucci, kurz i dynamit",
@@ -218,8 +218,8 @@ const catalog07: Record<string, string> = {
   "Let the TV keep its own theme": "Zachowaj osobny motyw telewizora",
   "Let your Discord friends see what you are watching, with the show poster and a live progress bar.":
     "Pozwól znajomym na Discordzie zobaczyć, co oglądasz, wraz z plakatem i aktualizowanym na żywo paskiem postępu.",
-  "Let your Discord friends see what you are watching, with the show poster and a live progress bar. Desktop only, and only your own Discord client is involved (nothing touches a Harbor server).":
-    "Pozwól znajomym z Discorda zobaczyć, co oglądasz, wraz z plakatem i paskiem postępu na żywo. Funkcja działa tylko na komputerze i korzysta wyłącznie z Twojego klienta Discord (nic nie łączy się z serwerem Harbor).",
+  "Let your Discord friends see what you are watching, with the show poster and a live progress bar. Desktop only, and only your own Discord client is involved (nothing touches a Lart server).":
+    "Pozwól znajomym z Discorda zobaczyć, co oglądasz, wraz z plakatem i paskiem postępu na żywo. Funkcja działa tylko na komputerze i korzysta wyłącznie z Twojego klienta Discord (nic nie łączy się z serwerem Lart).",
   "Let your full page background show without the top cover.":
     "Wyświetlaj tło całej strony bez górnej okładki.",
   "Let your graphics card do the heavy lifting of decoding video. It saves battery and keeps the CPU cool. Auto is right for almost everyone; only switch if playback looks wrong or won't start.":
@@ -290,7 +290,7 @@ const catalog07: Record<string, string> = {
     "Publiczne kolekcje pojawią się w sekcji społeczności po udostępnieniu tej funkcji.",
   Listen: "Posłuchaj",
   Listening: "Słucham",
-  "Listening for Harbors": "Wyszukiwanie instancji Harbor",
+  "Listening for Harbors": "Wyszukiwanie instancji Lart",
   "Listening…": "Nasłuchiwanie…",
   Lists: "Listy",
   Literary: "Literacki",
@@ -309,13 +309,13 @@ const catalog07: Record<string, string> = {
   "Live action": "Produkcja aktorska",
   "Live channel": "Kanał na żywo",
   "Live controller preview": "Podgląd kontrolera na żywo",
-  "Live face scanning loads on-device AI models and can significantly increase RAM, CPU, and GPU usage while playback is active. Turn it off if Harbor slows down or your device gets hot.":
-    "Skanowanie twarzy na żywo wczytuje modele AI na urządzeniu i może znacznie zwiększyć użycie pamięci RAM, procesora i układu graficznego podczas odtwarzania. Wyłącz tę funkcję, jeśli Harbor zwalnia lub urządzenie się nagrzewa.",
+  "Live face scanning loads on-device AI models and can significantly increase RAM, CPU, and GPU usage while playback is active. Turn it off if Lart slows down or your device gets hot.":
+    "Skanowanie twarzy na żywo wczytuje modele AI na urządzeniu i może znacznie zwiększyć użycie pamięci RAM, procesora i układu graficznego podczas odtwarzania. Wyłącz tę funkcję, jeśli Lart zwalnia lub urządzenie się nagrzewa.",
   "Live for everyone": "Dostępny publicznie",
   "Live preview": "Podgląd na żywo",
   "Live preview is on. Done and Save both keep what you've picked as your Custom theme. Reset reverts the editor to the saved palette.":
     "Podgląd na żywo jest włączony. Zarówno Gotowe, jak i Zapisz zachowują wybrane ustawienia jako motyw niestandardowy. Resetuj przywraca w edytorze zapisaną paletę.",
-  "Live state of Harbor's own P2P engine on this machine.": "Bieżący stan własnego silnika P2P Harbor na tym urządzeniu.",
+  "Live state of Lart's own P2P engine on this machine.": "Bieżący stan własnego silnika P2P Lart na tym urządzeniu.",
   "Live streams that actually work.": "Transmisje na żywo, które naprawdę działają.",
   "Live sync": "Synchronizacja na żywo",
   "Live web": "Internet na żywo",
@@ -443,8 +443,8 @@ const catalog07: Record<string, string> = {
     "Spójrz na telewizor. Jest już na nim wyświetlany nowy kod. Zeskanuj go.",
   "Look offline to others": "Pokazuj innym status offline",
   'Looking for "{q}"': "Wyszukiwanie „{q}”",
-  "Looking for Harbor in your browser, the phone remote, or the manga reader remote? They moved to the Remotes page.":
-    "Szukasz Harbor w przeglądarce, pilota na telefon lub pilota czytnika mangi? Znajdziesz je teraz na stronie Piloty.",
+  "Looking for Lart in your browser, the phone remote, or the manga reader remote? They moved to the Remotes page.":
+    "Szukasz Lart w przeglądarce, pilota na telefon lub pilota czytnika mangi? Znajdziesz je teraz na stronie Piloty.",
   "Looking for peers…": "Wyszukiwanie peerów…",
   "Looking for sources": "Wyszukiwanie źródeł",
   "Looking for sources…": "Wyszukiwanie źródeł…",
@@ -501,10 +501,10 @@ const catalog07: Record<string, string> = {
   "Main Char": "Główna postać",
   "Main subtitle line": "Główny wiersz napisów",
   Maintenance: "Konserwacja",
-  "Make Harbor yours: swap the sidebar logo and the window/taskbar icon.":
-    "Dostosuj Harbor do siebie: zmień logo na pasku bocznym oraz ikonę okna i paska zadań.",
-  "Make Harbor's interface larger.": "Powiększ interfejs Harbor.",
-  "Make Harbor's interface smaller.": "Pomniejsz interfejs Harbor.",
+  "Make Lart yours: swap the sidebar logo and the window/taskbar icon.":
+    "Dostosuj Lart do siebie: zmień logo na pasku bocznym oraz ikonę okna i paska zadań.",
+  "Make Lart's interface larger.": "Powiększ interfejs Lart.",
+  "Make Lart's interface smaller.": "Pomniejsz interfejs Lart.",
   "Make an award pack": "Utwórz pakiet nagród",
   "Make everything bigger and easier to read: sidebar, menus, popups, every page.":
     "Powiększ wszystko i ułatw czytanie: pasek boczny, menu, wyskakujące okna i każdą stronę.",
@@ -529,8 +529,8 @@ const catalog07: Record<string, string> = {
   "Manage addon": "Zarządzaj dodatkiem",
   "Manage connection": "Zarządzaj połączeniem",
   "Manage eBook sources": "Zarządzaj źródłami e-booków",
-  "Manage every place Harbor can read from, whether it lives on disk or across the web.":
-    "Zarządzaj wszystkimi miejscami, z których Harbor może odczytywać treści, zarówno na dysku, jak i w internecie.",
+  "Manage every place Lart can read from, whether it lives on disk or across the web.":
+    "Zarządzaj wszystkimi miejscami, z których Lart może odczytywać treści, zarówno na dysku, jak i w internecie.",
   "Manage members and posts": "Zarządzaj członkami i postami",
   "Manage recording": "Zarządzaj nagrywaniem",
   "Manage subtitle addons in Streaming sources":
@@ -541,8 +541,8 @@ const catalog07: Record<string, string> = {
   Managers: "Menedżerowie",
   "Manga adaptation": "Adaptacja mangi",
   "Manga browse cache": "Pamięć podręczna przeglądania mangi",
-  "Manga cannot be matched to a Harbor title yet, so {n} were left out.":
-    "Mangi nie można jeszcze dopasować do tytułu w Harbor, dlatego pominięto {n} tytułów.",
+  "Manga cannot be matched to a Lart title yet, so {n} were left out.":
+    "Mangi nie można jeszcze dopasować do tytułu w Lart, dlatego pominięto {n} tytułów.",
   "Manga reader remote": "Pilot czytnika mangi",
   "Manga sources": "Źródła mangi",
   "Manic Heart": "Szalone serce",
@@ -587,7 +587,7 @@ const catalog07: Record<string, string> = {
   Matched: "Dopasowane",
   "Matching moments": "Dopasowywanie momentów",
   "Matching the details": "Dopasowywanie szczegółów",
-  "Matching titles to Harbor": "Dopasowywanie tytułów do Harbor",
+  "Matching titles to Lart": "Dopasowywanie tytułów do Lart",
   Max: "Maks.",
   "Max badges per card": "Maksymalna liczba odznak na karcie",
   "Max scores per card": "Maksymalna liczba ocen na kartę",

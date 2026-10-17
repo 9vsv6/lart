@@ -378,8 +378,8 @@ fn apply_pre_init(
         .map(split_extra_option_pairs)
         .unwrap_or_default();
     let joined_init_only = join_init_only_pairs(&init_only_pairs);
-    set("title", "Harbor");
-    set("audio-client-name", "Harbor");
+    set("title", "Lart");
+    set("audio-client-name", "Lart");
     set("terminal", "no");
     set("msg-level", "all=warn,vo=v,d3d11=v,gpu=v,win32=v");
     let is_live = args.is_live.unwrap_or(false);
@@ -3184,7 +3184,7 @@ fn set_embedded_mpv_children_visible(app: &AppHandle, visible: bool) -> Result<(
         let title = String::from_utf16_lossy(&title_buf[..title_len as usize]);
         let is_mpv = class_name == "mpv"
             || class_name.starts_with("mpv ")
-            || (class_name.is_empty() && title.starts_with("Harbor"));
+            || (class_name.is_empty() && title.starts_with("Lart"));
         if is_mpv {
             (*(lparam.0 as *mut Vec<isize>)).push(hwnd.0 as isize);
         }
@@ -3272,7 +3272,7 @@ fn position_embedded_mpv_child(app: &AppHandle, css: MpvGeometry) -> Result<(), 
             .push((hwnd.0 as isize, class_name.clone(), title.clone()));
         let is_mpv = class_name == "mpv"
             || class_name.starts_with("mpv ")
-            || (class_name.is_empty() && title.starts_with("Harbor"));
+            || (class_name.is_empty() && title.starts_with("Lart"));
         if is_mpv {
             (*s).mpv_hwnds.push(hwnd.0 as isize);
         }

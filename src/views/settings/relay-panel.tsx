@@ -285,8 +285,8 @@ export function TogetherRelayPanel({
         apiToken: settings.togetherCfToken,
       },
       notes: [
-        "Keep this file safe and offline. Cloudflare shows API tokens only once at creation. Without this token, Harbor cannot stop, redeploy, or update this relay through its UI.",
-        "To restore: open Settings -> Harbor Relay, paste the relayUrl, and re-enter the API token if you plan to manage from Harbor.",
+        "Keep this file safe and offline. Cloudflare shows API tokens only once at creation. Without this token, Lart cannot stop, redeploy, or update this relay through its UI.",
+        "To restore: open Settings -> Lart Relay, paste the relayUrl, and re-enter the API token if you plan to manage from Lart.",
         "You can always delete the underlying Worker manually at dash.cloudflare.com -> Workers & Pages, even without this file.",
       ],
     };
@@ -294,7 +294,7 @@ export function TogetherRelayPanel({
       `harbor-relay-backup-${new Date().toISOString().slice(0, 10)}.json`,
       JSON.stringify(payload, null, 2),
       ["json"],
-      "Harbor relay backup",
+      "Lart relay backup",
     );
   };
 
@@ -338,7 +338,7 @@ export function TogetherRelayPanel({
             <SettingRow
               icon={<Power size={18} strokeWidth={1.9} />}
               label={t("Deploy a relay")}
-              desc={t("Harbor creates a Cloudflare Worker on your own free account and saves the URL.")}
+              desc={t("Lart creates a Cloudflare Worker on your own free account and saves the URL.")}
               tip={t("Runs on Cloudflare's free Workers tier. Takes about two minutes, and you can stop it from here later.")}
             >
               <button onClick={onOpenDeploy} className={ROW_ACTION_PRIMARY}>
@@ -357,16 +357,16 @@ export function TogetherRelayPanel({
           <SettingRow
             wide
             icon={<PublicRelayMark />}
-            label={t("Harbor's public relay")}
+            label={t("Lart's public relay")}
             desc={t("A relay we run. Nothing to set up, and it stays current on its own.")}
-            tip={t("Hit your daily quota? Use Harbor's public relay, or host your own.")}
+            tip={t("Hit your daily quota? Use Lart's public relay, or host your own.")}
           >
             <button
               onClick={() => update({ togetherRelayUrl: HARBOR_PUBLIC_RELAY })}
               className={ROW_ACTION}
             >
               <Relay size={16} strokeWidth={1.9} />
-              {t("Use Harbor's public relay")}
+              {t("Use Lart's public relay")}
             </button>
           </SettingRow>
 
@@ -437,7 +437,7 @@ export function TogetherRelayPanel({
                   passive.needsUpdate
                     ? isPubRelay
                       ? t(
-                          "Running version {version}. Harbor's public relay updates itself, so there is nothing for you to do.",
+                          "Running version {version}. Lart's public relay updates itself, so there is nothing for you to do.",
                           { version: relayVersion },
                         )
                       : t(
@@ -512,7 +512,7 @@ export function TogetherRelayPanel({
                 icon={<Download size={18} strokeWidth={1.9} />}
                 label={t("Backup credentials")}
                 desc={t("Saves the relay URL and your Cloudflare token to a file.")}
-                tip={t("Cloudflare shows API tokens only once. Save a copy now or you'll lose the ability to stop or redeploy this relay from Harbor.")}
+                tip={t("Cloudflare shows API tokens only once. Save a copy now or you'll lose the ability to stop or redeploy this relay from Lart.")}
               >
                 <button onClick={exportBackup} className={ROW_ACTION}>
                   <Download size={16} strokeWidth={1.9} />
@@ -523,7 +523,7 @@ export function TogetherRelayPanel({
               <SettingRow
                 icon={<Link2 size={18} strokeWidth={1.9} />}
                 label={t("Forget URL")}
-                desc={t("Clears the URL from Harbor. The Worker keeps running on Cloudflare.")}
+                desc={t("Clears the URL from Lart. The Worker keeps running on Cloudflare.")}
               >
                 <button onClick={() => update({ togetherRelayUrl: "" })} className={ROW_ACTION}>
                   {t("Forget")}
@@ -551,7 +551,7 @@ export function TogetherRelayPanel({
               <SettingRow
                 icon={<Link2 size={18} strokeWidth={1.9} />}
                 label={t("Use a different URL")}
-                desc={t("Clears the saved URL so you can point Harbor at another relay.")}
+                desc={t("Clears the saved URL so you can point Lart at another relay.")}
               >
                 <button onClick={() => update({ togetherRelayUrl: "" })} className={ROW_ACTION}>
                   {t("Change")}

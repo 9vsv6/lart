@@ -1,6 +1,6 @@
 const settingsFill: Record<string, string> = {
-  "Your avatar, name, and handle across Harbor.":
-    "Seu avatar, nome e identificador em todo o Harbor.",
+  "Your avatar, name, and handle across Lart.":
+    "Seu avatar, nome e identificador em todo o Lart.",
   'Adds an "Ask AI" button to search, so you can type things like a plain-language request.':
     'Adiciona um botão "Perguntar à IA" à busca, para você digitar pedidos em linguagem simples.',
   "Get a key at": "Obtenha uma chave em",
@@ -16,16 +16,16 @@ const settingsFill: Record<string, string> = {
     "Qualquer ID de modelo de openrouter.ai/models funciona aqui, incluindo as variantes :free.",
   ". Works without a key at low volume; add a key for higher quotas.":
     ". Funciona sem chave em baixo volume; adicione uma chave para cotas maiores.",
-  "SVP's files are here but its VapourSynth engine won't load ({err}). This usually means a stale VapourSynth entry or a missing Microsoft VC++ runtime. Reinstall SVP, or install the latest \"Visual C++ Redistributable (x64)\" from Microsoft, then reopen Harbor.":
-    'Os arquivos do SVP estão aqui, mas o mecanismo VapourSynth dele não carrega ({err}). Isso geralmente indica uma entrada obsoleta do VapourSynth ou a ausência do runtime Microsoft VC++. Reinstale o SVP ou instale a versão mais recente do "Visual C++ Redistributable (x64)" da Microsoft e reabra o Harbor.',
-  "Smooth motion runs on the bundled mpv engine in the Harbor desktop app. It has no effect in the browser.":
-    "O movimento suave é executado no mecanismo mpv integrado ao aplicativo de desktop do Harbor. Não tem efeito no navegador.",
+  "SVP's files are here but its VapourSynth engine won't load ({err}). This usually means a stale VapourSynth entry or a missing Microsoft VC++ runtime. Reinstall SVP, or install the latest \"Visual C++ Redistributable (x64)\" from Microsoft, then reopen Lart.":
+    'Os arquivos do SVP estão aqui, mas o mecanismo VapourSynth dele não carrega ({err}). Isso geralmente indica uma entrada obsoleta do VapourSynth ou a ausência do runtime Microsoft VC++. Reinstale o SVP ou instale a versão mais recente do "Visual C++ Redistributable (x64)" da Microsoft e reabra o Lart.',
+  "Smooth motion runs on the bundled mpv engine in the Lart desktop app. It has no effect in the browser.":
+    "O movimento suave é executado no mecanismo mpv integrado ao aplicativo de desktop do Lart. Não tem efeito no navegador.",
   "Subtitle auto-sync": "Sincronização automática de legendas",
-  "Harbor times out-of-sync subtitles to the audio for you, on any external subtitle. It works on the mpv player and leaves embedded tracks alone, since those are already in sync.":
-    "O Harbor sincroniza para você as legendas fora de sincronia com o áudio, em qualquer legenda externa. Funciona no reprodutor mpv e não mexe nas faixas incorporadas, já que essas já estão sincronizadas.",
+  "Lart times out-of-sync subtitles to the audio for you, on any external subtitle. It works on the mpv player and leaves embedded tracks alone, since those are already in sync.":
+    "O Lart sincroniza para você as legendas fora de sincronia com o áudio, em qualquer legenda externa. Funciona no reprodutor mpv e não mexe nas faixas incorporadas, já que essas já estão sincronizadas.",
   "Auto-sync subtitles": "Sincronizar legendas automaticamente",
-  "When a subtitle runs early or late, Harbor measures the speech and corrects the timing on its own. Off by default.":
-    "Quando uma legenda adianta ou atrasa, o Harbor mede a fala e corrige o tempo sozinho. Desativado por padrão.",
+  "When a subtitle runs early or late, Lart measures the speech and corrects the timing on its own. Off by default.":
+    "Quando uma legenda adianta ou atrasa, o Lart mede a fala e corrige o tempo sozinho. Desativado por padrão.",
   "Let structural tiers auto-apply": "Permitir aplicação automática dos níveis estruturais",
   "Identity matches from content hashing and the community database always apply on their own. Timing worked out from the audio only offers a fix until it has earned trust. Turn this on to let those audio-derived fixes apply automatically too.":
     "Correspondências de identidade obtidas por hashing de conteúdo e pelo banco de dados da comunidade sempre são aplicadas por conta própria. O tempo calculado a partir do áudio apenas sugere uma correção até conquistar confiança. Ative esta opção para que essas correções derivadas do áudio também sejam aplicadas automaticamente.",
@@ -33,43 +33,43 @@ const settingsFill: Record<string, string> = {
   "Keeps watching through playback and gently re-nudges the timing if the subtitle slips out of sync partway through.":
     "Continua monitorando durante a reprodução e reajusta suavemente o tempo se a legenda sair de sincronia no meio do caminho.",
   "Smart resync with speech recognition": "Ressincronização inteligente com reconhecimento de fala",
-  "For the hardest files and the Try again button, Harbor transcribes a little speech on your device and lines the subtitle up to the actual words. Needs a build with the asr-whisper feature and downloads a small model the first time you use it.":
-    "Para os arquivos mais difíceis e o botão Tentar novamente, o Harbor transcreve um trecho da fala no seu dispositivo e alinha a legenda às palavras reais. Requer uma compilação com o recurso asr-whisper e baixa um modelo pequeno na primeira vez que você o usa.",
+  "For the hardest files and the Try again button, Lart transcribes a little speech on your device and lines the subtitle up to the actual words. Needs a build with the asr-whisper feature and downloads a small model the first time you use it.":
+    "Para os arquivos mais difíceis e o botão Tentar novamente, o Lart transcreve um trecho da fala no seu dispositivo e alinha a legenda às palavras reais. Requer uma compilação com o recurso asr-whisper e baixa um modelo pequeno na primeira vez que você o usa.",
   "Match subtitles across languages (experimental)":
     "Comparar legendas entre idiomas (experimental)",
-  "When the audio and subtitle use different languages, Harbor compares a release-matched subtitle in the audio language. It only offers a fix unless every safety check is measured.":
-    "Quando o áudio e a legenda estão em idiomas diferentes, o Harbor compara uma legenda da mesma versão no idioma do áudio. Ele só sugere uma correção, a menos que todas as verificações de segurança tenham sido medidas.",
+  "When the audio and subtitle use different languages, Lart compares a release-matched subtitle in the audio language. It only offers a fix unless every safety check is measured.":
+    "Quando o áudio e a legenda estão em idiomas diferentes, o Lart compara uma legenda da mesma versão no idioma do áudio. Ele só sugere uma correção, a menos que todas as verificações de segurança tenham sido medidas.",
   "Community sync": "Sincronização da comunidade",
-  "A good correction only has to be found once. Harbor can share verified fixes so the next person with the same file and subtitle gets an instant result. Records are keyed by salted fingerprints, never your files or anything personal.":
-    "Uma boa correção só precisa ser encontrada uma vez. O Harbor pode compartilhar correções verificadas para que a próxima pessoa com o mesmo arquivo e a mesma legenda obtenha um resultado instantâneo. Os registros são indexados por impressões digitais salgadas, nunca pelos seus arquivos nem por nada pessoal.",
+  "A good correction only has to be found once. Lart can share verified fixes so the next person with the same file and subtitle gets an instant result. Records are keyed by salted fingerprints, never your files or anything personal.":
+    "Uma boa correção só precisa ser encontrada uma vez. O Lart pode compartilhar correções verificadas para que a próxima pessoa com o mesmo arquivo e a mesma legenda obtenha um resultado instantâneo. Os registros são indexados por impressões digitais salgadas, nunca pelos seus arquivos nem por nada pessoal.",
   "Use community corrections": "Usar correções da comunidade",
   "Check the shared database first. When this exact subtitle has already been synced by someone else, yours snaps into place with no analysis.":
     "Consulta primeiro o banco de dados compartilhado. Quando esta legenda exata já tiver sido sincronizada por outra pessoa, a sua se encaixa no lugar sem nenhuma análise.",
   "Community sync server": "Servidor de sincronização da comunidade",
   "https://sync.harbor.site": "https://sync.harbor.site",
-  "Leave blank to use Harbor's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.":
-    "Deixe em branco para usar o próprio servidor da comunidade do Harbor. Insira uma URL para apontar para o seu próprio servidor. O modo privado abaixo interrompe todo contato de qualquer forma.",
+  "Leave blank to use Lart's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.":
+    "Deixe em branco para usar o próprio servidor da comunidade do Lart. Insira uma URL para apontar para o seu próprio servidor. O modo privado abaixo interrompe todo contato de qualquer forma.",
   "Private mode": "Modo privado",
   "Never contact the community server in either direction. Nothing is looked up and nothing is contributed from this device.":
     "Nunca entra em contato com o servidor da comunidade em nenhuma direção. Nada é consultado e nada é compartilhado a partir deste dispositivo.",
-  "Harbor ships a neutral trophy for every award. Install an icon pack or upload your own image per award to make them yours. Packs are hosted by whoever makes them, so the artwork is theirs, not bundled with Harbor.":
-    "O Harbor inclui um troféu neutro para cada prêmio. Instale um pacote de ícones ou envie a sua própria imagem para cada prêmio para torná-los seus. Os pacotes são hospedados por quem os cria, então a arte é deles, não vem incluída no Harbor.",
+  "Lart ships a neutral trophy for every award. Install an icon pack or upload your own image per award to make them yours. Packs are hosted by whoever makes them, so the artwork is theirs, not bundled with Lart.":
+    "O Lart inclui um troféu neutro para cada prêmio. Instale um pacote de ícones ou envie a sua própria imagem para cada prêmio para torná-los seus. Os pacotes são hospedados por quem os cria, então a arte é deles, não vem incluída no Lart.",
   "View community award packs": "Ver pacotes de prêmios da comunidade",
   "Icon packs and single-award art from the community":
     "Pacotes de ícones e arte de prêmio individual da comunidade",
   "Upload an image per award, or name your zip files after the ID shown under each one (tap to copy). Natural names work too, so best_soundtrack, movie_of_the_year, etc. still match.":
     "Envie uma imagem por prêmio ou nomeie os seus arquivos zip com o ID mostrado abaixo de cada um (toque para copiar). Nomes naturais também funcionam, então best_soundtrack, movie_of_the_year, etc. ainda correspondem.",
-  "An award pack is a single JSON file plus the images it points to. Host both anywhere public (your own server, a GitHub repo, etc.) and share the JSON URL. Harbor only stores the URLs you install, never the images.":
-    "Um pacote de prêmios é um único arquivo JSON mais as imagens que ele referencia. Hospede ambos em qualquer lugar público (o seu próprio servidor, um repositório do GitHub, etc.) e compartilhe a URL do JSON. O Harbor armazena apenas as URLs que você instala, nunca as imagens.",
+  "An award pack is a single JSON file plus the images it points to. Host both anywhere public (your own server, a GitHub repo, etc.) and share the JSON URL. Lart only stores the URLs you install, never the images.":
+    "Um pacote de prêmios é um único arquivo JSON mais as imagens que ele referencia. Hospede ambos em qualquer lugar público (o seu próprio servidor, um repositório do GitHub, etc.) e compartilhe a URL do JSON. O Lart armazena apenas as URLs que você instala, nunca as imagens.",
   "Each key above is an award ID. Any key you omit falls back to the default trophy (or a lower-priority pack). The full list of IDs is every award shown in the grid above.":
     "Cada chave acima é um ID de prêmio. Qualquer chave que você omitir recorre ao troféu padrão (ou a um pacote de menor prioridade). A lista completa de IDs abrange todos os prêmios mostrados na grade acima.",
-  'Name each image file after its award ID and put them in a .zip, then use "Import a .zip pack" above. No JSON, no hosting needed. Harbor matches each file to its award, stores it locally, resizes it, and skips anything it doesn\'t recognize.':
-    'Nomeie cada arquivo de imagem com o ID do seu prêmio e coloque-os em um .zip, depois use "Importar um pacote .zip" acima. Sem JSON, sem necessidade de hospedagem. O Harbor associa cada arquivo ao seu prêmio, armazena-o localmente, redimensiona-o e ignora tudo o que não reconhece.',
+  'Name each image file after its award ID and put them in a .zip, then use "Import a .zip pack" above. No JSON, no hosting needed. Lart matches each file to its award, stores it locally, resizes it, and skips anything it doesn\'t recognize.':
+    'Nomeie cada arquivo de imagem com o ID do seu prêmio e coloque-os em um .zip, depois use "Importar um pacote .zip" acima. Sem JSON, sem necessidade de hospedagem. O Lart associa cada arquivo ao seu prêmio, armazena-o localmente, redimensiona-o e ignora tudo o que não reconhece.',
   "Watched badge": "Selo de assistido",
   "How episodes are grouped for shows and anime. TVDB is the default: it gives the arc, DVD, and absolute orderings anime fans expect, with no key needed. TMDB keeps the plain aired order. Either way, every episode still plays and marks watched the same.":
     "Como os episódios são agrupados para séries e anime. O TVDB é o padrão: ele oferece as ordenações por arco, DVD e absoluta que os fãs de anime esperam, sem necessidade de chave. O TMDB mantém a ordem simples de exibição. De qualquer forma, cada episódio continua sendo reproduzido e marcado como assistido da mesma maneira.",
-  "Turns the season button into a full panel: order tabs (Aired, DVD, Absolute, and any the show has) plus a season table with air-date ranges and episode counts. On by default for anime through Harbor's TVDB service, no key needed. Add your own TVDB key to use it for regular shows too.":
-    "Transforma o botão de temporada em um painel completo: abas de ordenação (Exibição, DVD, Absoluta e qualquer outra que a série tenha) mais uma tabela de temporadas com intervalos de datas de exibição e contagem de episódios. Ativado por padrão para anime através do serviço TVDB do Harbor, sem necessidade de chave. Adicione sua própria chave TVDB para usá-lo em séries comuns também.",
+  "Turns the season button into a full panel: order tabs (Aired, DVD, Absolute, and any the show has) plus a season table with air-date ranges and episode counts. On by default for anime through Lart's TVDB service, no key needed. Add your own TVDB key to use it for regular shows too.":
+    "Transforma o botão de temporada em um painel completo: abas de ordenação (Exibição, DVD, Absoluta e qualquer outra que a série tenha) mais uma tabela de temporadas com intervalos de datas de exibição e contagem de episódios. Ativado por padrão para anime através do serviço TVDB do Lart, sem necessidade de chave. Adicione sua própria chave TVDB para usá-lo em séries comuns também.",
   'When Esc would close the player, show a quick confirm first. You can tick "Don\'t ask me again" in that prompt to always leave on Esc.':
     'Quando o Esc for fechar o player, mostra primeiro uma confirmação rápida. Você pode marcar "Não perguntar novamente" nesse aviso para sempre sair com o Esc.',
   "Short seek (Shift + arrows)": "Salto curto (Shift + setas)",
@@ -92,8 +92,8 @@ const settingsFill: Record<string, string> = {
   "Poster shine on hover": "Brilho no pôster ao passar o mouse",
   "A subtle tvOS style light sweep across a poster when you hover it. Off by default; the card lift stays either way.":
     "Uma sutil passagem de luz no estilo tvOS sobre o pôster quando você passa o mouse. Desativado por padrão; a elevação do card permanece de qualquer forma.",
-  "Looking for Harbor in your browser, the phone remote, or the manga reader remote? They moved to the Remotes page.":
-    "Procurando o Harbor no seu navegador, o controle remoto do celular ou o controle remoto do leitor de mangá? Eles foram movidos para a página Controles Remotos.",
+  "Looking for Lart in your browser, the phone remote, or the manga reader remote? They moved to the Remotes page.":
+    "Procurando o Lart no seu navegador, o controle remoto do celular ou o controle remoto do leitor de mangá? Eles foram movidos para a página Controles Remotos.",
   "X-Ray (experimental)": "X-Ray (experimental)",
   "Amazon-style X-Ray: open the cast while you watch and tap anyone for their bio and everything they have been in. On-device face matching to show who is on screen is coming next. Off by default.":
     "X-Ray no estilo Amazon: abra o elenco enquanto assiste e toque em qualquer pessoa para ver sua biografia e tudo em que já atuou. A correspondência facial no dispositivo para mostrar quem está na tela vem a seguir. Desativado por padrão.",
@@ -113,10 +113,10 @@ const settingsFill: Record<string, string> = {
   "After 3": "Após 3",
   "After 4": "Após 4",
   "After 5": "Após 5",
-  "Remotes are served by the desktop app. Open these settings on your computer's Harbor to get the links.":
-    "Os controles remotos são fornecidos pelo aplicativo de desktop. Abra estas configurações no Harbor do seu computador para obter os links.",
-  "Harbor on other devices": "Harbor em outros dispositivos",
-  "Serve Harbor on your network": "Disponibilizar o Harbor na sua rede",
+  "Remotes are served by the desktop app. Open these settings on your computer's Lart to get the links.":
+    "Os controles remotos são fornecidos pelo aplicativo de desktop. Abra estas configurações no Lart do seu computador para obter os links.",
+  "Lart on other devices": "Lart em outros dispositivos",
+  "Serve Lart on your network": "Disponibilizar o Lart na sua rede",
   "One switch powers everything on this page: the web app, the phone remote, and the manga reader remote.":
     "Uma única chave ativa tudo nesta página: o aplicativo web, o controle pelo celular e o controle remoto do leitor de mangá.",
   "Phone remote": "Controle pelo celular",
@@ -129,19 +129,19 @@ const settingsFill: Record<string, string> = {
     "Ligue a chave acima e os endereços do controle pelo celular e do controle do leitor de mangá aparecem aqui.",
   "On a beta that's giving you trouble? Pick an earlier build below and run its installer over your current copy. Your library, settings, and downloads all stay put.":
     "Está tendo problemas com uma versão beta? Escolha uma versão anterior abaixo e execute o instalador dela sobre a sua cópia atual. Sua biblioteca, configurações e downloads continuam onde estão.",
-  "While beta updates are on, Harbor offers the newest build again on its next check. Turn beta updates off above to stay on an earlier one.":
-    "Enquanto as atualizações beta estiverem ativadas, o Harbor volta a oferecer a versão mais recente na próxima verificação. Desative as atualizações beta acima para permanecer em uma versão anterior.",
-  "Picture shaders run on the bundled mpv engine in the Harbor desktop app. They have no effect in the browser.":
-    "Os shaders de imagem são executados no motor mpv integrado ao aplicativo Harbor para desktop. Eles não têm efeito no navegador.",
+  "While beta updates are on, Lart offers the newest build again on its next check. Turn beta updates off above to stay on an earlier one.":
+    "Enquanto as atualizações beta estiverem ativadas, o Lart volta a oferecer a versão mais recente na próxima verificação. Desative as atualizações beta acima para permanecer em uma versão anterior.",
+  "Picture shaders run on the bundled mpv engine in the Lart desktop app. They have no effect in the browser.":
+    "Os shaders de imagem são executados no motor mpv integrado ao aplicativo Lart para desktop. Eles não têm efeito no navegador.",
   "Download the desktop app to use shaders.": "Baixe o aplicativo para desktop para usar shaders.",
   "More picture shaders": "Mais shaders de imagem",
-  "Neural upscalers, sharpeners, and HDR tone-mapping ported for mpv. Each is hosted by its author, not bundled with Harbor. Download the ones you want; Harbor chains them in the right order and applies them in the player.":
-    "Upscalers neurais, filtros de nitidez e mapeamento de tons HDR portados para o mpv. Cada um é hospedado pelo seu autor, não incluído no Harbor. Baixe os que quiser; o Harbor os encadeia na ordem certa e os aplica no player.",
+  "Neural upscalers, sharpeners, and HDR tone-mapping ported for mpv. Each is hosted by its author, not bundled with Lart. Download the ones you want; Lart chains them in the right order and applies them in the player.":
+    "Upscalers neurais, filtros de nitidez e mapeamento de tons HDR portados para o mpv. Cada um é hospedado pelo seu autor, não incluído no Lart. Baixe os que quiser; o Lart os encadeia na ordem certa e os aplica no player.",
   Cleared: "Limpo",
   "Sure?": "Tem certeza?",
   "Storage overview": "Visão geral do armazenamento",
-  "Everything Harbor saves lives on this computer. If space runs low, clear a cache below; Harbor rebuilds them as you browse.":
-    "Tudo o que o Harbor salva fica neste computador. Se faltar espaço, limpe um cache abaixo; o Harbor os reconstrói conforme você navega.",
+  "Everything Lart saves lives on this computer. If space runs low, clear a cache below; Lart rebuilds them as you browse.":
+    "Tudo o que o Lart salva fica neste computador. Se faltar espaço, limpe um cache abaixo; o Lart os reconstrói conforme você navega.",
   "App storage": "Armazenamento do aplicativo",
   "{quota} available": "{quota} disponível",
   "Settings storage": "Armazenamento das configurações",
@@ -158,8 +158,8 @@ const settingsFill: Record<string, string> = {
   "Parsed playlists, program guide, and series info. Re-downloads on next open.":
     "Playlists analisadas, guia de programação e informações de séries. Baixados novamente na próxima abertura.",
   "Dead stream marks": "Marcações de streams mortos",
-  "Sources Harbor flagged as broken. Clear to give them another chance.":
-    "Fontes que o Harbor marcou como quebradas. Limpe para dar outra chance a elas.",
+  "Sources Lart flagged as broken. Clear to give them another chance.":
+    "Fontes que o Lart marcou como quebradas. Limpe para dar outra chance a elas.",
   "Continue Watching suggestions cache": "Cache de sugestões de Continuar assistindo",
   "Resurface picks for the home rail. Rebuilds overnight.":
     "Traz de volta seleções para a faixa inicial. Reconstruído durante a noite.",
@@ -181,11 +181,11 @@ const settingsFill: Record<string, string> = {
   "None installed yet. Add Stremio subtitle addons under Streaming sources.":
     "Nenhum addon instalado ainda. Adicione addons de legendas do Stremio em Fontes de streaming.",
   "Subtitle sources": "Fontes de legendas",
-  "Harbor searches every source you enable at the same time, then merges and de-duplicates the results into one clean list. Turn a source off to stop pulling from it.":
-    "O Harbor pesquisa ao mesmo tempo todas as fontes que você ativa, depois mescla os resultados e remove as duplicatas em uma única lista organizada. Desative uma fonte para parar de buscar resultados nela.",
+  "Lart searches every source you enable at the same time, then merges and de-duplicates the results into one clean list. Turn a source off to stop pulling from it.":
+    "O Lart pesquisa ao mesmo tempo todas as fontes que você ativa, depois mescla os resultados e remove as duplicatas em uma única lista organizada. Desative uma fonte para parar de buscar resultados nela.",
   OpenSubtitles: "OpenSubtitles",
-  "Harbor's built-in OpenSubtitles search, on by default. If you install an OpenSubtitles addon, this steps aside automatically so your results are never duplicated.":
-    "A busca de OpenSubtitles integrada ao Harbor, ativada por padrão. Se você instalar um addon do OpenSubtitles, ela se desativa automaticamente para que seus resultados nunca sejam duplicados.",
+  "Lart's built-in OpenSubtitles search, on by default. If you install an OpenSubtitles addon, this steps aside automatically so your results are never duplicated.":
+    "A busca de OpenSubtitles integrada ao Lart, ativada por padrão. Se você instalar um addon do OpenSubtitles, ela se desativa automaticamente para que seus resultados nunca sejam duplicados.",
   Wyzie: "Wyzie",
   "A fast community subtitle index. Off by default; turn it on for extra coverage on newer or niche releases.":
     "Um índice rápido de legendas da comunidade. Desativado por padrão; ative-o para ter cobertura extra em lançamentos mais recentes ou de nicho.",
@@ -214,8 +214,8 @@ const settingsFill: Record<string, string> = {
     "Amplia suavemente os pôsteres próximos conforme você percorre uma linha de pôsteres, como um dock. Desativado por padrão.",
   "Liquid Glass": "Vidro líquido",
   "Use liquid glass": "Usar vidro líquido",
-  "Use liquid glass for the search pill and row scroll arrows. The appearance settings below are shared by glass surfaces across Harbor.":
-    "Use vidro líquido na barra de pesquisa e nas setas de rolagem das fileiras. As configurações de aparência abaixo são compartilhadas pelas superfícies de vidro do Harbor.",
+  "Use liquid glass for the search pill and row scroll arrows. The appearance settings below are shared by glass surfaces across Lart.":
+    "Use vidro líquido na barra de pesquisa e nas setas de rolagem das fileiras. As configurações de aparência abaixo são compartilhadas pelas superfícies de vidro do Lart.",
   "Enhanced liquid glass": "Vidro líquido aprimorado",
   "A richer glass treatment. May look better while using more graphics resources.":
     "Um efeito de vidro mais rico. Pode parecer melhor, mas consome mais recursos gráficos.",
@@ -223,12 +223,12 @@ const settingsFill: Record<string, string> = {
   "Glass blur": "Desfoque do vidro",
   "Glass tint": "Tonalidade do vidro",
   "Featured source": "Fonte do destaque",
-  "What fills the hero. Trending is a fresh top list from Harbor, refreshed through the day. Classic uses your own Home rows.":
-    "O que preenche o destaque. Em alta é uma nova lista dos mais populares do Harbor, atualizada ao longo do dia. Clássico usa as suas próprias linhas da tela Início.",
+  "What fills the hero. Trending is a fresh top list from Lart, refreshed through the day. Classic uses your own Home rows.":
+    "O que preenche o destaque. Em alta é uma nova lista dos mais populares do Lart, atualizada ao longo do dia. Clássico usa as suas próprias linhas da tela Início.",
   Classic: "Clássico",
   Screensaver: "Proteção de tela",
-  "When Harbor sits idle in the foreground, it drifts through cinematic backdrops with a clock and what's trending. Any movement or key brings you back. Off by default.":
-    "Quando o Harbor fica ocioso em primeiro plano, ele desliza por cenários cinematográficos com um relógio e o que está em alta. Qualquer movimento ou tecla traz você de volta. Desativado por padrão.",
+  "When Lart sits idle in the foreground, it drifts through cinematic backdrops with a clock and what's trending. Any movement or key brings you back. Off by default.":
+    "Quando o Lart fica ocioso em primeiro plano, ele desliza por cenários cinematográficos com um relógio e o que está em alta. Qualquer movimento ou tecla traz você de volta. Desativado por padrão.",
   "Ambient screensaver": "Proteção de tela ambiente",
   "Start after": "Iniciar após",
   "3 min": "3 min",
@@ -236,27 +236,27 @@ const settingsFill: Record<string, string> = {
   "10 min": "10 min",
   "15 min": "15 min",
   "Moving the window": "Mover a janela",
-  "Choose where you can grab Harbor to drag it around your screen.":
-    "Escolha onde você pode pegar o Harbor para arrastá-lo pela tela.",
+  "Choose where you can grab Lart to drag it around your screen.":
+    "Escolha onde você pode pegar o Lart para arrastá-lo pela tela.",
   "Native-style hybrid bar": "Barra híbrida de estilo nativo",
-  "Turn off the native window title bar above to use Harbor's hybrid bar instead.":
-    "Desative a barra de título nativa da janela acima para usar a barra híbrida do Harbor em vez dela.",
-  "Tuck clean, native-looking window buttons into the top corner, with hover labels. On macOS they become traffic-light dots. Blends into Harbor while feeling like your system's own title bar.":
-    "Encaixa botões de janela limpos e com aparência nativa no canto superior, com rótulos ao passar o mouse. No macOS, eles se tornam pontos de semáforo. Combina com o Harbor e ao mesmo tempo parece a barra de título do seu próprio sistema.",
+  "Turn off the native window title bar above to use Lart's hybrid bar instead.":
+    "Desative a barra de título nativa da janela acima para usar a barra híbrida do Lart em vez dela.",
+  "Tuck clean, native-looking window buttons into the top corner, with hover labels. On macOS they become traffic-light dots. Blends into Lart while feeling like your system's own title bar.":
+    "Encaixa botões de janela limpos e com aparência nativa no canto superior, com rótulos ao passar o mouse. No macOS, eles se tornam pontos de semáforo. Combina com o Lart e ao mesmo tempo parece a barra de título do seu próprio sistema.",
   "Frost the top bar on scroll": "Deixar a barra superior fosca ao rolar",
   "As you scroll, the top bar frosts over the content beneath it. Off by default; it uses a blur, so leave it off on lower-end machines.":
     "Ao rolar, a barra superior fica fosca sobre o conteúdo abaixo dela. Desativado por padrão; usa desfoque, então deixe desativado em máquinas mais fracas.",
   "Top-right controls": "Controles do canto superior direito",
-  "The operating system draws native window controls, so Harbor cannot change their appearance.":
-    "O sistema operacional desenha os controles nativos da janela, portanto o Harbor não pode alterar sua aparência.",
+  "The operating system draws native window controls, so Lart cannot change their appearance.":
+    "O sistema operacional desenha os controles nativos da janela, portanto o Lart não pode alterar sua aparência.",
   "Choose how Watch Together and the minimize, maximize, and close buttons look. Liquid glass replaces the clean transparent controls.":
     "Escolha a aparência de Assistir juntos e dos botões minimizar, maximizar e fechar. O vidro líquido substitui os controles transparentes limpos.",
   "Clean transparent": "Transparente limpo",
   "Liquid glass": "Vidro líquido",
   Filled: "Preenchido",
   "Drag the window from anywhere": "Arrastar a janela de qualquer lugar",
-  "Move Harbor by dragging any empty space on a page, not just the top bar. Leave this off to keep clicks inside pages from nudging the window.":
-    "Mova o Harbor arrastando qualquer espaço vazio de uma página, não apenas a barra superior. Deixe desativado para evitar que cliques dentro das páginas movam a janela sem querer.",
+  "Move Lart by dragging any empty space on a page, not just the top bar. Leave this off to keep clicks inside pages from nudging the window.":
+    "Mova o Lart arrastando qualquer espaço vazio de uma página, não apenas a barra superior. Deixe desativado para evitar que cliques dentro das páginas movam a janela sem querer.",
   "Stream priority": "Prioridade de streams",
   "Results from addons higher in this list come first. If one finds nothing, the next fills in.":
     "Os resultados dos addons mais acima nesta lista vêm primeiro. Se um não encontrar nada, o próximo assume.",
@@ -269,8 +269,8 @@ const settingsFill: Record<string, string> = {
   "{n} addons don't provide streams and aren't listed.":
     "{n} addons não fornecem streams e não aparecem aqui.",
   "Moved {name} to position {n} of {total}": "{name} movido para a posição {n} de {total}",
-  "Harbor ranking puts the best-scoring sources first. Addon order keeps each addon's results in the order it returned them, like the Stremio and Vidi apps. Stream priority below decides which addon leads, in both modes.":
-    "A classificação do Harbor coloca as fontes com melhor pontuação primeiro. A ordem dos addons mantém os resultados de cada addon na ordem em que foram retornados, como nos apps Stremio e Vidi. A prioridade de streams abaixo decide qual addon lidera, nos dois modos.",
+  "Lart ranking puts the best-scoring sources first. Addon order keeps each addon's results in the order it returned them, like the Stremio and Vidi apps. Stream priority below decides which addon leads, in both modes.":
+    "A classificação do Lart coloca as fontes com melhor pontuação primeiro. A ordem dos addons mantém os resultados de cada addon na ordem em que foram retornados, como nos apps Stremio e Vidi. A prioridade de streams abaixo decide qual addon lidera, nos dois modos.",
   "If a stream hasn't started playing in time (a dead source or an addon that's down), automatically try the next available stream. Off by default.":
     "Se um stream não começar a reproduzir a tempo (uma fonte morta ou um addon fora do ar), tenta automaticamente o próximo stream disponível. Desativado por padrão.",
   "How long to wait first": "Quanto tempo esperar antes",
@@ -278,7 +278,7 @@ const settingsFill: Record<string, string> = {
     "Addons lentos e fontes P2P costumam precisar de mais de 10 segundos para iniciar. Aumente este tempo se os streams estiverem sendo ignorados antes de terem uma chance.",
   "{n} sec": "{n} s",
   "Only start the P2P engine when needed": "Iniciar o mecanismo P2P somente quando necessário",
-  "Harbor normally starts its P2P engine at launch so the first P2P stream connects faster. That keeps a DHT node running and talking to the network even when you are not watching anything. Turn this on if you are on a metered or limited connection: the engine then starts the first time you actually play a P2P stream. Takes effect next launch.": "Normalmente, o Harbor inicia o mecanismo P2P ao abrir para que o primeiro stream P2P conecte mais rápido. Isso mantém um nó DHT ativo e em contato com a rede mesmo quando você não está assistindo. Ative esta opção se sua conexão for limitada ou tiver franquia de dados: o mecanismo só será iniciado quando você reproduzir um stream P2P pela primeira vez. A alteração entra em vigor na próxima inicialização.",
+  "Lart normally starts its P2P engine at launch so the first P2P stream connects faster. That keeps a DHT node running and talking to the network even when you are not watching anything. Turn this on if you are on a metered or limited connection: the engine then starts the first time you actually play a P2P stream. Takes effect next launch.": "Normalmente, o Lart inicia o mecanismo P2P ao abrir para que o primeiro stream P2P conecte mais rápido. Isso mantém um nó DHT ativo e em contato com a rede mesmo quando você não está assistindo. Ative esta opção se sua conexão for limitada ou tiver franquia de dados: o mecanismo só será iniciado quando você reproduzir um stream P2P pela primeira vez. A alteração entra em vigor na próxima inicialização.",
   "What fullscreen does": "Como funciona a tela cheia",
   "True fullscreen covers the whole screen and hides the taskbar. Maximize fills the screen but keeps the taskbar and title bar, so you can still switch apps.":
     "A tela cheia real ocupa toda a tela e oculta a barra de tarefas. Maximizar preenche a tela, mas mantém a barra de tarefas e a barra de título para você continuar alternando entre aplicativos.",
@@ -288,8 +288,8 @@ const settingsFill: Record<string, string> = {
   "Show a second subtitle in another language at the same time. Handy when you are learning a language: keep the one you are learning as your main subtitle, and put your own language here.":
     "Mostra ao mesmo tempo uma segunda legenda em outro idioma. É útil ao aprender uma língua: mantenha o idioma que está estudando como legenda principal e escolha aqui o seu próprio idioma.",
   "Second subtitle language": "Idioma da segunda legenda",
-  "Harbor loads it automatically when a track in that language exists. You can also set or clear the second track for one video from the subtitle menu in the player.":
-    "O Harbor a carrega automaticamente quando existe uma faixa nesse idioma. Você também pode definir ou remover a segunda faixa de um vídeo pelo menu de legendas do player.",
+  "Lart loads it automatically when a track in that language exists. You can also set or clear the second track for one video from the subtitle menu in the player.":
+    "O Lart a carrega automaticamente quando existe uma faixa nesse idioma. Você também pode definir ou remover a segunda faixa de um vídeo pelo menu de legendas do player.",
   "Where it shows": "Onde aparece",
   "Top of the screen": "No topo da tela",
   "Above the main line": "Acima da linha principal",
@@ -311,35 +311,35 @@ const settingsFill: Record<string, string> = {
   "Hide this": "Ocultar",
   "Includes Comet, MediaFusion, AIOStreams, StremThru, Jackettio and more, plus TorBox and Usenet accounts. No Docker, no server, no config.":
     "Inclui Comet, MediaFusion, AIOStreams, StremThru, Jackettio e outros, além de contas TorBox e Usenet. Sem Docker, servidor ou configuração.",
-  "Support Harbor": "Apoiar o Harbor",
+  "Support Lart": "Apoiar o Lart",
   "Who keeps this running": "Quem mantém tudo funcionando",
-  "Harbor's backend runs on ElfHosted. They took it on without being asked, and Harbor has never charged for anything.":
-    "O backend do Harbor funciona na ElfHosted. Eles assumiram esse trabalho por iniciativa própria, e o Harbor nunca cobrou por nada.",
-  "If you want to put money somewhere and you use Harbor, an ElfHosted subscription is the most useful place for it. You get a managed instance, and the servers Harbor depends on stay paid for.":
-    "Se você usa o Harbor e quer contribuir financeiramente, uma assinatura da ElfHosted é a opção mais útil. Você recebe uma instância gerenciada e ajuda a manter os servidores dos quais o Harbor depende.",
+  "Lart's backend runs on ElfHosted. They took it on without being asked, and Lart has never charged for anything.":
+    "O backend do Lart funciona na ElfHosted. Eles assumiram esse trabalho por iniciativa própria, e o Lart nunca cobrou por nada.",
+  "If you want to put money somewhere and you use Lart, an ElfHosted subscription is the most useful place for it. You get a managed instance, and the servers Lart depends on stay paid for.":
+    "Se você usa o Lart e quer contribuir financeiramente, uma assinatura da ElfHosted é a opção mais útil. Você recebe uma instância gerenciada e ajuda a manter os servidores dos quais o Lart depende.",
   "Browse ElfHosted": "Conhecer a ElfHosted",
   "One-off donation": "Doação única",
-  "Donating to Harbor": "Doar para o Harbor",
-  "Short version: don't. Harbor takes no donations and no cut of anything on this page.":
-    "Resumindo: não doe. O Harbor não aceita doações nem recebe comissão por nada desta página.",
+  "Donating to Lart": "Doar para o Lart",
+  "Short version: don't. Lart takes no donations and no cut of anything on this page.":
+    "Resumindo: não doe. O Lart não aceita doações nem recebe comissão por nada desta página.",
   "People have offered plenty of times and the answer has stayed no. If you were going to send something, send it to ElfHosted above so the infrastructure stays up, or to one of the charities below. Both do more good than paying me would.":
     "Muitas pessoas já ofereceram, mas a resposta continua sendo não. Se você pretendia enviar algo, apoie a ElfHosted acima para manter a infraestrutura ou uma das instituições abaixo. O dinheiro será mais útil assim.",
   "If you would rather give it away": "Se preferir fazer uma doação",
-  "No affiliation, no referral links, and Harbor gets nothing from these. They are just places where money goes further than it does here.":
-    "Não há afiliação nem links de indicação, e o Harbor não recebe nada dessas organizações. São apenas lugares onde o dinheiro faz mais diferença.",
+  "No affiliation, no referral links, and Lart gets nothing from these. They are just places where money goes further than it does here.":
+    "Não há afiliação nem links de indicação, e o Lart não recebe nada dessas organizações. São apenas lugares onde o dinheiro faz mais diferença.",
   "Insecticide-treated nets. One of the most cost-effective interventions measured.":
     "Mosquiteiros tratados com inseticida. Uma das intervenções de melhor custo-benefício já avaliadas.",
   "Cash straight to people living in extreme poverty, no strings.":
     "Dinheiro enviado diretamente a pessoas em extrema pobreza, sem condições.",
   "Emergency medical care in crisis zones.": "Atendimento médico de emergência em zonas de crise.",
-  "Keeps the web's memory alive. Harbor would be poorer without it.":
-    "Mantém viva a memória da web. O Harbor seria mais pobre sem ela.",
+  "Keeps the web's memory alive. Lart would be poorer without it.":
+    "Mantém viva a memória da web. O Lart seria mais pobre sem ela.",
   "Who pays for the servers, and where to put money if you want to.":
     "Quem paga pelos servidores e onde colocar dinheiro, se você quiser.",
-  "Harbor's backend runs on ElfHosted. They run our servers at no cost to the community.":
-    "O backend do Harbor funciona na ElfHosted. Eles mantêm nossos servidores sem custo para a comunidade.",
-  "Keeping Harbor's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Harbor stays funded at the same time.":
-    "Manter o backend do Harbor no ar custa dinheiro de verdade, e a ElfHosted arca com isso para que a comunidade não precise. Assinar é a melhor forma de manter isso funcionando, e não é uma doação. Você ganha uma infraestrutura de verdade para a sua própria configuração, e o Harbor continua financiado ao mesmo tempo.",
+  "Lart's backend runs on ElfHosted. They run our servers at no cost to the community.":
+    "O backend do Lart funciona na ElfHosted. Eles mantêm nossos servidores sem custo para a comunidade.",
+  "Keeping Lart's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Lart stays funded at the same time.":
+    "Manter o backend do Lart no ar custa dinheiro de verdade, e a ElfHosted arca com isso para que a comunidade não precise. Assinar é a melhor forma de manter isso funcionando, e não é uma doação. Você ganha uma infraestrutura de verdade para a sua própria configuração, e o Lart continua financiado ao mesmo tempo.",
   "Private Stremio add-ons with 10x the rate limits and built-in stream proxying, from $9 a month.":
     "Add-ons privados do Stremio com 10x mais limites de requisições e proxy de streams embutido, a partir de $9 por mês.",
   "Managed Plex, Emby, or Jellyfin, running in minutes with no hardware and no Docker.":
@@ -351,8 +351,8 @@ const settingsFill: Record<string, string> = {
   "Month to month, cancel anytime, and you can try the whole thing for $1 for a week.":
     "Mês a mês, cancele quando quiser, e você pode testar tudo por $1 durante uma semana.",
   "See what you get": "Veja o que você ganha",
-  "Short version: don't. Harbor takes no donations.":
-    "Versão curta: não. O Harbor não aceita doações.",
+  "Short version: don't. Lart takes no donations.":
+    "Versão curta: não. O Lart não aceita doações.",
   "If you were going to send something, send it to ElfHosted above so the servers stay paid for, or to one of the charities below. Both do more good with it.":
     "Se você ia enviar algo, envie para a ElfHosted acima, para manter os servidores pagos, ou para uma das instituições abaixo. Ambas fazem mais bem com isso.",
   "Badges for giving": "Emblemas por contribuir",
@@ -377,16 +377,16 @@ const settingsFill: Record<string, string> = {
     "Atendimento médico de emergência em zonas de crise, independente de política.",
   "Look any of them up on Charity Navigator": "Consulte qualquer uma delas no Charity Navigator",
   "Built on Stremio": "Construído sobre o Stremio",
-  "Harbor would not be possible without Stremio. It is the foundation everything here is built on.":
-    "O Harbor não seria possível sem o Stremio. É a base sobre a qual tudo aqui é construído.",
-  "Harbor speaks Stremio's addon protocol, and the whole ecosystem of addons grows out of their work. Stremio is funded by its community, and supporters who chip in get early access to experimental features. If you have it to spare, send some their way too.":
-    "O Harbor fala o protocolo de addons do Stremio, e todo o ecossistema de addons nasce do trabalho deles. O Stremio é financiado pela sua comunidade, e quem contribui ganha acesso antecipado a recursos experimentais. Se você puder, mande algo para eles também.",
+  "Lart would not be possible without Stremio. It is the foundation everything here is built on.":
+    "O Lart não seria possível sem o Stremio. É a base sobre a qual tudo aqui é construído.",
+  "Lart speaks Stremio's addon protocol, and the whole ecosystem of addons grows out of their work. Stremio is funded by its community, and supporters who chip in get early access to experimental features. If you have it to spare, send some their way too.":
+    "O Lart fala o protocolo de addons do Stremio, e todo o ecossistema de addons nasce do trabalho deles. O Stremio é financiado pela sua comunidade, e quem contribui ganha acesso antecipado a recursos experimentais. Se você puder, mande algo para eles também.",
   "Support Stremio": "Apoiar o Stremio",
-  "Stremio Supporters get a special badge on their Harbor profile.":
-    "Apoiadores do Stremio ganham um emblema especial no seu perfil do Harbor.",
+  "Stremio Supporters get a special badge on their Lart profile.":
+    "Apoiadores do Stremio ganham um emblema especial no seu perfil do Lart.",
   "Your own private {name}, bundled with Debridge": "O seu {name} privado, com Debridge incluído",
-  "Who keeps the lights on, what Harbor is built on, and where to put money if you want to.":
-    "Quem mantém tudo funcionando, sobre o que o Harbor é construído, e onde colocar dinheiro se você quiser.",
+  "Who keeps the lights on, what Lart is built on, and where to put money if you want to.":
+    "Quem mantém tudo funcionando, sobre o que o Lart é construído, e onde colocar dinheiro se você quiser.",
   "If you were going to send something, send it to ElfHosted or Stremio above, or to one of the charities below. They all do more good with it.":
     "Se você ia enviar algo, envie para a ElfHosted ou o Stremio acima, ou para uma das instituições abaixo. Todos fazem mais bem com isso.",
   "Support ElfHosted or Stremio, or give to any charity below, and the badge lands on your profile.":
@@ -434,21 +434,21 @@ const settingsFill: Record<string, string> = {
   "Could not reach TMDB. Check the connection.":
     "Não foi possível acessar o TMDB. Verifique a conexão.",
   "Edge margin": "Margem das bordas",
-  "Finish setting up Harbor": "Conclua a configuração do Harbor",
+  "Finish setting up Lart": "Conclua a configuração do Lart",
   "Get one free at {url}": "Obtenha uma gratuita em {url}",
   "Getting a code ready…": "Preparando um código…",
-  Harbor: "Harbor",
-  "Harbor needs a TMDB key for artwork, rows and collections. It is free.":
-    "O Harbor precisa de uma chave do TMDB para artes, fileiras e coleções. Ela é gratuita.",
-  "Harbor plays IPTV from your own provider. Add a playlist and the guide fills in.":
-    "O Harbor reproduz IPTV do seu próprio provedor. Adicione uma playlist e o guia é preenchido.",
+  Lart: "Lart",
+  "Lart needs a TMDB key for artwork, rows and collections. It is free.":
+    "O Lart precisa de uma chave do TMDB para artes, fileiras e coleções. Ela é gratuita.",
+  "Lart plays IPTV from your own provider. Add a playlist and the guide fills in.":
+    "O Lart reproduz IPTV do seu próprio provedor. Adicione uma playlist e o guia é preenchido.",
   Interface: "Interface",
   "Live TV playlists": "Playlists de TV ao vivo",
   "Nothing connected yet. Scan a code with your phone.":
     "Nada conectado ainda. Escaneie um código com o celular.",
   "Phone setup is off": "A configuração pelo celular está desativada",
-  "Press OK on a field to type, or use the Harbor remote on your phone.":
-    "Pressione OK em um campo para digitar, ou use o controle do Harbor no celular.",
+  "Press OK on a field to type, or use the Lart remote on your phone.":
+    "Pressione OK em um campo para digitar, ou use o controle do Lart no celular.",
   "Raise this only if your TV cuts off the edges of the picture.":
     "Aumente isto apenas se a sua TV cortar as bordas da imagem.",
   "Replace the saved key": "Substituir a chave salva",
@@ -468,8 +468,8 @@ const settingsFill: Record<string, string> = {
   "Your Stremio library": "Sua biblioteca do Stremio",
   "{count} added": "{count} adicionadas",
   "Performance notice": "Aviso de desempenho",
-  "Live face scanning loads on-device AI models and can significantly increase RAM, CPU, and GPU usage while playback is active. Turn it off if Harbor slows down or your device gets hot.":
-    "A detecção facial ao vivo carrega modelos de IA no dispositivo e pode aumentar significativamente o uso de RAM, CPU e GPU durante a reprodução. Desative-a se o Harbor ficar lento ou se o dispositivo aquecer.",
+  "Live face scanning loads on-device AI models and can significantly increase RAM, CPU, and GPU usage while playback is active. Turn it off if Lart slows down or your device gets hot.":
+    "A detecção facial ao vivo carrega modelos de IA no dispositivo e pode aumentar significativamente o uso de RAM, CPU e GPU durante a reprodução. Desative-a se o Lart ficar lento ou se o dispositivo aquecer.",
   "Borderless window": "Janela sem bordas",
   "True fullscreen covers the whole screen and hides the taskbar, but switching apps can flicker. Borderless window covers the same area with a frameless window, so alt-tab and overlays stay instant. Maximize fills the screen but keeps the taskbar and title bar.":
     "A tela cheia real ocupa toda a tela e oculta a barra de tarefas, mas alternar entre aplicativos pode piscar. A janela sem bordas ocupa a mesma área com uma janela sem moldura, então o alt-tab e as sobreposições continuam instantâneos. Maximizar preenche a tela, mas mantém a barra de tarefas e a barra de título.",

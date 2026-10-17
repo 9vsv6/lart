@@ -132,7 +132,7 @@ export function useProviderKeys({
           help={
             <>
               {t(
-                "Highly recommended. This is what gives you the full Harbor experience: Popular, Trending, In Theaters, and per-service rails. Free at",
+                "Highly recommended. This is what gives you the full Lart experience: Popular, Trending, In Theaters, and per-service rails. Free at",
               )}{" "}
               <ExtLink href="https://www.themoviedb.org/settings/api">
                 themoviedb.org/settings/api

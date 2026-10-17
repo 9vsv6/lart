@@ -1,6 +1,6 @@
 import { useT } from "@/lib/i18n";
 
-/** Harbor's compact media marks distinguish the viewing action from audio playback. */
+/** Lart's compact media marks distinguish the viewing action from audio playback. */
 export function MusicMediaBadge({
   kind,
   compact = false,

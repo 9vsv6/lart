@@ -3,12 +3,12 @@ const social: Record<string, string> = {
   "Pick it from the home view to follow.": "在首页中选择即可关注。",
   "Next and Previous follow this show": "“下一项”和“上一项”将按本剧顺序跳转",
   "The TMDB community score.": "TMDB 社区评分。",
-  "Watch Together rooms are routed through Harbor's hosted relay.":
-    "“共同观看”房间通过 Harbor 托管的中继连接。",
+  "Watch Together rooms are routed through Lart's hosted relay.":
+    "“共同观看”房间通过 Lart 托管的中继连接。",
   "Living-room focus, floating glass chrome.": "专为客厅操控优化的悬浮玻璃质感界面。",
   "Copied. Paste it to your friend.": "已复制，请粘贴给好友。",
-  "The Harbor relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Harbor server.":
-    "Harbor Relay 是一个 Cloudflare Worker，为“一起看”功能托管 WebSocket 房间。每位用户都运行自己的实例，不存在中央 Harbor 服务器。",
+  "The Lart relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Lart server.":
+    "Lart Relay 是一个 Cloudflare Worker，为“一起看”功能托管 WebSocket 房间。每位用户都运行自己的实例，不存在中央 Lart 服务器。",
   "The test calls {code} and confirms the worker is reachable and running a current version. A passing test means Watch Together rooms will connect.":
     "测试会调用 {code}，确认 Worker 可访问且运行的是当前版本。测试通过表示“一起看”房间可以连接。",
   "If the Watch Together popover shows an outdated-relay banner, redeploying with the steps above is the fix. The banner clears automatically the next time you connect once the relay reports the current version.":
@@ -29,8 +29,8 @@ const social: Record<string, string> = {
   "Redeploy to pick up the latest Watch Together fixes. The in-app banner clears once the new version is live.":
     "请重新部署以获取最新的“一起看”修复。新版本上线后，应用内横幅会自动消失。",
   "Running the latest Watch Together protocol.": "正在运行最新的“一起看”协议。",
-  "Connect Discord or Telegram and Harbor posts a message when something you follow is about to drop. Hit Test to send yourself a sample first.":
-    "连接 Discord 或 Telegram 后，你关注的内容即将上线时，Harbor 会发送消息。请先点击“测试”给自己发送一条示例消息。",
+  "Connect Discord or Telegram and Lart posts a message when something you follow is about to drop. Hit Test to send yourself a sample first.":
+    "连接 Discord 或 Telegram 后，你关注的内容即将上线时，Lart 会发送消息。请先点击“测试”给自己发送一条示例消息。",
   "and confirms the worker is reachable and running a current version. A passing test means Watch Together rooms will connect.":
     "并确认 Worker 可访问且运行的是当前版本。测试通过即表示“一起看”房间可以连接。",
   "A relay URL is shareable. Anyone with the URL can join Watch Together rooms hosted on your relay. The unique":
@@ -38,19 +38,19 @@ const social: Record<string, string> = {
   "with a WebSocket upgrade: opens a Watch Together room. State is held in a Durable Object, no persistence beyond the active session.":
     "通过 WebSocket 升级打开“一起看”房间。状态保存在 Durable Object 中，仅在活动会话期间保留。",
   "Use community corrections": "使用社区修正",
-  "Leave blank to use Harbor's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.":
-    "留空则使用 Harbor 自有的社区服务器。也可输入 URL，改用你自己的服务器。无论选择哪种方式，下方的隐私模式都会阻止一切连接。",
+  "Leave blank to use Lart's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.":
+    "留空则使用 Lart 自有的社区服务器。也可输入 URL，改用你自己的服务器。无论选择哪种方式，下方的隐私模式都会阻止一切连接。",
   "Never contact the community server in either direction. Nothing is looked up and nothing is contributed from this device.":
     "绝不以任何方式连接社区服务器。此设备不会查询或贡献任何内容。",
   "Downloaded from community": "从社区下载",
   "Choose how Watch Together and the minimize, maximize, and close buttons look. Liquid glass replaces the clean transparent controls.":
     "选择“一起看”以及最小化、最大化和关闭按钮的样式。“液态玻璃”会取代“简洁透明”控件。",
-  "Harbor's backend runs on ElfHosted. They run our servers at no cost to the community.":
-    "Harbor 的后端运行在 ElfHosted 上。他们免费为社区运行我们的服务器。",
-  "Keeping Harbor's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Harbor stays funded at the same time.":
-    "维持 Harbor 后端在线需要真金白银，而 ElfHosted 承担了这笔费用，社区无需付费。订阅 ElfHosted 是让这一切持续下去的最佳方式，而且这不是捐款。你自己的部署可以获得完善的基础设施，同时 Harbor 也能继续获得资金支持。",
-  "Harbor speaks Stremio's addon protocol, and the whole ecosystem of addons grows out of their work. Stremio is funded by its community, and supporters who chip in get early access to experimental features. If you have it to spare, send some their way too.":
-    "Harbor 使用 Stremio 的插件协议，整个插件生态都源自他们的工作。Stremio 由社区资助，提供支持的用户可以抢先体验实验性功能。如果你有余力，也请支持他们。",
+  "Lart's backend runs on ElfHosted. They run our servers at no cost to the community.":
+    "Lart 的后端运行在 ElfHosted 上。他们免费为社区运行我们的服务器。",
+  "Keeping Lart's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Lart stays funded at the same time.":
+    "维持 Lart 后端在线需要真金白银，而 ElfHosted 承担了这笔费用，社区无需付费。订阅 ElfHosted 是让这一切持续下去的最佳方式，而且这不是捐款。你自己的部署可以获得完善的基础设施，同时 Lart 也能继续获得资金支持。",
+  "Lart speaks Stremio's addon protocol, and the whole ecosystem of addons grows out of their work. Stremio is funded by its community, and supporters who chip in get early access to experimental features. If you have it to spare, send some their way too.":
+    "Lart 使用 Stremio 的插件协议，整个插件生态都源自他们的工作。Stremio 由社区资助，提供支持的用户可以抢先体验实验性功能。如果你有余力，也请支持他们。",
   "Add a review": "添加短评",
   "Edit your review": "编辑你的短评",
   "Write a review": "撰写短评",
@@ -97,8 +97,8 @@ const social: Record<string, string> = {
   "Room code": "房间码",
   "Copy room code": "复制房间码",
   "Leave room": "离开房间",
-  "Redeploy it to get the latest Watch Together fixes. Harbor's public relay updates on its own.":
-    "重新部署即可获取最新的“一起看”修复。Harbor 的公共中继会自动更新。",
+  "Redeploy it to get the latest Watch Together fixes. Lart's public relay updates on its own.":
+    "重新部署即可获取最新的“一起看”修复。Lart 的公共中继会自动更新。",
   "Start a room first.": "请先创建房间。",
   "Once you're in a room you can copy a link that joins anyone instantly: it sets the relay URL and the room code in one click.":
     "进入房间后，您可以复制一个链接，让任何人立即加入：只需点击一次，即可同时设置中继 URL 和房间码。",
@@ -132,8 +132,8 @@ const social: Record<string, string> = {
   "Thanks. Sent for review.": "谢谢。已提交审核。",
   "Know a good one? Add a name, its API or site URL, and an icon if you have one. We review every suggestion before it goes live.":
     "知道合适的来源？请添加名称、API 或网站 URL，如果有图标也可一并添加。每条建议都会在上线前经过审核。",
-  "Only add repositories you trust. Harbor cannot vouch for third-party plugins.":
-    "仅添加您信任的仓库。Harbor 无法为第三方插件担保。",
+  "Only add repositories you trust. Lart cannot vouch for third-party plugins.":
+    "仅添加您信任的仓库。Lart 无法为第三方插件担保。",
   "We review every source. Yours will be reviewed and approved shortly if it checks out.":
     "我们会审核每个来源。如果您的来源通过检查，很快就会获批。",
   "Could not respond to that invite.": "无法处理该邀请。",
@@ -151,11 +151,11 @@ const social: Record<string, string> = {
   "Browse community themes": "浏览社区主题",
   "Can post, moderate and invite": "可以发帖、管理和邀请成员",
   "Community collections are unavailable right now.": "社区合集当前不可用。",
-  "Fresh looks shared by the Harbor community": "Harbor 社区分享的全新外观",
-  "Harbor's own community server": "Harbor 自有社区服务器",
+  "Fresh looks shared by the Lart community": "Lart 社区分享的全新外观",
+  "Lart's own community server": "Lart 自有社区服务器",
   "How Watch Together and the window buttons are drawn.": "“一起看”和窗口按钮的显示方式。",
-  "Leave this blank to use Harbor's own community server, or enter the address of a server you run yourself.":
-    "留空即可使用 Harbor 自有的社区服务器，也可以输入你自行运行的服务器地址。",
+  "Leave this blank to use Lart's own community server, or enter the address of a server you run yourself.":
+    "留空即可使用 Lart 自有的社区服务器，也可以输入你自行运行的服务器地址。",
   "Paste a wss:// URL that a friend or your community shared with you.":
     "粘贴朋友或社区与你分享的 wss:// URL。",
   "Paste any YouTube link. Watch, share, shorts or embed all work.":
@@ -199,7 +199,7 @@ const social: Record<string, string> = {
   "Follow them out?": "要一起退出吗？",
   "Stay in party": "留在派对中",
   "{staff} requested your diagnostics": "{staff} 请求获取你的诊断信息",
-  "Harbor Staff": "Harbor 工作人员",
+  "Lart Staff": "Lart 工作人员",
   "Share watch activity": "分享观看动态",
   "Share live watching status": "分享实时观看状态",
   "Remove community photo": "移除社区头像",
@@ -232,10 +232,10 @@ const social: Record<string, string> = {
     "TMDB 会确认密钥已创建。点击其提供的链接，即可查看 API 密钥详情。",
   "Community index": "社区指数",
   "Ranked by the {site} community from their public index.": "根据{site}社区的公开指数排名。",
-  "Verified Harbor Staff": "已认证的 Harbor 员工",
+  "Verified Lart Staff": "已认证的 Lart 员工",
   "Share diagnostics": "分享诊断信息",
-  "Sorry, Harbor crashed the last time it was running. You can review the details and choose whether to send a report.":
-    "抱歉，Harbor 上次运行时崩溃了。你可以查看详情并选择是否发送报告。",
+  "Sorry, Lart crashed the last time it was running. You can review the details and choose whether to send a report.":
+    "抱歉，Lart 上次运行时崩溃了。你可以查看详情并选择是否发送报告。",
   "Got one a friend shared? Drop it in.": "有朋友分享的主题？拖到这里即可。",
   "Update in review": "更新审核中",
   "Push updates, flip visibility, and track where each one is in review.":

@@ -18,8 +18,8 @@ const library: Record<string, string> = {
   "Press play on something. It'll show up here once you start watching.":
     "Hãy nhấn phát trên một nội dung. Nội dung đó sẽ xuất hiện ở đây khi bạn bắt đầu xem.",
   "Your watchlist is empty": "Danh sách xem đang trống",
-  'Right-click any title in Harbor or hit "Add to Watchlist" on its detail page to save it here.':
-    'Nhấp chuột phải vào tiêu đề bất kỳ trong Harbor hoặc nhấn "Thêm vào danh sách xem" trên trang chi tiết để lưu tại đây.',
+  'Right-click any title in Lart or hit "Add to Watchlist" on its detail page to save it here.':
+    'Nhấp chuột phải vào tiêu đề bất kỳ trong Lart hoặc nhấn "Thêm vào danh sách xem" trên trang chi tiết để lưu tại đây.',
   "My Library shows upcoming episodes from the shows you've saved on Stremio. Sign in to wire it up.":
     "Thư viện của tôi hiển thị các tập sắp phát của những phim bộ bạn đã lưu trên Stremio. Hãy đăng nhập để kết nối.",
   "Open in Movies": "Mở trong Phim điện ảnh",

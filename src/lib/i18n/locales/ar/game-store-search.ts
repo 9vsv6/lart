@@ -1,9 +1,9 @@
 export default {
   "Search shortcuts": "اختصارات البحث",
   "Steam search shortcut": "اختصار البحث في Steam",
-  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Harbor search for these queries.": "اكتب “st ” أو “st:” للبحث في متجر Steam. عطّل هذا الخيار لاستخدام بحث Harbor العادي لهذه الاستعلامات.",
+  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Lart search for these queries.": "اكتب “st ” أو “st:” للبحث في متجر Steam. عطّل هذا الخيار لاستخدام بحث Lart العادي لهذه الاستعلامات.",
   "games.storeSearch.title": "متجر Steam",
-  "games.storeSearch.hint": "استخدم «st » في بحث Harbor للبحث مباشرة في Steam.",
+  "games.storeSearch.hint": "استخدم «st » في بحث Lart للبحث مباشرة في Steam.",
   "games.storeSearch.automatic": "تلقائية",
   "games.storeSearch.region": "منطقة المتجر",
   "games.storeSearch.showLibrary": "تمييز الألعاب الموجودة في مكتبتي",

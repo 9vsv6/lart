@@ -107,7 +107,7 @@ export function useSubtitleChoices(src: PlayerSrc) {
               resolution: src.streamRef?.resolution ?? null,
             },
             extra: {
-              userAgent: "Harbor",
+              userAgent: "Lart",
               netAllowed: true,
               subdlApiKey: settings.subdlApiKey || null,
               subsourceApiKey: settings.subsourceApiKey || null,

@@ -27,10 +27,10 @@ const catalogMO: Record<string, string> = {
   "Main Char": "मुख्य किरदार",
   "Main subtitle line": "मुख्य सबटाइटल पंक्ति",
   Maintenance: "रखरखाव",
-  "Make Harbor yours: swap the sidebar logo and the window/taskbar icon.":
-    "Harbor को अपने हिसाब से बनाएँ: साइडबार का लोगो और विंडो/टास्कबार आइकन बदलें।",
-  "Make Harbor's interface larger.": "Harbor का इंटरफ़ेस बड़ा करें।",
-  "Make Harbor's interface smaller.": "Harbor का इंटरफ़ेस छोटा करें।",
+  "Make Lart yours: swap the sidebar logo and the window/taskbar icon.":
+    "Lart को अपने हिसाब से बनाएँ: साइडबार का लोगो और विंडो/टास्कबार आइकन बदलें।",
+  "Make Lart's interface larger.": "Lart का इंटरफ़ेस बड़ा करें।",
+  "Make Lart's interface smaller.": "Lart का इंटरफ़ेस छोटा करें।",
   "Make an award pack": "अवॉर्ड पैक बनाएँ",
   "Make decisions on their behalf": "उनकी ओर से फ़ैसले लें",
   "Make everything bigger and easier to read: sidebar, menus, popups, every page.":
@@ -56,8 +56,8 @@ const catalogMO: Record<string, string> = {
   "Manage addon": "ऐडऑन मैनेज करें",
   "Manage connection": "कनेक्शन मैनेज करें",
   "Manage eBook sources": "eBook स्रोत मैनेज करें",
-  "Manage every place Harbor can read from, whether it lives on disk or across the web.":
-    "उन सभी जगहों को मैनेज करें जहाँ से Harbor पढ़ सकता है, चाहे वे डिस्क पर मौजूद हों या वेब पर।",
+  "Manage every place Lart can read from, whether it lives on disk or across the web.":
+    "उन सभी जगहों को मैनेज करें जहाँ से Lart पढ़ सकता है, चाहे वे डिस्क पर मौजूद हों या वेब पर।",
   "Manage members and posts": "सदस्य और पोस्ट मैनेज करें",
   "Manage profiles": "प्रोफ़ाइल मैनेज करें",
   "Manage recording": "रिकॉर्डिंग मैनेज करें",
@@ -69,8 +69,8 @@ const catalogMO: Record<string, string> = {
   Manga: "मंगा",
   "Manga adaptation": "मंगा रूपांतरण",
   "Manga browse cache": "मांगा ब्राउज़ कैश",
-  "Manga cannot be matched to a Harbor title yet, so {n} were left out.":
-    "मंगा का अभी Harbor के किसी टाइटल से मिलान नहीं हो सकता, इसलिए {n} आइटम छोड़ दिए गए।",
+  "Manga cannot be matched to a Lart title yet, so {n} were left out.":
+    "मंगा का अभी Lart के किसी टाइटल से मिलान नहीं हो सकता, इसलिए {n} आइटम छोड़ दिए गए।",
   "Manga reader remote": "मांगा रीडर रिमोट",
   "Manga sources": "मांगा स्रोत",
   "Manic Heart": "बेचैन दिल",
@@ -118,7 +118,7 @@ const catalogMO: Record<string, string> = {
   Matched: "मिलान हुआ",
   "Matching moments": "मेल खाते पल",
   "Matching the details": "विवरणों का मिलान हो रहा है",
-  "Matching titles to Harbor": "शीर्षकों का Harbor से मिलान हो रहा है",
+  "Matching titles to Lart": "शीर्षकों का Lart से मिलान हो रहा है",
   Max: "अधिकतम",
   "Max badges per card": "प्रति कार्ड अधिकतम बैज",
   "Max scores per card": "प्रति कार्ड अधिकतम स्कोर",
@@ -253,8 +253,8 @@ const catalogMO: Record<string, string> = {
   "Motion smoothing": "मोशन स्मूदिंग",
   "Mouse tracker": "माउस ट्रैकर",
   Move: "स्थान बदलें",
-  "Move Harbor by dragging any empty space on a page, not just the top bar. Leave this off to keep clicks inside pages from nudging the window.":
-    "सिर्फ़ टॉप बार ही नहीं, पेज की किसी भी खाली जगह को ड्रैग करके Harbor को खिसकाएँ। पेज के अंदर क्लिक करने पर विंडो को खिसकने से रोकने के लिए इसे बंद रखें।",
+  "Move Lart by dragging any empty space on a page, not just the top bar. Leave this off to keep clicks inside pages from nudging the window.":
+    "सिर्फ़ टॉप बार ही नहीं, पेज की किसी भी खाली जगह को ड्रैग करके Lart को खिसकाएँ। पेज के अंदर क्लिक करने पर विंडो को खिसकने से रोकने के लिए इसे बंद रखें।",
   "Move Refresh next to Back": "रीफ़्रेश को वापस बटन के पास ले जाएँ",
   "Move all to account": "सभी को अकाउंट में ले जाएँ",
   "Move down": "नीचे ले जाएँ",
@@ -273,8 +273,8 @@ const catalogMO: Record<string, string> = {
   "Moved {name} to position {n} of {total}": "{name} को {total} में से {n}वें स्थान पर ले जाया गया",
   "Moved {n} addons to your Stremio account. They now sync everywhere you sign in.":
     "{n} ऐडऑन आपके Stremio अकाउंट में ट्रांसफ़र किए गए। अब वे हर उस जगह सिंक होंगे जहाँ आप साइन इन करेंगे।",
-  "Moved, but Harbor couldn't confirm the result. Reload to see the current state.":
-    "मूव हो गया, लेकिन Harbor नतीजे की पुष्टि नहीं कर सका। मौजूदा स्थिति देखने के लिए रीलोड करें।",
+  "Moved, but Lart couldn't confirm the result. Reload to see the current state.":
+    "मूव हो गया, लेकिन Lart नतीजे की पुष्टि नहीं कर सका। मौजूदा स्थिति देखने के लिए रीलोड करें।",
   "Moves: {moves}": "चालें: {moves}",
   Movie: "फ़िल्म",
   "Movie Magic": "फ़िल्मी जादू",
@@ -363,11 +363,11 @@ const catalogMO: Record<string, string> = {
   Name: "नाम",
   "Name (e.g. REMUX)": "नाम (जैसे REMUX)",
   "Name (optional)": "नाम (वैकल्पिक)",
-  "Name each file after its award ID. Harbor resizes them and skips anything it cannot match.":
-    "हर फ़ाइल का नाम उसके अवॉर्ड ID के अनुसार रखें। Harbor उनका साइज़ बदलता है और जिनका मिलान नहीं हो पाता, उन्हें छोड़ देता है।",
+  "Name each file after its award ID. Lart resizes them and skips anything it cannot match.":
+    "हर फ़ाइल का नाम उसके अवॉर्ड ID के अनुसार रखें। Lart उनका साइज़ बदलता है और जिनका मिलान नहीं हो पाता, उन्हें छोड़ देता है।",
   "Name each file after its slot": "हर फ़ाइल का नाम उसके स्लॉट के अनुसार रखें",
-  'Name each image file after its award ID and put them in a .zip, then use "Import a .zip pack" above. No JSON, no hosting needed. Harbor matches each file to its award, stores it locally, resizes it, and skips anything it doesn\'t recognize.':
-    'हर इमेज फ़ाइल को उसके अवॉर्ड ID वाला नाम दें और उन्हें एक .zip में डालें, फिर ऊपर दिए गए "एक .zip पैक इंपोर्ट करें" विकल्प का इस्तेमाल करें। न JSON चाहिए, न होस्टिंग। Harbor हर फ़ाइल का उसके अवॉर्ड से मिलान करता है, उसे लोकल रूप से स्टोर करता है, उसका आकार बदलता है और जिसे पहचान नहीं पाता, उसे छोड़ देता है।',
+  'Name each image file after its award ID and put them in a .zip, then use "Import a .zip pack" above. No JSON, no hosting needed. Lart matches each file to its award, stores it locally, resizes it, and skips anything it doesn\'t recognize.':
+    'हर इमेज फ़ाइल को उसके अवॉर्ड ID वाला नाम दें और उन्हें एक .zip में डालें, फिर ऊपर दिए गए "एक .zip पैक इंपोर्ट करें" विकल्प का इस्तेमाल करें। न JSON चाहिए, न होस्टिंग। Lart हर फ़ाइल का उसके अवॉर्ड से मिलान करता है, उसे लोकल रूप से स्टोर करता है, उसका आकार बदलता है और जिसे पहचान नहीं पाता, उसे छोड़ देता है।',
   "Name it, tick the resolutions, sources, codecs and audio you want, and leave the rest blank.":
     "इसे नाम दें, अपनी पसंद के रिज़ॉल्यूशन, सोर्स, कोडेक और ऑडियो पर टिक करें और बाकी को खाली छोड़ दें।",
   "Name this collection": "इस कलेक्शन को नाम दें",
@@ -377,11 +377,11 @@ const catalogMO: Record<string, string> = {
   "Name your theme": "अपनी थीम को नाम दें",
   "Names behind the biggest productions": "सबसे बड़े प्रोडक्शन के पीछे के लोग",
   "Naming guide": "नामकरण गाइड",
-  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Harbor's embedded player.":
-    "आपके Linux SVP और VapourSynth इंस्टॉलेशन के ज़रिए नेटिव 48/60fps मोशन, जिसे Harbor के एम्बेडेड प्लेयर में रेंडर किया जाता है।",
+  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Lart's embedded player.":
+    "आपके Linux SVP और VapourSynth इंस्टॉलेशन के ज़रिए नेटिव 48/60fps मोशन, जिसे Lart के एम्बेडेड प्लेयर में रेंडर किया जाता है।",
   "Native libmpv": "नेटिव libmpv",
-  "Native to Harbor. No RPDB or ratings addon needed.":
-    "Harbor की अपनी सुविधा। RPDB या रेटिंग ऐडऑन की ज़रूरत नहीं।",
+  "Native to Lart. No RPDB or ratings addon needed.":
+    "Lart की अपनी सुविधा। RPDB या रेटिंग ऐडऑन की ज़रूरत नहीं।",
   "Native webview playback. Smooth and integrated, but limited codec coverage.":
     "नेटिव वेबव्यू प्लेबैक। सहज और इंटीग्रेटेड, लेकिन कोडेक सपोर्ट सीमित है।",
   "Native-style hybrid bar": "नेटिव-शैली हाइब्रिड बार",
@@ -408,8 +408,8 @@ const catalogMO: Record<string, string> = {
   "Network error": "नेटवर्क त्रुटि",
   "Network's best": "नेटवर्क के बेहतरीन",
   Networks: "नेटवर्क",
-  "Neural upscalers, sharpeners, and HDR tone-mapping ported for mpv. Each is hosted by its author, not bundled with Harbor. Download the ones you want; Harbor chains them in the right order and applies them in the player.":
-    "mpv के लिए पोर्ट किए गए न्यूरल अपस्केलर, शार्पनर और HDR टोन-मैपिंग। हर टूल को उसके लेखक ने होस्ट किया है, वह Harbor के साथ बंडल नहीं है। जो चाहिए उन्हें डाउनलोड करें; Harbor उन्हें सही क्रम में जोड़ता है और प्लेयर में लागू करता है।",
+  "Neural upscalers, sharpeners, and HDR tone-mapping ported for mpv. Each is hosted by its author, not bundled with Lart. Download the ones you want; Lart chains them in the right order and applies them in the player.":
+    "mpv के लिए पोर्ट किए गए न्यूरल अपस्केलर, शार्पनर और HDR टोन-मैपिंग। हर टूल को उसके लेखक ने होस्ट किया है, वह Lart के साथ बंडल नहीं है। जो चाहिए उन्हें डाउनलोड करें; Lart उन्हें सही क्रम में जोड़ता है और प्लेयर में लागू करता है।",
   Never: "कभी नहीं",
   "Never auto-select tracks containing": "इन शब्दों वाले ट्रैक कभी अपने-आप न चुनें",
   "Never contact the community server in either direction. Nothing is looked up and nothing is contributed from this device.":
@@ -504,7 +504,7 @@ const catalogMO: Record<string, string> = {
   "No EPG channels match. This playlist's EPG source may be empty.":
     "कोई EPG चैनल मेल नहीं खाते। इस प्लेलिस्ट का EPG स्रोत खाली हो सकता है।",
   "No Frills": "बिना तामझाम",
-  "No Harbor account yet": "अभी तक Harbor अकाउंट नहीं है",
+  "No Lart account yet": "अभी तक Lart अकाउंट नहीं है",
   "No Integrations option? You need the Manage Webhooks permission. Ask whoever owns the server.":
     "इंटीग्रेशन का विकल्प नहीं दिख रहा? आपको वेबहुक मैनेज करने की अनुमति चाहिए। सर्वर के मालिक से पूछें।",
   "No JavaScript. Scripts, inline handlers, and javascript: URLs are removed.":
@@ -524,8 +524,8 @@ const catalogMO: Record<string, string> = {
   "No addons are synced to this account yet.": "अभी तक इस अकाउंट से कोई ऐडऑन सिंक नहीं हुआ है।",
   "No addons installed yet": "अभी तक कोई ऐडऑन इंस्टॉल नहीं किया गया है",
   "No addons match these filters right now.": "अभी इन फ़िल्टर से मेल खाने वाले कोई ऐडऑन नहीं हैं।",
-  "No affiliation, no referral links, and Harbor gets nothing from these. They are just places where money goes further than it does here.":
-    "इनसे कोई संबद्धता नहीं है, कोई रेफ़रल लिंक नहीं है और Harbor को इनसे कुछ नहीं मिलता। ये बस ऐसी जगहें हैं जहाँ पैसे का मोल यहाँ से ज़्यादा मिलता है।",
+  "No affiliation, no referral links, and Lart gets nothing from these. They are just places where money goes further than it does here.":
+    "इनसे कोई संबद्धता नहीं है, कोई रेफ़रल लिंक नहीं है और Lart को इनसे कुछ नहीं मिलता। ये बस ऐसी जगहें हैं जहाँ पैसे का मोल यहाँ से ज़्यादा मिलता है।",
   "No approved themes yet": "अभी तक कोई स्वीकृत थीम नहीं है",
   "No art": "कोई आर्ट नहीं",
   "No artists match that search": "उस खोज से मेल खाने वाला कोई कलाकार नहीं मिला",
@@ -560,8 +560,8 @@ const catalogMO: Record<string, string> = {
     "कोई चैनल मेल नहीं खाता। कोई दूसरा समूह आज़माएँ या URL पेस्ट करें।",
   "No chapters available in {lang} from this source.": "इस स्रोत से {lang} में कोई अध्याय उपलब्ध नहीं है।",
   "No chapters match your search.": "आपकी खोज से कोई अध्याय मेल नहीं खाता।",
-  "No clean release has surfaced yet. This may be too new. Harbor's filters dropped everything that came back as wrong-movie noise.":
-    "अभी तक कोई साफ़ रिलीज़ नहीं मिली। यह शायद बहुत नया है। Harbor के फ़िल्टर ने गलत फ़िल्म से जुड़े सभी नतीजे हटा दिए।",
+  "No clean release has surfaced yet. This may be too new. Lart's filters dropped everything that came back as wrong-movie noise.":
+    "अभी तक कोई साफ़ रिलीज़ नहीं मिली। यह शायद बहुत नया है। Lart के फ़िल्टर ने गलत फ़िल्म से जुड़े सभी नतीजे हटा दिए।",
   "No collections were found in the installed source catalog.":
     "इंस्टॉल किए गए स्रोत कैटलॉग में कोई संग्रह नहीं मिला।",
   "No collections yet. Add a collections addon to browse curated sets.":
@@ -665,8 +665,8 @@ const catalogMO: Record<string, string> = {
   "No matches. Try a different search.": "कोई मेल नहीं। कोई दूसरी खोज आज़माएँ।",
   "No matches. Try another title.": "कोई मेल नहीं। कोई दूसरा शीर्षक आज़माएँ।",
   "No matching voices": "कोई मिलती-जुलती आवाज़ नहीं",
-  "No metadata addon detected. Harbor is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
-    "कोई मेटाडेटा ऐडऑन नहीं मिला। Harbor, Cinemeta को फ़ॉलबैक के तौर पर इस्तेमाल कर रहा है ताकि शीर्षक लोड होते रहें। अगर आप कोई ऐडऑन इंस्टॉल नहीं कर रहे हैं, तो इसे फिर से चालू करें।",
+  "No metadata addon detected. Lart is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
+    "कोई मेटाडेटा ऐडऑन नहीं मिला। Lart, Cinemeta को फ़ॉलबैक के तौर पर इस्तेमाल कर रहा है ताकि शीर्षक लोड होते रहें। अगर आप कोई ऐडऑन इंस्टॉल नहीं कर रहे हैं, तो इसे फिर से चालू करें।",
   "No more films to add. Start with what you picked.":
     "जोड़ने के लिए और फ़िल्में नहीं हैं। अपनी चुनी हुई फ़िल्मों से शुरू करें।",
   "No more found for this category.": "इस श्रेणी में और कुछ नहीं मिला।",
@@ -683,9 +683,9 @@ const catalogMO: Record<string, string> = {
     "अभी कोई नोटिफ़िकेशन नहीं है। कोई थीम प्रकाशित करें और उसे लोकप्रिय होते देखें।",
   "No one found by that name.": "उस नाम का कोई व्यक्ति नहीं मिला।",
   "No one recognized on screen right now.": "अभी स्क्रीन पर किसी व्यक्ति की पहचान नहीं हुई।",
-  "No other Harbor answered": "किसी अन्य Harbor ने जवाब नहीं दिया",
-  "No other Harbor answered on this network. One shows up here a moment after it starts.":
-    "इस नेटवर्क पर किसी अन्य Harbor ने जवाब नहीं दिया। कोई Harbor शुरू होने के कुछ पल बाद यहाँ दिखाई देता है।",
+  "No other Lart answered": "किसी अन्य Lart ने जवाब नहीं दिया",
+  "No other Lart answered on this network. One shows up here a moment after it starts.":
+    "इस नेटवर्क पर किसी अन्य Lart ने जवाब नहीं दिया। कोई Lart शुरू होने के कुछ पल बाद यहाँ दिखाई देता है।",
   "No peers found": "कोई पीयर नहीं मिला",
   "No people found": "कोई व्यक्ति नहीं मिला",
   "No people match these filters": "इन फ़िल्टरों से मेल खाने वाला कोई व्यक्ति नहीं",
@@ -752,8 +752,8 @@ const catalogMO: Record<string, string> = {
   "No subtitles found yet. Try the search at the bottom.":
     "अभी कोई सबटाइटल नहीं मिला। नीचे दी गई खोज आज़माएँ।",
   "No subtitles found.": "कोई सबटाइटल नहीं मिला।",
-  "No subtitles found. Start anyway, Harbor keeps looking while you watch.":
-    "कोई सबटाइटल नहीं मिला। फिर भी शुरू करें। आपके देखते समय Harbor खोज जारी रखेगा।",
+  "No subtitles found. Start anyway, Lart keeps looking while you watch.":
+    "कोई सबटाइटल नहीं मिला। फिर भी शुरू करें। आपके देखते समय Lart खोज जारी रखेगा।",
   "No subtitles found. Try another title above, or adjust the season and episode.":
     "कोई सबटाइटल नहीं मिला। ऊपर कोई दूसरा शीर्षक आज़माएँ या सीज़न और एपिसोड बदलें।",
   "No such captain": "ऐसा कोई कैप्टन नहीं",
@@ -798,8 +798,8 @@ const catalogMO: Record<string, string> = {
     "अभी तक कोई ऐडऑन इंस्टॉल नहीं है। स्ट्रीमिंग स्रोतों के तहत Stremio सबटाइटल ऐडऑन जोड़ें।",
   "None of Trakt's most-anticipated upcoming releases land in this month. Try a different month.":
     "Trakt की सबसे बहुप्रतीक्षित आगामी रिलीज़ में से कोई भी इस महीने नहीं आ रही है। कोई दूसरा महीना आज़माएँ।",
-  "None of your addons returned a downloadable package for {season}. Harbor can still fetch the episodes one at a time, or you can refresh the sources.":
-    "आपके किसी भी ऐडऑन ने {season} के लिए डाउनलोड करने योग्य पैकेज नहीं दिया। Harbor फिर भी एपिसोड एक-एक करके ला सकता है, या आप स्रोतों को रीफ़्रेश कर सकते हैं।",
+  "None of your addons returned a downloadable package for {season}. Lart can still fetch the episodes one at a time, or you can refresh the sources.":
+    "आपके किसी भी ऐडऑन ने {season} के लिए डाउनलोड करने योग्य पैकेज नहीं दिया। Lart फिर भी एपिसोड एक-एक करके ला सकता है, या आप स्रोतों को रीफ़्रेश कर सकते हैं।",
   "None of your addons returned a downloadable package for {season}. Refresh the sources or check your source settings.":
     "आपके किसी भी ऐडऑन ने {season} के लिए डाउनलोड करने योग्य पैकेज नहीं दिया। स्रोतों को रीफ़्रेश करें या अपनी स्रोत सेटिंग जाँचें।",
   "None yet": "अभी तक कोई नहीं",
@@ -857,8 +857,8 @@ const catalogMO: Record<string, string> = {
     "सेव दबाने तक कुछ नहीं बदलता। यह पेज छोड़ने पर किए गए बदलाव मिट जाएँगे।",
   "Nothing connected yet. Scan a code with your phone.":
     "अभी तक कुछ भी कनेक्ट नहीं है। अपने फ़ोन से कोई कोड स्कैन करें।",
-  "Nothing else answered. A Harbor shows up here a moment after it starts on this network.":
-    "किसी और ने जवाब नहीं दिया। इस नेटवर्क पर Harbor शुरू होने के कुछ पल बाद यहाँ दिखाई देता है।",
+  "Nothing else answered. A Lart shows up here a moment after it starts on this network.":
+    "किसी और ने जवाब नहीं दिया। इस नेटवर्क पर Lart शुरू होने के कुछ पल बाद यहाँ दिखाई देता है।",
   'Nothing found for "{q}"': '"{q}" के लिए कुछ नहीं मिला',
   'Nothing found for "{q}". {n} of your addons did not answer.':
     '"{q}" के लिए कुछ नहीं मिला। आपके {n} ऐडऑन ने जवाब नहीं दिया।',
@@ -880,8 +880,8 @@ const catalogMO: Record<string, string> = {
   "Nothing in this filter. Choose All to see everything that answered.":
     "इस फ़िल्टर में कुछ नहीं है। जवाब देने वाले सभी स्रोत देखने के लिए सभी चुनें।",
   "Nothing in {genre} right now.": "अभी {genre} में कुछ नहीं है।",
-  "Nothing is uploaded and nothing ships with Harbor. Everything stays on this device and you are responsible for the images you add.":
-    "न कुछ अपलोड होता है, न Harbor के साथ कोई सामग्री मिलती है। सब कुछ इसी डिवाइस पर रहता है और आपके जोड़े गए चित्रों की ज़िम्मेदारी आपकी है।",
+  "Nothing is uploaded and nothing ships with Lart. Everything stays on this device and you are responsible for the images you add.":
+    "न कुछ अपलोड होता है, न Lart के साथ कोई सामग्री मिलती है। सब कुछ इसी डिवाइस पर रहता है और आपके जोड़े गए चित्रों की ज़िम्मेदारी आपकी है।",
   "Nothing left in today's picks": "आज की पसंद में कुछ नहीं बचा",
   "Nothing left to confirm while P2P is disabled.": "P2P बंद होने पर पुष्टि करने के लिए कुछ नहीं बचा।",
   "Nothing left to post after removing links.": "लिंक हटाने के बाद पोस्ट करने के लिए कुछ नहीं बचा।",
@@ -899,8 +899,8 @@ const catalogMO: Record<string, string> = {
   "Nothing saved on Trakt yet.": "Trakt पर अभी तक कुछ सेव नहीं है।",
   "Nothing saved yet. Add a title from any details page.":
     "अभी तक कुछ सेव नहीं है। किसी भी विवरण पेज से कोई शीर्षक जोड़ें।",
-  "Nothing selected. Harbor will not load a subtitle on its own.":
-    "कुछ भी चुना नहीं गया। Harbor अपने आप कोई सबटाइटल लोड नहीं करेगा।",
+  "Nothing selected. Lart will not load a subtitle on its own.":
+    "कुछ भी चुना नहीं गया। Lart अपने आप कोई सबटाइटल लोड नहीं करेगा।",
   "Nothing sent yet. Change something and it goes up on its own.":
     "अभी तक कुछ नहीं भेजा गया। कुछ बदलें और वह अपने आप अपलोड हो जाएगा।",
   "Nothing this month": "इस महीने कुछ नहीं है",
@@ -925,14 +925,14 @@ const catalogMO: Record<string, string> = {
   "Nothing watched yet.": "अभी तक कुछ नहीं देखा।",
   "Nothing watched yet. Press play on something.": "अभी तक कुछ नहीं देखा। कुछ चलाने के लिए प्ले दबाएँ।",
   "Nothing yet": "अभी तक कुछ नहीं",
-  "Nothing you have already set is lost. Harbor picks this back up where you left it.":
-    "आपने जो कुछ पहले से सेट किया है, उसमें से कुछ भी नहीं मिटेगा। Harbor वहीं से फिर शुरू करेगा जहाँ आपने छोड़ा था।",
+  "Nothing you have already set is lost. Lart picks this back up where you left it.":
+    "आपने जो कुछ पहले से सेट किया है, उसमें से कुछ भी नहीं मिटेगा। Lart वहीं से फिर शुरू करेगा जहाँ आपने छोड़ा था।",
   Notification: "सूचना",
   Notifications: "सूचनाएँ",
   Now: "अभी",
   "Now Playing": "अभी चल रहा है",
   "Now Playing card": "अभी चल रहे मीडिया का कार्ड",
-  "Now on Harbor": "अब Harbor पर",
+  "Now on Lart": "अब Lart पर",
   "Now playing": "अभी चल रहा है",
   "Now playing touchpad. Swipe to move focus on the display, tap to select.":
     "अभी चल रहे मीडिया का टचपैड। डिस्प्ले पर फ़ोकस ले जाने के लिए स्वाइप करें, चुनने के लिए टैप करें।",
@@ -965,8 +965,8 @@ const catalogMO: Record<string, string> = {
   "OVA of the Year": "वर्ष का OVA",
   Off: "बंद",
   "Off (use CPU)": "बंद (CPU का उपयोग करें)",
-  "Off by default, so your controller only drives Harbor while it is the focused window. Leave it off if you play games with the same controller.":
-    "डिफ़ॉल्ट रूप से बंद, इसलिए आपका कंट्रोलर Harbor को तभी नियंत्रित करता है जब उसकी विंडो फ़ोकस में हो। अगर आप इसी कंट्रोलर से गेम खेलते हैं, तो इसे बंद रखें।",
+  "Off by default, so your controller only drives Lart while it is the focused window. Leave it off if you play games with the same controller.":
+    "डिफ़ॉल्ट रूप से बंद, इसलिए आपका कंट्रोलर Lart को तभी नियंत्रित करता है जब उसकी विंडो फ़ोकस में हो। अगर आप इसी कंट्रोलर से गेम खेलते हैं, तो इसे बंद रखें।",
   "Off by default. Let visitors see what you have been watching":
     "डिफ़ॉल्ट रूप से बंद। विज़िटर को देखने दें कि आप क्या देखते रहे हैं",
   "Off by default. Show what you are watching right now, or your watch party, on your profile. Applies instantly":
@@ -1023,8 +1023,8 @@ const catalogMO: Record<string, string> = {
   "On the card": "कार्ड पर",
   "On the poster": "पोस्टर पर",
   "On the taskbar": "टास्कबार पर",
-  "On the web, Harbor can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
-    "वेब पर Harbor केवल उन्हीं ऐडऑन तक पहुँच सकता है जो ब्राउज़र एक्सेस की अनुमति देते हैं (Torrentio, TorBox, Cinemeta)। रिलीज़ न हुए शीर्षकों के लिए आम तौर पर अभी कोई सोर्स उपलब्ध नहीं होता।",
+  "On the web, Lart can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
+    "वेब पर Lart केवल उन्हीं ऐडऑन तक पहुँच सकता है जो ब्राउज़र एक्सेस की अनुमति देते हैं (Torrentio, TorBox, Cinemeta)। रिलीज़ न हुए शीर्षकों के लिए आम तौर पर अभी कोई सोर्स उपलब्ध नहीं होता।",
   "On themoviedb.org, open Settings.": "themoviedb.org पर सेटिंग्स खोलें।",
   "On this computer": "इस कंप्यूटर पर",
   "On this device": "इस डिवाइस पर",
@@ -1047,8 +1047,8 @@ const catalogMO: Record<string, string> = {
     "सेव करने के बाद, हर पोस्टर पर IMDb, Rotten Tomatoes और Metacritic की रेटिंग लगाकर उसे फिर से रेंडर किया जाएगा।",
   "Once you're in a room you can copy a link that joins anyone instantly: it sets the relay URL and the room code in one click.":
     "रूम में आने के बाद आप ऐसा लिंक कॉपी कर सकते हैं जिससे कोई भी तुरंत जुड़ सके: यह एक क्लिक में रिले URL और रूम कोड सेट कर देता है।",
-  "One @name that finds you across Harbor.": "एक @नाम, जिससे लोग आपको पूरे Harbor में ढूँढ सकें।",
-  "One Harbor, every screen.": "एक Harbor, हर स्क्रीन पर।",
+  "One @name that finds you across Lart.": "एक @नाम, जिससे लोग आपको पूरे Lart में ढूँढ सकें।",
+  "One Lart, every screen.": "एक Lart, हर स्क्रीन पर।",
   "One Piece, Naruto and more worlds": "One Piece, Naruto और ऐसी कई दुनियाएँ",
   "One choice that sets how hard your computer works to make video look its best. Pick the one that matches your machine. Takes effect on the next thing you play.":
     "एक विकल्प तय करता है कि वीडियो को बेहतरीन दिखाने के लिए आपका कंप्यूटर कितनी मेहनत करे। अपनी मशीन के अनुकूल विकल्प चुनें। यह अगली बार कुछ चलाने पर लागू होगा।",
@@ -1063,22 +1063,22 @@ const catalogMO: Record<string, string> = {
   "One release": "एक रिलीज़",
   "One switch powers everything on this page: the web app, the phone remote, and the manga reader remote.":
     "एक स्विच इस पेज की हर चीज़ चालू करता है: वेब ऐप, फ़ोन रिमोट और मंगा रीडर रिमोट।",
-  "One switch serves Harbor on your network. Scan a code below with your phone, or open an address on any device on the same Wi-Fi.":
-    "एक स्विच आपके नेटवर्क पर Harbor उपलब्ध कराता है। नीचे दिया गया कोड अपने फ़ोन से स्कैन करें या उसी Wi-Fi नेटवर्क से जुड़े किसी भी डिवाइस पर दिया गया पता खोलें।",
-  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Harbor's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
-    "एक क्लिक में कम्युनिटी पैक। रूलसेट अपनी मैचिंग के साथ बैज का पूरा सेट लाते हैं; आर्ट रीमैप केवल Harbor के बिल्ट-इन बैज की तस्वीरें बदलते हैं। Nuvio Discord या Reddit पर badges.json लिंक के रूप में शेयर की गई कोई भी चीज़ यहाँ इम्पोर्ट की जा सकती है।",
+  "One switch serves Lart on your network. Scan a code below with your phone, or open an address on any device on the same Wi-Fi.":
+    "एक स्विच आपके नेटवर्क पर Lart उपलब्ध कराता है। नीचे दिया गया कोड अपने फ़ोन से स्कैन करें या उसी Wi-Fi नेटवर्क से जुड़े किसी भी डिवाइस पर दिया गया पता खोलें।",
+  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Lart's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
+    "एक क्लिक में कम्युनिटी पैक। रूलसेट अपनी मैचिंग के साथ बैज का पूरा सेट लाते हैं; आर्ट रीमैप केवल Lart के बिल्ट-इन बैज की तस्वीरें बदलते हैं। Nuvio Discord या Reddit पर badges.json लिंक के रूप में शेयर की गई कोई भी चीज़ यहाँ इम्पोर्ट की जा सकती है।",
   "One-off donation": "एकमुश्त दान",
   "One-tap looks": "एक टैप में नया रूप",
-  "One-time setup downloads the shader pack (about 1 MB) into Harbor. No files to hunt down.":
-    "एक बार के सेटअप में शेडर पैक (लगभग 1 MB) Harbor में डाउनलोड होता है। फ़ाइलें खोजने की ज़रूरत नहीं।",
+  "One-time setup downloads the shader pack (about 1 MB) into Lart. No files to hunt down.":
+    "एक बार के सेटअप में शेडर पैक (लगभग 1 MB) Lart में डाउनलोड होता है। फ़ाइलें खोजने की ज़रूरत नहीं।",
   Oneshot: "वनशॉट",
   Ongoing: "जारी",
   Online: "ऑनलाइन",
   "Online now": "अभी ऑनलाइन",
   "Only 1 source after filtering": "फ़िल्टर करने के बाद केवल 1 सोर्स",
   "Only 2 sources after filtering": "फ़िल्टर करने के बाद केवल 2 सोर्स",
-  "Only add repositories you trust. Harbor cannot vouch for third-party plugins.":
-    "केवल भरोसेमंद रिपॉज़िटरी जोड़ें। Harbor थर्ड-पार्टी प्लगइन की विश्वसनीयता की गारंटी नहीं दे सकता।",
+  "Only add repositories you trust. Lart cannot vouch for third-party plugins.":
+    "केवल भरोसेमंद रिपॉज़िटरी जोड़ें। Lart थर्ड-पार्टी प्लगइन की विश्वसनीयता की गारंटी नहीं दे सकता।",
   "Only addon/debrid sources, never peer-to-peer": "केवल ऐडऑन/डीब्रिड स्रोत, कभी भी पीयर-टू-पीयर नहीं",
   "Only continue if you fully trust this link": "तभी आगे बढ़ें जब आपको इस लिंक पर पूरा भरोसा हो",
   "Only embedded subtitles are available right now.": "अभी केवल एम्बेडेड सबटाइटल उपलब्ध हैं।",
@@ -1121,10 +1121,10 @@ const catalogMO: Record<string, string> = {
   "Open Cloudflare Workers": "Cloudflare Workers खोलें",
   "Open Cloudflare token page": "Cloudflare टोकन पेज खोलें",
   "Open Discord's webhook help": "Discord की वेबहुक सहायता खोलें",
-  "Open Harbor on desktop to link Discord.": "Discord को लिंक करने के लिए डेस्कटॉप पर Harbor खोलें।",
-  "Open Harbor on desktop to verify ownership in your browser.":
-    "अपने ब्राउज़र में स्वामित्व सत्यापित करने के लिए डेस्कटॉप पर Harbor खोलें।",
-  "Open Harbor's settings outside playback.": "प्लेबैक के बाहर Harbor की सेटिंग्स खोलें।",
+  "Open Lart on desktop to link Discord.": "Discord को लिंक करने के लिए डेस्कटॉप पर Lart खोलें।",
+  "Open Lart on desktop to verify ownership in your browser.":
+    "अपने ब्राउज़र में स्वामित्व सत्यापित करने के लिए डेस्कटॉप पर Lart खोलें।",
+  "Open Lart's settings outside playback.": "प्लेबैक के बाहर Lart की सेटिंग्स खोलें।",
   "Open Languages": "भाषाएँ खोलें",
   "Open Letterboxd profile": "Letterboxd प्रोफ़ाइल खोलें",
   "Open Library settings": "लाइब्रेरी सेटिंग्स खोलें",
@@ -1133,7 +1133,7 @@ const catalogMO: Record<string, string> = {
   "Open Range": "रेंज खोलें",
   "Open SVP": "SVP खोलें",
   "Open Settings": "सेटिंग्स खोलें",
-  "Open Settings, then Harbor Relay.": "सेटिंग्स खोलें, फिर Harbor Relay खोलें।",
+  "Open Settings, then Lart Relay.": "सेटिंग्स खोलें, फिर Lart Relay खोलें।",
   "Open Settings, then System, then Advanced system settings.":
     "Settings खोलें, फिर System और उसके बाद Advanced system settings खोलें।",
   "Open Setup": "सेटअप खोलें",
@@ -1144,8 +1144,8 @@ const catalogMO: Record<string, string> = {
   "Open Trakt profile": "Trakt प्रोफ़ाइल खोलें",
   "Open Voyages": "यात्राएँ खोलें",
   "Open a folder": "फ़ोल्डर खोलें",
-  "Open a manga on Harbor to control the reader from here.":
-    "यहाँ से रीडर को नियंत्रित करने के लिए Harbor में कोई मंगा खोलें।",
+  "Open a manga on Lart to control the reader from here.":
+    "यहाँ से रीडर को नियंत्रित करने के लिए Lart में कोई मंगा खोलें।",
   "Open a quick issue": "त्वरित समस्या दर्ज करें",
   "Open a terminal and run: brew install ffmpeg": "टर्मिनल खोलें और चलाएँ: brew install ffmpeg",
   "Open a terminal and run: winget install Gyan.FFmpeg":
@@ -1243,8 +1243,8 @@ const catalogMO: Record<string, string> = {
   "Opening…": "खोला जा रहा है…",
   "Opens Stremio in your browser. Works with email, Facebook, and Apple accounts.":
     "Stremio को आपके ब्राउज़र में खोलता है। ईमेल, Facebook और Apple अकाउंट के साथ काम करता है।",
-  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Harbor never sees your password.":
-    "Stremio को आपके ब्राउज़र में खोलता है। ईमेल, Facebook और Apple के साथ काम करता है। Harbor को आपका पासवर्ड कभी दिखाई नहीं देता।",
+  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Lart never sees your password.":
+    "Stremio को आपके ब्राउज़र में खोलता है। ईमेल, Facebook और Apple के साथ काम करता है। Lart को आपका पासवर्ड कभी दिखाई नहीं देता।",
   "Opens the folder holding the DHT cache and active transfer data.": "DHT कैश और सक्रिय ट्रांसफ़र डेटा वाला फ़ोल्डर खोलता है।",
   "Opens the free signup page": "मुफ़्त साइनअप पेज खोलता है",
   "Opens your API settings page": "आपकी API सेटिंग्स का पेज खोलता है",
@@ -1261,8 +1261,8 @@ const catalogMO: Record<string, string> = {
   "Optional. TheIntroDB answers without a key, but a key raises your rate limit so timing keeps arriving when you binge. Get one at":
     "वैकल्पिक। TheIntroDB बिना कुंजी के भी जवाब देता है, लेकिन कुंजी जोड़ने पर आपकी रेट लिमिट बढ़ जाती है, जिससे लगातार कई एपिसोड देखते समय भी टाइमिंग मिलती रहती है। कुंजी यहाँ से लें:",
   Options: "विकल्प",
-  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Harbor writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
-    "लाइब्रेरी → लोकल टैब के विकल्प: वे फ़ोल्डर जिन्हें आप अपनी ड्राइव से स्कैन करते हैं। मेटाडेटा एक्सपोर्ट करने पर Harbor हर फ़ाइल के पास Kodi-शैली की .nfo फ़ाइल बनाता है और नीचे दिए गए आकारों में आर्टवर्क डाउनलोड करता है।",
+  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Lart writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
+    "लाइब्रेरी → लोकल टैब के विकल्प: वे फ़ोल्डर जिन्हें आप अपनी ड्राइव से स्कैन करते हैं। मेटाडेटा एक्सपोर्ट करने पर Lart हर फ़ाइल के पास Kodi-शैली की .nfo फ़ाइल बनाता है और नीचे दिए गए आकारों में आर्टवर्क डाउनलोड करता है।",
   "Or browse curated packs and import a link": "या चुने हुए पैक ब्राउज़ करके कोई लिंक इंपोर्ट करें",
   "Or just zip up images": "या सिर्फ़ इमेज की ZIP फ़ाइल बनाएँ",
   "Or paste a stream URL": "या स्ट्रीम URL पेस्ट करें",
@@ -1323,13 +1323,13 @@ const catalogMO: Record<string, string> = {
   "more events": "और इवेंट",
   movies: "फ़िल्में",
   mpv: "mpv",
-  "mpv is required for recording. Install mpv and restart Harbor.":
-    "रिकॉर्डिंग के लिए mpv ज़रूरी है। mpv इंस्टॉल करके Harbor को रीस्टार्ट करें।",
+  "mpv is required for recording. Install mpv and restart Lart.":
+    "रिकॉर्डिंग के लिए mpv ज़रूरी है। mpv इंस्टॉल करके Lart को रीस्टार्ट करें।",
   "mpv on the desktop app, HTML5 in the browser. The right engine without thinking about it.":
     "डेस्कटॉप ऐप में mpv, ब्राउज़र में HTML5। हर जगह सही इंजन, अपने आप।",
   "mpv.conf": "mpv.conf",
   "n/a": "लागू नहीं",
-  "name it Harbor, hit": "इसे Harbor नाम दें, फिर दबाएँ",
+  "name it Lart, hit": "इसे Lart नाम दें, फिर दबाएँ",
   "natural-harmonia-gropius/hdr-toys": "natural-harmonia-gropius/hdr-toys",
   "nav.addons": "ऐडऑन",
   "nav.anime": "एनीमे",

@@ -1,12 +1,12 @@
 const musicCast: Record<string, string> = {
   "music.cast.title": "Ağ hoparlörleri",
-  "music.cast.body": "Hoparlörünüzü açık tutun ve Harbor ile aynı ağa bağlayın.",
+  "music.cast.body": "Hoparlörünüzü açık tutun ve Lart ile aynı ağa bağlayın.",
   "music.cast.discover": "Hoparlörleri bul",
   "music.cast.discovering": "Hoparlörler aranıyor…",
   "music.cast.empty": "Uyumlu hoparlör bulunamadı. Ağı kontrol edip yeniden arayın.",
   "music.cast.compatibility":
-    "Sonos ve Marantz desteği modele bağlıdır. Harbor DLNA veya Chromecast kullanır; AirPlay 2 desteklenmez.",
-  "music.cast.airplay": "Harbor’da AirPlay 2 ses desteği yoktur.",
+    "Sonos ve Marantz desteği modele bağlıdır. Lart DLNA veya Chromecast kullanır; AirPlay 2 desteklenmez.",
+  "music.cast.airplay": "Lart’da AirPlay 2 ses desteği yoktur.",
   "music.cast.unsupportedDevice": "Bu cihazın protokolü Müzik için desteklenmiyor.",
   "music.cast.invalidDevice": "Cihaz bilgileri eksik. Yeniden arayın.",
   "music.cast.noTrack": "Hoparlöre göndermeden önce bir şarkı seçin.",
@@ -16,11 +16,11 @@ const musicCast: Record<string, string> = {
   "music.cast.discoveryFailed":
     "Hoparlör araması başarısız oldu. Ağınızı kontrol edip tekrar deneyin.",
   "music.cast.controlFailed": "Hoparlör komutu onaylamadı. Hoparlörü kontrol edip tekrar deneyin.",
-  "music.cast.desktop": "Ağ hoparlörlerini bulmak için Harbor masaüstü uygulamasını kullanın.",
+  "music.cast.desktop": "Ağ hoparlörlerini bulmak için Lart masaüstü uygulamasını kullanın.",
   "music.cast.spotify":
     "Spotify korumalı ses bu şekilde gönderilemez. Spotify’da Spotify Connect kullanın.",
   "music.cast.local":
-    "Harbor henüz yerel dosyaları hoparlörlerle paylaşamıyor. Çevrimiçi bir ses kaynağı seçin.",
+    "Lart henüz yerel dosyaları hoparlörlerle paylaşamıyor. Çevrimiçi bir ses kaynağı seçin.",
   "music.cast.unsupportedStream":
     "Bu kaynak desteklenen bir ses akışı sağlamadı. Başka bir kaynak seçin.",
   "music.cast.disconnected":
@@ -29,7 +29,7 @@ const musicCast: Record<string, string> = {
   "music.cast.stop": "Yayını durdur",
   "music.cast.selected": "Seçili",
   "music.cast.eqHelp":
-    "Harbor’ın EQ ve kazanç ayarları yalnızca bu bilgisayarı etkiler. Sesi hoparlörünüzden ayarlayın.",
+    "Lart’ın EQ ve kazanç ayarları yalnızca bu bilgisayarı etkiler. Sesi hoparlörünüzden ayarlayın.",
   "music.cast.loading": "Hoparlöre bağlanılıyor…",
   "music.cast.playing": "Hoparlörde çalıyor",
   "music.cast.paused": "Hoparlörde duraklatıldı",

@@ -1,6 +1,6 @@
 export default {
   "floatingPlayer.playbackSettings": "إعدادات التشغيل",
-  "floatingPlayer.restoreVideo": "العودة إلى Harbor",
+  "floatingPlayer.restoreVideo": "العودة إلى Lart",
   "floatingPlayer.closeVideo": "إيقاف وإغلاق",
   "floatingPlayer.chapters": "الفصول",
   "floatingPlayer.subtitleDelay": "تأخير الترجمة",

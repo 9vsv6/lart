@@ -47,7 +47,7 @@ export function DesktopNotifyField({
         warn={
           blocked
             ? t(
-                "Notifications are blocked for Harbor. Enable them in your system settings, then turn this back on.",
+                "Notifications are blocked for Lart. Enable them in your system settings, then turn this back on.",
               )
             : undefined
         }

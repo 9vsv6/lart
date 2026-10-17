@@ -88,7 +88,7 @@ export function CustomChromeBuilder({
               type="text"
               value={config.brand}
               onChange={(e) => onChange({ ...config, brand: e.target.value })}
-              placeholder="Harbor"
+              placeholder="Lart"
               className="h-12 rounded-md bg-canvas px-3.5 text-[16.5px] text-ink transition-colors placeholder:text-ink-subtle/70 focus:bg-canvas focus:outline-none"
             />
           </Field>

@@ -1,6 +1,6 @@
 export default {
   "floatingPlayer.playbackSettings": "Oynatma ayarları",
-  "floatingPlayer.restoreVideo": "Harbor’a dön",
+  "floatingPlayer.restoreVideo": "Lart’a dön",
   "floatingPlayer.closeVideo": "Durdur ve kapat",
   "floatingPlayer.chapters": "Bölümler",
   "floatingPlayer.subtitleDelay": "Altyazı gecikmesi",

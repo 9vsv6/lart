@@ -151,7 +151,7 @@ export const ESPORTS_SERIES: readonly SeriesDef[] = [
 
 /**
  * toLowerCase, never toLocaleLowerCase: Turkish folds "IEM" to a dotless "iem" and every pattern
- * holding an i would stop matching for one of Harbor's sixteen locales.
+ * holding an i would stop matching for one of Lart's sixteen locales.
  */
 export function normalizeSeriesName(name: string): string {
   return name

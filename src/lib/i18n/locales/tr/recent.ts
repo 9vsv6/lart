@@ -27,8 +27,8 @@ const recent: Record<string, string> = {
     "Kütüphanenizi yönetmek için bilgisayarınıza bağlanın.",
   "Custom award name (e.g. My Festival)": "Özel ödül adı (ör. Festivalim)",
   "Delete saved audio": "Kaydedilen sesi sil",
-  "Drop in art at any resolution. Harbor resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
-    "İstediğiniz çözünürlükte görsel ekleyin. Harbor, fazla büyük olanları sizin için yeniden boyutlandırıp sıkıştırır; böylece hiçbir dosya çok büyük olduğu için atlanmaz. Şeffaf arka planlı kare PNG'ler en iyi sonucu verir.",
+  "Drop in art at any resolution. Lart resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
+    "İstediğiniz çözünürlükte görsel ekleyin. Lart, fazla büyük olanları sizin için yeniden boyutlandırıp sıkıştırır; böylece hiçbir dosya çok büyük olduğu için atlanmaz. Şeffaf arka planlı kare PNG'ler en iyi sonucu verir.",
   "Drop many images, GIFs, or a .zip at once. Name each file after its slot ({example}) and we match them. Any size is fine, we resize big images and keep animated GIFs light.":
     "Birden fazla görüntüyü, GIF'i veya bir .zip dosyasını tek seferde bırakın. Her dosyaya yuvasının adını verin ({example}); biz de eşleştirelim. Boyut fark etmez; büyük görüntüleri yeniden boyutlandırır, animasyonlu GIF'lerin dosya boyutunu küçük tutarız.",
   "Episode {number}": "Bölüm {number}",
@@ -95,8 +95,8 @@ const recent: Record<string, string> = {
     "Sığması için {count} görüntü yeniden boyutlandırıldı. Boyutu nedeniyle hiçbir şey atlanmadı.",
   "Resized {count} images to fit. Nothing was skipped for size.":
     "Sığması için {count} görüntü yeniden boyutlandırıldı. Boyutu nedeniyle hiçbir şey atlanmadı.",
-  "Reskin the award trophies shown across Harbor. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
-    "Harbor genelinde gösterilen ödül kupalarının görünümünü değiştirin. PNG veya animasyonlu GIF eklemek için herhangi bir ödüle tıklayın, kendi özel ödül türlerinizi ekleyin ya da tüm seti tek seferde içe aktarın.",
+  "Reskin the award trophies shown across Lart. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
+    "Lart genelinde gösterilen ödül kupalarının görünümünü değiştirin. PNG veya animasyonlu GIF eklemek için herhangi bir ödüle tıklayın, kendi özel ödül türlerinizi ekleyin ya da tüm seti tek seferde içe aktarın.",
   "Reskin the quality chips (4K, HDR, Dolby Vision, Atmos and more) that ride each stream in the play picker. Click any slot to drop in your own PNG or animated GIF, or import a whole set at once. You do not have to fill every slot.":
     "Oynatma seçicisinde her yayının yanında yer alan kalite etiketlerinin (4K, HDR, Dolby Vision, Atmos ve daha fazlası) görünümünü değiştirin. Kendi PNG veya animasyonlu GIF'inizi eklemek için herhangi bir yuvaya tıklayın ya da tüm seti tek seferde içe aktarın. Her yuvayı doldurmanız gerekmez.",
   "Save to your favorites": "Favorilerinize kaydet",
@@ -105,7 +105,7 @@ const recent: Record<string, string> = {
   "Saved to your favorites": "Favorilerinize kaydedildi",
   "Saved to {service} as {status}": "{service} üzerinde {status} olarak kaydedildi",
   "Season {number}": "Sezon {number}",
-  "Send this title to your Harbor app": "Bu içeriği Harbor uygulamanıza gönderin",
+  "Send this title to your Lart app": "Bu içeriği Lart uygulamanıza gönderin",
   "Services on the TV": "TV'deki hizmetler",
   "Set your status": "Durumunuzu belirleyin",
   "Single page": "Tek sayfa",
@@ -124,8 +124,8 @@ const recent: Record<string, string> = {
   "Two pages": "İki sayfa",
   "Use {color} for the line tracker": "Satır izleyici için {color} kullan",
   "Volumes not reported": "Cilt sayısı belirtilmemiş",
-  "Want a badge that moves? Drop in a GIF up to 8 MB. Harbor shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
-    "Hareketli bir rozet mi istiyorsunuz? En fazla 8 MB boyutunda bir GIF ekleyin. Harbor, net kalması ve hızlı yüklenmesi için GIF'i küçültüp düşük boyutlu bir animasyon biçimine dönüştürür. Görseli küçük ve döngülü tutun.",
+  "Want a badge that moves? Drop in a GIF up to 8 MB. Lart shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
+    "Hareketli bir rozet mi istiyorsunuz? En fazla 8 MB boyutunda bir GIF ekleyin. Lart, net kalması ve hızlı yüklenmesi için GIF'i küçültüp düşük boyutlu bir animasyon biçimine dönüştürür. Görseli küçük ve döngülü tutun.",
   Weak: "Zayıf",
   "Webtoon strip": "Webtoon şeridi",
   "What are you sharing?": "Ne paylaşıyorsunuz?",

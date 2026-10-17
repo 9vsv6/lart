@@ -1,6 +1,6 @@
 export default {
   "floatingPlayer.playbackSettings": "प्लेबैक सेटिंग",
-  "floatingPlayer.restoreVideo": "Harbor पर वापस जाएँ",
+  "floatingPlayer.restoreVideo": "Lart पर वापस जाएँ",
   "floatingPlayer.closeVideo": "रोकें और बंद करें",
   "floatingPlayer.chapters": "अध्याय",
   "floatingPlayer.subtitleDelay": "सबटाइटल में देरी",

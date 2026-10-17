@@ -261,7 +261,7 @@ function Translation() {
     };
     const persisted = saveEBookTranslationSettings(next);
     if (!persisted) {
-      setTestResult(t("Storage is full. Clear Harbor cache storage, then try saving again."));
+      setTestResult(t("Storage is full. Clear Lart cache storage, then try saving again."));
       return;
     }
     setSettings(next);
@@ -567,7 +567,7 @@ function LocalFolder() {
       if (typeof path === "string" && !addEBookFolder(path))
         setError(t("Could not add that folder"));
     } catch {
-      setError(t("Folder selection is available in the Harbor app"));
+      setError(t("Folder selection is available in the Lart app"));
     }
   };
   return (
@@ -831,7 +831,7 @@ function Extensions() {
           <h3 id="ebook-source-legal-title">{t("Copyright & third-party sources")}</h3>
           <p>{t("Use extensions only for content you may lawfully access, including public-domain books, licensed content, or uses permitted by law.")}</p>
           <p>{t("You are responsible for checking copyright status, local law, and each source’s terms.")}</p>
-          <p>{t("Extensions come from repositories you add. Harbor does not verify their content rights.")} {t("Harbor does not support copyright infringement.")}</p>
+          <p>{t("Extensions come from repositories you add. Lart does not verify their content rights.")} {t("Lart does not support copyright infringement.")}</p>
         </div>
       </aside>
       <div className={`flex flex-col gap-2.5 px-5 py-4 ${CARD}`}>
@@ -1001,7 +1001,7 @@ export function EBookSourcesView({ onBack }: { onBack: () => void }) {
           </h1>
           <p className="max-w-2xl text-[14px] leading-relaxed text-ink-muted">
             {t(
-              "Connect books you own, reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.",
+              "Connect books you own, reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.",
             )}
           </p>
           <div className="ebook-sources-stats" aria-label={t("Source overview")}>
@@ -1038,7 +1038,7 @@ export function EBookSourcesView({ onBack }: { onBack: () => void }) {
           <div className="ebook-sources-privacy-note">
             <ShieldCheck size={17} />
             <p>
-              <span>{t("Harbor never hosts your books.")}</span>
+              <span>{t("Lart never hosts your books.")}</span>
             </p>
           </div>
         </aside>
@@ -1048,7 +1048,7 @@ export function EBookSourcesView({ onBack }: { onBack: () => void }) {
             id="ebook-source-library"
             title={t("Library sources")}
             description={t(
-              "Manage every place Harbor can read from, whether it lives on disk or across the web.",
+              "Manage every place Lart can read from, whether it lives on disk or across the web.",
             )}
           >
             {installed.length > 0 && (
@@ -1082,7 +1082,7 @@ export function EBookSourcesView({ onBack }: { onBack: () => void }) {
             id="ebook-source-intelligence"
             title={t("Metadata & translation")}
             description={t(
-              "Shape the metadata and reading language Harbor uses without changing your original files.",
+              "Shape the metadata and reading language Lart uses without changing your original files.",
             )}
           >
             <MetadataProviders />

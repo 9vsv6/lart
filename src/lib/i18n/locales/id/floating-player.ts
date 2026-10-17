@@ -1,6 +1,6 @@
 export default {
   "floatingPlayer.playbackSettings": "Pengaturan pemutaran",
-  "floatingPlayer.restoreVideo": "Kembali ke Harbor",
+  "floatingPlayer.restoreVideo": "Kembali ke Lart",
   "floatingPlayer.closeVideo": "Hentikan dan tutup",
   "floatingPlayer.chapters": "Bab",
   "floatingPlayer.subtitleDelay": "Jeda subtitel",

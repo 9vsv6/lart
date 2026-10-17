@@ -1,7 +1,7 @@
 const misc: Record<string, string> = {
   "#{position} in {label} Today": "Nº {position} dans {label} aujourd’hui",
-  "'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "Page de configuration dans le navigateur intégré de Harbor. Choisissez vos options. Lorsque vous cliquez sur Installer sur cette page, Harbor récupère automatiquement le lien et met à jour l’extension.",
+  "'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "Page de configuration dans le navigateur intégré de Lart. Choisissez vos options. Lorsque vous cliquez sur Installer sur cette page, Lart récupère automatiquement le lien et met à jour l’extension.",
   "'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "Page de configuration. Choisissez vos options, puis copiez le lien d’installation fourni et collez-le ci-dessous pour mettre à jour l’extension.",
   "A client for the Stremio protocol. Two minutes to set up; most of it optional. You stay in control of every key.":
@@ -12,7 +12,7 @@ const misc: Record<string, string> = {
   Actions: "Actions",
   Active: "Actif",
   "Add a tag": "Ajouter une étiquette",
-  "Add a TMDB key for the full Harbor": "Ajoutez une clé TMDB pour profiter de Harbor au complet",
+  "Add a TMDB key for the full Lart": "Ajoutez une clé TMDB pour profiter de Lart au complet",
   "Add a TMDB key in settings first": "Ajoutez d’abord une clé TMDB dans les paramètres",
   "Add a TMDB key in Settings to load Arabic content.":
     "Ajoutez une clé TMDB dans les paramètres pour charger du contenu arabe.",
@@ -37,10 +37,10 @@ const misc: Record<string, string> = {
   "AniList Comments": "Commentaires AniList",
   "Anime sources are usually richer through Torrentio's anime config or AIOStreams. Make sure one is installed in Stremio.":
     "Les sources d’anime sont généralement plus nombreuses avec la configuration anime de Torrentio ou AIOStreams. Vérifiez que l’un des deux est installé dans Stremio.",
-  "Anyone with the link can open this collection once your Harbor server is live.":
-    "Toute personne disposant du lien pourra ouvrir cette collection dès que votre serveur Harbor sera en ligne.",
-  "Anything you install in Harbor pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
-    "Tout ce que vous installez dans Harbor est répercuté sur votre compte Stremio afin d’apparaître aussi sur mobile. Connectez-vous via l’avatar en bas à gauche de la barre latérale.",
+  "Anyone with the link can open this collection once your Lart server is live.":
+    "Toute personne disposant du lien pourra ouvrir cette collection dès que votre serveur Lart sera en ligne.",
+  "Anything you install in Lart pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
+    "Tout ce que vous installez dans Lart est répercuté sur votre compte Stremio afin d’apparaître aussi sur mobile. Connectez-vous via l’avatar en bas à gauche de la barre latérale.",
   Australia: "Australie",
   Auto: "Automatique",
   "Back to collections": "Retour aux collections",
@@ -97,9 +97,9 @@ const misc: Record<string, string> = {
   "Collapse sidebar": "Réduire la barre latérale",
   "Comments are hidden": "Les commentaires sont masqués",
   "Hosted elsewhere": "Hébergé ailleurs",
-  "A third party runs these plans. Harbor is not affiliated with them and receives nothing from a signup. Current pricing and terms are on their site.": "Ces offres sont gérées par un tiers. Harbor n’y est pas affilié et ne reçoit rien pour une inscription. Les tarifs et conditions actuels sont sur leur site.",
+  "A third party runs these plans. Lart is not affiliated with them and receives nothing from a signup. Current pricing and terms are on their site.": "Ces offres sont gérées par un tiers. Lart n’y est pas affilié et ne reçoit rien pour une inscription. Les tarifs et conditions actuels sont sur leur site.",
   "{name} can run on a hosted instance": "{name} peut tourner sur une instance hébergée",
-  "A third party operates this. Harbor is not affiliated with them, does not resell it, and receives nothing if you sign up. Whatever it costs and whatever it includes is on their site.": "Un tiers gère ce service. Harbor n’y est pas affilié, ne le revend pas et ne reçoit rien si vous vous inscrivez. Le prix et le contenu sont sur leur site.",
+  "A third party operates this. Lart is not affiliated with them, does not resell it, and receives nothing if you sign up. Whatever it costs and whatever it includes is on their site.": "Un tiers gère ce service. Lart n’y est pas affilié, ne le revend pas et ne reçoit rien si vous vous inscrivez. Le prix et le contenu sont sur leur site.",
   "Show comments": "Afficher les commentaires",
   "Hide comments": "Masquer les commentaires",
   "Comments may take a moment to appear on Trakt":
@@ -116,8 +116,8 @@ const misc: Record<string, string> = {
     "Connectez votre compte AniList pour voir les fils de discussion et les commentaires du forum.",
   Connected: "Connecté",
   "Contains spoiler": "Contient un spoiler",
-  "Continue Watching, then your addon catalogs in install order. No hero, no Harbor rails.":
-    "Reprendre la lecture, puis les catalogues de vos extensions dans l’ordre d’installation. Aucun visuel principal ni aucune rangée Harbor.",
+  "Continue Watching, then your addon catalogs in install order. No hero, no Lart rails.":
+    "Reprendre la lecture, puis les catalogues de vos extensions dans l’ordre d’installation. Aucun visuel principal ni aucune rangée Lart.",
   copied: "copié",
   Copy: "Copier",
   Corner: "Coin",
@@ -145,8 +145,8 @@ const misc: Record<string, string> = {
   Discover: "Découvrir",
   Documentary: "Documentaire",
   Documentation: "Documentation",
-  "Does Harbor {version} feel better or worse than the version you had before?":
-    "Harbor {version} vous semble-t-il meilleur ou moins bon que la version précédente ?",
+  "Does Lart {version} feel better or worse than the version you had before?":
+    "Lart {version} vous semble-t-il meilleur ou moins bon que la version précédente ?",
   "Don't have an account?": "Vous n’avez pas de compte ?",
   "Don't have an account? Create one →": "Vous n’avez pas de compte ? Créez-en un →",
   Done: "Terminé",
@@ -160,7 +160,7 @@ const misc: Record<string, string> = {
   "Empty — click to add filters": "Vide – cliquez pour ajouter des filtres",
   Enabled: "Activé",
   English: "Anglais",
-  "Enter Harbor": "Accéder à Harbor",
+  "Enter Lart": "Accéder à Lart",
   "Enter your PIN": "Saisissez votre code PIN",
   Episode: "Épisode",
   Episodes: "Épisodes",
@@ -182,8 +182,8 @@ const misc: Record<string, string> = {
   Fix: "Corriger",
   "Focus PIN entry": "Focus sur la saisie du code PIN",
   Font: "Police",
-  "For now, please open this site on a desktop, or build Harbor from source.":
-    "Pour l’instant, veuillez ouvrir ce site sur un ordinateur ou compiler Harbor depuis le code source.",
+  "For now, please open this site on a desktop, or build Lart from source.":
+    "Pour l’instant, veuillez ouvrir ce site sur un ordinateur ou compiler Lart depuis le code source.",
   "Built for Adventure!": "Conçu pour l'aventure !",
   "found by": "trouvé par",
   France: "France",
@@ -202,10 +202,10 @@ const misc: Record<string, string> = {
   "Golden Lion": "Lion d’or",
   "Grid view": "Vue en grille",
   "Hang tight, won't be a sec.": "Un instant, ce sera vite fait.",
-  "Harbor couldn't resolve a usable ID for this title. Add a TMDB key in Library settings or sign in to Stremio to broaden coverage.":
-    "Harbor n’a pas trouvé d’identifiant exploitable pour ce titre. Ajoutez une clé TMDB dans les paramètres de la bibliothèque ou connectez-vous à Stremio pour étendre la couverture.",
-  "Harbor pulls the most popular titles each service has right now. Toggle off anything you don't subscribe to.":
-    "Harbor récupère les titres actuellement les plus populaires de chaque service. Désactivez ceux auxquels vous n’êtes pas abonné.",
+  "Lart couldn't resolve a usable ID for this title. Add a TMDB key in Library settings or sign in to Stremio to broaden coverage.":
+    "Lart n’a pas trouvé d’identifiant exploitable pour ce titre. Ajoutez une clé TMDB dans les paramètres de la bibliothèque ou connectez-vous à Stremio pour étendre la couverture.",
+  "Lart pulls the most popular titles each service has right now. Toggle off anything you don't subscribe to.":
+    "Lart récupère les titres actuellement les plus populaires de chaque service. Désactivez ceux auxquels vous n’êtes pas abonné.",
   "Head to Discover. Cinemeta and OpenSubtitles cover the basics; Torrentio + a debrid key cover almost everything else.":
     "Rendez-vous dans Découvrir. Cinemeta et OpenSubtitles couvrent l’essentiel ; Torrentio avec une clé de débridage couvre presque tout le reste.",
   Hebrew: "Hébreu",
@@ -315,8 +315,8 @@ const misc: Record<string, string> = {
   Official: "Officiel",
   Oldest: "Les plus anciens",
   "On Stremio-Addons": "Sur Stremio-Addons",
-  "On the web, Harbor can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
-    "Sur le Web, Harbor ne peut accéder qu’aux extensions qui autorisent l’accès depuis un navigateur (Torrentio, TorBox, Cinemeta). Pour les titres qui ne sont pas encore sortis, il n’existe généralement aucune source.",
+  "On the web, Lart can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
+    "Sur le Web, Lart ne peut accéder qu’aux extensions qui autorisent l’accès depuis un navigateur (Torrentio, TorBox, Cinemeta). Pour les titres qui ne sont pas encore sortis, il n’existe généralement aucune source.",
   "Only 1 source after filtering": "Une seule source après filtrage",
   "Only 2 sources after filtering": "Seulement 2 sources après filtrage",
   Opacity: "Opacité",
@@ -341,8 +341,8 @@ const misc: Record<string, string> = {
   "Palme d'Or": "Palme d’Or",
   "Parental controls are on. Enter your PIN to access settings.":
     "Le contrôle parental est activé. Saisissez votre PIN pour accéder aux paramètres.",
-  "Paste this code into Harbor to open the collection.":
-    "Collez ce code dans Harbor pour ouvrir la collection.",
+  "Paste this code into Lart to open the collection.":
+    "Collez ce code dans Lart pour ouvrir la collection.",
   Paused: "En pause",
   "Paused on Simkl": "En pause sur Simkl",
   "Paused on Trakt": "En pause sur Trakt",
@@ -428,8 +428,8 @@ const misc: Record<string, string> = {
   Showtime: "Showtime",
   Side: "Côté",
   "Sign in to get a shareable link.": "Connectez-vous pour obtenir un lien partageable.",
-  "Sign in to mirror your Continue Watching, watchlist, and any addons you've already curated. Optional; Harbor works fully signed-out.":
-    "Connectez-vous pour retrouver votre liste Continuer à regarder, votre liste à voir et toutes les extensions que vous avez déjà sélectionnées. Cette étape est facultative, Harbor fonctionne parfaitement sans connexion.",
+  "Sign in to mirror your Continue Watching, watchlist, and any addons you've already curated. Optional; Lart works fully signed-out.":
+    "Connectez-vous pour retrouver votre liste Continuer à regarder, votre liste à voir et toutes les extensions que vous avez déjà sélectionnées. Cette étape est facultative, Lart fonctionne parfaitement sans connexion.",
   "Sign in to Stremio": "Se connecter à Stremio",
   "Sign in to sync your addons across devices":
     "Connectez-vous pour synchroniser vos extensions sur tous vos appareils",
@@ -441,8 +441,8 @@ const misc: Record<string, string> = {
     "Six façons de commencer. Touchez-en une et nous filtrerons le catalogue pour vous.",
   Skip: "Passer",
   "Skip for now": "Ignorer pour l’instant",
-  "Skip if you'd rather just use Cinemeta. Harbor still works, you'll just see fewer rails.":
-    "Passez cette étape si vous préférez utiliser uniquement Cinemeta. Harbor fonctionnera quand même, mais vous verrez simplement moins de rangées.",
+  "Skip if you'd rather just use Cinemeta. Lart still works, you'll just see fewer rails.":
+    "Passez cette étape si vous préférez utiliser uniquement Cinemeta. Lart fonctionnera quand même, mais vous verrez simplement moins de rangées.",
   "Skip setup": "Ignorer la configuration",
   "Slide {n}": "Diapositive {n}",
   Slot: "Emplacement",
@@ -495,8 +495,8 @@ const misc: Record<string, string> = {
   "These rails activate once a TMDB key is set. You can come back to this anytime in Settings.":
     "Ces rangées s’activent dès qu’une clé TMDB est définie. Vous pourrez y revenir à tout moment dans les Paramètres.",
   "This collection is no longer here.": "Cette collection n’existe plus.",
-  "This instance of Harbor is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
-    "Cette version de Harbor est conçue pour les ordinateurs. Nos applications iOS et Android autonomes seront bientôt disponibles, chacune avec une expérience sur mesure, pensée d’abord pour le mobile et conçue pour sa plateforme native.",
+  "This instance of Lart is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
+    "Cette version de Lart est conçue pour les ordinateurs. Nos applications iOS et Android autonomes seront bientôt disponibles, chacune avec une expérience sur mesure, pensée d’abord pour le mobile et conçue pour sa plateforme native.",
   "This source": "Cette source",
   "This thread is locked.": "Cette discussion est verrouillée.",
   "this title": "ce titre",
@@ -536,13 +536,13 @@ const misc: Record<string, string> = {
   Torrents: "Torrents",
   "Trakt Comments": "Commentaires Trakt",
   Transport: "Transport",
-  "Trending tracks star growth across your Harbor visits. Open the addons page again tomorrow and the top risers will appear here.":
-    "Les tendances mesurent la progression du nombre d’étoiles au fil de vos visites sur Harbor. Revenez demain sur la page des extensions pour voir apparaître ici les plus fortes progressions.",
+  "Trending tracks star growth across your Lart visits. Open the addons page again tomorrow and the top risers will appear here.":
+    "Les tendances mesurent la progression du nombre d’étoiles au fil de vos visites sur Lart. Revenez demain sur la page des extensions pour voir apparaître ici les plus fortes progressions.",
   "Trending, in theaters, what's on every streamer.":
     "Les tendances, les sorties au cinéma et les programmes de chaque plateforme.",
   Troubleshooting: "Dépannage",
-  "Try signing in to Stremio so Harbor can use your addon collection. Older or foreign titles often need Torrentio + a debrid addon to find anything.":
-    "Essayez de vous connecter à Stremio pour que Harbor puisse utiliser votre collection d’extensions. Pour les titres anciens ou étrangers, Torrentio et une extension de débridage sont souvent nécessaires pour trouver des sources.",
+  "Try signing in to Stremio so Lart can use your addon collection. Older or foreign titles often need Torrentio + a debrid addon to find anything.":
+    "Essayez de vous connecter à Stremio pour que Lart puisse utiliser votre collection d’extensions. Pour les titres anciens ou étrangers, Torrentio et une extension de débridage sont souvent nécessaires pour trouver des sources.",
   "Tune picks": "Personnaliser les sélections",
   "Tune your picks": "Personnalisez vos sélections",
   "Tune your Top Picks": "Personnalisez vos meilleures sélections",
@@ -566,14 +566,14 @@ const misc: Record<string, string> = {
   "update.errorServer": "Une erreur s’est produite lors de la connexion au serveur de mise à jour.",
   "update.failed": "Échec de la mise à jour",
   "update.fetching": "Récupération de la dernière version",
-  "update.harborVersion": "Harbor {version}",
+  "update.harborVersion": "Lart {version}",
   "update.installing": "Installation de la mise à jour",
   "update.installRestart": "Installer et redémarrer",
-  "update.keepUsing": "Continuer à utiliser Harbor pendant le téléchargement",
+  "update.keepUsing": "Continuer à utiliser Lart pendant le téléchargement",
   "update.later": "Plus tard",
   "update.of": "{downloaded} sur {total}",
   "update.ready": "Mise à jour prête à être installée",
-  "update.restartAuto": "Harbor redémarrera automatiquement.",
+  "update.restartAuto": "Lart redémarrera automatiquement.",
   "update.tryAgain": "Réessayer",
   Updated: "Mis à jour",
   Updating: "Mise à jour",
@@ -595,8 +595,8 @@ const misc: Record<string, string> = {
     "Nous devons vérifier votre âge avant de poursuivre la traversée. Trois petites questions auxquelles tout adulte qui travaille saurait répondre les yeux fermés. Répondez correctement aux trois pour accéder au rayon adulte.",
   "Welcome aboard": "Bienvenue à bord",
   Western: "Western",
-  "When playback starts, Harbor finds and loads a subtitle in one of these languages automatically. The first available match wins, so put your main language first.":
-    "Au démarrage de la lecture, Harbor recherche et charge automatiquement un sous-titre dans l’une de ces langues. La première correspondance disponible est utilisée, placez donc votre langue principale en premier.",
+  "When playback starts, Lart finds and loads a subtitle in one of these languages automatically. The first available match wins, so put your main language first.":
+    "Au démarrage de la lecture, Lart recherche et charge automatiquement un sous-titre dans l’une de ces langues. La première correspondance disponible est utilisée, placez donc votre langue principale en premier.",
   "Where your video comes from": "D’où vient votre vidéo",
   "Wide search · still empty": "Recherche étendue · toujours vide",
   Windowed: "Fenêtré",

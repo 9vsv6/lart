@@ -303,7 +303,7 @@ export function useAutoSync(params: {
       if (automaticSwap) {
         const os = defaultOsConfig(settingsRef.current) ?? {
           apiKey: "",
-          userAgent: "Harbor autosync",
+          userAgent: "Lart autosync",
         };
         void runWithSubtitleFpsReset(
           async () => {
@@ -619,7 +619,7 @@ export function useAutoSync(params: {
         if (o.subSwap) {
           const os = defaultOsConfig(settingsRef.current) ?? {
             apiKey: "",
-            userAgent: "Harbor autosync",
+            userAgent: "Lart autosync",
           };
           const swap = o.subSwap;
           const applied = await applySwap(b, swap, os, isCurrent);

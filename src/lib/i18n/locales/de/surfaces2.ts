@@ -23,7 +23,7 @@ const surfaces2: Record<string, string> = {
   "Add image": "Bild hinzufügen",
   "Add preset": "Voreinstellung hinzufügen",
   "Add to My List": "Zur Merkliste hinzufügen",
-  "Added to Harbor": "Zu Harbor hinzugefügt",
+  "Added to Lart": "Zu Lart hinzugefügt",
   "Added to downloads": "Zu Downloads hinzugefügt",
   "Added to library": "Zur Mediathek hinzugefügt",
   "Adds Letterboxd and Trakt community ratings to detail pages, covering what OMDb misses.":
@@ -67,7 +67,7 @@ const surfaces2: Record<string, string> = {
   "Community index": "Community-Index",
   "Compressing…": "Wird komprimiert…",
   "Configure URL above first": "Zuerst oben die URL konfigurieren",
-  "Continue in Harbor": "In Harbor fortfahren",
+  "Continue in Lart": "In Lart fortfahren",
   "Continue in browser": "Im Browser fortfahren",
   "Copy to clipboard": "In die Zwischenablage kopieren",
   "Could not send: {message}": "Senden nicht möglich: {message}",
@@ -101,8 +101,8 @@ const surfaces2: Record<string, string> = {
     "Episodentitel, alternative Namen, Senderinformationen sowie Handlungsbogen-, DVD- und absolute Reihenfolgen. Ergänzt TMDB so, dass pro Feld die bessere Quelle gewinnt. Für die persönliche Nutzung kostenlos unter",
   "Every color token, stable selector, {api} call, live hook (bell, account menu, avatar, status dot, unread badge), and copy-paste recipe.":
     "Jedes Farb-Token, jeder stabile Selektor, jeder {api}-Aufruf, jeder Live-Hook (Glocke, Kontomenü, Avatar, Statuspunkt, Ungelesen-Badge) und jede Anleitung zum Kopieren und Einfügen.",
-  "Every theme you share gets a private owner token. On the device where you shared it, Harbor saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
-    "Jedes Design, das du teilst, erhält ein privates Besitzer-Token. Auf dem Gerät, auf dem du es geteilt hast, speichert Harbor das Token automatisch. Deshalb werden diese Designs direkt hier angezeigt und du kannst sie mit einem Fingertipp beanspruchen. Um ein Design von einem anderen Gerät zu beanspruchen, füge das Token unten ein. Neu geteilte Designs werden jetzt direkt mit deinem Konto verknüpft, sodass du das nicht noch einmal tun musst.",
+  "Every theme you share gets a private owner token. On the device where you shared it, Lart saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
+    "Jedes Design, das du teilst, erhält ein privates Besitzer-Token. Auf dem Gerät, auf dem du es geteilt hast, speichert Lart das Token automatisch. Deshalb werden diese Designs direkt hier angezeigt und du kannst sie mit einem Fingertipp beanspruchen. Um ein Design von einem anderen Gerät zu beanspruchen, füge das Token unten ein. Neu geteilte Designs werden jetzt direkt mit deinem Konto verknüpft, sodass du das nicht noch einmal tun musst.",
   "Experimental 1:1 ports of other apps. Rough edges expected.":
     "Experimentelle 1:1-Portierungen anderer Apps. Mit Ecken und Kanten ist zu rechnen.",
   "Explore, discover and earn stars": "Erkunden, entdecken und Sterne verdienen",
@@ -117,16 +117,16 @@ const surfaces2: Record<string, string> = {
   "Go to host": "Zum Host",
   "Got one a friend shared? Drop it in.": "Hat dir ein Freund eins geschickt? Zieh es hierher.",
   HOME: "HEIM",
-  "Harbor couldn't reach MyAnimeList or AniList. Check your connection and try again.":
-    "Harbor konnte MyAnimeList oder AniList nicht erreichen. Prüfe deine Verbindung und versuche es erneut.",
-  "Harbor couldn't reach the catalog servers. Check your connection and try again.":
-    "Harbor konnte die Katalogserver nicht erreichen. Prüfe deine Verbindung und versuche es erneut.",
-  "Harbor opens 4 parallel requests to": "Harbor stellt 4 parallele Anfragen an",
+  "Lart couldn't reach MyAnimeList or AniList. Check your connection and try again.":
+    "Lart konnte MyAnimeList oder AniList nicht erreichen. Prüfe deine Verbindung und versuche es erneut.",
+  "Lart couldn't reach the catalog servers. Check your connection and try again.":
+    "Lart konnte die Katalogserver nicht erreichen. Prüfe deine Verbindung und versuche es erneut.",
+  "Lart opens 4 parallel requests to": "Lart stellt 4 parallele Anfragen an",
   "Have a file?": "Hast du eine Datei?",
   "Have a token from another device?": "Hast du ein Token von einem anderen Gerät?",
   "Hidden card": "Ausgeblendete Karte",
-  "Highly recommended. This is what gives you the full Harbor experience: Popular, Trending, In Theaters, and per-service rails. Free at":
-    "Sehr zu empfehlen. Damit erhältst du das vollständige Harbor-Erlebnis: Beliebt, Im Trend, Im Kino und Reihen für einzelne Dienste. Kostenlos unter",
+  "Highly recommended. This is what gives you the full Lart experience: Popular, Trending, In Theaters, and per-service rails. Free at":
+    "Sehr zu empfehlen. Damit erhältst du das vollständige Lart-Erlebnis: Beliebt, Im Trend, Im Kino und Reihen für einzelne Dienste. Kostenlos unter",
   "How this is measured": "So wird das gemessen",
   "IPTV lists": "IPTV-Listen",
   "Identifies the song with Google Gemini (free tier, no usage cap). Get a key at":
@@ -215,8 +215,8 @@ const surfaces2: Record<string, string> = {
   "Saved to your library.": "In deiner Mediathek gespeichert.",
   "Say a title, actor, or genre": "Nenne einen Titel, Schauspieler oder ein Genre",
   "See all winners": "Alle Gewinner ansehen",
-  "Sends the context above straight to the Harbor team. No keys or library data.":
-    "Sendet den obigen Kontext direkt an das Harbor-Team. Keine Schlüssel oder Mediatheksdaten.",
+  "Sends the context above straight to the Lart team. No keys or library data.":
+    "Sendet den obigen Kontext direkt an das Lart-Team. Keine Schlüssel oder Mediatheksdaten.",
   "Sent. Thanks for the help!": "Gesendet. Danke für deine Hilfe!",
   "Set as a backdrop": "Als Hintergrund festlegen",
   "Share diagnostics": "Diagnosedaten teilen",
@@ -227,8 +227,8 @@ const surfaces2: Record<string, string> = {
   "Slide {number}": "Folie {number}",
   "Something blew up while rendering. Reload to recover, or send us the technical detail.":
     "Beim Rendern ist etwas schiefgelaufen. Lade neu, um die App wiederherzustellen, oder sende uns die technischen Details.",
-  "Sorry, Harbor crashed the last time it was running. You can review the details and choose whether to send a report.":
-    "Entschuldigung, Harbor ist bei der letzten Ausführung abgestürzt. Du kannst die Details prüfen und entscheiden, ob du einen Bericht senden möchtest.",
+  "Sorry, Lart crashed the last time it was running. You can review the details and choose whether to send a report.":
+    "Entschuldigung, Lart ist bei der letzten Ausführung abgestürzt. Du kannst die Details prüfen und entscheiden, ob du einen Bericht senden möchtest.",
   "Submit update": "Update einreichen",
   "TMDB key": "TMDB-Schlüssel",
   "Take me back": "Zurück",
@@ -249,7 +249,7 @@ const surfaces2: Record<string, string> = {
   "Theme link or ID": "Theme-Link oder -ID",
   "They email an activation link the first time. Click it, then come back and save.":
     "Beim ersten Mal schicken sie dir per E-Mail einen Aktivierungslink. Klicke darauf, kehre dann zurück und speichere.",
-  "This Harbor": "Diese Harbor-Instanz",
+  "This Lart": "Diese Lart-Instanz",
   "This playlist hasn't been loaded yet, or it has no channels.":
     "Diese Playlist wurde noch nicht geladen oder enthält keine Sender.",
   "Tonight's picks": "Tipps für heute Abend",
@@ -265,12 +265,12 @@ const surfaces2: Record<string, string> = {
     'Verwende den "personal"-Schlüssel, nicht den Projektschlüssel.',
   "Use the v3 key, not the read access token.":
     "Verwende den v3-Schlüssel, nicht das Token für den Lesezugriff.",
-  "Used to check cache and unrestrict links. Harbor never adds or removes anything on your account on its own.": "Wird zum Prüfen des Caches und Entsperren von Links verwendet. Harbor fügt deinem Konto niemals selbstständig etwas hinzu oder entfernt etwas daraus.",
+  "Used to check cache and unrestrict links. Lart never adds or removes anything on your account on its own.": "Wird zum Prüfen des Caches und Entsperren von Links verwendet. Lart fügt deinem Konto niemals selbstständig etwas hinzu oder entfernt etwas daraus.",
   "Uses the directdl endpoint, which skips queueing for anything already cached.":
     "Verwendet den directdl-Endpunkt, der bei bereits zwischengespeicherten Inhalten die Warteschlange überspringt.",
   "Uses up to 150 MB": "Verwendet bis zu 150 MB",
   VS: "gegen",
-  "Verified Harbor Staff": "Verifizierte Harbor-Mitarbeiter",
+  "Verified Lart Staff": "Verifizierte Lart-Mitarbeiter",
   Versions: "Versionen",
   "Versions ({count})": "Versionen ({count})",
   "View {title}": "{title} anzeigen",
@@ -291,8 +291,8 @@ const surfaces2: Record<string, string> = {
   "Works without a key at low volume; add a key for higher quotas.":
     "Funktioniert bei geringer Nutzung ohne Schlüssel. Füge für höhere Kontingente einen Schlüssel hinzu.",
   "You found them all!": "Du hast sie alle gefunden!",
-  "Your library lives on Harbor. Connect to your computer and it shows up here.":
-    "Deine Mediathek befindet sich in Harbor. Stelle eine Verbindung zu deinem Computer her, dann wird sie hier angezeigt.",
+  "Your library lives on Lart. Connect to your computer and it shows up here.":
+    "Deine Mediathek befindet sich in Lart. Stelle eine Verbindung zu deinem Computer her, dann wird sie hier angezeigt.",
   "Your new version is in for a quick review. The live listing keeps working until this one is approved.":
     "Deine neue Version wurde zur kurzen Prüfung eingereicht. Der aktuelle Eintrag funktioniert weiter, bis sie genehmigt ist.",
   "a bare RPDB-compatible server (your RPDB key is still sent), or a full URL template using":

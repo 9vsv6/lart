@@ -3,7 +3,7 @@ import { RailChevron } from "@/components/nav-arrow";
 import { useDragScroll } from "@/lib/use-drag-scroll";
 
 /** The filter strips outran their width, so they fell back to native scrollbars. This gives them
- *  the same hidden-scrollbar rail plus edge arrows every other Harbor row already uses. */
+ *  the same hidden-scrollbar rail plus edge arrows every other Lart row already uses. */
 export function PillRail({
   className,
   label,

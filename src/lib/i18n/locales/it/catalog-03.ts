@@ -43,13 +43,13 @@ const catalog03: Record<string, string> = {
   "Default location": "Posizione predefinita",
   "Default picture shape on the mpv engine. Fit keeps the source as-is with any black bars; the rest stretch or crop to fill, handy for old 4:3 shows on a widescreen TV.":
     "Formato immagine predefinito nel motore mpv. Adatta mantiene la sorgente invariata, incluse eventuali bande nere; le altre opzioni allungano o ritagliano l'immagine per riempire lo schermo, una soluzione utile per le vecchie serie in 4:3 su una TV widescreen.",
-  "Default. Harbor parses and scores every source and surfaces the best quality first.":
-    "Predefinito. Harbor analizza e valuta ogni sorgente, mostrando per prima quella con la qualità migliore.",
+  "Default. Lart parses and scores every source and surfaces the best quality first.":
+    "Predefinito. Lart analizza e valuta ogni sorgente, mostrando per prima quella con la qualità migliore.",
   "Default. Humanist serif, warm sans.": "Predefinito. Serif umanista, sans caldo.",
   "Default. Rejects size outliers, suspicious extensions, year/episode mismatches, season packs (for episode requests), trailers, and likely cams.":
     "Predefinito. Esclude dimensioni anomale, estensioni sospette, incongruenze di anno o episodio, pacchetti di stagioni (per le richieste di episodi), trailer e probabili riprese da sala.",
-  "Default. Top pick at the top, quality tiles, and an All-Sources drawer. Harbor scores and ranks results.":
-    "Predefinito. Scelta migliore in cima, riquadri della qualità e pannello Tutte le sorgenti. Harbor valuta e ordina i risultati.",
+  "Default. Top pick at the top, quality tiles, and an All-Sources drawer. Lart scores and ranks results.":
+    "Predefinito. Scelta migliore in cima, riquadri della qualità e pannello Tutte le sorgenti. Lart valuta e ordina i risultati.",
   "Defending champion": "Campione in carica",
   "Defends privacy, free expression, and the open internet, in the courts and in the code.":
     "Difende la privacy, la libertà di espressione e un'internet aperta, nei tribunali e nel codice.",
@@ -179,8 +179,8 @@ const catalog03: Record<string, string> = {
   "Discord confirmed. Pick a username and password to finish.":
     "Discord confermato. Scegli un nome utente e una password per completare la procedura.",
   "Discord linked": "Discord collegato",
-  "Discord posts a message to a channel whenever Harbor pings it. Takes about a minute to set up.":
-    "Discord pubblica un messaggio in un canale ogni volta che Harbor invia un ping. La configurazione richiede circa un minuto.",
+  "Discord posts a message to a channel whenever Lart pings it. Takes about a minute to set up.":
+    "Discord pubblica un messaggio in un canale ogni volta che Lart invia un ping. La configurazione richiede circa un minuto.",
   "Discord webhook URL": "URL webhook Discord",
   Discover: "Scopri",
   "Discover more": "Scopri altro",
@@ -191,10 +191,10 @@ const catalog03: Record<string, string> = {
   "Dismiss notification": "Ignora la notifica",
   "Disney+": "Disney+",
   "Disney+ Originals": "Disney+ Originals",
-  "Dispatched on window. Listen from your theme JS to react to Harbor's lifecycle.":
-    "Generato su window. Ascoltalo dal JS del tuo tema per reagire al ciclo di vita di Harbor.",
-  "Display 'Browsing Harbor' when nothing is playing.":
-    "Mostra «Navigazione in Harbor» quando non è in riproduzione alcun contenuto.",
+  "Dispatched on window. Listen from your theme JS to react to Lart's lifecycle.":
+    "Generato su window. Ascoltalo dal JS del tuo tema per reagire al ciclo di vita di Lart.",
+  "Display 'Browsing Lart' when nothing is playing.":
+    "Mostra «Navigazione in Lart» quando non è in riproduzione alcun contenuto.",
   "Display SIMKL Community Ratings": "Mostra le valutazioni della community di SIMKL",
   "Display SIMKL community score badge on details pages.":
     "Mostra il badge del punteggio della community di SIMKL nelle pagine dei dettagli.",
@@ -236,15 +236,15 @@ const catalog03: Record<string, string> = {
   "Documentary Spotlight": "Documentari in primo piano",
   Documentation: "Documentazione",
   "Documentation: run your own relay": "Documentazione: esegui il tuo relay",
-  "Does Harbor {version} feel better or worse than the version you had before?":
-    "Harbor {version} ti sembra migliore o peggiore della versione precedente?",
+  "Does Lart {version} feel better or worse than the version you had before?":
+    "Lart {version} ti sembra migliore o peggiore della versione precedente?",
   "Does this stream look right?": "Questo stream si vede bene?",
   "Dolby Vision unsupported": "Dolby Vision non supportato",
   "Don't ask again": "Non chiedermelo più",
   "Don't ask me again": "Non chiedermelo più",
   "Don't have an account?": "Non hai un account?",
   "Don't have an account? Create one →": "Non hai un account? Creane uno →",
-  "Donating to Harbor": "Donazioni a Harbor",
+  "Donating to Lart": "Donazioni a Lart",
   Done: "Fatto",
   "Done editing": "Termina modifica",
   "Done.": "Fatto.",
@@ -304,8 +304,8 @@ const catalog03: Record<string, string> = {
     "I file degli stream peer-to-peer scaricati vengono conservati su disco, così, riaprendo un titolo, la riproduzione riprende subito anziché ricominciare da capo. Scegli per quanto tempo conservarli e dove salvarli.",
   "Downloaded subtitles can arrive a moment after playback starts. Leave this off to keep whatever subtitle is already showing; turn it on to switch to the best language match as soon as it loads.":
     "I sottotitoli scaricati possono arrivare poco dopo l'inizio della riproduzione. Lascia disattivata questa opzione per mantenere il sottotitolo già visualizzato; attivala per passare al sottotitolo che corrisponde meglio alla lingua non appena viene caricato.",
-  "Downloaded subtitles can arrive after playback starts. Harbor switches from a temporary track when a stronger release match becomes available.":
-    "I sottotitoli scaricati possono arrivare dopo l'inizio della riproduzione. Harbor sostituisce la traccia temporanea quando diventa disponibile una corrispondenza migliore con la release.",
+  "Downloaded subtitles can arrive after playback starts. Lart switches from a temporary track when a stronger release match becomes available.":
+    "I sottotitoli scaricati possono arrivare dopo l'inizio della riproduzione. Lart sostituisce la traccia temporanea quando diventa disponibile una corrispondenza migliore con la release.",
   "Downloaded themes are managed in Theme & appearance. Video and manga downloads are managed on the Downloads page.":
     "I temi scaricati si gestiscono in Tema e aspetto. I download di video e manga si gestiscono nella pagina Download.",
   "Downloaded. Ready to install and restart.":
@@ -350,8 +350,8 @@ const catalog03: Record<string, string> = {
     "La correzione della deriva è attiva (2 punti). Regolala con precisione usando i pulsanti oppure correggi una sezione anomala.",
   "Drift fixed": "Deriva corretta",
   "Drift monitor": "Monitoraggio della deriva",
-  "Drift through cinematic backdrops while Harbor sits idle.":
-    "Lasciati trasportare da sfondi cinematografici mentre Harbor è inattivo.",
+  "Drift through cinematic backdrops while Lart sits idle.":
+    "Lasciati trasportare da sfondi cinematografici mentre Lart è inattivo.",
   "Drifting poster wall behind the interface. Turn off on low power devices.":
     "Parete di locandine in movimento dietro l'interfaccia. Disattivala sui dispositivi a basso consumo.",
   "Drop a clip of the bug if you can. A 5-second screen recording usually says more than five paragraphs.":
@@ -359,8 +359,8 @@ const catalog03: Record<string, string> = {
   "Drop a wallpaper behind the app. The dim slider keeps text readable.":
     "Aggiungi uno sfondo all'app. Il cursore di oscuramento mantiene il testo leggibile.",
   "Drop images to add them": "Trascina qui le immagini per aggiungerle",
-  "Drop in art at any resolution. Harbor resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
-    "Trascina immagini a qualsiasi risoluzione. Harbor ridimensiona e comprime quelle troppo grandi, così nulla viene ignorato per le dimensioni. Le immagini PNG quadrate con sfondo trasparente danno i risultati migliori.",
+  "Drop in art at any resolution. Lart resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
+    "Trascina immagini a qualsiasi risoluzione. Lart ridimensiona e comprime quelle troppo grandi, così nulla viene ignorato per le dimensioni. Le immagini PNG quadrate con sfondo trasparente danno i risultati migliori.",
   "Drop many images, GIFs, or a .zip at once. Name each file after its slot ({example}) and we match them. Any size is fine, we resize big images and keep animated GIFs light.":
     "Trascina più immagini, GIF o un file .zip insieme. Assegna a ogni file il nome del relativo slot ({example}) e li abbineremo. Qualsiasi dimensione va bene: ridimensioniamo le immagini grandi e ottimizziamo le GIF animate.",
   "Drop screenshots or screen recordings, or click to browse":
@@ -401,8 +401,8 @@ const catalog03: Record<string, string> = {
     "Ogni chiave qui sopra è l'ID di un premio. Le chiavi omesse usano il trofeo predefinito (o un pacchetto con priorità inferiore). L'elenco completo degli ID include tutti i premi mostrati nella griglia qui sopra.",
   "Each rule fires independently. Define what triggers a ping and where it goes.":
     "Ogni regola si attiva in modo indipendente. Definisci cosa genera una notifica e dove inviarla.",
-  "Each shader is hosted by its author, not bundled with Harbor. Download the ones you want; Harbor chains them in the right order and applies them in the player.":
-    "Ogni shader è ospitato dal rispettivo autore e non è incluso in Harbor. Scarica quelli che vuoi; Harbor li concatena nell'ordine corretto e li applica nel player.",
+  "Each shader is hosted by its author, not bundled with Lart. Download the ones you want; Lart chains them in the right order and applies them in the player.":
+    "Ogni shader è ospitato dal rispettivo autore e non è incluso in Lart. Scarica quelli che vuoi; Lart li concatena nell'ordine corretto e li applica nel player.",
   "Each style keeps its own arrangement, icons and profiles, so switching back and forth never loses work.":
     "Ogni stile mantiene disposizione, icone e profili propri, quindi passando da uno all'altro non perdi mai il lavoro.",
   Earlier: "Prima",
@@ -410,8 +410,8 @@ const catalog03: Record<string, string> = {
     "Ottieni badge e appariranno qui, pronti per essere messi in evidenza",
   "Eases mouse-wheel scrolling instead of jumping line by line. Turn off if you prefer an instant response or notice any lag.":
     "Rende più fluido lo scorrimento con la rotellina del mouse anziché procedere a scatti riga per riga. Disattivalo se preferisci una risposta immediata o noti rallentamenti.",
-  "Easiest path. Harbor uploads the worker, creates the Durable Object namespace, and stores the resulting URL.":
-    "Il percorso più semplice. Harbor carica il worker, crea il namespace Durable Object e salva l'URL risultante.",
+  "Easiest path. Lart uploads the worker, creates the Durable Object namespace, and stores the resulting URL.":
+    "Il percorso più semplice. Lart carica il worker, crea il namespace Durable Object e salva l'URL risultante.",
   "Easing into series": "Per iniziare con le serie",
   "Easing tokens": "Token di easing",
   Easy: "Facile",
@@ -468,7 +468,7 @@ const catalog03: Record<string, string> = {
   Embed: "Incorpora",
   "Embed a YouTube video": "Incorpora un video di YouTube",
   "Embed from Spotify": "Incorpora da Spotify",
-  "Embed mpv inside Harbor window": "Incorpora mpv nella finestra di Harbor",
+  "Embed mpv inside Lart window": "Incorpora mpv nella finestra di Lart",
   Embedded: "Incorporati",
   "Embedded subtitles changing size between titles, or showing empty boxes? Switch to Use my style for a consistent size. For boxes, also choose Arabic under Font.":
     "I sottotitoli incorporati cambiano dimensione tra un titolo e l'altro o mostrano riquadri vuoti? Passa a Usa il mio stile per mantenere una dimensione uniforme. Per i riquadri, seleziona anche Arabo in Font.",
@@ -520,7 +520,7 @@ const catalog03: Record<string, string> = {
   English: "Inglese",
   "English (default)": "Inglese (predefinito)",
   "Enhanced liquid glass": "Vetro liquido migliorato",
-  "Enter Harbor": "Entra in Harbor",
+  "Enter Lart": "Entra in Lart",
   "Enter URL": "Inserisci URL",
   "Enter a URL or path.": "Inserisci un URL o un percorso.",
   "Enter a name and a valid https:// URL.": "Inserisci un nome e un URL https:// valido.",
@@ -590,52 +590,52 @@ const catalog03: Record<string, string> = {
     "Uniforma i dialoghi a basso volume e le scene d'azione ad alto volume con un normalizzatore dinamico.",
   "Every 15 min": "Ogni 15 min",
   "Every 30 min": "Ogni 30 min",
-  "Every Harbor that announces itself on this network appears here as it answers, with the theme it is wearing.":
-    "Ogni Harbor che si annuncia su questa rete appare qui non appena risponde, con il tema che sta usando.",
+  "Every Lart that announces itself on this network appears here as it answers, with the theme it is wearing.":
+    "Ogni Lart che si annuncia su questa rete appare qui non appena risponde, con il tema che sta usando.",
   "Every addon": "Tutti gli Add-on",
   "Every collection": "Tutte le raccolte",
   "Every episode of the season uses that same release.":
     "Ogni episodio della stagione usa la stessa release.",
-  "Every format badge Harbor can show on streams. Click one to swap its art, hide it, or reset it. Changes apply everywhere badges appear.":
-    "Tutti i badge di formato che Harbor può mostrare sugli stream. Fai clic su uno per cambiarne l'immagine, nasconderlo o ripristinarlo. Le modifiche si applicano ovunque compaiano i badge.",
+  "Every format badge Lart can show on streams. Click one to swap its art, hide it, or reset it. Changes apply everywhere badges appear.":
+    "Tutti i badge di formato che Lart può mostrare sugli stream. Fai clic su uno per cambiarne l'immagine, nasconderlo o ripristinarlo. Le modifiche si applicano ovunque compaiano i badge.",
   "Every launch": "A ogni avvio",
   "Every row": "Ogni riga",
   "Every saga in one place. Search anything: if it exists, it's here.":
     "Tutte le saghe in un unico posto. Cerca qualsiasi cosa: se esiste, è qui.",
   "Every saga, in order": "Tutte le saghe, in ordine",
-  "Every shortcut Harbor responds to. Click a binding to rebind it.":
-    "Tutte le scorciatoie riconosciute da Harbor. Fai clic su un'associazione per modificarla.",
+  "Every shortcut Lart responds to. Click a binding to rebind it.":
+    "Tutte le scorciatoie riconosciute da Lart. Fai clic su un'associazione per modificarla.",
   "Every slot name": "Tutti i nomi degli slot",
-  "Every source Harbor tried failed to start. Pick a different one, or try again in a moment.":
-    "Nessuna delle fonti provate da Harbor è riuscita ad avviarsi. Scegline un'altra o riprova tra poco.",
-  "Every surface in Harbor maps to one of these 12 variables.":
-    "Ogni superficie di Harbor corrisponde a una di queste 12 variabili.",
+  "Every source Lart tried failed to start. Pick a different one, or try again in a moment.":
+    "Nessuna delle fonti provate da Lart è riuscita ad avviarsi. Scegline un'altra o riprova tra poco.",
+  "Every surface in Lart maps to one of these 12 variables.":
+    "Ogni superficie di Lart corrisponde a una di queste 12 variabili.",
   "Every theme is sandboxed, scanned, and reviewed before it reaches the library, so you can try any look without a second thought.":
     "Ogni tema viene isolato, analizzato e verificato prima di entrare nella raccolta, così puoi provarne qualsiasi stile in tutta tranquillità.",
-  "Every variable, selector, hook, and recipe for building custom Harbor themes.":
-    "Tutte le variabili, i selettori, gli hook e le ricette per creare temi Harbor personalizzati.",
-  "Every winner Harbor ships, browsable offline by year and category.":
-    "Tutti i vincitori inclusi in Harbor, consultabili offline per anno e categoria.",
+  "Every variable, selector, hook, and recipe for building custom Lart themes.":
+    "Tutte le variabili, i selettori, gli hook e le ricette per creare temi Lart personalizzati.",
+  "Every winner Lart ships, browsable offline by year and category.":
+    "Tutti i vincitori inclusi in Lart, consultabili offline per anno e categoria.",
   Everyone: "Tutti",
   "Everyone else": "Tutti gli altri",
   "Everyone is loaded in. Press play to start watching.":
     "Ci sono tutti. Premi Riproduci per iniziare la visione.",
   "Everyone loses access. This cannot be undone.":
     "Tutti perderanno l'accesso. Questa operazione non può essere annullata.",
-  "Everyone on this Harbor": "Tutti su questo Harbor",
-  "Everyone who uses this Harbor gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
-    "Ogni persona che usa questo Harbor ha la propria cronologia di visione, il proprio avatar, il proprio colore e un PIN facoltativo. Puoi cambiare profilo in qualsiasi momento.",
+  "Everyone on this Lart": "Tutti su questo Lart",
+  "Everyone who uses this Lart gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
+    "Ogni persona che usa questo Lart ha la propria cronologia di visione, il proprio avatar, il proprio colore e un PIN facoltativo. Puoi cambiare profilo in qualsiasi momento.",
   Everything: "Tutto",
-  "Everything Harbor saves lives on this computer. If space runs low, clear a cache below; Harbor rebuilds them as you browse.":
-    "Tutto ciò che Harbor salva si trova su questo computer. Se lo spazio sta per esaurirsi, svuota una cache qui sotto; Harbor la ricreerà durante la navigazione.",
+  "Everything Lart saves lives on this computer. If space runs low, clear a cache below; Lart rebuilds them as you browse.":
+    "Tutto ciò che Lart salva si trova su questo computer. Se lo spazio sta per esaurirsi, svuota una cache qui sotto; Lart la ricreerà durante la navigazione.",
   "Everything else, via your own server": "Tutto il resto, tramite il tuo server",
   "Everything from {year}, sorted across trending, top rated, and hidden gems.":
     "Tutto ciò che risale al {year}, tra contenuti di tendenza, più votati e perle nascoste.",
   "Everything here is already in your account.": "Tutto ciò che vedi qui è già nel tuo account.",
   "Everything here took effect straight away, and it is saved on this device.":
     "Tutto ciò che vedi qui è stato applicato subito ed è salvato su questo dispositivo.",
-  "Everything on this page is written to your Harbor account. Your TV reads it on its next check-in, so you can set the whole thing up from here and never touch the remote.":
-    "Tutto ciò che vedi in questa pagina viene salvato nel tuo account Harbor. La TV lo leggerà al prossimo controllo, così puoi configurare tutto da qui senza mai toccare il telecomando.",
+  "Everything on this page is written to your Lart account. Your TV reads it on its next check-in, so you can set the whole thing up from here and never touch the remote.":
+    "Tutto ciò che vedi in questa pagina viene salvato nel tuo account Lart. La TV lo leggerà al prossimo controllo, così puoi configurare tutto da qui senza mai toccare il telecomando.",
   "Everything on this page of {genre} is hidden by your anime filter.":
     "Tutto il contenuto di questa pagina di {genre} è nascosto dal filtro anime.",
   "Everything originally in {name}: movies and series across every genre, era, and hidden gems.":
@@ -645,8 +645,8 @@ const catalog03: Record<string, string> = {
   "Everything releasing this month from TMDB": "Tutte le uscite di questo mese da TMDB",
   "Everything you pick is saved into one file. Restoring it later only touches what is in the file. Your Stremio sign-in is always left out.":
     "Tutto ciò che selezioni viene salvato in un unico file. Un ripristino successivo interesserà solo ciò che contiene il file. L'accesso a Stremio è sempre escluso.",
-  "Everything you save here stays in this browser. Your Stremio login, API keys, watch progress, picker cache, dismissed tips. Harbor servers never see any of it. Clearing your browser data wipes it.":
-    "Tutto ciò che salvi qui resta in questo browser: accesso a Stremio, chiavi API, avanzamento di visione, cache del selettore e suggerimenti ignorati. I server di Harbor non vedono mai questi dati. Se cancelli i dati del browser, andranno persi.",
+  "Everything you save here stays in this browser. Your Stremio login, API keys, watch progress, picker cache, dismissed tips. Lart servers never see any of it. Clearing your browser data wipes it.":
+    "Tutto ciò che salvi qui resta in questo browser: accesso a Stremio, chiavi API, avanzamento di visione, cache del selettore e suggerimenti ignorati. I server di Lart non vedono mai questi dati. Se cancelli i dati del browser, andranno persi.",
   "Everything your addons offer, shown as posters. Scroll, search, or filter to what you want.":
     "Tutto ciò che offrono i tuoi Add-on, mostrato come locandine. Scorri, cerca o applica filtri per trovare ciò che vuoi.",
   Excellence: "Eccellenza",
@@ -691,12 +691,12 @@ const catalog03: Record<string, string> = {
   "Export my setup": "Esporta la mia configurazione",
   "Export player log": "Esporta il log del player",
   "Export to Trakt": "Esporta su Trakt",
-  "Export your Harbor setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
-    "Esporta la configurazione di Harbor in un unico file, scegliendo esattamente cosa includere. Il ripristino recupera solo ciò che è contenuto nel file. L'accesso a Stremio viene sempre escluso.",
-  "Export your entire Harbor setup to a single file, then restore it on a new computer or keep it as a backup.":
-    "Esporta l'intera configurazione di Harbor in un unico file, poi ripristinala su un nuovo computer o conservala come backup.",
-  "Export your entire Harbor setup to a single file, then restore it on a new computer or keep it as a backup. Everything is included except your Stremio sign-in.":
-    "Esporta l'intera configurazione di Harbor in un unico file, poi ripristinala su un nuovo computer o conservala come backup. È incluso tutto tranne l'accesso a Stremio.",
+  "Export your Lart setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
+    "Esporta la configurazione di Lart in un unico file, scegliendo esattamente cosa includere. Il ripristino recupera solo ciò che è contenuto nel file. L'accesso a Stremio viene sempre escluso.",
+  "Export your entire Lart setup to a single file, then restore it on a new computer or keep it as a backup.":
+    "Esporta l'intera configurazione di Lart in un unico file, poi ripristinala su un nuovo computer o conservala come backup.",
+  "Export your entire Lart setup to a single file, then restore it on a new computer or keep it as a backup. Everything is included except your Stremio sign-in.":
+    "Esporta l'intera configurazione di Lart in un unico file, poi ripristinala su un nuovo computer o conservala come backup. È incluso tutto tranne l'accesso a Stremio.",
   "Export your setup": "Esporta la configurazione",
   "Export {n} sections": "Esporta {n} sezioni",
   Exported: "Esportato",
@@ -742,8 +742,8 @@ const catalog03: Record<string, string> = {
   Family: "Famiglia",
   "Family Favorites": "Preferiti per tutta la famiglia",
   "Family Heart": "Cuore di famiglia",
-  "Fan-made avatars for personal use. Harbor claims no rights to these characters; they belong to their creators and studios, shown here under fair use. Every one is optimized down to a tiny WebP.":
-    "Avatar creati dai fan per uso personale. Harbor non rivendica alcun diritto su questi personaggi, che appartengono ai rispettivi creatori e studi e sono mostrati qui secondo il fair use. Ognuno è ottimizzato in un minuscolo file WebP.",
+  "Fan-made avatars for personal use. Lart claims no rights to these characters; they belong to their creators and studios, shown here under fair use. Every one is optimized down to a tiny WebP.":
+    "Avatar creati dai fan per uso personale. Lart non rivendica alcun diritto su questi personaggi, che appartengono ai rispettivi creatori e studi e sono mostrati qui secondo il fair use. Ognuno è ottimizzato in un minuscolo file WebP.",
   "Fanart.tv": "Fanart.tv",
   "Fanart.tv · logos and backdrops": "Fanart.tv · loghi e sfondi",
   Fantasy: "Fantasy",
@@ -803,7 +803,7 @@ const catalog03: Record<string, string> = {
   "Field Reports": "Rapporti dal campo",
   Fight: "Combattimento",
   File: "File",
-  "File is not a Harbor layout profile.": "Il file non è un profilo di layout di Harbor.",
+  "File is not a Lart layout profile.": "Il file non è un profilo di layout di Lart.",
   "File it with the government": "Lo deposita presso un'autorità pubblica",
   Filename: "Nome file",
   "Filename hidden": "Nome file nascosto",
@@ -881,11 +881,11 @@ const catalog03: Record<string, string> = {
     "Quando finisci un episodio, la scheda passa a quello successivo invece di restare su 0 min rimanenti.",
   "Finish creating my account": "Completa la creazione del mio account",
   "Finish later": "Completa più tardi",
-  "Finish setting up Harbor": "Completa la configurazione di Harbor",
+  "Finish setting up Lart": "Completa la configurazione di Lart",
   "Finish setup on your phone": "Completa la configurazione sul telefono",
-  "Finish the install above first. Flipping this on now won't do anything until Harbor can find SVP's engine.":
-    "Prima completa l'installazione qui sopra. Attivarlo ora non avrà effetto finché Harbor non troverà il motore di SVP.",
-  "Finish updating Harbor": "Completa l'aggiornamento di Harbor",
+  "Finish the install above first. Flipping this on now won't do anything until Lart can find SVP's engine.":
+    "Prima completa l'installazione qui sopra. Attivarlo ora non avrà effetto finché Lart non troverà il motore di SVP.",
+  "Finish updating Lart": "Completa l'aggiornamento di Lart",
   Finished: "Completato",
   "Finishing an anime episode updates your AniList progress. Forward only: it never lowers a count you already have.":
     "Quando finisci un episodio anime, i tuoi progressi su AniList vengono aggiornati. Solo in avanti: un conteggio già raggiunto non viene mai ridotto.",
@@ -936,11 +936,11 @@ const catalog03: Record<string, string> = {
   Folder: "Cartella",
   "Folder picker is only available in the desktop app":
     "La selezione delle cartelle è disponibile solo nell'app desktop",
-  "Folder selection is available in the Harbor app":
-    "La selezione delle cartelle è disponibile nell'app Harbor",
+  "Folder selection is available in the Lart app":
+    "La selezione delle cartelle è disponibile nell'app Lart",
   Folders: "Cartelle",
-  "Folders Harbor imported your movies and shows from. Rescan to pick up new files.":
-    "Cartelle da cui Harbor ha importato film e serie. Esegui una nuova scansione per rilevare i nuovi file.",
+  "Folders Lart imported your movies and shows from. Rescan to pick up new files.":
+    "Cartelle da cui Lart ha importato film e serie. Esegui una nuova scansione per rilevare i nuovi file.",
   "Follow them out?": "Vuoi seguirli fuori?",
   "Following addon order": "Secondo l'ordine degli Add-on",
   Font: "Carattere",
@@ -958,14 +958,14 @@ const catalog03: Record<string, string> = {
   "For giving more than $100 to charity.": "Per una donazione in beneficenza superiore a $100.",
   "For laptop speakers and headphones. Movies mixed for 5.1 or 7.1 surround can sound hollow or have quiet dialogue on two speakers. This folds them down properly.":
     "Per altoparlanti e cuffie da portatile. I film mixati in surround 5.1 o 7.1 possono avere un suono vuoto o dialoghi troppo bassi su due altoparlanti. Questa opzione li converte correttamente.",
-  "For now, please open this site on a desktop, or build Harbor from source.":
-    "Per ora, apri questo sito da un computer oppure compila Harbor dal codice sorgente.",
+  "For now, please open this site on a desktop, or build Lart from source.":
+    "Per ora, apri questo sito da un computer oppure compila Lart dal codice sorgente.",
   "For reliable HDR on this display, switch to True HDR, separate window in Settings.":
     "Per un HDR affidabile su questo schermo, passa a True HDR, finestra separata nelle Impostazioni.",
   "For series and anime, keep playing the rest of the season from the release you first picked. Applies whether Play is instant or manual.":
     "Per serie e anime, continua a riprodurre il resto della stagione dalla versione scelta inizialmente. Vale sia con la riproduzione immediata sia con quella manuale.",
-  "For the hardest files and the Try again button, Harbor transcribes a little speech on your device and lines the subtitle up to the actual words. Needs a build with the asr-whisper feature and downloads a small model the first time you use it.":
-    "Per i file più difficili e il pulsante Riprova, Harbor trascrive sul dispositivo un breve segmento parlato e sincronizza i sottotitoli con le parole effettive. Richiede una build con la funzionalità asr-whisper e scarica un piccolo modello al primo utilizzo.",
+  "For the hardest files and the Try again button, Lart transcribes a little speech on your device and lines the subtitle up to the actual words. Needs a build with the asr-whisper feature and downloads a small model the first time you use it.":
+    "Per i file più difficili e il pulsante Riprova, Lart trascrive sul dispositivo un breve segmento parlato e sincronizza i sottotitoli con le parole effettive. Richiede una build con la funzionalità asr-whisper e scarica un piccolo modello al primo utilizzo.",
   "For the manual path:": "Per la procedura manuale:",
   "For the manual path: {code} 20+ and {code} CLI.":
     "Per la procedura manuale: {code} 20+ e la CLI di {code}.",
@@ -1053,7 +1053,7 @@ const catalog03: Record<string, string> = {
   "Frequent Collaborators": "Collaboratori abituali",
   "Fresh from the community": "Novità dalla community",
   "Fresh from the studio": "Appena uscito dallo studio",
-  "Fresh looks shared by the Harbor community": "Nuovi stili condivisi dalla community di Harbor",
+  "Fresh looks shared by the Lart community": "Nuovi stili condivisi dalla community di Lart",
   "Fresh tomato for 60%+, splat for under.": "Pomodoro fresco dal 60% in su, macchia sotto il 60%.",
   "Fresh tomatoes for 60% and up, splat for anything under.":
     "Pomodori freschi dal 60% in su, macchia per tutto ciò che è sotto.",
@@ -1088,8 +1088,8 @@ const catalog03: Record<string, string> = {
   "Frontline Valor": "Valore in prima linea",
   "Frost the top bar on scroll": "Sfuma la barra superiore durante lo scorrimento",
   "Frosted glass": "Vetro satinato",
-  "Frosted, refractive surfaces on Harbor's floating controls.":
-    "Superfici satinate e rifrangenti sui controlli mobili di Harbor.",
+  "Frosted, refractive surfaces on Lart's floating controls.":
+    "Superfici satinate e rifrangenti sui controlli mobili di Lart.",
   Fubo: "Fubo",
   FuboTV: "FuboTV",
   Full: "Completo",
@@ -1099,8 +1099,8 @@ const catalog03: Record<string, string> = {
   "Full details": "Dettagli completi",
   "Full hero banner": "Banner principale completo",
   "Full list": "Lista completa",
-  "Full mode signs in with your Letterboxd password to also unlock your diary, friends activity and your personal ratings. Your password is sent only to Stremboxd to obtain a token — Harbor never stores it.":
-    "La modalità completa accede con la tua password Letterboxd e sblocca anche il diario, l'attività degli amici e le tue valutazioni personali. La password viene inviata solo a Stremboxd per ottenere un token; Harbor non la memorizza mai.",
+  "Full mode signs in with your Letterboxd password to also unlock your diary, friends activity and your personal ratings. Your password is sent only to Stremboxd to obtain a token — Lart never stores it.":
+    "La modalità completa accede con la tua password Letterboxd e sblocca anche il diario, l'attività degli amici e le tue valutazioni personali. La password viene inviata solo a Stremboxd per ottenere un token; Lart non la memorizza mai.",
   "Full mode — diary, friends & ratings enabled":
     "Modalità completa: diario, amici e valutazioni abilitati",
   "Full quality frames": "Fotogrammi a qualità piena",
@@ -1116,8 +1116,8 @@ const catalog03: Record<string, string> = {
   "GIF export failed": "Esportazione GIF non riuscita",
   "GIF saved to {path}": "GIF salvata in {path}",
   GL: "GL",
-  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Harbor handles the shaders.":
-    "Shader GPU che rendono più nitide le linee e uniformano le sfumature degli anime durante la riproduzione. Scegli una modalità, agli shader pensa Harbor.",
+  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Lart handles the shaders.":
+    "Shader GPU che rendono più nitide le linee e uniformano le sfumature degli anime durante la riproduzione. Scegli una modalità, agli shader pensa Lart.",
   Gallery: "Galleria",
   "Game search needs an API key before it can run.":
     "La ricerca dei giochi richiede una chiave API per funzionare.",
@@ -1131,8 +1131,8 @@ const catalog03: Record<string, string> = {
   General: "Generali",
   "General Sans": "General Sans",
   "Generate a Cloudflare API token with": "Genera un token API Cloudflare con",
-  "Generate a Cloudflare API token with {code1} and {code2} permissions at {code3}. Paste it into Harbor.":
-    "Genera un token API Cloudflare con le autorizzazioni {code1} e {code2} su {code3}. Incollalo in Harbor.",
+  "Generate a Cloudflare API token with {code1} and {code2} permissions at {code3}. Paste it into Lart.":
+    "Genera un token API Cloudflare con le autorizzazioni {code1} e {code2} su {code3}. Incollalo in Lart.",
   "Generates a frame on the fly as you scrub the seek bar. Works on debrid streams and local files.":
     "Genera al volo un fotogramma mentre scorri la barra di avanzamento. Funziona con gli stream debrid e i file locali.",
   Genre: "Genere",
@@ -1149,14 +1149,14 @@ const catalog03: Record<string, string> = {
     "Ingrandisci leggermente le locandine vicine mentre ti sposti lungo una riga, come in un dock. Disattivato per impostazione predefinita.",
   "Gently magnify nearby posters as you move across a poster row.":
     "Ingrandisci leggermente le locandine vicine mentre ti sposti lungo una riga.",
-  "Genuine 48/60fps motion on anime, rendered right inside Harbor's player. SVP supplies the engine (VapourSynth + svpflow) and runs in your tray for licensing; Harbor's own player applies the interpolation, so it stays embedded and fully under your control. One-time install, then flip it on.":
-    "Movimenti anime autentici a 48/60 fps, elaborati direttamente nel player di Harbor. SVP fornisce il motore (VapourSynth + svpflow) e resta in esecuzione nell'area di notifica per la licenza; il player di Harbor applica l'interpolazione, che rimane integrata e completamente sotto il tuo controllo. Installalo una volta, poi attivalo.",
+  "Genuine 48/60fps motion on anime, rendered right inside Lart's player. SVP supplies the engine (VapourSynth + svpflow) and runs in your tray for licensing; Lart's own player applies the interpolation, so it stays embedded and fully under your control. One-time install, then flip it on.":
+    "Movimenti anime autentici a 48/60 fps, elaborati direttamente nel player di Lart. SVP fornisce il motore (VapourSynth + svpflow) e resta in esecuzione nell'area di notifica per la licenza; il player di Lart applica l'interpolazione, che rimane integrata e completamente sotto il tuo controllo. Installalo una volta, poi attivalo.",
   German: "Tedesco",
   "German Cinema": "Cinema tedesco",
   "German Films": "Film tedeschi",
   Germany: "Germania",
   Get: "Ottieni",
-  "Get Harbor for desktop": "Scarica Harbor per desktop",
+  "Get Lart for desktop": "Scarica Lart per desktop",
   "Get SVP (free)": "Scarica SVP (gratis)",
   "Get Started": "Inizia",
   "Get a discount for paying early": "Ottieni uno sconto pagando in anticipo",

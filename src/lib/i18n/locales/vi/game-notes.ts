@@ -27,6 +27,6 @@ export default {
   "games.notes.import": "Nhập JSON",
   "games.notes.export": "Xuất bản sao lưu",
   "games.notes.unsaved": "Thay đổi chưa lưu",
-  "games.notes.local": "Lưu trong hồ sơ Harbor này",
+  "games.notes.local": "Lưu trong hồ sơ Lart này",
   "games.notes.importGuide": "Chép vào ghi chú của tôi"
 };

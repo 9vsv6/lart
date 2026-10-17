@@ -6,13 +6,13 @@ export function musicSourceName(track: MusicTrack): string {
     youtube_music: "YouTube Music",
     soundcloud: "SoundCloud",
     spotify: "Spotify",
-    local: "Harbor",
+    local: "Lart",
     plex: "Plex",
     jellyfin: "Jellyfin",
     subsonic: "Subsonic",
     navidrome: "Navidrome",
   };
-  return names[track.connectorId ?? ""] ?? "Harbor";
+  return names[track.connectorId ?? ""] ?? "Lart";
 }
 
 export function musicRecoveryKey(error: string, track: MusicTrack): string {

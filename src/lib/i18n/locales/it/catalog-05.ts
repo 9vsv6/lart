@@ -87,8 +87,8 @@ const catalog05: Record<string, string> = {
     "Guarda la TV. Mostra già un nuovo codice. Scansiona quello.",
   "Look offline to others": "Mostrati offline agli altri",
   'Looking for "{q}"': 'Ricerca di "{q}"',
-  "Looking for Harbor in your browser, the phone remote, or the manga reader remote? They moved to the Remotes page.":
-    "Cerchi Harbor nel browser, il telecomando sul telefono o quello del lettore manga? Ora sono nella pagina Telecomandi.",
+  "Looking for Lart in your browser, the phone remote, or the manga reader remote? They moved to the Remotes page.":
+    "Cerchi Lart nel browser, il telecomando sul telefono o quello del lettore manga? Ora sono nella pagina Telecomandi.",
   "Looking for peers…": "Ricerca di peer…",
   "Looking for sources": "Ricerca delle fonti",
   "Looking for sources…": "Ricerca delle fonti…",
@@ -146,10 +146,10 @@ const catalog05: Record<string, string> = {
   "Main Char": "Protagonista",
   "Main subtitle line": "Riga principale dei sottotitoli",
   Maintenance: "Manutenzione",
-  "Make Harbor yours: swap the sidebar logo and the window/taskbar icon.":
-    "Personalizza Harbor: cambia il logo della barra laterale e l'icona della finestra o della barra delle applicazioni.",
-  "Make Harbor's interface larger.": "Ingrandisci l'interfaccia di Harbor.",
-  "Make Harbor's interface smaller.": "Riduci l'interfaccia di Harbor.",
+  "Make Lart yours: swap the sidebar logo and the window/taskbar icon.":
+    "Personalizza Lart: cambia il logo della barra laterale e l'icona della finestra o della barra delle applicazioni.",
+  "Make Lart's interface larger.": "Ingrandisci l'interfaccia di Lart.",
+  "Make Lart's interface smaller.": "Riduci l'interfaccia di Lart.",
   "Make an award pack": "Crea un pacchetto di premi",
   "Make decisions on their behalf": "Prendere decisioni per suo conto",
   "Make everything bigger and easier to read: sidebar, menus, popups, every page.":
@@ -175,8 +175,8 @@ const catalog05: Record<string, string> = {
   "Manage addon": "Gestisci Add-on",
   "Manage connection": "Gestisci connessione",
   "Manage eBook sources": "Gestisci fonti eBook",
-  "Manage every place Harbor can read from, whether it lives on disk or across the web.":
-    "Gestisci tutte le posizioni da cui Harbor può leggere, sul disco o sul web.",
+  "Manage every place Lart can read from, whether it lives on disk or across the web.":
+    "Gestisci tutte le posizioni da cui Lart può leggere, sul disco o sul web.",
   "Manage members and posts": "Gestisci membri e post",
   "Manage profiles": "Gestisci profili",
   "Manage recording": "Gestisci registrazione",
@@ -189,8 +189,8 @@ const catalog05: Record<string, string> = {
   Manga: "Manga",
   "Manga adaptation": "Adattamento manga",
   "Manga browse cache": "Cache di esplorazione dei manga",
-  "Manga cannot be matched to a Harbor title yet, so {n} were left out.":
-    "Non è ancora possibile associare i manga a un titolo Harbor, quindi {n} sono stati esclusi.",
+  "Manga cannot be matched to a Lart title yet, so {n} were left out.":
+    "Non è ancora possibile associare i manga a un titolo Lart, quindi {n} sono stati esclusi.",
   "Manga reader remote": "Telecomando del lettore manga",
   "Manga sources": "Sorgenti manga",
   "Manic Heart": "Cuore frenetico",
@@ -237,7 +237,7 @@ const catalog05: Record<string, string> = {
   Matched: "Associato",
   "Matching moments": "Momenti corrispondenti",
   "Matching the details": "Confronto dei dettagli",
-  "Matching titles to Harbor": "Associazione dei titoli a Harbor",
+  "Matching titles to Lart": "Associazione dei titoli a Lart",
   Max: "Max",
   "Max badges per card": "Numero massimo di badge per scheda",
   "Max scores per card": "Numero massimo di punteggi per scheda",
@@ -365,8 +365,8 @@ const catalog05: Record<string, string> = {
   "Motion smoothing": "Fluidità del movimento",
   "Mouse tracker": "Tracciamento del mouse",
   Move: "Sposta",
-  "Move Harbor by dragging any empty space on a page, not just the top bar. Leave this off to keep clicks inside pages from nudging the window.":
-    "Sposta Harbor trascinando qualsiasi spazio vuoto della pagina, non solo la barra superiore. Lascia disattivata questa opzione per evitare che i clic nelle pagine spostino la finestra.",
+  "Move Lart by dragging any empty space on a page, not just the top bar. Leave this off to keep clicks inside pages from nudging the window.":
+    "Sposta Lart trascinando qualsiasi spazio vuoto della pagina, non solo la barra superiore. Lascia disattivata questa opzione per evitare che i clic nelle pagine spostino la finestra.",
   "Move Refresh next to Back": "Sposta Aggiorna accanto a Indietro",
   "Move all to account": "Sposta tutto nell'account",
   "Move down": "Sposta in basso",
@@ -386,8 +386,8 @@ const catalog05: Record<string, string> = {
   "Moved {name} to position {n} of {total}": "{name} spostato alla posizione {n} di {total}",
   "Moved {n} addons to your Stremio account. They now sync everywhere you sign in.":
     "Hai spostato {n} Add-on nel tuo account Stremio. Ora si sincronizzano ovunque accedi.",
-  "Moved, but Harbor couldn't confirm the result. Reload to see the current state.":
-    "Spostamento completato, ma Harbor non ha potuto confermare il risultato. Ricarica per vedere lo stato attuale.",
+  "Moved, but Lart couldn't confirm the result. Reload to see the current state.":
+    "Spostamento completato, ma Lart non ha potuto confermare il risultato. Ricarica per vedere lo stato attuale.",
   Movie: "Film",
   "Movie Magic": "Magia del cinema",
   "Movie's too new": "Film troppo recente",
@@ -474,11 +474,11 @@ const catalog05: Record<string, string> = {
   Name: "Nome",
   "Name (e.g. REMUX)": "Nome (es. REMUX)",
   "Name (optional)": "Nome (facoltativo)",
-  "Name each file after its award ID. Harbor resizes them and skips anything it cannot match.":
-    "Assegna a ogni file il relativo ID del premio. Harbor li ridimensiona e ignora quelli che non riesce ad associare.",
+  "Name each file after its award ID. Lart resizes them and skips anything it cannot match.":
+    "Assegna a ogni file il relativo ID del premio. Lart li ridimensiona e ignora quelli che non riesce ad associare.",
   "Name each file after its slot": "Assegna a ogni file il nome del relativo slot",
-  'Name each image file after its award ID and put them in a .zip, then use "Import a .zip pack" above. No JSON, no hosting needed. Harbor matches each file to its award, stores it locally, resizes it, and skips anything it doesn\'t recognize.':
-    'Assegna a ogni file immagine il relativo ID del premio e inseriscili in un file .zip, poi usa "Importa un pacchetto .zip" qui sopra. Non servono JSON né hosting. Harbor associa ogni file al relativo premio, lo archivia in locale, lo ridimensiona e ignora quelli che non riconosce.',
+  'Name each image file after its award ID and put them in a .zip, then use "Import a .zip pack" above. No JSON, no hosting needed. Lart matches each file to its award, stores it locally, resizes it, and skips anything it doesn\'t recognize.':
+    'Assegna a ogni file immagine il relativo ID del premio e inseriscili in un file .zip, poi usa "Importa un pacchetto .zip" qui sopra. Non servono JSON né hosting. Lart associa ogni file al relativo premio, lo archivia in locale, lo ridimensiona e ignora quelli che non riconosce.',
   "Name it, tick the resolutions, sources, codecs and audio you want, and leave the rest blank.":
     "Dagli un nome, seleziona le risoluzioni, le sorgenti, i codec e l'audio desiderati e lascia vuoto il resto.",
   "Name this collection": "Dai un nome a questa collezione",
@@ -489,11 +489,11 @@ const catalog05: Record<string, string> = {
   "Name your theme": "Dai un nome al tema",
   "Names behind the biggest productions": "I nomi dietro le produzioni più importanti",
   "Naming guide": "Guida alla denominazione",
-  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Harbor's embedded player.":
-    "Movimento nativo a 48/60fps tramite la tua installazione Linux di SVP e VapourSynth, riprodotto nel player integrato di Harbor.",
+  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Lart's embedded player.":
+    "Movimento nativo a 48/60fps tramite la tua installazione Linux di SVP e VapourSynth, riprodotto nel player integrato di Lart.",
   "Native libmpv": "libmpv nativo",
-  "Native to Harbor. No RPDB or ratings addon needed.":
-    "Integrato in Harbor. Non servono RPDB né Add-on per le valutazioni.",
+  "Native to Lart. No RPDB or ratings addon needed.":
+    "Integrato in Lart. Non servono RPDB né Add-on per le valutazioni.",
   "Native webview playback. Smooth and integrated, but limited codec coverage.":
     "Riproduzione nativa nella webview. Fluida e integrata, ma con supporto limitato per i codec.",
   "Native-style hybrid bar": "Barra ibrida in stile nativo",
@@ -520,8 +520,8 @@ const catalog05: Record<string, string> = {
     "Per rilevare i dispositivi in rete serve l'app desktop.",
   "Network's best": "Il meglio della rete",
   Networks: "Reti",
-  "Neural upscalers, sharpeners, and HDR tone-mapping ported for mpv. Each is hosted by its author, not bundled with Harbor. Download the ones you want; Harbor chains them in the right order and applies them in the player.":
-    "Upscaler neurali, filtri di nitidezza e tone mapping HDR adattati per mpv. Ognuno è ospitato dal proprio autore e non è incluso in Harbor. Scarica quelli che vuoi: Harbor li concatena nell'ordine corretto e li applica nel player.",
+  "Neural upscalers, sharpeners, and HDR tone-mapping ported for mpv. Each is hosted by its author, not bundled with Lart. Download the ones you want; Lart chains them in the right order and applies them in the player.":
+    "Upscaler neurali, filtri di nitidezza e tone mapping HDR adattati per mpv. Ognuno è ospitato dal proprio autore e non è incluso in Lart. Scarica quelli che vuoi: Lart li concatena nell'ordine corretto e li applica nel player.",
   Never: "Mai",
   "Never auto-select tracks containing":
     "Non selezionare mai automaticamente le tracce che contengono",
@@ -613,7 +613,7 @@ const catalog05: Record<string, string> = {
   "No EPG channels match. This playlist's EPG source may be empty.":
     "Nessun canale EPG corrispondente. La sorgente EPG di questa playlist potrebbe essere vuota.",
   "No Frills": "Senza fronzoli",
-  "No Harbor account yet": "Non hai ancora un account Harbor",
+  "No Lart account yet": "Non hai ancora un account Lart",
   "No Integrations option? You need the Manage Webhooks permission. Ask whoever owns the server.":
     "L'opzione Integrazioni non è presente? Ti serve l'autorizzazione Gestisci webhook. Chiedila al proprietario del server.",
   "No JavaScript. Scripts, inline handlers, and javascript: URLs are removed.":
@@ -630,8 +630,8 @@ const catalog05: Record<string, string> = {
   "No addons are synced to this account yet.":
     "Nessun Add-on ancora sincronizzato con questo account.",
   "No addons installed yet": "Nessun Add-on ancora installato",
-  "No affiliation, no referral links, and Harbor gets nothing from these. They are just places where money goes further than it does here.":
-    "Nessuna affiliazione, nessun link di referral e Harbor non ci guadagna nulla. Sono solo posti in cui il denaro vale più che qui.",
+  "No affiliation, no referral links, and Lart gets nothing from these. They are just places where money goes further than it does here.":
+    "Nessuna affiliazione, nessun link di referral e Lart non ci guadagna nulla. Sono solo posti in cui il denaro vale più che qui.",
   "No approved themes yet": "Ancora nessun tema approvato",
   "No art": "Nessuna immagine",
   "No artists match that search": "Nessun artista corrisponde alla ricerca",
@@ -770,8 +770,8 @@ const catalog05: Record<string, string> = {
   "No matches. Try a different search.": "Nessun risultato. Prova una ricerca diversa.",
   "No matches. Try another title.": "Nessun risultato. Prova un altro titolo.",
   "No matching voices": "Nessuna voce corrispondente",
-  "No metadata addon detected. Harbor is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
-    "Nessun Add-on per i metadati rilevato. Harbor userà Cinemeta per continuare a caricare i titoli, ma riattivalo a meno che tu non ne stia installando uno.",
+  "No metadata addon detected. Lart is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
+    "Nessun Add-on per i metadati rilevato. Lart userà Cinemeta per continuare a caricare i titoli, ma riattivalo a meno che tu non ne stia installando uno.",
   "No more films to add. Start with what you picked.":
     "Non ci sono altri film da aggiungere. Inizia con quelli che hai scelto.",
   "No more found for this category.": "Nessun altro risultato per questa categoria.",
@@ -789,9 +789,9 @@ const catalog05: Record<string, string> = {
   "No one found by that name.": "Non è stato trovato nessuno con questo nome.",
   "No one recognized on screen right now.":
     "Nessuna persona riconosciuta sullo schermo in questo momento.",
-  "No other Harbor answered": "Nessun altro Harbor ha risposto",
-  "No other Harbor answered on this network. One shows up here a moment after it starts.":
-    "Nessun altro Harbor ha risposto su questa rete. Comparirà qui poco dopo l'avvio.",
+  "No other Lart answered": "Nessun altro Lart ha risposto",
+  "No other Lart answered on this network. One shows up here a moment after it starts.":
+    "Nessun altro Lart ha risposto su questa rete. Comparirà qui poco dopo l'avvio.",
   "No peers found": "Nessun peer trovato",
   "No people found": "Nessuna persona trovata",
   "No people match these filters": "Nessuna persona corrisponde a questi filtri",
@@ -857,8 +857,8 @@ const catalog05: Record<string, string> = {
   "No subtitles found yet. Try the search at the bottom.":
     "Ancora nessun sottotitolo trovato. Prova la ricerca in basso.",
   "No subtitles found.": "Nessun sottotitolo trovato.",
-  "No subtitles found. Start anyway, Harbor keeps looking while you watch.":
-    "Nessun sottotitolo trovato. Avvia comunque: Harbor continuerà a cercare durante la visione.",
+  "No subtitles found. Start anyway, Lart keeps looking while you watch.":
+    "Nessun sottotitolo trovato. Avvia comunque: Lart continuerà a cercare durante la visione.",
   "No subtitles found. Try another title above, or adjust the season and episode.":
     "Nessun sottotitolo trovato. Prova un altro titolo qui sopra oppure cambia stagione ed episodio.",
   "No such captain": "Nessun capitano",
@@ -901,8 +901,8 @@ const catalog05: Record<string, string> = {
     "Nessuno ancora installato. Aggiungi Add-on per sottotitoli di Stremio in Sorgenti streaming.",
   "None of Trakt's most-anticipated upcoming releases land in this month. Try a different month.":
     "Nessuna delle uscite più attese su Trakt è prevista per questo mese. Prova un altro mese.",
-  "None of your addons returned a downloadable package for {season}. Harbor can still fetch the episodes one at a time, or you can refresh the sources.":
-    "Nessuno dei tuoi Add-on ha restituito un pacchetto scaricabile per {season}. Harbor può comunque recuperare gli episodi uno alla volta, oppure puoi aggiornare le sorgenti.",
+  "None of your addons returned a downloadable package for {season}. Lart can still fetch the episodes one at a time, or you can refresh the sources.":
+    "Nessuno dei tuoi Add-on ha restituito un pacchetto scaricabile per {season}. Lart può comunque recuperare gli episodi uno alla volta, oppure puoi aggiornare le sorgenti.",
   "None of your addons returned a downloadable package for {season}. Refresh the sources or check your source settings.":
     "Nessuno dei tuoi Add-on ha restituito un pacchetto scaricabile per {season}. Aggiorna le sorgenti o controlla le impostazioni delle sorgenti.",
   "None yet": "Ancora nessuno",
@@ -959,8 +959,8 @@ const catalog05: Record<string, string> = {
     "Non cambia nulla finché non premi Salva. Se lasci questa pagina, le modifiche andranno perse.",
   "Nothing connected yet. Scan a code with your phone.":
     "Non è ancora connesso nulla. Scansiona un codice con il telefono.",
-  "Nothing else answered. A Harbor shows up here a moment after it starts on this network.":
-    "Nessun altro ha risposto. Un Harbor compare qui poco dopo essere stato avviato su questa rete.",
+  "Nothing else answered. A Lart shows up here a moment after it starts on this network.":
+    "Nessun altro ha risposto. Un Lart compare qui poco dopo essere stato avviato su questa rete.",
   'Nothing found for "{q}"': 'Nessun risultato per "{q}"',
   'Nothing found for "{q}". {n} of your addons did not answer.':
     'Nessun risultato per "{q}". {n} dei tuoi Add-on non hanno risposto.',
@@ -980,8 +980,8 @@ const catalog05: Record<string, string> = {
   "Nothing in this filter. Choose All to see everything that answered.":
     "Nessun risultato con questo filtro. Scegli Tutti per vedere tutti i risultati ricevuti.",
   "Nothing in {genre} right now.": "Nessun contenuto in {genre} al momento.",
-  "Nothing is uploaded and nothing ships with Harbor. Everything stays on this device and you are responsible for the images you add.":
-    "Non viene caricato nulla e Harbor non include alcun contenuto. Tutto resta su questo dispositivo e sei responsabile delle immagini che aggiungi.",
+  "Nothing is uploaded and nothing ships with Lart. Everything stays on this device and you are responsible for the images you add.":
+    "Non viene caricato nulla e Lart non include alcun contenuto. Tutto resta su questo dispositivo e sei responsabile delle immagini che aggiungi.",
   "Nothing left in today's picks": "Hai esaurito i consigli di oggi",
   "Nothing left to confirm while P2P is disabled.": "Non resta nulla da confermare finché il P2P è disattivato.",
   "Nothing left to post after removing links.":
@@ -999,8 +999,8 @@ const catalog05: Record<string, string> = {
   "Nothing saved on Trakt yet.": "Non hai ancora salvato nulla su Trakt.",
   "Nothing saved yet. Add a title from any details page.":
     "Non hai ancora salvato nulla. Aggiungi un titolo da una pagina dei dettagli.",
-  "Nothing selected. Harbor will not load a subtitle on its own.":
-    "Nessuna selezione. Harbor non caricherà automaticamente alcun sottotitolo.",
+  "Nothing selected. Lart will not load a subtitle on its own.":
+    "Nessuna selezione. Lart non caricherà automaticamente alcun sottotitolo.",
   "Nothing sent yet. Change something and it goes up on its own.":
     "Non è stato ancora inviato nulla. Modifica qualcosa e verrà inviato automaticamente.",
   "Nothing this month": "Nulla questo mese",
@@ -1026,14 +1026,14 @@ const catalog05: Record<string, string> = {
   "Nothing watched yet. Press play on something.":
     "Non hai ancora guardato nulla. Riproduci qualcosa.",
   "Nothing yet": "Ancora nulla",
-  "Nothing you have already set is lost. Harbor picks this back up where you left it.":
-    "Non perderai nulla di ciò che hai già impostato. Harbor riprenderà da dove avevi interrotto.",
+  "Nothing you have already set is lost. Lart picks this back up where you left it.":
+    "Non perderai nulla di ciò che hai già impostato. Lart riprenderà da dove avevi interrotto.",
   Notification: "Notifica",
   Notifications: "Notifiche",
   Now: "Ora",
   "Now Playing": "In riproduzione",
   "Now Playing card": "Scheda In riproduzione",
-  "Now on Harbor": "Ora su Harbor",
+  "Now on Lart": "Ora su Lart",
   "Now playing": "In riproduzione",
   "Now playing: {label}": "In riproduzione: {label}",
   "Now tap the last line of that section.": "Ora tocca l'ultima riga di quella sezione.",
@@ -1061,8 +1061,8 @@ const catalog05: Record<string, string> = {
   "OVA of the Year": "OVA dell'anno",
   Off: "Disattivato",
   "Off (use CPU)": "Disattivato (usa la CPU)",
-  "Off by default, so your controller only drives Harbor while it is the focused window. Leave it off if you play games with the same controller.":
-    "Disattivato per impostazione predefinita, così il controller comanda Harbor solo quando la sua finestra è attiva. Lascialo disattivato se usi lo stesso controller per giocare.",
+  "Off by default, so your controller only drives Lart while it is the focused window. Leave it off if you play games with the same controller.":
+    "Disattivato per impostazione predefinita, così il controller comanda Lart solo quando la sua finestra è attiva. Lascialo disattivato se usi lo stesso controller per giocare.",
   "Off by default. Let visitors see what you have been watching":
     "Disattivato per impostazione predefinita. Consenti ai visitatori di vedere cosa hai guardato",
   "Off by default. Show what you are watching right now, or your watch party, on your profile. Applies instantly":
@@ -1116,8 +1116,8 @@ const catalog05: Record<string, string> = {
   "On the card": "Sulla scheda",
   "On the poster": "Sulla locandina",
   "On the taskbar": "Sulla barra delle applicazioni",
-  "On the web, Harbor can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
-    "Sul web, Harbor può accedere solo agli Add-on che consentono l'accesso dal browser (Torrentio, TorBox, Cinemeta). Per i titoli non ancora usciti, di solito non esiste ancora alcuna fonte.",
+  "On the web, Lart can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
+    "Sul web, Lart può accedere solo agli Add-on che consentono l'accesso dal browser (Torrentio, TorBox, Cinemeta). Per i titoli non ancora usciti, di solito non esiste ancora alcuna fonte.",
   "On themoviedb.org, open Settings.": "Su themoviedb.org, apri Impostazioni.",
   "On this computer": "Su questo computer",
   "On this device": "Su questo dispositivo",
@@ -1137,8 +1137,8 @@ const catalog05: Record<string, string> = {
   "Onboarding & hints": "Configurazione iniziale e suggerimenti",
   "Once you're in a room you can copy a link that joins anyone instantly: it sets the relay URL and the room code in one click.":
     "Una volta entrato in una stanza, puoi copiare un link che permette a chiunque di accedere all'istante: imposta l'URL del relay e il codice della stanza con un solo clic.",
-  "One @name that finds you across Harbor.": "Un unico @nome per farti trovare in tutto Harbor.",
-  "One Harbor, every screen.": "Un solo Harbor, su ogni schermo.",
+  "One @name that finds you across Lart.": "Un unico @nome per farti trovare in tutto Lart.",
+  "One Lart, every screen.": "Un solo Lart, su ogni schermo.",
   "One Piece, Naruto and more worlds": "One Piece, Naruto e tanti altri mondi",
   "One choice that sets how hard your computer works to make video look its best. Pick the one that matches your machine. Takes effect on the next thing you play.":
     "Un'unica scelta stabilisce quanto deve lavorare il computer per ottimizzare la qualità video. Scegli quella adatta al tuo dispositivo. Avrà effetto dal prossimo contenuto riprodotto.",
@@ -1154,22 +1154,22 @@ const catalog05: Record<string, string> = {
   "One release": "Un'uscita",
   "One switch powers everything on this page: the web app, the phone remote, and the manga reader remote.":
     "Un solo interruttore attiva tutto in questa pagina: l'app web, il telecomando per telefono e quello per il lettore manga.",
-  "One switch serves Harbor on your network. Scan a code below with your phone, or open an address on any device on the same Wi-Fi.":
-    "Un solo interruttore rende Harbor disponibile sulla tua rete. Scansiona uno dei codici qui sotto con il telefono oppure apri un indirizzo su qualsiasi dispositivo connesso alla stessa rete Wi-Fi.",
-  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Harbor's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
-    "Pacchetti della community con un clic. I set di regole includono raccolte complete di badge con criteri di abbinamento propri; le rimappature grafiche sostituiscono solo le immagini dei badge integrati di Harbor. Puoi importare qui anche qualsiasi link badges.json condiviso sul Discord o Reddit di Nuvio.",
+  "One switch serves Lart on your network. Scan a code below with your phone, or open an address on any device on the same Wi-Fi.":
+    "Un solo interruttore rende Lart disponibile sulla tua rete. Scansiona uno dei codici qui sotto con il telefono oppure apri un indirizzo su qualsiasi dispositivo connesso alla stessa rete Wi-Fi.",
+  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Lart's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
+    "Pacchetti della community con un clic. I set di regole includono raccolte complete di badge con criteri di abbinamento propri; le rimappature grafiche sostituiscono solo le immagini dei badge integrati di Lart. Puoi importare qui anche qualsiasi link badges.json condiviso sul Discord o Reddit di Nuvio.",
   "One-off donation": "Donazione una tantum",
   "One-tap looks": "Stili con un tocco",
-  "One-time setup downloads the shader pack (about 1 MB) into Harbor. No files to hunt down.":
-    "La configurazione iniziale scarica il pacchetto di shader (circa 1 MB) in Harbor. Non devi cercare alcun file.",
+  "One-time setup downloads the shader pack (about 1 MB) into Lart. No files to hunt down.":
+    "La configurazione iniziale scarica il pacchetto di shader (circa 1 MB) in Lart. Non devi cercare alcun file.",
   Oneshot: "Storia autoconclusiva",
   Ongoing: "In corso",
   Online: "Online",
   "Online now": "Online ora",
   "Only 1 source after filtering": "Solo 1 fonte dopo i filtri",
   "Only 2 sources after filtering": "Solo 2 fonti dopo i filtri",
-  "Only add repositories you trust. Harbor cannot vouch for third-party plugins.":
-    "Aggiungi solo repository attendibili. Harbor non può garantire l'affidabilità dei plugin di terze parti.",
+  "Only add repositories you trust. Lart cannot vouch for third-party plugins.":
+    "Aggiungi solo repository attendibili. Lart non può garantire l'affidabilità dei plugin di terze parti.",
   "Only embedded subtitles are available right now.":
     "Al momento sono disponibili solo i sottotitoli incorporati.",
   "Only enter URLs for relays you operate or trust. A relay only carries Watch Together sync messages (play, pause, seek). Nothing else passes through it.":
@@ -1210,11 +1210,11 @@ const catalog05: Record<string, string> = {
   "Open Cloudflare Workers": "Apri Cloudflare Workers",
   "Open Cloudflare token page": "Apri la pagina dei token Cloudflare",
   "Open Discord's webhook help": "Apri la guida di Discord ai webhook",
-  "Open Harbor on desktop to link Discord.": "Apri Harbor sul desktop per collegare Discord.",
-  "Open Harbor on desktop to verify ownership in your browser.":
-    "Apri Harbor sul desktop per verificare la proprietà nel browser.",
-  "Open Harbor's settings outside playback.":
-    "Apri le Impostazioni di Harbor al di fuori della riproduzione.",
+  "Open Lart on desktop to link Discord.": "Apri Lart sul desktop per collegare Discord.",
+  "Open Lart on desktop to verify ownership in your browser.":
+    "Apri Lart sul desktop per verificare la proprietà nel browser.",
+  "Open Lart's settings outside playback.":
+    "Apri le Impostazioni di Lart al di fuori della riproduzione.",
   "Open Languages": "Apri Lingue",
   "Open Library settings": "Apri le impostazioni della Libreria",
   "Open MAL profile": "Apri il profilo MAL",

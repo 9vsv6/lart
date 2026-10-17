@@ -77,7 +77,7 @@ export default {
   "games.league.metaScope": "OP.GGの既定サンプルによるレーン順位です。このデータにはパッチ、地域、ランク帯が明記されていません。勝率は報告された勝利数と試合数から計算し、ピック率は提供元で丸められています。順位とビルドは別のサンプルです。",
   "games.league.buildNote": "ビルドごとにサンプルが異なります。完成アイテムのビルドは購入できるまで続いた試合に偏るため、勝率はチャンピオン全体の勝率ではありません。対面の試合数が少ない場合もあります。チームと相手に合わせて調整しましょう。動画は過去パッチの場合があります。",
   "games.league.patchDifference": "ビルド統計は{patch}、アイテムとスキルの資料は{assets}のデータです。",
-  "games.league.attribution": "Harbor is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
+  "games.league.attribution": "Lart is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
   "games.league.tierList": "ティアリスト",
   "games.league.tierScope": "ランク ソロ/デュオ · エメラルド以上 · 全地域",
   "games.league.patchFilter": "パッチを選択",

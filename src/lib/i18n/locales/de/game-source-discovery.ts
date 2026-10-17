@@ -11,7 +11,7 @@ export default {
 
   "games.sources.batch.failedFile": "{file} konnte nicht vorbereitet werden.",
 
-  "games.sources.batch.restart": "Starte Harbor nach dem Update neu, um ausgewählte Dateien gemeinsam herunterzuladen.",
+  "games.sources.batch.restart": "Starte Lart nach dem Update neu, um ausgewählte Dateien gemeinsam herunterzuladen.",
 
   "games.torrent.start": "Dateien herunterladen",
 
@@ -19,7 +19,7 @@ export default {
 
   "games.sources.verification.action": "Quelle verifizieren",
 
-  "games.sources.verification.waiting": "Schließe die Verifizierung im Quellenfenster ab. Harbor prüft danach den Katalog.",
+  "games.sources.verification.waiting": "Schließe die Verifizierung im Quellenfenster ab. Lart prüft danach den Katalog.",
 
   "games.sources.source_verify_busy": "Eine andere Quelle wird gerade verifiziert. Schließe zuerst deren Fenster oder beende die Verifizierung.",
 
@@ -27,31 +27,31 @@ export default {
 
   "games.sources.source_verify_timeout": "Die Verifizierung hat zu lange gedauert. Versuche es erneut, wenn du bereit bist.",
 
-  "games.sources.source_verify_unavailable": "Aktualisiere Harbor und starte es neu, um diese Quelle zu verifizieren.",
+  "games.sources.source_verify_unavailable": "Aktualisiere Lart und starte es neu, um diese Quelle zu verifizieren.",
 
   "games.sources.browser.direct": "Direkter Download",
 
   "games.sources.site.title": "Website öffnen",
-  "games.sources.site.note": "Füge eine Download-Seite von einer beliebigen Website ein. Harbor öffnet sie in einem eigenen Fenster, du wählst dort die Datei, und sie landet in Harbor.",
+  "games.sources.site.note": "Füge eine Download-Seite von einer beliebigen Website ein. Lart öffnet sie in einem eigenen Fenster, du wählst dort die Datei, und sie landet in Lart.",
   "games.sources.site.url": "Seitenlink",
   "games.sources.site.open": "Website öffnen",
   "games.sources.site.invalid": "Das muss ein öffentlicher https-Link sein.",
-  "games.sources.browser.intro": "Kein Debrid-Konto nötig. Wähle eine Datei auf {host} und anschließend den Speicherort in Harbor.",
-  "games.sources.browser.fallback": "Startet der Download nicht von selbst, nutze den Ersatzlink von {host} auf der Seite. Harbor nimmt die Datei trotzdem an.",
+  "games.sources.browser.intro": "Kein Debrid-Konto nötig. Wähle eine Datei auf {host} und anschließend den Speicherort in Lart.",
+  "games.sources.browser.fallback": "Startet der Download nicht von selbst, nutze den Ersatzlink von {host} auf der Seite. Lart nimmt die Datei trotzdem an.",
 
   "games.sources.browser.choose": "Datei auf {host} wählen",
 
-  "games.sources.browser.waiting": "Wähle die Datei im {host}-Fenster. Harbor fragt anschließend nach dem Speicherort.",
+  "games.sources.browser.waiting": "Wähle die Datei im {host}-Fenster. Lart fragt anschließend nach dem Speicherort.",
 
-  "games.sources.browser.selected": "Bereit zum Download in Harbor",
+  "games.sources.browser.selected": "Bereit zum Download in Lart",
 
   "games.sources.browser.another": "Andere Datei wählen",
 
-  "games.sources.browser.failed": "{host} konnte die Datei nicht an Harbor übergeben. Versuche es erneut oder öffne sie auf {host}.",
+  "games.sources.browser.failed": "{host} konnte die Datei nicht an Lart übergeben. Versuche es erneut oder öffne sie auf {host}.",
 
   "games.sources.browser.timeout": "Die Dateiauswahl ist abgelaufen. Öffne {host} erneut, um eine Datei zu wählen.",
 
-  "games.sources.browser.restart": "Starte Harbor nach dem Update neu, um direkt von {host} herunterzuladen.",
+  "games.sources.browser.restart": "Starte Lart nach dem Update neu, um direkt von {host} herunterzuladen.",
 
   "games.sources.retrySavedCatalog": "Gespeicherten Katalog erneut laden",
 
@@ -99,13 +99,13 @@ export default {
 
   "games.sources.platform.other": "{platform}-Version · nicht nativ auf {host}",
 
-  "games.sources.platform.otherNote": "Wähle eine Version für dein Betriebssystem. Harbor kann dieses Paket auf diesem Gerät nicht nativ installieren oder ausführen.",
+  "games.sources.platform.otherNote": "Wähle eine Version für dein Betriebssystem. Lart kann dieses Paket auf diesem Gerät nicht nativ installieren oder ausführen.",
 
   "games.sources.platform.unknown": "Plattform nicht angegeben",
 
   "games.sources.platform.unknownNote": "Die Quelle nennt kein Betriebssystem für dieses Paket. Prüfe vor dem Download die Angaben des Anbieters.",
 
-  "games.sources.platform.browseNote": "Downloads und lokale Spiele verwaltest du in Harbor Desktop.",
+  "games.sources.platform.browseNote": "Downloads und lokale Spiele verwaltest du in Lart Desktop.",
 
   "games.sources.platform.browse": "Version für {platform}",
 
@@ -117,9 +117,9 @@ export default {
 
   "games.sources.art.torrent": "Torrent-Download",
 
-  "games.sources.art.engine": "Harbor-Torrent-Engine",
+  "games.sources.art.engine": "Lart-Torrent-Engine",
 
-  "games.sources.art.reviewTorrent": "In Harbor herunterladen",
+  "games.sources.art.reviewTorrent": "In Lart herunterladen",
 
 
 
@@ -167,7 +167,7 @@ export default {
 
   "games.sources.discovery.change": "Link ändern",
 
-  "games.sources.discovery.harbor": "Harbor-Katalog",
+  "games.sources.discovery.harbor": "Lart-Katalog",
 
   "games.sources.discovery.community": "Hydra-kompatibler Katalog",
 
@@ -175,7 +175,7 @@ export default {
 
   "games.sources.discovery.reviewNote": "Es werden nur Katalogeinträge gespeichert. Dateien werden erst heruntergeladen, wenn du sie auswählst.",
 
-  "games.sources.source_no_catalog": "Diese Website veröffentlicht keinen Kataloglink, den Harbor lesen kann. Füge stattdessen den Link zum JSON-Katalog ein.",
+  "games.sources.source_no_catalog": "Diese Website veröffentlicht keinen Kataloglink, den Lart lesen kann. Füge stattdessen den Link zum JSON-Katalog ein.",
 
   "games.sources.source_url": "Gib eine Website-Adresse, eine HTTP(S)-Katalog-URL oder einen Hydra-Installationslink ein.",
 
@@ -229,7 +229,7 @@ export default {
 
   "games.sources.links.account": "Der Dienst hat die Verbindung abgelehnt. Prüfe den Schlüssel in den Quelleneinstellungen.",
 
-  "games.sources.links.rate": "Der Dienst bittet Harbor zu warten. Versuche es gleich erneut.",
+  "games.sources.links.rate": "Der Dienst bittet Lart zu warten. Versuche es gleich erneut.",
 
   "games.sources.links.limit": "Der Dienst hat zu viele Dateien für eine gemeinsame Vorschau zurückgegeben.",
 
@@ -241,7 +241,7 @@ export default {
 
   "games.sources.links.destination": "Speicherort wählen",
 
-  "games.sources.links.desktop": "Öffne Harbor auf dem Desktop, um Dateien herunterzuladen.",
+  "games.sources.links.desktop": "Öffne Lart auf dem Desktop, um Dateien herunterzuladen.",
 
   "games.sources.web.web": "Web-Downloads",
 
@@ -267,7 +267,7 @@ export default {
 
   "games.sources.web.again": "Weiteren Auftrag starten",
 
-  "games.sources.web.storage": "Harbor konnte den Auftrag nicht speichern. Er wird nicht automatisch erneut gesendet.",
+  "games.sources.web.storage": "Lart konnte den Auftrag nicht speichern. Er wird nicht automatisch erneut gesendet.",
 
   "games.sources.web.preparing": "TorBox bereitet vor",
 
@@ -353,7 +353,7 @@ export default {
 
   "games.sources.pm.select": "Diesen Transfer verwenden",
 
-  "games.sources.pm.review": "Wähle den von dir gestarteten Transfer. Harbor kann die Quelle nicht automatisch zuordnen.",
+  "games.sources.pm.review": "Wähle den von dir gestarteten Transfer. Lart kann die Quelle nicht automatisch zuordnen.",
 
   "games.sources.pm.retry": "Transfer erneut versuchen",
 

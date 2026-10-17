@@ -634,7 +634,7 @@ export function translatePickerError(t: Translate, error: PickerError): string {
       );
     case "engine-not-ready":
       return t(
-        "Harbor's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.",
+        "Lart's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.",
       );
     case "direct-torrent-disabled":
       return t(
@@ -645,7 +645,7 @@ export function translatePickerError(t: Translate, error: PickerError): string {
     case "addon-not-configured":
       return t("This addon isn't fully configured. Open its setup page and finish the wizard.");
     case "external-url-only":
-      return t("This source only opens in an external browser, not in Harbor's player.");
+      return t("This source only opens in an external browser, not in Lart's player.");
     case "youtube-only":
       return t("This is a YouTube link, not a video file. Open it in a browser instead.");
     case "nzb-needs-external-player":
@@ -674,7 +674,7 @@ export function translatePickerError(t: Translate, error: PickerError): string {
       );
     case "download-season-partial":
       return t(
-        "Queued {queued} of {total} episodes. Harbor could not match every episode in this package.",
+        "Queued {queued} of {total} episodes. Lart could not match every episode in this package.",
         { queued: error.queued, total: error.total },
       );
     case "stream-proxy-start-failed":
@@ -684,7 +684,7 @@ export function translatePickerError(t: Translate, error: PickerError): string {
         "This source isn't ready on your debrid yet. Try it again in a moment or pick another.",
       );
     case "debrid-queue-unsupported":
-      return t("Your debrid service doesn't support queueing torrents from Harbor yet.");
+      return t("Your debrid service doesn't support queueing torrents from Lart yet.");
     case "unknown-playback":
       return error.detail;
   }
@@ -732,7 +732,7 @@ export function translateDebridBannerTitle(t: Translate, banner: DebridBanner): 
         name: banner.name,
       });
     case "rate-limited":
-      return t("{name} is rate-limiting Harbor right now.", { name: banner.name });
+      return t("{name} is rate-limiting Lart right now.", { name: banner.name });
     case "unauthorized":
       return t("{name} rejected your API key.", { name: banner.name });
     case "not-premium":

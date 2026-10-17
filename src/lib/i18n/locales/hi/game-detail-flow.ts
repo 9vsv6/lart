@@ -1,7 +1,7 @@
 export default {
   "games.details.broadcastPause": "प्रसारण रोकें",
   "games.details.broadcastResume": "प्रसारण चलाएँ",
-  "games.details.broadcastPlay": "Harbor में देखें",
+  "games.details.broadcastPlay": "Lart में देखें",
   "games.details.watchRun": "रन देखें",
   "games.details.viewRun": "रन का विवरण",
   "games.details.runVideo": "रन का वीडियो",

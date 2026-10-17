@@ -45,7 +45,7 @@ export default {
   "games.pick.hours": "小时",
   "games.pick.noHistory": "暂无可参考的活动。选择最爱，或在游戏设置中连接Steam。",
   "games.pick.manualOnly": "仅根据最爱的游戏和已选筛选条件推荐。",
-  "games.pick.addedNote": "“最近添加”指初次导入后首次在Harbor中发现的时间，并非购买日期。",
+  "games.pick.addedNote": "“最近添加”指初次导入后首次在Lart中发现的时间，并非购买日期。",
   "games.pick.because": "因为你喜欢{name}",
   "games.pick.matches": "符合你的选择",
   "games.pick.steamCatalog": "Steam目录",

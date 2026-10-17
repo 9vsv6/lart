@@ -11,7 +11,7 @@ export default {
 
   "games.sources.batch.failedFile": "Não foi possível preparar {file}.",
 
-  "games.sources.batch.restart": "Reinicie o Harbor após atualizar para baixar os arquivos selecionados juntos.",
+  "games.sources.batch.restart": "Reinicie o Lart após atualizar para baixar os arquivos selecionados juntos.",
 
   "games.torrent.start": "Baixar arquivos",
 
@@ -19,7 +19,7 @@ export default {
 
   "games.sources.verification.action": "Verificar fonte",
 
-  "games.sources.verification.waiting": "Conclua a verificação na janela da fonte. O Harbor verificará o catálogo em seguida.",
+  "games.sources.verification.waiting": "Conclua a verificação na janela da fonte. O Lart verificará o catálogo em seguida.",
 
   "games.sources.source_verify_busy": "Outra fonte está sendo verificada. Conclua ou feche essa janela primeiro.",
 
@@ -27,31 +27,31 @@ export default {
 
   "games.sources.source_verify_timeout": "O tempo de verificação esgotou. Tente novamente quando estiver pronto.",
 
-  "games.sources.source_verify_unavailable": "Atualize e reinicie o Harbor para verificar esta fonte.",
+  "games.sources.source_verify_unavailable": "Atualize e reinicie o Lart para verificar esta fonte.",
 
   "games.sources.browser.direct": "Download direto",
 
   "games.sources.site.title": "Abrir um site",
-  "games.sources.site.note": "Cole uma página de download de qualquer site. O Harbor abre-a numa janela própria, escolhe lá o ficheiro, e ele é transferido para o Harbor.",
+  "games.sources.site.note": "Cole uma página de download de qualquer site. O Lart abre-a numa janela própria, escolhe lá o ficheiro, e ele é transferido para o Lart.",
   "games.sources.site.url": "Ligação da página",
   "games.sources.site.open": "Abrir site",
   "games.sources.site.invalid": "Tem de ser uma ligação https pública.",
-  "games.sources.browser.intro": "Não precisa de conta de debrid. Escolha um arquivo no {host} e depois onde salvá-lo no Harbor.",
-  "games.sources.browser.fallback": "Se o download não começar sozinho, use o link alternativo que o {host} mostra na página. O Harbor captura o ficheiro na mesma.",
+  "games.sources.browser.intro": "Não precisa de conta de debrid. Escolha um arquivo no {host} e depois onde salvá-lo no Lart.",
+  "games.sources.browser.fallback": "Se o download não começar sozinho, use o link alternativo que o {host} mostra na página. O Lart captura o ficheiro na mesma.",
 
   "games.sources.browser.choose": "Escolher arquivo no {host}",
 
-  "games.sources.browser.waiting": "Escolha o arquivo na janela do {host}. O Harbor perguntará onde salvá-lo.",
+  "games.sources.browser.waiting": "Escolha o arquivo na janela do {host}. O Lart perguntará onde salvá-lo.",
 
-  "games.sources.browser.selected": "Pronto para baixar no Harbor",
+  "games.sources.browser.selected": "Pronto para baixar no Lart",
 
   "games.sources.browser.another": "Escolher outro arquivo",
 
-  "games.sources.browser.failed": "O {host} não conseguiu enviar o arquivo ao Harbor. Tente novamente ou abra no {host}.",
+  "games.sources.browser.failed": "O {host} não conseguiu enviar o arquivo ao Lart. Tente novamente ou abra no {host}.",
 
   "games.sources.browser.timeout": "O tempo para escolher o arquivo acabou. Abra o {host} novamente.",
 
-  "games.sources.browser.restart": "Reinicie o Harbor após atualizar para baixar diretamente do {host}.",
+  "games.sources.browser.restart": "Reinicie o Lart após atualizar para baixar diretamente do {host}.",
 
   "games.sources.retrySavedCatalog": "Tentar o catálogo salvo novamente",
 
@@ -99,13 +99,13 @@ export default {
 
   "games.sources.platform.other": "Versão {platform} · não nativa em {host}",
 
-  "games.sources.platform.otherNote": "Escolha uma versão para seu sistema operacional. O Harbor não pode instalar nem executar este pacote nativamente neste dispositivo.",
+  "games.sources.platform.otherNote": "Escolha uma versão para seu sistema operacional. O Lart não pode instalar nem executar este pacote nativamente neste dispositivo.",
 
   "games.sources.platform.unknown": "Plataforma não informada",
 
   "games.sources.platform.unknownNote": "A fonte não informa o sistema operacional do pacote. Consulte o distribuidor antes de baixar.",
 
-  "games.sources.platform.browseNote": "Use o Harbor para desktop para baixar e gerenciar arquivos de jogos locais.",
+  "games.sources.platform.browseNote": "Use o Lart para desktop para baixar e gerenciar arquivos de jogos locais.",
 
   "games.sources.platform.browse": "Versão para {platform}",
 
@@ -117,9 +117,9 @@ export default {
 
   "games.sources.art.torrent": "Download por torrent",
 
-  "games.sources.art.engine": "Motor de torrents do Harbor",
+  "games.sources.art.engine": "Motor de torrents do Lart",
 
-  "games.sources.art.reviewTorrent": "Baixar no Harbor",
+  "games.sources.art.reviewTorrent": "Baixar no Lart",
 
 
 
@@ -167,7 +167,7 @@ export default {
 
   "games.sources.discovery.change": "Alterar link",
 
-  "games.sources.discovery.harbor": "Catálogo Harbor",
+  "games.sources.discovery.harbor": "Catálogo Lart",
 
   "games.sources.discovery.community": "Catálogo compatível com Hydra",
 
@@ -175,7 +175,7 @@ export default {
 
   "games.sources.discovery.reviewNote": "Apenas as entradas do catálogo são salvas. Os arquivos são baixados quando você os escolhe.",
 
-  "games.sources.source_no_catalog": "Este site não publica um link de catálogo que o Harbor possa ler. Cole o link do catálogo JSON.",
+  "games.sources.source_no_catalog": "Este site não publica um link de catálogo que o Lart possa ler. Cole o link do catálogo JSON.",
 
   "games.sources.source_url": "Digite um endereço de site, uma URL HTTP(S) de catálogo ou um link de instalação do Hydra.",
 
@@ -229,7 +229,7 @@ export default {
 
   "games.sources.links.account": "O serviço recusou a conexão. Verifique a chave nas configurações de fontes.",
 
-  "games.sources.links.rate": "O serviço pediu que o Harbor espere. Tente novamente em instantes.",
+  "games.sources.links.rate": "O serviço pediu que o Lart espere. Tente novamente em instantes.",
 
   "games.sources.links.limit": "O serviço retornou arquivos demais para revisar de uma vez.",
 
@@ -241,7 +241,7 @@ export default {
 
   "games.sources.links.destination": "Escolher destino",
 
-  "games.sources.links.desktop": "Abra o Harbor para desktop para baixar arquivos.",
+  "games.sources.links.desktop": "Abra o Lart para desktop para baixar arquivos.",
 
   "games.sources.web.web": "Downloads da web",
 
@@ -267,7 +267,7 @@ export default {
 
   "games.sources.web.again": "Iniciar outra tarefa",
 
-  "games.sources.web.storage": "O Harbor não conseguiu salvar esta tarefa. Ela não será enviada novamente de forma automática.",
+  "games.sources.web.storage": "O Lart não conseguiu salvar esta tarefa. Ela não será enviada novamente de forma automática.",
 
   "games.sources.web.preparing": "Preparando no TorBox",
 
@@ -353,7 +353,7 @@ export default {
 
   "games.sources.pm.select": "Usar esta transferência",
 
-  "games.sources.pm.review": "Selecione a transferência que você enviou. O Harbor não consegue identificar sua origem automaticamente.",
+  "games.sources.pm.review": "Selecione a transferência que você enviou. O Lart não consegue identificar sua origem automaticamente.",
 
   "games.sources.pm.retry": "Tentar transferência novamente",
 

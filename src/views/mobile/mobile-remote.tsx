@@ -12,6 +12,7 @@ import { Check, WifiOff } from "lucide-react";
 import type { Meta } from "@/lib/cinemeta";
 import type { RemoteCommand, RemoteSnapshot } from "@/lib/remote/protocol";
 import { useRemoteClient } from "@/lib/remote/use-remote-client";
+import { isPhoneApp } from "@/lib/platform";
 import { useSettings } from "@/lib/settings";
 
 type PlayOpts = { season?: number; episode?: number; resume?: boolean };
@@ -86,6 +87,25 @@ export function MobileRemoteProvider({ children }: { children: ReactNode }) {
 
   const playOnHost = useCallback(
     (meta: Meta, opts?: PlayOpts) => {
+      if (isPhoneApp()) {
+        // Standalone phone: play here. RemoteOpenBridge resolves local files,
+        // media servers or the stream picker exactly as a desktop host does.
+        window.dispatchEvent(
+          new CustomEvent("harbor:remote-open", {
+            detail: {
+              action: "playMeta",
+              metaId: meta.id,
+              metaType: meta.type,
+              name: meta.name,
+              poster: meta.poster,
+              season: opts?.season,
+              episode: opts?.episode,
+              resume: opts?.resume ?? true,
+            },
+          }),
+        );
+        return;
+      }
       const sent = sendCommand({
         action: "playMeta",
         metaId: meta.id,
@@ -103,6 +123,7 @@ export function MobileRemoteProvider({ children }: { children: ReactNode }) {
 
   const openOnHost = useCallback(
     (meta: Meta) => {
+      if (isPhoneApp()) return;
       const sent = sendCommand({
         action: "openMeta",
         metaId: meta.id,

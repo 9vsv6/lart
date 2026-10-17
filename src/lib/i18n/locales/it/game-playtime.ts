@@ -1,7 +1,7 @@
 export default {
   "games.playtime.title": "Tempo di gioco",
   "games.playtime.total": "Il tuo totale",
-  "games.playtime.tracked": "Registrato da Harbor",
+  "games.playtime.tracked": "Registrato da Lart",
   "games.playtime.adjusted": "Modificato da te",
   "games.playtime.changed": "Modificato il {date}",
   "games.playtime.edit": "Modifica il tempo di gioco",
@@ -9,14 +9,14 @@ export default {
   "games.playtime.minutes": "Minuti",
   "games.playtime.duration": "{hours} h {minutes} min",
   "games.playtime.card": "Tempo giocato: {time}",
-  "games.playtime.note": "Aggiungi il tempo giocato altrove o correggi il totale. Harbor conserva le sessioni registrate e aggiunge quelle future a questo totale.",
-  "games.playtime.localNote": "Si applica a questa copia locale nel tuo profilo Harbor. Steam e gli altri account restano invariati.",
+  "games.playtime.note": "Aggiungi il tempo giocato altrove o correggi il totale. Lart conserva le sessioni registrate e aggiunge quelle future a questo totale.",
+  "games.playtime.localNote": "Si applica a questa copia locale nel tuo profilo Lart. Steam e gli altri account restano invariati.",
   "games.playtime.running": "Chiudi questo gioco prima di modificarne il tempo di gioco.",
   "games.playtime.save": "Salva il tempo di gioco",
   "games.playtime.finishEdit": "Salva o annulla la modifica del tempo di gioco prima di salvare le altre impostazioni.",
   "games.playtime.reset": "Usa il tempo registrato",
   "games.playtime.invalid": "Inserisci ore intere da 0 a 999.999 e minuti da 0 a 59.",
   "games.playtime.saved": "Tempo di gioco salvato.",
-  "games.playtime.resetDone": "È in uso il tempo registrato da Harbor.",
+  "games.playtime.resetDone": "È in uso il tempo registrato da Lart.",
   "games.custom.launch_playtime": "Non è stato possibile salvare questo tempo di gioco. Controlla le ore e i minuti e riprova."
 } satisfies Record<string, string>;

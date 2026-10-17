@@ -63,7 +63,7 @@ const PAGE_LABELS: Record<string, string> = {
   "webhooks.destinations": "Notification destinations",
   "webhooks.what": "Notification sources",
   "webhooks.rules": "Notification rules",
-  "relay.status": "Harbor Relay",
+  "relay.status": "Lart Relay",
   "relay.manage": "Manage relay",
   "advanced.system": "Startup & system",
   "advanced.repair": "Repair & diagnostics",
@@ -200,7 +200,7 @@ function SectionRow({
       className={`hset-rail-row ${on ? "is-on" : ""}`}
     >
       <span className="hset-rail-chip">
-        {tab?.icon === "Harbor" ? (
+        {tab?.icon === "Lart" ? (
           <HarborMark className="h-5 w-5" />
         ) : tab?.img ? (
           <img

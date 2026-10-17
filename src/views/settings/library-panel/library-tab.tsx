@@ -69,7 +69,7 @@ export function LibraryTab() {
       <Section
         title={t("Local library")}
         subtitle={t(
-          "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Harbor writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.",
+          "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Lart writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.",
         )}
       >
         <SettingGroup label={t("On disk")}>
@@ -121,7 +121,7 @@ export function LibraryTab() {
             icon={<Download size={18} strokeWidth={2} />}
             label={t("Export artwork")}
             desc={t(
-              "The resolution Harbor downloads for each image when you export a title's metadata next to the file on disk.",
+              "The resolution Lart downloads for each image when you export a title's metadata next to the file on disk.",
             )}
           >
             <div className="grid w-full grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-4">

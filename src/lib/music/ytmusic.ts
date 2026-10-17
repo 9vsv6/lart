@@ -1,6 +1,6 @@
 import { invoke } from "@tauri-apps/api/core";
 
-/** Opens Google's own YouTube Music in a Harbor webview, reusing the window if it exists. */
+/** Opens Google's own YouTube Music in a Lart webview, reusing the window if it exists. */
 export function openYouTubeMusic(): Promise<void> {
   return invoke("ytmusic_open");
 }
@@ -23,7 +23,7 @@ export type YouTubeMusicRect = {
 };
 
 /**
- * Mounts YouTube Music as a child window inside Harbor's own, pinned to a CSS rect, so the
+ * Mounts YouTube Music as a child window inside Lart's own, pinned to a CSS rect, so the
  * sidebar and title bar stay around it. Windows only; elsewhere the caller falls back to
  * openYouTubeMusic and its separate window.
  */
@@ -40,7 +40,7 @@ export function unembedYouTubeMusic(): Promise<void> {
 }
 
 /**
- * Harbor keeps an inactive view mounted and display:none's it, which a native child window
+ * Lart keeps an inactive view mounted and display:none's it, which a native child window
  * ignores. The Music view must therefore hide this explicitly when it stops being the top view.
  */
 export function setYouTubeMusicVisible(visible: boolean): Promise<void> {

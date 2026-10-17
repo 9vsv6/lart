@@ -93,7 +93,7 @@ export function TvDevicesSection() {
 
   const selfName = me?.name?.trim() || t("This computer");
   const selfDetail = me
-    ? [platformLabel(me.platform), `Harbor ${me.version}`, themeLabel(themeId)]
+    ? [platformLabel(me.platform), `Lart ${me.version}`, themeLabel(themeId)]
         .filter(Boolean)
         .join(" / ")
     : t("Reading this device");
@@ -102,16 +102,16 @@ export function TvDevicesSection() {
   const tally = scanning
     ? t("Listening for Harbors")
     : count === 0
-      ? t("No other Harbor answered")
+      ? t("No other Lart answered")
       : count === 1
-        ? t("1 other Harbor")
+        ? t("1 other Lart")
         : t("{n} other Harbors", { n: count });
 
   return (
     <Section
       title={TV_DEVICES_TITLE}
       subtitle={t(
-        "Every Harbor that announces itself on this network appears here as it answers, with the theme it is wearing.",
+        "Every Lart that announces itself on this network appears here as it answers, with the theme it is wearing.",
       )}
     >
       <div className="flex flex-col gap-2.5">
@@ -130,7 +130,7 @@ export function TvDevicesSection() {
 
         {roster.map((entry) => {
           const peer = entry.instance;
-          const label = peer.name?.trim() || t("Harbor");
+          const label = peer.name?.trim() || t("Lart");
           const paired = pairedIds.has(peer.id);
           const state = deviceStateOf(
             peer,
@@ -148,7 +148,7 @@ export function TvDevicesSection() {
               state={state}
               note={
                 paired
-                  ? t("This Harbor takes commands from this computer. Forget it to take that back.")
+                  ? t("This Lart takes commands from this computer. Forget it to take that back.")
                   : undefined
               }
               stagger={entry.stagger}
@@ -169,7 +169,7 @@ export function TvDevicesSection() {
 
         {isTauri && settled && count === 0 ? (
           <p className="max-w-[70ch] px-1 py-1 text-[15.5px] font-normal leading-[22px] text-ink-subtle">
-            {t("Nothing else answered. A Harbor shows up here a moment after it starts on this network.")}
+            {t("Nothing else answered. A Lart shows up here a moment after it starts on this network.")}
           </p>
         ) : null}
 

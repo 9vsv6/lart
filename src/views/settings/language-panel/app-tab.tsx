@@ -85,7 +85,7 @@ export function AppLanguageTab() {
           wide
           label={t("Where you watch from")}
           desc={t(
-            "Sets streaming availability and the Now Playing release window. Pick a country and Harbor offers to match the interface, metadata, subtitle, and audio languages to it.",
+            "Sets streaming availability and the Now Playing release window. Pick a country and Lart offers to match the interface, metadata, subtitle, and audio languages to it.",
           )}
         >
           <RegionField />

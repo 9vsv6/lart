@@ -66,7 +66,7 @@ export function MalPanel() {
           <TrackerConnect
             service="MyAnimeList"
             logo={malLogo}
-            description={t("Bring your anime list into Harbor and update your episode count as you watch. Your existing progress is kept.")}
+            description={t("Bring your anime list into Lart and update your episode count as you watch. Your existing progress is kept.")}
             onConnect={() => setModalOpen(true)}
             website="https://myanimelist.net"
           />
@@ -74,7 +74,7 @@ export function MalPanel() {
       ) : (
         <Section
           title={t("Connected")}
-          subtitle={t("Harbor keeps your MyAnimeList watch progress in sync.")}
+          subtitle={t("Lart keeps your MyAnimeList watch progress in sync.")}
         >
           <TrackerIdentity
             service="MyAnimeList"
@@ -96,7 +96,7 @@ export function MalPanel() {
           {malAvatar && (
             <ToggleRow
               label={t("Use MyAnimeList avatar")}
-              sub={t("Set your MyAnimeList profile picture as your Harbor avatar.")}
+              sub={t("Set your MyAnimeList profile picture as your Lart avatar.")}
               value={settings.useMalAvatar}
               onChange={toggleMalAvatar}
               leading={

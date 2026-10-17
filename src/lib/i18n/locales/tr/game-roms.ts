@@ -66,7 +66,7 @@ const gameRoms: Record<string, string> = {
   "games.roms.era": "Çıkış dönemi",
   "games.roms.reset": "Filtreleri sıfırla",
   "games.roms.empty": "Başka bir oyun adı deneyin veya bu konsolun filtrelerini genişletin.",
-  "games.roms.source": "Oyun bilgileri ve oyunlar arasındaki bağlantılar IGDB’den alınır. Desteklenen oyunları Harbor’da oynamak için yerel dosyalarınızı içe aktarın.",
+  "games.roms.source": "Oyun bilgileri ve oyunlar arasındaki bağlantılar IGDB’den alınır. Desteklenen oyunları Lart’da oynamak için yerel dosyalarınızı içe aktarın.",
   "games.roms.playerScore": "IGDB oyuncu puanı · {count} değerlendirme",
   "games.roms.combinedScore": "IGDB birleşik puanı · {count} değerlendirme",
   "games.roms.sort.discussed": "En çok değerlendirilen",

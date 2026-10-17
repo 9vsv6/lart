@@ -1,8 +1,8 @@
 const appFill: Record<string, string> = {
   "Only turn this off if you already have a metadata addon installed, such as AIOMetadata or AIOStreams. Without one, titles and collections can open completely blank. Cinemeta can go stale and show released episodes as TBA, which is the reason to replace it.":
     "AIOMetadataやAIOStreamsなどのメタデータアドオンをすでにインストールしている場合にのみ、これをオフにしてください。メタデータアドオンがないと、作品やコレクションを開いても何も表示されないことがあります。Cinemetaは情報が古くなり、配信済みのエピソードがTBAと表示される場合があります。これがCinemetaを置き換える理由です。",
-  "No metadata addon detected. Harbor is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
-    "メタデータアドオンが検出されません。タイトルを読み込めるようHarborはCinemetaを代わりに使用していますが、別のアドオンをインストールする場合を除き、この設定をオンに戻してください。",
+  "No metadata addon detected. Lart is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
+    "メタデータアドオンが検出されません。タイトルを読み込めるようLartはCinemetaを代わりに使用していますが、別のアドオンをインストールする場合を除き、この設定をオンに戻してください。",
   "Checking sources and audio": "ソースと音声を確認中",
   "Downloading speech model {pct}%": "音声モデルをダウンロード中 {pct}%",
   "Downloading speech model": "音声モデルをダウンロード中",
@@ -22,20 +22,20 @@ const appFill: Record<string, string> = {
   "Timing rate": "タイミング倍率",
   "No timing change was needed. This subtitle already matches the audio.":
     "タイミングを変更する必要はありませんでした。この字幕はすでに音声と合っています。",
-  "Harbor couldn't analyze the audio for this source. Try again or adjust it manually.":
-    "Harborはこのソースの音声を解析できませんでした。もう一度試すか、手動で調整してください。",
+  "Lart couldn't analyze the audio for this source. Try again or adjust it manually.":
+    "Lartはこのソースの音声を解析できませんでした。もう一度試すか、手動で調整してください。",
   "There isn't enough readable dialogue in this subtitle to measure its timing.":
     "この字幕には、タイミングの測定に必要な読み取り可能な会話が足りません。",
   "This subtitle appears to be for a different cut. Try another match.":
     "この字幕は別編集版用のようです。別の字幕を試してください。",
-  "The timing checks disagreed, so Harbor left the subtitle unchanged.":
-    "タイミングの確認結果が一致しなかったため、Harborは字幕を変更しませんでした。",
+  "The timing checks disagreed, so Lart left the subtitle unchanged.":
+    "タイミングの確認結果が一致しなかったため、Lartは字幕を変更しませんでした。",
   "The timing difference was too large to correct safely. Try another subtitle.":
     "タイミングの差が大きすぎるため、安全に補正できません。別の字幕を試してください。",
   "There wasn't enough matching dialogue to make a safe correction.":
     "安全に補正するために必要な一致する会話が足りませんでした。",
-  "Harbor couldn't find a reliable timing correction for this subtitle.":
-    "Harborはこの字幕の信頼できるタイミング補正を見つけられませんでした。",
+  "Lart couldn't find a reliable timing correction for this subtitle.":
+    "Lartはこの字幕の信頼できるタイミング補正を見つけられませんでした。",
   "Looks right": "合っています",
   "Still off": "まだずれています",
   "This subtitle looks like a different version of the video.":
@@ -108,12 +108,12 @@ const appFill: Record<string, string> = {
   "Copy magnet link": "magnetリンクをコピー",
   "Download this subtitle": "この字幕をダウンロード",
   "Open {title}": "{title}を開く",
-  "The ship is sailing away. Thanks for watching with Harbor, it's time to listen to your grown-ups.":
-    "船はまもなく出航します。Harborでご視聴いただきありがとうございました。そろそろ大人の言うことを聞く時間です。",
-  "Use your Harbor color": "Harborカラーを使う",
+  "The ship is sailing away. Thanks for watching with Lart, it's time to listen to your grown-ups.":
+    "船はまもなく出航します。Lartでご視聴いただきありがとうございました。そろそろ大人の言うことを聞く時間です。",
+  "Use your Lart color": "Lartカラーを使う",
   "{n} in your library": "ライブラリ内: {n}件",
-  "These avatars are Harbor originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
-    "これらのアバターはHarborオリジナルです。インポートしたパックはこのデバイスにのみ保存されます。収録内容はご自身で選び、そのコンテンツについて責任を負うものとします。",
+  "These avatars are Lart originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
+    "これらのアバターはLartオリジナルです。インポートしたパックはこのデバイスにのみ保存されます。収録内容はご自身で選び、そのコンテンツについて責任を負うものとします。",
   "Import images": "画像をインポート",
   "Pick one or many images. They collect in an Uploads set in your library. PNG, JPG, WebP, and GIF all work.":
     "1枚または複数の画像を選択してください。ライブラリの「アップロード」セットに追加されます。PNG、JPG、WebP、GIFに対応しています。",
@@ -124,8 +124,8 @@ const appFill: Record<string, string> = {
   "Avatars display as squares, so square images fill the tile cleanly. Others are center-cropped.":
     "アバターは正方形で表示されるため、正方形の画像ならタイル全体にきれいに収まります。それ以外は中央でトリミングされます。",
   "You own the content": "コンテンツの所有者はあなたです",
-  "Nothing is uploaded and nothing ships with Harbor. Everything stays on this device and you are responsible for the images you add.":
-    "画像がアップロードされたり、Harborに同梱されたりすることはありません。すべてこのデバイスに保存され、追加した画像についてはご自身が責任を負うものとします。",
+  "Nothing is uploaded and nothing ships with Lart. Everything stays on this device and you are responsible for the images you add.":
+    "画像がアップロードされたり、Lartに同梱されたりすることはありません。すべてこのデバイスに保存され、追加した画像についてはご自身が責任を負うものとします。",
   "About avatar packs": "アバターパックについて",
   "Bring your own avatars into the library.": "自分のアバターをライブラリに追加できます。",
   "Preparing your images": "画像を準備中",
@@ -167,8 +167,8 @@ const appFill: Record<string, string> = {
   "Remind me about": "リマインド対象",
   Tone: "通知音",
   "Set reminder": "リマインダーを設定",
-  "Harbor checks a few times a day while it's open and lets you know here.":
-    "Harborを開いている間、1日に数回確認し、こちらでお知らせします。",
+  "Lart checks a few times a day while it's open and lets you know here.":
+    "Lartを開いている間、1日に数回確認し、こちらでお知らせします。",
   "Reminder on": "リマインダー: オン",
   "Remind me": "リマインドする",
   "Edit reminder": "リマインダーを編集",
@@ -203,8 +203,8 @@ const appFill: Record<string, string> = {
     "リストは{max}件までです。空きを作るには1件削除してください。",
   "Updated {when}": "{when}に更新",
   "Pick a few you love": "お気に入りをいくつか選択",
-  "Choose up to 5 movies or shows you already like. Harbor uses them to tune your featured picks and recommendations. Totally optional.":
-    "好きな映画や番組を最大5作品選んでください。Harborが注目作品やおすすめを好みに合わせて調整します。選択は任意です。",
+  "Choose up to 5 movies or shows you already like. Lart uses them to tune your featured picks and recommendations. Totally optional.":
+    "好きな映画や番組を最大5作品選んでください。Lartが注目作品やおすすめを好みに合わせて調整します。選択は任意です。",
   "Remove from Home": "ホームから削除",
   "Add to Home Screen": "ホーム画面に追加",
   "Some copies of new releases have ads spliced into the video itself. This is experimental: the community marks where those ads are so others can skip them.":
@@ -212,7 +212,7 @@ const appFill: Record<string, string> = {
   "Your report is sent for review before it ever skips anything for anyone. Nothing about the video is uploaded, just the timestamps you mark. It is off by default and you can turn it off anytime in Settings.":
     "報告内容は審査され、承認されるまでほかのユーザーの再生でスキップされることはありません。動画自体はアップロードされず、送信されるのはマークしたタイムスタンプだけです。この機能は初期設定ではオフで、設定からいつでも無効にできます。",
   "Open Voyages": "航海を開く",
-  "Harbor Voyages": "Harbor Voyages",
+  "Lart Voyages": "Lart Voyages",
   "Set a course": "進路を決める",
   "Pick up where you left off.": "続きから再開しましょう。",
   "A short run of films you'll actually finish. You pick every stop.":
@@ -409,7 +409,7 @@ const appFill: Record<string, string> = {
   "View my profile": "自分のプロフィールを表示",
   "Manage profiles": "プロフィールを管理",
   Reload: "再読み込み",
-  "Quit Harbor": "Harborを終了",
+  "Quit Lart": "Lartを終了",
   View: "表示",
   "Toggle Fullscreen": "フルスクリーンを切り替え",
   "Zoom In": "拡大",
@@ -504,8 +504,8 @@ const appFill: Record<string, string> = {
   "Schedule & options": "配信予定とオプション",
   "Nothing found here": "ここには何も見つかりませんでした",
   "That does not look like a repository URL": "リポジトリのURLではないようです",
-  "This server is too old to add repos from Harbor":
-    "このサーバーは古すぎるため、Harborからリポジトリを追加できません",
+  "This server is too old to add repos from Lart":
+    "このサーバーは古すぎるため、Lartからリポジトリを追加できません",
   "The server could not load that repository": "サーバーでこのリポジトリを読み込めませんでした",
   "Extension repositories": "拡張機能リポジトリ",
   "Action failed": "操作に失敗しました",
@@ -531,8 +531,8 @@ const appFill: Record<string, string> = {
   "Add server": "サーバーを追加",
   authenticated: "認証済み",
   "Connect a Suwayomi server": "Suwayomiサーバーに接続",
-  "Point Harbor at your self-hosted library to browse and install sources":
-    "セルフホストしたライブラリをHarborに接続して、ソースを閲覧、インストールできます",
+  "Point Lart at your self-hosted library to browse and install sources":
+    "セルフホストしたライブラリをLartに接続して、ソースを閲覧、インストールできます",
   Servers: "サーバー",
   "{n} / {max} lists": "{n} / {max}件のリスト",
   "Create your first list": "最初のリストを作成",
@@ -549,8 +549,8 @@ const appFill: Record<string, string> = {
   "Back to lists": "リストに戻る",
   "{n} / {max} items": "{n} / {max}件",
   "Your folders": "フォルダー",
-  "Folders Harbor imported your movies and shows from. Rescan to pick up new files.":
-    "Harborが映画や番組をインポートしたフォルダーです。新しいファイルを取り込むには再スキャンしてください。",
+  "Folders Lart imported your movies and shows from. Rescan to pick up new files.":
+    "Lartが映画や番組をインポートしたフォルダーです。新しいファイルを取り込むには再スキャンしてください。",
   "1 file": "1ファイル",
   "{n} files": "{n}ファイル",
   "Remove folder": "フォルダーを削除",
@@ -568,9 +568,9 @@ const appFill: Record<string, string> = {
   "Season {n} has started": "シーズン{n}が始まりました",
   "S{s} E{e} is out now": "S{s} E{e}が配信されました",
   "{n} new episodes are out": "新しいエピソードが{n}話配信されました",
-  "Harbor account": "Harborアカウント",
-  "Your handle across Harbor, and your verified status.":
-    "Harborで使用するユーザー名と認証ステータスです。",
+  "Lart account": "Lartアカウント",
+  "Your handle across Lart, and your verified status.":
+    "Lartで使用するユーザー名と認証ステータスです。",
   Titles: "作品",
   "No titles found in this collection.": "このコレクションに作品はありません。",
   ID: "ID",
@@ -579,8 +579,8 @@ const appFill: Record<string, string> = {
   "Two columns": "2列",
   "Stremio didn't confirm the move. Your collection may be unchanged. Reload to see the current state.":
     "Stremioで移動を確認できませんでした。コレクションが変更されていない可能性があります。再読み込みして現在の状態を確認してください。",
-  "Moved, but Harbor couldn't confirm the result. Reload to see the current state.":
-    "移動しましたが、Harborで結果を確認できませんでした。再読み込みして現在の状態を確認してください。",
+  "Moved, but Lart couldn't confirm the result. Reload to see the current state.":
+    "移動しましたが、Lartで結果を確認できませんでした。再読み込みして現在の状態を確認してください。",
   "Everything here is already in your account.": "ここにあるものはすべてアカウントに追加済みです。",
   "Moved 1 addon to your Stremio account. It now syncs everywhere you sign in.":
     "1個のアドオンをStremioアカウントに移動しました。ログインしているすべての端末で同期されます。",
@@ -603,24 +603,24 @@ const appFill: Record<string, string> = {
   "Install an extension above to get sources":
     "ソースを取得するには、上の拡張機能をインストールしてください",
   "Add a manga source": "マンガソースを追加",
-  "Harbor does not host any manga or any sources. Connect a self-hosted server you run, install a source plugin from a repository you trust, or open a folder you already have.":
-    "Harborはマンガやソースをホストしていません。ご自身で運用するサーバーに接続するか、信頼できるリポジトリからソースプラグインをインストールするか、お持ちのフォルダを開いてください。",
+  "Lart does not host any manga or any sources. Connect a self-hosted server you run, install a source plugin from a repository you trust, or open a folder you already have.":
+    "Lartはマンガやソースをホストしていません。ご自身で運用するサーバーに接続するか、信頼できるリポジトリからソースプラグインをインストールするか、お持ちのフォルダを開いてください。",
   "Set up a source": "ソースを設定",
   "Browse manga": "マンガを見る",
-  "Read manga in Harbor": "Harborでマンガを読む",
-  "Harbor does not host any manga. Add a source plugin from a repository you trust, connect your own server, or open a local folder. You can turn this off anytime in Settings.":
-    "Harborはマンガをホストしていません。信頼できるリポジトリからソースプラグインを追加するか、ご自身のサーバーに接続するか、ローカルフォルダを開いてください。設定でいつでも無効にできます。",
+  "Read manga in Lart": "Lartでマンガを読む",
+  "Lart does not host any manga. Add a source plugin from a repository you trust, connect your own server, or open a local folder. You can turn this off anytime in Settings.":
+    "Lartはマンガをホストしていません。信頼できるリポジトリからソースプラグインを追加するか、ご自身のサーバーに接続するか、ローカルフォルダを開いてください。設定でいつでも無効にできます。",
   "Enable manga sources": "マンガソースを有効にする",
-  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Harbor problem: pick another source, or give it a minute to finish caching and try again.":
-    "「キャッシュ済み」とは、そのファイルがすでにデブリッドに保存され、すぐに再生できるとアドオンが判断しているという意味です。ただし、この表示が常に正しいとは限らず、ファイルがまだ実際には保存されていない場合があります。その場合、ソースが再生されなかったり、破損した短い映像だけが再生されたりします。Harborの問題ではありません。別のソースを選ぶか、キャッシュが完了するまで1分ほど待ってからもう一度お試しください。",
+  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Lart problem: pick another source, or give it a minute to finish caching and try again.":
+    "「キャッシュ済み」とは、そのファイルがすでにデブリッドに保存され、すぐに再生できるとアドオンが判断しているという意味です。ただし、この表示が常に正しいとは限らず、ファイルがまだ実際には保存されていない場合があります。その場合、ソースが再生されなかったり、破損した短い映像だけが再生されたりします。Lartの問題ではありません。別のソースを選ぶか、キャッシュが完了するまで1分ほど待ってからもう一度お試しください。",
   "On your disk": "ディスク上",
   "Choose subtitles": "字幕を選択",
   "No subtitles": "字幕なし",
   "Couldn't load subtitles. You can start anyway and add one later in the player.":
     "字幕を読み込めませんでした。このまま再生を開始し、後でプレーヤーから追加できます。",
-  "No subtitles found. Start anyway, Harbor keeps looking while you watch.":
-    "字幕が見つかりませんでした。このまま再生を開始しても、Harborは視聴中に検索を続けます。",
-  "Skip, let Harbor choose": "スキップしてHarborに任せる",
+  "No subtitles found. Start anyway, Lart keeps looking while you watch.":
+    "字幕が見つかりませんでした。このまま再生を開始しても、Lartは視聴中に検索を続けます。",
+  "Skip, let Lart choose": "スキップしてLartに任せる",
   "Start playback": "再生開始",
   "Best match": "最も一致",
   "Finding subtitles…": "字幕を探しています…",
@@ -661,10 +661,10 @@ const appFill: Record<string, string> = {
   Horizontal: "横向き",
   "Chapter finished": "章を読み終えました",
   "Hidden sections": "非表示のセクション",
-  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Harbor can't import them.":
-    "これはMangayomiリポジトリですが、ソースがDartを使用しているか、マンガ用ではないため、Harborにはインポートできません。",
-  "This is a Mangayomi repo. Harbor runs its JavaScript sources natively. Import them to add these sources to your manga library.":
-    "これはMangayomiリポジトリです。HarborはJavaScriptソースをネイティブで実行します。インポートすると、これらのソースをマンガライブラリに追加できます。",
+  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Lart can't import them.":
+    "これはMangayomiリポジトリですが、ソースがDartを使用しているか、マンガ用ではないため、Lartにはインポートできません。",
+  "This is a Mangayomi repo. Lart runs its JavaScript sources natively. Import them to add these sources to your manga library.":
+    "これはMangayomiリポジトリです。LartはJavaScriptソースをネイティブで実行します。インポートすると、これらのソースをマンガライブラリに追加できます。",
   "Imported {n} sources, {f} could not load":
     "{n}件のソースをインポートしました。{f}件は読み込めませんでした",
   "Imported {n} sources": "{n}件のソースをインポートしました",
@@ -672,14 +672,14 @@ const appFill: Record<string, string> = {
   "Importing {done} of {total}": "{total}件中{done}件をインポート中",
   "Import {n} JavaScript sources": "{n}件のJavaScriptソースをインポート",
   "Import JavaScript sources": "JavaScriptソースをインポート",
-  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Harbor can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "これはTachiyomi / Mihonリポジトリです。Android（APK）用の拡張機能のため、Harborでは直接実行できません。これらのソースをデスクトップで使用するには、Suwayomiサーバーを起動し、「サーバー」セクションからHarborに接続してください。",
-  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "これはMangayomiリポジトリです。ネイティブインポートにはまだ対応していません。現時点で最大規模のカタログを利用するには、Suwayomiサーバーを起動し、「サーバー」セクションからHarborに接続してください。",
-  "This is a Paperback (iOS) repo, which Harbor can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
-    "これはPaperback（iOS）リポジトリのため、Harborでは使用できません。デスクトップ用ソースを利用するには、「サーバー」セクションからSuwayomiサーバーに接続してください。",
-  "This doesn't look like a Harbor plugin repo. Harbor expects a JSON file shaped { name, plugins: [ ... ] }.":
-    "Harborプラグインのリポジトリではないようです。Harborでは、{ name, plugins: [ ... ] } 形式のJSONファイルが必要です。",
+  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Lart can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "これはTachiyomi / Mihonリポジトリです。Android（APK）用の拡張機能のため、Lartでは直接実行できません。これらのソースをデスクトップで使用するには、Suwayomiサーバーを起動し、「サーバー」セクションからLartに接続してください。",
+  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "これはMangayomiリポジトリです。ネイティブインポートにはまだ対応していません。現時点で最大規模のカタログを利用するには、Suwayomiサーバーを起動し、「サーバー」セクションからLartに接続してください。",
+  "This is a Paperback (iOS) repo, which Lart can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
+    "これはPaperback（iOS）リポジトリのため、Lartでは使用できません。デスクトップ用ソースを利用するには、「サーバー」セクションからSuwayomiサーバーに接続してください。",
+  "This doesn't look like a Lart plugin repo. Lart expects a JSON file shaped { name, plugins: [ ... ] }.":
+    "Lartプラグインのリポジトリではないようです。Lartでは、{ name, plugins: [ ... ] } 形式のJSONファイルが必要です。",
   "Tap again to remove all {n} extensions":
     "もう一度タップすると、{n}件の拡張機能をすべて削除します",
   "Remove all extensions ({n})": "すべての拡張機能を削除（{n}）",
@@ -771,22 +771,22 @@ const appFill: Record<string, string> = {
     "一覧にない新しい字幕は見つかりませんでした。",
   "{time} left": "残り{time}",
   "Loading your library…": "ライブラリを読み込み中…",
-  "Keep controlling Harbor in the background": "バックグラウンドでもHarborを操作",
-  "Off by default, so your controller only drives Harbor while it is the focused window. Leave it off if you play games with the same controller.":
-    "初期設定ではオフです。コントローラーでHarborを操作できるのは、Harborのウィンドウが選択されているときだけです。同じコントローラーでゲームをする場合は、オフのままにしてください。",
+  "Keep controlling Lart in the background": "バックグラウンドでもLartを操作",
+  "Off by default, so your controller only drives Lart while it is the focused window. Leave it off if you play games with the same controller.":
+    "初期設定ではオフです。コントローラーでLartを操作できるのは、Lartのウィンドウが選択されているときだけです。同じコントローラーでゲームをする場合は、オフのままにしてください。",
   "Use Cinemeta for title metadata": "タイトルのメタデータにCinemetaを使用",
   "Turn this off to take Cinemeta out entirely and use only your own metadata addons, such as AIOMetadata or AIOStreams. Cinemeta can go stale and show already released episodes as TBA. Leave it on unless you have a metadata addon installed, or titles will have no details.":
     "オフにするとCinemetaを完全に無効にし、AIOMetadataやAIOStreamsなど、ご自身のメタデータアドオンのみを使用します。Cinemetaの情報は古くなり、配信済みのエピソードがTBAと表示されることがあります。メタデータアドオンをインストールしていない場合はオンのままにしてください。オフにするとタイトルの詳細が表示されません。",
-  "This one also replaces Harbor's bundled players and tools, so it installs through Harbor Setup. Harbor closes, the installer finishes, then Harbor reopens.":
-    "このアップデートではHarbor内蔵のプレイヤーとツールも置き換えるため、Harbor Setupからインストールします。Harborが終了し、インストール完了後に再起動します。",
-  "This one installs through Harbor Setup, but the update manifest carries no signature for it. Harbor will not run an installer it cannot verify. Download it and run it yourself.":
-    "このアップデートはHarbor Setupからインストールされますが、アップデートマニフェストに署名がありません。Harborは検証できないインストーラーを実行しません。ダウンロードしてご自身で実行してください。",
+  "This one also replaces Lart's bundled players and tools, so it installs through Lart Setup. Lart closes, the installer finishes, then Lart reopens.":
+    "このアップデートではLart内蔵のプレイヤーとツールも置き換えるため、Lart Setupからインストールします。Lartが終了し、インストール完了後に再起動します。",
+  "This one installs through Lart Setup, but the update manifest carries no signature for it. Lart will not run an installer it cannot verify. Download it and run it yourself.":
+    "このアップデートはLart Setupからインストールされますが、アップデートマニフェストに署名がありません。Lartは検証できないインストーラーを実行しません。ダウンロードしてご自身で実行してください。",
   "Download installer": "インストーラーをダウンロード",
   "Install and reopen": "インストールして再度開く",
-  "Harbor is closing. Harbor Setup will finish and reopen it.":
-    "Harborを終了しています。Harbor Setupがインストールを完了し、Harborを再起動します。",
-  "Harbor Setup did not finish updating Harbor. Nothing was changed.":
-    "Harbor SetupでHarborのアップデートを完了できませんでした。変更はありません。",
+  "Lart is closing. Lart Setup will finish and reopen it.":
+    "Lartを終了しています。Lart Setupがインストールを完了し、Lartを再起動します。",
+  "Lart Setup did not finish updating Lart. Nothing was changed.":
+    "Lart SetupでLartのアップデートを完了できませんでした。変更はありません。",
   "Dismiss": "閉じる",
 };
 

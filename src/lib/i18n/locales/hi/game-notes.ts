@@ -27,6 +27,6 @@ export default {
   "games.notes.import": "JSON आयात करें",
   "games.notes.export": "बैकअप निर्यात करें",
   "games.notes.unsaved": "बिना सहेजे बदलाव",
-  "games.notes.local": "इस Harbor प्रोफ़ाइल में संग्रहीत",
+  "games.notes.local": "इस Lart प्रोफ़ाइल में संग्रहीत",
   "games.notes.importGuide": "मेरे नोट्स में कॉपी करें"
 };

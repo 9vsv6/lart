@@ -42,7 +42,7 @@ const chrome: Record<string, string> = {
   "chrome.parentalOn": "Controle parental ativado",
   "chrome.lockedRequiresPin": "{label} (bloqueado, requer PIN)",
   "chrome.lockedShort": "{label} · bloqueado",
-  "chrome.harborHome": "Início do Harbor",
+  "chrome.harborHome": "Início do Lart",
   "chrome.sectionLibrary": "Biblioteca",
   "profile.whoWatching": "Quem está assistindo?",
   "profile.editThis": "Editar este perfil",
@@ -53,7 +53,7 @@ const chrome: Record<string, string> = {
   "profile.primary": "Principal",
   "profile.signedIn": "Conectado ao Stremio",
   "profile.fallback": "Perfil",
-  "welcome.title": "Bem-vindo ao Harbor",
+  "welcome.title": "Bem-vindo ao Lart",
   "welcome.subtitle":
     "A interface agora está em árabe. Você pode mudar de volta a qualquer momento nas Configurações.",
   "welcome.dismiss": "Começar",

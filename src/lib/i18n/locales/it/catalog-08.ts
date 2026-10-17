@@ -10,8 +10,8 @@ const catalog08: Record<string, string> = {
     "Salta «Chi sta guardando?» e avvia sempre con questo profilo. I profili protetti da PIN non possono essere predefiniti.",
   "Skip ad": "Salta l'annuncio",
   "Skip for now": "Salta per ora",
-  "Skip if you'd rather just use Cinemeta. Harbor still works, you'll just see fewer rails.":
-    "Salta se preferisci usare solo Cinemeta. Harbor continuerà a funzionare, ma vedrai meno sezioni.",
+  "Skip if you'd rather just use Cinemeta. Lart still works, you'll just see fewer rails.":
+    "Salta se preferisci usare solo Cinemeta. Lart continuerà a funzionare, ma vedrai meno sezioni.",
   "Skip injected ad": "Salta l'annuncio inserito",
   "Skip injected ad?": "Saltare l'annuncio inserito?",
   "Skip injected ads automatically": "Salta automaticamente gli annunci inseriti",
@@ -19,18 +19,18 @@ const catalog08: Record<string, string> = {
   "Skip intros & credits": "Salta sigle e titoli di coda",
   "Skip intros and credits": "Salta sigle e titoli di coda",
   "Skip setup": "Salta la configurazione",
-  "Skip the 'stream over peer-to-peer?' prompt and start uncached torrents immediately. Harbor remembers your choice after the first confirmation anyway.":
-    "Salta la richiesta «Riprodurre in streaming tramite peer-to-peer?» e avvia subito i torrent non memorizzati nella cache. Harbor ricorda comunque la tua scelta dopo la prima conferma.",
+  "Skip the 'stream over peer-to-peer?' prompt and start uncached torrents immediately. Lart remembers your choice after the first confirmation anyway.":
+    "Salta la richiesta «Riprodurre in streaming tramite peer-to-peer?» e avvia subito i torrent non memorizzati nella cache. Lart ricorda comunque la tua scelta dopo la prima conferma.",
   "Skip the launch": "Salta l'avvio",
   "Skip these tracks": "Salta queste tracce",
-  "Skip this and Harbor runs on Cinemeta. You just see fewer rows.":
-    "Salta questo passaggio e Harbor userà Cinemeta. Vedrai solo meno righe.",
-  "Skip this and Harbor still works. Your library just stays local.":
-    "Salta questo passaggio e Harbor continuerà a funzionare. La tua Libreria resterà solo in locale.",
+  "Skip this and Lart runs on Cinemeta. You just see fewer rows.":
+    "Salta questo passaggio e Lart userà Cinemeta. Vedrai solo meno righe.",
+  "Skip this and Lart still works. Your library just stays local.":
+    "Salta questo passaggio e Lart continuerà a funzionare. La tua Libreria resterà solo in locale.",
   "Skip to the next episode if available.": "Passa all'Episodio successivo, se disponibile.",
   "Skip to the previous episode if available.": "Passa all'Episodio precedente, se disponibile.",
   "Skip, I can do this later": "Salta, posso farlo più tardi",
-  "Skip, let Harbor choose": "Salta, lascia scegliere a Harbor",
+  "Skip, let Lart choose": "Salta, lascia scegliere a Lart",
   "Skipped, not rated or not supported": "Saltato, non valutato o non supportato",
   "Sleep at end": "Sospensione alla fine",
   "Sleep at end of episode": "Sospensione alla fine dell'Episodio",
@@ -67,8 +67,8 @@ const catalog08: Record<string, string> = {
     "Risincronizzazione intelligente con riconoscimento vocale",
   "Smooth motion": "Movimento fluido",
   "Smooth motion (interpolation) & SVP": "Movimento fluido (interpolazione) e SVP",
-  "Smooth motion runs on the bundled mpv engine in the Harbor desktop app. It has no effect in the browser.":
-    "Il movimento fluido usa il motore mpv incluso nell'app desktop Harbor. Non ha effetto nel browser.",
+  "Smooth motion runs on the bundled mpv engine in the Lart desktop app. It has no effect in the browser.":
+    "Il movimento fluido usa il motore mpv incluso nell'app desktop Lart. Non ha effetto nel browser.",
   "Smooth on weak PCs": "Fluido sui PC meno potenti",
   "Smooth scrolling": "Scorrimento fluido",
   "Smoothing off": "Uniformità disattivata",
@@ -102,8 +102,8 @@ const catalog08: Record<string, string> = {
   "Something unexpected went wrong. Nothing may have been written. Retry to re-check.":
     "Si è verificato un errore imprevisto. È possibile che non sia stato scritto nulla. Riprova per verificare.",
   "Something went wrong on the way there.": "Qualcosa è andato storto durante il percorso.",
-  "Something went wrong reaching Harbor. Check your connection and try again.":
-    "Si è verificato un errore nel contattare Harbor. Controlla la connessione e riprova.",
+  "Something went wrong reaching Lart. Check your connection and try again.":
+    "Si è verificato un errore nel contattare Lart. Controlla la connessione e riprova.",
   "Something went wrong reaching the ranking feed.":
     "Si è verificato un errore nel recuperare il feed della classifica.",
   "Something went wrong.": "Qualcosa è andato storto.",
@@ -141,8 +141,8 @@ const catalog08: Record<string, string> = {
     "Codice sorgente: {code}. Circa 200 righe di JavaScript, senza dipendenze. Leggilo prima della distribuzione se vuoi sapere cosa viene eseguito.",
   Sources: "Fonti",
   "Sources & library": "Fonti e libreria",
-  "Sources Harbor flagged as broken. Clear to give them another chance.":
-    "Fonti che Harbor ha contrassegnato come non funzionanti. Cancella l'elenco per dare loro un'altra possibilità.",
+  "Sources Lart flagged as broken. Clear to give them another chance.":
+    "Fonti che Lart ha contrassegnato come non funzionanti. Cancella l'elenco per dare loro un'altra possibilità.",
   "Sources are not cached for this title. Open the picker page to refresh.":
     "Le fonti non sono memorizzate nella cache per questo titolo. Apri la pagina di selezione per aggiornarle.",
   "Sources by addon": "Fonti per Add-on",
@@ -224,8 +224,8 @@ const catalog08: Record<string, string> = {
   "Start here. The ones almost everyone has.": "Inizia da qui. Quelli che hanno quasi tutti.",
   "Start import": "Avvia importazione",
   "Start of manga": "Inizio del manga",
-  "Start or stop recording a GIF of the video (no subtitles). Saves to Pictures/Harbor.":
-    "Avvia o interrompi la registrazione di una GIF del video, senza sottotitoli. Viene salvata in Immagini/Harbor.",
+  "Start or stop recording a GIF of the video (no subtitles). Saves to Pictures/Lart.":
+    "Avvia o interrompi la registrazione di una GIF del video, senza sottotitoli. Viene salvata in Immagini/Lart.",
   "Start over": "Ricomincia",
   "Start playback": "Avvia riproduzione",
   "Start recording": "Avvia registrazione",
@@ -301,8 +301,8 @@ const catalog08: Record<string, string> = {
   "Stop drawing": "Smetti di disegnare",
   "Stop feeding the hero carousel (back to automatic)":
     "Non usare più questo elemento nel carosello principale (torna alla modalità automatica)",
-  "Stop playback when you minimize Harbor or send it to the tray.":
-    "Interrompi la riproduzione quando riduci a icona Harbor o lo sposti nell'area di notifica.",
+  "Stop playback when you minimize Lart or send it to the tray.":
+    "Interrompi la riproduzione quando riduci a icona Lart o lo sposti nell'area di notifica.",
   "Stop playback whenever another window takes focus.":
     "Interrompi la riproduzione quando un'altra finestra passa in primo piano.",
   "Stop recording": "Interrompi registrazione",
@@ -319,8 +319,8 @@ const catalog08: Record<string, string> = {
   "Stops the TV playing to an empty room all night.":
     "Impedisce alla TV di restare accesa tutta la notte in una stanza vuota.",
   Storage: "Archiviazione",
-  "Storage is full. Clear Harbor cache storage, then try saving again.":
-    "Spazio di archiviazione esaurito. Svuota la cache di Harbor, quindi riprova a salvare.",
+  "Storage is full. Clear Lart cache storage, then try saving again.":
+    "Spazio di archiviazione esaurito. Svuota la cache di Lart, quindi riprova a salvare.",
   "Storage location": "Posizione di archiviazione",
   "Storage overview": "Panoramica dell'archiviazione",
   "Store each title in its own folder with its EPUB or PDF":
@@ -355,10 +355,10 @@ const catalog08: Record<string, string> = {
     "La riproduzione dello stream dovrebbe iniziare entro pochi secondi.",
   "Stream switcher": "Selettore degli stream",
   "Stream this via peer-to-peer?": "Riprodurre questo contenuto in streaming tramite peer-to-peer?",
-  "Stream torrents straight from Harbor's built-in engine when you have no debrid set up, or a torrent isn't cached. This connects to peers over your own connection. Turn off to only ever play debrid and direct links.":
-    "Riproduci i torrent in streaming direttamente dal motore integrato di Harbor quando non hai configurato un servizio debrid o un torrent non è nella cache. La connessione ai peer avviene tramite la tua rete. Disattiva questa opzione per riprodurre solo link debrid e diretti.",
-  "Stream torrents through Harbor's own Rust peer-to-peer engine instead of the bundled Stremio Server. Falls back automatically if it can't connect. Status and a self-test live in the Local engine card below.":
-    "Riproduci i torrent in streaming tramite il motore peer-to-peer Rust di Harbor anziché tramite Stremio Server incluso. Se non riesce a connettersi, passa automaticamente all'alternativa. Lo stato e l'autotest si trovano nella scheda Motore locale qui sotto.",
+  "Stream torrents straight from Lart's built-in engine when you have no debrid set up, or a torrent isn't cached. This connects to peers over your own connection. Turn off to only ever play debrid and direct links.":
+    "Riproduci i torrent in streaming direttamente dal motore integrato di Lart quando non hai configurato un servizio debrid o un torrent non è nella cache. La connessione ai peer avviene tramite la tua rete. Disattiva questa opzione per riprodurre solo link debrid e diretti.",
+  "Stream torrents through Lart's own Rust peer-to-peer engine instead of the bundled Stremio Server. Falls back automatically if it can't connect. Status and a self-test live in the Local engine card below.":
+    "Riproduci i torrent in streaming tramite il motore peer-to-peer Rust di Lart anziché tramite Stremio Server incluso. Se non riesce a connettersi, passa automaticamente all'alternativa. Lo stato e l'autotest si trovano nella scheda Motore locale qui sotto.",
   "Streamer release rule": "Regola sulle release dello streamer",
   Streamers: "Streamer",
   Streaming: "Streaming",
@@ -377,12 +377,12 @@ const catalog08: Record<string, string> = {
     "Gli stream oltre {cap} Mbps avranno una priorità inferiore, anche se sono nella cache.",
   Stremio: "Stremio",
   "Stremio ID": "ID Stremio",
-  "Stremio Supporters get a special badge on their Harbor profile.":
-    "I sostenitori di Stremio ricevono un badge speciale sul loro profilo Harbor.",
+  "Stremio Supporters get a special badge on their Lart profile.":
+    "I sostenitori di Stremio ricevono un badge speciale sul loro profilo Lart.",
   "Stremio account": "Account Stremio",
   "Stremio account (email / sign out)": "Account Stremio (email / Esci)",
-  "Stremio addon, packaged into Harbor's catalog.":
-    "Add-on Stremio incluso nel catalogo di Harbor.",
+  "Stremio addon, packaged into Lart's catalog.":
+    "Add-on Stremio incluso nel catalogo di Lart.",
   "Stremio cards": "Schede Stremio",
   "Stremio did not accept that email and password.":
     "Stremio non ha accettato l'email e la password.",
@@ -505,7 +505,7 @@ const catalog08: Record<string, string> = {
   Supernatural: "Soprannaturale",
   "Support ElfHosted or Stremio, or give to any charity below, and the badge lands on your profile.":
     "Sostieni ElfHosted o Stremio, oppure fai una donazione a uno degli enti qui sotto: il badge apparirà sul tuo profilo.",
-  "Support Harbor": "Sostieni Harbor",
+  "Support Lart": "Sostieni Lart",
   "Support Stremio": "Sostieni Stremio",
   Supporting: "Supporto attivo",
   "Sure?": "Confermi?",
@@ -522,7 +522,7 @@ const catalog08: Record<string, string> = {
   "Swedish Cinema": "Cinema svedese",
   "Swedish Films": "Film svedesi",
   Switch: "Cambia",
-  "Switch Harbor to {language}?": "Passare Harbor a {language}?",
+  "Switch Lart to {language}?": "Passare Lart a {language}?",
   "Switch profile": "Cambia profilo",
   "Switch source": "Cambia fonte",
   "Switch stream": "Cambia stream",
@@ -546,8 +546,8 @@ const catalog08: Record<string, string> = {
   Sync: "Sincronizza",
   "Sync Offset": "Offset di sincronizzazione",
   "Sync across your devices": "Sincronizza su tutti i tuoi dispositivi",
-  "Sync and track movies, shows, and anime across everything you use. Harbor marks what you finish as watched on Simkl and keeps your plan-to-watch list in step. Free at simkl.com.":
-    "Sincronizza e monitora Film, Serie e anime su tutti i servizi che usi. Harbor segna su Simkl come visti i titoli che completi e mantiene aggiornata la Lista dei titoli da vedere. Gratis su simkl.com.",
+  "Sync and track movies, shows, and anime across everything you use. Lart marks what you finish as watched on Simkl and keeps your plan-to-watch list in step. Free at simkl.com.":
+    "Sincronizza e monitora Film, Serie e anime su tutti i servizi che usi. Lart segna su Simkl come visti i titoli che completi e mantiene aggiornata la Lista dei titoli da vedere. Gratis su simkl.com.",
   "Sync everywhere": "Sincronizza ovunque",
   "Sync from here": "Sincronizza da qui",
   "Sync indicator": "Indicatore di sincronizzazione",
@@ -640,8 +640,8 @@ const catalog08: Record<string, string> = {
   "TV navigation": "Navigazione TV",
   "TV navigation in player": "Navigazione TV nel player",
   "TV only": "Solo TV",
-  "TV only. Older sets crop the outer edge of the picture. Nudge Harbor inward until nothing is cut off.":
-    "Solo TV. I televisori meno recenti tagliano i bordi esterni dell'immagine. Sposta Harbor verso l'interno finché non viene tagliato più nulla.",
+  "TV only. Older sets crop the outer edge of the picture. Nudge Lart inward until nothing is cut off.":
+    "Solo TV. I televisori meno recenti tagliano i bordi esterni dell'immagine. Sposta Lart verso l'interno finché non viene tagliato più nulla.",
   "TV shows wide art cards with the logo on them. Poster is the classic grid.":
     "TV mostra schede orizzontali con il logo sull'immagine. Poster usa la griglia classica.",
   "TV uses wide rounded cards with the logo on the art, like a TV home screen. Poster is the classic grid.":
@@ -738,8 +738,8 @@ const catalog08: Record<string, string> = {
   "Thanks! This helps us know the betas are heading the right way.":
     "Grazie! Ci aiuta a capire se le versioni beta stanno andando nella direzione giusta.",
   "Thanks. Sent for review.": "Grazie. Inviato per la revisione.",
-  "That Harbor is on the network but is not answering, so it cannot be driven.":
-    "Harbor è in rete ma non risponde, quindi non può essere controllato.",
+  "That Lart is on the network but is not answering, so it cannot be driven.":
+    "Lart è in rete ma non risponde, quindi non può essere controllato.",
   "That SVG is {size} (max 512 KB). Optimize it at svgomg or save it smaller and try again.":
     "Questo SVG pesa {size} (massimo 512 KB). Ottimizzalo con svgomg oppure salvalo con dimensioni inferiori e riprova.",
   "That code has expired": "Il codice è scaduto",
@@ -778,8 +778,8 @@ const catalog08: Record<string, string> = {
   "That list is private or doesn't exist. Public lists only.":
     "La lista è privata o non esiste. Sono ammesse solo liste pubbliche.",
   "That looks like spam, try rephrasing": "Sembra spam, prova a riformulare",
-  'That looks like the v4 Read Access Token. Harbor needs the shorter "API Key (v3 auth)" from the same page.':
-    'Sembra il v4 Read Access Token. Harbor richiede la chiave più breve "API Key (v3 auth)" disponibile nella stessa pagina.',
+  'That looks like the v4 Read Access Token. Lart needs the shorter "API Key (v3 auth)" from the same page.':
+    'Sembra il v4 Read Access Token. Lart richiede la chiave più breve "API Key (v3 auth)" disponibile nella stessa pagina.',
   "That pack's file isn't valid JSON": "Il file del pacchetto non contiene JSON valido",
   "That page is full": "La pagina è piena",
   "That route wouldn't chart. Try a different direction.":
@@ -816,8 +816,8 @@ const catalog08: Record<string, string> = {
   "The CPU decodes everything. Most compatible, but it runs hot and can stutter on 4K. Use this only if the picture glitches with hardware decoding on.":
     "La CPU decodifica tutto. Offre la massima compatibilità, ma si scalda e può andare a scatti in 4K. Usala solo se l'immagine presenta problemi con la decodifica hardware attiva.",
   "The CW": "The CW",
-  "The Harbor relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Harbor server.":
-    "Il relay Harbor è un Cloudflare Worker che ospita le stanze WebSocket per Guarda insieme. Ogni utente ne esegue uno proprio. Non esiste un server Harbor centrale.",
+  "The Lart relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Lart server.":
+    "Il relay Lart è un Cloudflare Worker che ospita le stanze WebSocket per Guarda insieme. Ogni utente ne esegue uno proprio. Non esiste un server Lart centrale.",
   "The Home Front": "Il fronte interno",
   "The King": "Il re",
   "The Last Stand": "L'ultima resistenza",
@@ -880,8 +880,8 @@ const catalog08: Record<string, string> = {
   "The end time has to be after the start.":
     "L'ora di fine deve essere successiva a quella di inizio.",
   "The engine listens on a local port and joins the DHT to find peers. Active transfers are the streams it currently has open.": "Il motore resta in ascolto su una porta locale e si unisce alla DHT per trovare peer. I trasferimenti attivi sono gli stream che ha aperto al momento.",
-  "The escape hatch for power users. One mpv option per line as key=value, exactly like mpv.conf. These apply last, so they override every dial above. Anything Harbor can't read is skipped, so a typo won't break playback. Restart playback to apply.":
-    "L'opzione avanzata per utenti esperti. Un'opzione mpv per riga nel formato key=value, esattamente come in mpv.conf. Queste opzioni vengono applicate per ultime, quindi hanno la precedenza su tutte le impostazioni precedenti. Harbor ignora ciò che non riesce a leggere, perciò un errore di battitura non interromperà la riproduzione. Riavvia la riproduzione per applicarle.",
+  "The escape hatch for power users. One mpv option per line as key=value, exactly like mpv.conf. These apply last, so they override every dial above. Anything Lart can't read is skipped, so a typo won't break playback. Restart playback to apply.":
+    "L'opzione avanzata per utenti esperti. Un'opzione mpv per riga nel formato key=value, esattamente come in mpv.conf. Queste opzioni vengono applicate per ultime, quindi hanno la precedenza su tutte le impostazioni precedenti. Lart ignora ciò che non riesce a leggere, perciò un errore di battitura non interromperà la riproduzione. Riavvia la riproduzione per applicarle.",
   "The free tier is $0 for personal use. Just pick the first option, no payment needed.":
     "Il piano gratuito costa $0 per uso personale. Scegli la prima opzione, non è richiesto alcun pagamento.",
   "The full annual amount upfront": "L'intero importo annuo in anticipo",
@@ -921,8 +921,8 @@ const catalog08: Record<string, string> = {
   "The next three screens need typing. Scan this and your phone does it for you.":
     "Nelle prossime tre schermate dovrai digitare. Scansiona questo codice e fallo dal telefono.",
   "The one you are about to watch stays readable.": "Quello che stai per guardare resta leggibile.",
-  "The operating system draws native window controls, so Harbor cannot change their appearance.":
-    "I controlli nativi della finestra sono disegnati dal sistema operativo, quindi Harbor non può cambiarne l'aspetto.",
+  "The operating system draws native window controls, so Lart cannot change their appearance.":
+    "I controlli nativi della finestra sono disegnati dal sistema operativo, quindi Lart non può cambiarne l'aspetto.",
   "The order also decides which addon's rows win on your Home screen.":
     "L'ordine determina anche quali sezioni degli Add-on hanno la precedenza nella Home.",
   "The originals": "Gli originali",
@@ -936,8 +936,8 @@ const catalog08: Record<string, string> = {
     "Il server della playlist ha rifiutato la connessione.",
   "The playlist server is down or your network is blocking it. Try again in a few minutes.":
     "Il server della playlist non è disponibile o la rete lo sta bloccando. Riprova tra qualche minuto.",
-  "The pointer your right stick moves around Harbor. Pick a shape or use your own image.":
-    "Il puntatore che muovi in Harbor con la levetta destra. Scegli una forma o usa un'immagine personalizzata.",
+  "The pointer your right stick moves around Lart. Pick a shape or use your own image.":
+    "Il puntatore che muovi in Lart con la levetta destra. Scegli una forma o usa un'immagine personalizzata.",
   "The practical default.": "La scelta predefinita più pratica.",
   "The price drops by half": "Il prezzo si dimezza",
   "The primary manages profiles and can't be deleted. Transfer it here to delete the old one.":
@@ -946,16 +946,16 @@ const catalog08: Record<string, string> = {
     "Il provider ha rifiutato la richiesta. Il link è probabilmente scaduto, bloccato nella tua regione o ha esaurito la quota.",
   "The provider's server could not be reached. It may be offline, or you have no connection.":
     "Impossibile raggiungere il server del provider. Potrebbe essere offline oppure potresti non avere connessione.",
-  "The provider's server returned an error. Nothing on Harbor's side can fix this. Pick another source.":
-    "Il server del provider ha restituito un errore. Harbor non può risolvere il problema. Scegli un'altra fonte.",
+  "The provider's server returned an error. Nothing on Lart's side can fix this. Pick another source.":
+    "Il server del provider ha restituito un errore. Lart non può risolvere il problema. Scegli un'altra fonte.",
   "The quick brown fox jumps": "La veloce volpe marrone salta",
   "The quick brown fox jumps over the lazy dog":
     "La rapida volpe marrone salta sopra il cane pigro",
   "The ratings row on a title's detail page, next to runtime and genre.":
     "La riga delle valutazioni nella pagina dei dettagli di un titolo, accanto a durata e genere.",
   "The real footage": "Le riprese reali",
-  "The resolution Harbor downloads for each image when you export a title's metadata next to the file on disk.":
-    "La risoluzione usata da Harbor per scaricare ogni immagine quando esporti i metadati di un titolo accanto al file sul disco.",
+  "The resolution Lart downloads for each image when you export a title's metadata next to the file on disk.":
+    "La risoluzione usata da Lart per scaricare ogni immagine quando esporti i metadati di un titolo accanto al file sul disco.",
   "The same as gross": "Lo stesso importo della retribuzione lorda",
   "The same camera pan on each setting. The lit lane is what you get right now.":
     "La stessa panoramica con ogni impostazione. La corsia illuminata mostra il risultato attuale.",
@@ -981,8 +981,8 @@ const catalog08: Record<string, string> = {
     "Nella pagina Impostazioni c'è una lista a sinistra. Fai clic su API in fondo.",
   "The shape of the whole Home page. Everything below tunes the rows inside it.":
     "La struttura dell'intera pagina Home. Le opzioni qui sotto regolano le righe al suo interno.",
-  "The ship is sailing away. Thanks for watching with Harbor, it's time to listen to your grown-ups.":
-    "La nave sta salpando. Grazie per aver guardato con Harbor: ora è il momento di ascoltare i grandi.",
+  "The ship is sailing away. Thanks for watching with Lart, it's time to listen to your grown-ups.":
+    "La nave sta salpando. Grazie per aver guardato con Lart: ora è il momento di ascoltare i grandi.",
   "The signing bonus from year one": "Un premio alla firma previsto nel primo anno",
   "The source responded but the stream would not open. Try a different one.":
     "La fonte ha risposto, ma non è stato possibile aprire lo stream. Provane un'altra.",
@@ -994,8 +994,8 @@ const catalog08: Record<string, string> = {
   "The test calls": "Le chiamate di test",
   "The test calls {code} and confirms the worker is reachable and running a current version. A passing test means Watch Together rooms will connect.":
     "Il test chiama {code} e conferma che il worker sia raggiungibile e utilizzi una versione aggiornata. Se il test riesce, le stanze Guarda insieme potranno connettersi.",
-  "The timing checks disagreed, so Harbor left the subtitle unchanged.":
-    "I controlli di sincronizzazione non concordavano, quindi Harbor non ha modificato il sottotitolo.",
+  "The timing checks disagreed, so Lart left the subtitle unchanged.":
+    "I controlli di sincronizzazione non concordavano, quindi Lart non ha modificato il sottotitolo.",
   "The timing difference was too large to correct safely. Try another subtitle.":
     "La differenza di sincronizzazione era troppo grande per correggerla in sicurezza. Prova un altro sottotitolo.",
   "The title shown at the top of the player.":
@@ -1032,15 +1032,15 @@ const catalog08: Record<string, string> = {
     "Il sottotitolo non contiene abbastanza dialoghi leggibili per misurarne la sincronizzazione.",
   "There wasn't enough matching dialogue to make a safe correction.":
     "Non c'erano abbastanza dialoghi corrispondenti per effettuare una correzione sicura.",
-  "These avatars are Harbor originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
-    "Questi avatar sono originali Harbor. I pacchetti importati vengono archiviati solo su questo dispositivo: sei tu a sceglierne il contenuto e ne sei responsabile.",
+  "These avatars are Lart originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
+    "Questi avatar sono originali Lart. I pacchetti importati vengono archiviati solo su questo dispositivo: sei tu a sceglierne il contenuto e ne sei responsabile.",
   "These badges are drawn on posters as you browse. RPDB, in the keys above, is a separate option that bakes scores into the poster image itself.":
     "Questi badge vengono mostrati sulle locandine durante la navigazione. RPDB, configurabile con le chiavi qui sopra, è un'opzione separata che incorpora i punteggi direttamente nell'immagine della locandina.",
   "These cards run down your public profile. Set the order they appear in, and hide any you would rather keep to yourself.":
     "Queste schede compaiono in verticale sul tuo profilo pubblico. Impostane l'ordine e nascondi quelle che preferisci tenere private.",
   "These episodes are already downloading.": "Il download di questi episodi è già in corso.",
-  "These live in Harbor on this computer and never touch your account.":
-    "Questi dati restano in Harbor su questo computer e non vengono mai associati al tuo account.",
+  "These live in Lart on this computer and never touch your account.":
+    "Questi dati restano in Lart su questo computer e non vengono mai associati al tuo account.",
   "These need the television in front of you, either because they show a pairing code or because the credential should never leave the device.":
     "Queste operazioni richiedono di avere davanti la TV, perché mostrano un codice di abbinamento o perché le credenziali non devono mai lasciare il dispositivo.",
   "These rails activate once a TMDB key is set. You can come back to this anytime in Settings.":
@@ -1049,8 +1049,8 @@ const catalog08: Record<string, string> = {
     "Queste righe richiedono una chiave TMDB per mostrare contenuti.",
   "These settings belong to a profile, and this computer is not in one. Pick a profile and the TV will follow it.":
     "Queste impostazioni appartengono a un profilo, ma questo computer non è associato ad alcun profilo. Scegli un profilo e la TV lo seguirà.",
-  "These tune the bundled mpv engine, which runs in the Harbor desktop app. They have no effect in the browser.":
-    "Queste opzioni regolano il motore mpv incluso nell'app desktop Harbor. Non hanno alcun effetto nel browser.",
+  "These tune the bundled mpv engine, which runs in the Lart desktop app. They have no effect in the browser.":
+    "Queste opzioni regolano il motore mpv incluso nell'app desktop Lart. Non hanno alcun effetto nel browser.",
   "These two points are very close ({n}s apart). Pick one near the start and one near the end, or the timing can drift at the edges.":
     "Questi due punti sono molto vicini (distano {n}s). Scegline uno vicino all'inizio e uno vicino alla fine, altrimenti la sincronizzazione potrebbe slittare alle estremità.",
   "They said the harbour would be quiet tonight.":
@@ -1060,8 +1060,8 @@ const catalog08: Record<string, string> = {
   "Things you still do on the TV itself": "Operazioni da fare comunque sulla TV",
   "Thinner outline": "Contorno più sottile",
   "This Afternoon": "Questo pomeriggio",
-  "This Harbor takes commands from this computer. Forget it to take that back.":
-    "Questo Harbor riceve comandi da questo computer. Rimuovilo per revocare il controllo.",
+  "This Lart takes commands from this computer. Forget it to take that back.":
+    "Questo Lart riceve comandi da questo computer. Rimuovilo per revocare il controllo.",
   "This Morning": "Questa mattina",
   "This Xtream account is expired, banned, or disabled on the provider side. Renew or confirm with your provider.":
     "Questo account Xtream è scaduto, bloccato o disattivato dal provider. Rinnovalo o chiedi conferma al provider.",
@@ -1087,8 +1087,8 @@ const catalog08: Record<string, string> = {
   "This comment can't be posted.": "Impossibile pubblicare questo commento.",
   "This computer": "Questo computer",
   "This device": "Questo dispositivo",
-  "This doesn't look like a Harbor plugin repo. Harbor expects a JSON file shaped { name, plugins: [ ... ] }.":
-    "Questo non sembra un repository di plugin Harbor. Harbor richiede un file JSON con la struttura { name, plugins: [ ... ] }.",
+  "This doesn't look like a Lart plugin repo. Lart expects a JSON file shaped { name, plugins: [ ... ] }.":
+    "Questo non sembra un repository di plugin Lart. Lart richiede un file JSON con la struttura { name, plugins: [ ... ] }.",
   "This eBook could not be exported": "Impossibile esportare questo eBook",
   "This eBook is not connected to an installed source.":
     "Questo eBook non è collegato a una fonte installata.",
@@ -1109,18 +1109,18 @@ const catalog08: Record<string, string> = {
     "Questo gruppo non ha ancora aggiunto una descrizione.",
   "This group's feed could not be loaded. Try again in a moment.":
     "Impossibile caricare il feed del gruppo. Riprova tra poco.",
-  "This instance of Harbor is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
-    "Questa versione di Harbor è pensata per desktop. Le nostre app autonome per iOS e Android arriveranno presto, ciascuna con un'esperienza mobile su misura, progettata appositamente per la propria piattaforma nativa.",
-  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Harbor can't import them.":
-    "Questo è un repository Mangayomi, ma le sue fonti usano Dart o non sono fonti manga, quindi Harbor non può importarle.",
-  "This is a Mangayomi repo. Harbor runs its JavaScript sources natively. Import them to add these sources to your manga library.":
-    "Questo è un repository Mangayomi. Harbor esegue nativamente le sue fonti JavaScript. Importale per aggiungerle alla tua libreria manga.",
-  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "Questo è un repository Mangayomi. L'importazione nativa non è ancora supportata. Per accedere subito al catalogo più ampio, avvia un server Suwayomi e collegalo a Harbor dalla sezione Server.",
-  "This is a Paperback (iOS) repo, which Harbor can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
-    "Questo è un repository Paperback (iOS), che Harbor non può usare. Per le fonti desktop, collega un server Suwayomi dalla sezione Server.",
-  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Harbor can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "Questo è un repository Tachiyomi / Mihon. Si tratta di estensioni Android (APK), quindi Harbor non può eseguirle direttamente. Per usare queste fonti su desktop, avvia un server Suwayomi e collegalo a Harbor dalla sezione Server.",
+  "This instance of Lart is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
+    "Questa versione di Lart è pensata per desktop. Le nostre app autonome per iOS e Android arriveranno presto, ciascuna con un'esperienza mobile su misura, progettata appositamente per la propria piattaforma nativa.",
+  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Lart can't import them.":
+    "Questo è un repository Mangayomi, ma le sue fonti usano Dart o non sono fonti manga, quindi Lart non può importarle.",
+  "This is a Mangayomi repo. Lart runs its JavaScript sources natively. Import them to add these sources to your manga library.":
+    "Questo è un repository Mangayomi. Lart esegue nativamente le sue fonti JavaScript. Importale per aggiungerle alla tua libreria manga.",
+  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "Questo è un repository Mangayomi. L'importazione nativa non è ancora supportata. Per accedere subito al catalogo più ampio, avvia un server Suwayomi e collegalo a Lart dalla sezione Server.",
+  "This is a Paperback (iOS) repo, which Lart can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
+    "Questo è un repository Paperback (iOS), che Lart non può usare. Per le fonti desktop, collega un server Suwayomi dalla sezione Server.",
+  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Lart can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "Questo è un repository Tachiyomi / Mihon. Si tratta di estensioni Android (APK), quindi Lart non può eseguirle direttamente. Per usare queste fonti su desktop, avvia un server Suwayomi e collegalo a Lart dalla sezione Server.",
   "This is a metadata-based release estimate, not a measured timing score.":
     "Questa è una stima della data di uscita basata sui metadati, non un punteggio di sincronizzazione misurato.",
   "This is how a subtitle will look.": "Ecco come apparirà un sottotitolo.",
@@ -1146,13 +1146,13 @@ const catalog08: Record<string, string> = {
   "This member has hidden their showcase, activity and friends from public view.":
     "Questo membro ha nascosto al pubblico la propria vetrina, l'attività e gli amici.",
   "This month": "Questo mese",
-  "This one also replaces Harbor's bundled players and tools, so it installs through Harbor Setup. Harbor closes, the installer finishes, then Harbor reopens.":
-    "Questo aggiornamento sostituisce anche i lettori e gli strumenti inclusi in Harbor, quindi viene installato tramite Harbor Setup. Harbor si chiude, il programma di installazione termina e poi Harbor si riapre.",
-  "This one installs through Harbor Setup, but the update manifest carries no signature for it. Harbor will not run an installer it cannot verify. Download it and run it yourself.":
-    "Questo aggiornamento viene installato tramite Harbor Setup, ma il relativo manifesto non contiene una firma. Harbor non eseguirà un programma di installazione che non può verificare. Scaricalo ed eseguilo manualmente.",
+  "This one also replaces Lart's bundled players and tools, so it installs through Lart Setup. Lart closes, the installer finishes, then Lart reopens.":
+    "Questo aggiornamento sostituisce anche i lettori e gli strumenti inclusi in Lart, quindi viene installato tramite Lart Setup. Lart si chiude, il programma di installazione termina e poi Lart si riapre.",
+  "This one installs through Lart Setup, but the update manifest carries no signature for it. Lart will not run an installer it cannot verify. Download it and run it yourself.":
+    "Questo aggiornamento viene installato tramite Lart Setup, ma il relativo manifesto non contiene una firma. Lart non eseguirà un programma di installazione che non può verificare. Scaricalo ed eseguilo manualmente.",
   "This only takes a moment the first time.": "Solo la prima volta richiede qualche istante.",
-  "This opens Harbor to devices on your Wi-Fi. You can turn it off again in Settings.":
-    "Consente ai dispositivi sulla tua rete Wi-Fi di accedere a Harbor. Puoi disattivarlo di nuovo nelle Impostazioni.",
+  "This opens Lart to devices on your Wi-Fi. You can turn it off again in Settings.":
+    "Consente ai dispositivi sulla tua rete Wi-Fi di accedere a Lart. Puoi disattivarlo di nuovo nelle Impostazioni.",
   "This order drives your catalog rows and the default stream order. A stream priority set in Settings overrides it for streams.":
     "Questo ordine determina le righe del catalogo e l'ordine predefinito degli stream. Un'eventuale priorità degli stream configurata nelle Impostazioni ha la precedenza per gli stream.",
   "This order syncs to every Stremio app signed into this account.":
@@ -1169,8 +1169,8 @@ const catalog08: Record<string, string> = {
     "Questa playlist non contiene serie. Potrebbe includere solo canali in diretta oppure usare un accesso Xtream che rende disponibili le serie separatamente.",
   "This reads pages a browser can already load. It does not, and must not be made to, bypass a login, password, paywall, or any access control.":
     "Questa funzione legge pagine che un browser può già caricare. Non aggira, e non deve essere modificata per aggirare, accessi, password, paywall o altri controlli di accesso.",
-  "This replaces your current Harbor setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Harbor reloads when it finishes.":
-    "Questa operazione sostituisce la configurazione attuale di Harbor, inclusi tema, layout della Home, impostazioni, Add-on, profili e altro, con le {n} voci salvate nel file. L'accesso a Stremio resta invariato. Al termine, Harbor si ricarica.",
+  "This replaces your current Lart setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Lart reloads when it finishes.":
+    "Questa operazione sostituisce la configurazione attuale di Lart, inclusi tema, layout della Home, impostazioni, Add-on, profili e altro, con le {n} voci salvate nel file. L'accesso a Stremio resta invariato. Al termine, Lart si ricarica.",
   "This repository lists no eBook extensions.":
     "Questo repository non contiene estensioni per eBook.",
   "This repository lists no plugins.": "Questo repository non contiene plugin.",
@@ -1180,8 +1180,8 @@ const catalog08: Record<string, string> = {
   "This section depends on the addon": "Questa sezione dipende dall'Add-on",
   "This section relies on TMDB discovery features.":
     "Questa sezione usa le funzioni di scoperta di TMDB.",
-  "This server is too old to add repos from Harbor":
-    "Questo server è troppo vecchio per aggiungere repository da Harbor",
+  "This server is too old to add repos from Lart":
+    "Questo server è troppo vecchio per aggiungere repository da Lart",
   "This server lists no extensions": "Questo server non contiene estensioni",
   "This server needs a username and password": "Questo server richiede nome utente e password",
   "This server responded but is not supported": "Il server ha risposto, ma non è supportato",
@@ -1191,8 +1191,8 @@ const catalog08: Record<string, string> = {
     "Imposta la stessa lingua per interfaccia, metadati, sottotitoli e audio.",
   "This show": "Questa serie",
   "This show: {title}": "Questa serie: {title}",
-  "This site may not support Harbor's temporary viewer. Retry the original link or open it in your browser.":
-    "Questo sito potrebbe non supportare il visualizzatore temporaneo di Harbor. Riprova con il link originale o aprilo nel browser.",
+  "This site may not support Lart's temporary viewer. Retry the original link or open it in your browser.":
+    "Questo sito potrebbe non supportare il visualizzatore temporaneo di Lart. Riprova con il link originale o aprilo nel browser.",
   "This source": "Questa fonte",
   "This source did not provide any chapters.": "Questa fonte non ha fornito capitoli.",
   "This source did not respond": "Questa fonte non ha risposto",
@@ -1200,11 +1200,11 @@ const catalog08: Record<string, string> = {
   "This source is down": "Questa fonte non è disponibile",
   "This source is not a downloadable season package. Pick another package.":
     "Questa fonte non è un pacchetto Stagione scaricabile. Scegli un altro pacchetto.",
-  "This source is not cached. Harbor will stream it peer to peer, which shares data with other peers.":
-    "Questa fonte non è nella cache. Harbor la riprodurrà in P2P, condividendo dati con altri peer.",
+  "This source is not cached. Lart will stream it peer to peer, which shares data with other peers.":
+    "Questa fonte non è nella cache. Lart la riprodurrà in P2P, condividendo dati con altri peer.",
   "This source is slow. Try another.": "Questa fonte è lenta. Provane un'altra.",
-  "This source isn't cached on your debrid, so Harbor would pull it directly from peers. It can take a moment to start and may buffer on low-seed torrents.":
-    "Questa fonte non è nella cache del tuo servizio debrid, quindi Harbor la recupererebbe direttamente dai peer. L'avvio può richiedere qualche istante e i torrent con pochi seed potrebbero subire interruzioni per il buffering.",
+  "This source isn't cached on your debrid, so Lart would pull it directly from peers. It can take a moment to start and may buffer on low-seed torrents.":
+    "Questa fonte non è nella cache del tuo servizio debrid, quindi Lart la recupererebbe direttamente dai peer. L'avvio può richiedere qualche istante e i torrent con pochi seed potrebbero subire interruzioni per il buffering.",
   "This source rejected the stream": "Questa fonte ha rifiutato lo stream",
   "This source returned no chapters for this title.":
     "Questa fonte non ha restituito capitoli per questo titolo.",
@@ -1223,8 +1223,8 @@ const catalog08: Record<string, string> = {
   "This user hasn't featured any lists": "Questo utente non ha messo in evidenza alcuna lista",
   "This user hasn't written anything yet": "Questo utente non ha ancora scritto nulla",
   "This user keeps their friends private": "Questo utente mantiene privata la lista degli amici",
-  "This usually means antivirus removed the server file (stremio-server.exe). Add Harbor's install folder to your antivirus exclusions, then reinstall.":
-    "Di solito significa che l'antivirus ha rimosso il file del server (stremio-server.exe). Aggiungi la cartella di installazione di Harbor alle esclusioni dell'antivirus, quindi reinstalla.",
+  "This usually means antivirus removed the server file (stremio-server.exe). Add Lart's install folder to your antivirus exclusions, then reinstall.":
+    "Di solito significa che l'antivirus ha rimosso il file del server (stremio-server.exe). Aggiungi la cartella di installazione di Lart alle esclusioni dell'antivirus, quindi reinstalla.",
   "This week": "Questa settimana",
   "Thread body (optional)": "Testo della discussione (facoltativo)",
   "Thread title": "Titolo della discussione",
@@ -1271,8 +1271,8 @@ const catalog08: Record<string, string> = {
   "To get a Charity badge, forward your donation receipt or invoice to":
     "Per ottenere il badge Beneficenza, inoltra la ricevuta o la fattura della donazione a",
   "To run a public relay, post the": "Per gestire un relay pubblico, pubblica",
-  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Harbor users paste it into Settings, Harbor Relay, {kbd}.":
-    "Per gestire un relay pubblico, pubblica l'URL {code} su r/Stremio o negli spazi della tua community. Gli altri utenti di Harbor possono incollarlo in Impostazioni, Harbor Relay, {kbd}.",
+  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Lart users paste it into Settings, Lart Relay, {kbd}.":
+    "Per gestire un relay pubblico, pubblica l'URL {code} su r/Stremio o negli spazi della tua community. Gli altri utenti di Lart possono incollarlo in Impostazioni, Lart Relay, {kbd}.",
   "To the side": "Di lato",
   Today: "Oggi",
   "Today's openers": "Le aperture di oggi",

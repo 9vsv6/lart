@@ -35,7 +35,7 @@ export default {
   "games.valorant.empty": "इन फ़िल्टर से कोई नतीजा नहीं मिला।",
   "games.valorant.checked": "जाँच: {date}",
   "games.valorant.metaScope": "चुने गए पैच के लिए OP.GG का प्रतिस्पर्धी डेटा। चयन दर एजेंट के इस्तेमाल का अनुपात है। नतीजे स्रोत के नमूने को दर्शाते हैं, सभी खिलाड़ियों को नहीं।",
-  "games.valorant.referenceScope": "गेम चित्र और जानकारी Valorant-API से। अपडेट गेम के बाद आ सकते हैं। Harbor को Riot Games का समर्थन प्राप्त नहीं है।",
+  "games.valorant.referenceScope": "गेम चित्र और जानकारी Valorant-API से। अपडेट गेम के बाद आ सकते हैं। Lart को Riot Games का समर्थन प्राप्त नहीं है।",
   "games.valorant.samples": "{count} बार इस्तेमाल",
   "games.valorant.smallSample": "छोटा नमूना",
   "games.valorant.abilities": "क्षमताएँ",

@@ -77,7 +77,7 @@ export default {
   "games.league.metaScope": "OP.GG liefert diese Lane-Rangliste mit seiner Standardstichprobe. Patch, Region und Ranggruppe werden nicht angegeben. Siegraten werden aus gemeldeten Siegen und Spielen berechnet; Pickraten rundet die Quelle. Ranglisten und Builds nutzen getrennte Stichproben.",
   "games.league.buildNote": "Jeder Build hat eine eigene Stichprobe. Vollständige Builds bevorzugen Spiele, die lange genug für den Kauf dauerten; ihre Siegraten sind nicht die Gesamtsiegrate des Champions. Matchup-Stichproben können klein sein. Passe dich Team und Gegner an. Videos können aus älteren Patches stammen.",
   "games.league.patchDifference": "Build-Statistiken: {patch}; Item- und Fähigkeitsdaten: {assets}.",
-  "games.league.attribution": "Harbor is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
+  "games.league.attribution": "Lart is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
   "games.league.tierList": "Rangliste",
   "games.league.tierScope": "Solo/Duo-Rangliste · Smaragd+ · Weltweit",
   "games.league.patchFilter": "Patch wählen",

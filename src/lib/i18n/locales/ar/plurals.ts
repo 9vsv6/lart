@@ -1,12 +1,12 @@
 const plurals: Record<string, string> = {
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#few":
-    "إضافة {n} عنوان من قائمة مشاهدة Harbor إلى Trakt؟ يتخطّى Trakt أي عنوان موجود لديه بالفعل.",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#one":
-    "إضافة {n} عنوان من قائمة مشاهدة Harbor إلى Trakt؟ يتخطّى Trakt أي عنوان موجود لديه بالفعل.",
-  "Add {n} titles from your Trakt watchlist to Harbor?#few":
-    "إضافة {n} عنوان من قائمة مشاهدة Trakt إلى Harbor؟",
-  "Add {n} titles from your Trakt watchlist to Harbor?#one":
-    "إضافة {n} عنوان من قائمة مشاهدة Trakt إلى Harbor؟",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#few":
+    "إضافة {n} عنوان من قائمة مشاهدة Lart إلى Trakt؟ يتخطّى Trakt أي عنوان موجود لديه بالفعل.",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#one":
+    "إضافة {n} عنوان من قائمة مشاهدة Lart إلى Trakt؟ يتخطّى Trakt أي عنوان موجود لديه بالفعل.",
+  "Add {n} titles from your Trakt watchlist to Lart?#few":
+    "إضافة {n} عنوان من قائمة مشاهدة Trakt إلى Lart؟",
+  "Add {n} titles from your Trakt watchlist to Lart?#one":
+    "إضافة {n} عنوان من قائمة مشاهدة Trakt إلى Lart؟",
   "After {n} episodes#few": "بعد {n} حلقات",
   "After {n} episodes#one": "بعد {n} حلقات",
   "All {n} channels loaded#few": "تم تحميل جميع القنوات ({n})",
@@ -201,10 +201,10 @@ const plurals: Record<string, string> = {
   "{n} titles together#one": "{n} أعمال مشتركة",
   "{n} titles#few": "{n} عنوان",
   "{n} titles#one": "{n} عنوان",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#few":
-    "حُظر {n} طلب تعقّب في هذه الجلسة. ولا يرسل Harbor نفسه أي قياسات.",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#one":
-    "حُظر {n} طلب تعقّب في هذه الجلسة. ولا يرسل Harbor نفسه أي قياسات.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#few":
+    "حُظر {n} طلب تعقّب في هذه الجلسة. ولا يرسل Lart نفسه أي قياسات.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#one":
+    "حُظر {n} طلب تعقّب في هذه الجلسة. ولا يرسل Lart نفسه أي قياسات.",
   "{n} votes#few": "{n} صوت",
   "{n} votes#one": "{n} صوت",
   "{n} winner#few": "{n} فائز",

@@ -10,7 +10,7 @@ const catalogVZ: Record<string, string> = {
   "Venice Film Festival": "वेनिस फ़िल्म फ़ेस्टिवल",
   Venue: "स्थान",
   Verified: "सत्यापित",
-  "Verified Harbor Staff": "सत्यापित Harbor स्टाफ़",
+  "Verified Lart Staff": "सत्यापित Lart स्टाफ़",
   "Verified status": "सत्यापन स्थिति",
   Verify: "सत्यापित करें",
   "Verify & connect": "सत्यापित करें और कनेक्ट करें",
@@ -87,8 +87,8 @@ const catalogVZ: Record<string, string> = {
   "Wait before playing": "चलने से पहले इंतज़ार",
   "Wait for the upload to finish. The relay URL gets written to":
     "अपलोड पूरा होने तक प्रतीक्षा करें। रिले URL यहाँ लिखा जाता है",
-  "Wait for the upload to finish. The relay URL gets written to {code} in Harbor settings.":
-    "अपलोड पूरा होने तक इंतज़ार करें। रिले URL, Harbor की सेटिंग्स में {code} में सेव हो जाएगा।",
+  "Wait for the upload to finish. The relay URL gets written to {code} in Lart settings.":
+    "अपलोड पूरा होने तक इंतज़ार करें। रिले URL, Lart की सेटिंग्स में {code} में सेव हो जाएगा।",
   "Wait {seconds}s": "{seconds}s प्रतीक्षा करें",
   "Waiting for": "इसके लिए प्रतीक्षा जारी",
   "Waiting for Trakt…": "Trakt की प्रतीक्षा हो रही है…",
@@ -100,8 +100,8 @@ const catalogVZ: Record<string, string> = {
     "आपके TV से ज़रूरी जानकारी मिलने की प्रतीक्षा हो रही है। इसमें थोड़ा समय लगेगा।",
   "Waive any overtime claim": "ओवरटाइम के किसी भी दावे का त्याग करें",
   Walks: "सैर",
-  "Want a badge that moves? Drop in a GIF up to 8 MB. Harbor shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
-    "हिलने वाला बैज चाहिए? 8 MB तक की GIF डालें। Harbor इसे छोटा करके हल्के एनिमेटेड फ़ॉर्मैट में बदल देता है, ताकि यह साफ़ दिखे और तेज़ी से लोड हो। इसे छोटा और लूप में रखें।",
+  "Want a badge that moves? Drop in a GIF up to 8 MB. Lart shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
+    "हिलने वाला बैज चाहिए? 8 MB तक की GIF डालें। Lart इसे छोटा करके हल्के एनिमेटेड फ़ॉर्मैट में बदल देता है, ताकि यह साफ़ दिखे और तेज़ी से लोड हो। इसे छोटा और लूप में रखें।",
   "Want to change the ratio mid-playback? The live aspect button is hidden by default to keep the player tidy.":
     "प्लेबैक के बीच में आस्पेक्ट रेशियो बदलना चाहते हैं? प्लेयर को व्यवस्थित रखने के लिए लाइव आस्पेक्ट बटन डिफ़ॉल्ट रूप से छिपा रहता है।",
   "Want to fix it yourself?": "इसे खुद ठीक करना चाहते हैं?",
@@ -120,8 +120,8 @@ const catalogVZ: Record<string, string> = {
   "Watch Together needs a relay.": "साथ में देखने के लिए रिले चाहिए।",
   "Watch Together panel": "साथ में देखने का पैनल",
   "Watch Together relay": "साथ में देखने का रिले",
-  "Watch Together rooms are routed through Harbor's hosted relay.":
-    "साथ में देखें रूम Harbor के होस्ट किए गए रिले से होकर जाते हैं।",
+  "Watch Together rooms are routed through Lart's hosted relay.":
+    "साथ में देखें रूम Lart के होस्ट किए गए रिले से होकर जाते हैं।",
   "Watch Together rooms drop after 6 hours": "साथ में देखें रूम 6 घंटे बाद खत्म हो जाते हैं",
   "Watch again": "फिर से देखें",
   "Watch from the beginning": "शुरू से देखें",
@@ -143,8 +143,8 @@ const catalogVZ: Record<string, string> = {
   "Watched {ago}": "{ago} देखा",
   Watching: "देख रहे हैं",
   "Watching 1 stream at once": "एक साथ 1 स्ट्रीम देख रहे हैं",
-  "Watching for ad, analytics, and tracking requests. Harbor itself sends zero telemetry.":
-    "विज्ञापन, एनालिटिक्स और ट्रैकिंग अनुरोधों पर नज़र रखी जा रही है। Harbor खुद कोई टेलीमेट्री नहीं भेजता।",
+  "Watching for ad, analytics, and tracking requests. Lart itself sends zero telemetry.":
+    "विज्ञापन, एनालिटिक्स और ट्रैकिंग अनुरोधों पर नज़र रखी जा रही है। Lart खुद कोई टेलीमेट्री नहीं भेजता।",
   "Watching right now": "अभी देख रहे हैं",
   "Watching {n} streams at once": "एक साथ {n} स्ट्रीम देख रहे हैं",
   Watchlist: "वॉचलिस्ट",
@@ -183,10 +183,10 @@ const catalogVZ: Record<string, string> = {
   "We'll show a one-time recovery key right after you sign up. Save it: it's the only way back in if you forget your password.":
     "साइन अप करने के तुरंत बाद हम आपको एक बार इस्तेमाल होने वाली रिकवरी कुंजी दिखाएँगे। इसे सेव कर लें: पासवर्ड भूलने पर वापस आने का यही एकमात्र तरीका है।",
   Weak: "कमज़ोर",
-  "Wear your Simkl profile picture across Harbor instead of the default.":
-    "डिफ़ॉल्ट तस्वीर के बजाय पूरे Harbor में अपनी Simkl प्रोफ़ाइल तस्वीर लगाएँ।",
-  "Wear your Trakt profile picture across Harbor instead of the default.":
-    "डिफ़ॉल्ट तस्वीर के बजाय पूरे Harbor में अपनी Trakt प्रोफ़ाइल तस्वीर लगाएँ।",
+  "Wear your Simkl profile picture across Lart instead of the default.":
+    "डिफ़ॉल्ट तस्वीर के बजाय पूरे Lart में अपनी Simkl प्रोफ़ाइल तस्वीर लगाएँ।",
+  "Wear your Trakt profile picture across Lart instead of the default.":
+    "डिफ़ॉल्ट तस्वीर के बजाय पूरे Lart में अपनी Trakt प्रोफ़ाइल तस्वीर लगाएँ।",
   Web: "वेब",
   "Web Release": "वेब रिलीज़",
   "Web build": "वेब बिल्ड",
@@ -213,8 +213,8 @@ const catalogVZ: Record<string, string> = {
   "What each addon is actually serving up right now.": "हर ऐडऑन अभी असल में क्या उपलब्ध करा रहा है।",
   "What everyone has been quietly binging this week.": "इस हफ़्ते हर कोई चुपके-चुपके क्या देखे जा रहा है।",
   "What everyone is reading": "हर कोई क्या पढ़ रहा है",
-  "What fills the hero. Trending is a fresh top list from Harbor, refreshed through the day. Classic uses your own Home rows.":
-    "हीरो सेक्शन में क्या दिखेगा। ट्रेंडिंग Harbor की नई टॉप लिस्ट है, जो दिन भर रीफ़्रेश होती रहती है। क्लासिक आपकी अपनी होम पंक्तियों का उपयोग करता है।",
+  "What fills the hero. Trending is a fresh top list from Lart, refreshed through the day. Classic uses your own Home rows.":
+    "हीरो सेक्शन में क्या दिखेगा। ट्रेंडिंग Lart की नई टॉप लिस्ट है, जो दिन भर रीफ़्रेश होती रहती है। क्लासिक आपकी अपनी होम पंक्तियों का उपयोग करता है।",
   "What fullscreen does": "फ़ुलस्क्रीन क्या करता है",
   "What gets blurred": "क्या धुंधला किया जाता है",
   "What gets sent": "क्या भेजा जाता है",
@@ -257,8 +257,8 @@ const catalogVZ: Record<string, string> = {
   "Whatever's left at year-end": "साल के अंत में जो भी बचा हो",
   'When Esc would close the player, show a quick confirm first. You can tick "Don\'t ask me again" in that prompt to always leave on Esc.':
     'जब Esc दबाने से प्लेयर बंद होने वाला हो, तो पहले तुरंत पुष्टि करने का विकल्प दिखाएँ। Esc दबाने पर हमेशा बाहर निकलने के लिए उस प्रॉम्प्ट में "फिर न पूछें" पर टिक कर सकते हैं।',
-  "When Harbor sits idle in the foreground, it drifts through cinematic backdrops with a clock and what's trending. Any movement or key brings you back. Off by default.":
-    "जब Harbor फ़ोरग्राउंड में निष्क्रिय रहता है, तो वह घड़ी और ट्रेंडिंग सामग्री के साथ सिनेमाई बैकड्रॉप दिखाता रहता है। माउस हिलाने या कोई कुंजी दबाने पर आप वापस आ जाते हैं। डिफ़ॉल्ट रूप से बंद।",
+  "When Lart sits idle in the foreground, it drifts through cinematic backdrops with a clock and what's trending. Any movement or key brings you back. Off by default.":
+    "जब Lart फ़ोरग्राउंड में निष्क्रिय रहता है, तो वह घड़ी और ट्रेंडिंग सामग्री के साथ सिनेमाई बैकड्रॉप दिखाता रहता है। माउस हिलाने या कोई कुंजी दबाने पर आप वापस आ जाते हैं। डिफ़ॉल्ट रूप से बंद।",
   "When a flagged ad plays, a Skip button slides in so you jump straight past it.":
     "जब फ़्लैग किया गया विज्ञापन चलता है, तो स्किप बटन दिखाई देता है, जिससे आप उसे सीधे छोड़ सकते हैं।",
   "When a movie or episode starts, briefly show its Common Sense Media parental guide (violence, nudity, profanity, substances) with severity. Fades on its own.":
@@ -267,30 +267,30 @@ const catalogVZ: Record<string, string> = {
     "कोई फ़िल्म या एपिसोड शुरू होने पर, उसकी IMDb पैरेंटल गाइड (हिंसा, अभद्र भाषा, नशीले पदार्थ, डरावने दृश्य और बहुत कुछ) गंभीरता के स्तर सहित कुछ देर दिखाएँ। यह अपने-आप गायब हो जाती है।",
   "When a new episode airs": "जब नया एपिसोड प्रसारित हो",
   "When a new season premieres": "जब नए सीज़न का प्रीमियर हो",
-  "When a release ships multiple audio tracks, Harbor selects the first match from this list.":
-    "जब किसी रिलीज़ में कई ऑडियो ट्रैक हों, तो Harbor इस सूची से पहला मेल चुनता है।",
-  "When a subtitle runs early or late, Harbor measures the speech and corrects the timing on its own.":
-    "जब कोई सबटाइटल समय से पहले या देर से चलता है, तो Harbor बोली का विश्लेषण करके उसकी टाइमिंग अपने-आप ठीक करता है।",
-  "When a subtitle runs early or late, Harbor measures the speech and corrects the timing on its own. Off by default.":
-    "जब सबटाइटल जल्दी या देर से चलता है, तो Harbor संवाद को मापकर अपने-आप उसकी टाइमिंग ठीक करता है। डिफ़ॉल्ट रूप से बंद।",
+  "When a release ships multiple audio tracks, Lart selects the first match from this list.":
+    "जब किसी रिलीज़ में कई ऑडियो ट्रैक हों, तो Lart इस सूची से पहला मेल चुनता है।",
+  "When a subtitle runs early or late, Lart measures the speech and corrects the timing on its own.":
+    "जब कोई सबटाइटल समय से पहले या देर से चलता है, तो Lart बोली का विश्लेषण करके उसकी टाइमिंग अपने-आप ठीक करता है।",
+  "When a subtitle runs early or late, Lart measures the speech and corrects the timing on its own. Off by default.":
+    "जब सबटाइटल जल्दी या देर से चलता है, तो Lart संवाद को मापकर अपने-आप उसकी टाइमिंग ठीक करता है। डिफ़ॉल्ट रूप से बंद।",
   "When a title is in your local library": "जब कोई टाइटल आपकी लोकल लाइब्रेरी में हो",
   "When an episode ends, automatically start the next one. Off lets the episode finish and stop.":
     "एपिसोड खत्म होने पर अगला एपिसोड अपने-आप शुरू करें। बंद होने पर एपिसोड पूरा होकर रुक जाता है।",
-  "When auto-playing the next episode, keep the same release/source you were just watching instead of Harbor's top-ranked stream. Falls back to the best stream if that source isn't available.":
-    "अगला एपिसोड अपने-आप चलाते समय Harbor की सबसे ऊँची रैंक वाली स्ट्रीम के बजाय उसी रिलीज़/स्रोत का इस्तेमाल करें जिसे आप अभी देख रहे थे। वह स्रोत उपलब्ध न होने पर सबसे अच्छी स्ट्रीम इस्तेमाल की जाती है।",
+  "When auto-playing the next episode, keep the same release/source you were just watching instead of Lart's top-ranked stream. Falls back to the best stream if that source isn't available.":
+    "अगला एपिसोड अपने-आप चलाते समय Lart की सबसे ऊँची रैंक वाली स्ट्रीम के बजाय उसी रिलीज़/स्रोत का इस्तेमाल करें जिसे आप अभी देख रहे थे। वह स्रोत उपलब्ध न होने पर सबसे अच्छी स्ट्रीम इस्तेमाल की जाती है।",
   "When in fullscreen, Esc leaves fullscreen instead of closing the player. Press Esc again to close. Turn off to make Esc always close.":
     "फ़ुलस्क्रीन में Esc दबाने पर प्लेयर बंद करने के बजाय फ़ुलस्क्रीन से बाहर निकलें। बंद करने के लिए फिर से Esc दबाएँ। Esc से हमेशा बंद करने के लिए इसे बंद करें।",
   "When off, a P2P transfer stops the moment you close or switch the stream, so nothing keeps downloading in the background. Turn on to let it keep going after you leave; manage or pause those from the Downloads tab.": "यह बंद होने पर, स्ट्रीम बंद करते या बदलते ही P2P ट्रांसफ़र रुक जाता है, इसलिए बैकग्राउंड में डाउनलोड जारी नहीं रहता। स्ट्रीम से बाहर निकलने के बाद भी डाउनलोड जारी रखने के लिए इसे चालू करें; उन डाउनलोड को डाउनलोड टैब से मैनेज या पॉज़ करें।",
-  "When on, a connected controller moves focus around Harbor and drives the player. Turn it off to ignore all controllers.":
-    "चालू होने पर, कनेक्टेड कंट्रोलर Harbor में फ़ोकस को इधर-उधर ले जाता है और प्लेयर को नियंत्रित करता है। सभी कंट्रोलर को अनदेखा करने के लिए इसे बंद करें।",
+  "When on, a connected controller moves focus around Lart and drives the player. Turn it off to ignore all controllers.":
+    "चालू होने पर, कनेक्टेड कंट्रोलर Lart में फ़ोकस को इधर-उधर ले जाता है और प्लेयर को नियंत्रित करता है। सभी कंट्रोलर को अनदेखा करने के लिए इसे बंद करें।",
   "When people share a collection it shows up here. Build one you love and share it, that is how it starts.":
     "जब लोग कोई कलेक्शन शेयर करते हैं, तो वह यहाँ दिखाई देता है। अपनी पसंद का कलेक्शन बनाएँ और शेयर करें, शुरुआत ऐसे ही होती है।",
-  "When playback starts, Harbor automatically finds and loads a subtitle in one of these languages, so you never have to search by hand. The first available match wins, so put your main language first.":
-    "प्लेबैक शुरू होने पर Harbor इनमें से किसी एक भाषा में सबटाइटल अपने-आप ढूँढकर लोड करता है, ताकि आपको कभी हाथ से खोजना न पड़े। उपलब्ध पहला मेल चुना जाता है, इसलिए अपनी मुख्य भाषा सबसे पहले रखें।",
-  "When playback starts, Harbor finds and loads a subtitle in one of these languages automatically. The first available match wins, so put your main language first.":
-    "प्लेबैक शुरू होने पर Harbor इनमें से किसी एक भाषा में सबटाइटल अपने-आप ढूँढकर लोड करता है। उपलब्ध पहला मेल चुना जाता है, इसलिए अपनी मुख्य भाषा सबसे पहले रखें।",
-  "When playback starts, Harbor finds and loads a subtitle in one of these languages. The first available match wins, so put your main language first.":
-    "प्लेबैक शुरू होने पर Harbor इनमें से किसी एक भाषा में सबटाइटल ढूँढकर लोड करता है। उपलब्ध पहला मेल चुना जाता है, इसलिए अपनी मुख्य भाषा सबसे पहले रखें।",
+  "When playback starts, Lart automatically finds and loads a subtitle in one of these languages, so you never have to search by hand. The first available match wins, so put your main language first.":
+    "प्लेबैक शुरू होने पर Lart इनमें से किसी एक भाषा में सबटाइटल अपने-आप ढूँढकर लोड करता है, ताकि आपको कभी हाथ से खोजना न पड़े। उपलब्ध पहला मेल चुना जाता है, इसलिए अपनी मुख्य भाषा सबसे पहले रखें।",
+  "When playback starts, Lart finds and loads a subtitle in one of these languages automatically. The first available match wins, so put your main language first.":
+    "प्लेबैक शुरू होने पर Lart इनमें से किसी एक भाषा में सबटाइटल अपने-आप ढूँढकर लोड करता है। उपलब्ध पहला मेल चुना जाता है, इसलिए अपनी मुख्य भाषा सबसे पहले रखें।",
+  "When playback starts, Lart finds and loads a subtitle in one of these languages. The first available match wins, so put your main language first.":
+    "प्लेबैक शुरू होने पर Lart इनमें से किसी एक भाषा में सबटाइटल ढूँढकर लोड करता है। उपलब्ध पहला मेल चुना जाता है, इसलिए अपनी मुख्य भाषा सबसे पहले रखें।",
   "When the Up Next pill appears before an episode ends. Auto scales to the episode length, so short episodes stop prompting so early. Off hides it.":
     "एपिसोड खत्म होने से कितनी देर पहले अगला पिल दिखाई दे। ऑटो इसे एपिसोड की अवधि के अनुसार समायोजित करता है, ताकि छोटे एपिसोड में यह बहुत जल्दी न दिखे। बंद करने पर यह छिप जाता है।",
   "When the audio already matches your subtitle language, pick a forced track (foreign dialogue and signs only) instead of full subtitles. If the file has no forced track, subtitles stay off.":
@@ -301,10 +301,10 @@ const catalogVZ: Record<string, string> = {
   "When the latest episode ends (Hide / Timer)": "जब नवीनतम एपिसोड खत्म हो (छिपाएँ / टाइमर)",
   "When time's up, the ship sails away until a parent unlocks it.":
     "समय पूरा होने पर जहाज़ तब तक दूर चला जाता है, जब तक कोई अभिभावक इसे अनलॉक न करे।",
-  "When you back out of a title, Harbor saves a frame so the Continue Watching card looks like the spot you left.":
-    "किसी टाइटल से वापस जाने पर Harbor एक फ़्रेम सेव करता है, ताकि 'देखना जारी रखें' कार्ड पर वही जगह दिखे जहाँ आपने देखना छोड़ा था।",
-  "When you back out of a title, Harbor saves a frame so the Continue Watching card looks like the spot you left. Tune how long they stick around, or wipe them all.":
-    "किसी टाइटल से वापस जाने पर Harbor एक फ़्रेम सेव करता है, ताकि 'देखना जारी रखें' कार्ड पर वही जगह दिखे जहाँ आपने देखना छोड़ा था। तय करें कि ये फ़्रेम कितने समय तक रहें, या सभी को मिटा दें।",
+  "When you back out of a title, Lart saves a frame so the Continue Watching card looks like the spot you left.":
+    "किसी टाइटल से वापस जाने पर Lart एक फ़्रेम सेव करता है, ताकि 'देखना जारी रखें' कार्ड पर वही जगह दिखे जहाँ आपने देखना छोड़ा था।",
+  "When you back out of a title, Lart saves a frame so the Continue Watching card looks like the spot you left. Tune how long they stick around, or wipe them all.":
+    "किसी टाइटल से वापस जाने पर Lart एक फ़्रेम सेव करता है, ताकि 'देखना जारी रखें' कार्ड पर वही जगह दिखे जहाँ आपने देखना छोड़ा था। तय करें कि ये फ़्रेम कितने समय तक रहें, या सभी को मिटा दें।",
   "When you exit fullscreen, return the window to exactly where it was. Turn off to center it on screen instead.":
     "फ़ुलस्क्रीन से बाहर निकलने पर विंडो को ठीक उसी जगह लौटाएँ जहाँ वह थी। इसके बजाय उसे स्क्रीन के बीच में लाने के लिए बंद करें।",
   "When you exit playback, keep the window fullscreen instead of dropping back to a window. Turn off to leave fullscreen automatically whenever the player closes.":
@@ -323,8 +323,8 @@ const catalogVZ: Record<string, string> = {
     "जिस शो को आप पहले ब्राउज़ कर रहे थे, उसे दोबारा खोलने पर ऊपर से शुरू करने के बजाय सीधे अपनी पिछली जगह (आमतौर पर एपिसोड सूची) पर जाएँ। यह पेज दिखने से पहले होता है, इसलिए स्क्रीन पर कोई झटका नहीं दिखता।",
   "When you resume something you were watching, replay the exact stream you last used (same addon and source) instead of opening the picker again. Turn off to always choose fresh.":
     "जिसे आप देख रहे थे उसे जारी रखने पर पिकर फिर से खोलने के बजाय पिछली बार इस्तेमाल की गई ठीक वही स्ट्रीम (वही ऐडऑन और सोर्स) चलाएँ। हर बार फिर से चुनने के लिए इसे बंद करें।",
-  "Where Harbor saves videos when you hit Download in the player. Pick any folder, including one on a different drive.":
-    "प्लेयर में डाउनलोड दबाने पर Harbor वीडियो कहाँ सेव करता है। किसी भी फ़ोल्डर को चुनें, चाहे वह किसी दूसरी ड्राइव पर हो।",
+  "Where Lart saves videos when you hit Download in the player. Pick any folder, including one on a different drive.":
+    "प्लेयर में डाउनलोड दबाने पर Lart वीडियो कहाँ सेव करता है। किसी भी फ़ोल्डर को चुनें, चाहे वह किसी दूसरी ड्राइव पर हो।",
   "Where alerts go": "अलर्ट कहाँ जाएँगे",
   "Where do you want to start?": "आप कहाँ से शुरू करना चाहते हैं?",
   "Where files live": "फ़ाइलें कहाँ सेव होती हैं",
@@ -346,8 +346,8 @@ const catalogVZ: Record<string, string> = {
   "Where you watch from": "आप कहाँ से देखते हैं",
   "Where your data lives": "आपका डेटा कहाँ सेव होता है",
   "Where your video comes from": "आपका वीडियो कहाँ से आता है",
-  "Whether Harbor reports playback to Simkl while you watch.":
-    "क्या Harbor आपके देखते समय प्लेबैक की जानकारी Simkl को भेजता है।",
+  "Whether Lart reports playback to Simkl while you watch.":
+    "क्या Lart आपके देखते समय प्लेबैक की जानकारी Simkl को भेजता है।",
   "Whether finishing an episode updates your AniList progress.":
     "क्या एपिसोड पूरा देखने पर आपकी AniList प्रगति अपडेट होती है।",
   "Whether subtitles are showing the moment a video starts.":
@@ -367,20 +367,20 @@ const catalogVZ: Record<string, string> = {
   "Which order": "किस क्रम में",
   "Which service names the track when you tap Identify song in the player.":
     "प्लेयर में गाना पहचानें पर टैप करने पर कौन-सी सेवा ट्रैक का नाम बताती है।",
-  "Which subtitle Harbor lands on when more than one is available.":
-    "एक से ज़्यादा उपलब्ध होने पर Harbor कौन-सा सबटाइटल चुनता है।",
+  "Which subtitle Lart lands on when more than one is available.":
+    "एक से ज़्यादा उपलब्ध होने पर Lart कौन-सा सबटाइटल चुनता है।",
   "Which subtitle languages, in order?": "सबटाइटल भाषाएँ किस क्रम में हों?",
   "While auto-sync is on": "जब ऑटो-सिंक चालू हो",
-  "While beta updates are on, Harbor offers the newest build again on its next check. Turn beta updates off above to stay on an earlier one.":
-    "बीटा अपडेट चालू रहने पर, Harbor अगली जाँच में फिर से सबसे नया बिल्ड पेश करेगा। पुराने बिल्ड पर बने रहने के लिए ऊपर बीटा अपडेट बंद करें।",
+  "While beta updates are on, Lart offers the newest build again on its next check. Turn beta updates off above to stay on an earlier one.":
+    "बीटा अपडेट चालू रहने पर, Lart अगली जाँच में फिर से सबसे नया बिल्ड पेश करेगा। पुराने बिल्ड पर बने रहने के लिए ऊपर बीटा अपडेट बंद करें।",
   "While the world's asleep": "जब दुनिया सो रही हो",
   "While you watch": "जब आप देख रहे हों",
   White: "सफ़ेद",
   "Who can join": "कौन शामिल हो सकता है",
   "Who is breaking out this week. Live, with weekly movement.":
     "इस हफ़्ते कौन तेज़ी से उभर रहा है। साप्ताहिक बदलावों के साथ लाइव।",
-  "Who keeps the lights on, what Harbor is built on, and where to put money if you want to.":
-    "इसे चलाए रखने वाले लोग, Harbor जिन तकनीकों पर बना है, और अगर आप चाहें तो आर्थिक सहयोग कहाँ करें।",
+  "Who keeps the lights on, what Lart is built on, and where to put money if you want to.":
+    "इसे चलाए रखने वाले लोग, Lart जिन तकनीकों पर बना है, और अगर आप चाहें तो आर्थिक सहयोग कहाँ करें।",
   "Who keeps this running": "इसे कौन चलाए रखता है",
   "Who pays for the servers": "सर्वर का खर्च कौन उठाता है",
   "Who pays for the servers, and where to put money if you want to.":
@@ -508,13 +508,13 @@ const catalogVZ: Record<string, string> = {
   "You are done.": "आपका काम पूरा हो गया।",
   "You are not a member yet. Accept to join and take part.":
     "आप अभी सदस्य नहीं हैं। शामिल होने और भाग लेने के लिए स्वीकार करें।",
-  "You are not signed in to a Harbor account, so nothing here can reach the TV.":
-    "आपने Harbor अकाउंट में साइन इन नहीं किया है, इसलिए यहाँ से कुछ भी TV तक नहीं पहुँच सकता।",
+  "You are not signed in to a Lart account, so nothing here can reach the TV.":
+    "आपने Lart अकाउंट में साइन इन नहीं किया है, इसलिए यहाँ से कुछ भी TV तक नहीं पहुँच सकता।",
   "You are rating too fast, try again in a moment":
     "आप बहुत तेज़ी से रेटिंग दे रहे हैं। कुछ देर बाद फिर कोशिश करें।",
   "You are set up": "आपका सेटअप पूरा हो गया है",
-  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Harbor bundles and endorses no sites; it only runs the config you supply.":
-    "आप जो भी कनेक्ट करते हैं और कॉपीराइट व हर साइट की शर्तों का पालन करते हैं, उसकी पूरी ज़िम्मेदारी आपकी है। Harbor किसी भी साइट को बंडल नहीं करता या उसका समर्थन नहीं करता; यह केवल आपके दिए कॉन्फ़िग को चलाता है।",
+  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Lart bundles and endorses no sites; it only runs the config you supply.":
+    "आप जो भी कनेक्ट करते हैं और कॉपीराइट व हर साइट की शर्तों का पालन करते हैं, उसकी पूरी ज़िम्मेदारी आपकी है। Lart किसी भी साइट को बंडल नहीं करता या उसका समर्थन नहीं करता; यह केवल आपके दिए कॉन्फ़िग को चलाता है।",
   'You buy something "in installments". That means you:':
     'आप कोई चीज़ "किस्तों में" खरीदते हैं। इसका मतलब है कि आप:',
   "You can always mute or stop a song from the card itself.":
@@ -550,8 +550,8 @@ const catalogVZ: Record<string, string> = {
   "You make an insurance claim. Before the insurer pays out, you usually:":
     "आप बीमा क्लेम करते हैं। बीमा कंपनी के भुगतान करने से पहले, आप आमतौर पर:",
   "You might like": "शायद आपको पसंद आए",
-  "You must install this addon in your Stremio account first so Harbor can fetch its works.":
-    "आपको पहले यह ऐडऑन अपने Stremio अकाउंट में इंस्टॉल करना होगा, ताकि Harbor इससे कंटेंट ला सके।",
+  "You must install this addon in your Stremio account first so Lart can fetch its works.":
+    "आपको पहले यह ऐडऑन अपने Stremio अकाउंट में इंस्टॉल करना होगा, ताकि Lart इससे कंटेंट ला सके।",
   "You only ever pay the minimum on a credit card each month. Over time you:":
     "आप हर महीने क्रेडिट कार्ड पर केवल न्यूनतम राशि चुकाते हैं। समय के साथ आप:",
   "You own the content": "कॉन्टेंट आपका है",
@@ -585,9 +585,9 @@ const catalogVZ: Record<string, string> = {
   'You\'re given "power of attorney" for a relative. You can:':
     'आपको किसी रिश्तेदार की "पावर ऑफ अटॉर्नी" दी जाती है। आप:',
   "You're in": "आप शामिल हैं",
-  "You're leaving Harbor": "आप Harbor छोड़ रहे हैं",
-  "You're modding your own client. Custom JS has full access to your Harbor session. Only paste code you wrote or fully trust.":
-    "आप अपने क्लाइंट को मॉड कर रहे हैं। कस्टम JS के पास आपके Harbor सेशन का पूरा एक्सेस है। केवल वही कोड पेस्ट करें जो आपने लिखा हो या जिस पर आपको पूरा भरोसा हो।",
+  "You're leaving Lart": "आप Lart छोड़ रहे हैं",
+  "You're modding your own client. Custom JS has full access to your Lart session. Only paste code you wrote or fully trust.":
+    "आप अपने क्लाइंट को मॉड कर रहे हैं। कस्टम JS के पास आपके Lart सेशन का पूरा एक्सेस है। केवल वही कोड पेस्ट करें जो आपने लिखा हो या जिस पर आपको पूरा भरोसा हो।",
   "You're offline": "आप ऑफ़लाइन हैं",
   "You're offline. Your downloads still play.": "आप ऑफ़लाइन हैं। आपके डाउनलोड फिर भी चलेंगे।",
   "You're on the latest build. Earlier builds show up here as new versions ship.":
@@ -614,12 +614,12 @@ const catalogVZ: Record<string, string> = {
   "Your Continue Watching, your watchlist and your addons.":
     "आपका देखना जारी रखें सेक्शन, आपकी वॉचलिस्ट और आपके ऐडऑन।",
   "Your Discovery Queue": "आपकी डिस्कवरी क्यू",
-  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Harbor. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
-    "आपके HTML और CSS एक सैंडबॉक्स किए गए फ़्रेम में रेंडर होते हैं और Harbor के बाकी हिस्सों से पूरी तरह अलग रहते हैं। इन्हें एक छोटे, अपने आप में पूरे पेज की तरह लिखें। फ़ॉन्ट और पेज बैकग्राउंड के लिए ऊपर अलग कंट्रोल हैं, जो पूरी प्रोफ़ाइल पर लागू होते हैं।",
-  "Your Harbor account": "आपका Harbor अकाउंट",
-  "Your Harbor account is separate from your Stremio sign in. Create one free or sign in from Settings.":
-    "आपका Harbor अकाउंट आपके Stremio साइन-इन से अलग है। मुफ़्त अकाउंट बनाएँ या सेटिंग्स से साइन इन करें।",
-  "Your Harbor account is signed in on the TV.": "आपका Harbor अकाउंट TV पर साइन इन है।",
+  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Lart. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
+    "आपके HTML और CSS एक सैंडबॉक्स किए गए फ़्रेम में रेंडर होते हैं और Lart के बाकी हिस्सों से पूरी तरह अलग रहते हैं। इन्हें एक छोटे, अपने आप में पूरे पेज की तरह लिखें। फ़ॉन्ट और पेज बैकग्राउंड के लिए ऊपर अलग कंट्रोल हैं, जो पूरी प्रोफ़ाइल पर लागू होते हैं।",
+  "Your Lart account": "आपका Lart अकाउंट",
+  "Your Lart account is separate from your Stremio sign in. Create one free or sign in from Settings.":
+    "आपका Lart अकाउंट आपके Stremio साइन-इन से अलग है। मुफ़्त अकाउंट बनाएँ या सेटिंग्स से साइन इन करें।",
+  "Your Lart account is signed in on the TV.": "आपका Lart अकाउंट TV पर साइन इन है।",
   "Your IP or device is blocked. Some providers geo restrict or limit how many devices can connect at once.":
     "आपका IP या डिवाइस ब्लॉक है। कुछ प्रोवाइडर भौगोलिक प्रतिबंध लगाते हैं या एक साथ कनेक्ट होने वाले डिवाइसों की संख्या सीमित करते हैं।",
   "Your Letterboxd password": "आपका Letterboxd पासवर्ड",
@@ -628,8 +628,8 @@ const catalogVZ: Record<string, string> = {
   "Your MAL Lists": "आपकी MAL सूचियाँ",
   "Your MAL: {name}": "आपका MAL: {name}",
   "Your MyAnimeList is empty": "आपका MyAnimeList खाली है",
-  "Your Roku is set to block control requests from apps on your network, so Harbor can't reach it. This is a one-time setting on the Roku.":
-    "आपका Roku आपके नेटवर्क के ऐप्स से आने वाले कंट्रोल अनुरोधों को ब्लॉक करने के लिए सेट किया गया है, इसलिए Harbor उस तक नहीं पहुँच सकता। Roku पर यह सेटिंग सिर्फ़ एक बार बदलनी होगी।",
+  "Your Roku is set to block control requests from apps on your network, so Lart can't reach it. This is a one-time setting on the Roku.":
+    "आपका Roku आपके नेटवर्क के ऐप्स से आने वाले कंट्रोल अनुरोधों को ब्लॉक करने के लिए सेट किया गया है, इसलिए Lart उस तक नहीं पहुँच सकता। Roku पर यह सेटिंग सिर्फ़ एक बार बदलनी होगी।",
   "Your Simkl plan-to-watch list has no episodes airing this month. Switch to All upcoming to browse everything.":
     "आपकी Simkl में बाद में देखने की सूची का कोई एपिसोड इस महीने प्रसारित नहीं हो रहा है। सब कुछ ब्राउज़ करने के लिए आने वाले सभी पर जाएँ।",
   "Your Streaming": "आपकी स्ट्रीमिंग",
@@ -664,7 +664,7 @@ const catalogVZ: Record<string, string> = {
     'आपके ऐडऑन ने "{q}" के लिए नतीजे दिए, लेकिन उनमें से कुछ भी यहाँ नहीं खुलता।',
   "Your avatar, banner, and how the whole profile is styled.":
     "आपका अवतार, बैनर और पूरी प्रोफ़ाइल की शैली।",
-  "Your avatar, name, and handle across Harbor.": "पूरे Harbor में आपका अवतार, नाम और हैंडल।",
+  "Your avatar, name, and handle across Lart.": "पूरे Lart में आपका अवतार, नाम और हैंडल।",
   "Your award pack": "आपका अवॉर्ड पैक",
   "Your badge pack": "आपका बैज पैक",
   "Your bank locked the account": "आपके बैंक ने अकाउंट लॉक कर दिया",
@@ -697,9 +697,9 @@ const catalogVZ: Record<string, string> = {
     "आपके दोस्तों ने अभी तक कुछ साझा नहीं किया है। गतिविधि साझा करना डिफ़ॉल्ट रूप से बंद है।",
   "Your groups": "आपके ग्रुप",
   "Your handle": "आपका हैंडल",
-  "Your handle across Harbor, and your verified status.":
-    "पूरे Harbor में आपका हैंडल और आपका वेरिफ़ाइड स्टेटस।",
-  "Your handle across Harbor.": "पूरे Harbor में आपका हैंडल।",
+  "Your handle across Lart, and your verified status.":
+    "पूरे Lart में आपका हैंडल और आपका वेरिफ़ाइड स्टेटस।",
+  "Your handle across Lart.": "पूरे Lart में आपका हैंडल।",
   "Your handle, your themes, your settings. Signed in once, waiting on the next machine you open.":
     "आपका हैंडल, आपकी थीम, आपकी सेटिंग्स। एक बार साइन इन करने पर, ये आपके खोले जाने वाले अगले डिवाइस पर तैयार मिलेंगे।",
   "Your holiday plans": "आपकी छुट्टियों की योजनाएँ",
@@ -707,8 +707,8 @@ const catalogVZ: Record<string, string> = {
   "Your library": "आपकी लाइब्रेरी",
   "Your library and watch progress sync here.": "आपकी लाइब्रेरी और देखने की प्रगति यहाँ सिंक होती हैं।",
   "Your library is aboard.": "आपकी लाइब्रेरी सवार हो गई है।",
-  "Your library lives on Harbor. Connect to your computer and it shows up here.":
-    "आपकी लाइब्रेरी Harbor पर रहती है। अपने कंप्यूटर से कनेक्ट करें और यह यहां दिखाई देगी।",
+  "Your library lives on Lart. Connect to your computer and it shows up here.":
+    "आपकी लाइब्रेरी Lart पर रहती है। अपने कंप्यूटर से कनेक्ट करें और यह यहां दिखाई देगी।",
   "Your links": "आपके लिंक",
   "Your name": "आपका नाम",
   "Your name and the details shown at the top of your profile.":
@@ -795,9 +795,9 @@ const catalogVZ: Record<string, string> = {
   watched: "देखा गया",
   "welcome.dismiss": "शुरू करें",
   "welcome.subtitle": "इंटरफ़ेस अब अरबी में है। आप सेटिंग्स से कभी भी पिछली भाषा पर वापस जा सकते हैं।",
-  "welcome.title": "Harbor में आपका स्वागत है",
-  "will be removed from Harbor. Anything you've set to use it will fall back to Inter.":
-    "को Harbor से हटा दिया जाएगा। जिन चीज़ों के लिए आपने इसे सेट किया है, उनमें फिर से Inter इस्तेमाल होगा।",
+  "welcome.title": "Lart में आपका स्वागत है",
+  "will be removed from Lart. Anything you've set to use it will fall back to Inter.":
+    "को Lart से हटा दिया जाएगा। जिन चीज़ों के लिए आपने इसे सेट किया है, उनमें फिर से Inter इस्तेमाल होगा।",
   "window.harbor API": "window.harbor API",
   "with a WebSocket upgrade: opens a Watch Together room. State is held in a Durable Object, no persistence beyond the active session.":
     "WebSocket अपग्रेड के साथ: साथ देखें रूम खोलता है। स्टेट Durable Object में रखा जाता है और सक्रिय सेशन खत्म होने के बाद स्थायी रूप से सहेजा नहीं जाता।",

@@ -15,7 +15,7 @@ export function SportsNoProviderNote() {
       <Tv size={17} strokeWidth={1.9} aria-hidden="true" />
       <p>
         {t(
-          "Scores, schedules and standings work without a provider. Harbor does not supply streams, so watching a game needs your own Live TV, M3U or Xtream source.",
+          "Scores, schedules and standings work without a provider. Lart does not supply streams, so watching a game needs your own Live TV, M3U or Xtream source.",
         )}
       </p>
       <button type="button" onClick={() => setView("live")}>

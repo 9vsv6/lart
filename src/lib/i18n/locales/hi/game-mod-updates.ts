@@ -14,7 +14,7 @@ export default {
   "games.mods.backupNote": "बदले गए संस्करण स्थानीय बैकअप में रहते हैं। वापस जाने के लिए अपने सेटअप में पिछला बहाल करें चुनें; निर्भरताएँ फिर जाँची जाएँगी।",
   "games.mods.currentVersion": "इंस्टॉल है: {version}",
   "games.mods.current": "इंस्टॉल है",
-  "games.mods.versionNote": "संगत संस्करण चुनें। Harbor बदलावों की जाँच करता है और पिछला संस्करण स्थानीय रूप से रखता है। बदलाव लागू करने से पहले Minecraft बंद करें।",
+  "games.mods.versionNote": "संगत संस्करण चुनें। Lart बदलावों की जाँच करता है और पिछला संस्करण स्थानीय रूप से रखता है। बदलाव लागू करने से पहले Minecraft बंद करें।",
   "games.mods.applyChanges": "बदलाव लागू करें",
   "games.mods.reviewChanges": "बदलावों की समीक्षा",
   "games.mods.previousVersion": "पिछला: {version}",

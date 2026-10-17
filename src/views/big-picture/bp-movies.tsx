@@ -49,7 +49,7 @@ export function BpMovies({ onSelect }: { onSelect: (m: Meta) => void }) {
         title={failed ? t("Couldn't load movies") : t("No movies to show yet")}
         body={
           failed
-            ? t("Harbor couldn't reach the catalog servers.")
+            ? t("Lart couldn't reach the catalog servers.")
             : t("Add a TMDB key in Setup to power this view.")
         }
         action={failed ? t("Try again") : t("Open settings")}

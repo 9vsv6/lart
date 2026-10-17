@@ -147,7 +147,7 @@ function extraProviderContext(settings: PivotRuntimeSettings): ProviderCtx | und
   const subsource = enabled.subsource === true && settings.subsourceApiKey.trim().length > 0;
   if (!subdl && !subsource) return undefined;
   return {
-    userAgent: "Harbor",
+    userAgent: "Lart",
     netAllowed: true,
     subdlApiKey: subdl ? settings.subdlApiKey : null,
     subsourceApiKey: subsource ? settings.subsourceApiKey : null,

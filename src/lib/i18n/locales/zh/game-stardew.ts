@@ -18,7 +18,7 @@ export default {
   "games.stardew.refresh": "刷新模组",
 
   "games.stardew.import": "导入模组 ZIP",
-  "games.stardew.manage": "由 Harbor 管理",
+  "games.stardew.manage": "由 Lart 管理",
   "games.stardew.manageNote": "导入已下载的 SMAPI 模组以在此管理。再次导入新版 ZIP 即可更新。",
   "games.stardew.previous": "历史版本",
   "games.stardew.review": "查看更改",
@@ -31,7 +31,7 @@ export default {
   "games.stardew.running": "更改模组文件前，请关闭星露谷物语和 SMAPI。",
   "games.stardew.requirementsError": "缺少必需的模组或 SMAPI 版本，或版本过旧。请查看模组要求。",
   "games.stardew.dependentsError": "某个已启用模组需要此版本。请先禁用该模组或选择兼容版本。",
-  "games.stardew.unmanagedError": "此模组已存在，但不在 Harbor 的记录中。请先移走现有副本再导入。",
+  "games.stardew.unmanagedError": "此模组已存在，但不在 Lart 的记录中。请先移走现有副本再导入。",
   "games.stardew.archiveError": "选择包含一个可直接使用的模组文件夹的 ZIP，最大 32 MB（解压后 128 MB）。源码下载不是可安装的模组。",
   "games.stardew.moreFiles": "还有 {count} 个文件",
   "games.stardew.partialError": "部分模组无法检查。更改文件前，请先解决扫描不完整的问题。",

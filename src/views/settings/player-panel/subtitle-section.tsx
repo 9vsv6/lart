@@ -171,8 +171,8 @@ export function SubtitleStylePanel() {
       },
     ],
     isDefault
-      ? "Subtitle style is at the Harbor default."
-      : "Puts every subtitle option back to the Harbor default.",
+      ? "Subtitle style is at the Lart default."
+      : "Puts every subtitle option back to the Lart default.",
   );
 
   return (
@@ -754,7 +754,7 @@ function ConfirmDeleteFont({
       <div className="flex min-h-0 flex-1 flex-col gap-1.5 overflow-y-auto p-6">
         <p className={`max-w-[66ch] ${ROW_DESC}`}>
           <span className="font-semibold text-ink">{name}</span>{" "}
-          {t("will be removed from Harbor. Anything you've set to use it will fall back to Inter.")}
+          {t("will be removed from Lart. Anything you've set to use it will fall back to Inter.")}
         </p>
       </div>
       <div className="flex items-center justify-end gap-2.5 px-6 pb-6">

@@ -77,7 +77,7 @@ export default {
   "games.league.metaScope": "OP.GG ofrece esta clasificación con su muestra predeterminada. No indica parche, región ni rango. Las victorias se calculan con las partidas y victorias publicadas; la fuente redondea las tasas de elección. Clasificaciones y builds usan muestras distintas.",
   "games.league.buildNote": "Cada build tiene su propia muestra. Los objetos completos favorecen partidas que duraron lo suficiente para comprarlos; sus victorias no equivalen a la tasa global del campeón. Los enfrentamientos pueden tener muestras pequeñas. Adapta tu build al equipo y rival. Los vídeos pueden ser de parches anteriores.",
   "games.league.patchDifference": "Estadísticas de build de {patch}; datos de objetos y habilidades de {assets}.",
-  "games.league.attribution": "Harbor is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
+  "games.league.attribution": "Lart is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
   "games.league.tierList": "Lista de niveles",
   "games.league.tierScope": "Clasificatoria solo/dúo · Esmeralda+ · Global",
   "games.league.patchFilter": "Elegir parche",

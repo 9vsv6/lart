@@ -16,8 +16,8 @@ const bpSports: Record<string, string> = {
   "Following {name}": "تتابع {name}",
   "Game finished": "انتهت المباراة",
   "Grand Prix weekend": "أسبوع الجائزة الكبرى",
-  "Harbor couldn't reach the sports servers. Check the connection and open the event again.":
-    "تعذّر على Harbor الوصول إلى خوادم الرياضة. تحقّق من الاتصال ثم افتح الحدث مرة أخرى.",
+  "Lart couldn't reach the sports servers. Check the connection and open the event again.":
+    "تعذّر على Lart الوصول إلى خوادم الرياضة. تحقّق من الاتصال ثم افتح الحدث مرة أخرى.",
   "Hide bench": "إخفاء مقاعد البدلاء",
   "Hot right now": "الأكثر رواجًا الآن",
   "If the broadcast asks you to sign in or confirm your age, open it in a browser.":
@@ -38,8 +38,8 @@ const bpSports: Record<string, string> = {
   "No installed addon offers a sports catalog yet.": "لا تقدّم أي إضافة مثبّتة كتالوج رياضة حتى الآن.",
   "No matching addon listing yet. Browse every addon channel to look for the broadcast.":
     "لا يوجد عنصر مطابق من الإضافات بعد. تصفّح جميع قنوات الإضافات للبحث عن البث.",
-  "No playlists yet. Add one in Live TV and Harbor will match its channels to fixtures.":
-    "لا توجد قوائم تشغيل بعد. أضف واحدة في التلفزيون المباشر وسيطابق Harbor قنواتها بالمباريات.",
+  "No playlists yet. Add one in Live TV and Lart will match its channels to fixtures.":
+    "لا توجد قوائم تشغيل بعد. أضف واحدة في التلفزيون المباشر وسيطابق Lart قنواتها بالمباريات.",
   "No venue page published": "لم تُنشر صفحة للملعب",
   "None of your channels match this fixture. Search your channels and pin the one that carries it.":
     "لا تطابق أي من قنواتك هذه المباراة. ابحث في قنواتك وثبّت القناة التي تنقلها.",

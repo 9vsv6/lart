@@ -35,7 +35,7 @@ export default {
   "games.valorant.empty": "По этим фильтрам ничего не найдено.",
   "games.valorant.checked": "Проверено: {date}",
   "games.valorant.metaScope": "Рейтинговые данные OP.GG для выбранного патча. Частота выбора — доля появлений агента. Результаты описывают выборку источника, а не всех игроков.",
-  "games.valorant.referenceScope": "Изображения и справочные данные через Valorant-API. Обновления могут запаздывать. Harbor не одобрен Riot Games.",
+  "games.valorant.referenceScope": "Изображения и справочные данные через Valorant-API. Обновления могут запаздывать. Lart не одобрен Riot Games.",
   "games.valorant.samples": "Появлений: {count}",
   "games.valorant.smallSample": "Малая выборка",
   "games.valorant.abilities": "Умения",

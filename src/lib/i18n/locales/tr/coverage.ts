@@ -1,11 +1,11 @@
-const coverage: Record<string, string> = {
+const coverage: Record<string, string> = {
   "Sound descriptions": "Ses açıklamaları",
   "Hide sound effects and speaker names": "Ses efektlerini ve konuşan adlarını gizle",
   "Removes bracketed descriptions like [door creaks] and shouted speaker labels like JOHN: while subtitles play, so a release that only ships an SDH track still reads as plain dialogue. Song lyrics, ordinary parentheses and non-Latin scripts are left alone. Skipped on forced and picture-based tracks.": "Altyazılar akarken [kapı gıcırdıyor] gibi köşeli parantez içindeki açıklamaları ve JOHN: gibi büyük harfle yazılmış konuşan adlarını kaldırır; böylece yalnızca SDH altyazısı olan bir sürüm de düz diyalog gibi okunur. Şarkı sözleri, normal parantezler ve Latin dışı yazılar olduğu gibi kalır. Zorunlu ve görüntü tabanlı altyazılarda uygulanmaz.",
   '"{name}" and everything in it will be removed. This cannot be undone.':
     '"{name}" ve içindeki her şey kaldırılacak. Bu işlem geri alınamaz.',
-  "A full screen, couch friendly Harbor for TVs, handhelds and big monitors.":
-    "TV'ler, taşınabilir cihazlar ve büyük monitörler için tam ekran, koltuktan kullanıma uygun Harbor deneyimi.",
+  "A full screen, couch friendly Lart for TVs, handhelds and big monitors.":
+    "TV'ler, taşınabilir cihazlar ve büyük monitörler için tam ekran, koltuktan kullanıma uygun Lart deneyimi.",
   Activity: "Etkinlik",
   "Actual size on screen": "Ekrandaki gerçek boyut",
   Adaptations: "Uyarlamalar",
@@ -15,8 +15,8 @@ const coverage: Record<string, string> = {
   Added: "Eklendi",
   'Added to "{name}"': '"{name}" listesine eklendi',
   "Addons you could install": "Yükleyebileceğiniz eklentiler",
-  "Adds a Big Picture button to Harbor's navigation. Turn this off to keep it out of the way.":
-    "Harbor'ın gezinme menüsüne bir Big Picture düğmesi ekler. Görünmesini istemiyorsanız bunu kapatın.",
+  "Adds a Big Picture button to Lart's navigation. Turn this off to keep it out of the way.":
+    "Lart'ın gezinme menüsüne bir Big Picture düğmesi ekler. Görünmesini istemiyorsanız bunu kapatın.",
   Airing: "Yayında",
   Align: "Hizala",
   "Align to now": "Şimdiye hizala",
@@ -27,8 +27,8 @@ const coverage: Record<string, string> = {
   Anime4K: "Anime4K",
   Announcement: "Duyuru",
   Anonymous: "Anonim",
-  "Another program already holds this port, usually a Stremio server that is running on this machine. Harbor tried its spare ports too. Stop that server, or leave it running and point Harbor at it in Remote streaming server below.":
-    "Bu bağlantı noktası başka bir program tarafından kullanılıyor. Bu genellikle bu makinede çalışan bir Stremio sunucusudur. Harbor yedek bağlantı noktalarını da denedi. Bu sunucuyu durdurun veya çalışır durumda bırakıp aşağıdaki Uzak yayın sunucusu bölümünden Harbor'ı ona yönlendirin.",
+  "Another program already holds this port, usually a Stremio server that is running on this machine. Lart tried its spare ports too. Stop that server, or leave it running and point Lart at it in Remote streaming server below.":
+    "Bu bağlantı noktası başka bir program tarafından kullanılıyor. Bu genellikle bu makinede çalışan bir Stremio sunucusudur. Lart yedek bağlantı noktalarını da denedi. Bu sunucuyu durdurun veya çalışır durumda bırakıp aşağıdaki Uzak yayın sunucusu bölümünden Lart'ı ona yönlendirin.",
   Arcs: "Hikâye bölümleri",
   Arrows: "Ok tuşları",
   Ascending: "Artan",
@@ -65,15 +65,15 @@ const coverage: Record<string, string> = {
   "Checking {total} episodes for sources.": "{total} bölüm için kaynaklar kontrol ediliyor.",
   Chime: "Çan sesi",
   Choose: "Seç",
-  "Choose one season package. Harbor will match and download every available episode from it.":
-    "Bir sezon paketi seçin. Harbor paketteki tüm mevcut bölümleri eşleştirip indirecek.",
+  "Choose one season package. Lart will match and download every available episode from it.":
+    "Bir sezon paketi seçin. Lart paketteki tüm mevcut bölümleri eşleştirip indirecek.",
   "Choose where subtitle timing feedback appears and how large it is.":
     "Altyazı zamanlama geri bildiriminin nerede görüneceğini ve boyutunu seçin.",
   "Choose who can see the friends on your profile":
     "Profilinizdeki arkadaşları kimlerin görebileceğini seçin",
   Cinematography: "Görüntü yönetimi",
-  "Claim one so people can find you across Harbor.":
-    "İnsanların sizi Harbor genelinde bulabilmesi için bir kullanıcı adı alın.",
+  "Claim one so people can find you across Lart.":
+    "İnsanların sizi Lart genelinde bulabilmesi için bir kullanıcı adı alın.",
   "Clear recent searches": "Son aramaları temizle",
   "Click anywhere to skip": "Atlamak için herhangi bir yere tıklayın",
   Collapse: "Daralt",
@@ -119,8 +119,8 @@ const coverage: Record<string, string> = {
   Dot: "Nokta",
   Down: "Aşağı",
   "Download episode by episode": "Bölümleri tek tek indir",
-  "Downloaded subtitles can arrive after playback starts. Harbor switches from a temporary track when a stronger release match becomes available.":
-    "İndirilen altyazılar oynatma başladıktan sonra gelebilir. Harbor, sürümle daha iyi eşleşen bir altyazı kullanılabilir olduğunda geçici altyazı parçasından ona geçer.",
+  "Downloaded subtitles can arrive after playback starts. Lart switches from a temporary track when a stronger release match becomes available.":
+    "İndirilen altyazılar oynatma başladıktan sonra gelebilir. Lart, sürümle daha iyi eşleşen bir altyazı kullanılabilir olduğunda geçici altyazı parçasından ona geçer.",
   "Drift fixed": "Kayma düzeltildi",
   "Drifting poster wall behind the interface. Turn off on low power devices.":
     "Arayüzün arkasında süzülen afiş duvarı. Düşük güçlü cihazlarda kapatın.",
@@ -174,22 +174,22 @@ const coverage: Record<string, string> = {
   Guide: "Rehber",
   HI: "HI",
   Handle: "Kullanıcı adı",
-  "Harbor couldn't reach the catalog servers. Check the connection and reopen Big Picture.":
-    "Harbor katalog sunucularına ulaşamadı. Bağlantıyı kontrol edip Big Picture'ı yeniden açın.",
-  "Harbor found episode sources for {season}, but none of them is a single downloadable package. It can still fetch the episodes one at a time.":
-    "Harbor, {season} için bölüm kaynakları buldu ancak hiçbiri tek parça indirilebilir paket değil. Bölümleri yine de tek tek indirebilir.",
-  "Harbor found episode sources, but none was a downloadable package for {season}. Try another addon or refresh the sources.":
-    "Harbor bölüm kaynakları buldu ancak bunların hiçbiri {season} için indirilebilir bir paket değildi. Başka bir eklenti deneyin veya kaynakları yenileyin.",
-  "Harbor in a browser": "Tarayıcıda Harbor",
-  "Harbor's full video engine. Plays anything you throw at it.":
-    "Harbor'ın tam donanımlı video motoru. Karşısına ne çıkarırsanız oynatır.",
+  "Lart couldn't reach the catalog servers. Check the connection and reopen Big Picture.":
+    "Lart katalog sunucularına ulaşamadı. Bağlantıyı kontrol edip Big Picture'ı yeniden açın.",
+  "Lart found episode sources for {season}, but none of them is a single downloadable package. It can still fetch the episodes one at a time.":
+    "Lart, {season} için bölüm kaynakları buldu ancak hiçbiri tek parça indirilebilir paket değil. Bölümleri yine de tek tek indirebilir.",
+  "Lart found episode sources, but none was a downloadable package for {season}. Try another addon or refresh the sources.":
+    "Lart bölüm kaynakları buldu ancak bunların hiçbiri {season} için indirilebilir bir paket değildi. Başka bir eklenti deneyin veya kaynakları yenileyin.",
+  "Lart in a browser": "Tarayıcıda Lart",
+  "Lart's full video engine. Plays anything you throw at it.":
+    "Lart'ın tam donanımlı video motoru. Karşısına ne çıkarırsanız oynatır.",
   "Hide replies": "Yanıtları gizle",
   Highlights: "Öne çıkanlar",
   "Hold to continue": "Devam etmek için basılı tutun",
   "Hold to skip or continue": "Atlamak veya devam etmek için basılı tutun",
   Horizontal: "Yatay",
   Host: "Ev sahibi",
-  "How people find you across Harbor.": "İnsanların sizi Harbor genelinde nasıl bulacağı.",
+  "How people find you across Lart.": "İnsanların sizi Lart genelinde nasıl bulacağı.",
   ID: "ID",
   Imported: "İçe aktarıldı",
   "In this collection": "Bu koleksiyonda",
@@ -198,7 +198,7 @@ const coverage: Record<string, string> = {
   "Interface sounds": "Arayüz sesleri",
   Interrupted: "Kesintiye uğradı",
   Invert: "Ters çevir",
-  "Join Harbor": "Harbor'a katıl",
+  "Join Lart": "Lart'a katıl",
   "Jump back in": "Kaldığınız yerden devam edin",
   Keep: "Koru",
   "Keep the clock on screen when the player is not fullscreen.":
@@ -206,10 +206,10 @@ const coverage: Record<string, string> = {
   "Known for": "Tanındığı yapımlar",
   Language: "Dil",
   Latest: "En yeni",
-  "Launch straight into Big Picture when Harbor starts":
-    "Harbor açıldığında doğrudan Big Picture'ı başlat",
-  "Launch straight into Big Picture when Harbor starts. Press Esc at any time to leave.":
-    "Harbor açıldığında doğrudan Big Picture'a geçer. Çıkmak için istediğiniz zaman Esc tuşuna basın.",
+  "Launch straight into Big Picture when Lart starts":
+    "Lart açıldığında doğrudan Big Picture'ı başlat",
+  "Launch straight into Big Picture when Lart starts. Press Esc at any time to leave.":
+    "Lart açıldığında doğrudan Big Picture'a geçer. Çıkmak için istediğiniz zaman Esc tuşuna basın.",
   Leave: "Ayrıl",
   "Leave Big Picture": "Big Picture'dan çık",
   Length: "Süre",
@@ -267,8 +267,8 @@ const coverage: Record<string, string> = {
     "Bu bölümlerin hiçbiri için kaynak bulunamadı. Yenilemeyi veya başka bir eklenti kullanmayı deneyin.",
   "No trailer available for {name}": "{name} için fragman yok",
   Nominee: "Aday",
-  "None of your addons returned a downloadable package for {season}. Harbor can still fetch the episodes one at a time, or you can refresh the sources.":
-    "Eklentilerinizin hiçbiri {season} için indirilebilir bir paket sunmadı. Harbor bölümleri yine de tek tek indirebilir veya kaynakları yenileyebilirsiniz.",
+  "None of your addons returned a downloadable package for {season}. Lart can still fetch the episodes one at a time, or you can refresh the sources.":
+    "Eklentilerinizin hiçbiri {season} için indirilebilir bir paket sunmadı. Lart bölümleri yine de tek tek indirebilir veya kaynakları yenileyebilirsiniz.",
   "None of your addons returned a downloadable package for {season}. Refresh the sources or check your source settings.":
     "Eklentilerinizin hiçbiri {season} için indirilebilir bir paket döndürmedi. Kaynakları yenileyin veya kaynak ayarlarınızı kontrol edin.",
   'Nothing found for "{q}"': '"{q}" için sonuç bulunamadı',
@@ -290,22 +290,22 @@ const coverage: Record<string, string> = {
   "On-screen keyboard": "Ekran klavyesi",
   "One free account for your handle, themes, and sync.":
     "Kullanıcı adınız, temalarınız ve senkronizasyon için tek bir ücretsiz hesap.",
-  "One switch serves Harbor on your network. Scan a code below with your phone, or open an address on any device on the same Wi-Fi.":
-    "Tek bir anahtarla Harbor'ı ağınızda kullanıma açın. Telefonunuzla aşağıdaki kodlardan birini tarayın veya aynı Wi-Fi'daki herhangi bir cihazda adreslerden birini açın.",
+  "One switch serves Lart on your network. Scan a code below with your phone, or open an address on any device on the same Wi-Fi.":
+    "Tek bir anahtarla Lart'ı ağınızda kullanıma açın. Telefonunuzla aşağıdaki kodlardan birini tarayın veya aynı Wi-Fi'daki herhangi bir cihazda adreslerden birini açın.",
   Ongoing: "Devam ediyor",
   Online: "Çevrimiçi",
   "Only embedded subtitles are available right now.":
     "Şu anda yalnızca gömülü altyazılar kullanılabilir.",
   "Only me": "Yalnızca ben",
-  "Open Harbor on desktop to verify ownership in your browser.":
-    "Sahipliği tarayıcınızda doğrulamak için Harbor'ı masaüstünde açın.",
+  "Open Lart on desktop to verify ownership in your browser.":
+    "Sahipliği tarayıcınızda doğrulamak için Lart'ı masaüstünde açın.",
   "Open here": "Burada aç",
   "Open in Big Picture": "Big Picture'da aç",
-  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Harbor never sees your password.":
-    "Stremio'yu tarayıcınızda açar. E-posta, Facebook ve Apple ile çalışır. Harbor şifrenizi hiçbir zaman görmez.",
+  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Lart never sees your password.":
+    "Stremio'yu tarayıcınızda açar. E-posta, Facebook ve Apple ile çalışır. Lart şifrenizi hiçbir zaman görmez.",
   "Ownership verified": "Sahiplik doğrulandı",
-  "PNG, WEBP, SVG or GIF. Harbor shrinks it to 128px so it stays small on disk.":
-    "PNG, WEBP, SVG veya GIF. Harbor, diskte az yer kaplaması için görseli 128px boyutuna küçültür.",
+  "PNG, WEBP, SVG or GIF. Lart shrinks it to 128px so it stays small on disk.":
+    "PNG, WEBP, SVG veya GIF. Lart, diskte az yer kaplaması için görseli 128px boyutuna küçültür.",
   "Page background": "Sayfa arka planı",
   Paid: "Ücretli",
   Paste: "Yapıştır",
@@ -345,8 +345,8 @@ const coverage: Record<string, string> = {
   Queue: "Kuyruk",
   Queued: "Kuyruğa alındı",
   "Queued {queued} of {total} episodes.": "{total} bölümden {queued} tanesi sıraya alındı.",
-  "Queued {queued} of {total} episodes. Harbor could not match every episode in this package.":
-    "{total} bölümden {queued} tanesi kuyruğa alındı. Harbor bu paketteki tüm bölümleri eşleştiremedi.",
+  "Queued {queued} of {total} episodes. Lart could not match every episode in this package.":
+    "{total} bölümden {queued} tanesi kuyruğa alındı. Lart bu paketteki tüm bölümleri eşleştiremedi.",
   "Quick panel": "Hızlı panel",
   Quiet: "Sakin",
   REC: "REC",
@@ -402,7 +402,7 @@ const coverage: Record<string, string> = {
   "Scroll awards left": "Ödülleri sola kaydır",
   "Scroll awards right": "Ödülleri sağa kaydır",
   Search: "Ara",
-  "Search Harbor": "Harbor'da ara",
+  "Search Lart": "Lart'da ara",
   "Search all sources again": "Tüm kaynaklarda yeniden ara",
   "Search movies, shows, and manga to add": "Eklemek için film, dizi ve manga ara",
   Searching: "Aranıyor",
@@ -410,8 +410,8 @@ const coverage: Record<string, string> = {
   Seasons: "Sezonlar",
   Servers: "Sunucular",
   Share: "Paylaş",
-  "Shared collections from across Harbor will show up here soon.":
-    "Harbor genelinde paylaşılan koleksiyonlar yakında burada görünecek.",
+  "Shared collections from across Lart will show up here soon.":
+    "Lart genelinde paylaşılan koleksiyonlar yakında burada görünecek.",
   "Shift + Arrows": "Shift + Ok tuşları",
   "Short {word} {n} seconds": "{word} {n} saniye kısa",
   "Show 1 reply": "1 yanıtı göster",
@@ -434,12 +434,12 @@ const coverage: Record<string, string> = {
   Shown: "Gösteriliyor",
   "Shown on the card and at the top of the page.": "Kartta ve sayfanın üst kısmında gösterilir.",
   Shows: "Diziler",
-  "Sign in to Harbor to check availability.":
-    "Kullanılabilirliği kontrol etmek için Harbor'da oturum açın.",
+  "Sign in to Lart to check availability.":
+    "Kullanılabilirliği kontrol etmek için Lart'da oturum açın.",
   "Sign in to pick up where you left off.": "Kaldığınız yerden devam etmek için oturum açın.",
   "Sign in to upload a custom image.": "Özel bir görsel yüklemek için oturum açın.",
   "Signed in as {username}": "{username} olarak oturum açıldı",
-  "Signed in to your Harbor account": "Harbor hesabınızda oturum açıldı",
+  "Signed in to your Lart account": "Lart hesabınızda oturum açıldı",
   Silent: "Sessiz",
   Size: "Boyut",
   "Skip the launch": "Açılışı atla",
@@ -494,8 +494,8 @@ const coverage: Record<string, string> = {
     "Bu görsel kullanılamadı. Daha küçük bir PNG veya WEBP deneyin.",
   "The 20-character key from when you created your account. Paste it or type each block.":
     "Hesabınızı oluştururken verilen 20 karakterlik anahtar. Yapıştırın veya her bloğu ayrı ayrı yazın.",
-  "The pointer your right stick moves around Harbor. Pick a shape or use your own image.":
-    "Sağ çubuğun Harbor'da hareket ettirdiği işaretçi. Bir şekil seçin veya kendi görselinizi kullanın.",
+  "The pointer your right stick moves around Lart. Pick a shape or use your own image.":
+    "Sağ çubuğun Lart'da hareket ettirdiği işaretçi. Bir şekil seçin veya kendi görselinizi kullanın.",
   "These episodes are already downloading.": "Bu bölümler zaten indiriliyor.",
   Thickness: "Kalınlık",
   "This collection does not have any titles in it right now.":
@@ -537,8 +537,8 @@ const coverage: Record<string, string> = {
   Up: "Yukarı",
   Uploads: "Yüklenenler",
   "Use a different Stremio account": "Farklı bir Stremio hesabı kullan",
-  "Use a gamepad or remote to move around Harbor":
-    "Harbor'da gezinmek için oyun kumandası veya uzaktan kumanda kullanın",
+  "Use a gamepad or remote to move around Lart":
+    "Lart'da gezinmek için oyun kumandası veya uzaktan kumanda kullanın",
   Verified: "Doğrulandı",
   Verify: "Doğrula",
   "Verify ownership": "Sahipliği doğrula",
@@ -555,8 +555,8 @@ const coverage: Record<string, string> = {
   "Welcome back": "Tekrar hoş geldiniz",
   "What ties these together? A studio, a mood, a marathon night.":
     "Bunları bir araya getiren ne? Bir stüdyo, bir ruh hâli, bir maraton gecesi.",
-  "When a subtitle runs early or late, Harbor measures the speech and corrects the timing on its own.":
-    "Altyazı erken veya geç göründüğünde Harbor konuşmayı ölçer ve zamanlamayı otomatik olarak düzeltir.",
+  "When a subtitle runs early or late, Lart measures the speech and corrects the timing on its own.":
+    "Altyazı erken veya geç göründüğünde Lart konuşmayı ölçer ve zamanlamayı otomatik olarak düzeltir.",
   "When people share a collection it shows up here. Build one you love and share it, that is how it starts.":
     "Kullanıcılar bir koleksiyonu paylaştığında burada görünür. Sevdiğiniz bir koleksiyon oluşturup paylaşın, her şey böyle başlar.",
   Winner: "Kazanan",
@@ -595,8 +595,8 @@ const coverage: Record<string, string> = {
   favorited: "favorilere eklendi",
   finished: "tamamlandı",
   hr: "sa.",
-  "libmpv did not load, so playback falls back to HTML5 and formats like MKV may refuse to play. On Linux, install your distribution's libmpv package, then restart Harbor.":
-    "libmpv yüklenemediğinden oynatma HTML5'e geçer ve MKV gibi biçimler oynatılamayabilir. Linux'ta dağıtımınızın libmpv paketini yükleyip Harbor'ı yeniden başlatın.",
+  "libmpv did not load, so playback falls back to HTML5 and formats like MKV may refuse to play. On Linux, install your distribution's libmpv package, then restart Lart.":
+    "libmpv yüklenemediğinden oynatma HTML5'e geçer ve MKV gibi biçimler oynatılamayabilir. Linux'ta dağıtımınızın libmpv paketini yükleyip Lart'ı yeniden başlatın.",
   local: "yerel",
   "m:ss": "m:ss",
   member: "üye",
@@ -647,22 +647,22 @@ const coverage: Record<string, string> = {
   "A local folder": "Yerel bir klasör",
   "Advanced: build a plugin": "İleri düzey: eklenti geliştirin",
   "Also Known As": "Diğer adları",
-  "Back in Harbor: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
-    "Harbor'da Manga > Kaynak ayarla > Sunucunuz bölümüne dönün ve sunucu adresinizi yapıştırın (örneğin {localUrl}; sunucu başka bir makinede çalışıyorsa yerel ağ IP adresiniz, örneğin {lanUrl}).",
+  "Back in Lart: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
+    "Lart'da Manga > Kaynak ayarla > Sunucunuz bölümüne dönün ve sunucu adresinizi yapıştırın (örneğin {localUrl}; sunucu başka bir makinede çalışıyorsa yerel ağ IP adresiniz, örneğin {lanUrl}).",
   "Controller preview": "Kumanda önizlemesi",
   "Couldn't save that font. It may be invalid, or storage is full.":
     "Bu yazı tipi kaydedilemedi. Geçersiz olabilir veya depolama alanı dolu olabilir.",
   "Download and run Suwayomi Server:": "Suwayomi Server'ı indirip çalıştırın:",
-  "Every source you enable in Suwayomi then shows up in Harbor. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
-    "Suwayomi'de etkinleştirdiğiniz her kaynak daha sonra Harbor'da görünür. Suwayomi, bir site değiştiğinde uzantılarını güncel tutar; böylece çalışmaya devam ederler.",
+  "Every source you enable in Suwayomi then shows up in Lart. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
+    "Suwayomi'de etkinleştirdiğiniz her kaynak daha sonra Lart'da görünür. Suwayomi, bir site değiştiğinde uzantılarını güncel tutar; böylece çalışmaya devam ederler.",
   "Everything else, through your own server (Suwayomi)":
     "Diğer her şey, kendi sunucunuz (Suwayomi) üzerinden",
   "Expand {title} image": "{title} görselini büyüt",
-  "Getting manga sources into Harbor": "Harbor'a manga kaynağı ekleme",
-  "Harbor also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Harbor repository. Only install plugins from repositories you trust.":
-    "Harbor ayrıca deneysel bir eklenti çalışma zamanı sunar. Bir kaynak eklentisi yazmak istiyorsanız Harbor deposundaki {path} yoluna bakın. Yalnızca güvendiğiniz depolardan eklenti kurun.",
-  "Harbor ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Harbor. There are two ways to add sources.":
-    "Harbor, manga veya kazıyıcı içermez; yalnızca bir okuyucudur. Kaynakları siz sağlarsınız ve bu kaynakların içeriği Harbor'a değil, onları işletenlere aittir. Kaynak eklemenin iki yolu vardır.",
+  "Getting manga sources into Lart": "Lart'a manga kaynağı ekleme",
+  "Lart also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Lart repository. Only install plugins from repositories you trust.":
+    "Lart ayrıca deneysel bir eklenti çalışma zamanı sunar. Bir kaynak eklentisi yazmak istiyorsanız Lart deposundaki {path} yoluna bakın. Yalnızca güvendiğiniz depolardan eklenti kurun.",
+  "Lart ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Lart. There are two ways to add sources.":
+    "Lart, manga veya kazıyıcı içermez; yalnızca bir okuyucudur. Kaynakları siz sağlarsınız ve bu kaynakların içeriği Lart'a değil, onları işletenlere aittir. Kaynak eklemenin iki yolu vardır.",
   "Import failed": "İçe aktarma başarısız oldu",
   "It serves a web UI at {url}": "{url} adresinde bir web arayüzü sunar",
   "Manga > Set up a source > Local folder, and choose a folder of manga you already own (CBZ files or folders of images).":
@@ -702,8 +702,8 @@ const coverage: Record<string, string> = {
   heard: "duyulan",
   of: "/",
   orig: "orij.",
-  "Open the signed-in user's own Harbor profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
-    "Oturum açmış kullanıcının kendi Harbor profilini, kullanıcı adı yüklendiği anda hemen açar. Gezinme başladığında true, diğer durumlarda false döndürür.",
+  "Open the signed-in user's own Lart profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
+    "Oturum açmış kullanıcının kendi Lart profilini, kullanıcı adı yüklendiği anda hemen açar. Gezinme başladığında true, diğer durumlarda false döndürür.",
   "AI search failed.": "Yapay zekâ araması başarısız oldu.",
   "Add a debrid provider in Settings first.": "Önce Ayarlar'dan bir debrid sağlayıcısı ekleyin.",
   "Cancelled.": "İptal edildi.",
@@ -715,9 +715,9 @@ const coverage: Record<string, string> = {
     "Bu P2P kaynağı hazırlanamadı. Erişilebilir eşleri olmayabilir. Tekrar deneyin veya başka bir kaynak seçin.",
   "Direct torrent streaming is turned off. Turn it on in Settings > P2P & servers to stream torrents without a debrid.":
     "Doğrudan torrent yayını kapalı. Torrentleri debrid olmadan oynatmak için Ayarlar > P2P ve sunucular bölümünden açın.",
-  "Harbor could not open your browser.": "Harbor tarayıcınızı açamadı.",
-  "Harbor's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
-    "Harbor'ın eşler arası motoru hazırlanıyor. Bu durum birkaç saniye içinde kendiliğinden düzelir, ardından Oynat çalışır.",
+  "Lart could not open your browser.": "Lart tarayıcınızı açamadı.",
+  "Lart's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
+    "Lart'ın eşler arası motoru hazırlanıyor. Bu durum birkaç saniye içinde kendiliğinden düzelir, ardından Oynat çalışır.",
   Minus: "Eksi",
   "None of your debrid services could deliver a working file. Pick another stream.":
     "Debrid hizmetlerinizin hiçbiri çalışan bir dosya sağlayamadı. Başka bir yayın seçin.",
@@ -745,8 +745,8 @@ const coverage: Record<string, string> = {
     "Bu ham bir NZB dosyasıdır. Oynatılmadan önce SABnzbd veya NZBGet ile indirilmesi gerekir.",
   "This source isn't ready on your debrid yet. Try it again in a moment or pick another.":
     "Bu kaynak debrid hizmetinizde henüz hazır değil. Birazdan tekrar deneyin veya başka bir kaynak seçin.",
-  "This source only opens in an external browser, not in Harbor's player.":
-    "Bu kaynak Harbor oynatıcısında değil, yalnızca harici bir tarayıcıda açılır.",
+  "This source only opens in an external browser, not in Lart's player.":
+    "Bu kaynak Lart oynatıcısında değil, yalnızca harici bir tarayıcıda açılır.",
   "This stream has no playable source.": "Bu yayında oynatılabilir kaynak yok.",
   "This stream isn't cached on your debrid yet. Try a different one from the list.":
     "Bu yayın debrid hizmetinizde henüz önbelleğe alınmamış. Listeden başka bir yayın deneyin.",
@@ -761,15 +761,15 @@ const coverage: Record<string, string> = {
     "Debrid anahtarınız reddedildi. Ayarlar'dan kontrol edin.",
   "Your debrid served a placeholder/error video instead of the real file. Pick another stream.":
     "Debrid hizmetiniz gerçek dosya yerine bir yer tutucu veya hata videosu sundu. Başka bir yayın seçin.",
-  "Your debrid service doesn't support queueing torrents from Harbor yet.":
-    "Debrid hizmetiniz torrentleri Harbor'dan kuyruğa almayı henüz desteklemiyor.",
+  "Your debrid service doesn't support queueing torrents from Lart yet.":
+    "Debrid hizmetiniz torrentleri Lart'dan kuyruğa almayı henüz desteklemiyor.",
   "Your debrid subscription has expired.": "Debrid aboneliğinizin süresi dolmuş.",
   "Your debrid took too long to respond. Hit Play again, or try another stream.":
     "Debrid hizmetiniz çok geç yanıt verdi. Oynat'a tekrar basın veya başka bir yayın deneyin.",
   "Your {name} subscription looks expired.": "{name} aboneliğinizin süresi dolmuş görünüyor.",
   "{name} is over its traffic or fair-use limit right now.":
     "{name} şu anda trafik veya adil kullanım sınırını aşmış.",
-  "{name} is rate-limiting Harbor right now.": "{name} şu anda Harbor'ın istek hızını sınırlıyor.",
+  "{name} is rate-limiting Lart right now.": "{name} şu anda Lart'ın istek hızını sınırlıyor.",
   "{name} is temporarily unavailable (server error).":
     "{name} geçici olarak kullanılamıyor (sunucu hatası).",
   "{name} rejected your API key.": "{name} API anahtarınızı reddetti.",
@@ -789,7 +789,7 @@ const coverage: Record<string, string> = {
   "Automatic refresh": "Otomatik yenileme",
   "Available in {name}": "{name} üzerinde kullanılabilir",
   "Bring your own server-rendered library aboard.":
-    "Kendi sunucunuzdaki medya kitaplığını Harbor'a taşıyın.",
+    "Kendi sunucunuzdaki medya kitaplığını Lart'a taşıyın.",
   "Browse addon sources": "Eklenti kaynaklarına göz at",
   "Build your own library": "Kendi kitaplığınızı oluşturun",
   "Cached titles from this server will also be removed. Your media on the server will not be changed.":
@@ -802,8 +802,8 @@ const coverage: Record<string, string> = {
   "Connect Jellyfin, Emby, or Plex in Streaming sources.":
     "Yayın kaynakları bölümünden Jellyfin, Emby veya Plex'i bağlayın.",
   "Connect and sync": "Bağlan ve eşitle",
-  "Connect books you own, reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "Sahip olduğunuz kitapları, okuma kaynaklarını ve meta veri hizmetlerini bağlayın. Tüm kaynaklar denetiminizde kalırken Harbor rafınızı düzenli tutar.",
+  "Connect books you own, reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "Sahip olduğunuz kitapları, okuma kaynaklarını ve meta veri hizmetlerini bağlayın. Tüm kaynaklar denetiminizde kalırken Lart rafınızı düzenli tutar.",
   "Connect home server": "Ev sunucusu bağla",
   "Connect now": "Şimdi bağlan",
   "Connect server": "Sunucu bağla",
@@ -815,18 +815,18 @@ const coverage: Record<string, string> = {
   Disable: "Devre dışı bırak",
   "Download media": "Medyayı indir",
   "Download selected ({n})": "Seçilenleri indir ({n})",
-  "Edge voices need the Harbor desktop app. Reading with the device voice.":
-    "Edge sesleri için Harbor masaüstü uygulaması gerekir. Cihazın sesiyle okunuyor.",
+  "Edge voices need the Lart desktop app. Reading with the device voice.":
+    "Edge sesleri için Lart masaüstü uygulaması gerekir. Cihazın sesiyle okunuyor.",
   "Edit home server": "Ev sunucusunu düzenle",
   Enrichment: "Zenginleştirme",
   "Every…": "Her…",
   "Featured book": "Öne çıkan kitap",
-  "Harbor does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Harbor open it.":
-    "Harbor hiçbir kitabı barındırmaz. Bu cihazda bir klasör açın, kaynak uzantısı kurun veya kendi sunucunuzu bağlayın. Meta veriler kitabı tanımlayabilir ancak Harbor'ın kitabı açabilmesini sağlayan şey kaynaktır.",
-  "Harbor opens Plex in your browser. Your Plex password is never entered in Harbor.":
-    "Harbor, Plex'i tarayıcınızda açar. Plex parolanız Harbor'a hiçbir zaman girilmez.",
-  "Harbor tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
-    "Harbor; HTTP, HTTPS, ters proxy'ler ve sağlayıcının varsayılan bağlantı noktasını dener. Kimlik bilgileri ayrı saklanır.",
+  "Lart does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Lart open it.":
+    "Lart hiçbir kitabı barındırmaz. Bu cihazda bir klasör açın, kaynak uzantısı kurun veya kendi sunucunuzu bağlayın. Meta veriler kitabı tanımlayabilir ancak Lart'ın kitabı açabilmesini sağlayan şey kaynaktır.",
+  "Lart opens Plex in your browser. Your Plex password is never entered in Lart.":
+    "Lart, Plex'i tarayıcınızda açar. Plex parolanız Lart'a hiçbir zaman girilmez.",
+  "Lart tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
+    "Lart; HTTP, HTTPS, ters proxy'ler ve sağlayıcının varsayılan bağlantı noktasını dener. Kimlik bilgileri ayrı saklanır.",
   "Home server": "Ev sunucusu",
   "Home server quality": "Ev sunucusu kalitesi",
   "Home servers": "Ev sunucuları",
@@ -852,7 +852,7 @@ const coverage: Record<string, string> = {
   "Prefer this device": "Bu cihazı tercih et",
   "Preferred home server": "Tercih edilen ev sunucusu",
   "Preparing narration audio": "Sesli okuma hazırlanıyor",
-  "Read eBooks in Harbor": "eKitapları Harbor'da okuyun",
+  "Read eBooks in Lart": "eKitapları Lart'da okuyun",
   "Refresh interval in days": "Gün cinsinden yenileme aralığı",
   "Refresh policy": "Yenileme ilkesi",
   "Remove folder?": "Klasör kaldırılsın mı?",
@@ -899,14 +899,14 @@ const coverage: Record<string, string> = {
   "Direct/debrid only": "Yalnızca doğrudan/debrid",
   "Match subtitles across languages (experimental)":
     "Farklı dillerdeki altyazıları eşleştir (deneysel)",
-  "When the audio and subtitle use different languages, Harbor compares a release-matched subtitle in the audio language. It only offers a fix unless every safety check is measured.":
-    "Ses ve altyazı farklı dillerde olduğunda Harbor, ses dilindeki aynı sürümle eşleşen bir altyazıyla karşılaştırır. Tüm güvenlik kontrolleri ölçülmedikçe yalnızca bir düzeltme önerir.",
+  "When the audio and subtitle use different languages, Lart compares a release-matched subtitle in the audio language. It only offers a fix unless every safety check is measured.":
+    "Ses ve altyazı farklı dillerde olduğunda Lart, ses dilindeki aynı sürümle eşleşen bir altyazıyla karşılaştırır. Tüm güvenlik kontrolleri ölçülmedikçe yalnızca bir düzeltme önerir.",
   "New York Times": "New York Times",
   "Bestseller lists in the eBook section.": "eBook bölümündeki çok satanlar listeleri.",
   "New York Times · bestseller lists": "New York Times · çok satanlar listeleri",
   "NYT Books API key": "NYT Books API anahtarı",
-  "Choose whether Harbor prefers direct and debrid sources, peer-to-peer torrents, or shows both.":
-    "Harbor'ın doğrudan ve debrid kaynaklarını mı, eşler arası torrentleri mi tercih edeceğini veya ikisini birden mi göstereceğini seçin.",
+  "Choose whether Lart prefers direct and debrid sources, peer-to-peer torrents, or shows both.":
+    "Lart'ın doğrudan ve debrid kaynaklarını mı, eşler arası torrentleri mi tercih edeceğini veya ikisini birden mi göstereceğini seçin.",
 };
 
 export default coverage;

@@ -53,11 +53,11 @@ const surfaces2: Record<string, string> = {
   "That is the whole trick. A file called {example} drops straight into the matching slot. The name before .png is all that matters, capitals and spaces are ignored.":
     "Вот и весь секрет. Файл с именем {example} сразу попадёт в соответствующую ячейку. Важно только имя перед .png, регистр и пробелы не учитываются.",
   "Any size works, we optimize it": "Подойдёт любой размер, мы всё оптимизируем",
-  "Drop in art at any resolution. Harbor resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
-    "Добавляйте изображения в любом разрешении. Harbor автоматически уменьшает и сжимает слишком большие файлы, поэтому ни один из них не будет пропущен из-за размера. Лучше всего выглядят квадратные PNG с прозрачным фоном.",
+  "Drop in art at any resolution. Lart resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
+    "Добавляйте изображения в любом разрешении. Lart автоматически уменьшает и сжимает слишком большие файлы, поэтому ни один из них не будет пропущен из-за размера. Лучше всего выглядят квадратные PNG с прозрачным фоном.",
   "Animated GIFs are welcome": "Анимированные GIF тоже поддерживаются",
-  "Want a badge that moves? Drop in a GIF up to 8 MB. Harbor shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
-    "Хотите анимированный значок? Добавьте GIF размером до 8 МБ. Harbor уменьшит его и преобразует в лёгкий анимированный формат, чтобы сохранить чёткость и ускорить загрузку. Лучше использовать короткую зацикленную анимацию.",
+  "Want a badge that moves? Drop in a GIF up to 8 MB. Lart shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
+    "Хотите анимированный значок? Добавьте GIF размером до 8 МБ. Lart уменьшит его и преобразует в лёгкий анимированный формат, чтобы сохранить чёткость и ускорить загрузку. Лучше использовать короткую зацикленную анимацию.",
   "Three ways to add art": "Три способа добавить изображения",
   "Click any single slot to pick one file, select many PNGs at once, or drop a whole .zip of them. Named files land in their slots automatically, the rest you can place by hand.":
     "Нажмите отдельную ячейку, чтобы выбрать один файл, выберите сразу несколько PNG или перетащите целый .zip с ними. Файлы с подходящими именами автоматически попадут в свои ячейки, остальные можно разместить вручную.",
@@ -141,7 +141,7 @@ const surfaces2: Record<string, string> = {
   "Preparing book…": "Подготовка книги…",
   "{title} cover": "Обложка {title}",
   "{title} internal cover": "Внутренняя обложка {title}",
-  "Harbor Reader": "Harbor Reader",
+  "Lart Reader": "Lart Reader",
   "Bookmark current passage": "Добавить текущий фрагмент в закладки",
   "Show translation": "Показать перевод",
   "Show original language": "Показать язык оригинала",
@@ -215,7 +215,7 @@ const surfaces2: Record<string, string> = {
   "Choose a custom tracker color": "Выбрать свой цвет отслеживания",
   "Save failed: {error}": "Не удалось сохранить: {error}",
   "The eBook download was canceled.": "Загрузка электронной книги отменена.",
-  "Harbor eBook": "Электронная книга Harbor",
+  "Lart eBook": "Электронная книга Lart",
   "This eBook is not connected to an installed source.":
     "Эта электронная книга не связана с установленным источником.",
   "Loading chapter list…": "Загрузка списка глав…",

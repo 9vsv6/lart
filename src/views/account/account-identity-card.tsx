@@ -36,7 +36,7 @@ export function AccountIdentityCard({ author }: { author: Author }) {
             <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-success" />
             {author.handle
               ? t("Signed in as {username}", { username: author.username })
-              : t("Signed in to your Harbor account")}
+              : t("Signed in to your Lart account")}
           </span>
         </span>
 

@@ -67,7 +67,7 @@ function LegalDisclaimer() {
   return (
     <Section title={t("Legal")}>
       <p className={`max-w-[70ch] ${ROW_DESC}`}>
-        {t("{app} is an independent, open-source desktop and web client.", { app: "Harbor" })}{" "}
+        {t("{app} is an independent, open-source desktop and web client.", { app: "Lart" })}{" "}
         <span className="font-semibold text-ink">
           {t(
             "It is not affiliated with, endorsed by, sponsored by, or in any way associated with {company}.",
@@ -86,7 +86,7 @@ function LegalDisclaimer() {
       <p className={`max-w-[70ch] ${ROW_DESC}`}>
         {t(
           "{app} itself does not host, distribute, or index any media. All streams come from third-party addons, debrid services, or your own {service} account that you configure yourself. You are responsible for what you choose to play and for complying with the laws of your jurisdiction.",
-          { app: "Harbor", service: "Stremio" },
+          { app: "Lart", service: "Stremio" },
         )}
       </p>
     </Section>

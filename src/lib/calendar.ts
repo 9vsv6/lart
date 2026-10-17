@@ -507,7 +507,7 @@ function desktopNotifyBody(item: CalendarItem): string {
 
 async function fetchPosterBytes(url: string): Promise<number[] | undefined> {
   try {
-    // A same-origin app asset (e.g. the Harbor icon) lives inside the webview's
+    // A same-origin app asset (e.g. the Lart icon) lives inside the webview's
     // own bundle — safeFetchBytes's native-fetch routing is for external CDNs
     // and can't reach it, so read it with a plain same-origin fetch instead.
     const res = url.startsWith("/")
@@ -607,7 +607,7 @@ export async function fireWebhook(
     let attempted = 0;
     if (payload.items.length === 0) {
       attempted = 1;
-      if (await sendDesktopNotification("Harbor", payload.text, undefined, HARBOR_ICON_PATH)) {
+      if (await sendDesktopNotification("Lart", payload.text, undefined, HARBOR_ICON_PATH)) {
         delivered = 1;
       }
     } else {
@@ -627,7 +627,7 @@ export async function fireWebhook(
       }
       if (payload.items.length > DESKTOP_NOTIFY_CAP) {
         attempted++;
-        if (await sendDesktopNotification("Harbor", payload.text)) delivered++;
+        if (await sendDesktopNotification("Lart", payload.text)) delivered++;
       }
     }
     if (delivered === 0) {
@@ -663,7 +663,7 @@ export async function fireWebhook(
         ],
       }));
       const body: Record<string, unknown> = {
-        username: "Harbor",
+        username: "Lart",
         content: payload.text,
       };
       if (embeds.length > 0) body.embeds = embeds;

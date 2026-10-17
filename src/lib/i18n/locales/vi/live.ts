@@ -76,8 +76,8 @@ const live: Record<string, string> = {
   "The URL is valid but the playlist is empty. The provider may be in maintenance, or the URL is misconfigured.":
     "URL hợp lệ nhưng danh sách phát trống. Nhà cung cấp có thể đang bảo trì hoặc URL được cấu hình sai.",
   "Playlist is too large": "Danh sách phát quá lớn",
-  "Harbor caps playlists at 80 MB to stay responsive. Most providers offer a filtered URL with fewer channels.":
-    "Harbor giới hạn danh sách phát ở 80 MB để duy trì độ phản hồi. Hầu hết nhà cung cấp đều có URL đã lọc với ít kênh hơn.",
+  "Lart caps playlists at 80 MB to stay responsive. Most providers offer a filtered URL with fewer channels.":
+    "Lart giới hạn danh sách phát ở 80 MB để duy trì độ phản hồi. Hầu hết nhà cung cấp đều có URL đã lọc với ít kênh hơn.",
   "Could not load this playlist": "Không thể tải danh sách phát này",
   "No channels match": "Không có kênh phù hợp",
   "Reset filters": "Đặt lại bộ lọc",

@@ -31,16 +31,16 @@ const residual: Record<string, string> = {
   "That's a normal security setting. Use the button below to open it in your browser instead.":
     "这是正常的安全设置。请使用下方按钮改为在浏览器中打开。",
   "Resume S{season} E{episode}": "继续播放第 {season} 季第 {episode} 集",
-  "You're leaving Harbor": "你即将离开 Harbor",
-  "This link goes to an external site that Harbor does not control or vouch for. Triple-check the address before you continue, and never enter your Harbor password anywhere but Harbor.":
-    "此链接将前往 Harbor 无法控制或担保的外部网站。继续前请务必再三核对网址，并且切勿在 Harbor 之外的任何地方输入 Harbor 密码。",
+  "You're leaving Lart": "你即将离开 Lart",
+  "This link goes to an external site that Lart does not control or vouch for. Triple-check the address before you continue, and never enter your Lart password anywhere but Lart.":
+    "此链接将前往 Lart 无法控制或担保的外部网站。继续前请务必再三核对网址，并且切勿在 Lart 之外的任何地方输入 Lart 密码。",
   Destination: "目标地址",
   "Only continue if you fully trust this link": "仅在完全信任此链接时继续",
-  "Harbor can open only HTTP or HTTPS destinations.": "Harbor 只能打开 HTTP 或 HTTPS 地址。",
-  "Harbor cannot open links that include embedded credentials.":
-    "Harbor 无法打开包含嵌入式凭据的链接。",
-  "Harbor could not verify this destination.": "Harbor 无法验证此目标地址。",
-  "Harbor's temporary viewer requires HTTPS.": "Harbor 的临时查看器要求使用 HTTPS。",
+  "Lart can open only HTTP or HTTPS destinations.": "Lart 只能打开 HTTP 或 HTTPS 地址。",
+  "Lart cannot open links that include embedded credentials.":
+    "Lart 无法打开包含嵌入式凭据的链接。",
+  "Lart could not verify this destination.": "Lart 无法验证此目标地址。",
+  "Lart's temporary viewer requires HTTPS.": "Lart 的临时查看器要求使用 HTTPS。",
   "Syncing to MyAnimeList": "正在同步到 MyAnimeList",
   "Now watching on MyAnimeList": "已在 MyAnimeList 标记为正在观看",
   "Synced to MyAnimeList": "已同步到 MyAnimeList",
@@ -51,8 +51,8 @@ const residual: Record<string, string> = {
   "Your remote streaming server is not reachable. Check its address in Settings.":
     "无法连接到你的远程流媒体服务器。请在“设置”中检查其地址。",
   "No playable video file was found in this torrent.": "此 torrent 中未找到可播放的视频文件。",
-  "Direct torrent play needs the Harbor desktop app.":
-    "直接播放 torrent 需要使用 Harbor 桌面应用。",
+  "Direct torrent play needs the Lart desktop app.":
+    "直接播放 torrent 需要使用 Lart 桌面应用。",
   "The streaming engine is still starting up. Give it a moment and press Play again.":
     "流媒体引擎仍在启动。请稍等片刻，然后再次按“播放”。",
   "Could not find any peers for this torrent yet. It may be dead or very low on seeders.":
@@ -143,8 +143,8 @@ const residual: Record<string, string> = {
   "No PiP session. Closing.": "无画中画会话。正在关闭。",
   "Failed to read session: {message}": "读取会话失败：{message}",
   "Subtitle {number}": "字幕 {number}",
-  "Harbor queried 1 addon and got nothing back": "Harbor 查询了 1 个插件，但未获得任何结果",
-  "Harbor queried {n} addons and got nothing back": "Harbor 查询了 {n} 个插件，但未获得任何结果",
+  "Lart queried 1 addon and got nothing back": "Lart 查询了 1 个插件，但未获得任何结果",
+  "Lart queried {n} addons and got nothing back": "Lart 查询了 {n} 个插件，但未获得任何结果",
   "Tried IDs: {ids}": "已尝试的 ID：{ids}",
   " · +{n} more": " · 另有 {n} 个",
   "sketchy files": "可疑文件",
@@ -162,10 +162,10 @@ const residual: Record<string, string> = {
   "wrong movie": "电影不符",
   "1 source · 0 made it through": "1 个片源 · 0 个通过筛选",
   "{n} sources · 0 made it through": "{n} 个片源 · 0 个通过筛选",
-  "Harbor blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
-    "Harbor 默认会屏蔽可疑文件和版本不符的资源。对于较老的剧集和冷门作品，此筛选有时过于严格。",
-  "No clean release has surfaced yet. This may be too new. Harbor's filters dropped everything that came back as wrong-movie noise.":
-    "尚未找到正常版本。这部作品可能太新了。Harbor 的筛选器已剔除所有被判定为电影不符的干扰结果。",
+  "Lart blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
+    "Lart 默认会屏蔽可疑文件和版本不符的资源。对于较老的剧集和冷门作品，此筛选有时过于严格。",
+  "No clean release has surfaced yet. This may be too new. Lart's filters dropped everything that came back as wrong-movie noise.":
+    "尚未找到正常版本。这部作品可能太新了。Lart 的筛选器已剔除所有被判定为电影不符的干扰结果。",
   "Create a custom filter": "创建自定义筛选器",
   Remux: "Remux",
   Debrid: "Debrid",
@@ -211,8 +211,8 @@ const residual: Record<string, string> = {
   Tight: "紧凑",
   Mid: "适中",
   Wide: "宽松",
-  "Harbor Relay Documentation": "Harbor Relay 文档",
-  "Harbor Relay docs": "Harbor Relay 文档",
+  "Lart Relay Documentation": "Lart Relay 文档",
+  "Lart Relay docs": "Lart Relay 文档",
   "Use a TTF, OTF, WOFF or WOFF2 file.": "请使用 TTF、OTF、WOFF 或 WOFF2 文件。",
   "That font is over 32 MB. Try a lighter file.": "该字体超过 32 MB。请尝试使用更小的文件。",
   "That file is not a valid font.": "该文件不是有效的字体文件。",
@@ -221,7 +221,7 @@ const residual: Record<string, string> = {
   "Browsing the theme library": "正在浏览主题库",
   "This theme is missing a color ({color}).": "此主题缺少颜色（{color}）。",
   "This file isn't a readable theme.": "无法将此文件作为主题读取。",
-  "This file isn't a Harbor theme.": "此文件不是 Harbor 主题。",
+  "This file isn't a Lart theme.": "此文件不是 Lart 主题。",
   "Theme is missing a name.": "主题缺少名称。",
   "This theme's preview colors look invalid.": "此主题的预览颜色似乎有误。",
   "This theme is missing its colors.": "此主题缺少颜色。",
@@ -242,8 +242,8 @@ const residual: Record<string, string> = {
   "Your changes to this theme aren't saved yet. They'll be lost if you leave now.":
     "对此主题的更改尚未保存。如果现在离开，这些更改将会丢失。",
   "Keep editing": "继续编辑",
-  "Harbor test message ({service}). If you can read this, your webhook is wired up.":
-    "Harbor 测试消息（{service}）。如果你能读到此消息，说明 webhook 已配置成功。",
+  "Lart test message ({service}). If you can read this, your webhook is wired up.":
+    "Lart 测试消息（{service}）。如果你能读到此消息，说明 webhook 已配置成功。",
 };
 
 export default residual;

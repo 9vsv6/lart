@@ -66,7 +66,7 @@ const gameRoms: Record<string, string> = {
   "games.roms.era": "発売年代",
   "games.roms.reset": "フィルターをリセット",
   "games.roms.empty": "別のタイトルで検索するか、このゲーム機の絞り込み条件を緩めてください。",
-  "games.roms.source": "ゲーム情報と関連情報はIGDBより。ローカルファイルをインポートすると、対応ゲームをHarborで遊べます。",
+  "games.roms.source": "ゲーム情報と関連情報はIGDBより。ローカルファイルをインポートすると、対応ゲームをLartで遊べます。",
   "games.roms.playerScore": "IGDBプレイヤー評価 · {count}件の評価",
   "games.roms.combinedScore": "IGDB総合評価 · {count}件の評価",
   "games.roms.sort.discussed": "評価件数が多い順",

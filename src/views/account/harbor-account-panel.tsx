@@ -51,7 +51,7 @@ export function HarborAccountPanel() {
   }
 
   return (
-    <Section title={t("Harbor account")} subtitle={t("Your handle across Harbor.")}>
+    <Section title={t("Lart account")} subtitle={t("Your handle across Lart.")}>
       <AccountIdentityCard author={author} />
       <JoinDiscordCard />
       <AccountThemeCta />

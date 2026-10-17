@@ -35,7 +35,7 @@ export default {
   "games.valorant.empty": "Tidak ada hasil yang sesuai filter.",
   "games.valorant.checked": "Diperiksa {date}",
   "games.valorant.metaScope": "Data kompetitif OP.GG untuk patch yang dipilih. Tingkat pemilihan adalah proporsi penampilan agen. Hasil mencerminkan sampel sumber, bukan semua pemain.",
-  "games.valorant.referenceScope": "Gambar dan referensi game melalui Valorant-API. Pembaruan mungkin tertinggal dari game. Harbor tidak didukung oleh Riot Games.",
+  "games.valorant.referenceScope": "Gambar dan referensi game melalui Valorant-API. Pembaruan mungkin tertinggal dari game. Lart tidak didukung oleh Riot Games.",
   "games.valorant.samples": "{count} penampilan",
   "games.valorant.smallSample": "Sampel kecil",
   "games.valorant.abilities": "Kemampuan",

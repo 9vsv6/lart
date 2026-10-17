@@ -28,8 +28,8 @@ const catalog02: Record<string, string> = {
   "Between meetings": "회의 사이에",
   "Beyond Hollywood": "할리우드 너머",
   "Beyond the kids' shelf": "어린이 코너 너머",
-  "Big Picture closes. Harbor keeps running behind it.":
-    "Big Picture가 닫힙니다. Harbor는 백그라운드에서 계속 실행됩니다.",
+  "Big Picture closes. Lart keeps running behind it.":
+    "Big Picture가 닫힙니다. Lart는 백그라운드에서 계속 실행됩니다.",
   "Big Swings": "대담한 도전",
   "Bigger buffer for slow connections": "느린 연결을 위한 더 큰 버퍼",
   Bingeing: "정주행",
@@ -99,8 +99,8 @@ const catalog02: Record<string, string> = {
   "Both Sides of the Law": "법의 양면",
   "Both devices need to be on the same Wi-Fi network, and some guest networks block devices from seeing each other.":
     "두 기기가 동일한 Wi-Fi 네트워크에 연결되어 있어야 하며, 일부 게스트 네트워크에서는 기기끼리 서로 찾지 못할 수 있습니다.",
-  "Both go in the boxes above. Harbor builds the URL for you.":
-    "둘 다 위 입력란에 입력하세요. Harbor가 URL을 생성합니다.",
+  "Both go in the boxes above. Lart builds the URL for you.":
+    "둘 다 위 입력란에 입력하세요. Lart가 URL을 생성합니다.",
   "Both serif and body text should stay legible at this dim.":
     "이 정도로 어두워도 세리프체와 본문 텍스트를 읽기 쉬워야 합니다.",
   Bottom: "하단",
@@ -127,16 +127,16 @@ const catalog02: Record<string, string> = {
   "Brighten dark movies": "어두운 영화 밝게",
   Brightness: "밝기",
   "Bring a server-rendered library aboard with your own source configuration.":
-    "직접 구성한 소스로 서버에서 렌더링되는 라이브러리를 Harbor에 연결합니다.",
+    "직접 구성한 소스로 서버에서 렌더링되는 라이브러리를 Lart에 연결합니다.",
   "Bring friends here": "친구를 여기로 초대",
   "Bring friends to {label}": "친구 초대: {label}",
   "Bring in your Stremio library": "Stremio 라이브러리 가져오기",
   "Bring in your library": "보관함 가져오기",
   "Bring the Tissues": "휴지를 준비하세요",
-  "Bring trusted source packages aboard through Harbor’s isolated extension worker.":
-    "Harbor의 격리된 확장 프로그램 워커를 통해 신뢰하는 소스 패키지를 추가하세요.",
-  "Bring your Letterboxd watchlist, diary, liked films and lists into Harbor via the Stremboxd bridge.":
-    "Stremboxd 브리지를 통해 Letterboxd 관심 목록, 다이어리, 좋아요 표시한 영화 및 리스트를 Harbor로 가져옵니다.",
+  "Bring trusted source packages aboard through Lart’s isolated extension worker.":
+    "Lart의 격리된 확장 프로그램 워커를 통해 신뢰하는 소스 패키지를 추가하세요.",
+  "Bring your Letterboxd watchlist, diary, liked films and lists into Lart via the Stremboxd bridge.":
+    "Stremboxd 브리지를 통해 Letterboxd 관심 목록, 다이어리, 좋아요 표시한 영화 및 리스트를 Lart로 가져옵니다.",
   "Bring your lists with you": "내 목록 가져오기",
   "Bring your own": "직접 추가",
   "Bring your own avatars into the library.": "내 아바타를 라이브러리로 가져오세요.",
@@ -223,7 +223,7 @@ const catalog02: Record<string, string> = {
   "Building tonight's queue…": "오늘 밤의 대기열 구성 중…",
   "Building your voyage": "여정 구성 중",
   "Built for desktop resolutions": "데스크톱 해상도에 최적화",
-  "Built into Harbor": "Harbor에 내장됨",
+  "Built into Lart": "Lart에 내장됨",
   "Built on Stremio": "Stremio 기반",
   "Built-in peer-to-peer streaming, served from your own machine.":
     "이 기기에서 제공되는 내장 P2P 스트리밍입니다.",
@@ -231,8 +231,8 @@ const catalog02: Record<string, string> = {
     "일괄 업로드는 아직 지원되지 않아 초당 평점 하나씩 전송합니다.",
   "Bullet Ballet": "총알의 발레",
   "Bumpers (LB / RB)": "범퍼(LB / RB)",
-  "Bundled with Harbor. Plays anything you throw at it.":
-    "Harbor에 포함되어 있습니다. 어떤 형식이든 재생합니다.",
+  "Bundled with Lart. Plays anything you throw at it.":
+    "Lart에 포함되어 있습니다. 어떤 형식이든 재생합니다.",
   "Burn in subtitles": "자막 입히기",
   Button: "버튼",
   "Button map": "버튼 배치",
@@ -263,8 +263,8 @@ const catalog02: Record<string, string> = {
   "Cached only ({n})": "캐시된 항목만({n})",
   Caches: "캐시",
   Calendar: "캘린더",
-  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Harbor feature, so your chrome never goes stale when Harbor adds menu items.":
-    "onclick 핸들러나 테마 JS에서 호출하세요. 안정적이고 안전합니다. 각 항목이 실제 Harbor 기능을 제어하므로 Harbor에 메뉴 항목이 추가되어도 사용자 지정 UI가 뒤처지지 않습니다.",
+  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Lart feature, so your chrome never goes stale when Lart adds menu items.":
+    "onclick 핸들러나 테마 JS에서 호출하세요. 안정적이고 안전합니다. 각 항목이 실제 Lart 기능을 제어하므로 Lart에 메뉴 항목이 추가되어도 사용자 지정 UI가 뒤처지지 않습니다.",
   "Cam-quality picture with audio plugged into the projector or a separate recorder. Sound is clean, but the image is still a theater capture. Better than CAM, far below a real release.":
     "캠 화질 영상에 프로젝터 또는 별도 녹음기로 녹음한 오디오를 결합한 버전입니다. 소리는 깨끗하지만 영상은 여전히 극장에서 촬영한 것입니다. CAM보다는 낫지만 정식 출시본보다 훨씬 떨어집니다.",
   "Camcorder rip": "캠코더 립",
@@ -289,8 +289,8 @@ const catalog02: Record<string, string> = {
   "Cannes Film Festival": "칸 영화제",
   "Canvas height": "캔버스 높이",
   "Canvas unavailable.": "캔버스를 사용할 수 없습니다.",
-  "Cap how much disk the cache can use. When it goes over, Harbor deletes the oldest files first. Enforced on launch and as streams close.":
-    "캐시가 사용할 수 있는 디스크 용량을 제한합니다. 한도를 초과하면 Harbor가 가장 오래된 파일부터 삭제합니다. 앱 시작 시와 스트림 종료 시 적용됩니다.",
+  "Cap how much disk the cache can use. When it goes over, Lart deletes the oldest files first. Enforced on launch and as streams close.":
+    "캐시가 사용할 수 있는 디스크 용량을 제한합니다. 한도를 초과하면 Lart가 가장 오래된 파일부터 삭제합니다. 앱 시작 시와 스트림 종료 시 적용됩니다.",
   "Caps file size. Unknown sizes still pass.":
     "파일 크기를 제한합니다. 크기를 알 수 없는 파일은 계속 허용됩니다.",
   "Captions in your language": "내 언어로 된 자막",
@@ -319,7 +319,7 @@ const catalog02: Record<string, string> = {
   Catalogs: "카탈로그",
   "Catalogs & metadata": "카탈로그 및 메타데이터",
   "Catalogs to show": "표시할 카탈로그",
-  "Catch stremio:// install links inside Harbor": "Harbor에서 stremio:// 설치 링크 열기",
+  "Catch stremio:// install links inside Lart": "Lart에서 stremio:// 설치 링크 열기",
   Categories: "카테고리",
   Cause: "원인",
   "Celebrated actors": "주목받은 배우",
@@ -342,14 +342,14 @@ const catalog02: Record<string, string> = {
   "Change the look": "디자인 변경",
   "Change the order addons are tried in": "애드온을 시도하는 순서 변경",
   "Change your handle?": "핸들을 변경하시겠어요?",
-  "Changes not saved to your Harbor account yet": "변경 사항이 아직 Harbor 계정에 저장되지 않음",
-  "Changes you make below will be saved on this computer, but they will not reach your TV. This is a fault in Harbor, not something you did.":
-    "아래에서 변경한 내용은 이 컴퓨터에 저장되지만 TV에는 반영되지 않습니다. 사용자의 문제가 아니라 Harbor의 오류입니다.",
+  "Changes not saved to your Lart account yet": "변경 사항이 아직 Lart 계정에 저장되지 않음",
+  "Changes you make below will be saved on this computer, but they will not reach your TV. This is a fault in Lart, not something you did.":
+    "아래에서 변경한 내용은 이 컴퓨터에 저장되지만 TV에는 반영되지 않습니다. 사용자의 문제가 아니라 Lart의 오류입니다.",
   "Change…": "변경…",
   "Changing the location restarts the engine. Clearing removes all cached stream files right away; anything you reopen will re-fetch.":
     "위치를 변경하면 엔진이 다시 시작됩니다. 지우면 캐시된 스트림 파일이 모두 즉시 삭제되며, 다시 열면 새로 가져옵니다.",
-  "Changing the metadata language reloads Harbor so the new language takes effect. Apply when you're done with the options above.":
-    "메타데이터 언어를 변경하면 새 언어를 적용하기 위해 Harbor를 다시 불러옵니다. 위 옵션 설정을 마치면 적용하세요.",
+  "Changing the metadata language reloads Lart so the new language takes effect. Apply when you're done with the options above.":
+    "메타데이터 언어를 변경하면 새 언어를 적용하기 위해 Lart를 다시 불러옵니다. 위 옵션 설정을 마치면 적용하세요.",
   Channel: "채널",
   "Channel categories": "채널 카테고리",
   "Channel is taking a while": "채널을 불러오는 데 시간이 걸리고 있습니다.",
@@ -443,16 +443,16 @@ const catalog02: Record<string, string> = {
   "Choose lists": "목록 선택",
   "Choose manga download folder": "만화 다운로드 폴더 선택",
   "Choose manga folder": "만화 폴더 선택",
-  "Choose one season package. Harbor will match and download every available episode from it.":
-    "시즌 패키지 하나를 선택하세요. Harbor가 패키지에서 이용 가능한 모든 에피소드를 찾아 다운로드합니다.",
+  "Choose one season package. Lart will match and download every available episode from it.":
+    "시즌 패키지 하나를 선택하세요. Lart가 패키지에서 이용 가능한 모든 에피소드를 찾아 다운로드합니다.",
   "Choose source": "소스 선택",
   "Choose subtitles": "자막 선택",
   "Choose subtitles before playback": "재생 전 자막 선택",
   'Choose the "Less than $50k per year" tier.': '"연간 $50k 미만" 요금제를 선택하세요.',
   "Choose the frame rate the subtitle was authored for.":
     "자막 제작 시 기준으로 사용한 프레임 레이트를 선택하세요.",
-  "Choose up to 5 movies or shows you already like. Harbor uses them to tune your featured picks and recommendations. Totally optional.":
-    "이미 좋아하는 영화 또는 프로그램을 최대 5개 선택하세요. Harbor가 이를 활용해 추천 콘텐츠와 맞춤 추천을 조정합니다. 선택 사항입니다.",
+  "Choose up to 5 movies or shows you already like. Lart uses them to tune your featured picks and recommendations. Totally optional.":
+    "이미 좋아하는 영화 또는 프로그램을 최대 5개 선택하세요. Lart가 이를 활용해 추천 콘텐츠와 맞춤 추천을 조정합니다. 선택 사항입니다.",
   "Choose what happens when you hit Play on a title. Manual gives you full control over quality and source.":
     "콘텐츠에서 재생을 눌렀을 때의 동작을 선택하세요. 수동 모드에서는 화질과 소스를 직접 선택할 수 있습니다.",
   "Choose what shows, what stays hidden, and what sits up top.":
@@ -460,8 +460,8 @@ const catalog02: Record<string, string> = {
   "Choose where subtitle timing feedback appears and how large it is.":
     "자막 타이밍 피드백의 표시 위치와 크기를 선택하세요.",
   "Choose where to open this link": "이 링크를 열 위치 선택",
-  "Choose where you can grab Harbor to drag it around your screen.":
-    "화면에서 Harbor 창을 드래그할 수 있는 영역을 선택합니다.",
+  "Choose where you can grab Lart to drag it around your screen.":
+    "화면에서 Lart 창을 드래그할 수 있는 영역을 선택합니다.",
   "Choose which Simkl rails appear on your home screen.":
     "홈 화면에 표시할 Simkl 레일을 선택합니다.",
   "Choose which badges appear by your name, and their order":
@@ -485,8 +485,8 @@ const catalog02: Record<string, string> = {
   Claim: "등록",
   "Claim a handle": "핸들 등록",
   "Claim a theme": "테마 소유권 등록",
-  "Claim one so people can find you across Harbor.":
-    "사람들이 Harbor 전체에서 나를 찾을 수 있도록 핸들을 만드세요.",
+  "Claim one so people can find you across Lart.":
+    "사람들이 Lart 전체에서 나를 찾을 수 있도록 핸들을 만드세요.",
   "Claim theme": "테마 소유권 등록",
   "Claim your @handle": "@handle 등록",
   "Claim your handle": "핸들 선점",
@@ -496,7 +496,7 @@ const catalog02: Record<string, string> = {
   "Classic Hollywood": "고전 할리우드",
   "Classic Mystery": "고전 미스터리",
   "Classic Stremio": "클래식 Stremio",
-  "Classic. Was Harbor's original pair.": "클래식. Harbor의 원래 글꼴 조합입니다.",
+  "Classic. Was Lart's original pair.": "클래식. Lart의 원래 글꼴 조합입니다.",
   "Clean modern. Sans across the board.": "깔끔하고 현대적입니다. 전체에 산세리프를 사용합니다.",
   "Clean releases for this title are still scarce. Confirm the filename and size before playing.":
     "아직 이 작품의 정확한 릴리스가 많지 않습니다. 재생 전에 파일 이름과 크기를 확인하세요.",
@@ -529,10 +529,10 @@ const catalog02: Record<string, string> = {
   Cleared: "삭제됨",
   Clearing: "지우는 중",
   "Clearing…": "지우는 중…",
-  "Clears the URL from Harbor. The Worker keeps running on Cloudflare.":
-    "Harbor에서 URL을 지웁니다. Worker는 Cloudflare에서 계속 실행됩니다.",
-  "Clears the saved URL so you can point Harbor at another relay.":
-    "저장된 URL을 지워 Harbor가 다른 릴레이를 가리키도록 합니다.",
+  "Clears the URL from Lart. The Worker keeps running on Cloudflare.":
+    "Lart에서 URL을 지웁니다. Worker는 Cloudflare에서 계속 실행됩니다.",
+  "Clears the saved URL so you can point Lart at another relay.":
+    "저장된 URL을 지워 Lart가 다른 릴레이를 가리키도록 합니다.",
   Click: "클릭:",
   "Click Activate in the email": "이메일에서 활성화 클릭",
   "Click a line": "선 하나 클릭",
@@ -546,8 +546,8 @@ const catalog02: Record<string, string> = {
     "슬롯 하나를 클릭해 파일 하나를 선택하거나, 여러 PNG를 한 번에 선택하거나, 전체 .zip 파일을 추가하세요. 이름이 지정된 파일은 해당 슬롯에 자동으로 배치되며 나머지는 직접 배치할 수 있습니다.",
   "Click any source to swap in place": "소스를 클릭하면 현재 위치에서 전환됩니다.",
   "Click anywhere to skip": "아무 곳이나 클릭하여 건너뛰기",
-  "Click below to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "아래를 클릭하여 Harbor 내장 브라우저에서 {name}의 설정 페이지를 여세요. 옵션을 선택하세요. 해당 페이지에서 설치를 클릭하면 Harbor가 링크를 자동으로 감지하여 애드온을 업데이트합니다.",
+  "Click below to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "아래를 클릭하여 Lart 내장 브라우저에서 {name}의 설정 페이지를 여세요. 옵션을 선택하세요. 해당 페이지에서 설치를 클릭하면 Lart가 링크를 자동으로 감지하여 애드온을 업데이트합니다.",
   "Click below to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "아래를 클릭하여 {name}의 설정 페이지를 여세요. 옵션을 선택한 다음, 제공된 설치 링크를 복사하여 아래에 붙여넣으면 애드온이 업데이트됩니다.",
   "Click the button below to open Cloudflare's Workers page.":
@@ -559,8 +559,8 @@ const catalog02: Record<string, string> = {
   "Click to copy": "클릭하여 복사",
   "Click to cycle 100 / 75 / 50 / 25 / 0.":
     "클릭할 때마다 100 / 75 / 50 / 25 / 0 순으로 전환됩니다.",
-  "Click to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "클릭하여 Harbor 내장 브라우저에서 {name} 설정 페이지를 여세요. 옵션을 선택한 뒤 해당 페이지에서 설치를 클릭하면 Harbor가 링크를 자동으로 감지하여 애드온을 업데이트합니다.",
+  "Click to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "클릭하여 Lart 내장 브라우저에서 {name} 설정 페이지를 여세요. 옵션을 선택한 뒤 해당 페이지에서 설치를 클릭하면 Lart가 링크를 자동으로 감지하여 애드온을 업데이트합니다.",
   "Click to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "클릭하여 {name} 설정 페이지를 여세요. 옵션을 선택한 다음 제공된 설치 링크를 복사하여 아래에 붙여 넣으면 애드온이 업데이트됩니다.",
   "Click to turn off": "클릭하여 끄기",
@@ -580,7 +580,7 @@ const catalog02: Record<string, string> = {
   "Clock size": "시계 크기",
   "Clock style": "시계 스타일",
   Close: "닫기",
-  "Close Harbor?": "Harbor를 닫으시겠습니까?",
+  "Close Lart?": "Lart를 닫으시겠습니까?",
   "Close Manga selection": "만화 선택 닫기",
   "Close cell": "셀 닫기",
   "Close chapters": "챕터 닫기",
@@ -603,16 +603,16 @@ const catalog02: Record<string, string> = {
   "Close trailer": "예고편 닫기",
   "Close zoom controls": "확대/축소 컨트롤 닫기",
   "Close · Esc": "닫기 · Esc",
-  "Closing the window tucks Harbor into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
-    "창을 닫아도 Harbor를 종료하지 않고 트레이로 최소화하여 즉시 다시 열 수 있습니다. 빠른 컨트롤을 사용하려면 트레이 아이콘을 마우스 오른쪽 버튼으로 클릭하고, 완전히 종료하려면 종료를 선택하세요.",
+  "Closing the window tucks Lart into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
+    "창을 닫아도 Lart를 종료하지 않고 트레이로 최소화하여 즉시 다시 열 수 있습니다. 빠른 컨트롤을 사용하려면 트레이 아이콘을 마우스 오른쪽 버튼으로 클릭하고, 완전히 종료하려면 종료를 선택하세요.",
   Cloudflare: "Cloudflare",
   "Cloudflare Workers free tier:": "Cloudflare Workers 무료 요금제:",
   "Cloudflare asks you to pick a name (this becomes {code}). Type any name (your first name works). Then click {b1}.":
     "Cloudflare에서 이름을 선택하라는 메시지가 표시됩니다. 이 이름은 {code}이(가) 됩니다. 원하는 이름을 입력한 다음 {b1}을(를) 클릭하세요. 이름을 사용해도 됩니다.",
-  "Cloudflare shows API tokens only once. Save a copy now or you'll lose the ability to stop or redeploy this relay from Harbor.":
-    "Cloudflare는 API 토큰을 한 번만 표시합니다. 지금 사본을 저장하지 않으면 Harbor에서 이 릴레이를 중지하거나 다시 배포할 수 없게 됩니다.",
-  "Cloudflare token form filled with name 'Harbor Relay' and one permission row set to Account / Workers Scripts / Edit":
-    "이름이 'Harbor Relay'로 입력되고 권한 행 하나가 Account / Workers Scripts / Edit로 설정된 Cloudflare 토큰 양식",
+  "Cloudflare shows API tokens only once. Save a copy now or you'll lose the ability to stop or redeploy this relay from Lart.":
+    "Cloudflare는 API 토큰을 한 번만 표시합니다. 지금 사본을 저장하지 않으면 Lart에서 이 릴레이를 중지하거나 다시 배포할 수 없게 됩니다.",
+  "Cloudflare token form filled with name 'Lart Relay' and one permission row set to Account / Workers Scripts / Edit":
+    "이름이 'Lart Relay'로 입력되고 권한 행 하나가 Account / Workers Scripts / Edit로 설정된 Cloudflare 토큰 양식",
   Code: "코드",
   "Code expired": "코드가 만료됨",
   "Code expires in {left}": "{left} 후 코드 만료",
@@ -627,8 +627,8 @@ const catalog02: Record<string, string> = {
   Color: "색상",
   "Color & HDR": "색상 및 HDR",
   "Color & HDR tone-mapping": "색상 및 HDR 톤 매핑",
-  "Color presets, custom backgrounds, and the font pair Harbor renders in.":
-    "색상 프리셋, 사용자 지정 배경, Harbor에서 사용하는 글꼴 조합입니다.",
+  "Color presets, custom backgrounds, and the font pair Lart renders in.":
+    "색상 프리셋, 사용자 지정 배경, Lart에서 사용하는 글꼴 조합입니다.",
   "Color tokens": "색상 토큰",
   Colored: "컬러",
   Colors: "색상",
@@ -637,7 +637,7 @@ const catalog02: Record<string, string> = {
   Combo: "콤보",
   "Come back here and hit {b1}. The Hello World can stay where it is. It's free and harmless.":
     "여기로 돌아와 {b1}을(를) 누르세요. Hello World는 그대로 두어도 됩니다. 무료이며 아무런 문제가 없습니다.",
-  "Come back to Harbor and try casting again.": "Harbor로 돌아와 다시 전송해 보세요.",
+  "Come back to Lart and try casting again.": "Lart로 돌아와 다시 전송해 보세요.",
   "Come back tomorrow, or clear what you skipped in Settings.":
     "내일 다시 오거나 설정에서 건너뛴 항목을 초기화하세요.",
   Comedy: "코미디",
@@ -703,14 +703,14 @@ const catalog02: Record<string, string> = {
   "Congrats! Tap to view your badges.": "축하합니다! 탭하여 배지를 확인하세요.",
   Connect: "연결",
   "Connect / Verify": "연결 / 확인",
-  "Connect AniList in Harbor on your computer to see your lists here.":
-    "컴퓨터의 Harbor에서 AniList를 연결하면 여기서 목록을 볼 수 있습니다.",
-  "Connect Discord or Telegram and Harbor posts a message when something you follow is about to drop. Hit Test to send yourself a sample first.":
-    "Discord 또는 Telegram을 연결하면 팔로우한 콘텐츠의 공개가 임박했을 때 Harbor가 메시지를 보냅니다. 먼저 테스트를 눌러 샘플 메시지를 보내 보세요.",
+  "Connect AniList in Lart on your computer to see your lists here.":
+    "컴퓨터의 Lart에서 AniList를 연결하면 여기서 목록을 볼 수 있습니다.",
+  "Connect Discord or Telegram and Lart posts a message when something you follow is about to drop. Hit Test to send yourself a sample first.":
+    "Discord 또는 Telegram을 연결하면 팔로우한 콘텐츠의 공개가 임박했을 때 Lart가 메시지를 보냅니다. 먼저 테스트를 눌러 샘플 메시지를 보내 보세요.",
   "Connect Letterboxd": "Letterboxd 연결",
   "Connect MyAnimeList": "MyAnimeList 연결",
-  "Connect MyAnimeList in Harbor on your computer to see your lists here.":
-    "컴퓨터의 Harbor에서 MyAnimeList를 연결하면 여기서 목록을 볼 수 있습니다.",
+  "Connect MyAnimeList in Lart on your computer to see your lists here.":
+    "컴퓨터의 Lart에서 MyAnimeList를 연결하면 여기서 목록을 볼 수 있습니다.",
   "Connect Simkl": "Simkl 연결",
   "Connect TMDB": "TMDB 연결",
   "Connect Trakt": "Trakt 연결",
@@ -729,8 +729,8 @@ const catalog02: Record<string, string> = {
   "Connect a source": "소스 연결",
   "Connect any IPTV provider. Channels are sorted by category, EPG is pulled automatically when your provider supplies it, and playback runs through native libmpv.":
     "어떤 IPTV 제공업체든 연결할 수 있습니다. 채널은 카테고리별로 정렬되며, 제공업체가 EPG를 제공하면 자동으로 불러옵니다. 재생은 네이티브 libmpv를 통해 이루어집니다.",
-  "Connect books you own, trusted reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "보유한 책, 신뢰하는 독서 소스 및 메타데이터 서비스를 연결하세요. Harbor는 모든 소스를 직접 관리할 수 있도록 하면서 서재를 일관되게 유지합니다.",
+  "Connect books you own, trusted reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "보유한 책, 신뢰하는 독서 소스 및 메타데이터 서비스를 연결하세요. Lart는 모든 소스를 직접 관리할 수 있도록 하면서 서재를 일관되게 유지합니다.",
   "Connect to your computer to manage your library.":
     "라이브러리를 관리하려면 컴퓨터에 연결하세요.",
   "Connect your AniList account": "AniList 계정 연결",
@@ -788,12 +788,12 @@ const catalog02: Record<string, string> = {
     "'계속 시청'을 먼저 표시한 다음, 애드온 카탈로그를 설치 순서대로 표시합니다.",
   "Continue Watching screenshots": "이어 보기 스크린샷",
   "Continue Watching suggestions cache": "이어보기 추천 캐시",
-  "Continue Watching, then your addon catalogs in install order. No hero, no Harbor rails.":
-    "이어보기 다음에 설치 순서대로 애드온 카탈로그가 표시됩니다. 히어로와 Harbor 콘텐츠 줄은 표시되지 않습니다.",
+  "Continue Watching, then your addon catalogs in install order. No hero, no Lart rails.":
+    "이어보기 다음에 설치 순서대로 애드온 카탈로그가 표시됩니다. 히어로와 Lart 콘텐츠 줄은 표시되지 않습니다.",
   "Continue Watching, then your installed addons. Every catalog renders as its own row, install order, no dedup, no hero.":
     "이어 보기 다음에 설치된 애드온을 표시합니다. 각 카탈로그는 설치 순서대로 별도 행에 표시되며 중복 제거와 히어로 영역은 없습니다.",
   "Continue from last watched": "마지막 시청 지점부터 계속",
-  "Continue in Harbor": "Harbor에서 계속",
+  "Continue in Lart": "Lart에서 계속",
   "Continue in browser": "브라우저에서 계속",
   "Continue in your browser...": "브라우저에서 계속하세요...",
   "Continue reading": "계속 읽기",
@@ -821,8 +821,8 @@ const catalog02: Record<string, string> = {
   "Controller support": "컨트롤러 지원",
   Controllers: "컨트롤러",
   "Controllers / gamepad": "컨트롤러 / 게임패드",
-  "Controllers Harbor can see right now. Connect one over USB or Bluetooth and it shows up here.":
-    "현재 Harbor에서 인식하는 컨트롤러입니다. USB 또는 Bluetooth로 연결하면 여기에 표시됩니다.",
+  "Controllers Lart can see right now. Connect one over USB or Bluetooth and it shows up here.":
+    "현재 Lart에서 인식하는 컨트롤러입니다. USB 또는 Bluetooth로 연결하면 여기에 표시됩니다.",
   Controls: "컨트롤",
   "Controls & devices": "컨트롤 및 기기",
   "Cool Heists": "멋진 강도극",
@@ -856,8 +856,8 @@ const catalog02: Record<string, string> = {
   "Copy theme": "테마 복제",
   "Copy to clipboard": "클립보드에 복사",
   "Copy your API Key": "API Key 복사",
-  "Copy your Harbor watchlist over to Trakt, or pull your Trakt watchlist into Harbor. Safe to run again, Trakt skips anything it already has.":
-    "Harbor 관심 목록을 Trakt로 복사하거나 Trakt 관심 목록을 Harbor로 가져옵니다. 다시 실행해도 안전하며, Trakt는 이미 있는 항목을 건너뜁니다.",
+  "Copy your Lart watchlist over to Trakt, or pull your Trakt watchlist into Lart. Safe to run again, Trakt skips anything it already has.":
+    "Lart 관심 목록을 Trakt로 복사하거나 Trakt 관심 목록을 Lart로 가져옵니다. 다시 실행해도 안전하며, Trakt는 이미 있는 항목을 건너뜁니다.",
   "Copy {label} handle": "{label} 핸들 복사",
   "Copy {text}": "{text} 복사",
   "Copy-paste starters for common customizations.":
@@ -903,8 +903,8 @@ const catalog02: Record<string, string> = {
   "Could not post.": "게시할 수 없습니다.",
   "Could not process image.": "이미지를 처리할 수 없습니다.",
   "Could not queue these episodes.": "이 에피소드들을 대기열에 추가할 수 없습니다.",
-  "Could not reach Harbor. Check your phone's connection and try again.":
-    "Harbor에 연결할 수 없습니다. 휴대전화의 연결 상태를 확인하고 다시 시도하세요.",
+  "Could not reach Lart. Check your phone's connection and try again.":
+    "Lart에 연결할 수 없습니다. 휴대전화의 연결 상태를 확인하고 다시 시도하세요.",
   "Could not reach Simkl.": "Simkl에 연결할 수 없습니다.",
   "Could not reach Stremio. Check your phone's connection and try again.":
     "Stremio에 연결할 수 없습니다. 휴대전화의 연결 상태를 확인하고 다시 시도하세요.",

@@ -18,7 +18,7 @@ export default {
   "games.warhammerUniverse.screenNote": "رسوم متحركة أصلية وفيلم طويل من الألفية الحادية والأربعين.",
   "games.warhammerUniverse.free": "مجانًا على Warhammer TV",
   "games.warhammerUniverse.subscription": "قد يتطلب اشتراك Warhammer+",
-  "games.warhammerUniverse.movieNote": "فيلم الرسوم المتحركة لعام 2010. افتح تفاصيل Harbor للممثلين والإعلانات والمصادر.",
+  "games.warhammerUniverse.movieNote": "فيلم الرسوم المتحركة لعام 2010. افتح تفاصيل Lart للممثلين والإعلانات والمصادر.",
   "games.warhammerUniverse.screenScope": "مختارات Warhammer TV العامة. يمتد Hammer and Bolter عبر عدة عوالم؛ يحدد المزود إمكانية المشاهدة.",
   "games.warhammerUniverse.lore": "في أعماق الحكاية",
   "games.warhammerUniverse.loreNote": "شخصيات وفصائل وأحداث محورية بصور من صانعي هذه العوالم.",

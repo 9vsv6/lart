@@ -45,7 +45,7 @@ export default {
   "games.pick.hours": "시간",
   "games.pick.noHistory": "아직 참고할 활동이 없어요. 게임을 고르거나 게임 설정에서 Steam을 연결하세요.",
   "games.pick.manualOnly": "좋아하는 게임과 선택한 필터만으로 추천합니다.",
-  "games.pick.addedNote": "‘최근 추가’는 최초 가져오기 이후 Harbor에서 처음 확인한 시점이며 구매일이 아닙니다.",
+  "games.pick.addedNote": "‘최근 추가’는 최초 가져오기 이후 Lart에서 처음 확인한 시점이며 구매일이 아닙니다.",
   "games.pick.because": "{name}을 좋아하니까",
   "games.pick.matches": "선택한 조건에 맞아요",
   "games.pick.steamCatalog": "Steam 카탈로그",

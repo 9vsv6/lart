@@ -1,6 +1,6 @@
 import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import { Pause, Play } from "lucide-react";
-import { isMangaReaderRoute } from "@/lib/platform";
+import { isMangaReaderRoute, isPhoneApp } from "@/lib/platform";
 import { isSetupRoute } from "@/lib/platform";
 import { hasSetupToken } from "./onboard/setup-wire";
 import { HarborLoader } from "@/components/harbor-loader";
@@ -15,6 +15,7 @@ import { SheetLockProvider, useSheetLock } from "./mobile-sheet-lock";
 import { useMobileRemoteStyle } from "./remote-style";
 import { ScrollToTop } from "./scroll-to-top";
 import { MangaNowBar } from "./manga-remote/manga-now-bar";
+import { PhonePlayback } from "./phone-playback";
 
 const RemoteApp = lazy(() => import("@/views/remote-app").then((m) => ({ default: m.RemoteApp })));
 const MangaRemote = lazy(() => import("./manga-remote/manga-remote").then((m) => ({ default: m.MangaRemote })));
@@ -64,7 +65,7 @@ function MangaReaderShell() {
 function ShellBody() {
   const [tab, setTab] = useState<MobileTab>("home");
   const [seen, setSeen] = useState<Set<MobileTab>>(() => new Set<MobileTab>(["home"]));
-  const showNowPlaying = tab !== "remote";
+  const showNowPlaying = tab !== "remote" && !isPhoneApp();
   const rootRef = useRef<HTMLDivElement>(null);
 
   const selectTab = (next: MobileTab) => {
@@ -118,6 +119,7 @@ function ShellBody() {
       </div>
       {showNowPlaying && <NowPlayingBar onExpand={() => selectTab("remote")} />}
       <BottomTabBar active={tab} onSelect={selectTab} />
+      <PhonePlayback />
     </div>
   );
 }

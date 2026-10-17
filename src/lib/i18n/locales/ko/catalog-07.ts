@@ -3,9 +3,9 @@ const catalog07: Record<string, string> = {
     "저장하면 모든 포스터가 IMDb, Rotten Tomatoes 및 Metacritic 표시와 함께 다시 렌더링됩니다.",
   "Once you're in a room you can copy a link that joins anyone instantly: it sets the relay URL and the room code in one click.":
     "방에 들어가면 누구나 즉시 참여할 수 있는 링크를 복사할 수 있습니다. 한 번의 클릭으로 릴레이 URL과 방 코드가 설정됩니다.",
-  "One @name that finds you across Harbor.":
-    "Harbor 어디서나 나를 찾을 수 있는 하나의 @name입니다.",
-  "One Harbor, every screen.": "하나의 Harbor, 모든 화면에서.",
+  "One @name that finds you across Lart.":
+    "Lart 어디서나 나를 찾을 수 있는 하나의 @name입니다.",
+  "One Lart, every screen.": "하나의 Lart, 모든 화면에서.",
   "One Piece, Naruto and more worlds": "원피스, 나루토 등 다양한 세계",
   "One choice that sets how hard your computer works to make video look its best. Pick the one that matches your machine. Takes effect on the next thing you play.":
     "컴퓨터가 최상의 화질을 구현하는 데 사용할 성능 수준을 한 번에 설정합니다. 사용 중인 기기에 맞는 옵션을 선택하세요. 다음 재생부터 적용됩니다.",
@@ -21,21 +21,21 @@ const catalog07: Record<string, string> = {
   "One release": "릴리스 1개",
   "One switch powers everything on this page: the web app, the phone remote, and the manga reader remote.":
     "이 스위치 하나로 이 페이지의 모든 기능을 켭니다. 웹 앱, 휴대폰 리모컨, 만화 리더 리모컨이 모두 포함됩니다.",
-  "One switch serves Harbor on your network. Scan a code below with your phone, or open an address on any device on the same Wi-Fi.":
-    "스위치 하나로 네트워크에서 Harbor를 제공합니다. 아래 코드를 휴대폰으로 스캔하거나 같은 Wi-Fi에 연결된 기기에서 주소를 여세요.",
-  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Harbor's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
-    "커뮤니티 팩을 클릭 한 번으로 설치하세요. 규칙 세트에는 자체 매칭 규칙이 포함된 전체 배지 세트가 들어 있고, 아트 리맵은 Harbor 기본 배지의 이미지만 바꿉니다. Nuvio Discord나 Reddit에서 badges.json 링크로 공유된 항목도 여기서 가져올 수 있습니다.",
+  "One switch serves Lart on your network. Scan a code below with your phone, or open an address on any device on the same Wi-Fi.":
+    "스위치 하나로 네트워크에서 Lart를 제공합니다. 아래 코드를 휴대폰으로 스캔하거나 같은 Wi-Fi에 연결된 기기에서 주소를 여세요.",
+  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Lart's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
+    "커뮤니티 팩을 클릭 한 번으로 설치하세요. 규칙 세트에는 자체 매칭 규칙이 포함된 전체 배지 세트가 들어 있고, 아트 리맵은 Lart 기본 배지의 이미지만 바꿉니다. Nuvio Discord나 Reddit에서 badges.json 링크로 공유된 항목도 여기서 가져올 수 있습니다.",
   "One-off donation": "일회성 기부",
   "One-tap looks": "원탭 스타일",
-  "One-time setup downloads the shader pack (about 1 MB) into Harbor. No files to hunt down.":
-    "최초 설정 시 셰이더 팩(약 1MB)을 Harbor에 다운로드합니다. 별도로 파일을 찾을 필요가 없습니다.",
+  "One-time setup downloads the shader pack (about 1 MB) into Lart. No files to hunt down.":
+    "최초 설정 시 셰이더 팩(약 1MB)을 Lart에 다운로드합니다. 별도로 파일을 찾을 필요가 없습니다.",
   Oneshot: "단편",
   Online: "온라인",
   "Online now": "현재 온라인",
   "Only 1 source after filtering": "필터링 후 소스가 1개뿐입니다",
   "Only 2 sources after filtering": "필터링 후 소스가 2개뿐입니다",
-  "Only add repositories you trust. Harbor cannot vouch for third-party plugins.":
-    "신뢰하는 저장소만 추가하세요. Harbor는 타사 플러그인을 보증할 수 없습니다.",
+  "Only add repositories you trust. Lart cannot vouch for third-party plugins.":
+    "신뢰하는 저장소만 추가하세요. Lart는 타사 플러그인을 보증할 수 없습니다.",
   "Only addon/debrid sources, never peer-to-peer": "애드온/디브리드 소스만 사용, P2P 사용 안 함",
   "Only continue if you fully trust this link": "이 링크를 완전히 신뢰하는 경우에만 계속하세요",
   "Only embedded subtitles are available right now.": "현재는 내장 자막만 사용할 수 있습니다.",
@@ -77,10 +77,10 @@ const catalog07: Record<string, string> = {
   "Open Cloudflare Workers": "Cloudflare Workers 열기",
   "Open Cloudflare token page": "Cloudflare 토큰 페이지 열기",
   "Open Discord's webhook help": "Discord 웹후크 도움말 열기",
-  "Open Harbor on desktop to link Discord.": "Discord를 연결하려면 데스크톱에서 Harbor를 여세요.",
-  "Open Harbor on desktop to verify ownership in your browser.":
-    "데스크톱에서 Harbor를 열어 브라우저에서 소유권을 확인하세요.",
-  "Open Harbor's settings outside playback.": "재생 화면 밖에서 Harbor 설정을 엽니다.",
+  "Open Lart on desktop to link Discord.": "Discord를 연결하려면 데스크톱에서 Lart를 여세요.",
+  "Open Lart on desktop to verify ownership in your browser.":
+    "데스크톱에서 Lart를 열어 브라우저에서 소유권을 확인하세요.",
+  "Open Lart's settings outside playback.": "재생 화면 밖에서 Lart 설정을 엽니다.",
   "Open Languages": "언어 열기",
   "Open Letterboxd profile": "Letterboxd 프로필 열기",
   "Open Library settings": "라이브러리 설정 열기",
@@ -89,7 +89,7 @@ const catalog07: Record<string, string> = {
   "Open Range": "광활한 대지",
   "Open SVP": "SVP 열기",
   "Open Settings": "설정 열기",
-  "Open Settings, then Harbor Relay.": "설정을 연 다음 Harbor Relay로 이동합니다.",
+  "Open Settings, then Lart Relay.": "설정을 연 다음 Lart Relay로 이동합니다.",
   "Open Settings, then System, then Advanced system settings.":
     "설정, 시스템, 고급 시스템 설정 순서로 여세요.",
   "Open Setup": "설정 열기",
@@ -100,8 +100,8 @@ const catalog07: Record<string, string> = {
   "Open Trakt profile": "Trakt 프로필 열기",
   "Open Voyages": "Voyages 열기",
   "Open a folder": "폴더 열기",
-  "Open a manga on Harbor to control the reader from here.":
-    "여기에서 리더를 제어하려면 Harbor에서 만화를 여세요.",
+  "Open a manga on Lart to control the reader from here.":
+    "여기에서 리더를 제어하려면 Lart에서 만화를 여세요.",
   "Open a quick issue": "빠르게 문제 신고",
   "Open a terminal and run: brew install ffmpeg":
     "터미널을 열고 다음을 실행하세요: brew install ffmpeg",
@@ -195,8 +195,8 @@ const catalog07: Record<string, string> = {
   "Opening…": "여는 중…",
   "Opens Stremio in your browser. Works with email, Facebook, and Apple accounts.":
     "브라우저에서 Stremio를 엽니다. 이메일, Facebook 및 Apple 계정으로 이용할 수 있습니다.",
-  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Harbor never sees your password.":
-    "브라우저에서 Stremio를 엽니다. 이메일, Facebook 및 Apple로 이용할 수 있습니다. Harbor는 비밀번호를 확인하지 않습니다.",
+  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Lart never sees your password.":
+    "브라우저에서 Stremio를 엽니다. 이메일, Facebook 및 Apple로 이용할 수 있습니다. Lart는 비밀번호를 확인하지 않습니다.",
   "Opens the folder holding the DHT cache and active transfer data.": "DHT 캐시와 활성 전송 데이터가 들어 있는 폴더를 엽니다.",
   "Opens the free signup page": "무료 가입 페이지를 엽니다",
   "Opens your API settings page": "API 설정 페이지를 엽니다",
@@ -213,14 +213,14 @@ const catalog07: Record<string, string> = {
   "Optional. TheIntroDB answers without a key, but a key raises your rate limit so timing keeps arriving when you binge. Get one at":
     "선택 사항입니다. TheIntroDB는 키가 없어도 응답하지만, 키를 등록하면 요청 한도가 늘어나 몰아 볼 때도 구간 정보가 끊기지 않습니다. 키 발급:",
   Options: "옵션",
-  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Harbor writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
-    "라이브러리 → 로컬 탭의 옵션입니다. 자체 드라이브에서 스캔할 폴더를 설정합니다. 메타데이터를 내보내면 Harbor가 Kodi 형식의 .nfo를 작성하고 아래 크기로 각 파일 옆에 아트워크를 다운로드합니다.",
+  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Lart writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
+    "라이브러리 → 로컬 탭의 옵션입니다. 자체 드라이브에서 스캔할 폴더를 설정합니다. 메타데이터를 내보내면 Lart가 Kodi 형식의 .nfo를 작성하고 아래 크기로 각 파일 옆에 아트워크를 다운로드합니다.",
   "Or browse curated packs and import a link": "또는 엄선된 팩을 둘러보고 링크를 가져오세요",
   "Or just zip up images": "또는 이미지만 압축하기",
   "Or paste a stream URL": "또는 스트림 URL 붙여넣기",
   "Or paste the install link manually": "또는 설치 링크 직접 붙여넣기",
   "Or set a series to auto-download": "또는 시리즈 자동 다운로드 설정",
-  "Or try one of ours": "Harbor 팩 사용해 보기",
+  "Or try one of ours": "Lart 팩 사용해 보기",
   Order: "순서",
   "Organize addons": "애드온 정리",
   "Organize downloads into folders": "다운로드를 폴더별로 정리",
@@ -284,16 +284,16 @@ const catalog07: Record<string, string> = {
     "PNG, JPEG, WebP 또는 SVG(너무 크면 자동 축소). 최대 2MB의 애니메이션 GIF가 실시간 재생됩니다.",
   "PNG, JPG, WebP, GIF, MP4, WebM, MOV. Up to 6 files, 100 MB each.":
     "PNG, JPG, WebP, GIF, MP4, WebM, MOV. 최대 6개 파일, 파일당 100 MB.",
-  "PNG, WEBP, SVG or GIF. Harbor shrinks it to 128px so it stays small on disk.":
-    "PNG, WEBP, SVG 또는 GIF. 디스크 공간을 적게 차지하도록 Harbor가 128px로 축소합니다.",
+  "PNG, WEBP, SVG or GIF. Lart shrinks it to 128px so it stays small on disk.":
+    "PNG, WEBP, SVG 또는 GIF. 디스크 공간을 적게 차지하도록 Lart가 128px로 축소합니다.",
   PREVIEW: "미리 보기",
   "Pack name": "팩 이름",
   "Pack removed, badges back to default": "팩이 제거되어 배지가 기본값으로 돌아갔습니다",
   Packaged: "패키지",
   Packs: "팩",
   "Packs & import": "팩 및 가져오기",
-  "Packs stay hosted by their maker. Harbor keeps the link, not the artwork.":
-    "팩은 제작자가 계속 호스팅합니다. Harbor에는 아트워크가 아닌 링크만 저장됩니다.",
+  "Packs stay hosted by their maker. Lart keeps the link, not the artwork.":
+    "팩은 제작자가 계속 호스팅합니다. Lart에는 아트워크가 아닌 링크만 저장됩니다.",
   Page: "페이지",
   "Page background": "페이지 배경",
   "Page background color": "페이지 배경색",
@@ -311,9 +311,9 @@ const catalog07: Record<string, string> = {
     "유료입니다. 점수를 포스터 이미지 자체에 삽입합니다.",
   "Painted Skies": "채색된 하늘",
   Pair: "페어링",
-  "Pair once from here and this Harbor will take commands.":
-    "여기에서 한 번 페어링하면 이 Harbor가 명령을 받습니다.",
-  "Pair with this Harbor": "이 Harbor와 페어링",
+  "Pair once from here and this Lart will take commands.":
+    "여기에서 한 번 페어링하면 이 Lart가 명령을 받습니다.",
+  "Pair with this Lart": "이 Lart와 페어링",
   Paired: "페어링됨",
   "Paired with {name}": "{name}와 페어링됨",
   Palette: "팔레트",
@@ -346,8 +346,8 @@ const catalog07: Record<string, string> = {
     "Trakt, MDBList, TMDB, Letterboxd, IMDb 또는 MAL 목록 URL 붙여넣기",
   "Paste a direct image link.": "이미지 직접 링크를 붙여 넣으세요.",
   "Paste a direct video file link.": "동영상 파일 직접 링크를 붙여 넣으세요.",
-  "Paste a public list from Trakt, MDBList, TMDB, Letterboxd, IMDb, or MyAnimeList. Harbor pulls the titles in and keeps the artwork sharp.":
-    "Trakt, MDBList, TMDB, Letterboxd, IMDb 또는 MyAnimeList의 공개 목록을 붙여 넣으세요. Harbor가 작품을 가져오고 선명한 이미지를 유지합니다.",
+  "Paste a public list from Trakt, MDBList, TMDB, Letterboxd, IMDb, or MyAnimeList. Lart pulls the titles in and keeps the artwork sharp.":
+    "Trakt, MDBList, TMDB, Letterboxd, IMDb 또는 MyAnimeList의 공개 목록을 붙여 넣으세요. Lart가 작품을 가져오고 선명한 이미지를 유지합니다.",
   "Paste a stremio:// link or an https://…/manifest.json URL.":
     "stremio:// 링크 또는 https://…/manifest.json URL을 붙여넣으세요.",
   "Paste a track, album or playlist link.": "트랙, 앨범 또는 재생목록 링크를 붙여 넣으세요.",
@@ -357,7 +357,7 @@ const catalog07: Record<string, string> = {
   "Paste any YouTube link. Watch, share, shorts or embed all work.":
     "YouTube 링크를 붙여 넣으세요. 시청, 공유, Shorts, 삽입 링크가 모두 지원됩니다.",
   "Paste invite link": "초대 링크 붙여넣기",
-  "Paste it into Harbor.": "Harbor에 붙여 넣으세요.",
+  "Paste it into Lart.": "Lart에 붙여 넣으세요.",
   "Paste manifest URL or stremio:// link": "매니페스트 URL 또는 stremio:// 링크 붙여넣기",
   "Paste the URL into the box above and send a test.":
     "URL을 위 입력란에 붙여 넣고 테스트를 보내세요.",
@@ -368,8 +368,8 @@ const catalog07: Record<string, string> = {
   "Paste the manifest URL, or click Install on the addon's configuration page above.":
     "매니페스트 URL을 붙여넣거나 위의 애드온 구성 페이지에서 설치를 클릭하세요.",
   "Paste the text from AniList": "AniList의 텍스트 붙여넣기",
-  "Paste this code into Harbor to open the collection.":
-    "이 코드를 Harbor에 붙여 넣어 컬렉션을 여세요.",
+  "Paste this code into Lart to open the collection.":
+    "이 코드를 Lart에 붙여 넣어 컬렉션을 여세요.",
   "Paste your API token first.": "먼저 API 토큰을 붙여 넣으세요.",
   "Paste your OpenSubtitles API key": "OpenSubtitles API 키를 붙여 넣으세요",
   "Paste your SUBDL API key": "SUBDL API 키 붙여넣기",
@@ -435,8 +435,8 @@ const catalog07: Record<string, string> = {
   "Pick a World": "세계 선택",
   "Pick a direction. You steer from there, one film at a time.":
     "방향을 선택하세요. 이후에는 영화 한 편씩 직접 항로를 정합니다.",
-  "Pick a display and body pairing, or upload your own font to use across Harbor.":
-    "Harbor 전체에서 사용할 제목용 글꼴과 본문용 글꼴 조합을 선택하거나 직접 글꼴을 업로드하세요.",
+  "Pick a display and body pairing, or upload your own font to use across Lart.":
+    "Lart 전체에서 사용할 제목용 글꼴과 본문용 글꼴 조합을 선택하거나 직접 글꼴을 업로드하세요.",
   "Pick a drive with room to spare. Files already cached stay where they are.":
     "여유 공간이 있는 드라이브를 선택하세요. 이미 캐시된 파일은 현재 위치에 유지됩니다.",
   "Pick a few you love": "좋아하는 작품을 골라보세요",
@@ -456,10 +456,10 @@ const catalog07: Record<string, string> = {
   "Pick a profile to continue.": "계속하려면 프로필을 선택하세요.",
   "Pick a random title": "작품 무작위 선택",
   "Pick a source": "소스 선택",
-  "Pick a source once and Harbor keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. For anime it locks the whole series to that release.":
-    "소스를 한 번 선택하면 Harbor가 다시 선택하지 않고 같은 릴리스로 해당 시즌의 나머지를 계속 재생합니다. 디브리드 시즌 팩에서 가장 잘 작동합니다. 애니메이션은 전체 시리즈가 해당 릴리스로 고정됩니다.",
-  "Pick a source once and Harbor keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
-    "소스를 한 번 선택하면 다시 선택하지 않아도 Harbor가 같은 릴리스로 해당 시즌의 나머지를 계속 재생합니다. 디브리드 시즌 팩에서 가장 잘 작동하며 애니메이션에는 적용되지 않습니다.",
+  "Pick a source once and Lart keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. For anime it locks the whole series to that release.":
+    "소스를 한 번 선택하면 Lart가 다시 선택하지 않고 같은 릴리스로 해당 시즌의 나머지를 계속 재생합니다. 디브리드 시즌 팩에서 가장 잘 작동합니다. 애니메이션은 전체 시리즈가 해당 릴리스로 고정됩니다.",
+  "Pick a source once and Lart keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
+    "소스를 한 번 선택하면 다시 선택하지 않아도 Lart가 같은 릴리스로 해당 시즌의 나머지를 계속 재생합니다. 디브리드 시즌 팩에서 가장 잘 작동하며 애니메이션에는 적용되지 않습니다.",
   "Pick a source to swap in place. Playback keeps running.":
     "교체할 소스를 선택하세요. 재생은 계속됩니다.",
   "Pick a star rating first": "먼저 별점을 선택하세요",
@@ -515,8 +515,8 @@ const catalog07: Record<string, string> = {
     "보다 만 에피소드와 영화를 저장된 위치부터 이어서 재생합니다. 80% 넘게 본 콘텐츠는 항상 처음부터 다시 시작합니다. 프로그램을 다시 볼 때처럼 항상 처음부터 시작하려면 끄세요.",
   "Pick up the manga at {label}.": "{label}부터 만화를 이어 보세요.",
   "Pick up the manga where the anime ends.": "애니메이션 이후 내용부터 만화를 이어 보세요.",
-  "Pick up to five. It shapes what Harbor surfaces first.":
-    "최대 5개를 선택하세요. Harbor에서 먼저 표시할 콘텐츠에 반영됩니다.",
+  "Pick up to five. It shapes what Lart surfaces first.":
+    "최대 5개를 선택하세요. Lart에서 먼저 표시할 콘텐츠에 반영됩니다.",
   "Pick up to {max} artists to show on your profile.":
     "프로필에 표시할 아티스트를 최대 {max}명 선택하세요.",
   "Pick up to {max} badges to show by your name. Tap in the order you want them to appear.":
@@ -536,8 +536,8 @@ const catalog07: Record<string, string> = {
   "Pick what you actually use": "실제로 이용하는 서비스 선택",
   "Pick what you want in your calendar. Mix and match: tracked people, genres, streamers, countries, Trakt lists.":
     "캘린더에 표시할 항목을 선택하세요. 팔로우 중인 인물, 장르, 스트리밍 서비스, 국가, Trakt 목록을 자유롭게 조합할 수 있습니다.",
-  "Pick which audio and subtitle languages Harbor reaches for first.":
-    "Harbor에서 우선 선택할 오디오 및 자막 언어를 지정하세요.",
+  "Pick which audio and subtitle languages Lart reaches for first.":
+    "Lart에서 우선 선택할 오디오 및 자막 언어를 지정하세요.",
   "Pick which calendars feed your alerts. Items are deduped across sources before sending.":
     "알림에 사용할 캘린더를 선택하세요. 전송 전에 여러 출처의 중복 항목이 제거됩니다.",
   "Pick which calendars feed your webhook. Items are deduped across sources before sending.":
@@ -566,8 +566,8 @@ const catalog07: Record<string, string> = {
   "Picture quality": "화질",
   "Picture quality (weak PC / balanced / max)": "화질(저사양 PC / 균형 / 최대)",
   "Picture quality on the TV": "TV 화질",
-  "Picture shaders run on the bundled mpv engine in the Harbor desktop app. They have no effect in the browser.":
-    "화면 셰이더는 Harbor 데스크톱 앱에 포함된 mpv 엔진에서 작동합니다. 브라우저에서는 적용되지 않습니다.",
+  "Picture shaders run on the bundled mpv engine in the Lart desktop app. They have no effect in the browser.":
+    "화면 셰이더는 Lart 데스크톱 앱에 포함된 mpv 엔진에서 작동합니다. 브라우저에서는 적용되지 않습니다.",
   "Picture-in-picture": "화면 속 화면",
   "Pilots that pull you in and finales that earn the season.":
     "단숨에 빠져드는 첫 화와 한 시즌을 빛내는 마지막 화입니다.",
@@ -662,8 +662,8 @@ const catalog07: Record<string, string> = {
   "Playlist contained no channels": "재생목록에 채널이 없습니다",
   "Playlist is too large": "재생목록이 너무 큽니다",
   Playlists: "재생목록",
-  "Plays + ratings sync from Harbor to Trakt.tv.":
-    "재생 기록과 평점이 Harbor에서 Trakt.tv로 동기화됩니다.",
+  "Plays + ratings sync from Lart to Trakt.tv.":
+    "재생 기록과 평점이 Lart에서 Trakt.tv로 동기화됩니다.",
   "Plays HDR content in its own window so Windows treats it as true HDR (the SDR brightness slider stops dimming it). Turn off HDR-to-SDR tonemapping above to use this on an HDR display.":
     "HDR 콘텐츠를 전용 창에서 재생하여 Windows가 실제 HDR로 처리하게 합니다(SDR 밝기 슬라이더로 인해 어두워지지 않음). HDR 디스플레이에서 사용하려면 위의 HDR-SDR 톤 매핑을 끄세요.",
   "Plays HDR in its own window so Windows shows real HDR and the SDR brightness slider stops dimming it. The most reliable way to get true HDR.":
@@ -674,17 +674,17 @@ const catalog07: Record<string, string> = {
   "Plays the trailer behind the hero after a short pause.":
     "잠시 후 메인 배너 뒤에서 예고편을 재생합니다.",
   "Please choose a PNG, SVG, JPG, or WebP image.": "PNG, SVG, JPG 또는 WebP 이미지를 선택하세요.",
-  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Harbor. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
-    "플러그인은 파일, 계정 또는 Harbor의 나머지 부분에 접근할 수 없는 격리된 워커의 샌드박스에서 실행됩니다. 플러그인이 스크래핑하는 내용은 사용자와 대상 사이트 간의 문제입니다. 신뢰하는 저장소의 플러그인만 설치하세요.",
+  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Lart. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
+    "플러그인은 파일, 계정 또는 Lart의 나머지 부분에 접근할 수 없는 격리된 워커의 샌드박스에서 실행됩니다. 플러그인이 스크래핑하는 내용은 사용자와 대상 사이트 간의 문제입니다. 신뢰하는 저장소의 플러그인만 설치하세요.",
   "Plus Jakarta Sans": "Plus Jakarta Sans",
   "Pluto TV": "Pluto TV",
-  "Point Harbor at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
-    "Harbor에서 사용할 폴더를 지정하세요. 폴더에서 영화와 시리즈를 검색하고 파일 이름에서 제목을 분석한 뒤 TMDB 정보로 보강하여 다른 항목과 동일하게 표시합니다. 경로만 기억하며 아무것도 복사하거나 이동하지 않습니다.",
-  "Point Harbor at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.": "홈 서버의 Stremio 서비스처럼 다른 기기의 스트리밍 서버를 Harbor에 연결합니다. P2P 스트림은 이 기기 대신 해당 기기에서 다운로드되고 재생됩니다.",
-  "Point Harbor at your self-hosted library to browse and install sources":
-    "Harbor를 직접 호스팅하는 라이브러리에 연결하여 소스를 탐색하고 설치하세요",
-  "Point Harbor's built-in scraper at any HTML site with a config":
-    "설정 파일로 Harbor의 기본 스크레이퍼가 원하는 HTML 사이트를 읽도록 지정",
+  "Point Lart at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
+    "Lart에서 사용할 폴더를 지정하세요. 폴더에서 영화와 시리즈를 검색하고 파일 이름에서 제목을 분석한 뒤 TMDB 정보로 보강하여 다른 항목과 동일하게 표시합니다. 경로만 기억하며 아무것도 복사하거나 이동하지 않습니다.",
+  "Point Lart at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.": "홈 서버의 Stremio 서비스처럼 다른 기기의 스트리밍 서버를 Lart에 연결합니다. P2P 스트림은 이 기기 대신 해당 기기에서 다운로드되고 재생됩니다.",
+  "Point Lart at your self-hosted library to browse and install sources":
+    "Lart를 직접 호스팅하는 라이브러리에 연결하여 소스를 탐색하고 설치하세요",
+  "Point Lart's built-in scraper at any HTML site with a config":
+    "설정 파일로 Lart의 기본 스크레이퍼가 원하는 HTML 사이트를 읽도록 지정",
   "Point Local folder at CBZ files or folders of images you already own.":
     "로컬 폴더에서 이미 소유한 CBZ 파일이나 이미지 폴더를 지정하세요.",
   Pointer: "포인터",
@@ -741,15 +741,15 @@ const catalog07: Record<string, string> = {
   "Posts are not available yet": "아직 게시물을 이용할 수 없습니다",
   "Power tools": "고급 도구",
   "Power tools & diagnostics": "고급 도구 및 진단",
-  "Power-user knob. Inject your own CSS, JS, and HTML into Harbor. Lives in your local settings; nothing leaves your machine.":
-    "고급 사용자용 기능입니다. 자체 CSS, JS, HTML을 Harbor에 삽입할 수 있습니다. 로컬 설정에 저장되며 컴퓨터 외부로 전송되지 않습니다.",
+  "Power-user knob. Inject your own CSS, JS, and HTML into Lart. Lives in your local settings; nothing leaves your machine.":
+    "고급 사용자용 기능입니다. 자체 CSS, JS, HTML을 Lart에 삽입할 수 있습니다. 로컬 설정에 저장되며 컴퓨터 외부로 전송되지 않습니다.",
   "Powers everything on this page: the web app, the phone remote, and the manga reader remote.":
     "이 페이지의 웹 앱, 휴대폰 리모컨, 만화 리더 리모컨을 모두 구동합니다.",
   "Powers the Identify song button in the player.": "플레이어의 곡 식별 버튼을 작동시킵니다.",
   "Powers the Identify-song button in the player. Get a token at":
     "플레이어의 노래 식별 버튼을 활성화합니다. 다음에서 토큰 받기",
-  "Prefer a server? Run every source through your own Suwayomi and point Harbor at it":
-    "서버를 선호하나요? 모든 소스를 자체 Suwayomi를 통해 실행하고 Harbor에서 해당 서버를 지정하세요.",
+  "Prefer a server? Run every source through your own Suwayomi and point Lart at it":
+    "서버를 선호하나요? 모든 소스를 자체 Suwayomi를 통해 실행하고 Lart에서 해당 서버를 지정하세요.",
   "Prefer embedded subtitles": "내장 자막 우선",
   "Prefer my installed metadata addon": "설치된 메타데이터 애드온 우선 사용",
   "Preferred language for anime titles displayed on poster cards.":
@@ -770,11 +770,11 @@ const catalog07: Record<string, string> = {
   "Preparing…": "준비 중…",
   Preset: "프리셋",
   Presets: "프리셋",
-  "Press OK on a field to type, or use the Harbor remote on your phone.":
-    "필드에서 확인 버튼을 눌러 입력하거나 휴대전화의 Harbor 리모컨을 사용하세요.",
+  "Press OK on a field to type, or use the Lart remote on your phone.":
+    "필드에서 확인 버튼을 눌러 입력하거나 휴대전화의 Lart 리모컨을 사용하세요.",
   "Press Play": "재생하세요",
-  "Press Play and Harbor picks the source itself instead of opening the list.":
-    "재생을 누르면 목록을 열지 않고 Harbor가 소스를 자동으로 선택합니다.",
+  "Press Play and Lart picks the source itself instead of opening the list.":
+    "재생을 누르면 목록을 열지 않고 Lart가 소스를 자동으로 선택합니다.",
   "Press T": "T 누르기",
   "Press a key…": "키를 누르세요…",
   "Press buttons and move the sticks. This mirrors your controller in real time.":
@@ -931,8 +931,8 @@ const catalog07: Record<string, string> = {
   Queued: "대기 중",
   "Queued {queued} of {total} episodes.":
     "{total}개 에피소드 중 {queued}개를 대기열에 추가했습니다.",
-  "Queued {queued} of {total} episodes. Harbor could not match every episode in this package.":
-    "전체 {total}개 에피소드 중 {queued}개가 대기열에 추가되었습니다. Harbor에서 이 패키지의 모든 에피소드를 일치시키지 못했습니다.",
+  "Queued {queued} of {total} episodes. Lart could not match every episode in this package.":
+    "전체 {total}개 에피소드 중 {queued}개가 대기열에 추가되었습니다. Lart에서 이 패키지의 모든 에피소드를 일치시키지 못했습니다.",
   "Quick Watches Under 90": "90분 미만 가볍게 보기",
   "Quick age check": "간단한 연령 확인",
   "Quick panel": "빠른 패널",
@@ -944,7 +944,7 @@ const catalog07: Record<string, string> = {
     "고요한 드라마와 날카로운 스릴러, 혼자만을 위해 아껴 둔 시리즈입니다.",
   "Quiet favorites": "조용한 즐겨찾기",
   "Quietly great, {decade}": "조용히 빛난 {decade}년대 명작",
-  "Quit Harbor": "Harbor 종료",
+  "Quit Lart": "Lart 종료",
   "Quiz time!": "퀴즈 시간!",
   Quote: "인용문",
   "RAVU Lite": "RAVU Lite",

@@ -18,7 +18,7 @@ export default {
   "games.warhammerUniverse.screenNote": "41वीं सहस्राब्दी के मूल एनिमेशन और एक फ़ीचर फ़िल्म।",
   "games.warhammerUniverse.free": "Warhammer TV पर मुफ़्त",
   "games.warhammerUniverse.subscription": "Warhammer+ सदस्यता की ज़रूरत हो सकती है",
-  "games.warhammerUniverse.movieNote": "2010 की एनिमेटेड फ़िल्म। कलाकार, ट्रेलर और स्रोतों के लिए Harbor विवरण खोलें।",
+  "games.warhammerUniverse.movieNote": "2010 की एनिमेटेड फ़िल्म। कलाकार, ट्रेलर और स्रोतों के लिए Lart विवरण खोलें।",
   "games.warhammerUniverse.screenScope": "Warhammer TV का सार्वजनिक चयन। Hammer and Bolter कई दुनियाओं में है; उपलब्धता प्रदाता तय करता है।",
   "games.warhammerUniverse.lore": "कथाजगत के भीतर",
   "games.warhammerUniverse.loreNote": "इन दुनियाओं के रचनाकारों के चित्रों के साथ पात्र, गुट और महत्वपूर्ण घटनाएँ।",

@@ -1,6 +1,6 @@
 export default {
   "floatingPlayer.playbackSettings": "Wiedergabeeinstellungen",
-  "floatingPlayer.restoreVideo": "Zurück zu Harbor",
+  "floatingPlayer.restoreVideo": "Zurück zu Lart",
   "floatingPlayer.closeVideo": "Stoppen und schließen",
   "floatingPlayer.chapters": "Kapitel",
   "floatingPlayer.subtitleDelay": "Untertitelverzögerung",

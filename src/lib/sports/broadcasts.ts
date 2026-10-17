@@ -46,7 +46,7 @@ export const SPORTS_BROADCASTS: SportsBroadcast[] = [
   },
 ];
 
-// Not a playback path. Twitch answers `frame-ancestors https://<parent>` and Harbor's packaged
+// Not a playback path. Twitch answers `frame-ancestors https://<parent>` and Lart's packaged
 // origin is `http://tauri.localhost`, so this URL only loads in an iframe on the dev server.
 // Playback goes through esportsPlayback, which opens a Twitch channel top-level.
 export function twitchEmbedUrl(channel: string, hostname: string): string | null {

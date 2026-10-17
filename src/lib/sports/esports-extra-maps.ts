@@ -559,5 +559,5 @@ export const PUBG_MAP_TERMS = {
   terms: "https://developer.pubg.com/tos",
   content: "https://pubg.com/en/clause/content_creation_guideline",
   attribution:
-    "PUBG map artwork © KRAFTON, Inc. Harbor is not affiliated with or endorsed by KRAFTON.",
+    "PUBG map artwork © KRAFTON, Inc. Lart is not affiliated with or endorsed by KRAFTON.",
 } as const;

@@ -87,14 +87,14 @@ const manga: Record<string, string> = {
   "For a link or image you usually want an attribute:": "リンクや画像には通常、次の属性が必要です:",
   "For an AI agent": "AIエージェント向け",
   Go: "移動",
-  "Harbor does not host any manga or any sources. Connect your own server or open a folder you already have, and mix as many as you like.":
-    "Harborは漫画やソースを一切ホストしていません。自分のサーバーを接続するか、手元のフォルダーを開いて、好きなだけ組み合わせられます。",
-  "Harbor logs into nothing and bypasses no password, paywall, or access control, and must not be used to attempt it. Point it only at content you are legally allowed to read, and never at official or licensed publisher sites. You alone are responsible for what you connect and for following copyright and each site's terms. Harbor bundles and endorses no sites.":
-    "Harborはどこにもログインせず、パスワード、ペイウォール、アクセス制限を回避しません。また、そのような目的で使用してはなりません。合法的に閲覧できるコンテンツのみを指定し、公式またはライセンスを受けた出版社のサイトは絶対に指定しないでください。接続先の選択、著作権および各サイトの利用規約の順守は、すべてご自身の責任です。Harborはいかなるサイトも同梱、推奨しません。",
-  "Harbor ships no manga sources and hosts nothing. Extensions come from repositories other people maintain. Paste a repository URL below to browse its plugins, then install the ones you want. Every plugin runs sandboxed in an isolated worker with no access to your files, accounts, or the rest of the app.":
-    "Harborには漫画ソースは付属せず、コンテンツも一切ホストしていません。拡張機能は、第三者が管理するリポジトリから提供されます。下にリポジトリのURLを貼り付けてプラグインを確認し、必要なものをインストールしてください。各プラグインは隔離されたワーカー内のサンドボックスで動作し、ファイル、アカウント、アプリの他の部分にはアクセスできません。",
-  "Harbor ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Harbor reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
-    "Harborが提供するのはエンジンであり、サイトではありません。CSSセレクターでサイトを記述する短いJSON設定を作成すると、Harborがそれを使ってサイトを読み取ります。サイトは一切同梱されていません。閲覧する権利のあるサイトのみを指定してください。",
+  "Lart does not host any manga or any sources. Connect your own server or open a folder you already have, and mix as many as you like.":
+    "Lartは漫画やソースを一切ホストしていません。自分のサーバーを接続するか、手元のフォルダーを開いて、好きなだけ組み合わせられます。",
+  "Lart logs into nothing and bypasses no password, paywall, or access control, and must not be used to attempt it. Point it only at content you are legally allowed to read, and never at official or licensed publisher sites. You alone are responsible for what you connect and for following copyright and each site's terms. Lart bundles and endorses no sites.":
+    "Lartはどこにもログインせず、パスワード、ペイウォール、アクセス制限を回避しません。また、そのような目的で使用してはなりません。合法的に閲覧できるコンテンツのみを指定し、公式またはライセンスを受けた出版社のサイトは絶対に指定しないでください。接続先の選択、著作権および各サイトの利用規約の順守は、すべてご自身の責任です。Lartはいかなるサイトも同梱、推奨しません。",
+  "Lart ships no manga sources and hosts nothing. Extensions come from repositories other people maintain. Paste a repository URL below to browse its plugins, then install the ones you want. Every plugin runs sandboxed in an isolated worker with no access to your files, accounts, or the rest of the app.":
+    "Lartには漫画ソースは付属せず、コンテンツも一切ホストしていません。拡張機能は、第三者が管理するリポジトリから提供されます。下にリポジトリのURLを貼り付けてプラグインを確認し、必要なものをインストールしてください。各プラグインは隔離されたワーカー内のサンドボックスで動作し、ファイル、アカウント、アプリの他の部分にはアクセスできません。",
+  "Lart ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Lart reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
+    "Lartが提供するのはエンジンであり、サイトではありません。CSSセレクターでサイトを記述する短いJSON設定を作成すると、Lartがそれを使ってサイトを読み取ります。サイトは一切同梱されていません。閲覧する権利のあるサイトのみを指定してください。",
   "Hide help": "ヘルプを非表示",
   "Host it with a repo.json": "repo.jsonと一緒にホスト",
   "How it works": "仕組み",
@@ -144,8 +144,8 @@ const manga: Record<string, string> = {
   "Oldest first": "古い順",
   "One Piece, Naruto and more worlds": "One Piece、Narutoなどの世界",
   Oneshot: "読み切り",
-  "Only add repositories you trust. Harbor cannot vouch for third-party plugins.":
-    "信頼できるリポジトリのみ追加してください。Harborはサードパーティ製プラグインの安全性を保証できません。",
+  "Only add repositories you trust. Lart cannot vouch for third-party plugins.":
+    "信頼できるリポジトリのみ追加してください。Lartはサードパーティ製プラグインの安全性を保証できません。",
   "Only sites you have the right to read.": "閲覧する権利のあるサイトのみ。",
   "Open manga details": "マンガの詳細を開く",
   "Open the site in a browser. Right-click the thing you want (a cover, a title, a chapter link) and choose Inspect.":
@@ -165,14 +165,14 @@ const manga: Record<string, string> = {
     "フォルダーを1つ選択してください。その中の各サブフォルダーが1作品になるため、作品名とまったく同じ名前を付けます。各サブフォルダーには、画像入りのチャプターフォルダーまたは.cbz / .zipファイルを追加してください。cover.jpgを置くとカスタム表紙になります。",
   "Pick up the manga at {label}.": "{label}からマンガの続きを読む。",
   "Pick up the manga where the anime ends.": "アニメの続きからマンガを読む。",
-  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Harbor. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
-    "プラグインは隔離されたワーカー内のサンドボックスで実行され、ファイル、アカウント、Harborのほかの部分にはアクセスできません。プラグインによるスクレイピングについては、利用者と対象サイトとの間の問題となります。信頼できるリポジトリのプラグインのみインストールしてください。",
-  "Point Harbor's built-in scraper at any HTML site with a config":
-    "設定ファイルを使って、Harbor内蔵スクレイパーで任意のHTMLサイトを読み込む",
+  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Lart. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
+    "プラグインは隔離されたワーカー内のサンドボックスで実行され、ファイル、アカウント、Lartのほかの部分にはアクセスできません。プラグインによるスクレイピングについては、利用者と対象サイトとの間の問題となります。信頼できるリポジトリのプラグインのみインストールしてください。",
+  "Point Lart's built-in scraper at any HTML site with a config":
+    "設定ファイルを使って、Lart内蔵スクレイパーで任意のHTMLサイトを読み込む",
   "Point Local folder at CBZ files or folders of images you already own.":
     "「ローカルフォルダー」に、所有しているCBZファイルまたは画像フォルダーを指定してください。",
-  "Prefer a server? Run every source through your own Suwayomi and point Harbor at it":
-    "サーバーを使うなら、すべての配信元を自分のSuwayomi経由で利用し、Harborを接続できます",
+  "Prefer a server? Run every source through your own Suwayomi and point Lart at it":
+    "サーバーを使うなら、すべての配信元を自分のSuwayomi経由で利用し、Lartを接続できます",
   "Previous chapter": "前のチャプター",
   "Previous page": "前のページ",
   "Publicly accessible pages only.": "一般公開されているページのみ。",
@@ -269,8 +269,8 @@ const manga: Record<string, string> = {
   "Write a scraper for any site, host it, and install it like any other plugin":
     "任意のサイト用スクレイパーを作成してホストし、通常のプラグインと同じようにインストールできます",
   "Write one JavaScript file": "JavaScriptファイルを1つ作成",
-  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Harbor bundles and endorses no sites; it only runs the config you supply.":
-    "接続先の選択と、著作権および各サイトの利用規約の順守は、すべてご自身の責任です。Harborはいかなるサイトも同梱、推奨せず、指定された設定を実行するだけです。",
+  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Lart bundles and endorses no sites; it only runs the config you supply.":
+    "接続先の選択と、著作権および各サイトの利用規約の順守は、すべてご自身の責任です。Lartはいかなるサイトも同梱、推奨せず、指定された設定を実行するだけです。",
   "You have reached the latest chapter available.": "公開されている最新の章まで到達しました。",
   "Your AniList": "あなたのAniList",
   "Your config": "あなたの設定",
@@ -297,8 +297,8 @@ const manga: Record<string, string> = {
   "is a page number. Add": "はページ番号です。次を追加します",
   "is a regex for the part to change": "は変更する部分に一致する正規表現です",
   "is each chapter row": "は各章の行です",
-  "is how many items to skip, starting at 0. Harbor auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
-    "は0から数えてスキップする項目数です。Harborがサイトのページサイズを自動検出してページをたどるため、ページサイズを設定する必要はありません。URLが項目数を数える形式の場合に使用してください。",
+  "is how many items to skip, starting at 0. Lart auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
+    "は0から数えてスキップする項目数です。Lartがサイトのページサイズを自動検出してページをたどるため、ページサイズを設定する必要はありません。URLが項目数を数える形式の場合に使用してください。",
   "is the box around one manga; inside it": "は1件のマンガを囲む要素です。その中の",
   "is the manga URL": "はマンガのURLです",
   "is the search text (searchPath only).": "は検索テキストです（searchPathのみ）。",

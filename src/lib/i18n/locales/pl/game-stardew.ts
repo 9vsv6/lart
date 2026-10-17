@@ -18,7 +18,7 @@ export default {
   "games.stardew.refresh": "Odśwież mody",
 
   "games.stardew.import": "Importuj ZIP moda",
-  "games.stardew.manage": "Zarządzane przez Harbor",
+  "games.stardew.manage": "Zarządzane przez Lart",
   "games.stardew.manageNote": "Zaimportuj pobrany mod SMAPI, aby nim zarządzać. Aby go zaktualizować, zaimportuj nowszy ZIP.",
   "games.stardew.previous": "Poprzednie wersje",
   "games.stardew.review": "Sprawdź zmiany",
@@ -31,7 +31,7 @@ export default {
   "games.stardew.running": "Zamknij Stardew Valley i SMAPI przed zmianą plików modów.",
   "games.stardew.requirementsError": "Brakuje wymaganego moda lub wersji SMAPI albo są zbyt stare. Sprawdź wymagania moda.",
   "games.stardew.dependentsError": "Włączony mod wymaga tej wersji. Najpierw go wyłącz lub wybierz zgodną wersję.",
-  "games.stardew.unmanagedError": "Ten mod już istnieje poza rejestrem Harbor. Przenieś istniejącą kopię przed importem.",
+  "games.stardew.unmanagedError": "Ten mod już istnieje poza rejestrem Lart. Przenieś istniejącą kopię przed importem.",
   "games.stardew.archiveError": "Wybierz ZIP z jednym gotowym folderem moda, do 32 MB (128 MB po rozpakowaniu). Kod źródłowy nie jest modem gotowym do instalacji.",
   "games.stardew.moreFiles": "Jeszcze {count} plików",
   "games.stardew.partialError": "Nie udało się sprawdzić części modów. Rozwiąż problem niepełnego skanowania przed zmianą plików.",

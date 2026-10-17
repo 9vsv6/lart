@@ -45,7 +45,7 @@ export default {
   "games.pick.hours": "ч",
   "games.pick.noHistory": "Пока нет активности. Выберите любимые игры или подключите Steam в настройках игр.",
   "games.pick.manualOnly": "На подборку повлияют только любимые игры и выбранные фильтры.",
-  "games.pick.addedNote": "«Недавно добавлено» — впервые замечено в Harbor после первого импорта, а не дата покупки.",
+  "games.pick.addedNote": "«Недавно добавлено» — впервые замечено в Lart после первого импорта, а не дата покупки.",
   "games.pick.because": "Потому что вам нравится {name}",
   "games.pick.matches": "Соответствует вашему выбору",
   "games.pick.steamCatalog": "Каталог Steam",

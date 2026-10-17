@@ -82,8 +82,8 @@ const live: Record<string, string> = {
   FT: "TL",
   "Grand Slam": "Grand Slam",
   Grid: "Cuadrícula",
-  "Harbor caps playlists at 80 MB to stay responsive. Most providers offer a filtered URL with fewer channels.":
-    "Harbor limita las listas de reproducción a 80 MB para mantener un buen rendimiento. La mayoría de los proveedores ofrecen una URL filtrada con menos canales.",
+  "Lart caps playlists at 80 MB to stay responsive. Most providers offer a filtered URL with fewer channels.":
+    "Lart limita las listas de reproducción a 80 MB para mantener un buen rendimiento. La mayoría de los proveedores ofrecen una URL filtrada con menos canales.",
   Height: "Altura",
   "HEVC, HDR, TrueHD, plus real subtitle and audio menus.":
     "HEVC, HDR, TrueHD, además de menús completos de subtítulos y audio.",

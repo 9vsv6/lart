@@ -131,7 +131,7 @@ const player: Record<string, string> = {
   "Got it": "Verstanden",
   "HI/SDH": "HI/SDH",
   "HW decode": "Hardwaredekodierung",
-  "Harbor's streaming server only runs in the desktop app.":
+  "Lart's streaming server only runs in the desktop app.":
     "Harbors Streaming-Server läuft nur in der Desktop-App.",
   Hidden: "Ausgeblendet",
   "Hidden by filter: {reason}": "Durch Filter ausgeblendet: {reason}",
@@ -392,8 +392,8 @@ const player: Record<string, string> = {
   center: "zentriert",
   "click to cancel": "zum Abbrechen klicken",
   left: "links",
-  "mpv is required for recording. Install mpv and restart Harbor.":
-    "mpv ist für Aufnahmen erforderlich. Installiere mpv und starte Harbor neu.",
+  "mpv is required for recording. Install mpv and restart Lart.":
+    "mpv ist für Aufnahmen erforderlich. Installiere mpv und starte Lart neu.",
   right: "rechts",
   "to close": "zum Schließen",
   "unsaved changes": "nicht gespeicherte Änderungen",

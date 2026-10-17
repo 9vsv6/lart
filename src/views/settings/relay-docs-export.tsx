@@ -54,7 +54,7 @@ export function DownloadMenu({
     close(true);
     const root = docsRef.current;
     if (!root) return;
-    const documentTitle = t("Harbor Relay Documentation");
+    const documentTitle = t("Lart Relay Documentation");
     if (kind === "pdf") {
       printDocs(root, documentTitle);
       return;
@@ -69,7 +69,7 @@ export function DownloadMenu({
         isTxt ? "harbor-relay-docs.txt" : "harbor-relay-docs.json",
         content,
         [isTxt ? "txt" : "json"],
-        t("Harbor Relay docs"),
+        t("Lart Relay docs"),
       );
       if (path) onSaved(path);
     } finally {

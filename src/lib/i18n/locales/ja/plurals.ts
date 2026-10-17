@@ -1,16 +1,16 @@
 const plurals: Record<string, string> = {
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.":
-    "Harborのウォッチリストから{n}件の作品をTraktに追加しますか？Traktにすでにある作品はスキップされます。",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#one":
-    "Harborのウォッチリストから{n}件をTraktに追加しますか？Traktにすでにあるタイトルはスキップされます。",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#few":
-    "Harborのウォッチリストから{n}件をTraktに追加しますか？Traktにすでにあるタイトルはスキップされます。",
-  "Add {n} titles from your Trakt watchlist to Harbor?":
-    "Traktのウォッチリストから{n}件の作品をHarborに追加しますか？",
-  "Add {n} titles from your Trakt watchlist to Harbor?#one":
-    "Traktのウォッチリストから{n}件をHarborに追加しますか？",
-  "Add {n} titles from your Trakt watchlist to Harbor?#few":
-    "Traktのウォッチリストから{n}件をHarborに追加しますか？",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.":
+    "Lartのウォッチリストから{n}件の作品をTraktに追加しますか？Traktにすでにある作品はスキップされます。",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#one":
+    "Lartのウォッチリストから{n}件をTraktに追加しますか？Traktにすでにあるタイトルはスキップされます。",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#few":
+    "Lartのウォッチリストから{n}件をTraktに追加しますか？Traktにすでにあるタイトルはスキップされます。",
+  "Add {n} titles from your Trakt watchlist to Lart?":
+    "Traktのウォッチリストから{n}件の作品をLartに追加しますか？",
+  "Add {n} titles from your Trakt watchlist to Lart?#one":
+    "Traktのウォッチリストから{n}件をLartに追加しますか？",
+  "Add {n} titles from your Trakt watchlist to Lart?#few":
+    "Traktのウォッチリストから{n}件をLartに追加しますか？",
   "After {n} episodes": "{n}話後",
   "After {n} episodes#one": "{n}話後",
   "After {n} episodes#few": "{n}話後",
@@ -295,12 +295,12 @@ const plurals: Record<string, string> = {
     "{n}作品の確認が必要です。特定にご協力ください。",
   "{n} titles together#one": "{n}作品を一緒に",
   "{n} titles together#few": "{n}作品を一緒に",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.":
-    "このセッションでトラッカーのリクエストを{n}件ブロックしました。Harbor自体はテレメトリを一切送信しません。",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#one":
-    "このセッションでトラッカーのリクエストを{n}件ブロックしました。Harbor自体はテレメトリを一切送信しません。",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#few":
-    "このセッションでトラッカーのリクエストを{n}件ブロックしました。Harbor自体はテレメトリを一切送信しません。",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.":
+    "このセッションでトラッカーのリクエストを{n}件ブロックしました。Lart自体はテレメトリを一切送信しません。",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#one":
+    "このセッションでトラッカーのリクエストを{n}件ブロックしました。Lart自体はテレメトリを一切送信しません。",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#few":
+    "このセッションでトラッカーのリクエストを{n}件ブロックしました。Lart自体はテレメトリを一切送信しません。",
   "{n} votes": "{n}票",
   "{n} votes#one": "{n}票",
   "{n} votes#few": "{n}票",

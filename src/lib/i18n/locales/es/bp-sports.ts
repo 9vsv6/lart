@@ -16,8 +16,8 @@ const bpSports: Record<string, string> = {
   "Following {name}": "Siguiendo a {name}",
   "Game finished": "Partido finalizado",
   "Grand Prix weekend": "Fin de semana de Gran Premio",
-  "Harbor couldn't reach the sports servers. Check the connection and open the event again.":
-    "Harbor no pudo conectarse con los servidores de deportes. Revisa la conexión y abre el evento de nuevo.",
+  "Lart couldn't reach the sports servers. Check the connection and open the event again.":
+    "Lart no pudo conectarse con los servidores de deportes. Revisa la conexión y abre el evento de nuevo.",
   "Hide bench": "Ocultar suplentes",
   "Hot right now": "En tendencia ahora",
   "If the broadcast asks you to sign in or confirm your age, open it in a browser.":
@@ -39,8 +39,8 @@ const bpSports: Record<string, string> = {
     "Todavía ningún complemento instalado ofrece un catálogo de deportes.",
   "No matching addon listing yet. Browse every addon channel to look for the broadcast.":
     "Aún no hay ningún canal de complemento que coincida. Explora todos los canales de complementos para buscar la transmisión.",
-  "No playlists yet. Add one in Live TV and Harbor will match its channels to fixtures.":
-    "Aún no tienes listas de reproducción. Agrega una en TV en vivo y Harbor asociará sus canales con los partidos.",
+  "No playlists yet. Add one in Live TV and Lart will match its channels to fixtures.":
+    "Aún no tienes listas de reproducción. Agrega una en TV en vivo y Lart asociará sus canales con los partidos.",
   "No venue page published": "No hay página del recinto publicada",
   "None of your channels match this fixture. Search your channels and pin the one that carries it.":
     "Ninguno de tus canales coincide con este partido. Busca en tus canales y fija el que lo transmite.",

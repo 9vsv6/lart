@@ -2,7 +2,7 @@ import type { TraktEpisodeRef } from "./ids";
 import type { TraktTarget } from "./types";
 
 const KEY = "harbor.trakt.pendingstops.v1";
-// Tracker accounts belong to Harbor profiles; never replay an unowned legacy queue.
+// Tracker accounts belong to Lart profiles; never replay an unowned legacy queue.
 import { activeProfileId } from "@/lib/active-profile-id";
 
 let generation = 0;

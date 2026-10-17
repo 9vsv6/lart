@@ -66,7 +66,7 @@ const gameRoms: Record<string, string> = {
   "games.roms.era": "Release era",
   "games.roms.reset": "Reset filters",
   "games.roms.empty": "Try another title or broaden the filters for this console.",
-  "games.roms.source": "Game metadata and relationships from IGDB. Import your local files to play supported games in Harbor.",
+  "games.roms.source": "Game metadata and relationships from IGDB. Import your local files to play supported games in Lart.",
   "games.roms.playerScore": "IGDB player rating · {count} ratings",
   "games.roms.combinedScore": "IGDB combined rating · {count} ratings",
   "games.roms.sort.discussed": "Most rated",

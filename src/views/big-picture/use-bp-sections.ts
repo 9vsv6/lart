@@ -67,7 +67,7 @@ export const BP_BANDS: Record<BpBandId, BpBand> = {
   catalog: {
     id: "catalog",
     eyebrow: "Catalog",
-    title: "Now on Harbor",
+    title: "Now on Lart",
     line: "What your catalogs are showing right now.",
     owns: "card",
     floor: "46%",

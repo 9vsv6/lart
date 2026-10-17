@@ -3,8 +3,8 @@ export default {
     "API-Sports 拒绝了此密钥。请在 API-Sports 控制面板中检查。",
   "Your API-Sports request allowance is exhausted. Public feeds remain available.":
     "你的 API-Sports 请求额度已用完。公开数据源仍可使用。",
-  "API-Sports is limiting requests. Harbor will retry after the waiting period.":
-    "API-Sports 正在限制请求。等待时间结束后，Harbor 将重试。",
+  "API-Sports is limiting requests. Lart will retry after the waiting period.":
+    "API-Sports 正在限制请求。等待时间结束后，Lart 将重试。",
   "API-Sports is unavailable right now. Public feeds remain available.":
     "API-Sports 暂时不可用。公开数据源仍可使用。",
   "The key could not be saved. Your previous key is unchanged.":

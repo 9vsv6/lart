@@ -47,7 +47,7 @@ export function parseAvatarPackJson(text: string): ParsedPack {
     throw new AvatarPackError('Missing "harborAvatarPack": 1 at the top level.');
   }
   if (json.harborAvatarPack > AVATAR_PACK_FORMAT) {
-    throw new AvatarPackError("This pack needs a newer version of Harbor.");
+    throw new AvatarPackError("This pack needs a newer version of Lart.");
   }
 
   const sets: ParsedPackSet[] = [];

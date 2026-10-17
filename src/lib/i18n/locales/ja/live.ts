@@ -56,8 +56,8 @@ const live: Record<string, string> = {
   "Recording · {pct}% · {remaining} · click to manage":
     "録画中 · {pct}% · 残り{remaining} · クリックして管理",
   "Saved as .ts (works in mpv, VLC, ffmpeg)": ".tsで保存（mpv、VLC、ffmpegで再生可能）",
-  "mpv is required for recording. Install mpv and restart Harbor.":
-    "録画にはmpvが必要です。mpvをインストールしてHarborを再起動してください。",
+  "mpv is required for recording. Install mpv and restart Lart.":
+    "録画にはmpvが必要です。mpvをインストールしてLartを再起動してください。",
   "Loading more channels ({n1} of {n2})": "チャンネルをさらに読み込み中（{n1}/{n2}）",
   "Showing first {n1} of {n2} channels. Use search or a category to narrow down.":
     "{n2}件中、最初の{n1}件のチャンネルを表示しています。検索またはカテゴリーで絞り込んでください。",
@@ -118,8 +118,8 @@ const live: Record<string, string> = {
   "The URL is valid but the playlist is empty. The provider may be in maintenance, or the URL is misconfigured.":
     "URLは有効ですが、プレイリストが空です。プロバイダーがメンテナンス中か、URLの設定が間違っている可能性があります。",
   "Playlist is too large": "プレイリストが大きすぎます",
-  "Harbor caps playlists at 80 MB to stay responsive. Most providers offer a filtered URL with fewer channels.":
-    "快適な動作を保つため、Harborではプレイリストを80 MBまでに制限しています。多くのプロバイダーでは、チャンネル数を絞ったURLを利用できます。",
+  "Lart caps playlists at 80 MB to stay responsive. Most providers offer a filtered URL with fewer channels.":
+    "快適な動作を保つため、Lartではプレイリストを80 MBまでに制限しています。多くのプロバイダーでは、チャンネル数を絞ったURLを利用できます。",
   "Could not load this playlist": "このプレイリストを読み込めませんでした",
   "No channels match": "一致するチャンネルがありません",
   "Reset filters": "フィルターをリセット",

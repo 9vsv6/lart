@@ -66,13 +66,13 @@ const used: Record<string, string> = {
     "ポスターの列を移動すると、近くのポスターが滑らかに拡大します。",
   "German Cinema": "ドイツ映画",
   "German Films": "ドイツ映画作品",
-  "Harbor Rank scores a whole career, not a single hit. Four things move a rank: how good the work is on average, how much of it earned wide acclaim, the major awards it won, and how often the person carried the work as a lead. Each pillar is weighted, added up, then adjusted for the breadth and recency of the body of work. Every number that feeds a score is shown on the card, so you can always see why.":
-    "Harbor Rankは、1作のヒットではなくキャリア全体を評価します。順位を左右するのは、作品の平均的な質、広く高い評価を得た作品の割合、受賞した主要な賞、主演として作品を支えた頻度の4要素です。各指標を重み付けして合算し、作品歴の幅広さと新しさを加味して調整します。スコアの算出に使われた数値はすべてカードに表示されるため、理由をいつでも確認できます。",
-  "Harbor could not find these": "Harborで見つかりませんでした",
-  "Harbor loads the native svpflow filter through VapourSynth and starts SVP Manager when available. Restart playback to apply.":
-    "HarborはVapourSynth経由でネイティブのsvpflowフィルターを読み込み、利用可能な場合はSVP Managerを起動します。適用するには再生をやり直してください。",
-  "Harbor's own menus and labels. Subtitle languages come later, and you can change both in Settings.":
-    "Harbor本体のメニューとラベルの言語です。字幕言語は後で選択でき、どちらも設定で変更できます。",
+  "Lart Rank scores a whole career, not a single hit. Four things move a rank: how good the work is on average, how much of it earned wide acclaim, the major awards it won, and how often the person carried the work as a lead. Each pillar is weighted, added up, then adjusted for the breadth and recency of the body of work. Every number that feeds a score is shown on the card, so you can always see why.":
+    "Lart Rankは、1作のヒットではなくキャリア全体を評価します。順位を左右するのは、作品の平均的な質、広く高い評価を得た作品の割合、受賞した主要な賞、主演として作品を支えた頻度の4要素です。各指標を重み付けして合算し、作品歴の幅広さと新しさを加味して調整します。スコアの算出に使われた数値はすべてカードに表示されるため、理由をいつでも確認できます。",
+  "Lart could not find these": "Lartで見つかりませんでした",
+  "Lart loads the native svpflow filter through VapourSynth and starts SVP Manager when available. Restart playback to apply.":
+    "LartはVapourSynth経由でネイティブのsvpflowフィルターを読み込み、利用可能な場合はSVP Managerを起動します。適用するには再生をやり直してください。",
+  "Lart's own menus and labels. Subtitle languages come later, and you can change both in Settings.":
+    "Lart本体のメニューとラベルの言語です。字幕言語は後で選択でき、どちらも設定で変更できます。",
   "Hide breakdown": "内訳を隠す",
   "Hide card": "カードを隠す",
   "Hide curated packs": "厳選パックを隠す",
@@ -83,8 +83,8 @@ const used: Record<string, string> = {
   "Hover a band to inspect a pillar": "帯にカーソルを合わせると指標を確認できます",
   "How cards look across Home, Discover, and your library. The preview updates live.":
     "ホーム、見つける、ライブラリでのカードの表示スタイルです。プレビューはリアルタイムで更新されます。",
-  "How long Harbor waits for each addon to return streams. Aggregators that search many sources can need 45s or more. Results appear as each addon answers, so a longer wait never delays the fast ones.":
-    "各アドオンからストリームが返されるまでHarborが待機する時間です。多数の配信元を検索するアグリゲーターでは、45秒以上かかることがあります。結果は各アドオンから届き次第表示されるため、待機時間を長くしても速いアドオンの表示は遅れません。",
+  "How long Lart waits for each addon to return streams. Aggregators that search many sources can need 45s or more. Results appear as each addon answers, so a longer wait never delays the fast ones.":
+    "各アドオンからストリームが返されるまでLartが待機する時間です。多数の配信元を検索するアグリゲーターでは、45秒以上かかることがあります。結果は各アドオンから届き次第表示されるため、待機時間を長くしても速いアドオンの表示は遅れません。",
   "How the four pillars are weighted": "4つの指標の重み付け",
   "If you already rated a title, the imported score replaces it.":
     "すでに作品を評価している場合、その評価はインポートしたスコアで上書きされます。",
@@ -99,8 +99,8 @@ const used: Record<string, string> = {
   Insert: "Insert",
   "Install more shaders in Settings, Shaders to switch between them here.":
     "ここで切り替えるには、設定の「シェーダー」からシェーダーを追加してください。",
-  "Installed and detected. Harbor found the native svpflow plugins and VapourSynth script library.":
-    "インストールを確認しました。HarborがネイティブのsvpflowプラグインとVapourSynthスクリプトライブラリを検出しました。",
+  "Installed and detected. Lart found the native svpflow plugins and VapourSynth script library.":
+    "インストールを確認しました。LartがネイティブのsvpflowプラグインとVapourSynthスクリプトライブラリを検出しました。",
   "Installed packs": "インストール済みパック",
   "Installed shaders": "インストール済みシェーダー",
   "Invited by {name}": "{name}からの招待",
@@ -110,18 +110,18 @@ const used: Record<string, string> = {
   "Japanese Films": "日本映画",
   "Korean Films": "韓国映画",
   "Last source tried": "最後に試した配信元",
-  "Leftover installers from past updates, cached trailers, and casting scratch files. Harbor clears old ones on launch, keeping only the most recent installer.":
-    "過去のアップデートで残ったインストーラー、キャッシュ済みの予告編、キャスト用の一時ファイルです。Harborは起動時に古いものを削除し、最新のインストーラーだけを残します。",
+  "Leftover installers from past updates, cached trailers, and casting scratch files. Lart clears old ones on launch, keeping only the most recent installer.":
+    "過去のアップデートで残ったインストーラー、キャッシュ済みの予告編、キャスト用の一時ファイルです。Lartは起動時に古いものを削除し、最新のインストーラーだけを残します。",
   "Local storage is full, these ratings live on your account only.":
     "ローカルストレージがいっぱいのため、これらの評価はアカウントにのみ保存されています。",
-  "Manga cannot be matched to a Harbor title yet, so {n} were left out.":
-    "マンガはまだHarborの作品と照合できないため、{n}件は除外されました。",
+  "Manga cannot be matched to a Lart title yet, so {n} were left out.":
+    "マンガはまだLartの作品と照合できないため、{n}件は除外されました。",
   "Mark all read": "すべて既読にする",
   Minecraft: "Minecraft",
   "Modern Russian Series": "現代ロシアドラマ",
   "Mute all profile songs": "プロフィール曲をすべてミュート",
-  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Harbor's embedded player.":
-    "LinuxにインストールされたSVPとVapourSynthを使用し、Harborの内蔵プレイヤーでネイティブの48/60fps映像をレンダリングします。",
+  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Lart's embedded player.":
+    "LinuxにインストールされたSVPとVapourSynthを使用し、Lartの内蔵プレイヤーでネイティブの48/60fps映像をレンダリングします。",
   "New Year Classics": "お正月の名作",
   "Next in {days}d {hours}h": "次回まで{days}日{hours}時間",
   "Next in {hours}h {minutes}m": "次回まで{hours}時間{minutes}分",
@@ -164,14 +164,14 @@ const used: Record<string, string> = {
   "Russian Drama": "ロシアのドラマ映画",
   "Russian Films": "ロシア映画",
   "Russian Movies": "ロシア映画",
-  "SVP is not supported by this Harbor package.": "このHarborパッケージはSVPに対応していません。",
+  "SVP is not supported by this Lart package.": "このLartパッケージはSVPに対応していません。",
   "Search movies, shows, anime, manga": "映画、ドラマ、アニメ、マンガを検索",
   Shaders: "シェーダー",
   "Show card": "カードを表示",
   "Shows a small green dot on the player's subtitle button while a subtitle track is active. Turn it off if you would rather keep the controls clean.":
     "字幕トラックが有効な間、プレイヤーの字幕ボタンに小さな緑の点を表示します。操作ボタンをすっきりさせたい場合はオフにしてください。",
-  "Sign in to your Harbor account first. Imported ratings are saved to your profile.":
-    "まずHarborアカウントにログインしてください。インポートした評価はプロフィールに保存されます。",
+  "Sign in to your Lart account first. Imported ratings are saved to your profile.":
+    "まずLartアカウントにログインしてください。インポートした評価はプロフィールに保存されます。",
   "Skip ad": "広告をスキップ",
   "Skipped, not rated or not supported": "スキップ済み、未評価、または非対応",
   Sort: "並べ替え",
@@ -215,7 +215,7 @@ const used: Record<string, string> = {
   "You were mentioned": "メンションされました",
   "Your Lists": "あなたのリスト",
   "Your MAL Lists": "あなたのMALリスト",
-  "Your handle across Harbor.": "Harbor全体で使用するユーザー名です。",
+  "Your handle across Lart.": "Lart全体で使用するユーザー名です。",
   "and {count} more": "ほか{count}件",
   "and {n} more": "ほか{n}件",
   "avg rating {r} across {n} titles": "{n}作品の平均評価 {r}",

@@ -11,7 +11,7 @@ export default {
 
   "games.sources.batch.failedFile": "无法准备 {file}。",
 
-  "games.sources.batch.restart": "更新后重启 Harbor，即可一起下载所选文件。",
+  "games.sources.batch.restart": "更新后重启 Lart，即可一起下载所选文件。",
 
   "games.torrent.start": "下载文件",
 
@@ -19,7 +19,7 @@ export default {
 
   "games.sources.verification.action": "验证来源",
 
-  "games.sources.verification.waiting": "请在来源窗口中完成验证。随后 Harbor 会检查其目录。",
+  "games.sources.verification.waiting": "请在来源窗口中完成验证。随后 Lart 会检查其目录。",
 
   "games.sources.source_verify_busy": "正在验证另一个来源。请先完成验证或关闭该窗口。",
 
@@ -27,31 +27,31 @@ export default {
 
   "games.sources.source_verify_timeout": "验证已超时。准备好后请重试。",
 
-  "games.sources.source_verify_unavailable": "请更新并重启 Harbor 以验证此来源。",
+  "games.sources.source_verify_unavailable": "请更新并重启 Lart 以验证此来源。",
 
   "games.sources.browser.direct": "直接下载",
 
   "games.sources.site.title": "打开一个网站",
-  "games.sources.site.note": "粘贴任意网站的下载页面。Harbor 会在自己的窗口中打开，你在那里选择文件，它就会下载到 Harbor。",
+  "games.sources.site.note": "粘贴任意网站的下载页面。Lart 会在自己的窗口中打开，你在那里选择文件，它就会下载到 Lart。",
   "games.sources.site.url": "页面链接",
   "games.sources.site.open": "打开网站",
   "games.sources.site.invalid": "需要一个公开的 https 链接。",
-  "games.sources.browser.intro": "无需 Debrid 账户。在 {host} 上选择文件，然后在 Harbor 中选择保存位置。",
-  "games.sources.browser.fallback": "如果下载没有自动开始，请使用 {host} 页面上的备用链接。Harbor 仍会接收该文件。",
+  "games.sources.browser.intro": "无需 Debrid 账户。在 {host} 上选择文件，然后在 Lart 中选择保存位置。",
+  "games.sources.browser.fallback": "如果下载没有自动开始，请使用 {host} 页面上的备用链接。Lart 仍会接收该文件。",
 
   "games.sources.browser.choose": "在 {host} 上选择文件",
 
-  "games.sources.browser.waiting": "请在 {host} 窗口中选择文件。Harbor 会询问保存位置。",
+  "games.sources.browser.waiting": "请在 {host} 窗口中选择文件。Lart 会询问保存位置。",
 
-  "games.sources.browser.selected": "可以在 Harbor 中下载",
+  "games.sources.browser.selected": "可以在 Lart 中下载",
 
   "games.sources.browser.another": "选择其他文件",
 
-  "games.sources.browser.failed": "{host} 无法将此文件传给 Harbor。请重试或在 {host} 上打开。",
+  "games.sources.browser.failed": "{host} 无法将此文件传给 Lart。请重试或在 {host} 上打开。",
 
   "games.sources.browser.timeout": "文件选择已超时。请重新打开 {host} 选择文件。",
 
-  "games.sources.browser.restart": "更新后重启 Harbor，即可使用 {host} 直接下载。",
+  "games.sources.browser.restart": "更新后重启 Lart，即可使用 {host} 直接下载。",
 
   "games.sources.retrySavedCatalog": "重试已保存的目录",
 
@@ -99,13 +99,13 @@ export default {
 
   "games.sources.platform.other": "{platform} 版本 · 无法在 {host} 上原生运行",
 
-  "games.sources.platform.otherNote": "请选择适合你操作系统的版本。Harbor 无法在此设备上原生安装或运行此安装包。",
+  "games.sources.platform.otherNote": "请选择适合你操作系统的版本。Lart 无法在此设备上原生安装或运行此安装包。",
 
   "games.sources.platform.unknown": "未指定平台",
 
   "games.sources.platform.unknownNote": "此来源未说明安装包的操作系统。下载前请查看发行商的信息。",
 
-  "games.sources.platform.browseNote": "请使用 Harbor 桌面版下载和管理本地游戏文件。",
+  "games.sources.platform.browseNote": "请使用 Lart 桌面版下载和管理本地游戏文件。",
 
   "games.sources.platform.browse": "{platform} 版本",
 
@@ -117,9 +117,9 @@ export default {
 
   "games.sources.art.torrent": "种子下载",
 
-  "games.sources.art.engine": "Harbor 种子引擎",
+  "games.sources.art.engine": "Lart 种子引擎",
 
-  "games.sources.art.reviewTorrent": "在 Harbor 中下载",
+  "games.sources.art.reviewTorrent": "在 Lart 中下载",
 
 
 
@@ -167,7 +167,7 @@ export default {
 
   "games.sources.discovery.change": "更改链接",
 
-  "games.sources.discovery.harbor": "Harbor 目录",
+  "games.sources.discovery.harbor": "Lart 目录",
 
   "games.sources.discovery.community": "兼容 Hydra 的目录",
 
@@ -175,7 +175,7 @@ export default {
 
   "games.sources.discovery.reviewNote": "只保存目录条目。选择文件后才会下载。",
 
-  "games.sources.source_no_catalog": "此网站未发布 Harbor 可读取的目录链接。请粘贴其 JSON 目录链接。",
+  "games.sources.source_no_catalog": "此网站未发布 Lart 可读取的目录链接。请粘贴其 JSON 目录链接。",
 
   "games.sources.source_url": "输入网站地址、HTTP(S) 目录 URL 或 Hydra 安装链接。",
 
@@ -229,7 +229,7 @@ export default {
 
   "games.sources.links.account": "服务拒绝了连接。请在来源设置中检查密钥。",
 
-  "games.sources.links.rate": "服务要求 Harbor 稍候。请过一会儿再试。",
+  "games.sources.links.rate": "服务要求 Lart 稍候。请过一会儿再试。",
 
   "games.sources.links.limit": "服务返回的文件过多，无法一次查看。",
 
@@ -241,7 +241,7 @@ export default {
 
   "games.sources.links.destination": "选择保存位置",
 
-  "games.sources.links.desktop": "请打开 Harbor 桌面版以下载文件。",
+  "games.sources.links.desktop": "请打开 Lart 桌面版以下载文件。",
 
   "games.sources.web.web": "网页下载",
 
@@ -267,7 +267,7 @@ export default {
 
   "games.sources.web.again": "开始另一个任务",
 
-  "games.sources.web.storage": "Harbor 无法保存此任务。不会自动重新提交。",
+  "games.sources.web.storage": "Lart 无法保存此任务。不会自动重新提交。",
 
   "games.sources.web.preparing": "正在 TorBox 中准备",
 
@@ -353,7 +353,7 @@ export default {
 
   "games.sources.pm.select": "使用此传输",
 
-  "games.sources.pm.review": "请选择你提交的传输。Harbor 无法自动匹配其来源。",
+  "games.sources.pm.review": "请选择你提交的传输。Lart 无法自动匹配其来源。",
 
   "games.sources.pm.retry": "重试传输",
 

@@ -113,8 +113,8 @@ const sweepB: Record<string, string> = {
   "BotFather replies with a token like": "BotFather 会回复一个类似以下内容的令牌：",
   Both: "两者",
   "Both Flags": "双旗之下",
-  "Both go in the boxes above. Harbor builds the URL for you.":
-    "将两者填入上方输入框。Harbor 会为你生成 URL。",
+  "Both go in the boxes above. Lart builds the URL for you.":
+    "将两者填入上方输入框。Lart 会为你生成 URL。",
   "Both serif and body text should stay legible at this dim.":
     "在此暗度下，衬线字体和正文都应保持清晰易读。",
   "Both Sides of the Law": "执法者与违法者",
@@ -144,8 +144,8 @@ const sweepB: Record<string, string> = {
   "Bring friends here": "邀请好友来这里",
   "Bring friends to {label}": "邀请好友来到{label}",
   "Bring the Tissues": "催泪佳作",
-  "Bring trusted source packages aboard through Harbor’s isolated extension worker.":
-    "通过 Harbor 的隔离式扩展 Worker 接入可信的来源包。",
+  "Bring trusted source packages aboard through Lart’s isolated extension worker.":
+    "通过 Lart 的隔离式扩展 Worker 接入可信的来源包。",
   "Bring your lists with you": "导入您的列表",
   "Bring your own": "自备",
   "Bring your own extensions": "使用自备扩展",
@@ -180,7 +180,7 @@ const sweepB: Record<string, string> = {
   "Building EPUB": "正在生成 EPUB",
   "Building your voyage": "正在规划航程",
   "Built for desktop resolutions": "专为桌面端分辨率设计",
-  "Built into Harbor": "Harbor 内置",
+  "Built into Lart": "Lart 内置",
   "Built on Stremio": "基于 Stremio 构建",
   "Built-in peer-to-peer streaming, served from your own machine.":
     "由本机提供服务的内置 P2P 流式传输引擎。",
@@ -188,7 +188,7 @@ const sweepB: Record<string, string> = {
     "批量上传尚未上线，目前每秒发送一条评分。",
   "Bullet Ballet": "子弹芭蕾",
   "Bumpers (LB / RB)": "肩键（LB / RB）",
-  "Bundled with Harbor. Plays anything you throw at it.": "Harbor 内置。什么内容都能播放。",
+  "Bundled with Lart. Plays anything you throw at it.": "Lart 内置。什么内容都能播放。",
   "Burn in subtitles": "烧录字幕",
   Button: "按钮",
   "Button map": "按键映射",
@@ -198,7 +198,7 @@ const sweepB: Record<string, string> = {
   "by {authors}": "作者：{authors}",
   "by {name}": "作者：{name}",
   "by @{handle}": "由 @{handle} 创建",
-  "by Harbor contributors": "由 Harbor 贡献者制作",
+  "by Lart contributors": "由 Lart 贡献者制作",
   "By year": "按年份",
   "Cabinet Grotesk + Switzer": "Cabinet Grotesk + Switzer",
   Cached: "已缓存",
@@ -344,8 +344,8 @@ const sweepB: Record<string, string> = {
   'Choose the "Less than $50k per year" tier.': "选择“年收入低于 $50k”档位。",
   "Choose what shows, what stays hidden, and what sits up top.": "选择要显示、隐藏和置顶的内容。",
   "Choose where to open this link": "选择打开此链接的位置",
-  "Choose where you can grab Harbor to drag it around your screen.":
-    "选择可拖动 Harbor 窗口的区域。",
+  "Choose where you can grab Lart to drag it around your screen.":
+    "选择可拖动 Lart 窗口的区域。",
   "Choose which badges appear by your name, and their order": "选择名称旁显示的徽章及其顺序",
   "Choose your starting film": "选择起始电影",
   "Choose your username": "选择用户名",
@@ -358,8 +358,8 @@ const sweepB: Record<string, string> = {
   Circle: "圆形",
   Claim: "认领",
   "Claim a handle": "认领用户标识",
-  "Claim one so people can find you across Harbor.":
-    "设置一个用户名，让其他人能在 Harbor 中找到你。",
+  "Claim one so people can find you across Lart.":
+    "设置一个用户名，让其他人能在 Lart 中找到你。",
   "Claim your @handle": "认领你的 @用户标识",
   "Claim your handle": "认领你的用户名",
   "Class names and data attributes that won't change between releases. Safe to target from your CSS.":
@@ -368,7 +368,7 @@ const sweepB: Record<string, string> = {
   "Classic Hollywood": "经典好莱坞",
   "Classic Mystery": "经典悬疑",
   "Classic Stremio": "经典 Stremio",
-  "Classic. Was Harbor's original pair.": "经典。Harbor 最初使用的字体组合。",
+  "Classic. Was Lart's original pair.": "经典。Lart 最初使用的字体组合。",
   "Clean modern. Sans across the board.": "简洁现代。全部使用无衬线体。",
   "Clean transparent": "简洁透明",
   Clear: "清除",
@@ -389,8 +389,8 @@ const sweepB: Record<string, string> = {
   Cleared: "已清除",
   Clearing: "正在清除",
   "Clearing…": "正在清除…",
-  "Clears the URL from Harbor. The Worker keeps running on Cloudflare.":
-    "从 Harbor 中清除该 URL。Worker 会继续在 Cloudflare 上运行。",
+  "Clears the URL from Lart. The Worker keeps running on Cloudflare.":
+    "从 Lart 中清除该 URL。Worker 会继续在 Cloudflare 上运行。",
   "CLI.": "CLI。",
   Click: "点击",
   "Click {b1} in the top right. Pick the {b2} template (it's the default, should already be selected).":
@@ -425,7 +425,7 @@ const sweepB: Record<string, string> = {
   "Close chapters": "关闭章节列表",
   "Close editor": "关闭编辑器",
   "Close guide": "关闭节目指南",
-  "Close Harbor?": "关闭 Harbor？",
+  "Close Lart?": "关闭 Lart？",
   "Close image viewer": "关闭图片查看器",
   "Close match": "相近匹配",
   "Close match to host": "与主机高度匹配",
@@ -435,8 +435,8 @@ const sweepB: Record<string, string> = {
   "Close to the system tray": "关闭时最小化到系统托盘",
   "Close trailer": "关闭预告片",
   "Close zoom controls": "关闭缩放控件",
-  "Closing the window tucks Harbor into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
-    "关闭窗口时，Harbor 会收起到系统托盘而非退出，以便立即重新打开。右键单击托盘图标可使用快捷控制，也可选择“退出”以彻底退出。",
+  "Closing the window tucks Lart into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
+    "关闭窗口时，Lart 会收起到系统托盘而非退出，以便立即重新打开。右键单击托盘图标可使用快捷控制，也可选择“退出”以彻底退出。",
   Cloudflare: "Cloudflare",
   "Cloudflare asks you to pick a name (this becomes {code}). Type any name (your first name works). Then click {b1}.":
     "Cloudflare 会要求您选择一个名称（该名称将成为 {code}）。输入任意名称即可（用您的名字也可以），然后点击 {b1}。",
@@ -455,7 +455,7 @@ const sweepB: Record<string, string> = {
   Combo: "组合",
   "Come back here and hit {b1}. The Hello World can stay where it is. It's free and harmless.":
     "返回此处并点击 {b1}。Hello World 可以保留，不会产生费用，也不会造成任何影响。",
-  "Come back to Harbor and try casting again.": "返回 Harbor 并再次尝试投屏。",
+  "Come back to Lart and try casting again.": "返回 Lart 并再次尝试投屏。",
   Comedy: "喜剧",
   "Comedy Series": "喜剧剧集",
   "Comfort Watch": "轻松下饭",
@@ -468,9 +468,9 @@ const sweepB: Record<string, string> = {
     "评论在你主动显示前会被模糊处理，即使未标记为剧透也是如此。",
   "Comments are hidden": "评论已隐藏",
   "Hosted elsewhere": "由外部托管",
-  "A third party runs these plans. Harbor is not affiliated with them and receives nothing from a signup. Current pricing and terms are on their site.": "这些套餐由第三方运营。Harbor 与其无关联，也不会因注册获得任何收益。最新价格和条款请见其网站。",
+  "A third party runs these plans. Lart is not affiliated with them and receives nothing from a signup. Current pricing and terms are on their site.": "这些套餐由第三方运营。Lart 与其无关联，也不会因注册获得任何收益。最新价格和条款请见其网站。",
   "{name} can run on a hosted instance": "{name} 可以运行在托管实例上",
-  "A third party operates this. Harbor is not affiliated with them, does not resell it, and receives nothing if you sign up. Whatever it costs and whatever it includes is on their site.": "该服务由第三方运营。Harbor 与其无关联，不转售，也不会因您注册获得任何收益。价格及包含内容请见其网站。",
+  "A third party operates this. Lart is not affiliated with them, does not resell it, and receives nothing if you sign up. Whatever it costs and whatever it includes is on their site.": "该服务由第三方运营。Lart 与其无关联，不转售，也不会因您注册获得任何收益。价格及包含内容请见其网站。",
   "Show comments": "显示评论",
   "Hide comments": "隐藏评论",
   Compact: "紧凑",
@@ -501,11 +501,11 @@ const sweepB: Record<string, string> = {
   "Connect a provider": "连接提供商",
   "Connect a source": "连接来源",
   "Connect AniList": "连接 AniList",
-  "Connect AniList in Harbor on your computer to see your lists here.":
-    "请在电脑上的 Harbor 中连接 AniList，以便在此查看你的列表。",
+  "Connect AniList in Lart on your computer to see your lists here.":
+    "请在电脑上的 Lart 中连接 AniList，以便在此查看你的列表。",
   "Connect MyAnimeList": "连接 MyAnimeList",
-  "Connect MyAnimeList in Harbor on your computer to see your lists here.":
-    "请在电脑上的 Harbor 中连接 MyAnimeList，以便在此查看你的列表。",
+  "Connect MyAnimeList in Lart on your computer to see your lists here.":
+    "请在电脑上的 Lart 中连接 MyAnimeList，以便在此查看你的列表。",
   "Connect TMDB": "连接 TMDB",
   "Connect your provider.": "连接你的提供商。",
   Connected: "已连接",
@@ -540,7 +540,7 @@ const sweepB: Record<string, string> = {
   Continue: "继续",
   "Continue from last watched": "从上次观看处继续",
   "Continue in browser": "在浏览器中继续",
-  "Continue in Harbor": "在 Harbor 中继续",
+  "Continue in Lart": "在 Lart 中继续",
   "Continue in your browser...": "请在浏览器中继续…",
   "Continue to summary": "继续查看摘要",
   "Continue voyage": "继续航程",
@@ -562,8 +562,8 @@ const sweepB: Record<string, string> = {
     "控制谁可以查看你的好友、动态和统计数据。",
   Controllers: "控制器",
   "Controllers / gamepad": "控制器/游戏手柄",
-  "Controllers Harbor can see right now. Connect one over USB or Bluetooth and it shows up here.":
-    "Harbor 当前可识别的控制器。通过 USB 或蓝牙连接后便会显示在此处。",
+  "Controllers Lart can see right now. Connect one over USB or Bluetooth and it shows up here.":
+    "Lart 当前可识别的控制器。通过 USB 或蓝牙连接后便会显示在此处。",
   Controls: "控件",
   "Controls & devices": "控制与设备",
   "Convert your currency": "将你的货币兑换成其他货币",
@@ -668,7 +668,7 @@ const sweepB: Record<string, string> = {
   "Couldn't reach {site}": "无法访问{site}",
   "Couldn't reach AniList.": "无法连接 AniList。",
   "Couldn't reach AniList. Try refreshing.": "无法连接 AniList。请尝试刷新。",
-  "Couldn't reach Harbor. Showing this device only.": "无法连接 Harbor。仅显示此设备上的内容。",
+  "Couldn't reach Lart. Showing this device only.": "无法连接 Lart。仅显示此设备上的内容。",
   "Couldn't reach Letterboxd. Try refreshing.": "无法连接 Letterboxd。请尝试刷新。",
   "Couldn't reach MyAnimeList. Try refreshing.": "无法连接 MyAnimeList。请尝试刷新。",
   "Couldn't reach that pack": "无法访问该包",
@@ -920,7 +920,7 @@ const sweepB: Record<string, string> = {
   "Dismiss episode panel": "收起剧集面板",
   "Disney+": "Disney+",
   "Disney+ Originals": "Disney+ 原创",
-  "Display 'Browsing Harbor' when nothing is playing.": "未播放内容时显示“正在浏览 Harbor”。",
+  "Display 'Browsing Lart' when nothing is playing.": "未播放内容时显示“正在浏览 Lart”。",
   "Display name": "显示名称",
   "Display panel": "显示面板",
   "Display the raw release filename under each source in the condensed picker. Off keeps rows compact.":
@@ -938,12 +938,12 @@ const sweepB: Record<string, string> = {
   "Documentary Series": "纪录片剧集",
   Documentation: "文档",
   "Documentation: run your own relay": "文档：自行运行中继",
-  "Does Harbor {version} feel better or worse than the version you had before?":
-    "Harbor {version} 比你之前使用的版本更好还是更差？",
+  "Does Lart {version} feel better or worse than the version you had before?":
+    "Lart {version} 比你之前使用的版本更好还是更差？",
   "Dolby Vision unsupported": "不支持 Dolby Vision",
   "Don't ask again": "不再询问",
   "Don't ask me again": "不再询问",
-  "Donating to Harbor": "向 Harbor 捐款",
+  "Donating to Lart": "向 Lart 捐款",
   Done: "完成",
   "Done editing": "完成编辑",
   "Done.": "完成。",
@@ -989,8 +989,8 @@ const sweepB: Record<string, string> = {
     "已启用漂移校正（2 个点）。可使用按钮微调，或修正单独错位的片段。",
   "Drift fixed": "已修正时间漂移",
   "Drift monitor": "漂移监测",
-  "Drift through cinematic backdrops while Harbor sits idle.":
-    "Harbor 空闲时，缓缓浏览电影感背景图。",
+  "Drift through cinematic backdrops while Lart sits idle.":
+    "Lart 空闲时，缓缓浏览电影感背景图。",
   "Drifting poster wall behind the interface. Turn off on low power devices.":
     "界面后方缓慢移动的海报墙。低功耗设备请关闭此功能。",
   "Drop a {extension}": "拖入 {extension} 文件",
@@ -999,8 +999,8 @@ const sweepB: Record<string, string> = {
   "Drop a wallpaper behind the app. The dim slider keeps text readable.":
     "在应用背景中添加壁纸。使用调暗滑块可确保文字清晰可读。",
   "Drop images to add them": "拖放图片即可添加",
-  "Drop in art at any resolution. Harbor resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
-    "可添加任意分辨率的图片。Harbor 会自动调整并压缩过大的图片，因此不会有图片因尺寸过大而被跳过。带透明背景的正方形 PNG 效果最佳。",
+  "Drop in art at any resolution. Lart resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
+    "可添加任意分辨率的图片。Lart 会自动调整并压缩过大的图片，因此不会有图片因尺寸过大而被跳过。带透明背景的正方形 PNG 效果最佳。",
   "Drop shadow": "投影",
   "Drop the About and Custom labels so an embed fills the card cleanly.":
     "移除“关于”和“自定义”标签，让嵌入内容完整铺满卡片。",
@@ -1032,8 +1032,8 @@ const sweepB: Record<string, string> = {
   "Earn badges and they will appear here to feature": "获得徽章后，即可在此展示",
   "Eases mouse-wheel scrolling instead of jumping line by line. Turn off if you prefer an instant response or notice any lag.":
     "使鼠标滚轮平滑滚动，而不是逐行跳动。如果你偏好即时响应或发现卡顿，请将其关闭。",
-  "Easiest path. Harbor uploads the worker, creates the Durable Object namespace, and stores the resulting URL.":
-    "最简单的方式。Harbor 会上传 Worker、创建 Durable Object 命名空间并保存生成的 URL。",
+  "Easiest path. Lart uploads the worker, creates the Durable Object namespace, and stores the resulting URL.":
+    "最简单的方式。Lart 会上传 Worker、创建 Durable Object 命名空间并保存生成的 URL。",
   "Easing into series": "轻松开启追剧",
   "Easing tokens": "缓动令牌",
   Easy: "简单",
@@ -1127,7 +1127,7 @@ const sweepB: Record<string, string> = {
   "Enter an FPS from 1 to 240.": "请输入 1 到 240 之间的 FPS。",
   "Enter current PIN": "输入当前 PIN",
   "Enter fullscreen": "进入全屏",
-  "Enter Harbor": "进入 Harbor",
+  "Enter Lart": "进入 Lart",
   "Enter or exit fullscreen.": "进入或退出全屏。",
   "Enter to save": "按 Enter 保存",
   "Enter URL": "输入 URL",

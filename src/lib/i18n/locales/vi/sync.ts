@@ -25,13 +25,13 @@ const sync: Record<string, string> = {
   "Guests pick their own source": "Khách tự chọn nguồn",
   "Prompts guests to choose instead of auto-matching":
     "Yêu cầu khách chọn thay vì tự động ghép nguồn",
-  "Harbor's public relay has not rolled out the latest protocol yet.":
-    "Relay công khai của Harbor chưa được cập nhật lên giao thức mới nhất.",
+  "Lart's public relay has not rolled out the latest protocol yet.":
+    "Relay công khai của Lart chưa được cập nhật lên giao thức mới nhất.",
   "It updates automatically; nothing to do.": "Relay sẽ tự động cập nhật, bạn không cần làm gì.",
   "Relay outdated. Your self-hosted relay is running an older version.":
     "Relay đã lỗi thời. Relay tự lưu trữ của bạn đang chạy phiên bản cũ hơn.",
-  "Redeploy it to get the latest Watch Together fixes. Harbor's public relay updates on its own.":
-    "Triển khai lại relay để nhận các bản sửa lỗi Xem cùng nhau mới nhất. Relay công khai của Harbor tự động cập nhật.",
+  "Redeploy it to get the latest Watch Together fixes. Lart's public relay updates on its own.":
+    "Triển khai lại relay để nhận các bản sửa lỗi Xem cùng nhau mới nhất. Relay công khai của Lart tự động cập nhật.",
   "Open relay settings": "Mở cài đặt relay",
   "Start a room first.": "Hãy tạo phòng trước.",
   "Once you're in a room you can copy a link that joins anyone instantly: it sets the relay URL and the room code in one click.":
@@ -122,16 +122,16 @@ const sync: Record<string, string> = {
   "Open Stremio registration": "Mở trang đăng ký Stremio",
   "to bring in your library.": "để nhập thư viện của bạn.",
   "Bring your lists with you": "Mang theo các danh sách của bạn",
-  "Show your AniList lists as rails on the Anime page, keep your watch progress in sync as you finish episodes, and use your AniList avatar as your Harbor photo. Free at anilist.co.":
-    "Hiển thị danh sách AniList của bạn dưới dạng các hàng trên trang Anime, đồng bộ tiến độ xem khi bạn xem xong các tập và dùng ảnh đại diện AniList làm ảnh Harbor. Miễn phí tại anilist.co.",
+  "Show your AniList lists as rails on the Anime page, keep your watch progress in sync as you finish episodes, and use your AniList avatar as your Lart photo. Free at anilist.co.":
+    "Hiển thị danh sách AniList của bạn dưới dạng các hàng trên trang Anime, đồng bộ tiến độ xem khi bạn xem xong các tập và dùng ảnh đại diện AniList làm ảnh Lart. Miễn phí tại anilist.co.",
   "Disconnect AniList? Your lists will stop showing on the Anime page until you reconnect.":
     "Ngắt kết nối AniList? Danh sách của bạn sẽ không còn hiển thị trên trang Anime cho đến khi bạn kết nối lại.",
   "1 day ago": "1 ngày trước",
   "{count} days ago": "{count} ngày trước",
   "1 month ago": "1 tháng trước",
   "{count} months ago": "{count} tháng trước",
-  "Sync and track movies, shows, and anime across everything you use. Harbor marks what you finish as watched on Simkl and keeps your plan-to-watch list in step. Free at simkl.com.":
-    "Đồng bộ và theo dõi phim, phim bộ và anime trên mọi dịch vụ bạn dùng. Harbor đánh dấu nội dung bạn xem xong là đã xem trên Simkl và đồng bộ danh sách dự định xem. Miễn phí tại simkl.com.",
+  "Sync and track movies, shows, and anime across everything you use. Lart marks what you finish as watched on Simkl and keeps your plan-to-watch list in step. Free at simkl.com.":
+    "Đồng bộ và theo dõi phim, phim bộ và anime trên mọi dịch vụ bạn dùng. Lart đánh dấu nội dung bạn xem xong là đã xem trên Simkl và đồng bộ danh sách dự định xem. Miễn phí tại simkl.com.",
 };
 
 export default sync;

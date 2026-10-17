@@ -92,7 +92,7 @@ const chrome: Record<string, string> = {
   "arabic.row.ramadan": "Ramadan-Serien 2026",
   "arabic.row.trending": "Auf Arabisch im Trend",
   "chrome.backToTop": "Nach oben",
-  "chrome.harborHome": "Harbor-Startseite",
+  "chrome.harborHome": "Lart-Startseite",
   "chrome.locked": "Gesperrt",
   "chrome.lockedRequiresPin": "{label} (gesperrt, PIN erforderlich)",
   "chrome.lockedShort": "{label} · gesperrt",
@@ -150,7 +150,7 @@ const chrome: Record<string, string> = {
   "welcome.dismiss": "Loslegen",
   "welcome.subtitle":
     "Die Oberfläche ist jetzt auf Deutsch. Du kannst die Sprache jederzeit in den Einstellungen ändern.",
-  "welcome.title": "Willkommen bei Harbor",
+  "welcome.title": "Willkommen bei Lart",
   "{n} tabs locked": "{n} Tabs gesperrt",
   "{n} tabs require this profile's PIN.": "{n} Tabs erfordern die PIN dieses Profils.",
 };

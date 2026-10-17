@@ -12,7 +12,7 @@ export function GuideExportActions({value,active}:{value:GuideExport;active:bool
     if(request.current&&!request.current.signal.aborted||!active)return;
     const controller=new AbortController();request.current=controller;setBusy(format);setError(false);
     try {
-      if(format==="txt")await saveTextFileWithPath(guideFilename(value.article.title,"txt"),guideAsText(value),["txt"],"Harbor",{nativeFailure:"throw"});
+      if(format==="txt")await saveTextFileWithPath(guideFilename(value.article.title,"txt"),guideAsText(value),["txt"],"Lart",{nativeFailure:"throw"});
       else {
         const { createGuidePdf, saveGuidePdf }=await import("@/lib/games/guide-export-pdf");
         const bytes=await createGuidePdf(value,controller.signal);

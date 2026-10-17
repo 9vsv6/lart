@@ -85,7 +85,7 @@ export function BpPhoneTyping({ onClose }: { onClose: () => void }) {
         {!serving ? (
           <>
             <p className="text-[clamp(13px,1.8vh,20px)] leading-relaxed text-ink-subtle">
-              {t("Harbor needs to be serving on your network before a phone can reach it.")}
+              {t("Lart needs to be serving on your network before a phone can reach it.")}
             </p>
             <button
               type="button"
@@ -116,7 +116,7 @@ export function BpPhoneTyping({ onClose }: { onClose: () => void }) {
               </div>
               <div className="flex min-w-0 flex-col gap-[clamp(7px,1vh,14px)]">
                 <p className="text-[clamp(13px,1.8vh,20px)] leading-relaxed text-ink-subtle">
-                  {t("Scan this with your phone camera to open the Harbor remote, then type straight into the search box.")}
+                  {t("Scan this with your phone camera to open the Lart remote, then type straight into the search box.")}
                 </p>
                 <p className="text-[clamp(11.5px,1.6vh,17px)] font-semibold uppercase tracking-[0.14em] text-ink-subtle">
                   {t("Same Wi-Fi as this computer")}

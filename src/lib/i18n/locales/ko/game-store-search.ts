@@ -1,9 +1,9 @@
 export default {
   "Search shortcuts": "검색 바로가기",
   "Steam search shortcut": "Steam 검색 바로가기",
-  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Harbor search for these queries.": "“st ” 또는 “st:”를 입력하면 Steam 상점을 검색합니다. 끄면 해당 검색어에도 일반 Harbor 검색을 사용합니다.",
+  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Lart search for these queries.": "“st ” 또는 “st:”를 입력하면 Steam 상점을 검색합니다. 끄면 해당 검색어에도 일반 Lart 검색을 사용합니다.",
   "games.storeSearch.title": "Steam 상점",
-  "games.storeSearch.hint": "Harbor 검색에 “st ”를 입력하면 Steam에서 바로 검색할 수 있습니다.",
+  "games.storeSearch.hint": "Lart 검색에 “st ”를 입력하면 Steam에서 바로 검색할 수 있습니다.",
   "games.storeSearch.automatic": "자동",
   "games.storeSearch.region": "상점 지역",
   "games.storeSearch.showLibrary": "내 라이브러리에 있는 게임 표시",

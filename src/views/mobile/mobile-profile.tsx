@@ -5,12 +5,16 @@ import {
   HelpCircle,
   LogOut,
   MonitorSmartphone,
+  Puzzle,
+  Settings,
   Users,
 } from "lucide-react";
 import { useState, type ReactNode } from "react";
 import { useAuth } from "@/lib/auth";
 import { useProfiles } from "@/lib/profiles";
 import { useT } from "@/lib/i18n";
+import { isPhoneApp } from "@/lib/platform";
+import { useView } from "@/lib/view";
 import { MobileWhosWatching } from "./mobile-whos-watching";
 import { useMobileRemote } from "./mobile-remote";
 import { setMobileRemoteStyle, useMobileRemoteStyle, type MobileRemoteStyle } from "./remote-style";
@@ -27,6 +31,8 @@ export function MobileProfile({ onOpenRemote }: { onOpenRemote: () => void }) {
   const avatar = remote?.avatar ?? activeProfile?.avatar ?? null;
   const color = remote?.color ?? activeProfile?.color ?? "oklch(0.78 0.13 60)";
   const [switching, setSwitching] = useState(false);
+  const { openSettings, setView } = useView();
+  const phone = isPhoneApp();
 
   return (
     <div className="flex h-full flex-col gap-6 px-5 pt-4">
@@ -56,6 +62,7 @@ export function MobileProfile({ onOpenRemote }: { onOpenRemote: () => void }) {
         </span>
       </button>
 
+      {!phone && (
       <section className="flex flex-col gap-3">
         <h2 className="px-1 text-[12px] font-bold uppercase tracking-[0.16em] text-ink-subtle">
           {t("Remote style")}
@@ -65,13 +72,30 @@ export function MobileProfile({ onOpenRemote }: { onOpenRemote: () => void }) {
           <StylePreview kind="minimal" label={t("Touchpad")} />
         </div>
       </section>
+      )}
 
       <section className="overflow-hidden rounded-2xl border border-edge-soft/70 bg-elevated/40">
-        <Row
-          icon={<MonitorSmartphone size={20} strokeWidth={2} />}
-          label={t("Remote")}
-          onClick={onOpenRemote}
-        />
+        {phone ? (
+          <>
+            <Row
+              icon={<Settings size={20} strokeWidth={2} />}
+              label={t("Settings")}
+              onClick={() => openSettings()}
+            />
+            <Divider />
+            <Row
+              icon={<Puzzle size={20} strokeWidth={2} />}
+              label={t("Addons")}
+              onClick={() => setView("addons")}
+            />
+          </>
+        ) : (
+          <Row
+            icon={<MonitorSmartphone size={20} strokeWidth={2} />}
+            label={t("Remote")}
+            onClick={onOpenRemote}
+          />
+        )}
         <Divider />
         <Row
           icon={<HelpCircle size={20} strokeWidth={2} />}
@@ -147,7 +171,7 @@ function TouchpadGlyph() {
 /* `href` renders a real anchor rather than a button calling window.open. This
    screen is where the setup flow lands people, and a programmatic open that a
    mobile browser does not credit as a user gesture can navigate the current
-   tab instead, which is how a viewer ends up outside Harbor with no way back. */
+   tab instead, which is how a viewer ends up outside Lart with no way back. */
 function Row({
   icon,
   label,

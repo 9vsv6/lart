@@ -15,7 +15,7 @@ export function UpNextPreview({ leadSec }: { leadSec: number }) {
     note = t("No prompt. The episode plays out and stops.");
   } else if (auto) {
     note = t(
-      "Harbor scales the prompt to the episode length, so a short episode does not ask this early. The bar shows the last three minutes.",
+      "Lart scales the prompt to the episode length, so a short episode does not ask this early. The bar shows the last three minutes.",
     );
   } else {
     const label =

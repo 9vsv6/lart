@@ -16,8 +16,8 @@ const bpSports: Record<string, string> = {
   "Following {name}": "Mengikuti {name}",
   "Game finished": "Pertandingan selesai",
   "Grand Prix weekend": "Akhir pekan Grand Prix",
-  "Harbor couldn't reach the sports servers. Check the connection and open the event again.":
-    "Harbor tidak dapat menghubungi server olahraga. Periksa koneksi Anda lalu buka acara ini lagi.",
+  "Lart couldn't reach the sports servers. Check the connection and open the event again.":
+    "Lart tidak dapat menghubungi server olahraga. Periksa koneksi Anda lalu buka acara ini lagi.",
   "Hide bench": "Sembunyikan pemain cadangan",
   "Hot right now": "Sedang ramai",
   "If the broadcast asks you to sign in or confirm your age, open it in a browser.":
@@ -39,8 +39,8 @@ const bpSports: Record<string, string> = {
     "Belum ada addon terpasang yang menyediakan katalog olahraga.",
   "No matching addon listing yet. Browse every addon channel to look for the broadcast.":
     "Belum ada hasil yang cocok di addon. Jelajahi semua saluran addon untuk mencari siarannya.",
-  "No playlists yet. Add one in Live TV and Harbor will match its channels to fixtures.":
-    "Belum ada daftar putar. Tambahkan satu di TV Langsung dan Harbor akan mencocokkan salurannya dengan jadwal pertandingan.",
+  "No playlists yet. Add one in Live TV and Lart will match its channels to fixtures.":
+    "Belum ada daftar putar. Tambahkan satu di TV Langsung dan Lart akan mencocokkan salurannya dengan jadwal pertandingan.",
   "No venue page published": "Halaman lokasi belum diterbitkan",
   "None of your channels match this fixture. Search your channels and pin the one that carries it.":
     "Tidak ada saluran Anda yang cocok dengan pertandingan ini. Cari saluran Anda lalu sematkan saluran yang menayangkannya.",

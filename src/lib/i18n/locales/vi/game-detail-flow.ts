@@ -1,7 +1,7 @@
 export default {
   "games.details.broadcastPause": "Tạm dừng phát sóng",
   "games.details.broadcastResume": "Phát chương trình",
-  "games.details.broadcastPlay": "Xem trong Harbor",
+  "games.details.broadcastPlay": "Xem trong Lart",
   "games.details.watchRun": "Xem lượt chạy",
   "games.details.viewRun": "Xem thành tích",
   "games.details.runVideo": "Video lượt chạy",

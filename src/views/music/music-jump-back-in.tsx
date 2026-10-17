@@ -38,7 +38,7 @@ type Tile = {
 
 type Translate = MusicBandContext["t"];
 
-/** "catalog" is Harbor's own aggregate, so its chip would read CA and say nothing about origin. */
+/** "catalog" is Lart's own aggregate, so its chip would read CA and say nothing about origin. */
 function named(connectorId: string | undefined): string | undefined {
   return !connectorId || connectorId === "catalog" || connectorId === "local" ? undefined : connectorId;
 }

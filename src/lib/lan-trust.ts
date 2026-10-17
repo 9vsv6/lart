@@ -181,18 +181,18 @@ const PAIR_TEXT: Record<string, string> = {
   badCode: "That code did not match. Read it off the television again.",
   expired: "That code has expired. Ask the television for a fresh one.",
   alreadyPaired:
-    "That Harbor already trusts a computer under this name. Forget it on the television, then pair again.",
-  busy: "That Harbor is already pairing with something else. Finish that first.",
-  gone: "That Harbor dropped off mid-pair. Wake it and make sure it is on this network.",
-  "no-response": "That Harbor did not answer.",
-  unreachable: "Could not reach that Harbor.",
-  "too-old": "That Harbor does not know how to pair yet. Update Harbor on it first.",
-  mismatch: "That Harbor answered with a different identity. Scan again before pairing.",
-  off: "Remote control is switched off on that Harbor.",
+    "That Lart already trusts a computer under this name. Forget it on the television, then pair again.",
+  busy: "That Lart is already pairing with something else. Finish that first.",
+  gone: "That Lart dropped off mid-pair. Wake it and make sure it is on this network.",
+  "no-response": "That Lart did not answer.",
+  unreachable: "Could not reach that Lart.",
+  "too-old": "That Lart does not know how to pair yet. Update Lart on it first.",
+  mismatch: "That Lart answered with a different identity. Scan again before pairing.",
+  off: "Remote control is switched off on that Lart.",
 };
 
 export function pairFailureText(code: string): string {
-  return PAIR_TEXT[code] ?? "That Harbor refused to pair.";
+  return PAIR_TEXT[code] ?? "That Lart refused to pair.";
 }
 
 let nonceSeq = 0;

@@ -176,7 +176,7 @@ function PlayOnPanel({ request, themeId }: { request: PlayOnRequest; themeId: st
 
   const runRemote = useCallback(
     async (instance: HarborInstance, action: PlayOnAction) => {
-      setRows((prev) => ({ ...prev, [instance.id]: { kind: "busy", text: t("Sending to that Harbor") } }));
+      setRows((prev) => ({ ...prev, [instance.id]: { kind: "busy", text: t("Sending to that Lart") } }));
       const result = await sendToInstance(instance, action, payload);
       if (!alive.current) return;
       if (result.ok) {
@@ -213,7 +213,7 @@ function PlayOnPanel({ request, themeId }: { request: PlayOnRequest; themeId: st
   const localName = identity?.name?.trim() || t("This computer");
   const localDetail = [
     platformLabel(identity?.platform ?? ""),
-    `Harbor ${identity?.version || APP_VERSION}`,
+    `Lart ${identity?.version || APP_VERSION}`,
     themeLabel(themeId),
   ]
     .filter(Boolean)
@@ -263,7 +263,7 @@ function PlayOnPanel({ request, themeId }: { request: PlayOnRequest; themeId: st
 
           {roster.map((entry) => {
             const peer = entry.instance;
-            const label = peer.name?.trim() || t("Harbor");
+            const label = peer.name?.trim() || t("Lart");
             const paired = pairedIds.has(peer.id);
             const state = deviceStateOf(
               peer,
@@ -309,7 +309,7 @@ function PlayOnPanel({ request, themeId }: { request: PlayOnRequest; themeId: st
           {settled && peers.length === 0 ? (
             <p className="px-4 py-6 text-center text-[12.5px] leading-relaxed text-ink-muted">
               {isTauri
-                ? t("No other Harbor answered on this network. One shows up here a moment after it starts.")
+                ? t("No other Lart answered on this network. One shows up here a moment after it starts.")
                 : t("Network discovery needs the desktop app.")}
             </p>
           ) : null}
@@ -321,7 +321,7 @@ function PlayOnPanel({ request, themeId }: { request: PlayOnRequest; themeId: st
             {scanning
               ? t("Listening for Harbors")
               : peers.length === 1
-                ? t("1 other Harbor")
+                ? t("1 other Lart")
                 : t("{n} other Harbors", { n: peers.length })}
           </span>
           <button

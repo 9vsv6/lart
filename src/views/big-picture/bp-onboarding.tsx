@@ -115,7 +115,7 @@ function BpOnboardLeave({
             {t("Leave setup?")}
           </h2>
           <p className="text-[clamp(17px,2.2vh,22px)] leading-relaxed text-ink-subtle">
-            {t("Nothing you have already set is lost. Harbor picks this back up where you left it.")}
+            {t("Nothing you have already set is lost. Lart picks this back up where you left it.")}
           </p>
         </div>
 
@@ -153,7 +153,7 @@ function BpOnboardLeave({
         </div>
 
         {/* Its own row, and never the default. This is the only path other than
-            the last screen that marks Harbor onboarded, and the desktop modal's
+            the last screen that marks Lart onboarded, and the desktop modal's
             close button doing it silently on step two is the bug being fixed. */}
         <div
           data-bp-row
@@ -183,7 +183,7 @@ export type BpOnboardingGate = {
   resumeIndex: number;
   /** Finish later. This session only, and the next launch resumes in place. */
   suspend: () => void;
-  /** Mark Harbor onboarded. Only the last screen and Do not show this again. */
+  /** Mark Lart onboarded. Only the last screen and Do not show this again. */
   complete: () => void;
 };
 
@@ -338,7 +338,7 @@ export function BpOnboarding({
       ref={setModalNode}
       role="dialog"
       aria-modal="true"
-      aria-label={t("Set up Harbor")}
+      aria-label={t("Set up Lart")}
       data-bp-dialog
       // No entry animation on the layer itself. An [animation] class here loses
       // to the [dir=rtl] [role=dialog] rule in bp-tokens, which would translate

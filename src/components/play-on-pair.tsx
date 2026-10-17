@@ -167,7 +167,7 @@ function PairPanel({ instance }: { instance: HarborInstance }) {
     setAttempt((n) => n + 1);
   }, []);
 
-  const label = instance.name?.trim() || t("Harbor");
+  const label = instance.name?.trim() || t("Lart");
   const where = `${platformLabel(instance.platform)} / ${instance.host}`;
 
   return createPortal(
@@ -175,7 +175,7 @@ function PairPanel({ instance }: { instance: HarborInstance }) {
       className="fixed inset-0 z-[250] flex items-center justify-center bg-canvas/75 p-6 backdrop-blur-[3px] animate-fade-in motion-reduce:animate-none"
       role="dialog"
       aria-modal="true"
-      aria-label={t("Pair with this Harbor")}
+      aria-label={t("Pair with this Lart")}
       onMouseDown={closePairFlow}
     >
       <div
@@ -248,7 +248,7 @@ function PairBody({
     return (
       <p className="flex min-h-[44px] items-center gap-2.5 text-[13px] text-ink-muted">
         <Loader2 size={15} strokeWidth={2.2} className="animate-spin motion-reduce:animate-none" />
-        {t("Asking that Harbor to show a code")}
+        {t("Asking that Lart to show a code")}
       </p>
     );
   }
@@ -304,7 +304,7 @@ function PairBody({
       }}
     >
       <label htmlFor="harbor-pair-code" className="text-[13px] leading-relaxed text-ink-muted">
-        {t("Type the code showing on that Harbor.")}
+        {t("Type the code showing on that Lart.")}
       </label>
       <input
         id="harbor-pair-code"
@@ -339,7 +339,7 @@ function PairBody({
         </button>
       </div>
       <p id="harbor-pair-hint" className="text-[11.5px] leading-relaxed text-ink-subtle">
-        {t("Until you pair, that Harbor ignores anything this computer sends it.")}
+        {t("Until you pair, that Lart ignores anything this computer sends it.")}
       </p>
     </form>
   );

@@ -19,8 +19,8 @@ const currentTail: Record<string, string> = {
   "All topics": "모든 주제",
   "Also Known As": "다른 이름",
   "Audio not labeled": "오디오 정보 없음",
-  "Back in Harbor: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
-    "Harbor로 돌아가 만화 > 소스 설정 > 내 서버로 이동한 다음 서버 주소를 붙여 넣으세요. 예: {localUrl}. 다른 기기에서 실행 중이라면 LAN IP를 사용하세요. 예: {lanUrl}.",
+  "Back in Lart: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
+    "Lart로 돌아가 만화 > 소스 설정 > 내 서버로 이동한 다음 서버 주소를 붙여 넣으세요. 예: {localUrl}. 다른 기기에서 실행 중이라면 LAN IP를 사용하세요. 예: {lanUrl}.",
   "Browsing the theme library": "테마 라이브러리 둘러보기",
   "Cache on {provider}": "{provider}에서 캐시",
   "Cached on {providers}": "{providers}에 캐시됨",
@@ -47,30 +47,30 @@ const currentTail: Record<string, string> = {
   "Drag to resize all four panels · Double-click to align rows":
     "드래그하여 패널 4개 크기 조절 · 행을 맞추려면 두 번 클릭",
   "Edit theme": "테마 편집",
-  "Every source you enable in Suwayomi then shows up in Harbor. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
-    "Suwayomi에서 활성화한 모든 소스가 Harbor에 표시됩니다. 사이트가 변경되면 Suwayomi가 확장 기능을 최신 상태로 유지하므로 계속 사용할 수 있습니다.",
+  "Every source you enable in Suwayomi then shows up in Lart. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
+    "Suwayomi에서 활성화한 모든 소스가 Lart에 표시됩니다. 사이트가 변경되면 Suwayomi가 확장 기능을 최신 상태로 유지하므로 계속 사용할 수 있습니다.",
   "Everything else, through your own server (Suwayomi)":
     "그 밖의 모든 소스는 내 서버(Suwayomi)로 이용",
   "Expand {title} image": "{title} 이미지 확대",
   "Failed to read session: {message}": "세션을 읽지 못했습니다: {message}",
   "Fullscreen split view": "전체 화면 분할 보기",
-  "Getting manga sources into Harbor": "Harbor에 만화 소스 추가하기",
+  "Getting manga sources into Lart": "Lart에 만화 소스 추가하기",
   "Go to featured item {n}": "추천 항목 {n}(으)로 이동",
   "Great job!": "잘했어요!",
   H: "H",
-  "Harbor Relay Documentation": "Harbor Relay 문서",
-  "Harbor Relay docs": "Harbor Relay 문서",
-  "Harbor also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Harbor repository. Only install plugins from repositories you trust.":
-    "Harbor에는 실험적인 플러그인 런타임도 있습니다. 소스 플러그인을 만들려면 Harbor 저장소의 {path}을(를) 참고하세요. 신뢰할 수 있는 저장소의 플러그인만 설치하세요.",
-  "Harbor blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
-    "Harbor는 기본적으로 의심스러운 파일과 작품이 일치하지 않는 릴리스를 차단합니다. 오래된 프로그램이나 특이한 제목에서는 이 기준이 너무 엄격할 수 있습니다.",
-  "Harbor queried 1 addon and got nothing back": "Harbor가 애드온 1개에 요청했지만 결과가 없습니다",
-  "Harbor queried {n} addons and got nothing back":
-    "Harbor가 애드온 {n}개에 요청했지만 결과가 없습니다",
-  "Harbor ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Harbor. There are two ways to add sources.":
-    "Harbor에는 만화나 스크레이퍼가 포함되어 있지 않습니다. Harbor는 리더이며, 소스는 사용자가 추가합니다. 소스의 콘텐츠에 대한 책임은 Harbor가 아니라 해당 소스 운영자에게 있습니다. 소스를 추가하는 방법은 두 가지입니다.",
-  "Harbor test message ({service}). If you can read this, your webhook is wired up.":
-    "Harbor 테스트 메시지({service})입니다. 이 메시지가 보이면 웹후크가 정상적으로 연결된 것입니다.",
+  "Lart Relay Documentation": "Lart Relay 문서",
+  "Lart Relay docs": "Lart Relay 문서",
+  "Lart also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Lart repository. Only install plugins from repositories you trust.":
+    "Lart에는 실험적인 플러그인 런타임도 있습니다. 소스 플러그인을 만들려면 Lart 저장소의 {path}을(를) 참고하세요. 신뢰할 수 있는 저장소의 플러그인만 설치하세요.",
+  "Lart blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
+    "Lart는 기본적으로 의심스러운 파일과 작품이 일치하지 않는 릴리스를 차단합니다. 오래된 프로그램이나 특이한 제목에서는 이 기준이 너무 엄격할 수 있습니다.",
+  "Lart queried 1 addon and got nothing back": "Lart가 애드온 1개에 요청했지만 결과가 없습니다",
+  "Lart queried {n} addons and got nothing back":
+    "Lart가 애드온 {n}개에 요청했지만 결과가 없습니다",
+  "Lart ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Lart. There are two ways to add sources.":
+    "Lart에는 만화나 스크레이퍼가 포함되어 있지 않습니다. Lart는 리더이며, 소스는 사용자가 추가합니다. 소스의 콘텐츠에 대한 책임은 Lart가 아니라 해당 소스 운영자에게 있습니다. 소스를 추가하는 방법은 두 가지입니다.",
+  "Lart test message ({service}). If you can read this, your webhook is wired up.":
+    "Lart 테스트 메시지({service})입니다. 이 메시지가 보이면 웹후크가 정상적으로 연결된 것입니다.",
   "Hide all sources": "모든 소스 숨기기",
   "Hide controls": "컨트롤 숨기기",
   "Hide controls, full grid": "컨트롤 숨기고 전체 그리드 표시",
@@ -94,8 +94,8 @@ const currentTail: Record<string, string> = {
   "Native Title": "원어 제목",
   "Nice try!": "아깝네요!",
   "No PiP session. Closing.": "PiP 세션이 없어 닫습니다.",
-  "No clean release has surfaced yet. This may be too new. Harbor's filters dropped everything that came back as wrong-movie noise.":
-    "아직 적합한 릴리스가 없습니다. 너무 최신 작품일 수 있습니다. Harbor 필터에서 다른 영화로 판단된 결과를 모두 제외했습니다.",
+  "No clean release has surfaced yet. This may be too new. Lart's filters dropped everything that came back as wrong-movie noise.":
+    "아직 적합한 릴리스가 없습니다. 너무 최신 작품일 수 있습니다. Lart 필터에서 다른 영화로 판단된 결과를 모두 제외했습니다.",
   "Not cached": "캐시되지 않음",
   "Not cached yet": "아직 캐시되지 않음",
   "Open {url} in a browser. Go to the Extensions / Browse area, add a community source repository, then install the sources you want (hundreds are available). Suwayomi uses the same extension repos the Mihon / Tachiyomi ecosystem does.":
@@ -136,7 +136,7 @@ const currentTail: Record<string, string> = {
   "Theatrical Capture": "극장 촬영본",
   "Theme Studio": "테마 스튜디오",
   "Theme is missing a name.": "테마 이름이 없습니다.",
-  "This file isn't a Harbor theme.": "Harbor 테마 파일이 아닙니다.",
+  "This file isn't a Lart theme.": "Lart 테마 파일이 아닙니다.",
   "This file isn't a readable theme.": "읽을 수 있는 테마 파일이 아닙니다.",
   "This is how you get hundreds of community sources.":
     "이 방법으로 수백 개의 커뮤니티 소스를 추가할 수 있습니다.",
@@ -209,8 +209,8 @@ const currentTail: Record<string, string> = {
   heard: "들음",
   of: "중",
   orig: "원본",
-  "Open the signed-in user's own Harbor profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
-    "로그인한 사용자의 핸들이 불러와지는 즉시 해당 사용자의 Harbor 프로필을 엽니다. 화면 이동이 시작되면 true를 반환하고, 그렇지 않으면 false를 반환합니다.",
+  "Open the signed-in user's own Lart profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
+    "로그인한 사용자의 핸들이 불러와지는 즉시 해당 사용자의 Lart 프로필을 엽니다. 화면 이동이 시작되면 true를 반환하고, 그렇지 않으면 false를 반환합니다.",
   "AI search failed.": "AI 검색에 실패했습니다.",
   "Add a debrid provider in Settings first.": "먼저 설정에서 디브리드 제공업체를 추가하세요.",
   "Cancelled.": "취소되었습니다.",
@@ -222,9 +222,9 @@ const currentTail: Record<string, string> = {
     "이 P2P 소스를 준비할 수 없습니다. 연결 가능한 피어가 없을 수 있습니다. 다시 시도하거나 다른 소스를 선택하세요.",
   "Direct torrent streaming is turned off. Turn it on in Settings > P2P & servers to stream torrents without a debrid.":
     "토렌트 직접 스트리밍이 꺼져 있습니다. 디브리드 없이 토렌트를 스트리밍하려면 설정 > P2P 및 서버에서 켜세요.",
-  "Harbor could not open your browser.": "Harbor에서 브라우저를 열 수 없습니다.",
-  "Harbor's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
-    "Harbor의 P2P 엔진을 준비하고 있습니다. 몇 초 후 자동으로 완료되면 재생할 수 있습니다.",
+  "Lart could not open your browser.": "Lart에서 브라우저를 열 수 없습니다.",
+  "Lart's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
+    "Lart의 P2P 엔진을 준비하고 있습니다. 몇 초 후 자동으로 완료되면 재생할 수 있습니다.",
   Minus: "빼기",
   "None of your debrid services could deliver a working file. Pick another stream.":
     "사용 중인 디브리드 서비스에서 재생 가능한 파일을 가져오지 못했습니다. 다른 스트림을 선택하세요.",
@@ -252,8 +252,8 @@ const currentTail: Record<string, string> = {
     "원본 NZB 파일입니다. 먼저 SABnzbd 또는 NZBGet으로 다운로드한 후 재생해야 합니다.",
   "This source isn't ready on your debrid yet. Try it again in a moment or pick another.":
     "이 소스는 아직 디브리드에서 준비되지 않았습니다. 잠시 후 다시 시도하거나 다른 소스를 선택하세요.",
-  "This source only opens in an external browser, not in Harbor's player.":
-    "이 소스는 Harbor 플레이어가 아닌 외부 브라우저에서만 열 수 있습니다.",
+  "This source only opens in an external browser, not in Lart's player.":
+    "이 소스는 Lart 플레이어가 아닌 외부 브라우저에서만 열 수 있습니다.",
   "This stream has no playable source.": "이 스트림에는 재생 가능한 소스가 없습니다.",
   "This stream isn't cached on your debrid yet. Try a different one from the list.":
     "이 스트림은 아직 디브리드에 캐시되지 않았습니다. 목록에서 다른 스트림을 선택하세요.",
@@ -268,16 +268,16 @@ const currentTail: Record<string, string> = {
     "디브리드 키가 거부되었습니다. 설정에서 확인하세요.",
   "Your debrid served a placeholder/error video instead of the real file. Pick another stream.":
     "디브리드에서 실제 파일 대신 자리표시자 또는 오류 동영상을 제공했습니다. 다른 스트림을 선택하세요.",
-  "Your debrid service doesn't support queueing torrents from Harbor yet.":
-    "사용 중인 디브리드 서비스는 아직 Harbor에서 토렌트를 대기열에 추가하는 기능을 지원하지 않습니다.",
+  "Your debrid service doesn't support queueing torrents from Lart yet.":
+    "사용 중인 디브리드 서비스는 아직 Lart에서 토렌트를 대기열에 추가하는 기능을 지원하지 않습니다.",
   "Your debrid subscription has expired.": "디브리드 구독이 만료되었습니다.",
   "Your debrid took too long to respond. Hit Play again, or try another stream.":
     "디브리드의 응답 시간이 너무 오래 걸렸습니다. 다시 재생하거나 다른 스트림을 사용하세요.",
   "Your {name} subscription looks expired.": "{name} 구독이 만료된 것 같습니다.",
   "{name} is over its traffic or fair-use limit right now.":
     "{name}에서 현재 트래픽 또는 공정 사용 한도를 초과했습니다.",
-  "{name} is rate-limiting Harbor right now.":
-    "{name}에서 현재 Harbor의 요청 횟수를 제한하고 있습니다.",
+  "{name} is rate-limiting Lart right now.":
+    "{name}에서 현재 Lart의 요청 횟수를 제한하고 있습니다.",
   "{name} is temporarily unavailable (server error).":
     "{name}을(를) 일시적으로 사용할 수 없습니다(서버 오류).",
   "{name} rejected your API key.": "{name}에서 API 키를 거부했습니다.",
@@ -309,8 +309,8 @@ const currentTail: Record<string, string> = {
   "Connect Jellyfin, Emby, or Plex in Streaming sources.":
     "스트리밍 소스에서 Jellyfin, Emby 또는 Plex를 연결하세요.",
   "Connect and sync": "연결 및 동기화",
-  "Connect books you own, reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "보유한 책, 독서 소스 및 메타데이터 서비스를 연결하세요. 모든 소스를 직접 관리하면서 Harbor가 서재를 일관되게 정리합니다.",
+  "Connect books you own, reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "보유한 책, 독서 소스 및 메타데이터 서비스를 연결하세요. 모든 소스를 직접 관리하면서 Lart가 서재를 일관되게 정리합니다.",
   "Connect home server": "홈 서버 연결",
   "Connect now": "지금 연결",
   "Connect server": "서버 연결",
@@ -322,18 +322,18 @@ const currentTail: Record<string, string> = {
   Disable: "사용 안 함",
   "Download media": "미디어 다운로드",
   "Download selected ({n})": "선택 항목 다운로드({n}개)",
-  "Edge voices need the Harbor desktop app. Reading with the device voice.":
-    "Edge 음성을 사용하려면 Harbor 데스크톱 앱이 필요합니다. 기기 음성으로 읽습니다.",
+  "Edge voices need the Lart desktop app. Reading with the device voice.":
+    "Edge 음성을 사용하려면 Lart 데스크톱 앱이 필요합니다. 기기 음성으로 읽습니다.",
   "Edit home server": "홈 서버 편집",
   Enrichment: "정보 보강",
   "Every…": "매번…",
   "Featured book": "추천 도서",
-  "Harbor does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Harbor open it.":
-    "Harbor는 어떤 책도 호스팅하지 않습니다. 이 기기의 폴더를 열거나 소스 확장 기능을 설치하거나 직접 운영하는 서버를 연결하세요. 메타데이터는 책 정보를 제공하지만 Harbor에서 책을 열려면 소스가 필요합니다.",
-  "Harbor opens Plex in your browser. Your Plex password is never entered in Harbor.":
-    "Harbor가 브라우저에서 Plex를 엽니다. Plex 비밀번호는 Harbor에 입력되지 않습니다.",
-  "Harbor tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
-    "Harbor가 HTTP, HTTPS, 리버스 프록시 및 제공업체의 기본 포트를 차례로 시도합니다. 인증 정보는 별도로 저장됩니다.",
+  "Lart does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Lart open it.":
+    "Lart는 어떤 책도 호스팅하지 않습니다. 이 기기의 폴더를 열거나 소스 확장 기능을 설치하거나 직접 운영하는 서버를 연결하세요. 메타데이터는 책 정보를 제공하지만 Lart에서 책을 열려면 소스가 필요합니다.",
+  "Lart opens Plex in your browser. Your Plex password is never entered in Lart.":
+    "Lart가 브라우저에서 Plex를 엽니다. Plex 비밀번호는 Lart에 입력되지 않습니다.",
+  "Lart tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
+    "Lart가 HTTP, HTTPS, 리버스 프록시 및 제공업체의 기본 포트를 차례로 시도합니다. 인증 정보는 별도로 저장됩니다.",
   "Home server": "홈 서버",
   "Home server quality": "홈 서버 화질",
   "Home servers": "홈 서버",
@@ -359,7 +359,7 @@ const currentTail: Record<string, string> = {
   "Prefer this device": "이 기기 우선",
   "Preferred home server": "선호 홈 서버",
   "Preparing narration audio": "낭독 오디오 준비 중",
-  "Read eBooks in Harbor": "Harbor에서 전자책 읽기",
+  "Read eBooks in Lart": "Lart에서 전자책 읽기",
   "Refresh interval in days": "새로고침 간격(일)",
   "Refresh policy": "새로고침 정책",
   "Remove folder?": "폴더를 삭제할까요?",

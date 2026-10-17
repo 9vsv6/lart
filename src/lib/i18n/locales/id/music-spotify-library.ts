@@ -4,17 +4,17 @@ const musicSpotifyLibrary: Record<string, string> = {
   "music.spotifyLibrary.connect": "Hubungkan Spotify",
   "music.spotifyLibrary.liked": "Lagu yang disukai",
   "music.spotifyLibrary.playlists": "Playlist Spotify",
-  "music.spotifyLibrary.harbor": "Playlist Harbor",
+  "music.spotifyLibrary.harbor": "Playlist Lart",
   "music.spotifyLibrary.back": "Kembali ke pustaka Spotify",
-  "music.spotifyLibrary.import": "Impor ke Harbor",
+  "music.spotifyLibrary.import": "Impor ke Lart",
   "music.spotifyLibrary.importBody":
-    "Simpan salinan daftar ini di Harbor. Lagu tetap diputar melalui sumber musiknya.",
+    "Simpan salinan daftar ini di Lart. Lagu tetap diputar melalui sumber musiknya.",
   "music.spotifyLibrary.importing": "Membaca {count} lagu…",
   "music.spotifyLibrary.imported": "{count} lagu diimpor ke {name}.",
-  "music.spotifyLibrary.skipped": "{count} entri yang tidak dapat diimpor Harbor dilewati.",
+  "music.spotifyLibrary.skipped": "{count} entri yang tidak dapat diimpor Lart dilewati.",
   "music.spotifyLibrary.loaded": "{count} dari {total}",
   "music.spotifyLibrary.empty": "Koleksi Spotify ini masih kosong.",
-  "music.spotifyLibrary.noImportable": "Koleksi ini tidak memiliki lagu yang dapat diimpor Harbor.",
+  "music.spotifyLibrary.noImportable": "Koleksi ini tidak memiliki lagu yang dapat diimpor Lart.",
   "music.spotifyLibrary.error":
     "Spotify tidak dapat menyelesaikan permintaan. Periksa koneksi Anda lalu coba lagi.",
   "music.spotifyLibrary.permission":

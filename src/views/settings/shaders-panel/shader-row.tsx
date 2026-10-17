@@ -17,7 +17,7 @@ export function ShaderRow({ entry }: { entry: ShaderCatalogEntry }) {
   );
   const lockReason = conflicted
     ? t(
-        "Harbor's built-in HDR to SDR conversion is on. Turn it off in Video tuning to use this instead. Running both double-processes the picture.",
+        "Lart's built-in HDR to SDR conversion is on. Turn it off in Video tuning to use this instead. Running both double-processes the picture.",
       )
     : undefined;
 

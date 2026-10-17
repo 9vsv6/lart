@@ -54,7 +54,7 @@ const CHARITIES = [
     name: "Internet Archive",
     url: "https://archive.org/donate",
     icon: internetArchiveIcon,
-    blurb: "Keeps the web's memory alive. Harbor would be poorer without it.",
+    blurb: "Keeps the web's memory alive. Lart would be poorer without it.",
   },
   {
     name: "Doctors Without Borders",
@@ -112,12 +112,12 @@ export function SupportPanel() {
       <Section
         title={t("Who keeps this running")}
         subtitle={t(
-          "Harbor's backend runs on ElfHosted. They run our servers at no cost to the community.",
+          "Lart's backend runs on ElfHosted. They run our servers at no cost to the community.",
         )}
       >
         <Prose>
           {t(
-            "Keeping Harbor's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Harbor stays funded at the same time.",
+            "Keeping Lart's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Lart stays funded at the same time.",
           )}
         </Prose>
         <ul className="flex max-w-[70ch] flex-col gap-2.5">
@@ -132,7 +132,7 @@ export function SupportPanel() {
           wide
           label={t("ElfHosted plans")}
           desc={t(
-            "A third party runs these plans. Harbor is not affiliated with them and receives nothing from a signup. Current pricing and terms are on their site.",
+            "A third party runs these plans. Lart is not affiliated with them and receives nothing from a signup. Current pricing and terms are on their site.",
           )}
         >
           <div className="flex w-full flex-wrap items-end justify-between gap-x-6 gap-y-4">
@@ -153,12 +153,12 @@ export function SupportPanel() {
       <Section
         title={t("Built on Stremio")}
         subtitle={t(
-          "Harbor would not be possible without Stremio. It is the foundation everything here is built on.",
+          "Lart would not be possible without Stremio. It is the foundation everything here is built on.",
         )}
       >
         <Prose>
           {t(
-            "Harbor speaks Stremio's addon protocol, and the whole ecosystem of addons grows out of their work. Stremio is funded by its community, and supporters who chip in get early access to experimental features. If you have it to spare, send some their way too.",
+            "Lart speaks Stremio's addon protocol, and the whole ecosystem of addons grows out of their work. Stremio is funded by its community, and supporters who chip in get early access to experimental features. If you have it to spare, send some their way too.",
           )}
         </Prose>
         <Callout
@@ -171,7 +171,7 @@ export function SupportPanel() {
             />
           }
         >
-          {t("Stremio Supporters get a special badge on their Harbor profile.")}
+          {t("Stremio Supporters get a special badge on their Lart profile.")}
         </Callout>
         <SettingRow
           icon={<img src={stremioLogo} alt="" draggable={false} className={LEAD_IMG} />}
@@ -183,8 +183,8 @@ export function SupportPanel() {
       </Section>
 
       <Section
-        title={t("Donating to Harbor")}
-        subtitle={t("Short version: don't. Harbor takes no donations.")}
+        title={t("Donating to Lart")}
+        subtitle={t("Short version: don't. Lart takes no donations.")}
       >
         <Prose>
           {t(
@@ -223,7 +223,7 @@ export function SupportPanel() {
       <Section
         title={t("If you would rather give it away")}
         subtitle={t(
-          "No affiliation, no referral links, and Harbor gets nothing from these. They are just places where money goes further than it does here.",
+          "No affiliation, no referral links, and Lart gets nothing from these. They are just places where money goes further than it does here.",
         )}
       >
         {CHARITIES.map((c) => (

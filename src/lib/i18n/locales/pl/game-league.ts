@@ -77,7 +77,7 @@ export default {
   "games.league.metaScope": "OP.GG dostarcza ranking alei z domyślnej próbki, bez informacji o aktualizacji, regionie i zakresie rang. Odsetek zwycięstw wynika ze zgłoszonych zwycięstw i gier; częstość wyboru jest zaokrąglana przez źródło. Rankingi i buildy korzystają z osobnych próbek.",
   "games.league.buildNote": "Każdy build ma osobną próbkę. Pełne buildy dotyczą częściej gier trwających dość długo, by kupić przedmioty; ich odsetek zwycięstw nie jest ogólnym wynikiem bohatera. Próbki pojedynków mogą być małe. Dostosuj się do drużyny i rywala. Filmy mogą pochodzić ze starszych aktualizacji.",
   "games.league.patchDifference": "Statystyki buildu: {patch}; dane przedmiotów i umiejętności: {assets}.",
-  "games.league.attribution": "Harbor is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
+  "games.league.attribution": "Lart is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
   "games.league.tierList": "Lista poziomów",
   "games.league.tierScope": "Ranking solo/duo · Szmaragd+ · Globalnie",
   "games.league.patchFilter": "Wybierz aktualizację",

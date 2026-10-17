@@ -50,8 +50,8 @@ const identityAudit: Record<string, string> = {
   heard: "terdengar",
   of: "dari",
   orig: "asli",
-  "Open the signed-in user's own Harbor profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
-    "Segera buka profil Harbor milik pengguna yang sedang masuk setelah handle-nya dimuat. Mengembalikan true saat navigasi dimulai dan false jika tidak.",
+  "Open the signed-in user's own Lart profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
+    "Segera buka profil Lart milik pengguna yang sedang masuk setelah handle-nya dimuat. Mengembalikan true saat navigasi dimulai dan false jika tidak.",
   "AI search failed.": "Pencarian AI gagal.",
   "Add a debrid provider in Settings first.":
     "Tambahkan penyedia debrid di Pengaturan terlebih dahulu.",
@@ -64,9 +64,9 @@ const identityAudit: Record<string, string> = {
     "Sumber P2P ini tidak dapat disiapkan. Mungkin tidak ada peer yang dapat dijangkau. Coba lagi atau pilih sumber lain.",
   "Direct torrent streaming is turned off. Turn it on in Settings > P2P & servers to stream torrents without a debrid.":
     "Streaming torrent langsung dinonaktifkan. Aktifkan di Pengaturan > P2P & server untuk melakukan streaming torrent tanpa debrid.",
-  "Harbor could not open your browser.": "Harbor tidak dapat membuka browser Anda.",
-  "Harbor's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
-    "Mesin peer-to-peer Harbor sedang dipersiapkan. Proses ini akan selesai dengan sendirinya dalam beberapa detik, lalu tombol Putar dapat digunakan.",
+  "Lart could not open your browser.": "Lart tidak dapat membuka browser Anda.",
+  "Lart's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
+    "Mesin peer-to-peer Lart sedang dipersiapkan. Proses ini akan selesai dengan sendirinya dalam beberapa detik, lalu tombol Putar dapat digunakan.",
   Minus: "Minus",
   "None of your debrid services could deliver a working file. Pick another stream.":
     "Tidak ada layanan debrid Anda yang dapat menyediakan file yang berfungsi. Pilih stream lain.",
@@ -94,8 +94,8 @@ const identityAudit: Record<string, string> = {
     "Ini adalah file NZB mentah. File tersebut harus diunduh terlebih dahulu dengan SABnzbd atau NZBGet, lalu dapat diputar.",
   "This source isn't ready on your debrid yet. Try it again in a moment or pick another.":
     "Sumber ini belum siap di debrid Anda. Coba lagi sebentar lagi atau pilih sumber lain.",
-  "This source only opens in an external browser, not in Harbor's player.":
-    "Sumber ini hanya dapat dibuka di browser eksternal, bukan di pemutar Harbor.",
+  "This source only opens in an external browser, not in Lart's player.":
+    "Sumber ini hanya dapat dibuka di browser eksternal, bukan di pemutar Lart.",
   "This stream has no playable source.": "Stream ini tidak memiliki sumber yang dapat diputar.",
   "This stream isn't cached on your debrid yet. Try a different one from the list.":
     "Stream ini belum di-cache di debrid Anda. Coba stream lain dari daftar.",
@@ -110,15 +110,15 @@ const identityAudit: Record<string, string> = {
     "Kunci debrid Anda ditolak. Periksa kunci tersebut di Pengaturan.",
   "Your debrid served a placeholder/error video instead of the real file. Pick another stream.":
     "Debrid Anda menyajikan video placeholder atau video kesalahan, bukan file yang sebenarnya. Pilih stream lain.",
-  "Your debrid service doesn't support queueing torrents from Harbor yet.":
-    "Layanan debrid Anda belum mendukung pengantrean torrent dari Harbor.",
+  "Your debrid service doesn't support queueing torrents from Lart yet.":
+    "Layanan debrid Anda belum mendukung pengantrean torrent dari Lart.",
   "Your debrid subscription has expired.": "Langganan debrid Anda telah kedaluwarsa.",
   "Your debrid took too long to respond. Hit Play again, or try another stream.":
     "Debrid Anda terlalu lama merespons. Tekan Putar lagi atau coba stream lain.",
   "Your {name} subscription looks expired.": "Langganan {name} Anda tampaknya telah kedaluwarsa.",
   "{name} is over its traffic or fair-use limit right now.":
     "{name} sedang melampaui batas trafik atau penggunaan wajarnya.",
-  "{name} is rate-limiting Harbor right now.": "{name} sedang membatasi laju permintaan Harbor.",
+  "{name} is rate-limiting Lart right now.": "{name} sedang membatasi laju permintaan Lart.",
   "{name} is temporarily unavailable (server error).":
     "{name} untuk sementara tidak tersedia karena kesalahan server.",
   "{name} rejected your API key.": "{name} menolak kunci API Anda.",
@@ -151,8 +151,8 @@ const identityAudit: Record<string, string> = {
   "Connect Jellyfin, Emby, or Plex in Streaming sources.":
     "Hubungkan Jellyfin, Emby, atau Plex di Sumber streaming.",
   "Connect and sync": "Hubungkan dan sinkronkan",
-  "Connect books you own, reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "Hubungkan buku yang Anda miliki, sumber bacaan, dan layanan metadata. Harbor menjaga rak tetap tertata sementara setiap sumber tetap berada di bawah kendali Anda.",
+  "Connect books you own, reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "Hubungkan buku yang Anda miliki, sumber bacaan, dan layanan metadata. Lart menjaga rak tetap tertata sementara setiap sumber tetap berada di bawah kendali Anda.",
   "Connect home server": "Hubungkan server rumah",
   "Connect now": "Hubungkan sekarang",
   "Connect server": "Hubungkan server",
@@ -164,18 +164,18 @@ const identityAudit: Record<string, string> = {
   Disable: "Nonaktifkan",
   "Download media": "Unduh media",
   "Download selected ({n})": "Unduh yang dipilih ({n})",
-  "Edge voices need the Harbor desktop app. Reading with the device voice.":
-    "Suara Edge memerlukan aplikasi desktop Harbor. Membaca dengan suara perangkat.",
+  "Edge voices need the Lart desktop app. Reading with the device voice.":
+    "Suara Edge memerlukan aplikasi desktop Lart. Membaca dengan suara perangkat.",
   "Edit home server": "Edit server rumah",
   Enrichment: "Pengayaan",
   "Every…": "Setiap…",
   "Featured book": "Buku unggulan",
-  "Harbor does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Harbor open it.":
-    "Harbor tidak menghosting buku apa pun. Buka folder di perangkat ini, instal ekstensi sumber, atau hubungkan server Anda sendiri. Metadata dapat mendeskripsikan buku, tetapi sumberlah yang memungkinkan Harbor membukanya.",
-  "Harbor opens Plex in your browser. Your Plex password is never entered in Harbor.":
-    "Harbor membuka Plex di browser Anda. Kata sandi Plex Anda tidak pernah dimasukkan ke Harbor.",
-  "Harbor tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
-    "Harbor mencoba HTTP, HTTPS, proksi balik, dan port bawaan penyedia. Kredensial disimpan secara terpisah.",
+  "Lart does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Lart open it.":
+    "Lart tidak menghosting buku apa pun. Buka folder di perangkat ini, instal ekstensi sumber, atau hubungkan server Anda sendiri. Metadata dapat mendeskripsikan buku, tetapi sumberlah yang memungkinkan Lart membukanya.",
+  "Lart opens Plex in your browser. Your Plex password is never entered in Lart.":
+    "Lart membuka Plex di browser Anda. Kata sandi Plex Anda tidak pernah dimasukkan ke Lart.",
+  "Lart tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
+    "Lart mencoba HTTP, HTTPS, proksi balik, dan port bawaan penyedia. Kredensial disimpan secara terpisah.",
   "Home server": "Server rumah",
   "Home server quality": "Kualitas server rumah",
   "Home servers": "Server rumah",
@@ -201,7 +201,7 @@ const identityAudit: Record<string, string> = {
   "Prefer this device": "Prioritaskan perangkat ini",
   "Preferred home server": "Server rumah pilihan",
   "Preparing narration audio": "Menyiapkan audio narasi",
-  "Read eBooks in Harbor": "Baca eBook di Harbor",
+  "Read eBooks in Lart": "Baca eBook di Lart",
   "Refresh interval in days": "Interval penyegaran dalam hari",
   "Refresh policy": "Kebijakan penyegaran",
   "Remove folder?": "Hapus folder?",

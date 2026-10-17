@@ -32,8 +32,8 @@ const addons: Record<string, string> = {
   "Re-configure this addon and apply the updated link":
     "このアドオンを再設定して新しいリンクを適用",
   "Sign in to sync your addons across devices": "ログインしてアドオンをデバイス間で同期",
-  "Anything you install in Harbor pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
-    "HarborでインストールしたアドオンはStremioアカウントにも反映され、モバイルでも利用できます。サイドバー左下のアバターからログインしてください。",
+  "Anything you install in Lart pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
+    "LartでインストールしたアドオンはStremioアカウントにも反映され、モバイルでも利用できます。サイドバー左下のアバターからログインしてください。",
   "Common picks for a fresh setup.": "初期設定でよく選ばれるアドオンです。",
   "Browse by category": "カテゴリーから探す",
   "Six places to start. Tap one and we'll filter the catalog for you.":
@@ -54,8 +54,8 @@ const addons: Record<string, string> = {
   "Configure on the addon's setup page": "アドオンの設定ページで設定",
   "Click to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "クリックして{name}の設定ページを開きます。オプションを選び、表示されたインストールリンクをコピーして下に貼り付けると、アドオンが更新されます。",
-  "Click to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "クリックしてHarbor内蔵ブラウザで{name}の設定ページを開きます。オプションを選んでください。ページ上の「インストール」をクリックすると、Harborがリンクを自動取得してアドオンを更新します。",
+  "Click to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "クリックしてLart内蔵ブラウザで{name}の設定ページを開きます。オプションを選んでください。ページ上の「インストール」をクリックすると、Lartがリンクを自動取得してアドオンを更新します。",
   "Open setup page": "設定ページを開く",
   'Heads-up: a few addons (like AIOStatus) don\'t pre-fill from the URL. If the form loads blank, paste the existing manifest URL into their "Import from URL" field to restore your settings.':
     "注意: 一部のアドオン（AIOStatusなど）では、URLから設定が自動入力されません。フォームが空の場合は、既存のマニフェストURLを「URLからインポート」欄に貼り付けて設定を復元してください。",
@@ -97,7 +97,7 @@ const addons: Record<string, string> = {
     "URLにはdebridキーやトークンが含まれる場合があります。コピーが必要なときだけ表示してください",
   "Hidden by default. Manifest paths often carry API keys (debrid tokens, OMDB keys, etc.) you don't want over a shoulder.":
     "デフォルトでは非表示です。マニフェストのパスにはAPIキー（debridトークン、OMDBキーなど）が含まれることが多いため、他人に見られないようにしてください。",
-  "Stremio addon, packaged into Harbor's catalog.": "StremioアドオンをHarborのカタログに収録。",
+  "Stremio addon, packaged into Lart's catalog.": "StremioアドオンをLartのカタログに収録。",
   "Version and capabilities come straight from the addon's manifest. Ratings and categories come from the":
     "バージョンと機能はアドオンのマニフェストから直接取得されます。評価とカテゴリーは",
   "community API. Star, browse, and contribute on their site.":
@@ -110,8 +110,8 @@ const addons: Record<string, string> = {
   "View more": "もっと見る",
   "You've reached the end · {n} addons": "以上です・アドオン{n}件",
   "No velocity data yet": "伸び率データはまだありません",
-  "Trending tracks star growth across your Harbor visits. Open the addons page again tomorrow and the top risers will appear here.":
-    "トレンドでは、Harborを訪れるたびにスター数の伸びを記録します。明日もう一度アドオンページを開くと、急上昇中のアドオンがここに表示されます。",
+  "Trending tracks star growth across your Lart visits. Open the addons page again tomorrow and the top risers will appear here.":
+    "トレンドでは、Lartを訪れるたびにスター数の伸びを記録します。明日もう一度アドオンページを開くと、急上昇中のアドオンがここに表示されます。",
   "Organize addons": "アドオンを並べ替える",
   "Back to addons": "アドオンに戻る",
   "This order drives your catalog rows and the default stream order. A stream priority set in Settings overrides it for streams.":
@@ -133,8 +133,8 @@ const addons: Record<string, string> = {
   "No addons are synced to this account yet.":
     "このアカウントにはまだアドオンが同期されていません。",
   "On this device only": "このデバイスのみ",
-  "These live in Harbor on this computer and never touch your account.":
-    "これらはこのパソコンのHarbor内に保存され、アカウントには一切反映されません。",
+  "These live in Lart on this computer and never touch your account.":
+    "これらはこのパソコンのLart内に保存され、アカウントには一切反映されません。",
   "On this device": "このデバイス上",
   "Sign in to Stremio to organize the addons synced to your account.":
     "アカウントに同期されたアドオンを並べ替えるには、Stremioにログインしてください。",
@@ -147,8 +147,8 @@ const addons: Record<string, string> = {
     "「保存」を押すまで変更は反映されません。このページを離れると編集内容は破棄されます。",
   "The Backups button at the top keeps your last five orders. One click restores any of them.":
     "上部の「バックアップ」ボタンには、直近5件の並び順が保存されます。どれでもワンクリックで復元できます。",
-  "Harbor double-checks with Stremio after saving, so a half-written order can't slip through.":
-    "保存後にHarborがStremioでも再確認するため、並び順が不完全な状態で保存されることはありません。",
+  "Lart double-checks with Stremio after saving, so a half-written order can't slip through.":
+    "保存後にLartがStremioでも再確認するため、並び順が不完全な状態で保存されることはありません。",
   "{n} addon": "{n}個のアドオン",
   "{n} addons": "{n}個のアドオン",
   "Drag to reorder": "ドラッグして並べ替え",
@@ -161,12 +161,12 @@ const addons: Record<string, string> = {
     "別のデバイスでアドオンコレクションが変更されました。何も書き込まれていません。",
   "Stremio didn't confirm the save. Your collection may be unchanged. Retry will re-check before writing again.":
     "Stremioで保存を確認できませんでした。コレクションは変更されていない可能性があります。再試行すると、もう一度書き込む前に再確認します。",
-  "Saved, but Harbor couldn't confirm the new order. Retry to re-check.":
-    "保存しましたが、Harborで新しい並び順を確認できませんでした。再試行して確認してください。",
+  "Saved, but Lart couldn't confirm the new order. Retry to re-check.":
+    "保存しましたが、Lartで新しい並び順を確認できませんでした。再試行して確認してください。",
   "Stremio reports a different order than was saved.":
     "Stremioで確認された並び順が、保存した並び順と異なります。",
-  "A safety copy of your addon order. One is saved automatically before Harbor writes any change, and you can save one yourself any time. The five most recent are kept.":
-    "アドオンの並び順を保護するためのバックアップです。Harborが変更を書き込む前に自動で保存され、いつでも手動で保存できます。直近5件が保持されます。",
+  "A safety copy of your addon order. One is saved automatically before Lart writes any change, and you can save one yourself any time. The five most recent are kept.":
+    "アドオンの並び順を保護するためのバックアップです。Lartが変更を書き込む前に自動で保存され、いつでも手動で保存できます。直近5件が保持されます。",
   "Back up current order": "現在の並び順をバックアップ",
   "No backups yet. Press the button above to save your first one.":
     "バックアップはまだありません。上のボタンを押して最初のバックアップを保存してください。",
@@ -184,8 +184,8 @@ const addons: Record<string, string> = {
     "URLからインストール: マニフェストURLまたはstremio://リンクを貼り付け",
   "Click below to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "下をクリックして{name}の設定ページを開きます。オプションを選び、表示されたインストールリンクをコピーして下に貼り付けると、アドオンを更新できます。",
-  "Click below to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "下をクリックして、Harborの内蔵ブラウザで{name}の設定ページを開きます。オプションを選んでください。そのページで「インストール」をクリックすると、Harborがリンクを自動的に取得してアドオンを更新します。",
+  "Click below to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "下をクリックして、Lartの内蔵ブラウザで{name}の設定ページを開きます。オプションを選んでください。そのページで「インストール」をクリックすると、Lartがリンクを自動的に取得してアドオンを更新します。",
   "Essential addons": "必須アドオン",
   "Start here. The ones almost everyone has.":
     "まずはこちら。ほとんどの人が使っているアドオンです。",

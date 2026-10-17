@@ -2,7 +2,7 @@ import { useT } from "@/lib/i18n";
 import { AtSign, BadgeCheck, RefreshCw } from "@/views/settings/icons";
 
 const PROPS = [
-  { icon: AtSign, title: "Claim your @handle", body: "A name people can find you by across Harbor." },
+  { icon: AtSign, title: "Claim your @handle", body: "A name people can find you by across Lart." },
   { icon: RefreshCw, title: "Sync everywhere", body: "Your themes, lists, and profile follow you to any device." },
   { icon: BadgeCheck, title: "Show off your taste", body: "A public profile with your stats, lists, badges, and custom styling." },
 ];

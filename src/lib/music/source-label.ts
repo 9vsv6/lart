@@ -21,7 +21,7 @@ const SOURCE_LABEL: Record<string, string> = {
   tidal: "Tidal",
   apple: "Apple Music",
   applemusic: "Apple Music",
-  harbor: "Harbor",
+  harbor: "Lart",
 };
 
 export function sourceLabel(id: string, override?: string): string {

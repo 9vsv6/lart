@@ -365,7 +365,7 @@ pub async fn dvr_default_dir(app: AppHandle) -> Result<String, String> {
         .or_else(|_| app.path().download_dir())
         .or_else(|_| app.path().app_data_dir())
         .map_err(|e| format!("no base dir: {}", e))?;
-    let dir = base.join("Harbor DVR");
+    let dir = base.join("Lart DVR");
     if !dir.exists() {
         let _ = std::fs::create_dir_all(&dir);
     }

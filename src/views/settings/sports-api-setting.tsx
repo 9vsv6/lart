@@ -15,7 +15,7 @@ import apiSportsLogo from "@/assets/service-logos/apisports.png";
 const ACCOUNT_NOTICES: Record<string, string> = {
   "invalid-key": "API-Sports rejected this key. Check it in your API-Sports dashboard.",
   quota: "Your API-Sports request allowance is exhausted. Public feeds remain available.",
-  "rate-limit": "API-Sports is limiting requests. Harbor will retry after the waiting period.",
+  "rate-limit": "API-Sports is limiting requests. Lart will retry after the waiting period.",
   unavailable: "API-Sports is unavailable right now. Public feeds remain available.",
 };
 const readAccountNotices = () =>

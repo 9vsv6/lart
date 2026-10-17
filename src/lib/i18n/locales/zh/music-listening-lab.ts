@@ -36,7 +36,7 @@ const musicListeningLab: Record<string, string> = {
   "music.lab.crossfeed": "耳机交叉馈送",
   "music.lab.crossfeedHelp":
     "将每个立体声通道的部分信号滤波后混入另一通道，减轻耳机的左右分离感。0% 为关闭。",
-  "music.lab.bypass": "旁通 Harbor DSP",
+  "music.lab.bypass": "旁通 Lart DSP",
   "music.lab.bypassHelp":
     "应用后旁通 EQ、前级、交叉馈送、平衡和 ReplayGain。输出设置与播放音量仍生效。这不代表已验证比特完美播放。",
   "music.lab.exclusive": "请求独占输出",

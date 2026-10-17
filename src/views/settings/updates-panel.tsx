@@ -26,7 +26,7 @@ export function UpdatesPanel() {
         <Section
           title={t("Updates")}
           subtitle={t(
-            "Harbor checks harbor.site for new versions and installs them in place. Nothing installs until you choose to, and a dismissed update never nags you again.",
+            "Lart checks harbor.site for new versions and installs them in place. Nothing installs until you choose to, and a dismissed update never nags you again.",
           )}
         >
           <UpdatesRow />
@@ -41,7 +41,7 @@ export function UpdatesPanel() {
       <Section
         title={t("Backup & restore")}
         subtitle={t(
-          "Export your entire Harbor setup to a single file, then restore it on a new computer or keep it as a backup. Everything is included except your Stremio sign-in.",
+          "Export your entire Lart setup to a single file, then restore it on a new computer or keep it as a backup. Everything is included except your Stremio sign-in.",
         )}
       >
         <SettingsRecoverRow />

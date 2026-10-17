@@ -18,7 +18,7 @@ export default {
   "games.stardew.refresh": "Làm mới bản mod",
 
   "games.stardew.import": "Nhập ZIP bản mod",
-  "games.stardew.manage": "Quản lý bằng Harbor",
+  "games.stardew.manage": "Quản lý bằng Lart",
   "games.stardew.manageNote": "Nhập bản mod SMAPI đã tải để quản lý tại đây. Nhập ZIP phiên bản mới để cập nhật.",
   "games.stardew.previous": "Phiên bản trước",
   "games.stardew.review": "Xem lại thay đổi",
@@ -31,7 +31,7 @@ export default {
   "games.stardew.running": "Đóng Stardew Valley và SMAPI trước khi thay đổi tệp mod.",
   "games.stardew.requirementsError": "Thiếu bản mod bắt buộc hoặc phiên bản SMAPI quá cũ. Hãy kiểm tra yêu cầu của mod.",
   "games.stardew.dependentsError": "Một bản mod đang bật cần phiên bản này. Tắt mod đó trước hoặc chọn phiên bản tương thích.",
-  "games.stardew.unmanagedError": "Bản mod này đã tồn tại ngoài hồ sơ Harbor. Di chuyển bản hiện có trước khi nhập.",
+  "games.stardew.unmanagedError": "Bản mod này đã tồn tại ngoài hồ sơ Lart. Di chuyển bản hiện có trước khi nhập.",
   "games.stardew.archiveError": "Chọn ZIP chứa một thư mục mod sẵn dùng, tối đa 32 MB (128 MB sau giải nén). Mã nguồn tải về không phải bản mod có thể cài.",
   "games.stardew.moreFiles": "Thêm {count} tệp",
   "games.stardew.partialError": "Không thể kiểm tra một số mod. Giải quyết việc quét chưa hoàn tất trước khi thay đổi tệp.",

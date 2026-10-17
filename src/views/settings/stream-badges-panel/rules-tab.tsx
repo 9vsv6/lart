@@ -222,7 +222,7 @@ export function RulesTab() {
         <SettingRow
           wide
           label={t("Rule name")}
-          desc={t("The text Harbor prints on the badge, for example REMUX.")}
+          desc={t("The text Lart prints on the badge, for example REMUX.")}
         >
           <input
             ref={nameRef}
@@ -236,7 +236,7 @@ export function RulesTab() {
         <SettingRow
           wide
           label={t("Pattern to match")}
-          desc={t("A regular expression Harbor tests against each stream title. Every stream that matches gets this badge.")}
+          desc={t("A regular expression Lart tests against each stream title. Every stream that matches gets this badge.")}
         >
           <input
             value={pattern}
@@ -281,7 +281,7 @@ export function RulesTab() {
         <SettingRow
           wide
           label={t("Sample title")}
-          desc={t("Type any release name here to see what Harbor would badge it with.")}
+          desc={t("Type any release name here to see what Lart would badge it with.")}
         >
           <input
             value={sample}

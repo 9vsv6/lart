@@ -3,8 +3,8 @@ export default {
     "API-Sportsがこのキーを拒否しました。API-Sportsダッシュボードで確認してください。",
   "Your API-Sports request allowance is exhausted. Public feeds remain available.":
     "API-Sportsのリクエスト上限に達しました。公開データ源は引き続き利用できます。",
-  "API-Sports is limiting requests. Harbor will retry after the waiting period.":
-    "API-Sportsがリクエストを制限しています。待機時間が過ぎるとHarborが再試行します。",
+  "API-Sports is limiting requests. Lart will retry after the waiting period.":
+    "API-Sportsがリクエストを制限しています。待機時間が過ぎるとLartが再試行します。",
   "API-Sports is unavailable right now. Public feeds remain available.":
     "現在API-Sportsを利用できません。公開データ源は引き続き利用できます。",
   "The key could not be saved. Your previous key is unchanged.":

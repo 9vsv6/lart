@@ -34,7 +34,7 @@ export function MpvPanel() {
     return (
       <Section
         title={t("Desktop only")}
-        subtitle={t("These tune the bundled mpv engine, which runs in the Harbor desktop app. They have no effect in the browser.")}
+        subtitle={t("These tune the bundled mpv engine, which runs in the Lart desktop app. They have no effect in the browser.")}
       >
         <div className="flex items-start gap-2.5 rounded-[10px] bg-elevated px-4 py-3">
           <Info size={18} className="mt-[2px] shrink-0 text-ink-subtle" />

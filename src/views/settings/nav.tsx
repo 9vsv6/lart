@@ -553,7 +553,7 @@ const NAV_GROUPS: Array<{ heading: string | null; items: NavItem[] }> = [
     items: [
       {
         id: "relay",
-        label: "Harbor Relay",
+        label: "Lart Relay",
         Icon: IconRelay,
         keywords: ["together", "watch party", "p2p", "host", "share"],
       },
@@ -1047,7 +1047,7 @@ const NAV_GROUPS: Array<{ heading: string | null; items: NavItem[] }> = [
       },
       {
         id: "support",
-        label: "Support Harbor",
+        label: "Support Lart",
         Icon: IconSupport,
         keywords: [
           "donate",
@@ -2280,9 +2280,9 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     ],
   },
   {
-    label: "Harbor on other devices (web app)",
+    label: "Lart on other devices (web app)",
     section: "remotes",
-    anchorTitle: "Harbor on other devices",
+    anchorTitle: "Lart on other devices",
     keywords: [
       "harbor in browser",
       "web ui",
@@ -3003,7 +3003,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
   {
     label: "Watch Together relay",
     section: "relay",
-    anchorTitle: "Harbor Relay",
+    anchorTitle: "Lart Relay",
     keywords: [
       "friends",
       "with friends",
@@ -3256,7 +3256,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
   },
 
   {
-    label: "Harbor identity (avatar / color)",
+    label: "Lart identity (avatar / color)",
     section: "account",
     tab: "you",
     anchorTitle: "Your profile",
@@ -3477,7 +3477,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     keywords: ["theme", "appearance", "recolor", "fonts", "poster size", "wallpaper", "customize"],
   },
   {
-    label: "Harbor identity",
+    label: "Lart identity",
     section: "account",
     tab: "you",
     anchorTitle: "Your profile",
@@ -4278,7 +4278,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     keywords: ["open profile", "trakt profile", "view profile", "my trakt", "profile page"],
   },
   {
-    label: "Use my Trakt avatar as my Harbor avatar",
+    label: "Use my Trakt avatar as my Lart avatar",
     section: "trackers",
     tab: "trakt",
     anchorTitle: "Your Trakt account",
@@ -4363,7 +4363,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     keywords: ["anilist sync", "episode progress", "auto update", "forward only", "tracking"],
   },
   {
-    label: "Use my AniList avatar as my Harbor avatar",
+    label: "Use my AniList avatar as my Lart avatar",
     section: "trackers",
     tab: "anilist",
     anchorTitle: "Tracking what you watch",
@@ -4472,7 +4472,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     keywords: ["open profile", "simkl profile", "view profile", "profile page", "my simkl"],
   },
   {
-    label: "Use my Simkl avatar as my Harbor avatar",
+    label: "Use my Simkl avatar as my Lart avatar",
     section: "trackers",
     tab: "simkl",
     anchorTitle: "Connected",
@@ -4583,9 +4583,9 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     keywords: ["logout", "disconnect", "sign out letterboxd", "unlink", "full mode"],
   },
   {
-    label: "Harbor Relay",
+    label: "Lart Relay",
     section: "relay",
-    anchorTitle: "Harbor Relay",
+    anchorTitle: "Lart Relay",
     keywords: [
       "relay",
       "watch together",
@@ -4615,7 +4615,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     ],
   },
   {
-    label: "Use Harbor's public relay",
+    label: "Use Lart's public relay",
     section: "relay",
     anchorTitle: "Get a relay",
     keywords: ["public relay", "hosted relay", "default relay", "quota", "pub relay"],
@@ -4623,13 +4623,13 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
   {
     label: "Enter an existing relay URL:",
     section: "relay",
-    anchorTitle: "Harbor Relay",
+    anchorTitle: "Lart Relay",
     keywords: ["relay url", "wss", "workers.dev", "custom relay", "paste url", "save"],
   },
   {
     label: "Test relay connection",
     section: "relay",
-    anchorTitle: "Harbor Relay",
+    anchorTitle: "Lart Relay",
     keywords: ["test connection", "run test", "ping", "health", "reachable", "verify relay"],
   },
   {
@@ -4671,7 +4671,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
   {
     label: "Documentation: run your own relay",
     section: "relay",
-    anchorTitle: "Harbor Relay",
+    anchorTitle: "Lart Relay",
     keywords: ["docs", "documentation", "guide", "run your own", "instructions"],
   },
   {
@@ -5091,7 +5091,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     ],
   },
   {
-    label: "Harbor in your browser",
+    label: "Lart in your browser",
     section: "p2p",
     tab: "server",
     anchorTitle: "Your streaming server address",
@@ -5476,7 +5476,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     label: "Contribute on GitHub",
     section: "language",
     tab: "discovery",
-    anchorTitle: "Help translate Harbor",
+    anchorTitle: "Help translate Lart",
     keywords: ["github", "translate harbor", "contribute", "open source", "help translate", "i18n"],
   },
   {
@@ -5627,7 +5627,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     ],
   },
   {
-    label: "Embed mpv inside Harbor window",
+    label: "Embed mpv inside Lart window",
     section: "player",
     tab: "engine",
     anchorTitle: "Engine",
@@ -7572,9 +7572,9 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     keywords: ["send bug report", "file bug", "submit issue", "report problem"],
   },
   {
-    label: "Donating to Harbor",
+    label: "Donating to Lart",
     section: "support",
-    anchorTitle: "Donating to Harbor",
+    anchorTitle: "Donating to Lart",
     keywords: [
       "donate",
       "donation",
@@ -7799,7 +7799,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     keywords: ["pause on focus loss", "alt tab pause", "unfocused pause", "another window"],
   },
   {
-    label: "Catch stremio:// install links inside Harbor",
+    label: "Catch stremio:// install links inside Lart",
     section: "account",
     tab: "stremio",
     anchorTitle: "Stremio install links",
@@ -7964,7 +7964,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     keywords: ["version", "build info", "bug email", "app version", "desktop or web"],
   },
   {
-    label: "Get Harbor for desktop",
+    label: "Get Lart for desktop",
     section: "advanced",
     tab: "about",
     keywords: ["download desktop app", "desktop version", "web limitations", "install harbor"],
@@ -8009,10 +8009,10 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     ],
   },
   {
-    label: "Sign in to Harbor",
+    label: "Sign in to Lart",
     section: "account",
     tab: "harbor",
-    anchorTitle: "Harbor account",
+    anchorTitle: "Lart account",
     keywords: [
       "sign in",
       "log in",
@@ -8023,10 +8023,10 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     ],
   },
   {
-    label: "Create Harbor account",
+    label: "Create Lart account",
     section: "account",
     tab: "harbor",
-    anchorTitle: "Harbor account",
+    anchorTitle: "Lart account",
     keywords: [
       "create account",
       "register",
@@ -8040,7 +8040,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     label: "Claim your handle",
     section: "account",
     tab: "harbor",
-    anchorTitle: "Harbor account",
+    anchorTitle: "Lart account",
     keywords: [
       "handle",
       "@handle",
@@ -8055,7 +8055,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     label: "Reset password (recovery key)",
     section: "account",
     tab: "harbor",
-    anchorTitle: "Harbor account",
+    anchorTitle: "Lart account",
     keywords: [
       "forgot password",
       "reset password",
@@ -8066,17 +8066,17 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     ],
   },
   {
-    label: "Sign out of Harbor account",
+    label: "Sign out of Lart account",
     section: "account",
     tab: "harbor",
-    anchorTitle: "Harbor account",
+    anchorTitle: "Lart account",
     keywords: ["sign out", "logout", "log off", "harbor account", "disconnect"],
   },
   {
     label: "Verified status",
     section: "account",
     tab: "harbor",
-    anchorTitle: "Harbor account",
+    anchorTitle: "Lart account",
     keywords: ["verified", "verification", "verified badge", "checkmark", "ownership"],
   },
   {
@@ -8110,7 +8110,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     ],
   },
   {
-    label: "Home style (Harbor curated / Classic Stremio)",
+    label: "Home style (Lart curated / Classic Stremio)",
     section: "library",
     tab: "home",
     anchorTitle: "Home layout",
@@ -8643,7 +8643,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
   {
     label: "Relay version status",
     section: "relay",
-    anchorTitle: "Harbor Relay",
+    anchorTitle: "Lart Relay",
     keywords: [
       "relay version",
       "outdated",
@@ -8656,7 +8656,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
   {
     label: "Download relay documentation",
     section: "relay",
-    anchorTitle: "Harbor Relay",
+    anchorTitle: "Lart Relay",
     keywords: ["download docs", "export documentation", "pdf", "txt", "json", "save docs", "print"],
   },
   {
@@ -10135,7 +10135,7 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     keywords: ["big picture button", "tv mode button", "hide big picture", "ten foot"],
   },
   {
-    label: "Keep controlling Harbor in the background",
+    label: "Keep controlling Lart in the background",
     section: "controllers",
     tab: "setup",
     anchorTitle: "Controller support",
@@ -10225,9 +10225,9 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     keywords: ["scroll trailer", "trailer on scroll", "autoplay trailer", "hero trailer"],
   },
   {
-    label: "Serve Harbor on your network",
+    label: "Serve Lart on your network",
     section: "remotes",
-    anchorTitle: "Harbor on other devices",
+    anchorTitle: "Lart on other devices",
     keywords: [
       "lan",
       "network",

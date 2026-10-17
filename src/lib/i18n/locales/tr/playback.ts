@@ -203,10 +203,10 @@ const playback: Record<string, string> = {
     "HEVC, HDR, TrueHD ve eksiksiz altyazı ile ses menüleri.",
   "HI/SDH": "HI/SDH",
   "HW decode": "Donanım kod çözme",
-  "Harbor caps playlists at 80 MB to stay responsive. Most providers offer a filtered URL with fewer channels.":
-    "Harbor, akıcı çalışmayı sürdürmek için oynatma listelerini 80 MB ile sınırlar. Çoğu sağlayıcı daha az kanal içeren filtrelenmiş bir URL sunar.",
-  "Harbor's streaming server only runs in the desktop app.":
-    "Harbor'ın yayın sunucusu yalnızca masaüstü uygulamasında çalışır.",
+  "Lart caps playlists at 80 MB to stay responsive. Most providers offer a filtered URL with fewer channels.":
+    "Lart, akıcı çalışmayı sürdürmek için oynatma listelerini 80 MB ile sınırlar. Çoğu sağlayıcı daha az kanal içeren filtrelenmiş bir URL sunar.",
+  "Lart's streaming server only runs in the desktop app.":
+    "Lart'ın yayın sunucusu yalnızca masaüstü uygulamasında çalışır.",
   Height: "Boy",
   Hidden: "Gizli",
   "Hidden by filter: {reason}": "Filtre nedeniyle gizlendi: {reason}",
@@ -648,8 +648,8 @@ const playback: Record<string, string> = {
   "at {n}": "{n}'de",
   "click to cancel": "iptal etmek için tıklayın",
   lineups: "kadrolar",
-  "mpv is required for recording. Install mpv and restart Harbor.":
-    "Kayıt için mpv gereklidir. mpv'yi yükleyip Harbor'ı yeniden başlatın.",
+  "mpv is required for recording. Install mpv and restart Lart.":
+    "Kayıt için mpv gereklidir. mpv'yi yükleyip Lart'ı yeniden başlatın.",
   profile: "profil",
   "sports.customize": "Özelleştir",
   "sports.customize.all": "Tümü",

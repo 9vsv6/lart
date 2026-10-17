@@ -34,9 +34,9 @@ const profileFill: Record<string, string> = {
   "Add a review": "レビューを追加",
   "Edit your review": "レビューを編集",
   "Save changes": "変更を保存",
-  "Ratings need a Harbor account": "評価にはHarborアカウントが必要です",
-  "Your Harbor account is separate from your Stremio sign in. Create one free or sign in from Settings.":
-    "HarborアカウントはStremioのサインインとは別です。無料で作成するか、「設定」からサインインしてください。",
+  "Ratings need a Lart account": "評価にはLartアカウントが必要です",
+  "Your Lart account is separate from your Stremio sign in. Create one free or sign in from Settings.":
+    "LartアカウントはStremioのサインインとは別です。無料で作成するか、「設定」からサインインしてください。",
   "Open account settings": "アカウント設定を開く",
   "Save rating": "評価を保存",
   "Rate this": "評価する",
@@ -56,10 +56,10 @@ const profileFill: Record<string, string> = {
     "評価の間隔が短すぎます。しばらくしてからもう一度お試しください",
   "Could not save your rating": "評価を保存できませんでした",
   "Could not remove your rating": "評価を削除できませんでした",
-  "Couldn't reach Harbor, check your connection":
-    "Harborに接続できませんでした。接続を確認してください",
-  "Harbor is having trouble, try again in a moment":
-    "Harborで問題が発生しています。しばらくしてからもう一度お試しください",
+  "Couldn't reach Lart, check your connection":
+    "Lartに接続できませんでした。接続を確認してください",
+  "Lart is having trouble, try again in a moment":
+    "Lartで問題が発生しています。しばらくしてからもう一度お試しください",
   Ratings: "評価",
   "Move or hide your cards": "カードを並べ替え・非表示",
   "Watch time": "視聴時間",
@@ -120,10 +120,10 @@ const profileFill: Record<string, string> = {
   Added: "追加済み",
   "Unlike list": "リストのいいねを取り消す",
   "Like list": "リストにいいね",
-  "Harbor list": "Harborリスト",
+  "Lart list": "Lartリスト",
   "Share list": "リストを共有",
   "List link": "リストのリンク",
-  "{title} on Harbor": "Harborの{title}",
+  "{title} on Lart": "Lartの{title}",
   "No location": "場所なし",
   "Could not save. Try again.": "保存できませんでした。もう一度お試しください。",
   "Featured lists": "注目のリスト",
@@ -227,7 +227,7 @@ const profileFill: Record<string, string> = {
   Share: "共有",
   "Share profile": "プロフィールを共有",
   "Profile link": "プロフィールリンク",
-  "{name} on Harbor": "Harborの{name}",
+  "{name} on Lart": "Lartの{name}",
   "Removing...": "削除中...",
   "Remove friend": "フレンドから削除",
   "Accepting...": "承認中...",
@@ -246,8 +246,8 @@ const profileFill: Record<string, string> = {
   "Change banner": "バナーを変更",
   "Add banner": "バナーを追加",
   "Could not load this profile": "このプロフィールを読み込めませんでした",
-  "Something went wrong reaching Harbor. Check your connection and try again.":
-    "Harborに接続できませんでした。接続を確認して、もう一度お試しください。",
+  "Something went wrong reaching Lart. Check your connection and try again.":
+    "Lartに接続できませんでした。接続を確認して、もう一度お試しください。",
   "No such captain": "船長が見つかりません",
   "We could not find anyone at @{handle}. The handle may have changed or the profile was removed.":
     "@{handle}のユーザーが見つかりませんでした。ハンドルネームが変更されたか、プロフィールが削除された可能性があります。",

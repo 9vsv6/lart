@@ -63,13 +63,13 @@ const catalogDF: Record<string, string> = {
   "Default picture shape on the mpv engine. Fit keeps the source as-is with any black bars; the rest stretch or crop to fill, handy for old 4:3 shows on a widescreen TV.":
     "mpv इंजन पर तस्वीर का डिफ़ॉल्ट आकार। फ़िट स्रोत को काली पट्टियों सहित जस का तस रखता है; बाकी विकल्प स्क्रीन भरने के लिए तस्वीर को फैलाते या क्रॉप करते हैं, जो वाइडस्क्रीन TV पर पुराने 4:3 शो के लिए उपयोगी है।",
   "Default speed": "डिफ़ॉल्ट गति",
-  "Default. Harbor parses and scores every source and surfaces the best quality first.":
-    "डिफ़ॉल्ट। Harbor हर स्रोत को पार्स करके स्कोर देता है और सबसे अच्छी क्वालिटी पहले दिखाता है।",
+  "Default. Lart parses and scores every source and surfaces the best quality first.":
+    "डिफ़ॉल्ट। Lart हर स्रोत को पार्स करके स्कोर देता है और सबसे अच्छी क्वालिटी पहले दिखाता है।",
   "Default. Humanist serif, warm sans.": "डिफ़ॉल्ट। ह्यूमनिस्ट सेरिफ़, गर्माहट वाला सैन्स।",
   "Default. Rejects size outliers, suspicious extensions, year/episode mismatches, season packs (for episode requests), trailers, and likely cams.":
     "डिफ़ॉल्ट। असामान्य आकार, संदिग्ध एक्सटेंशन, वर्ष/एपिसोड के बेमेल, सीज़न पैक (एपिसोड अनुरोधों के लिए), ट्रेलर और संभावित कैम रिकॉर्डिंग को अस्वीकार करता है।",
-  "Default. Top pick at the top, quality tiles, and an All-Sources drawer. Harbor scores and ranks results.":
-    "डिफ़ॉल्ट। सबसे अच्छी पसंद सबसे ऊपर, क्वालिटी टाइलें और सभी स्रोतों वाला ड्रॉअर। Harbor नतीजों को स्कोर देकर रैंक करता है।",
+  "Default. Top pick at the top, quality tiles, and an All-Sources drawer. Lart scores and ranks results.":
+    "डिफ़ॉल्ट। सबसे अच्छी पसंद सबसे ऊपर, क्वालिटी टाइलें और सभी स्रोतों वाला ड्रॉअर। Lart नतीजों को स्कोर देकर रैंक करता है।",
   "Defending champion": "मौजूदा चैंपियन",
   "Defends privacy, free expression, and the open internet, in the courts and in the code.":
     "अदालतों और कोड में निजता, अभिव्यक्ति की स्वतंत्रता और खुले इंटरनेट की रक्षा करता है।",
@@ -170,8 +170,8 @@ const catalogDF: Record<string, string> = {
     "ऐसा सीधा .m3u या get.php URL, जिसमें क्रेडेंशियल पहले से शामिल हों।",
   "Direct link": "सीधा लिंक",
   "Direct stream": "सीधी स्ट्रीम",
-  "Direct torrent play needs the Harbor desktop app.":
-    "सीधे टोरेंट चलाने के लिए Harbor डेस्कटॉप ऐप चाहिए।",
+  "Direct torrent play needs the Lart desktop app.":
+    "सीधे टोरेंट चलाने के लिए Lart डेस्कटॉप ऐप चाहिए।",
   "Direct P2P streaming": "सीधी P2P स्ट्रीमिंग",
   "Directed by": "निर्देशन",
   Directing: "निर्देशन",
@@ -207,8 +207,8 @@ const catalogDF: Record<string, string> = {
   "Discord confirmed. Pick a username and password to finish.":
     "Discord की पुष्टि हो गई। पूरा करने के लिए यूज़रनेम और पासवर्ड चुनें।",
   "Discord linked": "Discord से लिंक हो गया",
-  "Discord posts a message to a channel whenever Harbor pings it. Takes about a minute to set up.":
-    "जब भी Harbor इसे पिंग करता है, Discord किसी चैनल पर संदेश पोस्ट करता है। इसे सेट अप करने में करीब एक मिनट लगता है।",
+  "Discord posts a message to a channel whenever Lart pings it. Takes about a minute to set up.":
+    "जब भी Lart इसे पिंग करता है, Discord किसी चैनल पर संदेश पोस्ट करता है। इसे सेट अप करने में करीब एक मिनट लगता है।",
   "Discord webhook URL": "Discord वेबहुक URL",
   Discover: "खोजें",
   "Discover more": "और खोजें",
@@ -219,9 +219,9 @@ const catalogDF: Record<string, string> = {
   "Dismiss notification": "नोटिफ़िकेशन बंद करें",
   "Disney+": "Disney+",
   "Disney+ Originals": "Disney+ ओरिजिनल्स",
-  "Dispatched on window. Listen from your theme JS to react to Harbor's lifecycle.":
-    "window पर डिस्पैच किया गया। Harbor के लाइफ़साइकल पर प्रतिक्रिया देने के लिए अपनी थीम के JS में इसे सुनें।",
-  "Display 'Browsing Harbor' when nothing is playing.": "कुछ न चलने पर 'Harbor ब्राउज़ कर रहे हैं' दिखाएँ।",
+  "Dispatched on window. Listen from your theme JS to react to Lart's lifecycle.":
+    "window पर डिस्पैच किया गया। Lart के लाइफ़साइकल पर प्रतिक्रिया देने के लिए अपनी थीम के JS में इसे सुनें।",
+  "Display 'Browsing Lart' when nothing is playing.": "कुछ न चलने पर 'Lart ब्राउज़ कर रहे हैं' दिखाएँ।",
   "Display SIMKL Community Ratings": "SIMKL कम्युनिटी रेटिंग दिखाएँ",
   "Display SIMKL community score badge on details pages.":
     "विवरण पेज पर SIMKL कम्युनिटी स्कोर बैज दिखाएँ।",
@@ -263,15 +263,15 @@ const catalogDF: Record<string, string> = {
   "Documentary Spotlight": "चुनिंदा डॉक्यूमेंट्री",
   Documentation: "दस्तावेज़ीकरण",
   "Documentation: run your own relay": "दस्तावेज़ीकरण: अपना रिले चलाएँ",
-  "Does Harbor {version} feel better or worse than the version you had before?":
-    "क्या Harbor {version} आपको पिछले वर्ज़न से बेहतर लगता है या बदतर?",
+  "Does Lart {version} feel better or worse than the version you had before?":
+    "क्या Lart {version} आपको पिछले वर्ज़न से बेहतर लगता है या बदतर?",
   "Does this stream look right?": "क्या यह स्ट्रीम सही दिख रही है?",
   "Dolby Vision unsupported": "Dolby Vision समर्थित नहीं है",
   "Don't ask again": "फिर न पूछें",
   "Don't ask me again": "मुझसे फिर न पूछें",
   "Don't have an account?": "अकाउंट नहीं है?",
   "Don't have an account? Create one →": "अकाउंट नहीं है? बनाएँ →",
-  "Donating to Harbor": "Harbor को दान देना",
+  "Donating to Lart": "Lart को दान देना",
   Done: "हो गया",
   "Done editing": "संपादन पूरा करें",
   "Done.": "हो गया।",
@@ -334,8 +334,8 @@ const catalogDF: Record<string, string> = {
     "डाउनलोड की गई पीयर-टू-पीयर स्ट्रीम फ़ाइलें डिस्क पर रखी जाती हैं, ताकि कोई टाइटल दोबारा खोलने पर शुरुआत से शुरू होने के बजाय तुरंत वहीं से चलने लगे। तय करें कि वे कितने समय तक रहें और कहाँ रखी जाएँ।",
   "Downloaded subtitles can arrive a moment after playback starts. Leave this off to keep whatever subtitle is already showing; turn it on to switch to the best language match as soon as it loads.":
     "डाउनलोड किए गए सबटाइटल प्लेबैक शुरू होने के कुछ पल बाद आ सकते हैं। पहले से दिख रहे सबटाइटल को बनाए रखने के लिए इसे बंद रखें; लोड होते ही भाषा से सबसे बेहतर मेल खाने वाले सबटाइटल पर स्विच करने के लिए इसे चालू करें।",
-  "Downloaded subtitles can arrive after playback starts. Harbor switches from a temporary track when a stronger release match becomes available.":
-    "डाउनलोड किए गए सबटाइटल प्लेबैक शुरू होने के बाद आ सकते हैं। रिलीज़ से बेहतर मेल खाने वाला सबटाइटल उपलब्ध होने पर Harbor अस्थायी ट्रैक से उस पर स्विच कर देता है।",
+  "Downloaded subtitles can arrive after playback starts. Lart switches from a temporary track when a stronger release match becomes available.":
+    "डाउनलोड किए गए सबटाइटल प्लेबैक शुरू होने के बाद आ सकते हैं। रिलीज़ से बेहतर मेल खाने वाला सबटाइटल उपलब्ध होने पर Lart अस्थायी ट्रैक से उस पर स्विच कर देता है।",
   "Downloaded themes are managed in Theme & appearance. Video and manga downloads are managed on the Downloads page.":
     "डाउनलोड की गई थीम्स को थीम और रूप-रंग में मैनेज किया जाता है। वीडियो और मंगा डाउनलोड को डाउनलोड पेज पर मैनेज किया जाता है।",
   "Downloaded. Ready to install and restart.": "डाउनलोड हो गया। इंस्टॉल और रीस्टार्ट के लिए तैयार।",
@@ -384,8 +384,8 @@ const catalogDF: Record<string, string> = {
     "ड्रिफ्ट सुधार चालू है (2 पॉइंट)। बटनों से बारीकी से समायोजित करें या किसी गड़बड़ हिस्से को ठीक करें।",
   "Drift fixed": "ड्रिफ्ट ठीक किया गया",
   "Drift monitor": "ड्रिफ्ट मॉनिटर",
-  "Drift through cinematic backdrops while Harbor sits idle.":
-    "Harbor के निष्क्रिय रहने पर सिनेमाई बैकड्रॉप्स के बीच घूमते रहें।",
+  "Drift through cinematic backdrops while Lart sits idle.":
+    "Lart के निष्क्रिय रहने पर सिनेमाई बैकड्रॉप्स के बीच घूमते रहें।",
   "Drifting poster wall behind the interface. Turn off on low power devices.":
     "इंटरफ़ेस के पीछे धीरे-धीरे खिसकती पोस्टर वॉल। कम पावर वाले डिवाइसों पर इसे बंद रखें।",
   "Drop a clip of the bug if you can. A 5-second screen recording usually says more than five paragraphs.":
@@ -395,8 +395,8 @@ const catalogDF: Record<string, string> = {
     "ऐप के पीछे वॉलपेपर डालें। डिम स्लाइडर टेक्स्ट को पढ़ने योग्य बनाए रखता है।",
   "Drop a {extension}": "{extension} फ़ाइल ड्रॉप करें",
   "Drop images to add them": "इमेज जोड़ने के लिए उन्हें यहाँ छोड़ें",
-  "Drop in art at any resolution. Harbor resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
-    "किसी भी रिज़ॉल्यूशन का आर्टवर्क यहाँ ड्रॉप करें। Harbor बहुत बड़ी फ़ाइलों का आकार घटाकर उन्हें कंप्रेस कर देता है, इसलिए बड़े आकार की वजह से कुछ भी छोड़ा नहीं जाता। पारदर्शी बैकग्राउंड वाले चौकोर PNG सबसे अच्छे दिखते हैं।",
+  "Drop in art at any resolution. Lart resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
+    "किसी भी रिज़ॉल्यूशन का आर्टवर्क यहाँ ड्रॉप करें। Lart बहुत बड़ी फ़ाइलों का आकार घटाकर उन्हें कंप्रेस कर देता है, इसलिए बड़े आकार की वजह से कुछ भी छोड़ा नहीं जाता। पारदर्शी बैकग्राउंड वाले चौकोर PNG सबसे अच्छे दिखते हैं।",
   "Drop many images, GIFs, or a .zip at once. Name each file after its slot ({example}) and we match them. Any size is fine, we resize big images and keep animated GIFs light.":
     "कई इमेज, GIFs, या एक .zip एक साथ ड्रॉप करें। हर फ़ाइल को उसके स्लॉट ({example}) के नाम पर रखें और हम उनका मिलान कर देंगे। कोई भी साइज़ ठीक है, हम बड़ी इमेज का आकार घटाते हैं और एनिमेटेड GIFs को हल्का रखते हैं।",
   "Drop screenshots or screen recordings, or click to browse":
@@ -438,16 +438,16 @@ const catalogDF: Record<string, string> = {
     "ऊपर दी गई हर की एक अवॉर्ड ID है। जिस की को आप छोड़ देते हैं, उसके लिए डिफ़ॉल्ट ट्रॉफ़ी (या कम प्राथमिकता वाला पैक) इस्तेमाल होता है। ID की पूरी सूची में ऊपर ग्रिड में दिखाए गए सभी अवॉर्ड शामिल हैं।",
   "Each rule fires independently. Define what triggers a ping and where it goes.":
     "हर नियम स्वतंत्र रूप से सक्रिय होता है। तय करें कि पिंग किससे ट्रिगर हो और कहाँ जाए।",
-  "Each shader is hosted by its author, not bundled with Harbor. Download the ones you want; Harbor chains them in the right order and applies them in the player.":
-    "हर शेडर उसके लेखक द्वारा होस्ट किया जाता है, Harbor के साथ बंडल नहीं होता। जो चाहिए उन्हें डाउनलोड करें; Harbor उन्हें सही क्रम में जोड़ता है और प्लेयर में लागू करता है।",
+  "Each shader is hosted by its author, not bundled with Lart. Download the ones you want; Lart chains them in the right order and applies them in the player.":
+    "हर शेडर उसके लेखक द्वारा होस्ट किया जाता है, Lart के साथ बंडल नहीं होता। जो चाहिए उन्हें डाउनलोड करें; Lart उन्हें सही क्रम में जोड़ता है और प्लेयर में लागू करता है।",
   "Each style keeps its own arrangement, icons and profiles, so switching back and forth never loses work.":
     "हर स्टाइल अपनी व्यवस्था, आइकन और प्रोफ़ाइल अलग रखता है, इसलिए उनके बीच बार-बार स्विच करने पर भी कोई काम नहीं खोता।",
   Earlier: "पहले",
   "Earn badges and they will appear here to feature": "बैज कमाएँ; फ़ीचर करने के लिए वे यहाँ दिखाई देंगे",
   "Eases mouse-wheel scrolling instead of jumping line by line. Turn off if you prefer an instant response or notice any lag.":
     "माउस-व्हील स्क्रॉलिंग को लाइन-दर-लाइन उछलने के बजाय सहज बनाता है। अगर आप तुरंत प्रतिक्रिया पसंद करते हैं या कोई लैग दिखे, तो इसे बंद कर दें।",
-  "Easiest path. Harbor uploads the worker, creates the Durable Object namespace, and stores the resulting URL.":
-    "सबसे आसान तरीका। Harbor वर्कर अपलोड करता है, Durable Object नेमस्पेस बनाता है और उससे मिला URL सेव करता है।",
+  "Easiest path. Lart uploads the worker, creates the Durable Object namespace, and stores the resulting URL.":
+    "सबसे आसान तरीका। Lart वर्कर अपलोड करता है, Durable Object नेमस्पेस बनाता है और उससे मिला URL सेव करता है।",
   "Easing into series": "धीरे-धीरे सीरीज़ की ओर",
   "Easing tokens": "ईज़िंग टोकन",
   Easy: "आसान",
@@ -505,7 +505,7 @@ const catalogDF: Record<string, string> = {
   Embed: "एम्बेड करें",
   "Embed a YouTube video": "YouTube वीडियो एम्बेड करें",
   "Embed from Spotify": "Spotify से एम्बेड करें",
-  "Embed mpv inside Harbor window": "Harbor विंडो के अंदर mpv एम्बेड करें",
+  "Embed mpv inside Lart window": "Lart विंडो के अंदर mpv एम्बेड करें",
   Embedded: "एम्बेड किया गया",
   "Embedded subtitles changing size between titles, or showing empty boxes? Switch to Use my style for a consistent size. For boxes, also choose Arabic under Font.":
     "क्या एम्बेड किए गए सबटाइटल का आकार अलग-अलग शीर्षकों में बदल रहा है या खाली बॉक्स दिख रहे हैं? एक जैसा आकार रखने के लिए 'मेरी शैली इस्तेमाल करें' चुनें। खाली बॉक्स के लिए फ़ॉन्ट में अरबी भी चुनें।",
@@ -558,7 +558,7 @@ const catalogDF: Record<string, string> = {
   English: "अंग्रेज़ी",
   "English (default)": "अंग्रेज़ी (डिफ़ॉल्ट)",
   "Enhanced liquid glass": "उन्नत लिक्विड ग्लास",
-  "Enter Harbor": "Harbor में प्रवेश करें",
+  "Enter Lart": "Lart में प्रवेश करें",
   "Enter URL": "URL दर्ज करें",
   "Enter a URL or path.": "URL या पाथ दर्ज करें।",
   "Enter a name and a valid https:// URL.": "नाम और मान्य https:// URL दर्ज करें।",
@@ -631,56 +631,56 @@ const catalogDF: Record<string, string> = {
     "डायनेमिक नॉर्मलाइज़र से कम आवाज़ वाले संवादों और तेज़ एक्शन दृश्यों की आवाज़ को संतुलित करता है।",
   "Every 15 min": "हर 15 मिनट",
   "Every 30 min": "हर 30 मिनट",
-  "Every Harbor that announces itself on this network appears here as it answers, with the theme it is wearing.":
-    "इस नेटवर्क पर अपनी मौजूदगी घोषित करने वाला हर Harbor, जवाब देते ही अपनी मौजूदा थीम के साथ यहाँ दिखाई देता है।",
+  "Every Lart that announces itself on this network appears here as it answers, with the theme it is wearing.":
+    "इस नेटवर्क पर अपनी मौजूदगी घोषित करने वाला हर Lart, जवाब देते ही अपनी मौजूदा थीम के साथ यहाँ दिखाई देता है।",
   "Every addon": "हर ऐडऑन",
   "Every collection": "हर कलेक्शन",
   "Every color token, stable selector, {api} call, live hook (bell, account menu, avatar, status dot, unread badge), and copy-paste recipe.":
     "हर कलर टोकन, स्थिर सिलेक्टर, {api} कॉल, लाइव हुक (घंटी, अकाउंट मेन्यू, अवतार, स्टेटस डॉट, अपठित बैज) और कॉपी-पेस्ट करने लायक निर्देश।",
   "Every episode of the season uses that same release.":
     "सीज़न का हर एपिसोड उसी रिलीज़ का उपयोग करता है।",
-  "Every format badge Harbor can show on streams. Click one to swap its art, hide it, or reset it. Changes apply everywhere badges appear.":
-    "वे सभी फ़ॉर्मैट बैज जिन्हें Harbor स्ट्रीम पर दिखा सकता है। किसी बैज की आर्ट बदलने, उसे छिपाने या रीसेट करने के लिए उस पर क्लिक करें। बदलाव उन सभी जगहों पर लागू होते हैं जहाँ बैज दिखाई देते हैं।",
+  "Every format badge Lart can show on streams. Click one to swap its art, hide it, or reset it. Changes apply everywhere badges appear.":
+    "वे सभी फ़ॉर्मैट बैज जिन्हें Lart स्ट्रीम पर दिखा सकता है। किसी बैज की आर्ट बदलने, उसे छिपाने या रीसेट करने के लिए उस पर क्लिक करें। बदलाव उन सभी जगहों पर लागू होते हैं जहाँ बैज दिखाई देते हैं।",
   "Every launch": "हर बार शुरू होने पर",
   "Every row": "हर पंक्ति",
   "Every saga in one place. Search anything: if it exists, it's here.":
     "हर गाथा एक ही जगह। कुछ भी खोजें: अगर वह मौजूद है, तो यहीं है।",
   "Every saga, in order": "हर गाथा, क्रम से",
-  "Every shortcut Harbor responds to. Click a binding to rebind it.":
-    "वे सभी शॉर्टकट जिन पर Harbor प्रतिक्रिया देता है। किसी बाइंडिंग को दोबारा सेट करने के लिए उस पर क्लिक करें।",
+  "Every shortcut Lart responds to. Click a binding to rebind it.":
+    "वे सभी शॉर्टकट जिन पर Lart प्रतिक्रिया देता है। किसी बाइंडिंग को दोबारा सेट करने के लिए उस पर क्लिक करें।",
   "Every slot name": "हर स्लॉट का नाम",
-  "Every source Harbor tried failed to start. Pick a different one, or try again in a moment.":
-    "Harbor ने जिन भी स्रोतों को आज़माया, वे शुरू नहीं हो सके। कोई दूसरा स्रोत चुनें या थोड़ी देर बाद फिर कोशिश करें।",
-  "Every surface in Harbor maps to one of these 12 variables.":
-    "Harbor का हर UI हिस्सा इन 12 वेरिएबल में से किसी एक से जुड़ा है।",
+  "Every source Lart tried failed to start. Pick a different one, or try again in a moment.":
+    "Lart ने जिन भी स्रोतों को आज़माया, वे शुरू नहीं हो सके। कोई दूसरा स्रोत चुनें या थोड़ी देर बाद फिर कोशिश करें।",
+  "Every surface in Lart maps to one of these 12 variables.":
+    "Lart का हर UI हिस्सा इन 12 वेरिएबल में से किसी एक से जुड़ा है।",
   "Every theme is sandboxed, scanned, and reviewed before it reaches the library, so you can try any look without a second thought.":
     "हर थीम को लाइब्रेरी में पहुँचने से पहले सैंडबॉक्स में रखा, स्कैन और रिव्यू किया जाता है, इसलिए आप बेफ़िक्र होकर कोई भी लुक आज़मा सकते हैं।",
-  "Every theme you share gets a private owner token. On the device where you shared it, Harbor saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
-    "आपके द्वारा साझा की गई हर थीम को एक निजी ओनर टोकन मिलता है। जिस डिवाइस से आपने इसे साझा किया था, उस पर Harbor ने इसे अपने-आप सेव कर लिया था, इसलिए वे थीम यहीं दिखेंगी और आप एक टैप में उन पर दावा कर सकेंगे। किसी दूसरे डिवाइस से थीम पर दावा करने के लिए वह टोकन नीचे पेस्ट करें। अब नई शेयर की गई थीम सीधे आपके अकाउंट से जुड़ती हैं, इसलिए आपको फिर इसकी ज़रूरत नहीं पड़ेगी।",
-  "Every variable, selector, hook, and recipe for building custom Harbor themes.":
-    "कस्टम Harbor थीम बनाने के लिए हर वेरिएबल, सिलेक्टर, हुक और विधि।",
-  "Every winner Harbor ships, browsable offline by year and category.":
-    "Harbor में शामिल हर पुरस्कार विजेता, जिसे साल और श्रेणी के अनुसार ऑफ़लाइन देखा जा सकता है।",
+  "Every theme you share gets a private owner token. On the device where you shared it, Lart saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
+    "आपके द्वारा साझा की गई हर थीम को एक निजी ओनर टोकन मिलता है। जिस डिवाइस से आपने इसे साझा किया था, उस पर Lart ने इसे अपने-आप सेव कर लिया था, इसलिए वे थीम यहीं दिखेंगी और आप एक टैप में उन पर दावा कर सकेंगे। किसी दूसरे डिवाइस से थीम पर दावा करने के लिए वह टोकन नीचे पेस्ट करें। अब नई शेयर की गई थीम सीधे आपके अकाउंट से जुड़ती हैं, इसलिए आपको फिर इसकी ज़रूरत नहीं पड़ेगी।",
+  "Every variable, selector, hook, and recipe for building custom Lart themes.":
+    "कस्टम Lart थीम बनाने के लिए हर वेरिएबल, सिलेक्टर, हुक और विधि।",
+  "Every winner Lart ships, browsable offline by year and category.":
+    "Lart में शामिल हर पुरस्कार विजेता, जिसे साल और श्रेणी के अनुसार ऑफ़लाइन देखा जा सकता है।",
   Everyone: "सभी लोग",
   "Everyone else": "बाकी सभी",
   "Everyone is loaded in. Press play to start watching.":
     "सभी लोग जुड़ चुके हैं। देखना शुरू करने के लिए प्ले दबाएँ।",
   "Everyone loses access. This cannot be undone.":
     "सभी की पहुँच समाप्त हो जाएगी। इसे वापस नहीं किया जा सकता।",
-  "Everyone on this Harbor": "इस Harbor पर सभी लोग",
-  "Everyone who uses this Harbor gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
-    "इस Harbor का उपयोग करने वाले हर व्यक्ति को अपनी अलग देखने की हिस्ट्री, अवतार, रंग और वैकल्पिक PIN मिलता है। कभी भी प्रोफ़ाइल बदलें।",
+  "Everyone on this Lart": "इस Lart पर सभी लोग",
+  "Everyone who uses this Lart gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
+    "इस Lart का उपयोग करने वाले हर व्यक्ति को अपनी अलग देखने की हिस्ट्री, अवतार, रंग और वैकल्पिक PIN मिलता है। कभी भी प्रोफ़ाइल बदलें।",
   Everything: "सब कुछ",
-  "Everything Harbor saves lives on this computer. If space runs low, clear a cache below; Harbor rebuilds them as you browse.":
-    "Harbor जो कुछ भी सेव करता है, वह इस कंप्यूटर पर रहता है। जगह कम होने पर नीचे कोई कैश साफ़ करें; ब्राउज़ करते समय Harbor उन्हें फिर से बना लेता है।",
+  "Everything Lart saves lives on this computer. If space runs low, clear a cache below; Lart rebuilds them as you browse.":
+    "Lart जो कुछ भी सेव करता है, वह इस कंप्यूटर पर रहता है। जगह कम होने पर नीचे कोई कैश साफ़ करें; ब्राउज़ करते समय Lart उन्हें फिर से बना लेता है।",
   "Everything else, via your own server": "बाकी सब कुछ, आपके अपने सर्वर के ज़रिए",
   "Everything from {year}, sorted across trending, top rated, and hidden gems.":
     "साल {year} की सारी सामग्री, ट्रेंडिंग, टॉप रेटेड और छुपे हुए नगीने जैसी श्रेणियों में क्रमबद्ध।",
   "Everything here is already in your account.": "यहाँ मौजूद सब कुछ आपके अकाउंट में पहले से है।",
   "Everything here took effect straight away, and it is saved on this device.":
     "यहाँ किए गए सभी बदलाव तुरंत लागू हो गए हैं और इस डिवाइस पर सेव हैं।",
-  "Everything on this page is written to your Harbor account. Your TV reads it on its next check-in, so you can set the whole thing up from here and never touch the remote.":
-    "इस पेज की हर चीज़ आपके Harbor अकाउंट में सेव की जाती है। अगली बार चेक-इन करने पर आपका TV इसे पढ़ लेता है, इसलिए आप यहीं से सब कुछ सेट अप कर सकते हैं और रिमोट को छूने की ज़रूरत नहीं पड़ेगी।",
+  "Everything on this page is written to your Lart account. Your TV reads it on its next check-in, so you can set the whole thing up from here and never touch the remote.":
+    "इस पेज की हर चीज़ आपके Lart अकाउंट में सेव की जाती है। अगली बार चेक-इन करने पर आपका TV इसे पढ़ लेता है, इसलिए आप यहीं से सब कुछ सेट अप कर सकते हैं और रिमोट को छूने की ज़रूरत नहीं पड़ेगी।",
   "Everything on this page of {genre} is hidden by your anime filter.":
     "आपके ऐनिमे फ़िल्टर के कारण {genre} के इस पेज की सारी सामग्री छिपी हुई है।",
   "Everything originally in {name}: movies and series across every genre, era, and hidden gems.":
@@ -690,8 +690,8 @@ const catalogDF: Record<string, string> = {
   "Everything releasing this month from TMDB": "TMDB के अनुसार इस महीने रिलीज़ होने वाली हर चीज़",
   "Everything you pick is saved into one file. Restoring it later only touches what is in the file. Your Stremio sign-in is always left out.":
     "आप जो कुछ चुनते हैं, वह एक फ़ाइल में सेव हो जाता है। बाद में उसे रीस्टोर करने पर सिर्फ़ फ़ाइल में शामिल चीज़ें ही बदली जाती हैं। आपके Stremio साइन-इन की जानकारी कभी शामिल नहीं होती।",
-  "Everything you save here stays in this browser. Your Stremio login, API keys, watch progress, picker cache, dismissed tips. Harbor servers never see any of it. Clearing your browser data wipes it.":
-    "आप यहाँ जो कुछ सेव करते हैं, वह इसी ब्राउज़र में रहता है। इसमें आपका Stremio लॉगिन, API कुंजियाँ, देखने की प्रगति, पिकर कैश और बंद की गई टिप्स शामिल हैं। Harbor के सर्वर इनमें से कुछ भी कभी नहीं देखते। ब्राउज़र डेटा साफ़ करने पर यह सब मिट जाता है।",
+  "Everything you save here stays in this browser. Your Stremio login, API keys, watch progress, picker cache, dismissed tips. Lart servers never see any of it. Clearing your browser data wipes it.":
+    "आप यहाँ जो कुछ सेव करते हैं, वह इसी ब्राउज़र में रहता है। इसमें आपका Stremio लॉगिन, API कुंजियाँ, देखने की प्रगति, पिकर कैश और बंद की गई टिप्स शामिल हैं। Lart के सर्वर इनमें से कुछ भी कभी नहीं देखते। ब्राउज़र डेटा साफ़ करने पर यह सब मिट जाता है।",
   "Everything your addons offer, shown as posters. Scroll, search, or filter to what you want.":
     "आपके ऐडऑन जो कुछ भी पेश करते हैं, वह पोस्टर के रूप में दिखाया जाता है। जो चाहिए, उस तक पहुँचने के लिए स्क्रॉल करें, खोजें या फ़िल्टर करें।",
   Excellence: "उत्कृष्टता",
@@ -738,12 +738,12 @@ const catalogDF: Record<string, string> = {
   "Export my setup": "मेरा सेटअप एक्सपोर्ट करें",
   "Export player log": "प्लेयर लॉग एक्सपोर्ट करें",
   "Export to Trakt": "Trakt में एक्सपोर्ट करें",
-  "Export your Harbor setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
-    "अपने Harbor सेटअप को एक फ़ाइल में एक्सपोर्ट करें: उसमें क्या जाएगा, यह ठीक-ठीक चुनें। रीस्टोर करने पर केवल फ़ाइल में मौजूद चीज़ें वापस आती हैं। आपका Stremio साइन-इन हमेशा बाहर रखा जाता है।",
-  "Export your entire Harbor setup to a single file, then restore it on a new computer or keep it as a backup.":
-    "अपने पूरे Harbor सेटअप को एक फ़ाइल में एक्सपोर्ट करें, फिर उसे नए कंप्यूटर पर रीस्टोर करें या बैकअप के रूप में रखें।",
-  "Export your entire Harbor setup to a single file, then restore it on a new computer or keep it as a backup. Everything is included except your Stremio sign-in.":
-    "अपने पूरे Harbor सेटअप को एक फ़ाइल में एक्सपोर्ट करें, फिर उसे नए कंप्यूटर पर रीस्टोर करें या बैकअप के रूप में रखें। आपके Stremio साइन-इन को छोड़कर सब कुछ शामिल होता है।",
+  "Export your Lart setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
+    "अपने Lart सेटअप को एक फ़ाइल में एक्सपोर्ट करें: उसमें क्या जाएगा, यह ठीक-ठीक चुनें। रीस्टोर करने पर केवल फ़ाइल में मौजूद चीज़ें वापस आती हैं। आपका Stremio साइन-इन हमेशा बाहर रखा जाता है।",
+  "Export your entire Lart setup to a single file, then restore it on a new computer or keep it as a backup.":
+    "अपने पूरे Lart सेटअप को एक फ़ाइल में एक्सपोर्ट करें, फिर उसे नए कंप्यूटर पर रीस्टोर करें या बैकअप के रूप में रखें।",
+  "Export your entire Lart setup to a single file, then restore it on a new computer or keep it as a backup. Everything is included except your Stremio sign-in.":
+    "अपने पूरे Lart सेटअप को एक फ़ाइल में एक्सपोर्ट करें, फिर उसे नए कंप्यूटर पर रीस्टोर करें या बैकअप के रूप में रखें। आपके Stremio साइन-इन को छोड़कर सब कुछ शामिल होता है।",
   "Export your setup": "अपना सेटअप एक्सपोर्ट करें",
   "Export {n} sections": "{n} सेक्शन एक्सपोर्ट करें",
   Exported: "एक्सपोर्ट हो गया",
@@ -790,8 +790,8 @@ const catalogDF: Record<string, string> = {
   Family: "परिवार",
   "Family Favorites": "परिवार की पसंद",
   "Family Heart": "पारिवारिक हृदय",
-  "Fan-made avatars for personal use. Harbor claims no rights to these characters; they belong to their creators and studios, shown here under fair use. Every one is optimized down to a tiny WebP.":
-    "निजी उपयोग के लिए प्रशंसकों के बनाए अवतार। Harbor इन पात्रों पर कोई अधिकार होने का दावा नहीं करता; ये अपने रचनाकारों और स्टूडियो के हैं और यहाँ उचित उपयोग के तहत दिखाए गए हैं। हर अवतार को एक बहुत छोटी WebP फ़ाइल में अनुकूलित किया गया है।",
+  "Fan-made avatars for personal use. Lart claims no rights to these characters; they belong to their creators and studios, shown here under fair use. Every one is optimized down to a tiny WebP.":
+    "निजी उपयोग के लिए प्रशंसकों के बनाए अवतार। Lart इन पात्रों पर कोई अधिकार होने का दावा नहीं करता; ये अपने रचनाकारों और स्टूडियो के हैं और यहाँ उचित उपयोग के तहत दिखाए गए हैं। हर अवतार को एक बहुत छोटी WebP फ़ाइल में अनुकूलित किया गया है।",
   "Fanart.tv": "Fanart.tv",
   "Fanart.tv · logos and backdrops": "Fanart.tv · लोगो और बैकड्रॉप",
   Fantasy: "फ़ैंटेसी",
@@ -851,7 +851,7 @@ const catalogDF: Record<string, string> = {
   Fight: "लड़ाई",
   File: "फ़ाइल",
   "File another": "एक और दर्ज करें",
-  "File is not a Harbor layout profile.": "यह फ़ाइल Harbor की लेआउट प्रोफ़ाइल नहीं है।",
+  "File is not a Lart layout profile.": "यह फ़ाइल Lart की लेआउट प्रोफ़ाइल नहीं है।",
   "File it with the government": "इसे सरकार के पास दर्ज करें",
   Filename: "फ़ाइल का नाम",
   "Filename hidden": "फ़ाइल का नाम छिपा है",
@@ -931,11 +931,11 @@ const catalogDF: Record<string, string> = {
     "एपिसोड पूरा करने पर कार्ड 0m शेष पर रुके रहने के बजाय अगले एपिसोड पर चला जाता है।",
   "Finish creating my account": "मेरा अकाउंट बनाना पूरा करें",
   "Finish later": "बाद में पूरा करें",
-  "Finish setting up Harbor": "Harbor का सेटअप पूरा करें",
+  "Finish setting up Lart": "Lart का सेटअप पूरा करें",
   "Finish setup on your phone": "अपने फ़ोन पर सेटअप पूरा करें",
-  "Finish the install above first. Flipping this on now won't do anything until Harbor can find SVP's engine.":
-    "पहले ऊपर दिया गया इंस्टॉलेशन पूरा करें। इसे अभी चालू करने से तब तक कुछ नहीं होगा, जब तक Harbor को SVP का इंजन नहीं मिल जाता।",
-  "Finish updating Harbor": "Harbor का अपडेट पूरा करें",
+  "Finish the install above first. Flipping this on now won't do anything until Lart can find SVP's engine.":
+    "पहले ऊपर दिया गया इंस्टॉलेशन पूरा करें। इसे अभी चालू करने से तब तक कुछ नहीं होगा, जब तक Lart को SVP का इंजन नहीं मिल जाता।",
+  "Finish updating Lart": "Lart का अपडेट पूरा करें",
   Finished: "पूरा हुआ",
   "Finishing an anime episode updates your AniList progress. Forward only: it never lowers a count you already have.":
     "एनीमे एपिसोड पूरा करने पर आपकी AniList प्रगति अपडेट होती है। प्रगति केवल आगे बढ़ती है: यह आपकी मौजूदा गिनती कभी कम नहीं करता।",
@@ -985,10 +985,10 @@ const catalogDF: Record<string, string> = {
   "Focused Card": "फ़ोकस वाला कार्ड",
   Folder: "फ़ोल्डर",
   "Folder picker is only available in the desktop app": "फ़ोल्डर पिकर केवल डेस्कटॉप ऐप में उपलब्ध है",
-  "Folder selection is available in the Harbor app": "फ़ोल्डर चुनने की सुविधा Harbor ऐप में उपलब्ध है",
+  "Folder selection is available in the Lart app": "फ़ोल्डर चुनने की सुविधा Lart ऐप में उपलब्ध है",
   Folders: "फ़ोल्डर",
-  "Folders Harbor imported your movies and shows from. Rescan to pick up new files.":
-    "वे फ़ोल्डर जिनसे Harbor ने आपकी फ़िल्में और शो इंपोर्ट किए हैं। नई फ़ाइलें शामिल करने के लिए फिर से स्कैन करें।",
+  "Folders Lart imported your movies and shows from. Rescan to pick up new files.":
+    "वे फ़ोल्डर जिनसे Lart ने आपकी फ़िल्में और शो इंपोर्ट किए हैं। नई फ़ाइलें शामिल करने के लिए फिर से स्कैन करें।",
   "Follow them out?": "उनकी साइट पर जाएँ?",
   "Following addon order": "ऐडऑन क्रम के अनुसार",
   Font: "फ़ॉन्ट",
@@ -1006,14 +1006,14 @@ const catalogDF: Record<string, string> = {
   "For giving more than $100 to charity.": "चैरिटी को $100 से अधिक देने के लिए।",
   "For laptop speakers and headphones. Movies mixed for 5.1 or 7.1 surround can sound hollow or have quiet dialogue on two speakers. This folds them down properly.":
     "लैपटॉप स्पीकर और हेडफ़ोन के लिए। 5.1 या 7.1 सराउंड के लिए मिक्स की गई फ़िल्में दो स्पीकर पर खोखली लग सकती हैं या संवाद धीमे सुनाई दे सकते हैं। यह उन्हें ठीक से डाउनमिक्स करता है।",
-  "For now, please open this site on a desktop, or build Harbor from source.":
-    "फ़िलहाल, कृपया इस साइट को डेस्कटॉप पर खोलें, या Harbor को सोर्स से बिल्ड करें।",
+  "For now, please open this site on a desktop, or build Lart from source.":
+    "फ़िलहाल, कृपया इस साइट को डेस्कटॉप पर खोलें, या Lart को सोर्स से बिल्ड करें।",
   "For reliable HDR on this display, switch to True HDR, separate window in Settings.":
     'इस डिस्प्ले पर भरोसेमंद HDR के लिए, सेटिंग्स में "True HDR, अलग विंडो" चुनें।',
   "For series and anime, keep playing the rest of the season from the release you first picked. Applies whether Play is instant or manual.":
     "सीरीज़ और ऐनिमे के लिए, सीज़न के बाकी एपिसोड उसी रिलीज़ से चलाते रहें जिसे आपने पहले चुना था। यह प्ले के तुरंत या मैन्युअल होने, दोनों पर लागू होता है।",
-  "For the hardest files and the Try again button, Harbor transcribes a little speech on your device and lines the subtitle up to the actual words. Needs a build with the asr-whisper feature and downloads a small model the first time you use it.":
-    "सबसे मुश्किल फ़ाइलों और फिर से कोशिश करें बटन के लिए, Harbor आपके डिवाइस पर बोले गए एक छोटे-से अंश को ट्रांसक्राइब करता है और सबटाइटल को असल शब्दों के साथ मिलाता है। इसके लिए asr-whisper फ़ीचर वाला बिल्ड चाहिए और पहली बार इस्तेमाल करने पर यह एक छोटा मॉडल डाउनलोड करता है।",
+  "For the hardest files and the Try again button, Lart transcribes a little speech on your device and lines the subtitle up to the actual words. Needs a build with the asr-whisper feature and downloads a small model the first time you use it.":
+    "सबसे मुश्किल फ़ाइलों और फिर से कोशिश करें बटन के लिए, Lart आपके डिवाइस पर बोले गए एक छोटे-से अंश को ट्रांसक्राइब करता है और सबटाइटल को असल शब्दों के साथ मिलाता है। इसके लिए asr-whisper फ़ीचर वाला बिल्ड चाहिए और पहली बार इस्तेमाल करने पर यह एक छोटा मॉडल डाउनलोड करता है।",
   "For the manual path:": "मैन्युअल पथ के लिए:",
   "For the manual path: {code} 20+ and {code} CLI.": "मैन्युअल तरीके के लिए: {code} 20+ और {code} CLI।",
   "For users who want to deploy themselves or already have a wrangler workflow.":
@@ -1101,7 +1101,7 @@ const catalogDF: Record<string, string> = {
   "Frequent Collaborators": "अक्सर सहयोग करने वाले",
   "Fresh from the community": "कम्युनिटी की नई पेशकश",
   "Fresh from the studio": "स्टूडियो से ताज़ा",
-  "Fresh looks shared by the Harbor community": "Harbor समुदाय द्वारा साझा किए गए नए रूप",
+  "Fresh looks shared by the Lart community": "Lart समुदाय द्वारा साझा किए गए नए रूप",
   "Fresh on TV": "टीवी पर नया",
   "Fresh tomato for 60%+, splat for under.": "60%+ के लिए ताज़ा टमाटर, उससे कम के लिए छींटा।",
   "Fresh tomatoes for 60% and up, splat for anything under.":
@@ -1137,8 +1137,8 @@ const catalogDF: Record<string, string> = {
   "Frontline Valor": "फ्रंटलाइन वीरता",
   "Frost the top bar on scroll": "स्क्रॉल करने पर ऊपरी बार पर फ्रॉस्ट इफ़ेक्ट दें",
   "Frosted glass": "फ्रॉस्टेड ग्लास",
-  "Frosted, refractive surfaces on Harbor's floating controls.":
-    "Harbor के फ़्लोटिंग कंट्रोल पर फ्रॉस्टेड, अपवर्तक सतहें।",
+  "Frosted, refractive surfaces on Lart's floating controls.":
+    "Lart के फ़्लोटिंग कंट्रोल पर फ्रॉस्टेड, अपवर्तक सतहें।",
   Fubo: "Fubo",
   FuboTV: "FuboTV",
   Full: "पूर्ण",
@@ -1148,8 +1148,8 @@ const catalogDF: Record<string, string> = {
   "Full details": "पूरी जानकारी",
   "Full hero banner": "पूरा हीरो बैनर",
   "Full list": "पूरी सूची",
-  "Full mode signs in with your Letterboxd password to also unlock your diary, friends activity and your personal ratings. Your password is sent only to Stremboxd to obtain a token — Harbor never stores it.":
-    "फ़ुल मोड में अपने Letterboxd पासवर्ड से साइन इन करने पर आपकी डायरी, दोस्तों की गतिविधि और निजी रेटिंग भी अनलॉक हो जाती हैं। टोकन पाने के लिए आपका पासवर्ड केवल Stremboxd को भेजा जाता है; Harbor इसे कभी स्टोर नहीं करता।",
+  "Full mode signs in with your Letterboxd password to also unlock your diary, friends activity and your personal ratings. Your password is sent only to Stremboxd to obtain a token — Lart never stores it.":
+    "फ़ुल मोड में अपने Letterboxd पासवर्ड से साइन इन करने पर आपकी डायरी, दोस्तों की गतिविधि और निजी रेटिंग भी अनलॉक हो जाती हैं। टोकन पाने के लिए आपका पासवर्ड केवल Stremboxd को भेजा जाता है; Lart इसे कभी स्टोर नहीं करता।",
   "Full mode — diary, friends & ratings enabled": "फ़ुल मोड - डायरी, दोस्त और रेटिंग चालू",
   "Full quality frames": "पूरी क्वालिटी वाले फ़्रेम",
   "Full quality hero image": "पूरी क्वालिटी वाली हीरो इमेज",
@@ -1174,8 +1174,8 @@ const catalogDF: Record<string, string> = {
   "e.g. 20": "जैसे 20",
   eBook: "ई-बुक",
   "eBook actions": "eBook कार्रवाइयाँ",
-  "eBook extensions use Harbor’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
-    "eBook एक्सटेंशन Harbor के अलग-थलग वर्कर, HTTP ब्रिज और HTML पार्सर का इस्तेमाल करते हैं। Manga एक्सटेंशन भी इसी सैंडबॉक्स का इस्तेमाल करते हैं। सिर्फ़ भरोसेमंद रिपॉज़िटरी जोड़ें।",
+  "eBook extensions use Lart’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
+    "eBook एक्सटेंशन Lart के अलग-थलग वर्कर, HTTP ब्रिज और HTML पार्सर का इस्तेमाल करते हैं। Manga एक्सटेंशन भी इसी सैंडबॉक्स का इस्तेमाल करते हैं। सिर्फ़ भरोसेमंद रिपॉज़िटरी जोड़ें।",
   "eBook source settings": "eBook स्रोत की सेटिंग्स",
   eBooks: "eBooks",
   "each card on a browse/search page.": "ब्राउज़/सर्च पेज पर हर कार्ड।",
@@ -1197,7 +1197,7 @@ const catalogDF: Record<string, string> = {
     "ऊँची रेट लिमिट के लिए; मुफ़्त अनाम टियर के लिए खाली छोड़ें।",
   "for {count} more episodes": "{count} और एपिसोड के लिए",
   "found by": "इसके द्वारा खोजा गया",
-  "from the Harbor repo into a new directory as": "Harbor रेपो से एक नई डायरेक्टरी में इस रूप में",
+  "from the Lart repo into a new directory as": "Lart रेपो से एक नई डायरेक्टरी में इस रूप में",
   "from {source}": "{source} से",
   "Cached source resolution and direct download links.": "कैश किए गए स्रोतों का समाधान और सीधे डाउनलोड लिंक।",
   "Cached source resolution and cloud library access.": "कैश किए गए स्रोतों का समाधान और क्लाउड लाइब्रेरी तक पहुँच।",

@@ -14,7 +14,7 @@ export default {
   "games.mods.backupNote": "被替换的版本会保存在本地备份中。可在“我的配置”中选择“恢复上一版本”来还原，届时仍会检查依赖关系。",
   "games.mods.currentVersion": "已安装：{version}",
   "games.mods.current": "已安装",
-  "games.mods.versionNote": "选择兼容的版本。Harbor 会检查更改并在本地保留上一版本。应用更改前请关闭 Minecraft。",
+  "games.mods.versionNote": "选择兼容的版本。Lart 会检查更改并在本地保留上一版本。应用更改前请关闭 Minecraft。",
   "games.mods.applyChanges": "应用更改",
   "games.mods.reviewChanges": "检查更改",
   "games.mods.previousVersion": "上一版本：{version}",

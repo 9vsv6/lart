@@ -6,7 +6,7 @@ const residual: Record<string, string> = {
   "Select renderer": "Chọn thiết bị phát",
   "Scanning...": "Đang quét...",
   "This PC": "PC này",
-  "Harbor on the server display": "Harbor trên màn hình máy chủ",
+  "Lart on the server display": "Lart trên màn hình máy chủ",
   "Scanning your network...": "Đang quét mạng...",
   "No Chromecast, DLNA, or Roku devices found. Make sure your TV is on, awake, and on the same Wi-Fi.":
     "Không tìm thấy thiết bị Chromecast, DLNA hoặc Roku. Hãy đảm bảo TV đang bật, không ở chế độ ngủ và dùng cùng mạng Wi-Fi.",
@@ -109,8 +109,8 @@ const residual: Record<string, string> = {
   "Update submitted": "Đã gửi bản cập nhật",
   "Your new version is in for a quick review. The live listing keeps working until this one is approved.":
     "Phiên bản mới của bạn đang được xét duyệt nhanh. Bản đang hiển thị vẫn hoạt động cho đến khi phiên bản này được phê duyệt.",
-  "Every theme you share gets a private owner token. On the device where you shared it, Harbor saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
-    "Mỗi giao diện bạn chia sẻ đều có một token chủ sở hữu riêng tư. Trên thiết bị đã dùng để chia sẻ, Harbor tự động lưu token, nên các giao diện đó xuất hiện ngay tại đây để bạn nhận quyền sở hữu chỉ bằng một lần nhấn. Để nhận quyền sở hữu từ thiết bị khác, hãy dán token đó bên dưới. Các lượt chia sẻ mới giờ được liên kết thẳng với tài khoản của bạn, nên bạn sẽ không cần làm việc này nữa.",
+  "Every theme you share gets a private owner token. On the device where you shared it, Lart saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
+    "Mỗi giao diện bạn chia sẻ đều có một token chủ sở hữu riêng tư. Trên thiết bị đã dùng để chia sẻ, Lart tự động lưu token, nên các giao diện đó xuất hiện ngay tại đây để bạn nhận quyền sở hữu chỉ bằng một lần nhấn. Để nhận quyền sở hữu từ thiết bị khác, hãy dán token đó bên dưới. Các lượt chia sẻ mới giờ được liên kết thẳng với tài khoản của bạn, nên bạn sẽ không cần làm việc này nữa.",
   "Claim a theme": "Nhận quyền sở hữu giao diện",
   "Attach a theme you shared before creating this account.":
     "Liên kết giao diện bạn đã chia sẻ trước khi tạo tài khoản này.",
@@ -129,7 +129,7 @@ const residual: Record<string, string> = {
   "No previous versions yet. Your next update starts the history.":
     "Chưa có phiên bản trước. Bản cập nhật tiếp theo sẽ bắt đầu lịch sử.",
   "Get yours at": "Lấy token của bạn tại",
-  "Used to check cache and unrestrict links. Harbor never adds or removes anything on your account on its own.": "Dùng để kiểm tra bộ nhớ đệm và bỏ hạn chế liên kết. Harbor không bao giờ tự thêm hoặc xóa bất cứ thứ gì trong tài khoản của bạn.",
+  "Used to check cache and unrestrict links. Lart never adds or removes anything on your account on its own.": "Dùng để kiểm tra bộ nhớ đệm và bỏ hạn chế liên kết. Lart không bao giờ tự thêm hoặc xóa bất cứ thứ gì trong tài khoản của bạn.",
   "Same read-only usage as Real-Debrid. Also lets you queue uncached sources from the play picker.": "Quyền sử dụng chỉ đọc giống Real-Debrid. Đồng thời cho phép bạn đưa nguồn chưa được lưu vào bộ nhớ đệm vào hàng đợi từ trình chọn phát.",
   "AllDebrid deprecated their cache-check endpoint, so streams may show as unknown until you actually hit Play.":
     "AllDebrid đã ngừng dùng endpoint kiểm tra bộ nhớ đệm, nên luồng phát có thể hiển thị là không xác định cho đến khi bạn thực sự nhấn Phát.",
@@ -143,7 +143,7 @@ const residual: Record<string, string> = {
   "Applies when you play something. Only visibly changes the picture when the video is being scaled.":
     "Áp dụng khi bạn phát nội dung. Chỉ làm hình ảnh thay đổi rõ rệt khi video được đổi tỷ lệ.",
   "How this is measured": "Cách đo",
-  "Harbor opens 4 parallel requests to": "Harbor mở 4 yêu cầu song song đến",
+  "Lart opens 4 parallel requests to": "Lart mở 4 yêu cầu song song đến",
   ", discards the first 1.2s so TCP slow-start doesn't tank the result, then measures until it has 150 MB or 8 seconds of steady-state transfer.":
     ", bỏ qua 1,2 giây đầu để TCP slow-start không làm sai lệch kết quả, rồi đo cho đến khi nhận đủ 150 MB hoặc truyền ổn định trong 8 giây.",
   "The number is bytes divided by the time they actually took to arrive. Cloudflare is a single origin, so on a very fast line this can read lower than a multi-server test like speedtest.net.":
@@ -155,8 +155,8 @@ const residual: Record<string, string> = {
   "Re-test": "Kiểm tra lại",
   "Slot is getting crowded ({count}/{limit}). May overflow on narrow screens.":
     "Vị trí này sắp quá tải ({count}/{limit}). Có thể tràn trên màn hình hẹp.",
-  "Highly recommended. This is what gives you the full Harbor experience: Popular, Trending, In Theaters, and per-service rails. Free at":
-    "Rất nên dùng. Đây là chìa khóa để bạn có trải nghiệm Harbor đầy đủ: Phổ biến, Thịnh hành, Đang chiếu rạp và các hàng nội dung theo từng dịch vụ. Miễn phí tại",
+  "Highly recommended. This is what gives you the full Lart experience: Popular, Trending, In Theaters, and per-service rails. Free at":
+    "Rất nên dùng. Đây là chìa khóa để bạn có trải nghiệm Lart đầy đủ: Phổ biến, Thịnh hành, Đang chiếu rạp và các hàng nội dung theo từng dịch vụ. Miễn phí tại",
   "Use the v3 key, not the read access token.": "Dùng khóa v3, không dùng mã truy cập đọc.",
   "Free at": "Miễn phí tại",
   "They email an activation link the first time. Click it, then come back and save.":
@@ -221,10 +221,10 @@ const residual: Record<string, string> = {
   "A favorite title or one of your themes will appear here":
     "Một tựa phim yêu thích hoặc một trong các giao diện của bạn sẽ xuất hiện tại đây",
   "This user hasn't set a showcase": "Người dùng này chưa thiết lập mục giới thiệu",
-  "Harbor dropped {n} suspicious or mismatched result.":
-    "Harbor đã loại {n} kết quả đáng ngờ hoặc không khớp.",
-  "Harbor dropped {n} suspicious or mismatched results.":
-    "Harbor đã loại {n} kết quả đáng ngờ hoặc không khớp.",
+  "Lart dropped {n} suspicious or mismatched result.":
+    "Lart đã loại {n} kết quả đáng ngờ hoặc không khớp.",
+  "Lart dropped {n} suspicious or mismatched results.":
+    "Lart đã loại {n} kết quả đáng ngờ hoặc không khớp.",
   "plays via": "phát qua",
   "{n} cached": "{n} đã lưu vào bộ nhớ đệm",
   "{total} found across 1 source": "Tìm thấy {total} từ 1 nguồn",
@@ -260,16 +260,16 @@ const residual: Record<string, string> = {
   "In My List": "Đã có trong Danh sách của tôi",
   "Add to My List": "Thêm vào Danh sách của tôi",
   "Slide {number}": "Trang chiếu {number}",
-  "Harbor couldn't reach MyAnimeList or AniList. Check your connection and try again.":
-    "Harbor không thể kết nối với MyAnimeList hoặc AniList. Hãy kiểm tra kết nối rồi thử lại.",
+  "Lart couldn't reach MyAnimeList or AniList. Check your connection and try again.":
+    "Lart không thể kết nối với MyAnimeList hoặc AniList. Hãy kiểm tra kết nối rồi thử lại.",
   "{name} · since {year}": "{name} · từ năm {year}",
   Winners: "Tác phẩm đoạt giải",
   "Add a TMDB key in Settings to unlock award winners.":
     "Thêm khóa TMDB trong Cài đặt để xem các tác phẩm đoạt giải.",
   "View {title}": "Xem {title}",
   "Couldn't load this catalog": "Không thể tải danh mục này",
-  "Harbor couldn't reach the catalog servers. Check your connection and try again.":
-    "Harbor không thể kết nối với máy chủ danh mục. Hãy kiểm tra kết nối rồi thử lại.",
+  "Lart couldn't reach the catalog servers. Check your connection and try again.":
+    "Lart không thể kết nối với máy chủ danh mục. Hãy kiểm tra kết nối rồi thử lại.",
   "Ep {episode}": "Tập {episode}",
   "{hours}h {minutes}m left": "Còn {hours} giờ {minutes} phút",
   "Couldn't load Discover": "Không thể tải Khám phá",
@@ -280,8 +280,8 @@ const residual: Record<string, string> = {
   "Couldn't load your home": "Không thể tải trang chủ của bạn",
   "Top 10 Today": "Top 10 hôm nay",
   "Not connected to a computer": "Chưa kết nối với máy tính",
-  "Your library lives on Harbor. Connect to your computer and it shows up here.":
-    "Thư viện của bạn nằm trên Harbor. Hãy kết nối với máy tính để thư viện xuất hiện tại đây.",
+  "Your library lives on Lart. Connect to your computer and it shows up here.":
+    "Thư viện của bạn nằm trên Lart. Hãy kết nối với máy tính để thư viện xuất hiện tại đây.",
   "The most-watched movies and series on {service} right now.":
     "Những phim điện ảnh và phim bộ được xem nhiều nhất trên {service} hiện nay.",
   "Nothing from {service} is available in your region right now. Try another genre or switch between Movies and Shows.":
@@ -291,7 +291,7 @@ const residual: Record<string, string> = {
   "Couldn't load shows": "Không thể tải phim bộ",
   "Typing on your computer": "Nhập trên máy tính của bạn",
   "Type to search…": "Nhập để tìm kiếm…",
-  "This Harbor": "Harbor này",
+  "This Lart": "Lart này",
   "Cast to": "Truyền tới",
   "No cast devices found on your network.": "Không tìm thấy thiết bị truyền nào trên mạng của bạn.",
   "Voice search": "Tìm kiếm bằng giọng nói",
@@ -350,19 +350,19 @@ const residual: Record<string, string> = {
     "Đã xảy ra lỗi khi hiển thị. Hãy tải lại để khôi phục hoặc gửi cho chúng tôi thông tin kỹ thuật.",
   "We couldn't find what you were looking for. The wire got snipped: either the page moved, the addon's offline, or something glitched on our end.":
     "Chúng tôi không tìm thấy nội dung bạn cần. Kết nối đã bị gián đoạn: có thể trang đã chuyển, tiện ích bổ sung đang ngoại tuyến hoặc phía chúng tôi gặp trục trặc.",
-  "Sorry, Harbor crashed the last time it was running. You can review the details and choose whether to send a report.":
-    "Rất tiếc, Harbor đã gặp sự cố trong lần chạy trước. Bạn có thể xem lại chi tiết và chọn có gửi báo cáo hay không.",
+  "Sorry, Lart crashed the last time it was running. You can review the details and choose whether to send a report.":
+    "Rất tiếc, Lart đã gặp sự cố trong lần chạy trước. Bạn có thể xem lại chi tiết và chọn có gửi báo cáo hay không.",
   "Oops..": "Úi...",
   "Take me back": "Quay lại",
   "Report sent": "Đã gửi báo cáo",
   "Thanks. Tracked as {id}.": "Cảm ơn. Mã theo dõi: {id}.",
   "Could not send: {message}": "Không thể gửi: {message}",
-  "Sends the context above straight to the Harbor team. No keys or library data.":
-    "Gửi thẳng thông tin ngữ cảnh ở trên đến đội ngũ Harbor. Không bao gồm khóa hay dữ liệu thư viện.",
+  "Sends the context above straight to the Lart team. No keys or library data.":
+    "Gửi thẳng thông tin ngữ cảnh ở trên đến đội ngũ Lart. Không bao gồm khóa hay dữ liệu thư viện.",
   "Technical detail": "Thông tin kỹ thuật",
   "Copy to clipboard": "Sao chép vào bảng nhớ tạm",
   "Choose where to open this link": "Chọn nơi mở liên kết này",
-  "Continue in Harbor": "Tiếp tục trong Harbor",
+  "Continue in Lart": "Tiếp tục trong Lart",
   "Continue in browser": "Tiếp tục trong trình duyệt",
   "Choose another destination": "Chọn đích khác",
   "Alternate link destination": "Đích liên kết thay thế",
@@ -378,9 +378,9 @@ const residual: Record<string, string> = {
   "Remove preset": "Xóa cài đặt sẵn",
   "Add preset": "Thêm cài đặt sẵn",
   "Resolving manifest": "Đang phân giải manifest",
-  "Added to Harbor": "Đã thêm vào Harbor",
+  "Added to Lart": "Đã thêm vào Lart",
   "Saved to your library.": "Đã lưu vào thư viện của bạn.",
-  "Verified Harbor Staff": "Nhân viên Harbor đã được xác minh",
+  "Verified Lart Staff": "Nhân viên Lart đã được xác minh",
   "Diagnostics request": "Yêu cầu dữ liệu chẩn đoán",
   "Sharing your diagnostics for issue #{ticket}. Your session tokens, API keys, and passwords are removed before anything leaves your device.":
     "Đang chia sẻ dữ liệu chẩn đoán của bạn cho sự cố #{ticket}. Token phiên, khóa API và mật khẩu của bạn sẽ được xóa trước khi bất kỳ dữ liệu nào rời khỏi thiết bị.",

@@ -37,7 +37,7 @@ export default {
   "games.recommend.retrySome": "Riprova i collegamenti mancanti",
   "games.recommend.saveError": "Impossibile salvare le preferenze di scoperta su questo dispositivo. Riprova.",
   "games.recommend.influences": "Cosa influenza i tuoi suggerimenti",
-  "games.recommend.influencesNote": "Scegli quali giochi usa Harbor. La tua libreria non cambia.",
+  "games.recommend.influencesNote": "Scegli quali giochi usa Lart. La tua libreria non cambia.",
   "games.recommend.exclude": "Non usare più {name}",
   "games.recommend.excluded": "Influenze escluse ({count})",
   "games.recommend.useAgain": "Usa di nuovo {name}",

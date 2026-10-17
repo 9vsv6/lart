@@ -2,7 +2,7 @@
  * Liquipedia metadata cassette: text and structure only, never a bitmap.
  *
  * Measured, and the reason nothing here returns an image URL: their CDN runs nginx valid_referers
- * and answered every real Harbor origin with 403 (tauri.localhost, localhost:1420, harbor.site),
+ * and answered every real Lart origin with 403 (tauri.localhost, localhost:1420, harbor.site),
  * and the 403 body is itself a valid PNG "no hotlinking" banner that would render inside a card.
  * Independently, event and team logos carry license=fairuselogo and the photography carries
  * license=permission naming Liquipedia as the only grantee. CC BY-SA 3.0 covers the wiki text, so
@@ -367,7 +367,7 @@ export function parseSections(wikitext: string): LiquipediaSection[] {
 
 const OPPONENTS = ["teamopponent", "soloopponent", "literalopponent"];
 
-/** A Liquipedia page name ("spirit"), not a display name. Join it through Harbor's team identity. */
+/** A Liquipedia page name ("spirit"), not a display name. Join it through Lart's team identity. */
 const opponentName = (tpl: LpTemplate) =>
   cleanWikitext(tpl.args[0] || tpl.params.team || tpl.params.p1 || tpl.params.name || "");
 
@@ -430,7 +430,7 @@ export interface LiquipediaBracket {
   layout?: string;
   id?: string;
   status: "ready" | "empty";
-  /** A machine code, never display copy: Harbor has 16 locales and this file adds no i18n key. */
+  /** A machine code, never display copy: Lart has 16 locales and this file adds no i18n key. */
   reason?: "empty-match-stubs";
   rounds: { round: number; matches: LiquipediaBracketMatch[] }[];
   matchCount: number;
@@ -533,7 +533,7 @@ export function parseBrackets(wikitext: string): LiquipediaBracket[] {
 const AGENT = "HarborEsports/1.0 (https://harbor.site; bugs@harbor.site)";
 
 /**
- * Api-User-Agent is MediaWiki's own channel for platforms that own the User-Agent header. Harbor's
+ * Api-User-Agent is MediaWiki's own channel for platforms that own the User-Agent header. Lart's
  * Rust bridge forwards both verbatim, and reqwest's gzip feature is enabled in src-tauri/Cargo.toml,
  * so setting Accept-Encoding by hand satisfies the edge and the body still arrives decoded.
  */

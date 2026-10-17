@@ -1,7 +1,7 @@
 const catalog10: Record<string, string> = {
   "Stremio account (email / sign out)": "Stremio 계정(이메일 / 로그아웃)",
-  "Stremio addon, packaged into Harbor's catalog.":
-    "Harbor 카탈로그에 포함된 Stremio 애드온입니다.",
+  "Stremio addon, packaged into Lart's catalog.":
+    "Lart 카탈로그에 포함된 Stremio 애드온입니다.",
   "Stremio cards": "Stremio 카드",
   "Stremio did not accept that email and password.":
     "Stremio에서 해당 이메일과 비밀번호를 승인하지 않았습니다.",
@@ -122,7 +122,7 @@ const catalog10: Record<string, string> = {
   Supernatural: "초자연",
   "Support ElfHosted or Stremio, or give to any charity below, and the badge lands on your profile.":
     "ElfHosted나 Stremio를 후원하거나 아래 자선단체에 기부하면 프로필에 배지가 표시됩니다.",
-  "Support Harbor": "Harbor 후원",
+  "Support Lart": "Lart 후원",
   "Support Stremio": "Stremio 후원",
   Supporting: "조연",
   Sure: "좋아요",
@@ -140,7 +140,7 @@ const catalog10: Record<string, string> = {
   "Swedish Cinema": "스웨덴 영화",
   "Swedish Films": "스웨덴 영화",
   Switch: "스위치",
-  "Switch Harbor to {language}?": "Harbor를 {language}(으)로 전환할까요?",
+  "Switch Lart to {language}?": "Lart를 {language}(으)로 전환할까요?",
   "Switch profile": "프로필 전환",
   "Switch source": "소스 전환",
   "Switch stream": "스트림 전환",
@@ -163,8 +163,8 @@ const catalog10: Record<string, string> = {
   Sync: "동기화",
   "Sync Offset": "동기화 오프셋",
   "Sync across your devices": "기기 간 동기화",
-  "Sync and track movies, shows, and anime across everything you use. Harbor marks what you finish as watched on Simkl and keeps your plan-to-watch list in step. Free at simkl.com.":
-    "사용하는 모든 서비스에서 영화, 시리즈, 애니메이션을 동기화하고 기록하세요. Harbor는 끝까지 본 항목을 Simkl에서 시청 완료로 표시하고 시청 예정 목록을 최신 상태로 유지합니다. simkl.com에서 무료로 이용할 수 있습니다.",
+  "Sync and track movies, shows, and anime across everything you use. Lart marks what you finish as watched on Simkl and keeps your plan-to-watch list in step. Free at simkl.com.":
+    "사용하는 모든 서비스에서 영화, 시리즈, 애니메이션을 동기화하고 기록하세요. Lart는 끝까지 본 항목을 Simkl에서 시청 완료로 표시하고 시청 예정 목록을 최신 상태로 유지합니다. simkl.com에서 무료로 이용할 수 있습니다.",
   "Sync everywhere": "모든 기기에서 동기화",
   "Sync from here": "여기서 동기화",
   "Sync indicator": "동기화 표시기",
@@ -228,7 +228,7 @@ const catalog10: Record<string, string> = {
     "TMDB에서 키가 생성되었음을 확인해 줍니다. 제공된 링크를 열어 API 키 세부 정보를 확인하세요.",
   "TMDB connected": "TMDB 연결됨",
   "TMDB connected. {n} streaming {services} on. Welcome aboard.":
-    "TMDB가 연결되었습니다. 스트리밍 {services} {n}개가 켜져 있습니다. Harbor에 오신 것을 환영합니다.",
+    "TMDB가 연결되었습니다. 스트리밍 {services} {n}개가 켜져 있습니다. Lart에 오신 것을 환영합니다.",
   "TMDB did not accept that key.": "TMDB에서 해당 키를 승인하지 않았습니다.",
   'TMDB did not accept that key. Check you copied the "API Key (v3 auth)" value, not the read access token.':
     'TMDB에서 해당 키를 승인하지 않았습니다. 읽기 액세스 토큰이 아닌 "API Key (v3 auth)" 값을 복사했는지 확인하세요.',
@@ -261,8 +261,8 @@ const catalog10: Record<string, string> = {
   "TV navigation": "TV 탐색",
   "TV navigation in player": "플레이어에서 TV 탐색",
   "TV only": "TV 전용",
-  "TV only. Older sets crop the outer edge of the picture. Nudge Harbor inward until nothing is cut off.":
-    "TV 전용입니다. 오래된 TV는 화면 바깥쪽 가장자리가 잘릴 수 있습니다. 아무것도 잘리지 않을 때까지 Harbor를 안쪽으로 조정하세요.",
+  "TV only. Older sets crop the outer edge of the picture. Nudge Lart inward until nothing is cut off.":
+    "TV 전용입니다. 오래된 TV는 화면 바깥쪽 가장자리가 잘릴 수 있습니다. 아무것도 잘리지 않을 때까지 Lart를 안쪽으로 조정하세요.",
   "TV shows wide art cards with the logo on them. Poster is the classic grid.":
     "TV에서는 로고가 표시된 가로형 아트 카드를 사용합니다. 포스터는 클래식 그리드 형식입니다.",
   "TV uses wide rounded cards with the logo on the art, like a TV home screen. Poster is the classic grid.":
@@ -364,8 +364,8 @@ const catalog10: Record<string, string> = {
     "감사합니다! 베타가 올바른 방향으로 나아가는지 파악하는 데 도움이 됩니다.",
   "Thanks. Sent for review.": "감사합니다. 검토를 위해 전송했습니다.",
   "Thanks. Tracked as {id}.": "감사합니다. {id}(으)로 추적 중입니다.",
-  "That Harbor is on the network but is not answering, so it cannot be driven.":
-    "해당 Harbor는 네트워크에 있지만 응답하지 않아 제어할 수 없습니다.",
+  "That Lart is on the network but is not answering, so it cannot be driven.":
+    "해당 Lart는 네트워크에 있지만 응답하지 않아 제어할 수 없습니다.",
   "That SVG is {size} (max 512 KB). Optimize it at svgomg or save it smaller and try again.":
     "해당 SVG의 크기는 {size}입니다(최대 512KB). svgomg에서 최적화하거나 더 작게 저장한 후 다시 시도하세요.",
   "That code has expired": "해당 코드가 만료되었습니다",
@@ -406,8 +406,8 @@ const catalog10: Record<string, string> = {
   "That list is private or doesn't exist. Public lists only.":
     "해당 목록은 비공개이거나 존재하지 않습니다. 공개 목록만 사용할 수 있습니다.",
   "That looks like spam, try rephrasing": "스팸으로 보입니다. 표현을 바꿔 보세요",
-  'That looks like the v4 Read Access Token. Harbor needs the shorter "API Key (v3 auth)" from the same page.':
-    'v4 Read Access Token인 것 같습니다. Harbor에는 같은 페이지에 있는 더 짧은 "API Key (v3 auth)"가 필요합니다.',
+  'That looks like the v4 Read Access Token. Lart needs the shorter "API Key (v3 auth)" from the same page.':
+    'v4 Read Access Token인 것 같습니다. Lart에는 같은 페이지에 있는 더 짧은 "API Key (v3 auth)"가 필요합니다.',
   "That pack's file isn't valid JSON": "팩 파일이 유효한 JSON이 아닙니다",
   "That page is full": "해당 페이지가 가득 찼습니다",
   "That route wouldn't chart. Try a different direction.":
@@ -444,8 +444,8 @@ const catalog10: Record<string, string> = {
   "The CPU decodes everything. Most compatible, but it runs hot and can stutter on 4K. Use this only if the picture glitches with hardware decoding on.":
     "CPU가 모든 영상을 디코딩합니다. 호환성은 가장 높지만 발열이 크고 4K에서 끊길 수 있습니다. 하드웨어 디코딩을 켰을 때 화면에 문제가 생기는 경우에만 사용하세요.",
   "The CW": "The CW",
-  "The Harbor relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Harbor server.":
-    "Harbor 릴레이는 함께 보기용 WebSocket 방을 호스팅하는 Cloudflare Worker입니다. 각 사용자가 자체 릴레이를 실행하며 중앙 Harbor 서버는 없습니다.",
+  "The Lart relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Lart server.":
+    "Lart 릴레이는 함께 보기용 WebSocket 방을 호스팅하는 Cloudflare Worker입니다. 각 사용자가 자체 릴레이를 실행하며 중앙 Lart 서버는 없습니다.",
   "The Home Front": "후방 전선",
   "The King": "왕",
   "The Last Stand": "최후의 저항",
@@ -501,8 +501,8 @@ const catalog10: Record<string, string> = {
     "편집기에는 플레이어의 작업용 사본이 표시됩니다. 컨트롤을 클릭하여 이동하거나 크기와 스타일을 바꾸거나 숨기세요.",
   "The end time has to be after the start.": "종료 시간은 시작 시간보다 뒤여야 합니다.",
   "The engine listens on a local port and joins the DHT to find peers. Active transfers are the streams it currently has open.": "엔진은 로컬 포트에서 수신 대기하고 DHT에 참여하여 피어를 찾습니다. 활성 전송은 현재 열려 있는 스트림입니다.",
-  "The escape hatch for power users. One mpv option per line as key=value, exactly like mpv.conf. These apply last, so they override every dial above. Anything Harbor can't read is skipped, so a typo won't break playback. Restart playback to apply.":
-    "고급 사용자를 위한 설정입니다. mpv.conf와 똑같이 한 줄에 하나의 mpv 옵션을 key=value 형식으로 입력하세요. 이 설정은 마지막에 적용되므로 위의 모든 다이얼 설정보다 우선합니다. Harbor에서 읽을 수 없는 항목은 건너뛰므로 오타가 있어도 재생이 중단되지 않습니다. 적용하려면 재생을 다시 시작하세요.",
+  "The escape hatch for power users. One mpv option per line as key=value, exactly like mpv.conf. These apply last, so they override every dial above. Anything Lart can't read is skipped, so a typo won't break playback. Restart playback to apply.":
+    "고급 사용자를 위한 설정입니다. mpv.conf와 똑같이 한 줄에 하나의 mpv 옵션을 key=value 형식으로 입력하세요. 이 설정은 마지막에 적용되므로 위의 모든 다이얼 설정보다 우선합니다. Lart에서 읽을 수 없는 항목은 건너뛰므로 오타가 있어도 재생이 중단되지 않습니다. 적용하려면 재생을 다시 시작하세요.",
   "The free tier is $0 for personal use. Just pick the first option, no payment needed.":
     "무료 요금제는 개인용으로 $0입니다. 첫 번째 옵션을 선택하면 되며 결제는 필요하지 않습니다.",
   "The generated audio could not be played": "생성된 오디오를 재생할 수 없습니다.",
@@ -543,8 +543,8 @@ const catalog10: Record<string, string> = {
   "The number is bytes divided by the time they actually took to arrive. Cloudflare is a single origin, so on a very fast line this can read lower than a multi-server test like speedtest.net.":
     "수치는 실제로 바이트가 도착하는 데 걸린 시간으로 바이트 수를 나눈 값입니다. Cloudflare는 단일 오리진이므로 회선이 매우 빠르면 speedtest.net과 같은 다중 서버 테스트보다 낮게 측정될 수 있습니다.",
   "The one you are about to watch stays readable.": "곧 시청할 항목은 계속 잘 보입니다.",
-  "The operating system draws native window controls, so Harbor cannot change their appearance.":
-    "운영체제에서 네이티브 창 컨트롤을 표시하므로 Harbor에서 모양을 변경할 수 없습니다.",
+  "The operating system draws native window controls, so Lart cannot change their appearance.":
+    "운영체제에서 네이티브 창 컨트롤을 표시하므로 Lart에서 모양을 변경할 수 없습니다.",
   "The order also decides which addon's rows win on your Home screen.":
     "이 순서에 따라 홈 화면에 우선 표시될 애드온의 콘텐츠 줄도 결정됩니다.",
   "The originals": "오리지널",
@@ -558,8 +558,8 @@ const catalog10: Record<string, string> = {
     "재생목록 서버에서 연결을 명시적으로 거부했습니다.",
   "The playlist server is down or your network is blocking it. Try again in a few minutes.":
     "재생목록 서버가 다운되었거나 네트워크에서 차단하고 있습니다. 몇 분 후 다시 시도하세요.",
-  "The pointer your right stick moves around Harbor. Pick a shape or use your own image.":
-    "오른쪽 스틱으로 Harbor에서 움직이는 포인터입니다. 모양을 선택하거나 원하는 이미지를 사용하세요.",
+  "The pointer your right stick moves around Lart. Pick a shape or use your own image.":
+    "오른쪽 스틱으로 Lart에서 움직이는 포인터입니다. 모양을 선택하거나 원하는 이미지를 사용하세요.",
   "The practical default.": "실용적인 기본값입니다.",
   "The primary manages profiles and can't be deleted. Transfer it here to delete the old one.":
     "기본 프로필은 프로필을 관리하며 삭제할 수 없습니다. 기존 프로필을 삭제하려면 기본 프로필을 여기로 이전하세요.",
@@ -567,8 +567,8 @@ const catalog10: Record<string, string> = {
     "제공업체에서 요청을 거부했습니다. 링크가 만료되었거나 지역 제한이 있거나 할당량을 초과했을 수 있습니다.",
   "The provider's server could not be reached. It may be offline, or you have no connection.":
     "제공업체 서버에 연결할 수 없습니다. 서버가 오프라인이거나 인터넷에 연결되지 않았을 수 있습니다.",
-  "The provider's server returned an error. Nothing on Harbor's side can fix this. Pick another source.":
-    "제공업체 서버에서 오류를 반환했습니다. Harbor에서는 해결할 수 없습니다. 다른 소스를 선택하세요.",
+  "The provider's server returned an error. Nothing on Lart's side can fix this. Pick another source.":
+    "제공업체 서버에서 오류를 반환했습니다. Lart에서는 해결할 수 없습니다. 다른 소스를 선택하세요.",
   "The quick brown fox jumps": "다람쥐 헌 쳇바퀴에 타고파",
   "The quick brown fox jumps over the lazy dog": "다람쥐 헌 쳇바퀴에 타고파",
   "The quickest start and the least memory used. Good on a fast, steady connection, or on a machine that is short on memory.":
@@ -576,8 +576,8 @@ const catalog10: Record<string, string> = {
   "The ratings row on a title's detail page, next to runtime and genre.":
     "제목 상세 페이지에서 재생 시간 및 장르 옆에 표시되는 평점 행입니다.",
   "The real footage": "실제 기록 영상",
-  "The resolution Harbor downloads for each image when you export a title's metadata next to the file on disk.":
-    "제목의 메타데이터를 디스크의 파일 옆으로 내보낼 때 Harbor가 각 이미지를 다운로드할 해상도입니다.",
+  "The resolution Lart downloads for each image when you export a title's metadata next to the file on disk.":
+    "제목의 메타데이터를 디스크의 파일 옆으로 내보낼 때 Lart가 각 이미지를 다운로드할 해상도입니다.",
   "The same camera pan on each setting. The lit lane is what you get right now.":
     "각 설정에서 동일한 카메라 패닝을 보여 줍니다. 밝게 표시된 구간이 현재 적용되는 설정입니다.",
   "The series that make the rest of the night disappear.":
@@ -601,8 +601,8 @@ const catalog10: Record<string, string> = {
     "설정 페이지 왼쪽에 목록이 있습니다. 아래쪽의 API를 클릭하세요.",
   "The shape of the whole Home page. Everything below tunes the rows inside it.":
     "홈 페이지 전체의 구성입니다. 아래의 모든 설정은 그 안의 행을 조정합니다.",
-  "The ship is sailing away. Thanks for watching with Harbor, it's time to listen to your grown-ups.":
-    "배가 곧 출항합니다. Harbor와 함께 시청해 주셔서 감사합니다. 이제 보호자 말씀을 들을 시간이에요.",
+  "The ship is sailing away. Thanks for watching with Lart, it's time to listen to your grown-ups.":
+    "배가 곧 출항합니다. Lart와 함께 시청해 주셔서 감사합니다. 이제 보호자 말씀을 들을 시간이에요.",
   "The source responded but the stream would not open. Try a different one.":
     "소스가 응답했지만 스트림을 열 수 없습니다. 다른 스트림을 사용해 보세요.",
   "The source returned a bad response for this manga. It may be temporary, or the title may have moved. Try another source, or head back and pick something else.":
@@ -615,8 +615,8 @@ const catalog10: Record<string, string> = {
   "The test calls": "테스트는",
   "The test calls {code} and confirms the worker is reachable and running a current version. A passing test means Watch Together rooms will connect.":
     "테스트는 {code}을(를) 호출해 Worker에 연결할 수 있고 최신 버전이 실행 중인지 확인합니다. 테스트를 통과하면 함께 보기 방에 연결할 수 있습니다.",
-  "The timing checks disagreed, so Harbor left the subtitle unchanged.":
-    "타이밍 검사 결과가 서로 달라 Harbor가 자막을 변경하지 않았습니다.",
+  "The timing checks disagreed, so Lart left the subtitle unchanged.":
+    "타이밍 검사 결과가 서로 달라 Lart가 자막을 변경하지 않았습니다.",
   "The timing difference was too large to correct safely. Try another subtitle.":
     "타이밍 차이가 너무 커 안전하게 보정할 수 없습니다. 다른 자막을 사용해 보세요.",
   "The title shown at the top of the player.": "플레이어 상단에 표시되는 제목입니다.",
@@ -655,15 +655,15 @@ const catalog10: Record<string, string> = {
     "이 자막에는 타이밍을 측정할 만큼 읽을 수 있는 대사가 없습니다.",
   "There wasn't enough matching dialogue to make a safe correction.":
     "안전하게 보정할 만큼 일치하는 대사가 충분하지 않습니다.",
-  "These avatars are Harbor originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
-    "이 아바타는 Harbor 오리지널입니다. 가져온 팩은 이 기기에만 저장됩니다. 팩에 넣을 콘텐츠는 사용자가 선택하며, 해당 콘텐츠에 대한 책임도 사용자에게 있습니다.",
+  "These avatars are Lart originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
+    "이 아바타는 Lart 오리지널입니다. 가져온 팩은 이 기기에만 저장됩니다. 팩에 넣을 콘텐츠는 사용자가 선택하며, 해당 콘텐츠에 대한 책임도 사용자에게 있습니다.",
   "These badges are drawn on posters as you browse. RPDB, in the keys above, is a separate option that bakes scores into the poster image itself.":
     "탐색 중 포스터에 그려지는 배지입니다. 위 키 설정의 RPDB는 포스터 이미지 자체에 평점을 넣는 별도 옵션입니다.",
   "These cards run down your public profile. Set the order they appear in, and hide any you would rather keep to yourself.":
     "이 카드는 공개 프로필에 세로로 표시됩니다. 표시 순서를 정하고 공개하고 싶지 않은 카드는 숨기세요.",
   "These episodes are already downloading.": "이 에피소드는 이미 다운로드 중입니다.",
-  "These live in Harbor on this computer and never touch your account.":
-    "이 애드온은 이 컴퓨터의 Harbor에만 저장되며 계정에는 반영되지 않습니다.",
+  "These live in Lart on this computer and never touch your account.":
+    "이 애드온은 이 컴퓨터의 Lart에만 저장되며 계정에는 반영되지 않습니다.",
   "These need the television in front of you, either because they show a pairing code or because the credential should never leave the device.":
     "페어링 코드를 표시하거나 인증 정보가 기기 밖으로 유출되어서는 안 되므로 TV를 앞에 두고 진행해야 합니다.",
   "These rails activate once a TMDB key is set. You can come back to this anytime in Settings.":
@@ -672,8 +672,8 @@ const catalog10: Record<string, string> = {
     "이 행의 콘텐츠를 표시하려면 TMDB 키가 필요합니다.",
   "These settings belong to a profile, and this computer is not in one. Pick a profile and the TV will follow it.":
     "이 설정은 프로필에 속하지만 이 컴퓨터는 프로필에 연결되어 있지 않습니다. 프로필을 선택하면 TV에도 적용됩니다.",
-  "These tune the bundled mpv engine, which runs in the Harbor desktop app. They have no effect in the browser.":
-    "이 설정은 Harbor 데스크톱 앱에서 실행되는 내장 mpv 엔진을 조정합니다. 브라우저에서는 적용되지 않습니다.",
+  "These tune the bundled mpv engine, which runs in the Lart desktop app. They have no effect in the browser.":
+    "이 설정은 Lart 데스크톱 앱에서 실행되는 내장 mpv 엔진을 조정합니다. 브라우저에서는 적용되지 않습니다.",
   "These two points are very close ({n}s apart). Pick one near the start and one near the end, or the timing can drift at the edges.":
     "두 지점이 너무 가깝습니다(간격 {n}초). 하나는 시작 부분 근처, 다른 하나는 끝부분 근처에서 선택하세요. 그렇지 않으면 양쪽 끝에서 타이밍이 어긋날 수 있습니다.",
   "They email an activation link the first time. Click it, then come back and save.":
@@ -684,9 +684,9 @@ const catalog10: Record<string, string> = {
   "Things you still do on the TV itself": "TV에서 직접 해야 하는 작업",
   "Thinner outline": "외곽선 가늘게",
   "This Afternoon": "오늘 오후",
-  "This Harbor": "이 Harbor",
-  "This Harbor takes commands from this computer. Forget it to take that back.":
-    "이 Harbor는 이 컴퓨터의 명령을 받습니다. 제어를 해제하려면 기기를 삭제하세요.",
+  "This Lart": "이 Lart",
+  "This Lart takes commands from this computer. Forget it to take that back.":
+    "이 Lart는 이 컴퓨터의 명령을 받습니다. 제어를 해제하려면 기기를 삭제하세요.",
   "This Morning": "오늘 아침",
   "This PC": "이 PC",
   "This Xtream account is expired, banned, or disabled on the provider side. Renew or confirm with your provider.":
@@ -711,13 +711,13 @@ const catalog10: Record<string, string> = {
   "This comment can't be posted.": "이 댓글은 게시할 수 없습니다.",
   "This computer": "이 컴퓨터",
   "This device": "이 기기",
-  "This doesn't look like a Harbor plugin repo. Harbor expects a JSON file shaped { name, plugins: [ ... ] }.":
-    "Harbor 플러그인 저장소가 아닌 것 같습니다. Harbor에는 { name, plugins: [ ... ] } 구조의 JSON 파일이 필요합니다.",
+  "This doesn't look like a Lart plugin repo. Lart expects a JSON file shaped { name, plugins: [ ... ] }.":
+    "Lart 플러그인 저장소가 아닌 것 같습니다. Lart에는 { name, plugins: [ ... ] } 구조의 JSON 파일이 필요합니다.",
   "This eBook could not be exported": "이 eBook을 내보낼 수 없습니다.",
   "This eBook is not connected to an installed source.":
     "이 eBook은 설치된 소스에 연결되어 있지 않습니다.",
   "This exact install, served as a web app. Open it on a phone, laptop or TV browser and it streams through this computer.":
-    "현재 설치된 Harbor를 그대로 웹 앱으로 제공합니다. 휴대폰, 노트북 또는 TV 브라우저에서 열면 이 컴퓨터를 통해 스트리밍됩니다.",
+    "현재 설치된 Lart를 그대로 웹 앱으로 제공합니다. 휴대폰, 노트북 또는 TV 브라우저에서 열면 이 컴퓨터를 통해 스트리밍됩니다.",
   "This file has one audio track.": "이 파일에는 오디오 트랙이 하나 있습니다.",
   "This file is flagged as not web-playable. Try the mpv backend in Settings or pick another stream.":
     "이 파일은 웹에서 재생할 수 없는 것으로 표시되어 있습니다. 설정에서 mpv 백엔드를 사용하거나 다른 스트림을 선택하세요.",
@@ -732,18 +732,18 @@ const catalog10: Record<string, string> = {
   "This group has not written a description yet.": "이 그룹에는 아직 설명이 없습니다.",
   "This group's feed could not be loaded. Try again in a moment.":
     "이 그룹의 피드를 불러올 수 없습니다. 잠시 후 다시 시도하세요.",
-  "This instance of Harbor is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
-    "이 Harbor 버전은 데스크톱용입니다. 각 네이티브 플랫폼에 맞춰 모바일 중심으로 설계한 iOS 및 Android 전용 앱도 곧 출시됩니다.",
-  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Harbor can't import them.":
-    "Mangayomi 저장소이지만 소스가 Dart를 사용하거나 만화용이 아니므로 Harbor에서 가져올 수 없습니다.",
-  "This is a Mangayomi repo. Harbor runs its JavaScript sources natively. Import them to add these sources to your manga library.":
-    "Mangayomi 저장소입니다. Harbor는 이 저장소의 JavaScript 소스를 네이티브로 실행합니다. 이 소스를 만화 라이브러리에 추가하려면 가져오세요.",
-  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "Mangayomi 저장소입니다. 아직 네이티브 가져오기를 지원하지 않습니다. 현재 가장 방대한 카탈로그를 이용하려면 Suwayomi 서버를 실행한 후 서버 섹션에서 Harbor에 연결하세요.",
-  "This is a Paperback (iOS) repo, which Harbor can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
-    "Paperback(iOS) 저장소이므로 Harbor에서 사용할 수 없습니다. 데스크톱 소스를 이용하려면 서버 섹션에서 Suwayomi 서버를 연결하세요.",
-  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Harbor can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "Tachiyomi / Mihon 저장소입니다. Android(APK) 확장 프로그램이므로 Harbor에서 직접 실행할 수 없습니다. 데스크톱에서 이 소스를 사용하려면 Suwayomi 서버를 실행한 후 서버 섹션에서 Harbor에 연결하세요.",
+  "This instance of Lart is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
+    "이 Lart 버전은 데스크톱용입니다. 각 네이티브 플랫폼에 맞춰 모바일 중심으로 설계한 iOS 및 Android 전용 앱도 곧 출시됩니다.",
+  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Lart can't import them.":
+    "Mangayomi 저장소이지만 소스가 Dart를 사용하거나 만화용이 아니므로 Lart에서 가져올 수 없습니다.",
+  "This is a Mangayomi repo. Lart runs its JavaScript sources natively. Import them to add these sources to your manga library.":
+    "Mangayomi 저장소입니다. Lart는 이 저장소의 JavaScript 소스를 네이티브로 실행합니다. 이 소스를 만화 라이브러리에 추가하려면 가져오세요.",
+  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "Mangayomi 저장소입니다. 아직 네이티브 가져오기를 지원하지 않습니다. 현재 가장 방대한 카탈로그를 이용하려면 Suwayomi 서버를 실행한 후 서버 섹션에서 Lart에 연결하세요.",
+  "This is a Paperback (iOS) repo, which Lart can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
+    "Paperback(iOS) 저장소이므로 Lart에서 사용할 수 없습니다. 데스크톱 소스를 이용하려면 서버 섹션에서 Suwayomi 서버를 연결하세요.",
+  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Lart can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "Tachiyomi / Mihon 저장소입니다. Android(APK) 확장 프로그램이므로 Lart에서 직접 실행할 수 없습니다. 데스크톱에서 이 소스를 사용하려면 Suwayomi 서버를 실행한 후 서버 섹션에서 Lart에 연결하세요.",
   "This is a metadata-based release estimate, not a measured timing score.":
     "측정된 타이밍 점수가 아닌 메타데이터 기반 릴리스 추정치입니다.",
   "This is how a subtitle will look.": "자막은 이렇게 표시됩니다.",
@@ -760,8 +760,8 @@ const catalog10: Record<string, string> = {
     "이 레이아웃에는 아이콘만 표시되므로 레이블은 표시되지 않습니다.",
   "This layout shows icons only, so renaming is off here. Reorder and hide still apply.":
     "이 레이아웃에는 아이콘만 표시되므로 여기서는 이름을 바꿀 수 없습니다. 순서 변경과 숨기기는 계속 적용됩니다.",
-  "This link goes to an external site that Harbor does not control or vouch for. Triple-check the address before you continue, and never enter your Harbor password anywhere but Harbor.":
-    "이 링크는 Harbor에서 관리하거나 보증하지 않는 외부 사이트로 연결됩니다. 계속하기 전에 주소를 세 번 확인하고, Harbor가 아닌 곳에는 절대 Harbor 비밀번호를 입력하지 마세요.",
+  "This link goes to an external site that Lart does not control or vouch for. Triple-check the address before you continue, and never enter your Lart password anywhere but Lart.":
+    "이 링크는 Lart에서 관리하거나 보증하지 않는 외부 사이트로 연결됩니다. 계속하기 전에 주소를 세 번 확인하고, Lart가 아닌 곳에는 절대 Lart 비밀번호를 입력하지 마세요.",
   "This list is empty, or its items couldn't be matched.":
     "이 목록이 비어 있거나 항목을 일치시킬 수 없습니다.",
   "This list is full ({max} items)": "이 목록이 가득 찼습니다({max}개)",
@@ -771,13 +771,13 @@ const catalog10: Record<string, string> = {
   "This member has hidden their showcase, activity and friends from public view.":
     "이 회원은 쇼케이스, 활동 및 친구 목록을 공개하지 않습니다.",
   "This month": "이번 달",
-  "This one also replaces Harbor's bundled players and tools, so it installs through Harbor Setup. Harbor closes, the installer finishes, then Harbor reopens.":
-    "이 항목은 Harbor에 포함된 플레이어와 도구도 교체하므로 Harbor Setup을 통해 설치됩니다. Harbor가 종료되고 설치 프로그램이 작업을 마치면 다시 열립니다.",
-  "This one installs through Harbor Setup, but the update manifest carries no signature for it. Harbor will not run an installer it cannot verify. Download it and run it yourself.":
-    "이 항목은 Harbor Setup을 통해 설치되지만 업데이트 매니페스트에 서명이 없습니다. Harbor는 확인할 수 없는 설치 프로그램을 실행하지 않습니다. 다운로드한 후 직접 실행하세요.",
+  "This one also replaces Lart's bundled players and tools, so it installs through Lart Setup. Lart closes, the installer finishes, then Lart reopens.":
+    "이 항목은 Lart에 포함된 플레이어와 도구도 교체하므로 Lart Setup을 통해 설치됩니다. Lart가 종료되고 설치 프로그램이 작업을 마치면 다시 열립니다.",
+  "This one installs through Lart Setup, but the update manifest carries no signature for it. Lart will not run an installer it cannot verify. Download it and run it yourself.":
+    "이 항목은 Lart Setup을 통해 설치되지만 업데이트 매니페스트에 서명이 없습니다. Lart는 확인할 수 없는 설치 프로그램을 실행하지 않습니다. 다운로드한 후 직접 실행하세요.",
   "This only takes a moment the first time.": "처음 한 번만 잠시 걸립니다.",
-  "This opens Harbor to devices on your Wi-Fi. You can turn it off again in Settings.":
-    "Wi-Fi의 다른 기기에서 Harbor에 접속할 수 있게 합니다. 설정에서 다시 끌 수 있습니다.",
+  "This opens Lart to devices on your Wi-Fi. You can turn it off again in Settings.":
+    "Wi-Fi의 다른 기기에서 Lart에 접속할 수 있게 합니다. 설정에서 다시 끌 수 있습니다.",
   "This order drives your catalog rows and the default stream order. A stream priority set in Settings overrides it for streams.":
     "이 순서에 따라 카탈로그 줄과 기본 스트림 순서가 결정됩니다. 설정에서 스트림 우선순위를 지정하면 스트림에는 해당 설정이 우선 적용됩니다.",
   "This order syncs to every Stremio app signed into this account.":
@@ -795,15 +795,15 @@ const catalog10: Record<string, string> = {
     "이 재생목록은 아직 로드되지 않았거나 채널이 없습니다.",
   "This reads pages a browser can already load. It does not, and must not be made to, bypass a login, password, paywall, or any access control.":
     "브라우저에서 이미 불러올 수 있는 페이지를 읽습니다. 로그인, 비밀번호, 유료 장벽 또는 기타 접근 제어를 우회하지 않으며, 우회하도록 만들어서도 안 됩니다.",
-  "This replaces your current Harbor setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Harbor reloads when it finishes.":
-    "현재 Harbor 설정(테마, 홈 레이아웃, 설정, 애드온, 프로필 등)을 이 파일에 저장된 항목 {n}개로 대체합니다. Stremio 로그인 정보는 그대로 유지됩니다. 완료되면 Harbor가 다시 로드됩니다.",
+  "This replaces your current Lart setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Lart reloads when it finishes.":
+    "현재 Lart 설정(테마, 홈 레이아웃, 설정, 애드온, 프로필 등)을 이 파일에 저장된 항목 {n}개로 대체합니다. Stremio 로그인 정보는 그대로 유지됩니다. 완료되면 Lart가 다시 로드됩니다.",
   "This repository lists no eBook extensions.": "이 저장소에는 eBook 확장 프로그램이 없습니다.",
   "This repository lists no plugins.": "이 저장소에 등록된 플러그인이 없습니다.",
   "This score only appears on cards.": "이 평점은 카드에만 표시됩니다.",
   "This screen stopped. Going back to Home usually clears it.":
     "이 화면이 중지되었습니다. 홈으로 돌아가면 대부분 해결됩니다.",
-  "This server is too old to add repos from Harbor":
-    "이 서버는 너무 오래되어 Harbor에서 저장소를 추가할 수 없습니다",
+  "This server is too old to add repos from Lart":
+    "이 서버는 너무 오래되어 Lart에서 저장소를 추가할 수 없습니다",
   "This server lists no extensions": "이 서버에 등록된 확장 프로그램이 없습니다",
   "This server needs a username and password": "이 서버에는 사용자 이름과 비밀번호가 필요합니다",
   "This server responded but is not supported": "서버가 응답했지만 지원되지 않습니다",
@@ -813,8 +813,8 @@ const catalog10: Record<string, string> = {
     "인터페이스, 메타데이터, 자막 및 오디오 언어를 서로 맞게 설정합니다.",
   "This show": "이 시리즈",
   "This show: {title}": "현재 프로그램: {title}",
-  "This site may not support Harbor's temporary viewer. Retry the original link or open it in your browser.":
-    "이 사이트는 Harbor의 임시 뷰어를 지원하지 않을 수 있습니다. 원본 링크를 다시 불러오거나 브라우저에서 여세요.",
+  "This site may not support Lart's temporary viewer. Retry the original link or open it in your browser.":
+    "이 사이트는 Lart의 임시 뷰어를 지원하지 않을 수 있습니다. 원본 링크를 다시 불러오거나 브라우저에서 여세요.",
   "This source": "이 소스",
   "This source did not provide any chapters.": "이 소스에서 제공한 챕터가 없습니다.",
   "This source did not respond": "이 소스가 응답하지 않았습니다",
@@ -822,11 +822,11 @@ const catalog10: Record<string, string> = {
   "This source is down": "이 소스를 사용할 수 없습니다",
   "This source is not a downloadable season package. Pick another package.":
     "이 소스는 다운로드 가능한 시즌 패키지가 아닙니다. 다른 패키지를 선택하세요.",
-  "This source is not cached. Harbor will stream it peer to peer, which shares data with other peers.":
-    "이 소스는 캐시되지 않았습니다. Harbor가 다른 피어와 데이터를 공유하는 P2P 방식으로 스트리밍합니다.",
+  "This source is not cached. Lart will stream it peer to peer, which shares data with other peers.":
+    "이 소스는 캐시되지 않았습니다. Lart가 다른 피어와 데이터를 공유하는 P2P 방식으로 스트리밍합니다.",
   "This source is slow. Try another.": "이 소스는 느립니다. 다른 소스를 사용해 보세요.",
-  "This source isn't cached on your debrid, so Harbor would pull it directly from peers. It can take a moment to start and may buffer on low-seed torrents.":
-    "이 소스는 디브리드에 캐시되어 있지 않아 Harbor가 피어에서 직접 가져옵니다. 시작하는 데 시간이 걸릴 수 있으며 시더가 적은 토렌트에서는 버퍼링이 발생할 수 있습니다.",
+  "This source isn't cached on your debrid, so Lart would pull it directly from peers. It can take a moment to start and may buffer on low-seed torrents.":
+    "이 소스는 디브리드에 캐시되어 있지 않아 Lart가 피어에서 직접 가져옵니다. 시작하는 데 시간이 걸릴 수 있으며 시더가 적은 토렌트에서는 버퍼링이 발생할 수 있습니다.",
   "This source rejected the stream": "이 소스에서 스트림을 거부했습니다",
   "This source returned no chapters for this title.":
     "이 소스에서 이 작품의 챕터를 찾지 못했습니다.",
@@ -844,8 +844,8 @@ const catalog10: Record<string, string> = {
   "This user hasn't set a showcase": "이 사용자는 쇼케이스를 설정하지 않았습니다",
   "This user hasn't written anything yet": "이 사용자는 아직 소개를 작성하지 않았습니다",
   "This user keeps their friends private": "이 사용자는 친구 목록을 비공개로 설정했습니다",
-  "This usually means antivirus removed the server file (stremio-server.exe). Add Harbor's install folder to your antivirus exclusions, then reinstall.":
-    "일반적으로 백신 프로그램이 서버 파일(stremio-server.exe)을 삭제한 경우입니다. Harbor 설치 폴더를 백신 프로그램의 예외 목록에 추가한 다음 다시 설치하세요.",
+  "This usually means antivirus removed the server file (stremio-server.exe). Add Lart's install folder to your antivirus exclusions, then reinstall.":
+    "일반적으로 백신 프로그램이 서버 파일(stremio-server.exe)을 삭제한 경우입니다. Lart 설치 폴더를 백신 프로그램의 예외 목록에 추가한 다음 다시 설치하세요.",
   "This week": "이번 주",
   "Three Point %": "3점슛 성공률",
   "Three ways to add art": "이미지를 추가하는 세 가지 방법",
@@ -893,8 +893,8 @@ const catalog10: Record<string, string> = {
   "To get a Charity badge, forward your donation receipt or invoice to":
     "Charity 배지를 받으려면 기부 영수증이나 청구서를 다음 주소로 전달하세요.",
   "To run a public relay, post the": "공개 릴레이를 운영하려면",
-  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Harbor users paste it into Settings, Harbor Relay, {kbd}.":
-    "공개 릴레이를 운영하려면 r/Stremio 또는 커뮤니티가 활동하는 곳에 {code} URL을 게시하세요. 다른 Harbor 사용자는 설정, Harbor Relay, {kbd}에 이 URL을 붙여 넣으면 됩니다.",
+  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Lart users paste it into Settings, Lart Relay, {kbd}.":
+    "공개 릴레이를 운영하려면 r/Stremio 또는 커뮤니티가 활동하는 곳에 {code} URL을 게시하세요. 다른 Lart 사용자는 설정, Lart Relay, {kbd}에 이 URL을 붙여 넣으면 됩니다.",
   "To the side": "측면",
   Today: "오늘",
   "Today's openers": "오늘의 첫 작품",
@@ -1030,8 +1030,8 @@ const catalog10: Record<string, string> = {
   Tournaments: "토너먼트",
   "Towering Roles": "압도적인 역할",
   Track: "트랙",
-  "Track everything you watch, see your watchlist, and get personalized recommendations on Harbor's home page. Free at trakt.tv.":
-    "시청한 모든 콘텐츠를 기록하고 관심 목록을 확인하며 Harbor 홈에서 맞춤 추천을 받으세요. trakt.tv에서 무료로 이용할 수 있습니다.",
+  "Track everything you watch, see your watchlist, and get personalized recommendations on Lart's home page. Free at trakt.tv.":
+    "시청한 모든 콘텐츠를 기록하고 관심 목록을 확인하며 Lart 홈에서 맞춤 추천을 받으세요. trakt.tv에서 무료로 이용할 수 있습니다.",
   "Track people": "인물 팔로우",
   "Track people ({n})": "인물 팔로우({n})",
   "Track switching isn't supported on the current engine. The file's default audio is playing.":

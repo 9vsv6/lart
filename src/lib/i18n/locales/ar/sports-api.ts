@@ -3,8 +3,8 @@ export default {
     "رفض API-Sports هذا المفتاح. تحقّق منه في لوحة تحكم API-Sports.",
   "Your API-Sports request allowance is exhausted. Public feeds remain available.":
     "نفدت حصة طلبات API-Sports. لا تزال مصادر البيانات العامة متاحة.",
-  "API-Sports is limiting requests. Harbor will retry after the waiting period.":
-    "يحدّ API-Sports من الطلبات. سيعيد Harbor المحاولة بعد فترة الانتظار.",
+  "API-Sports is limiting requests. Lart will retry after the waiting period.":
+    "يحدّ API-Sports من الطلبات. سيعيد Lart المحاولة بعد فترة الانتظار.",
   "API-Sports is unavailable right now. Public feeds remain available.":
     "API-Sports غير متاح حاليًا. لا تزال مصادر البيانات العامة متاحة.",
   "The key could not be saved. Your previous key is unchanged.":

@@ -77,7 +77,7 @@ export default {
   "games.league.metaScope": "O OP.GG fornece o ranking de rotas com sua amostra padrão, sem especificar atualização, região ou faixa de elo. As vitórias são calculadas com partidas e vitórias informadas; a fonte arredonda as taxas de escolha. Rankings e builds usam amostras separadas.",
   "games.league.buildNote": "Cada build tem sua própria amostra. Builds completas favorecem partidas que duraram o bastante para comprar os itens; sua taxa de vitória não é a taxa geral do campeão. Confrontos podem ter amostras pequenas. Adapte-se ao time e adversário. Os vídeos podem ser de atualizações anteriores.",
   "games.league.patchDifference": "Estatísticas da build: {patch}; dados de itens e habilidades: {assets}.",
-  "games.league.attribution": "Harbor is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
+  "games.league.attribution": "Lart is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
   "games.league.tierList": "Lista de tiers",
   "games.league.tierScope": "Ranqueada solo/duo · Esmeralda+ · Global",
   "games.league.patchFilter": "Escolher atualização",

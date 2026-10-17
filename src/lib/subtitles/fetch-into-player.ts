@@ -142,7 +142,7 @@ function extraCtx(settings: Settings, deep: boolean, hashOnly: boolean) {
   const wantSubsource = enabled.subsource === true && !!settings.subsourceApiKey;
   if (!hashOnly && !wantSubdl && !wantSubsource) return undefined;
   return {
-    userAgent: "Harbor",
+    userAgent: "Lart",
     netAllowed: true,
     subdlApiKey: settings.subdlApiKey || null,
     subsourceApiKey: settings.subsourceApiKey || null,

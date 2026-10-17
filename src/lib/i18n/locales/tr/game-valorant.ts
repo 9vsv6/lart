@@ -35,7 +35,7 @@ export default {
   "games.valorant.empty": "Bu filtrelerle eşleşen sonuç yok.",
   "games.valorant.checked": "Kontrol: {date}",
   "games.valorant.metaScope": "Seçili yama için OP.GG rekabetçi verileri. Seçilme oranı, ajan görünümlerinin payıdır. Sonuçlar tüm oyuncuları değil, kaynağın örneklemini temsil eder.",
-  "games.valorant.referenceScope": "Oyun görselleri ve referanslar Valorant-API üzerinden sağlanır. Güncellemeler gecikebilir. Harbor, Riot Games tarafından onaylanmamıştır.",
+  "games.valorant.referenceScope": "Oyun görselleri ve referanslar Valorant-API üzerinden sağlanır. Güncellemeler gecikebilir. Lart, Riot Games tarafından onaylanmamıştır.",
   "games.valorant.samples": "{count} görünüm",
   "games.valorant.smallSample": "Küçük örneklem",
   "games.valorant.abilities": "Yetenekler",

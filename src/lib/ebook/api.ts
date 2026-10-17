@@ -18,7 +18,7 @@ export type EBook = {
   seriesTitle?: string;
   /** Alternative titles explicitly supplied by the installed source. */
   sourceAliases?: string[];
-  /** Titles obtained from a metadata result that passed Harbor's verification checks. */
+  /** Titles obtained from a metadata result that passed Lart's verification checks. */
   verifiedAliases?: string[];
   /** Stable identifiers explicitly supplied by the installed source. */
   sourceIdentity?: {
@@ -876,7 +876,7 @@ async function cachedJson<T>(url: string, timeoutMs = 8_000): Promise<T> {
           cacheUrl.hostname === "query.wikidata.org"
             ? {
                 Accept: "application/sparql-results+json",
-                "User-Agent": "Harbor (eBook metadata)",
+                "User-Agent": "Lart (eBook metadata)",
               }
             : undefined,
       });
@@ -951,7 +951,7 @@ export async function validateGoogleBooksApiKey(value: string): Promise<void> {
   const key = value.trim();
   if (!key) return;
   const url = new URL("https://www.googleapis.com/books/v1/volumes");
-  url.searchParams.set("q", "intitle:Harbor");
+  url.searchParams.set("q", "intitle:Lart");
   url.searchParams.set("maxResults", "1");
   url.searchParams.set("key", key);
   const response = await safeFetch(url.toString(), { signal: AbortSignal.timeout(10_000) });

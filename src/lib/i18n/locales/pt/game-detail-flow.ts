@@ -1,7 +1,7 @@
 export default {
   "games.details.broadcastPause": "Pausar transmissão",
   "games.details.broadcastResume": "Reproduzir transmissão",
-  "games.details.broadcastPlay": "Assistir no Harbor",
+  "games.details.broadcastPlay": "Assistir no Lart",
   "games.details.watchRun": "Assistir à run",
   "games.details.viewRun": "Ver a run",
   "games.details.runVideo": "Vídeo da run",

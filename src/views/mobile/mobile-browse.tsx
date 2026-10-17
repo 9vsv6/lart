@@ -6,6 +6,7 @@ import { MobileAnime } from "./mobile-anime";
 import { MobileDiscover } from "./mobile-discover";
 import { MobileViewSwitcher } from "./mobile-view-switcher";
 import { MobileDeviceSwitcher } from "./mobile-device-switcher";
+import { isPhoneApp } from "@/lib/platform";
 import { ScrollToTop } from "./scroll-to-top";
 
 export type View = "home" | "movies" | "shows" | "anime" | "discover";
@@ -85,7 +86,13 @@ export function MobileBrowse() {
         style={{ paddingTop: "calc(env(safe-area-inset-top, 0px) + 10px)" }}
       >
         <div className="pointer-events-auto min-w-0">
-          <MobileDeviceSwitcher />
+          {isPhoneApp() ? (
+            <span className="px-1 font-display text-[26px] font-semibold leading-none tracking-tight text-ink">
+              Lart
+            </span>
+          ) : (
+            <MobileDeviceSwitcher />
+          )}
         </div>
         <div className="pointer-events-auto">
           <MobileViewSwitcher view={view} onSelect={selectView} />

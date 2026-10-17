@@ -23,7 +23,7 @@ const BY_CODE = {
     "Someone released that handle recently. It frees up 14 days after they dropped it.",
   handle_cooldown: "You changed your handle recently. You can change it again after the cooldown.",
   stremio_already_bound:
-    "That Stremio account is already linked to a different Harbor account. Unlink it there first.",
+    "That Stremio account is already linked to a different Lart account. Unlink it there first.",
   stremio_key_invalid: "That Stremio sign-in did not go through. Try again.",
   stremio_anonymous: "Sign in to a real Stremio account, not a guest, to verify.",
   stremio_unreachable: "Could not reach Stremio right now. Try again in a moment.",
@@ -48,7 +48,7 @@ const BY_REASON = {
 } as const;
 
 const VALIDATION_ERROR_KEY = "Please check the details you entered and try again.";
-const NETWORK_ERROR_KEY = "Couldn't reach Harbor. Check your connection and try again.";
+const NETWORK_ERROR_KEY = "Couldn't reach Lart. Check your connection and try again.";
 const GENERIC_ERROR_KEY = "Something went wrong. Try again.";
 const SNAKE_CODE_RE = /^[a-z0-9]+(_[a-z0-9]+)+$/;
 

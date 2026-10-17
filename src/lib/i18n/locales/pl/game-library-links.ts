@@ -2,7 +2,7 @@ export default {
   "games.links.title": "Linki",
   "games.links.sort": "Sortuj linki",
   "games.links.note": "Sortuj według adresu URL, od A do Z. Nazwy i adresy pozostają bez zmian.",
-  "games.links.available": "Używa linków już dostępnych w Harbor. Nowe linki pojawią się za zapisaną kolejnością.",
+  "games.links.available": "Używa linków już dostępnych w Lart. Nowe linki pojawią się za zapisaną kolejnością.",
   "games.links.original": "Przywróć pierwotną kolejność",
   "games.links.applied": "Zaktualizowano linki dla {count} gier.",
   "games.links.changes": "Liczba gier do zmiany: {count}.",

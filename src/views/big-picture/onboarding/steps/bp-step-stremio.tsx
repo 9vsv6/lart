@@ -118,7 +118,7 @@ export function BpStepStremio({ setSatisfied, setPrimaryGuard }: BpOnboardStepPr
         />
       </BpDecisionRow>
       <BpDecisionNote
-        text={error ?? t("Skip this and Harbor still works. Your library just stays local.")}
+        text={error ?? t("Skip this and Lart still works. Your library just stays local.")}
         alert={error !== null}
       />
       <BpOnboardKeyboard

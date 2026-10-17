@@ -1,7 +1,7 @@
 export default {
   "games.details.broadcastPause": "暂停直播",
   "games.details.broadcastResume": "播放直播",
-  "games.details.broadcastPlay": "在 Harbor 中观看",
+  "games.details.broadcastPlay": "在 Lart 中观看",
   "games.details.watchRun": "观看速通",
   "games.details.viewRun": "查看纪录",
   "games.details.runVideo": "速通视频",

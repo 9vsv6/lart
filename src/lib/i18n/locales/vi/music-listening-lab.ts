@@ -36,7 +36,7 @@ const musicListeningLab: Record<string, string> = {
   "music.lab.crossfeed": "Crossfeed tai nghe",
   "music.lab.crossfeedHelp":
     "Trộn một phần đã lọc của mỗi kênh stereo sang kênh kia để giảm tách biệt khi dùng tai nghe. 0% là tắt.",
-  "music.lab.bypass": "Bỏ qua DSP Harbor",
+  "music.lab.bypass": "Bỏ qua DSP Lart",
   "music.lab.bypassHelp":
     "Sau khi áp dụng, bỏ qua EQ, tiền khuếch đại, crossfeed, cân bằng và ReplayGain. Đầu ra và âm lượng phát vẫn hoạt động. Không xác minh phát bit-perfect.",
   "music.lab.exclusive": "Yêu cầu đầu ra độc quyền",

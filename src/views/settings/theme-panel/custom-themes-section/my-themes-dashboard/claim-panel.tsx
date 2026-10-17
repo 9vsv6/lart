@@ -82,7 +82,7 @@ export function ClaimPanel({
         <form onSubmit={claimManual} className="flex flex-col gap-4 border-t border-edge-soft pt-4">
           <p className={`max-w-[66ch] ${ROW_DESC}`}>
             {t(
-              "Every theme you share gets a private owner token. On the device where you shared it, Harbor saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.",
+              "Every theme you share gets a private owner token. On the device where you shared it, Lart saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.",
             )}
           </p>
           <TextField

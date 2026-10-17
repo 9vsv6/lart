@@ -21,8 +21,8 @@ const wired: Record<string, string> = {
   "Add a custom award type": "カスタム賞を追加",
   "Add a display name first. It is the name shown on your profile.":
     "まず表示名を追加してください。プロフィールに表示される名前です。",
-  "Add a series above and Harbor will grab each new episode as it airs, on your terms.":
-    "上でシリーズを追加すると、Harborが新しいエピソードの配信に合わせて、指定した条件で自動取得します。",
+  "Add a series above and Lart will grab each new episode as it airs, on your terms.":
+    "上でシリーズを追加すると、Lartが新しいエピソードの配信に合わせて、指定した条件で自動取得します。",
   "Add a series to auto-download": "自動ダウンロードするシリーズを追加",
   "Add art to at least one slot to continue.":
     "続行するには、少なくとも1つのスロットに画像を追加してください。",
@@ -31,8 +31,8 @@ const wired: Record<string, string> = {
   "Add screenshot": "スクリーンショットを追加",
   "Add to Shelf": "本棚に追加",
   "Add to your watchlist": "ウォッチリストに追加",
-  "Add trusted eBook sources from a Harbor-compatible repository.":
-    "Harbor対応リポジトリから、信頼できるeBook配信元を追加します。",
+  "Add trusted eBook sources from a Lart-compatible repository.":
+    "Lart対応リポジトリから、信頼できるeBook配信元を追加します。",
   "Add up to 6 screenshots so people can see your theme in action. Optional, but they sell it.":
     "テーマの使用イメージが伝わるスクリーンショットを最大6枚追加できます。任意ですが、テーマの魅力をアピールできます。",
   "Added to Shelf": "本棚に追加しました",
@@ -71,8 +71,8 @@ const wired: Record<string, string> = {
     "賞の種類は固定されていません。好きな名前と画像でカスタム賞を追加できます。追加した賞は、標準のトロフィーと一緒に表示されます。",
   "Back on TMDB, click your avatar in the top right and choose Settings from the menu.":
     "TMDBに戻り、右上のアバターをクリックして、メニューから「Settings」を選択します。",
-  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Harbor. Harbor saves it on its own.":
-    "APIページに戻り、一番下までスクロールします。「API Key」の値をコピーしてHarborに貼り付けてください。Harborが自動的に保存します。",
+  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Lart. Lart saves it on its own.":
+    "APIページに戻り、一番下までスクロールします。「API Key」の値をコピーしてLartに貼り付けてください。Lartが自動的に保存します。",
   "Back to eBook actions": "eBookの操作に戻る",
   "Back to editing": "編集に戻る",
   "Back to remote": "リモコンに戻る",
@@ -97,8 +97,8 @@ const wired: Record<string, string> = {
   "Brand name": "ブランド名",
   "Bring a server-rendered library aboard with your own source configuration.":
     "独自のソース設定で、サーバーレンダリング型ライブラリを追加できます。",
-  "Bring trusted source packages aboard through Harbor’s isolated extension worker.":
-    "Harborの隔離された拡張機能ワーカーを介して、信頼できるソースパッケージを追加できます。",
+  "Bring trusted source packages aboard through Lart’s isolated extension worker.":
+    "Lartの隔離された拡張機能ワーカーを介して、信頼できるソースパッケージを追加できます。",
   "Bring your own keys": "自分のキーを使用",
   "Browse community": "コミュニティを見る",
   "Browse eBooks": "eBookを探す",
@@ -112,8 +112,8 @@ const wired: Record<string, string> = {
   "CSS {css} · HTML {html} · JS {js}": "CSS {css}・HTML {html}・JS {js}",
   "CSS, HTML and JS layered over the whole app. Optional for built-in layouts, required for custom chrome.":
     "アプリ全体に重ねて適用するCSS、HTML、JSです。組み込みレイアウトでは任意ですが、カスタムUIでは必須です。",
-  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Harbor feature, so your chrome never goes stale when Harbor adds menu items.":
-    "onclickハンドラーまたはテーマのJSから呼び出してください。これらは安定性と安全性が確保され、いずれもHarborの実機能を操作します。Harborにメニュー項目が追加されても、カスタムUIが古くなることはありません。",
+  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Lart feature, so your chrome never goes stale when Lart adds menu items.":
+    "onclickハンドラーまたはテーマのJSから呼び出してください。これらは安定性と安全性が確保され、いずれもLartの実機能を操作します。Lartにメニュー項目が追加されても、カスタムUIが古くなることはありません。",
   "Cancel Edge TTS generation": "Edge TTSの生成をキャンセル",
   "Cancel audio generation": "音声生成をキャンセル",
   Cancelled: "打ち切り",
@@ -152,7 +152,7 @@ const wired: Record<string, string> = {
   "Close the cast menu and reopen it to rescan the network.":
     "ネットワークを再スキャンするには、キャストメニューを閉じてから開き直してください。",
   "Close zoom controls": "ズーム操作を閉じる",
-  "Come back to Harbor and try casting again.": "Harborに戻り、もう一度キャストしてください。",
+  "Come back to Lart and try casting again.": "Lartに戻り、もう一度キャストしてください。",
   "Complete book": "本全体",
   "Complete-chapter generation progress": "章全体の生成進捗",
   "Configure the addon above, then copy its manifest URL and paste it here. The web app can't catch the Install button automatically the way the desktop app does.":
@@ -162,8 +162,8 @@ const wired: Record<string, string> = {
     "個人利用であることをもう一度確認し、チェックボックスをオンにしてAPI利用規約に同意してください。",
   "Congrats! Tap to view your badges.": "おめでとうございます！タップしてバッジを確認しましょう。",
   "Connect a source": "ソースを接続",
-  "Connect books you own, trusted reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "所有している本、信頼できる読書ソース、メタデータサービスを接続できます。各ソースを自分で管理しながら、Harborが本棚を整理された状態に保ちます。",
+  "Connect books you own, trusted reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "所有している本、信頼できる読書ソース、メタデータサービスを接続できます。各ソースを自分で管理しながら、Lartが本棚を整理された状態に保ちます。",
   "Connect to your computer to manage your library.":
     "ライブラリを管理するには、パソコンに接続してください。",
   "Connecting...": "接続中...",
@@ -220,8 +220,8 @@ const wired: Record<string, string> = {
   "Delete saved audio": "保存済み音声を削除",
   "Diacritic-insensitive · results ahead stay sealed":
     "ダイアクリティカルマークを区別しない · 先の検索結果は伏せたまま",
-  "Dispatched on window. Listen from your theme JS to react to Harbor's lifecycle.":
-    "windowに送出されます。テーマのJSでリッスンすると、Harborのライフサイクルに応答できます。",
+  "Dispatched on window. Listen from your theme JS to react to Lart's lifecycle.":
+    "windowに送出されます。テーマのJSでリッスンすると、Lartのライフサイクルに応答できます。",
   "Display the artist and album under the title on the card.":
     "カードのタイトル下にアーティストとアルバムを表示します。",
   "Distinguished fiction honored by the Pulitzer Prize": "ピュリツァー賞を受賞した傑作小説",
@@ -233,8 +233,8 @@ const wired: Record<string, string> = {
   "Download interrupted": "ダウンロードが中断されました",
   "Download {file}": "{file}をダウンロード",
   "Downloading shaders…": "シェーダーをダウンロード中…",
-  "Drop in art at any resolution. Harbor resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
-    "解像度を問わずアートワークをドロップしてください。大きすぎるものはHarborが自動でリサイズ・圧縮するため、サイズが原因でスキップされることはありません。背景が透明な正方形のPNGが最適です。",
+  "Drop in art at any resolution. Lart resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
+    "解像度を問わずアートワークをドロップしてください。大きすぎるものはLartが自動でリサイズ・圧縮するため、サイズが原因でスキップされることはありません。背景が透明な正方形のPNGが最適です。",
   "Drop many images, GIFs, or a .zip at once. Name each file after its slot ({example}) and we match them. Any size is fine, we resize big images and keep animated GIFs light.":
     "複数の画像、GIF、または.zipをまとめてドロップできます。各ファイルに対応するスロット名（{example}）を付けると、自動で照合されます。サイズは問いません。大きな画像はリサイズし、アニメーションGIFは軽量化します。",
   "Drop the About and Custom labels so an embed fills the card cleanly.":
@@ -255,8 +255,8 @@ const wired: Record<string, string> = {
   "Even after auto-shrinking this image is still too big to store. Try one with a tighter crop.":
     "自動縮小後も、この画像は保存するには大きすぎます。もっと余白を切り詰めた画像をお試しください。",
   "Every slot name": "すべてのスロット名",
-  "Every surface in Harbor maps to one of these 12 variables.":
-    "Harborのすべてのサーフェスは、これら12個の変数のいずれかに対応します。",
+  "Every surface in Lart maps to one of these 12 variables.":
+    "Lartのすべてのサーフェスは、これら12個の変数のいずれかに対応します。",
   "Every theme is sandboxed, scanned, and reviewed before it reaches the library, so you can try any look without a second thought.":
     "すべてのテーマはサンドボックス化され、スキャンと審査を経てからライブラリに公開されます。どのデザインも安心してお試しいただけます。",
   "Exit full screen": "全画面表示を終了",
@@ -270,15 +270,15 @@ const wired: Record<string, string> = {
   "Featured pick": "注目の一作",
   "Featured theme": "注目のテーマ",
   Fiction: "フィクション",
-  "File is not a Harbor layout profile.":
-    "このファイルはHarborのレイアウトプロフィールではありません。",
+  "File is not a Lart layout profile.":
+    "このファイルはLartのレイアウトプロフィールではありません。",
   "Fill in the details, then Subscribe": "詳細を入力してから購読してください",
   "Filter eBooks": "電子書籍を絞り込む",
   "Find a word or passage": "単語や文章を検索",
-  "Finish updating Harbor": "Harborのアップデートを完了",
+  "Finish updating Lart": "Lartのアップデートを完了",
   "Floating orbs over the canvas.": "キャンバス上に浮かぶオーブ。",
   Folder: "フォルダー",
-  "Folder selection is available in the Harbor app": "フォルダーの選択はHarborアプリで利用できます",
+  "Folder selection is available in the Lart app": "フォルダーの選択はLartアプリで利用できます",
   "Follow them out?": "外部サイトへ移動しますか？",
   "Font tokens": "フォントトークン",
   "For Application URL anything works, for example https://harbor.site. TMDB never visits it.":
@@ -292,8 +292,8 @@ const wired: Record<string, string> = {
   "Full screen": "全画面表示",
   "GIF export failed": "GIFのエクスポートに失敗しました",
   "GIF saved to {path}": "GIFを{path}に保存しました",
-  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Harbor handles the shaders.":
-    "再生中のアニメの線を鮮明にし、グラデーションを整えるGPUシェーダーです。モードを選ぶだけで、Harborがシェーダーを処理します。",
+  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Lart handles the shaders.":
+    "再生中のアニメの線を鮮明にし、グラデーションを整えるGPUシェーダーです。モードを選ぶだけで、Lartがシェーダーを処理します。",
   "Get theme": "テーマを入手",
   "Get your free TMDB key": "無料のTMDBキーを取得",
   "Get your free TheTVDB key": "無料のTheTVDBキーを取得",
@@ -308,22 +308,22 @@ const wired: Record<string, string> = {
   "HDR10 unsupported": "HDR10非対応",
   "HEVC unsupported": "HEVC非対応",
   "HTML and CSS are each capped at 16,384 characters.": "HTMLとCSSはそれぞれ16,384文字までです。",
-  "Harbor Reader": "Harbor Reader",
-  "Harbor Staff": "Harborスタッフ",
-  "Harbor eBook": "Harbor eBook",
-  "Harbor found something at this address that looked like a Roku, but it didn't respond like one. The device may be offline or another product picked up the same broadcast.":
+  "Lart Reader": "Lart Reader",
+  "Lart Staff": "Lartスタッフ",
+  "Lart eBook": "Lart eBook",
+  "Lart found something at this address that looked like a Roku, but it didn't respond like one. The device may be offline or another product picked up the same broadcast.":
     "このアドレスでRokuらしきデバイスが見つかりましたが、Rokuとして応答しませんでした。デバイスがオフラインか、別の製品が同じブロードキャストに反応した可能性があります。",
-  "Harbor never hosts your books or source files.":
-    "Harborがお客様の書籍やソースファイルをホストすることはありません。",
-  "Harbor never hosts your books.": "Harborがお客様の書籍をホストすることはありません。",
-  "Harbor reading room": "Harbor読書ルーム",
-  "Harbor snippet": "Harborスニペット",
-  "Harbor theme": "Harborテーマ",
-  "Harbor uses ffmpeg to convert streams into formats TVs can play. It's a one-time install and Harbor will pick it up automatically.":
-    "Harborはffmpegを使い、ストリームをテレビで再生できる形式に変換します。一度インストールすれば、Harborが自動的に検出します。",
-  "Harbor {version} downloaded but did not install on its own.":
-    "Harbor {version}はダウンロードされましたが、自動ではインストールされませんでした。",
-  "Harbor, from a public domain frame": "Harbor、パブリックドメインのフレームより",
+  "Lart never hosts your books or source files.":
+    "Lartがお客様の書籍やソースファイルをホストすることはありません。",
+  "Lart never hosts your books.": "Lartがお客様の書籍をホストすることはありません。",
+  "Lart reading room": "Lart読書ルーム",
+  "Lart snippet": "Lartスニペット",
+  "Lart theme": "Lartテーマ",
+  "Lart uses ffmpeg to convert streams into formats TVs can play. It's a one-time install and Lart will pick it up automatically.":
+    "Lartはffmpegを使い、ストリームをテレビで再生できる形式に変換します。一度インストールすれば、Lartが自動的に検出します。",
+  "Lart {version} downloaded but did not install on its own.":
+    "Lart {version}はダウンロードされましたが、自動ではインストールされませんでした。",
+  "Lart, from a public domain frame": "Lart、パブリックドメインのフレームより",
   "Help & feedback": "ヘルプとフィードバック",
   "Here for the late-night sci-fi": "深夜のSFを楽しみに来ました",
   Hiatus: "休載中",
@@ -422,8 +422,8 @@ const wired: Record<string, string> = {
   "Make sure the Roku is powered on and on the same Wi-Fi as your computer.":
     "Rokuの電源が入っていて、パソコンと同じWi-Fiに接続されていることを確認してください。",
   "Manage eBook sources": "eBookソースを管理",
-  "Manage every place Harbor can read from, whether it lives on disk or across the web.":
-    "ディスク上でもWeb上でも、Harborが読み込めるすべての場所を管理します。",
+  "Manage every place Lart can read from, whether it lives on disk or across the web.":
+    "ディスク上でもWeb上でも、Lartが読み込めるすべての場所を管理します。",
   "Manga adaptation": "漫画化",
   "Mark as Read": "既読にする",
   "Mark as unwatched": "未視聴にする",
@@ -525,16 +525,16 @@ const wired: Record<string, string> = {
     "Rokuのホーム画面から「ストリーミングチャンネル」を開きます。",
   "One line for the picker (optional)": "選択画面に表示する1行（任意）",
   "One line shown under the name.": "名前の下に表示する1行です。",
-  "One-time setup downloads the shader pack (about 1 MB) into Harbor. No files to hunt down.":
-    "初回設定時にシェーダーパック（約1 MB）がHarbor内へダウンロードされます。ファイルを探す必要はありません。",
+  "One-time setup downloads the shader pack (about 1 MB) into Lart. No files to hunt down.":
+    "初回設定時にシェーダーパック（約1 MB）がLart内へダウンロードされます。ファイルを探す必要はありません。",
   "Only you can see your friends, badges, activity, and comments. Your name and avatar stay visible.":
     "友達、バッジ、アクティビティ、コメントは自分だけに表示されます。名前とアバターは引き続き公開されます。",
   "Open Settings, then System, then Advanced system settings.":
     "「設定」、「システム」、「システムの詳細設定」の順に開きます。",
   "Open TheTVDB": "TheTVDBを開く",
   "Open a folder": "フォルダーを開く",
-  "Open a manga on Harbor to control the reader from here.":
-    "Harborでマンガを開くと、ここからリーダーを操作できます。",
+  "Open a manga on Lart to control the reader from here.":
+    "Lartでマンガを開くと、ここからリーダーを操作できます。",
   "Open a terminal and run: brew install ffmpeg": "ターミナルを開いて実行: brew install ffmpeg",
   "Open a terminal and run: winget install Gyan.FFmpeg":
     "ターミナルを開いて実行: winget install Gyan.FFmpeg",
@@ -630,7 +630,7 @@ const wired: Record<string, string> = {
   "Rate this pack": "このパックを評価",
   "Rate this theme": "このテーマを評価",
   "Rate {count} stars": "{count}つ星で評価",
-  "Re-sync from your Harbor profile picture": "Harborのプロフィール画像から再同期",
+  "Re-sync from your Lart profile picture": "Lartのプロフィール画像から再同期",
   "Read EPUB, text, Markdown, and HTML books already on this device.":
     "このデバイスにあるEPUB、テキスト、Markdown、HTML形式の書籍を読めます。",
   "Read chapter with Edge TTS": "Edge TTSで章を読み上げ",
@@ -693,11 +693,11 @@ const wired: Record<string, string> = {
     "{count}枚の画像を収まるようにリサイズしました。サイズが原因でスキップされた画像はありません。",
   "Resized {count} images to fit. Nothing was skipped for size.":
     "{count}枚の画像を収まるようにリサイズしました。サイズが原因でスキップされた画像はありません。",
-  "Reskin the award trophies shown across Harbor. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
-    "Harbor全体に表示されるアワードトロフィーの外観を変更できます。アワードをクリックしてPNGまたはアニメーションGIFを追加したり、独自のアワードタイプを作成したり、セット全体を一括でインポートしたりできます。",
+  "Reskin the award trophies shown across Lart. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
+    "Lart全体に表示されるアワードトロフィーの外観を変更できます。アワードをクリックしてPNGまたはアニメーションGIFを追加したり、独自のアワードタイプを作成したり、セット全体を一括でインポートしたりできます。",
   "Reskin the quality chips (4K, HDR, Dolby Vision, Atmos and more) that ride each stream in the play picker. Click any slot to drop in your own PNG or animated GIF, or import a whole set at once. You do not have to fill every slot.":
     "再生選択画面で各ストリームに表示される画質バッジ（4K、HDR、Dolby Vision、Atmosなど）の外観を変更できます。スロットをクリックして独自のPNGまたはアニメーションGIFを追加するか、セット全体を一括でインポートできます。すべてのスロットを埋める必要はありません。",
-  "Restart Harbor after the install completes.": "インストール完了後にHarborを再起動してください。",
+  "Restart Lart after the install completes.": "インストール完了後にLartを再起動してください。",
   "Restart game": "ゲームを再起動",
   "Restart to update": "再起動して更新",
   "Resume download": "ダウンロードを再開",
@@ -750,25 +750,25 @@ const wired: Record<string, string> = {
   "Select a passage to add a highlight, note, or reference.":
     "文章を選択して、ハイライト、メモ、参照を追加します。",
   "Select a volume to see its chapters.": "巻を選択するとチャプターが表示されます。",
-  "Send this title to your Harbor app": "このタイトルをHarborアプリに送信",
+  "Send this title to your Lart app": "このタイトルをLartアプリに送信",
   "Sends only the chapter you open to DeepSeek. Volumes, chapters, and metadata stay unchanged.":
     "DeepSeekに送信されるのは、開いたチャプターだけです。巻、チャプター、メタデータは変更されません。",
-  "Set a Harbor profile picture first": "先にHarborのプロフィール画像を設定してください",
+  "Set a Lart profile picture first": "先にLartのプロフィール画像を設定してください",
   "Set on <html>. Use them to scope styles to a specific layout/card/button choice.":
     "<html>に設定します。特定のレイアウト、カード、ボタンの選択肢にスタイルの適用範囲を限定するために使用します。",
   "Set on the root. Override any to swap typography.":
     "ルートに設定します。任意の値を上書きして書体を変更できます。",
-  "Set up at least one readable eBook source to begin. Metadata can describe a book, but a folder, extension, or custom source is what lets Harbor open it.":
-    "まず、閲覧可能なeBookソースを1つ以上設定してください。メタデータは本の情報を記述できますが、Harborで本を開くにはフォルダー、拡張機能、またはカスタムソースが必要です。",
+  "Set up at least one readable eBook source to begin. Metadata can describe a book, but a folder, extension, or custom source is what lets Lart open it.":
+    "まず、閲覧可能なeBookソースを1つ以上設定してください。メタデータは本の情報を記述できますが、Lartで本を開くにはフォルダー、拡張機能、またはカスタムソースが必要です。",
   "Set up eBooks": "eBookを設定",
   "Set your status": "ステータスを設定",
-  "Sets streaming availability and the Now Playing release window. Pick a country and Harbor offers to match the interface, metadata, subtitle, and audio languages to it.":
-    "ストリーミング配信状況と「上映中」の公開期間を設定します。国を選ぶと、Harborからインターフェース、メタデータ、字幕、音声の言語をその国に合わせるよう提案されます。",
+  "Sets streaming availability and the Now Playing release window. Pick a country and Lart offers to match the interface, metadata, subtitle, and audio languages to it.":
+    "ストリーミング配信状況と「上映中」の公開期間を設定します。国を選ぶと、Lartからインターフェース、メタデータ、字幕、音声の言語をその国に合わせるよう提案されます。",
   "Setting up an addon": "アドオンを設定中",
   "Setup · {title}": "セットアップ · {title}",
   "Shaders installed": "シェーダーをインストールしました",
-  "Shape the metadata and reading language Harbor uses without changing your original files.":
-    "元のファイルを変更せずに、Harborで使用するメタデータと言語を調整できます。",
+  "Shape the metadata and reading language Lart uses without changing your original files.":
+    "元のファイルを変更せずに、Lartで使用するメタデータと言語を調整できます。",
   "Share a pack": "パックを共有",
   "Share a theme": "テーマを共有",
   "Share an icon pack": "アイコンパックを共有",
@@ -795,8 +795,8 @@ const wired: Record<string, string> = {
   "Show them anyway": "それでも表示",
   "Show translation": "翻訳を表示",
   "Show up to 6 of your lists on your profile": "プロフィールに最大6件のリストを表示",
-  "Show your Harbor profile picture on the community":
-    "コミュニティにHarborのプロフィール画像を表示",
+  "Show your Lart profile picture on the community":
+    "コミュニティにLartのプロフィール画像を表示",
   "Shows as a bubble on your profile": "プロフィールにバブルとして表示されます",
   "Shows in the browser tab; defaults to your avatar":
     "ブラウザーのタブに表示されます。デフォルトはアバターです",
@@ -825,8 +825,8 @@ const wired: Record<string, string> = {
   "Stop auto-downloading {title}": "{title}の自動ダウンロードを停止",
   "Stop sample": "サンプル再生を停止",
   "Stop {voice} sample": "{voice}のサンプル再生を停止",
-  "Storage is full. Clear Harbor cache storage, then try saving again.":
-    "ストレージがいっぱいです。Harborのキャッシュストレージを消去してから、もう一度保存してください。",
+  "Storage is full. Clear Lart cache storage, then try saving again.":
+    "ストレージがいっぱいです。Lartのキャッシュストレージを消去してから、もう一度保存してください。",
   "Store each title in its own folder with its EPUB or PDF":
     "各作品をEPUBまたはPDFと一緒に個別のフォルダーへ保存",
   "Stories you love": "大好きな物語",
@@ -898,8 +898,8 @@ const wired: Record<string, string> = {
   "This layout shows icons only, so renaming is off here. Reorder and hide still apply.":
     "このレイアウトではアイコンのみ表示されるため、ここでは名前を変更できません。並べ替えと非表示の設定は引き続き適用されます。",
   "This repository lists no eBook extensions.": "このリポジトリにはeBook拡張機能がありません。",
-  "This site may not support Harbor's temporary viewer. Retry the original link or open it in your browser.":
-    "このサイトはHarborの一時ビューアーに対応していない可能性があります。元のリンクを再試行するか、ブラウザで開いてください。",
+  "This site may not support Lart's temporary viewer. Retry the original link or open it in your browser.":
+    "このサイトはLartの一時ビューアーに対応していない可能性があります。元のリンクを再試行するか、ブラウザで開いてください。",
   "This source did not provide any chapters.": "このソースにはチャプターがありません。",
   "This source returned no chapters for this title.":
     "このソースでは、このタイトルのチャプターが見つかりませんでした。",
@@ -928,8 +928,8 @@ const wired: Record<string, string> = {
   "Unknown author": "作者不明",
   "Unlock controls": "操作のロックを解除",
   "Unlock player controls ({binding})": "プレイヤー操作のロックを解除（{binding}）",
-  "Unsupported profile version ({version}). Update Harbor or use an older profile.":
-    "プロファイルのバージョン（{version}）には対応していません。Harborを更新するか、古いプロファイルを使用してください。",
+  "Unsupported profile version ({version}). Update Lart or use an older profile.":
+    "プロファイルのバージョン（{version}）には対応していません。Lartを更新するか、古いプロファイルを使用してください。",
   "Untitled theme": "無題のテーマ",
   "Update password": "パスワードを更新",
   "Update photo": "写真を変更",
@@ -960,8 +960,8 @@ const wired: Record<string, string> = {
   "Volume {volume}": "第{volume}巻",
   Volumes: "巻",
   "Volumes not reported": "巻数情報なし",
-  "Want a badge that moves? Drop in a GIF up to 8 MB. Harbor shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
-    "動くバッジにしたい場合は、8 MBまでのGIFを追加してください。Harborが縮小して軽量なアニメーション形式に変換するため、鮮明さを保ちながらすばやく読み込めます。小さく、ループする画像がおすすめです。",
+  "Want a badge that moves? Drop in a GIF up to 8 MB. Lart shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
+    "動くバッジにしたい場合は、8 MBまでのGIFを追加してください。Lartが縮小して軽量なアニメーション形式に変換するため、鮮明さを保ちながらすばやく読み込めます。小さく、ループする画像がおすすめです。",
   "Watch Live TV?": "ライブTVを視聴しますか？",
   "Ways to add an eBook source": "eBookソースを追加する方法",
   Weak: "弱い",
@@ -990,10 +990,10 @@ const wired: Record<string, string> = {
   "You're editing the chrome by hand, so the visual builder stays out of your way.":
     "UIを手動で編集しているため、ビジュアルビルダーは表示されません。",
   "YouTube, SoundCloud or Spotify link": "YouTube、SoundCloud、Spotifyのリンク",
-  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Harbor. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
-    "HTMLとCSSはサンドボックス化されたフレーム内でレンダリングされ、Harborのほかの部分から完全に分離されます。小さな自己完結型ページとして記述してください。フォントとページ背景は上の個別コントロールで設定でき、プロフィール全体に適用されます。",
-  "Your Roku is set to block control requests from apps on your network, so Harbor can't reach it. This is a one-time setting on the Roku.":
-    "Rokuがネットワーク上のアプリからの操作リクエストをブロックする設定になっているため、Harborから接続できません。Rokuで一度だけ設定を変更してください。",
+  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Lart. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
+    "HTMLとCSSはサンドボックス化されたフレーム内でレンダリングされ、Lartのほかの部分から完全に分離されます。小さな自己完結型ページとして記述してください。フォントとページ背景は上の個別コントロールで設定でき、プロフィール全体に適用されます。",
+  "Your Roku is set to block control requests from apps on your network, so Lart can't reach it. This is a one-time setting on the Roku.":
+    "Rokuがネットワーク上のアプリからの操作リクエストをブロックする設定になっているため、Lartから接続できません。Rokuで一度だけ設定を変更してください。",
   "Your account needs activating": "アカウントの有効化が必要です",
   "Your award pack": "あなたのアワードパック",
   "Your badge pack": "あなたのバッジパック",
@@ -1024,8 +1024,8 @@ const wired: Record<string, string> = {
     "スロットに一致しませんでした（スロット名に合わせて名前を変更してください）",
   "download error": "ダウンロードエラー",
   "eBook actions": "電子書籍の操作",
-  "eBook extensions use Harbor’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
-    "電子書籍拡張機能では、Harborの分離ワーカー、HTTPブリッジ、HTMLパーサーを使用します。これはマンガ拡張機能と同じサンドボックスです。信頼できるリポジトリのみ追加してください。",
+  "eBook extensions use Lart’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
+    "電子書籍拡張機能では、Lartの分離ワーカー、HTTPブリッジ、HTMLパーサーを使用します。これはマンガ拡張機能と同じサンドボックスです。信頼できるリポジトリのみ追加してください。",
   "eBook source settings": "電子書籍ソース設定",
   eBooks: "電子書籍",
   episodes: "話",
@@ -1125,14 +1125,14 @@ const wired: Record<string, string> = {
   "{count}w": "{count}週間",
   "{count}w ago": "{count}週間前",
   "{count}y ago": "{count}年前",
-  "{deviceLabel} can't decode this stream natively ({reasons}). Harbor uses ffmpeg to convert it into a format your TV understands.":
-    "{deviceLabel}はこのストリームを標準機能でデコードできません（{reasons}）。Harborはffmpegを使い、テレビで再生できる形式に変換します。",
+  "{deviceLabel} can't decode this stream natively ({reasons}). Lart uses ffmpeg to convert it into a format your TV understands.":
+    "{deviceLabel}はこのストリームを標準機能でデコードできません（{reasons}）。Lartはffmpegを使い、テレビで再生できる形式に変換します。",
   "{deviceLabel} can't play this stream ({reasons}) and none of the {count} available alternatives match its capabilities.":
     "{deviceLabel}はこのストリームを再生できず（{reasons}）、利用可能な代替ストリーム{count}件にも対応するものがありません。",
-  "{deviceName} is an audio-only device. Harbor can't transcode video to audio yet, so this device can only stream audio files. Pick a TV, Chromecast, or display-equipped device to stream video.":
-    "{deviceName}は音声専用デバイスです。Harborはまだ動画を音声に変換できないため、このデバイスでは音声ファイルのみストリーミングできます。動画をストリーミングするには、テレビ、Chromecast、または画面付きデバイスを選択してください。",
-  "{file} is empty. Start typing to restyle Harbor.":
-    "{file}は空です。入力してHarborのスタイルを変更できます。",
+  "{deviceName} is an audio-only device. Lart can't transcode video to audio yet, so this device can only stream audio files. Pick a TV, Chromecast, or display-equipped device to stream video.":
+    "{deviceName}は音声専用デバイスです。Lartはまだ動画を音声に変換できないため、このデバイスでは音声ファイルのみストリーミングできます。動画をストリーミングするには、テレビ、Chromecast、または画面付きデバイスを選択してください。",
+  "{file} is empty. Start typing to restyle Lart.":
+    "{file}は空です。入力してLartのスタイルを変更できます。",
   "{first} and {second}": "{first}と{second}",
   "{format} added to Downloads": "{format}をダウンロードに追加しました",
   "{label} icon": "{label}アイコン",
@@ -1155,7 +1155,7 @@ const wired: Record<string, string> = {
   "{title} internal cover": "{title}の内表紙",
   "{title} poster": "{title}のポスター",
   "{title} trailer": "{title}の予告編",
-  "{title} won't load inside Harbor.": "{title}はHarbor内で読み込めません。",
+  "{title} won't load inside Lart.": "{title}はLart内で読み込めません。",
   "≈{count}m left": "残り約{count}分",
   "≈{count}s left": "残り約{count}秒",
   "Chinese (Simplified)": "中国語（簡体字）",
@@ -1189,15 +1189,15 @@ const wired: Record<string, string> = {
   "2010s": "2010年代",
   "14s": "14秒",
   "20s": "20秒",
-  "Changing the metadata language reloads Harbor so the new language takes effect. Apply when you're done with the options above.":
-    "メタデータの言語を変更すると、新しい言語を反映するためHarborが再読み込みされます。上のオプションを設定し終えたら適用してください。",
+  "Changing the metadata language reloads Lart so the new language takes effect. Apply when you're done with the options above.":
+    "メタデータの言語を変更すると、新しい言語を反映するためLartが再読み込みされます。上のオプションを設定し終えたら適用してください。",
   Colored: "カラー",
   "Content advisory style": "コンテンツ注意情報の表示スタイル",
   "Cursor speed": "カーソル速度",
-  "Export your Harbor setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
-    "Harborの設定を1つのファイルにエクスポートし、含める項目を選べます。復元されるのはファイルに含まれる項目のみです。Stremioのサインイン情報は常に除外されます。",
-  "How quickly the Harbor cursor moves with the right stick.":
-    "右スティックでHarborのカーソルを動かす速さです。",
+  "Export your Lart setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
+    "Lartの設定を1つのファイルにエクスポートし、含める項目を選べます。復元されるのはファイルに含まれる項目のみです。Stremioのサインイン情報は常に除外されます。",
+  "How quickly the Lart cursor moves with the right stick.":
+    "右スティックでLartのカーソルを動かす速さです。",
   "Keyboard size": "キーボードのサイズ",
   "Monochrome (White)": "モノクロ（白）",
   "On shows titles in your metadata language (English by default). Off keeps titles in English.":
@@ -1248,7 +1248,7 @@ const wired: Record<string, string> = {
   "Add preset": "プリセットを追加",
   "Add to My List": "マイリストに追加",
   "Add to tile {n}": "タイル{n}に追加",
-  "Added to Harbor": "Harborに追加済み",
+  "Added to Lart": "Lartに追加済み",
   "Added to downloads": "ダウンロードに追加済み",
   "Added to library": "ライブラリに追加済み",
   "Adds Letterboxd and Trakt community ratings to detail pages, covering what OMDb misses.":
@@ -1300,7 +1300,7 @@ const wired: Record<string, string> = {
   "Community index": "コミュニティインデックス",
   "Compressing…": "圧縮中…",
   "Configure URL above first": "先に上のURLを設定してください",
-  "Continue in Harbor": "Harborで続ける",
+  "Continue in Lart": "Lartで続ける",
   "Continue in browser": "ブラウザで続ける",
   "Copy to clipboard": "クリップボードにコピー",
   "Could not send: {message}": "送信できませんでした: {message}",
@@ -1334,8 +1334,8 @@ const wired: Record<string, string> = {
     "エピソードタイトル、別名、放送局情報、編/DVD/通算順に対応します。TMDBと組み合わせ、項目ごとに優れた情報源を採用します。個人利用は次で無料です:",
   "Every color token, stable selector, {api} call, live hook (bell, account menu, avatar, status dot, unread badge), and copy-paste recipe.":
     "すべてのカラートークン、安定したセレクター、{api}呼び出し、ライブフック（ベル、アカウントメニュー、アバター、ステータスドット、未読バッジ）、コピーして使えるレシピ。",
-  "Every theme you share gets a private owner token. On the device where you shared it, Harbor saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
-    "共有した各テーマには、非公開の所有者トークンが発行されます。共有に使ったデバイスではHarborが自動保存するため、ここからワンタップでテーマを取得できます。別のデバイスから取得するには、下にそのトークンを貼り付けてください。今後の新規共有はアカウントに直接紐づくため、この操作は不要です。",
+  "Every theme you share gets a private owner token. On the device where you shared it, Lart saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
+    "共有した各テーマには、非公開の所有者トークンが発行されます。共有に使ったデバイスではLartが自動保存するため、ここからワンタップでテーマを取得できます。別のデバイスから取得するには、下にそのトークンを貼り付けてください。今後の新規共有はアカウントに直接紐づくため、この操作は不要です。",
   "Experimental 1:1 ports of other apps. Rough edges expected.":
     "他のアプリを1:1で移植する実験的機能です。未完成な部分があります。",
   "Explore, discover and earn stars": "探索して見つけ、スターを獲得",
@@ -1351,21 +1351,21 @@ const wired: Record<string, string> = {
   "Got one a friend shared? Drop it in.":
     "友だちが共有したものをお持ちですか？ここにドロップしてください。",
   HOME: "ホーム",
-  "Harbor couldn't reach MyAnimeList or AniList. Check your connection and try again.":
-    "HarborからMyAnimeListまたはAniListに接続できませんでした。接続を確認して、もう一度お試しください。",
-  "Harbor couldn't reach the catalog servers. Check your connection and try again.":
-    "Harborからカタログサーバーに接続できませんでした。接続を確認して、もう一度お試しください。",
-  "Harbor dropped {n} suspicious or mismatched result.":
-    "Harborは不審または不一致の検索結果を{n}件除外しました。",
-  "Harbor dropped {n} suspicious or mismatched results.":
-    "Harborは不審または不一致の検索結果を{n}件除外しました。",
-  "Harbor on the server display": "サーバーディスプレイ上のHarbor",
-  "Harbor opens 4 parallel requests to": "Harborは次のサービスに4件のリクエストを並列送信します:",
+  "Lart couldn't reach MyAnimeList or AniList. Check your connection and try again.":
+    "LartからMyAnimeListまたはAniListに接続できませんでした。接続を確認して、もう一度お試しください。",
+  "Lart couldn't reach the catalog servers. Check your connection and try again.":
+    "Lartからカタログサーバーに接続できませんでした。接続を確認して、もう一度お試しください。",
+  "Lart dropped {n} suspicious or mismatched result.":
+    "Lartは不審または不一致の検索結果を{n}件除外しました。",
+  "Lart dropped {n} suspicious or mismatched results.":
+    "Lartは不審または不一致の検索結果を{n}件除外しました。",
+  "Lart on the server display": "サーバーディスプレイ上のLart",
+  "Lart opens 4 parallel requests to": "Lartは次のサービスに4件のリクエストを並列送信します:",
   "Have a file?": "ファイルをお持ちですか？",
   "Have a token from another device?": "別のデバイスのトークンをお持ちですか？",
   "Hidden card": "非表示のカード",
-  "Highly recommended. This is what gives you the full Harbor experience: Popular, Trending, In Theaters, and per-service rails. Free at":
-    "強く推奨します。人気、トレンド、劇場公開中、サービス別レールなど、Harborの全機能を利用するために必要です。次で無料です:",
+  "Highly recommended. This is what gives you the full Lart experience: Popular, Trending, In Theaters, and per-service rails. Free at":
+    "強く推奨します。人気、トレンド、劇場公開中、サービス別レールなど、Lartの全機能を利用するために必要です。次で無料です:",
   "How this is measured": "測定方法",
   "IPTV lists": "IPTVリスト",
   "Identifies the song with Google Gemini (free tier, no usage cap). Get a key at":
@@ -1481,8 +1481,8 @@ const wired: Record<string, string> = {
   "Seek back 10 seconds": "10秒戻る",
   "Seek forward 10 seconds": "10秒進む",
   "Select renderer": "レンダラーを選択",
-  "Sends the context above straight to the Harbor team. No keys or library data.":
-    "上記の情報をHarborチームに直接送信します。キーやライブラリデータは送信されません。",
+  "Sends the context above straight to the Lart team. No keys or library data.":
+    "上記の情報をLartチームに直接送信します。キーやライブラリデータは送信されません。",
   "Sent. Thanks for the help!": "送信しました。ご協力ありがとうございます！",
   "Set as a backdrop": "背景に設定",
   "Share diagnostics": "診断情報を共有",
@@ -1497,8 +1497,8 @@ const wired: Record<string, string> = {
     "スロットが混み合っています（{count}/{limit}）。画面幅が狭いと、はみ出す可能性があります。",
   "Something blew up while rendering. Reload to recover, or send us the technical detail.":
     "描画中に問題が発生しました。再読み込みして復旧するか、技術情報をお送りください。",
-  "Sorry, Harbor crashed the last time it was running. You can review the details and choose whether to send a report.":
-    "申し訳ありません。前回の実行中にHarborがクラッシュしました。詳細を確認し、レポートを送信するか選択できます。",
+  "Sorry, Lart crashed the last time it was running. You can review the details and choose whether to send a report.":
+    "申し訳ありません。前回の実行中にLartがクラッシュしました。詳細を確認し、レポートを送信するか選択できます。",
   "Stream offline": "配信オフライン",
   "Submit update": "更新を送信",
   "S{season} · E{episode}": "S{season}・E{episode}",
@@ -1521,7 +1521,7 @@ const wired: Record<string, string> = {
   "Theme link or ID": "テーマのリンクまたはID",
   "They email an activation link the first time. Click it, then come back and save.":
     "初回はアクティベーションリンクがメールで届きます。リンクをクリックしてから、ここに戻って保存してください。",
-  "This Harbor": "このHarbor",
+  "This Lart": "このLart",
   "This PC": "このPC",
   "This playlist hasn't been loaded yet, or it has no channels.":
     "このプレイリストはまだ読み込まれていないか、チャンネルがありません。",
@@ -1543,12 +1543,12 @@ const wired: Record<string, string> = {
     "プロジェクト用ではなく、「personal」キーを使用してください。",
   "Use the v3 key, not the read access token.":
     "読み取りアクセストークンではなく、v3キーを使用してください。",
-  "Used to check cache and unrestrict links. Harbor never adds or removes anything on your account on its own.": "キャッシュの確認とリンクの制限解除に使用します。Harborがアカウントに独自に何かを追加または削除することはありません。",
+  "Used to check cache and unrestrict links. Lart never adds or removes anything on your account on its own.": "キャッシュの確認とリンクの制限解除に使用します。Lartがアカウントに独自に何かを追加または削除することはありません。",
   "Uses the directdl endpoint, which skips queueing for anything already cached.":
     "directdlエンドポイントを使用し、キャッシュ済みのものはキューをスキップします。",
   "Uses up to 150 MB": "最大150 MBを使用",
   VS: "VS",
-  "Verified Harbor Staff": "Harbor認定スタッフ",
+  "Verified Lart Staff": "Lart認定スタッフ",
   Versions: "バージョン",
   "Versions ({count})": "バージョン（{count}）",
   "View {title}": "{title}を表示",
@@ -1572,8 +1572,8 @@ const wired: Record<string, string> = {
   "Works without a key at low volume; add a key for higher quotas.":
     "少量ならキーなしで利用できます。上限を増やすにはキーを追加してください。",
   "You found them all!": "全部見つけました！",
-  "Your library lives on Harbor. Connect to your computer and it shows up here.":
-    "ライブラリはHarborにあります。パソコンに接続すると、ここに表示されます。",
+  "Your library lives on Lart. Connect to your computer and it shows up here.":
+    "ライブラリはLartにあります。パソコンに接続すると、ここに表示されます。",
   "Your new version is in for a quick review. The live listing keeps working until this one is approved.":
     "新しいバージョンを簡易審査に提出しました。承認されるまでは、現在公開中のリストが引き続き利用されます。",
   "a bare RPDB-compatible server (your RPDB key is still sent), or a full URL template using":
@@ -1667,8 +1667,8 @@ const wired: Record<string, string> = {
   'Designing "{name}"': "「{name}」をデザイン中",
   "Designing a theme": "テーマをデザイン中",
   Destination: "出力先",
-  "Direct torrent play needs the Harbor desktop app.":
-    "Torrentの直接再生にはHarborデスクトップアプリが必要です。",
+  "Direct torrent play needs the Lart desktop app.":
+    "Torrentの直接再生にはLartデスクトップアプリが必要です。",
   "Disc Source": "ディスクソース",
   "Double-click to unlink rows": "ダブルクリックで行の連結を解除",
   "Drag or use arrow keys to resize columns": "ドラッグまたは矢印キーで列幅を変更",
@@ -1684,22 +1684,22 @@ const wired: Record<string, string> = {
   "Great job!": "よくできました！",
   H: "H",
   "HTTP {status}: {body}": "HTTP {status}: {body}",
-  "Harbor Relay Documentation": "Harbor Relayドキュメント",
-  "Harbor Relay docs": "Harbor Relayドキュメント",
-  "Harbor blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
-    "Harborは、疑わしいファイルや内容が一致しないリリースをデフォルトでブロックします。古い番組や珍しいタイトルでは、判定が厳しすぎる場合があります。",
-  "Harbor can open only HTTP or HTTPS destinations.":
-    "Harborで開けるリンク先はHTTPまたはHTTPSのみです。",
-  "Harbor cannot open links that include embedded credentials.":
-    "Harborでは、認証情報が埋め込まれたリンクは開けません。",
-  "Harbor could not verify this destination.": "Harborはこのリンク先を確認できませんでした。",
-  "Harbor queried 1 addon and got nothing back":
-    "Harborがアドオン1個に問い合わせましたが、応答はありませんでした",
-  "Harbor queried {n} addons and got nothing back":
-    "Harborがアドオン{n}個に問い合わせましたが、応答はありませんでした",
-  "Harbor test message ({service}). If you can read this, your webhook is wired up.":
-    "Harborのテストメッセージ（{service}）。これを読めれば、Webhookは正しく接続されています。",
-  "Harbor's temporary viewer requires HTTPS.": "Harborの一時ビューアーにはHTTPSが必要です。",
+  "Lart Relay Documentation": "Lart Relayドキュメント",
+  "Lart Relay docs": "Lart Relayドキュメント",
+  "Lart blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
+    "Lartは、疑わしいファイルや内容が一致しないリリースをデフォルトでブロックします。古い番組や珍しいタイトルでは、判定が厳しすぎる場合があります。",
+  "Lart can open only HTTP or HTTPS destinations.":
+    "Lartで開けるリンク先はHTTPまたはHTTPSのみです。",
+  "Lart cannot open links that include embedded credentials.":
+    "Lartでは、認証情報が埋め込まれたリンクは開けません。",
+  "Lart could not verify this destination.": "Lartはこのリンク先を確認できませんでした。",
+  "Lart queried 1 addon and got nothing back":
+    "Lartがアドオン1個に問い合わせましたが、応答はありませんでした",
+  "Lart queried {n} addons and got nothing back":
+    "Lartがアドオン{n}個に問い合わせましたが、応答はありませんでした",
+  "Lart test message ({service}). If you can read this, your webhook is wired up.":
+    "Lartのテストメッセージ（{service}）。これを読めれば、Webhookは正しく接続されています。",
+  "Lart's temporary viewer requires HTTPS.": "Lartの一時ビューアーにはHTTPSが必要です。",
   "Hidden Gems from the {decade}": "{decade}年代の隠れた名作",
   "Hide all sources": "すべてのソースを非表示",
   "Hide controls": "コントロールを非表示",
@@ -1732,8 +1732,8 @@ const wired: Record<string, string> = {
   "New {genre} Series": "新作{genre}シリーズ",
   "Nice try!": "惜しい！",
   "No PiP session. Closing.": "PiPセッションがありません。閉じます。",
-  "No clean release has surfaced yet. This may be too new. Harbor's filters dropped everything that came back as wrong-movie noise.":
-    "クリーンなリリースはまだ見つかっていません。公開直後の可能性があります。Harborのフィルターにより、別作品と思われる検索結果はすべて除外されました。",
+  "No clean release has surfaced yet. This may be too new. Lart's filters dropped everything that came back as wrong-movie noise.":
+    "クリーンなリリースはまだ見つかっていません。公開直後の可能性があります。Lartのフィルターにより、別作品と思われる検索結果はすべて除外されました。",
   "No playable video file was found in this torrent.":
     "このtorrentには再生可能な動画ファイルがありません。",
   "Not cached": "未キャッシュ",
@@ -1800,10 +1800,10 @@ const wired: Record<string, string> = {
   "Theatrical Capture": "劇場撮影版",
   "Theme Studio": "テーマスタジオ",
   "Theme is missing a name.": "テーマ名がありません。",
-  "This file isn't a Harbor theme.": "このファイルはHarborテーマではありません。",
+  "This file isn't a Lart theme.": "このファイルはLartテーマではありません。",
   "This file isn't a readable theme.": "このテーマファイルは読み込めません。",
-  "This link goes to an external site that Harbor does not control or vouch for. Triple-check the address before you continue, and never enter your Harbor password anywhere but Harbor.":
-    "このリンクは、Harborが管理または安全性を保証していない外部サイトに移動します。続行する前にアドレスを十分に確認し、Harbor以外では決してHarborのパスワードを入力しないでください。",
+  "This link goes to an external site that Lart does not control or vouch for. Triple-check the address before you continue, and never enter your Lart password anywhere but Lart.":
+    "このリンクは、Lartが管理または安全性を保証していない外部サイトに移動します。続行する前にアドレスを十分に確認し、Lart以外では決してLartのパスワードを入力しないでください。",
   "This theme file is missing a name.": "このテーマファイルには名前がありません。",
   "This theme file is missing its colors.": "このテーマファイルには配色がありません。",
   "This theme is missing a color ({color}).": "このテーマにはカラー（{color}）がありません。",
@@ -1827,7 +1827,7 @@ const wired: Record<string, string> = {
   Won: "受賞",
   Y: "Y",
   "You got {score} of {total} right!": "全{total}問中{score}問正解！",
-  "You're leaving Harbor": "Harborから移動します",
+  "You're leaving Lart": "Lartから移動します",
   "Your changes to this theme aren't saved yet. They'll be lost if you leave now.":
     "このテーマへの変更はまだ保存されていません。このまま移動すると変更内容は失われます。",
   "Your remote streaming server is not reachable. Check its address in Settings.":

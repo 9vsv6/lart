@@ -14,7 +14,7 @@ export default {
   "games.mods.backupNote": "Заменённые версии сохраняются локально. Нажмите «Вернуть предыдущую» в своей сборке, чтобы откатить изменения. Зависимости будут проверены снова.",
   "games.mods.currentVersion": "Установлена: {version}",
   "games.mods.current": "Установлена",
-  "games.mods.versionNote": "Выберите совместимую версию. Harbor проверит изменения и сохранит предыдущую версию локально. Закройте Minecraft перед применением.",
+  "games.mods.versionNote": "Выберите совместимую версию. Lart проверит изменения и сохранит предыдущую версию локально. Закройте Minecraft перед применением.",
   "games.mods.applyChanges": "Применить изменения",
   "games.mods.reviewChanges": "Проверить изменения",
   "games.mods.previousVersion": "Предыдущая: {version}",

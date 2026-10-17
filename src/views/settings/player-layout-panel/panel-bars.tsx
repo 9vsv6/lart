@@ -64,7 +64,7 @@ export function ThemeTabs({ value, onChange }: { value: ThemeId; onChange: (v: T
       icon={<LayoutGrid size={18} strokeWidth={1.9} />}
       label={t("Player style")}
       desc={
-        value === "stremio" ? t("Familiar Stremio button order.") : t("Harbor's native player chrome.")
+        value === "stremio" ? t("Familiar Stremio button order.") : t("Lart's native player chrome.")
       }
       tip={t("Each style keeps its own arrangement, icons and profiles, so switching back and forth never loses work.")}
     >

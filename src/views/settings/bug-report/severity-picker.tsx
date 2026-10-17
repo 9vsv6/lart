@@ -19,9 +19,9 @@ export function SeverityPicker({
   const t = useT();
   const descriptions: Record<Severity, string> = {
     low: t("Something looks wrong, but the feature still works."),
-    normal: t("Something behaves unexpectedly, but you can keep using Harbor."),
+    normal: t("Something behaves unexpectedly, but you can keep using Lart."),
     high: t("A feature you need does not work."),
-    critical: t("You cannot use Harbor."),
+    critical: t("You cannot use Lart."),
   };
   return (
     <div className="flex flex-col items-start gap-2">

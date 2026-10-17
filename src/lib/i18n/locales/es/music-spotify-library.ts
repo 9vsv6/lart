@@ -5,18 +5,18 @@ const musicSpotifyLibrary: Record<string, string> = {
   "music.spotifyLibrary.connect": "Conectar Spotify",
   "music.spotifyLibrary.liked": "Canciones favoritas",
   "music.spotifyLibrary.playlists": "Listas de Spotify",
-  "music.spotifyLibrary.harbor": "Listas de Harbor",
+  "music.spotifyLibrary.harbor": "Listas de Lart",
   "music.spotifyLibrary.back": "Volver a la biblioteca de Spotify",
-  "music.spotifyLibrary.import": "Importar a Harbor",
+  "music.spotifyLibrary.import": "Importar a Lart",
   "music.spotifyLibrary.importBody":
-    "Guarda una copia de esta lista en Harbor. Las canciones seguirán reproduciéndose desde su fuente de música.",
+    "Guarda una copia de esta lista en Lart. Las canciones seguirán reproduciéndose desde su fuente de música.",
   "music.spotifyLibrary.importing": "Leyendo {count} canciones…",
   "music.spotifyLibrary.imported": "Se importaron {count} canciones a {name}.",
-  "music.spotifyLibrary.skipped": "Se omitieron {count} elementos que Harbor no puede importar.",
+  "music.spotifyLibrary.skipped": "Se omitieron {count} elementos que Lart no puede importar.",
   "music.spotifyLibrary.loaded": "{count} de {total}",
   "music.spotifyLibrary.empty": "Esta colección de Spotify todavía está vacía.",
   "music.spotifyLibrary.noImportable":
-    "Esta colección no contiene canciones que Harbor pueda importar.",
+    "Esta colección no contiene canciones que Lart pueda importar.",
   "music.spotifyLibrary.error":
     "Spotify no pudo completar la solicitud. Comprueba tu conexión e inténtalo de nuevo.",
   "music.spotifyLibrary.permission":

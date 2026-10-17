@@ -77,7 +77,7 @@ export function TvStatusHeader() {
     : status.phase === "signed-out"
       ? {
           tone: "warn",
-          line: "Sign in to Harbor to sync these settings through your account.",
+          line: "Sign in to Lart to sync these settings through your account.",
           fix: "account",
         }
       : status.phase === "no-refresh"
@@ -97,7 +97,7 @@ export function TvStatusHeader() {
             ? { tone: "on", line: `${status.queued} change${status.queued === 1 ? "" : "s"} waiting to sync.` }
             : status.lastPushAt > 0
               ? { tone: "on", line: `Sent to your account ${ago(status.lastPushAt, now)}.` }
-              : { tone: "off", line: "Changes sync automatically through your Harbor account." };
+              : { tone: "off", line: "Changes sync automatically through your Lart account." };
 
   return (
     <div id={settingsAnchor("The link to your TV")} className="flex flex-col gap-3 border-b border-edge-soft pb-5">
@@ -115,7 +115,7 @@ export function TvStatusHeader() {
           {status.phase === "pushing" ? t("Syncing…") : t("Sync now")}
         </SButton>
         {read.fix && (
-          <SButton variant="primary" onClick={() => setActive("account", settingsAnchor("Harbor account"))}>{t("Open Harbor account")}</SButton>
+          <SButton variant="primary" onClick={() => setActive("account", settingsAnchor("Lart account"))}>{t("Open Lart account")}</SButton>
         )}
       </SettingRow>
     </div>

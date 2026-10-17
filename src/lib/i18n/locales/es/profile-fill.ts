@@ -6,10 +6,10 @@ const profileFill: Record<string, string> = {
   "{count} of {total} showing": "Se muestran {count} de {total}",
   "{count}/{max} selected": "{count}/{max} seleccionados",
   "{label} handle": "Identificador de {label}",
-  "{name} on Harbor": "{name} en Harbor",
+  "{name} on Lart": "{name} en Lart",
   "{name}'s ratings": "Calificaciones de {name}",
   "{selected}/{max} selected": "{selected}/{max} seleccionados",
-  "{title} on Harbor": "{title} en Harbor",
+  "{title} on Lart": "{title} en Lart",
   "@handle or name": "@handle o nombre",
   "1 friend in common": "1 amigo en común",
   "Accept request": "Aceptar solicitud",
@@ -73,8 +73,8 @@ const profileFill: Record<string, string> = {
   "Could not update banner.": "No se pudo actualizar el banner.",
   "Could not update group photo.": "No se pudo actualizar la foto del grupo.",
   "Could not update photo.": "No se pudo actualizar la foto.",
-  "Couldn't reach Harbor, check your connection":
-    "No se pudo acceder a Harbor. Comprueba tu conexión.",
+  "Couldn't reach Lart, check your connection":
+    "No se pudo acceder a Lart. Comprueba tu conexión.",
   "Create a group to watch and share together.":
     "Crea un grupo para ver y compartir contenido juntos.",
   "Create group": "Crear grupo",
@@ -94,9 +94,9 @@ const profileFill: Record<string, string> = {
   "Featured lists": "Listas destacadas",
   "Game search needs an API key before it can run.":
     "La búsqueda de juegos necesita una clave de API para funcionar.",
-  "Harbor is having trouble, try again in a moment":
-    "Harbor está teniendo problemas. Inténtalo de nuevo en un momento.",
-  "Harbor list": "Lista de Harbor",
+  "Lart is having trouble, try again in a moment":
+    "Lart está teniendo problemas. Inténtalo de nuevo en un momento.",
+  "Lart list": "Lista de Lart",
   "Hero stats": "Estadísticas destacadas",
   "Hidden language": "Idioma oculto",
   "In a watch party": "En una sesión grupal",
@@ -181,7 +181,7 @@ const profileFill: Record<string, string> = {
   "Rate this": "Calificar esto",
   "Rating removed": "Calificación eliminada",
   "Rating saved": "Calificación guardada",
-  "Ratings need a Harbor account": "Las calificaciones requieren una cuenta de Harbor",
+  "Ratings need a Lart account": "Las calificaciones requieren una cuenta de Lart",
   "Recent activity": "Actividad reciente",
   "Remove {alias}": "Eliminar {alias}",
   "Remove {label}": "Eliminar {label}",
@@ -223,8 +223,8 @@ const profileFill: Record<string, string> = {
   "Slow down a moment before posting again": "Espera un momento antes de volver a publicar",
   "Social links": "Enlaces sociales",
   "Something went wrong on the way there.": "Algo salió mal en el camino.",
-  "Something went wrong reaching Harbor. Check your connection and try again.":
-    "Hubo un problema al conectarse con Harbor. Revisa tu conexión e inténtalo de nuevo.",
+  "Something went wrong reaching Lart. Check your connection and try again.":
+    "Hubo un problema al conectarse con Lart. Revisa tu conexión e inténtalo de nuevo.",
   "Start typing to find people.": "Empieza a escribir para buscar personas.",
   "Stored as a small optimized webp.": "Se almacena como un archivo webp pequeño y optimizado.",
   "Tap a star to change, then save": "Toca una estrella para cambiarla y luego guarda",
@@ -266,8 +266,8 @@ const profileFill: Record<string, string> = {
     "Estás calificando demasiado rápido. Inténtalo de nuevo en un momento.",
   "You have no lists yet": "Aún no tienes listas",
   "You have reached the {max} link limit": "Alcanzaste el límite de {max} enlaces",
-  "Your Harbor account is separate from your Stremio sign in. Create one free or sign in from Settings.":
-    "Tu cuenta de Harbor es independiente de tu inicio de sesión en Stremio. Crea una gratis o inicia sesión desde Configuración.",
+  "Your Lart account is separate from your Stremio sign in. Create one free or sign in from Settings.":
+    "Tu cuenta de Lart es independiente de tu inicio de sesión en Stremio. Crea una gratis o inicia sesión desde Configuración.",
   "Your links": "Tus enlaces",
   "Your rating": "Tu calificación",
   "Your rating {n}/10": "Tu calificación: {n}/10",

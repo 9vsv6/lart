@@ -46,7 +46,7 @@ export function ExperimentalBuildsSection() {
           icon={<FlaskConical size={18} aria-hidden="true" />}
           label={t("Return to a regular build")}
           desc={t(
-            "Experimental access requires a Harbor account with a Tester, Moderator, Admin, or Dev badge.",
+            "Experimental access requires a Lart account with a Tester, Moderator, Admin, or Dev badge.",
           )}
         >
           <BetaReturnSection />
@@ -90,18 +90,18 @@ export function ExperimentalBuildsSection() {
         wide
         icon={<FlaskConical size={18} aria-hidden="true" />}
         label={t("Test upcoming changes")}
-        desc={t("Available to Harbor accounts with a Tester, Moderator, Admin, or Dev badge.")}
+        desc={t("Available to Lart accounts with a Tester, Moderator, Admin, or Dev badge.")}
       >
         <div className="flex flex-col gap-3">
           <p className="text-[12.5px] leading-relaxed text-ink-muted">
             {t(
-              "These builds may crash or change your settings. Back up Harbor before installing. Downloads and installation still require your approval.",
+              "These builds may crash or change your settings. Back up Lart before installing. Downloads and installation still require your approval.",
             )}
           </p>
           <p className="text-[12px] text-ink-muted">
             {experimentalInstalled
               ? `${t("Installed")}: ${t("Experimental")} ${installedContext.experimentalVersion}`
-              : t("Installed: Harbor {version}", { version: __APP_VERSION__ })}
+              : t("Installed: Lart {version}", { version: __APP_VERSION__ })}
             {" · "}
             {t("Update channel: {channel}", { channel: enabled ? t("Experimental") : normal })}
           </p>

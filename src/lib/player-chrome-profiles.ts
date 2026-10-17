@@ -352,13 +352,13 @@ export function importProfileJson(
     return { ok: false, error: t("Not valid JSON. The file may be corrupted.") };
   }
   if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
-    return { ok: false, error: t("File is not a Harbor layout profile.") };
+    return { ok: false, error: t("File is not a Lart layout profile.") };
   }
   const obj = parsed as Record<string, unknown>;
   if (obj.harborProfileVersion !== undefined && obj.harborProfileVersion !== 1) {
     return {
       ok: false,
-      error: t("Unsupported profile version ({version}). Update Harbor or use an older profile.", {
+      error: t("Unsupported profile version ({version}). Update Lart or use an older profile.", {
         version: String(obj.harborProfileVersion),
       }),
     };

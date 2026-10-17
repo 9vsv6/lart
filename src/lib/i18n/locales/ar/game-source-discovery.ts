@@ -11,7 +11,7 @@ export default {
 
   "games.sources.batch.failedFile": "تعذّر تجهيز {file}.",
 
-  "games.sources.batch.restart": "أعد تشغيل Harbor بعد التحديث لتنزيل الملفات المحددة معًا.",
+  "games.sources.batch.restart": "أعد تشغيل Lart بعد التحديث لتنزيل الملفات المحددة معًا.",
 
   "games.torrent.start": "تنزيل الملفات",
 
@@ -19,7 +19,7 @@ export default {
 
   "games.sources.verification.action": "التحقق من المصدر",
 
-  "games.sources.verification.waiting": "أكمل التحقق في نافذة المصدر. سيفحص Harbor الكتالوج بعد ذلك.",
+  "games.sources.verification.waiting": "أكمل التحقق في نافذة المصدر. سيفحص Lart الكتالوج بعد ذلك.",
 
   "games.sources.source_verify_busy": "يجري التحقق من مصدر آخر. أكمل التحقق أو أغلق نافذته أولاً.",
 
@@ -27,31 +27,31 @@ export default {
 
   "games.sources.source_verify_timeout": "انتهت مهلة التحقق. حاول مجدداً عندما تكون مستعداً.",
 
-  "games.sources.source_verify_unavailable": "حدّث Harbor وأعد تشغيله للتحقق من هذا المصدر.",
+  "games.sources.source_verify_unavailable": "حدّث Lart وأعد تشغيله للتحقق من هذا المصدر.",
 
   "games.sources.browser.direct": "تنزيل مباشر",
 
   "games.sources.site.title": "افتح موقعًا",
-  "games.sources.site.note": "الصق رابط صفحة تنزيل من أي موقع. يفتحه Harbor في نافذته الخاصة، تختار الملف هناك، ثم ينزل داخل Harbor.",
+  "games.sources.site.note": "الصق رابط صفحة تنزيل من أي موقع. يفتحه Lart في نافذته الخاصة، تختار الملف هناك، ثم ينزل داخل Lart.",
   "games.sources.site.url": "رابط الصفحة",
   "games.sources.site.open": "افتح الموقع",
   "games.sources.site.invalid": "يجب أن يكون رابط https عام.",
-  "games.sources.browser.intro": "لا تحتاج إلى حساب Debrid. اختر ملفًا على {host}، ثم اختر مكان حفظه في Harbor.",
-  "games.sources.browser.fallback": "إذا لم يبدأ التنزيل تلقائيًا، استخدم رابط {host} الاحتياطي في الصفحة. سيلتقط Harbor الملف على أي حال.",
+  "games.sources.browser.intro": "لا تحتاج إلى حساب Debrid. اختر ملفًا على {host}، ثم اختر مكان حفظه في Lart.",
+  "games.sources.browser.fallback": "إذا لم يبدأ التنزيل تلقائيًا، استخدم رابط {host} الاحتياطي في الصفحة. سيلتقط Lart الملف على أي حال.",
 
   "games.sources.browser.choose": "اختيار ملف على {host}",
 
-  "games.sources.browser.waiting": "اختر الملف في نافذة {host}. سيطلب Harbor تحديد مكان حفظه.",
+  "games.sources.browser.waiting": "اختر الملف في نافذة {host}. سيطلب Lart تحديد مكان حفظه.",
 
-  "games.sources.browser.selected": "جاهز للتنزيل في Harbor",
+  "games.sources.browser.selected": "جاهز للتنزيل في Lart",
 
   "games.sources.browser.another": "اختيار ملف آخر",
 
-  "games.sources.browser.failed": "تعذّر على {host} إرسال الملف إلى Harbor. حاول مجددًا أو افتحه على {host}.",
+  "games.sources.browser.failed": "تعذّر على {host} إرسال الملف إلى Lart. حاول مجددًا أو افتحه على {host}.",
 
   "games.sources.browser.timeout": "انتهت مهلة اختيار الملف. افتح {host} مجددًا لاختيار ملف.",
 
-  "games.sources.browser.restart": "أعد تشغيل Harbor بعد التحديث لاستخدام التنزيل المباشر من {host}.",
+  "games.sources.browser.restart": "أعد تشغيل Lart بعد التحديث لاستخدام التنزيل المباشر من {host}.",
 
   "games.sources.retrySavedCatalog": "إعادة محاولة قراءة الفهرس المحفوظ",
 
@@ -99,13 +99,13 @@ export default {
 
   "games.sources.platform.other": "إصدار {platform} · ليس أصليًا على {host}",
 
-  "games.sources.platform.otherNote": "اختر إصدارًا لنظام تشغيلك. لا يستطيع Harbor تثبيت هذه الحزمة أو تشغيلها مباشرة على هذا الجهاز.",
+  "games.sources.platform.otherNote": "اختر إصدارًا لنظام تشغيلك. لا يستطيع Lart تثبيت هذه الحزمة أو تشغيلها مباشرة على هذا الجهاز.",
 
   "games.sources.platform.unknown": "المنصة غير محددة",
 
   "games.sources.platform.unknownNote": "لا يحدد المصدر نظام تشغيل الحزمة. تحقق من معلومات الناشر قبل التنزيل.",
 
-  "games.sources.platform.browseNote": "استخدم Harbor لسطح المكتب لتنزيل ملفات الألعاب المحلية وإدارتها.",
+  "games.sources.platform.browseNote": "استخدم Lart لسطح المكتب لتنزيل ملفات الألعاب المحلية وإدارتها.",
 
   "games.sources.platform.browse": "إصدار {platform}",
 
@@ -117,9 +117,9 @@ export default {
 
   "games.sources.art.torrent": "تنزيل تورنت",
 
-  "games.sources.art.engine": "محرك التورنت في Harbor",
+  "games.sources.art.engine": "محرك التورنت في Lart",
 
-  "games.sources.art.reviewTorrent": "تنزيل عبر Harbor",
+  "games.sources.art.reviewTorrent": "تنزيل عبر Lart",
 
 
 
@@ -167,7 +167,7 @@ export default {
 
   "games.sources.discovery.change": "تغيير الرابط",
 
-  "games.sources.discovery.harbor": "كتالوج Harbor",
+  "games.sources.discovery.harbor": "كتالوج Lart",
 
   "games.sources.discovery.community": "كتالوج متوافق مع Hydra",
 
@@ -175,7 +175,7 @@ export default {
 
   "games.sources.discovery.reviewNote": "تُحفظ قوائم الكتالوج فقط. تُنزّل الملفات عندما تختارها.",
 
-  "games.sources.source_no_catalog": "لا ينشر هذا الموقع رابط كتالوج يستطيع Harbor قراءته. ألصق رابط كتالوج JSON الخاص به بدلًا من ذلك.",
+  "games.sources.source_no_catalog": "لا ينشر هذا الموقع رابط كتالوج يستطيع Lart قراءته. ألصق رابط كتالوج JSON الخاص به بدلًا من ذلك.",
 
   "games.sources.source_url": "أدخل عنوان موقع أو رابط كتالوج HTTP(S) أو رابط تثبيت Hydra.",
 
@@ -229,7 +229,7 @@ export default {
 
   "games.sources.links.account": "رفضت الخدمة الاتصال. تحقق من مفتاحها في إعدادات المصادر.",
 
-  "games.sources.links.rate": "طلبت الخدمة من Harbor الانتظار. حاول مجددًا بعد قليل.",
+  "games.sources.links.rate": "طلبت الخدمة من Lart الانتظار. حاول مجددًا بعد قليل.",
 
   "games.sources.links.limit": "أعادت الخدمة ملفات أكثر مما يمكن مراجعته دفعة واحدة.",
 
@@ -241,7 +241,7 @@ export default {
 
   "games.sources.links.destination": "اختيار الوجهة",
 
-  "games.sources.links.desktop": "افتح Harbor على سطح المكتب لتنزيل الملفات.",
+  "games.sources.links.desktop": "افتح Lart على سطح المكتب لتنزيل الملفات.",
 
   "games.sources.web.web": "تنزيلات الويب",
 
@@ -267,7 +267,7 @@ export default {
 
   "games.sources.web.again": "بدء مهمة أخرى",
 
-  "games.sources.web.storage": "تعذر على Harbor حفظ هذه المهمة. لن تُرسل مجددًا تلقائيًا.",
+  "games.sources.web.storage": "تعذر على Lart حفظ هذه المهمة. لن تُرسل مجددًا تلقائيًا.",
 
   "games.sources.web.preparing": "جارٍ التحضير في TorBox",
 
@@ -353,7 +353,7 @@ export default {
 
   "games.sources.pm.select": "استخدام هذا النقل",
 
-  "games.sources.pm.review": "اختر عملية النقل التي أرسلتها. لا يستطيع Harbor مطابقة مصدرها تلقائيًا.",
+  "games.sources.pm.review": "اختر عملية النقل التي أرسلتها. لا يستطيع Lart مطابقة مصدرها تلقائيًا.",
 
   "games.sources.pm.retry": "إعادة محاولة النقل",
 

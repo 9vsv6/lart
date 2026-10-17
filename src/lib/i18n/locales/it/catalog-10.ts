@@ -77,7 +77,7 @@ const catalog10: Record<string, string> = {
   "bot token": "token del bot",
   "box above.": "riquadro qui sopra.",
   "by @{handle}": "di @{handle}",
-  "by Harbor contributors": "dei collaboratori di Harbor",
+  "by Lart contributors": "dei collaboratori di Lart",
   "by {authors}": "di {authors}",
   "by {author}": "di {author}",
   "by {name}": "di {name}",
@@ -94,7 +94,7 @@ const catalog10: Record<string, string> = {
   "checks in {count}m": "controllo tra {count} min",
   "checks periodically": "controllo periodico",
   "chrome.backToTop": "Torna su",
-  "chrome.harborHome": "Home di Harbor",
+  "chrome.harborHome": "Home di Lart",
   "chrome.locked": "Bloccato",
   "chrome.lockedRequiresPin": "{label} (bloccato, richiede il PIN)",
   "chrome.lockedShort": "{label} · bloccato",
@@ -142,8 +142,8 @@ const catalog10: Record<string, string> = {
   "e.g. 20": "ad es. 20",
   eBook: "eBook",
   "eBook actions": "azioni eBook",
-  "eBook extensions use Harbor’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
-    "Le estensioni eBook usano il worker isolato di Harbor, il bridge HTTP e il parser HTML, la stessa sandbox usata dalle estensioni Manga. Aggiungi solo repository attendibili.",
+  "eBook extensions use Lart’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
+    "Le estensioni eBook usano il worker isolato di Lart, il bridge HTTP e il parser HTML, la stessa sandbox usata dalle estensioni Manga. Aggiungi solo repository attendibili.",
   "eBook source settings": "impostazioni della sorgente eBook",
   eBooks: "eBook",
   "each card on a browse/search page.": "ogni scheda in una pagina di esplorazione o di ricerca.",
@@ -165,8 +165,8 @@ const catalog10: Record<string, string> = {
     "per limiti di richieste più elevati; lascia vuoto per il livello anonimo gratuito.",
   "for {count} more episodes": "per altri {count} episodi",
   "found by": "trovato da",
-  "from the Harbor repo into a new directory as":
-    "dal repository Harbor in una nuova directory come",
+  "from the Lart repo into a new directory as":
+    "dal repository Lart in una nuova directory come",
   "from {source}": "da {source}",
   "grabs lazy-loaded images.": "recupera le immagini caricate in modo differito.",
   "grid view": "vista a griglia",
@@ -192,7 +192,7 @@ const catalog10: Record<string, string> = {
   "if the site blocks hotlinked images.": "se il sito blocca le immagini collegate direttamente.",
   "igv (gist)": "igv (gist)",
   "in 24h": "tra 24 h",
-  "in Harbor settings.": "nelle Impostazioni di Harbor.",
+  "in Lart settings.": "nelle Impostazioni di Lart.",
   "in {d} days": "tra {d} giorni",
   "in {n} weeks": "tra {n} settimane",
   "in {n} weeks#few": "tra {n} settimane",
@@ -203,8 +203,8 @@ const catalog10: Record<string, string> = {
   "is a page number. Add": "è un numero di pagina. Aggiungi",
   "is a regex for the part to change": "è un'espressione regolare per la parte da modificare",
   "is each chapter row": "è ogni riga di un capitolo",
-  "is how many items to skip, starting at 0. Harbor auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
-    "indica quanti elementi saltare, a partire da 0. Harbor rileva automaticamente la dimensione delle pagine del sito e le scorre per te, quindi non devi mai impostare una dimensione di pagina. Usalo quando l'URL conta gli elementi.",
+  "is how many items to skip, starting at 0. Lart auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
+    "indica quanti elementi saltare, a partire da 0. Lart rileva automaticamente la dimensione delle pagine del sito e le scorre per te, quindi non devi mai impostare una dimensione di pagina. Usalo quando l'URL conta gli elementi.",
   "is not an image we can read": "non è un'immagine leggibile",
   "is now using your new configuration.": "ora usa la nuova configurazione.",
   "is ready. Open Discover or hit Play on a title to use it.":
@@ -229,8 +229,8 @@ const catalog10: Record<string, string> = {
   "lead roles": "ruoli da protagonista",
   left: "rimasto",
   "letterboxd.com/username/list/slug": "letterboxd.com/username/list/slug",
-  "libmpv did not load, so playback falls back to HTML5 and formats like MKV may refuse to play. On Linux, install your distribution's libmpv package, then restart Harbor.":
-    "libmpv non è stato caricato, quindi la riproduzione passa a HTML5 e formati come MKV potrebbero non essere riprodotti. Su Linux, installa il pacchetto libmpv della tua distribuzione, quindi riavvia Harbor.",
+  "libmpv did not load, so playback falls back to HTML5 and formats like MKV may refuse to play. On Linux, install your distribution's libmpv package, then restart Lart.":
+    "libmpv non è stato caricato, quindi la riproduzione passa a HTML5 e formati come MKV potrebbero non essere riprodotti. Su Linux, installa il pacchetto libmpv della tua distribuzione, quindi riavvia Lart.",
   like: "Mi piace",
   "limit reached": "limite raggiunto",
   lineups: "programmazioni",
@@ -249,13 +249,13 @@ const catalog10: Record<string, string> = {
   "more events": "altri eventi",
   movies: "film",
   mpv: "mpv",
-  "mpv is required for recording. Install mpv and restart Harbor.":
-    "mpv è necessario per registrare. Installa mpv e riavvia Harbor.",
+  "mpv is required for recording. Install mpv and restart Lart.":
+    "mpv è necessario per registrare. Installa mpv e riavvia Lart.",
   "mpv on the desktop app, HTML5 in the browser. The right engine without thinking about it.":
     "mpv nell'app desktop, HTML5 nel browser. Il motore giusto, senza doverci pensare.",
   "mpv.conf": "mpv.conf",
   "n/a": "n/d",
-  "name it Harbor, hit": "chiamalo Harbor, premi",
+  "name it Lart, hit": "chiamalo Lart, premi",
   "natural-harmonia-gropius/hdr-toys": "natural-harmonia-gropius/hdr-toys",
   "nav.addons": "Add-on",
   "nav.anime": "Anime",
@@ -370,8 +370,8 @@ const catalog10: Record<string, string> = {
   stars: "stelle",
   stats: "statistiche",
   "stremio:// link": "link stremio://",
-  "stremio:// links now open in the Stremio app. Harbor will only install when you trigger it from inside Harbor.":
-    "Ora i link stremio:// si aprono nell'app Stremio. Harbor eseguirà l'installazione solo quando la avvii dall'interno di Harbor.",
+  "stremio:// links now open in the Stremio app. Lart will only install when you trigger it from inside Lart.":
+    "Ora i link stremio:// si aprono nell'app Stremio. Lart eseguirà l'installazione solo quando la avvii dall'interno di Lart.",
   "stremio://… or https://…/manifest.json": "stremio://… o https://…/manifest.json",
   "study, character, quote": "studio, personaggio, citazione",
   "subdomain acts as the access token. There is no login.":
@@ -426,14 +426,14 @@ const catalog10: Record<string, string> = {
   "update.errorServer": "Impossibile raggiungere il server degli aggiornamenti",
   "update.failed": "Aggiornamento non riuscito",
   "update.fetching": "Ricerca della versione più recente",
-  "update.harborVersion": "Harbor {version}",
+  "update.harborVersion": "Lart {version}",
   "update.installRestart": "Installa e riavvia",
   "update.installing": "Installazione dell'aggiornamento",
-  "update.keepUsing": "Continua a usare Harbor durante il download",
+  "update.keepUsing": "Continua a usare Lart durante il download",
   "update.later": "Più tardi",
   "update.of": "{downloaded} di {total}",
   "update.ready": "Aggiornamento pronto per l'installazione",
-  "update.restartAuto": "Harbor si riavvierà automaticamente.",
+  "update.restartAuto": "Lart si riavvierà automaticamente.",
   "update.tryAgain": "Riprova",
   "v3 API key": "chiave API v3",
   via: "tramite",
@@ -444,9 +444,9 @@ const catalog10: Record<string, string> = {
   "welcome.dismiss": "Inizia",
   "welcome.subtitle":
     "Ora l’interfaccia è in italiano. Puoi cambiare lingua in qualsiasi momento dalle Impostazioni.",
-  "welcome.title": "Benvenuto in Harbor",
-  "will be removed from Harbor. Anything you've set to use it will fall back to Inter.":
-    "verrà rimosso da Harbor. Tutto ciò che hai configurato per usarlo passerà a Inter.",
+  "welcome.title": "Benvenuto in Lart",
+  "will be removed from Lart. Anything you've set to use it will fall back to Inter.":
+    "verrà rimosso da Lart. Tutto ciò che hai configurato per usarlo passerà a Inter.",
   "window.harbor API": "API window.harbor",
   "with a WebSocket upgrade: opens a Watch Together room. State is held in a Durable Object, no persistence beyond the active session.":
     "con un upgrade WebSocket: apre una stanza Guarda insieme. Lo stato viene mantenuto in un Durable Object e non persiste oltre la sessione attiva.",
@@ -546,8 +546,8 @@ const catalog10: Record<string, string> = {
   "{count} slot reskinned": "{count} slot con una nuova skin",
   "{count} slots reskinned": "{count} slot rinnovati graficamente",
   "{count} sources": "{count} fonti",
-  "{count} tracker request blocked this session. Harbor itself sends zero telemetry.":
-    "{count} richieste ai tracker bloccate in questa sessione. Harbor non invia alcun dato di telemetria.",
+  "{count} tracker request blocked this session. Lart itself sends zero telemetry.":
+    "{count} richieste ai tracker bloccate in questa sessione. Lart non invia alcun dato di telemetria.",
   "{count} views": "{count} visualizzazioni",
   "{count} vols": "{count} vol.",
   "{count} volume": "{count} volume",
@@ -566,22 +566,22 @@ const catalog10: Record<string, string> = {
   "{count}w": "{count} sett.",
   "{count}w ago": "{count} sett. fa",
   "{count}y ago": "{count} anni fa",
-  "{deviceLabel} can't decode this stream natively ({reasons}). Harbor uses ffmpeg to convert it into a format your TV understands.":
-    "{deviceLabel} non riesce a decodificare nativamente questo stream ({reasons}). Harbor usa ffmpeg per convertirlo in un formato compatibile con la tua TV.",
+  "{deviceLabel} can't decode this stream natively ({reasons}). Lart uses ffmpeg to convert it into a format your TV understands.":
+    "{deviceLabel} non riesce a decodificare nativamente questo stream ({reasons}). Lart usa ffmpeg per convertirlo in un formato compatibile con la tua TV.",
   "{deviceLabel} can't play this stream ({reasons}) and none of the {count} available alternatives match its capabilities.":
     "{deviceLabel} non riesce a riprodurre questo stream ({reasons}) e nessuna delle {count} alternative disponibili è compatibile con il dispositivo.",
   '{deviceLabel} can\'t play this stream ({reasons}). Click "Pick another" first to load alternatives, then try casting again.':
     '{deviceLabel} non riesce a riprodurre questo stream ({reasons}). Prima fai clic su "Scegli un altro" per caricare le alternative, poi prova di nuovo a trasmettere.',
-  "{deviceName} is an audio-only device. Harbor can't transcode video to audio yet, so this device can only stream audio files. Pick a TV, Chromecast, or display-equipped device to stream video.":
-    "{deviceName} è un dispositivo solo audio. Harbor non può ancora transcodificare i video in audio, quindi questo dispositivo può riprodurre in streaming solo file audio. Per riprodurre video in streaming, scegli una TV, un Chromecast o un dispositivo con schermo.",
+  "{deviceName} is an audio-only device. Lart can't transcode video to audio yet, so this device can only stream audio files. Pick a TV, Chromecast, or display-equipped device to stream video.":
+    "{deviceName} è un dispositivo solo audio. Lart non può ancora transcodificare i video in audio, quindi questo dispositivo può riprodurre in streaming solo file audio. Per riprodurre video in streaming, scegli una TV, un Chromecast o un dispositivo con schermo.",
   "{done} of {total}": "{done} di {total}",
   "{done} of {total} films picked.": "{done} film selezionati su {total}.",
   "{done} of {total} picked": "{done} di {total} selezionati",
   "{done} of {total} watched": "{done} di {total} guardati",
   "{done} of {total} watched so far.": "Finora hai guardato {done} di {total}.",
   "{d}d ago": "{d} g fa",
-  "{file} is empty. Start typing to restyle Harbor.":
-    "{file} è vuoto. Inizia a scrivere per personalizzare lo stile di Harbor.",
+  "{file} is empty. Start typing to restyle Lart.":
+    "{file} è vuoto. Inizia a scrivere per personalizzare lo stile di Lart.",
   "{first} and {second}": "{first} e {second}",
   "{format} added to Downloads": "{format} aggiunto ai Download",
   "{honor} winner": "vincitore di {honor}",
@@ -625,12 +625,12 @@ const catalog10: Record<string, string> = {
   "{name} is available": "{name} è disponibile",
   "{name} is taken": "{name} è già in uso",
   "{name} left the video": "{name} ha lasciato il video",
-  "{name} on Harbor": "{name} su Harbor",
+  "{name} on Lart": "{name} su Lart",
   "{name} reached {count} five-star ratings":
     "{name} ha raggiunto {count} valutazioni a cinque stelle",
   "{name} started watching": "{name} ha iniziato a guardare",
-  "{name} will be removed from Harbor. Anything you've set to use it will fall back to Inter.":
-    "{name} verrà rimosso da Harbor. Tutti gli elementi impostati per usarlo torneranno a Inter.",
+  "{name} will be removed from Lart. Anything you've set to use it will fall back to Inter.":
+    "{name} verrà rimosso da Lart. Tutti gli elementi impostati per usarlo torneranno a Inter.",
   "{name}'s ratings": "Valutazioni di {name}",
   "{name}'s {sub}": "{sub} di {name}",
   "{noms} noms": "{noms} nomination",
@@ -639,7 +639,7 @@ const catalog10: Record<string, string> = {
   "{n} / {max} lists": "{n} / {max} liste",
   "{n} / {max} titles": "{n} / {max} titoli",
   "{n} GB": "{n} GB",
-  "{n} Harbor icons": "{n} icone Harbor",
+  "{n} Lart icons": "{n} icone Lart",
   "{n} LIVE": "{n} IN DIRETTA",
   "{n} active": "{n} attivi",
   "{n} addon": "{n} Add-on",
@@ -784,7 +784,7 @@ const catalog10: Record<string, string> = {
   "{n} options active": "{n} opzioni attive",
   "{n} options#few": "{n} opzioni#few",
   "{n} options#one": "{n} opzione#one",
-  "{n} other Harbors": "{n} altri Harbor",
+  "{n} other Harbors": "{n} altri Lart",
   "{n} pages": "{n} pagine",
   "{n} pages#few": "{n} pagine#few",
   "{n} pages#one": "{n} pagina#one",
@@ -870,14 +870,14 @@ const catalog10: Record<string, string> = {
   "{n} titles you like": "{n} titoli che ti piacciono",
   "{n} titles#few": "{n} titoli#few",
   "{n} titles#one": "{n} titolo#one",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.":
-    "{n} richiesta di tracciamento bloccata in questa sessione. Harbor non invia alcun dato di telemetria.",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#few":
-    "{n} richieste di tracciamento bloccate in questa sessione. Harbor non invia alcun dato di telemetria.#few",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#one":
-    "{n} richiesta di tracciamento bloccata in questa sessione. Harbor non invia alcun dato di telemetria.#one",
-  "{n} tracker requests blocked this session. Harbor itself sends zero telemetry.":
-    "{n} richieste di tracciamento bloccate in questa sessione. Harbor non invia alcun dato di telemetria.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.":
+    "{n} richiesta di tracciamento bloccata in questa sessione. Lart non invia alcun dato di telemetria.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#few":
+    "{n} richieste di tracciamento bloccate in questa sessione. Lart non invia alcun dato di telemetria.#few",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#one":
+    "{n} richiesta di tracciamento bloccata in questa sessione. Lart non invia alcun dato di telemetria.#one",
+  "{n} tracker requests blocked this session. Lart itself sends zero telemetry.":
+    "{n} richieste di tracciamento bloccate in questa sessione. Lart non invia alcun dato di telemetria.",
   "{n} tracks": "{n} tracce",
   "{n} uncached hidden": "{n} elementi non memorizzati nella cache nascosti",
   "{n} versions": "{n} versioni",
@@ -946,13 +946,13 @@ const catalog10: Record<string, string> = {
   "{title} cover": "Copertina di {title}",
   "{title} image viewer": "Visualizzatore immagini di {title}",
   "{title} internal cover": "Copertina interna di {title}",
-  "{title} on Harbor": "{title} su Harbor",
+  "{title} on Lart": "{title} su Lart",
   "{title} overview": "Panoramica di {title}",
   "{title} poster": "Poster di {title}",
   "{title} trailer": "Trailer di {title}",
   "{title} will not come back in the Discovery Queue.":
     "{title} non comparirà più nella Coda scoperte.",
-  "{title} won't load inside Harbor.": "{title} non può essere caricato in Harbor.",
+  "{title} won't load inside Lart.": "{title} non può essere caricato in Lart.",
   "{used} / {limit} requests today.": "{used} / {limit} richieste oggi.",
   "{v} avg": "Media {v}",
   "{v} · weight {p}%": "{v} · peso {p}%",
@@ -990,8 +990,8 @@ const catalog10: Record<string, string> = {
   "التنس (WTA)": "Tennis (WTA)",
   "بطولة PGA": "PGA Tour",
   "دوري MLS": "MLS",
-  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Harbor problem: pick another source, or give it a minute to finish caching and try again.":
-    "“Nella cache” significa solo che, secondo il tuo Add-on, il file è già salvato sul tuo servizio debrid ed è pronto per essere riprodotto subito. L'indicazione non è sempre corretta: a volte il file non è ancora realmente disponibile. In tal caso, la fonte non si avvia oppure riproduce un breve filmato danneggiato. Non è un problema di Harbor: scegli un'altra fonte oppure attendi un minuto che la memorizzazione nella cache termini e riprova.",
+  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Lart problem: pick another source, or give it a minute to finish caching and try again.":
+    "“Nella cache” significa solo che, secondo il tuo Add-on, il file è già salvato sul tuo servizio debrid ed è pronto per essere riprodotto subito. L'indicazione non è sempre corretta: a volte il file non è ancora realmente disponibile. In tal caso, la fonte non si avvia oppure riproduce un breve filmato danneggiato. Non è un problema di Lart: scegli un'altra fonte oppure attendi un minuto che la memorizzazione nella cache termini e riprova.",
   "← folder or .cbz / .zip": "← cartella o .cbz / .zip",
   "← name it like the manga": "← dagli lo stesso nome del manga",
   "≈{count}m left": "≈{count} min rimanenti",

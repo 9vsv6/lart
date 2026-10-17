@@ -1,6 +1,6 @@
 const addons: Record<string, string> = {
-  "A safety copy of your addon order. One is saved automatically before Harbor writes any change, and you can save one yourself any time. The five most recent are kept.":
-    "Eine Sicherungskopie deiner Add-on-Reihenfolge. Sie wird automatisch gespeichert, bevor Harbor Änderungen vornimmt, und du kannst jederzeit selbst eine anlegen. Die fünf neuesten Kopien werden aufbewahrt.",
+  "A safety copy of your addon order. One is saved automatically before Lart writes any change, and you can save one yourself any time. The five most recent are kept.":
+    "Eine Sicherungskopie deiner Add-on-Reihenfolge. Sie wird automatisch gespeichert, bevor Lart Änderungen vornimmt, und du kannst jederzeit selbst eine anlegen. Die fünf neuesten Kopien werden aufbewahrt.",
   "Anime done right": "Anime, richtig gemacht",
   "Back to addons": "Zurück zu Add-ons",
   "Back up current order": "Aktuelle Reihenfolge sichern",
@@ -13,12 +13,12 @@ const addons: Record<string, string> = {
   "Cached on Real-Debrid, TorBox, AllDebrid. Instant play.":
     "Im Cache von Real-Debrid, TorBox, AllDebrid. Sofortige Wiedergabe.",
   "Catalogs & metadata": "Kataloge und Metadaten",
-  "Click below to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "Klicke unten, um die Einrichtungsseite von {name} im integrierten Browser von Harbor zu öffnen. Wähle deine Optionen. Wenn du auf der Seite auf „Installieren“ klickst, erkennt Harbor den Link automatisch und aktualisiert das Add-on.",
+  "Click below to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "Klicke unten, um die Einrichtungsseite von {name} im integrierten Browser von Lart zu öffnen. Wähle deine Optionen. Wenn du auf der Seite auf „Installieren“ klickst, erkennt Lart den Link automatisch und aktualisiert das Add-on.",
   "Click below to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "Klicke unten, um die Einrichtungsseite von {name} zu öffnen. Wähle deine Optionen aus, kopiere dann den dort erzeugten Installationslink und füge ihn unten ein, um das Add-on zu aktualisieren.",
-  "Click to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "Klicke, um die Einrichtungsseite von {name} im integrierten Browser von Harbor zu öffnen. Wähle deine Optionen. Wenn du auf der Seite auf „Installieren“ klickst, erkennt Harbor den Link automatisch und aktualisiert das Add-on.",
+  "Click to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "Klicke, um die Einrichtungsseite von {name} im integrierten Browser von Lart zu öffnen. Wähle deine Optionen. Wenn du auf der Seite auf „Installieren“ klickst, erkennt Lart den Link automatisch und aktualisiert das Add-on.",
   "Click to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "Klicke, um die Einrichtungsseite von {name} zu öffnen. Wähle deine Optionen, kopiere anschließend den dort angezeigten Installationslink und füge ihn unten ein, um das Add-on zu aktualisieren.",
   "Couldn't load your Stremio collection. Nothing can be reordered safely without it.":
@@ -34,8 +34,8 @@ const addons: Record<string, string> = {
   "From stremio-addons.net": "Von stremio-addons.net",
   "Go back": "Zurück",
   "Good to know": "Gut zu wissen",
-  "Harbor double-checks with Stremio after saving, so a half-written order can't slip through.":
-    "Harbor gleicht die Sortierung nach dem Speichern noch einmal mit Stremio ab, damit keine nur teilweise gespeicherte Sortierung übernommen wird.",
+  "Lart double-checks with Stremio after saving, so a half-written order can't slip through.":
+    "Lart gleicht die Sortierung nach dem Speichern noch einmal mit Stremio ab, damit keine nur teilweise gespeicherte Sortierung übernommen wird.",
   'Heads-up: a few addons (like AIOStatus) don\'t pre-fill from the URL. If the form loads blank, paste the existing manifest URL into their "Import from URL" field to restore your settings.':
     "Hinweis: Einige Add-ons (wie AIOStatus) übernehmen die Daten nicht automatisch aus der URL. Wenn das Formular leer geladen wird, füge die vorhandene Manifest-URL in das Feld „Von URL importieren“ ein, um deine Einstellungen wiederherzustellen.",
   "Install from URL: paste any manifest or stremio:// link":
@@ -72,8 +72,8 @@ const addons: Record<string, string> = {
   "Rising · +{n} star in 24h": "Im Aufwind · +{n} Stern in 24 Std.",
   "Rising · +{n} stars in 24h": "Im Aufwärtstrend · +{n} Sterne in 24 Std.",
   "Save order": "Reihenfolge speichern",
-  "Saved, but Harbor couldn't confirm the new order. Retry to re-check.":
-    "Gespeichert, aber Harbor konnte die neue Reihenfolge nicht bestätigen. Versuche es erneut, um sie noch einmal zu prüfen.",
+  "Saved, but Lart couldn't confirm the new order. Retry to re-check.":
+    "Gespeichert, aber Lart konnte die neue Reihenfolge nicht bestätigen. Versuche es erneut, um sie noch einmal zu prüfen.",
   Saving: "Speichern",
   "Search addons": "Add-ons durchsuchen",
   "See all ({n})": "Alle anzeigen ({n})",
@@ -84,8 +84,8 @@ const addons: Record<string, string> = {
     "Etwas Unerwartetes ist schiefgelaufen. Möglicherweise wurde nichts gespeichert. Wiederhole den Vorgang zur erneuten Prüfung.",
   "Sports & live TV": "Sport & Live-TV",
   "Start here. The ones almost everyone has.": "Starte hier. Diese haben fast alle.",
-  "Stremio addon, packaged into Harbor's catalog.":
-    "Stremio-Add-on, eingebunden in den Katalog von Harbor.",
+  "Stremio addon, packaged into Lart's catalog.":
+    "Stremio-Add-on, eingebunden in den Katalog von Lart.",
   "Stremio didn't confirm the save. Your collection may be unchanged. Retry will re-check before writing again.":
     "Stremio hat das Speichern nicht bestätigt. Deine Sammlung ist möglicherweise unverändert. Bei einem erneuten Versuch wird dies vor dem Schreiben noch einmal geprüft.",
   "Stremio link copied": "Stremio-Link kopiert",
@@ -95,8 +95,8 @@ const addons: Record<string, string> = {
     "Die Schaltfläche „Sicherungen“ oben bewahrt deine letzten fünf Sortierungen auf. Mit einem Klick kannst du jede davon wiederherstellen.",
   "The order also decides which addon's rows win on your Home screen.":
     "Die Reihenfolge bestimmt außerdem, welche Zeilen von welchem Add-on auf deinem Startbildschirm Vorrang haben.",
-  "These live in Harbor on this computer and never touch your account.":
-    "Diese Daten verbleiben in Harbor auf diesem Computer und werden nie an dein Konto übertragen.",
+  "These live in Lart on this computer and never touch your account.":
+    "Diese Daten verbleiben in Lart auf diesem Computer und werden nie an dein Konto übertragen.",
   "This order drives your catalog rows and the default stream order. A stream priority set in Settings overrides it for streams.":
     "Diese Reihenfolge bestimmt die Anordnung deiner Katalogzeilen und die Standardsortierung der Streams. Eine in den Einstellungen festgelegte Stream-Priorität hat bei Streams Vorrang.",
   "This order syncs to every Stremio app signed into this account.":

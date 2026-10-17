@@ -9,7 +9,7 @@
     "windows": [
       {
         "label": "main",
-        "title": "Harbor",
+        "title": "Lart",
         "url": "index-tv.html",
         "backgroundColor": [8, 9, 10, 255]
       }
@@ -22,7 +22,7 @@
       "resources/capstan/": null
     },
     "android": {
-      "minSdkVersion": 24
+      "minSdkVersion": 26
     }
   },
   "plugins": {

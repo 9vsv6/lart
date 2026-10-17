@@ -10,7 +10,7 @@ export type MinecraftDependency = { project: string; version: string; filename: 
 export type MinecraftVersion = { id: string; number: string; name: string; type: string; date: string; games: string[]; loaders: string[]; bytes: number; filename: string; dependencies: number; dependencyRefs: MinecraftDependency[]; dependencyCount: number };
 const ID = /^[a-zA-Z0-9_-]{1,100}$/;
 const LOADER = ["fabric", "forge", "neoforge", "quilt", "iris", "optifine", "canvas", "minecraft"];
-// Search labels also include legacy and server loaders, even when Harbor does
+// Search labels also include legacy and server loaders, even when Lart does
 // not offer them as install/filter targets. Preserve that compatibility data.
 const CATALOG_LOADERS = new Set([...LOADER, "babric", "bta-babric", "bukkit", "bungeecord", "datapack", "folia", "geyser", "java-agent", "legacy-fabric", "liteloader", "modloader", "nilloader", "ornithe", "paper", "purpur", "rift", "spigot", "sponge", "velocity", "waterfall"]);
 const SORTS = ["relevance", "downloads", "updated", "newest"];

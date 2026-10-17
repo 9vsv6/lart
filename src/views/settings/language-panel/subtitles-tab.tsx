@@ -11,7 +11,7 @@ export function SubtitlesLanguageTab() {
     <>
       <Section
         title={t("Subtitle languages")}
-        subtitle={t("Harbor looks for subtitles in this order. Put your preferred language first.")}
+        subtitle={t("Lart looks for subtitles in this order. Put your preferred language first.")}
       >
         <LanguagesPicker
           value={settings.preferredSubLangs}
@@ -23,7 +23,7 @@ export function SubtitlesLanguageTab() {
 
       <Section
         title={t("Choosing a track")}
-        subtitle={t("Which subtitle Harbor lands on when more than one is available.")}
+        subtitle={t("Which subtitle Lart lands on when more than one is available.")}
       >
         <ToggleRow
           label={t("Prefer embedded subtitles")}

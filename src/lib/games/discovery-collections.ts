@@ -1,7 +1,7 @@
 import { ATLAS_SUMMARY_FIELDS } from "./igdb-data";
 
 // A small, sourced editorial collection. Artwork and game details are hydrated from IGDB.
-// These are dated milestones, not a claim that Harbor tracks changing records live.
+// These are dated milestones, not a claim that Lart tracks changing records live.
 export const GAME_MILESTONES = [
   { id:121, key:"minecraft", dated:true, name:"Minecraft", logo:"/games/minecraft/wordmark.svg", scene:"", value:"350M", date:"2025-04", source:"https://www.guinnessworldrecords.com/world-records/best-selling-video-game" },
   { id:8197, key:"tetris", dated:true, name:"Tetris", logo:"/games/records/tetris.svg", scene:"https://images.igdb.com/igdb/image/upload/t_1080p/scs8lz.jpg", value:"70+", date:"2026-09-30", source:"https://www.guinnessworldrecords.com/world-records/most-ported-computer-game" },

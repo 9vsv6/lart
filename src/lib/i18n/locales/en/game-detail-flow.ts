@@ -1,7 +1,7 @@
 export default {
   "games.details.broadcastPause": "Pause broadcast",
   "games.details.broadcastResume": "Play broadcast",
-  "games.details.broadcastPlay": "Watch in Harbor",
+  "games.details.broadcastPlay": "Watch in Lart",
   "games.details.watchRun": "Watch run",
   "games.details.viewRun": "View run",
   "games.details.runVideo": "Run video",

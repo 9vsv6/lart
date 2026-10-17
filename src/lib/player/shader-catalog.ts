@@ -63,7 +63,7 @@ export const SHADER_CATALOG: ShaderCatalogEntry[] = [
         files: ["FSRCNNX_x2_8-0-4-1.glsl"],
       },
     ],
-    demo: demoFor("fsrcnnx", "Harbor, from a public domain frame"),
+    demo: demoFor("fsrcnnx", "Lart, from a public domain frame"),
   },
   {
     id: "fsr",
@@ -79,7 +79,7 @@ export const SHADER_CATALOG: ShaderCatalogEntry[] = [
       url: "https://gist.github.com/agyild/82219c545228d70c5604f865ce0b0ce5",
     },
     files: ["FSR.glsl"],
-    demo: demoFor("fsr", "Harbor, from a public domain frame"),
+    demo: demoFor("fsr", "Lart, from a public domain frame"),
   },
   {
     id: "nis",
@@ -95,7 +95,7 @@ export const SHADER_CATALOG: ShaderCatalogEntry[] = [
       url: "https://gist.github.com/agyild/7e8951915b2bf24526a9343d951db214",
     },
     files: ["NVScaler.glsl"],
-    demo: demoFor("nis", "Harbor, from a public domain frame"),
+    demo: demoFor("nis", "Lart, from a public domain frame"),
   },
   {
     id: "sgsr",
@@ -111,7 +111,7 @@ export const SHADER_CATALOG: ShaderCatalogEntry[] = [
       url: "https://gist.github.com/agyild/7715b6b1f38427839d58f80884902cab",
     },
     files: ["SGSR.glsl"],
-    demo: demoFor("sgsr", "Harbor, from a public domain frame"),
+    demo: demoFor("sgsr", "Lart, from a public domain frame"),
   },
   {
     id: "ravu",
@@ -134,7 +134,7 @@ export const SHADER_CATALOG: ShaderCatalogEntry[] = [
         files: ["ravu-lite-r2.hook"],
       },
     ],
-    demo: demoFor("ravu", "Harbor, from a public domain frame"),
+    demo: demoFor("ravu", "Lart, from a public domain frame"),
   },
   {
     id: "nnedi3",
@@ -167,7 +167,7 @@ export const SHADER_CATALOG: ShaderCatalogEntry[] = [
         files: ["nnedi3-nns128-win8x4.hook"],
       },
     ],
-    demo: demoFor("nnedi3", "Harbor, from a public domain frame"),
+    demo: demoFor("nnedi3", "Lart, from a public domain frame"),
   },
   {
     id: "ssimsuperres",
@@ -183,7 +183,7 @@ export const SHADER_CATALOG: ShaderCatalogEntry[] = [
       url: "https://gist.github.com/igv/2364ffa6e81540f29cb7ab4c9bc05b6b",
     },
     files: ["SSimSuperRes.glsl"],
-    demo: demoFor("ssimsuperres", "Harbor, from a public domain frame"),
+    demo: demoFor("ssimsuperres", "Lart, from a public domain frame"),
   },
   {
     id: "krig",
@@ -199,7 +199,7 @@ export const SHADER_CATALOG: ShaderCatalogEntry[] = [
       url: "https://gist.github.com/igv/a015fc885d5c22e6891820ad89555637",
     },
     files: ["KrigBilateral.glsl"],
-    demo: demoFor("krig", "Harbor, from a public domain frame"),
+    demo: demoFor("krig", "Lart, from a public domain frame"),
   },
   {
     id: "adaptive-sharpen",
@@ -215,7 +215,7 @@ export const SHADER_CATALOG: ShaderCatalogEntry[] = [
       url: "https://gist.github.com/igv/8a77e4eb8276753b54bb94c1c50c317e",
     },
     files: ["adaptive-sharpen.glsl"],
-    demo: demoFor("adaptive-sharpen", "Harbor, from a public domain frame"),
+    demo: demoFor("adaptive-sharpen", "Lart, from a public domain frame"),
   },
   {
     id: "cas",
@@ -231,7 +231,7 @@ export const SHADER_CATALOG: ShaderCatalogEntry[] = [
       url: "https://gist.github.com/agyild/bbb4e58298b2f86aa24da3032a0d2ee6",
     },
     files: ["CAS.glsl"],
-    demo: demoFor("cas", "Harbor, from a public domain frame"),
+    demo: demoFor("cas", "Lart, from a public domain frame"),
   },
   {
     id: "hdr-toys",
@@ -240,7 +240,7 @@ export const SHADER_CATALOG: ShaderCatalogEntry[] = [
     content: "hdr",
     tier: "quality",
     description:
-      "High quality HDR to SDR tone and gamut mapping as a shader pipeline, for PQ (HDR10) sources. Use this instead of Harbor's built-in tone-mapping. Turn off the built-in HDR to SDR conversion first, it cannot run alongside this. Needs the gpu-next renderer, so it is reliable on Windows and unverified on macOS.",
+      "High quality HDR to SDR tone and gamut mapping as a shader pipeline, for PQ (HDR10) sources. Use this instead of Lart's built-in tone-mapping. Turn off the built-in HDR to SDR conversion first, it cannot run alongside this. Needs the gpu-next renderer, so it is reliable on Windows and unverified on macOS.",
     stage: "tonemap",
     source: {
       label: "natural-harmonia-gropius/hdr-toys",

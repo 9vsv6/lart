@@ -1,14 +1,14 @@
 const musicCast: Record<string, string> = {
   "music.cast.title": "Netzwerklautsprecher",
   "music.cast.body":
-    "Lass den Lautsprecher eingeschaltet und verbinde ihn mit demselben Netzwerk wie Harbor.",
+    "Lass den Lautsprecher eingeschaltet und verbinde ihn mit demselben Netzwerk wie Lart.",
   "music.cast.discover": "Lautsprecher suchen",
   "music.cast.discovering": "Lautsprecher werden gesucht…",
   "music.cast.empty":
     "Keine kompatiblen Lautsprecher gefunden. Prüfe das Netzwerk und suche erneut.",
   "music.cast.compatibility":
-    "Die Unterstützung für Sonos und Marantz hängt vom Modell ab. Harbor nutzt DLNA oder Chromecast; AirPlay 2 wird nicht unterstützt.",
-  "music.cast.airplay": "AirPlay-2-Audio wird in Harbor nicht unterstützt.",
+    "Die Unterstützung für Sonos und Marantz hängt vom Modell ab. Lart nutzt DLNA oder Chromecast; AirPlay 2 wird nicht unterstützt.",
+  "music.cast.airplay": "AirPlay-2-Audio wird in Lart nicht unterstützt.",
   "music.cast.unsupportedDevice": "Das Protokoll dieses Geräts wird für Musik nicht unterstützt.",
   "music.cast.invalidDevice": "Die Gerätedaten sind unvollständig. Suche erneut.",
   "music.cast.noTrack": "Wähle einen Song, bevor du ihn an einen Lautsprecher sendest.",
@@ -23,7 +23,7 @@ const musicCast: Record<string, string> = {
   "music.cast.spotify":
     "Geschütztes Spotify-Audio kann so nicht gesendet werden. Nutze Spotify Connect in Spotify.",
   "music.cast.local":
-    "Harbor kann lokale Dateien noch nicht an Lautsprecher senden. Wähle eine Online-Audioquelle.",
+    "Lart kann lokale Dateien noch nicht an Lautsprecher senden. Wähle eine Online-Audioquelle.",
   "music.cast.unsupportedStream":
     "Diese Quelle hat keinen unterstützten Audiostream geliefert. Wähle eine andere Quelle.",
   "music.cast.disconnected":

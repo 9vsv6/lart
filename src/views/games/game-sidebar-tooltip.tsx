@@ -5,7 +5,7 @@ import { sidebarStatus, type SidebarStatusIcon } from "@/lib/games/sidebar-statu
 import type { QuickGame } from "@/lib/games/quick-library";
 import "./game-sidebar-tooltip.css";
 
-/** One small, unboxed glyph per state, using Harbor's 24-unit stroke weight. */
+/** One small, unboxed glyph per state, using Lart's 24-unit stroke weight. */
 export function GameSidebarStatusIcon({ state }: { state: SidebarStatusIcon }) {
   return <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     {state === "play" && <><path d="m5 4 11 8-11 8Z"/><path d="m14 18 2.5 2.5L22 15"/></>}

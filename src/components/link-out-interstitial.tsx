@@ -77,7 +77,7 @@ function LinkOutJourneyInterstitial({
   const browserErrorMessage =
     browserError?.detail ??
     (browserError?.code === "browser-open-failed"
-      ? t("Harbor could not open your browser.")
+      ? t("Lart could not open your browser.")
       : null);
 
   const setMenuOpenState = useCallback((open: boolean) => {
@@ -201,11 +201,11 @@ function LinkOutJourneyInterstitial({
             id="link-out-title"
             className="mt-6 font-display text-[26px] font-medium tracking-tight text-ink"
           >
-            {t("You're leaving Harbor")}
+            {t("You're leaving Lart")}
           </h1>
           <p id="link-out-description" className="mt-2 text-[14px] leading-relaxed text-ink-muted">
             {t(
-              "This link goes to an external site that Harbor does not control or vouch for. Triple-check the address before you continue, and never enter your Harbor password anywhere but Harbor.",
+              "This link goes to an external site that Lart does not control or vouch for. Triple-check the address before you continue, and never enter your Lart password anywhere but Lart.",
             )}
           </p>
           <div className="mt-6 flex flex-col gap-1 rounded-lg border border-edge-soft bg-surface p-4 text-start">
@@ -224,15 +224,15 @@ function LinkOutJourneyInterstitial({
           {!parsed.ok && (
             <p role="alert" className="mt-4 text-[13px] leading-relaxed text-danger">
               {parsed.reason === "unsupported-protocol"
-                ? t("Harbor can open only HTTP or HTTPS destinations.")
+                ? t("Lart can open only HTTP or HTTPS destinations.")
                 : parsed.reason === "embedded-credentials"
-                  ? t("Harbor cannot open links that include embedded credentials.")
-                  : t("Harbor could not verify this destination.")}
+                  ? t("Lart cannot open links that include embedded credentials.")
+                  : t("Lart could not verify this destination.")}
             </p>
           )}
           {parsed.ok && !parsed.link.canOpenInHarbor && (
             <p className="mt-4 text-[13px] leading-relaxed text-ink-muted">
-              {t("Harbor's temporary viewer requires HTTPS.")}
+              {t("Lart's temporary viewer requires HTTPS.")}
             </p>
           )}
           {browserErrorMessage && (

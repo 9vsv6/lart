@@ -11,7 +11,7 @@ export function DisplayPanelPreview({ panel }: { panel: string }) {
   const t = useT();
   const ramp = RAMPS[panel] ?? RAMPS.auto;
   const notes: Record<string, string> = {
-    auto: t("Harbor reads your display and lands between the two."),
+    auto: t("Lart reads your display and lands between the two."),
     oled: t("Deep shadows keep their steps, so dark scenes stay readable."),
     lcd: t("The darkest steps flatten together, which is how an LCD really behaves."),
   };

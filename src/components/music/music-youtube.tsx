@@ -97,7 +97,7 @@ export function MusicYouTube({ active, onFellBack }: { active: boolean; onFellBa
     };
   }, [rect]);
 
-  // A native child window does not honour the display:none Harbor puts on an inactive view,
+  // A native child window does not honour the display:none Lart puts on an inactive view,
   // and the view stays mounted for a minute after navigation, so visibility is explicit.
   useEffect(() => {
     void setYouTubeMusicVisible(onTop).catch(() => {});

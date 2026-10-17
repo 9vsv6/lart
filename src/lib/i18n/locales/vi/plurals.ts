@@ -1,12 +1,12 @@
 const plurals: Record<string, string> = {
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#one":
-    "Thêm {n} tựa phim từ danh sách xem Harbor vào Trakt? Trakt sẽ bỏ qua các tựa phim đã có.#one",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#few":
-    "Thêm {n} tựa phim từ danh sách xem Harbor vào Trakt? Trakt sẽ bỏ qua các tựa phim đã có.#few",
-  "Add {n} titles from your Trakt watchlist to Harbor?#one":
-    "Thêm {n} tựa phim từ danh sách xem Trakt vào Harbor?#one",
-  "Add {n} titles from your Trakt watchlist to Harbor?#few":
-    "Thêm {n} tựa phim từ danh sách xem Trakt vào Harbor?#few",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#one":
+    "Thêm {n} tựa phim từ danh sách xem Lart vào Trakt? Trakt sẽ bỏ qua các tựa phim đã có.#one",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#few":
+    "Thêm {n} tựa phim từ danh sách xem Lart vào Trakt? Trakt sẽ bỏ qua các tựa phim đã có.#few",
+  "Add {n} titles from your Trakt watchlist to Lart?#one":
+    "Thêm {n} tựa phim từ danh sách xem Trakt vào Lart?#one",
+  "Add {n} titles from your Trakt watchlist to Lart?#few":
+    "Thêm {n} tựa phim từ danh sách xem Trakt vào Lart?#few",
   "After {n} episodes#one": "Sau {n} tập#one",
   "After {n} episodes#few": "Sau {n} tập#few",
   "All {n} channels loaded#one": "Đã tải đủ {n} kênh#one",
@@ -199,10 +199,10 @@ const plurals: Record<string, string> = {
     "{n} tựa phim cần xem lại - hãy giúp chúng tôi xác định.#few",
   "{n} titles together#one": "{n} tựa phim cùng nhau#one",
   "{n} titles together#few": "{n} tựa phim cùng nhau#few",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#one":
-    "Đã chặn {n} yêu cầu theo dõi trong phiên này. Bản thân Harbor không gửi dữ liệu đo từ xa.#one",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#few":
-    "Đã chặn {n} yêu cầu theo dõi trong phiên này. Bản thân Harbor không gửi dữ liệu đo từ xa.#few",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#one":
+    "Đã chặn {n} yêu cầu theo dõi trong phiên này. Bản thân Lart không gửi dữ liệu đo từ xa.#one",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#few":
+    "Đã chặn {n} yêu cầu theo dõi trong phiên này. Bản thân Lart không gửi dữ liệu đo từ xa.#few",
   "{n} votes#one": "{n} lượt bình chọn#one",
   "{n} votes#few": "{n} lượt bình chọn#few",
   "{n} winner#one": "{n} người chiến thắng#one",

@@ -125,8 +125,8 @@ export default {
   Constructors: "Constructores",
   "Coverage varies by league. Streams depend on your available sources.":
     "La cobertura varía según la liga. Las transmisiones dependen de tus fuentes disponibles.",
-  "Delivery failed. Retrying while Harbor is open.":
-    "No se pudo entregar. Se reintentará mientras Harbor esté abierto.",
+  "Delivery failed. Retrying while Lart is open.":
+    "No se pudo entregar. Se reintentará mientras Lart esté abierto.",
   Driver: "Piloto",
   Drivers: "Pilotos",
   "Entrants and starting positions appear when the feed publishes them.":
@@ -161,7 +161,7 @@ export default {
     "De las grandes ligas a tu nuevo deporte favorito.",
   "Inside the paddock": "Dentro del paddock",
   "Jump to today": "Ir a hoy",
-  "Keep Harbor open to deliver reminders.": "Mantén Harbor abierto para enviar los recordatorios.",
+  "Keep Lart open to deliver reminders.": "Mantén Lart abierto para enviar los recordatorios.",
   "Last saved score": "Último marcador guardado",
   "Last update": "Última actualización",
   "Latest saved scores": "Últimos marcadores guardados",
@@ -286,10 +286,10 @@ export default {
     "Prueba otro deporte o fecha. Los calendarios guardados aparecerán aquí si una fuente no está disponible.",
   "Up to date": "Actualizado",
   "Updating schedules…": "Actualizando calendarios…",
-  "Use only sources you are authorized to access. Harbor does not bypass subscriptions or access restrictions.":
-    "Usa solo fuentes a las que tengas acceso autorizado. Harbor no elude suscripciones ni restricciones de acceso.",
-  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Harbor does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
-    "Usa transmisiones, listas M3U y cuentas Xtream a las que tengas acceso autorizado. Harbor no proporciona suscripciones ni elude muros de pago, DRM o restricciones de acceso.",
+  "Use only sources you are authorized to access. Lart does not bypass subscriptions or access restrictions.":
+    "Usa solo fuentes a las que tengas acceso autorizado. Lart no elude suscripciones ni restricciones de acceso.",
+  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Lart does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
+    "Usa transmisiones, listas M3U y cuentas Xtream a las que tengas acceso autorizado. Lart no proporciona suscripciones ni elude muros de pago, DRM o restricciones de acceso.",
   "View match statistics": "Ver estadísticas del partido",
   "Watch with your sources": "Ver con tus fuentes",
   "Your authorized IPTV, M3U and Xtream channels, in one place.":

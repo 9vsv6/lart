@@ -18,7 +18,7 @@ export function ContributorCard() {
       title={t("Want to fix it yourself?")}
       subtitle={t(
         "{app} is open source. Browse existing fixes or contribute a patch for the problem you found.",
-        { app: "Harbor" },
+        { app: "Lart" },
       )}
     >
       <SRow

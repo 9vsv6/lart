@@ -21,8 +21,8 @@ const library: Record<string, string> = {
   "Press play on something. It'll show up here once you start watching.":
     "何か再生してみましょう。視聴を始めると、ここに表示されます。",
   "Your watchlist is empty": "ウォッチリストは空です",
-  'Right-click any title in Harbor or hit "Add to Watchlist" on its detail page to save it here.':
-    "Harborで作品を右クリックするか、詳細ページの「ウォッチリストに追加」を押すと、ここに保存できます。",
+  'Right-click any title in Lart or hit "Add to Watchlist" on its detail page to save it here.':
+    "Lartで作品を右クリックするか、詳細ページの「ウォッチリストに追加」を押すと、ここに保存できます。",
   "Loading favorites…": "お気に入りを読み込み中…",
   "Loading favorites from other providers…": "他のサービスからお気に入りを読み込んでいます…",
   "My Library shows upcoming episodes from the shows you've saved on Stremio. Sign in to wire it up.":

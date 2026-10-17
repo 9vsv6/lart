@@ -66,7 +66,7 @@ const gameRoms: Record<string, string> = {
   "games.roms.era": "发行年代",
   "games.roms.reset": "重置筛选",
   "games.roms.empty": "请尝试其他游戏名，或放宽此游戏机的筛选条件。",
-  "games.roms.source": "游戏资料及关联信息来自 IGDB。导入本地文件，即可在 Harbor 中游玩支持的游戏。",
+  "games.roms.source": "游戏资料及关联信息来自 IGDB。导入本地文件，即可在 Lart 中游玩支持的游戏。",
   "games.roms.playerScore": "IGDB 玩家评分 · {count} 条评分",
   "games.roms.combinedScore": "IGDB 综合评分 · {count} 条评分",
   "games.roms.sort.discussed": "评分数量最多",

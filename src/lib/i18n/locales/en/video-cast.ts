@@ -10,7 +10,7 @@ const videoCast: Record<string, string> = {
   "video.cast.volume": "Adjust volume on the speaker. Computer volume and boost do not apply.",
   "video.cast.settings": "Return audio to this computer before changing speed or audio tracks.",
   "video.cast.muteFailed":
-    "Harbor could not confirm local audio was muted. Speaker playback was stopped.",
+    "Lart could not confirm local audio was muted. Speaker playback was stopped.",
   "video.cast.loadFailed": "Couldn’t start audio on this speaker. Try another source.",
   "video.cast.notReady": "The speaker did not confirm playback.",
   "video.cast.retryReturn": "Check the speaker, then retry returning audio to this computer.",

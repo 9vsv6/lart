@@ -6,7 +6,7 @@ const wiringSweep3: Record<string, string> = {
   "Select renderer": "Selecionar dispositivo de reprodução",
   "Scanning...": "Buscando...",
   "This PC": "Este PC",
-  "Harbor on the server display": "Harbor na tela do servidor",
+  "Lart on the server display": "Lart na tela do servidor",
   "Scanning your network...": "Buscando na sua rede...",
   "No Chromecast, DLNA, or Roku devices found. Make sure your TV is on, awake, and on the same Wi-Fi.":
     "Nenhum dispositivo Chromecast, DLNA ou Roku encontrado. Verifique se sua TV está ligada, ativa e conectada ao mesmo Wi-Fi.",
@@ -111,8 +111,8 @@ const wiringSweep3: Record<string, string> = {
   "Update submitted": "Atualização enviada",
   "Your new version is in for a quick review. The live listing keeps working until this one is approved.":
     "Sua nova versão foi enviada para uma revisão rápida. A página publicada continua no ar até esta versão ser aprovada.",
-  "Every theme you share gets a private owner token. On the device where you shared it, Harbor saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
-    "Cada tema que você compartilha recebe um token privado do proprietário. No dispositivo usado para compartilhá-lo, o Harbor salvou esse token automaticamente. Por isso, esses temas aparecem aqui para você vinculá-los com um toque. Para vincular um tema de outro dispositivo, cole o token abaixo. Agora, novos compartilhamentos são vinculados diretamente à sua conta, então você não precisará fazer isso novamente.",
+  "Every theme you share gets a private owner token. On the device where you shared it, Lart saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
+    "Cada tema que você compartilha recebe um token privado do proprietário. No dispositivo usado para compartilhá-lo, o Lart salvou esse token automaticamente. Por isso, esses temas aparecem aqui para você vinculá-los com um toque. Para vincular um tema de outro dispositivo, cole o token abaixo. Agora, novos compartilhamentos são vinculados diretamente à sua conta, então você não precisará fazer isso novamente.",
   "Claim a theme": "Vincular um tema",
   "Attach a theme you shared before creating this account.":
     "Vincule à sua conta um tema que você compartilhou antes de criá-la.",
@@ -131,7 +131,7 @@ const wiringSweep3: Record<string, string> = {
   "No previous versions yet. Your next update starts the history.":
     "Ainda não há versões anteriores. Sua próxima atualização iniciará o histórico.",
   "Get yours at": "Obtenha o seu em",
-  "Used to check cache and unrestrict links. Harbor never adds or removes anything on your account on its own.": "Usado para verificar o cache e desbloquear links. O Harbor nunca adiciona nem remove nada da sua conta por conta própria.",
+  "Used to check cache and unrestrict links. Lart never adds or removes anything on your account on its own.": "Usado para verificar o cache e desbloquear links. O Lart nunca adiciona nem remove nada da sua conta por conta própria.",
   "Same read-only usage as Real-Debrid. Also lets you queue uncached sources from the play picker.": "Mesmo uso somente leitura do Real-Debrid. Também permite colocar na fila fontes que não estão no cache pelo seletor de reprodução.",
   "AllDebrid deprecated their cache-check endpoint, so streams may show as unknown until you actually hit Play.":
     "O AllDebrid descontinuou o endpoint de verificação de cache, então as fontes podem aparecer como desconhecidas até você tocar em Reproduzir.",
@@ -146,7 +146,7 @@ const wiringSweep3: Record<string, string> = {
   "Applies when you play something. Only visibly changes the picture when the video is being scaled.":
     "Aplica-se durante a reprodução. A imagem só muda visivelmente quando o vídeo é redimensionado.",
   "How this is measured": "Como isso é medido",
-  "Harbor opens 4 parallel requests to": "O Harbor abre 4 solicitações paralelas para",
+  "Lart opens 4 parallel requests to": "O Lart abre 4 solicitações paralelas para",
   ", discards the first 1.2s so TCP slow-start doesn't tank the result, then measures until it has 150 MB or 8 seconds of steady-state transfer.":
     ", descarta os primeiros 1,2 s para que a inicialização lenta do TCP não prejudique o resultado e mede até receber 150 MB ou completar 8 segundos de transferência estável.",
   "The number is bytes divided by the time they actually took to arrive. Cloudflare is a single origin, so on a very fast line this can read lower than a multi-server test like speedtest.net.":
@@ -158,8 +158,8 @@ const wiringSweep3: Record<string, string> = {
   "Re-test": "Testar novamente",
   "Slot is getting crowded ({count}/{limit}). May overflow on narrow screens.":
     "O espaço está ficando lotado ({count}/{limit}). O conteúdo pode ultrapassar os limites em telas estreitas.",
-  "Highly recommended. This is what gives you the full Harbor experience: Popular, Trending, In Theaters, and per-service rails. Free at":
-    "Altamente recomendado. É isso que oferece a experiência completa do Harbor: Populares, Em alta, Nos cinemas e seções de cada serviço. Grátis em",
+  "Highly recommended. This is what gives you the full Lart experience: Popular, Trending, In Theaters, and per-service rails. Free at":
+    "Altamente recomendado. É isso que oferece a experiência completa do Lart: Populares, Em alta, Nos cinemas e seções de cada serviço. Grátis em",
   "Use the v3 key, not the read access token.":
     "Use a chave da v3, não o token de acesso de leitura.",
   "Free at": "Grátis em",
@@ -227,10 +227,10 @@ const wiringSweep3: Record<string, string> = {
   "A favorite title or one of your themes will appear here":
     "Um título favorito ou um dos seus temas aparecerá aqui",
   "This user hasn't set a showcase": "Este usuário ainda não configurou uma vitrine",
-  "Harbor dropped {n} suspicious or mismatched result.":
-    "O Harbor descartou {n} resultado suspeito ou incompatível.",
-  "Harbor dropped {n} suspicious or mismatched results.":
-    "O Harbor descartou {n} resultados suspeitos ou incompatíveis.",
+  "Lart dropped {n} suspicious or mismatched result.":
+    "O Lart descartou {n} resultado suspeito ou incompatível.",
+  "Lart dropped {n} suspicious or mismatched results.":
+    "O Lart descartou {n} resultados suspeitos ou incompatíveis.",
   "plays via": "reproduz via",
   "{n} cached": "{n} em cache",
   "{total} found across 1 source": "{total} encontrados em 1 fonte",
@@ -267,16 +267,16 @@ const wiringSweep3: Record<string, string> = {
   "In My List": "Na Minha Lista",
   "Add to My List": "Adicionar à Minha Lista",
   "Slide {number}": "Slide {number}",
-  "Harbor couldn't reach MyAnimeList or AniList. Check your connection and try again.":
-    "O Harbor não conseguiu acessar o MyAnimeList nem o AniList. Verifique sua conexão e tente novamente.",
+  "Lart couldn't reach MyAnimeList or AniList. Check your connection and try again.":
+    "O Lart não conseguiu acessar o MyAnimeList nem o AniList. Verifique sua conexão e tente novamente.",
   "{name} · since {year}": "{name} · desde {year}",
   Winners: "Vencedores",
   "Add a TMDB key in Settings to unlock award winners.":
     "Adicione uma chave do TMDB em Configurações para acessar os vencedores de prêmios.",
   "View {title}": "Ver {title}",
   "Couldn't load this catalog": "Não foi possível carregar este catálogo",
-  "Harbor couldn't reach the catalog servers. Check your connection and try again.":
-    "O Harbor não conseguiu acessar os servidores do catálogo. Verifique sua conexão e tente novamente.",
+  "Lart couldn't reach the catalog servers. Check your connection and try again.":
+    "O Lart não conseguiu acessar os servidores do catálogo. Verifique sua conexão e tente novamente.",
   "Ep {episode}": "Ep. {episode}",
   "{hours}h {minutes}m left": "Restam {hours}h {minutes}min",
   "Couldn't load Discover": "Não foi possível carregar a seção Descobrir",
@@ -287,8 +287,8 @@ const wiringSweep3: Record<string, string> = {
   "Couldn't load your home": "Não foi possível carregar sua página inicial",
   "Top 10 Today": "10 mais vistos hoje",
   "Not connected to a computer": "Sem conexão com um computador",
-  "Your library lives on Harbor. Connect to your computer and it shows up here.":
-    "Sua biblioteca fica no Harbor. Conecte-se ao seu computador para vê-la aqui.",
+  "Your library lives on Lart. Connect to your computer and it shows up here.":
+    "Sua biblioteca fica no Lart. Conecte-se ao seu computador para vê-la aqui.",
   "The most-watched movies and series on {service} right now.":
     "Os filmes e as séries mais vistos no {service} agora.",
   "Nothing from {service} is available in your region right now. Try another genre or switch between Movies and Shows.":
@@ -298,7 +298,7 @@ const wiringSweep3: Record<string, string> = {
   "Couldn't load shows": "Não foi possível carregar as séries",
   "Typing on your computer": "Digitando no computador",
   "Type to search…": "Digite para pesquisar…",
-  "This Harbor": "Este Harbor",
+  "This Lart": "Este Lart",
   "Cast to": "Transmitir para",
   "No cast devices found on your network.":
     "Nenhum dispositivo de transmissão foi encontrado na sua rede.",
@@ -358,19 +358,19 @@ const wiringSweep3: Record<string, string> = {
     "Algo deu errado durante a renderização. Recarregue para restaurar ou envie os detalhes técnicos.",
   "We couldn't find what you were looking for. The wire got snipped: either the page moved, the addon's offline, or something glitched on our end.":
     "Não encontramos o que você procurava. O fio foi cortado: a página mudou de lugar, o complemento está offline ou ocorreu uma falha do nosso lado.",
-  "Sorry, Harbor crashed the last time it was running. You can review the details and choose whether to send a report.":
-    "Desculpe, o Harbor falhou na última execução. Você pode revisar os detalhes e decidir se deseja enviar um relatório.",
+  "Sorry, Lart crashed the last time it was running. You can review the details and choose whether to send a report.":
+    "Desculpe, o Lart falhou na última execução. Você pode revisar os detalhes e decidir se deseja enviar um relatório.",
   "Oops..": "Ops..",
   "Take me back": "Voltar",
   "Report sent": "Relatório enviado",
   "Thanks. Tracked as {id}.": "Obrigado. Registrado como {id}.",
   "Could not send: {message}": "Não foi possível enviar: {message}",
-  "Sends the context above straight to the Harbor team. No keys or library data.":
-    "Envia o contexto acima diretamente para a equipe do Harbor. Não inclui chaves nem dados da biblioteca.",
+  "Sends the context above straight to the Lart team. No keys or library data.":
+    "Envia o contexto acima diretamente para a equipe do Lart. Não inclui chaves nem dados da biblioteca.",
   "Technical detail": "Detalhes técnicos",
   "Copy to clipboard": "Copiar para a área de transferência",
   "Choose where to open this link": "Escolha onde abrir este link",
-  "Continue in Harbor": "Continuar no Harbor",
+  "Continue in Lart": "Continuar no Lart",
   "Continue in browser": "Continuar no navegador",
   "Choose another destination": "Escolha outro destino",
   "Alternate link destination": "Destino alternativo do link",
@@ -386,9 +386,9 @@ const wiringSweep3: Record<string, string> = {
   "Remove preset": "Remover preset",
   "Add preset": "Adicionar preset",
   "Resolving manifest": "Resolvendo o manifesto",
-  "Added to Harbor": "Adicionado ao Harbor",
+  "Added to Lart": "Adicionado ao Lart",
   "Saved to your library.": "Salvo na sua biblioteca.",
-  "Verified Harbor Staff": "Membro verificado da equipe do Harbor",
+  "Verified Lart Staff": "Membro verificado da equipe do Lart",
   "Diagnostics request": "Solicitação de diagnóstico",
   "Sharing your diagnostics for issue #{ticket}. Your session tokens, API keys, and passwords are removed before anything leaves your device.":
     "Compartilhando seus dados de diagnóstico referentes à issue #{ticket}. Seus tokens de sessão, chaves de API e senhas são removidos antes que qualquer dado saia do seu dispositivo.",

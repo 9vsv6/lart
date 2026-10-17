@@ -1,7 +1,7 @@
 export default {
   "games.details.broadcastPause": "إيقاف البث مؤقتًا",
   "games.details.broadcastResume": "تشغيل البث",
-  "games.details.broadcastPlay": "شاهد في Harbor",
+  "games.details.broadcastPlay": "شاهد في Lart",
   "games.details.watchRun": "شاهد المحاولة",
   "games.details.viewRun": "عرض المحاولة",
   "games.details.runVideo": "فيديو المحاولة",

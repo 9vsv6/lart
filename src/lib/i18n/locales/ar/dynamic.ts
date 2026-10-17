@@ -67,12 +67,12 @@ const dynamic: Record<string, string> = {
   Opening: "البداية",
   Packaged: "مجمّع",
   "Pick a list to view it.": "اختر قائمة لعرضها.",
-  "Pick a source once and Harbor keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
-    "اختر مصدرًا مرة واحدة، وسيواصل Harbor تشغيل بقية الموسم من الإصدار نفسه دون إعادة الاختيار. يعمل بأفضل صورة مع حزمة موسم عبر debrid، ولا يُستخدم مع الأنمي.",
+  "Pick a source once and Lart keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
+    "اختر مصدرًا مرة واحدة، وسيواصل Lart تشغيل بقية الموسم من الإصدار نفسه دون إعادة الاختيار. يعمل بأفضل صورة مع حزمة موسم عبر debrid، ولا يُستخدم مع الأنمي.",
   "Play, then tap the line you hear at two spots (one early, one late) to fix drift.":
     "شغّل الفيديو، ثم اضغط السطر الذي تسمعه عند نقطتين، واحدة مبكرة وأخرى متأخرة، لتصحيح الانحراف.",
-  "Plays + ratings sync from Harbor to Trakt.tv.":
-    "تتزامن المشاهدات والتقييمات من Harbor إلى Trakt.tv.",
+  "Plays + ratings sync from Lart to Trakt.tv.":
+    "تتزامن المشاهدات والتقييمات من Lart إلى Trakt.tv.",
   "Refresh list": "تحديث القائمة",
   "Reset offset": "إعادة ضبط الإزاحة",
   "Reset offset to 0": "إعادة الإزاحة إلى 0",

@@ -138,7 +138,7 @@ export class JellyfinEmbyAdapter implements MediaServerAdapter {
     const auth = token ?? (connection ? mediaServerToken(connection) : null);
     return {
       Accept: "application/json",
-      "X-Emby-Authorization": `MediaBrowser Client="Harbor", Device="Harbor", DeviceId="harbor", Version="1"${auth ? `, Token="${auth}"` : ""}`,
+      "X-Emby-Authorization": `MediaBrowser Client="Lart", Device="Lart", DeviceId="harbor", Version="1"${auth ? `, Token="${auth}"` : ""}`,
     };
   }
   async authenticate(input: Record<string, string>): Promise<AuthResult> {
@@ -315,7 +315,7 @@ export class JellyfinEmbyAdapter implements MediaServerAdapter {
               AllowAudioStreamCopy: false,
               PlaySessionId: sessionId,
               DeviceProfile: {
-                Name: "Harbor",
+                Name: "Lart",
                 MaxStreamingBitrate: maxBitrate,
                 MaxStaticBitrate: maxBitrate,
                 MusicStreamingTranscodingBitrate: 192000,

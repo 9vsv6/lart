@@ -1,7 +1,7 @@
 const catalog12: Record<string, string> = {
   "Your MyAnimeList is empty": "MyAnimeList가 비어 있습니다",
-  "Your Roku is set to block control requests from apps on your network, so Harbor can't reach it. This is a one-time setting on the Roku.":
-    "Roku가 네트워크 내 앱의 제어 요청을 차단하도록 설정되어 있어 Harbor에서 연결할 수 없습니다. Roku에서 한 번만 설정하면 됩니다.",
+  "Your Roku is set to block control requests from apps on your network, so Lart can't reach it. This is a one-time setting on the Roku.":
+    "Roku가 네트워크 내 앱의 제어 요청을 차단하도록 설정되어 있어 Lart에서 연결할 수 없습니다. Roku에서 한 번만 설정하면 됩니다.",
   "Your Simkl plan-to-watch list has no episodes airing this month. Switch to All upcoming to browse everything.":
     "Simkl의 시청 예정 목록에 이번 달 방영 에피소드가 없습니다. 모든 공개 예정작을 보려면 전체 예정을 선택하세요.",
   "Your Streaming": "내 스트리밍",
@@ -34,8 +34,8 @@ const catalog12: Record<string, string> = {
     '애드온이 "{q}"에 응답했지만 여기서 열 수 있는 결과가 없습니다.',
   "Your avatar, banner, and how the whole profile is styled.":
     "아바타와 배너, 프로필 전체의 스타일입니다.",
-  "Your avatar, name, and handle across Harbor.":
-    "Harbor 전반에 표시되는 아바타, 이름 및 핸들입니다.",
+  "Your avatar, name, and handle across Lart.":
+    "Lart 전반에 표시되는 아바타, 이름 및 핸들입니다.",
   "Your award pack": "내 어워드 팩",
   "Your badge pack": "내 배지 팩",
   "Your browser's storage is full. Remove custom icons or delete profiles to free up space, then try again.":
@@ -63,9 +63,9 @@ const catalog12: Record<string, string> = {
     "친구가 아직 아무것도 공유하지 않았습니다. 활동 공유는 기본적으로 꺼져 있습니다.",
   "Your groups": "내 그룹",
   "Your handle": "내 핸들",
-  "Your handle across Harbor, and your verified status.":
-    "Harbor 전체에서 사용하는 핸들과 인증 상태입니다.",
-  "Your handle across Harbor.": "Harbor 전체에서 사용할 핸들입니다.",
+  "Your handle across Lart, and your verified status.":
+    "Lart 전체에서 사용하는 핸들과 인증 상태입니다.",
+  "Your handle across Lart.": "Lart 전체에서 사용할 핸들입니다.",
   "Your handle, your themes, your settings. Signed in once, waiting on the next machine you open.":
     "내 핸들, 테마, 설정입니다. 한 번 로그인하면 다음에 여는 기기에서도 사용할 수 있습니다.",
   "Your icons, in everyone's library": "내 아이콘을 모두의 라이브러리에",
@@ -73,8 +73,8 @@ const catalog12: Record<string, string> = {
   "Your library and watch progress sync here.":
     "라이브러리와 시청 진행 상황이 여기에서 동기화됩니다.",
   "Your library is aboard.": "내 라이브러리가 준비되었습니다.",
-  "Your library lives on Harbor. Connect to your computer and it shows up here.":
-    "라이브러리는 Harbor에 있습니다. 컴퓨터에 연결하면 여기에 표시됩니다.",
+  "Your library lives on Lart. Connect to your computer and it shows up here.":
+    "라이브러리는 Lart에 있습니다. 컴퓨터에 연결하면 여기에 표시됩니다.",
   "Your links": "내 링크",
   "Your name": "내 이름",
   "Your name and the details shown at the top of your profile.":
@@ -188,7 +188,7 @@ const catalog12: Record<string, string> = {
   "bot token": "봇 토큰",
   "box above.": "입력란에 붙여 넣으세요.",
   "by @{handle}": "@{handle} 님이 만듦",
-  "by Harbor contributors": "Harbor 기여자 참여",
+  "by Lart contributors": "Lart 기여자 참여",
   "by {authors}": "{authors} 지음",
   "by {author}": "{author} 저",
   "by {name}": "{name} 제작",
@@ -228,8 +228,8 @@ const catalog12: Record<string, string> = {
   "e.g. 20": "예: 20",
   eBook: "eBook",
   "eBook actions": "eBook 작업",
-  "eBook extensions use Harbor’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
-    "eBook 확장 프로그램은 Manga 확장 프로그램과 동일한 샌드박스인 Harbor의 격리된 워커, HTTP 브리지 및 HTML 파서를 사용합니다. 신뢰하는 저장소만 추가하세요.",
+  "eBook extensions use Lart’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
+    "eBook 확장 프로그램은 Manga 확장 프로그램과 동일한 샌드박스인 Lart의 격리된 워커, HTTP 브리지 및 HTML 파서를 사용합니다. 신뢰하는 저장소만 추가하세요.",
   "eBook source settings": "eBook 소스 설정",
   eBooks: "eBook",
   "each card on a browse/search page.": "탐색/검색 페이지의 각 카드입니다.",
@@ -251,7 +251,7 @@ const catalog12: Record<string, string> = {
     "더 높은 요청 한도를 사용하려면 입력하세요. 무료 익명 요금제를 사용하려면 비워 두세요.",
   "for {count} more episodes": "에피소드 {count}개 더",
   "found by": "제공:",
-  "from the Harbor repo into a new directory as":
+  "from the Lart repo into a new directory as":
     "을 새 디렉터리에 복사하고 이름을 다음과 같이 지정하세요:",
   "from {source}": "{source} 제공",
   "grabs lazy-loaded images.": "지연 로드된 이미지를 가져옵니다.",
@@ -279,7 +279,7 @@ const catalog12: Record<string, string> = {
   "if the site blocks hotlinked images.": "사이트에서 핫링크된 이미지를 차단하는 경우입니다.",
   "igv (gist)": "igv (gist)",
   "in 24h": "24시간 동안",
-  "in Harbor settings.": "에 기록됩니다.",
+  "in Lart settings.": "에 기록됩니다.",
   "in {d} days": "{d}일 후",
   "in {n} weeks": "{n}주 후",
   "in {n} weeks#few": "{n}주 후#few",
@@ -290,8 +290,8 @@ const catalog12: Record<string, string> = {
   "is a page number. Add": "페이지 번호입니다. 다음을 추가합니다:",
   "is a regex for the part to change": "변경할 부분을 찾는 정규식입니다",
   "is each chapter row": "각 챕터 행입니다",
-  "is how many items to skip, starting at 0. Harbor auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
-    "0부터 세어 건너뛸 항목 수입니다. Harbor가 사이트의 페이지 크기를 자동으로 감지하고 순회하므로 페이지 크기를 설정할 필요가 없습니다. URL에서 항목 수를 세는 경우 사용합니다.",
+  "is how many items to skip, starting at 0. Lart auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
+    "0부터 세어 건너뛸 항목 수입니다. Lart가 사이트의 페이지 크기를 자동으로 감지하고 순회하므로 페이지 크기를 설정할 필요가 없습니다. URL에서 항목 수를 세는 경우 사용합니다.",
   "is not an image we can read": "읽을 수 있는 이미지가 아닙니다",
   "is now using your new configuration.": "이제 새 설정을 사용합니다.",
   "is ready. Open Discover or hit Play on a title to use it.":
@@ -314,8 +314,8 @@ const catalog12: Record<string, string> = {
   "lead or co-lead of {n} acclaimed titles": "호평받은 작품 {n}편의 주연 또는 공동 주연",
   left: "왼쪽",
   "letterboxd.com/username/list/slug": "letterboxd.com/username/list/slug",
-  "libmpv did not load, so playback falls back to HTML5 and formats like MKV may refuse to play. On Linux, install your distribution's libmpv package, then restart Harbor.":
-    "libmpv를 불러오지 못해 HTML5로 대체 재생되며 MKV 같은 형식은 재생되지 않을 수 있습니다. Linux에서는 배포판의 libmpv 패키지를 설치한 다음 Harbor를 다시 시작하세요.",
+  "libmpv did not load, so playback falls back to HTML5 and formats like MKV may refuse to play. On Linux, install your distribution's libmpv package, then restart Lart.":
+    "libmpv를 불러오지 못해 HTML5로 대체 재생되며 MKV 같은 형식은 재생되지 않을 수 있습니다. Linux에서는 배포판의 libmpv 패키지를 설치한 다음 Lart를 다시 시작하세요.",
   like: "예:",
   "limit reached": "한도 도달",
   lineups: "라인업",
@@ -333,12 +333,12 @@ const catalog12: Record<string, string> = {
   "more events": "개 이벤트 더 보기",
   movies: "영화",
   mpv: "mpv",
-  "mpv is required for recording. Install mpv and restart Harbor.":
-    "녹화하려면 mpv가 필요합니다. mpv를 설치하고 Harbor를 다시 시작하세요.",
+  "mpv is required for recording. Install mpv and restart Lart.":
+    "녹화하려면 mpv가 필요합니다. mpv를 설치하고 Lart를 다시 시작하세요.",
   "mpv on the desktop app, HTML5 in the browser. The right engine without thinking about it.":
     "데스크톱 앱에서는 mpv, 브라우저에서는 HTML5를 사용합니다. 따로 신경 쓰지 않아도 적합한 엔진이 선택됩니다.",
   "n/a": "해당 없음",
-  "name it Harbor, hit": "이름을 Harbor로 지정하고 누르기:",
+  "name it Lart, hit": "이름을 Lart로 지정하고 누르기:",
   "natural-harmonia-gropius/hdr-toys": "natural-harmonia-gropius/hdr-toys",
   new: "신규",
   "next airs in {count}d": "다음 방송까지 {count}일",
@@ -373,7 +373,7 @@ const catalog12: Record<string, string> = {
   "or join": "또는 참여",
   "or paste an invite link": "또는 초대 링크 붙여넣기",
   "or use email": "또는 이메일 사용",
-  "or use one of our avatars": "또는 Harbor 아바타 사용",
+  "or use one of our avatars": "또는 Lart 아바타 사용",
   "out of 5": "5점 만점",
   packs: "팩",
   "page {n}": "페이지 {n}",
@@ -418,8 +418,8 @@ const catalog12: Record<string, string> = {
   stars: "별",
   stats: "통계",
   "stremio:// link": "stremio:// 링크",
-  "stremio:// links now open in the Stremio app. Harbor will only install when you trigger it from inside Harbor.":
-    "이제 stremio:// 링크가 Stremio 앱에서 열립니다. Harbor는 Harbor 안에서 설치를 실행한 경우에만 설치합니다.",
+  "stremio:// links now open in the Stremio app. Lart will only install when you trigger it from inside Lart.":
+    "이제 stremio:// 링크가 Stremio 앱에서 열립니다. Lart는 Lart 안에서 설치를 실행한 경우에만 설치합니다.",
   "stremio://… or https://…/manifest.json": "stremio://… 또는 https://…/manifest.json",
   "study, character, quote": "학습, 등장인물, 인용문",
   "subdomain acts as the access token. There is no login.":
@@ -475,8 +475,8 @@ const catalog12: Record<string, string> = {
   "wants to connect": "연결을 요청함",
   "warming up…": "준비 중…",
   watched: "시청함",
-  "will be removed from Harbor. Anything you've set to use it will fall back to Inter.":
-    "Harbor에서 삭제됩니다. 이 글꼴을 사용하도록 설정한 모든 항목은 Inter로 대체됩니다.",
+  "will be removed from Lart. Anything you've set to use it will fall back to Inter.":
+    "Lart에서 삭제됩니다. 이 글꼴을 사용하도록 설정한 모든 항목은 Inter로 대체됩니다.",
   "window.harbor API": "window.harbor API",
   "with a WebSocket upgrade: opens a Watch Together room. State is held in a Durable Object, no persistence beyond the active session.":
     "에 WebSocket 업그레이드를 사용하면 함께 보기 방이 열립니다. 상태는 Durable Object에 보관되며 활성 세션이 끝나면 유지되지 않습니다.",
@@ -595,8 +595,8 @@ const catalog12: Record<string, string> = {
     "작품 {count}개에 콘텐츠 주의 사항이 다시 표시되지 않습니다.#few",
   "{count} titles will never show the content advisory again.#one":
     "작품 {count}개에 콘텐츠 주의 사항이 다시 표시되지 않습니다.#one",
-  "{count} tracker request blocked this session. Harbor itself sends zero telemetry.":
-    "이번 세션에서 차단된 추적기 요청 {count}개. Harbor 자체는 원격 측정 데이터를 전혀 전송하지 않습니다.",
+  "{count} tracker request blocked this session. Lart itself sends zero telemetry.":
+    "이번 세션에서 차단된 추적기 요청 {count}개. Lart 자체는 원격 측정 데이터를 전혀 전송하지 않습니다.",
   "{count} views": "조회수 {count}회",
   "{count} vols": "{count}권",
   "{count} volume": "{count}권",
@@ -617,22 +617,22 @@ const catalog12: Record<string, string> = {
   "{count}w": "{count}주",
   "{count}w ago": "{count}주 전",
   "{count}y ago": "{count}년 전",
-  "{deviceLabel} can't decode this stream natively ({reasons}). Harbor uses ffmpeg to convert it into a format your TV understands.":
-    "{deviceLabel}에서 이 스트림을 기본적으로 디코딩할 수 없습니다({reasons}). Harbor는 ffmpeg를 사용해 TV에서 재생할 수 있는 형식으로 변환합니다.",
+  "{deviceLabel} can't decode this stream natively ({reasons}). Lart uses ffmpeg to convert it into a format your TV understands.":
+    "{deviceLabel}에서 이 스트림을 기본적으로 디코딩할 수 없습니다({reasons}). Lart는 ffmpeg를 사용해 TV에서 재생할 수 있는 형식으로 변환합니다.",
   "{deviceLabel} can't play this stream ({reasons}) and none of the {count} available alternatives match its capabilities.":
     "{deviceLabel}에서 이 스트림을 재생할 수 없으며({reasons}), 사용 가능한 대체 스트림 {count}개 중 기기 성능에 맞는 항목이 없습니다.",
   '{deviceLabel} can\'t play this stream ({reasons}). Click "Pick another" first to load alternatives, then try casting again.':
     '{deviceLabel}에서 이 스트림을 재생할 수 없습니다({reasons}). 먼저 "다른 항목 선택"을 클릭하여 대체 스트림을 불러온 후 다시 전송해 보세요.',
-  "{deviceName} is an audio-only device. Harbor can't transcode video to audio yet, so this device can only stream audio files. Pick a TV, Chromecast, or display-equipped device to stream video.":
-    "{deviceName}은(는) 오디오 전용 기기입니다. Harbor는 아직 동영상을 오디오로 트랜스코딩할 수 없으므로 이 기기에서는 오디오 파일만 스트리밍할 수 있습니다. 동영상을 스트리밍하려면 TV, Chromecast 또는 디스플레이가 있는 기기를 선택하세요.",
+  "{deviceName} is an audio-only device. Lart can't transcode video to audio yet, so this device can only stream audio files. Pick a TV, Chromecast, or display-equipped device to stream video.":
+    "{deviceName}은(는) 오디오 전용 기기입니다. Lart는 아직 동영상을 오디오로 트랜스코딩할 수 없으므로 이 기기에서는 오디오 파일만 스트리밍할 수 있습니다. 동영상을 스트리밍하려면 TV, Chromecast 또는 디스플레이가 있는 기기를 선택하세요.",
   "{done} of {total}": "{done}/{total}",
   "{done} of {total} films picked.": "영화 {total}편 중 {done}편을 선택했습니다.",
   "{done} of {total} picked": "{total}개 중 {done}개 선택",
   "{done} of {total} watched": "{total}개 중 {done}개 시청",
   "{done} of {total} watched so far.": "현재까지 {total}편 중 {done}편을 시청했습니다.",
   "{d}d ago": "{d}일 전",
-  "{file} is empty. Start typing to restyle Harbor.":
-    "{file} 파일이 비어 있습니다. 입력하여 Harbor의 스타일을 바꿔 보세요.",
+  "{file} is empty. Start typing to restyle Lart.":
+    "{file} 파일이 비어 있습니다. 입력하여 Lart의 스타일을 바꿔 보세요.",
   "{first} and {second}": "{first} 및 {second}",
   "{format} added to Downloads": "{format}이(가) 다운로드에 추가됨",
   "{genreA} + {genreB}": "{genreA} + {genreB}",
@@ -683,12 +683,12 @@ const catalog12: Record<string, string> = {
   "{name} is available": "{name} 사용 가능",
   "{name} is taken": "{name} 사용 중",
   "{name} left the video": "{name} 님이 영상에서 나갔습니다",
-  "{name} on Harbor": "Harbor의 {name}",
+  "{name} on Lart": "Lart의 {name}",
   "{name} reached {count} five-star ratings": "{name}의 별점 5점 평가가 {count}개를 달성했습니다",
   "{name} started watching": "{name} 님이 시청을 시작했습니다",
   "{name} wants you here": "{name}님이 회원님을 여기로 초대했습니다",
-  "{name} will be removed from Harbor. Anything you've set to use it will fall back to Inter.":
-    "{name}이 Harbor에서 제거됩니다. 이 항목을 사용하도록 설정한 모든 요소는 Inter로 대체됩니다.",
+  "{name} will be removed from Lart. Anything you've set to use it will fall back to Inter.":
+    "{name}이 Lart에서 제거됩니다. 이 항목을 사용하도록 설정한 모든 요소는 Inter로 대체됩니다.",
   "{name} · since {year}": "{name} · {year}년부터",
   "{name}'s ratings": "{name}님의 평점",
   "{name}'s {sub}": "{name}의 {sub}",
@@ -699,7 +699,7 @@ const catalog12: Record<string, string> = {
   "{n} / {max} lists": "목록 {n} / {max}개",
   "{n} / {max} titles": "제목 {n} / {max}",
   "{n} GB": "{n}GB",
-  "{n} Harbor icons": "Harbor 아이콘 {n}개",
+  "{n} Lart icons": "Lart 아이콘 {n}개",
   "{n} LIVE": "라이브 {n}개",
   "{n} active": "활성 {n}개",
   "{n} addon": "애드온 {n}개",
@@ -847,7 +847,7 @@ const catalog12: Record<string, string> = {
   "{n} options active": "옵션 {n}개 활성",
   "{n} options#few": "옵션 {n}개#few",
   "{n} options#one": "옵션 {n}개#one",
-  "{n} other Harbors": "다른 Harbor {n}개",
+  "{n} other Harbors": "다른 Lart {n}개",
   "{n} pages": "{n}페이지",
   "{n} pages#few": "{n}페이지#few",
   "{n} pages#one": "{n}페이지#one",

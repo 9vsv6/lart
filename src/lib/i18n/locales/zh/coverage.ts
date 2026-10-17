@@ -1,4 +1,4 @@
-const coverage: Record<string, string> = {
+const coverage: Record<string, string> = {
   "Sound descriptions": "声音描述",
   "Hide sound effects and speaker names": "隐藏音效和说话人姓名",
   "Removes bracketed descriptions like [door creaks] and shouted speaker labels like JOHN: while subtitles play, so a release that only ships an SDH track still reads as plain dialogue. Song lyrics, ordinary parentheses and non-Latin scripts are left alone. Skipped on forced and picture-based tracks.": "在字幕播放时移除 [门吱呀作响] 这类方括号描述，以及 JOHN: 这类全大写的说话人姓名，让只提供 SDH 字幕的片源也能当作普通对白来读。歌词、普通圆括号和非拉丁文字保持原样。强制字幕和图形字幕不受影响。",
@@ -48,8 +48,8 @@ const coverage: Record<string, string> = {
   "Couldn't find a Simkl avatar on your account.": "未在你的 Simkl 账号中找到头像。",
   "Profile is locked. Enter the 4-digit PIN to continue.":
     "个人资料已锁定。请输入 4 位 PIN 以继续。",
-  "Watch Together rooms are routed through Harbor's hosted relay.":
-    "“共同观看”房间通过 Harbor 托管的中继连接。",
+  "Watch Together rooms are routed through Lart's hosted relay.":
+    "“共同观看”房间通过 Lart 托管的中继连接。",
   "No favorites yet. Star a channel to pin it here.": "暂无收藏。为频道加星即可将其固定在此处。",
   "Award Nominee": "提名者",
   "Failed: {message}": "失败：{message}",
@@ -80,8 +80,8 @@ const coverage: Record<string, string> = {
   "Use Simkl avatar": "使用 Simkl 头像",
   "Pick a 4-digit PIN. You'll be asked for it before this profile opens.":
     "选择一个 4 位 PIN。打开此个人资料前需要输入该 PIN。",
-  "The Harbor relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Harbor server.":
-    "Harbor Relay 是一个 Cloudflare Worker，为“一起看”功能托管 WebSocket 房间。每位用户都运行自己的实例，不存在中央 Harbor 服务器。",
+  "The Lart relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Lart server.":
+    "Lart Relay 是一个 Cloudflare Worker，为“一起看”功能托管 WebSocket 房间。每位用户都运行自己的实例，不存在中央 Lart 服务器。",
   "Wrong channel or source?": "频道或来源有误？",
   "Use live web context (Jina Reader)": "使用实时网页上下文（Jina Reader）",
   "Same file": "同一文件",
@@ -249,8 +249,8 @@ const coverage: Record<string, string> = {
     "以上是 Cinemeta 提供的全部 {genre} 内容。添加 TMDB 密钥可浏览更多内容栏。",
   "Saved to disk": "已保存到磁盘",
   "Account is not active": "账号未激活",
-  "Connect Discord or Telegram and Harbor posts a message when something you follow is about to drop. Hit Test to send yourself a sample first.":
-    "连接 Discord 或 Telegram 后，你关注的内容即将上线时，Harbor 会发送消息。请先点击“测试”给自己发送一条示例消息。",
+  "Connect Discord or Telegram and Lart posts a message when something you follow is about to drop. Hit Test to send yourself a sample first.":
+    "连接 Discord 或 Telegram 后，你关注的内容即将上线时，Lart 会发送消息。请先点击“测试”给自己发送一条示例消息。",
   "Playlist contained no channels": "播放列表中没有频道",
   "Show DUB badge on anime cards": "在动漫卡片上显示 DUB 徽章",
   "Jina API key": "Jina API 密钥",
@@ -289,7 +289,7 @@ const coverage: Record<string, string> = {
   "Casting comes with the mpv backend": "投屏功能仅适用于 mpv 后端",
   "Title info": "标题信息",
   Sync: "同步",
-  "Create Harbor account": "创建 Harbor 账户",
+  "Create Lart account": "创建 Lart 账户",
   "with a WebSocket upgrade: opens a Watch Together room. State is held in a Durable Object, no persistence beyond the active session.":
     "通过 WebSocket 升级打开“一起看”房间。状态保存在 Durable Object 中，仅在活动会话期间保留。",
   "Could not load this playlist": "无法加载此播放列表",
@@ -302,7 +302,7 @@ const coverage: Record<string, string> = {
   "Play movie": "播放电影",
   "Your copy runs {guest}, host's runs {host}. Sync may drift.":
     "你的版本时长为 {guest}，房主的版本时长为 {host}。同步可能会逐渐偏移。",
-  "Sign out of Harbor account": "退出 Harbor 账户",
+  "Sign out of Lart account": "退出 Lart 账户",
   "Use community corrections": "使用社区修正",
   "Loading playlist...": "正在加载播放列表…",
   "Removes the Anime tab and any Trending/Popular/Upcoming/New anime rows from Home.":
@@ -315,8 +315,8 @@ const coverage: Record<string, string> = {
   "Movie's too new. Subtitles haven't been published yet.": "电影太新，字幕尚未发布。",
   "Next and Previous follow your queue": "“下一项”和“上一项”将按你的队列顺序跳转",
   "Settings for this profile (shared or independent)": "此个人资料的设置（共享或独立）",
-  "Leave blank to use Harbor's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.":
-    "留空则使用 Harbor 自有的社区服务器。也可输入 URL，改用你自己的服务器。无论选择哪种方式，下方的隐私模式都会阻止一切连接。",
+  "Leave blank to use Lart's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.":
+    "留空则使用 Lart 自有的社区服务器。也可输入 URL，改用你自己的服务器。无论选择哪种方式，下方的隐私模式都会阻止一切连接。",
   "Channel categories": "频道分类",
   "Blur episode artwork, titles, and descriptions for episodes you have not watched yet, on both shows and anime. Hover an episode to peek.":
     "在剧集和动漫中，模糊尚未观看剧集的剧照、标题和简介。将鼠标悬停在某一集上可预览。",
@@ -327,7 +327,7 @@ const coverage: Record<string, string> = {
     "在“设置”中添加 TMDB 密钥，即可查看所有影片的演员阵容。",
   "Show HI/SDH": "显示 HI/SDH",
   "URL saved": "URL 已保存",
-  "Home style (Harbor curated / Classic Stremio)": "首页样式（Harbor 精选 / 经典 Stremio）",
+  "Home style (Lart curated / Classic Stremio)": "首页样式（Lart 精选 / 经典 Stremio）",
   "Never contact the community server in either direction. Nothing is looked up and nothing is contributed from this device.":
     "绝不以任何方式连接社区服务器。此设备不会查询或贡献任何内容。",
   "Match EPG": "匹配 EPG",
@@ -363,8 +363,8 @@ const coverage: Record<string, string> = {
   Browse: "浏览",
   "Display Simkl Community Ratings": "显示 Simkl 社区评分",
   "Downloaded community badge packs": "已下载的社区徽章包",
-  "Harbor's backend runs on ElfHosted. They run our servers at no cost to the community.":
-    "Harbor 的后端运行在 ElfHosted 上。他们免费为社区运行我们的服务器。",
+  "Lart's backend runs on ElfHosted. They run our servers at no cost to the community.":
+    "Lart 的后端运行在 ElfHosted 上。他们免费为社区运行我们的服务器。",
   "Search {n} EPG channels": "搜索 {n} 个 EPG 频道",
   "Minimum file size": "最小文件大小",
   "Locks only activate once a PIN is set.": "设置 PIN 后才会启用锁定。",
@@ -373,8 +373,8 @@ const coverage: Record<string, string> = {
   "Browse provider": "浏览提供商",
   "Download relay documentation": "下载中继文档",
   "Test badge rules (Try it)": "测试徽章规则（试用）",
-  "Keeping Harbor's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Harbor stays funded at the same time.":
-    "维持 Harbor 后端在线需要真金白银，而 ElfHosted 承担了这笔费用，社区无需付费。订阅 ElfHosted 是让这一切持续下去的最佳方式，而且这不是捐款。你自己的部署可以获得完善的基础设施，同时 Harbor 也能继续获得资金支持。",
+  "Keeping Lart's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Lart stays funded at the same time.":
+    "维持 Lart 后端在线需要真金白银，而 ElfHosted 承担了这笔费用，社区无需付费。订阅 ElfHosted 是让这一切持续下去的最佳方式，而且这不是捐款。你自己的部署可以获得完善的基础设施，同时 Lart 也能继续获得资金支持。",
   "Drag to resize the channel column": "拖动以调整频道栏宽度",
   "MyAnimeList scores for anime titles. RPDB doesn't cover anime, so this stays an opt-in.":
     "显示动漫作品的 MyAnimeList 评分。RPDB 不涵盖动漫，因此此项需手动开启。",
@@ -386,8 +386,8 @@ const coverage: Record<string, string> = {
   "Hide search": "隐藏搜索",
   "Community sync server URL": "社区同步服务器 URL",
   "Settings storage breakdown": "设置存储空间明细",
-  "Harbor speaks Stremio's addon protocol, and the whole ecosystem of addons grows out of their work. Stremio is funded by its community, and supporters who chip in get early access to experimental features. If you have it to spare, send some their way too.":
-    "Harbor 使用 Stremio 的插件协议，整个插件生态都源自他们的工作。Stremio 由社区资助，提供支持的用户可以抢先体验实验性功能。如果你有余力，也请支持他们。",
+  "Lart speaks Stremio's addon protocol, and the whole ecosystem of addons grows out of their work. Stremio is funded by its community, and supporters who chip in get early access to experimental features. If you have it to spare, send some their way too.":
+    "Lart 使用 Stremio 的插件协议，整个插件生态都源自他们的工作。Stremio 由社区资助，提供支持的用户可以抢先体验实验性功能。如果你有余力，也请支持他们。",
   "Connect a playlist to get started.": "连接播放列表即可开始使用。",
   "MyAnimeList scores for anime titles.": "动漫作品的 MyAnimeList 评分。",
   "Nothing usable in that file": "该文件中没有可用内容",
@@ -423,8 +423,8 @@ const coverage: Record<string, string> = {
   "Write a review": "撰写短评",
   "Direct .m3u or get.php URL with credentials baked in.":
     "直接使用 .m3u 或内含凭据的 get.php URL。",
-  "Harbor shows your AniList lists on the Anime page and keeps your progress in sync.":
-    "Harbor 会在动漫页面显示你的 AniList 列表，并持续同步观看进度。",
+  "Lart shows your AniList lists on the Anime page and keeps your progress in sync.":
+    "Lart 会在动漫页面显示你的 AniList 列表，并持续同步观看进度。",
   "That file isn't valid JSON": "该文件不是有效的 JSON",
   "Move down": "下移",
   "chrome.backToTop": "返回顶部",
@@ -455,8 +455,8 @@ const coverage: Record<string, string> = {
   "Does this stream look right?": "此视频流看起来正常吗？",
   Search: "搜索",
   "Queue drives Next/Previous": "由队列决定下一项/上一项",
-  "Every format badge Harbor can show on streams. Click one to swap its art, hide it, or reset it. Changes apply everywhere badges appear.":
-    "Harbor 可在片源上显示的所有格式徽章。点击任一徽章即可替换其图稿、隐藏或重置。更改会应用到所有显示徽章的位置。",
+  "Every format badge Lart can show on streams. Click one to swap its art, hide it, or reset it. Changes apply everywhere badges appear.":
+    "Lart 可在片源上显示的所有格式徽章。点击任一徽章即可替换其图稿、隐藏或重置。更改会应用到所有显示徽章的位置。",
   "Save review": "保存短评",
   "Playlist URL": "播放列表 URL",
   "A new anime comes out": "有新动漫上线",
@@ -484,13 +484,13 @@ const coverage: Record<string, string> = {
     "实时让动漫线条更锐利、渐变更干净。可在下方一键设置。",
   "subscriber API key": "订阅者 API 密钥",
   "Sign in": "登录",
-  "chrome.harborHome": "Harbor 首页",
+  "chrome.harborHome": "Lart 首页",
   "Instant Play: clicking Play queues the next stream automatically.":
     "即时播放：点击播放会自动将下一个视频流加入队列。",
   "Show details": "显示详情",
   "Sync indicator": "同步指示器",
-  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Harbor's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
-    "一键安装社区包。规则集提供自带匹配规则的完整徽章套装；图稿重映射仅替换 Harbor 内置徽章的图片。Nuvio Discord 或 Reddit 上以 badges.json 链接分享的内容也可在此导入。",
+  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Lart's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
+    "一键安装社区包。规则集提供自带匹配规则的完整徽章套装；图稿重映射仅替换 Lart 内置徽章的图片。Nuvio Discord 或 Reddit 上以 badges.json 链接分享的内容也可在此导入。",
   "Link and social": "链接与社交账号",
   "Stored locally on this device. Credentials never leave your machine. If a channel fails to play, your provider may rate-limit shared accounts: refresh the playlist or check with them.":
     "数据存储在此设备本地，凭据绝不会离开你的设备。如果频道无法播放，可能是提供商对共享账号进行了限流：请刷新播放列表或联系提供商确认。",
@@ -500,8 +500,8 @@ const coverage: Record<string, string> = {
   "chrome.sectionLibrary": "媒体库",
   "Local subtitle": "本地字幕",
   "Show downloaded file": "显示已下载的文件",
-  "Updating separated settings per profile, which may have reset your theme and keys. Harbor still has your old setup saved. Bring it back on this profile, then reload.":
-    "正在升级为按配置文件分别保存设置，这可能已重置你的主题和密钥。Harbor 仍保留着之前的设置。请将其恢复到此配置文件，然后重新加载。",
+  "Updating separated settings per profile, which may have reset your theme and keys. Lart still has your old setup saved. Bring it back on this profile, then reload.":
+    "正在升级为按配置文件分别保存设置，这可能已重置你的主题和密钥。Lart 仍保留着之前的设置。请将其恢复到此配置文件，然后重新加载。",
   "Restore previous settings": "恢复之前的设置",
   "Social links": "社交链接",
   "Xtream provider": "Xtream 提供商",
@@ -540,8 +540,8 @@ const coverage: Record<string, string> = {
   "Leave a comment. No links.": "发表评论，请勿包含链接。",
   "EPG failed:": "EPG 加载失败：",
   "Download the desktop app to use anime enhancements.": "下载桌面应用以使用动漫增强功能。",
-  "Export your entire Harbor setup to a single file, then restore it on a new computer or keep it as a backup.":
-    "将整个 Harbor 配置导出为单个文件，以便在新电脑上恢复或留作备份。",
+  "Export your entire Lart setup to a single file, then restore it on a new computer or keep it as a backup.":
+    "将整个 Lart 配置导出为单个文件，以便在新电脑上恢复或留作备份。",
   "Copy URL": "复制 URL",
   "profile.signOut": "退出 Stremio",
   "Subtitle track": "字幕轨道",
@@ -576,8 +576,8 @@ const coverage: Record<string, string> = {
   "Delete comment": "删除评论",
   "Export as .m3u": "导出为 .m3u",
   anime: "动漫",
-  "Harbor catches stremio:// install links so the configure-and-install flow stays inside the app.":
-    "Harbor 会接管 stremio:// 安装链接，让配置和安装流程都在应用内完成。",
+  "Lart catches stremio:// install links so the configure-and-install flow stays inside the app.":
+    "Lart 会接管 stremio:// 安装链接，让配置和安装流程都在应用内完成。",
   "Searching…": "搜索中…",
   "profile.primary": "主个人资料",
   "Track switching isn't supported on the current engine. The file's default audio is playing.":
@@ -600,22 +600,22 @@ const coverage: Record<string, string> = {
     "使用上方搜索添加影片，或在任意电影或剧集页面点击“添加到列表”。",
   "Advanced: build a plugin": "高级：开发插件",
   "Also Known As": "又名",
-  "Back in Harbor: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
-    "返回 Harbor：进入“漫画 > 设置来源 > 你的服务器”，然后粘贴服务器地址（例如 {localUrl}；如果服务器运行在另一台设备上，则粘贴局域网 IP，例如 {lanUrl}）。",
+  "Back in Lart: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
+    "返回 Lart：进入“漫画 > 设置来源 > 你的服务器”，然后粘贴服务器地址（例如 {localUrl}；如果服务器运行在另一台设备上，则粘贴局域网 IP，例如 {lanUrl}）。",
   "Controller preview": "手柄预览",
   "Couldn't save that font. It may be invalid, or storage is full.":
     "无法保存该字体。字体可能无效，或存储空间已满。",
   "Download and run Suwayomi Server:": "下载并运行 Suwayomi Server：",
-  "Every source you enable in Suwayomi then shows up in Harbor. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
-    "你在 Suwayomi 中启用的每个来源随后都会显示在 Harbor 中。网站发生变化时，Suwayomi 会更新扩展，因此它们可以继续使用。",
+  "Every source you enable in Suwayomi then shows up in Lart. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
+    "你在 Suwayomi 中启用的每个来源随后都会显示在 Lart 中。网站发生变化时，Suwayomi 会更新扩展，因此它们可以继续使用。",
   "Everything else, through your own server (Suwayomi)":
     "其他所有来源均通过你自己的服务器（Suwayomi）",
   "Expand {title} image": "放大 {title} 图片",
-  "Getting manga sources into Harbor": "将漫画来源添加到 Harbor",
-  "Harbor also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Harbor repository. Only install plugins from repositories you trust.":
-    "Harbor 还提供实验性插件运行时。如果你想编写来源插件，请查看 Harbor 仓库中的 {path}。请仅安装来自可信仓库的插件。",
-  "Harbor ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Harbor. There are two ways to add sources.":
-    "Harbor 不附带任何漫画或抓取器，它只是阅读器。你需要自行提供来源；这些来源包含的内容归运行来源的人员所有，与 Harbor 无关。添加来源有两种方式。",
+  "Getting manga sources into Lart": "将漫画来源添加到 Lart",
+  "Lart also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Lart repository. Only install plugins from repositories you trust.":
+    "Lart 还提供实验性插件运行时。如果你想编写来源插件，请查看 Lart 仓库中的 {path}。请仅安装来自可信仓库的插件。",
+  "Lart ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Lart. There are two ways to add sources.":
+    "Lart 不附带任何漫画或抓取器，它只是阅读器。你需要自行提供来源；这些来源包含的内容归运行来源的人员所有，与 Lart 无关。添加来源有两种方式。",
   "Import failed": "导入失败",
   "It serves a web UI at {url}": "它会在 {url} 提供 Web 界面",
   "Manga > Set up a source > Local folder, and choose a folder of manga you already own (CBZ files or folders of images).":
@@ -660,8 +660,8 @@ const coverage: Record<string, string> = {
   heard: "听到位置",
   of: "/",
   orig: "原始位置",
-  "Open the signed-in user's own Harbor profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
-    "当前登录用户的账号名加载完成后，立即打开其 Harbor 个人资料。开始导航时返回 true，否则返回 false。",
+  "Open the signed-in user's own Lart profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
+    "当前登录用户的账号名加载完成后，立即打开其 Lart 个人资料。开始导航时返回 true，否则返回 false。",
   "AI search failed.": "AI 搜索失败。",
   "Add a debrid provider in Settings first.": "请先在“设置”中添加 Debrid 提供商。",
   "Cancelled.": "已取消。",
@@ -673,9 +673,9 @@ const coverage: Record<string, string> = {
     "无法准备此 P2P 播放源。可能没有可连接的对等节点。请重试或选择其他播放源。",
   "Direct torrent streaming is turned off. Turn it on in Settings > P2P & servers to stream torrents without a debrid.":
     "直接种子流式播放已关闭。请在“设置 > P2P 和服务器”中开启，才能在不使用 Debrid 的情况下播放种子。",
-  "Harbor could not open your browser.": "Harbor 无法打开浏览器。",
-  "Harbor's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
-    "Harbor 的点对点引擎正在预热。几秒后会自动就绪，届时即可播放。",
+  "Lart could not open your browser.": "Lart 无法打开浏览器。",
+  "Lart's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
+    "Lart 的点对点引擎正在预热。几秒后会自动就绪，届时即可播放。",
   Minus: "减号",
   "None of your debrid services could deliver a working file. Pick another stream.":
     "你的所有 Debrid 服务都未能提供可用文件。请选择其他播放源。",
@@ -692,7 +692,7 @@ const coverage: Record<string, string> = {
   "Some of your cached sources may be missing from this list. This is a debrid-side issue, not a problem with your subscription.":
     "列表中可能缺少部分已缓存的播放源。这是 Debrid 端的问题，并非你的订阅有问题。",
   "The debrid service is rate-limiting us. Try again in a moment.":
-    "Debrid 服务正在对 Harbor 限流。请稍后重试。",
+    "Debrid 服务正在对 Lart 限流。请稍后重试。",
   "The debrid service returned a server error and is temporarily unavailable. Try again in a moment or pick another source.":
     "Debrid 服务返回服务器错误，暂时不可用。请稍后重试或选择其他播放源。",
   "This addon isn't fully configured. Open its setup page and finish the wizard.":
@@ -703,8 +703,8 @@ const coverage: Record<string, string> = {
     "这是原始 NZB 文件。需要先使用 SABnzbd 或 NZBGet 下载，之后才能播放。",
   "This source isn't ready on your debrid yet. Try it again in a moment or pick another.":
     "此播放源在你的 Debrid 服务中尚未就绪。请稍后重试或选择其他播放源。",
-  "This source only opens in an external browser, not in Harbor's player.":
-    "此播放源只能在外部浏览器中打开，无法在 Harbor 播放器中播放。",
+  "This source only opens in an external browser, not in Lart's player.":
+    "此播放源只能在外部浏览器中打开，无法在 Lart 播放器中播放。",
   "This stream has no playable source.": "此视频流没有可播放的来源。",
   "This stream isn't cached on your debrid yet. Try a different one from the list.":
     "此视频流尚未缓存到你的 Debrid 服务。请从列表中选择其他播放源。",
@@ -719,15 +719,15 @@ const coverage: Record<string, string> = {
     "你的 Debrid 密钥被拒绝。请在“设置”中检查。",
   "Your debrid served a placeholder/error video instead of the real file. Pick another stream.":
     "你的 Debrid 服务返回了占位或错误视频，而不是真实文件。请选择其他播放源。",
-  "Your debrid service doesn't support queueing torrents from Harbor yet.":
-    "你的 Debrid 服务暂不支持从 Harbor 将种子加入队列。",
+  "Your debrid service doesn't support queueing torrents from Lart yet.":
+    "你的 Debrid 服务暂不支持从 Lart 将种子加入队列。",
   "Your debrid subscription has expired.": "你的 Debrid 订阅已过期。",
   "Your debrid took too long to respond. Hit Play again, or try another stream.":
     "你的 Debrid 服务响应超时。请再次点击“播放”，或尝试其他播放源。",
   "Your {name} subscription looks expired.": "你的 {name} 订阅似乎已过期。",
   "{name} is over its traffic or fair-use limit right now.":
     "{name} 当前已超出流量或合理使用限额。",
-  "{name} is rate-limiting Harbor right now.": "{name} 当前正在对 Harbor 限流。",
+  "{name} is rate-limiting Lart right now.": "{name} 当前正在对 Lart 限流。",
   "{name} is temporarily unavailable (server error).": "{name} 暂时不可用（服务器错误）。",
   "{name} rejected your API key.": "{name} 拒绝了你的 API 密钥。",
   "{name} returned an error ({code}).": "{name} 返回错误（{code}）。",
@@ -744,7 +744,7 @@ const coverage: Record<string, string> = {
   "Ask which server": "询问使用哪个服务器",
   "Automatic refresh": "自动刷新",
   "Available in {name}": "可在 {name} 中使用",
-  "Bring your own server-rendered library aboard.": "将你自己的服务器媒体库接入 Harbor。",
+  "Bring your own server-rendered library aboard.": "将你自己的服务器媒体库接入 Lart。",
   "Browse addon sources": "浏览插件来源",
   "Build your own library": "构建自己的媒体库",
   "Cached titles from this server will also be removed. Your media on the server will not be changed.":
@@ -757,8 +757,8 @@ const coverage: Record<string, string> = {
   "Connect Jellyfin, Emby, or Plex in Streaming sources.":
     "请在“流媒体来源”中连接 Jellyfin、Emby 或 Plex。",
   "Connect and sync": "连接并同步",
-  "Connect books you own, reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "连接你拥有的图书、阅读来源和元数据服务。Harbor 会保持书架井然有序，同时所有来源始终由你掌控。",
+  "Connect books you own, reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "连接你拥有的图书、阅读来源和元数据服务。Lart 会保持书架井然有序，同时所有来源始终由你掌控。",
   "Connect home server": "连接家庭服务器",
   "Connect now": "立即连接",
   "Connect server": "连接服务器",
@@ -770,18 +770,18 @@ const coverage: Record<string, string> = {
   Disable: "禁用",
   "Download media": "下载媒体",
   "Download selected ({n})": "下载所选内容（{n}）",
-  "Edge voices need the Harbor desktop app. Reading with the device voice.":
-    "Edge 语音需要 Harbor 桌面应用。将改用设备语音朗读。",
+  "Edge voices need the Lart desktop app. Reading with the device voice.":
+    "Edge 语音需要 Lart 桌面应用。将改用设备语音朗读。",
   "Edit home server": "编辑家庭服务器",
   Enrichment: "信息增强",
   "Every…": "每隔…",
   "Featured book": "精选图书",
-  "Harbor does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Harbor open it.":
-    "Harbor 不托管任何图书。你可以打开此设备上的文件夹、安装来源扩展，或连接自己的服务器。元数据可以描述图书，但只有来源才能让 Harbor 打开图书。",
-  "Harbor opens Plex in your browser. Your Plex password is never entered in Harbor.":
-    "Harbor 会在浏览器中打开 Plex。你的 Plex 密码绝不会输入到 Harbor 中。",
-  "Harbor tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
-    "Harbor 会尝试 HTTP、HTTPS、反向代理和提供商的默认端口。凭据会单独存储。",
+  "Lart does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Lart open it.":
+    "Lart 不托管任何图书。你可以打开此设备上的文件夹、安装来源扩展，或连接自己的服务器。元数据可以描述图书，但只有来源才能让 Lart 打开图书。",
+  "Lart opens Plex in your browser. Your Plex password is never entered in Lart.":
+    "Lart 会在浏览器中打开 Plex。你的 Plex 密码绝不会输入到 Lart 中。",
+  "Lart tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
+    "Lart 会尝试 HTTP、HTTPS、反向代理和提供商的默认端口。凭据会单独存储。",
   "Home server": "家庭服务器",
   "Home server quality": "家庭服务器画质",
   "Home servers": "家庭服务器",
@@ -807,7 +807,7 @@ const coverage: Record<string, string> = {
   "Prefer this device": "优先使用此设备",
   "Preferred home server": "首选家庭服务器",
   "Preparing narration audio": "正在准备朗读音频",
-  "Read eBooks in Harbor": "在 Harbor 中阅读电子书",
+  "Read eBooks in Lart": "在 Lart 中阅读电子书",
   "Refresh interval in days": "刷新间隔（天）",
   "Refresh policy": "刷新策略",
   "Remove folder?": "移除文件夹？",
@@ -852,14 +852,14 @@ const coverage: Record<string, string> = {
   "Machine-translated": "机器翻译",
   "Direct/debrid only": "仅直连/debrid",
   "Match subtitles across languages (experimental)": "跨语言匹配字幕（实验性）",
-  "When the audio and subtitle use different languages, Harbor compares a release-matched subtitle in the audio language. It only offers a fix unless every safety check is measured.":
-    "当音频和字幕使用不同语言时，Harbor 会与音频语言中匹配同一发行版本的字幕进行比较。除非所有安全检查都已完成测量，否则只会提供修正建议。",
+  "When the audio and subtitle use different languages, Lart compares a release-matched subtitle in the audio language. It only offers a fix unless every safety check is measured.":
+    "当音频和字幕使用不同语言时，Lart 会与音频语言中匹配同一发行版本的字幕进行比较。除非所有安全检查都已完成测量，否则只会提供修正建议。",
   "New York Times": "New York Times",
   "Bestseller lists in the eBook section.": "eBook 区域中的畅销书榜单。",
   "New York Times · bestseller lists": "New York Times · 畅销书榜单",
   "NYT Books API key": "NYT Books API 密钥",
-  "Choose whether Harbor prefers direct and debrid sources, peer-to-peer torrents, or shows both.":
-    "选择 Harbor 优先使用直连和 debrid 来源、点对点种子，或同时显示两者。",
+  "Choose whether Lart prefers direct and debrid sources, peer-to-peer torrents, or shows both.":
+    "选择 Lart 优先使用直连和 debrid 来源、点对点种子，或同时显示两者。",
 };
 
 export default coverage;

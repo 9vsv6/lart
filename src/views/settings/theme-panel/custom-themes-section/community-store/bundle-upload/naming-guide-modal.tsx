@@ -26,14 +26,14 @@ function stepsFor(kind: BundleKind, t: Translate): Step[] {
       icon: Wand2,
       title: t("Any size works, we optimize it"),
       body: t(
-        "Drop in art at any resolution. Harbor resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.",
+        "Drop in art at any resolution. Lart resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.",
       ),
     },
     {
       icon: Film,
       title: t("Animated GIFs are welcome"),
       body: t(
-        "Want a badge that moves? Drop in a GIF up to 8 MB. Harbor shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.",
+        "Want a badge that moves? Drop in a GIF up to 8 MB. Lart shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.",
       ),
     },
     {

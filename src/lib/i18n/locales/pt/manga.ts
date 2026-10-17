@@ -88,14 +88,14 @@ const manga: Record<string, string> = {
     "Para um link ou imagem, você geralmente quer um atributo:",
   "For an AI agent": "Para um agente de IA",
   Go: "Ir",
-  "Harbor does not host any manga or any sources. Connect your own server or open a folder you already have, and mix as many as you like.":
-    "O Harbor não hospeda nenhum mangá nem nenhuma fonte. Conecte seu próprio servidor ou abra uma pasta que você já tem, e combine quantas quiser.",
-  "Harbor logs into nothing and bypasses no password, paywall, or access control, and must not be used to attempt it. Point it only at content you are legally allowed to read, and never at official or licensed publisher sites. You alone are responsible for what you connect and for following copyright and each site's terms. Harbor bundles and endorses no sites.":
-    "O Harbor não faz login em nada e não contorna nenhuma senha, paywall ou controle de acesso, e não deve ser usado para tentar isso. Aponte-o apenas para conteúdo que você tem permissão legal para ler, e nunca para sites oficiais ou de editoras licenciadas. Você é o único responsável pelo que conecta e por seguir os direitos autorais e os termos de cada site. O Harbor não inclui nem endossa nenhum site.",
-  "Harbor ships no manga sources and hosts nothing. Extensions come from repositories other people maintain. Paste a repository URL below to browse its plugins, then install the ones you want. Every plugin runs sandboxed in an isolated worker with no access to your files, accounts, or the rest of the app.":
-    "O Harbor não vem com nenhuma fonte de mangá e não hospeda nada. As extensões vêm de repositórios que outras pessoas mantêm. Cole a URL de um repositório abaixo para explorar seus plugins e instale os que você quiser. Cada plugin roda em modo sandbox, em um worker isolado, sem acesso aos seus arquivos, contas ou ao resto do aplicativo.",
-  "Harbor ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Harbor reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
-    "O Harbor fornece o mecanismo, não os sites. Você escreve uma pequena configuração JSON que descreve um site com seletores CSS, e o Harbor lê o site com eles. Nada vem incluído: aponte-o apenas para sites que você tem o direito de ler.",
+  "Lart does not host any manga or any sources. Connect your own server or open a folder you already have, and mix as many as you like.":
+    "O Lart não hospeda nenhum mangá nem nenhuma fonte. Conecte seu próprio servidor ou abra uma pasta que você já tem, e combine quantas quiser.",
+  "Lart logs into nothing and bypasses no password, paywall, or access control, and must not be used to attempt it. Point it only at content you are legally allowed to read, and never at official or licensed publisher sites. You alone are responsible for what you connect and for following copyright and each site's terms. Lart bundles and endorses no sites.":
+    "O Lart não faz login em nada e não contorna nenhuma senha, paywall ou controle de acesso, e não deve ser usado para tentar isso. Aponte-o apenas para conteúdo que você tem permissão legal para ler, e nunca para sites oficiais ou de editoras licenciadas. Você é o único responsável pelo que conecta e por seguir os direitos autorais e os termos de cada site. O Lart não inclui nem endossa nenhum site.",
+  "Lart ships no manga sources and hosts nothing. Extensions come from repositories other people maintain. Paste a repository URL below to browse its plugins, then install the ones you want. Every plugin runs sandboxed in an isolated worker with no access to your files, accounts, or the rest of the app.":
+    "O Lart não vem com nenhuma fonte de mangá e não hospeda nada. As extensões vêm de repositórios que outras pessoas mantêm. Cole a URL de um repositório abaixo para explorar seus plugins e instale os que você quiser. Cada plugin roda em modo sandbox, em um worker isolado, sem acesso aos seus arquivos, contas ou ao resto do aplicativo.",
+  "Lart ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Lart reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
+    "O Lart fornece o mecanismo, não os sites. Você escreve uma pequena configuração JSON que descreve um site com seletores CSS, e o Lart lê o site com eles. Nada vem incluído: aponte-o apenas para sites que você tem o direito de ler.",
   "Hide help": "Ocultar ajuda",
   "Host it with a repo.json": "Hospede com um repo.json",
   "How it works": "Como funciona",
@@ -146,8 +146,8 @@ const manga: Record<string, string> = {
   "Oldest first": "Mais antigos primeiro",
   "One Piece, Naruto and more worlds": "One Piece, Naruto e mais mundos",
   Oneshot: "Oneshot",
-  "Only add repositories you trust. Harbor cannot vouch for third-party plugins.":
-    "Adicione apenas repositórios em que você confia. O Harbor não pode garantir plugins de terceiros.",
+  "Only add repositories you trust. Lart cannot vouch for third-party plugins.":
+    "Adicione apenas repositórios em que você confia. O Lart não pode garantir plugins de terceiros.",
   "Only sites you have the right to read.": "Apenas sites que você tem o direito de ler.",
   "Open manga details": "Abrir detalhes do mangá",
   "Open the site in a browser. Right-click the thing you want (a cover, a title, a chapter link) and choose Inspect.":
@@ -168,14 +168,14 @@ const manga: Record<string, string> = {
     "Escolha uma pasta. Cada subpasta dentro dela é um mangá, então nomeie exatamente como o título. Em cada uma, adicione pastas de capítulos com imagens ou arquivos .cbz / .zip. Um cover.jpg define uma capa personalizada.",
   "Pick up the manga at {label}.": "Continue o mangá em {label}.",
   "Pick up the manga where the anime ends.": "Continue o mangá de onde o anime termina.",
-  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Harbor. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
-    "Os plugins rodam em modo sandbox, em um worker isolado, sem acesso aos seus arquivos, contas ou ao resto do Harbor. O que um plugin extrai é assunto entre você e o site que ele acessa. Instale apenas plugins de repositórios em que você confia.",
-  "Point Harbor's built-in scraper at any HTML site with a config":
-    "Aponte o scraper integrado do Harbor para qualquer site HTML com uma configuração",
+  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Lart. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
+    "Os plugins rodam em modo sandbox, em um worker isolado, sem acesso aos seus arquivos, contas ou ao resto do Lart. O que um plugin extrai é assunto entre você e o site que ele acessa. Instale apenas plugins de repositórios em que você confia.",
+  "Point Lart's built-in scraper at any HTML site with a config":
+    "Aponte o scraper integrado do Lart para qualquer site HTML com uma configuração",
   "Point Local folder at CBZ files or folders of images you already own.":
     "Aponte a Pasta local para arquivos CBZ ou pastas de imagens que você já possui.",
-  "Prefer a server? Run every source through your own Suwayomi and point Harbor at it":
-    "Prefere um servidor? Rode todas as fontes pelo seu próprio Suwayomi e aponte o Harbor para ele",
+  "Prefer a server? Run every source through your own Suwayomi and point Lart at it":
+    "Prefere um servidor? Rode todas as fontes pelo seu próprio Suwayomi e aponte o Lart para ele",
   "Previous chapter": "Capítulo anterior",
   "Previous page": "Página anterior",
   "Publicly accessible pages only.": "Apenas páginas de acesso público.",
@@ -272,8 +272,8 @@ const manga: Record<string, string> = {
   "Write a scraper for any site, host it, and install it like any other plugin":
     "Escreva um scraper para qualquer site, hospede-o e instale-o como qualquer outro plugin",
   "Write one JavaScript file": "Escreva um arquivo JavaScript",
-  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Harbor bundles and endorses no sites; it only runs the config you supply.":
-    "Você é o único responsável pelo que conecta e por cumprir os direitos autorais e os termos de cada site. O Harbor não inclui nem endossa nenhum site; ele apenas executa a configuração que você fornece.",
+  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Lart bundles and endorses no sites; it only runs the config you supply.":
+    "Você é o único responsável pelo que conecta e por cumprir os direitos autorais e os termos de cada site. O Lart não inclui nem endossa nenhum site; ele apenas executa a configuração que você fornece.",
   "You have reached the latest chapter available.":
     "Você chegou ao capítulo mais recente disponível.",
   "Your AniList": "Seu AniList",
@@ -300,8 +300,8 @@ const manga: Record<string, string> = {
   "is a page number. Add": "é um número de página. Adicione",
   "is a regex for the part to change": "é uma regex para a parte a ser alterada",
   "is each chapter row": "é cada linha de capítulo",
-  "is how many items to skip, starting at 0. Harbor auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
-    "é quantos itens pular, começando em 0. O Harbor detecta automaticamente o tamanho de página do site e percorre por você, então você nunca define um tamanho de página. Use isto quando a URL conta itens.",
+  "is how many items to skip, starting at 0. Lart auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
+    "é quantos itens pular, começando em 0. O Lart detecta automaticamente o tamanho de página do site e percorre por você, então você nunca define um tamanho de página. Use isto quando a URL conta itens.",
   "is the box around one manga; inside it": "é a caixa ao redor de um mangá; dentro dela",
   "is the manga URL": "é a URL do mangá",
   "is the search text (searchPath only).": "é o texto de busca (apenas searchPath).",

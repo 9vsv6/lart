@@ -54,8 +54,8 @@ const library: Record<string, string> = {
   "Previous month": "Mois précédent",
   "Remove from favorites": "Retirer des favoris",
   "Remove from library": "Supprimer de la bibliothèque",
-  'Right-click any title in Harbor or hit "Add to Watchlist" on its detail page to save it here.':
-    "Faites un clic droit sur un titre dans Harbor ou cliquez sur « Ajouter à la liste de suivi » sur sa page détaillée pour l’enregistrer ici.",
+  'Right-click any title in Lart or hit "Add to Watchlist" on its detail page to save it here.':
+    "Faites un clic droit sur un titre dans Lart ou cliquez sur « Ajouter à la liste de suivi » sur sa page détaillée pour l’enregistrer ici.",
   "Simkl history": "Historique Simkl",
   "Simkl plan to watch": "Liste Simkl « À voir »",
   "Simkl premieres": "Avant-premières Simkl",

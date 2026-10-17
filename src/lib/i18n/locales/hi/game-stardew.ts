@@ -18,7 +18,7 @@ export default {
   "games.stardew.refresh": "मॉड रीफ़्रेश करें",
 
   "games.stardew.import": "मॉड ZIP आयात करें",
-  "games.stardew.manage": "Harbor से प्रबंधित",
+  "games.stardew.manage": "Lart से प्रबंधित",
   "games.stardew.manageNote": "डाउनलोड किया हुआ SMAPI मॉड यहाँ प्रबंधित करने के लिए आयात करें। अपडेट करने के लिए उसका नया ZIP आयात करें।",
   "games.stardew.previous": "पिछले संस्करण",
   "games.stardew.review": "बदलाव देखें",
@@ -31,7 +31,7 @@ export default {
   "games.stardew.running": "मॉड फ़ाइलें बदलने से पहले Stardew Valley और SMAPI बंद करें।",
   "games.stardew.requirementsError": "ज़रूरी मॉड या SMAPI संस्करण मौजूद नहीं है या बहुत पुराना है। मॉड की ज़रूरतें जाँचें।",
   "games.stardew.dependentsError": "एक चालू मॉड को यह संस्करण चाहिए। पहले उस मॉड को बंद करें या संगत संस्करण चुनें।",
-  "games.stardew.unmanagedError": "यह मॉड Harbor के रिकॉर्ड से बाहर पहले से मौजूद है। आयात करने से पहले मौजूदा कॉपी अलग रखें।",
+  "games.stardew.unmanagedError": "यह मॉड Lart के रिकॉर्ड से बाहर पहले से मौजूद है। आयात करने से पहले मौजूदा कॉपी अलग रखें।",
   "games.stardew.archiveError": "एक तैयार मॉड फ़ोल्डर वाला ZIP चुनें, अधिकतम 32 MB (निकालने के बाद 128 MB)। सोर्स कोड डाउनलोड इंस्टॉल करने योग्य मॉड नहीं हैं।",
   "games.stardew.moreFiles": "{count} और फ़ाइलें",
   "games.stardew.partialError": "कुछ मॉड जाँचे नहीं जा सके। फ़ाइलें बदलने से पहले अधूरी स्कैन की समस्या सुलझाएँ।",

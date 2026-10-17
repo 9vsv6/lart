@@ -12,7 +12,7 @@ export const SECTION_TABS: Partial<Record<SectionId, TabEntry[]>> = {
   account: [
     { id: "you", label: "Your profile", icon: "UserRound" },
     { id: "profiles", label: "Profiles", icon: "Users" },
-    { id: "harbor", label: "Harbor account", icon: "Harbor" },
+    { id: "harbor", label: "Lart account", icon: "Lart" },
     { id: "stremio", label: "Stremio", icon: "Play", img: stremioLogo },
   ],
   player: [
@@ -42,7 +42,7 @@ export const SECTION_TABS: Partial<Record<SectionId, TabEntry[]>> = {
     { id: "svp", label: "SVP", icon: "Film" },
   ],
   language: [
-    { id: "app", label: "Harbor", icon: "AppLanguage" },
+    { id: "app", label: "Lart", icon: "AppLanguage" },
     { id: "audio", label: "Audio", icon: "AudioLines" },
     { id: "discovery", label: "What you see", icon: "Eye" },
   ],

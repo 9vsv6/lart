@@ -5,7 +5,7 @@ export default {
 
   "games.shortcuts.activity.open": "Aktivitas",
   "games.shortcuts.activity.title": "Aktivitas pintasan",
-  "games.shortcuts.activity.note": "Pemindaian dan peluncuran terbaru untuk profil Harbor ini. Hingga 300 entri.",
+  "games.shortcuts.activity.note": "Pemindaian dan peluncuran terbaru untuk profil Lart ini. Hingga 300 entri.",
   "games.shortcuts.activity.remember": "Simpan antar sesi",
   "games.shortcuts.activity.detailed": "Sertakan detail pemindaian",
   "games.shortcuts.activity.storageError": "Aktivitas tersimpan tidak dapat diakses. Entri sesi ini tetap ditampilkan.",
@@ -47,7 +47,7 @@ export default {
   "games.shortcuts.tags": "Tag",
   "games.shortcuts.storeError": "Pengaturan tidak dapat disimpan.",
   "games.shortcuts.shortcut_location": "Pilih folder Steam atau folder userdata di dalamnya.",
-  "games.shortcuts.shortcut_account": "Buka Steam dengan akun pintasan ini, lalu segarkan. Harbor harus menggunakan instalasi Steam yang sama.",
+  "games.shortcuts.shortcut_account": "Buka Steam dengan akun pintasan ini, lalu segarkan. Lart harus menggunakan instalasi Steam yang sama.",
   "games.shortcuts.shortcut_missing": "Pintasan ini sudah tidak ada. Segarkan pustaka.",
   "games.shortcuts.shortcut_executable": "Berkas eksekusi hilang atau jalur absolutnya tidak didukung.",
   "games.shortcuts.shortcut_launch": "Steam tidak dapat membuka pintasan ini. Coba lagi.",

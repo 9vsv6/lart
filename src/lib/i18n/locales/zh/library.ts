@@ -46,8 +46,8 @@ const library: Record<string, string> = {
   "Show a bookmark on saved titles": "在已收藏的影片上显示书签",
   "Show sync indicator": "显示同步指示器",
   "Sync indicator": "同步指示器",
-  "Updating separated settings per profile, which may have reset your theme and keys. Harbor still has your old setup saved. Bring it back on this profile, then reload.":
-    "正在升级为按配置文件分别保存设置，这可能已重置你的主题和密钥。Harbor 仍保留着之前的设置。请将其恢复到此配置文件，然后重新加载。",
+  "Updating separated settings per profile, which may have reset your theme and keys. Lart still has your old setup saved. Bring it back on this profile, then reload.":
+    "正在升级为按配置文件分别保存设置，这可能已重置你的主题和密钥。Lart 仍保留着之前的设置。请将其恢复到此配置文件，然后重新加载。",
   "Watchlist bookmark": "待看列表书签",
   "Keep the Library Watchlist tab limited to titles you added in Stremio. Turn this off to also include anything Stremio auto-added when you pressed play.":
     "让媒体库的“稍后观看”标签页仅显示你在 Stremio 中添加的作品。关闭此项后，还会显示你按下播放时由 Stremio 自动添加的所有内容。",
@@ -63,33 +63,33 @@ const library: Record<string, string> = {
     "扫描 Stremio 媒体库，并重写所有不完全符合 Stremio 架构的项目。",
   "Show each addon's results in the order it returned them, grouped by your addon list. Matches the Stremio and Vidi apps.":
     "按各插件返回的原始顺序显示结果，并依照你的插件列表分组。与 Stremio 和 Vidi 应用一致。",
-  "Harbor pulls your addon collection from Stremio. Manage individual addons in Streaming sources.":
-    "Harbor 会从 Stremio 获取你的插件集合。可在“流媒体来源”中管理各个插件。",
+  "Lart pulls your addon collection from Stremio. Manage individual addons in Streaming sources.":
+    "Lart 会从 Stremio 获取你的插件集合。可在“流媒体来源”中管理各个插件。",
   "Theme Library": "主题库",
   "Pick a layout, set colors and fonts, save it to your library. No code needed.":
     "选择布局并设置颜色和字体，然后保存到主题库。无需编写代码。",
   "Open library": "打开主题库",
   "{name} imported to your library": "已将 {name} 导入主题库",
-  "Use my Trakt avatar as my Harbor avatar": "使用我的 Trakt 头像作为 Harbor 头像",
-  "Use my Simkl avatar as my Harbor avatar": "使用我的 Simkl 头像作为 Harbor 头像",
+  "Use my Trakt avatar as my Lart avatar": "使用我的 Trakt 头像作为 Lart 头像",
+  "Use my Simkl avatar as my Lart avatar": "使用我的 Simkl 头像作为 Lart 头像",
   "Sync now": "立即同步",
   "Sign in to sync your library, watch progress, and addons.": "登录以同步媒体库、观看进度和插件。",
   "URL is saved and ready to share.": "URL 已保存，可以分享。",
   "Connect your Trakt account": "连接你的 Trakt 账户",
   "Connect Trakt": "连接 Trakt",
   "About Trakt": "关于 Trakt",
-  "Wear your Trakt profile picture across Harbor instead of the default.":
-    "在 Harbor 各处使用你的 Trakt 头像，而非默认头像。",
+  "Wear your Trakt profile picture across Lart instead of the default.":
+    "在 Lart 各处使用你的 Trakt 头像，而非默认头像。",
   "Disconnect from Trakt": "断开 Trakt 连接",
   "Disconnect Trakt? Scrobbles and syncs will stop until you reconnect.":
     "要断开 Trakt 连接吗？重新连接前，播放记录上报和同步将停止。",
   "Connect your Simkl account": "连接你的 Simkl 账户",
   "Connect Simkl": "连接 Simkl",
   "About Simkl": "关于 Simkl",
-  "Harbor will mark what you finish as watched on Simkl and sync your plan-to-watch list.":
-    "Harbor 会在 Simkl 上将你看完的内容标记为已观看，并同步你的想看片单。",
-  "Wear your Simkl profile picture across Harbor instead of the default.":
-    "在 Harbor 各处使用你的 Simkl 头像，而非默认头像。",
+  "Lart will mark what you finish as watched on Simkl and sync your plan-to-watch list.":
+    "Lart 会在 Simkl 上将你看完的内容标记为已观看，并同步你的想看片单。",
+  "Wear your Simkl profile picture across Lart instead of the default.":
+    "在 Lart 各处使用你的 Simkl 头像，而非默认头像。",
   "Disconnect from Simkl": "断开 Simkl 连接",
   "Disconnect Simkl? Syncing will stop until you reconnect.":
     "要断开 Simkl 连接吗？重新连接前，同步将停止。",
@@ -124,18 +124,18 @@ const library: Record<string, string> = {
   "Custom calendar": "自定义日历",
   "Library, watch progress, and addon collection sync from this account.":
     "媒体库、观看进度和插件集合会从此账户同步。",
-  "Harbor catches stremio:// install links so the configure-and-install flow stays inside the app. Every install also syncs to your Stremio account, so the official app remains the canonical home for your library.":
-    "Harbor 会接管 stremio:// 安装链接，让配置和安装流程始终在应用内完成。每次安装也会同步到你的 Stremio 账户，确保官方应用中的媒体库始终为准。",
-  "Saved {d} from Harbor {a}.": "已从 Harbor {a} 保存 {d}。",
+  "Lart catches stremio:// install links so the configure-and-install flow stays inside the app. Every install also syncs to your Stremio account, so the official app remains the canonical home for your library.":
+    "Lart 会接管 stremio:// 安装链接，让配置和安装流程始终在应用内完成。每次安装也会同步到你的 Stremio 账户，确保官方应用中的媒体库始终为准。",
+  "Saved {d} from Lart {a}.": "已从 Lart {a} 保存 {d}。",
   "Scans your Stremio library and rewrites any item whose shape doesn't match Stremio's exact schema. Safe to run anytime; only items that need fixing get touched.":
     "扫描你的 Stremio 媒体库，并重写结构不符合 Stremio 精确数据规范的项目。可随时安全运行，只会修改需要修复的项目。",
   "Watchlist shows only saved titles": "片单仅显示已保存的内容",
   "Clear all saved frames": "清除所有已保存的帧",
-  "This replaces your current Harbor setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Harbor reloads when it finishes.":
-    "这会用该文件中保存的 {n} 个条目替换当前 Harbor 配置，包括主题、首页布局、设置、插件、个人资料等。Stremio 登录状态保持不变。完成后 Harbor 将重新加载。",
-  "Saved {when} from Harbor {app}.": "由 Harbor {app} 于 {when} 保存。",
-  "Harbor's in-app installer animates the manifest install and keeps you in context. Anything Harbor installs is also synced to your Stremio account, so the official app stays the canonical library. Turn this off and Stremio becomes the only handler for stremio:// links; Harbor still installs anything you trigger from inside the app (Configure & install, paste, drag-and-drop).":
-    "Harbor 的应用内安装器会以动画展示 manifest 安装过程，让你无需离开当前页面。Harbor 安装的所有内容也会同步到你的 Stremio 账户，因此官方应用仍是规范内容库。关闭此选项后，stremio:// 链接将仅由 Stremio 处理；但从 Harbor 内触发的安装仍会由 Harbor 完成，包括“配置并安装”、粘贴和拖放。",
+  "This replaces your current Lart setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Lart reloads when it finishes.":
+    "这会用该文件中保存的 {n} 个条目替换当前 Lart 配置，包括主题、首页布局、设置、插件、个人资料等。Stremio 登录状态保持不变。完成后 Lart 将重新加载。",
+  "Saved {when} from Lart {app}.": "由 Lart {app} 于 {when} 保存。",
+  "Lart's in-app installer animates the manifest install and keeps you in context. Anything Lart installs is also synced to your Stremio account, so the official app stays the canonical library. Turn this off and Stremio becomes the only handler for stremio:// links; Lart still installs anything you trigger from inside the app (Configure & install, paste, drag-and-drop).":
+    "Lart 的应用内安装器会以动画展示 manifest 安装过程，让你无需离开当前页面。Lart 安装的所有内容也会同步到你的 Stremio 账户，因此官方应用仍是规范内容库。关闭此选项后，stremio:// 链接将仅由 Stremio 处理；但从 Lart 内触发的安装仍会由 Lart 完成，包括“配置并安装”、粘贴和拖放。",
   "A new version is ready to download.": "新版本已可下载。",
   "Save an OMDB key in Library & metadata to enable rating fetches.":
     "在“媒体库与元数据”中保存 OMDB 密钥，以启用评分获取功能。",
@@ -149,8 +149,8 @@ const library: Record<string, string> = {
     "播放看过一部分的内容时，显示提示，让您选择从上次位置继续或从头开始。也适用于从 Stremio 或 Trakt 同步的项目。",
   "Please add your TMDB API key in the Library & Metadata settings to view this folder.":
     "请在“媒体库与元数据”设置中添加 TMDB API 密钥，以查看此文件夹。",
-  "Bring your Letterboxd watchlist, diary, liked films and lists into Harbor via the Stremboxd bridge.":
-    "通过 Stremboxd 桥接服务，将你的 Letterboxd 想看清单、日记、喜欢的电影和列表导入 Harbor。",
+  "Bring your Letterboxd watchlist, diary, liked films and lists into Lart via the Stremboxd bridge.":
+    "通过 Stremboxd 桥接服务，将你的 Letterboxd 想看清单、日记、喜欢的电影和列表导入 Lart。",
   "Public mode uses just your username: watchlist, liked films, popular and Top 250. No password needed.":
     "公开模式只需用户名，即可访问想看清单、喜欢的电影、热门电影和 Top 250，无需密码。",
   "Remove list": "移除列表",
@@ -173,10 +173,10 @@ const library: Record<string, string> = {
   "Download the desktop app to use shaders.": "下载桌面应用以使用着色器。",
   "Safe to clear anytime. Nothing here touches your watch history, library, themes, or sign-ins.":
     "可随时安全清除。这里的任何操作都不会影响观看记录、媒体库、主题或登录状态。",
-  "Harbor searches every source you enable at the same time, then merges and de-duplicates the results into one clean list. Turn a source off to stop pulling from it.":
-    "Harbor 会同时搜索你启用的所有来源，然后合并结果并去重，生成一份简洁列表。关闭某个来源即可停止从中获取字幕。",
-  "What fills the hero. Trending is a fresh top list from Harbor, refreshed through the day. Classic uses your own Home rows.":
-    "决定主视觉区显示的内容。“热门趋势”显示 Harbor 提供的最新热门榜单，并在一天中持续刷新。“经典”则使用你自己的首页横栏。",
+  "Lart searches every source you enable at the same time, then merges and de-duplicates the results into one clean list. Turn a source off to stop pulling from it.":
+    "Lart 会同时搜索你启用的所有来源，然后合并结果并去重，生成一份简洁列表。关闭某个来源即可停止从中获取字幕。",
+  "What fills the hero. Trending is a fresh top list from Lart, refreshed through the day. Classic uses your own Home rows.":
+    "决定主视觉区显示的内容。“热门趋势”显示 Lart 提供的最新热门榜单，并在一天中持续刷新。“经典”则使用你自己的首页横栏。",
   "Results from addons higher in this list come first. If one finds nothing, the next fills in.":
     "此列表中位置较高的插件结果会优先显示。如果某个插件没有结果，则由下一个插件补上。",
   "Remove from list": "从列表中移除",
@@ -197,7 +197,7 @@ const library: Record<string, string> = {
   "Review saved": "短评已保存",
   "Unlike list": "取消点赞列表",
   "Like list": "点赞列表",
-  "Harbor list": "Harbor 列表",
+  "Lart list": "Lart 列表",
   "Share list": "分享列表",
   "List link": "列表链接",
   "Create lists in your library to feature them here": "在媒体库中创建列表，即可在此展示",
@@ -263,8 +263,8 @@ const library: Record<string, string> = {
   "Download this season": "下载本季",
   "Season saved offline": "本季已保存，可离线观看",
   "Auto-download new episodes": "自动下载新剧集",
-  "Point Harbor at your self-hosted library to browse and install sources":
-    "将 Harbor 连接到你的自托管媒体库，以浏览和安装源",
+  "Point Lart at your self-hosted library to browse and install sources":
+    "将 Lart 连接到你的自托管媒体库，以浏览和安装源",
   "Create your first list": "创建你的第一个列表",
   "Library is everything from Stremio, Trakt, and this device. Watchlist is only titles you haven't watched yet. History is what you've watched. Local is files on your computer.":
     "媒体库包含来自 Stremio、Trakt 和此设备的所有内容。待看列表仅包含你尚未观看的片名。观看历史包含你看过的内容。本地内容是你电脑上的文件。",
@@ -288,8 +288,8 @@ const library: Record<string, string> = {
     "已设置。如果之后字幕逐渐不同步，请向前播放一段，并在后面的字幕行再次点按“从此处同步”以校正偏移。",
   "Sync subtitles": "同步字幕",
   "Loading your library…": "正在加载你的媒体库…",
-  "This one installs through Harbor Setup, but the update manifest carries no signature for it. Harbor will not run an installer it cannot verify. Download it and run it yourself.":
-    "此更新通过 Harbor Setup 安装，但更新清单中没有它的签名。Harbor 不会运行无法验证的安装程序。请下载后自行运行。",
+  "This one installs through Lart Setup, but the update manifest carries no signature for it. Lart will not run an installer it cannot verify. Download it and run it yourself.":
+    "此更新通过 Lart Setup 安装，但更新清单中没有它的签名。Lart 不会运行无法验证的安装程序。请下载后自行运行。",
   "Download installer": "下载安装程序",
   "Your collection.": "你的收藏。",
   "Watchlist is what you've saved for later. History is everything you've watched. Local is files on your computer.":
@@ -301,8 +301,8 @@ const library: Record<string, string> = {
   "Confirm remove from library": "确认从媒体库中移除",
   "No history yet": "暂无观看历史",
   "Your watchlist is empty": "你的待看清单为空",
-  'Right-click any title in Harbor or hit "Add to Watchlist" on its detail page to save it here.':
-    "右键单击 Harbor 中的任意标题，或在其详情页点击“添加到待看清单”，即可保存到这里。",
+  'Right-click any title in Lart or hit "Add to Watchlist" on its detail page to save it here.':
+    "右键单击 Lart 中的任意标题，或在其详情页点击“添加到待看清单”，即可保存到这里。",
   "My Library shows upcoming episodes from the shows you've saved on Stremio. Sign in to wire it up.":
     "“我的媒体库”会显示你在 Stremio 中所保存节目的即将播出剧集。登录即可关联。",
   "Couldn't load the calendar": "无法加载日历",
@@ -393,8 +393,8 @@ const library: Record<string, string> = {
   "Keep typing, or paste the full list URL.": "继续输入，或粘贴完整的列表 URL。",
   "Paste a Trakt, MDBList, TMDB, Letterboxd, IMDb, or MAL list URL":
     "粘贴 Trakt、MDBList、TMDB、Letterboxd、IMDb 或 MAL 列表 URL",
-  "Paste a public list from Trakt, MDBList, TMDB, Letterboxd, IMDb, or MyAnimeList. Harbor pulls the titles in and keeps the artwork sharp.":
-    "粘贴来自 Trakt、MDBList、TMDB、Letterboxd、IMDb 或 MyAnimeList 的公开列表。Harbor 会导入其中的作品，并保持海报清晰。",
+  "Paste a public list from Trakt, MDBList, TMDB, Letterboxd, IMDb, or MyAnimeList. Lart pulls the titles in and keeps the artwork sharp.":
+    "粘贴来自 Trakt、MDBList、TMDB、Letterboxd、IMDb 或 MyAnimeList 的公开列表。Lart 会导入其中的作品，并保持海报清晰。",
   "Search every collection on TMDB...": "搜索 TMDB 上的所有系列合集…",
   "That's every collection TMDB knows about.": "以上是 TMDB 收录的全部系列合集。",
   "That's every {category} collection we could find.": "以上是我们能找到的全部{category}系列合集。",
@@ -432,8 +432,8 @@ const library: Record<string, string> = {
   "Open on Trakt": "在 Trakt 上打开",
   "Comments may take a moment to appear on Trakt": "评论可能需要片刻才会在 Trakt 上显示",
   History: "历史",
-  "Harbor couldn't resolve a usable ID for this title. Add a TMDB key in Library settings or sign in to Stremio to broaden coverage.":
-    "Harbor 无法为此条目解析出可用 ID。请在媒体库设置中添加 TMDB 密钥，或登录 Stremio 以扩大匹配范围。",
+  "Lart couldn't resolve a usable ID for this title. Add a TMDB key in Library settings or sign in to Stremio to broaden coverage.":
+    "Lart 无法为此条目解析出可用 ID。请在媒体库设置中添加 TMDB 密钥，或登录 Stremio 以扩大匹配范围。",
   "Brings in your library, watchlist, and installed addons.":
     "导入您的媒体库、待看列表和已安装的插件。",
   "update.downloadComplete": "下载完成",
@@ -445,16 +445,16 @@ const library: Record<string, string> = {
   "You can switch later in Settings under Library & metadata.":
     "之后可在“设置”的“媒体库与元数据”中切换。",
   "Library and addons will sync in once you're past setup.":
-    "完成设置后，媒体库和插件将同步到 Harbor。",
+    "完成设置后，媒体库和插件将同步到 Lart。",
   "Bring in your library": "导入你的媒体库",
-  "Sign in to mirror your Continue Watching, watchlist, and any addons you've already curated. Optional; Harbor works fully signed-out.":
-    "登录后可同步“继续观看”、片单和已配置的插件。此操作可选；不登录也能完整使用 Harbor。",
+  "Sign in to mirror your Continue Watching, watchlist, and any addons you've already curated. Optional; Lart works fully signed-out.":
+    "登录后可同步“继续观看”、片单和已配置的插件。此操作可选；不登录也能完整使用 Lart。",
   "Your Discovery Queue": "你的发现队列",
   "Explore your queue": "探索你的队列",
   "Share collection": "分享合集",
-  "Anyone with the link can open this collection once your Harbor server is live.":
-    "Harbor 服务器上线后，任何获得链接的人都可以打开此合集。",
-  "Paste this code into Harbor to open the collection.": "将此代码粘贴到 Harbor 中即可打开合集。",
+  "Anyone with the link can open this collection once your Lart server is live.":
+    "Lart 服务器上线后，任何获得链接的人都可以打开此合集。",
+  "Paste this code into Lart to open the collection.": "将此代码粘贴到 Lart 中即可打开合集。",
   "The collection shows up as its own row you can reorder or hide from that page.":
     "该合集会显示为一个独立内容栏，你可以在该页面调整其顺序或将其隐藏。",
   "This collection is no longer here.": "此合集已不在这里。",
@@ -471,16 +471,16 @@ const library: Record<string, string> = {
     "你的插件合集已在其他设备上更改。未写入任何内容。",
   "Stremio didn't confirm the save. Your collection may be unchanged. Retry will re-check before writing again.":
     "Stremio 未确认保存。你的合集可能没有变化。重试时会先重新检查，再尝试写入。",
-  "Saved, but Harbor couldn't confirm the new order. Retry to re-check.":
-    "已保存，但 Harbor 无法确认新顺序。请重试以重新检查。",
+  "Saved, but Lart couldn't confirm the new order. Retry to re-check.":
+    "已保存，但 Lart 无法确认新顺序。请重试以重新检查。",
   "Stremio reports a different order than was saved.": "Stremio 报告的顺序与已保存的顺序不同。",
-  "A safety copy of your addon order. One is saved automatically before Harbor writes any change, and you can save one yourself any time. The five most recent are kept.":
-    "插件顺序的安全副本。Harbor 每次写入更改前都会自动保存一个，你也可以随时手动保存。系统会保留最近五个。",
+  "A safety copy of your addon order. One is saved automatically before Lart writes any change, and you can save one yourself any time. The five most recent are kept.":
+    "插件顺序的安全副本。Lart 每次写入更改前都会自动保存一个，你也可以随时手动保存。系统会保留最近五个。",
   "+ Watchlist": "+ 片单",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.":
-    "要将 Harbor 片单中的 {n} 部作品添加到 Trakt 吗？Trakt 会跳过已有的作品。",
-  "Add {n} titles from your Trakt watchlist to Harbor?":
-    "要将 Trakt 片单中的 {n} 部作品添加到 Harbor 吗？",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.":
+    "要将 Lart 片单中的 {n} 部作品添加到 Trakt 吗？Trakt 会跳过已有的作品。",
+  "Add {n} titles from your Trakt watchlist to Lart?":
+    "要将 Trakt 片单中的 {n} 部作品添加到 Lart 吗？",
   "Add a profile for someone else and everyone keeps their own Continue Watching, watch history, and progress.":
     "为其他人添加个人资料，每个人都能保留各自的“继续观看”、观看历史和进度。",
   "Add a TMDB key in Settings → Library to power this view.":
@@ -488,9 +488,9 @@ const library: Record<string, string> = {
   "Add a TMDB key in Settings → Library to search.":
     "在“设置 → 媒体库”中添加 TMDB 密钥以进行搜索。",
   "Add to watchlist": "添加到片单",
-  "Added {n} to your Harbor watchlist": "已将 {n} 部作品添加到你的 Harbor 片单",
-  "Authorize Harbor on Simkl": "在 Simkl 上授权 Harbor",
-  "Authorize Harbor on Trakt": "在 Trakt 上授权 Harbor",
+  "Added {n} to your Lart watchlist": "已将 {n} 部作品添加到你的 Lart 片单",
+  "Authorize Lart on Simkl": "在 Simkl 上授权 Lart",
+  "Authorize Lart on Trakt": "在 Trakt 上授权 Lart",
   Calendar: "日历",
   "Choose which Simkl rails appear on your home screen.": "选择要在主屏幕上显示的 Simkl 内容栏。",
   "Clear history": "清除历史记录",
@@ -499,8 +499,8 @@ const library: Record<string, string> = {
   "Connect your Trakt account to leave comments and reviews.": "连接 Trakt 账号即可发表评论和评价。",
   "Connected to Simkl": "已连接到 Simkl",
   "Connected to Trakt": "已连接到 Trakt",
-  "Copy your Harbor watchlist over to Trakt, or pull your Trakt watchlist into Harbor. Safe to run again, Trakt skips anything it already has.":
-    "将 Harbor 片单复制到 Trakt，或将 Trakt 片单导入 Harbor。可以安全地重复运行，Trakt 会跳过已有内容。",
+  "Copy your Lart watchlist over to Trakt, or pull your Trakt watchlist into Lart. Safe to run again, Trakt skips anything it already has.":
+    "将 Lart 片单复制到 Trakt，或将 Trakt 片单导入 Lart。可以安全地重复运行，Trakt 会跳过已有内容。",
   "Could not identify this title on Trakt.": "无法在 Trakt 上识别此条目。",
   "Couldn't load this list. Check the URL and try again.": "无法加载此列表。请检查 URL 后重试。",
   "Couldn't reach Trakt": "无法连接到 Trakt",
@@ -513,16 +513,16 @@ const library: Record<string, string> = {
   "Download this build": "下载此版本",
   "Download this build's installer, then run it over your current copy":
     "下载此版本的安装程序，然后运行并覆盖当前安装。",
-  "Everyone who uses this Harbor gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
-    "使用此 Harbor 的每个人都拥有各自的观看历史、头像、颜色和可选 PIN。可随时切换。",
+  "Everyone who uses this Lart gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
+    "使用此 Lart 的每个人都拥有各自的观看历史、头像、颜色和可选 PIN。可随时切换。",
   "Exit sync mode": "退出同步模式",
   "Export to Trakt": "导出到 Trakt",
   Favorite: "收藏",
   "Found {n}: {names}. Saved under the wrong id by the 0.9.65 bug, which breaks Continue Watching and Trakt marking.":
     "找到 {n} 个：{names}。由于 0.9.65 版本的错误，这些内容被保存到了错误的 ID 下，导致“继续观看”和 Trakt 标记失效。",
   "Full list": "完整列表",
-  "Harbor keeps your MyAnimeList watch progress in sync.":
-    "Harbor 会同步你的 MyAnimeList 观看进度。",
+  "Lart keeps your MyAnimeList watch progress in sync.":
+    "Lart 会同步你的 MyAnimeList 观看进度。",
   "Import from Trakt": "从 Trakt 导入",
   "In your local library": "在你的本地媒体库中",
   "Live preview is on. Done and Save both keep what you've picked as your Custom theme. Reset reverts the editor to the saved palette.":
@@ -538,12 +538,12 @@ const library: Record<string, string> = {
     "你看过的电影和已有观看进度的剧集将不再出现在内置目录栏中。此功能使用本地观看历史记录（如已连接 Trakt，也会使用其记录）。“继续观看”不受影响。",
   "No saved filters yet. Hit New filter to build one.":
     "暂无已保存的筛选器。点击“新建筛选器”创建一个。",
-  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Harbor writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
-    "“媒体库”→“本地”选项卡的设置：从你自己的硬盘中扫描的文件夹。导出元数据时，Harbor 会写入 Kodi 样式的 .nfo 文件，并按下方尺寸将图片下载到每个文件旁边。",
+  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Lart writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
+    "“媒体库”→“本地”选项卡的设置：从你自己的硬盘中扫描的文件夹。导出元数据时，Lart 会写入 Kodi 样式的 .nfo 文件，并按下方尺寸将图片下载到每个文件旁边。",
   "Pick a list to view it.": "选择一个列表即可查看。",
   "Pick up partly-watched episodes and movies at your saved spot. Anything watched past 80% always restarts. Turn this off to always start from the beginning, handy if you rewatch shows.":
     "从保存的位置继续播放未看完的剧集和电影。观看进度超过 80% 的内容始终会从头播放。关闭此项后所有内容都会从头播放，适合重看剧集。",
-  "Plays + ratings sync from Harbor to Trakt.tv.": "播放记录和评分会从 Harbor 同步到 Trakt.tv。",
+  "Plays + ratings sync from Lart to Trakt.tv.": "播放记录和评分会从 Lart 同步到 Trakt.tv。",
   Queue: "播放队列",
   "Rate on SIMKL": "在 SIMKL 上评分",
   "Read titles, ids, and any poster/logo/backdrop already saved next to your files. Missing images are filled from TMDB.":
@@ -572,8 +572,8 @@ const library: Record<string, string> = {
     "在列表、网格和面板布局的单集中显示 IMDb 评分和剧情简介。",
   "Show Trakt score on cards": "在卡片上显示 Trakt 评分",
   "Show Up Next on Simkl rail": "在 Simkl 内容栏中显示“接下来播放”",
-  "Sign in to Stremio first so Harbor knows which watchlist to sync.":
-    "请先登录 Stremio，以便 Harbor 确定要同步哪个片单。",
+  "Sign in to Stremio first so Lart knows which watchlist to sync.":
+    "请先登录 Stremio，以便 Lart 确定要同步哪个片单。",
   "Sign in to Stremio first. This reads the active profile's library.":
     "请先登录 Stremio。此操作会读取当前个人资料的媒体库。",
   "Sign in to Stremio first. This scans the active profile's library.":
@@ -596,8 +596,8 @@ const library: Record<string, string> = {
   "This list is empty, or its items couldn't be matched.": "此列表为空，或无法匹配其中的项目。",
   "This list needs your {key} API key. Add it in Settings, then refresh.":
     "此列表需要你的 {key} API 密钥。请在设置中添加，然后刷新。",
-  "Track everything you watch, see your watchlist, and get personalized recommendations on Harbor's home page. Free at trakt.tv.":
-    "记录你观看的所有内容、查看片单，并在 Harbor 首页获取个性化推荐。可在 trakt.tv 免费使用。",
+  "Track everything you watch, see your watchlist, and get personalized recommendations on Lart's home page. Free at trakt.tv.":
+    "记录你观看的所有内容、查看片单，并在 Lart 首页获取个性化推荐。可在 trakt.tv 免费使用。",
   Trakt: "Trakt",
   "Trakt account limit reached. Upgrade to Trakt VIP or trim your watchlist.":
     "已达到 Trakt 账户上限。请升级到 Trakt VIP 或精简片单。",
@@ -648,20 +648,20 @@ const library: Record<string, string> = {
   "Couldn't load this collection": "无法加载此合集",
   "How cards look across Home, Discover, and your library. The preview updates live.":
     "卡片在首页、发现和媒体库中的外观。预览会实时更新。",
-  "Installed and detected. Harbor found the native svpflow plugins and VapourSynth script library.":
-    "已安装且已检测到。Harbor 已找到原生 svpflow 插件和 VapourSynth 脚本库。",
+  "Installed and detected. Lart found the native svpflow plugins and VapourSynth script library.":
+    "已安装且已检测到。Lart 已找到原生 svpflow 插件和 VapourSynth 脚本库。",
   "Nothing was saved.": "未保存任何内容。",
-  "Sign in to your Harbor account first. Imported ratings are saved to your profile.":
-    "请先登录你的 Harbor 账号。导入的评分会保存到你的个人资料中。",
+  "Sign in to your Lart account first. Imported ratings are saved to your profile.":
+    "请先登录你的 Lart 账号。导入的评分会保存到你的个人资料中。",
   "{n} ratings were saved before you stopped.": "你停止前已保存 {n} 条评分。",
   "Account & sync": "账号与同步",
   "Blur Trakt comments by default": "默认模糊 Trakt 评论",
   "Bring in your Stremio library": "导入你的 Stremio 媒体库",
-  "Changes not saved to your Harbor account yet": "更改尚未保存到你的 Harbor 账户",
-  "Changes you make below will be saved on this computer, but they will not reach your TV. This is a fault in Harbor, not something you did.":
-    "你在下方所做的更改会保存在这台电脑上，但不会同步到电视。这是 Harbor 的故障，并非你的操作有误。",
-  "Clears the saved URL so you can point Harbor at another relay.":
-    "清除已保存的 URL，以便将 Harbor 指向其他中继。",
+  "Changes not saved to your Lart account yet": "更改尚未保存到你的 Lart 账户",
+  "Changes you make below will be saved on this computer, but they will not reach your TV. This is a fault in Lart, not something you did.":
+    "你在下方所做的更改会保存在这台电脑上，但不会同步到电视。这是 Lart 的故障，并非你的操作有误。",
+  "Clears the saved URL so you can point Lart at another relay.":
+    "清除已保存的 URL，以便将 Lart 指向其他中继。",
   "Comments and reviews on detail pages stay blurred until you reveal them, even when they are not tagged as spoilers. This one switch covers Trakt and Letterboxd.":
     "详情页上的评论和影评会保持模糊，直到你主动显示，即使它们未标记为剧透。此开关同时适用于 Trakt 和 Letterboxd。",
   "Could not reach the extension list. Check your server connection and try again.":
@@ -697,18 +697,18 @@ const library: Record<string, string> = {
   "Picks up at your saved spot instead of the start.": "从保存的位置继续，而不是从头开始。",
   'Posters, logos, and title art load in the first available language from this list. "Original" uses the title\'s own language. Needs a TMDB key.':
     "海报、徽标和标题图会优先使用此列表中首个可用的语言加载。“原始语言”会使用作品自身的语言。需要 TMDB 密钥。",
-  "Press Play and Harbor picks the source itself instead of opening the list.":
-    "按下“播放”后，Harbor 会自行选择片源，而不会打开列表。",
+  "Press Play and Lart picks the source itself instead of opening the list.":
+    "按下“播放”后，Lart 会自行选择片源，而不会打开列表。",
   "Publish a theme, share a list, keep both when you reinstall.":
     "发布主题、分享片单，并在重新安装后保留两者。",
   "Re-download": "重新下载",
   "Rotten Tomatoes, Metacritic, Letterboxd, Trakt and Simkl scores on the TV need an MDBList key entered on the TV.":
     "电视端的 Rotten Tomatoes、Metacritic、Letterboxd、Trakt 和 Simkl 评分需要在电视上输入 MDBList 密钥。",
   "Saved on this device": "已保存在此设备上",
-  "Saved on this device. Another Harbor install starts fresh.":
-    "已保存在此设备上。其他 Harbor 实例将从全新状态开始。",
-  "Saved {when} from Harbor {app}. Your Stremio sign-in stays as is.":
-    "已于 {when} 从 Harbor {app} 保存。你的 Stremio 登录状态不受影响。",
+  "Saved on this device. Another Lart install starts fresh.":
+    "已保存在此设备上。其他 Lart 实例将从全新状态开始。",
+  "Saved {when} from Lart {app}. Your Stremio sign-in stays as is.":
+    "已于 {when} 从 Lart {app} 保存。你的 Stremio 登录状态不受影响。",
   "Search your library": "搜索你的媒体库",
   "See every TVDB list": "查看所有 TVDB 列表",
   "Shader library": "着色器库",
@@ -722,8 +722,8 @@ const library: Record<string, string> = {
   "Simkl community scores on detail pages, and your own star ratings.":
     "在详情页显示 Simkl 社区评分和你自己的星级评分。",
   "Simkl connection": "Simkl 连接",
-  "Skip this and Harbor still works. Your library just stays local.":
-    "跳过后 Harbor 仍可正常使用，只是你的媒体库将仅保存在本地。",
+  "Skip this and Lart still works. Your library just stays local.":
+    "跳过后 Lart 仍可正常使用，只是你的媒体库将仅保存在本地。",
   "Sources & library": "来源与媒体库",
   "Stremio library signed in": "已登录 Stremio 媒体库",
   "Strips the source list back to name and size.": "将来源列表精简为仅显示名称和大小。",
@@ -764,8 +764,8 @@ const library: Record<string, string> = {
     "已保存到你的设备，但无法上传供他人查看。请重试。",
   "Auto sync": "自动同步",
   "Cancel sync": "取消同步",
-  "Choose one season package. Harbor will match and download every available episode from it.":
-    "请选择一个整季资源包。Harbor 会匹配并下载其中所有可用剧集。",
+  "Choose one season package. Lart will match and download every available episode from it.":
+    "请选择一个整季资源包。Lart 会匹配并下载其中所有可用剧集。",
   "Delete this collection?": "要删除此合集吗？",
   "Edit collection": "编辑合集",
   "Enter your username and the recovery key you saved. We'll set a new password and sign you in.":
@@ -796,14 +796,14 @@ const library: Record<string, string> = {
   "Sync point {n}": "同步点 {n}",
   "Could not queue these episodes.": "无法将这些剧集加入队列。",
   "Download episode by episode": "逐集下载",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#one":
-    "要将 Harbor 片单中的 {n} 个条目添加到 Trakt 吗？Trakt 会跳过已有条目。",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#few":
-    "要将 Harbor 片单中的 {n} 个条目添加到 Trakt 吗？Trakt 会跳过已有条目。",
-  "Add {n} titles from your Trakt watchlist to Harbor?#one":
-    "要将 Trakt 片单中的 {n} 个条目添加到 Harbor 吗？",
-  "Add {n} titles from your Trakt watchlist to Harbor?#few":
-    "要将 Trakt 片单中的 {n} 个条目添加到 Harbor 吗？",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#one":
+    "要将 Lart 片单中的 {n} 个条目添加到 Trakt 吗？Trakt 会跳过已有条目。",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#few":
+    "要将 Lart 片单中的 {n} 个条目添加到 Trakt 吗？Trakt 会跳过已有条目。",
+  "Add {n} titles from your Trakt watchlist to Lart?#one":
+    "要将 Trakt 片单中的 {n} 个条目添加到 Lart 吗？",
+  "Add {n} titles from your Trakt watchlist to Lart?#few":
+    "要将 Trakt 片单中的 {n} 个条目添加到 Lart 吗？",
   "Remove {n} items from your library? Files on your disk are not deleted.#one":
     "要从媒体库中移除 {n} 个条目吗？不会删除磁盘上的文件。",
   "Remove {n} items from your library? Files on your disk are not deleted.#few":
@@ -847,7 +847,7 @@ const library: Record<string, string> = {
   "Download interrupted": "下载中断",
   "No saved profiles yet.": "还没有已保存的配置方案。",
   "I've saved my recovery code somewhere safe.": "我已将恢复代码妥善保存在安全的位置。",
-  "Re-sync from your Harbor profile picture": "从你的 Harbor 头像重新同步",
+  "Re-sync from your Lart profile picture": "从你的 Lart 头像重新同步",
   "Your icons, in everyone's library": "让你的图标进入每个人的图标库",
   "Appears in the community library once approved.": "获批后会显示在社区资源库中。",
   "Thanks for sharing. It'll appear in the library once it's approved. You can manage it any time from your uploads.":
@@ -860,13 +860,13 @@ const library: Record<string, string> = {
   "Download {file}": "下载 {file}",
   "The settings page has a list down the left. Click API near the bottom.":
     "设置页面左侧有一个列表。点击接近底部的 API 选项。",
-  "Sends the context above straight to the Harbor team. No keys or library data.":
-    "将上述上下文直接发送给 Harbor 团队，不含任何密钥或媒体库数据。",
+  "Sends the context above straight to the Lart team. No keys or library data.":
+    "将上述上下文直接发送给 Lart 团队，不含任何密钥或媒体库数据。",
   "Saved to your library.": "已保存到你的媒体库。",
   "In My List": "已在我的列表中",
   "Add to My List": "添加到我的列表",
-  "Your library lives on Harbor. Connect to your computer and it shows up here.":
-    "你的媒体库在 Harbor 中。连接到电脑后，就会显示在这里。",
+  "Your library lives on Lart. Connect to your computer and it shows up here.":
+    "你的媒体库在 Lart 中。连接到电脑后，就会显示在这里。",
   "A favorite title or one of your themes will appear here": "收藏的影片或您的某个主题将显示在这里",
   "Adds Letterboxd and Trakt community ratings to detail pages, covering what OMDb misses.":
     "在详情页添加 Letterboxd 和 Trakt 社区评分，补充 OMDb 未涵盖的内容。",
@@ -875,8 +875,8 @@ const library: Record<string, string> = {
   "Added to library": "已添加到媒体库",
   "1 download": "1 次下载",
   "Release to add it to your library": "松开即可添加到媒体库",
-  "Every theme you share gets a private owner token. On the device where you shared it, Harbor saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
-    "你分享的每个主题都有一个私密所有者令牌。在分享该主题的设备上，Harbor 会自动保存令牌，因此这些主题会显示在这里，轻点一下即可认领。要认领其他设备上分享的主题，请在下方粘贴对应令牌。现在新分享的主题会直接绑定到你的账号，因此以后无需再执行此操作。",
+  "Every theme you share gets a private owner token. On the device where you shared it, Lart saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
+    "你分享的每个主题都有一个私密所有者令牌。在分享该主题的设备上，Lart 会自动保存令牌，因此这些主题会显示在这里，轻点一下即可认领。要认领其他设备上分享的主题，请在下方粘贴对应令牌。现在新分享的主题会直接绑定到你的账号，因此以后无需再执行此操作。",
   "Loading history": "正在加载历史记录",
   "No previous versions yet. Your next update starts the history.":
     "暂无旧版本。下次更新后将开始记录版本历史。",

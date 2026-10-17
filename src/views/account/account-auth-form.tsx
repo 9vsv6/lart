@@ -172,7 +172,7 @@ export function AccountAuthForm({
     );
   }
 
-  const heading = mode === "register" ? t("Create your Harbor account") : t("Sign in to Harbor");
+  const heading = mode === "register" ? t("Create your Lart account") : t("Sign in to Lart");
   const subtitle =
     mode === "register"
       ? t("One free account for your handle, themes, and sync.")

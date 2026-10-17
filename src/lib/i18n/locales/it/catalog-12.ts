@@ -46,8 +46,8 @@ const catalog12: Record<string, string> = {
   'Designing "{name}"': 'Progettazione di "{name}"',
   "Designing a theme": "Progettazione di un tema",
   Destination: "Destinazione",
-  "Direct torrent play needs the Harbor desktop app.":
-    "La riproduzione diretta dei torrent richiede l'app desktop Harbor.",
+  "Direct torrent play needs the Lart desktop app.":
+    "La riproduzione diretta dei torrent richiede l'app desktop Lart.",
   "Disc Source": "Sorgente disco",
   Discard: "Scarta",
   "Double-click to unlink rows": "Fai doppio clic per scollegare le righe",
@@ -66,24 +66,24 @@ const catalog12: Record<string, string> = {
   "Great job!": "Ottimo lavoro!",
   H: "H",
   "HTTP {status}: {body}": "HTTP {status}: {body}",
-  "Harbor Relay Documentation": "Documentazione di Harbor Relay",
-  "Harbor Relay docs": "Documentazione Harbor Relay",
-  "Harbor blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
-    "Per impostazione predefinita, Harbor blocca i file sospetti e le release non corrispondenti. Per le Serie meno recenti e i titoli insoliti, a volte i filtri sono troppo rigidi.",
-  "Harbor can open only HTTP or HTTPS destinations.":
-    "Harbor può aprire solo destinazioni HTTP o HTTPS.",
-  "Harbor cannot open links that include embedded credentials.":
-    "Harbor non può aprire link che contengono credenziali incorporate.",
-  "Harbor could not verify this destination.":
-    "Harbor non ha potuto verificare questa destinazione.",
-  "Harbor queried 1 addon and got nothing back":
-    "Harbor ha interrogato 1 Add-on senza ottenere risposta",
-  "Harbor queried {n} addons and got nothing back":
-    "Harbor ha interrogato {n} Add-on senza ottenere risposta",
-  "Harbor test message ({service}). If you can read this, your webhook is wired up.":
-    "Messaggio di prova di Harbor ({service}). Se riesci a leggerlo, il webhook è configurato correttamente.",
-  "Harbor's temporary viewer requires HTTPS.":
-    "Il visualizzatore temporaneo di Harbor richiede HTTPS.",
+  "Lart Relay Documentation": "Documentazione di Lart Relay",
+  "Lart Relay docs": "Documentazione Lart Relay",
+  "Lart blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
+    "Per impostazione predefinita, Lart blocca i file sospetti e le release non corrispondenti. Per le Serie meno recenti e i titoli insoliti, a volte i filtri sono troppo rigidi.",
+  "Lart can open only HTTP or HTTPS destinations.":
+    "Lart può aprire solo destinazioni HTTP o HTTPS.",
+  "Lart cannot open links that include embedded credentials.":
+    "Lart non può aprire link che contengono credenziali incorporate.",
+  "Lart could not verify this destination.":
+    "Lart non ha potuto verificare questa destinazione.",
+  "Lart queried 1 addon and got nothing back":
+    "Lart ha interrogato 1 Add-on senza ottenere risposta",
+  "Lart queried {n} addons and got nothing back":
+    "Lart ha interrogato {n} Add-on senza ottenere risposta",
+  "Lart test message ({service}). If you can read this, your webhook is wired up.":
+    "Messaggio di prova di Lart ({service}). Se riesci a leggerlo, il webhook è configurato correttamente.",
+  "Lart's temporary viewer requires HTTPS.":
+    "Il visualizzatore temporaneo di Lart richiede HTTPS.",
   "Hidden Gems from the {decade}": "Gemme nascoste degli anni {decade}",
   "Hide all sources": "Nascondi tutte le fonti",
   "Hide controls": "Nascondi i controlli",
@@ -116,8 +116,8 @@ const catalog12: Record<string, string> = {
   "New {genre} Series": "Nuove Serie di genere {genre}",
   "Nice try!": "Bel tentativo!",
   "No PiP session. Closing.": "Nessuna sessione PiP. Chiusura in corso.",
-  "No clean release has surfaced yet. This may be too new. Harbor's filters dropped everything that came back as wrong-movie noise.":
-    "Non è ancora emersa una release valida. Potrebbe essere troppo recente. I filtri di Harbor hanno scartato tutti i risultati relativi al Film sbagliato.",
+  "No clean release has surfaced yet. This may be too new. Lart's filters dropped everything that came back as wrong-movie noise.":
+    "Non è ancora emersa una release valida. Potrebbe essere troppo recente. I filtri di Lart hanno scartato tutti i risultati relativi al Film sbagliato.",
   "No playable video file was found in this torrent.":
     "Nessun file video riproducibile trovato in questo torrent.",
   "Not cached": "Non in cache",
@@ -184,10 +184,10 @@ const catalog12: Record<string, string> = {
   "Theatrical Capture": "Ripresa in sala",
   "Theme Studio": "Studio dei temi",
   "Theme is missing a name.": "Manca il nome del tema.",
-  "This file isn't a Harbor theme.": "Questo file non è un tema Harbor.",
+  "This file isn't a Lart theme.": "Questo file non è un tema Lart.",
   "This file isn't a readable theme.": "Questo file non è un tema leggibile.",
-  "This link goes to an external site that Harbor does not control or vouch for. Triple-check the address before you continue, and never enter your Harbor password anywhere but Harbor.":
-    "Questo link porta a un sito esterno che Harbor non controlla né garantisce. Controlla tre volte l'indirizzo prima di continuare e non inserire mai la password di Harbor al di fuori di Harbor.",
+  "This link goes to an external site that Lart does not control or vouch for. Triple-check the address before you continue, and never enter your Lart password anywhere but Lart.":
+    "Questo link porta a un sito esterno che Lart non controlla né garantisce. Controlla tre volte l'indirizzo prima di continuare e non inserire mai la password di Lart al di fuori di Lart.",
   "This theme file is missing a name.": "In questo file del tema manca il nome.",
   "This theme file is missing its colors.": "In questo file del tema mancano i colori.",
   "This theme is missing a color ({color}).": "Nel tema manca un colore ({color}).",
@@ -212,7 +212,7 @@ const catalog12: Record<string, string> = {
   Won: "Vinto",
   Y: "Y",
   "You got {score} of {total} right!": "Hai risposto correttamente a {score} domande su {total}!",
-  "You're leaving Harbor": "Stai per uscire da Harbor",
+  "You're leaving Lart": "Stai per uscire da Lart",
   "Your changes to this theme aren't saved yet. They'll be lost if you leave now.":
     "Le modifiche a questo tema non sono ancora state salvate. Se esci ora, andranno perse.",
   "Your remote streaming server is not reachable. Check its address in Settings.":

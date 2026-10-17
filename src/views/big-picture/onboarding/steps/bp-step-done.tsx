@@ -33,8 +33,8 @@ export function BpStepDone() {
       key: "harbor",
       on: facts.harborName !== null,
       text: facts.harborName
-        ? t("Harbor account linked as {name}", { name: facts.harborName })
-        : t("No Harbor account yet"),
+        ? t("Lart account linked as {name}", { name: facts.harborName })
+        : t("No Lart account yet"),
     },
     {
       key: "subs",

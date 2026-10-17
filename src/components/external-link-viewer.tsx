@@ -68,7 +68,7 @@ function ExternalLinkViewerFrame({
             <p className="text-[14px] font-semibold text-ink">{t("Still loading?")}</p>
             <p className="max-w-[44ch] text-[12.5px] text-ink-muted">
               {t(
-                "This site may not support Harbor's temporary viewer. Retry the original link or open it in your browser.",
+                "This site may not support Lart's temporary viewer. Retry the original link or open it in your browser.",
               )}
             </p>
           </div>

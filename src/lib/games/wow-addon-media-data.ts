@@ -5,7 +5,7 @@ export type WowAddonMedia = { id: number; title: string; images: WowAddonImage[]
 
 function authorText(value: unknown) {
   if (typeof value !== "string") return { text: "", truncated: false };
-  // Reuse Harbor's text-only BBCode handling; WoWInterface also uses these
+  // Reuse Lart's text-only BBCode handling; WoWInterface also uses these
   // presentation tags and numeric entities. Never turn author text into markup.
   const plain = communityText(value.slice(0, 24_000).replace(/\r\n?/g, "\n")
     .replace(/\[\/?(?:indent|center|left|right)\b[^\]]*\]/gi, "\n")

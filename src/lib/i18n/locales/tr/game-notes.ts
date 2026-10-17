@@ -27,6 +27,6 @@ export default {
   "games.notes.import": "JSON içe aktar",
   "games.notes.export": "Yedek dışa aktar",
   "games.notes.unsaved": "Kaydedilmemiş değişiklikler",
-  "games.notes.local": "Bu Harbor profilinde saklanır",
+  "games.notes.local": "Bu Lart profilinde saklanır",
   "games.notes.importGuide": "Notlarıma kopyala"
 };

@@ -1,9 +1,9 @@
 export default {
   "Search shortcuts": "खोज शॉर्टकट",
   "Steam search shortcut": "Steam खोज शॉर्टकट",
-  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Harbor search for these queries.": "Steam स्टोर में खोजने के लिए “st ” या “st:” लिखें। इन खोजों के लिए Harbor की सामान्य खोज इस्तेमाल करने हेतु इसे बंद करें।",
+  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Lart search for these queries.": "Steam स्टोर में खोजने के लिए “st ” या “st:” लिखें। इन खोजों के लिए Lart की सामान्य खोज इस्तेमाल करने हेतु इसे बंद करें।",
   "games.storeSearch.title": "Steam स्टोर",
-  "games.storeSearch.hint": "Steam में सीधे खोजने के लिए Harbor खोज में “st ” लिखें।",
+  "games.storeSearch.hint": "Steam में सीधे खोजने के लिए Lart खोज में “st ” लिखें।",
   "games.storeSearch.automatic": "अपने आप",
   "games.storeSearch.region": "स्टोर क्षेत्र",
   "games.storeSearch.showLibrary": "मेरी लाइब्रेरी में मौजूद गेम चिह्नित करें",

@@ -66,7 +66,7 @@ const gameRoms: Record<string, string> = {
   "games.roms.era": "فترة الإصدار",
   "games.roms.reset": "إعادة ضبط الفلاتر",
   "games.roms.empty": "جرّب عنوانًا آخر أو وسّع نطاق الفلاتر لهذا الجهاز.",
-  "games.roms.source": "بيانات الألعاب والعلاقات بينها من IGDB. استورد ملفاتك المحلية للعب الألعاب المدعومة في Harbor.",
+  "games.roms.source": "بيانات الألعاب والعلاقات بينها من IGDB. استورد ملفاتك المحلية للعب الألعاب المدعومة في Lart.",
   "games.roms.playerScore": "تقييم لاعبي IGDB · {count} تقييمًا",
   "games.roms.combinedScore": "تقييم IGDB المجمّع · {count} تقييمًا",
   "games.roms.sort.discussed": "الأكثر تقييمًا",

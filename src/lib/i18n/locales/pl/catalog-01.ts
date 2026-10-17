@@ -23,8 +23,8 @@ const catalog01: Record<string, string> = {
   "#{rank} in Movies Today": "Dziś #{rank} wśród filmów",
   "#{rank} in Series Today": "Dziś #{rank} wśród seriali",
   "${n} for {days} days": "${n} za {days} dni",
-  "'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    " ma stronę konfiguracji we wbudowanej przeglądarce Harbor. Wybierz opcje. Gdy klikniesz Zainstaluj na tej stronie, Harbor automatycznie przechwyci link i zaktualizuje dodatek.",
+  "'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    " ma stronę konfiguracji we wbudowanej przeglądarce Lart. Wybierz opcje. Gdy klikniesz Zainstaluj na tej stronie, Lart automatycznie przechwyci link i zaktualizuje dodatek.",
   "'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     " ma stronę konfiguracji. Wybierz opcje, a następnie skopiuj podany link instalacyjny i wklej go poniżej, aby zaktualizować dodatek.",
   "(empty body)": "(pusta treść)",
@@ -68,7 +68,7 @@ const catalog01: Record<string, string> = {
   "1 month ago": "1 miesiąc temu",
   "1 new episode since you last watched": "1 nowy odcinek od ostatniego oglądania",
   "1 option active": "Aktywna jest 1 opcja",
-  "1 other Harbor": "1 inny Harbor",
+  "1 other Lart": "1 inny Lart",
   "1 selected": "Wybrano 1",
   "1 source · 0 made it through": "1 źródło · 0 przeszło filtry",
   "1 title needs review — help us identify it.":
@@ -165,15 +165,15 @@ const catalog01: Record<string, string> = {
   "A 16:9 shot of your theme looks best": "Najlepiej wygląda ujęcie motywu w formacie 16:9",
   "A Cloudflare Worker on your own account that hosts your Watch Together rooms.":
     "Cloudflare Worker na własnym koncie, który obsługuje pokoje Wspólnego oglądania.",
-  "A Harbor account": "Konto Harbor",
+  "A Lart account": "Konto Lart",
   "A Live TV program is about to start": "Program telewizyjny na żywo wkrótce się rozpocznie",
   "A Short Tonight: {genre} Under 90": "Krótki film na dziś: {genre}, poniżej 90 minut",
   "A TOP 10 corner ribbon on the Top 10 rail posters. The watchlist marker auto-moves to the opposite corner so nothing overlaps.":
     "Narożna wstęga TOP 10 na plakatach w sekcji Top 10. Znacznik listy do obejrzenia automatycznie przenosi się do przeciwległego rogu, aby elementy się nie nakładały.",
-  "A browser tab opened on AniList. Approve Harbor there, then copy the text it shows and paste it below.":
-    "W przeglądarce otwarto kartę AniList. Zatwierdź tam dostęp Harbor, a następnie skopiuj wyświetlony tekst i wklej go poniżej.",
-  "A browser tab opened on MyAnimeList. Approve Harbor there, then copy the code or the page URL and paste it below.":
-    "W przeglądarce otwarto kartę MyAnimeList. Zatwierdź tam Harbor, a następnie skopiuj kod lub adres URL strony i wklej go poniżej.",
+  "A browser tab opened on AniList. Approve Lart there, then copy the text it shows and paste it below.":
+    "W przeglądarce otwarto kartę AniList. Zatwierdź tam dostęp Lart, a następnie skopiuj wyświetlony tekst i wklej go poniżej.",
+  "A browser tab opened on MyAnimeList. Approve Lart there, then copy the code or the page URL and paste it below.":
+    "W przeglądarce otwarto kartę MyAnimeList. Zatwierdź tam Lart, a następnie skopiuj kod lub adres URL strony i wklej go poniżej.",
   "A classic neural edge-directed luma doubler. Very high quality, heavy on the GPU. More neurons means sharper and slower.":
     "Klasyczny neuronowy algorytm podwajania rozdzielczości luminancji, ukierunkowany na krawędzie. Bardzo wysoka jakość, duże obciążenie GPU. Więcej neuronów oznacza ostrzejszy obraz i wolniejsze działanie.",
   "A client for the Stremio protocol. Two minutes to set up; most of it optional. You stay in control of every key.":
@@ -195,16 +195,16 @@ const catalog01: Record<string, string> = {
     "Szybki społecznościowy indeks napisów. Domyślnie wyłączony. Włącz go, aby uzyskać więcej napisów do nowszych lub niszowych wydań.",
   "A favorite title or one of your themes will appear here":
     "Tutaj pojawi się ulubiony tytuł lub jeden z Twoich motywów",
-  "A filter applies everywhere Harbor picks a stream: the source picker, the instant pick, and Big Picture on TV.":
-    "Filtr obowiązuje wszędzie tam, gdzie Harbor wybiera strumień: w selektorze źródeł, przy natychmiastowym wyborze i w trybie Big Picture na telewizorze.",
+  "A filter applies everywhere Lart picks a stream: the source picker, the instant pick, and Big Picture on TV.":
+    "Filtr obowiązuje wszędzie tam, gdzie Lart wybiera strumień: w selektorze źródeł, przy natychmiastowym wyborze i w trybie Big Picture na telewizorze.",
   "A folder you already have": "Folder, który już masz",
   "A free Cloudflare account.": "Bezpłatne konto Cloudflare.",
-  "A free TMDB key is highly recommended. It unlocks the full Harbor experience. The rest are optional, and Cinemeta works out of the box without any.":
-    "Zdecydowanie zalecamy użycie bezpłatnego klucza TMDB. Odblokowuje on wszystkie możliwości Harbor. Pozostałe klucze są opcjonalne, a Cinemeta działa od razu bez żadnego z nich.",
-  "A full screen, couch friendly Harbor for TVs, handhelds and big monitors.":
-    "Pełnoekranowy Harbor przystosowany do obsługi z kanapy na telewizorach, urządzeniach przenośnych i dużych monitorach.",
-  "A good correction only has to be found once. Harbor can share verified fixes so the next person with the same file and subtitle gets an instant result. Records are keyed by salted fingerprints, never your files or anything personal.":
-    "Dobrą korektę wystarczy znaleźć raz. Harbor może udostępniać zweryfikowane poprawki, aby kolejna osoba z tym samym plikiem i napisami otrzymała natychmiastowy wynik. Rekordy są identyfikowane za pomocą skrótów z solą, nigdy na podstawie plików ani danych osobowych.",
+  "A free TMDB key is highly recommended. It unlocks the full Lart experience. The rest are optional, and Cinemeta works out of the box without any.":
+    "Zdecydowanie zalecamy użycie bezpłatnego klucza TMDB. Odblokowuje on wszystkie możliwości Lart. Pozostałe klucze są opcjonalne, a Cinemeta działa od razu bez żadnego z nich.",
+  "A full screen, couch friendly Lart for TVs, handhelds and big monitors.":
+    "Pełnoekranowy Lart przystosowany do obsługi z kanapy na telewizorach, urządzeniach przenośnych i dużych monitorach.",
+  "A good correction only has to be found once. Lart can share verified fixes so the next person with the same file and subtitle gets an instant result. Records are keyed by salted fingerprints, never your files or anything personal.":
+    "Dobrą korektę wystarczy znaleźć raz. Lart może udostępniać zweryfikowane poprawki, aby kolejna osoba z tym samym plikiem i napisami otrzymała natychmiastowy wynik. Rekordy są identyfikowane za pomocą skrótów z solą, nigdy na podstawie plików ani danych osobowych.",
   "A grown-up can enter the parent PIN to keep watching.":
     "Aby oglądać dalej, osoba dorosła może wprowadzić kod PIN rodzica.",
   "A hero up top, then Top 10, Trending, In Theaters and your service rows.":
@@ -217,8 +217,8 @@ const catalog01: Record<string, string> = {
     "Podgląd odtwarzacza na żywo. Otwórz edytor, aby przenieść, ukryć lub zmienić kolejność dowolnego elementu sterującego.",
   "A living shelf for new worlds, beloved stories, and the books you have yet to meet.":
     "Żywa półka na nowe światy, ukochane historie i książki, których jeszcze nie znasz.",
-  "A name people can find you by across Harbor.":
-    "Nazwa, po której inni mogą Cię znaleźć w Harbor.",
+  "A name people can find you by across Lart.":
+    "Nazwa, po której inni mogą Cię znaleźć w Lart.",
   "A name you keep watching": "Nazwisko, do którego wciąż wracasz",
   "A neural network that doubles luma resolution. The sharpest general-purpose upscaler, strong on both live action and anime. Pick one variant.":
     "Sieć neuronowa podwajająca rozdzielczość luminancji. Najostrzejszy uniwersalny algorytm skalowania, skuteczny zarówno w materiałach aktorskich, jak i anime. Wybierz wariant.",
@@ -245,8 +245,8 @@ const catalog01: Record<string, string> = {
     "Bogatszy efekt szkła. Może wyglądać lepiej, ale zużywa więcej zasobów graficznych.",
   "A safe, simple space: kid-friendly titles, big art, one-tap play, and a watch-time limit.":
     "Bezpieczna, prosta przestrzeń: treści dla dzieci, duże grafiki, odtwarzanie jednym dotknięciem i limit czasu oglądania.",
-  "A safety copy of your addon order. One is saved automatically before Harbor writes any change, and you can save one yourself any time. The five most recent are kept.":
-    "Kopia bezpieczeństwa kolejności dodatków. Jest tworzona automatycznie, zanim Harbor zapisze jakąkolwiek zmianę, a w dowolnej chwili możesz też utworzyć ją samodzielnie. Zachowywanych jest pięć najnowszych kopii.",
+  "A safety copy of your addon order. One is saved automatically before Lart writes any change, and you can save one yourself any time. The five most recent are kept.":
+    "Kopia bezpieczeństwa kolejności dodatków. Jest tworzona automatycznie, zanim Lart zapisze jakąkolwiek zmianę, a w dowolnej chwili możesz też utworzyć ją samodzielnie. Zachowywanych jest pięć najnowszych kopii.",
   "A second binding for the same action so muscle memory survives.":
     "Drugie przypisanie tego samego działania, aby zachować pamięć mięśniową.",
   "A short line shown under the name.": "Krótki opis wyświetlany pod nazwą.",
@@ -377,7 +377,7 @@ const catalog01: Record<string, string> = {
     "Podczas wspólnego oglądania dodawaj przycisk Dołącz z łączem do Twojego pokoju.",
   "Add a TMDB key above to unlock this.": "Dodaj klucz TMDB powyżej, aby odblokować tę funkcję.",
   "Add a TMDB key above to unlock.": "Dodaj powyżej klucz TMDB, aby odblokować tę funkcję.",
-  "Add a TMDB key for the full Harbor": "Dodaj klucz TMDB, aby korzystać z pełnej wersji Harbor",
+  "Add a TMDB key for the full Lart": "Dodaj klucz TMDB, aby korzystać z pełnej wersji Lart",
   "Add a TMDB key in Library settings.": "Dodaj klucz TMDB w ustawieniach biblioteki.",
   "Add a TMDB key in Settings to browse collections.":
     "Dodaj klucz TMDB w Ustawieniach, aby przeglądać kolekcje.",
@@ -430,8 +430,8 @@ const catalog01: Record<string, string> = {
     "Dodaj profil dla innej osoby, aby każdy miał własną listę Oglądaj dalej, historię oglądania i postęp.",
   "Add a repository": "Dodaj repozytorium",
   "Add a review": "Dodaj recenzję",
-  "Add a series above and Harbor will grab each new episode as it airs, on your terms.":
-    "Dodaj serial powyżej, a Harbor będzie pobierać każdy nowy odcinek po jego emisji, zgodnie z Twoimi ustawieniami.",
+  "Add a series above and Lart will grab each new episode as it airs, on your terms.":
+    "Dodaj serial powyżej, a Lart będzie pobierać każdy nowy odcinek po jego emisji, zgodnie z Twoimi ustawieniami.",
   "Add a series to auto-download": "Dodaj serial do automatycznego pobierania",
   "Add a source": "Dodaj źródło",
   "Add a tag": "Dodaj tag",
@@ -508,8 +508,8 @@ const catalog01: Record<string, string> = {
   "Add to tile {n}": "Dodaj do kafelka {n}",
   "Add to your watchlist": "Dodaj do listy do obejrzenia",
   "Add to {name}": "Dodaj do {name}",
-  "Add trusted eBook sources from a Harbor-compatible repository.":
-    "Dodaj zaufane źródła e-booków z repozytorium zgodnego z Harbor.",
+  "Add trusted eBook sources from a Lart-compatible repository.":
+    "Dodaj zaufane źródła e-booków z repozytorium zgodnego z Lart.",
   "Add up to 6 screenshots so people can see your theme in action. Optional, but they sell it.":
     "Dodaj maksymalnie 6 zrzutów ekranu, aby pokazać motyw w działaniu. To opcjonalne, ale zwiększa zainteresowanie.",
   "Add up to {max} profiles. Enter your handle only, not the full link.":
@@ -530,7 +530,7 @@ const catalog01: Record<string, string> = {
   "Add {title} to Simkl": "Dodaj {title} do Simkl",
   Added: "Dodano",
   'Added to "{name}"': "Dodano do „{name}”",
-  "Added to Harbor": "Dodano do Harbor",
+  "Added to Lart": "Dodano do Lart",
   "Added to My List": "Dodano do Mojej listy",
   "Added to Shelf": "Dodano na półkę",
   "Added to downloads": "Dodano do pobieranych",
@@ -538,7 +538,7 @@ const catalog01: Record<string, string> = {
   "Added to new list": "Dodano do nowej listy",
   "Added to {page}": "Dodano do strony {page}",
   "Added {count} more subtitles.": "Dodano jeszcze {count} napisów.",
-  "Added {n} to your Harbor watchlist": "Dodano {n} tytułów do listy do obejrzenia Harbor",
+  "Added {n} to your Lart watchlist": "Dodano {n} tytułów do listy do obejrzenia Lart",
   Adding: "Dodawanie",
   "Adding font…": "Dodawanie czcionki…",
   Addon: "Dodatek",
@@ -555,8 +555,8 @@ const catalog01: Record<string, string> = {
   Addresses: "Adresy",
   "Adds Letterboxd and Trakt community ratings to detail pages, covering what OMDb misses.":
     "Dodaje oceny społeczności Letterboxd i Trakt do stron szczegółów, uzupełniając braki w OMDb.",
-  "Adds a Big Picture button to Harbor's navigation. Turn this off to keep it out of the way.":
-    "Dodaje przycisk Big Picture do nawigacji Harbor. Wyłącz tę opcję, aby przycisk nie przeszkadzał.",
+  "Adds a Big Picture button to Lart's navigation. Turn this off to keep it out of the way.":
+    "Dodaje przycisk Big Picture do nawigacji Lart. Wyłącz tę opcję, aby przycisk nie przeszkadzał.",
   "Adds a Hide option when you right-click an episode. Hidden episodes disappear from the list and are skipped by Up Next. A Show hidden toggle on each show lets you bring them back.":
     "Dodaje opcję „Ukryj” do menu wyświetlanego po kliknięciu odcinka prawym przyciskiem myszy. Ukryte odcinki znikają z listy i są pomijane przez funkcję Następny odcinek. Przełącznik „Pokaż ukryte” przy każdym serialu pozwala je przywrócić.",
   "Adds a Playlists item to the navigation for browsing movies and shows from your M3U or Xtream playlists (the same ones you add for Live TV). Off by default to keep the nav tidy.":
@@ -605,8 +605,8 @@ const catalog01: Record<string, string> = {
   "After the current show's episodes, Next flows into your queue. Off keeps Next/Previous within the current show only.":
     "Po odcinkach bieżącego serialu przycisk Dalej przechodzi do kolejki. Wyłączenie ogranicza przyciski Dalej/Poprzedni do bieżącego serialu.",
   "After the news": "Po wiadomościach",
-  "After you pick a source, show a subtitle picker so you can set the exact track and language before the video starts. Off by default, Harbor keeps picking one for you automatically.":
-    "Po wybraniu źródła wyświetl wybór napisów, aby przed rozpoczęciem filmu ustawić dokładną ścieżkę i język. Domyślnie wyłączone; Harbor automatycznie wybiera napisy.",
+  "After you pick a source, show a subtitle picker so you can set the exact track and language before the video starts. Off by default, Lart keeps picking one for you automatically.":
+    "Po wybraniu źródła wyświetl wybór napisów, aby przed rozpoczęciem filmu ustawić dokładną ścieżkę i język. Domyślnie wyłączone; Lart automatycznie wybiera napisy.",
   "After you stop watching, a stream file stays cached for this long so reopening resumes instead of re-downloading. Older files are cleaned up automatically. Off deletes the file as soon as you leave the player.":
     "Po zakończeniu oglądania plik strumienia pozostaje w pamięci podręcznej przez ten czas, dzięki czemu ponowne otwarcie wznawia odtwarzanie zamiast ponownego pobierania. Starsze pliki są automatycznie usuwane. Wyłączenie tej opcji usuwa plik natychmiast po opuszczeniu odtwarzacza.",
   "After-hours picks": "Propozycje po godzinach",
@@ -704,8 +704,8 @@ const catalog01: Record<string, string> = {
   "An XMLTV address to add listings to channels you already have":
     "Adres XMLTV do dodania programu do już dostępnych kanałów",
   "An actor you keep watching": "Aktor, którego wciąż oglądasz",
-  "An award pack is a single JSON file plus the images it points to. Host both anywhere public (your own server, a GitHub repo, etc.) and share the JSON URL. Harbor only stores the URLs you install, never the images.":
-    "Pakiet nagród to pojedynczy plik JSON wraz z obrazami, do których się odwołuje. Udostępnij oba publicznie w dowolnym miejscu (na własnym serwerze, w repozytorium GitHub itd.) i udostępnij URL pliku JSON. Harbor przechowuje tylko URL zainstalowanych pakietów, nigdy obrazy.",
+  "An award pack is a single JSON file plus the images it points to. Host both anywhere public (your own server, a GitHub repo, etc.) and share the JSON URL. Lart only stores the URLs you install, never the images.":
+    "Pakiet nagród to pojedynczy plik JSON wraz z obrazami, do których się odwołuje. Udostępnij oba publicznie w dowolnym miejscu (na własnym serwerze, w repozytorium GitHub itd.) i udostępnij URL pliku JSON. Lart przechowuje tylko URL zainstalowanych pakietów, nigdy obrazy.",
   "An empty selector before": "Pusty selektor przed",
   "Anchor Selection": "Wybór punktów odniesienia",
   "Ancient Civilizations": "Starożytne cywilizacje",

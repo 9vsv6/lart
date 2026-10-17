@@ -1,4 +1,4 @@
-const coverage: Record<string, string> = {
+const coverage: Record<string, string> = {
   "Sound descriptions": "Descripciones de sonido",
   "Hide sound effects and speaker names": "Ocultar efectos de sonido y nombres de personajes",
   "Removes bracketed descriptions like [door creaks] and shouted speaker labels like JOHN: while subtitles play, so a release that only ships an SDH track still reads as plain dialogue. Song lyrics, ordinary parentheses and non-Latin scripts are left alone. Skipped on forced and picture-based tracks.": "Elimina las descripciones entre corchetes como [la puerta cruje] y los nombres de personajes en mayúsculas como JOHN: mientras se reproducen los subtítulos, para que una versión que solo trae una pista SDH se lea como diálogo normal. Las letras de canciones, los paréntesis normales y los alfabetos no latinos se dejan intactos. No se aplica a pistas forzadas ni a pistas de imagen.",
@@ -57,15 +57,15 @@ const coverage: Record<string, string> = {
   "Checking availability": "Comprobando disponibilidad",
   Chime: "Campanilla",
   Choose: "Elegir",
-  "Choose one season package. Harbor will match and download every available episode from it.":
-    "Elige un paquete de temporada. Harbor identificará y descargará todos los episodios disponibles.",
+  "Choose one season package. Lart will match and download every available episode from it.":
+    "Elige un paquete de temporada. Lart identificará y descargará todos los episodios disponibles.",
   "Choose where subtitle timing feedback appears and how large it is.":
     "Elige dónde aparece la información sobre la sincronización de los subtítulos y qué tamaño tiene.",
   "Choose who can see the friends on your profile":
     "Elige quién puede ver a los amigos de tu perfil",
   Cinematography: "Cinematografía",
-  "Claim one so people can find you across Harbor.":
-    "Reclama uno para que las personas puedan encontrarte en Harbor.",
+  "Claim one so people can find you across Lart.":
+    "Reclama uno para que las personas puedan encontrarte en Lart.",
   Collapse: "Contraer",
   "Community collections are coming soon":
     "Las colecciones de la comunidad estarán disponibles pronto",
@@ -145,20 +145,20 @@ const coverage: Record<string, string> = {
   Guide: "Guía",
   HI: "HI",
   Handle: "Identificador",
-  "Harbor found episode sources, but none was a downloadable package for {season}. Try another addon or refresh the sources.":
-    "Harbor encontró fuentes de episodios, pero ninguna era un paquete descargable para {season}. Prueba otro complemento o actualiza las fuentes.",
+  "Lart found episode sources, but none was a downloadable package for {season}. Try another addon or refresh the sources.":
+    "Lart encontró fuentes de episodios, pero ninguna era un paquete descargable para {season}. Prueba otro complemento o actualiza las fuentes.",
   "Hide replies": "Ocultar respuestas",
   Highlights: "Resaltados",
   Horizontal: "Horizontal",
   Host: "Servidor",
-  "How people find you across Harbor.": "Cómo te encuentran otras personas en Harbor.",
+  "How people find you across Lart.": "Cómo te encuentran otras personas en Lart.",
   ID: "ID",
   Imported: "Importado",
   "In this collection": "En esta colección",
   Information: "Información",
   Interrupted: "Interrumpido",
   Invert: "Invertir",
-  "Join Harbor": "Unirse a Harbor",
+  "Join Lart": "Unirse a Lart",
   Keep: "Conservar",
   Language: "Idioma",
   Latest: "Más recientes",
@@ -209,10 +209,10 @@ const coverage: Record<string, string> = {
   Ongoing: "En curso",
   Online: "En línea",
   "Only me": "Solo yo",
-  "Open Harbor on desktop to verify ownership in your browser.":
-    "Abre Harbor en la aplicación de escritorio para verificar la propiedad en tu navegador.",
-  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Harbor never sees your password.":
-    "Abre Stremio en tu navegador. Funciona con correo electrónico, Facebook y Apple. Harbor nunca ve tu contraseña.",
+  "Open Lart on desktop to verify ownership in your browser.":
+    "Abre Lart en la aplicación de escritorio para verificar la propiedad en tu navegador.",
+  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Lart never sees your password.":
+    "Abre Stremio en tu navegador. Funciona con correo electrónico, Facebook y Apple. Lart nunca ve tu contraseña.",
   "Ownership verified": "Propiedad verificada",
   "Page background": "Fondo de la página",
   Paid: "De pago",
@@ -240,8 +240,8 @@ const coverage: Record<string, string> = {
   Pulse: "Pulso",
   Queue: "Cola",
   Queued: "En cola",
-  "Queued {queued} of {total} episodes. Harbor could not match every episode in this package.":
-    "{queued} de {total} episodios en cola. Harbor no pudo identificar todos los episodios de este paquete.",
+  "Queued {queued} of {total} episodes. Lart could not match every episode in this package.":
+    "{queued} de {total} episodios en cola. Lart no pudo identificar todos los episodios de este paquete.",
   Quiet: "Tranquilo",
   REC: "REC",
   Ratings: "Calificaciones",
@@ -292,8 +292,8 @@ const coverage: Record<string, string> = {
   Seasons: "Temporadas",
   Servers: "Servidores",
   Share: "Compartir",
-  "Shared collections from across Harbor will show up here soon.":
-    "Las colecciones compartidas de toda la comunidad de Harbor aparecerán aquí pronto.",
+  "Shared collections from across Lart will show up here soon.":
+    "Las colecciones compartidas de toda la comunidad de Lart aparecerán aquí pronto.",
   "Show 1 reply": "Mostrar 1 respuesta",
   "Show More info button": "Mostrar botón Más información",
   "Show a Minecraft card on your profile. Leave the username blank to hide it.":
@@ -312,12 +312,12 @@ const coverage: Record<string, string> = {
   "Shown on the card and at the top of the page.":
     "Se muestra en la tarjeta y en la parte superior de la página.",
   Shows: "Series",
-  "Sign in to Harbor to check availability.":
-    "Inicia sesión en Harbor para comprobar la disponibilidad.",
+  "Sign in to Lart to check availability.":
+    "Inicia sesión en Lart para comprobar la disponibilidad.",
   "Sign in to pick up where you left off.": "Inicia sesión para continuar donde lo dejaste.",
   "Sign in to upload a custom image.": "Inicia sesión para subir una imagen personalizada.",
   "Signed in as {username}": "Sesión iniciada como {username}",
-  "Signed in to your Harbor account": "Sesión iniciada en tu cuenta de Harbor",
+  "Signed in to your Lart account": "Sesión iniciada en tu cuenta de Lart",
   Silent: "Silencioso",
   Size: "Tamaño",
   Socials: "Redes sociales",
@@ -465,14 +465,14 @@ const coverage: Record<string, string> = {
   "· {n} noms": "· {n} nominaciones",
   "Big Picture": "Pantalla grande",
   "Leave Big Picture": "Salir de Vista panorámica",
-  "A full screen, couch friendly Harbor for TVs, handhelds and big monitors.":
-    "Harbor a pantalla completa, cómodo para usar desde el sofá en TV, dispositivos portátiles y monitores grandes.",
+  "A full screen, couch friendly Lart for TVs, handhelds and big monitors.":
+    "Lart a pantalla completa, cómodo para usar desde el sofá en TV, dispositivos portátiles y monitores grandes.",
   "Show the Big Picture button": "Mostrar el botón Big Picture",
-  "Adds a Big Picture button to Harbor's navigation. Turn this off to keep it out of the way.":
-    "Agrega un botón de pantalla grande a la navegación de Harbor. Desactívalo para que no estorbe.",
+  "Adds a Big Picture button to Lart's navigation. Turn this off to keep it out of the way.":
+    "Agrega un botón de pantalla grande a la navegación de Lart. Desactívalo para que no estorbe.",
   "Open in Big Picture": "Abrir en pantalla grande",
-  "Launch straight into Big Picture when Harbor starts. Press Esc at any time to leave.":
-    "Abrir directamente en Vista panorámica al iniciar Harbor. Presiona Esc en cualquier momento para salir.",
+  "Launch straight into Big Picture when Lart starts. Press Esc at any time to leave.":
+    "Abrir directamente en Vista panorámica al iniciar Lart. Presiona Esc en cualquier momento para salir.",
   "Almost done": "Casi listo",
   "Jump back in": "Retroceder en",
   "Couldn't load this title.": "No se pudo cargar este título.",
@@ -483,8 +483,8 @@ const coverage: Record<string, string> = {
   "Box office": "Taquilla",
   Length: "Duración",
   "Couldn't load your catalogs": "No se pudieron cargar tus catálogos",
-  "Harbor couldn't reach the catalog servers. Check the connection and reopen Big Picture.":
-    "Harbor no pudo conectarse con los servidores de catálogos. Revisa la conexión y vuelve a abrir Big Picture.",
+  "Lart couldn't reach the catalog servers. Check the connection and reopen Big Picture.":
+    "Lart no pudo conectarse con los servidores de catálogos. Revisa la conexión y vuelve a abrir Big Picture.",
   Letters: "Letras",
   Symbols: "Símbolos",
   Space: "Espacio",
@@ -493,7 +493,7 @@ const coverage: Record<string, string> = {
   "Nothing saved yet. Add a title from any details page.":
     "Aún no hay nada guardado. Agrega un título desde cualquier página de detalles.",
   "Your watchlist is empty.": "Tu lista de seguimiento está vacía.",
-  "Search Harbor": "Buscar en Harbor",
+  "Search Lart": "Buscar en Lart",
   "{n} results": "{n} resultados",
   "Looking...": "Buscando...",
   "Start typing to search movies and series.":
@@ -506,10 +506,10 @@ const coverage: Record<string, string> = {
   "Drifting poster wall behind the interface. Turn off on low power devices.":
     "Muro de pósteres en movimiento detrás de la interfaz. Desactívalo en dispositivos de bajo consumo.",
   "Controller navigation": "Navegación con control",
-  "Use a gamepad or remote to move around Harbor":
-    "Usa un control de videojuegos o un control remoto para navegar por Harbor",
-  "Launch straight into Big Picture when Harbor starts":
-    "Abrir directamente en Vista panorámica al iniciar Harbor",
+  "Use a gamepad or remote to move around Lart":
+    "Usa un control de videojuegos o un control remoto para navegar por Lart",
+  "Launch straight into Big Picture when Lart starts":
+    "Abrir directamente en Vista panorámica al iniciar Lart",
   "Quick panel": "Panel rápido",
   "No trailer available for {name}": "No hay tráiler disponible para {name}",
   "Loading trailer...": "Cargando tráiler...",
@@ -551,10 +551,10 @@ const coverage: Record<string, string> = {
   "Moved subtitles 0.25 seconds later.": "Los subtítulos se retrasaron 0.25 segundos.",
   "Moved subtitles 0.25 seconds earlier.": "Los subtítulos se adelantaron 0.25 segundos.",
   Synced: "Sincronizado",
-  "When a subtitle runs early or late, Harbor measures the speech and corrects the timing on its own.":
-    "Cuando un subtítulo aparece antes o después de tiempo, Harbor analiza el diálogo y corrige la sincronización automáticamente.",
-  "Downloaded subtitles can arrive after playback starts. Harbor switches from a temporary track when a stronger release match becomes available.":
-    "Los subtítulos descargados pueden llegar después de iniciar la reproducción. Harbor cambia la pista temporal cuando está disponible una versión que coincide mejor.",
+  "When a subtitle runs early or late, Lart measures the speech and corrects the timing on its own.":
+    "Cuando un subtítulo aparece antes o después de tiempo, Lart analiza el diálogo y corrige la sincronización automáticamente.",
+  "Downloaded subtitles can arrive after playback starts. Lart switches from a temporary track when a stronger release match becomes available.":
+    "Los subtítulos descargados pueden llegar después de iniciar la reproducción. Lart cambia la pista temporal cuando está disponible una versión que coincide mejor.",
   "Only embedded subtitles are available right now.":
     "Por ahora, solo hay subtítulos integrados disponibles.",
   "Search all sources again": "Volver a buscar en todas las fuentes",
@@ -583,10 +583,10 @@ const coverage: Record<string, string> = {
     "No se encontró ninguna fuente para estos episodios. Intenta actualizar o usar otro complemento.",
   "Queued {queued} of {total} episodes.": "{queued} de {total} episodios en cola.",
   "Could not queue these episodes.": "No se pudieron agregar estos episodios a la cola.",
-  "Harbor found episode sources for {season}, but none of them is a single downloadable package. It can still fetch the episodes one at a time.":
-    "Harbor encontró fuentes de episodios para {season}, pero ninguna es un paquete único descargable. Aun así, puede descargar los episodios uno por uno.",
-  "None of your addons returned a downloadable package for {season}. Harbor can still fetch the episodes one at a time, or you can refresh the sources.":
-    "Ninguno de tus complementos devolvió un paquete descargable para {season}. Harbor aún puede obtener los episodios uno por uno, o puedes actualizar las fuentes.",
+  "Lart found episode sources for {season}, but none of them is a single downloadable package. It can still fetch the episodes one at a time.":
+    "Lart encontró fuentes de episodios para {season}, pero ninguna es un paquete único descargable. Aun así, puede descargar los episodios uno por uno.",
+  "None of your addons returned a downloadable package for {season}. Lart can still fetch the episodes one at a time, or you can refresh the sources.":
+    "Ninguno de tus complementos devolvió un paquete descargable para {season}. Lart aún puede obtener los episodios uno por uno, o puedes actualizar las fuentes.",
   "Download episode by episode": "Descargar episodio por episodio",
   "Test mode: your controller only moves this diagram. Press Esc to stop.":
     "Modo de prueba: el control solo mueve este diagrama. Presiona Esc para detenerlo.",
@@ -596,11 +596,11 @@ const coverage: Record<string, string> = {
   Pointer: "Puntero",
   Dot: "Punto",
   "Controller cursor": "Cursor del control",
-  "The pointer your right stick moves around Harbor. Pick a shape or use your own image.":
-    "El puntero que mueves por Harbor con la palanca derecha. Elige una forma o usa tu propia imagen.",
+  "The pointer your right stick moves around Lart. Pick a shape or use your own image.":
+    "El puntero que mueves por Lart con la palanca derecha. Elige una forma o usa tu propia imagen.",
   "Your own image": "Tu propia imagen",
-  "PNG, WEBP, SVG or GIF. Harbor shrinks it to 128px so it stays small on disk.":
-    "PNG, WEBP, SVG o GIF. Harbor la reduce a 128 px para que ocupe poco espacio en el disco.",
+  "PNG, WEBP, SVG or GIF. Lart shrinks it to 128px so it stays small on disk.":
+    "PNG, WEBP, SVG o GIF. Lart la reduce a 128 px para que ocupe poco espacio en el disco.",
   "Remove image": "Eliminar imagen",
   "That image could not be used. Try a smaller PNG or WEBP.":
     "No se pudo usar esa imagen. Prueba con un PNG o WEBP más pequeño.",
@@ -609,28 +609,28 @@ const coverage: Record<string, string> = {
     "Amplíala para verla en una TV al otro lado de la habitación o redúcela para un monitor de escritorio.",
   "{n} px": "{n} px",
   "Actual size on screen": "Tamaño real en pantalla",
-  "Harbor's full video engine. Plays anything you throw at it.":
-    "Motor de video completo de Harbor. Reproduce cualquier contenido.",
-  "libmpv did not load, so playback falls back to HTML5 and formats like MKV may refuse to play. On Linux, install your distribution's libmpv package, then restart Harbor.":
-    "libmpv no se cargó, por lo que la reproducción usará HTML5 y es posible que formatos como MKV no se reproduzcan. En Linux, instala el paquete libmpv de tu distribución y reinicia Harbor.",
+  "Lart's full video engine. Plays anything you throw at it.":
+    "Motor de video completo de Lart. Reproduce cualquier contenido.",
+  "libmpv did not load, so playback falls back to HTML5 and formats like MKV may refuse to play. On Linux, install your distribution's libmpv package, then restart Lart.":
+    "libmpv no se cargó, por lo que la reproducción usará HTML5 y es posible que formatos como MKV no se reproduzcan. En Linux, instala el paquete libmpv de tu distribución y reinicia Lart.",
   "{n} hours": "{n} horas",
   "{n} GB": "{n} GB",
-  "Another program already holds this port, usually a Stremio server that is running on this machine. Harbor tried its spare ports too. Stop that server, or leave it running and point Harbor at it in Remote streaming server below.":
-    "Otro programa ya está usando este puerto, por lo general un servidor de Stremio que se ejecuta en esta computadora. Harbor también probó sus puertos alternativos. Detén ese servidor o déjalo activo e indícale a Harbor que lo use en Servidor remoto de streaming, más abajo.",
+  "Another program already holds this port, usually a Stremio server that is running on this machine. Lart tried its spare ports too. Stop that server, or leave it running and point Lart at it in Remote streaming server below.":
+    "Otro programa ya está usando este puerto, por lo general un servidor de Stremio que se ejecuta en esta computadora. Lart también probó sus puertos alternativos. Detén ese servidor o déjalo activo e indícale a Lart que lo use en Servidor remoto de streaming, más abajo.",
   "Open here": "Abrir aquí",
   "Scan with your phone camera, or type the address above.":
     "Escanea con la cámara de tu teléfono o escribe la dirección de arriba.",
   "No Wi-Fi address yet. Other devices cannot reach this computer.":
     "Aún no hay una dirección Wi-Fi. Otros dispositivos no pueden acceder a esta computadora.",
-  "Harbor in a browser": "Harbor en un navegador",
+  "Lart in a browser": "Lart en un navegador",
   "This exact install, served as a web app. Open it on a phone, laptop or TV browser and it streams through this computer.":
     "Esta misma instalación, ofrecida como aplicación web. Ábrela en el navegador de un teléfono, una laptop o una TV para transmitir contenido a través de esta computadora.",
   "Play, pause, seek, volume and casting from the couch.":
     "Controla la reproducción, las pausas, el avance, el volumen y la transmisión desde el sofá.",
   "Turn pages, zoom and switch modes while you read on the big screen.":
     "Pasa páginas, usa el zoom y cambia de modo mientras lees en la pantalla grande.",
-  "One switch serves Harbor on your network. Scan a code below with your phone, or open an address on any device on the same Wi-Fi.":
-    "Un solo interruptor permite acceder a Harbor desde tu red. Escanea uno de los códigos de abajo con tu teléfono o abre una dirección en cualquier dispositivo conectado al mismo Wi-Fi.",
+  "One switch serves Lart on your network. Scan a code below with your phone, or open an address on any device on the same Wi-Fi.":
+    "Un solo interruptor permite acceder a Lart desde tu red. Escanea uno de los códigos de abajo con tu teléfono o abre una dirección en cualquier dispositivo conectado al mismo Wi-Fi.",
   "Powers everything on this page: the web app, the phone remote, and the manga reader remote.":
     "Sustenta todo lo que aparece en esta página: la aplicación web, el control remoto del teléfono y el control remoto del lector de manga.",
   "Flip the switch above and the addresses and scan codes appear here.":
@@ -650,22 +650,22 @@ const coverage: Record<string, string> = {
   "A local folder": "Una carpeta local",
   "Advanced: build a plugin": "Avanzado: crear un plugin",
   "Also Known As": "También conocido como",
-  "Back in Harbor: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
-    "De vuelta en Harbor, ve a Manga > Configurar una fuente > Tu servidor y pega la dirección del servidor (por ejemplo, {localUrl}, o la IP de tu red local si se ejecuta en otra máquina, como {lanUrl}).",
+  "Back in Lart: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
+    "De vuelta en Lart, ve a Manga > Configurar una fuente > Tu servidor y pega la dirección del servidor (por ejemplo, {localUrl}, o la IP de tu red local si se ejecuta en otra máquina, como {lanUrl}).",
   "Controller preview": "Vista previa del control",
   "Couldn't save that font. It may be invalid, or storage is full.":
     "No se pudo guardar esa fuente. Puede que no sea válida o que el almacenamiento esté lleno.",
   "Download and run Suwayomi Server:": "Descarga y ejecuta Suwayomi Server:",
-  "Every source you enable in Suwayomi then shows up in Harbor. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
-    "Cada fuente que habilites en Suwayomi aparecerá en Harbor. Suwayomi mantiene sus extensiones actualizadas cuando cambia un sitio para que sigan funcionando.",
+  "Every source you enable in Suwayomi then shows up in Lart. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
+    "Cada fuente que habilites en Suwayomi aparecerá en Lart. Suwayomi mantiene sus extensiones actualizadas cuando cambia un sitio para que sigan funcionando.",
   "Everything else, through your own server (Suwayomi)":
     "Todo lo demás, mediante tu propio servidor (Suwayomi)",
   "Expand {title} image": "Ampliar imagen de {title}",
-  "Getting manga sources into Harbor": "Obtener fuentes de manga en Harbor",
-  "Harbor also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Harbor repository. Only install plugins from repositories you trust.":
-    "Harbor también cuenta con un entorno experimental para plugins. Si quieres crear un plugin de fuentes, consulta {path} en el repositorio de Harbor. Instala plugins únicamente desde repositorios de confianza.",
-  "Harbor ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Harbor. There are two ways to add sources.":
-    "Harbor no incluye manga ni extractores web. Es un lector. Tú aportas las fuentes, y su contenido pertenece a quienes las administran, no a Harbor. Hay dos formas de agregar fuentes.",
+  "Getting manga sources into Lart": "Obtener fuentes de manga en Lart",
+  "Lart also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Lart repository. Only install plugins from repositories you trust.":
+    "Lart también cuenta con un entorno experimental para plugins. Si quieres crear un plugin de fuentes, consulta {path} en el repositorio de Lart. Instala plugins únicamente desde repositorios de confianza.",
+  "Lart ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Lart. There are two ways to add sources.":
+    "Lart no incluye manga ni extractores web. Es un lector. Tú aportas las fuentes, y su contenido pertenece a quienes las administran, no a Lart. Hay dos formas de agregar fuentes.",
   "Import failed": "Error de importación",
   "It serves a web UI at {url}": "Ofrece una interfaz web en {url}",
   "Manga > Set up a source > Local folder, and choose a folder of manga you already own (CBZ files or folders of images).":
@@ -706,8 +706,8 @@ const coverage: Record<string, string> = {
   heard: "oído",
   of: "de",
   orig: "orig.",
-  "Open the signed-in user's own Harbor profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
-    "Abre de inmediato el perfil de Harbor del usuario que inició sesión cuando se haya cargado su identificador. Devuelve true cuando comienza la navegación y false en caso contrario.",
+  "Open the signed-in user's own Lart profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
+    "Abre de inmediato el perfil de Lart del usuario que inició sesión cuando se haya cargado su identificador. Devuelve true cuando comienza la navegación y false en caso contrario.",
   "AI search failed.": "La búsqueda con IA falló.",
   "Add a debrid provider in Settings first.":
     "Primero agrega un proveedor de debrid en Configuración.",
@@ -720,9 +720,9 @@ const coverage: Record<string, string> = {
     "No se pudo preparar esta fuente P2P. Es posible que no tenga pares accesibles. Inténtalo de nuevo o elige otra fuente.",
   "Direct torrent streaming is turned off. Turn it on in Settings > P2P & servers to stream torrents without a debrid.":
     "La transmisión directa de torrents está desactivada. Actívala en Configuración > P2P y servidores para transmitir torrents sin un servicio de debrid.",
-  "Harbor could not open your browser.": "Harbor no pudo abrir tu navegador.",
-  "Harbor's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
-    "El motor P2P de Harbor se está preparando. Esto se resuelve por sí solo en unos segundos y luego podrás usar Reproducir.",
+  "Lart could not open your browser.": "Lart no pudo abrir tu navegador.",
+  "Lart's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
+    "El motor P2P de Lart se está preparando. Esto se resuelve por sí solo en unos segundos y luego podrás usar Reproducir.",
   Minus: "Menos",
   "None of your debrid services could deliver a working file. Pick another stream.":
     "Ninguno de tus servicios de debrid pudo proporcionar un archivo funcional. Elige otra fuente.",
@@ -750,8 +750,8 @@ const coverage: Record<string, string> = {
     "Este es un archivo NZB sin procesar. Primero debes descargarlo con SABnzbd o NZBGet y luego reproducirlo.",
   "This source isn't ready on your debrid yet. Try it again in a moment or pick another.":
     "Esta fuente aún no está lista en tu servicio de debrid. Inténtalo de nuevo en un momento o elige otra.",
-  "This source only opens in an external browser, not in Harbor's player.":
-    "Esta fuente solo se abre en un navegador externo, no en el reproductor de Harbor.",
+  "This source only opens in an external browser, not in Lart's player.":
+    "Esta fuente solo se abre en un navegador externo, no en el reproductor de Lart.",
   "This stream has no playable source.": "Esta transmisión no tiene ninguna fuente reproducible.",
   "This stream isn't cached on your debrid yet. Try a different one from the list.":
     "Esta fuente aún no está en caché en tu servicio de debrid. Prueba con otra de la lista.",
@@ -766,16 +766,16 @@ const coverage: Record<string, string> = {
     "La clave de tu servicio de debrid fue rechazada. Revísala en Configuración.",
   "Your debrid served a placeholder/error video instead of the real file. Pick another stream.":
     "Tu servicio de debrid devolvió un video de marcador de posición o de error en lugar del archivo real. Elige otra fuente.",
-  "Your debrid service doesn't support queueing torrents from Harbor yet.":
-    "Tu servicio de debrid todavía no permite poner torrents en cola desde Harbor.",
+  "Your debrid service doesn't support queueing torrents from Lart yet.":
+    "Tu servicio de debrid todavía no permite poner torrents en cola desde Lart.",
   "Your debrid subscription has expired.": "Tu suscripción al servicio de debrid venció.",
   "Your debrid took too long to respond. Hit Play again, or try another stream.":
     "Tu servicio de debrid tardó demasiado en responder. Presiona Reproducir de nuevo o prueba con otra fuente.",
   "Your {name} subscription looks expired.": "Parece que tu suscripción a {name} venció.",
   "{name} is over its traffic or fair-use limit right now.":
     "{name} superó su límite de tráfico o de uso razonable.",
-  "{name} is rate-limiting Harbor right now.":
-    "{name} está limitando la frecuencia de las solicitudes de Harbor.",
+  "{name} is rate-limiting Lart right now.":
+    "{name} está limitando la frecuencia de las solicitudes de Lart.",
   "{name} is temporarily unavailable (server error).":
     "{name} no está disponible temporalmente (error del servidor).",
   "{name} rejected your API key.": "{name} rechazó tu clave de API.",
@@ -808,8 +808,8 @@ const coverage: Record<string, string> = {
   "Connect Jellyfin, Emby, or Plex in Streaming sources.":
     "Conecta Jellyfin, Emby o Plex en Fuentes de transmisión.",
   "Connect and sync": "Conectar y sincronizar",
-  "Connect books you own, reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "Conecta libros que tengas, fuentes de lectura y servicios de metadatos. Harbor mantiene la biblioteca organizada mientras todas las fuentes siguen bajo tu control.",
+  "Connect books you own, reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "Conecta libros que tengas, fuentes de lectura y servicios de metadatos. Lart mantiene la biblioteca organizada mientras todas las fuentes siguen bajo tu control.",
   "Connect home server": "Conectar servidor doméstico",
   "Connect now": "Conectar ahora",
   "Connect server": "Conectar servidor",
@@ -821,18 +821,18 @@ const coverage: Record<string, string> = {
   Disable: "Desactivar",
   "Download media": "Descargar contenido",
   "Download selected ({n})": "Descargar selección ({n})",
-  "Edge voices need the Harbor desktop app. Reading with the device voice.":
-    "Las voces de Edge requieren la aplicación de escritorio de Harbor. Se usará la voz del dispositivo para la lectura.",
+  "Edge voices need the Lart desktop app. Reading with the device voice.":
+    "Las voces de Edge requieren la aplicación de escritorio de Lart. Se usará la voz del dispositivo para la lectura.",
   "Edit home server": "Editar servidor doméstico",
   Enrichment: "Enriquecimiento",
   "Every…": "Cada…",
   "Featured book": "Libro destacado",
-  "Harbor does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Harbor open it.":
-    "Harbor no aloja ningún libro. Abre una carpeta en este dispositivo, instala una extensión de fuentes o conecta tu propio servidor. Los metadatos pueden describir un libro, pero se necesita una fuente para que Harbor pueda abrirlo.",
-  "Harbor opens Plex in your browser. Your Plex password is never entered in Harbor.":
-    "Harbor abre Plex en tu navegador. Tu contraseña de Plex nunca se ingresa en Harbor.",
-  "Harbor tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
-    "Harbor prueba HTTP, HTTPS, proxies inversos y el puerto predeterminado del proveedor. Las credenciales se almacenan por separado.",
+  "Lart does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Lart open it.":
+    "Lart no aloja ningún libro. Abre una carpeta en este dispositivo, instala una extensión de fuentes o conecta tu propio servidor. Los metadatos pueden describir un libro, pero se necesita una fuente para que Lart pueda abrirlo.",
+  "Lart opens Plex in your browser. Your Plex password is never entered in Lart.":
+    "Lart abre Plex en tu navegador. Tu contraseña de Plex nunca se ingresa en Lart.",
+  "Lart tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
+    "Lart prueba HTTP, HTTPS, proxies inversos y el puerto predeterminado del proveedor. Las credenciales se almacenan por separado.",
   "Home server": "Servidor doméstico",
   "Home server quality": "Calidad del servidor doméstico",
   "Home servers": "Servidores domésticos",
@@ -858,7 +858,7 @@ const coverage: Record<string, string> = {
   "Prefer this device": "Preferir este dispositivo",
   "Preferred home server": "Servidor doméstico preferido",
   "Preparing narration audio": "Preparando el audio de narración",
-  "Read eBooks in Harbor": "Leer eBooks en Harbor",
+  "Read eBooks in Lart": "Leer eBooks en Lart",
   "Refresh interval in days": "Intervalo de actualización en días",
   "Refresh policy": "Política de actualización",
   "Remove folder?": "¿Eliminar la carpeta?",
@@ -905,14 +905,14 @@ const coverage: Record<string, string> = {
   "Direct/debrid only": "Solo directo/debrid",
   "Match subtitles across languages (experimental)":
     "Comparar subtítulos entre idiomas (experimental)",
-  "When the audio and subtitle use different languages, Harbor compares a release-matched subtitle in the audio language. It only offers a fix unless every safety check is measured.":
-    "Cuando el audio y los subtítulos usan idiomas diferentes, Harbor compara un subtítulo que coincide con la versión en el idioma del audio. Solo ofrece una corrección salvo que se hayan medido todas las comprobaciones de seguridad.",
+  "When the audio and subtitle use different languages, Lart compares a release-matched subtitle in the audio language. It only offers a fix unless every safety check is measured.":
+    "Cuando el audio y los subtítulos usan idiomas diferentes, Lart compara un subtítulo que coincide con la versión en el idioma del audio. Solo ofrece una corrección salvo que se hayan medido todas las comprobaciones de seguridad.",
   "New York Times": "New York Times",
   "Bestseller lists in the eBook section.": "Listas de superventas en la sección de eBooks.",
   "New York Times · bestseller lists": "New York Times · listas de superventas",
   "NYT Books API key": "Clave de API de NYT Books",
-  "Choose whether Harbor prefers direct and debrid sources, peer-to-peer torrents, or shows both.":
-    "Elige si Harbor prefiere fuentes directas y debrid, torrents entre pares o muestra ambas.",
+  "Choose whether Lart prefers direct and debrid sources, peer-to-peer torrents, or shows both.":
+    "Elige si Lart prefiere fuentes directas y debrid, torrents entre pares o muestra ambas.",
 };
 
 export default coverage;

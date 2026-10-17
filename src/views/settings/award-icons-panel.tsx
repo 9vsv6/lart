@@ -214,7 +214,7 @@ export function AwardIconsPanel() {
             icon={<Download size={18} strokeWidth={2.2} />}
             label={t("Install a pack")}
             desc={t(
-              "Point Harbor at a hosted pack link, upload your own images, or import a .zip. Harbor stores the link, so the artwork stays with whoever made it.",
+              "Point Lart at a hosted pack link, upload your own images, or import a .zip. Lart stores the link, so the artwork stays with whoever made it.",
             )}
             warn={errorMessage ?? undefined}
           >
@@ -225,7 +225,7 @@ export function AwardIconsPanel() {
             icon={<BookOpen size={18} strokeWidth={2.2} />}
             label={t("How to make an award pack")}
             desc={t(
-              "An award pack is a single JSON file plus the images it points to. Host both anywhere public (your own server, a GitHub repo, etc.) and share the JSON URL. Harbor only stores the URLs you install, never the images.",
+              "An award pack is a single JSON file plus the images it points to. Host both anywhere public (your own server, a GitHub repo, etc.) and share the JSON URL. Lart only stores the URLs you install, never the images.",
             )}
           >
             <ModalButton ghost onClick={() => setShowHelp(true)}>
@@ -342,7 +342,7 @@ export function AwardIconsPanel() {
         open={showInstall}
         onClose={() => setShowInstall(false)}
         title={t("Install a pack")}
-        sub={t("Packs stay hosted by their maker. Harbor keeps the link, not the artwork.")}
+        sub={t("Packs stay hosted by their maker. Lart keeps the link, not the artwork.")}
       >
         <section className="flex flex-col gap-[11px]">
           <h3 className={MODAL_LABEL}>{t("From a link")}</h3>
@@ -375,7 +375,7 @@ export function AwardIconsPanel() {
           </div>
           <p className={`max-w-[66ch] ${ROW_DESC}`}>
             {t(
-              "Name each file after its award ID. Harbor resizes them and skips anything it cannot match.",
+              "Name each file after its award ID. Lart resizes them and skips anything it cannot match.",
             )}
           </p>
         </section>
@@ -413,7 +413,7 @@ export function AwardIconsPanel() {
         <h3 className={MODAL_LABEL}>{t("Or just zip up images")}</h3>
         <p className={`max-w-[70ch] ${ROW_DESC}`}>
           {t(
-            'Name each image file after its award ID and put them in a .zip, then use "Import a .zip pack" above. No JSON, no hosting needed. Harbor matches each file to its award, stores it locally, resizes it, and skips anything it doesn\'t recognize.',
+            'Name each image file after its award ID and put them in a .zip, then use "Import a .zip pack" above. No JSON, no hosting needed. Lart matches each file to its award, stores it locally, resizes it, and skips anything it doesn\'t recognize.',
           )}
         </p>
         <pre className={CODE_BLOCK}>{`my-pack.zip

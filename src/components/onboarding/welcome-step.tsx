@@ -12,14 +12,14 @@ export function WelcomeStep() {
             className="font-display text-[44px] font-medium leading-none tracking-tight"
             style={{ transform: "translateY(2px)" }}
           >
-            Harb
+            L
             <span
               className="inline-block"
               style={{ transform: "rotate(7deg)", transformOrigin: "50% 65%" }}
             >
-              o
+              a
             </span>
-            r
+            rt
           </span>
         </div>
         <p className="text-[15.5px] leading-relaxed text-ink-muted">

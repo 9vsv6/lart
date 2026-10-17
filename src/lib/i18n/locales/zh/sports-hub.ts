@@ -121,7 +121,7 @@ export default {
   Constructors: "车队",
   "Coverage varies by league. Streams depend on your available sources.":
     "覆盖范围因联赛而异。直播取决于你可用的来源。",
-  "Delivery failed. Retrying while Harbor is open.": "发送失败。Harbor保持开启时会重试。",
+  "Delivery failed. Retrying while Lart is open.": "发送失败。Lart保持开启时会重试。",
   Driver: "车手",
   Drivers: "车手",
   "Entrants and starting positions appear when the feed publishes them.":
@@ -155,7 +155,7 @@ export default {
   "From the biggest leagues to a new favorite sport.": "从顶级联赛，到新的心头好。",
   "Inside the paddock": "走进围场",
   "Jump to today": "跳转至今天",
-  "Keep Harbor open to deliver reminders.": "请保持Harbor开启，以发送提醒。",
+  "Keep Lart open to deliver reminders.": "请保持Lart开启，以发送提醒。",
   "Last saved score": "最近保存的比分",
   "Last update": "上次更新",
   "Latest saved scores": "最近保存的比分",
@@ -275,10 +275,10 @@ export default {
     "请尝试其他运动或日期。数据源不可用时，此处会显示已保存的赛程。",
   "Up to date": "已是最新",
   "Updating schedules…": "正在更新赛程…",
-  "Use only sources you are authorized to access. Harbor does not bypass subscriptions or access restrictions.":
-    "仅使用你获授权访问的来源。Harbor不会绕过订阅或访问限制。",
-  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Harbor does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
-    "请使用你获授权访问的直播源、M3U播放列表和Xtream账号。Harbor不提供订阅，也不会绕过付费墙、DRM或访问限制。",
+  "Use only sources you are authorized to access. Lart does not bypass subscriptions or access restrictions.":
+    "仅使用你获授权访问的来源。Lart不会绕过订阅或访问限制。",
+  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Lart does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
+    "请使用你获授权访问的直播源、M3U播放列表和Xtream账号。Lart不提供订阅，也不会绕过付费墙、DRM或访问限制。",
   "View match statistics": "查看比赛统计",
   "Watch with your sources": "使用你的来源观看",
   "Your authorized IPTV, M3U and Xtream channels, in one place.":

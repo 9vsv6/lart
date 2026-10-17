@@ -194,7 +194,7 @@ export function useCastPick(params: {
         setCastErrorInfo({
           title: t("Install ffmpeg"),
           message: t(
-            "{deviceLabel} can't decode this stream natively ({reasons}). Harbor uses ffmpeg to convert it into a format your TV understands.",
+            "{deviceLabel} can't decode this stream natively ({reasons}). Lart uses ffmpeg to convert it into a format your TV understands.",
             {
               deviceLabel: resolved.caps.label,
               reasons: formatCastReasons(resolved.reasons),
@@ -202,7 +202,7 @@ export function useCastPick(params: {
           ),
           steps: [
             localizedFfmpegInstallStep(),
-            t("Restart Harbor after the install completes."),
+            t("Restart Lart after the install completes."),
             t("Open the cast menu and try this device again."),
           ],
           deviceName: device.name,

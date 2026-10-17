@@ -162,5 +162,5 @@ function note(
   // field being broken on the one screen where the user is counting presses.
   if (draft.length > KEY_LEN) return t("{n} characters", { n: draft.length });
   if (draft.length > 0) return t("{n} of {len} characters", { n: draft.length, len: KEY_LEN });
-  return t("Skip this and Harbor runs on Cinemeta. You just see fewer rows.");
+  return t("Skip this and Lart runs on Cinemeta. You just see fewer rows.");
 }

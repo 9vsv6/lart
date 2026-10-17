@@ -1,9 +1,9 @@
 export default {
   "Search shortcuts": "Atalhos de pesquisa",
   "Steam search shortcut": "Atalho de pesquisa do Steam",
-  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Harbor search for these queries.": "Digite “st ” ou “st:” para pesquisar na loja Steam. Desative para usar a pesquisa normal do Harbor com essas consultas.",
+  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Lart search for these queries.": "Digite “st ” ou “st:” para pesquisar na loja Steam. Desative para usar a pesquisa normal do Lart com essas consultas.",
   "games.storeSearch.title": "Loja Steam",
-  "games.storeSearch.hint": "Use “st ” na busca do Harbor para pesquisar diretamente no Steam.",
+  "games.storeSearch.hint": "Use “st ” na busca do Lart para pesquisar diretamente no Steam.",
   "games.storeSearch.automatic": "Automática",
   "games.storeSearch.region": "Região da loja",
   "games.storeSearch.showLibrary": "Marcar jogos que já estão na minha biblioteca",

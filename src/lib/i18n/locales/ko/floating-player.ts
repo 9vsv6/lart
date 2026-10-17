@@ -1,6 +1,6 @@
 export default {
   "floatingPlayer.playbackSettings": "재생 설정",
-  "floatingPlayer.restoreVideo": "Harbor로 돌아가기",
+  "floatingPlayer.restoreVideo": "Lart로 돌아가기",
   "floatingPlayer.closeVideo": "정지하고 닫기",
   "floatingPlayer.chapters": "챕터",
   "floatingPlayer.subtitleDelay": "자막 지연",

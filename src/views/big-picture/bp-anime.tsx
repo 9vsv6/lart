@@ -72,7 +72,7 @@ export function BpAnime({ onSelect }: { onSelect: (m: Meta) => void }) {
     return (
       <BpPageMessage
         title={t("Anime is hidden")}
-        body={t("Turn anime back on in Harbor's content settings to browse it here.")}
+        body={t("Turn anime back on in Lart's content settings to browse it here.")}
       />
     );
   }
@@ -81,7 +81,7 @@ export function BpAnime({ onSelect }: { onSelect: (m: Meta) => void }) {
     return (
       <BpPageMessage
         title={t("Couldn't load anime")}
-        body={t("Harbor couldn't reach MyAnimeList or AniList. Check the connection and reopen Big Picture.")}
+        body={t("Lart couldn't reach MyAnimeList or AniList. Check the connection and reopen Big Picture.")}
       />
     );
   }

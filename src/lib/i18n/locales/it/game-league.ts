@@ -77,7 +77,7 @@ export default {
   "games.league.metaScope": "OP.GG fornisce la classifica con il campione predefinito, senza indicare patch, regione o fascia di rango. Le vittorie sono calcolate da partite e vittorie riportate; i tassi di scelta sono arrotondati dalla fonte. Classifiche e build usano campioni distinti.",
   "games.league.buildNote": "Ogni build ha un campione separato. Le build complete favoriscono partite abbastanza lunghe da acquistare gli oggetti; le loro vittorie non rappresentano il totale del campione. I matchup possono avere pochi dati. Adattati a squadra e avversario. I video possono risalire a patch precedenti.",
   "games.league.patchDifference": "Statistiche della build: {patch}; dati di oggetti e abilità: {assets}.",
-  "games.league.attribution": "Harbor is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
+  "games.league.attribution": "Lart is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
   "games.league.tierList": "Classifica",
   "games.league.tierScope": "Classificata solo/duo · Smeraldo+ · Globale",
   "games.league.patchFilter": "Scegli patch",

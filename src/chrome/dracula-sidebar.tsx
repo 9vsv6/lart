@@ -115,14 +115,14 @@ export function DraculaSidebar() {
                   className="hidden text-[40px] font-medium leading-none tracking-tight lg:inline"
                   style={{ fontFamily: "var(--font-display)", transform: "translateY(1px)" }}
                 >
-                  Harb
+                  L
                   <span
                     className="inline-block"
                     style={{ transform: "rotate(8deg)", transformOrigin: "50% 65%" }}
                   >
-                    o
+                    a
                   </span>
-                  r
+                  rt
                 </span>
               )}
             </button>

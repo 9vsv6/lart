@@ -11,7 +11,7 @@ const FRAMES: Array<{ id: string; w: number }> = [
 export function TrailerQualityPreview({ quality }: { quality: string }) {
   const t = useT();
   const notes: Record<string, string> = {
-    auto: t("Harbor picks the size your connection can keep up with."),
+    auto: t("Lart picks the size your connection can keep up with."),
     "360p": t("640 × 360. Fastest to start, softest picture."),
     "720p": t("1280 × 720."),
     "1080p": t("1920 × 1080. This is what the Watch Trailer button targets."),

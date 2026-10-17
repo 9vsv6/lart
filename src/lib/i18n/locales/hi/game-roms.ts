@@ -66,7 +66,7 @@ const gameRoms: Record<string, string> = {
   "games.roms.era": "रिलीज़ का दौर",
   "games.roms.reset": "फ़िल्टर रीसेट करें",
   "games.roms.empty": "कोई दूसरा शीर्षक आज़माएँ या इस कंसोल के फ़िल्टर का दायरा बढ़ाएँ।",
-  "games.roms.source": "गेम की जानकारी और उनके आपसी संबंध IGDB से। Harbor में समर्थित गेम खेलने के लिए अपनी स्थानीय फ़ाइलें आयात करें।",
+  "games.roms.source": "गेम की जानकारी और उनके आपसी संबंध IGDB से। Lart में समर्थित गेम खेलने के लिए अपनी स्थानीय फ़ाइलें आयात करें।",
   "games.roms.playerScore": "IGDB खिलाड़ी रेटिंग · {count} रेटिंग",
   "games.roms.combinedScore": "IGDB संयुक्त रेटिंग · {count} रेटिंग",
   "games.roms.sort.discussed": "सबसे ज़्यादा रेटिंग",

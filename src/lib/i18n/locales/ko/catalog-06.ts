@@ -8,8 +8,8 @@ const catalog06: Record<string, string> = {
   Manga: "만화",
   "Manga adaptation": "만화 각색",
   "Manga browse cache": "만화 탐색 캐시",
-  "Manga cannot be matched to a Harbor title yet, so {n} were left out.":
-    "만화는 아직 Harbor 작품과 연결할 수 없어 {n}개를 제외했습니다.",
+  "Manga cannot be matched to a Lart title yet, so {n} were left out.":
+    "만화는 아직 Lart 작품과 연결할 수 없어 {n}개를 제외했습니다.",
   "Manga reader remote": "만화 리더 리모컨",
   "Manga sources": "만화 소스",
   "Manic Heart": "광란의 심장",
@@ -57,7 +57,7 @@ const catalog06: Record<string, string> = {
   Matched: "일치함",
   "Matching moments": "장면을 대조하는 중",
   "Matching the details": "세부 정보 일치 여부 확인 중",
-  "Matching titles to Harbor": "제목을 Harbor와 연결 중",
+  "Matching titles to Lart": "제목을 Lart와 연결 중",
   Max: "최대",
   "Max badges per card": "카드당 최대 배지 수",
   "Max scores per card": "카드당 최대 평점 수",
@@ -186,8 +186,8 @@ const catalog06: Record<string, string> = {
   "Motion smoothing": "모션 스무딩",
   "Mouse tracker": "마우스 추적기",
   Move: "이동",
-  "Move Harbor by dragging any empty space on a page, not just the top bar. Leave this off to keep clicks inside pages from nudging the window.":
-    "상단 바뿐 아니라 페이지의 빈 공간 어디든 드래그하여 Harbor를 이동합니다. 페이지 안을 클릭할 때 창이 움직이지 않게 하려면 끄세요.",
+  "Move Lart by dragging any empty space on a page, not just the top bar. Leave this off to keep clicks inside pages from nudging the window.":
+    "상단 바뿐 아니라 페이지의 빈 공간 어디든 드래그하여 Lart를 이동합니다. 페이지 안을 클릭할 때 창이 움직이지 않게 하려면 끄세요.",
   "Move Refresh next to Back": "새로 고침을 뒤로 옆으로 이동",
   "Move all to account": "모두 계정으로 이동",
   "Move down": "아래로 이동",
@@ -206,8 +206,8 @@ const catalog06: Record<string, string> = {
   "Moved {name} to position {n} of {total}": "{name}을(를) {total}개 중 {n}번째로 이동했습니다",
   "Moved {n} addons to your Stremio account. They now sync everywhere you sign in.":
     "애드온 {n}개를 Stremio 계정으로 이동했습니다. 이제 로그인하는 모든 곳에서 동기화됩니다.",
-  "Moved, but Harbor couldn't confirm the result. Reload to see the current state.":
-    "이동했지만 Harbor에서 결과를 확인하지 못했습니다. 현재 상태를 보려면 새로고침하세요.",
+  "Moved, but Lart couldn't confirm the result. Reload to see the current state.":
+    "이동했지만 Lart에서 결과를 확인하지 못했습니다. 현재 상태를 보려면 새로고침하세요.",
   "Moves: {moves}": "이동 횟수: {moves}",
   Movie: "영화",
   "Movie Magic": "영화의 마법",
@@ -294,11 +294,11 @@ const catalog06: Record<string, string> = {
   Name: "이름",
   "Name (e.g. REMUX)": "이름(예: REMUX)",
   "Name (optional)": "이름(선택 사항)",
-  "Name each file after its award ID. Harbor resizes them and skips anything it cannot match.":
-    "각 파일의 이름을 어워드 ID로 지정하세요. Harbor가 크기를 조정하고 일치하지 않는 파일은 건너뜁니다.",
+  "Name each file after its award ID. Lart resizes them and skips anything it cannot match.":
+    "각 파일의 이름을 어워드 ID로 지정하세요. Lart가 크기를 조정하고 일치하지 않는 파일은 건너뜁니다.",
   "Name each file after its slot": "각 파일명을 슬롯 이름에 맞추세요",
-  'Name each image file after its award ID and put them in a .zip, then use "Import a .zip pack" above. No JSON, no hosting needed. Harbor matches each file to its award, stores it locally, resizes it, and skips anything it doesn\'t recognize.':
-    '각 이미지 파일의 이름을 어워드 ID로 지정해 .zip에 넣은 다음 위의 ".zip 팩 가져오기"를 사용하세요. JSON이나 호스팅은 필요하지 않습니다. Harbor가 각 파일을 어워드에 연결하고 로컬에 저장한 뒤 크기를 조정하며, 인식하지 못하는 파일은 건너뜁니다.',
+  'Name each image file after its award ID and put them in a .zip, then use "Import a .zip pack" above. No JSON, no hosting needed. Lart matches each file to its award, stores it locally, resizes it, and skips anything it doesn\'t recognize.':
+    '각 이미지 파일의 이름을 어워드 ID로 지정해 .zip에 넣은 다음 위의 ".zip 팩 가져오기"를 사용하세요. JSON이나 호스팅은 필요하지 않습니다. Lart가 각 파일을 어워드에 연결하고 로컬에 저장한 뒤 크기를 조정하며, 인식하지 못하는 파일은 건너뜁니다.',
   "Name it, tick the resolutions, sources, codecs and audio you want, and leave the rest blank.":
     "이름을 지정하고 원하는 해상도, 소스, 코덱, 오디오를 선택한 뒤 나머지는 비워 두세요.",
   "Name this collection": "컬렉션 이름 지정",
@@ -308,11 +308,11 @@ const catalog06: Record<string, string> = {
   "Name your theme": "테마 이름 지정",
   "Names behind the biggest productions": "대형 작품을 이끈 프로듀서",
   "Naming guide": "파일명 안내",
-  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Harbor's embedded player.":
-    "Linux에 설치된 SVP와 VapourSynth를 통해 네이티브 48/60fps 모션을 구현하고 Harbor 내장 플레이어에서 렌더링합니다.",
+  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Lart's embedded player.":
+    "Linux에 설치된 SVP와 VapourSynth를 통해 네이티브 48/60fps 모션을 구현하고 Lart 내장 플레이어에서 렌더링합니다.",
   "Native libmpv": "네이티브 libmpv",
-  "Native to Harbor. No RPDB or ratings addon needed.":
-    "Harbor에서 기본 지원합니다. RPDB나 평점 애드온이 필요하지 않습니다.",
+  "Native to Lart. No RPDB or ratings addon needed.":
+    "Lart에서 기본 지원합니다. RPDB나 평점 애드온이 필요하지 않습니다.",
   "Native webview playback. Smooth and integrated, but limited codec coverage.":
     "네이티브 웹뷰 재생입니다. 부드럽고 통합성이 뛰어나지만 지원 코덱이 제한적입니다.",
   "Native-style hybrid bar": "네이티브 스타일 하이브리드 바",
@@ -340,8 +340,8 @@ const catalog06: Record<string, string> = {
   "Network error": "네트워크 오류",
   "Network's best": "네트워크 인기작",
   Networks: "네트워크",
-  "Neural upscalers, sharpeners, and HDR tone-mapping ported for mpv. Each is hosted by its author, not bundled with Harbor. Download the ones you want; Harbor chains them in the right order and applies them in the player.":
-    "mpv용으로 포팅된 뉴럴 업스케일러, 선명화 필터, HDR 톤 매핑입니다. 각 셰이더는 Harbor에 포함되지 않으며 제작자가 직접 호스팅합니다. 원하는 셰이더를 다운로드하면 Harbor가 올바른 순서로 연결하여 플레이어에 적용합니다.",
+  "Neural upscalers, sharpeners, and HDR tone-mapping ported for mpv. Each is hosted by its author, not bundled with Lart. Download the ones you want; Lart chains them in the right order and applies them in the player.":
+    "mpv용으로 포팅된 뉴럴 업스케일러, 선명화 필터, HDR 톤 매핑입니다. 각 셰이더는 Lart에 포함되지 않으며 제작자가 직접 호스팅합니다. 원하는 셰이더를 다운로드하면 Lart가 올바른 순서로 연결하여 플레이어에 적용합니다.",
   Never: "안 함",
   "Never auto-select tracks containing": "다음 문구가 포함된 트랙 자동 선택 안 함",
   "Never contact the community server in either direction. Nothing is looked up and nothing is contributed from this device.":
@@ -431,7 +431,7 @@ const catalog06: Record<string, string> = {
   "No EPG channels match. This playlist's EPG source may be empty.":
     "일치하는 EPG 채널이 없습니다. 이 재생목록의 EPG 소스가 비어 있을 수 있습니다.",
   "No Frills": "군더더기 없이",
-  "No Harbor account yet": "아직 Harbor 계정이 없습니다",
+  "No Lart account yet": "아직 Lart 계정이 없습니다",
   "No Integrations option? You need the Manage Webhooks permission. Ask whoever owns the server.":
     "연동 옵션이 없나요? 웹후크 관리 권한이 필요합니다. 서버 소유자에게 문의하세요.",
   "No JavaScript. Scripts, inline handlers, and javascript: URLs are removed.":
@@ -450,8 +450,8 @@ const catalog06: Record<string, string> = {
   "No addons are synced to this account yet.": "아직 이 계정에 동기화된 애드온이 없습니다.",
   "No addons installed yet": "아직 설치된 애드온이 없습니다",
   "No addons match these filters right now.": "현재 이 필터와 일치하는 애드온이 없습니다.",
-  "No affiliation, no referral links, and Harbor gets nothing from these. They are just places where money goes further than it does here.":
-    "Harbor는 이 단체들과 제휴하지 않았고 추천 링크도 없으며 어떤 이익도 받지 않습니다. 단지 이곳보다 기부금이 더 큰 가치를 만드는 곳들입니다.",
+  "No affiliation, no referral links, and Lart gets nothing from these. They are just places where money goes further than it does here.":
+    "Lart는 이 단체들과 제휴하지 않았고 추천 링크도 없으며 어떤 이익도 받지 않습니다. 단지 이곳보다 기부금이 더 큰 가치를 만드는 곳들입니다.",
   "No approved themes yet": "아직 승인된 테마가 없습니다",
   "No art": "아트워크 없음",
   "No artists match that search": "검색과 일치하는 아티스트가 없습니다",
@@ -593,8 +593,8 @@ const catalog06: Record<string, string> = {
   "No matches. Try a different search.": "일치하는 결과가 없습니다. 다른 검색어를 사용해 보세요.",
   "No matches. Try another title.": "일치하는 항목이 없습니다. 다른 제목을 입력해 보세요.",
   "No matching voices": "일치하는 음성 없음",
-  "No metadata addon detected. Harbor is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
-    "메타데이터 애드온이 감지되지 않았습니다. 작품을 계속 불러올 수 있도록 Harbor가 Cinemeta를 대신 사용합니다. 다른 애드온을 설치하는 중이 아니라면 이 옵션을 다시 켜세요.",
+  "No metadata addon detected. Lart is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
+    "메타데이터 애드온이 감지되지 않았습니다. 작품을 계속 불러올 수 있도록 Lart가 Cinemeta를 대신 사용합니다. 다른 애드온을 설치하는 중이 아니라면 이 옵션을 다시 켜세요.",
   "No more films to add. Start with what you picked.":
     "추가할 영화가 더 없습니다. 선택한 영화로 시작하세요.",
   "No more found for this category.": "이 카테고리에서 더 이상 찾을 수 없습니다.",
@@ -611,9 +611,9 @@ const catalog06: Record<string, string> = {
     "아직 알림이 없습니다. 테마를 게시하고 순위가 오르는 모습을 확인해 보세요.",
   "No one found by that name.": "해당 이름을 가진 사용자를 찾지 못했습니다.",
   "No one recognized on screen right now.": "현재 화면에서 인식된 인물이 없습니다.",
-  "No other Harbor answered": "응답한 다른 Harbor가 없습니다",
-  "No other Harbor answered on this network. One shows up here a moment after it starts.":
-    "이 네트워크에서 응답한 다른 Harbor가 없습니다. Harbor가 시작되면 잠시 후 여기에 표시됩니다.",
+  "No other Lart answered": "응답한 다른 Lart가 없습니다",
+  "No other Lart answered on this network. One shows up here a moment after it starts.":
+    "이 네트워크에서 응답한 다른 Lart가 없습니다. Lart가 시작되면 잠시 후 여기에 표시됩니다.",
   "No peers found": "피어를 찾을 수 없습니다",
   "No people found": "인물을 찾을 수 없습니다",
   "No picks loaded. TMDB might be unreachable.":
@@ -681,8 +681,8 @@ const catalog06: Record<string, string> = {
   "No subtitles found yet. Try the search at the bottom.":
     "아직 자막을 찾지 못했습니다. 아래에서 검색해 보세요.",
   "No subtitles found.": "자막을 찾을 수 없습니다.",
-  "No subtitles found. Start anyway, Harbor keeps looking while you watch.":
-    "자막을 찾지 못했습니다. 일단 재생을 시작하면 시청하는 동안 Harbor가 계속 찾습니다.",
+  "No subtitles found. Start anyway, Lart keeps looking while you watch.":
+    "자막을 찾지 못했습니다. 일단 재생을 시작하면 시청하는 동안 Lart가 계속 찾습니다.",
   "No subtitles found. Try another title above, or adjust the season and episode.":
     "자막을 찾지 못했습니다. 위에서 다른 제목을 선택하거나 시즌과 에피소드를 조정하세요.",
   "No such captain": "존재하지 않는 선장",
@@ -725,8 +725,8 @@ const catalog06: Record<string, string> = {
     "아직 설치된 항목이 없습니다. 스트리밍 소스에서 Stremio 자막 애드온을 추가하세요.",
   "None of Trakt's most-anticipated upcoming releases land in this month. Try a different month.":
     "이번 달에는 Trakt에서 가장 기대되는 공개 예정작이 없습니다. 다른 달을 선택해 보세요.",
-  "None of your addons returned a downloadable package for {season}. Harbor can still fetch the episodes one at a time, or you can refresh the sources.":
-    "어떤 애드온에서도 {season}의 다운로드 가능한 패키지를 반환하지 않았습니다. Harbor가 에피소드를 하나씩 가져오게 하거나 소스를 새로고침할 수 있습니다.",
+  "None of your addons returned a downloadable package for {season}. Lart can still fetch the episodes one at a time, or you can refresh the sources.":
+    "어떤 애드온에서도 {season}의 다운로드 가능한 패키지를 반환하지 않았습니다. Lart가 에피소드를 하나씩 가져오게 하거나 소스를 새로고침할 수 있습니다.",
   "None of your addons returned a downloadable package for {season}. Refresh the sources or check your source settings.":
     "애드온에서 {season}의 다운로드 가능한 패키지를 찾지 못했습니다. 소스를 새로고침하거나 소스 설정을 확인하세요.",
   "None yet": "아직 없음",
@@ -780,8 +780,8 @@ const catalog06: Record<string, string> = {
     "저장을 누르기 전까지 변경 사항이 적용되지 않습니다. 이 페이지를 나가면 편집 내용이 삭제됩니다.",
   "Nothing connected yet. Scan a code with your phone.":
     "아직 연결된 항목이 없습니다. 휴대전화로 코드를 스캔하세요.",
-  "Nothing else answered. A Harbor shows up here a moment after it starts on this network.":
-    "응답한 항목이 없습니다. 이 네트워크에서 Harbor가 시작되면 잠시 후 여기에 표시됩니다.",
+  "Nothing else answered. A Lart shows up here a moment after it starts on this network.":
+    "응답한 항목이 없습니다. 이 네트워크에서 Lart가 시작되면 잠시 후 여기에 표시됩니다.",
   'Nothing found for "{q}"': '"{q}" 검색 결과 없음',
   'Nothing found for "{q}". {n} of your addons did not answer.':
     '"{q}" 검색 결과가 없습니다. 애드온 {n}개가 응답하지 않았습니다.',
@@ -803,8 +803,8 @@ const catalog06: Record<string, string> = {
   "Nothing in this filter. Choose All to see everything that answered.":
     "이 필터에는 항목이 없습니다. 응답한 모든 결과를 보려면 전체를 선택하세요.",
   "Nothing in {genre} right now.": "현재 {genre} 장르에 콘텐츠가 없습니다.",
-  "Nothing is uploaded and nothing ships with Harbor. Everything stays on this device and you are responsible for the images you add.":
-    "아무것도 업로드되지 않으며 Harbor에는 어떤 콘텐츠도 포함되어 있지 않습니다. 모든 항목은 이 기기에만 보관되며, 추가한 이미지에 대한 책임은 회원님에게 있습니다.",
+  "Nothing is uploaded and nothing ships with Lart. Everything stays on this device and you are responsible for the images you add.":
+    "아무것도 업로드되지 않으며 Lart에는 어떤 콘텐츠도 포함되어 있지 않습니다. 모든 항목은 이 기기에만 보관되며, 추가한 이미지에 대한 책임은 회원님에게 있습니다.",
   "Nothing left in today's picks": "오늘의 추천작을 모두 확인했습니다",
   "Nothing left to confirm while P2P is disabled.": "P2P가 비활성화되어 있어 더 이상 확인할 항목이 없습니다.",
   "Nothing left to post after removing links.": "링크를 삭제하니 게시할 내용이 없습니다.",
@@ -822,8 +822,8 @@ const catalog06: Record<string, string> = {
   "Nothing saved on Trakt yet.": "Trakt에 아직 저장된 항목이 없습니다.",
   "Nothing saved yet. Add a title from any details page.":
     "아직 저장된 항목이 없습니다. 상세 정보 페이지에서 제목을 추가하세요.",
-  "Nothing selected. Harbor will not load a subtitle on its own.":
-    "선택한 항목이 없습니다. Harbor가 자동으로 자막을 불러오지 않습니다.",
+  "Nothing selected. Lart will not load a subtitle on its own.":
+    "선택한 항목이 없습니다. Lart가 자동으로 자막을 불러오지 않습니다.",
   "Nothing sent yet. Change something and it goes up on its own.":
     "아직 전송된 항목이 없습니다. 내용을 변경하면 자동으로 업로드됩니다.",
   "Nothing this month": "이번 달에는 항목이 없습니다",
@@ -848,8 +848,8 @@ const catalog06: Record<string, string> = {
   "Nothing watched yet. Press play on something.":
     "아직 시청한 콘텐츠가 없습니다. 콘텐츠를 재생해 보세요.",
   "Nothing yet": "아직 아무것도 없습니다",
-  "Nothing you have already set is lost. Harbor picks this back up where you left it.":
-    "이미 설정한 내용은 그대로 유지됩니다. Harbor에서 중단한 지점부터 다시 진행할 수 있습니다.",
+  "Nothing you have already set is lost. Lart picks this back up where you left it.":
+    "이미 설정한 내용은 그대로 유지됩니다. Lart에서 중단한 지점부터 다시 진행할 수 있습니다.",
   Notification: "알림",
   Notifications: "알림",
   Now: "지금",
@@ -886,8 +886,8 @@ const catalog06: Record<string, string> = {
   "OVA of the Year": "올해의 OVA",
   Off: "끔",
   "Off (use CPU)": "끄기(CPU 사용)",
-  "Off by default, so your controller only drives Harbor while it is the focused window. Leave it off if you play games with the same controller.":
-    "기본적으로 꺼져 있으므로 Harbor 창이 활성화된 동안에만 컨트롤러로 Harbor를 조작할 수 있습니다. 같은 컨트롤러로 게임을 한다면 꺼 두세요.",
+  "Off by default, so your controller only drives Lart while it is the focused window. Leave it off if you play games with the same controller.":
+    "기본적으로 꺼져 있으므로 Lart 창이 활성화된 동안에만 컨트롤러로 Lart를 조작할 수 있습니다. 같은 컨트롤러로 게임을 한다면 꺼 두세요.",
   "Off by default. Let visitors see what you have been watching":
     "기본적으로 꺼져 있습니다. 방문자가 내가 시청한 콘텐츠를 볼 수 있게 합니다",
   "Off by default. Show what you are watching right now, or your watch party, on your profile. Applies instantly":
@@ -942,8 +942,8 @@ const catalog06: Record<string, string> = {
   "On the card": "카드에서",
   "On the poster": "포스터에 표시",
   "On the taskbar": "작업 표시줄에 표시",
-  "On the web, Harbor can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
-    "웹에서 Harbor는 브라우저 접근을 허용하는 애드온(Torrentio, TorBox, Cinemeta)에만 연결할 수 있습니다. 미공개 작품은 아직 소스가 없는 경우가 일반적입니다.",
+  "On the web, Lart can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
+    "웹에서 Lart는 브라우저 접근을 허용하는 애드온(Torrentio, TorBox, Cinemeta)에만 연결할 수 있습니다. 미공개 작품은 아직 소스가 없는 경우가 일반적입니다.",
   "On themoviedb.org, open Settings.": "themoviedb.org에서 설정을 여세요.",
   "On this computer": "이 컴퓨터에서",
   "On this device": "이 기기",

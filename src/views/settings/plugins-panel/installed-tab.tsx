@@ -31,7 +31,7 @@ export function InstalledTab({ onAddRepository }: { onAddRepository: () => void 
   const groups = groupByRepo();
   const waitSeconds = Math.max(8, Math.min(120, settings.addonTimeoutSec ?? 30));
   const [refreshing, setRefreshing] = useState(false);
-  // Only a plugin Harbor stood down has anything to gain from a run: one that answers comes back,
+  // Only a plugin Lart stood down has anything to gain from a run: one that answers comes back,
   // and the rest are already asked when Play is pressed. Nothing is offered while every plugin is
   // paused, because then there is nothing to try.
   const stoodDown = groups.flatMap((g) =>
@@ -59,7 +59,7 @@ export function InstalledTab({ onAddRepository }: { onAddRepository: () => void 
       <Section
         title={t("Use plugins")}
         subtitle={t(
-          "Plugins look for streams on sites Harbor does not know about. Everything here was installed by you, from repositories you chose.",
+          "Plugins look for streams on sites Lart does not know about. Everything here was installed by you, from repositories you chose.",
         )}
         newId="plugins:use-plugins"
       >
@@ -100,7 +100,7 @@ export function InstalledTab({ onAddRepository }: { onAddRepository: () => void 
         <ToggleRow
           label={t("Show languages on plugin posters")}
           sub={t(
-            "Some plugins name a listing after everything it carries, so its languages are in the title. Harbor reads them back out and badges the poster. Shown only when the plugin provides it.",
+            "Some plugins name a listing after everything it carries, so its languages are in the title. Lart reads them back out and badges the poster. Shown only when the plugin provides it.",
           )}
           value={settings.pluginsPosterLanguages}
           onChange={(v) => update({ pluginsPosterLanguages: v })}
@@ -135,7 +135,7 @@ export function InstalledTab({ onAddRepository }: { onAddRepository: () => void 
             icon={<RefreshCw size={18} strokeWidth={2} />}
             label={t("Refresh all")}
             desc={t(
-              "Runs every plugin Harbor stood down. One that answers comes back; the others stay paused.",
+              "Runs every plugin Lart stood down. One that answers comes back; the others stay paused.",
             )}
           >
             <SButton disabled={refreshing} onClick={() => void refreshAll()}>

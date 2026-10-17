@@ -38,8 +38,8 @@ const settings: Record<string, string> = {
   "A debrid service is connected. You'll get instant, high-quality streams.":
     "Ein Debrid-Dienst ist verbunden. Du erhältst sofort hochwertige Streams.",
   "A free Cloudflare account.": "Ein kostenloses Cloudflare-Konto.",
-  "A free TMDB key is highly recommended. It unlocks the full Harbor experience. The rest are optional, and Cinemeta works out of the box without any.":
-    "Ein kostenloser TMDB-Schlüssel wird dringend empfohlen. Er schaltet das vollständige Harbor-Erlebnis frei. Die übrigen Schlüssel sind optional, und Cinemeta funktioniert auch ohne Schlüssel sofort.",
+  "A free TMDB key is highly recommended. It unlocks the full Lart experience. The rest are optional, and Cinemeta works out of the box without any.":
+    "Ein kostenloser TMDB-Schlüssel wird dringend empfohlen. Er schaltet das vollständige Lart-Erlebnis frei. Die übrigen Schlüssel sind optional, und Cinemeta funktioniert auch ohne Schlüssel sofort.",
   "A live preview of your player. Open the editor to move, hide, or reorder any control.":
     "Eine Live-Vorschau deines Players. Öffne den Editor, um Bedienelemente zu verschieben, auszublenden oder neu anzuordnen.",
   "A new anime comes out": "Ein neuer Anime erscheint",
@@ -112,11 +112,11 @@ const settings: Record<string, string> = {
   "Add people in the Custom calendar manager first, then come back here.":
     "Füge zuerst Personen in der Verwaltung des benutzerdefinierten Kalenders hinzu und kehre dann hierher zurück.",
   "Add rule": "Regel hinzufügen",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.":
-    "{n} Titel aus deiner Harbor-Merkliste zu Trakt hinzufügen? Trakt überspringt alle bereits vorhandenen Titel.",
-  "Add {n} titles from your Trakt watchlist to Harbor?":
-    "{n} Titel aus deiner Trakt-Merkliste zu Harbor hinzufügen?",
-  "Added {n} to your Harbor watchlist": "{n} zu deiner Harbor-Merkliste hinzugefügt",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.":
+    "{n} Titel aus deiner Lart-Merkliste zu Trakt hinzufügen? Trakt überspringt alle bereits vorhandenen Titel.",
+  "Add {n} titles from your Trakt watchlist to Lart?":
+    "{n} Titel aus deiner Trakt-Merkliste zu Lart hinzufügen?",
+  "Added {n} to your Lart watchlist": "{n} zu deiner Lart-Merkliste hinzugefügt",
   "Addon not installed": "Add-on nicht installiert",
   "Addon order": "Add-on-Reihenfolge",
   "Adds a Playlists item to the navigation for browsing movies and shows from your M3U or Xtream playlists (the same ones you add for Live TV). Off by default to keep the nav tidy.":
@@ -139,8 +139,8 @@ const settings: Record<string, string> = {
     "Nachdem eine Kachel einen Moment lang angezeigt wurde, wird der Trailer des hervorgehobenen Titels stumm im Hintergrund abgespielt. Verbraucht mehr Bandbreite.",
   "After the current show's episodes, Next flows into your queue. Off keeps Next/Previous within the current show only.":
     "Nach den Folgen der aktuellen Serie setzt „Weiter“ die Wiedergabe mit deiner Warteschlange fort. Bei deaktivierter Option bleiben „Weiter“ und „Zurück“ auf die aktuelle Serie beschränkt.",
-  "After you pick a source, show a subtitle picker so you can set the exact track and language before the video starts. Off by default, Harbor keeps picking one for you automatically.":
-    "Zeige nach der Auswahl einer Quelle eine Untertitelauswahl an, damit du vor dem Videostart die gewünschte Untertitelspur und Sprache festlegen kannst. Die Option ist standardmäßig deaktiviert; Harbor wählt die Untertitel dann weiterhin automatisch aus.",
+  "After you pick a source, show a subtitle picker so you can set the exact track and language before the video starts. Off by default, Lart keeps picking one for you automatically.":
+    "Zeige nach der Auswahl einer Quelle eine Untertitelauswahl an, damit du vor dem Videostart die gewünschte Untertitelspur und Sprache festlegen kannst. Die Option ist standardmäßig deaktiviert; Lart wählt die Untertitel dann weiterhin automatisch aus.",
   "After you stop watching, a stream file stays cached for this long so reopening resumes instead of re-downloading. Older files are cleaned up automatically. Off deletes the file as soon as you leave the player.":
     "Nachdem du die Wiedergabe beendet hast, bleibt eine Streamdatei so lange im Cache. So wird die Wiedergabe beim erneuten Öffnen fortgesetzt, statt die Datei erneut herunterzuladen. Ältere Dateien werden automatisch bereinigt. „Aus“ löscht die Datei, sobald du den Player verlässt.",
   Aired: "Ausgestrahlt",
@@ -171,8 +171,8 @@ const settings: Record<string, string> = {
   "Anime only": "Nur Anime",
   "Anime tab": "Anime-Tab",
   "Anime tweaks": "Anime-Anpassungen",
-  "Anime4K and smooth-motion run on the bundled mpv engine in the Harbor desktop app. They have no effect in the browser.":
-    "Anime4K und flüssige Bewegungen laufen über die mitgelieferte mpv-Engine in der Harbor-Desktop-App. Im Browser haben sie keine Wirkung.",
+  "Anime4K and smooth-motion run on the bundled mpv engine in the Lart desktop app. They have no effect in the browser.":
+    "Anime4K und flüssige Bewegungen laufen über die mitgelieferte mpv-Engine in der Lart-Desktop-App. Im Browser haben sie keine Wirkung.",
   "Anime4K real-time upscaling, smooth motion, and where SVP fits in. All the anime-specific picture enhancements in one place.":
     "Anime4K-Echtzeit-Hochskalierung, flüssige Bewegungen und die Rolle von SVP. Alle anime-spezifischen Bildverbesserungen an einem Ort.",
   "Anime4K shaders": "Anime4K-Shader",
@@ -190,7 +190,7 @@ const settings: Record<string, string> = {
   "Any streamer": "Beliebiger Streamingdienst",
   "Anything matching your Custom calendar: tracked people, genres, providers, countries.":
     "Alles, was deinem benutzerdefinierten Kalender entspricht: verfolgte Personen, Genres, Anbieter und Länder.",
-  "Anywhere in Harbor.": "Überall in Harbor.",
+  "Anywhere in Lart.": "Überall in Lart.",
   "App icon": "App-Symbol",
   "App logo": "App-Logo",
   Appearance: "Erscheinungsbild",
@@ -224,7 +224,7 @@ const settings: Record<string, string> = {
   "Auto-apply audio-derived sync fixes":
     "Audiobasierte Synchronisierungskorrekturen automatisch anwenden",
   "Auto-confirm peer-to-peer streaming": "P2P-Streaming automatisch bestätigen",
-  "Auto-deploy from Harbor": "Automatisch aus Harbor bereitstellen",
+  "Auto-deploy from Lart": "Automatisch aus Lart bereitstellen",
   "Auto-hide the Skip button after": "Schaltfläche „Überspringen“ automatisch ausblenden nach",
   "Auto-included. No keys, no library, no URLs. Just structural flags so reproductions go faster.":
     "Automatisch enthalten. Keine Schlüssel, keine Mediathek, keine URLs. Nur Strukturmerkmale, damit sich Fehler schneller reproduzieren lassen.",
@@ -293,8 +293,8 @@ const settings: Record<string, string> = {
   "Boost SDR video toward HDR": "SDR-Video in Richtung HDR optimieren",
   "Bot token": "Bot-Token",
   "BotFather replies with a token like": "BotFather antwortet mit einem Token wie",
-  "Both go in the boxes above. Harbor builds the URL for you.":
-    "Beides kommt in die Felder oben. Harbor erstellt die URL für dich.",
+  "Both go in the boxes above. Lart builds the URL for you.":
+    "Beides kommt in die Felder oben. Lart erstellt die URL für dich.",
   Bottom: "Unten",
   "Bottom bar": "Untere Leiste",
   "Bottom left": "Unten links",
@@ -302,8 +302,8 @@ const settings: Record<string, string> = {
   "Box color": "Feldfarbe",
   "Brighten dark movies": "Dunkle Filme aufhellen",
   Brightness: "Helligkeit",
-  "Bring your Letterboxd watchlist, diary, liked films and lists into Harbor via the Stremboxd bridge.":
-    "Importiere deine Letterboxd-Merkliste, dein Tagebuch, deine mit „Gefällt mir“ markierten Filme und deine Listen über die Stremboxd-Brücke in Harbor.",
+  "Bring your Letterboxd watchlist, diary, liked films and lists into Lart via the Stremboxd bridge.":
+    "Importiere deine Letterboxd-Merkliste, dein Tagebuch, deine mit „Gefällt mir“ markierten Filme und deine Listen über die Stremboxd-Brücke in Lart.",
   "Brings back the small in-app tips you've dismissed without redoing the welcome flow.":
     "Zeigt die kleinen Hinweise in der App wieder an, die du geschlossen hast, ohne die Einführung zu wiederholen.",
   "Browse all releases": "Alle Veröffentlichungen durchsuchen",
@@ -331,21 +331,21 @@ const settings: Record<string, string> = {
   "Build your own palette": "Eigene Farbpalette erstellen",
   "Built-in peer-to-peer streaming, served from your own machine.":
     "Integriertes P2P-Streaming, bereitgestellt von deinem eigenen Gerät.",
-  "Bundled with Harbor. Plays anything you throw at it.":
-    "In Harbor enthalten. Spielt alles ab, was du ihm gibst.",
+  "Bundled with Lart. Plays anything you throw at it.":
+    "In Lart enthalten. Spielt alles ab, was du ihm gibst.",
   "By default, addon rails that duplicate the built-in ones (Trending, Popular, Top Rated, etc.) are merged so you don't see the same row twice. Turn this on to show every one, duplicates and all.":
     "Standardmäßig werden Add-on-Reihen, die integrierte Reihen duplizieren (Trends, Beliebt, Bestbewertet usw.), zusammengeführt, damit dieselbe Reihe nicht zweimal erscheint. Aktiviere dies, um ausnahmslos alle Reihen einschließlich Duplikaten anzuzeigen.",
   "CLI.": "CLI.",
   "Cache location": "Cache-Speicherort",
-  "Cap how much disk the cache can use. When it goes over, Harbor deletes the oldest files first. Enforced on launch and as streams close.":
-    "Begrenze den Speicherplatz, den der Cache verwenden darf. Wird das Limit überschritten, löscht Harbor zuerst die ältesten Dateien. Die Prüfung erfolgt beim Start und beim Schließen von Streams.",
+  "Cap how much disk the cache can use. When it goes over, Lart deletes the oldest files first. Enforced on launch and as streams close.":
+    "Begrenze den Speicherplatz, den der Cache verwenden darf. Wird das Limit überschritten, löscht Lart zuerst die ältesten Dateien. Die Prüfung erfolgt beim Start und beim Schließen von Streams.",
   "Caps file size. Unknown sizes still pass.":
     "Begrenzt die Dateigröße. Unbekannte Größen werden dennoch zugelassen.",
   "Card size": "Kartengröße",
   Cards: "Karten",
   "Catalogs to show": "Anzuzeigende Kataloge",
-  "Catch stremio:// install links inside Harbor":
-    "stremio://-Installationslinks in Harbor abfangen",
+  "Catch stremio:// install links inside Lart":
+    "stremio://-Installationslinks in Lart abfangen",
   Cause: "Ursache",
   "Change…": "Ändern…",
   "Changing the location restarts the engine. Clearing removes all cached stream files right away; anything you reopen will re-fetch.":
@@ -375,7 +375,7 @@ const settings: Record<string, string> = {
   "Cinematic overlay": "Filmische Einblendung",
   "Claim your handle": "Sichere dir deinen Benutzernamen",
   "Classic Stremio": "Klassisches Stremio",
-  "Classic. Was Harbor's original pair.": "Klassisch. War Harbors ursprüngliche Kombination.",
+  "Classic. Was Lart's original pair.": "Klassisch. War Harbors ursprüngliche Kombination.",
   "Clean modern. Sans across the board.": "Klar und modern. Durchgehend serifenlos.",
   "Cleaner grid for when your poster service already prints the title onto the artwork.":
     "Übersichtlicheres Raster, wenn dein Posterdienst den Titel bereits in das Bild einfügt.",
@@ -403,20 +403,20 @@ const settings: Record<string, string> = {
   "Click {kbd}.": "Auf {kbd} klicken.",
   "Close player": "Player schließen",
   "Close to the system tray": "Beim Schließen in den Infobereich",
-  "Closing the window tucks Harbor into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
-    "Beim Schließen des Fensters wird Harbor im Infobereich abgelegt, statt beendet zu werden, sodass es sofort wieder geöffnet werden kann. Klicke für Schnellsteuerungen mit der rechten Maustaste auf das Symbol im Infobereich oder wähle „Beenden“, um Harbor vollständig zu schließen.",
+  "Closing the window tucks Lart into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
+    "Beim Schließen des Fensters wird Lart im Infobereich abgelegt, statt beendet zu werden, sodass es sofort wieder geöffnet werden kann. Klicke für Schnellsteuerungen mit der rechten Maustaste auf das Symbol im Infobereich oder wähle „Beenden“, um Lart vollständig zu schließen.",
   "Cloudflare Workers free tier:": "Kostenloses Kontingent von Cloudflare Workers:",
   "Cloudflare asks you to pick a name (this becomes {code}). Type any name (your first name works). Then click {b1}.":
     "Cloudflare fordert dich auf, einen Namen auszuwählen (dieser wird zu {code}). Gib einen beliebigen Namen ein (dein Vorname genügt). Klicke dann auf {b1}.",
-  "Cloudflare shows API tokens only once. Save a copy now or you'll lose the ability to stop or redeploy this relay from Harbor.":
-    "Cloudflare zeigt API-Tokens nur einmal an. Speichere jetzt eine Kopie, sonst kannst du dieses Relay später nicht mehr über Harbor anhalten oder erneut bereitstellen.",
-  "Cloudflare token form filled with name 'Harbor Relay' and one permission row set to Account / Workers Scripts / Edit":
-    "Cloudflare-Tokenformular, ausgefüllt mit dem Namen „Harbor Relay“ und einer Berechtigungszeile mit Account / Workers Scripts / Edit",
+  "Cloudflare shows API tokens only once. Save a copy now or you'll lose the ability to stop or redeploy this relay from Lart.":
+    "Cloudflare zeigt API-Tokens nur einmal an. Speichere jetzt eine Kopie, sonst kannst du dieses Relay später nicht mehr über Lart anhalten oder erneut bereitstellen.",
+  "Cloudflare token form filled with name 'Lart Relay' and one permission row set to Account / Workers Scripts / Edit":
+    "Cloudflare-Tokenformular, ausgefüllt mit dem Namen „Lart Relay“ und einer Berechtigungszeile mit Account / Workers Scripts / Edit",
   Codec: "Codec",
   "Codec filter": "Codec-Filter",
   "Color & HDR": "Farbe & HDR",
-  "Color presets, custom backgrounds, and the font pair Harbor renders in.":
-    "Farbvorlagen, eigene Hintergründe und die von Harbor verwendete Schriftkombination.",
+  "Color presets, custom backgrounds, and the font pair Lart renders in.":
+    "Farbvorlagen, eigene Hintergründe und die von Lart verwendete Schriftkombination.",
   "Color tokens": "Farb-Tokens",
   Colors: "Farben",
   "Come back here and hit {b1}. The Hello World can stay where it is. It's free and harmless.":
@@ -444,8 +444,8 @@ const settings: Record<string, string> = {
   Connect: "Verbinden",
   "Connect / Verify": "Verbinden / Verifizieren",
   "Connect AniList": "AniList verbinden",
-  "Connect Discord or Telegram and Harbor posts a message when something you follow is about to drop. Hit Test to send yourself a sample first.":
-    "Verbinde Discord oder Telegram, damit Harbor eine Nachricht sendet, wenn etwas, dem du folgst, bald erscheint. Klicke zuerst auf „Testen“, um dir eine Beispielnachricht zu senden.",
+  "Connect Discord or Telegram and Lart posts a message when something you follow is about to drop. Hit Test to send yourself a sample first.":
+    "Verbinde Discord oder Telegram, damit Lart eine Nachricht sendet, wenn etwas, dem du folgst, bald erscheint. Klicke zuerst auf „Testen“, um dir eine Beispielnachricht zu senden.",
   "Connect MyAnimeList": "MyAnimeList verbinden",
   "Connect Simkl": "Mit Simkl verbinden",
   "Connect Trakt": "Mit Trakt verbinden",
@@ -487,8 +487,8 @@ const settings: Record<string, string> = {
   "Copy filename": "Dateinamen kopieren",
   "Copy relay URL": "Relay-URL kopieren",
   "Copy theme": "Design kopieren",
-  "Copy your Harbor watchlist over to Trakt, or pull your Trakt watchlist into Harbor. Safe to run again, Trakt skips anything it already has.":
-    "Übertrage deine Harbor-Merkliste zu Trakt oder importiere deine Trakt-Merkliste in Harbor. Kann problemlos erneut ausgeführt werden, da Trakt bereits vorhandene Einträge überspringt.",
+  "Copy your Lart watchlist over to Trakt, or pull your Trakt watchlist into Lart. Safe to run again, Trakt skips anything it already has.":
+    "Übertrage deine Lart-Merkliste zu Trakt oder importiere deine Trakt-Merkliste in Lart. Kann problemlos erneut ausgeführt werden, da Trakt bereits vorhandene Einträge überspringt.",
   "Corner radius": "Eckenradius",
   "Corners keep it clear of subtitles along the bottom.":
     "In den Ecken kommt es den Untertiteln am unteren Rand nicht in die Quere.",
@@ -529,7 +529,7 @@ const settings: Record<string, string> = {
   "Cover Image URL": "URL des Titelbilds",
   Create: "Erstellen",
   "Create Custom Token": "Benutzerdefiniertes Token erstellen",
-  "Create Harbor account": "Harbor-Konto erstellen",
+  "Create Lart account": "Lart-Konto erstellen",
   "Create Token": "Token erstellen",
   "Create folders for movies and shows": "Ordner für Filme und Serien erstellen",
   "Credit (optional)": "Namensnennung (optional)",
@@ -577,14 +577,14 @@ const settings: Record<string, string> = {
   "Default art": "Standardgrafik",
   "Default picture shape on the mpv engine. Fit keeps the source as-is with any black bars; the rest stretch or crop to fill, handy for old 4:3 shows on a widescreen TV.":
     "Standardmäßiges Bildformat der mpv-Engine. „Einpassen“ behält die Quelle einschließlich schwarzer Balken unverändert bei. Die übrigen Optionen strecken das Bild oder schneiden es zum Ausfüllen zu, was bei alten 4:3-Sendungen auf einem Breitbildfernseher praktisch ist.",
-  "Default. Harbor parses and scores every source and surfaces the best quality first.":
-    "Standard. Harbor analysiert und bewertet jede Quelle und zeigt die beste Qualität zuerst an.",
+  "Default. Lart parses and scores every source and surfaces the best quality first.":
+    "Standard. Lart analysiert und bewertet jede Quelle und zeigt die beste Qualität zuerst an.",
   "Default. Humanist serif, warm sans.":
     "Standard. Humanistische Serifenschrift, warme serifenlose Schrift.",
   "Default. Rejects size outliers, suspicious extensions, year/episode mismatches, season packs (for episode requests), trailers, and likely cams.":
     "Standard. Lehnt Ausreißer bei der Größe, verdächtige Dateiendungen, Abweichungen bei Jahr oder Folge, Staffelpakete (bei Folgenanfragen), Trailer und wahrscheinliche Cam-Aufnahmen ab.",
-  "Default. Top pick at the top, quality tiles, and an All-Sources drawer. Harbor scores and ranks results.":
-    "Standard. Beste Wahl ganz oben, Qualitätskacheln und ein Bereich für alle Quellen. Harbor bewertet und sortiert die Ergebnisse.",
+  "Default. Top pick at the top, quality tiles, and an All-Sources drawer. Lart scores and ranks results.":
+    "Standard. Beste Wahl ganz oben, Qualitätskacheln und ein Bereich für alle Quellen. Lart bewertet und sortiert die Ergebnisse.",
   "Delete after I finish watching": "Nach dem Ansehen löschen",
   "Delete filter": "Filter löschen",
   "Delete layout": "Layout löschen",
@@ -634,11 +634,11 @@ const settings: Record<string, string> = {
   "Disconnect from Simkl": "Verbindung mit Simkl trennen",
   "Disconnect from Trakt": "Verbindung mit Trakt trennen",
   "Discord Rich Presence": "Discord Rich Presence",
-  "Discord posts a message to a channel whenever Harbor pings it. Takes about a minute to set up.":
-    "Discord sendet jedes Mal eine Nachricht an einen Kanal, wenn Harbor Discord anpingt. Die Einrichtung dauert etwa eine Minute.",
+  "Discord posts a message to a channel whenever Lart pings it. Takes about a minute to set up.":
+    "Discord sendet jedes Mal eine Nachricht an einen Kanal, wenn Lart Discord anpingt. Die Einrichtung dauert etwa eine Minute.",
   "Discord webhook URL": "Discord-Webhook-URL",
-  "Display 'Browsing Harbor' when nothing is playing.":
-    "„In Harbor stöbern“ anzeigen, wenn nichts wiedergegeben wird.",
+  "Display 'Browsing Lart' when nothing is playing.":
+    "„In Lart stöbern“ anzeigen, wenn nichts wiedergegeben wird.",
   "Display SIMKL Community Ratings": "SIMKL-Community-Bewertungen anzeigen",
   "Display SIMKL community score badge on details pages.":
     "SIMKL-Community-Bewertungsbadge auf Detailseiten anzeigen.",
@@ -699,8 +699,8 @@ const settings: Record<string, string> = {
     "Jede Regel wird unabhängig ausgelöst. Lege fest, was eine Benachrichtigung auslöst und wohin sie gesendet wird.",
   "Eases mouse-wheel scrolling instead of jumping line by line. Turn off if you prefer an instant response or notice any lag.":
     "Sorgt beim Scrollen mit dem Mausrad für fließende Bewegungen, statt zeilenweise zu springen. Deaktiviere dies, wenn du eine sofortige Reaktion bevorzugst oder Verzögerungen bemerkst.",
-  "Easiest path. Harbor uploads the worker, creates the Durable Object namespace, and stores the resulting URL.":
-    "Der einfachste Weg. Harbor lädt den Worker hoch, erstellt den Durable-Object-Namespace und speichert die resultierende URL.",
+  "Easiest path. Lart uploads the worker, creates the Durable Object namespace, and stores the resulting URL.":
+    "Der einfachste Weg. Lart lädt den Worker hoch, erstellt den Durable-Object-Namespace und speichert die resultierende URL.",
   "Easy on the eyes": "Angenehm für die Augen",
   "Easynews+": "Easynews+",
   "Edit Channel": "Kanal bearbeiten",
@@ -716,7 +716,7 @@ const settings: Record<string, string> = {
   "Elapsed and remaining": "Verstrichen und verbleibend",
   "Elapsed only": "Nur verstrichene Zeit",
   "Email or Discord": "E-Mail oder Discord",
-  "Embed mpv inside Harbor window": "mpv in das Harbor-Fenster einbetten",
+  "Embed mpv inside Lart window": "mpv in das Lart-Fenster einbetten",
   "Empty. The dials above cover what most people ever need.":
     "Leer. Die Regler oben decken alles ab, was die meisten je brauchen.",
   "Enable Anime4K": "Anime4K aktivieren",
@@ -744,19 +744,19 @@ const settings: Record<string, string> = {
   "Esc exits fullscreen first": "Esc beendet zuerst den Vollbildmodus",
   "Evens out quiet dialogue and loud action scenes with a dynamic normalizer.":
     "Gleicht leise Dialoge und laute Actionszenen durch einen dynamischen Lautstärkeausgleich an.",
-  "Every format badge Harbor can show on streams. Click one to swap its art, hide it, or reset it. Changes apply everywhere badges appear.":
-    "Alle Formatabzeichen, die Harbor bei Streams anzeigen kann. Klicke auf eines, um dessen Grafik zu ändern, es auszublenden oder zurückzusetzen. Änderungen gelten überall, wo Abzeichen angezeigt werden.",
+  "Every format badge Lart can show on streams. Click one to swap its art, hide it, or reset it. Changes apply everywhere badges appear.":
+    "Alle Formatabzeichen, die Lart bei Streams anzeigen kann. Klicke auf eines, um dessen Grafik zu ändern, es auszublenden oder zurückzusetzen. Änderungen gelten überall, wo Abzeichen angezeigt werden.",
   "Every row": "Jede Zeile",
-  "Every shortcut Harbor responds to. Click a binding to rebind it.":
-    "Alle Tastenkürzel, auf die Harbor reagiert. Klicke auf eine Belegung, um sie zu ändern.",
-  "Every variable, selector, hook, and recipe for building custom Harbor themes.":
-    "Alle Variablen, Selektoren, Hooks und Anleitungen zum Erstellen eigener Harbor-Designs.",
-  "Everyone who uses this Harbor gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
-    "Jeder, der diese Harbor-Instanz verwendet, erhält einen eigenen Wiedergabeverlauf, Avatar, eine eigene Farbe und eine optionale PIN. Du kannst jederzeit wechseln.",
+  "Every shortcut Lart responds to. Click a binding to rebind it.":
+    "Alle Tastenkürzel, auf die Lart reagiert. Klicke auf eine Belegung, um sie zu ändern.",
+  "Every variable, selector, hook, and recipe for building custom Lart themes.":
+    "Alle Variablen, Selektoren, Hooks und Anleitungen zum Erstellen eigener Lart-Designs.",
+  "Everyone who uses this Lart gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
+    "Jeder, der diese Lart-Instanz verwendet, erhält einen eigenen Wiedergabeverlauf, Avatar, eine eigene Farbe und eine optionale PIN. Du kannst jederzeit wechseln.",
   "Everything releasing in the current month from TMDB.":
     "Alle Veröffentlichungen des aktuellen Monats laut TMDB.",
-  "Everything you save here stays in this browser. Your Stremio login, API keys, watch progress, picker cache, dismissed tips. Harbor servers never see any of it. Clearing your browser data wipes it.":
-    "Alles, was du hier speicherst, bleibt in diesem Browser: deine Stremio-Anmeldung, API-Schlüssel, dein Wiedergabefortschritt, der Auswahl-Cache und ausgeblendete Tipps. Harbor-Server sehen davon nichts. Beim Löschen deiner Browserdaten wird alles entfernt.",
+  "Everything you save here stays in this browser. Your Stremio login, API keys, watch progress, picker cache, dismissed tips. Lart servers never see any of it. Clearing your browser data wipes it.":
+    "Alles, was du hier speicherst, bleibt in diesem Browser: deine Stremio-Anmeldung, API-Schlüssel, dein Wiedergabefortschritt, der Auswahl-Cache und ausgeblendete Tipps. Lart-Server sehen davon nichts. Beim Löschen deiner Browserdaten wird alles entfernt.",
   "Excludes direct and debrid streams with no seeders.":
     "Schließt Direkt- und Debrid-Streams ohne Seeder aus.",
   "Exit playback and return to the previous view.":
@@ -774,10 +774,10 @@ const settings: Record<string, string> = {
   "Export my setup": "Meine Einrichtung exportieren",
   "Export player log": "Player-Protokoll exportieren",
   "Export to Trakt": "Zu Trakt exportieren",
-  "Export your entire Harbor setup to a single file, then restore it on a new computer or keep it as a backup.":
-    "Exportiere deine gesamte Harbor-Konfiguration in eine einzige Datei. Du kannst sie dann auf einem neuen Computer wiederherstellen oder als Sicherung aufbewahren.",
-  "Export your entire Harbor setup to a single file, then restore it on a new computer or keep it as a backup. Everything is included except your Stremio sign-in.":
-    "Exportiere deine gesamte Harbor-Einrichtung in eine einzige Datei, um sie auf einem neuen Computer wiederherzustellen oder als Sicherung aufzubewahren. Alles außer deiner Stremio-Anmeldung ist enthalten.",
+  "Export your entire Lart setup to a single file, then restore it on a new computer or keep it as a backup.":
+    "Exportiere deine gesamte Lart-Konfiguration in eine einzige Datei. Du kannst sie dann auf einem neuen Computer wiederherstellen oder als Sicherung aufbewahren.",
+  "Export your entire Lart setup to a single file, then restore it on a new computer or keep it as a backup. Everything is included except your Stremio sign-in.":
+    "Exportiere deine gesamte Lart-Einrichtung in eine einzige Datei, um sie auf einem neuen Computer wiederherzustellen oder als Sicherung aufzubewahren. Alles außer deiner Stremio-Anmeldung ist enthalten.",
   Exported: "Exportiert",
   Exporting: "Wird exportiert",
   "Extra large": "Sehr groß",
@@ -787,8 +787,8 @@ const settings: Record<string, string> = {
   "Failed to fetch JSON": "JSON konnte nicht abgerufen werden",
   "Failed: {error}": "Fehlgeschlagen: {error}",
   "Familiar Stremio button order.": "Vertraute Stremio-Schaltflächenanordnung.",
-  "Fan-made avatars for personal use. Harbor claims no rights to these characters; they belong to their creators and studios, shown here under fair use. Every one is optimized down to a tiny WebP.":
-    "Von Fans erstellte Avatare für den persönlichen Gebrauch. Harbor beansprucht keine Rechte an diesen Figuren; sie gehören ihren Urhebern und Studios und werden hier im Rahmen der zulässigen Nutzung gezeigt. Alle wurden auf winzige WebP-Dateien optimiert.",
+  "Fan-made avatars for personal use. Lart claims no rights to these characters; they belong to their creators and studios, shown here under fair use. Every one is optimized down to a tiny WebP.":
+    "Von Fans erstellte Avatare für den persönlichen Gebrauch. Lart beansprucht keine Rechte an diesen Figuren; sie gehören ihren Urhebern und Studios und werden hier im Rahmen der zulässigen Nutzung gezeigt. Alle wurden auf winzige WebP-Dateien optimiert.",
   "Fanart.tv · logos and backdrops": "Fanart.tv · Logos und Hintergründe",
   "Faster and quieter than P2P if you already pay for Usenet. Configure on the addon page, paste the manifest URL it returns.": "Schneller und unauffälliger als P2P, wenn du bereits für Usenet bezahlst. Konfiguriere das Add-on auf der Add-on-Seite und füge die dort ausgegebene Manifest-URL ein.",
   "Fetches DuckDuckGo results and feeds top hits into the model prompt.":
@@ -812,8 +812,8 @@ const settings: Record<string, string> = {
     "Findet Anime, die unter einer Film- oder Serien-ID gespeichert sind (wodurch „Weiterschauen“ und Trakt nicht funktionieren), und entfernt nur diese, damit sie korrekt neu hinzugefügt werden.",
   "Finish an episode and the card jumps to the next one instead of sitting at 0m left.":
     "Nach dem Ende einer Episode springt die Karte zur nächsten, statt bei 0 Min. verbleibend stehen zu bleiben.",
-  "Finish the install above first. Flipping this on now won't do anything until Harbor can find SVP's engine.":
-    "Schließe zuerst die Installation oben ab. Wenn du dies jetzt aktivierst, hat das keine Wirkung, bis Harbor die Engine von SVP finden kann.",
+  "Finish the install above first. Flipping this on now won't do anything until Lart can find SVP's engine.":
+    "Schließe zuerst die Installation oben ab. Wenn du dies jetzt aktivierst, hat das keine Wirkung, bis Lart die Engine von SVP finden kann.",
   "Finishing an anime episode updates your AniList progress. Forward only: it never lowers a count you already have.":
     "Wenn du eine Anime-Folge zu Ende schaust, wird dein Fortschritt bei AniList aktualisiert. Nur vorwärts: Ein bereits erreichter Stand wird nie herabgesetzt.",
   "Finishing an anime episode updates your MyAnimeList progress. Forward only: it never lowers a count you already have.":
@@ -866,8 +866,8 @@ const settings: Record<string, string> = {
   "From other devices on your Wi-Fi": "Von anderen Geräten in deinem WLAN",
   Full: "Voll",
   "Full hero banner": "Vollflächiges Hero-Banner",
-  "Full mode signs in with your Letterboxd password to also unlock your diary, friends activity and your personal ratings. Your password is sent only to Stremboxd to obtain a token — Harbor never stores it.":
-    "Im Vollmodus meldest du dich mit deinem Letterboxd-Passwort an, um zusätzlich dein Tagebuch, die Aktivitäten deiner Freunde und deine persönlichen Bewertungen freizuschalten. Dein Passwort wird nur an Stremboxd gesendet, um ein Token zu erhalten; Harbor speichert es niemals.",
+  "Full mode signs in with your Letterboxd password to also unlock your diary, friends activity and your personal ratings. Your password is sent only to Stremboxd to obtain a token — Lart never stores it.":
+    "Im Vollmodus meldest du dich mit deinem Letterboxd-Passwort an, um zusätzlich dein Tagebuch, die Aktivitäten deiner Freunde und deine persönlichen Bewertungen freizuschalten. Dein Passwort wird nur an Stremboxd gesendet, um ein Token zu erhalten; Lart speichert es niemals.",
   "Full mode — diary, friends & ratings enabled":
     "Vollmodus: Tagebuch, Freunde und Bewertungen aktiviert",
   "Full quality frames": "Einzelbilder in voller Qualität",
@@ -876,14 +876,14 @@ const settings: Record<string, string> = {
   "Gemini API key": "Gemini-API-Schlüssel",
   "Gemini · in-player song ID": "Gemini · Songerkennung im Player",
   "Generate a Cloudflare API token with": "Cloudflare-API-Token erstellen mit",
-  "Generate a Cloudflare API token with {code1} and {code2} permissions at {code3}. Paste it into Harbor.":
-    "Erstelle unter {code3} ein Cloudflare-API-Token mit den Berechtigungen {code1} und {code2}. Füge es in Harbor ein.",
+  "Generate a Cloudflare API token with {code1} and {code2} permissions at {code3}. Paste it into Lart.":
+    "Erstelle unter {code3} ein Cloudflare-API-Token mit den Berechtigungen {code1} und {code2}. Füge es in Lart ein.",
   "Generates a frame on the fly as you scrub the seek bar. Works on debrid streams and local files.":
     "Erzeugt beim Ziehen über die Wiedergabeleiste spontan ein Einzelbild. Funktioniert mit Debrid-Streams und lokalen Dateien.",
   "Genre release rule": "Veröffentlichungsregel für Genres",
-  "Genuine 48/60fps motion on anime, rendered right inside Harbor's player. SVP supplies the engine (VapourSynth + svpflow) and runs in your tray for licensing; Harbor's own player applies the interpolation, so it stays embedded and fully under your control. One-time install, then flip it on.":
-    "Echte Bewegungsdarstellung mit 48/60 fps bei Anime, direkt im Player von Harbor gerendert. SVP stellt die Engine bereit (VapourSynth + svpflow) und läuft für die Lizenzierung im Infobereich; der eigene Player von Harbor wendet die Interpolation an, sodass alles eingebettet bleibt und vollständig unter deiner Kontrolle steht. Einmal installieren und dann einschalten.",
-  "Get Harbor for desktop": "Harbor für den Desktop herunterladen",
+  "Genuine 48/60fps motion on anime, rendered right inside Lart's player. SVP supplies the engine (VapourSynth + svpflow) and runs in your tray for licensing; Lart's own player applies the interpolation, so it stays embedded and fully under your control. One-time install, then flip it on.":
+    "Echte Bewegungsdarstellung mit 48/60 fps bei Anime, direkt im Player von Lart gerendert. SVP stellt die Engine bereit (VapourSynth + svpflow) und läuft für die Lizenzierung im Infobereich; der eigene Player von Lart wendet die Interpolation an, sodass alles eingebettet bleibt und vollständig unter deiner Kontrolle steht. Einmal installieren und dann einschalten.",
+  "Get Lart for desktop": "Lart für den Desktop herunterladen",
   "Get SVP (free)": "SVP herunterladen (kostenlos)",
   "Get beta updates": "Beta-Updates erhalten",
   "Get started": "Loslegen",
@@ -916,72 +916,72 @@ const settings: Record<string, string> = {
     "Eine halbe Stunde Vorlauf. Lohnt sich nur bei einer sehr unzuverlässigen Verbindung.",
   "Hand-tuned colors. Edit them in the section above.":
     "Manuell abgestimmte Farben. Bearbeite sie im Bereich oben.",
-  "Harbor Relay": "Harbor Relay",
-  "Harbor catches stremio:// install links so the configure-and-install flow stays inside the app.":
-    "Harbor fängt Installationslinks mit stremio:// ab, damit Konfiguration und Installation innerhalb der App bleiben.",
-  "Harbor catches stremio:// install links so the configure-and-install flow stays inside the app. Every install also syncs to your Stremio account, so the official app remains the canonical home for your library.":
-    "Harbor fängt stremio://-Installationslinks ab, damit Konfiguration und Installation innerhalb der App bleiben. Jede Installation wird außerdem mit deinem Stremio-Konto synchronisiert, sodass die offizielle App die maßgebliche Zentrale für deine Mediathek bleibt.",
-  "Harbor checks automatically every few hours.":
-    "Harbor sucht automatisch alle paar Stunden nach Aktualisierungen.",
-  "Harbor checks harbor.site for new versions and installs them in place.":
-    "Harbor sucht auf harbor.site nach neuen Versionen und installiert sie direkt als Aktualisierung.",
-  "Harbor checks harbor.site for new versions and installs them in place. Nothing installs until you choose to, and a dismissed update never nags you again.":
-    "Harbor sucht auf harbor.site nach neuen Versionen und installiert sie direkt über die vorhandene Version. Es wird nichts installiert, bevor du dich dafür entscheidest, und ein abgelehntes Update wird dir nie wieder angeboten.",
-  "Harbor curated": "Von Harbor kuratiert",
-  "Harbor finds intro and credits timing from AniSkip, TheIntroDB, and the file's own chapters, then shows a Skip button at the right moment.":
-    "Harbor ermittelt die Zeitpunkte von Intro und Abspann aus AniSkip, TheIntroDB und den Kapiteln der Datei und zeigt dann im richtigen Moment eine Schaltfläche zum Überspringen an.",
-  "Harbor identity": "Harbor-Identität",
-  "Harbor in your browser": "Harbor in deinem Browser",
-  "Harbor is open source. PRs that reference a bug get reviewed within 48h and ship with credit in the release notes.":
-    "Harbor ist Open Source. PRs, die auf einen Fehler verweisen, werden innerhalb von 48 Stunden geprüft und mit Namensnennung in den Versionshinweisen veröffentlicht.",
-  "Harbor keeps your MyAnimeList watch progress in sync.":
-    "Harbor hält deinen Wiedergabefortschritt bei MyAnimeList synchron.",
-  "Harbor pulls your addon collection from Stremio. Manage individual addons in Streaming sources.":
-    "Harbor ruft deine Add-on-Sammlung von Stremio ab. Einzelne Add-ons kannst du unter Streamingquellen verwalten.",
-  "Harbor ranking": "Harbor-Rangliste",
-  "Harbor ranking puts the best-scoring sources first. Addon order follows your addon priority (organize it in Addons, Installed tab, Reorder) and keeps each addon's results in the order it returned them, like the Stremio and Vidi apps.":
-    "Bei der Harbor-Rangliste stehen die am besten bewerteten Quellen zuerst. Die Add-on-Reihenfolge richtet sich nach deiner Add-on-Priorität (du kannst sie unter „Add-ons“, „Installiert“, „Neu anordnen“ festlegen) und belässt die Ergebnisse jedes Add-ons in der Reihenfolge, in der es sie zurückgegeben hat, genau wie Stremio und Vidi.",
-  "Harbor runs a small streaming server right on this computer. This is where it lives. To stream from this machine on another device, copy the Wi-Fi address and paste it into Remote streaming server in Harbor over there.":
-    "Harbor betreibt direkt auf diesem Computer einen kleinen Streaming-Server. Hier befindet er sich. Um von diesem Computer auf einem anderen Gerät zu streamen, kopiere die WLAN-Adresse und füge sie dort in Harbor unter „Remote-Streaming-Server“ ein.",
-  "Harbor scans your IPTV playlists' EPG every 30 min for programs about to start.":
-    "Harbor durchsucht die EPG-Daten deiner IPTV-Wiedergabelisten alle 30 Min. nach Sendungen, die bald beginnen.",
-  "Harbor sends no telemetry. This also drops outbound ad, analytics, and tracker requests that addons or metadata providers try to make, before they leave your machine.":
-    "Harbor sendet keine Telemetriedaten. Außerdem werden ausgehende Werbe-, Analyse- und Trackinganfragen, die Add-ons oder Metadatenanbieter zu senden versuchen, blockiert, bevor sie deinen Computer verlassen.",
-  "Harbor shows your AniList lists on the Anime page and keeps your progress in sync.":
-    "Harbor zeigt deine AniList-Listen auf der Anime-Seite an und hält deinen Fortschritt synchron.",
-  "Harbor sizes the head start for each title and grows it once playback settles. Right for almost everyone.":
-    "Harbor bemisst den Vorlauf für jeden Titel einzeln und vergrößert ihn, sobald die Wiedergabe stabil läuft. Für fast alle die richtige Wahl.",
-  "Harbor still finds and loads subtitles so they're one click away in the player, it just won't turn them on automatically.":
-    "Harbor sucht und lädt weiterhin Untertitel, sodass sie im Player mit nur einem Klick verfügbar sind. Sie werden lediglich nicht automatisch aktiviert.",
-  "Harbor test message (Discord). If you can read this, your webhook is wired up.":
-    "Harbor-Testnachricht (Discord). Wenn du das lesen kannst, ist dein Webhook eingerichtet.",
-  "Harbor test message (Telegram). If you can read this, your webhook is wired up.":
-    "Harbor-Testnachricht (Telegram). Wenn du das lesen kannst, ist dein Webhook eingerichtet.",
-  "Harbor uses the graphics card when it's safe and falls back to the CPU when it isn't. The right call for almost everyone.":
-    "Harbor verwendet die Grafikkarte, wenn es unbedenklich ist, und weicht andernfalls auf die CPU aus. Für fast alle die richtige Wahl.",
-  "Harbor will mark what you finish as watched on Simkl and sync your plan-to-watch list.":
-    "Harbor markiert abgeschlossene Titel auf Simkl als angesehen und synchronisiert deine Merkliste.",
-  "Harbor will not start the P2P engine, contact trackers, or run DHT. Use this if you only want debrid and direct links. Turn off to re-enable P2P streaming.": "Harbor startet die P2P-Engine nicht, kontaktiert keine Tracker und führt DHT nicht aus. Aktiviere diese Option, wenn du nur Debrid- und Direktlinks nutzen möchtest. Deaktiviere sie, um P2P-Streaming wieder zu aktivieren.",
-  "Harbor will scrobble your playback to Trakt and sync your watchlist.":
-    "Harbor scrobbelt deine Wiedergabe an Trakt und synchronisiert deine Merkliste.",
-  "Harbor {version} available": "Harbor {version} verfügbar",
-  "Harbor's built-in frame interpolation. Smooths panning, best on anime. Needs a display refresh rate above the video's frame rate, and can stutter on weak GPUs. Lighter than SVP.":
+  "Lart Relay": "Lart Relay",
+  "Lart catches stremio:// install links so the configure-and-install flow stays inside the app.":
+    "Lart fängt Installationslinks mit stremio:// ab, damit Konfiguration und Installation innerhalb der App bleiben.",
+  "Lart catches stremio:// install links so the configure-and-install flow stays inside the app. Every install also syncs to your Stremio account, so the official app remains the canonical home for your library.":
+    "Lart fängt stremio://-Installationslinks ab, damit Konfiguration und Installation innerhalb der App bleiben. Jede Installation wird außerdem mit deinem Stremio-Konto synchronisiert, sodass die offizielle App die maßgebliche Zentrale für deine Mediathek bleibt.",
+  "Lart checks automatically every few hours.":
+    "Lart sucht automatisch alle paar Stunden nach Aktualisierungen.",
+  "Lart checks harbor.site for new versions and installs them in place.":
+    "Lart sucht auf harbor.site nach neuen Versionen und installiert sie direkt als Aktualisierung.",
+  "Lart checks harbor.site for new versions and installs them in place. Nothing installs until you choose to, and a dismissed update never nags you again.":
+    "Lart sucht auf harbor.site nach neuen Versionen und installiert sie direkt über die vorhandene Version. Es wird nichts installiert, bevor du dich dafür entscheidest, und ein abgelehntes Update wird dir nie wieder angeboten.",
+  "Lart curated": "Von Lart kuratiert",
+  "Lart finds intro and credits timing from AniSkip, TheIntroDB, and the file's own chapters, then shows a Skip button at the right moment.":
+    "Lart ermittelt die Zeitpunkte von Intro und Abspann aus AniSkip, TheIntroDB und den Kapiteln der Datei und zeigt dann im richtigen Moment eine Schaltfläche zum Überspringen an.",
+  "Lart identity": "Lart-Identität",
+  "Lart in your browser": "Lart in deinem Browser",
+  "Lart is open source. PRs that reference a bug get reviewed within 48h and ship with credit in the release notes.":
+    "Lart ist Open Source. PRs, die auf einen Fehler verweisen, werden innerhalb von 48 Stunden geprüft und mit Namensnennung in den Versionshinweisen veröffentlicht.",
+  "Lart keeps your MyAnimeList watch progress in sync.":
+    "Lart hält deinen Wiedergabefortschritt bei MyAnimeList synchron.",
+  "Lart pulls your addon collection from Stremio. Manage individual addons in Streaming sources.":
+    "Lart ruft deine Add-on-Sammlung von Stremio ab. Einzelne Add-ons kannst du unter Streamingquellen verwalten.",
+  "Lart ranking": "Lart-Rangliste",
+  "Lart ranking puts the best-scoring sources first. Addon order follows your addon priority (organize it in Addons, Installed tab, Reorder) and keeps each addon's results in the order it returned them, like the Stremio and Vidi apps.":
+    "Bei der Lart-Rangliste stehen die am besten bewerteten Quellen zuerst. Die Add-on-Reihenfolge richtet sich nach deiner Add-on-Priorität (du kannst sie unter „Add-ons“, „Installiert“, „Neu anordnen“ festlegen) und belässt die Ergebnisse jedes Add-ons in der Reihenfolge, in der es sie zurückgegeben hat, genau wie Stremio und Vidi.",
+  "Lart runs a small streaming server right on this computer. This is where it lives. To stream from this machine on another device, copy the Wi-Fi address and paste it into Remote streaming server in Lart over there.":
+    "Lart betreibt direkt auf diesem Computer einen kleinen Streaming-Server. Hier befindet er sich. Um von diesem Computer auf einem anderen Gerät zu streamen, kopiere die WLAN-Adresse und füge sie dort in Lart unter „Remote-Streaming-Server“ ein.",
+  "Lart scans your IPTV playlists' EPG every 30 min for programs about to start.":
+    "Lart durchsucht die EPG-Daten deiner IPTV-Wiedergabelisten alle 30 Min. nach Sendungen, die bald beginnen.",
+  "Lart sends no telemetry. This also drops outbound ad, analytics, and tracker requests that addons or metadata providers try to make, before they leave your machine.":
+    "Lart sendet keine Telemetriedaten. Außerdem werden ausgehende Werbe-, Analyse- und Trackinganfragen, die Add-ons oder Metadatenanbieter zu senden versuchen, blockiert, bevor sie deinen Computer verlassen.",
+  "Lart shows your AniList lists on the Anime page and keeps your progress in sync.":
+    "Lart zeigt deine AniList-Listen auf der Anime-Seite an und hält deinen Fortschritt synchron.",
+  "Lart sizes the head start for each title and grows it once playback settles. Right for almost everyone.":
+    "Lart bemisst den Vorlauf für jeden Titel einzeln und vergrößert ihn, sobald die Wiedergabe stabil läuft. Für fast alle die richtige Wahl.",
+  "Lart still finds and loads subtitles so they're one click away in the player, it just won't turn them on automatically.":
+    "Lart sucht und lädt weiterhin Untertitel, sodass sie im Player mit nur einem Klick verfügbar sind. Sie werden lediglich nicht automatisch aktiviert.",
+  "Lart test message (Discord). If you can read this, your webhook is wired up.":
+    "Lart-Testnachricht (Discord). Wenn du das lesen kannst, ist dein Webhook eingerichtet.",
+  "Lart test message (Telegram). If you can read this, your webhook is wired up.":
+    "Lart-Testnachricht (Telegram). Wenn du das lesen kannst, ist dein Webhook eingerichtet.",
+  "Lart uses the graphics card when it's safe and falls back to the CPU when it isn't. The right call for almost everyone.":
+    "Lart verwendet die Grafikkarte, wenn es unbedenklich ist, und weicht andernfalls auf die CPU aus. Für fast alle die richtige Wahl.",
+  "Lart will mark what you finish as watched on Simkl and sync your plan-to-watch list.":
+    "Lart markiert abgeschlossene Titel auf Simkl als angesehen und synchronisiert deine Merkliste.",
+  "Lart will not start the P2P engine, contact trackers, or run DHT. Use this if you only want debrid and direct links. Turn off to re-enable P2P streaming.": "Lart startet die P2P-Engine nicht, kontaktiert keine Tracker und führt DHT nicht aus. Aktiviere diese Option, wenn du nur Debrid- und Direktlinks nutzen möchtest. Deaktiviere sie, um P2P-Streaming wieder zu aktivieren.",
+  "Lart will scrobble your playback to Trakt and sync your watchlist.":
+    "Lart scrobbelt deine Wiedergabe an Trakt und synchronisiert deine Merkliste.",
+  "Lart {version} available": "Lart {version} verfügbar",
+  "Lart's built-in frame interpolation. Smooths panning, best on anime. Needs a display refresh rate above the video's frame rate, and can stutter on weak GPUs. Lighter than SVP.":
     "Harbors integrierte Zwischenbildberechnung. Sie glättet Kameraschwenks und eignet sich besonders für Anime. Erfordert eine Bildschirmaktualisierungsrate über der Bildrate des Videos und kann auf schwachen GPUs ruckeln. Ressourcenschonender als SVP.",
-  "Harbor's in-app installer animates the manifest install and keeps you in context. Anything Harbor installs is also synced to your Stremio account, so the official app stays the canonical library. Turn this off and Stremio becomes the only handler for stremio:// links; Harbor still installs anything you trigger from inside the app (Configure & install, paste, drag-and-drop).":
-    "Das Harbor-interne Installationsprogramm zeigt die Manifest-Installation animiert an und lässt dich im aktuellen Kontext bleiben. Alles, was Harbor installiert, wird außerdem mit deinem Stremio-Konto synchronisiert, sodass die Mediathek der offiziellen App maßgeblich bleibt. Schalte dies aus, damit nur noch Stremio stremio://-Links verarbeitet; Harbor installiert weiterhin alles, dessen Installation du innerhalb der App auslöst (Konfigurieren und installieren, Einfügen, Drag-and-drop).",
-  "Harbor's native player chrome.": "Harbors native Player-Bedienelemente.",
-  "Harbor's player applies the interpolation itself, embedded like normal playback, and starts SVP Manager in the tray for licensing. Restart playback to apply. If video goes black or won't start, turn this off.":
+  "Lart's in-app installer animates the manifest install and keeps you in context. Anything Lart installs is also synced to your Stremio account, so the official app stays the canonical library. Turn this off and Stremio becomes the only handler for stremio:// links; Lart still installs anything you trigger from inside the app (Configure & install, paste, drag-and-drop).":
+    "Das Lart-interne Installationsprogramm zeigt die Manifest-Installation animiert an und lässt dich im aktuellen Kontext bleiben. Alles, was Lart installiert, wird außerdem mit deinem Stremio-Konto synchronisiert, sodass die Mediathek der offiziellen App maßgeblich bleibt. Schalte dies aus, damit nur noch Stremio stremio://-Links verarbeitet; Lart installiert weiterhin alles, dessen Installation du innerhalb der App auslöst (Konfigurieren und installieren, Einfügen, Drag-and-drop).",
+  "Lart's native player chrome.": "Harbors native Player-Bedienelemente.",
+  "Lart's player applies the interpolation itself, embedded like normal playback, and starts SVP Manager in the tray for licensing. Restart playback to apply. If video goes black or won't start, turn this off.":
     "Harbors Player wendet die Interpolation direkt wie bei der normalen Wiedergabe an und startet zur Lizenzierung den SVP Manager im Infobereich. Starte die Wiedergabe neu, um die Änderung anzuwenden. Wenn das Video schwarz bleibt oder nicht startet, deaktiviere diese Option.",
-  "Harbor's public relay updates automatically; nothing to do.":
-    "Das öffentliche Relay von Harbor wird automatisch aktualisiert. Du musst nichts tun.",
+  "Lart's public relay updates automatically; nothing to do.":
+    "Das öffentliche Relay von Lart wird automatisch aktualisiert. Du musst nichts tun.",
   "Hard stroke around each letter. High contrast.":
     "Kräftige Kontur um jeden Buchstaben. Hoher Kontrast.",
   "Hardware acceleration": "Hardwarebeschleunigung",
   "Heads up": "Hinweis",
-  "Heads up: Harbor was built in English. Multi-language support is partial, so your addons usually catch what Harbor's own filters miss. If you speak another language and want to help fill the gaps, the source is open.":
-    "Hinweis: Harbor wurde auf Englisch entwickelt. Die Unterstützung mehrerer Sprachen ist unvollständig, daher finden deine Add-ons meist das, was Harbors eigene Filter übersehen. Wenn du eine andere Sprache sprichst und helfen möchtest, die Lücken zu schließen, ist der Quellcode offen.",
-  "Heads up: if Stremio is also installed, Windows may ask which app to use the first time a stremio:// link fires. Pick Harbor to make it stick.":
-    "Hinweis: Wenn Stremio ebenfalls installiert ist, fragt Windows beim ersten Öffnen eines stremio://-Links möglicherweise, welche App verwendet werden soll. Wähle Harbor, um diese Auswahl beizubehalten.",
+  "Heads up: Lart was built in English. Multi-language support is partial, so your addons usually catch what Lart's own filters miss. If you speak another language and want to help fill the gaps, the source is open.":
+    "Hinweis: Lart wurde auf Englisch entwickelt. Die Unterstützung mehrerer Sprachen ist unvollständig, daher finden deine Add-ons meist das, was Harbors eigene Filter übersehen. Wenn du eine andere Sprache sprichst und helfen möchtest, die Lücken zu schließen, ist der Quellcode offen.",
+  "Heads up: if Stremio is also installed, Windows may ask which app to use the first time a stremio:// link fires. Pick Lart to make it stick.":
+    "Hinweis: Wenn Stremio ebenfalls installiert ist, fragt Windows beim ersten Öffnen eines stremio://-Links möglicherweise, welche App verwendet werden soll. Wähle Lart, um diese Auswahl beizubehalten.",
   "Heads up: {keys} can load outside scripts or open your player to the network. Only keep these if you know exactly what they do.":
     "Achtung: {keys} kann externe Skripte laden oder deinen Player für das Netzwerk öffnen. Behalte diese nur, wenn du genau weißt, was sie tun.",
   "Health check returns 5xx": "Statusprüfung gibt 5xx zurück",
@@ -1021,13 +1021,13 @@ const settings: Record<string, string> = {
   High: "Hoch",
   "High-quality episode images": "Hochwertige Episodenbilder",
   Hit: "Treffer",
-  "Hit your daily quota? Use Harbor's public relay, or host your own.":
+  "Hit your daily quota? Use Lart's public relay, or host your own.":
     "Tageskontingent erreicht? Nutze Harbors öffentliches Relay oder hoste dein eigenes.",
-  "Hitting Play jumps straight into playback with the best stream Harbor finds.":
-    "Wenn du auf „Wiedergeben“ drückst, startet sofort die Wiedergabe mit dem besten von Harbor gefundenen Stream.",
+  "Hitting Play jumps straight into playback with the best stream Lart finds.":
+    "Wenn du auf „Wiedergeben“ drückst, startet sofort die Wiedergabe mit dem besten von Lart gefundenen Stream.",
   "Hitting Play opens the source list so you can choose quality, debrid, and audio yourself.":
     "Beim Starten der Wiedergabe wird die Quellenliste geöffnet, damit du Qualität, Debrid und Tonspur selbst auswählen kannst.",
-  "Hold Ctrl or Cmd and scroll to resize Harbor's interface smoothly.":
+  "Hold Ctrl or Cmd and scroll to resize Lart's interface smoothly.":
     "Halte Ctrl oder Cmd gedrückt und scrolle, um Harbors Oberfläche stufenlos zu skalieren.",
   "Holds up to {size} in memory while a video plays.":
     "Belegt während der Videowiedergabe bis zu {size} Arbeitsspeicher.",
@@ -1038,8 +1038,8 @@ const settings: Record<string, string> = {
   "Home hero shadow": "Schatten des Startseiten-Aufmachers",
   "Home languages": "Sprachen auf der Startseite",
   "Home rail categories (Movies, TV, Anime)": "Kategorien der Startseitenreihen (Filme, TV, Anime)",
-  "Home style (Harbor curated / Classic Stremio)":
-    "Startseitenstil (von Harbor kuratiert / klassisches Stremio)",
+  "Home style (Lart curated / Classic Stremio)":
+    "Startseitenstil (von Lart kuratiert / klassisches Stremio)",
   "Home · Continue Watching": "Start · Weiterschauen",
   Hotkeys: "Tastenkürzel",
   "Hover a poster to peek at its rating, runtime, and synopsis without opening it.":
@@ -1047,13 +1047,13 @@ const settings: Record<string, string> = {
   "Hover the speaker to reveal a horizontal slider.":
     "Fahre mit der Maus über den Lautsprecher, um einen horizontalen Regler einzublenden.",
   "Hover to peek": "Zum Ansehen darüberfahren",
-  "How Harbor finds and resolves playable streams. Debrid keys and addon installs live here.":
-    "Wie Harbor abspielbare Streams findet und auflöst. Debrid-Schlüssel und Add-on-Installationen befinden sich hier.",
-  "How Harbor squeezes HDR movies onto a normal screen. Auto is right for almost everyone; the curves below just change the look (punchy vs soft). Only matters on HDR sources.":
-    "Legt fest, wie Harbor HDR-Filme auf einem normalen Bildschirm darstellt. „Automatisch“ ist für fast alle die richtige Wahl. Die Kurven unten ändern lediglich den Bildeindruck, von kräftig bis weich. Wirkt sich nur auf HDR-Quellen aus.",
+  "How Lart finds and resolves playable streams. Debrid keys and addon installs live here.":
+    "Wie Lart abspielbare Streams findet und auflöst. Debrid-Schlüssel und Add-on-Installationen befinden sich hier.",
+  "How Lart squeezes HDR movies onto a normal screen. Auto is right for almost everyone; the curves below just change the look (punchy vs soft). Only matters on HDR sources.":
+    "Legt fest, wie Lart HDR-Filme auf einem normalen Bildschirm darstellt. „Automatisch“ ist für fast alle die richtige Wahl. Die Kurven unten ändern lediglich den Bildeindruck, von kräftig bis weich. Wirkt sich nur auf HDR-Quellen aus.",
   "How Play works": "So funktioniert „Wiedergeben“",
-  "How aggressively Harbor rejects shady or mismatched streams before showing them in the picker.":
-    "Legt fest, wie streng Harbor dubiose oder unpassende Streams ablehnt, bevor sie in der Auswahl erscheinen.",
+  "How aggressively Lart rejects shady or mismatched streams before showing them in the picker.":
+    "Legt fest, wie streng Lart dubiose oder unpassende Streams ablehnt, bevor sie in der Auswahl erscheinen.",
   "How big episode cards are in the strip and grid layouts. Bigger cards show larger artwork.":
     "Legt die Größe der Folgenkarten in Streifen- und Rasteransichten fest. Größere Karten zeigen größere Bilder.",
   "How dark the gradient behind the featured title on Home is. 100% is the classic look; lower it to let more of the artwork show through.":
@@ -1101,8 +1101,8 @@ const settings: Record<string, string> = {
     "Wenn das Einblendfenster „Gemeinsam ansehen“ ein Banner zu einem veralteten Relay zeigt, behebst du das Problem durch eine erneute Bereitstellung mit den oben beschriebenen Schritten. Das Banner verschwindet automatisch bei der nächsten Verbindung, sobald das Relay die aktuelle Version meldet.",
   "If the server is unreachable, playback fails instead of streaming locally. Use this when your VPN runs on the server machine and torrent traffic must never leave this one.":
     "Wenn der Server nicht erreichbar ist, schlägt die Wiedergabe fehl, anstatt lokal zu streamen. Verwende dies, wenn dein VPN auf dem Server läuft und Torrent-Datenverkehr diesen Computer niemals verlassen darf.",
-  "If video keeps pausing to buffer, or you're on spotty Wi-Fi or a far-away server, this gives Harbor a bigger head start so playback rides through the rough patches.":
-    "Wenn das Video immer wieder zum Puffern pausiert oder du eine instabile WLAN-Verbindung beziehungsweise einen weit entfernten Server nutzt, verschafft dies Harbor einen größeren Vorlauf, damit die Wiedergabe Unterbrechungen besser überbrückt.",
+  "If video keeps pausing to buffer, or you're on spotty Wi-Fi or a far-away server, this gives Lart a bigger head start so playback rides through the rough patches.":
+    "Wenn das Video immer wieder zum Puffern pausiert oder du eine instabile WLAN-Verbindung beziehungsweise einen weit entfernten Server nutzt, verschafft dies Lart einen größeren Vorlauf, damit die Wiedergabe Unterbrechungen besser überbrückt.",
   "If you exceed free tier, the Workers Paid plan is $5 per month and bumps the request allowance to 10 million per day.":
     "Wenn du das kostenlose Kontingent überschreitest, kostet der Tarif Workers Paid 5 US-Dollar pro Monat und erhöht das Anfragelimit auf 10 Millionen pro Tag.",
   "Ignored titles": "Ignorierte Titel",
@@ -1120,23 +1120,23 @@ const settings: Record<string, string> = {
   "Import any pack": "Beliebiges Paket importieren",
   "Import from Trakt": "Aus Trakt importieren",
   "Importing {done} / {total}": "Wird importiert: {done} / {total}",
-  "In Harbor: Settings, Harbor Relay, then": "In Harbor: Einstellungen, Harbor Relay, dann",
-  "In Harbor: Settings, Harbor Relay, then {kbd}. Paste the URL with {code1} as the scheme instead of {code2}.":
-    "In Harbor: Einstellungen, Harbor Relay, dann {kbd}. Füge die URL mit {code1} statt {code2} als Schema ein.",
+  "In Lart: Settings, Lart Relay, then": "In Lart: Einstellungen, Lart Relay, dann",
+  "In Lart: Settings, Lart Relay, then {kbd}. Paste the URL with {code1} as the scheme instead of {code2}.":
+    "In Lart: Einstellungen, Lart Relay, dann {kbd}. Füge die URL mit {code1} statt {code2} als Schema ein.",
   "Injected ad skip (experimental)": "Eingeschleuste Werbung überspringen (experimentell)",
   "Injected into a fixed-position layer above the app (pointer-events disabled by default). Wrap in a div with pointer-events:auto to make it interactive.":
     "Wird in eine Ebene mit fester Position über der App eingefügt (pointer-events sind standardmäßig deaktiviert). Umschließe den Inhalt mit einem div mit pointer-events:auto, um ihn interaktiv zu machen.",
   "Inside the playback view.": "In der Wiedergabeansicht.",
   Inspector: "Inspektor",
-  "Install SVP once (the free tier is enough). It bundles VapourSynth + svpflow; Harbor reuses them, no extra setup.":
-    "Installiere SVP einmalig (die kostenlose Version genügt). VapourSynth + svpflow sind enthalten; Harbor verwendet sie ohne zusätzliche Einrichtung.",
+  "Install SVP once (the free tier is enough). It bundles VapourSynth + svpflow; Lart reuses them, no extra setup.":
+    "Installiere SVP einmalig (die kostenlose Version genügt). VapourSynth + svpflow sind enthalten; Lart verwendet sie ohne zusätzliche Einrichtung.",
   "Install a pack": "Paket installieren",
   "Install failed": "Installation fehlgeschlagen",
   "Install wrangler and authenticate:": "Installiere wrangler und authentifiziere dich:",
-  "Installed and detected. Harbor found its interpolation engine and will drive it directly.":
-    "Installiert und erkannt. Harbor hat die Interpolations-Engine gefunden und steuert sie direkt an.",
+  "Installed and detected. Lart found its interpolation engine and will drive it directly.":
+    "Installiert und erkannt. Lart hat die Interpolations-Engine gefunden und steuert sie direkt an.",
   "Installed via {label}": "Über {label} installiert",
-  "Installing. Harbor will restart.": "Installation läuft. Harbor wird neu gestartet.",
+  "Installing. Lart will restart.": "Installation läuft. Lart wird neu gestartet.",
   "Installing...": "Wird installiert...",
   Instant: "Sofort",
   Integrations: "Integrationen",
@@ -1173,8 +1173,8 @@ const settings: Record<string, string> = {
   "Just change region": "Nur die Region ändern",
   "Keep Dolby Vision, HDR10, HLG. Drop SDR.":
     "Dolby Vision, HDR10 und HLG behalten. SDR entfernen.",
-  "Keep Harbor a click away. Close it to the system tray instead of quitting, and control it from the tray menu. These also mirror into the tray menu live.":
-    "Harbor immer nur einen Klick entfernt halten. Minimiere Harbor beim Schließen in den Infobereich, statt es zu beenden, und steuere es über das Menü im Infobereich. Änderungen hier werden auch sofort in diesem Menü übernommen.",
+  "Keep Lart a click away. Close it to the system tray instead of quitting, and control it from the tray menu. These also mirror into the tray menu live.":
+    "Lart immer nur einen Klick entfernt halten. Minimiere Lart beim Schließen in den Infobereich, statt es zu beenden, und steuere es über das Menü im Infobereich. Änderungen hier werden auch sofort in diesem Menü übernommen.",
   "Keep anime in the Anime room only": "Anime nur im Anime-Raum behalten",
   "Keep at most": "Höchstens behalten",
   "Keep cached files for": "Zwischengespeicherte Dateien aufbewahren für",
@@ -1182,7 +1182,7 @@ const settings: Record<string, string> = {
   "Keep frames for": "Einzelbilder aufbewahren für",
   "Keep original": "Original beibehalten",
   "Keep same source on next episode": "Bei der nächsten Episode dieselbe Quelle verwenden",
-  "Keep the Harbor window above other windows.": "Das Harbor-Fenster über anderen Fenstern halten.",
+  "Keep the Lart window above other windows.": "Das Lart-Fenster über anderen Fenstern halten.",
   "Keep the Library Watchlist tab limited to titles you added in Stremio. Turn this off to also include anything Stremio auto-added when you pressed play.":
     "Den Reiter „Merkliste“ in der Mediathek auf Titel beschränken, die du in Stremio hinzugefügt hast. Deaktiviere dies, um auch alles einzubeziehen, was Stremio beim Starten der Wiedergabe automatisch hinzugefügt hat.",
   "Keep the next episode visible": "Nächste Folge sichtbar lassen",
@@ -1190,10 +1190,10 @@ const settings: Record<string, string> = {
     "Das ursprüngliche Erscheinungsbild beibehalten, aber die von dir festgelegte Größe und Position anwenden.",
   "Keep the presence visible when playback is paused.":
     "Den Aktivitätsstatus sichtbar halten, wenn die Wiedergabe pausiert ist.",
-  "Keeps HDR inside Harbor with the controls floating above the video. Subtitles render on the video. If the control bar does not appear, press Esc or use separate window.":
-    "HDR bleibt in Harbor, während die Bedienelemente über dem Video eingeblendet werden. Untertitel werden direkt im Video gerendert. Falls die Steuerleiste nicht erscheint, drücke Esc oder verwende ein separates Fenster.",
-  "Keeps Harbor embedded but lifts the HDR video onto its own opaque plane with the controls floating above, so Windows shows true HDR without the brightness slider dimming it. Needs HDR-to-SDR tonemapping off.":
-    "Harbor bleibt eingebettet, aber das HDR-Video wird auf eine eigene undurchsichtige Ebene gelegt, über der die Bedienelemente schweben. So zeigt Windows echtes HDR an, ohne dass der Helligkeitsregler es abdunkelt. HDR-zu-SDR-Tonemapping muss deaktiviert sein.",
+  "Keeps HDR inside Lart with the controls floating above the video. Subtitles render on the video. If the control bar does not appear, press Esc or use separate window.":
+    "HDR bleibt in Lart, während die Bedienelemente über dem Video eingeblendet werden. Untertitel werden direkt im Video gerendert. Falls die Steuerleiste nicht erscheint, drücke Esc oder verwende ein separates Fenster.",
+  "Keeps Lart embedded but lifts the HDR video onto its own opaque plane with the controls floating above, so Windows shows true HDR without the brightness slider dimming it. Needs HDR-to-SDR tonemapping off.":
+    "Lart bleibt eingebettet, aber das HDR-Video wird auf eine eigene undurchsichtige Ebene gelegt, über der die Bedienelemente schweben. So zeigt Windows echtes HDR an, ohne dass der Helligkeitsregler es abdunkelt. HDR-zu-SDR-Tonemapping muss deaktiviert sein.",
   "Keeps fetching the full torrent in the background, even when paused, so you can pre-buffer big remuxes and scrub a finished file with no re-downloading. Uses more bandwidth and disk; cleaned up when you switch or close like normal.":
     "Lädt den vollständigen Torrent auch bei pausierter Wiedergabe im Hintergrund weiter herunter. So kannst du große Remux-Dateien vorpuffern und in einer vollständig geladenen Datei springen, ohne Daten erneut herunterzuladen. Verbraucht mehr Bandbreite und Speicherplatz. Beim Wechseln oder Schließen wird wie üblich aufgeräumt.",
   "Keeps the malware/year/episode-mismatch checks but allows season packs and oversized files. Same as hitting Search wider in the picker.":
@@ -1218,8 +1218,8 @@ const settings: Record<string, string> = {
   "Less bass": "Weniger Bass",
   "Let your Discord friends see what you are watching, with the show poster and a live progress bar.":
     "Zeige deinen Discord-Freunden mit Poster und Live-Fortschrittsbalken, was du gerade ansiehst.",
-  "Let your Discord friends see what you are watching, with the show poster and a live progress bar. Desktop only, and only your own Discord client is involved (nothing touches a Harbor server).":
-    "Lass deine Discord-Freunde mit Poster und Live-Fortschrittsanzeige sehen, was du gerade ansiehst. Nur auf dem Desktop und ausschließlich über deinen eigenen Discord-Client (kein Harbor-Server ist beteiligt).",
+  "Let your Discord friends see what you are watching, with the show poster and a live progress bar. Desktop only, and only your own Discord client is involved (nothing touches a Lart server).":
+    "Lass deine Discord-Freunde mit Poster und Live-Fortschrittsanzeige sehen, was du gerade ansiehst. Nur auf dem Desktop und ausschließlich über deinen eigenen Discord-Client (kein Lart-Server ist beteiligt).",
   "Let your graphics card do the heavy lifting of decoding video. It saves battery and keeps the CPU cool. Auto is right for almost everyone; only switch if playback looks wrong or won't start.":
     "Überlasse deiner Grafikkarte die aufwendige Videodekodierung. Das spart Akku und hält die CPU kühl. „Automatisch“ ist für fast alle die richtige Wahl; wechsle nur, wenn die Wiedergabe fehlerhaft ist oder nicht startet.",
   "Letterboxd password": "Letterboxd-Passwort",
@@ -1279,8 +1279,8 @@ const settings: Record<string, string> = {
   "MDBList · Letterboxd and Trakt scores": "MDBList · Bewertungen von Letterboxd und Trakt",
   "MPV (native, recommended)": "mpv (nativ, empfohlen)",
   "Made with": "Erstellt mit",
-  "Make Harbor yours: swap the sidebar logo and the window/taskbar icon.":
-    "Passe Harbor an: Tausche das Seitenleistenlogo und das Fenster-/Taskleistensymbol aus.",
+  "Make Lart yours: swap the sidebar logo and the window/taskbar icon.":
+    "Passe Lart an: Tausche das Seitenleistenlogo und das Fenster-/Taskleistensymbol aus.",
   "Make everything bigger and easier to read: sidebar, menus, popups, every page. The whole interface scales live as you drag, so you can see the change right here. Great on 4K and ultrawide monitors, or whenever the text feels small.":
     "Vergrößere alles und verbessere die Lesbarkeit: Seitenleiste, Menüs, Pop-ups und jede Seite. Die gesamte Oberfläche wird beim Ziehen sofort skaliert, sodass du die Änderung direkt hier siehst. Ideal für 4K- und Ultrawide-Monitore oder wenn dir der Text zu klein erscheint.",
   "Make the featured banner on Home bigger and sharper.":
@@ -1351,8 +1351,8 @@ const settings: Record<string, string> = {
   NEW: "NEU",
   "NNEDI3 neural upscaler": "Neuronaler NNEDI3-Upscaler",
   "Name (e.g. REMUX)": "Name (z. B. REMUX)",
-  "Native to Harbor. No RPDB or ratings addon needed.":
-    "Direkt in Harbor integriert. Kein RPDB- oder Bewertungs-Add-on nötig.",
+  "Native to Lart. No RPDB or ratings addon needed.":
+    "Direkt in Lart integriert. Kein RPDB- oder Bewertungs-Add-on nötig.",
   "Native webview playback. Smooth and integrated, but limited codec coverage.":
     "Native Wiedergabe in der Webansicht. Flüssig und integriert, aber mit eingeschränkter Codec-Unterstützung.",
   "Native/Japanese": "Original/Japanisch",
@@ -1445,8 +1445,8 @@ const settings: Record<string, string> = {
   "One choice that sets how hard your computer works to make video look its best. Pick the one that matches your machine. Takes effect on the next thing you play.":
     "Eine einzige Auswahl legt fest, wie stark dein Computer für die bestmögliche Videoqualität beansprucht wird. Wähle die passende Einstellung für dein Gerät. Sie gilt ab der nächsten Wiedergabe.",
   "One last thing on Cloudflare's side": "Ein letzter Schritt auf der Seite von Cloudflare",
-  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Harbor's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
-    "Community-Pakete mit einem Klick. Regelsätze enthalten vollständige Abzeichensätze mit eigener Zuordnungslogik; Bildzuordnungen ersetzen nur die Grafiken der integrierten Harbor-Abzeichen. Auch alles, was im Nuvio-Discord oder auf Reddit als badges.json-Link geteilt wird, lässt sich hier importieren.",
+  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Lart's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
+    "Community-Pakete mit einem Klick. Regelsätze enthalten vollständige Abzeichensätze mit eigener Zuordnungslogik; Bildzuordnungen ersetzen nur die Grafiken der integrierten Lart-Abzeichen. Auch alles, was im Nuvio-Discord oder auf Reddit als badges.json-Link geteilt wird, lässt sich hier importieren.",
   "Only enter URLs for relays you operate or trust. A relay only carries Watch Together sync messages (play, pause, seek). Nothing else passes through it.":
     "Gib nur URLs von Relays ein, die du selbst betreibst oder denen du vertraust. Ein Relay überträgt ausschließlich Synchronisierungsnachrichten für „Gemeinsam ansehen“ (Wiedergabe, Pause, Positionswechsel). Nichts anderes wird darüber übertragen.",
   "Only my favorited channels": "Nur meine favorisierten Sender",
@@ -1460,12 +1460,12 @@ const settings: Record<string, string> = {
   "Open Cloudflare Workers": "Cloudflare Workers öffnen",
   "Open Cloudflare token page": "Cloudflare-Token-Seite öffnen",
   "Open Discord's webhook help": "Discord-Hilfe zu Webhooks öffnen",
-  "Open Harbor's settings outside playback.":
-    "Öffne die Harbor-Einstellungen, wenn gerade nichts wiedergegeben wird.",
+  "Open Lart's settings outside playback.":
+    "Öffne die Lart-Einstellungen, wenn gerade nichts wiedergegeben wird.",
   "Open Library settings": "Mediathekeinstellungen öffnen",
   "Open SVP": "SVP öffnen",
   "Open Settings": "Einstellungen öffnen",
-  "Open Settings, then Harbor Relay.": "Einstellungen und dann Harbor Relay öffnen.",
+  "Open Settings, then Lart Relay.": "Einstellungen und dann Lart Relay öffnen.",
   "Open library": "Mediathek öffnen",
   "Open or close the episode panel.": "Episodenleiste öffnen oder schließen.",
   "Open or close the in-player stream switcher.":
@@ -1489,8 +1489,8 @@ const settings: Record<string, string> = {
   "Optional overlays that appear over the video.": "Optionale Einblendungen über dem Video.",
   "Optional. TheIntroDB answers without a key, but a key raises your rate limit so timing keeps arriving when you binge. Get one at":
     "Optional. TheIntroDB antwortet auch ohne Schlüssel, aber ein Schlüssel erhöht dein Anfragelimit, damit die Zeitangaben auch bei einem Serienmarathon weiter eintreffen. Erhältlich unter",
-  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Harbor writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
-    "Optionen für die Registerkarte Mediathek → Lokal: Ordner, die du auf deinem eigenen Laufwerk scannst. Beim Exportieren von Metadaten schreibt Harbor eine .nfo-Datei im Kodi-Stil und lädt Grafiken in den unten angegebenen Größen neben jede Datei herunter.",
+  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Lart writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
+    "Optionen für die Registerkarte Mediathek → Lokal: Ordner, die du auf deinem eigenen Laufwerk scannst. Beim Exportieren von Metadaten schreibt Lart eine .nfo-Datei im Kodi-Stil und lädt Grafiken in den unten angegebenen Größen neben jede Datei herunter.",
   "Or just zip up images": "Oder die Bilder einfach zippen",
   "Or try one of ours": "Oder probiere eines unserer Pakete aus",
   Other: "Sonstiges",
@@ -1517,7 +1517,7 @@ const settings: Record<string, string> = {
   Pass: "Pass",
   "Paste JSON": "JSON einfügen",
   "Paste an image URL (png, webp, svg)": "Bild-URL einfügen (png, webp, svg)",
-  "Paste it into Harbor.": "Füge das in Harbor ein.",
+  "Paste it into Lart.": "Füge das in Lart ein.",
   "Paste the URL into the box above and send a test.":
     "Füge die URL oben in das Feld ein und sende einen Test.",
   "Paste the URL with": "URL einfügen mit",
@@ -1534,16 +1534,16 @@ const settings: Record<string, string> = {
   "People (empty = all tracked)": "Personen (leer = alle beobachteten)",
   "Pick OLED for perfect-black panels to unlock shadow detail in tonemapped HDR.":
     "Wähle OLED für Bildschirme mit perfektem Schwarz, um bei HDR mit Tone-Mapping mehr Details in dunklen Bildbereichen sichtbar zu machen.",
-  "Pick a display and body pairing, or upload your own font to use across Harbor.":
-    "Wähle eine Kombination aus Anzeige- und Fließtextschrift oder lade eine eigene Schriftart zur Verwendung in Harbor hoch.",
+  "Pick a display and body pairing, or upload your own font to use across Lart.":
+    "Wähle eine Kombination aus Anzeige- und Fließtextschrift oder lade eine eigene Schriftart zur Verwendung in Lart hoch.",
   "Pick a layout, set colors and fonts, save it to your library. No code needed.":
     "Wähle ein Layout, lege Farben und Schriftarten fest und speichere es in deiner Mediathek. Ganz ohne Code.",
   "Pick a layout, set colors and fonts. No code needed.":
     "Wähle ein Layout und lege Farben und Schriftarten fest. Kein Code nötig.",
   "Pick a look. Every color and surface updates instantly.":
     "Wähle ein Design. Alle Farben und Oberflächen werden sofort aktualisiert.",
-  "Pick a source once and Harbor keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. For anime it locks the whole series to that release.":
-    "Wähle einmal eine Quelle aus, und Harbor spielt den Rest der Staffel aus derselben Veröffentlichung weiter, ohne dass du erneut wählen musst. Funktioniert am besten mit einem Debrid-Staffelpaket. Bei Anime wird die gesamte Serie an diese Veröffentlichung gebunden.",
+  "Pick a source once and Lart keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. For anime it locks the whole series to that release.":
+    "Wähle einmal eine Quelle aus, und Lart spielt den Rest der Staffel aus derselben Veröffentlichung weiter, ohne dass du erneut wählen musst. Funktioniert am besten mit einem Debrid-Staffelpaket. Bei Anime wird die gesamte Serie an diese Veröffentlichung gebunden.",
   "Pick a theme, then rearrange every button in the player chrome. Hide what you never use, promote what you do.":
     "Wähle ein Design und ordne dann jede Schaltfläche in den Player-Steuerelementen neu an. Blende aus, was du nie verwendest, und hebe hervor, was du brauchst.",
   "Pick any name. Pick a username ending in":
@@ -1556,8 +1556,8 @@ const settings: Record<string, string> = {
     "Wähle die Wiedergabe-Engine und welche Qualitäts-Chips auf Karten angezeigt werden.",
   "Pick up partly-watched episodes and movies at your saved spot. Anything watched past 80% always restarts. Turn this off to always start from the beginning, handy if you rewatch shows.":
     "Setze teilweise angesehene Folgen und Filme an der gespeicherten Stelle fort. Inhalte, die zu mehr als 80 % angesehen wurden, beginnen immer von vorn. Schalte dies aus, um immer am Anfang zu beginnen, etwa wenn du Serien erneut ansiehst.",
-  "Pick which audio and subtitle languages Harbor reaches for first.":
-    "Wähle, welche Sprachen Harbor bei Tonspuren und Untertiteln zuerst verwenden soll.",
+  "Pick which audio and subtitle languages Lart reaches for first.":
+    "Wähle, welche Sprachen Lart bei Tonspuren und Untertiteln zuerst verwenden soll.",
   "Pick which calendars feed your alerts. Items are deduped across sources before sending.":
     "Wähle aus, welche Kalender deine Benachrichtigungen speisen. Doppelte Einträge aus verschiedenen Quellen werden vor dem Senden entfernt.",
   "Pick which calendars feed your webhook. Items are deduped across sources before sending.":
@@ -1598,7 +1598,7 @@ const settings: Record<string, string> = {
     "Spielt beim Öffnen eines Titels einen stummgeschalteten Trailer im Hintergrund ab. Klicke auf den Lautsprecher, um den Ton einzuschalten. Ist kein Trailer verfügbar, wird stattdessen das Bild angezeigt.",
   "Please add your TMDB API key in the Library & Metadata settings to view this folder.":
     "Füge bitte deinen TMDB-API-Schlüssel in den Einstellungen unter „Mediathek & Metadaten“ hinzu, um diesen Ordner anzuzeigen.",
-  "Point Harbor at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.": "Verbinde Harbor mit einem Streaming-Server auf einem anderen Gerät, etwa dem Stremio-Dienst auf einem Heimserver. P2P-Streams werden dann auf diesem Gerät statt auf diesem Computer heruntergeladen und wiedergegeben.",
+  "Point Lart at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.": "Verbinde Lart mit einem Streaming-Server auf einem anderen Gerät, etwa dem Stremio-Dienst auf einem Heimserver. P2P-Streams werden dann auf diesem Gerät statt auf diesem Computer heruntergeladen und wiedergegeben.",
   "Pop-up position": "Pop-up-Position",
   Popular: "Beliebt",
   "Popular This Week": "Diese Woche beliebt",
@@ -1612,8 +1612,8 @@ const settings: Record<string, string> = {
   "Poster translation is disabled because a custom poster service is active.":
     "Die Posterübersetzung ist deaktiviert, weil ein benutzerdefinierter Posterdienst aktiv ist.",
   "Power tools & diagnostics": "Expertenwerkzeuge und Diagnose",
-  "Power-user knob. Inject your own CSS, JS, and HTML into Harbor. Lives in your local settings; nothing leaves your machine.":
-    "Einstellung für erfahrene Nutzer. Füge dein eigenes CSS, JS und HTML in Harbor ein. Die Daten bleiben in deinen lokalen Einstellungen und verlassen dein Gerät nicht.",
+  "Power-user knob. Inject your own CSS, JS, and HTML into Lart. Lives in your local settings; nothing leaves your machine.":
+    "Einstellung für erfahrene Nutzer. Füge dein eigenes CSS, JS und HTML in Lart ein. Die Daten bleiben in deinen lokalen Einstellungen und verlassen dein Gerät nicht.",
   "Prefer my installed metadata addon": "Mein installiertes Metadaten-Add-on bevorzugen",
   "Preferred language for anime titles displayed on poster cards.":
     "Bevorzugte Sprache für Anime-Titel auf Posterkarten.",
@@ -1665,8 +1665,8 @@ const settings: Record<string, string> = {
   "Real-Debrid API token": "Real-Debrid-API-Token",
   "Real-Debrid, TorBox, AllDebrid, Premiumize, Debrid-Link. Cached streams play direct. Keys stay local.":
     "Real-Debrid, TorBox, AllDebrid, Premiumize, Debrid-Link. Zwischengespeicherte Streams werden direkt abgespielt. API-Schlüssel bleiben lokal.",
-  "Real-time GPU upscaling that sharpens lines and cleans up gradients on anime, built right into Harbor's player. The one-tap setup below grabs the shaders; nothing else to install.":
-    "GPU-Echtzeitskalierung, die Linien schärft und Farbverläufe in Anime glättet, direkt in den Player von Harbor integriert. Die Ein-Klick-Einrichtung unten lädt die Shader herunter; mehr musst du nicht installieren.",
+  "Real-time GPU upscaling that sharpens lines and cleans up gradients on anime, built right into Lart's player. The one-tap setup below grabs the shaders; nothing else to install.":
+    "GPU-Echtzeitskalierung, die Linien schärft und Farbverläufe in Anime glättet, direkt in den Player von Lart integriert. Die Ein-Klick-Einrichtung unten lädt die Shader herunter; mehr musst du nicht installieren.",
   "Receive early builds with the newest fixes before they reach the stable release. Betas can be rough around the edges; switch this off to return to stable at the next update.":
     "Erhalte frühe Versionen mit den neuesten Fehlerbehebungen, bevor sie in der stabilen Version erscheinen. Betaversionen können noch Ecken und Kanten haben. Deaktiviere dies, um beim nächsten Update zur stabilen Version zurückzukehren.",
   "Recolor everything, swap fonts, resize posters, set a wallpaper.":
@@ -1723,8 +1723,8 @@ const settings: Record<string, string> = {
   "Removing…": "Wird entfernt…",
   "Render subtitles in a heavier weight. Turn off to use your font's normal weight.":
     "Untertitel in einer kräftigeren Schriftstärke darstellen. Deaktivieren, um die normale Stärke deiner Schriftart zu verwenden.",
-  "Renders mpv inline so playback lives in Harbor itself. Disable to open it in a separate window instead.":
-    "Bettet mpv in Harbor ein, sodass die Wiedergabe direkt in Harbor erfolgt. Deaktivieren, um mpv stattdessen in einem separaten Fenster zu öffnen.",
+  "Renders mpv inline so playback lives in Lart itself. Disable to open it in a separate window instead.":
+    "Bettet mpv in Lart ein, sodass die Wiedergabe direkt in Lart erfolgt. Deaktivieren, um mpv stattdessen in einem separaten Fenster zu öffnen.",
   "Repair anime library": "Anime-Mediathek reparieren",
   "Repair library": "Mediathek reparieren",
   "Repair now": "Jetzt reparieren",
@@ -1755,7 +1755,7 @@ const settings: Record<string, string> = {
     "Lass den Mauszeiger auf einem Poster ruhen, um eine Vorschau zu sehen, ohne es zu öffnen. Standardmäßig deaktiviert.",
   "Rest the cursor on a poster to peek at the rating, story, and quick actions without opening it.":
     "Bewege den Mauszeiger über ein Poster, um Bewertung, Handlung und Schnellaktionen zu sehen, ohne es zu öffnen.",
-  "Restart Harbor's own streaming server, then reload the stream once it is back. Desktop only.":
+  "Restart Lart's own streaming server, then reload the stream once it is back. Desktop only.":
     "Harbors eigenen Streaming-Server neu starten und den Stream neu laden, sobald er wieder läuft. Nur Desktop.",
   "Restart engine": "Engine neu starten",
   "Restart streaming server": "Streaming-Server neu starten",
@@ -1778,8 +1778,8 @@ const settings: Record<string, string> = {
     "Das Bild zur Serie oder zum Film anzeigen. Wenn deaktiviert, bleibt der Titel sichtbar, aber das Poster wird ausgeblendet.",
   "Reviews on film pages are blurred until you reveal them.":
     "Rezensionen auf Filmseiten sind verschwommen, bis du sie einblendest.",
-  "Rewrites every library item to match Stremio's exact schema. Run once if your Stremio app started crashing after Harbor synced playback.":
-    "Schreibt jeden Mediathekseintrag so um, dass er exakt dem Schema von Stremio entspricht. Führe dies einmal aus, falls deine Stremio-App nach der Synchronisierung der Wiedergabe durch Harbor abstürzt.",
+  "Rewrites every library item to match Stremio's exact schema. Run once if your Stremio app started crashing after Lart synced playback.":
+    "Schreibt jeden Mediathekseintrag so um, dass er exakt dem Schema von Stremio entspricht. Führe dies einmal aus, falls deine Stremio-App nach der Synchronisierung der Wiedergabe durch Lart abstürzt.",
   "Ribbon corner": "Eckbanner",
   "Rich season and order panel": "Detaillierte Übersicht zu Staffeln und Reihenfolge",
   "Richer, more vivid picture with a touch more contrast.":
@@ -1801,7 +1801,7 @@ const settings: Record<string, string> = {
   "Run self-test": "Selbsttest ausführen",
   "Run speed test": "Geschwindigkeitstest starten",
   "Run test": "Test ausführen",
-  "Run your own Harbor Relay": "Eigenes Harbor Relay betreiben",
+  "Run your own Lart Relay": "Eigenes Lart Relay betreiben",
   Running: "Läuft",
   "Running self-test": "Selbsttest läuft",
   "Running the latest Watch Together protocol.":
@@ -1815,8 +1815,8 @@ const settings: Record<string, string> = {
   "SVP frame interpolation": "SVP-Zwischenbildberechnung",
   "SVP is already handling frame interpolation. Turn off SVP below to use this instead. Running both delays the audio.":
     "SVP übernimmt bereits die Zwischenbildberechnung. Deaktiviere SVP unten, um stattdessen diese Funktion zu verwenden. Beides gleichzeitig verzögert den Ton.",
-  "SVP is installed but Harbor couldn't find its engine files (svpflow + VapourSynth). Try repairing the SVP install, or reopen SVP once.":
-    "SVP ist installiert, aber Harbor konnte die Engine-Dateien (svpflow + VapourSynth) nicht finden. Versuche, die SVP-Installation zu reparieren, oder öffne SVP einmal erneut.",
+  "SVP is installed but Lart couldn't find its engine files (svpflow + VapourSynth). Try repairing the SVP install, or reopen SVP once.":
+    "SVP ist installiert, aber Lart konnte die Engine-Dateien (svpflow + VapourSynth) nicht finden. Versuche, die SVP-Installation zu reparieren, oder öffne SVP einmal erneut.",
   Saturation: "Sättigung",
   "Save a TMDB key in Library & metadata to turn on streaming catalogs.":
     "Speichere unter „Mediathek & Metadaten“ einen TMDB-Schlüssel, um Streamingkataloge zu aktivieren.",
@@ -1828,20 +1828,20 @@ const settings: Record<string, string> = {
   "Save rule": "Regel speichern",
   "Save sharper frames instead of light thumbnails. They look crisper on the card but take more space, so fewer are kept before the oldest roll off.":
     "Speichert schärfere Einzelbilder statt platzsparender Vorschaubilder. Sie wirken auf der Karte klarer, brauchen aber mehr Speicherplatz. Daher werden weniger behalten, bevor die ältesten entfernt werden.",
-  "Save the current frame (video only, no subtitles) as a PNG to Pictures/Harbor.":
-    "Das aktuelle Einzelbild (nur Video, ohne Untertitel) als PNG unter Bilder/Harbor speichern.",
+  "Save the current frame (video only, no subtitles) as a PNG to Pictures/Lart.":
+    "Das aktuelle Einzelbild (nur Video, ohne Untertitel) als PNG unter Bilder/Lart speichern.",
   "Save the worker source. Copy": "Worker-Quelle speichern. Kopieren",
-  "Save the worker source. Copy {code1} from the Harbor repo into a new directory as {code2}.":
-    "Speichere den Worker-Quellcode. Kopiere {code1} aus dem Harbor-Repository in ein neues Verzeichnis namens {code2}.",
+  "Save the worker source. Copy {code1} from the Lart repo into a new directory as {code2}.":
+    "Speichere den Worker-Quellcode. Kopiere {code1} aus dem Lart-Repository in ein neues Verzeichnis namens {code2}.",
   "Save this": "Speichern",
   "Save this {code} next to it:": "Speichere {code} daneben:",
   "Saved frame": "Gespeichertes Einzelbild",
   "Saved stream filters": "Gespeicherte Streamfilter",
   "Saved to Downloads as harbor-mpv-log.txt": "In Downloads als harbor-mpv-log.txt gespeichert",
-  "Saved {d} from Harbor {a}.": "{d} aus Harbor {a} gespeichert.",
-  "Saved {when} from Harbor {app}.": "{when} aus Harbor {app} gespeichert.",
-  "Saves your whole Harbor setup to one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
-    "Speichert deine gesamte Harbor-Konfiguration in einer Datei: Design, Startseitenlayout, Einstellungen, Add-ons, Profile, Merkliste, Player-Layouts, Wiedergabefortschritt und mehr. Deine Stremio-Anmeldedaten werden absichtlich nicht gespeichert.",
+  "Saved {d} from Lart {a}.": "{d} aus Lart {a} gespeichert.",
+  "Saved {when} from Lart {app}.": "{when} aus Lart {app} gespeichert.",
+  "Saves your whole Lart setup to one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
+    "Speichert deine gesamte Lart-Konfiguration in einer Datei: Design, Startseitenlayout, Einstellungen, Add-ons, Profile, Merkliste, Player-Layouts, Wiedergabefortschritt und mehr. Deine Stremio-Anmeldedaten werden absichtlich nicht gespeichert.",
   "Saving…": "Wird gespeichert…",
   "Scale every poster and card across Home, Discover, and your library. Bump it up on a 4K or large display where the defaults feel small, or shrink it for a denser grid.":
     "Skaliert alle Poster und Karten auf der Startseite, in Entdecken und in deiner Mediathek. Vergrößere sie auf einem 4K- oder großen Bildschirm, wenn die Standardgröße zu klein wirkt, oder verkleinere sie für ein kompakteres Raster.",
@@ -1881,13 +1881,13 @@ const settings: Record<string, string> = {
   "Self-host": "Selbst hosten",
   "Self-test": "Selbsttest",
   "Self-test is disabled while strict remote streaming is on. It downloads a small test file over peer-to-peer on this machine.": "Der Selbsttest ist deaktiviert, solange striktes Remote-Streaming aktiv ist. Er lädt auf diesem Gerät eine kleine Testdatei über P2P herunter.",
-  "Send a bug report straight to the Harbor team. Screenshots and screen recordings welcome.":
-    "Sende einen Fehlerbericht direkt an das Harbor-Team. Screenshots und Bildschirmaufnahmen sind willkommen.",
+  "Send a bug report straight to the Lart team. Screenshots and screen recordings welcome.":
+    "Sende einen Fehlerbericht direkt an das Lart-Team. Screenshots und Bildschirmaufnahmen sind willkommen.",
   "Send audio to specific speakers, headphones or a receiver. System default follows Windows.":
     "Gib Audio über bestimmte Lautsprecher, Kopfhörer oder einen Receiver aus. Bei der Systemvorgabe wird die Windows-Einstellung übernommen.",
   "Send test": "Test senden",
-  "Send this to anyone you want to watch with. They paste it in their Settings → Harbor Relay. After that, share a 6-character room code from the people icon up top.":
-    "Sende dies allen, mit denen du gemeinsam schauen möchtest. Sie fügen es unter „Einstellungen → Harbor Relay“ ein. Teile danach über das Personensymbol oben einen sechs Zeichen langen Raumcode.",
+  "Send this to anyone you want to watch with. They paste it in their Settings → Lart Relay. After that, share a 6-character room code from the people icon up top.":
+    "Sende dies allen, mit denen du gemeinsam schauen möchtest. Sie fügen es unter „Einstellungen → Lart Relay“ ein. Teile danach über das Personensymbol oben einen sechs Zeichen langen Raumcode.",
   "Sending to Trakt…": "Wird an Trakt gesendet…",
   "Sending…": "Wird gesendet…",
   "Sent {n} to Trakt": "{n} an Trakt gesendet",
@@ -1896,27 +1896,27 @@ const settings: Record<string, string> = {
   "Server address": "Serveradresse",
   "Server couldn't start:": "Server konnte nicht gestartet werden:",
   "Server reachable": "Server erreichbar",
-  "Server reachable in {ms}ms. Harbor will use it for torrent streaming.":
-    "Server in {ms} ms erreichbar. Harbor verwendet ihn für Torrent-Streaming.",
-  "Serves this exact install of Harbor as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer.":
-    "Stellt genau diese Harbor-Installation als Web-App in deinem Netzwerk bereit. Öffne sie im Browser eines Smartphones, Laptops oder Fernsehers, melde dich dort an und die Inhalte werden über diesen Computer gestreamt.",
-  "Serves this exact install of Harbor as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer. You can also use the phone remote to control playback and cast to another device on this machine.":
-    "Stellt genau diese Harbor-Installation als Web-App in deinem Netzwerk bereit. Öffne sie im Browser eines Smartphones, Laptops oder Fernsehers, melde dich dort an und die Inhalte werden über diesen Computer gestreamt. Du kannst außerdem die Smartphone-Fernbedienung verwenden, um die Wiedergabe zu steuern und von diesem Computer aus auf ein anderes Gerät zu übertragen.",
+  "Server reachable in {ms}ms. Lart will use it for torrent streaming.":
+    "Server in {ms} ms erreichbar. Lart verwendet ihn für Torrent-Streaming.",
+  "Serves this exact install of Lart as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer.":
+    "Stellt genau diese Lart-Installation als Web-App in deinem Netzwerk bereit. Öffne sie im Browser eines Smartphones, Laptops oder Fernsehers, melde dich dort an und die Inhalte werden über diesen Computer gestreamt.",
+  "Serves this exact install of Lart as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer. You can also use the phone remote to control playback and cast to another device on this machine.":
+    "Stellt genau diese Lart-Installation als Web-App in deinem Netzwerk bereit. Öffne sie im Browser eines Smartphones, Laptops oder Fernsehers, melde dich dort an und die Inhalte werden über diesen Computer gestreamt. Du kannst außerdem die Smartphone-Fernbedienung verwenden, um die Wiedergabe zu steuern und von diesem Computer aus auf ein anderes Gerät zu übertragen.",
   "Service status": "Dienststatus",
   "Set active": "Aktivieren",
   "Set active filter": "Aktiven Filter festlegen",
   "Set up a Cloudflare relay for Watch Together":
     "Cloudflare-Relay für gemeinsames Schauen einrichten",
-  "Set your MyAnimeList profile picture as your Harbor avatar.":
-    "Dein MyAnimeList-Profilbild als Harbor-Avatar festlegen.",
-  "Sets the language of Harbor's own interface: menus, buttons, and labels. Arabic switches the layout to right to left. This is separate from subtitle and metadata languages below.":
-    "Legt die Sprache der Harbor-Oberfläche fest: Menüs, Schaltflächen und Beschriftungen. Bei Arabisch wechselt das Layout zur Schreibrichtung von rechts nach links. Dies ist unabhängig von den unten festgelegten Sprachen für Untertitel und Metadaten.",
+  "Set your MyAnimeList profile picture as your Lart avatar.":
+    "Dein MyAnimeList-Profilbild als Lart-Avatar festlegen.",
+  "Sets the language of Lart's own interface: menus, buttons, and labels. Arabic switches the layout to right to left. This is separate from subtitle and metadata languages below.":
+    "Legt die Sprache der Lart-Oberfläche fest: Menüs, Schaltflächen und Beschriftungen. Bei Arabisch wechselt das Layout zur Schreibrichtung von rechts nach links. Dies ist unabhängig von den unten festgelegten Sprachen für Untertitel und Metadaten.",
   "Settings for this profile": "Einstellungen für dieses Profil",
   "Settings for this profile (shared or independent)":
     "Einstellungen für dieses Profil (gemeinsam oder unabhängig)",
   "Settings storage breakdown": "Aufschlüsselung des Einstellungsspeichers",
-  "Settings, Harbor Relay, then": "Einstellungen, Harbor Relay, dann",
-  "Settings, Harbor Relay, then {kbd}.": "Einstellungen, Harbor Relay, dann {kbd}.",
+  "Settings, Lart Relay, then": "Einstellungen, Lart Relay, dann",
+  "Settings, Lart Relay, then {kbd}.": "Einstellungen, Lart Relay, dann {kbd}.",
   "Setup copied to clipboard as JSON": "Einrichtung als JSON in die Zwischenablage kopiert",
   Severity: "Schweregrad",
   "Shape the sound without touching your system EQ. Applies on the mpv engine; the HTML5 engine plays audio untouched.":
@@ -1934,7 +1934,7 @@ const settings: Record<string, string> = {
     "Untertitel früher anzeigen (Shift für Feinschritte).",
   "Shift subtitle timing later (Shift for fine steps).":
     "Untertitel später anzeigen (Shift für Feinschritte).",
-  "Ships with Harbor. Always available.": "In Harbor enthalten. Immer verfügbar.",
+  "Ships with Lart. Always available.": "In Lart enthalten. Immer verfügbar.",
   "Short seek back": "Kurzer Rückwärtssprung",
   "Short seek forward": "Kurzer Sprung vorwärts",
   "Show 'Watching something' with no show name or poster.":
@@ -1953,8 +1953,8 @@ const settings: Record<string, string> = {
   "Show Simkl Trending Today rail": "Leiste „Heute im Trend bei Simkl“ anzeigen",
   "Show Simkl rails on Home": "Simkl-Leisten auf der Startseite anzeigen",
   "Show Up Next on Simkl rail": "„Als Nächstes“ in der Simkl-Leiste anzeigen",
-  "Show a Skip Intro / Skip Credits button when Harbor detects one. Turn this off to never show it. You can also tap the X on the button to dismiss a wrong one for the rest of the episode.":
-    "Zeige die Schaltfläche „Intro überspringen“ / „Abspann überspringen“ an, wenn Harbor einen solchen Abschnitt erkennt. Schalte dies aus, um sie nie anzuzeigen. Du kannst auch auf das X der Schaltfläche tippen, um eine falsche Erkennung für den Rest der Folge auszublenden.",
+  "Show a Skip Intro / Skip Credits button when Lart detects one. Turn this off to never show it. You can also tap the X on the button to dismiss a wrong one for the rest of the episode.":
+    "Zeige die Schaltfläche „Intro überspringen“ / „Abspann überspringen“ an, wenn Lart einen solchen Abschnitt erkennt. Schalte dies aus, um sie nie anzuzeigen. Du kannst auch auf das X der Schaltfläche tippen, um eine falsche Erkennung für den Rest der Folge auszublenden.",
   "Show a Skip button when a known injected ad plays, and a small report button on new releases so you can mark ads for review.":
     "Bei einer bekannten eingeschleusten Werbeanzeige eine Schaltfläche „Überspringen“ und bei Neuveröffentlichungen eine kleine Schaltfläche „Melden“ anzeigen, damit du Werbung zur Überprüfung markieren kannst.",
   "Show a bookmark on saved titles": "Lesezeichen für gespeicherte Titel anzeigen",
@@ -1983,8 +1983,8 @@ const settings: Record<string, string> = {
   "Show my rating on movie posters": "Meine Bewertung auf Filmplakaten anzeigen",
   "Show on Discord": "Auf Discord anzeigen",
   "Show what you are listening to": "Anzeigen, was du hörst",
-  "Share the track, artist and album art while music plays, with a Listen in Harbor button.":
-    "Teile Titel, Interpret und Albumcover, während Musik läuft, samt einer Schaltfläche „Listen in Harbor“.",
+  "Share the track, artist and album art while music plays, with a Listen in Lart button.":
+    "Teile Titel, Interpret und Albumcover, während Musik läuft, samt einer Schaltfläche „Listen in Lart“.",
   "Show or hide the playback stats overlay.": "Wiedergabestatistik ein- oder ausblenden.",
   "Show play button": "Wiedergabeschaltfläche anzeigen",
   "Show poster": "Poster anzeigen",
@@ -2012,10 +2012,10 @@ const settings: Record<string, string> = {
     "Zeige unter dem Titel im Player, was du tatsächlich ansiehst.",
   "Show while browsing": "Beim Durchsuchen anzeigen",
   "Show while paused": "Während der Pause anzeigen",
-  "Show your AniList profile picture as your Harbor avatar.":
-    "Dein AniList-Profilbild als Harbor-Avatar anzeigen.",
-  "Show your operating system's own title bar with its minimize, maximize, and close buttons. They stay reachable everywhere, including while a video is playing. Turn this off to use Harbor's built-in window buttons.":
-    "Zeige die systemeigene Titelleiste mit Schaltflächen zum Minimieren, Maximieren und Schließen an. Sie bleiben überall erreichbar, auch während der Videowiedergabe. Deaktiviere dies, um die integrierten Fensterschaltflächen von Harbor zu verwenden.",
+  "Show your AniList profile picture as your Lart avatar.":
+    "Dein AniList-Profilbild als Lart-Avatar anzeigen.",
+  "Show your operating system's own title bar with its minimize, maximize, and close buttons. They stay reachable everywhere, including while a video is playing. Turn this off to use Lart's built-in window buttons.":
+    "Zeige die systemeigene Titelleiste mit Schaltflächen zum Minimieren, Maximieren und Schließen an. Sie bleiben überall erreichbar, auch während der Videowiedergabe. Deaktiviere dies, um die integrierten Fensterschaltflächen von Lart zu verwenden.",
   "Show {n} more addons": "{n} weitere Add-ons anzeigen",
   "Shows each episode's rating. Add your free OMDb API key for real IMDb scores; without it, ratings fall back to TMDB.":
     "Zeigt die Bewertung jeder Folge an. Füge deinen kostenlosen OMDb-API-Schlüssel hinzu, um echte IMDb-Wertungen zu erhalten; ohne ihn wird auf TMDB zurückgegriffen.",
@@ -2025,9 +2025,9 @@ const settings: Record<string, string> = {
     "Zeigt deine Letterboxd-Kataloge auf der Startseite und einen Letterboxd-Bereich auf Filmseiten an.",
   "Side rail": "Seitenleiste",
   "Sidebar layout": "Seitenleistenlayout",
-  "Sign in to Harbor": "Bei Harbor anmelden",
-  "Sign in to Stremio first so Harbor knows which watchlist to sync.":
-    "Melde dich zuerst bei Stremio an, damit Harbor weiß, welche Merkliste synchronisiert werden soll.",
+  "Sign in to Lart": "Bei Lart anmelden",
+  "Sign in to Stremio first so Lart knows which watchlist to sync.":
+    "Melde dich zuerst bei Stremio an, damit Lart weiß, welche Merkliste synchronisiert werden soll.",
   "Sign in to Stremio first.": "Melde dich zuerst bei Stremio an.",
   "Sign in to Stremio first. The repair scans only the active profile's library.":
     "Melde dich zuerst bei Stremio an. Die Reparatur durchsucht nur die Mediathek des aktiven Profils.",
@@ -2037,7 +2037,7 @@ const settings: Record<string, string> = {
     "Melde dich zuerst bei Stremio an. Deine installierten Add-ons werden von dort synchronisiert.",
   "Sign in to sync your library, watch progress, and addons.":
     "Melde dich an, um deine Mediathek, deinen Wiedergabefortschritt und deine Add-ons zu synchronisieren.",
-  "Sign out of Harbor account": "Vom Harbor-Konto abmelden",
+  "Sign out of Lart account": "Vom Lart-Konto abmelden",
   Simkl: "Simkl",
   "Single -1:12 label, both ends collapse.":
     "Einzelne -1:12-Anzeige, beide Enden werden eingeklappt.",
@@ -2052,8 +2052,8 @@ const settings: Record<string, string> = {
   "Skip injected ads automatically": "Eingefügte Werbung automatisch überspringen",
   "Skip intros": "Intros überspringen",
   "Skip intros & credits": "Intros und Abspann überspringen",
-  "Skip the 'stream over peer-to-peer?' prompt and start uncached torrents immediately. Harbor remembers your choice after the first confirmation anyway.":
-    "Die Frage „Über P2P streamen?“ überspringen und nicht zwischengespeicherte Torrents sofort starten. Harbor merkt sich deine Auswahl nach der ersten Bestätigung ohnehin.",
+  "Skip the 'stream over peer-to-peer?' prompt and start uncached torrents immediately. Lart remembers your choice after the first confirmation anyway.":
+    "Die Frage „Über P2P streamen?“ überspringen und nicht zwischengespeicherte Torrents sofort starten. Lart merkt sich deine Auswahl nach der ersten Bestätigung ohnehin.",
   "Skip to the next episode if available.": "Zur nächsten Folge springen, falls verfügbar.",
   "Skip to the previous episode if available.": "Zur vorherigen Folge springen, falls verfügbar.",
   "Sleep at end of episode": "Am Episodenende in den Ruhemodus wechseln",
@@ -2101,8 +2101,8 @@ const settings: Record<string, string> = {
     "Quadratisches Signet in der Seitenleiste. Transparente PNG- oder SVG-Dateien eignen sich am besten.",
   Stable: "Stabil",
   "Stable selectors": "Stabile Selektoren",
-  "Start or stop recording a GIF of the video (no subtitles). Saves to Pictures/Harbor.":
-    "Aufnahme eines GIFs vom Video starten oder stoppen (ohne Untertitel). Wird unter Bilder/Harbor gespeichert.",
+  "Start or stop recording a GIF of the video (no subtitles). Saves to Pictures/Lart.":
+    "Aufnahme eines GIFs vom Video starten oder stoppen (ohne Untertitel). Wird unter Bilder/Lart gespeichert.",
   "Start server": "Server starten",
   "Start trailers with audio": "Trailer mit Ton starten",
   Starting: "Wird gestartet",
@@ -2119,8 +2119,8 @@ const settings: Record<string, string> = {
     "Schrittweise herauszoomen, um fest eingebettete schwarze Balken wiederherzustellen (Zoommodus).",
   Stepper: "Schrittregler",
   "Steps to reproduce": "Schritte zum Reproduzieren",
-  "Stop playback when you minimize Harbor or send it to the tray.":
-    "Wiedergabe beenden, wenn du Harbor minimierst oder in den Infobereich verschiebst.",
+  "Stop playback when you minimize Lart or send it to the tray.":
+    "Wiedergabe beenden, wenn du Lart minimierst oder in den Infobereich verschiebst.",
   "Stop playback whenever another window takes focus.":
     "Wiedergabe stoppen, sobald ein anderes Fenster den Fokus erhält.",
   "Stop relay": "Relay stoppen",
@@ -2134,9 +2134,9 @@ const settings: Record<string, string> = {
   "Stream should start playing within a few seconds.":
     "Der Stream sollte innerhalb weniger Sekunden starten.",
   "Stream switcher": "Stream-Auswahl",
-  "Stream torrents straight from Harbor's built-in engine when you have no debrid set up, or a torrent isn't cached. This connects to peers over your own connection. Turn off to only ever play debrid and direct links.":
-    "Streame Torrents direkt mit der integrierten Engine von Harbor, wenn du keinen Debrid-Dienst eingerichtet hast oder ein Torrent nicht zwischengespeichert ist. Dabei verbindest du dich über deine eigene Internetverbindung mit Peers. Deaktiviere diese Option, um ausschließlich Debrid- und Direktlinks abzuspielen.",
-  "Stream torrents through Harbor's own Rust peer-to-peer engine instead of the bundled Stremio Server. Falls back automatically if it can't connect. Status and a self-test live in the Local engine card below.":
+  "Stream torrents straight from Lart's built-in engine when you have no debrid set up, or a torrent isn't cached. This connects to peers over your own connection. Turn off to only ever play debrid and direct links.":
+    "Streame Torrents direkt mit der integrierten Engine von Lart, wenn du keinen Debrid-Dienst eingerichtet hast oder ein Torrent nicht zwischengespeichert ist. Dabei verbindest du dich über deine eigene Internetverbindung mit Peers. Deaktiviere diese Option, um ausschließlich Debrid- und Direktlinks abzuspielen.",
+  "Stream torrents through Lart's own Rust peer-to-peer engine instead of the bundled Stremio Server. Falls back automatically if it can't connect. Status and a self-test live in the Local engine card below.":
     "Streame Torrents über Harbors eigene, in Rust entwickelte P2P-Engine statt über den mitgelieferten Stremio Server. Wenn keine Verbindung möglich ist, wird automatisch auf diesen zurückgegriffen. Status und Selbsttest findest du unten auf der Karte „Lokale Engine“.",
   "Streamer release rule": "Veröffentlichungsregel für Streamer",
   Streamers: "Streamer",
@@ -2183,7 +2183,7 @@ const settings: Record<string, string> = {
   Summary: "Zusammenfassung",
   "Summary needs at least 6 characters": "Die Zusammenfassung muss mindestens 6 Zeichen lang sein",
   "Suspicious file": "Verdächtige Datei",
-  "Switch Harbor to {language}?": "Harbor auf {language} umstellen?",
+  "Switch Lart to {language}?": "Lart auf {language} umstellen?",
   "Switch the menus and buttons to your language. Arabic flips the layout to right to left.":
     "Menüs und Schaltflächen auf deine Sprache umstellen. Bei Arabisch wechselt das Layout zu einer Leserichtung von rechts nach links.",
   Symptom: "Symptom",
@@ -2236,8 +2236,8 @@ const settings: Record<string, string> = {
   "That pack's file isn't valid JSON": "Die Datei dieses Pakets ist kein gültiges JSON",
   "The CPU decodes everything. Most compatible, but it runs hot and can stutter on 4K. Use this only if the picture glitches with hardware decoding on.":
     "Die CPU dekodiert alles. Das ist am kompatibelsten, erzeugt aber viel Wärme und kann bei 4K ruckeln. Verwende dies nur, wenn es bei aktivierter Hardwaredekodierung zu Bildfehlern kommt.",
-  "The Harbor relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Harbor server.":
-    "Das Harbor-Relay ist ein Cloudflare Worker, der WebSocket-Räume für „Gemeinsam ansehen“ bereitstellt. Jeder Benutzer betreibt seinen eigenen. Es gibt keinen zentralen Harbor-Server.",
+  "The Lart relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Lart server.":
+    "Das Lart-Relay ist ein Cloudflare Worker, der WebSocket-Räume für „Gemeinsam ansehen“ bereitstellt. Jeder Benutzer betreibt seinen eigenen. Es gibt keinen zentralen Lart-Server.",
   "The Last Stand": "Das letzte Gefecht",
   "The New, In Cinema, Rerun, and Awards chips. Turn off for a cleaner grid. Score chips are separate, below.":
     "Die Chips „Neu“, „Im Kino“, „Wiederholung“ und „Auszeichnungen“. Deaktivieren, um ein übersichtlicheres Raster zu erhalten. Bewertungs-Chips werden unten separat eingestellt.",
@@ -2247,8 +2247,8 @@ const settings: Record<string, string> = {
   "The button set your layout is built on. Your customizations are kept separately for each style.":
     "Die Schaltflächengruppe, auf der dein Layout basiert. Deine Anpassungen werden für jeden Stil separat gespeichert.",
   "The default round dot.": "Der standardmäßige runde Punkt.",
-  "The escape hatch for power users. One mpv option per line as key=value, exactly like mpv.conf. These apply last, so they override every dial above. Anything Harbor can't read is skipped, so a typo won't break playback. Restart playback to apply.":
-    "Die Notlösung für Poweruser. Eine mpv-Option pro Zeile im Format key=value, genau wie in mpv.conf. Diese Optionen werden zuletzt angewendet und überschreiben daher alle obigen Einstellungen. Alles, was Harbor nicht lesen kann, wird übersprungen, sodass ein Tippfehler die Wiedergabe nicht verhindert. Starte die Wiedergabe neu, um die Änderungen anzuwenden.",
+  "The escape hatch for power users. One mpv option per line as key=value, exactly like mpv.conf. These apply last, so they override every dial above. Anything Lart can't read is skipped, so a typo won't break playback. Restart playback to apply.":
+    "Die Notlösung für Poweruser. Eine mpv-Option pro Zeile im Format key=value, genau wie in mpv.conf. Diese Optionen werden zuletzt angewendet und überschreiben daher alle obigen Einstellungen. Alles, was Lart nicht lesen kann, wird übersprungen, sodass ein Tippfehler die Wiedergabe nicht verhindert. Starte die Wiedergabe neu, um die Änderungen anzuwenden.",
   "The free tier is $0 for personal use. Just pick the first option, no payment needed.":
     "Der kostenlose Tarif kostet für die persönliche Nutzung $0. Wähle einfach die erste Option, eine Zahlung ist nicht nötig.",
   "The home hero trailer plays with sound and a mute button in the corner, then shows a replay button when it ends. Auto-rotation pauses so it stays on the featured title.":
@@ -2271,8 +2271,8 @@ const settings: Record<string, string> = {
     "Startet am schnellsten und braucht am wenigsten Arbeitsspeicher. Gut bei einer schnellen, stabilen Verbindung oder auf einem Computer mit wenig Arbeitsspeicher.",
   "The ratings row on a title's detail page, next to runtime and genre.":
     "Die Bewertungszeile auf der Detailseite eines Titels, neben Laufzeit und Genre.",
-  "The resolution Harbor downloads for each image when you export a title's metadata next to the file on disk.":
-    "Die Auflösung, in der Harbor jedes Bild herunterlädt, wenn du die Metadaten eines Titels neben die Datei auf dem Datenträger exportierst.",
+  "The resolution Lart downloads for each image when you export a title's metadata next to the file on disk.":
+    "Die Auflösung, in der Lart jedes Bild herunterlädt, wenn du die Metadaten eines Titels neben die Datei auf dem Datenträger exportierst.",
   "The server answered with status {status}. Is that a streaming server?":
     "Der Server hat mit Status {status} geantwortet. Ist das ein Streamingserver?",
   "The test calls": "Der Test ruft Folgendes auf",
@@ -2292,18 +2292,18 @@ const settings: Record<string, string> = {
   "Themes you imported or built.": "Von dir importierte oder erstellte Designs.",
   "These badges are drawn on posters as you browse. RPDB, in the keys above, is a separate option that bakes scores into the poster image itself.":
     "Diese Abzeichen werden beim Stöbern auf Postern eingeblendet. RPDB ist unter den obigen Schlüsseln eine separate Option, die Bewertungen direkt in das Posterbild einbettet.",
-  "These tune the bundled mpv engine, which runs in the Harbor desktop app. They have no effect in the browser.":
-    "Diese Einstellungen passen die mitgelieferte mpv-Engine an, die in der Harbor-Desktop-App läuft. Im Browser haben sie keine Wirkung.",
-  "This replaces your current Harbor setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Harbor reloads when it finishes.":
-    "Dadurch wird deine aktuelle Harbor-Konfiguration (Design, Startseitenlayout, Einstellungen, Add-ons, Profile und mehr) durch die {n} gespeicherten Einträge in dieser Datei ersetzt. Deine Stremio-Anmeldung bleibt unverändert. Nach Abschluss wird Harbor neu geladen.",
+  "These tune the bundled mpv engine, which runs in the Lart desktop app. They have no effect in the browser.":
+    "Diese Einstellungen passen die mitgelieferte mpv-Engine an, die in der Lart-Desktop-App läuft. Im Browser haben sie keine Wirkung.",
+  "This replaces your current Lart setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Lart reloads when it finishes.":
+    "Dadurch wird deine aktuelle Lart-Konfiguration (Design, Startseitenlayout, Einstellungen, Add-ons, Profile und mehr) durch die {n} gespeicherten Einträge in dieser Datei ersetzt. Deine Stremio-Anmeldung bleibt unverändert. Nach Abschluss wird Lart neu geladen.",
   "This score only appears on cards.": "Diese Bewertung erscheint nur auf Karten.",
   "This section depends on the addon": "Dieser Abschnitt hängt vom Add-on ab",
   "This section relies on TMDB discovery features.":
     "Dieser Bereich nutzt die Funktionen von TMDB zum Entdecken von Inhalten.",
   "This sets the interface, metadata, subtitle, and audio languages to match.":
     "Dadurch werden die Sprachen für Oberfläche, Metadaten, Untertitel und Tonspur aufeinander abgestimmt.",
-  "This usually means antivirus removed the server file (stremio-server.exe). Add Harbor's install folder to your antivirus exclusions, then reinstall.":
-    "Das bedeutet meistens, dass dein Virenschutz die Serverdatei (stremio-server.exe) entfernt hat. Füge den Installationsordner von Harbor zu den Ausnahmen deines Virenschutzes hinzu und installiere Harbor dann neu.",
+  "This usually means antivirus removed the server file (stremio-server.exe). Add Lart's install folder to your antivirus exclusions, then reinstall.":
+    "Das bedeutet meistens, dass dein Virenschutz die Serverdatei (stremio-server.exe) entfernt hat. Füge den Installationsordner von Lart zu den Ausnahmen deines Virenschutzes hinzu und installiere Lart dann neu.",
   "Tiles horizontally; the bar's height crops it vertically. Animated GIFs up to 2 MB play.":
     "Das Bild wird horizontal gekachelt und durch die Höhe der Leiste vertikal beschnitten. Animierte GIFs bis 2 MB werden abgespielt.",
   "Time format": "Zeitformat",
@@ -2314,8 +2314,8 @@ const settings: Record<string, string> = {
   "Titles, overviews, and taglines from TMDB display in this language when a translation exists. Needs a TMDB key.":
     "Titel, Inhaltsangaben und Slogans von TMDB werden in dieser Sprache angezeigt, wenn eine Übersetzung vorhanden ist. Erfordert einen TMDB-Schlüssel.",
   "To run a public relay, post the": "Um ein öffentliches Relay zu betreiben, veröffentliche die",
-  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Harbor users paste it into Settings, Harbor Relay, {kbd}.":
-    "Um ein öffentliches Relay zu betreiben, veröffentliche die {code}-URL auf r/Stremio oder dort, wo sich deine Community austauscht. Andere Harbor-Nutzer fügen sie unter Einstellungen, Harbor Relay, {kbd} ein.",
+  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Lart users paste it into Settings, Lart Relay, {kbd}.":
+    "Um ein öffentliches Relay zu betreiben, veröffentliche die {code}-URL auf r/Stremio oder dort, wo sich deine Community austauscht. Andere Lart-Nutzer fügen sie unter Einstellungen, Lart Relay, {kbd} ein.",
   "To the side": "Seitlich",
   "Toggle a sleep timer that pauses when this episode ends.":
     "Sleep-Timer ein-/ausschalten, der die Wiedergabe am Ende dieser Episode pausiert.",
@@ -2343,8 +2343,8 @@ const settings: Record<string, string> = {
   "TorBox API key": "TorBox-API-Schlüssel",
   "Torrent name": "Torrent-Name",
   "P2P is disabled. Uncached streams will not play unless they come from a debrid service or a direct link. To use P2P, toggle this off.": "P2P ist deaktiviert. Nicht zwischengespeicherte Streams werden nur wiedergegeben, wenn sie von einem Debrid-Dienst oder einem Direktlink stammen. Deaktiviere diese Option, um P2P zu verwenden.",
-  "Track everything you watch, see your watchlist, and get personalized recommendations on Harbor's home page. Free at trakt.tv.":
-    "Verfolge alles, was du ansiehst, greife auf deine Merkliste zu und erhalte personalisierte Empfehlungen auf der Harbor-Startseite. Kostenlos auf trakt.tv.",
+  "Track everything you watch, see your watchlist, and get personalized recommendations on Lart's home page. Free at trakt.tv.":
+    "Verfolge alles, was du ansiehst, greife auf deine Merkliste zu und erhalte personalisierte Empfehlungen auf der Lart-Startseite. Kostenlos auf trakt.tv.",
   "Tracked people": "Personen, denen du folgst",
   "Tracked person release rule": "Veröffentlichungsregel für Personen, denen du folgst",
   Tracks: "Tonspuren",
@@ -2394,8 +2394,8 @@ const settings: Record<string, string> = {
     "Aktivieren, um den Trakt-Kommentarbereich bei Filmen, Serien und Episoden anzuzeigen.",
   "Turns off the fancy scaling and effects so video just plays. The lightest on your machine. Pick this if anything ever stutters or your fan screams.":
     "Deaktiviert aufwendige Skalierung und Effekte, sodass das Video einfach abgespielt wird. Schont deinen Rechner am meisten. Wähle dies, wenn etwas ruckelt oder dein Lüfter laut aufdreht.",
-  "Two paths: Harbor handles the deploy for you, or you do it yourself with wrangler.":
-    "Zwei Wege: Harbor übernimmt die Bereitstellung für dich oder du erledigst sie selbst mit wrangler.",
+  "Two paths: Lart handles the deploy for you, or you do it yourself with wrangler.":
+    "Zwei Wege: Lart übernimmt die Bereitstellung für dich oder du erledigst sie selbst mit wrangler.",
   "Two-factor authentication code": "Code für die Zwei-Faktor-Authentifizierung",
   "Type what you want in plain language and let a model find it. Bring your own API key.":
     "Beschreibe in Alltagssprache, was du suchst, und lass ein Modell danach suchen. Verwende deinen eigenen API-Schlüssel.",
@@ -2405,8 +2405,8 @@ const settings: Record<string, string> = {
   Typography: "Typografie",
   "URL cannot be empty": "URL darf nicht leer sein",
   "URL is saved and ready to share.": "URL ist gespeichert und kann geteilt werden.",
-  "URL on r/Stremio or wherever your community lives. Other Harbor users paste it into Settings, Harbor Relay,":
-    "URL auf r/Stremio oder dort, wo deine Community aktiv ist. Andere Harbor-Nutzer fügen sie unter Einstellungen > Harbor Relay ein,",
+  "URL on r/Stremio or wherever your community lives. Other Lart users paste it into Settings, Lart Relay,":
+    "URL auf r/Stremio oder dort, wo deine Community aktiv ist. Andere Lart-Nutzer fügen sie unter Einstellungen > Lart Relay ein,",
   "Unlimited Durable Object storage at $0.20 per million reads.":
     "Unbegrenzter Durable Object-Speicher für 0,20 $ pro Million Lesevorgänge.",
   "Untitled filter": "Unbenannter Filter",
@@ -2417,8 +2417,8 @@ const settings: Record<string, string> = {
     "Konvertiert SDR-Videos auf einer Nvidia-RTX-GPU in HDR (aktiviere RTX Video HDR in der Nvidia-App; GPU-Dekodierung erforderlich). Experimentell. Nicht verfügbar, solange SVP für das aktuelle Video aktiv ist.",
   "Update now": "Jetzt aktualisieren",
   Updates: "Updates",
-  "Updating separated settings per profile, which may have reset your theme and keys. Harbor still has your old setup saved. Bring it back on this profile, then reload.":
-    "Bei der Aktualisierung wurden die Einstellungen nach Profil getrennt, wodurch dein Design und deine Tastenbelegungen möglicherweise zurückgesetzt wurden. Harbor hat deine alte Einrichtung weiterhin gespeichert. Stelle sie für dieses Profil wieder her und lade anschließend neu.",
+  "Updating separated settings per profile, which may have reset your theme and keys. Lart still has your old setup saved. Bring it back on this profile, then reload.":
+    "Bei der Aktualisierung wurden die Einstellungen nach Profil getrennt, wodurch dein Design und deine Tastenbelegungen möglicherweise zurückgesetzt wurden. Lart hat deine alte Einrichtung weiterhin gespeichert. Stelle sie für dieses Profil wieder her und lade anschließend neu.",
   "Upgrade subtitles when better ones load":
     "Untertitel durch bessere ersetzen, sobald sie geladen sind",
   Upload: "Hochladen",
@@ -2434,8 +2434,8 @@ const settings: Record<string, string> = {
     "Worker wird hochgeladen, Durable Object wird verbunden…",
   "Upscales SDR video with AI on an Nvidia RTX GPU (turn on RTX Video Super Resolution in the Nvidia app; needs GPU decode). Experimental. Unavailable while SVP is active for the current video.":
     "Skaliert SDR-Videos per KI auf einer Nvidia-RTX-GPU hoch (aktiviere RTX Video Super Resolution in der Nvidia-App; GPU-Decodierung erforderlich). Experimentell. Nicht verfügbar, solange SVP für das aktuelle Video aktiv ist.",
-  "Use Harbor's built-in engine (beta)": "Harbors integrierte Engine verwenden (Beta)",
-  "Use Harbor's public relay": "Öffentliches Relay von Harbor verwenden",
+  "Use Lart's built-in engine (beta)": "Harbors integrierte Engine verwenden (Beta)",
+  "Use Lart's public relay": "Öffentliches Relay von Lart verwenden",
   "Use MyAnimeList avatar": "MyAnimeList-Avatar verwenden",
   "Use a custom meta addon you installed (e.g. a localized Cinemeta) for titles and descriptions instead of the built-in Cinemeta. Falls back to Cinemeta if yours has no data.":
     "Ein von dir installiertes benutzerdefiniertes Metadaten-Add-on (z. B. ein lokalisiertes Cinemeta) anstelle des integrierten Cinemeta für Titel und Beschreibungen verwenden. Wenn dein Add-on keine Daten liefert, wird auf Cinemeta zurückgegriffen.",
@@ -2450,27 +2450,27 @@ const settings: Record<string, string> = {
   "Use in Nuvio": "In Nuvio verwenden",
   "Use live web context": "Live-Webkontext verwenden",
   "Use live web context (Jina Reader)": "Live-Webkontext verwenden (Jina Reader)",
-  "Use my AniList avatar as my Harbor avatar": "Meinen AniList-Avatar als Harbor-Avatar verwenden",
-  "Use my Simkl avatar as my Harbor avatar":
-    "Meinen Simkl-Avatar als meinen Harbor-Avatar verwenden",
-  "Use my Trakt avatar as my Harbor avatar":
-    "Meinen Trakt-Avatar als meinen Harbor-Avatar verwenden",
+  "Use my AniList avatar as my Lart avatar": "Meinen AniList-Avatar als Lart-Avatar verwenden",
+  "Use my Simkl avatar as my Lart avatar":
+    "Meinen Simkl-Avatar als meinen Lart-Avatar verwenden",
+  "Use my Trakt avatar as my Lart avatar":
+    "Meinen Trakt-Avatar als meinen Lart-Avatar verwenden",
   "Use my style": "Meinen Stil verwenden",
-  "Use the arrow keys and Enter to move focus through Harbor. Turn this off to keep arrow keys free and disable focus navigation everywhere.":
-    "Navigiere mit den Pfeiltasten und der Eingabetaste durch Harbor. Deaktiviere dies, um die Pfeiltasten freizuhalten und die Fokusnavigation überall auszuschalten.",
+  "Use the arrow keys and Enter to move focus through Lart. Turn this off to keep arrow keys free and disable focus navigation everywhere.":
+    "Navigiere mit den Pfeiltasten und der Eingabetaste durch Lart. Deaktiviere dies, um die Pfeiltasten freizuhalten und die Fokusnavigation überall auszuschalten.",
   "Use the native window title bar": "Native Fenstertitelleiste verwenden",
-  "Use your operating system's native title bar and window buttons instead of Harbor's built-in ones. Handy if the in-app buttons ever feel out of reach, like during playback.":
-    "Verwendet die native Titelleiste und die Fensterschaltflächen deines Betriebssystems anstelle der integrierten Bedienelemente von Harbor. Praktisch, falls die Schaltflächen in der App einmal schwer erreichbar sind, etwa während der Wiedergabe.",
+  "Use your operating system's native title bar and window buttons instead of Lart's built-in ones. Handy if the in-app buttons ever feel out of reach, like during playback.":
+    "Verwendet die native Titelleiste und die Fensterschaltflächen deines Betriebssystems anstelle der integrierten Bedienelemente von Lart. Praktisch, falls die Schaltflächen in der App einmal schwer erreichbar sind, etwa während der Wiedergabe.",
   "Use your own image as the app icon": "Eigenes Bild als App-Symbol verwenden",
   "Used for streaming availability and the Now Playing release window.":
     "Wird für die Streamingverfügbarkeit und das Veröffentlichungsfenster „Jetzt läuft“ verwendet.",
-  "Used for streaming availability and the Now Playing release window. Pick a country and Harbor can match the interface, metadata, and subtitle languages to it.":
-    "Wird für die Streamingverfügbarkeit und das Veröffentlichungsfenster „Jetzt läuft“ verwendet. Wähle ein Land aus, damit Harbor die Sprachen für Benutzeroberfläche, Metadaten und Untertitel daran anpassen kann.",
+  "Used for streaming availability and the Now Playing release window. Pick a country and Lart can match the interface, metadata, and subtitle languages to it.":
+    "Wird für die Streamingverfügbarkeit und das Veröffentlichungsfenster „Jetzt läuft“ verwendet. Wähle ein Land aus, damit Lart die Sprachen für Benutzeroberfläche, Metadaten und Untertitel daran anpassen kann.",
   "Used for your cursor in Watch Together, your draw color, and your name pill in chat.":
     "Wird für deinen Cursor in Watch Together, deine Zeichenfarbe und dein Namensschild im Chat verwendet.",
   Usenet: "Usenet",
-  "Using AIOStreams or another aggregator addon? Its own sorting and filtering happen inside the addon before Harbor ever sees the results, then Harbor applies the stream filter and result order above on top. If results look thinner than expected, keep one side permissive: either relax the addon's internal filters or set Harbor's stream filter to Balanced or Off.":
-    "Verwendest du AIOStreams oder ein anderes Aggregator-Add-on? Dessen eigene Sortierung und Filterung erfolgen innerhalb des Add-ons, bevor Harbor die Ergebnisse erhält. Anschließend wendet Harbor zusätzlich den oben festgelegten Streamfilter und die Ergebnisreihenfolge an. Wenn weniger Ergebnisse als erwartet erscheinen, lass eine Seite großzügig eingestellt: Lockere entweder die internen Filter des Add-ons oder stelle Harbors Streamfilter auf Ausgewogen oder Aus.",
+  "Using AIOStreams or another aggregator addon? Its own sorting and filtering happen inside the addon before Lart ever sees the results, then Lart applies the stream filter and result order above on top. If results look thinner than expected, keep one side permissive: either relax the addon's internal filters or set Lart's stream filter to Balanced or Off.":
+    "Verwendest du AIOStreams oder ein anderes Aggregator-Add-on? Dessen eigene Sortierung und Filterung erfolgen innerhalb des Add-ons, bevor Lart die Ergebnisse erhält. Anschließend wendet Lart zusätzlich den oben festgelegten Streamfilter und die Ergebnisreihenfolge an. Wenn weniger Ergebnisse als erwartet erscheinen, lass eine Seite großzügig eingestellt: Lockere entweder die internen Filter des Add-ons oder stelle Harbors Streamfilter auf Ausgewogen oder Aus.",
   VOLUME: "LAUTSTÄRKE",
   "Verified status": "Verifizierungsstatus",
   "Verify & connect": "Verifizieren und verbinden",
@@ -2483,28 +2483,28 @@ const settings: Record<string, string> = {
   "Wait before playing": "Wartezeit vor Start",
   "Wait for the upload to finish. The relay URL gets written to":
     "Warte, bis der Upload abgeschlossen ist. Die Relay-URL wird an folgendem Ort eingetragen:",
-  "Wait for the upload to finish. The relay URL gets written to {code} in Harbor settings.":
-    "Warte, bis der Upload abgeschlossen ist. Die Relay-URL wird in den Harbor-Einstellungen unter {code} eingetragen.",
+  "Wait for the upload to finish. The relay URL gets written to {code} in Lart settings.":
+    "Warte, bis der Upload abgeschlossen ist. Die Relay-URL wird in den Lart-Einstellungen unter {code} eingetragen.",
   "Want to change the ratio mid-playback? The live aspect button is hidden by default to keep the player tidy.":
     "Möchtest du das Seitenverhältnis während der Wiedergabe ändern? Die Schaltfläche zum Ändern des Seitenverhältnisses während der Wiedergabe ist standardmäßig ausgeblendet, damit der Player aufgeräumt bleibt.",
   "Want to fix it yourself?": "Möchtest du es selbst beheben?",
   "Watch Together": "Gemeinsam ansehen",
   "Watch Together panel": "Bereich „Gemeinsam ansehen“",
-  "Watch Together rooms are routed through Harbor's hosted relay.":
-    "Räume für „Gemeinsam ansehen“ werden über das von Harbor gehostete Relay geleitet.",
+  "Watch Together rooms are routed through Lart's hosted relay.":
+    "Räume für „Gemeinsam ansehen“ werden über das von Lart gehostete Relay geleitet.",
   "Watch Together rooms drop after 6 hours":
     "Räume zum gemeinsamen Ansehen werden nach 6 Stunden geschlossen",
   "Watch party join button": "Schaltfläche zum Beitreten zur Watchparty",
   Watching: "Wird angesehen",
-  "Watching for ad, analytics, and tracking requests. Harbor itself sends zero telemetry.":
-    "Überwacht Werbe-, Analyse- und Trackinganfragen. Harbor selbst sendet keinerlei Telemetrie.",
+  "Watching for ad, analytics, and tracking requests. Lart itself sends zero telemetry.":
+    "Überwacht Werbe-, Analyse- und Trackinganfragen. Lart selbst sendet keinerlei Telemetrie.",
   Watchlist: "Merkliste",
   "Watchlist bookmark": "Lesezeichen für die Merkliste",
   "Watchlist shows only saved titles": "Die Merkliste zeigt nur gespeicherte Titel",
-  "Wear your Simkl profile picture across Harbor instead of the default.":
-    "Dein Simkl-Profilbild statt des Standardbilds überall in Harbor verwenden.",
-  "Wear your Trakt profile picture across Harbor instead of the default.":
-    "Dein Trakt-Profilbild statt des Standardbilds überall in Harbor verwenden.",
+  "Wear your Simkl profile picture across Lart instead of the default.":
+    "Dein Simkl-Profilbild statt des Standardbilds überall in Lart verwenden.",
+  "Wear your Trakt profile picture across Lart instead of the default.":
+    "Dein Trakt-Profilbild statt des Standardbilds überall in Lart verwenden.",
   Web: "Web",
   "Web build": "Web-Version",
   Webhooks: "Webhooks",
@@ -2527,18 +2527,18 @@ const settings: Record<string, string> = {
     "Wenn ein Film oder eine Folge startet, kurz den Elternratgeber von Common Sense Media anzeigen (Gewalt, Nacktheit, vulgäre Sprache, Rauschmittel), jeweils mit Schweregrad. Wird automatisch ausgeblendet.",
   "When a movie or episode starts, briefly show its IMDb parental guide (violence, profanity, substances, frightening scenes and more) with severity. Fades on its own.":
     "Wenn ein Film oder eine Folge startet, kurz den IMDb-Elternratgeber mit Schweregraden für Gewalt, vulgäre Sprache, Rauschmittel, beängstigende Szenen und mehr anzeigen. Die Anzeige wird automatisch ausgeblendet.",
-  "When a release ships multiple audio tracks, Harbor selects the first match from this list.":
-    "Wenn eine Veröffentlichung mehrere Tonspuren enthält, wählt Harbor den ersten Treffer aus dieser Liste aus.",
+  "When a release ships multiple audio tracks, Lart selects the first match from this list.":
+    "Wenn eine Veröffentlichung mehrere Tonspuren enthält, wählt Lart den ersten Treffer aus dieser Liste aus.",
   "When a title is in your local library": "Wenn ein Titel in deiner lokalen Mediathek ist",
   "When an episode ends, automatically start the next one. Off lets the episode finish and stop.":
     "Wenn eine Folge endet, wird automatisch die nächste gestartet. Bei „Aus“ endet die Folge und die Wiedergabe stoppt.",
-  "When auto-playing the next episode, keep the same release/source you were just watching instead of Harbor's top-ranked stream. Falls back to the best stream if that source isn't available.":
-    "Verwende beim automatischen Abspielen der nächsten Folge dieselbe Veröffentlichung bzw. Quelle wie zuvor, statt des von Harbor am höchsten bewerteten Streams. Ist diese Quelle nicht verfügbar, wird auf den besten Stream zurückgegriffen.",
+  "When auto-playing the next episode, keep the same release/source you were just watching instead of Lart's top-ranked stream. Falls back to the best stream if that source isn't available.":
+    "Verwende beim automatischen Abspielen der nächsten Folge dieselbe Veröffentlichung bzw. Quelle wie zuvor, statt des von Lart am höchsten bewerteten Streams. Ist diese Quelle nicht verfügbar, wird auf den besten Stream zurückgegriffen.",
   "When in fullscreen, Esc leaves fullscreen instead of closing the player. Press Esc again to close. Turn off to make Esc always close.":
     "Im Vollbildmodus beendet Esc den Vollbildmodus, statt den Player zu schließen. Drücke erneut Esc, um ihn zu schließen. Deaktiviere dies, damit Esc den Player immer schließt.",
   "When off, a P2P transfer stops the moment you close or switch the stream, so nothing keeps downloading in the background. Turn on to let it keep going after you leave; manage or pause those from the Downloads tab.": "Wenn diese Option deaktiviert ist, wird eine P2P-Übertragung sofort gestoppt, sobald du den Stream schließt oder wechselst, sodass im Hintergrund nichts weiter heruntergeladen wird. Aktiviere sie, damit der Download nach dem Verlassen weiterläuft; verwalte oder pausiere solche Downloads im Tab „Downloads“.",
-  "When playback starts, Harbor automatically finds and loads a subtitle in one of these languages, so you never have to search by hand. The first available match wins, so put your main language first.":
-    "Beim Wiedergabestart sucht und lädt Harbor automatisch einen Untertitel in einer dieser Sprachen, damit du nie manuell suchen musst. Die erste verfügbare Übereinstimmung wird verwendet, daher sollte deine Hauptsprache an erster Stelle stehen.",
+  "When playback starts, Lart automatically finds and loads a subtitle in one of these languages, so you never have to search by hand. The first available match wins, so put your main language first.":
+    "Beim Wiedergabestart sucht und lädt Lart automatisch einen Untertitel in einer dieser Sprachen, damit du nie manuell suchen musst. Die erste verfügbare Übereinstimmung wird verwendet, daher sollte deine Hauptsprache an erster Stelle stehen.",
   "When the Up Next pill appears before an episode ends. Auto scales to the episode length, so short episodes stop prompting so early. Off hides it.":
     "Legt fest, wann vor dem Ende einer Folge der Hinweis „Als Nächstes“ erscheint. „Automatisch“ passt den Zeitpunkt an die Folgenlänge an, damit er bei kurzen Folgen nicht so früh erscheint. „Aus“ blendet ihn aus.",
   "When the audio already matches your subtitle language, pick a forced track (foreign dialogue and signs only) instead of full subtitles. If the file has no forced track, subtitles stay off.":
@@ -2547,10 +2547,10 @@ const settings: Record<string, string> = {
     "Wenn die Datei eine eigene Untertitelspur enthält, bleibt diese ausgewählt, statt zu einer heruntergeladenen zu wechseln. Eingebettete Spuren sind normalerweise am besten synchronisiert.",
   "When the latest episode ends (Hide / Timer)":
     "Wenn die neueste Folge endet (Ausblenden / Timer)",
-  "When you back out of a title, Harbor saves a frame so the Continue Watching card looks like the spot you left.":
-    "Wenn du einen Titel verlässt, speichert Harbor ein Einzelbild, damit die Karte unter „Weiterschauen“ die Stelle zeigt, an der du aufgehört hast.",
-  "When you back out of a title, Harbor saves a frame so the Continue Watching card looks like the spot you left. Tune how long they stick around, or wipe them all.":
-    "Wenn du einen Titel verlässt, speichert Harbor ein Einzelbild, damit die „Weiterschauen“-Karte die Stelle zeigt, an der du aufgehört hast. Lege fest, wie lange diese Bilder aufbewahrt werden, oder lösche sie alle.",
+  "When you back out of a title, Lart saves a frame so the Continue Watching card looks like the spot you left.":
+    "Wenn du einen Titel verlässt, speichert Lart ein Einzelbild, damit die Karte unter „Weiterschauen“ die Stelle zeigt, an der du aufgehört hast.",
+  "When you back out of a title, Lart saves a frame so the Continue Watching card looks like the spot you left. Tune how long they stick around, or wipe them all.":
+    "Wenn du einen Titel verlässt, speichert Lart ein Einzelbild, damit die „Weiterschauen“-Karte die Stelle zeigt, an der du aufgehört hast. Lege fest, wie lange diese Bilder aufbewahrt werden, oder lösche sie alle.",
   "When you exit fullscreen, return the window to exactly where it was. Turn off to center it on screen instead.":
     "Wenn du den Vollbildmodus verlässt, wird das Fenster genau an seine vorherige Position zurückgesetzt. Deaktiviere dies, um es stattdessen auf dem Bildschirm zu zentrieren.",
   "When you exit playback, keep the window fullscreen instead of dropping back to a window. Turn off to leave fullscreen automatically whenever the player closes.":
@@ -2565,8 +2565,8 @@ const settings: Record<string, string> = {
     "Wenn du bei einem teilweise angesehenen Inhalt auf „Abspielen“ klickst, wirst du gefragt, ob du an der letzten Stelle fortfahren oder von vorn beginnen möchtest. Dies gilt auch für Inhalte, die mit Stremio oder Trakt synchronisiert wurden.",
   "When you resume something you were watching, replay the exact stream you last used (same addon and source) instead of opening the picker again. Turn off to always choose fresh.":
     "Wenn du die Wiedergabe eines Titels fortsetzt, wird genau der zuletzt verwendete Stream erneut abgespielt, mit demselben Add-on und derselben Quelle, statt die Auswahl erneut zu öffnen. Deaktiviere dies, um immer neu auszuwählen.",
-  "Where Harbor saves videos when you hit Download in the player. Pick any folder, including one on a different drive.":
-    "Hier speichert Harbor Videos, wenn du im Player auf Herunterladen klickst. Wähle einen beliebigen Ordner, auch auf einem anderen Laufwerk.",
+  "Where Lart saves videos when you hit Download in the player. Pick any folder, including one on a different drive.":
+    "Hier speichert Lart Videos, wenn du im Player auf Herunterladen klickst. Wähle einen beliebigen Ordner, auch auf einem anderen Laufwerk.",
   "Where alerts go": "Ziel für Benachrichtigungen",
   "Where scores appear": "Wo Bewertungen erscheinen",
   "Where the Refresh button sits in the picker header. Default keeps it on the right, across from Back.":
@@ -2601,12 +2601,12 @@ const settings: Record<string, string> = {
     "Du hast ungespeicherte Änderungen, die beim Profilwechsel verloren gehen. Fortfahren?",
   "You have unsaved changes. Close the editor and discard them?":
     "Du hast ungespeicherte Änderungen. Editor schließen und verwerfen?",
-  "You must install this addon in your Stremio account first so Harbor can fetch its works.":
-    "Du musst dieses Add-on zuerst in deinem Stremio-Konto installieren, damit Harbor seine Inhalte abrufen kann.",
+  "You must install this addon in your Stremio account first so Lart can fetch its works.":
+    "Du musst dieses Add-on zuerst in deinem Stremio-Konto installieren, damit Lart seine Inhalte abrufen kann.",
   "You should get a message from your new bot.":
     "Du solltest eine Nachricht von deinem neuen Bot erhalten.",
-  "You're modding your own client. Custom JS has full access to your Harbor session. Only paste code you wrote or fully trust.":
-    "Du modifizierst deinen eigenen Client. Benutzerdefiniertes JS hat vollen Zugriff auf deine Harbor-Sitzung. Füge nur Code ein, den du selbst geschrieben hast oder dem du vollständig vertraust.",
+  "You're modding your own client. Custom JS has full access to your Lart session. Only paste code you wrote or fully trust.":
+    "Du modifizierst deinen eigenen Client. Benutzerdefiniertes JS hat vollen Zugriff auf deine Lart-Sitzung. Füge nur Code ein, den du selbst geschrieben hast oder dem du vollständig vertraust.",
   "You're on the latest build. Earlier builds show up here as new versions ship.":
     "Du verwendest den neuesten Build. Frühere Builds erscheinen hier, sobald neue Versionen veröffentlicht werden.",
   "You're on the latest version.": "Du verwendest die neueste Version.",
@@ -2656,7 +2656,7 @@ const settings: Record<string, string> = {
   blocked: "blockiert",
   "bot token": "Bot-Token",
   "box above.": "Feld oben.",
-  "by Harbor contributors": "von Harbor-Mitwirkenden",
+  "by Lart contributors": "von Lart-Mitwirkenden",
   "by {name}": "von {name}",
   "chat ID": "Chat-ID",
   "commentary, descriptive": "Kommentar, Audiodeskription",
@@ -2666,12 +2666,12 @@ const settings: Record<string, string> = {
   "feature broken": "Funktion defekt",
   "for higher rate limits; leave blank for the free anonymous tier.":
     "für höhere Anfragelimits; für die kostenlose anonyme Nutzung leer lassen.",
-  "from the Harbor repo into a new directory as":
-    "aus dem Harbor-Repository in ein neues Verzeichnis als",
+  "from the Lart repo into a new directory as":
+    "aus dem Lart-Repository in ein neues Verzeichnis als",
   hidden: "ausgeblendet",
   "https://posters.example.com or a pattern with {id}":
     "https://posters.example.com oder ein Muster mit {id}",
-  "in Harbor settings.": "in den Harbor-Einstellungen.",
+  "in Lart settings.": "in den Lart-Einstellungen.",
   "jina_...": "jina_...",
   "language. Home filters to it.": "Sprache. Die Startseite filtert danach.",
   "languages. Home filters to these.": "Sprachen. Die Startseite filtert danach.",
@@ -2680,7 +2680,7 @@ const settings: Record<string, string> = {
   mpv: "mpv",
   "mpv on the desktop app, HTML5 in the browser. The right engine without thinking about it.":
     "mpv in der Desktop-App, HTML5 im Browser. Automatisch immer die passende Engine.",
-  "name it Harbor, hit": "nenne es Harbor und klicke auf",
+  "name it Lart, hit": "nenne es Lart und klicke auf",
   "next to it:": "daneben:",
   "no channel": "kein Kanal",
   nodes: "Knoten",
@@ -2695,8 +2695,8 @@ const settings: Record<string, string> = {
   shown: "angezeigt",
   skipped: "übersprungen",
   "skipped {n} anime": "{n} Anime übersprungen",
-  "stremio:// links now open in the Stremio app. Harbor will only install when you trigger it from inside Harbor.":
-    "stremio://-Links werden jetzt in der Stremio-App geöffnet. Harbor führt die Installation nur aus, wenn du sie innerhalb von Harbor startest.",
+  "stremio:// links now open in the Stremio app. Lart will only install when you trigger it from inside Lart.":
+    "stremio://-Links werden jetzt in der Stremio-App geöffnet. Lart führt die Installation nur aus, wenn du sie innerhalb von Lart startest.",
   "subdomain acts as the access token. There is no login.":
     "Die Subdomain dient als Zugriffstoken. Es gibt keine Anmeldung.",
   "subscriber API key": "API-Schlüssel für Abonnenten",
@@ -2706,8 +2706,8 @@ const settings: Record<string, string> = {
   unknown: "unbekannt",
   "v3 API key": "v3-API-Schlüssel",
   visible: "sichtbar",
-  "will be removed from Harbor. Anything you've set to use it will fall back to Inter.":
-    "wird aus Harbor entfernt. Alles, wofür du diese Schrift festgelegt hast, verwendet dann wieder Inter.",
+  "will be removed from Lart. Anything you've set to use it will fall back to Inter.":
+    "wird aus Lart entfernt. Alles, wofür du diese Schrift festgelegt hast, verwendet dann wieder Inter.",
   "with a WebSocket upgrade: opens a Watch Together room. State is held in a Durable Object, no persistence beyond the active session.":
     "Mit einem WebSocket-Upgrade: Öffnet einen Raum für „Gemeinsam ansehen“. Der Zustand wird in einem Durable Object gehalten und nicht über die aktive Sitzung hinaus gespeichert.",
   "{a} badges remapped, {b} rules added": "{a} Abzeichen neu zugeordnet, {b} Regeln hinzugefügt",
@@ -2723,12 +2723,12 @@ const settings: Record<string, string> = {
     "Bei {count} Titeln wird der Inhaltshinweis nie wieder angezeigt.",
   "{count} titles will never show the content advisory again.#one":
     "Bei {count} Titel wird der Inhaltshinweis nie wieder angezeigt.",
-  "{count} tracker request blocked this session. Harbor itself sends zero telemetry.":
-    "Blockierte Tracker-Anfragen in dieser Sitzung: {count}. Harbor selbst sendet keinerlei Telemetrie.",
+  "{count} tracker request blocked this session. Lart itself sends zero telemetry.":
+    "Blockierte Tracker-Anfragen in dieser Sitzung: {count}. Lart selbst sendet keinerlei Telemetrie.",
   "{name} imported to your library": "{name} in deine Mediathek importiert",
-  "{name} will be removed from Harbor. Anything you've set to use it will fall back to Inter.":
-    "{name} wird aus Harbor entfernt. Alles, wofür du diese Schrift festgelegt hast, greift dann auf Inter zurück.",
-  "{n} Harbor icons": "{n} Harbor-Symbole",
+  "{name} will be removed from Lart. Anything you've set to use it will fall back to Inter.":
+    "{name} wird aus Lart entfernt. Alles, wofür du diese Schrift festgelegt hast, greift dann auf Inter zurück.",
+  "{n} Lart icons": "{n} Lart-Symbole",
   "{n} anime titles will be left out (Trakt has no IDs for them).":
     "{n} Anime-Titel werden ausgelassen (Trakt hat keine IDs dafür).",
   "{n} avatars across film, TV, and anime.": "{n} Avatare aus Film, TV und Anime.",
@@ -2760,10 +2760,10 @@ const settings: Record<string, string> = {
   "{n} tab locked": "{n} Tab gesperrt",
   "{n} tab requires this profile's PIN.": "{n} Tab erfordert die PIN dieses Profils.",
   "{n} tabs": "{n} Tabs",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.":
-    "In dieser Sitzung wurde {n} Tracker-Anfrage blockiert. Harbor selbst sendet keine Telemetriedaten.",
-  "{n} tracker requests blocked this session. Harbor itself sends zero telemetry.":
-    "In dieser Sitzung wurden {n} Tracker-Anfragen blockiert. Harbor selbst sendet keine Telemetriedaten.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.":
+    "In dieser Sitzung wurde {n} Tracker-Anfrage blockiert. Lart selbst sendet keine Telemetriedaten.",
+  "{n} tracker requests blocked this session. Lart itself sends zero telemetry.":
+    "In dieser Sitzung wurden {n} Tracker-Anfragen blockiert. Lart selbst sendet keine Telemetriedaten.",
   "{n}d left": "noch {n} T.",
   "{repaired} fixed, {clean} already clean": "{repaired} repariert, {clean} bereits fehlerfrei",
   "{themeName} theme": "Design „{themeName}“",

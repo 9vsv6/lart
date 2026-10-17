@@ -969,7 +969,7 @@ export function PlayPicker({
           <div className="rounded-2xl border border-edge-soft bg-elevated/60 px-5 py-3.5 text-[13.5px] text-ink-muted">
             {isSeasonDownload
               ? t(
-                  "Choose one season package. Harbor will match and download every available episode from it.",
+                  "Choose one season package. Lart will match and download every available episode from it.",
                 )
               : t("Choose a source to save offline. You can track progress on the Downloads page.")}
           </div>
@@ -1290,11 +1290,11 @@ function SeasonPackEmptyState({
           <p className="text-[13.5px] leading-relaxed text-ink-muted">
             {rawCount > 0
               ? t(
-                  "Harbor found episode sources for {season}, but none of them is a single downloadable package. It can still fetch the episodes one at a time.",
+                  "Lart found episode sources for {season}, but none of them is a single downloadable package. It can still fetch the episodes one at a time.",
                   { season: seasonLabel },
                 )
               : t(
-                  "None of your addons returned a downloadable package for {season}. Harbor can still fetch the episodes one at a time, or you can refresh the sources.",
+                  "None of your addons returned a downloadable package for {season}. Lart can still fetch the episodes one at a time, or you can refresh the sources.",
                   { season: seasonLabel },
                 )}
           </p>

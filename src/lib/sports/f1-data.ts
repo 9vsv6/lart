@@ -91,7 +91,7 @@ export function fetchF1(path: string, force = false): Promise<Entry> {
     lastStarted = Date.now();
     const headers =
       typeof window !== "undefined" && "__TAURI_INTERNALS__" in window
-        ? { "User-Agent": "Harbor/0.9.124" }
+        ? { "User-Agent": "Lart/0.9.124" }
         : undefined;
     const response = await safeFetch(`https://api.jolpi.ca/ergast/f1/${path}`, {
       headers,

@@ -3,7 +3,7 @@ const sweep: Record<string, string> = {
   "1 day": "1 ngày",
   "1 hour": "1 giờ",
   "1 hr": "1 giờ",
-  "1 other Harbor": "1 Harbor khác",
+  "1 other Lart": "1 Lart khác",
   "10 GB": "10 GB",
   "100 GB": "100 GB",
   "10k+": "10k+",
@@ -42,21 +42,21 @@ const sweep: Record<string, string> = {
   "8 seconds": "8 giây",
   "8-0-4-1. Half the passes, kinder to weaker cards.":
     "8-0-4-1. Số lượt xử lý giảm một nửa, nhẹ hơn với card yếu.",
-  "A Harbor account": "Tài khoản Harbor",
+  "A Lart account": "Tài khoản Lart",
   "A classic neural edge-directed luma doubler. Very high quality, heavy on the GPU. More neurons means sharper and slower.":
     "Bộ nhân đôi độ phân giải độ chói cổ điển dùng mạng nơ-ron, định hướng theo cạnh. Chất lượng rất cao nhưng dùng nhiều GPU. Càng nhiều nơ-ron thì càng sắc nét và chậm.",
   "A dead source is dropped and the next one starts.":
     "Nguồn không hoạt động sẽ bị loại bỏ và nguồn tiếp theo sẽ bắt đầu.",
   "A direct .m3u or .m3u8 address from your provider":
     "Địa chỉ .m3u hoặc .m3u8 trực tiếp từ nhà cung cấp",
-  "A filter applies everywhere Harbor picks a stream: the source picker, the instant pick, and Big Picture on TV.":
-    "Bộ lọc áp dụng ở mọi nơi Harbor chọn luồng: trình chọn nguồn, chọn tức thì và Big Picture trên TV.",
+  "A filter applies everywhere Lart picks a stream: the source picker, the instant pick, and Big Picture on TV.":
+    "Bộ lọc áp dụng ở mọi nơi Lart chọn luồng: trình chọn nguồn, chọn tức thì và Big Picture trên TV.",
   "A hero up top, then Top 10, Trending, In Theaters and your service rows.":
     "Nội dung nổi bật ở trên cùng, tiếp theo là Top 10, Thịnh hành, Đang chiếu rạp và các hàng dịch vụ của bạn.",
   "A high quality chroma upscaler. Fixes the color blur and bleeding of default chroma scaling, most visible on saturated edges and subtitles.":
     "Bộ nâng cấp sắc độ chất lượng cao. Khắc phục hiện tượng nhòe và lem màu do nội suy sắc độ mặc định, dễ thấy nhất ở các cạnh có màu bão hòa và phụ đề.",
-  "A name people can find you by across Harbor.":
-    "Tên để mọi người có thể tìm thấy bạn trên Harbor.",
+  "A name people can find you by across Lart.":
+    "Tên để mọi người có thể tìm thấy bạn trên Lart.",
   "A neural network that doubles luma resolution. The sharpest general-purpose upscaler, strong on both live action and anime. Pick one variant.":
     "Mạng nơ-ron nhân đôi độ phân giải độ chói. Bộ nâng cấp đa dụng sắc nét nhất, hiệu quả cao với cả phim người đóng và anime. Chọn một biến thể.",
   "A passing test means Watch Together rooms will connect from this machine.":
@@ -126,8 +126,8 @@ const sweep: Record<string, string> = {
   "All times": "Mọi thời điểm",
   "All video": "Tất cả video",
   "All-time bests": "Hay nhất mọi thời đại",
-  "Linking your Discord account also joins you to Harbor's Discord server, so the bot can send your Backup keys privately.":
-    "Linking your Discord account also joins you to Harbor's Discord server, so the bot can send your Backup keys privately.",
+  "Linking your Discord account also joins you to Lart's Discord server, so the bot can send your Backup keys privately.":
+    "Linking your Discord account also joins you to Lart's Discord server, so the bot can send your Backup keys privately.",
   "Always re-encode when casting": "Luôn mã hóa lại khi truyền phát",
   "Always stream P2P": "Luôn phát trực tuyến P2P",
   Amber: "Hổ phách",
@@ -167,7 +167,7 @@ const sweep: Record<string, string> = {
   "Artwork and rows": "Hình ảnh và hàng nội dung",
   "Ask after": "Hỏi sau",
   "Ask if you are still watching": "Hỏi xem bạn còn đang xem không",
-  "Asking that Harbor to show a code": "Đang yêu cầu Harbor hiển thị mã",
+  "Asking that Lart to show a code": "Đang yêu cầu Lart hiển thị mã",
   "Asks first: carry on, or start over.": "Hỏi trước: xem tiếp hay xem lại từ đầu.",
   Aspect: "Tỷ lệ khung hình",
   "At least 6 characters.": "Ít nhất 6 ký tự.",
@@ -225,8 +225,8 @@ const sweep: Record<string, string> = {
   "Best VA Performance": "Màn lồng tiếng xuất sắc nhất",
   "Best {label}": "{label} xuất sắc nhất",
   "Beyond Hollywood": "Ngoài Hollywood",
-  "Big Picture closes. Harbor keeps running behind it.":
-    "Big Picture đóng. Harbor tiếp tục chạy trong nền.",
+  "Big Picture closes. Lart keeps running behind it.":
+    "Big Picture đóng. Lart tiếp tục chạy trong nền.",
   "Bigger buffer for slow connections": "Bộ đệm lớn hơn cho kết nối chậm",
   "Bingeing on the TV": "Cày phim trên TV",
   Black: "Đen",
@@ -252,7 +252,7 @@ const sweep: Record<string, string> = {
   Broadcast: "Truyền hình quảng bá",
   "Broadcast networks": "Các đài truyền hình",
   "Browse community themes": "Duyệt giao diện cộng đồng",
-  "Built into Harbor": "Tích hợp sẵn trong Harbor",
+  "Built into Lart": "Tích hợp sẵn trong Lart",
   "Buttons & sticks": "Nút bấm & cần điều khiển",
   "By year": "Theo năm",
   CONTENT: "NỘI DUNG",
@@ -277,9 +277,9 @@ const sweep: Record<string, string> = {
   "Change server": "Đổi máy chủ",
   "Change source, current source {name}": "Đổi nguồn, nguồn hiện tại là {name}",
   "Change the look": "Thay đổi giao diện",
-  "Changes not saved to your Harbor account yet": "Các thay đổi chưa được lưu vào tài khoản Harbor",
-  "Changes you make below will be saved on this computer, but they will not reach your TV. This is a fault in Harbor, not something you did.":
-    "Các thay đổi bên dưới sẽ được lưu trên máy tính này, nhưng không được chuyển đến TV. Đây là lỗi của Harbor, không phải do bạn.",
+  "Changes not saved to your Lart account yet": "Các thay đổi chưa được lưu vào tài khoản Lart",
+  "Changes you make below will be saved on this computer, but they will not reach your TV. This is a fault in Lart, not something you did.":
+    "Các thay đổi bên dưới sẽ được lưu trên máy tính này, nhưng không được chuyển đến TV. Đây là lỗi của Lart, không phải do bạn.",
   "Character of the Year": "Nhân vật của năm",
   "Charities to give to instead": "Các tổ chức từ thiện khác để quyên góp",
   "Checking your connection": "Đang kiểm tra kết nối",
@@ -300,10 +300,10 @@ const sweep: Record<string, string> = {
   "Claim a handle": "Nhận tên định danh",
   "Claim your @handle": "Nhận @tên định danh",
   "Classic Hollywood": "Hollywood kinh điển",
-  "Clears the URL from Harbor. The Worker keeps running on Cloudflare.":
-    "Xóa URL khỏi Harbor. Worker vẫn tiếp tục chạy trên Cloudflare.",
-  "Clears the saved URL so you can point Harbor at another relay.":
-    "Xóa URL đã lưu để Harbor có thể trỏ đến một relay khác.",
+  "Clears the URL from Lart. The Worker keeps running on Cloudflare.":
+    "Xóa URL khỏi Lart. Worker vẫn tiếp tục chạy trên Cloudflare.",
+  "Clears the saved URL so you can point Lart at another relay.":
+    "Xóa URL đã lưu để Lart có thể trỏ đến một relay khác.",
   "Close editor": "Đóng trình chỉnh sửa",
   Cloudflare: "Cloudflare",
   "Code expires in {left}": "Mã hết hạn sau {left}",
@@ -317,10 +317,10 @@ const sweep: Record<string, string> = {
   "Compare before and after": "So sánh trước và sau",
   "Comparison by {credit}": "So sánh bởi {credit}",
   Configure: "Cấu hình",
-  "Connect AniList in Harbor on your computer to see your lists here.":
-    "Kết nối AniList trong Harbor trên máy tính để xem danh sách tại đây.",
-  "Connect MyAnimeList in Harbor on your computer to see your lists here.":
-    "Kết nối MyAnimeList trong Harbor trên máy tính để xem danh sách tại đây.",
+  "Connect AniList in Lart on your computer to see your lists here.":
+    "Kết nối AniList trong Lart trên máy tính để xem danh sách tại đây.",
+  "Connect MyAnimeList in Lart on your computer to see your lists here.":
+    "Kết nối MyAnimeList trong Lart trên máy tính để xem danh sách tại đây.",
   "Connect TMDB": "Kết nối TMDB",
   "Connected to your TV": "Đã kết nối với TV",
   Contender: "Ứng viên",
@@ -344,8 +344,8 @@ const sweep: Record<string, string> = {
   "Copy the settings you already tuned here onto the TV in one go. It overwrites the matching TV rows and leaves everything else alone.":
     "Sao chép toàn bộ cài đặt đã tinh chỉnh tại đây sang TV. Thao tác này sẽ ghi đè các mục cài đặt tương ứng trên TV và giữ nguyên mọi mục khác.",
   'Copy the value labelled "API Key (v3 auth)".': 'Sao chép giá trị có nhãn "API Key (v3 auth)".',
-  "Could not reach Harbor. Check your phone's connection and try again.":
-    "Không thể kết nối với Harbor. Hãy kiểm tra kết nối của điện thoại rồi thử lại.",
+  "Could not reach Lart. Check your phone's connection and try again.":
+    "Không thể kết nối với Lart. Hãy kiểm tra kết nối của điện thoại rồi thử lại.",
   "Could not reach Stremio. Check your phone's connection and try again.":
     "Không thể kết nối với Stremio. Hãy kiểm tra kết nối của điện thoại rồi thử lại.",
   "Could not reach TMDB from this TV. You can save the key without checking it.":
@@ -365,8 +365,8 @@ const sweep: Record<string, string> = {
   "Couldn't post right now, try again": "Hiện không thể đăng, hãy thử lại",
   "Couldn't reach AniList. Check the connection and reopen Big Picture.":
     "Không thể kết nối với AniList. Hãy kiểm tra kết nối rồi mở lại Big Picture.",
-  "Couldn't reach Harbor. Showing this device only.":
-    "Không thể kết nối với Harbor. Chỉ hiển thị thiết bị này.",
+  "Couldn't reach Lart. Showing this device only.":
+    "Không thể kết nối với Lart. Chỉ hiển thị thiết bị này.",
   "Couldn't reach MyAnimeList. Check the connection and reopen Big Picture.":
     "Không thể kết nối với MyAnimeList. Hãy kiểm tra kết nối rồi mở lại Big Picture.",
   "Couldn't reach TMDB for {genre} titles.":
@@ -374,7 +374,7 @@ const sweep: Record<string, string> = {
   "Couldn't reach {name}. Try refreshing.": "Không thể kết nối với {name}. Hãy thử làm mới.",
   "Couldn't save the playlist. Free up storage space in Settings and try again.":
     "Không thể lưu danh sách phát. Hãy giải phóng dung lượng lưu trữ trong Cài đặt rồi thử lại.",
-  "Create a Harbor account": "Tạo tài khoản Harbor",
+  "Create a Lart account": "Tạo tài khoản Lart",
   "Create your account": "Tạo tài khoản",
   "Critics + audiences": "Giới phê bình + khán giả",
   "Crossfade when the backdrop changes. Turn it off if the TV stutters while browsing.":
@@ -446,16 +446,16 @@ const sweep: Record<string, string> = {
   Dracula: "Dracula",
   "Drag a dial and watch the still update. Each dial resets on its own.":
     "Kéo núm xoay và xem ảnh tĩnh cập nhật. Mỗi núm tự đặt lại.",
-  "Drift through cinematic backdrops while Harbor sits idle.":
-    "Trình chiếu các ảnh nền điện ảnh khi Harbor ở trạng thái chờ.",
+  "Drift through cinematic backdrops while Lart sits idle.":
+    "Trình chiếu các ảnh nền điện ảnh khi Lart ở trạng thái chờ.",
   "Drops anything already finished out of the browse rows.":
     "Ẩn mọi nội dung đã xem xong khỏi các hàng duyệt.",
   "DualSense connected": "Đã kết nối DualSense",
   ED: "ED",
   "Each curve shows how much of the bright range it keeps before rolling off.":
     "Mỗi đường cong cho biết mức độ giữ lại dải sáng trước khi giảm dần.",
-  "Each shader is hosted by its author, not bundled with Harbor. Download the ones you want; Harbor chains them in the right order and applies them in the player.":
-    "Mỗi shader do tác giả lưu trữ, không đi kèm Harbor. Hãy tải xuống những shader bạn muốn; Harbor sẽ xâu chuỗi chúng theo đúng thứ tự và áp dụng trong trình phát.",
+  "Each shader is hosted by its author, not bundled with Lart. Download the ones you want; Lart chains them in the right order and applies them in the player.":
+    "Mỗi shader do tác giả lưu trữ, không đi kèm Lart. Hãy tải xuống những shader bạn muốn; Lart sẽ xâu chuỗi chúng theo đúng thứ tự và áp dụng trong trình phát.",
   "Each style keeps its own arrangement, icons and profiles, so switching back and forth never loses work.":
     "Mỗi kiểu lưu riêng bố cục, biểu tượng và hồ sơ, nên chuyển đổi qua lại không bao giờ làm mất thiết lập.",
   "Edge colour": "Màu viền",
@@ -492,23 +492,23 @@ const sweep: Record<string, string> = {
   Esportes: "Thể thao",
   "Every 15 min": "Mỗi 15 phút",
   "Every 30 min": "Mỗi 30 phút",
-  "Every Harbor that announces itself on this network appears here as it answers, with the theme it is wearing.":
-    "Mọi Harbor tự thông báo trên mạng này sẽ xuất hiện tại đây khi phản hồi, cùng với giao diện đang sử dụng.",
+  "Every Lart that announces itself on this network appears here as it answers, with the theme it is wearing.":
+    "Mọi Lart tự thông báo trên mạng này sẽ xuất hiện tại đây khi phản hồi, cùng với giao diện đang sử dụng.",
   "Every addon": "Mọi tiện ích bổ sung",
   "Every episode of the season uses that same release.":
     "Mọi tập trong mùa đều dùng cùng bản phát hành đó.",
   "Every launch": "Mỗi lần khởi chạy",
   "Every saga, in order": "Mọi phần truyện, theo thứ tự",
-  "Every source Harbor tried failed to start. Pick a different one, or try again in a moment.":
-    "Mọi nguồn Harbor đã thử đều không khởi chạy được. Hãy chọn nguồn khác hoặc thử lại sau giây lát.",
-  "Every winner Harbor ships, browsable offline by year and category.":
-    "Mọi tác phẩm đoạt giải có sẵn trong Harbor, có thể duyệt ngoại tuyến theo năm và hạng mục.",
+  "Every source Lart tried failed to start. Pick a different one, or try again in a moment.":
+    "Mọi nguồn Lart đã thử đều không khởi chạy được. Hãy chọn nguồn khác hoặc thử lại sau giây lát.",
+  "Every winner Lart ships, browsable offline by year and category.":
+    "Mọi tác phẩm đoạt giải có sẵn trong Lart, có thể duyệt ngoại tuyến theo năm và hạng mục.",
   "Everyone else": "Mọi người khác",
-  "Everyone on this Harbor": "Mọi người trên Harbor này",
+  "Everyone on this Lart": "Mọi người trên Lart này",
   "Everything here took effect straight away, and it is saved on this device.":
     "Mọi thay đổi tại đây có hiệu lực ngay và được lưu trên thiết bị này.",
-  "Everything on this page is written to your Harbor account. Your TV reads it on its next check-in, so you can set the whole thing up from here and never touch the remote.":
-    "Mọi nội dung trên trang này được lưu vào tài khoản Harbor của bạn. TV sẽ đọc chúng vào lần kiểm tra tiếp theo, nên bạn có thể thiết lập mọi thứ tại đây mà không cần dùng đến điều khiển từ xa.",
+  "Everything on this page is written to your Lart account. Your TV reads it on its next check-in, so you can set the whole thing up from here and never touch the remote.":
+    "Mọi nội dung trên trang này được lưu vào tài khoản Lart của bạn. TV sẽ đọc chúng vào lần kiểm tra tiếp theo, nên bạn có thể thiết lập mọi thứ tại đây mà không cần dùng đến điều khiển từ xa.",
   "Everything on this page of {genre} is hidden by your anime filter.":
     "Mọi nội dung trên trang {genre} này đều bị bộ lọc anime của bạn ẩn.",
   "Everything you pick is saved into one file. Restoring it later only touches what is in the file. Your Stremio sign-in is always left out.":
@@ -577,7 +577,7 @@ const sweep: Record<string, string> = {
     "Miễn phí, mất hai phút. Mở khóa Thịnh hành, Đang chiếu tại rạp, Được đánh giá cao nhất và hàng của mọi dịch vụ.",
   "French cinema": "Điện ảnh Pháp",
   "Fresh from the studio": "Mới từ hãng phim",
-  "Fresh looks shared by the Harbor community": "Giao diện mới do cộng đồng Harbor chia sẻ",
+  "Fresh looks shared by the Lart community": "Giao diện mới do cộng đồng Lart chia sẻ",
   "Frightening & Intense Scenes": "Cảnh đáng sợ & căng thẳng",
   "From Japan": "Từ Nhật Bản",
   "From Korea": "Từ Hàn Quốc",
@@ -587,8 +587,8 @@ const sweep: Record<string, string> = {
   "From your addons": "Từ các tiện ích bổ sung của bạn",
   "From your own files": "Từ tệp của bạn",
   "Frosted glass": "Kính mờ",
-  "Frosted, refractive surfaces on Harbor's floating controls.":
-    "Bề mặt kính mờ khúc xạ trên các nút điều khiển nổi của Harbor.",
+  "Frosted, refractive surfaces on Lart's floating controls.":
+    "Bề mặt kính mờ khúc xạ trên các nút điều khiển nổi của Lart.",
   Fubo: "Fubo",
   FuboTV: "FuboTV",
   "Full control of the group": "Toàn quyền kiểm soát nhóm",
@@ -616,51 +616,51 @@ const sweep: Record<string, string> = {
   HIDIVE: "HIDIVE",
   "Handles P2P playback and transcoding for this machine.":
     "Xử lý việc phát P2P và chuyển mã trên thiết bị này.",
-  "Harbor accepted that but returned no session. Try again.":
-    "Harbor đã chấp nhận nhưng không trả về phiên. Hãy thử lại.",
-  "Harbor account linked as {name}": "Đã liên kết tài khoản Harbor với tên {name}",
-  "Harbor account signed in": "Đã đăng nhập tài khoản Harbor",
-  "Harbor asks your addons for titles and descriptions in this language. The TV menus stay in English.":
-    "Harbor yêu cầu các tiện ích bổ sung cung cấp tiêu đề và mô tả bằng ngôn ngữ này. Các menu TV vẫn bằng tiếng Anh.",
-  "Harbor cannot find this TV's network address, so the phone hand-off is unavailable here.":
-    "Harbor không tìm thấy địa chỉ mạng của TV này nên không thể chuyển tiếp từ điện thoại tại đây.",
-  "Harbor could not open its web server. Try again, or set this up on the TV.":
-    "Harbor không thể mở máy chủ web. Hãy thử lại hoặc thiết lập trên TV.",
-  "Harbor couldn't play this source": "Harbor không thể phát nguồn này",
-  "Harbor couldn't reach MyAnimeList or AniList. Check the connection and reopen Big Picture.":
-    "Harbor không thể kết nối với MyAnimeList hoặc AniList. Hãy kiểm tra kết nối rồi mở lại Chế độ màn hình lớn.",
-  "Harbor couldn't reach the catalog servers.": "Harbor không thể kết nối với máy chủ danh mục.",
-  "Harbor couldn't start any source": "Harbor không thể khởi chạy bất kỳ nguồn nào",
-  "Harbor creates a Cloudflare Worker on your own free account and saves the URL.":
-    "Harbor tạo một Cloudflare Worker trên tài khoản miễn phí của bạn và lưu URL.",
-  "Harbor default": "Mặc định của Harbor",
-  "Harbor identity (avatar / color)": "Danh tính Harbor (ảnh đại diện / màu)",
-  "Harbor is an independent client. It is not affiliated with or endorsed by Stremio.":
-    "Harbor là ứng dụng khách độc lập, không liên kết với Stremio và cũng không được Stremio chứng thực.",
-  "Harbor leads with one big title. Classic leads with rows.":
-    "Harbor ưu tiên một tiêu đề lớn. Cổ điển ưu tiên các hàng.",
-  "Harbor needs at least one streaming source before it can play {title}. Install a stream addon or add a debrid key in settings.":
-    "Harbor cần ít nhất một nguồn phát trực tuyến để phát {title}. Hãy cài đặt tiện ích bổ sung nguồn phát hoặc thêm khóa debrid trong Cài đặt.",
-  "Harbor needs to be serving on your network before a phone can reach it.":
-    "Harbor phải đang hoạt động trên mạng của bạn thì điện thoại mới có thể truy cập.",
-  "Harbor on other devices (web app)": "Harbor trên các thiết bị khác (ứng dụng web)",
-  "Harbor pick": "Harbor đề xuất",
-  "Harbor reads the speech in the audio, then slides the subtitle track until the two line up.":
-    "Harbor nhận dạng lời thoại trong âm thanh, sau đó dịch chuyển rãnh phụ đề cho đến khi cả hai khớp nhau.",
-  "Harbor signed you up but returned no session. Try signing in instead.":
-    "Harbor đã đăng ký cho bạn nhưng không trả về phiên. Hãy thử đăng nhập.",
-  "Harbor speaks this everywhere. You can change it later in Settings.":
-    "Harbor dùng ngôn ngữ này ở mọi nơi. Bạn có thể đổi sau trong Cài đặt.",
-  "Harbor tried {n} sources for {title} and none of them played. Usually that means a debrid key has expired, no stream addon is installed yet, or nothing has this title cached.":
-    "Harbor đã thử {n} nguồn cho {title} nhưng không nguồn nào phát được. Thường là do khóa debrid đã hết hạn, chưa cài đặt tiện ích bổ sung nguồn phát hoặc chưa có nguồn nào lưu tiêu đề này trong bộ nhớ đệm.",
-  "Harbor was built in English. Multi-language support is partial, so your addons usually catch what Harbor's own filters miss. If you speak another language and want to help, the source is open.":
-    "Harbor được xây dựng bằng tiếng Anh. Khả năng hỗ trợ đa ngôn ngữ còn hạn chế, vì vậy các tiện ích bổ sung thường tìm được nội dung mà bộ lọc riêng của Harbor bỏ sót. Nếu bạn dùng ngôn ngữ khác và muốn đóng góp, mã nguồn được công khai.",
-  "Harbor's built-in HDR to SDR conversion is on. Turn it off in Video tuning to use this instead. Running both double-processes the picture.":
-    "Tính năng chuyển đổi HDR sang SDR tích hợp của Harbor đang bật. Hãy tắt tính năng này trong phần Tinh chỉnh video để dùng tùy chọn này. Bật cả hai sẽ khiến hình ảnh bị xử lý hai lần.",
-  "Harbor's own bar": "Thanh riêng của Harbor",
-  "Harbor's own community server": "Máy chủ cộng đồng riêng của Harbor",
-  "Harbor's public relay": "Relay công khai của Harbor",
-  "Harbors on your network": "Các Harbor trên mạng của bạn",
+  "Lart accepted that but returned no session. Try again.":
+    "Lart đã chấp nhận nhưng không trả về phiên. Hãy thử lại.",
+  "Lart account linked as {name}": "Đã liên kết tài khoản Lart với tên {name}",
+  "Lart account signed in": "Đã đăng nhập tài khoản Lart",
+  "Lart asks your addons for titles and descriptions in this language. The TV menus stay in English.":
+    "Lart yêu cầu các tiện ích bổ sung cung cấp tiêu đề và mô tả bằng ngôn ngữ này. Các menu TV vẫn bằng tiếng Anh.",
+  "Lart cannot find this TV's network address, so the phone hand-off is unavailable here.":
+    "Lart không tìm thấy địa chỉ mạng của TV này nên không thể chuyển tiếp từ điện thoại tại đây.",
+  "Lart could not open its web server. Try again, or set this up on the TV.":
+    "Lart không thể mở máy chủ web. Hãy thử lại hoặc thiết lập trên TV.",
+  "Lart couldn't play this source": "Lart không thể phát nguồn này",
+  "Lart couldn't reach MyAnimeList or AniList. Check the connection and reopen Big Picture.":
+    "Lart không thể kết nối với MyAnimeList hoặc AniList. Hãy kiểm tra kết nối rồi mở lại Chế độ màn hình lớn.",
+  "Lart couldn't reach the catalog servers.": "Lart không thể kết nối với máy chủ danh mục.",
+  "Lart couldn't start any source": "Lart không thể khởi chạy bất kỳ nguồn nào",
+  "Lart creates a Cloudflare Worker on your own free account and saves the URL.":
+    "Lart tạo một Cloudflare Worker trên tài khoản miễn phí của bạn và lưu URL.",
+  "Lart default": "Mặc định của Lart",
+  "Lart identity (avatar / color)": "Danh tính Lart (ảnh đại diện / màu)",
+  "Lart is an independent client. It is not affiliated with or endorsed by Stremio.":
+    "Lart là ứng dụng khách độc lập, không liên kết với Stremio và cũng không được Stremio chứng thực.",
+  "Lart leads with one big title. Classic leads with rows.":
+    "Lart ưu tiên một tiêu đề lớn. Cổ điển ưu tiên các hàng.",
+  "Lart needs at least one streaming source before it can play {title}. Install a stream addon or add a debrid key in settings.":
+    "Lart cần ít nhất một nguồn phát trực tuyến để phát {title}. Hãy cài đặt tiện ích bổ sung nguồn phát hoặc thêm khóa debrid trong Cài đặt.",
+  "Lart needs to be serving on your network before a phone can reach it.":
+    "Lart phải đang hoạt động trên mạng của bạn thì điện thoại mới có thể truy cập.",
+  "Lart on other devices (web app)": "Lart trên các thiết bị khác (ứng dụng web)",
+  "Lart pick": "Lart đề xuất",
+  "Lart reads the speech in the audio, then slides the subtitle track until the two line up.":
+    "Lart nhận dạng lời thoại trong âm thanh, sau đó dịch chuyển rãnh phụ đề cho đến khi cả hai khớp nhau.",
+  "Lart signed you up but returned no session. Try signing in instead.":
+    "Lart đã đăng ký cho bạn nhưng không trả về phiên. Hãy thử đăng nhập.",
+  "Lart speaks this everywhere. You can change it later in Settings.":
+    "Lart dùng ngôn ngữ này ở mọi nơi. Bạn có thể đổi sau trong Cài đặt.",
+  "Lart tried {n} sources for {title} and none of them played. Usually that means a debrid key has expired, no stream addon is installed yet, or nothing has this title cached.":
+    "Lart đã thử {n} nguồn cho {title} nhưng không nguồn nào phát được. Thường là do khóa debrid đã hết hạn, chưa cài đặt tiện ích bổ sung nguồn phát hoặc chưa có nguồn nào lưu tiêu đề này trong bộ nhớ đệm.",
+  "Lart was built in English. Multi-language support is partial, so your addons usually catch what Lart's own filters miss. If you speak another language and want to help, the source is open.":
+    "Lart được xây dựng bằng tiếng Anh. Khả năng hỗ trợ đa ngôn ngữ còn hạn chế, vì vậy các tiện ích bổ sung thường tìm được nội dung mà bộ lọc riêng của Lart bỏ sót. Nếu bạn dùng ngôn ngữ khác và muốn đóng góp, mã nguồn được công khai.",
+  "Lart's built-in HDR to SDR conversion is on. Turn it off in Video tuning to use this instead. Running both double-processes the picture.":
+    "Tính năng chuyển đổi HDR sang SDR tích hợp của Lart đang bật. Hãy tắt tính năng này trong phần Tinh chỉnh video để dùng tùy chọn này. Bật cả hai sẽ khiến hình ảnh bị xử lý hai lần.",
+  "Lart's own bar": "Thanh riêng của Lart",
+  "Lart's own community server": "Máy chủ cộng đồng riêng của Lart",
+  "Lart's public relay": "Relay công khai của Lart",
+  "Harbors on your network": "Các Lart trên mạng của bạn",
   "Hard outline": "Viền đậm",
   "Hardware acceleration (hwdec)": "Tăng tốc phần cứng (hwdec)",
   Head: "Đầu",
@@ -668,7 +668,7 @@ const sweep: Record<string, string> = {
   Health: "Tình trạng",
   Heavy: "Nặng",
   "Help & support": "Trợ giúp & hỗ trợ",
-  "Help translate Harbor": "Hỗ trợ dịch Harbor",
+  "Help translate Lart": "Hỗ trợ dịch Lart",
   "Hero trailer preview": "Xem trước trailer nổi bật",
   "Hero trailers": "Trailer nổi bật",
   "Hidden gems": "Phim hay ít người biết",
@@ -696,8 +696,8 @@ const sweep: Record<string, string> = {
     "Cách hiển thị Xem cùng nhau và các nút cửa sổ.",
   "How large a backdrop image the TV fetches. It does not change video quality. Balanced is the safe choice on older hardware.":
     "Kích thước ảnh nền mà TV tải. Cài đặt này không thay đổi chất lượng video. Cân bằng là lựa chọn an toàn cho thiết bị cũ.",
-  "How long Harbor waits before drifting off.":
-    "Khoảng thời gian Harbor chờ trước khi chuyển sang trạng thái nghỉ.",
+  "How long Lart waits before drifting off.":
+    "Khoảng thời gian Lart chờ trước khi chuyển sang trạng thái nghỉ.",
   "How long a saved frame sticks around before the oldest roll off.":
     "Khoảng thời gian giữ lại khung hình đã lưu trước khi khung hình cũ nhất bị xóa.",
   "How long files stay": "Thời gian lưu tệp",
@@ -793,8 +793,8 @@ const sweep: Record<string, string> = {
   "Leave Big Picture and open settings": "Thoát chế độ Màn hình lớn và mở Cài đặt",
   "Leave setup": "Thoát thiết lập",
   "Leave setup?": "Thoát thiết lập?",
-  "Leave this blank to use Harbor's own community server, or enter the address of a server you run yourself.":
-    "Để trống để dùng máy chủ cộng đồng của Harbor hoặc nhập địa chỉ máy chủ do bạn tự vận hành.",
+  "Leave this blank to use Lart's own community server, or enter the address of a server you run yourself.":
+    "Để trống để dùng máy chủ cộng đồng của Lart hoặc nhập địa chỉ máy chủ do bạn tự vận hành.",
   "Let the TV keep its own theme": "Giữ nguyên giao diện riêng của TV",
   "Letterboxd connection": "Kết nối Letterboxd",
   "Letterboxd, Trakt, Metacritic, and audience scores.":
@@ -806,13 +806,13 @@ const sweep: Record<string, string> = {
   "Link Discord": "Liên kết Discord",
   "Link a title": "Liên kết một tựa phim",
   "Linked as {username}": "Đã liên kết với tên {username}",
-  "Linked to your Harbor account.": "Đã liên kết với tài khoản Harbor của bạn.",
-  "Listening for Harbors": "Đang tìm Harbor",
+  "Linked to your Lart account.": "Đã liên kết với tài khoản Lart của bạn.",
+  "Listening for Harbors": "Đang tìm Lart",
   "Live TV source": "Nguồn TV trực tiếp",
   "Live TV sources": "Nguồn TV trực tiếp",
   "Live action": "Người đóng",
-  "Live state of Harbor's own P2P engine on this machine.":
-    "Trạng thái trực tiếp của công cụ P2P riêng của Harbor trên máy này.",
+  "Live state of Lart's own P2P engine on this machine.":
+    "Trạng thái trực tiếp của công cụ P2P riêng của Lart trên máy này.",
   "Loading more collections...": "Đang tải thêm bộ sưu tập...",
   "Loads a backup file and restores exactly what it contains, without touching the rest of your setup. Your Stremio sign-in on this device stays as is.":
     "Tải tệp sao lưu và khôi phục chính xác nội dung trong đó mà không ảnh hưởng đến phần thiết lập còn lại. Trạng thái đăng nhập Stremio trên thiết bị này được giữ nguyên.",
@@ -842,8 +842,8 @@ const sweep: Record<string, string> = {
   MUBI: "MUBI",
   "Main subtitle line": "Dòng phụ đề chính",
   Maintenance: "Bảo trì",
-  "Make Harbor's interface larger.": "Phóng to giao diện Harbor.",
-  "Make Harbor's interface smaller.": "Thu nhỏ giao diện Harbor.",
+  "Make Lart's interface larger.": "Phóng to giao diện Lart.",
+  "Make Lart's interface smaller.": "Thu nhỏ giao diện Lart.",
   "Make an award pack": "Tạo gói giải thưởng",
   "Make everything bigger and easier to read: sidebar, menus, popups, every page.":
     "Phóng to mọi thứ để dễ đọc hơn: thanh bên, menu, cửa sổ bật lên và mọi trang.",
@@ -852,7 +852,7 @@ const sweep: Record<string, string> = {
   Managers: "Quản lý",
   Marquee: "Chữ chạy",
   "Match this computer": "Khớp với máy tính này",
-  "Matching titles to Harbor": "Đang đối chiếu tựa phim với Harbor",
+  "Matching titles to Lart": "Đang đối chiếu tựa phim với Lart",
   Max: "Tối đa",
   "Max {n} GB": "Tối đa {n} GB",
   "Menu / Options": "Menu / Tùy chọn",
@@ -890,8 +890,8 @@ const sweep: Record<string, string> = {
     "NVIDIA Image Scaling. Bộ nâng cấp độ phân giải không gian và tăng độ nét nhẹ, một lựa chọn thay thế cho FSR hoạt động tốt trên mọi GPU.",
   "NVIDIA NIS": "NVIDIA NIS",
   "NVIDIA NIS upscaler": "Bộ nâng cấp độ phân giải NVIDIA NIS",
-  "Name each file after its award ID. Harbor resizes them and skips anything it cannot match.":
-    "Đặt tên từng tệp theo ID giải thưởng. Harbor sẽ đổi kích thước và bỏ qua mọi tệp không thể đối chiếu.",
+  "Name each file after its award ID. Lart resizes them and skips anything it cannot match.":
+    "Đặt tên từng tệp theo ID giải thưởng. Lart sẽ đổi kích thước và bỏ qua mọi tệp không thể đối chiếu.",
   "Name it, tick the resolutions, sources, codecs and audio you want, and leave the rest blank.":
     "Đặt tên, chọn độ phân giải, nguồn, codec và âm thanh mong muốn, rồi để trống phần còn lại.",
   "Needs an API key": "Cần khóa API",
@@ -911,7 +911,7 @@ const sweep: Record<string, string> = {
     "Đã có phiên bản mới cho các giao diện bạn đã lưu.",
   News: "Tin tức",
   "Next episode prompt & auto-play": "Lời nhắc tập tiếp theo và tự động phát",
-  "No Harbor account yet": "Chưa có tài khoản Harbor",
+  "No Lart account yet": "Chưa có tài khoản Lart",
   "No Label": "Không nhãn",
   "No channels here": "Không có kênh nào ở đây",
   "No entries on your AniList lists yet.": "Danh sách AniList của bạn chưa có mục nào.",
@@ -924,9 +924,9 @@ const sweep: Record<string, string> = {
   "No language matches that search.": "Không có ngôn ngữ nào khớp với nội dung tìm kiếm.",
   "No movies to show yet": "Chưa có phim để hiển thị",
   "No network address": "Không có địa chỉ mạng",
-  "No other Harbor answered": "Không có Harbor nào khác phản hồi",
-  "No other Harbor answered on this network. One shows up here a moment after it starts.":
-    "Không có Harbor nào khác phản hồi trên mạng này. Harbor sẽ xuất hiện ở đây ngay sau khi khởi động.",
+  "No other Lart answered": "Không có Lart nào khác phản hồi",
+  "No other Lart answered on this network. One shows up here a moment after it starts.":
+    "Không có Lart nào khác phản hồi trên mạng này. Lart sẽ xuất hiện ở đây ngay sau khi khởi động.",
   "No quality label": "Không có nhãn chất lượng",
   "No series to show yet": "Chưa có phim bộ để hiển thị",
   "No sources match your filter. Showing all sources.":
@@ -942,8 +942,8 @@ const sweep: Record<string, string> = {
   "Not set": "Chưa đặt",
   "Not signed in to Stremio. Your library stays local.":
     "Chưa đăng nhập Stremio. Thư viện vẫn được lưu cục bộ.",
-  "Nothing else answered. A Harbor shows up here a moment after it starts on this network.":
-    "Không có thiết bị nào khác phản hồi. Harbor sẽ xuất hiện ở đây ngay sau khi khởi động trên mạng này.",
+  "Nothing else answered. A Lart shows up here a moment after it starts on this network.":
+    "Không có thiết bị nào khác phản hồi. Lart sẽ xuất hiện ở đây ngay sau khi khởi động trên mạng này.",
   "Nothing has connected yet. Your phone may be on a guest network, or this TV may be on a different network from your phone.":
     "Chưa có thiết bị nào kết nối. Điện thoại có thể đang dùng mạng khách hoặc TV và điện thoại đang dùng hai mạng khác nhau.",
   "Nothing here yet.": "Chưa có gì ở đây.",
@@ -951,17 +951,17 @@ const sweep: Record<string, string> = {
   "Nothing left to confirm while P2P is disabled.": "Không còn gì cần xác nhận khi P2P bị tắt.",
   "Nothing on your TV changes until you confirm you have saved this.":
     "Nội dung trên TV sẽ không thay đổi cho đến khi bạn xác nhận đã lưu mục này.",
-  "Nothing selected. Harbor will not load a subtitle on its own.":
-    "Chưa chọn gì. Harbor sẽ không tự tải phụ đề.",
+  "Nothing selected. Lart will not load a subtitle on its own.":
+    "Chưa chọn gì. Lart sẽ không tự tải phụ đề.",
   "Nothing sent yet. Change something and it goes up on its own.":
     "Chưa gửi gì. Thay đổi nội dung và nội dung đó sẽ tự được tải lên.",
   "Nothing to set up": "Không có gì cần thiết lập",
   "Nothing to show here yet.": "Chưa có gì để hiển thị ở đây.",
   "Nothing watched yet. Press play on something.": "Chưa xem gì. Hãy phát một nội dung.",
-  "Nothing you have already set is lost. Harbor picks this back up where you left it.":
-    "Mọi thiết lập trước đó vẫn được giữ nguyên. Harbor sẽ tiếp tục từ nơi bạn đã dừng.",
+  "Nothing you have already set is lost. Lart picks this back up where you left it.":
+    "Mọi thiết lập trước đó vẫn được giữ nguyên. Lart sẽ tiếp tục từ nơi bạn đã dừng.",
   "Now Playing card": "Thẻ Đang phát",
-  "Now on Harbor": "Hiện có trên Harbor",
+  "Now on Lart": "Hiện có trên Lart",
   "Nudge the daily Home rows toward your region and languages so local releases surface instead of the same worldwide list. Turn it off to see the unweighted picks.":
     "Ưu tiên khu vực và ngôn ngữ của bạn trong các hàng hằng ngày trên Trang chủ để nội dung phát hành tại địa phương xuất hiện thay vì cùng một danh sách toàn cầu. Tắt để xem các đề xuất không ưu tiên.",
   OMDb: "OMDb",
@@ -975,8 +975,8 @@ const sweep: Record<string, string> = {
   "On the taskbar": "Trên thanh tác vụ",
   "On themoviedb.org, open Settings.": "Trên themoviedb.org, mở Cài đặt.",
   "Onboarding & hints": "Hướng dẫn ban đầu và gợi ý",
-  "One @name that finds you across Harbor.": "Một @name để mọi người tìm thấy bạn trên Harbor.",
-  "One Harbor, every screen.": "Một Harbor, mọi màn hình.",
+  "One @name that finds you across Lart.": "Một @name để mọi người tìm thấy bạn trên Lart.",
+  "One Lart, every screen.": "Một Lart, mọi màn hình.",
   "One release": "Một bản phát hành",
   "One-tap looks": "Giao diện một chạm",
   "Only on anime": "Chỉ với anime",
@@ -985,7 +985,7 @@ const sweep: Record<string, string> = {
   "Only when I press play": "Chỉ khi tôi nhấn phát",
   "Open Account": "Mở Tài khoản",
   "Open AniList profile": "Mở hồ sơ AniList",
-  "Open Harbor on desktop to link Discord.": "Mở Harbor trên máy tính để liên kết Discord.",
+  "Open Lart on desktop to link Discord.": "Mở Lart trên máy tính để liên kết Discord.",
   "Open MAL profile": "Mở hồ sơ MAL",
   "Open Setup": "Mở phần thiết lập",
   "Open Trakt profile": "Mở hồ sơ Trakt",
@@ -1010,15 +1010,15 @@ const sweep: Record<string, string> = {
   "P2P only": "Chỉ P2P",
   PBS: "PBS",
   Packs: "Gói",
-  "Packs stay hosted by their maker. Harbor keeps the link, not the artwork.":
-    "Các gói vẫn do nhà tạo lập lưu trữ. Harbor chỉ giữ liên kết, không giữ hình ảnh.",
+  "Packs stay hosted by their maker. Lart keeps the link, not the artwork.":
+    "Các gói vẫn do nhà tạo lập lưu trữ. Lart chỉ giữ liên kết, không giữ hình ảnh.",
   "Page base.": "Nền trang.",
   "Paid. Bakes scores into the poster image itself.":
     "Có tính phí. Nhúng điểm số trực tiếp vào ảnh áp phích.",
   Pair: "Ghép nối",
-  "Pair once from here and this Harbor will take commands.":
-    "Ghép nối một lần tại đây để Harbor này nhận lệnh.",
-  "Pair with this Harbor": "Ghép nối với Harbor này",
+  "Pair once from here and this Lart will take commands.":
+    "Ghép nối một lần tại đây để Lart này nhận lệnh.",
+  "Pair with this Lart": "Ghép nối với Lart này",
   Paired: "Đã ghép nối",
   "Paired with {name}": "Đã ghép nối với {name}",
   "Panel and play": "Bảng điều khiển và phát",
@@ -1055,8 +1055,8 @@ const sweep: Record<string, string> = {
   "Pick the palette Big Picture wears on the television. A theme this computer knows but the TV does not is sent whole, colors and all.":
     "Chọn bảng màu cho Big Picture trên TV. Nếu máy tính biết một chủ đề nhưng TV không có, toàn bộ chủ đề, gồm cả màu sắc, sẽ được gửi sang TV.",
   "Pick up exactly where you left off.": "Tiếp tục chính xác từ chỗ bạn đã dừng.",
-  "Pick up to five. It shapes what Harbor surfaces first.":
-    "Chọn tối đa năm mục. Lựa chọn này quyết định nội dung Harbor ưu tiên hiển thị.",
+  "Pick up to five. It shapes what Lart surfaces first.":
+    "Chọn tối đa năm mục. Lựa chọn này quyết định nội dung Lart ưu tiên hiển thị.",
   "Pick what to save, then everything you choose lands in one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
     "Chọn nội dung cần lưu, sau đó mọi thứ đã chọn sẽ được đưa vào một tệp: chủ đề, bố cục trang chủ, cài đặt, tiện ích bổ sung, hồ sơ, danh sách xem, bố cục trình phát, tiến trình xem và nhiều nội dung khác. Thông tin đăng nhập Stremio được chủ động loại trừ.",
   "Picked for you": "Dành riêng cho bạn",
@@ -1103,8 +1103,8 @@ const sweep: Record<string, string> = {
   "Prepares up to two provider-confirmed cached debrid sources while the picker is open, so Play can start sooner. This may create or update transfers on your debrid account before you click Play. It never touches P2P or uncached sources, is rate-limited, and keeps prepared links in memory for two minutes only. Off by default.":
     "Chuẩn bị tối đa hai nguồn debrid đã lưu vào bộ nhớ đệm và được nhà cung cấp xác nhận trong khi trình chọn đang mở để có thể bắt đầu phát sớm hơn. Thao tác này có thể tạo hoặc cập nhật tác vụ truyền trên tài khoản debrid trước khi bạn nhấn Phát. Tính năng không bao giờ tác động đến nguồn P2P hoặc nguồn chưa lưu vào bộ nhớ đệm, có giới hạn tần suất và chỉ giữ liên kết đã chuẩn bị trong bộ nhớ trong hai phút. Mặc định tắt.",
   Presets: "Cấu hình đặt sẵn",
-  "Press Play and Harbor picks the source itself instead of opening the list.":
-    "Nhấn Phát để Harbor tự chọn nguồn thay vì mở danh sách.",
+  "Press Play and Lart picks the source itself instead of opening the list.":
+    "Nhấn Phát để Lart tự chọn nguồn thay vì mở danh sách.",
   "Press the star on any channel to keep it at the top of the guide.":
     "Nhấn biểu tượng ngôi sao trên bất kỳ kênh nào để giữ kênh đó ở đầu lịch phát sóng.",
   "Preview style": "Kiểu xem trước",
@@ -1166,12 +1166,12 @@ const sweep: Record<string, string> = {
   Released: "Đã phát hành",
   "Remap stream badges": "Ánh xạ lại huy hiệu luồng phát",
   "Remember your place on show pages": "Ghi nhớ vị trí trên trang phim bộ",
-  "Remote control is off on that Harbor, so it cannot be driven from here.":
-    "Điều khiển từ xa đang tắt trên Harbor đó nên không thể điều khiển từ đây.",
+  "Remote control is off on that Lart, so it cannot be driven from here.":
+    "Điều khiển từ xa đang tắt trên Lart đó nên không thể điều khiển từ đây.",
   "Remote control is off, so other Harbors can see this one but cannot drive it.":
-    "Điều khiển từ xa đang tắt nên các Harbor khác có thể thấy Harbor này nhưng không thể điều khiển.",
+    "Điều khiển từ xa đang tắt nên các Lart khác có thể thấy Lart này nhưng không thể điều khiển.",
   "Remote control is on, so other Harbors on this network can drive this one.":
-    "Điều khiển từ xa đang bật nên các Harbor khác trên mạng này có thể điều khiển Harbor này.",
+    "Điều khiển từ xa đang bật nên các Lart khác trên mạng này có thể điều khiển Lart này.",
   "Remote off": "Điều khiển từ xa tắt",
   Remotes: "Thiết bị điều khiển từ xa",
   "Reopening a title within this window resumes instead of re-downloading.":
@@ -1184,7 +1184,7 @@ const sweep: Record<string, string> = {
   "Reset subtitle style to defaults": "Đặt lại kiểu phụ đề về mặc định",
   "Restore + upscale. The best all-rounder for most anime.":
     "Khôi phục + nâng cấp độ phân giải. Lựa chọn toàn diện nhất cho hầu hết anime.",
-  "Restore Harbor's interface scale to 100%.": "Khôi phục tỷ lệ giao diện của Harbor về 100%.",
+  "Restore Lart's interface scale to 100%.": "Khôi phục tỷ lệ giao diện của Lart về 100%.",
   "Result order (ranking / addon order)": "Thứ tự kết quả (xếp hạng / thứ tự tiện ích bổ sung)",
   Revert: "Hoàn nguyên",
   "Rising Stars": "Ngôi sao đang lên",
@@ -1223,31 +1223,31 @@ const sweep: Record<string, string> = {
   "Saturn Award": "Giải Saturn",
   "Saturn Awards": "Các giải Saturn",
   "Save it anyway": "Vẫn lưu",
-  "Save the last 30 seconds as a video clip with audio, choosing subtitles on or off. Saves to Pictures/Harbor.":
-    "Lưu 30 giây gần nhất thành clip video có âm thanh, tùy chọn bật hoặc tắt phụ đề. Lưu vào Pictures/Harbor.",
+  "Save the last 30 seconds as a video clip with audio, choosing subtitles on or off. Saves to Pictures/Lart.":
+    "Lưu 30 giây gần nhất thành clip video có âm thanh, tùy chọn bật hoặc tắt phụ đề. Lưu vào Pictures/Lart.",
   "Save video clip": "Lưu clip video",
   "Save your recovery code": "Lưu mã khôi phục",
   "Saved on that device. You can close this page, or use this phone as a remote.":
     "Đã lưu trên thiết bị đó. Bạn có thể đóng trang này hoặc dùng điện thoại này làm điều khiển từ xa.",
   "Saved on this device": "Đã lưu trên thiết bị này",
-  "Saved on this device. Another Harbor install starts fresh.":
-    "Đã lưu trên thiết bị này. Bản cài đặt Harbor khác sẽ bắt đầu mới.",
-  "Saved {when} from Harbor {app}. Your Stremio sign-in stays as is.":
-    "Đã lưu {when} từ Harbor {app}. Trạng thái đăng nhập Stremio của bạn vẫn giữ nguyên.",
+  "Saved on this device. Another Lart install starts fresh.":
+    "Đã lưu trên thiết bị này. Bản cài đặt Lart khác sẽ bắt đầu mới.",
+  "Saved {when} from Lart {app}. Your Stremio sign-in stays as is.":
+    "Đã lưu {when} từ Lart {app}. Trạng thái đăng nhập Stremio của bạn vẫn giữ nguyên.",
   "Saves the relay URL and your Cloudflare token to a file.":
     "Lưu URL chuyển tiếp và token Cloudflare của bạn vào một tệp.",
   "Saving to your profile": "Đang lưu vào hồ sơ của bạn",
   "Scales the whole interface live as you drag.":
     "Thay đổi tỷ lệ toàn bộ giao diện theo thời gian thực khi bạn kéo.",
-  "Scan this with your phone camera to open the Harbor remote, then type straight into the search box.":
-    "Quét mã này bằng camera điện thoại để mở điều khiển Harbor, rồi nhập trực tiếp vào ô tìm kiếm.",
+  "Scan this with your phone camera to open the Lart remote, then type straight into the search box.":
+    "Quét mã này bằng camera điện thoại để mở điều khiển Lart, rồi nhập trực tiếp vào ô tìm kiếm.",
   "Sci-fi, fantasy & horror": "Khoa học viễn tưởng, kỳ ảo & kinh dị",
   "Search every source again": "Tìm kiếm lại mọi nguồn",
   "Search languages (Tamil, Telugu, ...)": "Tìm kiếm ngôn ngữ (Tamil, Telugu, ...)",
   "Search title": "Tìm kiếm tiêu đề",
   "Search your library": "Tìm kiếm trong thư viện",
-  "Searching works without a key. A key lets Harbor line subtitles up with the audio automatically.":
-    "Có thể tìm kiếm mà không cần khóa. Khóa giúp Harbor tự động căn phụ đề khớp với âm thanh.",
+  "Searching works without a key. A key lets Lart line subtitles up with the audio automatically.":
+    "Có thể tìm kiếm mà không cần khóa. Khóa giúp Lart tự động căn phụ đề khớp với âm thanh.",
   "Second line": "Dòng thứ hai",
   "Secondary copy.": "Bản sao phụ.",
   "See every TVDB list": "Xem mọi danh sách TVDB",
@@ -1263,7 +1263,7 @@ const sweep: Record<string, string> = {
   "Send to TV": "Gửi tới TV",
   "Send to TV now": "Gửi tới TV ngay",
   Sending: "Đang gửi",
-  "Sending to that Harbor": "Đang gửi đến Harbor đó",
+  "Sending to that Lart": "Đang gửi đến Lart đó",
   "Sending to your TV": "Đang gửi đến TV của bạn",
   Sent: "Đã gửi",
   "Sentient + Switzer": "Sentient + Switzer",
@@ -1273,7 +1273,7 @@ const sweep: Record<string, string> = {
   "Services you have": "Dịch vụ bạn có",
   "Session ID or v4 access token": "ID phiên hoặc mã truy cập v4",
   "Set up Anime4K": "Thiết lập Anime4K",
-  "Set up Harbor": "Thiết lập Harbor",
+  "Set up Lart": "Thiết lập Lart",
   "Set up my TV from this computer": "Thiết lập TV từ máy tính này",
   "Set up your own Cloudflare Worker rather than borrowing this one.":
     "Thiết lập Cloudflare Worker riêng thay vì dùng nhờ Worker này.",
@@ -1325,8 +1325,8 @@ const sweep: Record<string, string> = {
   "Sign in with a server, username and password":
     "Đăng nhập bằng máy chủ, tên người dùng và mật khẩu",
   "Signed in. Your library is on the TV.": "Đã đăng nhập. Thư viện của bạn đã có trên TV.",
-  "Signing in to your Harbor account. Your profiles will appear in a moment.":
-    "Đang đăng nhập vào tài khoản Harbor của bạn. Hồ sơ sẽ xuất hiện sau giây lát.",
+  "Signing in to your Lart account. Your profiles will appear in a moment.":
+    "Đang đăng nhập vào tài khoản Lart của bạn. Hồ sơ sẽ xuất hiện sau giây lát.",
   "Signing the TV in to Stremio, Trakt, AniList and the metadata keys. Scan the code with your phone from the TV itself.":
     "Đang đăng nhập TV vào Stremio, Trakt, AniList và các khóa siêu dữ liệu. Quét mã bằng điện thoại ngay trên TV.",
   "Silence notifications": "Tắt tiếng thông báo",
@@ -1338,10 +1338,10 @@ const sweep: Record<string, string> = {
   "Skip injected ad": "Bỏ qua quảng cáo được chèn",
   "Skip intros and credits": "Bỏ qua phần mở đầu và danh đề",
   "Skip these tracks": "Bỏ qua các bản nhạc này",
-  "Skip this and Harbor runs on Cinemeta. You just see fewer rows.":
-    "Bỏ qua bước này và Harbor sẽ chạy trên Cinemeta. Bạn chỉ thấy ít hàng hơn.",
-  "Skip this and Harbor still works. Your library just stays local.":
-    "Bỏ qua bước này và Harbor vẫn hoạt động. Thư viện chỉ được lưu cục bộ.",
+  "Skip this and Lart runs on Cinemeta. You just see fewer rows.":
+    "Bỏ qua bước này và Lart sẽ chạy trên Cinemeta. Bạn chỉ thấy ít hàng hơn.",
+  "Skip this and Lart still works. Your library just stays local.":
+    "Bỏ qua bước này và Lart vẫn hoạt động. Thư viện chỉ được lưu cục bộ.",
   "Skip, I can do this later": "Bỏ qua, tôi có thể làm sau",
   "Slightly lighter than background.": "Sáng hơn nền một chút.",
   "Slowly fade between a show's backdrop images while you read the page, instead of holding one still. Only runs when the show has more than one backdrop, and never when you have pinned one or asked for reduced motion.":
@@ -1446,8 +1446,8 @@ const sweep: Record<string, string> = {
   "TMDB is connected. Your TV has it.": "Đã kết nối TMDB. TV của bạn đã nhận được.",
   "TV Settings": "Cài đặt TV",
   "TV only": "Chỉ TV",
-  "TV only. Older sets crop the outer edge of the picture. Nudge Harbor inward until nothing is cut off.":
-    "Chỉ dành cho TV. TV đời cũ sẽ cắt phần rìa ngoài của hình ảnh. Dịch Harbor vào trong cho đến khi không còn phần nào bị cắt.",
+  "TV only. Older sets crop the outer edge of the picture. Nudge Lart inward until nothing is cut off.":
+    "Chỉ dành cho TV. TV đời cũ sẽ cắt phần rìa ngoài của hình ảnh. Dịch Lart vào trong cho đến khi không còn phần nào bị cắt.",
   "TVDB list": "Danh sách TVDB",
   "TVDB lists are unavailable right now.": "Danh sách TVDB hiện không khả dụng.",
   Taiwanese: "Tiếng Đài Loan",
@@ -1462,8 +1462,8 @@ const sweep: Record<string, string> = {
   Text: "Văn bản",
   "Text colour": "Màu văn bản",
   "Text opacity": "Độ mờ văn bản",
-  "That Harbor is on the network but is not answering, so it cannot be driven.":
-    "Harbor đó đang ở trên mạng nhưng không phản hồi nên không thể điều khiển được.",
+  "That Lart is on the network but is not answering, so it cannot be driven.":
+    "Lart đó đang ở trên mạng nhưng không phản hồi nên không thể điều khiển được.",
   "That code has expired": "Mã đó đã hết hạn",
   "That code is no longer valid. Look at your TV for a new one.":
     "Mã đó không còn hợp lệ. Hãy xem mã mới trên TV.",
@@ -1471,8 +1471,8 @@ const sweep: Record<string, string> = {
   "That does not look like a Spotify link.": "Đây có vẻ không phải liên kết Spotify.",
   "That does not look like a YouTube link.": "Đây có vẻ không phải liên kết YouTube.",
   "That is five. Deselect one to swap it out.": "Đã đủ năm mục. Bỏ chọn một mục để thay thế.",
-  'That looks like the v4 Read Access Token. Harbor needs the shorter "API Key (v3 auth)" from the same page.':
-    'Đây có vẻ là Read Access Token v4. Harbor cần "API Key (v3 auth)" ngắn hơn trên cùng trang.',
+  'That looks like the v4 Read Access Token. Lart needs the shorter "API Key (v3 auth)" from the same page.':
+    'Đây có vẻ là Read Access Token v4. Lart cần "API Key (v3 auth)" ngắn hơn trên cùng trang.',
   "That's all of your collections.": "Đó là toàn bộ bộ sưu tập của bạn.",
   "That's every TVDB list we could find.": "Đó là tất cả danh sách TVDB chúng tôi tìm thấy.",
   "That's every TVDB list we could reach. Some are unavailable right now.":
@@ -1510,8 +1510,8 @@ const sweep: Record<string, string> = {
     "Nhà cung cấp đã từ chối yêu cầu. Liên kết có thể đã hết hạn, bị giới hạn theo khu vực hoặc đã hết hạn mức.",
   "The provider's server could not be reached. It may be offline, or you have no connection.":
     "Không thể kết nối với máy chủ của nhà cung cấp. Máy chủ có thể đang ngoại tuyến hoặc bạn không có kết nối mạng.",
-  "The provider's server returned an error. Nothing on Harbor's side can fix this. Pick another source.":
-    "Máy chủ của nhà cung cấp trả về lỗi. Harbor không thể khắc phục lỗi này. Hãy chọn nguồn khác.",
+  "The provider's server returned an error. Nothing on Lart's side can fix this. Pick another source.":
+    "Máy chủ của nhà cung cấp trả về lỗi. Lart không thể khắc phục lỗi này. Hãy chọn nguồn khác.",
   "The same camera pan on each setting. The lit lane is what you get right now.":
     "Cùng một cảnh lia máy ở mỗi cài đặt. Dải sáng là kết quả bạn đang nhận được.",
   "The shape of the whole Home page. Everything below tunes the rows inside it.":
@@ -1540,8 +1540,8 @@ const sweep: Record<string, string> = {
     "Các cài đặt này thuộc về một hồ sơ, nhưng máy tính này chưa có hồ sơ. Chọn một hồ sơ để TV dùng theo cài đặt đó.",
   "They said the harbour would be quiet tonight.": "Họ nói tối nay bến cảng sẽ yên tĩnh.",
   "Things you still do on the TV itself": "Những việc bạn vẫn thực hiện trực tiếp trên TV",
-  "This Harbor takes commands from this computer. Forget it to take that back.":
-    "Harbor này nhận lệnh từ máy tính này. Hãy quên thiết bị để thu hồi quyền đó.",
+  "This Lart takes commands from this computer. Forget it to take that back.":
+    "Lart này nhận lệnh từ máy tính này. Hãy quên thiết bị để thu hồi quyền đó.",
   "This browser blocked the copy. Long-press the code above, or write it down.":
     "Trình duyệt này đã chặn thao tác sao chép. Nhấn giữ mã ở trên hoặc ghi lại mã.",
   "This build cannot carry TV settings to the account yet. Everything on this page saves on this computer and will go up the moment the sync section names are enabled.":
@@ -1555,8 +1555,8 @@ const sweep: Record<string, string> = {
   "This is how your subtitles will look.": "Phụ đề của bạn sẽ hiển thị như thế này.",
   "This is the only way back into your account if you forget your password. It is shown once.":
     "Đây là cách duy nhất để truy cập lại tài khoản nếu bạn quên mật khẩu. Thông tin này chỉ hiển thị một lần.",
-  "This opens Harbor to devices on your Wi-Fi. You can turn it off again in Settings.":
-    "Tùy chọn này cho phép các thiết bị trên Wi-Fi truy cập Harbor. Bạn có thể tắt lại trong Cài đặt.",
+  "This opens Lart to devices on your Wi-Fi. You can turn it off again in Settings.":
+    "Tùy chọn này cho phép các thiết bị trên Wi-Fi truy cập Lart. Bạn có thể tắt lại trong Cài đặt.",
   "This page cannot reach your TV": "Trang này không thể kết nối với TV",
   "This page works while your TV is showing its setup screen. Go back to that screen on the TV, then try again.":
     "Trang này hoạt động khi TV đang hiển thị màn hình thiết lập. Hãy quay lại màn hình đó trên TV rồi thử lại.",
@@ -1569,8 +1569,8 @@ const sweep: Record<string, string> = {
     "Phiên này không thể làm mới token. Hãy đăng xuất rồi đăng nhập lại, nếu không TV sẽ không nhận được những thay đổi này.",
   "This source didn't respond": "Nguồn này không phản hồi",
   "This source is down": "Nguồn này đang ngừng hoạt động",
-  "This source isn't cached on your debrid, so Harbor would pull it directly from peers. It can take a moment to start and may buffer on low-seed torrents.":
-    "Nguồn này chưa được lưu vào bộ nhớ đệm trên dịch vụ debrid của bạn, nên Harbor sẽ tải trực tiếp từ các peer. Quá trình phát có thể mất một lúc để bắt đầu và có thể bị gián đoạn với torrent có ít seeder.",
+  "This source isn't cached on your debrid, so Lart would pull it directly from peers. It can take a moment to start and may buffer on low-seed torrents.":
+    "Nguồn này chưa được lưu vào bộ nhớ đệm trên dịch vụ debrid của bạn, nên Lart sẽ tải trực tiếp từ các peer. Quá trình phát có thể mất một lúc để bắt đầu và có thể bị gián đoạn với torrent có ít seeder.",
   "This source rejected the stream": "Nguồn này đã từ chối luồng phát",
   "This source stays quiet until you add a key.":
     "Nguồn này sẽ không hoạt động cho đến khi bạn thêm khóa.",
@@ -1610,8 +1610,8 @@ const sweep: Record<string, string> = {
     "Bật (tự động) hoặc tắt nâng cấp hình ảnh bằng Anime4K. Chỉ hoạt động khi có shader.",
   "Turn Anime4K upscaling on. Only active when shaders are available.":
     "Bật nâng cấp hình ảnh bằng Anime4K. Chỉ hoạt động khi có shader.",
-  "Turn anime back on in Harbor's content settings to browse it here.":
-    "Bật lại anime trong cài đặt nội dung của Harbor để duyệt tại đây.",
+  "Turn anime back on in Lart's content settings to browse it here.":
+    "Bật lại anime trong cài đặt nội dung của Lart để duyệt tại đây.",
   "Turn off mobile data so your phone uses Wi-Fi.":
     "Tắt dữ liệu di động để điện thoại sử dụng Wi-Fi.",
   "Turn off what you do not have": "Tắt những dịch vụ bạn không có",
@@ -1621,7 +1621,7 @@ const sweep: Record<string, string> = {
   "Turn this on to arm the four rules below.":
     "Bật tùy chọn này để kích hoạt bốn quy tắc bên dưới.",
   "Turning them on": "Bật chúng",
-  "Type the code showing on that Harbor.": "Nhập mã đang hiển thị trên Harbor đó.",
+  "Type the code showing on that Lart.": "Nhập mã đang hiển thị trên Lart đó.",
   Typeface: "Kiểu chữ",
   "Typography & custom fonts": "Kiểu chữ & phông chữ tùy chỉnh",
   "UFC / MMA": "UFC / MMA",
@@ -1633,8 +1633,8 @@ const sweep: Record<string, string> = {
   Unreachable: "Không thể kết nối",
   "Unsaved changes to your layout, time format and volume style.":
     "Các thay đổi về bố cục, định dạng thời gian và kiểu âm lượng chưa được lưu.",
-  "Until you pair, that Harbor ignores anything this computer sends it.":
-    "Cho đến khi ghép nối, Harbor sẽ bỏ qua mọi dữ liệu máy tính này gửi đến.",
+  "Until you pair, that Lart ignores anything this computer sends it.":
+    "Cho đến khi ghép nối, Lart sẽ bỏ qua mọi dữ liệu máy tính này gửi đến.",
   Unverified: "Chưa xác minh",
   "Upcoming episodes and movies from your Simkl watching and plan-to-watch lists":
     "Các tập và phim sắp ra mắt trong danh sách đang xem và dự định xem trên Simkl",
@@ -1687,15 +1687,15 @@ const sweep: Record<string, string> = {
   "What your catalogs are showing right now.": "Nội dung danh mục đang hiển thị.",
   "What's hot right now": "Nội dung đang thịnh hành",
   "What's new on the network": "Có gì mới trên mạng",
-  "When playback starts, Harbor finds and loads a subtitle in one of these languages. The first available match wins, so put your main language first.":
-    "Khi bắt đầu phát, Harbor sẽ tìm và tải phụ đề bằng một trong các ngôn ngữ này. Bản khớp đầu tiên tìm thấy sẽ được dùng, vì vậy hãy đặt ngôn ngữ chính của bạn lên đầu.",
+  "When playback starts, Lart finds and loads a subtitle in one of these languages. The first available match wins, so put your main language first.":
+    "Khi bắt đầu phát, Lart sẽ tìm và tải phụ đề bằng một trong các ngôn ngữ này. Bản khớp đầu tiên tìm thấy sẽ được dùng, vì vậy hãy đặt ngôn ngữ chính của bạn lên đầu.",
   "When you open a profile": "Khi bạn mở hồ sơ",
   "When you press Play": "Khi bạn nhấn Phát",
   "Where files live": "Vị trí lưu tệp",
   "Where the bookmark sits on the poster.": "Vị trí dấu trang trên áp phích.",
   "Where to find the key": "Nơi tìm khóa",
-  "Whether Harbor reports playback to Simkl while you watch.":
-    "Harbor có báo cáo hoạt động phát cho Simkl khi bạn xem hay không.",
+  "Whether Lart reports playback to Simkl while you watch.":
+    "Lart có báo cáo hoạt động phát cho Simkl khi bạn xem hay không.",
   "Whether finishing an episode updates your AniList progress.":
     "Việc xem hết một tập có cập nhật tiến độ AniList của bạn hay không.",
   "Whether subtitles are showing the moment a video starts.":
@@ -1711,8 +1711,8 @@ const sweep: Record<string, string> = {
     "Vị trí của từng dòng khi cả hai cùng hiển thị.",
   "Which service names the track when you tap Identify song in the player.":
     "Dịch vụ xác định tên bản nhạc khi bạn nhấn Nhận diện bài hát trong trình phát.",
-  "Which subtitle Harbor lands on when more than one is available.":
-    "Phụ đề Harbor chọn khi có nhiều phụ đề.",
+  "Which subtitle Lart lands on when more than one is available.":
+    "Phụ đề Lart chọn khi có nhiều phụ đề.",
   "Which subtitle languages, in order?": "Thứ tự ưu tiên ngôn ngữ phụ đề?",
   "While auto-sync is on": "Khi bật tự động đồng bộ",
   White: "Trắng",
@@ -1737,8 +1737,8 @@ const sweep: Record<string, string> = {
   Yesterday: "Hôm qua",
   "You are aboard.": "Bạn đã lên tàu.",
   "You are done.": "Bạn đã hoàn tất.",
-  "You are not signed in to a Harbor account, so nothing here can reach the TV.":
-    "Bạn chưa đăng nhập tài khoản Harbor nên không nội dung nào ở đây có thể chuyển đến TV.",
+  "You are not signed in to a Lart account, so nothing here can reach the TV.":
+    "Bạn chưa đăng nhập tài khoản Lart nên không nội dung nào ở đây có thể chuyển đến TV.",
   "You are set up": "Bạn đã thiết lập xong",
   "You have no lists yet.": "Bạn chưa có danh sách nào.",
   "You have not made a collection yet.": "Bạn chưa tạo bộ sưu tập nào.",
@@ -1747,9 +1747,9 @@ const sweep: Record<string, string> = {
     "Xem tiếp, danh sách xem và các tiện ích bổ sung của bạn trên TV này.",
   "Your Continue Watching, your watchlist and your addons.":
     "Xem tiếp, danh sách xem và các tiện ích bổ sung của bạn.",
-  "Your Harbor account": "Tài khoản Harbor của bạn",
-  "Your Harbor account is signed in on the TV.":
-    "Tài khoản Harbor của bạn đã được đăng nhập trên TV.",
+  "Your Lart account": "Tài khoản Lart của bạn",
+  "Your Lart account is signed in on the TV.":
+    "Tài khoản Lart của bạn đã được đăng nhập trên TV.",
   "Your Stremio password": "Mật khẩu Stremio của bạn",
   "Your TV could not use that. It may have been rejected on the TV's side.":
     "TV của bạn không thể sử dụng nội dung đó. Có thể TV đã từ chối.",
@@ -1813,7 +1813,7 @@ const sweep: Record<string, string> = {
   "{n} of {total} chosen": "Đã chọn {n} trên {total}",
   "{n} of {total} connected": "Đã kết nối {n} trên {total}",
   "{n} on": "Bật {n}",
-  "{n} other Harbors": "{n} Harbor khác",
+  "{n} other Harbors": "{n} Lart khác",
   "{n} picks, refreshed daily": "{n} lựa chọn, làm mới hằng ngày",
   "{n} recorded winners": "{n} người thắng giải được ghi nhận",
   "{n} seeders": "{n} seeder",
@@ -1831,8 +1831,8 @@ const sweep: Record<string, string> = {
   "دوري MLS": "Giải MLS",
   "14s": "14 giây",
   "20s": "20 giây",
-  "Changing the metadata language reloads Harbor so the new language takes effect. Apply when you're done with the options above.":
-    "Khi đổi ngôn ngữ siêu dữ liệu, Harbor sẽ tải lại để áp dụng ngôn ngữ mới. Hãy áp dụng sau khi hoàn tất các tùy chọn ở trên.",
+  "Changing the metadata language reloads Lart so the new language takes effect. Apply when you're done with the options above.":
+    "Khi đổi ngôn ngữ siêu dữ liệu, Lart sẽ tải lại để áp dụng ngôn ngữ mới. Hãy áp dụng sau khi hoàn tất các tùy chọn ở trên.",
   Colored: "Có màu",
   "Content advisory style": "Kiểu cảnh báo nội dung",
   "Ignored titles": "Tựa phim đã bỏ qua",
@@ -1845,10 +1845,10 @@ const sweep: Record<string, string> = {
   "{count} titles will never show the content advisory again.#few":
     "{count} tựa phim sẽ không bao giờ hiện lại cảnh báo nội dung.",
   "Cursor speed": "Tốc độ con trỏ",
-  "Export your Harbor setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
-    "Xuất cấu hình Harbor vào một tệp duy nhất, với nội dung do bạn chọn. Khi khôi phục, chỉ những nội dung có trong tệp mới được phục hồi. Thông tin đăng nhập Stremio luôn bị loại trừ.",
-  "How quickly the Harbor cursor moves with the right stick.":
-    "Tốc độ di chuyển của con trỏ Harbor bằng cần điều khiển bên phải.",
+  "Export your Lart setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
+    "Xuất cấu hình Lart vào một tệp duy nhất, với nội dung do bạn chọn. Khi khôi phục, chỉ những nội dung có trong tệp mới được phục hồi. Thông tin đăng nhập Stremio luôn bị loại trừ.",
+  "How quickly the Lart cursor moves with the right stick.":
+    "Tốc độ di chuyển của con trỏ Lart bằng cần điều khiển bên phải.",
   "Keyboard size": "Kích thước bàn phím",
   "Monochrome (White)": "Đơn sắc (Trắng)",
   "On shows titles in your metadata language (English by default). Off keeps titles in English.":
@@ -1911,8 +1911,8 @@ const sweep: Record<string, string> = {
   "TMDB confirms the key is created. Follow the link it gives you to see your API key details.":
     "TMDB xác nhận khóa đã được tạo. Mở liên kết được cung cấp để xem thông tin chi tiết về khóa API của bạn.",
   "Copy your API Key": "Sao chép khóa API",
-  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Harbor. Harbor saves it on its own.":
-    "Quay lại trang API rồi cuộn xuống cuối trang. Sao chép giá trị trong mục Khóa API và dán vào Harbor. Harbor sẽ tự động lưu.",
+  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Lart. Lart saves it on its own.":
+    "Quay lại trang API rồi cuộn xuống cuối trang. Sao chép giá trị trong mục Khóa API và dán vào Lart. Lart sẽ tự động lưu.",
   "Take the short API Key at the very bottom, not the long API Read Access Token above it.":
     "Hãy lấy khóa API ngắn ở cuối trang, không phải API Read Access Token dài ở phía trên.",
   "Get your free TMDB key": "Nhận khóa TMDB miễn phí",
@@ -1920,8 +1920,8 @@ const sweep: Record<string, string> = {
     "Miễn phí vĩnh viễn cho mục đích cá nhân. Không bao giờ phải thanh toán.",
   "Bring your own keys": "Sử dụng khóa của riêng bạn",
   "Where you watch from": "Nơi bạn xem",
-  "Sets streaming availability and the Now Playing release window. Pick a country and Harbor offers to match the interface, metadata, subtitle, and audio languages to it.":
-    "Đặt phạm vi nội dung phát trực tuyến có sẵn và thời gian phát hành của mục Đang chiếu. Chọn một quốc gia và Harbor sẽ đề xuất điều chỉnh ngôn ngữ giao diện, siêu dữ liệu, phụ đề và âm thanh cho phù hợp.",
+  "Sets streaming availability and the Now Playing release window. Pick a country and Lart offers to match the interface, metadata, subtitle, and audio languages to it.":
+    "Đặt phạm vi nội dung phát trực tuyến có sẵn và thời gian phát hành của mục Đang chiếu. Chọn một quốc gia và Lart sẽ đề xuất điều chỉnh ngôn ngữ giao diện, siêu dữ liệu, phụ đề và âm thanh cho phù hợp.",
   "repo.json identifies and versions the plugin. Filtering, title cleanup, volumes, chapters, dates, and views are returned by example.plugin.js.":
     "repo.json xác định và quản lý phiên bản của plugin. example.plugin.js trả về bộ lọc, tiêu đề đã tinh chỉnh, tập, chương, ngày tháng và chế độ xem.",
   "70s": "Thập niên 70",

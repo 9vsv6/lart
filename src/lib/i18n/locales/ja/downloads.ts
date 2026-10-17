@@ -46,8 +46,8 @@ const downloads: Record<string, string> = {
   "Same file": "同じファイル",
   "{shown} of {total} file from your computer": "コンピューター上のファイル {total}件中{shown}件",
   "{shown} of {total} files from your computer": "コンピューター上のファイル {total}件中{shown}件",
-  "Point Harbor at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
-    "Harborでフォルダーを指定してください。フォルダー内の映画や番組をスキャンし、ファイル名からタイトルを解析して、TMDBの情報を追加します。これにより、ほかの作品と同じように表示されます。記憶するのはパスだけで、ファイルのコピーや移動は行いません。",
+  "Point Lart at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
+    "Lartでフォルダーを指定してください。フォルダー内の映画や番組をスキャンし、ファイル名からタイトルを解析して、TMDBの情報を追加します。これにより、ほかの作品と同じように表示されます。記憶するのはパスだけで、ファイルのコピーや移動は行いません。",
   "No video files found in that folder.": "そのフォルダーに動画ファイルはありません。",
   "Couldn't scan that folder.": "そのフォルダーをスキャンできませんでした。",
   "Couldn't open this file": "このファイルを開けませんでした",

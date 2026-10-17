@@ -111,7 +111,7 @@ export function BpStatus() {
       {stale && (
         <CloudOff
           strokeWidth={2}
-          aria-label={t("Changes not saved to your Harbor account yet")}
+          aria-label={t("Changes not saved to your Lart account yet")}
           className="h-[clamp(14px,1.9vh,22px)] w-auto text-danger"
         />
       )}

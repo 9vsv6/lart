@@ -88,7 +88,7 @@ export function AutoDownloadModal({ onClose }: { onClose: () => void }) {
           {list.length === 0 ? (
             <p className="rounded-2xl border border-dashed border-edge-soft bg-canvas/30 px-5 py-8 text-center text-[13px] leading-relaxed text-ink-muted">
               {t(
-                "Add a series above and Harbor will grab each new episode as it airs, on your terms.",
+                "Add a series above and Lart will grab each new episode as it airs, on your terms.",
               )}
             </p>
           ) : (

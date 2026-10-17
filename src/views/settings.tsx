@@ -177,7 +177,7 @@ const SECTION_META: Record<SectionId, { label: string; sub: string }> = {
   },
   plugins: {
     label: "Plugins",
-    sub: "Small scripts that find streams, manga and books on sites Harbor does not know about, installed from repositories you choose.",
+    sub: "Small scripts that find streams, manga and books on sites Lart does not know about, installed from repositories you choose.",
   },
   trakt: {
     label: "Trakt",
@@ -197,17 +197,17 @@ const SECTION_META: Record<SectionId, { label: string; sub: string }> = {
   },
   letterboxd: {
     label: "Letterboxd",
-    sub: "Bring your Letterboxd watchlist, diary, liked films and lists into Harbor via the Stremboxd bridge.",
+    sub: "Bring your Letterboxd watchlist, diary, liked films and lists into Lart via the Stremboxd bridge.",
   },
   relay: {
-    label: "Harbor Relay",
+    label: "Lart Relay",
     sub: IS_WEB
-      ? "Watch Together rooms are routed through Harbor's hosted relay."
+      ? "Watch Together rooms are routed through Lart's hosted relay."
       : "A Cloudflare Worker on your own account that hosts your Watch Together rooms.",
   },
   streaming: {
     label: "Streaming sources",
-    sub: "How Harbor finds and resolves playable streams. Debrid keys and addon installs live here.",
+    sub: "How Lart finds and resolves playable streams. Debrid keys and addon installs live here.",
   },
   streamFilters: {
     label: "Stream filters",
@@ -215,11 +215,11 @@ const SECTION_META: Record<SectionId, { label: string; sub: string }> = {
   },
   p2p: {
     label: "P2P & servers",
-    sub: "Harbor's built-in peer-to-peer engine, its self-test, and any streaming server you point it at.",
+    sub: "Lart's built-in peer-to-peer engine, its self-test, and any streaming server you point it at.",
   },
   language: {
     label: "Languages",
-    sub: "What language Harbor speaks, and which audio tracks it reaches for first.",
+    sub: "What language Lart speaks, and which audio tracks it reaches for first.",
   },
   subtitles: {
     label: "Subtitles",
@@ -239,7 +239,7 @@ const SECTION_META: Record<SectionId, { label: string; sub: string }> = {
   },
   shaders: {
     label: "Shaders",
-    sub: "GPU shaders that reshape the picture as it plays: Anime4K upscaling, HDR tone-mapping, neural upscalers, and sharpeners. Download the ones you want and Harbor applies them in the mpv engine.",
+    sub: "GPU shaders that reshape the picture as it plays: Anime4K upscaling, HDR tone-mapping, neural upscalers, and sharpeners. Download the ones you want and Lart applies them in the mpv engine.",
   },
   playerLayout: {
     label: "Player layout",
@@ -247,15 +247,15 @@ const SECTION_META: Record<SectionId, { label: string; sub: string }> = {
   },
   hotkeys: {
     label: "Hotkeys",
-    sub: "Every shortcut Harbor responds to. Click a binding to rebind it.",
+    sub: "Every shortcut Lart responds to. Click a binding to rebind it.",
   },
   controllers: {
     label: "Controllers",
-    sub: "Use a game controller to browse Harbor and control playback. Tune the sticks and see the button map.",
+    sub: "Use a game controller to browse Lart and control playback. Tune the sticks and see the button map.",
   },
   theme: {
     label: "Theme & appearance",
-    sub: "Color presets, custom backgrounds, and the font pair Harbor renders in.",
+    sub: "Color presets, custom backgrounds, and the font pair Lart renders in.",
   },
   badges: {
     label: "Stream badges",
@@ -263,7 +263,7 @@ const SECTION_META: Record<SectionId, { label: string; sub: string }> = {
   },
   awardIcons: {
     label: "Award icons",
-    sub: "Install icon packs or upload your own image for every award. Packs are hosted by their makers, not bundled with Harbor.",
+    sub: "Install icon packs or upload your own image for every award. Packs are hosted by their makers, not bundled with Lart.",
   },
   webhooks: {
     label: "Webhooks",
@@ -271,35 +271,35 @@ const SECTION_META: Record<SectionId, { label: string; sub: string }> = {
   },
   bug: {
     label: "Report a bug",
-    sub: "Send a bug report straight to the Harbor team. Screenshots and screen recordings welcome.",
+    sub: "Send a bug report straight to the Lart team. Screenshots and screen recordings welcome.",
   },
   support: {
-    label: "Support Harbor",
-    sub: "Who keeps the lights on, what Harbor is built on, and where to put money if you want to.",
+    label: "Support Lart",
+    sub: "Who keeps the lights on, what Lart is built on, and where to put money if you want to.",
   },
   licenses: {
     label: "Licenses & attribution",
-    sub: "Harbor's licence, the projects it is built on, and the people and services that make it possible.",
+    sub: "Lart's licence, the projects it is built on, and the people and services that make it possible.",
   },
   icons: {
     label: "Icons & animation",
-    sub: "Every icon and animation drawn for Harbor, who drew them, and how to take one with you.",
+    sub: "Every icon and animation drawn for Lart, who drew them, and how to take one with you.",
   },
   remotes: {
     label: "Remotes",
-    sub: "Harbor on your other devices: the web app, the phone remote, and the manga reader remote.",
+    sub: "Lart on your other devices: the web app, the phone remote, and the manga reader remote.",
   },
   tv: {
     label: "TV Settings",
-    sub: "Set up your television from here. Everything on this page is written to your Harbor account and picked up by Big Picture on the TV, so you never have to type on a remote.",
+    sub: "Set up your television from here. Everything on this page is written to your Lart account and picked up by Big Picture on the TV, so you never have to type on a remote.",
   },
   bigPicture: {
     label: "Big Picture",
-    sub: "A full screen, couch friendly Harbor for TVs, handhelds and big monitors. How it launches, the top-bar button, the interface sounds, and how it fills your screen.",
+    sub: "A full screen, couch friendly Lart for TVs, handhelds and big monitors. How it launches, the top-bar button, the interface sounds, and how it fills your screen.",
   },
   storage: {
     label: "Storage",
-    sub: "See what Harbor stores on this computer and clear caches when you want the space back.",
+    sub: "See what Lart stores on this computer and clear caches when you want the space back.",
   },
   trackers: {
     label: "Trackers",

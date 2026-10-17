@@ -8,7 +8,7 @@ export function SignedOutHero({ onSignIn }: { onSignIn: (mode: "register" | "sig
   const t = useT();
   const { setActive } = useSettingsActiveContext();
   return (
-    <Section title={t("Harbor account")}>
+    <Section title={t("Lart account")}>
       <div className="hset-account-welcome">
         <div className="flex min-w-0 flex-col items-start gap-6">
           <div className="flex flex-col gap-3">
@@ -40,7 +40,7 @@ export function SignedOutHero({ onSignIn }: { onSignIn: (mode: "register" | "sig
           <div className="relative aspect-[1005/405] overflow-hidden rounded-[12px] bg-canvas">
             <img
               src={harborScreenshot}
-              alt={t("Harbor profile showing watch statistics")}
+              alt={t("Lart profile showing watch statistics")}
               width={1221}
               height={849}
               draggable={false}

@@ -15,10 +15,10 @@ const catalog03: Record<string, string> = {
   "Change the look": "Zmień wygląd",
   "Change the order addons are tried in": "Zmień kolejność wypróbowywania dodatków",
   "Change your handle?": "Zmienić identyfikator?",
-  "Changes not saved to your Harbor account yet":
-    "Zmiany nie zostały jeszcze zapisane na koncie Harbor",
-  "Changes you make below will be saved on this computer, but they will not reach your TV. This is a fault in Harbor, not something you did.":
-    "Zmiany wprowadzone poniżej zostaną zapisane na tym komputerze, ale nie trafią do telewizora. To błąd Harbor, a nie skutek Twojego działania.",
+  "Changes not saved to your Lart account yet":
+    "Zmiany nie zostały jeszcze zapisane na koncie Lart",
+  "Changes you make below will be saved on this computer, but they will not reach your TV. This is a fault in Lart, not something you did.":
+    "Zmiany wprowadzone poniżej zostaną zapisane na tym komputerze, ale nie trafią do telewizora. To błąd Lart, a nie skutek Twojego działania.",
   "Change…": "Zmień…",
   "Changing the location restarts the engine. Clearing removes all cached stream files right away; anything you reopen will re-fetch.":
     "Zmiana lokalizacji spowoduje ponowne uruchomienie silnika. Wyczyszczenie natychmiast usunie wszystkie pliki strumieni z pamięci podręcznej. Ponowne otwarcie materiału będzie wymagało pobrania ich od nowa.",
@@ -111,15 +111,15 @@ const catalog03: Record<string, string> = {
   "Choose lists": "Wybierz listy",
   "Choose manga download folder": "Wybierz folder pobierania mangi",
   "Choose manga folder": "Wybierz folder z mangą",
-  "Choose one season package. Harbor will match and download every available episode from it.":
-    "Wybierz jeden pakiet sezonu. Harbor dopasuje i pobierze z niego każdy dostępny odcinek.",
+  "Choose one season package. Lart will match and download every available episode from it.":
+    "Wybierz jeden pakiet sezonu. Lart dopasuje i pobierze z niego każdy dostępny odcinek.",
   "Choose subtitles": "Wybierz napisy",
   "Choose subtitles before playback": "Wybierz napisy przed odtwarzaniem",
   'Choose the "Less than $50k per year" tier.': "Wybierz plan „Less than $50k per year”.",
   "Choose the frame rate the subtitle was authored for.":
     "Wybierz liczbę klatek na sekundę, dla której utworzono napisy.",
-  "Choose up to 5 movies or shows you already like. Harbor uses them to tune your featured picks and recommendations. Totally optional.":
-    "Wybierz maksymalnie 5 filmów lub seriali, które już lubisz. Harbor użyje ich, aby lepiej dopasować wyróżnione propozycje i rekomendacje. To całkowicie opcjonalne.",
+  "Choose up to 5 movies or shows you already like. Lart uses them to tune your featured picks and recommendations. Totally optional.":
+    "Wybierz maksymalnie 5 filmów lub seriali, które już lubisz. Lart użyje ich, aby lepiej dopasować wyróżnione propozycje i rekomendacje. To całkowicie opcjonalne.",
   "Choose what happens when you hit Play on a title. Manual gives you full control over quality and source.":
     "Wybierz, co ma się dziać po naciśnięciu przycisku Odtwórz przy danym tytule. Tryb ręczny zapewnia pełną kontrolę nad jakością i źródłem.",
   "Choose what shows, what stays hidden, and what sits up top.":
@@ -127,8 +127,8 @@ const catalog03: Record<string, string> = {
   "Choose where subtitle timing feedback appears and how large it is.":
     "Wybierz miejsce wyświetlania informacji o synchronizacji napisów oraz jej rozmiar.",
   "Choose where to open this link": "Wybierz, gdzie otworzyć ten link",
-  "Choose where you can grab Harbor to drag it around your screen.":
-    "Wybierz obszar, za który można chwycić Harbor, aby przeciągnąć go po ekranie.",
+  "Choose where you can grab Lart to drag it around your screen.":
+    "Wybierz obszar, za który można chwycić Lart, aby przeciągnąć go po ekranie.",
   "Choose which Simkl rails appear on your home screen.":
     "Wybierz, które sekcje Simkl mają być wyświetlane na ekranie głównym.",
   "Choose which badges appear by your name, and their order":
@@ -151,8 +151,8 @@ const catalog03: Record<string, string> = {
   Claim: "Zarezerwuj",
   "Claim a handle": "Zarezerwuj nazwę",
   "Claim a theme": "Przypisz motyw",
-  "Claim one so people can find you across Harbor.":
-    "Zarezerwuj identyfikator, aby inni mogli Cię znaleźć w Harbor.",
+  "Claim one so people can find you across Lart.":
+    "Zarezerwuj identyfikator, aby inni mogli Cię znaleźć w Lart.",
   "Claim theme": "Przypisz motyw",
   "Claim your @handle": "Zarezerwuj swój identyfikator @handle",
   "Claim your handle": "Zarezerwuj swoją nazwę użytkownika",
@@ -162,7 +162,7 @@ const catalog03: Record<string, string> = {
   "Classic Hollywood": "Klasyczne Hollywood",
   "Classic Mystery": "Klasyczne kryminały",
   "Classic Stremio": "Klasyczny układ Stremio",
-  "Classic. Was Harbor's original pair.": "Klasyczny. Pierwotna para krojów Harbor.",
+  "Classic. Was Lart's original pair.": "Klasyczny. Pierwotna para krojów Lart.",
   "Clean modern. Sans across the board.": "Czysty i nowoczesny. Wyłącznie kroje bezszeryfowe.",
   "Clean releases for this title are still scarce. Confirm the filename and size before playing.":
     "Prawidłowo oznaczonych wydań tego tytułu nadal jest niewiele. Przed odtworzeniem sprawdź nazwę i rozmiar pliku.",
@@ -194,10 +194,10 @@ const catalog03: Record<string, string> = {
   Cleared: "Wyczyszczono",
   Clearing: "Czyszczenie",
   "Clearing…": "Czyszczenie…",
-  "Clears the URL from Harbor. The Worker keeps running on Cloudflare.":
-    "Usuwa URL z Harbor. Worker nadal działa w Cloudflare.",
-  "Clears the saved URL so you can point Harbor at another relay.":
-    "Usuwa zapisany URL, aby można było połączyć Harbor z innym przekaźnikiem.",
+  "Clears the URL from Lart. The Worker keeps running on Cloudflare.":
+    "Usuwa URL z Lart. Worker nadal działa w Cloudflare.",
+  "Clears the saved URL so you can point Lart at another relay.":
+    "Usuwa zapisany URL, aby można było połączyć Lart z innym przekaźnikiem.",
   Click: "Kliknij",
   "Click Activate in the email": "Kliknij Activate w wiadomości e-mail",
   "Click a line": "Kliknij wiersz",
@@ -211,8 +211,8 @@ const catalog03: Record<string, string> = {
     "Kliknij pojedyncze miejsce, aby wybrać jeden plik, wybierz wiele plików PNG naraz albo dodaj cały plik .zip. Pliki o odpowiednich nazwach automatycznie trafią na swoje miejsca, a pozostałe możesz umieścić ręcznie.",
   "Click any source to swap in place": "Kliknij dowolne źródło, aby je podmienić",
   "Click anywhere to skip": "Kliknij w dowolnym miejscu, aby pominąć",
-  "Click below to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "Kliknij poniżej, aby otworzyć stronę konfiguracji dodatku {name} we wbudowanej przeglądarce Harbor. Wybierz opcje. Gdy klikniesz Zainstaluj na tej stronie, Harbor automatycznie przechwyci link i zaktualizuje dodatek.",
+  "Click below to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "Kliknij poniżej, aby otworzyć stronę konfiguracji dodatku {name} we wbudowanej przeglądarce Lart. Wybierz opcje. Gdy klikniesz Zainstaluj na tej stronie, Lart automatycznie przechwyci link i zaktualizuje dodatek.",
   "Click below to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "Kliknij poniżej, aby otworzyć stronę konfiguracji dodatku {name}. Wybierz opcje, a następnie skopiuj podany link instalacyjny i wklej go poniżej, aby zaktualizować dodatek.",
   "Click the button below to open Cloudflare's Workers page.":
@@ -226,8 +226,8 @@ const catalog03: Record<string, string> = {
   "Click to cycle 100 / 75 / 50 / 25 / 0.":
     "Kliknij, aby przełączać kolejno 100 / 75 / 50 / 25 / 0.",
   "Click to edit": "Kliknij, aby edytować",
-  "Click to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "Kliknij, aby otworzyć stronę konfiguracji dodatku {name} we wbudowanej przeglądarce Harbor. Wybierz opcje. Gdy klikniesz Zainstaluj na tej stronie, Harbor automatycznie przechwyci link i zaktualizuje dodatek.",
+  "Click to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "Kliknij, aby otworzyć stronę konfiguracji dodatku {name} we wbudowanej przeglądarce Lart. Wybierz opcje. Gdy klikniesz Zainstaluj na tej stronie, Lart automatycznie przechwyci link i zaktualizuje dodatek.",
   "Click to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "Kliknij, aby otworzyć stronę konfiguracji dodatku {name}. Wybierz opcje, a następnie skopiuj podany link instalacyjny i wklej go poniżej, aby zaktualizować dodatek.",
   "Click to turn off": "Kliknij, aby wyłączyć",
@@ -269,16 +269,16 @@ const catalog03: Record<string, string> = {
   "Close trailer": "Zamknij zwiastun",
   "Close zoom controls": "Zamknij sterowanie powiększeniem",
   "Close · Esc": "Zamknij · Esc",
-  "Closing the window tucks Harbor into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
-    "Zamknięcie okna minimalizuje Harbor do zasobnika systemowego zamiast kończyć działanie, dzięki czemu można go natychmiast otworzyć ponownie. Kliknij ikonę w zasobniku prawym przyciskiem myszy, aby uzyskać dostęp do szybkich funkcji, albo wybierz opcję Zakończ, aby całkowicie zamknąć program.",
+  "Closing the window tucks Lart into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
+    "Zamknięcie okna minimalizuje Lart do zasobnika systemowego zamiast kończyć działanie, dzięki czemu można go natychmiast otworzyć ponownie. Kliknij ikonę w zasobniku prawym przyciskiem myszy, aby uzyskać dostęp do szybkich funkcji, albo wybierz opcję Zakończ, aby całkowicie zamknąć program.",
   Cloudflare: "Cloudflare",
   "Cloudflare Workers free tier:": "Bezpłatny plan Cloudflare Workers:",
   "Cloudflare asks you to pick a name (this becomes {code}). Type any name (your first name works). Then click {b1}.":
     "Cloudflare poprosi o wybranie nazwy, która stanie się adresem {code}. Wpisz dowolną nazwę, może to być Twoje imię. Następnie kliknij {b1}.",
-  "Cloudflare shows API tokens only once. Save a copy now or you'll lose the ability to stop or redeploy this relay from Harbor.":
-    "Cloudflare wyświetla tokeny API tylko raz. Zapisz teraz ich kopię, bo w przeciwnym razie utracisz możliwość zatrzymania lub ponownego wdrożenia tego przekaźnika z poziomu Harbor.",
-  "Cloudflare token form filled with name 'Harbor Relay' and one permission row set to Account / Workers Scripts / Edit":
-    "Formularz tokenu Cloudflare z nazwą „Harbor Relay” i jednym wierszem uprawnień ustawionym na Account / Workers Scripts / Edit",
+  "Cloudflare shows API tokens only once. Save a copy now or you'll lose the ability to stop or redeploy this relay from Lart.":
+    "Cloudflare wyświetla tokeny API tylko raz. Zapisz teraz ich kopię, bo w przeciwnym razie utracisz możliwość zatrzymania lub ponownego wdrożenia tego przekaźnika z poziomu Lart.",
+  "Cloudflare token form filled with name 'Lart Relay' and one permission row set to Account / Workers Scripts / Edit":
+    "Formularz tokenu Cloudflare z nazwą „Lart Relay” i jednym wierszem uprawnień ustawionym na Account / Workers Scripts / Edit",
   Code: "Kod",
   "Code expired": "Kod wygasł",
   "Code expires in {left}": "Kod wygaśnie za {left}",
@@ -289,8 +289,8 @@ const catalog03: Record<string, string> = {
   Color: "Kolor",
   "Color & HDR": "Kolor i HDR",
   "Color & HDR tone-mapping": "Kolory i mapowanie tonów HDR",
-  "Color presets, custom backgrounds, and the font pair Harbor renders in.":
-    "Gotowe zestawy kolorów, niestandardowe tła i para czcionek używana przez Harbor.",
+  "Color presets, custom backgrounds, and the font pair Lart renders in.":
+    "Gotowe zestawy kolorów, niestandardowe tła i para czcionek używana przez Lart.",
   "Color tokens": "Tokeny kolorów",
   Colors: "Kolory",
   "Colors, layout, and fonts. No code.": "Kolory, układ i czcionki. Bez kodowania.",
@@ -298,8 +298,8 @@ const catalog03: Record<string, string> = {
   Combo: "Kombinacja",
   "Come back here and hit {b1}. The Hello World can stay where it is. It's free and harmless.":
     "Wróć tutaj i naciśnij {b1}. Projekt Hello World może pozostać bez zmian. Jest bezpłatny i nieszkodliwy.",
-  "Come back to Harbor and try casting again.":
-    "Wróć do Harbor i ponownie spróbuj przesłać strumień.",
+  "Come back to Lart and try casting again.":
+    "Wróć do Lart i ponownie spróbuj przesłać strumień.",
   "Come back tomorrow, or clear what you skipped in Settings.":
     "Wróć jutro lub wyczyść pominięte pozycje w Ustawieniach.",
   "Comedy Series": "Seriale komediowe",
@@ -365,14 +365,14 @@ const catalog03: Record<string, string> = {
   "Congrats! Tap to view your badges.": "Gratulacje! Dotknij, aby wyświetlić swoje odznaki.",
   Connect: "Połącz",
   "Connect / Verify": "Połącz / zweryfikuj",
-  "Connect AniList in Harbor on your computer to see your lists here.":
-    "Połącz AniList w Harbor na komputerze, aby zobaczyć tutaj swoje listy.",
-  "Connect Discord or Telegram and Harbor posts a message when something you follow is about to drop. Hit Test to send yourself a sample first.":
-    "Połącz konto Discord lub Telegram, a Harbor wyśle wiadomość, gdy będzie zbliżać się premiera obserwowanej pozycji. Najpierw wybierz Testuj, aby wysłać sobie przykładową wiadomość.",
+  "Connect AniList in Lart on your computer to see your lists here.":
+    "Połącz AniList w Lart na komputerze, aby zobaczyć tutaj swoje listy.",
+  "Connect Discord or Telegram and Lart posts a message when something you follow is about to drop. Hit Test to send yourself a sample first.":
+    "Połącz konto Discord lub Telegram, a Lart wyśle wiadomość, gdy będzie zbliżać się premiera obserwowanej pozycji. Najpierw wybierz Testuj, aby wysłać sobie przykładową wiadomość.",
   "Connect Letterboxd": "Połącz z Letterboxd",
   "Connect MyAnimeList": "Połącz z MyAnimeList",
-  "Connect MyAnimeList in Harbor on your computer to see your lists here.":
-    "Połącz MyAnimeList w Harbor na komputerze, aby zobaczyć tutaj swoje listy.",
+  "Connect MyAnimeList in Lart on your computer to see your lists here.":
+    "Połącz MyAnimeList w Lart na komputerze, aby zobaczyć tutaj swoje listy.",
   "Connect Simkl": "Połącz z Simkl",
   "Connect TMDB": "Połącz TMDB",
   "Connect Trakt": "Połącz z Trakt",
@@ -391,8 +391,8 @@ const catalog03: Record<string, string> = {
   "Connect a source": "Połącz źródło",
   "Connect any IPTV provider. Channels are sorted by category, EPG is pulled automatically when your provider supplies it, and playback runs through native libmpv.":
     "Połącz dowolnego dostawcę IPTV. Kanały są sortowane według kategorii, dane EPG są pobierane automatycznie, jeśli dostawca je udostępnia, a odtwarzanie odbywa się przez natywny libmpv.",
-  "Connect books you own, trusted reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "Połącz własne książki, zaufane źródła treści i usługi metadanych. Harbor dba o spójność półki, a każde źródło pozostaje pod Twoją kontrolą.",
+  "Connect books you own, trusted reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "Połącz własne książki, zaufane źródła treści i usługi metadanych. Lart dba o spójność półki, a każde źródło pozostaje pod Twoją kontrolą.",
   "Connect to your computer to manage your library.":
     "Połącz się z komputerem, aby zarządzać biblioteką.",
   "Connect to your computer to switch": "Połącz się z komputerem, aby się przełączyć",
@@ -449,12 +449,12 @@ const catalog03: Record<string, string> = {
     "Najpierw „Oglądaj dalej”, potem katalogi dodatków w kolejności instalacji.",
   "Continue Watching screenshots": "Zrzuty ekranu z sekcji Kontynuuj oglądanie",
   "Continue Watching suggestions cache": "Pamięć podręczna sugestii „Oglądaj dalej”",
-  "Continue Watching, then your addon catalogs in install order. No hero, no Harbor rails.":
-    "Najpierw Kontynuuj oglądanie, a potem katalogi dodatków w kolejności instalacji. Bez banera głównego i sekcji Harbor.",
+  "Continue Watching, then your addon catalogs in install order. No hero, no Lart rails.":
+    "Najpierw Kontynuuj oglądanie, a potem katalogi dodatków w kolejności instalacji. Bez banera głównego i sekcji Lart.",
   "Continue Watching, then your installed addons. Every catalog renders as its own row, install order, no dedup, no hero.":
     "Najpierw Oglądaj dalej, potem zainstalowane dodatki. Każdy katalog jest wyświetlany w osobnym rzędzie, zgodnie z kolejnością instalacji, z duplikatami i bez karuzeli głównej.",
   "Continue from last watched": "Kontynuuj od ostatnio oglądanego miejsca",
-  "Continue in Harbor": "Kontynuuj w Harbor",
+  "Continue in Lart": "Kontynuuj w Lart",
   "Continue in browser": "Kontynuuj w przeglądarce",
   "Continue in your browser...": "Kontynuuj w przeglądarce...",
   "Continue reading": "Kontynuuj czytanie",
@@ -481,8 +481,8 @@ const catalog03: Record<string, string> = {
   "Controller support": "Obsługa kontrolerów",
   Controllers: "Kontrolery",
   "Controllers / gamepad": "Kontrolery / gamepady",
-  "Controllers Harbor can see right now. Connect one over USB or Bluetooth and it shows up here.":
-    "Kontrolery, które Harbor obecnie wykrywa. Podłącz kontroler przez USB lub Bluetooth, a pojawi się tutaj.",
+  "Controllers Lart can see right now. Connect one over USB or Bluetooth and it shows up here.":
+    "Kontrolery, które Lart obecnie wykrywa. Podłącz kontroler przez USB lub Bluetooth, a pojawi się tutaj.",
   Controls: "Elementy sterujące",
   "Controls & devices": "Sterowanie i urządzenia",
   "Cool Heists": "Stylowe napady",
@@ -514,8 +514,8 @@ const catalog03: Record<string, string> = {
   "Copy theme": "Kopiuj motyw",
   "Copy to clipboard": "Kopiuj do schowka",
   "Copy your API Key": "Skopiuj klucz API",
-  "Copy your Harbor watchlist over to Trakt, or pull your Trakt watchlist into Harbor. Safe to run again, Trakt skips anything it already has.":
-    "Skopiuj listę do obejrzenia z Harbor do Trakt lub pobierz listę z Trakt do Harbor. Możesz bezpiecznie uruchomić tę operację ponownie, Trakt pominie wszystkie pozycje, które już zawiera.",
+  "Copy your Lart watchlist over to Trakt, or pull your Trakt watchlist into Lart. Safe to run again, Trakt skips anything it already has.":
+    "Skopiuj listę do obejrzenia z Lart do Trakt lub pobierz listę z Trakt do Lart. Możesz bezpiecznie uruchomić tę operację ponownie, Trakt pominie wszystkie pozycje, które już zawiera.",
   "Copy {label}": "Kopiuj: {label}",
   "Copy {label} handle": "Kopiuj nazwę użytkownika w serwisie {label}",
   "Copy {text}": "Kopiuj {text}",
@@ -562,8 +562,8 @@ const catalog03: Record<string, string> = {
   "Could not post.": "Nie udało się opublikować posta.",
   "Could not process image.": "Nie udało się przetworzyć obrazu.",
   "Could not queue these episodes.": "Nie udało się dodać tych odcinków do kolejki.",
-  "Could not reach Harbor. Check your phone's connection and try again.":
-    "Nie udało się połączyć z Harbor. Sprawdź połączenie telefonu i spróbuj ponownie.",
+  "Could not reach Lart. Check your phone's connection and try again.":
+    "Nie udało się połączyć z Lart. Sprawdź połączenie telefonu i spróbuj ponownie.",
   "Could not reach Simkl.": "Nie udało się połączyć z Simkl.",
   "Could not reach Stremio. Check your phone's connection and try again.":
     "Nie udało się połączyć ze Stremio. Sprawdź połączenie telefonu i spróbuj ponownie.",
@@ -684,10 +684,10 @@ const catalog03: Record<string, string> = {
   "Couldn't reach AniList. Check the connection and reopen Big Picture.":
     "Nie udało się połączyć z AniList. Sprawdź połączenie i ponownie otwórz Big Picture.",
   "Couldn't reach AniList. Try refreshing.": "Nie udało się połączyć z AniList. Spróbuj odświeżyć.",
-  "Couldn't reach Harbor, check your connection":
-    "Nie udało się połączyć z Harbor. Sprawdź połączenie.",
-  "Couldn't reach Harbor. Showing this device only.":
-    "Nie udało się połączyć z Harbor. Wyświetlane jest tylko to urządzenie.",
+  "Couldn't reach Lart, check your connection":
+    "Nie udało się połączyć z Lart. Sprawdź połączenie.",
+  "Couldn't reach Lart. Showing this device only.":
+    "Nie udało się połączyć z Lart. Wyświetlane jest tylko to urządzenie.",
   "Couldn't reach Letterboxd. Try refreshing.":
     "Nie udało się połączyć z Letterboxd. Spróbuj odświeżyć.",
   "Couldn't reach MyAnimeList. Check the connection and reopen Big Picture.":

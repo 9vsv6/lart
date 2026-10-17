@@ -18,7 +18,7 @@ export default {
   "games.stardew.refresh": "모드 새로 고침",
 
   "games.stardew.import": "모드 ZIP 가져오기",
-  "games.stardew.manage": "Harbor에서 관리",
+  "games.stardew.manage": "Lart에서 관리",
   "games.stardew.manageNote": "다운로드한 SMAPI 모드를 가져와 여기서 관리하세요. 업데이트하려면 새 ZIP을 다시 가져오세요.",
   "games.stardew.previous": "이전 버전",
   "games.stardew.review": "변경 검토",
@@ -31,7 +31,7 @@ export default {
   "games.stardew.running": "모드 파일을 변경하기 전에 Stardew Valley와 SMAPI를 종료하세요.",
   "games.stardew.requirementsError": "필요한 모드나 SMAPI 버전이 없거나 너무 오래되었습니다. 모드 요구 사항을 확인하세요.",
   "games.stardew.dependentsError": "활성화된 모드가 이 버전을 필요로 합니다. 먼저 해당 모드를 비활성화하거나 호환 버전을 선택하세요.",
-  "games.stardew.unmanagedError": "이 모드는 Harbor 기록 밖에 이미 존재합니다. 기존 복사본을 옮긴 후 가져오세요.",
+  "games.stardew.unmanagedError": "이 모드는 Lart 기록 밖에 이미 존재합니다. 기존 복사본을 옮긴 후 가져오세요.",
   "games.stardew.archiveError": "바로 사용할 수 있는 모드 폴더 하나가 든 ZIP을 선택하세요. 최대 32 MB(압축 해제 후 128 MB)입니다. 소스 코드는 설치 가능한 모드가 아닙니다.",
   "games.stardew.moreFiles": "파일 {count}개 더 있음",
   "games.stardew.partialError": "일부 모드를 확인하지 못했습니다. 파일을 변경하기 전에 불완전한 검색 문제를 해결하세요.",

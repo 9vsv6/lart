@@ -7,8 +7,8 @@ const bpSources: Record<string, string> = {
   "No sources match these filters": "Keine Quellen entsprechen diesen Filtern",
   "Stream over P2P?": "Über P2P streamen?",
   "Switch source": "Quelle wechseln",
-  "This source is not cached. Harbor will stream it peer to peer, which shares data with other peers.":
-    "Diese Quelle ist nicht zwischengespeichert. Harbor streamt sie per P2P, wobei Daten mit anderen Peers geteilt werden.",
+  "This source is not cached. Lart will stream it peer to peer, which shares data with other peers.":
+    "Diese Quelle ist nicht zwischengespeichert. Lart streamt sie per P2P, wobei Daten mit anderen Peers geteilt werden.",
   Unavailable: "Nicht verfügbar",
   "Your debrid service is not responding. Try a different source.":
     "Dein Debrid-Dienst antwortet nicht. Probiere eine andere Quelle.",

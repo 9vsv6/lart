@@ -53,7 +53,7 @@ export function SimklDeviceModal({ onClose }: { onClose: () => void }) {
               {t("Connect Simkl")}
             </span>
             <h2 className="text-[17px] font-semibold tracking-tight text-ink">
-              {connectState.kind === "success" ? t("Connected") : t("Authorize Harbor on Simkl")}
+              {connectState.kind === "success" ? t("Connected") : t("Authorize Lart on Simkl")}
             </h2>
           </div>
           <button

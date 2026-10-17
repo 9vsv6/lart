@@ -132,14 +132,14 @@ export function CommunityShareModal({
             <CopyField
               label={t("Link")}
               value={collectionShareUrl(linkHandle, linkId)}
-              helper={t("Anyone with the link can open this collection once your Harbor server is live.")}
+              helper={t("Anyone with the link can open this collection once your Lart server is live.")}
               icon={<Link size={12} strokeWidth={2} />}
             />
 
             <CopyField
               label={t("Code")}
               value={collectionCode(linkHandle, linkId)}
-              helper={t("Paste this code into Harbor to open the collection.")}
+              helper={t("Paste this code into Lart to open the collection.")}
             />
 
             {isSaved ? (

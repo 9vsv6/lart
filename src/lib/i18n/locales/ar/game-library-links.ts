@@ -2,7 +2,7 @@ export default {
   "games.links.title": "الروابط",
   "games.links.sort": "ترتيب الروابط",
   "games.links.note": "ترتيب حسب عنوان URL من A إلى Z. تبقى الأسماء والوجهات كما هي.",
-  "games.links.available": "يستخدم الروابط المتوفرة بالفعل في Harbor. تظهر الروابط المكتشفة حديثًا بعد الترتيب المحفوظ.",
+  "games.links.available": "يستخدم الروابط المتوفرة بالفعل في Lart. تظهر الروابط المكتشفة حديثًا بعد الترتيب المحفوظ.",
   "games.links.original": "استعادة الترتيب الأصلي",
   "games.links.applied": "تم تحديث روابط {count} ألعاب.",
   "games.links.changes": "سيتغير ترتيب الروابط في {count} ألعاب.",

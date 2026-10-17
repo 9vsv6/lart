@@ -21,6 +21,6 @@ export default {
   "games.match.use": "Użyj tej gry",
   "games.match.remove": "Usuń dopasowanie",
   "games.match.source": "Grafiki i informacje z IGDB",
-  "games.match.note": "Wybierz wydanie pasujące do pliku. Harbor zachowa oryginalny plik i jego nazwę.",
+  "games.match.note": "Wybierz wydanie pasujące do pliku. Lart zachowa oryginalny plik i jego nazwę.",
   "games.match.empty": "Spróbuj tytułu bez oznaczeń regionu lub rewizji."
 };

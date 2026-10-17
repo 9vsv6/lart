@@ -27,6 +27,6 @@ export default {
   "games.notes.import": "JSON 가져오기",
   "games.notes.export": "백업 내보내기",
   "games.notes.unsaved": "저장하지 않은 변경 사항",
-  "games.notes.local": "이 Harbor 프로필에 저장됨",
+  "games.notes.local": "이 Lart 프로필에 저장됨",
   "games.notes.importGuide": "내 노트로 복사"
 };

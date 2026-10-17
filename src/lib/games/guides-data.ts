@@ -48,7 +48,7 @@ const tags = new Set(["p","br","hr","h1","h2","h3","h4","h5","h6","strong","b","
 const steamTags:Record<string,string>={bb_h1:"h3",bb_h2:"h4",bb_h3:"h5",bb_code:"pre",bb_table:"table",bb_table_tr:"tr",bb_table_th:"th",bb_table_td:"td",bb_ul:"ul",bb_ol:"ol",bb_blockquote:"blockquote"};
 const steamClasses:Record<string,string>={sizeThumb:"games-guide-image-thumb",sizeFull:"games-guide-image-full",sizeOriginal:"games-guide-image-original",floatLeft:"games-guide-float-left",floatRight:"games-guide-float-right",bb_quoteauthor:"games-guide-quote-author",bb_clear:"games-guide-clear",emoticon:"games-guide-emoticon"};
 const discard = new Set(["script","style","iframe","object","embed","form","input","button","textarea","select","svg","math","link","meta","template"]);
-/** Reconstruct provider content; remote CSS, scripts, attributes and frames never enter Harbor. */
+/** Reconstruct provider content; remote CSS, scripts, attributes and frames never enter Lart. */
 export function sanitizeGuideHtml(html: string, base: string): string {
   const source = document.createElement("template"), result = document.createElement("template");
   source.innerHTML = html.slice(0, 700_000); let count = 0;

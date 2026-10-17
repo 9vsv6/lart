@@ -95,7 +95,7 @@ export function RemoteServerSection() {
     <Section
       title={t("Remote streaming server")}
       subtitle={t(
-        "Point Harbor at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.",
+        "Point Lart at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.",
       )}
     >
       <SettingGroup label={t("Connection")}>

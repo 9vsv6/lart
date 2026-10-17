@@ -86,10 +86,10 @@ const catalog03: Record<string, string> = {
   "Couldn't reach AniList. Check the connection and reopen Big Picture.":
     "AniList에 연결할 수 없습니다. 연결을 확인하고 Big Picture를 다시 여세요.",
   "Couldn't reach AniList. Try refreshing.": "AniList에 연결할 수 없습니다. 새로고침해 보세요.",
-  "Couldn't reach Harbor, check your connection":
-    "Harbor에 연결할 수 없습니다. 연결 상태를 확인하세요",
-  "Couldn't reach Harbor. Showing this device only.":
-    "Harbor에 연결할 수 없습니다. 이 기기의 항목만 표시합니다.",
+  "Couldn't reach Lart, check your connection":
+    "Lart에 연결할 수 없습니다. 연결 상태를 확인하세요",
+  "Couldn't reach Lart. Showing this device only.":
+    "Lart에 연결할 수 없습니다. 이 기기의 항목만 표시합니다.",
   "Couldn't reach Letterboxd. Try refreshing.":
     "Letterboxd에 연결하지 못했습니다. 새로고침해 보세요.",
   "Couldn't reach MyAnimeList. Check the connection and reopen Big Picture.":
@@ -155,9 +155,9 @@ const catalog03: Record<string, string> = {
   Crash: "충돌",
   Create: "만들기",
   "Create Custom Token": "사용자 지정 토큰 만들기",
-  "Create Harbor account": "Harbor 계정 만들기",
+  "Create Lart account": "Lart 계정 만들기",
   "Create Token": "토큰 만들기",
-  "Create a Harbor account": "Harbor 계정 만들기",
+  "Create a Lart account": "Lart 계정 만들기",
   "Create a folder by movie or series name": "영화 또는 시리즈 이름으로 폴더 만들기",
   "Create a free account to publish. No email required.":
     "무료 계정을 만들어 게시하세요. 이메일은 필요하지 않습니다.",
@@ -345,13 +345,13 @@ const catalog03: Record<string, string> = {
   "Default picture shape on the mpv engine. Fit keeps the source as-is with any black bars; the rest stretch or crop to fill, handy for old 4:3 shows on a widescreen TV.":
     "mpv 엔진의 기본 화면 형태입니다. 맞춤은 검은 여백이 생기더라도 원본 화면비를 유지합니다. 나머지 옵션은 화면을 채우도록 늘리거나 잘라내므로 와이드스크린 TV에서 오래된 4:3 프로그램을 볼 때 유용합니다.",
   "Default speed": "기본 속도",
-  "Default. Harbor parses and scores every source and surfaces the best quality first.":
-    "기본값입니다. Harbor가 모든 소스를 분석하고 점수를 계산하여 최고 화질을 먼저 표시합니다.",
+  "Default. Lart parses and scores every source and surfaces the best quality first.":
+    "기본값입니다. Lart가 모든 소스를 분석하고 점수를 계산하여 최고 화질을 먼저 표시합니다.",
   "Default. Humanist serif, warm sans.": "기본값. 휴머니스트 세리프와 따뜻한 산세리프 조합입니다.",
   "Default. Rejects size outliers, suspicious extensions, year/episode mismatches, season packs (for episode requests), trailers, and likely cams.":
     "기본값입니다. 비정상적인 파일 크기, 의심스러운 확장자, 연도/에피소드 불일치, 시즌 팩(에피소드 요청 시), 예고편, 캠 버전으로 추정되는 항목을 제외합니다.",
-  "Default. Top pick at the top, quality tiles, and an All-Sources drawer. Harbor scores and ranks results.":
-    "기본값입니다. 상단에 최우선 추천, 화질 타일, 모든 소스 서랍을 표시합니다. Harbor가 결과의 점수를 계산하고 순위를 정합니다.",
+  "Default. Top pick at the top, quality tiles, and an All-Sources drawer. Lart scores and ranks results.":
+    "기본값입니다. 상단에 최우선 추천, 화질 타일, 모든 소스 서랍을 표시합니다. Lart가 결과의 점수를 계산하고 순위를 정합니다.",
   "Defending champion": "디펜딩 챔피언",
   "Defends privacy, free expression, and the open internet, in the courts and in the code.":
     "법정과 코드를 통해 개인정보 보호, 표현의 자유, 개방형 인터넷을 수호합니다.",
@@ -450,8 +450,8 @@ const catalog03: Record<string, string> = {
     "인증 정보가 포함된 직접 .m3u 또는 get.php URL입니다.",
   "Direct link": "직접 링크",
   "Direct stream": "직접 스트리밍",
-  "Direct torrent play needs the Harbor desktop app.":
-    "토렌트를 직접 재생하려면 Harbor 데스크톱 앱이 필요합니다.",
+  "Direct torrent play needs the Lart desktop app.":
+    "토렌트를 직접 재생하려면 Lart 데스크톱 앱이 필요합니다.",
   "Direct P2P streaming": "P2P 직접 스트리밍",
   "Directed by": "감독",
   Directing: "연출",
@@ -485,8 +485,8 @@ const catalog03: Record<string, string> = {
   "Discord confirmed. Pick a username and password to finish.":
     "Discord가 확인되었습니다. 사용자 이름과 비밀번호를 선택하여 완료하세요.",
   "Discord linked": "Discord 연결됨",
-  "Discord posts a message to a channel whenever Harbor pings it. Takes about a minute to set up.":
-    "Harbor가 신호를 보낼 때마다 Discord가 채널에 메시지를 게시합니다. 설정에는 약 1분이 걸립니다.",
+  "Discord posts a message to a channel whenever Lart pings it. Takes about a minute to set up.":
+    "Lart가 신호를 보낼 때마다 Discord가 채널에 메시지를 게시합니다. 설정에는 약 1분이 걸립니다.",
   "Discord webhook URL": "Discord 웹후크 URL",
   Discover: "인기 콘텐츠 찾기",
   "Discover more": "더 찾아보기",
@@ -496,10 +496,10 @@ const catalog03: Record<string, string> = {
   "Dismiss notification": "알림 닫기",
   "Disney+": "Disney+",
   "Disney+ Originals": "Disney+ 오리지널",
-  "Dispatched on window. Listen from your theme JS to react to Harbor's lifecycle.":
-    "window에서 디스패치됩니다. 테마 JS에서 수신해 Harbor의 수명 주기에 반응하세요.",
-  "Display 'Browsing Harbor' when nothing is playing.":
-    "재생 중인 콘텐츠가 없을 때 'Harbor 탐색 중'으로 표시합니다.",
+  "Dispatched on window. Listen from your theme JS to react to Lart's lifecycle.":
+    "window에서 디스패치됩니다. 테마 JS에서 수신해 Lart의 수명 주기에 반응하세요.",
+  "Display 'Browsing Lart' when nothing is playing.":
+    "재생 중인 콘텐츠가 없을 때 'Lart 탐색 중'으로 표시합니다.",
   "Display SIMKL Community Ratings": "SIMKL 커뮤니티 평점 표시",
   "Display SIMKL community score badge on details pages.":
     "상세 페이지에 SIMKL 커뮤니티 점수 배지를 표시합니다.",
@@ -540,15 +540,15 @@ const catalog03: Record<string, string> = {
   "Documentary Spotlight": "다큐멘터리 집중 조명",
   Documentation: "문서",
   "Documentation: run your own relay": "문서: 자체 릴레이 실행",
-  "Does Harbor {version} feel better or worse than the version you had before?":
-    "Harbor {version}은 이전에 사용하던 버전보다 더 나아졌나요, 나빠졌나요?",
+  "Does Lart {version} feel better or worse than the version you had before?":
+    "Lart {version}은 이전에 사용하던 버전보다 더 나아졌나요, 나빠졌나요?",
   "Does this stream look right?": "이 스트림이 제대로 보이나요?",
   "Dolby Vision unsupported": "Dolby Vision 지원 안 됨",
   "Don't ask again": "다시 묻지 않기",
   "Don't ask me again": "다시 묻지 않기",
   "Don't have an account?": "계정이 없으신가요?",
   "Don't have an account? Create one →": "계정이 없으신가요? 만들기 →",
-  "Donating to Harbor": "Harbor에 기부하기",
+  "Donating to Lart": "Lart에 기부하기",
   Done: "완료",
   "Done editing": "편집 완료",
   "Done.": "완료되었습니다.",
@@ -605,8 +605,8 @@ const catalog03: Record<string, string> = {
     "다운로드한 P2P 스트림 파일은 디스크에 보관되므로 작품을 다시 열 때 처음부터 시작하지 않고 즉시 이어서 재생됩니다. 보관 기간과 저장 위치를 설정할 수 있습니다.",
   "Downloaded subtitles can arrive a moment after playback starts. Leave this off to keep whatever subtitle is already showing; turn it on to switch to the best language match as soon as it loads.":
     "다운로드한 자막은 재생이 시작된 후 잠시 뒤에 도착할 수 있습니다. 현재 표시 중인 자막을 유지하려면 이 설정을 끄고, 자막이 로드되는 즉시 가장 적합한 언어로 전환하려면 켜세요.",
-  "Downloaded subtitles can arrive after playback starts. Harbor switches from a temporary track when a stronger release match becomes available.":
-    "다운로드 자막은 재생 시작 후 도착할 수 있습니다. 릴리스와 더 잘 일치하는 자막이 제공되면 Harbor가 임시 트랙에서 해당 자막으로 전환합니다.",
+  "Downloaded subtitles can arrive after playback starts. Lart switches from a temporary track when a stronger release match becomes available.":
+    "다운로드 자막은 재생 시작 후 도착할 수 있습니다. 릴리스와 더 잘 일치하는 자막이 제공되면 Lart가 임시 트랙에서 해당 자막으로 전환합니다.",
   "Downloaded themes are managed in Theme & appearance. Video and manga downloads are managed on the Downloads page.":
     "다운로드한 테마는 테마 및 화면 설정에서 관리합니다. 동영상과 만화 다운로드는 다운로드 페이지에서 관리합니다.",
   "Downloaded. Ready to install and restart.":
@@ -651,8 +651,8 @@ const catalog03: Record<string, string> = {
     "싱크 밀림 보정이 켜져 있습니다(지점 2개). 버튼으로 미세 조정하거나 어긋난 구간을 수정하세요.",
   "Drift fixed": "밀림 보정됨",
   "Drift monitor": "싱크 이탈 모니터",
-  "Drift through cinematic backdrops while Harbor sits idle.":
-    "Harbor가 유휴 상태일 때 영화 같은 배경 화면을 감상하세요.",
+  "Drift through cinematic backdrops while Lart sits idle.":
+    "Lart가 유휴 상태일 때 영화 같은 배경 화면을 감상하세요.",
   "Drifting poster wall behind the interface. Turn off on low power devices.":
     "인터페이스 뒤에서 포스터 벽이 움직입니다. 저전력 기기에서는 끄세요.",
   "Drop a clip of the bug if you can. A 5-second screen recording usually says more than five paragraphs.":
@@ -662,8 +662,8 @@ const catalog03: Record<string, string> = {
     "앱 배경에 배경화면을 표시합니다. 어둡기 슬라이더로 텍스트를 읽기 쉽게 유지할 수 있습니다.",
   "Drop a {extension}": "{extension} 파일을 놓으세요",
   "Drop images to add them": "이미지를 놓아 추가",
-  "Drop in art at any resolution. Harbor resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
-    "해상도에 상관없이 이미지를 추가하세요. Harbor가 너무 큰 이미지를 자동으로 크기 조정하고 압축하므로 크기 때문에 건너뛰지 않습니다. 투명 배경의 정사각형 PNG가 가장 보기 좋습니다.",
+  "Drop in art at any resolution. Lart resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
+    "해상도에 상관없이 이미지를 추가하세요. Lart가 너무 큰 이미지를 자동으로 크기 조정하고 압축하므로 크기 때문에 건너뛰지 않습니다. 투명 배경의 정사각형 PNG가 가장 보기 좋습니다.",
   "Drop many images, GIFs, or a .zip at once. Name each file after its slot ({example}) and we match them. Any size is fine, we resize big images and keep animated GIFs light.":
     "여러 이미지나 GIF 또는 .zip 파일을 한 번에 추가하세요. 각 파일명을 슬롯 이름({example})에 맞추면 자동으로 연결됩니다. 크기는 상관없습니다. 큰 이미지는 크기를 조정하고 움직이는 GIF는 가볍게 최적화합니다.",
   "Drop screenshots or screen recordings, or click to browse":
@@ -705,16 +705,16 @@ const catalog03: Record<string, string> = {
     "위의 각 키는 어워드 ID입니다. 생략한 키에는 기본 트로피 또는 우선순위가 낮은 팩이 적용됩니다. 전체 ID 목록은 위 그리드에 표시된 모든 어워드입니다.",
   "Each rule fires independently. Define what triggers a ping and where it goes.":
     "각 규칙은 독립적으로 실행됩니다. 알림을 보낼 조건과 대상을 지정하세요.",
-  "Each shader is hosted by its author, not bundled with Harbor. Download the ones you want; Harbor chains them in the right order and applies them in the player.":
-    "각 셰이더는 Harbor에 포함되지 않고 제작자가 직접 호스팅합니다. 원하는 셰이더를 다운로드하면 Harbor가 올바른 순서로 연결해 플레이어에 적용합니다.",
+  "Each shader is hosted by its author, not bundled with Lart. Download the ones you want; Lart chains them in the right order and applies them in the player.":
+    "각 셰이더는 Lart에 포함되지 않고 제작자가 직접 호스팅합니다. 원하는 셰이더를 다운로드하면 Lart가 올바른 순서로 연결해 플레이어에 적용합니다.",
   "Each style keeps its own arrangement, icons and profiles, so switching back and forth never loses work.":
     "스타일마다 고유한 배치, 아이콘, 프로필이 유지되므로 전환해도 작업 내용이 사라지지 않습니다.",
   Earlier: "이전",
   "Earn badges and they will appear here to feature": "배지를 획득하면 여기에 표시할 수 있습니다",
   "Eases mouse-wheel scrolling instead of jumping line by line. Turn off if you prefer an instant response or notice any lag.":
     "마우스 휠로 줄 단위로 이동하는 대신 부드럽게 스크롤합니다. 즉각적인 반응을 원하거나 지연이 느껴지면 끄세요.",
-  "Easiest path. Harbor uploads the worker, creates the Durable Object namespace, and stores the resulting URL.":
-    "가장 간편한 방법입니다. Harbor가 Worker를 업로드하고 Durable Object 네임스페이스를 만든 뒤 생성된 URL을 저장합니다.",
+  "Easiest path. Lart uploads the worker, creates the Durable Object namespace, and stores the resulting URL.":
+    "가장 간편한 방법입니다. Lart가 Worker를 업로드하고 Durable Object 네임스페이스를 만든 뒤 생성된 URL을 저장합니다.",
   "Easing into series": "부담 없이 시작하는 시리즈",
   "Easing tokens": "이징 토큰",
   Easy: "쉬움",
@@ -768,7 +768,7 @@ const catalog03: Record<string, string> = {
   Embed: "임베드",
   "Embed a YouTube video": "YouTube 동영상 삽입",
   "Embed from Spotify": "Spotify에서 삽입",
-  "Embed mpv inside Harbor window": "Harbor 창 안에 mpv 삽입",
+  "Embed mpv inside Lart window": "Lart 창 안에 mpv 삽입",
   Embedded: "내장",
   "Embedded subtitles changing size between titles, or showing empty boxes? Switch to Use my style for a consistent size. For boxes, also choose Arabic under Font.":
     "콘텐츠마다 내장 자막 크기가 달라지거나 빈 네모가 표시되나요? 일관된 크기를 유지하려면 내 스타일 사용으로 전환하세요. 네모가 표시되면 글꼴에서 아랍어도 선택하세요.",
@@ -821,7 +821,7 @@ const catalog03: Record<string, string> = {
   English: "영어",
   "English (default)": "영어(기본값)",
   "Enhanced liquid glass": "향상된 리퀴드 글래스",
-  "Enter Harbor": "Harbor 입장",
+  "Enter Lart": "Lart 입장",
   "Enter URL": "URL 입력",
   "Enter a URL or path.": "URL 또는 경로를 입력하세요.",
   "Enter a name and a valid https:// URL.": "이름과 유효한 https:// URL을 입력하세요.",
@@ -892,55 +892,55 @@ const catalog03: Record<string, string> = {
     "동적 음량 평준화로 작은 대사와 큰 액션 장면의 음량 차이를 줄입니다.",
   "Every 15 min": "15분마다",
   "Every 30 min": "30분마다",
-  "Every Harbor that announces itself on this network appears here as it answers, with the theme it is wearing.":
-    "이 네트워크에서 자신을 알린 모든 Harbor가 응답하는 대로 사용 중인 테마와 함께 여기에 표시됩니다.",
+  "Every Lart that announces itself on this network appears here as it answers, with the theme it is wearing.":
+    "이 네트워크에서 자신을 알린 모든 Lart가 응답하는 대로 사용 중인 테마와 함께 여기에 표시됩니다.",
   "Every addon": "모든 애드온",
   "Every collection": "모든 컬렉션",
   "Every color token, stable selector, {api} call, live hook (bell, account menu, avatar, status dot, unread badge), and copy-paste recipe.":
     "모든 색상 토큰, 안정적인 선택자, {api} 호출, 라이브 훅(알림 벨, 계정 메뉴, 아바타, 상태 점, 읽지 않음 배지)과 복사하여 바로 쓸 수 있는 예시를 확인하세요.",
   "Every episode of the season uses that same release.":
     "시즌의 모든 에피소드에 동일한 릴리스를 사용합니다.",
-  "Every format badge Harbor can show on streams. Click one to swap its art, hide it, or reset it. Changes apply everywhere badges appear.":
-    "Harbor가 스트림에 표시할 수 있는 모든 형식 배지입니다. 배지를 클릭하여 아트를 바꾸거나 숨기거나 재설정하세요. 변경 사항은 배지가 표시되는 모든 곳에 적용됩니다.",
+  "Every format badge Lart can show on streams. Click one to swap its art, hide it, or reset it. Changes apply everywhere badges appear.":
+    "Lart가 스트림에 표시할 수 있는 모든 형식 배지입니다. 배지를 클릭하여 아트를 바꾸거나 숨기거나 재설정하세요. 변경 사항은 배지가 표시되는 모든 곳에 적용됩니다.",
   "Every launch": "실행할 때마다",
   "Every row": "모든 행",
   "Every saga in one place. Search anything: if it exists, it's here.":
     "모든 시리즈를 한곳에서 만나보세요. 무엇이든 검색하세요. 존재하는 작품이라면 여기에 있습니다.",
-  "Every shortcut Harbor responds to. Click a binding to rebind it.":
-    "Harbor에서 지원하는 모든 단축키입니다. 키 지정을 클릭하여 변경할 수 있습니다.",
+  "Every shortcut Lart responds to. Click a binding to rebind it.":
+    "Lart에서 지원하는 모든 단축키입니다. 키 지정을 클릭하여 변경할 수 있습니다.",
   "Every slot name": "모든 슬롯 이름",
-  "Every source Harbor tried failed to start. Pick a different one, or try again in a moment.":
-    "Harbor가 시도한 모든 소스를 재생하지 못했습니다. 다른 소스를 선택하거나 잠시 후 다시 시도하세요.",
-  "Every surface in Harbor maps to one of these 12 variables.":
-    "Harbor의 모든 화면 요소는 이 12개 변수 중 하나에 매핑됩니다.",
+  "Every source Lart tried failed to start. Pick a different one, or try again in a moment.":
+    "Lart가 시도한 모든 소스를 재생하지 못했습니다. 다른 소스를 선택하거나 잠시 후 다시 시도하세요.",
+  "Every surface in Lart maps to one of these 12 variables.":
+    "Lart의 모든 화면 요소는 이 12개 변수 중 하나에 매핑됩니다.",
   "Every theme is sandboxed, scanned, and reviewed before it reaches the library, so you can try any look without a second thought.":
     "모든 테마는 라이브러리에 등록되기 전에 샌드박스에서 실행되고 검사와 검토를 거치므로 어떤 스타일이든 안심하고 사용해 볼 수 있습니다.",
-  "Every theme you share gets a private owner token. On the device where you shared it, Harbor saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
-    "공유하는 모든 테마에는 비공개 소유자 토큰이 발급됩니다. 테마를 공유한 기기에서는 Harbor가 토큰을 자동으로 저장하므로, 해당 테마가 바로 여기에 표시되어 탭 한 번으로 소유권을 등록할 수 있습니다. 다른 기기에서 소유권을 등록하려면 아래에 해당 토큰을 붙여 넣으세요. 이제 새로 공유하는 테마는 계정에 바로 연결되므로 다시 이 작업을 할 필요가 없습니다.",
-  "Every variable, selector, hook, and recipe for building custom Harbor themes.":
-    "사용자 지정 Harbor 테마 제작에 필요한 모든 변수, 선택자, 훅, 레시피입니다.",
-  "Every winner Harbor ships, browsable offline by year and category.":
-    "Harbor에 포함된 모든 수상작을 연도와 부문별로 오프라인에서 탐색할 수 있습니다.",
+  "Every theme you share gets a private owner token. On the device where you shared it, Lart saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
+    "공유하는 모든 테마에는 비공개 소유자 토큰이 발급됩니다. 테마를 공유한 기기에서는 Lart가 토큰을 자동으로 저장하므로, 해당 테마가 바로 여기에 표시되어 탭 한 번으로 소유권을 등록할 수 있습니다. 다른 기기에서 소유권을 등록하려면 아래에 해당 토큰을 붙여 넣으세요. 이제 새로 공유하는 테마는 계정에 바로 연결되므로 다시 이 작업을 할 필요가 없습니다.",
+  "Every variable, selector, hook, and recipe for building custom Lart themes.":
+    "사용자 지정 Lart 테마 제작에 필요한 모든 변수, 선택자, 훅, 레시피입니다.",
+  "Every winner Lart ships, browsable offline by year and category.":
+    "Lart에 포함된 모든 수상작을 연도와 부문별로 오프라인에서 탐색할 수 있습니다.",
   Everyone: "모두",
   "Everyone else": "그 외 모든 사용자",
   "Everyone is loaded in. Press play to start watching.":
     "모두 입장했습니다. 재생을 눌러 시청을 시작하세요.",
   "Everyone loses access. This cannot be undone.":
     "모든 사용자가 접근 권한을 잃습니다. 이 작업은 취소할 수 없습니다.",
-  "Everyone on this Harbor": "이 Harbor의 모든 사용자",
-  "Everyone who uses this Harbor gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
-    "이 Harbor를 사용하는 모든 사람은 각자의 시청 기록, 아바타, 색상 및 선택적 PIN을 사용할 수 있습니다. 언제든지 전환할 수 있습니다.",
+  "Everyone on this Lart": "이 Lart의 모든 사용자",
+  "Everyone who uses this Lart gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
+    "이 Lart를 사용하는 모든 사람은 각자의 시청 기록, 아바타, 색상 및 선택적 PIN을 사용할 수 있습니다. 언제든지 전환할 수 있습니다.",
   Everything: "전체",
-  "Everything Harbor saves lives on this computer. If space runs low, clear a cache below; Harbor rebuilds them as you browse.":
-    "Harbor에서 저장하는 모든 데이터는 이 컴퓨터에 보관됩니다. 공간이 부족하면 아래의 캐시를 삭제하세요. 탐색하면서 Harbor가 캐시를 다시 생성합니다.",
+  "Everything Lart saves lives on this computer. If space runs low, clear a cache below; Lart rebuilds them as you browse.":
+    "Lart에서 저장하는 모든 데이터는 이 컴퓨터에 보관됩니다. 공간이 부족하면 아래의 캐시를 삭제하세요. 탐색하면서 Lart가 캐시를 다시 생성합니다.",
   "Everything else, via your own server": "그 밖의 모든 소스는 자체 서버를 통해 이용",
   "Everything from {year}, sorted across trending, top rated, and hidden gems.":
     "{year}년 작품 전체를 인기 급상승, 평점순, 숨은 명작으로 나누어 정렬했습니다.",
   "Everything here is already in your account.": "여기의 모든 항목이 이미 계정에 있습니다.",
   "Everything here took effect straight away, and it is saved on this device.":
     "여기의 모든 변경 사항은 즉시 적용되었으며 이 기기에 저장되었습니다.",
-  "Everything on this page is written to your Harbor account. Your TV reads it on its next check-in, so you can set the whole thing up from here and never touch the remote.":
-    "이 페이지의 모든 설정은 Harbor 계정에 저장됩니다. 다음 확인 시 TV에 반영되므로 리모컨을 전혀 사용하지 않고 여기서 모두 설정할 수 있습니다.",
+  "Everything on this page is written to your Lart account. Your TV reads it on its next check-in, so you can set the whole thing up from here and never touch the remote.":
+    "이 페이지의 모든 설정은 Lart 계정에 저장됩니다. 다음 확인 시 TV에 반영되므로 리모컨을 전혀 사용하지 않고 여기서 모두 설정할 수 있습니다.",
   "Everything on this page of {genre} is hidden by your anime filter.":
     "이 {genre} 페이지의 모든 항목이 애니메이션 필터로 숨겨졌습니다.",
   "Everything originally in {name}: movies and series across every genre, era, and hidden gems.":
@@ -950,8 +950,8 @@ const catalog03: Record<string, string> = {
   "Everything releasing this month from TMDB": "TMDB의 이번 달 모든 공개작",
   "Everything you pick is saved into one file. Restoring it later only touches what is in the file. Your Stremio sign-in is always left out.":
     "선택한 모든 항목이 하나의 파일에 저장됩니다. 나중에 복원하면 파일에 포함된 항목만 변경됩니다. Stremio 로그인 정보는 항상 제외됩니다.",
-  "Everything you save here stays in this browser. Your Stremio login, API keys, watch progress, picker cache, dismissed tips. Harbor servers never see any of it. Clearing your browser data wipes it.":
-    "여기에 저장하는 모든 데이터는 이 브라우저에만 보관됩니다. Stremio 로그인, API 키, 시청 진행 상황, 선택기 캐시, 닫은 팁이 포함됩니다. Harbor 서버에서는 어떤 데이터도 볼 수 없습니다. 브라우저 데이터를 삭제하면 모두 지워집니다.",
+  "Everything you save here stays in this browser. Your Stremio login, API keys, watch progress, picker cache, dismissed tips. Lart servers never see any of it. Clearing your browser data wipes it.":
+    "여기에 저장하는 모든 데이터는 이 브라우저에만 보관됩니다. Stremio 로그인, API 키, 시청 진행 상황, 선택기 캐시, 닫은 팁이 포함됩니다. Lart 서버에서는 어떤 데이터도 볼 수 없습니다. 브라우저 데이터를 삭제하면 모두 지워집니다.",
   "Everything your addons offer, shown as posters. Scroll, search, or filter to what you want.":
     "애드온에서 제공하는 모든 콘텐츠를 포스터로 표시합니다. 스크롤하거나 검색 또는 필터링해 원하는 콘텐츠를 찾으세요.",
   Excellence: "탁월함",

@@ -3,8 +3,8 @@ const extra: Record<string, string> = {
   "{count} community ratings on stremio-addons.net":
     "stremio-addons.netでのコミュニティ評価{count}件",
   "{count} selected": "{count}件選択中",
-  "{count} tracker request blocked this session. Harbor itself sends zero telemetry.":
-    "このセッションでトラッカーのリクエストを{count}件ブロックしました。Harbor自体はテレメトリを一切送信しません。",
+  "{count} tracker request blocked this session. Lart itself sends zero telemetry.":
+    "このセッションでトラッカーのリクエストを{count}件ブロックしました。Lart自体はテレメトリを一切送信しません。",
   "{d}d ago": "{d}日前",
   "{h}h ago": "{h}時間前",
   "{langs} only": "{langs}のみ",
@@ -54,10 +54,10 @@ const extra: Record<string, string> = {
   "24/7": "24時間365日",
   "4 digits": "4桁",
   "5s": "5秒",
-  "A browser tab opened on AniList. Approve Harbor there, then copy the text it shows and paste it below.":
-    "ブラウザでAniListのタブが開きました。そこでHarborを承認し、表示されたテキストをコピーして下に貼り付けてください。",
-  "A browser tab opened on MyAnimeList. Approve Harbor there, then copy the code or the page URL and paste it below.":
-    "ブラウザでMyAnimeListのタブが開きました。そこでHarborを承認し、コードまたはページのURLをコピーして下に貼り付けてください。",
+  "A browser tab opened on AniList. Approve Lart there, then copy the text it shows and paste it below.":
+    "ブラウザでAniListのタブが開きました。そこでLartを承認し、表示されたテキストをコピーして下に貼り付けてください。",
+  "A browser tab opened on MyAnimeList. Approve Lart there, then copy the code or the page URL and paste it below.":
+    "ブラウザでMyAnimeListのタブが開きました。そこでLartを承認し、コードまたはページのURLをコピーして下に貼り付けてください。",
   "A debrid service is connected. You'll get instant, high-quality streams.":
     "Debridサービスが接続されています。高画質のストリームをすぐに再生できます。",
   "A grown-up can enter the parent PIN to keep watching.":
@@ -71,10 +71,10 @@ const extra: Record<string, string> = {
   "Access denied": "アクセスが拒否されました",
   "Ad {n}": "広告 {n}",
   Add: "追加",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.":
-    "Harborのウォッチリストから{n}件の作品をTraktに追加しますか？Traktにすでにある作品はスキップされます。",
-  "Add {n} titles from your Trakt watchlist to Harbor?":
-    "Traktのウォッチリストから{n}件の作品をHarborに追加しますか？",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.":
+    "Lartのウォッチリストから{n}件の作品をTraktに追加しますか？Traktにすでにある作品はスキップされます。",
+  "Add {n} titles from your Trakt watchlist to Lart?":
+    "Traktのウォッチリストから{n}件の作品をLartに追加しますか？",
   "Add {title} to MyAnimeList": "{title}をMyAnimeListに追加",
   "Add a profile for someone else and everyone keeps their own Continue Watching, watch history, and progress.":
     "ほかの人のプロフィールを追加すると、それぞれが自分専用の「視聴を続ける」、視聴履歴、進捗を利用できます。",
@@ -89,7 +89,7 @@ const extra: Record<string, string> = {
   "Add to MAL": "MALに追加",
   "Add to watchlist": "ウォッチリストに追加",
   added: "追加済み",
-  "Added {n} to your Harbor watchlist": "Harborのウォッチリストに{n}件追加しました",
+  "Added {n} to your Lart watchlist": "Lartのウォッチリストに{n}件追加しました",
   "Added to stremio-addons.net in the last 14 days": "過去14日間にstremio-addons.netへ追加",
   "Adds a blurred glass effect behind the stream picker panel.":
     "ストリーム選択パネルの背後にぼかしガラス効果を追加します。",
@@ -146,10 +146,10 @@ const extra: Record<string, string> = {
   "Gemini · in-player song ID": "Gemini · プレイヤー内の楽曲認識",
   "Gemini API key": "Gemini APIキー",
   "AudD API token": "AudD APIトークン",
-  "Authorize Harbor on AniList": "AniListでHarborを認証",
-  "Authorize Harbor on MyAnimeList": "MyAnimeListでHarborを認証",
-  "Authorize Harbor on Simkl": "SimklでHarborを認証",
-  "Authorize Harbor on Trakt": "TraktでHarborを認証",
+  "Authorize Lart on AniList": "AniListでLartを認証",
+  "Authorize Lart on MyAnimeList": "MyAnimeListでLartを認証",
+  "Authorize Lart on Simkl": "SimklでLartを認証",
+  "Authorize Lart on Trakt": "TraktでLartを認証",
   "Authorized {when}": "{when}に認証済み",
   "Auto is best for most people. mpv handles the trickiest 4K, HDR, and audio formats.":
     "ほとんどの場合は「自動」がおすすめです。mpvなら、特に扱いの難しい4K、HDR、音声形式にも対応できます。",
@@ -200,8 +200,8 @@ const extra: Record<string, string> = {
   "Cache location": "キャッシュの保存先",
   Calendar: "カレンダー",
   Canceled: "キャンセル済み",
-  "Cap how much disk the cache can use. When it goes over, Harbor deletes the oldest files first. Enforced on launch and as streams close.":
-    "キャッシュが使用できるディスク容量を制限します。上限を超えると、Harborは古いファイルから削除します。起動時とストリーム終了時に適用されます。",
+  "Cap how much disk the cache can use. When it goes over, Lart deletes the oldest files first. Enforced on launch and as streams close.":
+    "キャッシュが使用できるディスク容量を制限します。上限を超えると、Lartは古いファイルから削除します。起動時とストリーム終了時に適用されます。",
   Catalog: "カタログ",
   categories: "カテゴリ",
   category: "カテゴリ",
@@ -228,7 +228,7 @@ const extra: Record<string, string> = {
   "Click another": "別の行をクリック",
   "Client ID": "クライアントID",
   "Client secret": "クライアントシークレット",
-  "Close Harbor?": "Harborを終了しますか？",
+  "Close Lart?": "Lartを終了しますか？",
   "Close image viewer": "画像ビューアーを閉じる",
   "Close match to host": "ホストとほぼ一致",
   "Close overview": "概要を閉じる",
@@ -262,8 +262,8 @@ const extra: Record<string, string> = {
   "Continue in your browser...": "ブラウザで続行してください...",
   "Copy diagnostics": "診断情報をコピー",
   "Copy diagnostics grabs the engine status and your P2P settings as JSON, handy to paste into a bug report. The engine folder holds the DHT cache (dht.json) and active transfer data.": "「診断情報をコピー」では、エンジンの状態とP2P設定をJSON形式で取得できます。バグ報告への貼り付けに便利です。エンジンフォルダーには、DHTキャッシュ（dht.json）と実行中の転送データが保存されています。",
-  "Copy your Harbor watchlist over to Trakt, or pull your Trakt watchlist into Harbor. Safe to run again, Trakt skips anything it already has.":
-    "HarborのウォッチリストをTraktにコピーするか、TraktのウォッチリストをHarborに取り込めます。再実行しても安全です。Traktにすでにある作品はスキップされます。",
+  "Copy your Lart watchlist over to Trakt, or pull your Trakt watchlist into Lart. Safe to run again, Trakt skips anything it already has.":
+    "LartのウォッチリストをTraktにコピーするか、TraktのウォッチリストをLartに取り込めます。再実行しても安全です。Traktにすでにある作品はスキップされます。",
   "Corner radius": "角の丸み",
   "Could not identify this title on Trakt.": "Traktでこの作品を特定できませんでした。",
   "Could not send: {error}": "送信できませんでした: {error}",
@@ -357,8 +357,8 @@ const extra: Record<string, string> = {
   "Episode details": "エピソード詳細",
   "Episode ordering": "エピソードの順序",
   "Esc exits fullscreen first": "Escで先に全画面表示を終了",
-  "Everyone who uses this Harbor gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
-    "このHarborを使う人ごとに、視聴履歴、アバター、カラー、任意のPINを設定できます。いつでも切り替えられます。",
+  "Everyone who uses this Lart gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
+    "このLartを使う人ごとに、視聴履歴、アバター、カラー、任意のPINを設定できます。いつでも切り替えられます。",
   "Exit sync mode": "同期モードを終了",
   Experimental: "試験的機能",
   Expiring: "期限間近",
@@ -417,10 +417,10 @@ const extra: Record<string, string> = {
   "Group episodes by story arc": "エピソードをストーリーアーク別にまとめる",
   Grouped: "グループ化済み",
   "Grown-ups only": "大人のみ",
-  "Harbor keeps your MyAnimeList watch progress in sync.":
-    "HarborがMyAnimeListの視聴進捗を同期します。",
-  "Harbor ranking puts the best-scoring sources first. Addon order follows your addon priority (organize it in Addons, Installed tab, Reorder) and keeps each addon's results in the order it returned them, like the Stremio and Vidi apps.":
-    "Harborランキングでは、スコアの高いソースが先に表示されます。アドオン順では、設定したアドオンの優先順位（「アドオン」>「インストール済み」タブ>「並べ替え」で設定）に従い、各アドオンの結果はStremioやVidiと同様に返された順序のまま表示されます。",
+  "Lart keeps your MyAnimeList watch progress in sync.":
+    "LartがMyAnimeListの視聴進捗を同期します。",
+  "Lart ranking puts the best-scoring sources first. Addon order follows your addon priority (organize it in Addons, Installed tab, Reorder) and keeps each addon's results in the order it returned them, like the Stremio and Vidi apps.":
+    "Lartランキングでは、スコアの高いソースが先に表示されます。アドオン順では、設定したアドオンの優先順位（「アドオン」>「インストール済み」タブ>「並べ替え」で設定）に従い、各アドオンの結果はStremioやVidiと同様に返された順序のまま表示されます。",
   HDR: "HDR",
   "HDR to SDR: Off": "HDRからSDR: オフ",
   "HDR to SDR: On": "HDRからSDR: オン",
@@ -435,8 +435,8 @@ const extra: Record<string, string> = {
   "Hides the button on its own after a few seconds so a wrong one doesn't sit there the whole episode.":
     "数秒後にボタンを自動で隠し、誤ったボタンがエピソード中ずっと表示されないようにします。",
   "High-quality episode images": "高画質のエピソード画像",
-  "Hold Ctrl or Cmd and scroll to resize Harbor's interface smoothly.":
-    "CtrlまたはCmdを押しながらスクロールすると、Harborのインターフェースを滑らかに拡大・縮小できます。",
+  "Hold Ctrl or Cmd and scroll to resize Lart's interface smoothly.":
+    "CtrlまたはCmdを押しながらスクロールすると、Lartのインターフェースを滑らかに拡大・縮小できます。",
   "Home hero shadow": "ホームのメインビジュアルの影",
   "Home languages": "ホームの言語",
   "Home Rail Settings": "ホームの行設定",
@@ -489,8 +489,8 @@ const extra: Record<string, string> = {
   "Keep Watching": "続きを見る",
   "Keeps fetching the full torrent in the background, even when paused, so you can pre-buffer big remuxes and scrub a finished file with no re-downloading. Uses more bandwidth and disk; cleaned up when you switch or close like normal.":
     "一時停止中もバックグラウンドでTorrent全体の取得を続けます。大容量のremuxを事前にバッファリングでき、取得済みのファイルを再ダウンロードせずにシークできます。通信量とディスク容量を多く使用しますが、切り替え時や終了時には通常どおり消去されます。",
-  "Keeps HDR inside Harbor with the controls floating above the video. Subtitles render on the video. If the control bar does not appear, press Esc or use separate window.":
-    "HDRをHarbor内で維持し、操作ボタンを動画の上に重ねて表示します。字幕も動画上に表示されます。コントロールバーが表示されない場合はEscを押すか、別ウィンドウを使用してください。",
+  "Keeps HDR inside Lart with the controls floating above the video. Subtitles render on the video. If the control bar does not appear, press Esc or use separate window.":
+    "HDRをLart内で維持し、操作ボタンを動画の上に重ねて表示します。字幕も動画上に表示されます。コントロールバーが表示されない場合はEscを押すか、別ウィンドウを使用してください。",
   "Kids profile": "子ども用プロフィール",
   Language: "言語",
   "Last updated {ago}": "最終更新 {ago}",
@@ -618,8 +618,8 @@ const extra: Record<string, string> = {
   "OpenRouter API key (sk-or-...)": "OpenRouter APIキー（sk-or-...）",
   "Opens Stremio in your browser. Works with email, Facebook, and Apple accounts.":
     "ブラウザでStremioを開きます。メールアドレス、Facebook、Appleのアカウントに対応しています。",
-  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Harbor writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
-    "ライブラリ → ローカルタブの設定です。自分のドライブからスキャンするフォルダーを指定できます。メタデータをエクスポートすると、HarborはKodi形式の.nfoを作成し、各ファイルと同じ場所に以下のサイズでアートワークをダウンロードします。",
+  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Lart writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
+    "ライブラリ → ローカルタブの設定です。自分のドライブからスキャンするフォルダーを指定できます。メタデータをエクスポートすると、LartはKodi形式の.nfoを作成し、各ファイルと同じ場所に以下のサイズでアートワークをダウンロードします。",
   "or use email": "またはメールアドレスを使用",
   "out of 5": "5点満点",
   "Output device": "出力デバイス",
@@ -635,12 +635,12 @@ const extra: Record<string, string> = {
   peers: "ピア",
   "Peers, speed and progress while a torrent streams. Sits clear of the exit button, top left.":
     "トレント再生中のピア数、速度、進行状況を表示します。左上に配置され、終了ボタンと重なりません。",
-  "Pick a display and body pairing, or upload your own font to use across Harbor.":
-    "見出し用と本文用のフォントの組み合わせを選ぶか、独自のフォントをアップロードしてHarbor全体に適用できます。",
+  "Pick a display and body pairing, or upload your own font to use across Lart.":
+    "見出し用と本文用のフォントの組み合わせを選ぶか、独自のフォントをアップロードしてLart全体に適用できます。",
   "Pick a list to view it.": "表示するリストを選んでください。",
   "Pick a look. Every color and surface updates instantly.":
     "外観を選んでください。すべての色とサーフェスがすぐに更新されます。",
-  "Pick a source once and Harbor keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
+  "Pick a source once and Lart keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
     "一度ソースを選ぶと、同じリリースからそのシーズンの残りを続けて再生するため、選び直す必要はありません。debridのシーズンパックで最も効果的です。アニメには適用されません。",
   "Pick a video": "動画を選ぶ",
   "Pick a World": "世界を選ぶ",
@@ -649,8 +649,8 @@ const extra: Record<string, string> = {
     "完全な黒を表示できるパネルではOLEDを選ぶと、トーンマッピングされたHDRの暗部ディテールを引き出せます。",
   "Pick up partly-watched episodes and movies at your saved spot. Anything watched past 80% always restarts. Turn this off to always start from the beginning, handy if you rewatch shows.":
     "途中まで視聴したエピソードや映画を、保存した位置から再開します。80%を超えて視聴した作品は常に最初から再生されます。番組を見直す場合など、常に最初から再生したいときはオフにしてください。",
-  "Pick which audio and subtitle languages Harbor reaches for first.":
-    "Harborで優先する音声と字幕の言語を選んでください。",
+  "Pick which audio and subtitle languages Lart reaches for first.":
+    "Lartで優先する音声と字幕の言語を選んでください。",
   "Pick which score anime cards show. IMDb falls back to MAL when a title has no IMDb rating yet.":
     "アニメカードに表示する評価を選びます。IMDb評価がまだない作品ではMAL評価を表示します。",
   "Pick your source": "ソースを選択",
@@ -669,8 +669,8 @@ const extra: Record<string, string> = {
   "Player log": "プレイヤーログ",
   "Playing now": "再生中",
   Playlist: "プレイリスト",
-  "Plays + ratings sync from Harbor to Trakt.tv.":
-    "再生履歴と評価をHarborからTrakt.tvへ同期します。",
+  "Plays + ratings sync from Lart to Trakt.tv.":
+    "再生履歴と評価をLartからTrakt.tvへ同期します。",
   "Plays a muted trailer in the backdrop when you open a title. Click the speaker to unmute. Falls back to the image when no trailer is available.":
     "作品を開くと、背景で音声なしの予告編を再生します。スピーカーをクリックすると音声が有効になります。予告編がない場合は画像を表示します。",
   "Plays HDR in its own window so Windows shows real HDR and the SDR brightness slider stops dimming it. The most reliable way to get true HDR.":
@@ -819,8 +819,8 @@ const extra: Record<string, string> = {
   "Service-specific browsing needs a TMDB key. Pick All / Movies / Shows to browse via Cinemeta.":
     "サービス別に閲覧するにはTMDBキーが必要です。Cinemetaで閲覧するには「すべて」/「映画」/「シリーズ」を選択してください。",
   "Set to where the video is right now": "動画の現在位置に設定",
-  "Set your MyAnimeList profile picture as your Harbor avatar.":
-    "MyAnimeListのプロフィール画像をHarborのアバターに設定します。",
+  "Set your MyAnimeList profile picture as your Lart avatar.":
+    "MyAnimeListのプロフィール画像をLartのアバターに設定します。",
   Shadow: "影",
   Show: "表示",
   "Show {n} more reviews": "さらに{n}件のレビューを表示",
@@ -830,8 +830,8 @@ const extra: Record<string, string> = {
     "プレイヤーの操作ボタンが非表示でも、音量を変更したときに音量表示を短時間表示します。キーボードやスクロールホイールによる変更も常に確認できます。",
   "Show a Skip button when a known injected ad plays, and a small report button on new releases so you can mark ads for review.":
     "既知の埋め込み広告が再生されたときに「スキップ」ボタンを表示します。また、新作には小さな報告ボタンを表示し、広告を確認対象として報告できます。",
-  "Show a Skip Intro / Skip Credits button when Harbor detects one. Turn this off to never show it. You can also tap the X on the button to dismiss a wrong one for the rest of the episode.":
-    "Harborが検出したときに「イントロをスキップ」/「クレジットをスキップ」ボタンを表示します。今後一切表示しない場合はオフにしてください。誤検出の場合はボタンのXをタップすると、そのエピソード中は非表示にできます。",
+  "Show a Skip Intro / Skip Credits button when Lart detects one. Turn this off to never show it. You can also tap the X on the button to dismiss a wrong one for the rest of the episode.":
+    "Lartが検出したときに「イントロをスキップ」/「クレジットをスキップ」ボタンを表示します。今後一切表示しない場合はオフにしてください。誤検出の場合はボタンのXをタップすると、そのエピソード中は非表示にできます。",
   "Show an “on disk” badge on cards": "カードに「ディスク上」バッジを表示",
   "Show audience score on cards": "カードに視聴者スコアを表示",
   "Show comments on detail pages": "詳細ページにコメントを表示",
@@ -869,8 +869,8 @@ const extra: Record<string, string> = {
   "Show Up Next on Simkl rail": "Simklレールに「次に見る」を表示",
   "Show what you're actually watching, under the title in the player.":
     "実際に再生中の内容を、プレイヤーのタイトルの下に表示します。",
-  "Show your operating system's own title bar with its minimize, maximize, and close buttons. They stay reachable everywhere, including while a video is playing. Turn this off to use Harbor's built-in window buttons.":
-    "OS標準のタイトルバーに、最小化、最大化、閉じるボタンを表示します。動画の再生中を含め、どの画面からでも操作できます。オフにすると、Harbor内蔵のウィンドウボタンを使用します。",
+  "Show your operating system's own title bar with its minimize, maximize, and close buttons. They stay reachable everywhere, including while a video is playing. Turn this off to use Lart's built-in window buttons.":
+    "OS標準のタイトルバーに、最小化、最大化、閉じるボタンを表示します。動画の再生中を含め、どの画面からでも操作できます。オフにすると、Lart内蔵のウィンドウボタンを使用します。",
   "Showing {shown} of {total}.": "{total}件中{shown}件を表示しています。",
   Shows: "番組",
   "Shows each episode's rating. Add your free OMDb API key for real IMDb scores; without it, ratings fall back to TMDB.":
@@ -878,8 +878,8 @@ const extra: Record<string, string> = {
   "Shows the episode synopsis on the cards. Turn it off to hide it.":
     "カードにエピソードのあらすじを表示します。非表示にするにはオフにしてください。",
   "Shows titles suitable up to age {age}.": "{age}歳以下向けの作品を表示します。",
-  "Sign in to Stremio first so Harbor knows which watchlist to sync.":
-    "最初にStremioへサインインして、Harborが同期するウォッチリストを特定できるようにしてください。",
+  "Sign in to Stremio first so Lart knows which watchlist to sync.":
+    "最初にStremioへサインインして、Lartが同期するウォッチリストを特定できるようにしてください。",
   "Sign in to Stremio first. This reads the active profile's library.":
     "最初にStremioへサインインしてください。現在のプロフィールのライブラリを読み込みます。",
   "Sign in to Stremio first. This scans the active profile's library.":
@@ -892,8 +892,8 @@ const extra: Record<string, string> = {
   "Skip injected ad?": "挿入広告をスキップしますか？",
   "Skip injected ads automatically": "挿入広告を自動でスキップ",
   "Skip intros & credits": "イントロとクレジットをスキップ",
-  "Skip the 'stream over peer-to-peer?' prompt and start uncached torrents immediately. Harbor remembers your choice after the first confirmation anyway.":
-    "「peer-to-peerでストリーミングしますか？」という確認を省略し、キャッシュされていないトレントをすぐに開始します。いずれにしても、Harborは最初の確認後に選択を記憶します。",
+  "Skip the 'stream over peer-to-peer?' prompt and start uncached torrents immediately. Lart remembers your choice after the first confirmation anyway.":
+    "「peer-to-peerでストリーミングしますか？」という確認を省略し、キャッシュされていないトレントをすぐに開始します。いずれにしても、Lartは最初の確認後に選択を記憶します。",
   "Skip Who's watching and always start as this profile. PIN-locked profiles can't be a default.":
     "「視聴するプロフィール」を省略し、常にこのプロフィールで開始します。PINでロックされたプロフィールはデフォルトにできません。",
   "skipped {n} anime": "{n}件のアニメをスキップしました",
@@ -923,8 +923,8 @@ const extra: Record<string, string> = {
   "Stream cache": "ストリームキャッシュ",
   "Stream descriptions": "ストリームの説明",
   "Stream quality in player": "プレイヤーにストリーム品質を表示",
-  "Stream torrents straight from Harbor's built-in engine when you have no debrid set up, or a torrent isn't cached. This connects to peers over your own connection. Turn off to only ever play debrid and direct links.":
-    "debridが未設定の場合や、トレントがキャッシュされていない場合に、Harbor内蔵エンジンでトレントを直接ストリーミングします。お使いの回線からピアへ接続します。debridと直接リンクのみを再生するにはオフにしてください。",
+  "Stream torrents straight from Lart's built-in engine when you have no debrid set up, or a torrent isn't cached. This connects to peers over your own connection. Turn off to only ever play debrid and direct links.":
+    "debridが未設定の場合や、トレントがキャッシュされていない場合に、Lart内蔵エンジンでトレントを直接ストリーミングします。お使いの回線からピアへ接続します。debridと直接リンクのみを再生するにはオフにしてください。",
   "Streaming quality": "ストリーミング品質",
   Streams: "ストリーム",
   Studio: "スタジオ",
@@ -982,8 +982,8 @@ const extra: Record<string, string> = {
   "This list needs your {key} API key. Add it in Settings, then refresh.":
     "このリストには{key} APIキーが必要です。設定で追加してから更新してください。",
   "This trailer plays on YouTube.": "この予告編はYouTubeで再生されます。",
-  "This usually means antivirus removed the server file (stremio-server.exe). Add Harbor's install folder to your antivirus exclusions, then reinstall.":
-    "通常は、ウイルス対策ソフトがサーバーファイル（stremio-server.exe）を削除したことが原因です。Harborのインストールフォルダーをウイルス対策ソフトの除外対象に追加してから、再インストールしてください。",
+  "This usually means antivirus removed the server file (stremio-server.exe). Add Lart's install folder to your antivirus exclusions, then reinstall.":
+    "通常は、ウイルス対策ソフトがサーバーファイル（stremio-server.exe）を削除したことが原因です。Lartのインストールフォルダーをウイルス対策ソフトの除外対象に追加してから、再インストールしてください。",
   "Time's up!": "時間切れです！",
   title: "タイトル",
   titles: "タイトル",
@@ -1002,8 +1002,8 @@ const extra: Record<string, string> = {
   "Top left": "左上",
   "Top right": "右上",
   "Torrent name": "トレント名",
-  "Track everything you watch, see your watchlist, and get personalized recommendations on Harbor's home page. Free at trakt.tv.":
-    "視聴した作品をすべて記録し、ウォッチリストの確認や、Harborのホームであなた向けのおすすめを利用できます。trakt.tvで無料で登録できます。",
+  "Track everything you watch, see your watchlist, and get personalized recommendations on Lart's home page. Free at trakt.tv.":
+    "視聴した作品をすべて記録し、ウォッチリストの確認や、Lartのホームであなた向けのおすすめを利用できます。trakt.tvで無料で登録できます。",
   "Track people": "人物をフォロー",
   Trakt: "Trakt",
   "Trakt account limit reached. Upgrade to Trakt VIP or trim your watchlist.":
@@ -1090,8 +1090,8 @@ const extra: Record<string, string> = {
   "When a movie or episode starts, briefly show its IMDb parental guide (violence, profanity, substances, frightening scenes and more) with severity. Fades on its own.":
     "映画やエピソードの開始時に、IMDbのペアレンタルガイド（暴力、暴言、薬物、恐怖を伴うシーンなど）を深刻度とともに短時間表示します。自動的に消えます。",
   "When a title is in your local library": "作品がローカルライブラリにある場合",
-  "When auto-playing the next episode, keep the same release/source you were just watching instead of Harbor's top-ranked stream. Falls back to the best stream if that source isn't available.":
-    "次のエピソードを自動再生するとき、Harborで最上位のストリームではなく、直前まで見ていたものと同じリリースまたはソースを使用します。そのソースが利用できない場合は、最適なストリームを使用します。",
+  "When auto-playing the next episode, keep the same release/source you were just watching instead of Lart's top-ranked stream. Falls back to the best stream if that source isn't available.":
+    "次のエピソードを自動再生するとき、Lartで最上位のストリームではなく、直前まで見ていたものと同じリリースまたはソースを使用します。そのソースが利用できない場合は、最適なストリームを使用します。",
   "When in fullscreen, Esc leaves fullscreen instead of closing the player. Press Esc again to close. Turn off to make Esc always close.":
     "全画面表示中は、Escでプレイヤーを閉じずに全画面表示を終了します。もう一度Escを押すと閉じます。Escで常に閉じるにはオフにしてください。",
   "When time's up, the ship sails away until a parent unlocks it.":

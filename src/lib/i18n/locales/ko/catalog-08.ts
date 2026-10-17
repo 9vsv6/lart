@@ -7,7 +7,7 @@ const catalog08: Record<string, string> = {
   Ratings: "평점",
   "Ratings count from {movie}+ votes, {tv}+ for TV":
     "영화는 {movie}표 이상, TV는 {tv}표 이상인 평점",
-  "Ratings need a Harbor account": "평점을 남기려면 Harbor 계정이 필요합니다",
+  "Ratings need a Lart account": "평점을 남기려면 Lart 계정이 필요합니다",
   "Raw Nerve": "날것의 긴장감",
   "Re-apply to the window and taskbar now": "지금 창과 작업 표시줄에 다시 적용",
   "Re-authenticate": "다시 인증",
@@ -19,7 +19,7 @@ const catalog08: Record<string, string> = {
   "Re-run deploy or paste the correct URL": "다시 배포하거나 올바른 URL 붙여 넣기",
   "Re-runs the welcome flow and clears every dismissed tip.":
     "환영 절차를 다시 실행하고 닫은 모든 팁을 초기화합니다.",
-  "Re-sync from your Harbor profile picture": "Harbor 프로필 사진에서 다시 동기화",
+  "Re-sync from your Lart profile picture": "Lart 프로필 사진에서 다시 동기화",
   "Re-test": "다시 테스트",
   Reach: "리치",
   "Reach the network with harbor.http(url, opts) and parse HTML with harbor.parseHtml(html). There is no fetch, DOM, or storage in the sandbox.":
@@ -37,7 +37,7 @@ const catalog08: Record<string, string> = {
   "Read here": "여기서 읽기",
   "Read latest": "최신화 읽기",
   "Read manga files you already have": "보유한 만화 파일 읽기",
-  "Read manga in Harbor": "Harbor에서 만화 읽기",
+  "Read manga in Lart": "Lart에서 만화 읽기",
   "Read more": "더 보기",
   "Read now": "지금 읽기",
   "Read on": "다음에서 읽기",
@@ -79,8 +79,8 @@ const catalog08: Record<string, string> = {
     "Real-Debrid, TorBox, AllDebrid 및 Premiumize에는 링크 반환이 잠시 중단되는 장애가 발생할 수 있습니다. 몇 분 후 다시 시도하거나 해당 서비스의 상태 페이지를 확인하세요.",
   "Real-Debrid, TorBox, AllDebrid, Premiumize, Debrid-Link. Cached streams play direct. Keys stay local.":
     "Real-Debrid, TorBox, AllDebrid, Premiumize, Debrid-Link를 지원합니다. 캐시된 스트림은 바로 재생되며 키는 로컬에 보관됩니다.",
-  "Real-time GPU upscaling that sharpens lines and cleans up gradients on anime, built right into Harbor's player. The one-tap setup below grabs the shaders; nothing else to install.":
-    "애니메이션의 선을 선명하게 하고 그라데이션을 매끄럽게 정리하는 실시간 GPU 업스케일링 기능으로, Harbor 플레이어에 내장되어 있습니다. 아래 원터치 설정으로 셰이더를 받으면 되며, 별도로 설치할 것은 없습니다.",
+  "Real-time GPU upscaling that sharpens lines and cleans up gradients on anime, built right into Lart's player. The one-tap setup below grabs the shaders; nothing else to install.":
+    "애니메이션의 선을 선명하게 하고 그라데이션을 매끄럽게 정리하는 실시간 GPU 업스케일링 기능으로, Lart 플레이어에 내장되어 있습니다. 아래 원터치 설정으로 셰이더를 받으면 되며, 별도로 설치할 것은 없습니다.",
   "Real-time anime upscaling. GPU-intensive.":
     "실시간 애니메이션 업스케일링입니다. GPU 사용량이 많습니다.",
   Reality: "리얼리티",
@@ -131,8 +131,8 @@ const catalog08: Record<string, string> = {
   "Rede aberta": "개방형 네트워크",
   Redeploy: "재배포",
   "Redeploy instructions": "재배포 안내",
-  "Redeploy it to get the latest Watch Together fixes. Harbor's public relay updates on its own.":
-    "함께 보기의 최신 수정 사항을 적용하려면 다시 배포하세요. Harbor의 공개 릴레이는 자동으로 업데이트됩니다.",
+  "Redeploy it to get the latest Watch Together fixes. Lart's public relay updates on its own.":
+    "함께 보기의 최신 수정 사항을 적용하려면 다시 배포하세요. Lart의 공개 릴레이는 자동으로 업데이트됩니다.",
   "Redeploy relay": "릴레이 재배포",
   "Redeploy to pick up the latest Watch Together fixes. The in-app banner clears once the new version is live.":
     "최신 같이 보기 수정 사항을 적용하려면 다시 배포하세요. 새 버전이 활성화되면 앱 내 배너가 사라집니다.",
@@ -208,19 +208,19 @@ const catalog08: Record<string, string> = {
   "Reminder updated": "알림 업데이트됨",
   Reminders: "알림",
   Remote: "리모컨",
-  "Remote control is off on that Harbor, so it cannot be driven from here.":
-    "해당 Harbor에서 원격 제어가 꺼져 있어 여기서 조작할 수 없습니다.",
+  "Remote control is off on that Lart, so it cannot be driven from here.":
+    "해당 Lart에서 원격 제어가 꺼져 있어 여기서 조작할 수 없습니다.",
   "Remote control is off, so other Harbors can see this one but cannot drive it.":
-    "원격 제어가 꺼져 있어 다른 Harbor에서 이 기기를 볼 수는 있지만 조작할 수는 없습니다.",
+    "원격 제어가 꺼져 있어 다른 Lart에서 이 기기를 볼 수는 있지만 조작할 수는 없습니다.",
   "Remote control is on, so other Harbors on this network can drive this one.":
-    "원격 제어가 켜져 있어 이 네트워크의 다른 Harbor에서 이 기기를 조작할 수 있습니다.",
+    "원격 제어가 켜져 있어 이 네트워크의 다른 Lart에서 이 기기를 조작할 수 있습니다.",
   "Remote off": "원격 제어 꺼짐",
   "Remote server": "원격 서버",
   "Remote streaming server": "원격 스트리밍 서버",
   "Remote style": "리모컨 스타일",
   Remotes: "원격 기기",
-  "Remotes are served by the desktop app. Open these settings on your computer's Harbor to get the links.":
-    "리모컨은 데스크톱 앱에서 제공됩니다. 링크를 확인하려면 컴퓨터의 Harbor에서 이 설정을 여세요.",
+  "Remotes are served by the desktop app. Open these settings on your computer's Lart to get the links.":
+    "리모컨은 데스크톱 앱에서 제공됩니다. 링크를 확인하려면 컴퓨터의 Lart에서 이 설정을 여세요.",
   Remove: "제거",
   "Remove all": "모두 삭제",
   "Remove all extensions ({n})": "모든 확장 프로그램 삭제({n})",
@@ -309,8 +309,8 @@ const catalog08: Record<string, string> = {
   Renamed: "이름 변경됨",
   "Render subtitles in a heavier weight. Turn off to use your font's normal weight.":
     "자막을 더 굵게 표시합니다. 글꼴의 기본 굵기를 사용하려면 끄세요.",
-  "Renders mpv inline so playback lives in Harbor itself. Disable to open it in a separate window instead.":
-    "mpv를 인라인으로 렌더링하여 Harbor 안에서 바로 재생합니다. 별도 창에서 열려면 사용 중지하세요.",
+  "Renders mpv inline so playback lives in Lart itself. Disable to open it in a separate window instead.":
+    "mpv를 인라인으로 렌더링하여 Lart 안에서 바로 재생합니다. 별도 창에서 열려면 사용 중지하세요.",
   "Reopening a title within this window resumes instead of re-downloading.":
     "이 시간 안에 작품을 다시 열면 재다운로드하지 않고 이어서 재생합니다.",
   Reorder: "순서 변경",
@@ -397,8 +397,8 @@ const catalog08: Record<string, string> = {
     "이미지 {count}개의 크기를 조정했습니다. 크기 때문에 건너뛴 항목은 없습니다.",
   "Resized {count} images to fit. Nothing was skipped for size.":
     "이미지 {count}개의 크기를 조정했습니다. 크기 때문에 건너뛴 항목은 없습니다.",
-  "Reskin the award trophies shown across Harbor. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
-    "Harbor 전반에 표시되는 어워드 트로피의 디자인을 바꿔 보세요. 어워드를 클릭하여 PNG 또는 움직이는 GIF를 추가하거나, 사용자 지정 어워드 유형을 만들거나, 전체 세트를 한 번에 가져올 수 있습니다.",
+  "Reskin the award trophies shown across Lart. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
+    "Lart 전반에 표시되는 어워드 트로피의 디자인을 바꿔 보세요. 어워드를 클릭하여 PNG 또는 움직이는 GIF를 추가하거나, 사용자 지정 어워드 유형을 만들거나, 전체 세트를 한 번에 가져올 수 있습니다.",
   "Reskin the quality chips (4K, HDR, Dolby Vision, Atmos and more) that ride each stream in the play picker. Click any slot to drop in your own PNG or animated GIF, or import a whole set at once. You do not have to fill every slot.":
     "재생 선택 화면에서 각 스트림에 표시되는 화질 칩(4K, HDR, Dolby Vision, Atmos 등)의 디자인을 바꿔 보세요. 슬롯을 클릭하여 직접 만든 PNG 또는 움직이는 GIF를 추가하거나 전체 세트를 한 번에 가져올 수 있습니다. 모든 슬롯을 채울 필요는 없습니다.",
   Resolution: "해상도",
@@ -414,9 +414,9 @@ const catalog08: Record<string, string> = {
   "Rest the cursor on a poster to peek at the rating, story, and quick actions without opening it.":
     "포스터에 커서를 올리면 열지 않고도 평점, 줄거리, 빠른 작업을 미리 볼 수 있습니다.",
   Restart: "다시 시작",
-  "Restart Harbor after the install completes.": "설치가 완료되면 Harbor를 다시 시작하세요.",
-  "Restart Harbor's own streaming server, then reload the stream once it is back. Desktop only.":
-    "Harbor 자체 스트리밍 서버를 다시 시작한 뒤 서버가 돌아오면 스트림을 다시 불러옵니다. 데스크톱 전용입니다.",
+  "Restart Lart after the install completes.": "설치가 완료되면 Lart를 다시 시작하세요.",
+  "Restart Lart's own streaming server, then reload the stream once it is back. Desktop only.":
+    "Lart 자체 스트리밍 서버를 다시 시작한 뒤 서버가 돌아오면 스트림을 다시 불러옵니다. 데스크톱 전용입니다.",
   "Restart engine": "엔진 다시 시작",
   "Restart game": "게임 다시 시작",
   "Restart streaming server": "스트리밍 서버 다시 시작",
@@ -425,7 +425,7 @@ const catalog08: Record<string, string> = {
   Restore: "복원",
   "Restore + upscale. The best all-rounder for most anime.":
     "복원 + 업스케일링. 대부분의 애니메이션에 가장 무난합니다.",
-  "Restore Harbor's interface scale to 100%.": "Harbor의 인터페이스 배율을 100%로 복원합니다.",
+  "Restore Lart's interface scale to 100%.": "Lart의 인터페이스 배율을 100%로 복원합니다.",
   "Restore and reload": "복원 후 다시 로드",
   "Restore dismissed hints": "닫은 도움말 복원",
   "Restore from a backup": "백업에서 복원",
@@ -476,8 +476,8 @@ const catalog08: Record<string, string> = {
   "Revisionist Westerns": "수정주의 웨스턴",
   Rewatching: "재시청 중",
   Rewind: "되감기",
-  "Rewrites every library item to match Stremio's exact schema. Run once if your Stremio app started crashing after Harbor synced playback.":
-    "모든 라이브러리 항목을 Stremio의 정확한 스키마에 맞게 다시 작성합니다. Harbor가 재생 상태를 동기화한 후 Stremio 앱이 충돌하기 시작했다면 한 번 실행하세요.",
+  "Rewrites every library item to match Stremio's exact schema. Run once if your Stremio app started crashing after Lart synced playback.":
+    "모든 라이브러리 항목을 Stremio의 정확한 스키마에 맞게 다시 작성합니다. Lart가 재생 상태를 동기화한 후 Stremio 앱이 충돌하기 시작했다면 한 번 실행하세요.",
   "Ribbon corner": "리본 모서리",
   "Rich season and order panel": "상세 시즌 및 순서 패널",
   "Richer, more vivid picture with a touch more contrast.":
@@ -487,8 +487,8 @@ const catalog08: Record<string, string> = {
     "등록 직후 TMDB에서 계정이 아직 활성화되지 않았다고 안내합니다. 문제가 생긴 것이 아니며 이메일이 곧 도착합니다.",
   "Right edge": "오른쪽 가장자리",
   "Right-click a text channel, pick": "텍스트 채널을 마우스 오른쪽 버튼으로 클릭하고 선택:",
-  'Right-click any title in Harbor or hit "Add to Watchlist" on its detail page to save it here.':
-    'Harbor에서 콘텐츠를 마우스 오른쪽 버튼으로 클릭하거나 상세 페이지에서 "관심 목록에 추가"를 눌러 여기에 저장하세요.',
+  'Right-click any title in Lart or hit "Add to Watchlist" on its detail page to save it here.':
+    'Lart에서 콘텐츠를 마우스 오른쪽 버튼으로 클릭하거나 상세 페이지에서 "관심 목록에 추가"를 눌러 여기에 저장하세요.',
   "Rights and usage": "권리 및 사용",
   Ring: "링",
   Rising: "급상승",
@@ -544,7 +544,7 @@ const catalog08: Record<string, string> = {
   "Run self-test": "자체 테스트 실행",
   "Run speed test": "속도 테스트 실행",
   "Run test": "테스트 실행",
-  "Run your own Harbor Relay": "자체 Harbor Relay 실행",
+  "Run your own Lart Relay": "자체 Lart Relay 실행",
   "Run your own server": "자체 서버 실행",
   Running: "실행 중",
   "Running on Cinemeta for now. Add a TMDB key from Settings whenever you're ready.":
@@ -589,11 +589,11 @@ const catalog08: Record<string, string> = {
   "SVP frame interpolation": "SVP 프레임 보간",
   "SVP is already handling frame interpolation. Turn off SVP below to use this instead. Running both delays the audio.":
     "SVP가 이미 프레임 보간을 처리하고 있습니다. 이 기능을 사용하려면 아래에서 SVP를 끄세요. 둘 다 실행하면 오디오가 지연됩니다.",
-  "SVP is installed but Harbor couldn't find its engine files (svpflow + VapourSynth). Try repairing the SVP install, or reopen SVP once.":
-    "SVP가 설치되어 있지만 Harbor에서 엔진 파일(svpflow + VapourSynth)을 찾을 수 없습니다. SVP 설치를 복구하거나 SVP를 한 번 다시 여세요.",
-  "SVP is not supported by this Harbor package.": "이 Harbor 패키지는 SVP를 지원하지 않습니다.",
-  "SVP's files are here but its VapourSynth engine won't load ({err}). This usually means a stale VapourSynth entry or a missing Microsoft VC++ runtime. Reinstall SVP, or install the latest \"Visual C++ Redistributable (x64)\" from Microsoft, then reopen Harbor.":
-    'SVP 파일은 있지만 VapourSynth 엔진을 불러올 수 없습니다({err}). 일반적으로 오래된 VapourSynth 항목이나 Microsoft VC++ 런타임 누락이 원인입니다. SVP를 다시 설치하거나 Microsoft에서 최신 "Visual C++ Redistributable (x64)"을 설치한 다음 Harbor를 다시 여세요.',
+  "SVP is installed but Lart couldn't find its engine files (svpflow + VapourSynth). Try repairing the SVP install, or reopen SVP once.":
+    "SVP가 설치되어 있지만 Lart에서 엔진 파일(svpflow + VapourSynth)을 찾을 수 없습니다. SVP 설치를 복구하거나 SVP를 한 번 다시 여세요.",
+  "SVP is not supported by this Lart package.": "이 Lart 패키지는 SVP를 지원하지 않습니다.",
+  "SVP's files are here but its VapourSynth engine won't load ({err}). This usually means a stale VapourSynth entry or a missing Microsoft VC++ runtime. Reinstall SVP, or install the latest \"Visual C++ Redistributable (x64)\" from Microsoft, then reopen Lart.":
+    'SVP 파일은 있지만 VapourSynth 엔진을 불러올 수 없습니다({err}). 일반적으로 오래된 VapourSynth 항목이나 Microsoft VC++ 런타임 누락이 원인입니다. SVP를 다시 설치하거나 Microsoft에서 최신 "Visual C++ Redistributable (x64)"을 설치한 다음 Lart를 다시 여세요.',
   "SVP's files are here, but its VapourSynth engine won't load.":
     "SVP 파일은 있지만 VapourSynth 엔진을 불러올 수 없습니다.",
   SYSTEM: "시스템",
@@ -653,14 +653,14 @@ const catalog08: Record<string, string> = {
     "가벼운 썸네일 대신 더 선명한 프레임을 저장합니다. 카드에서 더 또렷하게 보이지만 공간을 더 차지하므로 저장되는 수가 적고 가장 오래된 것부터 삭제됩니다.",
   "Save status": "상태 저장",
   "Save sync": "동기화 저장",
-  "Save the current frame (video only, no subtitles) as a PNG to Pictures/Harbor.":
-    "현재 프레임을 자막 없이 동영상만 PNG로 Pictures/Harbor에 저장합니다.",
+  "Save the current frame (video only, no subtitles) as a PNG to Pictures/Lart.":
+    "현재 프레임을 자막 없이 동영상만 PNG로 Pictures/Lart에 저장합니다.",
   "Save the last 30 seconds": "최근 30초 저장",
-  "Save the last 30 seconds as a video clip with audio, choosing subtitles on or off. Saves to Pictures/Harbor.":
-    "마지막 30초를 오디오가 포함된 동영상 클립으로 저장하며 자막 포함 여부를 선택할 수 있습니다. Pictures/Harbor에 저장됩니다.",
-  "Save the worker source. Copy": "워커 소스를 저장하세요. Harbor 저장소의",
-  "Save the worker source. Copy {code1} from the Harbor repo into a new directory as {code2}.":
-    "Worker 소스를 저장합니다. Harbor 저장소의 {code1}을(를) 새 디렉터리에 {code2}(으)로 복사합니다.",
+  "Save the last 30 seconds as a video clip with audio, choosing subtitles on or off. Saves to Pictures/Lart.":
+    "마지막 30초를 오디오가 포함된 동영상 클립으로 저장하며 자막 포함 여부를 선택할 수 있습니다. Pictures/Lart에 저장됩니다.",
+  "Save the worker source. Copy": "워커 소스를 저장하세요. Lart 저장소의",
+  "Save the worker source. Copy {code1} from the Lart repo into a new directory as {code2}.":
+    "Worker 소스를 저장합니다. Lart 저장소의 {code1}을(를) 새 디렉터리에 {code2}(으)로 복사합니다.",
   "Save this": "다음을 저장하여",
   "Save this look": "이 스타일 저장",
   "Save this look as a template": "이 스타일을 템플릿으로 저장",
@@ -697,8 +697,8 @@ const catalog08: Record<string, string> = {
   "Saved on that device. You can close this page, or use this phone as a remote.":
     "해당 기기에 저장되었습니다. 이 페이지를 닫거나 이 휴대전화를 리모컨으로 사용할 수 있습니다.",
   "Saved on this device": "이 기기에 저장됨",
-  "Saved on this device. Another Harbor install starts fresh.":
-    "이 기기에 저장되었습니다. 다른 Harbor 설치에서는 처음부터 시작됩니다.",
+  "Saved on this device. Another Lart install starts fresh.":
+    "이 기기에 저장되었습니다. 다른 Lart 설치에서는 처음부터 시작됩니다.",
   "Saved on your device, but it couldn't be uploaded for others to see. Try again.":
     "기기에 저장되었지만 다른 사람이 볼 수 있도록 업로드하지 못했습니다. 다시 시도하세요.",
   "Saved on your server": "서버에 저장됨",
@@ -712,25 +712,25 @@ const catalog08: Record<string, string> = {
   "Saved to your library.": "라이브러리에 저장되었습니다.",
   "Saved to {folder} · open folder": "{folder}에 저장됨 · 폴더 열기",
   "Saved to {service} as {status}": "{service}에 {status}(으)로 저장됨",
-  "Saved {d} from Harbor {a}.": "Harbor {a}에서 {d}에 저장했습니다.",
+  "Saved {d} from Lart {a}.": "Lart {a}에서 {d}에 저장했습니다.",
   "Saved {n} entries to {path}. Send us that file.":
     "{n}개 항목을 {path}에 저장했습니다. 해당 파일을 보내 주세요.",
   "Saved {n} entries to {path}. Send us that file.#few":
     "항목 {n}개를 {path}에 저장했습니다. 이 파일을 보내 주세요.#few",
   "Saved {n} entries to {path}. Send us that file.#one":
     "항목 {n}개를 {path}에 저장했습니다. 이 파일을 보내 주세요.#one",
-  "Saved {when} from Harbor {app}.": "Harbor {app}에서 {when}에 저장됨.",
-  "Saved {when} from Harbor {app}. Your Stremio sign-in stays as is.":
-    "Harbor {app}에서 {when}에 저장되었습니다. Stremio 로그인 상태는 그대로 유지됩니다.",
-  "Saved, but Harbor couldn't confirm the new order. Retry to re-check.":
-    "저장했지만 Harbor에서 새 순서를 확인하지 못했습니다. 다시 시도하여 확인하세요.",
+  "Saved {when} from Lart {app}.": "Lart {app}에서 {when}에 저장됨.",
+  "Saved {when} from Lart {app}. Your Stremio sign-in stays as is.":
+    "Lart {app}에서 {when}에 저장되었습니다. Stremio 로그인 상태는 그대로 유지됩니다.",
+  "Saved, but Lart couldn't confirm the new order. Retry to re-check.":
+    "저장했지만 Lart에서 새 순서를 확인하지 못했습니다. 다시 시도하여 확인하세요.",
   Saves: "선방",
   "Saves a .txt of your watched anime + series entries so we can see the exact shape and finish the fix. Just titles, ids, and episode numbers.":
     "시청한 애니메이션과 시리즈 항목을 .txt로 저장해 정확한 데이터 구조를 확인하고 수정 작업을 마칠 수 있게 합니다. 제목, ID, 에피소드 번호만 포함됩니다.",
   "Saves the relay URL and your Cloudflare token to a file.":
     "릴레이 URL과 Cloudflare 토큰을 파일에 저장합니다.",
-  "Saves your whole Harbor setup to one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
-    "테마, 홈 레이아웃, 설정, 애드온, 프로필, 관심 목록, 플레이어 레이아웃, 시청 진행률 등 Harbor의 전체 설정을 하나의 파일로 저장합니다. Stremio 로그인 정보는 의도적으로 제외됩니다.",
+  "Saves your whole Lart setup to one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
+    "테마, 홈 레이아웃, 설정, 애드온, 프로필, 관심 목록, 플레이어 레이아웃, 시청 진행률 등 Lart의 전체 설정을 하나의 파일로 저장합니다. Stremio 로그인 정보는 의도적으로 제외됩니다.",
   Saving: "저장 중",
   "Saving EPUB": "EPUB 저장 중",
   "Saving GIF…": "GIF 저장 중…",
@@ -755,8 +755,8 @@ const catalog08: Record<string, string> = {
     "드래그하는 동안 전체 인터페이스 배율이 실시간으로 조정됩니다.",
   "Scan again": "다시 검색",
   "Scan for corruption": "손상 여부 검사",
-  "Scan this with your phone camera to open the Harbor remote, then type straight into the search box.":
-    "휴대전화 카메라로 스캔해 Harbor 리모컨을 연 다음 검색창에 바로 입력하세요.",
+  "Scan this with your phone camera to open the Lart remote, then type straight into the search box.":
+    "휴대전화 카메라로 스캔해 Lart 리모컨을 연 다음 검색창에 바로 입력하세요.",
   "Scan who is on screen while playing": "재생 중 화면 속 인물 스캔",
   "Scan with your phone camera, or type the address above.":
     "휴대폰 카메라로 스캔하거나 위 주소를 입력하세요.",
@@ -804,7 +804,7 @@ const catalog08: Record<string, string> = {
   "Scroll to top": "맨 위로 스크롤",
   "Scroll up for the trailer": "위로 스크롤하여 예고편 보기",
   Search: "검색",
-  "Search Harbor": "Harbor 검색",
+  "Search Lart": "Lart 검색",
   "Search TMDB…": "TMDB 검색…",
   "Search a line by its words": "단어로 대사 검색",
   "Search actors, directors…": "배우, 감독 검색…",
@@ -879,8 +879,8 @@ const catalog08: Record<string, string> = {
   "Searching every source for more subtitles…": "더 많은 자막을 찾도록 모든 소스 검색 중…",
   "Searching sources…": "소스 검색 중…",
   "Searching titles…": "제목 검색 중…",
-  "Searching works without a key. A key lets Harbor line subtitles up with the audio automatically.":
-    "키 없이도 검색할 수 있습니다. 키가 있으면 Harbor가 자막을 오디오에 맞춰 자동으로 동기화합니다.",
+  "Searching works without a key. A key lets Lart line subtitles up with the audio automatically.":
+    "키 없이도 검색할 수 있습니다. 키가 있으면 Lart가 자막을 오디오에 맞춰 자동으로 동기화합니다.",
   "Searching {count} sources…": "소스 {count}개 검색 중…",
   "Searching {count} sources…#few": "소스 {count}개 검색 중…#few",
   "Searching {count} sources…#one": "소스 {count}개 검색 중…#one",

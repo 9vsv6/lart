@@ -22,8 +22,8 @@ const misc: Record<string, string> = {
   "Grid view": "Chế độ xem lưới",
   "List view": "Chế độ xem danh sách",
   "How is this build treating you?": "Bạn thấy bản dựng này thế nào?",
-  "Does Harbor {version} feel better or worse than the version you had before?":
-    "Harbor {version} tốt hơn hay tệ hơn phiên bản trước của bạn?",
+  "Does Lart {version} feel better or worse than the version you had before?":
+    "Lart {version} tốt hơn hay tệ hơn phiên bản trước của bạn?",
   "Much worse": "Tệ hơn nhiều",
   "About the same": "Gần như không đổi",
   "Much better": "Tốt hơn nhiều",
@@ -78,9 +78,9 @@ const misc: Record<string, string> = {
   "Reveal comments": "Hiện bình luận",
   "Comments are hidden": "Bình luận đã bị ẩn",
   "Hosted elsewhere": "Được lưu trữ nơi khác",
-  "A third party runs these plans. Harbor is not affiliated with them and receives nothing from a signup. Current pricing and terms are on their site.": "Các gói này do một bên thứ ba vận hành. Harbor không liên kết và không nhận gì từ việc đăng ký. Giá và điều khoản hiện tại nằm trên trang của họ.",
+  "A third party runs these plans. Lart is not affiliated with them and receives nothing from a signup. Current pricing and terms are on their site.": "Các gói này do một bên thứ ba vận hành. Lart không liên kết và không nhận gì từ việc đăng ký. Giá và điều khoản hiện tại nằm trên trang của họ.",
   "{name} can run on a hosted instance": "{name} có thể chạy trên một phiên bản được lưu trữ",
-  "A third party operates this. Harbor is not affiliated with them, does not resell it, and receives nothing if you sign up. Whatever it costs and whatever it includes is on their site.": "Một bên thứ ba vận hành dịch vụ này. Harbor không liên kết, không bán lại và không nhận gì nếu bạn đăng ký. Giá và nội dung nằm trên trang của họ.",
+  "A third party operates this. Lart is not affiliated with them, does not resell it, and receives nothing if you sign up. Whatever it costs and whatever it includes is on their site.": "Một bên thứ ba vận hành dịch vụ này. Lart không liên kết, không bán lại và không nhận gì nếu bạn đăng ký. Giá và nội dung nằm trên trang của họ.",
   "Show comments": "Hiện bình luận",
   "Hide comments": "Ẩn bình luận",
   "You haven't commented yet": "Bạn chưa bình luận",
@@ -174,8 +174,8 @@ const misc: Record<string, string> = {
     "Chọn một nguồn để lưu xem ngoại tuyến. Bạn có thể theo dõi tiến trình trên trang Tải xuống.",
   "Last source wasn't actually cached on your debrid yet. Pick another from the list.":
     "Nguồn gần nhất thực ra chưa được lưu vào bộ nhớ đệm trên dịch vụ debrid của bạn. Hãy chọn nguồn khác trong danh sách.",
-  "Harbor couldn't resolve a usable ID for this title. Add a TMDB key in Library settings or sign in to Stremio to broaden coverage.":
-    "Harbor không thể xác định ID dùng được cho tựa phim này. Hãy thêm khóa TMDB trong phần Cài đặt thư viện hoặc đăng nhập Stremio để mở rộng phạm vi hỗ trợ.",
+  "Lart couldn't resolve a usable ID for this title. Add a TMDB key in Library settings or sign in to Stremio to broaden coverage.":
+    "Lart không thể xác định ID dùng được cho tựa phim này. Hãy thêm khóa TMDB trong phần Cài đặt thư viện hoặc đăng nhập Stremio để mở rộng phạm vi hỗ trợ.",
   "No playable streams turned up, and no debrid is configured. Real-Debrid, TorBox, AllDebrid, Premiumize, or Debrid-Link will unlock raw torrent results. Some addons bake debrid in (Sootio, Comet/ElfHosted, MediaFusion/ElfHosted) and play without your own keys.":
     "Không tìm thấy luồng phát nào và chưa cấu hình dịch vụ debrid. Real-Debrid, TorBox, AllDebrid, Premiumize hoặc Debrid-Link sẽ mở khóa các kết quả torrent thô. Một số tiện ích bổ sung tích hợp sẵn debrid (Sootio, Comet/ElfHosted, MediaFusion/ElfHosted) và có thể phát mà không cần khóa riêng của bạn.",
   "Set up a debrid": "Thiết lập dịch vụ debrid",
@@ -189,10 +189,10 @@ const misc: Record<string, string> = {
   "No source returned a stream": "Không nguồn nào trả về luồng phát",
   "Anime sources are usually richer through Torrentio's anime config or AIOStreams. Make sure one is installed in Stremio.":
     "Nguồn anime thường phong phú hơn khi dùng cấu hình anime của Torrentio hoặc AIOStreams. Hãy đảm bảo đã cài một trong hai trên Stremio.",
-  "On the web, Harbor can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
-    "Trên web, Harbor chỉ có thể truy cập các tiện ích bổ sung cho phép trình duyệt truy cập (Torrentio, TorBox, Cinemeta). Với nội dung chưa phát hành, thường chưa có nguồn nào.",
-  "Try signing in to Stremio so Harbor can use your addon collection. Older or foreign titles often need Torrentio + a debrid addon to find anything.":
-    "Hãy thử đăng nhập Stremio để Harbor có thể dùng bộ sưu tập tiện ích bổ sung của bạn. Nội dung cũ hoặc nước ngoài thường cần Torrentio + một tiện ích bổ sung debrid mới tìm được nguồn.",
+  "On the web, Lart can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
+    "Trên web, Lart chỉ có thể truy cập các tiện ích bổ sung cho phép trình duyệt truy cập (Torrentio, TorBox, Cinemeta). Với nội dung chưa phát hành, thường chưa có nguồn nào.",
+  "Try signing in to Stremio so Lart can use your addon collection. Older or foreign titles often need Torrentio + a debrid addon to find anything.":
+    "Hãy thử đăng nhập Stremio để Lart có thể dùng bộ sưu tập tiện ích bổ sung của bạn. Nội dung cũ hoặc nước ngoài thường cần Torrentio + một tiện ích bổ sung debrid mới tìm được nguồn.",
   "Strict filters dropped everything": "Bộ lọc nghiêm ngặt đã loại bỏ tất cả",
   "Search wider": "Tìm kiếm rộng hơn",
   "Wide search · still empty": "Tìm kiếm rộng · vẫn không có kết quả",
@@ -311,16 +311,16 @@ const misc: Record<string, string> = {
   "update.downloading": "Đang tải bản cập nhật xuống",
   "update.failed": "Cập nhật thất bại",
   "update.available": "Có bản cập nhật",
-  "update.harborVersion": "Harbor {version}",
+  "update.harborVersion": "Lart {version}",
   "update.downloadComplete": "Tải xuống hoàn tất",
   "update.fetching": "Đang tải phiên bản mới nhất",
   "update.errorServer": "Đã xảy ra lỗi khi kết nối với máy chủ cập nhật.",
   "update.later": "Để sau",
   "update.download": "Tải xuống",
   "update.installRestart": "Cài đặt và khởi động lại",
-  "update.restartAuto": "Harbor sẽ tự động khởi động lại.",
+  "update.restartAuto": "Lart sẽ tự động khởi động lại.",
   "update.tryAgain": "Thử lại",
-  "update.keepUsing": "Tiếp tục dùng Harbor trong khi tải xuống",
+  "update.keepUsing": "Tiếp tục dùng Lart trong khi tải xuống",
   "update.of": "{downloaded} trên {total}",
   "Hide password": "Ẩn mật khẩu",
   "Show password": "Hiện mật khẩu",
@@ -373,21 +373,21 @@ const misc: Record<string, string> = {
   copied: "đã sao chép",
   "'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "Trang thiết lập của tiện ích. Chọn các tùy chọn, sau đó sao chép liên kết cài đặt được cung cấp và dán vào bên dưới để cập nhật tiện ích bổ sung.",
-  "'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "Trang thiết lập của tiện ích trong trình duyệt tích hợp của Harbor. Chọn các tùy chọn. Khi bạn nhấp vào Cài đặt trên trang đó, Harbor sẽ tự động nhận liên kết và cập nhật tiện ích bổ sung.",
+  "'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "Trang thiết lập của tiện ích trong trình duyệt tích hợp của Lart. Chọn các tùy chọn. Khi bạn nhấp vào Cài đặt trên trang đó, Lart sẽ tự động nhận liên kết và cập nhật tiện ích bổ sung.",
   "We need to check your age before you sail ahead. Three quick questions a working adult would know in their sleep. Get them all right and the adult shelf opens.":
     "Chúng tôi cần xác minh độ tuổi trước khi bạn tiếp tục. Ba câu hỏi nhanh mà một người trưởng thành đang đi làm có thể trả lời dễ dàng. Trả lời đúng tất cả để mở nội dung người lớn.",
   "Top 10": "Top 10",
   "Add a TMDB key in Settings to load Arabic content.":
     "Thêm khóa TMDB trong Cài đặt để tải nội dung tiếng Ả Rập.",
-  "Add a TMDB key for the full Harbor": "Thêm khóa TMDB để dùng đầy đủ Harbor",
+  "Add a TMDB key for the full Lart": "Thêm khóa TMDB để dùng đầy đủ Lart",
   "Free key unlocks Trending, In Theaters, and per-service catalogs. 60 seconds.":
     "Khóa miễn phí mở khóa mục Thịnh hành, Đang chiếu rạp và danh mục theo từng dịch vụ. Chỉ mất 60 giây.",
   "Built for desktop resolutions": "Được thiết kế cho độ phân giải máy tính",
-  "This instance of Harbor is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
-    "Phiên bản Harbor này dành cho máy tính. Các ứng dụng iOS và Android độc lập của chúng tôi sắp ra mắt, mỗi ứng dụng mang đến trải nghiệm riêng ưu tiên thiết bị di động và được thiết kế cho nền tảng tương ứng.",
-  "For now, please open this site on a desktop, or build Harbor from source.":
-    "Hiện tại, vui lòng mở trang này trên máy tính hoặc tự biên dịch Harbor từ mã nguồn.",
+  "This instance of Lart is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
+    "Phiên bản Lart này dành cho máy tính. Các ứng dụng iOS và Android độc lập của chúng tôi sắp ra mắt, mỗi ứng dụng mang đến trải nghiệm riêng ưu tiên thiết bị di động và được thiết kế cho nền tảng tương ứng.",
+  "For now, please open this site on a desktop, or build Lart from source.":
+    "Hiện tại, vui lòng mở trang này trên máy tính hoặc tự biên dịch Lart từ mã nguồn.",
   "Build from source": "Biên dịch từ mã nguồn",
   "Wrong PIN": "Sai mã PIN",
   "PINs didn't match. Start over.": "Mã PIN không khớp. Hãy bắt đầu lại.",
@@ -422,7 +422,7 @@ const misc: Record<string, string> = {
   "Skip setup": "Bỏ qua thiết lập",
   "Skip for now": "Tạm bỏ qua",
   "Get Started": "Bắt đầu",
-  "Enter Harbor": "Vào Harbor",
+  "Enter Lart": "Vào Lart",
   "A client for the Stremio protocol. Two minutes to set up; most of it optional. You stay in control of every key.":
     "Ứng dụng khách cho giao thức Stremio. Chỉ mất hai phút để thiết lập; hầu hết đều không bắt buộc. Bạn luôn toàn quyền kiểm soát mọi khóa.",
   "Trending, in theaters, what's on every streamer.":
@@ -434,8 +434,8 @@ const misc: Record<string, string> = {
   "Built for Adventure!": "Được tạo ra cho cuộc phiêu lưu!",
   "Hero, Top 10, Trending, In Theaters, per-service rails. Your addons append underneath.":
     "Nổi bật, Top 10, Thịnh hành, Đang chiếu rạp và các hàng theo từng dịch vụ. Tiện ích bổ sung của bạn sẽ được thêm bên dưới.",
-  "Continue Watching, then your addon catalogs in install order. No hero, no Harbor rails.":
-    "Xem tiếp, sau đó là các danh mục tiện ích bổ sung theo thứ tự cài đặt. Không có mục nổi bật hay các hàng của Harbor.",
+  "Continue Watching, then your addon catalogs in install order. No hero, no Lart rails.":
+    "Xem tiếp, sau đó là các danh mục tiện ích bổ sung theo thứ tự cài đặt. Không có mục nổi bật hay các hàng của Lart.",
   "Pick a home layout": "Chọn bố cục trang chủ",
   "You can switch later in Settings under Library & metadata.":
     "Bạn có thể đổi sau trong Cài đặt, tại Thư viện & siêu dữ liệu.",
@@ -443,8 +443,8 @@ const misc: Record<string, string> = {
   "Free, two-minute signup. Unlocks Trending, In Theaters Now, Top Rated, and per-streaming catalogs (Netflix, Disney+, Hulu, …). Your key stays on this machine.":
     "Đăng ký miễn phí trong hai phút. Mở khóa Thịnh hành, Đang chiếu rạp, Được đánh giá cao nhất và danh mục theo từng dịch vụ phát trực tuyến (Netflix, Disney+, Hulu, …). Khóa của bạn chỉ được lưu trên thiết bị này.",
   "Get a free key at themoviedb.org": "Nhận khóa miễn phí tại themoviedb.org",
-  "Skip if you'd rather just use Cinemeta. Harbor still works, you'll just see fewer rails.":
-    "Bỏ qua nếu bạn chỉ muốn dùng Cinemeta. Harbor vẫn hoạt động, nhưng sẽ hiển thị ít hàng hơn.",
+  "Skip if you'd rather just use Cinemeta. Lart still works, you'll just see fewer rails.":
+    "Bỏ qua nếu bạn chỉ muốn dùng Cinemeta. Lart vẫn hoạt động, nhưng sẽ hiển thị ít hàng hơn.",
   "Sign-in failed": "Đăng nhập thất bại",
   "Step 2 · Stremio": "Bước 2 · Stremio",
   "You're in": "Đã đăng nhập",
@@ -455,20 +455,20 @@ const misc: Record<string, string> = {
   "Don't have an account?": "Chưa có tài khoản?",
   "Create one": "Tạo tài khoản",
   "Bring in your library": "Nhập thư viện của bạn",
-  "Sign in to mirror your Continue Watching, watchlist, and any addons you've already curated. Optional; Harbor works fully signed-out.":
-    "Đăng nhập để đồng bộ mục Xem tiếp, danh sách xem và mọi tiện ích bổ sung bạn đã tuyển chọn. Không bắt buộc; Harbor vẫn hoạt động đầy đủ khi chưa đăng nhập.",
+  "Sign in to mirror your Continue Watching, watchlist, and any addons you've already curated. Optional; Lart works fully signed-out.":
+    "Đăng nhập để đồng bộ mục Xem tiếp, danh sách xem và mọi tiện ích bổ sung bạn đã tuyển chọn. Không bắt buộc; Lart vẫn hoạt động đầy đủ khi chưa đăng nhập.",
   "Sign in with": "Đăng nhập bằng",
   "Don't have an account? Create one →": "Chưa có tài khoản? Tạo tài khoản →",
   "Step 3 · Streaming": "Bước 3 · Dịch vụ phát trực tuyến",
   "Pick what you actually use": "Chọn các dịch vụ bạn thực sự dùng",
-  "Harbor pulls the most popular titles each service has right now. Toggle off anything you don't subscribe to.":
-    "Harbor lấy các tựa phim phổ biến nhất hiện có trên từng dịch vụ. Tắt những dịch vụ bạn không đăng ký.",
+  "Lart pulls the most popular titles each service has right now. Toggle off anything you don't subscribe to.":
+    "Lart lấy các tựa phim phổ biến nhất hiện có trên từng dịch vụ. Tắt những dịch vụ bạn không đăng ký.",
   "These rails activate once a TMDB key is set. You can come back to this anytime in Settings.":
     "Các hàng này sẽ được kích hoạt sau khi đặt khóa TMDB. Bạn có thể quay lại đây bất cứ lúc nào trong Cài đặt.",
   "Step 4 · Subtitles": "Bước 4 · Phụ đề",
   "Pick your subtitle languages": "Chọn ngôn ngữ phụ đề",
-  "When playback starts, Harbor finds and loads a subtitle in one of these languages automatically. The first available match wins, so put your main language first.":
-    "Khi bắt đầu phát, Harbor sẽ tự động tìm và tải phụ đề bằng một trong các ngôn ngữ này. Kết quả khớp đầu tiên có sẵn sẽ được chọn, vì vậy hãy đặt ngôn ngữ chính lên đầu.",
+  "When playback starts, Lart finds and loads a subtitle in one of these languages automatically. The first available match wins, so put your main language first.":
+    "Khi bắt đầu phát, Lart sẽ tự động tìm và tải phụ đề bằng một trong các ngôn ngữ này. Kết quả khớp đầu tiên có sẵn sẽ được chọn, vì vậy hãy đặt ngôn ngữ chính lên đầu.",
   "You're set.": "Đã thiết lập xong.",
   "TMDB connected. {n} streaming {services} on. Welcome aboard.":
     "Đã kết nối TMDB. Đã bật {n} {services} phát trực tuyến. Chào mừng bạn.",
@@ -502,9 +502,9 @@ const misc: Record<string, string> = {
   Mystery: "Bí ẩn",
   Music: "Âm nhạc",
   "Share collection": "Chia sẻ bộ sưu tập",
-  "Anyone with the link can open this collection once your Harbor server is live.":
-    "Bất kỳ ai có liên kết đều có thể mở bộ sưu tập này khi máy chủ Harbor hoạt động.",
-  "Paste this code into Harbor to open the collection.": "Dán mã này vào Harbor để mở bộ sưu tập.",
+  "Anyone with the link can open this collection once your Lart server is live.":
+    "Bất kỳ ai có liên kết đều có thể mở bộ sưu tập này khi máy chủ Lart hoạt động.",
+  "Paste this code into Lart to open the collection.": "Dán mã này vào Lart để mở bộ sưu tập.",
   "Shared to the community": "Đã chia sẻ với cộng đồng",
   "Share to the community": "Chia sẻ với cộng đồng",
   "Listed collections will appear in community browse when that rolls out.":

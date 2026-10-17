@@ -13,8 +13,8 @@ const catalog11: Record<string, string> = {
   "Revisionist Westerns": "Westerny rewizjonistyczne",
   Rewatching: "Oglądam ponownie",
   Rewind: "Przewiń wstecz",
-  "Rewrites every library item to match Stremio's exact schema. Run once if your Stremio app started crashing after Harbor synced playback.":
-    "Przepisuje każdy element biblioteki, aby dokładnie odpowiadał schematowi Stremio. Uruchom raz, jeśli aplikacja Stremio zaczęła się wyłączać awaryjnie po zsynchronizowaniu odtwarzania przez Harbor.",
+  "Rewrites every library item to match Stremio's exact schema. Run once if your Stremio app started crashing after Lart synced playback.":
+    "Przepisuje każdy element biblioteki, aby dokładnie odpowiadał schematowi Stremio. Uruchom raz, jeśli aplikacja Stremio zaczęła się wyłączać awaryjnie po zsynchronizowaniu odtwarzania przez Lart.",
   "Ribbon corner": "Narożna wstążka",
   "Rich season and order panel": "Rozbudowany panel sezonów i kolejności",
   "Richer, more vivid picture with a touch more contrast.":
@@ -24,8 +24,8 @@ const catalog11: Record<string, string> = {
     "Zaraz po rejestracji TMDB poinformuje, że konto nie jest jeszcze aktywne. Wszystko działa prawidłowo, wiadomość e-mail jest już w drodze.",
   "Right edge": "Prawa krawędź",
   "Right-click a text channel, pick": "Kliknij kanał tekstowy prawym przyciskiem myszy i wybierz",
-  'Right-click any title in Harbor or hit "Add to Watchlist" on its detail page to save it here.':
-    "Kliknij prawym przyciskiem myszy dowolny tytuł w Harbor lub wybierz „Dodaj do listy do obejrzenia” na stronie jego szczegółów, aby zapisać go tutaj.",
+  'Right-click any title in Lart or hit "Add to Watchlist" on its detail page to save it here.':
+    "Kliknij prawym przyciskiem myszy dowolny tytuł w Lart lub wybierz „Dodaj do listy do obejrzenia” na stronie jego szczegółów, aby zapisać go tutaj.",
   "Rights and usage": "Prawa i zasady użytkowania",
   Ring: "Okrąg",
   Rising: "Zyskuje popularność",
@@ -75,7 +75,7 @@ const catalog11: Record<string, string> = {
   "Run self-test": "Uruchom autotest",
   "Run speed test": "Uruchom test prędkości",
   "Run test": "Uruchom test",
-  "Run your own Harbor Relay": "Uruchom własny Harbor Relay",
+  "Run your own Lart Relay": "Uruchom własny Lart Relay",
   "Run your own server": "Uruchom własny serwer",
   Running: "Działa",
   "Running on Cinemeta for now. Add a TMDB key from Settings whenever you're ready.":
@@ -119,11 +119,11 @@ const catalog11: Record<string, string> = {
   "SVP frame interpolation": "Interpolacja klatek SVP",
   "SVP is already handling frame interpolation. Turn off SVP below to use this instead. Running both delays the audio.":
     "SVP już obsługuje interpolację klatek. Wyłącz SVP poniżej, aby zamiast niego używać tej funkcji. Jednoczesne działanie obu funkcji powoduje opóźnienie dźwięku.",
-  "SVP is installed but Harbor couldn't find its engine files (svpflow + VapourSynth). Try repairing the SVP install, or reopen SVP once.":
-    "SVP jest zainstalowany, ale Harbor nie znalazł plików jego silnika (svpflow + VapourSynth). Spróbuj naprawić instalację SVP lub ponownie otwórz SVP.",
-  "SVP is not supported by this Harbor package.": "Ten pakiet Harbor nie obsługuje SVP.",
-  "SVP's files are here but its VapourSynth engine won't load ({err}). This usually means a stale VapourSynth entry or a missing Microsoft VC++ runtime. Reinstall SVP, or install the latest \"Visual C++ Redistributable (x64)\" from Microsoft, then reopen Harbor.":
-    "Pliki SVP są dostępne, ale nie można załadować jego silnika VapourSynth ({err}). Zwykle oznacza to nieaktualny wpis VapourSynth lub brak środowiska uruchomieniowego Microsoft VC++. Zainstaluj ponownie SVP albo zainstaluj najnowszy pakiet „Visual C++ Redistributable (x64)” firmy Microsoft, a następnie ponownie otwórz Harbor.",
+  "SVP is installed but Lart couldn't find its engine files (svpflow + VapourSynth). Try repairing the SVP install, or reopen SVP once.":
+    "SVP jest zainstalowany, ale Lart nie znalazł plików jego silnika (svpflow + VapourSynth). Spróbuj naprawić instalację SVP lub ponownie otwórz SVP.",
+  "SVP is not supported by this Lart package.": "Ten pakiet Lart nie obsługuje SVP.",
+  "SVP's files are here but its VapourSynth engine won't load ({err}). This usually means a stale VapourSynth entry or a missing Microsoft VC++ runtime. Reinstall SVP, or install the latest \"Visual C++ Redistributable (x64)\" from Microsoft, then reopen Lart.":
+    "Pliki SVP są dostępne, ale nie można załadować jego silnika VapourSynth ({err}). Zwykle oznacza to nieaktualny wpis VapourSynth lub brak środowiska uruchomieniowego Microsoft VC++. Zainstaluj ponownie SVP albo zainstaluj najnowszy pakiet „Visual C++ Redistributable (x64)” firmy Microsoft, a następnie ponownie otwórz Lart.",
   "SVP's files are here, but its VapourSynth engine won't load.":
     "Pliki SVP są dostępne, ale nie można załadować jego silnika VapourSynth.",
   SYSTEM: "SYSTEM",
@@ -182,14 +182,14 @@ const catalog11: Record<string, string> = {
     "Zapisuj ostrzejsze klatki zamiast uproszczonych miniatur. Wyglądają wyraźniej na karcie, ale zajmują więcej miejsca, więc przed usunięciem najstarszych przechowywanych jest ich mniej.",
   "Save status": "Zapisz status",
   "Save sync": "Zapisz synchronizację",
-  "Save the current frame (video only, no subtitles) as a PNG to Pictures/Harbor.":
-    "Zapisz bieżącą klatkę jako plik PNG w folderze Obrazy/Harbor (tylko obraz, bez napisów).",
+  "Save the current frame (video only, no subtitles) as a PNG to Pictures/Lart.":
+    "Zapisz bieżącą klatkę jako plik PNG w folderze Obrazy/Lart (tylko obraz, bez napisów).",
   "Save the last 30 seconds": "Zapisz ostatnie 30 sekund",
-  "Save the last 30 seconds as a video clip with audio, choosing subtitles on or off. Saves to Pictures/Harbor.":
-    "Zapisz ostatnie 30 sekund jako klip wideo z dźwiękiem, z możliwością włączenia lub wyłączenia napisów. Plik zostanie zapisany w folderze Pictures/Harbor.",
+  "Save the last 30 seconds as a video clip with audio, choosing subtitles on or off. Saves to Pictures/Lart.":
+    "Zapisz ostatnie 30 sekund jako klip wideo z dźwiękiem, z możliwością włączenia lub wyłączenia napisów. Plik zostanie zapisany w folderze Pictures/Lart.",
   "Save the worker source. Copy": "Zapisz kod źródłowy workera. Skopiuj",
-  "Save the worker source. Copy {code1} from the Harbor repo into a new directory as {code2}.":
-    "Zapisz kod źródłowy skryptu Worker. Skopiuj plik {code1} z repozytorium Harbor do nowego katalogu jako {code2}.",
+  "Save the worker source. Copy {code1} from the Lart repo into a new directory as {code2}.":
+    "Zapisz kod źródłowy skryptu Worker. Skopiuj plik {code1} z repozytorium Lart do nowego katalogu jako {code2}.",
   "Save theme": "Zapisz motyw",
   "Save this": "Zapisz ten plik",
   "Save this look": "Zapisz ten styl",
@@ -222,8 +222,8 @@ const catalog11: Record<string, string> = {
   "Saved on that device. You can close this page, or use this phone as a remote.":
     "Zapisano na tym urządzeniu. Możesz zamknąć tę stronę lub używać tego telefonu jako pilota.",
   "Saved on this device": "Zapisano na tym urządzeniu",
-  "Saved on this device. Another Harbor install starts fresh.":
-    "Zapisano na tym urządzeniu. Inna instalacja Harbor rozpocznie z ustawieniami domyślnymi.",
+  "Saved on this device. Another Lart install starts fresh.":
+    "Zapisano na tym urządzeniu. Inna instalacja Lart rozpocznie z ustawieniami domyślnymi.",
   "Saved on your device, but it couldn't be uploaded for others to see. Try again.":
     "Zapisano na urządzeniu, ale nie udało się przesłać, aby inni mogli to zobaczyć. Spróbuj ponownie.",
   "Saved on your server": "Zapisano na Twoim serwerze",
@@ -237,17 +237,17 @@ const catalog11: Record<string, string> = {
   "Saved to your library.": "Zapisano w bibliotece.",
   "Saved to {folder} · open folder": "Zapisano w {folder} · otwórz folder",
   "Saved to {service} as {status}": "Zapisano w {service} ze statusem {status}",
-  "Saved {d} from Harbor {a}.": "Zapisano {d} z Harbor {a}.",
-  "Saved {when} from Harbor {app}.": "Zapisano {when} z Harbor {app}.",
-  "Saved, but Harbor couldn't confirm the new order. Retry to re-check.":
-    "Zapisano, ale Harbor nie mógł potwierdzić nowej kolejności. Ponów, aby sprawdzić ponownie.",
+  "Saved {d} from Lart {a}.": "Zapisano {d} z Lart {a}.",
+  "Saved {when} from Lart {app}.": "Zapisano {when} z Lart {app}.",
+  "Saved, but Lart couldn't confirm the new order. Retry to re-check.":
+    "Zapisano, ale Lart nie mógł potwierdzić nowej kolejności. Ponów, aby sprawdzić ponownie.",
   Saves: "Obrony",
   "Saves a .txt of your watched anime + series entries so we can see the exact shape and finish the fix. Just titles, ids, and episode numbers.":
     "Zapisuje plik .txt z obejrzanymi anime i wpisami seriali, abyśmy mogli sprawdzić dokładną strukturę danych i dokończyć poprawkę. Zawiera tylko tytuły, identyfikatory i numery odcinków.",
   "Saves the relay URL and your Cloudflare token to a file.":
     "Zapisuje adres URL przekaźnika i token Cloudflare do pliku.",
-  "Saves your whole Harbor setup to one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
-    "Zapisuje całą konfigurację Harbor w jednym pliku: motyw, układ strony głównej, ustawienia, dodatki, profile, listę do obejrzenia, układy odtwarzacza, postęp oglądania i inne dane. Logowanie do Stremio celowo nie jest uwzględniane.",
+  "Saves your whole Lart setup to one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
+    "Zapisuje całą konfigurację Lart w jednym pliku: motyw, układ strony głównej, ustawienia, dodatki, profile, listę do obejrzenia, układy odtwarzacza, postęp oglądania i inne dane. Logowanie do Stremio celowo nie jest uwzględniane.",
   Saving: "Zapisywanie",
   "Saving EPUB": "Zapisywanie EPUB",
   "Saving GIF…": "Zapisywanie GIF-a…",
@@ -273,8 +273,8 @@ const catalog11: Record<string, string> = {
     "Skaluje cały interfejs na żywo podczas przeciągania.",
   "Scan again": "Skanuj ponownie",
   "Scan for corruption": "Skanuj w poszukiwaniu uszkodzeń",
-  "Scan this with your phone camera to open the Harbor remote, then type straight into the search box.":
-    "Zeskanuj ten kod aparatem telefonu, aby otworzyć pilota Harbor, a następnie wpisuj tekst bezpośrednio w polu wyszukiwania.",
+  "Scan this with your phone camera to open the Lart remote, then type straight into the search box.":
+    "Zeskanuj ten kod aparatem telefonu, aby otworzyć pilota Lart, a następnie wpisuj tekst bezpośrednio w polu wyszukiwania.",
   "Scan who is on screen while playing": "Wykrywaj osoby na ekranie podczas odtwarzania",
   "Scan with your phone camera, or type the address above.":
     "Zeskanuj aparatem telefonu lub wpisz powyższy adres.",
@@ -320,7 +320,7 @@ const catalog11: Record<string, string> = {
   "Scroll to top": "Przewiń na górę",
   "Scroll up for the trailer": "Przewiń w górę, aby zobaczyć zwiastun",
   Search: "Szukaj",
-  "Search Harbor": "Przeszukaj Harbor",
+  "Search Lart": "Przeszukaj Lart",
   "Search TMDB…": "Przeszukaj TMDB…",
   "Search a line by its words": "Wyszukaj wiersz po jego słowach",
   "Search actors, directors…": "Szukaj aktorów, reżyserów…",
@@ -387,8 +387,8 @@ const catalog11: Record<string, string> = {
     "Przeszukiwanie wszystkich źródeł w poszukiwaniu kolejnych napisów…",
   "Searching sources…": "Wyszukiwanie źródeł…",
   "Searching titles…": "Wyszukiwanie tytułów…",
-  "Searching works without a key. A key lets Harbor line subtitles up with the audio automatically.":
-    "Wyszukiwanie działa bez klucza. Klucz umożliwia Harbor automatyczne synchronizowanie napisów z dźwiękiem.",
+  "Searching works without a key. A key lets Lart line subtitles up with the audio automatically.":
+    "Wyszukiwanie działa bez klucza. Klucz umożliwia Lart automatyczne synchronizowanie napisów z dźwiękiem.",
   "Searching...": "Wyszukiwanie...",
   "Searching…": "Wyszukiwanie…",
   Season: "Sezon",
@@ -457,8 +457,8 @@ const catalog11: Record<string, string> = {
   "Self-test is disabled while strict remote streaming is on. It downloads a small test file over peer-to-peer on this machine.": "Autotest jest niedostępny przy włączonym rygorystycznym zdalnym przesyłaniu strumieniowym. Pobiera mały plik testowy bezpośrednio od innych użytkowników na to urządzenie.",
   Send: "Wyślij",
   "Send a bug report": "Wyślij zgłoszenie błędu",
-  "Send a bug report straight to the Harbor team. Screenshots and screen recordings welcome.":
-    "Wyślij zgłoszenie błędu bezpośrednio do zespołu Harbor. Zrzuty ekranu i nagrania ekranu są mile widziane.",
+  "Send a bug report straight to the Lart team. Screenshots and screen recordings welcome.":
+    "Wyślij zgłoszenie błędu bezpośrednio do zespołu Lart. Zrzuty ekranu i nagrania ekranu są mile widziane.",
   "Send audio to specific speakers, headphones or a receiver. System default follows Windows.":
     "Wysyłaj dźwięk do wybranych głośników, słuchawek lub amplitunera. Ustawienie domyślne systemu jest zgodne z ustawieniem Windows.",
   "Send rating": "Wyślij ocenę",
@@ -466,22 +466,22 @@ const catalog11: Record<string, string> = {
   "Send test": "Wyślij test",
   "Send the theme you are looking at right now, exactly as it is here.":
     "Wyślij aktualnie wyświetlany motyw dokładnie w takiej postaci, w jakiej jest tutaj.",
-  "Send this title to your Harbor app": "Wyślij ten tytuł do aplikacji Harbor",
-  "Send this to anyone you want to watch with. They paste it in their Settings → Harbor Relay. After that, share a 6-character room code from the people icon up top.":
-    "Wyślij ten adres każdej osobie, z którą chcesz oglądać. Osoba ta powinna wkleić go w sekcji Ustawienia → Przekaźnik Harbor. Następnie udostępnij 6-znakowy kod pokoju za pomocą ikony osoby u góry.",
+  "Send this title to your Lart app": "Wyślij ten tytuł do aplikacji Lart",
+  "Send this to anyone you want to watch with. They paste it in their Settings → Lart Relay. After that, share a 6-character room code from the people icon up top.":
+    "Wyślij ten adres każdej osobie, z którą chcesz oglądać. Osoba ta powinna wkleić go w sekcji Ustawienia → Przekaźnik Lart. Następnie udostępnij 6-znakowy kod pokoju za pomocą ikony osoby u góry.",
   "Send to TV": "Wyślij na telewizor",
   "Send to TV now": "Wyślij teraz na telewizor",
   Sending: "Wysyłanie",
   "Sending to Trakt…": "Wysyłanie do Trakt…",
-  "Sending to that Harbor": "Wysyłanie do tego Harbor",
+  "Sending to that Lart": "Wysyłanie do tego Lart",
   "Sending to your TV": "Wysyłanie na telewizor",
   "Sending to {provider}": "Wysyłanie do {provider}",
   "Sending...": "Wysyłanie...",
   "Sending…": "Wysyłanie…",
   "Sends only the chapter you open to DeepSeek. Volumes, chapters, and metadata stay unchanged.":
     "Do DeepSeek wysyłany jest tylko otwarty rozdział. Tomy, rozdziały i metadane pozostają bez zmian.",
-  "Sends the context above straight to the Harbor team. No keys or library data.":
-    "Wysyła powyższy kontekst bezpośrednio do zespołu Harbor. Bez kluczy ani danych biblioteki.",
+  "Sends the context above straight to the Lart team. No keys or library data.":
+    "Wysyła powyższy kontekst bezpośrednio do zespołu Lart. Bez kluczy ani danych biblioteki.",
   Sent: "Wysłano",
   "Sent {n} to Trakt": "Wysłano {n} elementów do Trakt",
   "Sent. Check your channel.": "Wysłano. Sprawdź swój kanał.",
@@ -508,7 +508,7 @@ const catalog11: Record<string, string> = {
   "Series · {n}": "Seriale · {n}",
   "Series, Critically Acclaimed": "Seriale docenione przez krytyków",
   Serif: "Szeryfowa",
-  "Serve Harbor on your network": "Udostępniaj Harbor w swojej sieci",
+  "Serve Lart on your network": "Udostępniaj Lart w swojej sieci",
   Server: "Serwer",
   "Server + login": "Serwer i dane logowania",
   "Server URL": "Adres URL serwera",
@@ -518,14 +518,14 @@ const catalog11: Record<string, string> = {
   "Server couldn't start:": "Nie udało się uruchomić serwera:",
   "Server did not respond": "Serwer nie odpowiedział",
   "Server reachable": "Serwer jest osiągalny",
-  "Server reachable in {ms}ms. Harbor will use it for torrent streaming.":
-    "Serwer osiągalny w ciągu {ms} ms. Harbor będzie go używać do strumieniowania torrentów.",
+  "Server reachable in {ms}ms. Lart will use it for torrent streaming.":
+    "Serwer osiągalny w ciągu {ms} ms. Lart będzie go używać do strumieniowania torrentów.",
   "Server returned an empty response": "Serwer zwrócił pustą odpowiedź",
   Servers: "Serwery",
-  "Serves this exact install of Harbor as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer.":
-    "Udostępnia tę konkretną instalację Harbor jako aplikację internetową w sieci lokalnej. Otwórz ją w przeglądarce na telefonie, laptopie lub telewizorze, zaloguj się, a treści będą przesyłane strumieniowo przez ten komputer.",
-  "Serves this exact install of Harbor as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer. You can also use the phone remote to control playback and cast to another device on this machine.":
-    "Udostępnia dokładnie tę instalację Harbor jako aplikację internetową w Twojej sieci. Otwórz ją w przeglądarce na telefonie, laptopie lub telewizorze, zaloguj się, a materiały będą strumieniowane przez ten komputer. Możesz też użyć telefonu jako pilota do sterowania odtwarzaniem i przesyłania obrazu na inne urządzenie połączone z tym komputerem.",
+  "Serves this exact install of Lart as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer.":
+    "Udostępnia tę konkretną instalację Lart jako aplikację internetową w sieci lokalnej. Otwórz ją w przeglądarce na telefonie, laptopie lub telewizorze, zaloguj się, a treści będą przesyłane strumieniowo przez ten komputer.",
+  "Serves this exact install of Lart as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer. You can also use the phone remote to control playback and cast to another device on this machine.":
+    "Udostępnia dokładnie tę instalację Lart jako aplikację internetową w Twojej sieci. Otwórz ją w przeglądarce na telefonie, laptopie lub telewizorze, zaloguj się, a materiały będą strumieniowane przez ten komputer. Możesz też użyć telefonu jako pilota do sterowania odtwarzaniem i przesyłania obrazu na inne urządzenie połączone z tym komputerem.",
   "Service status": "Stan usługi",
   "Service-specific browsing needs a TMDB key. Pick All / Movies / Shows to browse via Cinemeta.":
     "Przeglądanie według serwisu wymaga klucza TMDB. Wybierz Wszystko, Filmy lub Seriale, aby przeglądać przez Cinemeta.",
@@ -535,7 +535,7 @@ const catalog11: Record<string, string> = {
   "Session ID or v4 access token": "Identyfikator sesji lub token dostępu v4",
   "Set PIN": "Ustaw PIN",
   "Set a 4-digit PIN": "Ustaw 4-cyfrowy PIN",
-  "Set a Harbor profile picture first": "Najpierw ustaw zdjęcie profilowe Harbor",
+  "Set a Lart profile picture first": "Najpierw ustaw zdjęcie profilowe Lart",
   "Set a PIN": "Ustaw PIN",
   "Set a PIN for {name}": "Ustaw PIN profilu {name}",
   "Set a course": "Wyznacz kurs",
@@ -561,27 +561,27 @@ const catalog11: Record<string, string> = {
   "Set to where the video is right now": "Ustaw na bieżącą pozycję filmu",
   "Set up": "Skonfiguruj",
   "Set up Anime4K": "Skonfiguruj Anime4K",
-  "Set up Harbor": "Skonfiguruj Harbor",
+  "Set up Lart": "Skonfiguruj Lart",
   "Set up Live TV": "Skonfiguruj telewizję na żywo",
   "Set up a Cloudflare relay for Watch Together":
     "Skonfiguruj przekaźnik Cloudflare dla Watch Together",
   "Set up a debrid": "Skonfiguruj usługę debrid",
   "Set up a source": "Skonfiguruj źródło",
-  "Set up at least one readable eBook source to begin. Metadata can describe a book, but a folder, extension, or custom source is what lets Harbor open it.":
-    "Aby rozpocząć, skonfiguruj co najmniej jedno źródło e-booków umożliwiające ich odczyt. Metadane mogą opisywać książkę, ale Harbor może ją otworzyć dopiero z folderu, rozszerzenia lub niestandardowego źródła.",
+  "Set up at least one readable eBook source to begin. Metadata can describe a book, but a folder, extension, or custom source is what lets Lart open it.":
+    "Aby rozpocząć, skonfiguruj co najmniej jedno źródło e-booków umożliwiające ich odczyt. Metadane mogą opisywać książkę, ale Lart może ją otworzyć dopiero z folderu, rozszerzenia lub niestandardowego źródła.",
   "Set up eBooks": "Skonfiguruj e-booki",
   "Set up my TV from this computer": "Skonfiguruj mój telewizor z tego komputera",
   "Set up your own Cloudflare Worker rather than borrowing this one.":
     "Skonfiguruj własny Cloudflare Worker zamiast korzystać z tego.",
-  "Set your MyAnimeList profile picture as your Harbor avatar.":
-    "Ustaw zdjęcie profilowe z MyAnimeList jako awatar Harbor.",
+  "Set your MyAnimeList profile picture as your Lart avatar.":
+    "Ustaw zdjęcie profilowe z MyAnimeList jako awatar Lart.",
   "Set your status": "Ustaw status",
   "Set. If the subtitles drift later on, play ahead and Sync from here again at a later line to fix the drift.":
     "Gotowe. Jeśli napisy później się rozjadą, odtwórz dalszy fragment i ponownie wybierz Synchronizuj od tego miejsca przy późniejszym wierszu, aby skorygować przesunięcie.",
-  "Sets streaming availability and the Now Playing release window. Pick a country and Harbor offers to match the interface, metadata, subtitle, and audio languages to it.":
-    "Określa dostępność transmisji strumieniowej i przedział premier w sekcji „Teraz odtwarzane”. Wybierz kraj, a Harbor zaproponuje dostosowanie do niego języka interfejsu, metadanych, napisów i dźwięku.",
-  "Sets the language of Harbor's own interface: menus, buttons, and labels. Arabic switches the layout to right to left. This is separate from subtitle and metadata languages below.":
-    "Ustawia język interfejsu Harbor, w tym menu, przycisków i etykiet. Język arabski przełącza układ na kierunek od prawej do lewej. To ustawienie jest niezależne od poniższych języków napisów i metadanych.",
+  "Sets streaming availability and the Now Playing release window. Pick a country and Lart offers to match the interface, metadata, subtitle, and audio languages to it.":
+    "Określa dostępność transmisji strumieniowej i przedział premier w sekcji „Teraz odtwarzane”. Wybierz kraj, a Lart zaproponuje dostosowanie do niego języka interfejsu, metadanych, napisów i dźwięku.",
+  "Sets the language of Lart's own interface: menus, buttons, and labels. Arabic switches the layout to right to left. This is separate from subtitle and metadata languages below.":
+    "Ustawia język interfejsu Lart, w tym menu, przycisków i etykiet. Język arabski przełącza układ na kierunek od prawej do lewej. To ustawienie jest niezależne od poniższych języków napisów i metadanych.",
   "Setting up Multiview": "Konfigurowanie widoku wielu strumieni",
   "Setting up an addon": "Konfigurowanie dodatku",
   "Setting up the hand-off…": "Konfigurowanie przekazania…",
@@ -590,9 +590,9 @@ const catalog11: Record<string, string> = {
     "Ustawienia tego profilu (współdzielone lub niezależne)",
   "Settings storage": "Dane ustawień",
   "Settings storage breakdown": "Zestawienie użycia pamięci przez ustawienia",
-  "Settings, Harbor Relay, then": "Ustawienia, Przekaźnik Harbor, a następnie",
-  "Settings, Harbor Relay, then {kbd}.":
-    "Wybierz kolejno Ustawienia, Przekaźnik Harbor, a następnie {kbd}.",
+  "Settings, Lart Relay, then": "Ustawienia, Przekaźnik Lart, a następnie",
+  "Settings, Lart Relay, then {kbd}.":
+    "Wybierz kolejno Ustawienia, Przekaźnik Lart, a następnie {kbd}.",
   "Settings, lists and progress follow you between machines.":
     "Ustawienia, listy i postępy są synchronizowane między urządzeniami.",
   Setup: "Konfiguracja",
@@ -609,8 +609,8 @@ const catalog11: Record<string, string> = {
   "Shaders (Anime4K + installed)": "Shadery (Anime4K + zainstalowane)",
   "Shaders installed": "Shadery zainstalowane",
   Shadow: "Cień",
-  "Shape the metadata and reading language Harbor uses without changing your original files.":
-    "Dostosuj metadane i język czytania używany przez Harbor bez zmieniania oryginalnych plików.",
+  "Shape the metadata and reading language Lart uses without changing your original files.":
+    "Dostosuj metadane i język czytania używany przez Lart bez zmieniania oryginalnych plików.",
   "Shape the sound without touching your system EQ. Applies on the mpv engine; the HTML5 engine plays audio untouched.":
     "Dostosuj brzmienie bez zmieniania korektora systemowego. Ustawienie działa w silniku mpv, silnik HTML5 odtwarza dźwięk bez zmian.",
   Share: "Udostępnij",
@@ -634,15 +634,15 @@ const catalog11: Record<string, string> = {
   "Share with {name}": "Udostępnij profilowi {name}",
   "Share your thoughts (optional)": "Podziel się opinią (opcjonalnie)",
   Shared: "Udostępnione",
-  "Shared collections from across Harbor will show up here soon.":
-    "Wkrótce pojawią się tutaj kolekcje udostępnione w Harbor.",
+  "Shared collections from across Lart will show up here soon.":
+    "Wkrótce pojawią się tutaj kolekcje udostępnione w Lart.",
   "Shared to the community": "Udostępniono społeczności",
   "Shared transition curves. Use anywhere you transition.":
     "Wspólne krzywe przejść. Używaj ich wszędzie tam, gdzie stosujesz przejścia.",
   "Sharing your diagnostics": "Udostępnianie danych diagnostycznych",
   "Sharing your diagnostics for issue #{ticket}. Your session tokens, API keys, and passwords are removed before anything leaves your device.":
     "Udostępniasz dane diagnostyczne dotyczące zgłoszenia #{ticket}. Tokeny sesji, klucze API i hasła są usuwane, zanim jakiekolwiek dane opuszczą urządzenie.",
-  "Sharing your relay": "Udostępnianie Harbor Relay",
+  "Sharing your relay": "Udostępnianie Lart Relay",
   "Sharp Wit": "Cięty dowcip",
   "Sharp comedies, sunny worlds, and the occasional binge bait.":
     "Błyskotliwe komedie, słoneczne światy i czasem coś, co kusi do maratonu.",
@@ -666,16 +666,16 @@ const catalog11: Record<string, string> = {
     "Przesuń napisy wcześniej (Shift umożliwia precyzyjną regulację).",
   "Shift subtitle timing later (Shift for fine steps).":
     "Przesuń napisy później (Shift umożliwia precyzyjną regulację).",
-  "Ships with Harbor. Always available.": "Dostarczany z Harbor. Zawsze dostępny.",
+  "Ships with Lart. Always available.": "Dostarczany z Lart. Zawsze dostępny.",
   Short: "Krótkometrażowe",
   "Short of the Year": "Film krótkometrażowy roku",
   "Short seek (Shift + arrows)": "Krótkie przewijanie (Shift + strzałki)",
   "Short seek back": "Krótkie przewinięcie wstecz",
   "Short seek forward": "Krótkie przewinięcie do przodu",
-  "Short version: don't. Harbor takes no donations and no cut of anything on this page.":
-    "W skrócie: nie rób tego. Harbor nie przyjmuje darowizn ani nie pobiera prowizji od niczego na tej stronie.",
-  "Short version: don't. Harbor takes no donations.":
-    "W skrócie: nie rób tego. Harbor nie przyjmuje darowizn.",
+  "Short version: don't. Lart takes no donations and no cut of anything on this page.":
+    "W skrócie: nie rób tego. Lart nie przyjmuje darowizn ani nie pobiera prowizji od niczego na tej stronie.",
+  "Short version: don't. Lart takes no donations.":
+    "W skrócie: nie rób tego. Lart nie przyjmuje darowizn.",
   "Short {word} {n} seconds": "Krótkie {word}: {n} sekund",
   Shortcuts: "Skróty",
   Shots: "Strzały",
@@ -707,8 +707,8 @@ const catalog11: Record<string, string> = {
     "Wyświetlaj na profilu kartę Minecrafta. Pozostaw nazwę użytkownika pustą, aby ją ukryć.",
   "Show a Minecraft card with your username":
     "Wyświetlaj kartę Minecrafta z Twoją nazwą użytkownika",
-  "Show a Skip Intro / Skip Credits button when Harbor detects one. Turn this off to never show it. You can also tap the X on the button to dismiss a wrong one for the rest of the episode.":
-    "Pokazuj przycisk Pomiń intro / Pomiń napisy końcowe, gdy Harbor je wykryje. Wyłącz tę opcję, aby nigdy go nie wyświetlać. Możesz też nacisnąć X na przycisku, aby ukryć błędną sugestię do końca odcinka.",
+  "Show a Skip Intro / Skip Credits button when Lart detects one. Turn this off to never show it. You can also tap the X on the button to dismiss a wrong one for the rest of the episode.":
+    "Pokazuj przycisk Pomiń intro / Pomiń napisy końcowe, gdy Lart je wykryje. Wyłącz tę opcję, aby nigdy go nie wyświetlać. Możesz też nacisnąć X na przycisku, aby ukryć błędną sugestię do końca odcinka.",
   "Show a Skip button when a known injected ad plays, and a small report button on new releases so you can mark ads for review.":
     "Pokazuj przycisk Pomiń podczas odtwarzania znanej wstawionej reklamy oraz mały przycisk zgłaszania w nowych wydaniach, aby oznaczać reklamy do sprawdzenia.",
   "Show a bookmark on saved titles": "Pokazuj zakładkę na zapisanych tytułach",

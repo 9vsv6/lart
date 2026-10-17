@@ -1,7 +1,7 @@
 export default {
   "games.details.broadcastPause": "Wstrzymaj transmisję",
   "games.details.broadcastResume": "Odtwórz transmisję",
-  "games.details.broadcastPlay": "Oglądaj w Harbor",
+  "games.details.broadcastPlay": "Oglądaj w Lart",
   "games.details.watchRun": "Obejrzyj próbę",
   "games.details.viewRun": "Zobacz wynik",
   "games.details.runVideo": "Nagranie próby",

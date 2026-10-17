@@ -38,7 +38,7 @@ export function AdvancedMpvSection() {
           </span>
         )}
         {check.valid === 0 && check.skipped === 0 && (
-          <span className="text-ink-subtle">{t("No custom options. Harbor uses your video settings.")}</span>
+          <span className="text-ink-subtle">{t("No custom options. Lart uses your video settings.")}</span>
         )}
       </p>
       {check.risky.length > 0 && (

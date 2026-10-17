@@ -34,8 +34,8 @@ const addons: Record<string, string> = {
     "Перенастроить дополнение и применить новую ссылку",
   "Sign in to sync your addons across devices":
     "Войдите, чтобы синхронизировать дополнения между устройствами",
-  "Anything you install in Harbor pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
-    "Всё, что вы устанавливаете в Harbor, отправляется в ваш аккаунт Stremio и появляется в том числе на телефоне. Войдите через аватар в левом нижнем углу боковой панели.",
+  "Anything you install in Lart pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
+    "Всё, что вы устанавливаете в Lart, отправляется в ваш аккаунт Stremio и появляется в том числе на телефоне. Войдите через аватар в левом нижнем углу боковой панели.",
   "Common picks for a fresh setup.": "Частый выбор при первой настройке.",
   "Browse by category": "По категориям",
   "Six places to start. Tap one and we'll filter the catalog for you.":
@@ -56,8 +56,8 @@ const addons: Record<string, string> = {
   "Configure on the addon's setup page": "Настройка на странице дополнения",
   "Click to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "Нажмите, чтобы открыть страницу настройки {name}. Выберите параметры, скопируйте выданную ссылку установки и вставьте её ниже, чтобы обновить дополнение.",
-  "Click to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "Нажмите, чтобы открыть страницу настройки {name} во встроенном браузере Harbor. Выберите параметры. Когда нажмёте кнопку установки на их странице, Harbor сам поймает ссылку и обновит дополнение.",
+  "Click to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "Нажмите, чтобы открыть страницу настройки {name} во встроенном браузере Lart. Выберите параметры. Когда нажмёте кнопку установки на их странице, Lart сам поймает ссылку и обновит дополнение.",
   "Open setup page": "Открыть страницу настройки",
   'Heads-up: a few addons (like AIOStatus) don\'t pre-fill from the URL. If the form loads blank, paste the existing manifest URL into their "Import from URL" field to restore your settings.':
     'Обратите внимание: некоторые дополнения (например, AIOStatus) не подставляют значения из URL. Если форма открылась пустой, вставьте текущий URL манифеста в их поле "Import from URL", чтобы восстановить настройки.',
@@ -98,8 +98,8 @@ const addons: Record<string, string> = {
     "В URL могут быть ключи debrid или токены; показывайте только для копирования",
   "Hidden by default. Manifest paths often carry API keys (debrid tokens, OMDB keys, etc.) you don't want over a shoulder.":
     "Скрыто по умолчанию. В путях манифеста часто есть API-ключи (токены debrid, ключи OMDB и т. п.), которые лучше не показывать посторонним.",
-  "Stremio addon, packaged into Harbor's catalog.":
-    "Дополнение Stremio, включённое в каталог Harbor.",
+  "Stremio addon, packaged into Lart's catalog.":
+    "Дополнение Stremio, включённое в каталог Lart.",
   "Version and capabilities come straight from the addon's manifest. Ratings and categories come from the":
     "Версия и возможности берутся прямо из манифеста дополнения. Рейтинги и категории – из",
   "community API. Star, browse, and contribute on their site.":
@@ -112,8 +112,8 @@ const addons: Record<string, string> = {
   "View more": "Показать ещё",
   "You've reached the end · {n} addons": "Это всё · {n} дополнений",
   "No velocity data yet": "Пока нет данных о динамике",
-  "Trending tracks star growth across your Harbor visits. Open the addons page again tomorrow and the top risers will appear here.":
-    "Тренды отслеживают прирост звёзд между вашими визитами в Harbor. Откройте страницу дополнений завтра – здесь появятся лидеры роста.",
+  "Trending tracks star growth across your Lart visits. Open the addons page again tomorrow and the top risers will appear here.":
+    "Тренды отслеживают прирост звёзд между вашими визитами в Lart. Откройте страницу дополнений завтра – здесь появятся лидеры роста.",
   "Organize addons": "Упорядочить дополнения",
   "Back to addons": "Назад к дополнениям",
   "This order drives your catalog rows and the default stream order. A stream priority set in Settings overrides it for streams.":
@@ -135,8 +135,8 @@ const addons: Record<string, string> = {
   "No addons are synced to this account yet.":
     "С этим аккаунтом пока не синхронизировано ни одного дополнения.",
   "On this device only": "Только на этом устройстве",
-  "These live in Harbor on this computer and never touch your account.":
-    "Они хранятся в Harbor на этом компьютере и не попадают в аккаунт.",
+  "These live in Lart on this computer and never touch your account.":
+    "Они хранятся в Lart на этом компьютере и не попадают в аккаунт.",
   "On this device": "На этом устройстве",
   "Sign in to Stremio to organize the addons synced to your account.":
     "Войдите в Stremio, чтобы упорядочить дополнения из аккаунта.",
@@ -149,8 +149,8 @@ const addons: Record<string, string> = {
     "Ничего не изменится, пока вы не нажмёте «Сохранить». При выходе со страницы правки пропадут.",
   "The Backups button at the top keeps your last five orders. One click restores any of them.":
     "Кнопка «Резервные копии» вверху хранит пять последних вариантов порядка. Любой можно вернуть одним нажатием.",
-  "Harbor double-checks with Stremio after saving, so a half-written order can't slip through.":
-    "После сохранения Harbor перепроверяет данные в Stremio, чтобы не остался наполовину записанный порядок.",
+  "Lart double-checks with Stremio after saving, so a half-written order can't slip through.":
+    "После сохранения Lart перепроверяет данные в Stremio, чтобы не остался наполовину записанный порядок.",
   "{n} addon": "{n} дополнение",
   "{n} addons": "{n} дополнений",
   "Drag to reorder": "Перетащите, чтобы изменить порядок",
@@ -163,12 +163,12 @@ const addons: Record<string, string> = {
     "Коллекция дополнений изменилась на другом устройстве. Ничего не записано.",
   "Stremio didn't confirm the save. Your collection may be unchanged. Retry will re-check before writing again.":
     "Stremio не подтвердил сохранение. Возможно, коллекция не изменилась. Повтор сначала перепроверит данные.",
-  "Saved, but Harbor couldn't confirm the new order. Retry to re-check.":
-    "Сохранено, но Harbor не смог подтвердить новый порядок. Повторите, чтобы перепроверить.",
+  "Saved, but Lart couldn't confirm the new order. Retry to re-check.":
+    "Сохранено, но Lart не смог подтвердить новый порядок. Повторите, чтобы перепроверить.",
   "Stremio reports a different order than was saved.":
     "Stremio сообщает о другом порядке, чем был сохранён.",
-  "A safety copy of your addon order. One is saved automatically before Harbor writes any change, and you can save one yourself any time. The five most recent are kept.":
-    "Резервная копия порядка дополнений. Создаётся автоматически перед тем, как Harbor запишет изменения, и вы можете сохранить её сами в любой момент. Хранятся пять последних.",
+  "A safety copy of your addon order. One is saved automatically before Lart writes any change, and you can save one yourself any time. The five most recent are kept.":
+    "Резервная копия порядка дополнений. Создаётся автоматически перед тем, как Lart запишет изменения, и вы можете сохранить её сами в любой момент. Хранятся пять последних.",
   "Back up current order": "Сохранить текущий порядок",
   "No backups yet. Press the button above to save your first one.":
     "Копий пока нет. Нажмите кнопку выше, чтобы создать первую.",
@@ -186,8 +186,8 @@ const addons: Record<string, string> = {
     "Установка по URL: вставьте любой манифест или ссылку stremio://",
   "Click below to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "Нажмите ниже, чтобы открыть страницу настройки {name}. Выберите параметры, скопируйте выданную ссылку установки и вставьте её ниже, чтобы обновить дополнение.",
-  "Click below to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "Нажмите ниже, чтобы открыть страницу настройки {name} во встроенном браузере Harbor. Выберите параметры. Когда нажмёте кнопку установки на их странице, Harbor сам поймает ссылку и обновит дополнение.",
+  "Click below to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "Нажмите ниже, чтобы открыть страницу настройки {name} во встроенном браузере Lart. Выберите параметры. Когда нажмёте кнопку установки на их странице, Lart сам поймает ссылку и обновит дополнение.",
   "Essential addons": "Основные дополнения",
   "Start here. The ones almost everyone has.": "Начните отсюда. Их ставят почти все.",
   "Best for debrid": "Лучшее для debrid",

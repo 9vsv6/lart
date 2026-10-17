@@ -9,8 +9,8 @@ export function JoinDiscordCard() {
   const t = useT();
   return (
     <SettingRow
-      label={t("Harbor on Discord")}
-      desc={t("Release notes, help from other people using Harbor, and somewhere to send bugs.")}
+      label={t("Lart on Discord")}
+      desc={t("Release notes, help from other people using Lart, and somewhere to send bugs.")}
       icon={<DiscordIcon className="h-[18px] w-[18px]" />}
     >
       <SButton onClick={() => void openUrl(HARBOR_DISCORD_INVITE)}>{t("Join")}</SButton>

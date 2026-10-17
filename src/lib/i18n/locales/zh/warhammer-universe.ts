@@ -18,7 +18,7 @@ export default {
   "games.warhammerUniverse.screenNote": "来自第四十一千年的原创动画与长篇电影。",
   "games.warhammerUniverse.free": "在 Warhammer TV 免费观看",
   "games.warhammerUniverse.subscription": "可能需要 Warhammer+ 订阅",
-  "games.warhammerUniverse.movieNote": "2010年动画电影。在 Harbor 详情中查看演员、预告与可用来源。",
+  "games.warhammerUniverse.movieNote": "2010年动画电影。在 Lart 详情中查看演员、预告与可用来源。",
   "games.warhammerUniverse.screenScope": "Warhammer TV 的公开精选。《战锤：锤与爆弹》跨越多个世界；观看权限由服务商决定。",
   "games.warhammerUniverse.lore": "深入背景故事",
   "games.warhammerUniverse.loreNote": "由世界的创作者以图像呈现人物、派系与关键事件。",

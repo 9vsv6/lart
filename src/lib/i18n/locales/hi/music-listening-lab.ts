@@ -36,7 +36,7 @@ const musicListeningLab: Record<string, string> = {
   "music.lab.crossfeed": "हेडफ़ोन क्रॉसफ़ीड",
   "music.lab.crossfeedHelp":
     "हर स्टीरियो चैनल का फ़िल्टर किया हिस्सा दूसरे में मिलाता है ताकि हेडफ़ोन में अलगाव कम हो। 0% पर बंद।",
-  "music.lab.bypass": "Harbor DSP बायपास करें",
+  "music.lab.bypass": "Lart DSP बायपास करें",
   "music.lab.bypassHelp":
     "लागू करने के बाद EQ, प्रीऐम्प, क्रॉसफ़ीड, बैलेंस और ReplayGain बायपास होते हैं। आउटपुट और प्लेबैक वॉल्यूम सक्रिय रहते हैं। यह बिट-परफ़ेक्ट प्लेबैक की पुष्टि नहीं है।",
   "music.lab.exclusive": "एक्सक्लूसिव आउटपुट का अनुरोध",

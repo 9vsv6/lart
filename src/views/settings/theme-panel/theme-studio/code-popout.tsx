@@ -78,7 +78,7 @@ export function CodePopout({
 
   const download = (id: CodeLang) => {
     const f = THEME_FILES.find((x) => x.id === id);
-    if (f) void downloadText(f.name, values[id], [f.id], t("Harbor theme"));
+    if (f) void downloadText(f.name, values[id], [f.id], t("Lart theme"));
   };
 
   const copy = () => {
@@ -226,7 +226,7 @@ export function CodePopout({
             {!value && (
               <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
                 <span className="max-w-[66ch] text-[15.5px] leading-[22px] text-ink-subtle">
-                  {t("{file} is empty. Start typing to restyle Harbor.", { file: meta.name })}
+                  {t("{file} is empty. Start typing to restyle Lart.", { file: meta.name })}
                 </span>
               </div>
             )}

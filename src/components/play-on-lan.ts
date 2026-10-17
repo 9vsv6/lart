@@ -45,12 +45,12 @@ const PLATFORM_LABEL: Record<string, string> = {
 };
 
 export function platformLabel(platform: string): string {
-  return PLATFORM_LABEL[platform] ?? (platform ? platform : "Harbor");
+  return PLATFORM_LABEL[platform] ?? (platform ? platform : "Lart");
 }
 
 export function describeInstance(instance: HarborInstance): string {
   const bits = [platformLabel(instance.platform)];
-  if (instance.version) bits.push(`Harbor ${instance.version}`);
+  if (instance.version) bits.push(`Lart ${instance.version}`);
   const theme = themeLabel(instance.theme ?? "");
   if (theme) bits.push(theme);
   return bits.join(" / ");

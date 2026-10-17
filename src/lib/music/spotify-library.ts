@@ -80,7 +80,7 @@ export async function importSpotifyCollection({
   }
   signal?.throwIfAborted();
   if (tracks.length === 0) throw new Error("Spotify collection has no importable tracks");
-  // Read the complete collection before creating anything in Harbor. A failed
+  // Read the complete collection before creating anything in Lart. A failed
   // page or cancellation cannot leave a misleading partial import.
   const created = await createMusicPlaylist(name);
   let playlist: MusicPlaylist;

@@ -196,7 +196,7 @@ const en: Record<string, string> = {
   "chrome.parentalOn": "Parental controls on",
   "chrome.lockedRequiresPin": "{label} (locked, requires PIN)",
   "chrome.lockedShort": "{label} · locked",
-  "chrome.harborHome": "Harbor home",
+  "chrome.harborHome": "Lart home",
   "chrome.sectionLibrary": "Library",
 
   "profile.whoWatching": "Who's watching",
@@ -209,7 +209,7 @@ const en: Record<string, string> = {
   "profile.signedIn": "Signed in to Stremio",
   "profile.fallback": "Profile",
 
-  "welcome.title": "Welcome to Harbor",
+  "welcome.title": "Welcome to Lart",
   "welcome.subtitle": "The interface is now in Arabic. You can switch back anytime from Settings.",
   "welcome.dismiss": "Get started",
 
@@ -321,8 +321,8 @@ const en: Record<string, string> = {
   "Focus GIF URL": "Focus GIF URL",
   "Addon not installed": "Addon not installed",
   "This section depends on the addon": "This section depends on the addon",
-  "You must install this addon in your Stremio account first so Harbor can fetch its works.":
-    "You must install this addon in your Stremio account first so Harbor can fetch its works.",
+  "You must install this addon in your Stremio account first so Lart can fetch its works.":
+    "You must install this addon in your Stremio account first so Lart can fetch its works.",
   "Missing TMDB Key": "Missing TMDB Key",
   "This section relies on TMDB discovery features.":
     "This section relies on TMDB discovery features.",
@@ -333,13 +333,13 @@ const en: Record<string, string> = {
 
   "Top People": "Top People",
   "Ranking source": "Ranking source",
-  "How Harbor Rank works": "How Harbor Rank works",
-  "Harbor Rank": "Harbor Rank",
+  "How Lart Rank works": "How Lart Rank works",
+  "Lart Rank": "Lart Rank",
   Trending: "Trending",
   "Top on TMDB": "Top on TMDB",
   "Top on IMDb": "Top on IMDb",
   Consensus: "Consensus",
-  Harbor: "Harbor",
+  Lart: "Lart",
   TMDB: "TMDB",
   IMDb: "IMDb",
   "Our all-time ranking of a body of work, fully explained.":
@@ -424,16 +424,16 @@ const en: Record<string, string> = {
   "update.downloading": "Downloading update",
   "update.failed": "Update failed",
   "update.available": "Update available",
-  "update.harborVersion": "Harbor {version}",
+  "update.harborVersion": "Lart {version}",
   "update.downloadComplete": "Download complete",
   "update.fetching": "Fetching the latest version",
   "update.errorServer": "There was an error connecting to the update server.",
   "update.later": "Later",
   "update.download": "Download",
   "update.installRestart": "Install and restart",
-  "update.restartAuto": "Harbor will restart automatically.",
+  "update.restartAuto": "Lart will restart automatically.",
   "update.tryAgain": "Try again",
-  "update.keepUsing": "Keep using Harbor while it downloads",
+  "update.keepUsing": "Keep using Lart while it downloads",
   "update.of": "{downloaded} of {total}",
   "mpv.conf": "mpv.conf",
   ...settingsRefinements,

@@ -451,7 +451,7 @@ function RuleEditor({
           wide
           label={t("Rule name")}
           desc={t(
-            "What this rule is called in your list. Leave it empty and Harbor names it after the trigger.",
+            "What this rule is called in your list. Leave it empty and Lart names it after the trigger.",
           )}
         >
           <input
@@ -470,7 +470,7 @@ function RuleEditor({
         <SettingRow
           wide
           label={t("Trigger")}
-          desc={t("The release Harbor watches for. Everything else on this page narrows it down.")}
+          desc={t("The release Lart watches for. Everything else on this page narrows it down.")}
         >
           <div className="w-full max-w-[420px]">
             <Dropdown
@@ -502,7 +502,7 @@ function RuleEditor({
           <ToggleRow
             label={t("Only my favorited channels")}
             sub={t(
-              "Turn this on and Harbor watches just the Live TV channels you starred. Off means every channel in your playlists.",
+              "Turn this on and Lart watches just the Live TV channels you starred. Off means every channel in your playlists.",
             )}
             value={liveTv.favoritesOnly !== false}
             onChange={(v) => setTrigger({ ...liveTv, favoritesOnly: v })}
@@ -513,7 +513,7 @@ function RuleEditor({
           <SettingRow
             label={t("Heads-up time")}
             desc={t(
-              "How far ahead of the start time Harbor pings you. It scans your playlist EPG every 30 minutes.",
+              "How far ahead of the start time Lart pings you. It scans your playlist EPG every 30 minutes.",
             )}
           >
             <div className="w-[280px] max-w-full">

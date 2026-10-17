@@ -29,7 +29,7 @@ export function spooktoberAsset(path: string): string {
   return `/spooktober/${path.replace(/^\.?\//, "")}`;
 }
 
-/** Match Harbor's catalog identity, and let its source picker resolve the full recording. */
+/** Match Lart's catalog identity, and let its source picker resolve the full recording. */
 export function spooktoberSongToTrack(song: SpooktoberSong): MusicTrack {
   const sourceId = /^music-(\d+)$/.exec(song.id)?.[1];
   const duration = Math.max(0, Math.round(Number(song.duration) || 0));

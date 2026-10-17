@@ -124,8 +124,8 @@ export default {
   Constructors: "Konstruktor",
   "Coverage varies by league. Streams depend on your available sources.":
     "Cakupan berbeda menurut liga. Siaran bergantung pada sumber yang tersedia.",
-  "Delivery failed. Retrying while Harbor is open.":
-    "Pengiriman gagal. Dicoba lagi selama Harbor terbuka.",
+  "Delivery failed. Retrying while Lart is open.":
+    "Pengiriman gagal. Dicoba lagi selama Lart terbuka.",
   Driver: "Pembalap",
   Drivers: "Pembalap",
   "Entrants and starting positions appear when the feed publishes them.":
@@ -160,7 +160,7 @@ export default {
     "Dari liga terbesar hingga olahraga favorit baru.",
   "Inside the paddock": "Di dalam paddock",
   "Jump to today": "Ke hari ini",
-  "Keep Harbor open to deliver reminders.": "Biarkan Harbor terbuka untuk mengirim pengingat.",
+  "Keep Lart open to deliver reminders.": "Biarkan Lart terbuka untuk mengirim pengingat.",
   "Last saved score": "Skor terakhir tersimpan",
   "Last update": "Pembaruan terakhir",
   "Latest saved scores": "Skor terbaru tersimpan",
@@ -284,10 +284,10 @@ export default {
     "Coba olahraga atau tanggal lain. Jadwal tersimpan muncul di sini jika sumber tidak tersedia.",
   "Up to date": "Terkini",
   "Updating schedules…": "Memperbarui jadwal…",
-  "Use only sources you are authorized to access. Harbor does not bypass subscriptions or access restrictions.":
-    "Gunakan hanya sumber yang berhak Anda akses. Harbor tidak melewati langganan atau pembatasan akses.",
-  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Harbor does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
-    "Gunakan siaran, daftar putar M3U, dan akun Xtream yang berhak Anda akses. Harbor tidak menyediakan langganan atau melewati paywall, DRM, dan pembatasan akses.",
+  "Use only sources you are authorized to access. Lart does not bypass subscriptions or access restrictions.":
+    "Gunakan hanya sumber yang berhak Anda akses. Lart tidak melewati langganan atau pembatasan akses.",
+  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Lart does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
+    "Gunakan siaran, daftar putar M3U, dan akun Xtream yang berhak Anda akses. Lart tidak menyediakan langganan atau melewati paywall, DRM, dan pembatasan akses.",
   "View match statistics": "Lihat statistik pertandingan",
   "Watch with your sources": "Tonton dengan sumber Anda",
   "Your authorized IPTV, M3U and Xtream channels, in one place.":

@@ -43,7 +43,7 @@ function clientId(): string {
 function headers(id = clientId()) {
   return {
     Accept: "application/json",
-    "X-Plex-Product": "Harbor",
+    "X-Plex-Product": "Lart",
     "X-Plex-Version": "1",
     "X-Plex-Client-Identifier": id,
   };
@@ -77,7 +77,7 @@ export async function signInWithPlex(
   const params = new URLSearchParams({
     clientID: id,
     code: pin.code,
-    "context[device][product]": "Harbor",
+    "context[device][product]": "Lart",
   });
   openUrl(`https://app.plex.tv/auth#?${params}`);
   onWaiting?.();

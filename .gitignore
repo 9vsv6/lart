@@ -103,7 +103,7 @@ installer/payload-stage/
 tools/tv-refs/
 docs/tv-perf/
 # tauri-generated scaffolding, recreate with: pnpm android:init
-src-tauri/gen/
+src-tauri/gen/schemas/
 installer/src-tauri/gen/
 
 # Localization / Crowdin credentials (token lives outside the repo, env-var only)
@@ -126,3 +126,10 @@ gemini.key
 
 # Rotated dev-server logs: *.log covers dev.log but not its .prev rotation.
 dev.log*
+
+# Prompt files imported with ?raw must ship.
+!src/lib/ebook/*.md
+
+# Built APKs and installers
+/releases/
+!/LART.md

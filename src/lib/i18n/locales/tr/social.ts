@@ -34,8 +34,8 @@ const social: Record<string, string> = {
   "First anchor": "İlk referans noktası",
   "Guests pick their own source": "Konuklar kendi kaynaklarını seçsin",
   Guided: "Yönlendirmeli",
-  "Harbor's public relay has not rolled out the latest protocol yet.":
-    "Harbor'ın herkese açık aktarıcısına en son protokol henüz dağıtılmadı.",
+  "Lart's public relay has not rolled out the latest protocol yet.":
+    "Lart'ın herkese açık aktarıcısına en son protokol henüz dağıtılmadı.",
   "Hide streams": "Yayınları gizle",
   IMDb: "IMDb",
   "Increase progress": "İlerlemeyi artır",
@@ -83,8 +83,8 @@ const social: Record<string, string> = {
   "Prompts guests to choose instead of auto-matching":
     "Otomatik eşleştirme yerine konuklardan seçim yapmalarını ister",
   "Ready to save": "Kaydetmeye hazır",
-  "Redeploy it to get the latest Watch Together fixes. Harbor's public relay updates on its own.":
-    "En son Birlikte İzle düzeltmelerini almak için yeniden dağıtın. Harbor'ın herkese açık aktarıcısı kendiliğinden güncellenir.",
+  "Redeploy it to get the latest Watch Together fixes. Lart's public relay updates on its own.":
+    "En son Birlikte İzle düzeltmelerini almak için yeniden dağıtın. Lart'ın herkese açık aktarıcısı kendiliğinden güncellenir.",
   "Relay outdated. Your self-hosted relay is running an older version.":
     "Aktarıcı güncel değil. Kendi barındırdığınız aktarıcı eski bir sürüm çalıştırıyor.",
   "Remove from AniList": "AniList'ten kaldır",
@@ -100,8 +100,8 @@ const social: Record<string, string> = {
   "Show cursors": "İmleçleri göster",
   "Show remaining time": "Kalan süreyi göster",
   "Show streams": "Yayınları göster",
-  "Show your AniList lists as rails on the Anime page, keep your watch progress in sync as you finish episodes, and use your AniList avatar as your Harbor photo. Free at anilist.co.":
-    "AniList listelerinizi Anime sayfasında şeritler hâlinde gösterin, bölümleri bitirdikçe izleme ilerlemenizi senkronize edin ve AniList avatarınızı Harbor profil fotoğrafınız olarak kullanın. anilist.co adresinde ücretsizdir.",
+  "Show your AniList lists as rails on the Anime page, keep your watch progress in sync as you finish episodes, and use your AniList avatar as your Lart photo. Free at anilist.co.":
+    "AniList listelerinizi Anime sayfasında şeritler hâlinde gösterin, bölümleri bitirdikçe izleme ilerlemenizi senkronize edin ve AniList avatarınızı Lart profil fotoğrafınız olarak kullanın. anilist.co adresinde ücretsizdir.",
   "Sign in to": "Oturum açılacak hizmet",
   "Sign in to Stremio or connect Trakt to see what you've been watching here.":
     "Burada izlediklerinizi görmek için Stremio'da oturum açın veya Trakt'ı bağlayın.",
@@ -114,8 +114,8 @@ const social: Record<string, string> = {
   "Start a new room": "Yeni bir oda başlat",
   "Start a room first.": "Önce bir oda başlatın.",
   "Starting…": "Başlatılıyor…",
-  "Sync and track movies, shows, and anime across everything you use. Harbor marks what you finish as watched on Simkl and keeps your plan-to-watch list in step. Free at simkl.com.":
-    "Kullandığınız tüm hizmetlerde filmleri, dizileri ve animeleri senkronize edip takip edin. Harbor, bitirdiğiniz içerikleri Simkl'da izlendi olarak işaretler ve izleme planı listenizi güncel tutar. simkl.com adresinde ücretsizdir.",
+  "Sync and track movies, shows, and anime across everything you use. Lart marks what you finish as watched on Simkl and keeps your plan-to-watch list in step. Free at simkl.com.":
+    "Kullandığınız tüm hizmetlerde filmleri, dizileri ve animeleri senkronize edip takip edin. Lart, bitirdiğiniz içerikleri Simkl'da izlendi olarak işaretler ve izleme planı listenizi güncel tutar. simkl.com adresinde ücretsizdir.",
   "Sync subtitles via text": "Altyazıları metinle eşitle",
   "Sync unavailable": "Senkronizasyon kullanılamıyor",
   "Sync via text": "Metinle eşitle",

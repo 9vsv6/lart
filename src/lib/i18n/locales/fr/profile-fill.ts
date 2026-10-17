@@ -62,8 +62,8 @@ const profileFill: Record<string, string> = {
   "Could not update banner.": "Impossible de mettre à jour la bannière.",
   "Could not update group photo.": "Impossible de mettre à jour la photo du groupe.",
   "Could not update photo.": "Impossible de mettre à jour la photo.",
-  "Couldn't reach Harbor, check your connection":
-    "Impossible de joindre Harbor, vérifiez votre connexion",
+  "Couldn't reach Lart, check your connection":
+    "Impossible de joindre Lart, vérifiez votre connexion",
   "Create a group to watch and share together.":
     "Créez un groupe pour regarder et partager ensemble.",
   "Create group": "Créer le groupe",
@@ -83,9 +83,9 @@ const profileFill: Record<string, string> = {
   "Featured lists": "Listes à la une",
   "Game search needs an API key before it can run.":
     "La recherche de jeux nécessite une clé API pour fonctionner.",
-  "Harbor is having trouble, try again in a moment":
-    "Harbor rencontre un problème, réessayez dans un instant",
-  "Harbor list": "Liste Harbor",
+  "Lart is having trouble, try again in a moment":
+    "Lart rencontre un problème, réessayez dans un instant",
+  "Lart list": "Liste Lart",
   "Hero stats": "Statistiques du bandeau principal",
   "Hidden language": "Langue masquée",
   "In a watch party": "Dans une séance de visionnage",
@@ -170,7 +170,7 @@ const profileFill: Record<string, string> = {
   "Rate this": "Noter ceci",
   "Rating removed": "Note supprimée",
   "Rating saved": "Note enregistrée",
-  "Ratings need a Harbor account": "Un compte Harbor est requis pour attribuer des notes",
+  "Ratings need a Lart account": "Un compte Lart est requis pour attribuer des notes",
   "Recent activity": "Activité récente",
   "Remove friend": "Supprimer l’ami",
   "Remove rating": "Supprimer la note",
@@ -212,8 +212,8 @@ const profileFill: Record<string, string> = {
   "Slow down a moment before posting again": "Attendez un peu avant de publier à nouveau",
   "Social links": "Liens vers les réseaux sociaux",
   "Something went wrong on the way there.": "Une erreur s’est produite en chemin.",
-  "Something went wrong reaching Harbor. Check your connection and try again.":
-    "Impossible de joindre Harbor. Vérifiez votre connexion et réessayez.",
+  "Something went wrong reaching Lart. Check your connection and try again.":
+    "Impossible de joindre Lart. Vérifiez votre connexion et réessayez.",
   "Start typing to find people.": "Commencez à saisir du texte pour trouver des personnes.",
   "Stored as a small optimized webp.": "Stocké sous forme de petit fichier webp optimisé.",
   "Tap a star to change, then save": "Touchez une étoile pour modifier la note, puis enregistrez",
@@ -256,8 +256,8 @@ const profileFill: Record<string, string> = {
     "Vous attribuez des notes trop rapidement, réessayez dans un instant",
   "You have no lists yet": "Vous n’avez pas encore de listes",
   "You have reached the {max} link limit": "Vous avez atteint la limite de {max} liens",
-  "Your Harbor account is separate from your Stremio sign in. Create one free or sign in from Settings.":
-    "Votre compte Harbor est distinct de votre connexion Stremio. Créez-en un gratuitement ou connectez-vous depuis les paramètres.",
+  "Your Lart account is separate from your Stremio sign in. Create one free or sign in from Settings.":
+    "Votre compte Lart est distinct de votre connexion Stremio. Créez-en un gratuitement ou connectez-vous depuis les paramètres.",
   "Your links": "Vos liens",
   "Your rating": "Votre note",
   "Your rating {n}/10": "Votre note : {n}/10",
@@ -270,10 +270,10 @@ const profileFill: Record<string, string> = {
   "{count} of {total} showing": "{count} sur {total} affichés",
   "{count}/{max} selected": "{count}/{max} sélectionnés",
   "{label} handle": "identifiant {label}",
-  "{name} on Harbor": "{name} sur Harbor",
+  "{name} on Lart": "{name} sur Lart",
   "{name}'s ratings": "Notes de {name}",
   "{selected}/{max} selected": "{selected}/{max} sélectionnés",
-  "{title} on Harbor": "{title} sur Harbor",
+  "{title} on Lart": "{title} sur Lart",
 };
 
 export default profileFill;

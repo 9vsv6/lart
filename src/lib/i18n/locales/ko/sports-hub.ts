@@ -121,8 +121,8 @@ export default {
   Constructors: "컨스트럭터",
   "Coverage varies by league. Streams depend on your available sources.":
     "지원 범위는 리그마다 다릅니다. 스트림은 사용 가능한 소스에 따라 달라집니다.",
-  "Delivery failed. Retrying while Harbor is open.":
-    "전송 실패. Harbor가 열려 있는 동안 다시 시도합니다.",
+  "Delivery failed. Retrying while Lart is open.":
+    "전송 실패. Lart가 열려 있는 동안 다시 시도합니다.",
   Driver: "드라이버",
   Drivers: "드라이버",
   "Entrants and starting positions appear when the feed publishes them.":
@@ -156,7 +156,7 @@ export default {
   "From the biggest leagues to a new favorite sport.": "최고의 리그부터 새로운 취향의 스포츠까지.",
   "Inside the paddock": "패독 안에서",
   "Jump to today": "오늘로 이동",
-  "Keep Harbor open to deliver reminders.": "알림을 보내려면 Harbor를 열어 두세요.",
+  "Keep Lart open to deliver reminders.": "알림을 보내려면 Lart를 열어 두세요.",
   "Last saved score": "마지막 저장 점수",
   "Last update": "마지막 업데이트",
   "Latest saved scores": "최근 저장 점수",
@@ -279,10 +279,10 @@ export default {
     "다른 스포츠나 날짜를 선택하세요. 소스를 사용할 수 없으면 저장된 일정이 여기에 표시됩니다.",
   "Up to date": "최신 상태",
   "Updating schedules…": "일정 업데이트 중…",
-  "Use only sources you are authorized to access. Harbor does not bypass subscriptions or access restrictions.":
-    "접근 권한이 있는 소스만 사용하세요. Harbor는 구독이나 접근 제한을 우회하지 않습니다.",
-  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Harbor does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
-    "접근 권한이 있는 스트림, M3U 재생목록 및 Xtream 계정을 사용하세요. Harbor는 구독을 제공하거나 유료 제한, DRM 및 접근 제한을 우회하지 않습니다.",
+  "Use only sources you are authorized to access. Lart does not bypass subscriptions or access restrictions.":
+    "접근 권한이 있는 소스만 사용하세요. Lart는 구독이나 접근 제한을 우회하지 않습니다.",
+  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Lart does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
+    "접근 권한이 있는 스트림, M3U 재생목록 및 Xtream 계정을 사용하세요. Lart는 구독을 제공하거나 유료 제한, DRM 및 접근 제한을 우회하지 않습니다.",
   "View match statistics": "경기 통계 보기",
   "Watch with your sources": "내 소스로 시청",
   "Your authorized IPTV, M3U and Xtream channels, in one place.":

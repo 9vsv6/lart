@@ -257,7 +257,7 @@ export default {
   "games.gw2.partial": "部分物品详情暂不可用，奖励价格仍计入总额。",
   "games.gw2.guide": "宝库指南",
   "games.gw2.checked": "检查时间：{date}",
-  "games.gw2.scope": "保存在当前 Harbor 个人资料中。每个选择按一份商品计算；不会检查你的余额、购买限制或扩展包权限。请确认可用性后在游戏内购买。",
+  "games.gw2.scope": "保存在当前 Lart 个人资料中。每个选择按一份商品计算；不会检查你的余额、购买限制或扩展包权限。请确认可用性后在游戏内购买。",
   "games.gw2.total": "计划总额",
   "games.gw2.currency": "星界赞誉",
   "games.gw2.selected": "已选择 {count} 份商品",

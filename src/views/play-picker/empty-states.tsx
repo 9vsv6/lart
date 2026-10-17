@@ -44,10 +44,10 @@ export function NoSourcesState({
       )
     : isWeb
       ? t(
-          "On the web, Harbor can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.",
+          "On the web, Lart can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.",
         )
       : t(
-          "Try signing in to Stremio so Harbor can use your addon collection. Older or foreign titles often need Torrentio + a debrid addon to find anything.",
+          "Try signing in to Stremio so Lart can use your addon collection. Older or foreign titles often need Torrentio + a debrid addon to find anything.",
         );
   return (
     <div className="rounded-3xl border border-edge-soft/70 bg-canvas/80 px-9 py-11">
@@ -57,8 +57,8 @@ export function NoSourcesState({
         </p>
         <h2 className="font-display text-[28px] leading-tight text-ink">
           {addonCount === 1
-            ? t("Harbor queried 1 addon and got nothing back")
-            : t("Harbor queried {n} addons and got nothing back", { n: addonCount })}
+            ? t("Lart queried 1 addon and got nothing back")
+            : t("Lart queried {n} addons and got nothing back", { n: addonCount })}
         </h2>
         <p className="max-w-md text-[13.5px] leading-relaxed text-ink-muted">{tip}</p>
         <p className="text-[10.5px] font-mono uppercase tracking-[0.18em] text-ink-subtle/70">
@@ -128,7 +128,7 @@ export function FilteredOutState({
         </h2>
         <p className="max-w-lg text-[14px] leading-relaxed text-ink-muted">
           {t(
-            "Harbor blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.",
+            "Lart blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.",
           )}
         </p>
         {groups.length > 0 && (
@@ -193,7 +193,7 @@ export function TheatresEmptyState({
         </h2>
         <p className="max-w-md text-[14px] leading-relaxed text-ink-muted">
           {t(
-            "No clean release has surfaced yet. This may be too new. Harbor's filters dropped everything that came back as wrong-movie noise.",
+            "No clean release has surfaced yet. This may be too new. Lart's filters dropped everything that came back as wrong-movie noise.",
           )}
         </p>
         {onShowAll && !showingAll && (

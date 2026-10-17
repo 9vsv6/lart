@@ -19,7 +19,7 @@ const STEPS: { title: string; body: string; img: string; callout?: boolean }[] =
   },
   {
     title: "Fill the form on the free tier",
-    body: "For Company / Project Revenue pick 'Less than $50k per year' (Free). Company or Project Name can be anything, like Harbor, and 'This is an application that is open sourced!' works for the description.",
+    body: "For Company / Project Revenue pick 'Less than $50k per year' (Free). Company or Project Name can be anything, like Lart, and 'This is an application that is open sourced!' works for the description.",
     img: tvdb2,
     callout: true,
   },
@@ -30,7 +30,7 @@ const STEPS: { title: string; body: string; img: string; callout?: boolean }[] =
   },
   {
     title: "Copy your key",
-    body: "The success page shows your secret API key in a box. Copy it (it is also saved in your TheTVDB dashboard), then paste it into the TVDB field in Harbor.",
+    body: "The success page shows your secret API key in a box. Copy it (it is also saved in your TheTVDB dashboard), then paste it into the TVDB field in Lart.",
     img: tvdb4,
   },
 ];

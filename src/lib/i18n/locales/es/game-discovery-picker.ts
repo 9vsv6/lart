@@ -45,7 +45,7 @@ export default {
   "games.pick.hours": "h",
   "games.pick.noHistory": "Todavía no hay actividad. Elige favoritos o conecta Steam en los ajustes de Juegos.",
   "games.pick.manualOnly": "Solo tus favoritos y filtros elegidos determinarán las recomendaciones.",
-  "games.pick.addedNote": "«Añadido recientemente» significa detectado en Harbor tras la primera importación, no la fecha de compra.",
+  "games.pick.addedNote": "«Añadido recientemente» significa detectado en Lart tras la primera importación, no la fecha de compra.",
   "games.pick.because": "Porque te gusta {name}",
   "games.pick.matches": "Coincide con tus preferencias",
   "games.pick.steamCatalog": "Catálogo de Steam",

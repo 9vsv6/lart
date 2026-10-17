@@ -52,13 +52,13 @@ export function AmbienceSection() {
       <Section
         title={t("Screensaver")}
         subtitle={t(
-          "When Harbor sits idle in the foreground, it drifts through cinematic backdrops with a clock and what's trending. Any movement or key brings you back. Off by default.",
+          "When Lart sits idle in the foreground, it drifts through cinematic backdrops with a clock and what's trending. Any movement or key brings you back. Off by default.",
         )}
       >
         <SettingGroup>
           <ToggleRow
             label={t("Ambient screensaver")}
-            sub={t("Drift through cinematic backdrops while Harbor sits idle.")}
+            sub={t("Drift through cinematic backdrops while Lart sits idle.")}
             value={settings.screensaver}
             onChange={(v) => update({ screensaver: v })}
             leading={<Moon size={18} strokeWidth={2} />}
@@ -98,7 +98,7 @@ export function AmbienceSection() {
               <SettingRow
                 icon={<Hourglass size={18} strokeWidth={2} />}
                 label={t("Start after")}
-                desc={t("How long Harbor waits before drifting off.")}
+                desc={t("How long Lart waits before drifting off.")}
               >
                 <Picker
                   value={String(settings.screensaverDelayMin)}
@@ -274,14 +274,14 @@ export function DisplaySection() {
 
       <Section
         title={t("Liquid Glass")}
-        subtitle={t("Frosted, refractive surfaces on Harbor's floating controls.")}
+        subtitle={t("Frosted, refractive surfaces on Lart's floating controls.")}
       >
         <SettingGroup>
           <ToggleRow
             label={t("Use liquid glass")}
             newId="theme:liquid-glass"
             sub={t(
-              "Use liquid glass for the search pill and row scroll arrows. The appearance settings below are shared by glass surfaces across Harbor.",
+              "Use liquid glass for the search pill and row scroll arrows. The appearance settings below are shared by glass surfaces across Lart.",
             )}
             value={settings.liquidGlass}
             onChange={(v) => update({ liquidGlass: v })}

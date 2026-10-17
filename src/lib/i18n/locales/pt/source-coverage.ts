@@ -13,15 +13,15 @@ const sourceCoverage: Record<string, string> = {
   "101+": "101+",
   "14s": "14 s",
   "20s": "20 s",
-  "Changing the metadata language reloads Harbor so the new language takes effect. Apply when you're done with the options above.":
-    "Alterar o idioma dos metadados recarrega o Harbor para aplicar o novo idioma. Faça a alteração depois de concluir as opções acima.",
+  "Changing the metadata language reloads Lart so the new language takes effect. Apply when you're done with the options above.":
+    "Alterar o idioma dos metadados recarrega o Lart para aplicar o novo idioma. Faça a alteração depois de concluir as opções acima.",
   Colored: "Colorido",
   "Content advisory style": "Estilo do aviso de conteúdo",
   "Cursor speed": "Velocidade do cursor",
-  "Export your Harbor setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
-    "Exporte a configuração do Harbor para um único arquivo e escolha exatamente o que incluir. A restauração recupera apenas o conteúdo desse arquivo. O login do Stremio nunca é incluído.",
-  "How quickly the Harbor cursor moves with the right stick.":
-    "Define a velocidade do cursor do Harbor ao usar o analógico direito.",
+  "Export your Lart setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
+    "Exporte a configuração do Lart para um único arquivo e escolha exatamente o que incluir. A restauração recupera apenas o conteúdo desse arquivo. O login do Stremio nunca é incluído.",
+  "How quickly the Lart cursor moves with the right stick.":
+    "Define a velocidade do cursor do Lart ao usar o analógico direito.",
   "Keyboard size": "Tamanho do teclado",
   "Monochrome (White)": "Monocromático (branco)",
   "On shows titles in your metadata language (English by default). Off keeps titles in English.":
@@ -142,8 +142,8 @@ const sourceCoverage: Record<string, string> = {
   "TMDB confirms the key is created. Follow the link it gives you to see your API key details.":
     "O TMDB confirma a criação da chave. Siga o link exibido para ver os detalhes da sua chave de API.",
   "Copy your API Key": "Copie sua chave de API",
-  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Harbor. Harbor saves it on its own.":
-    "De volta à página da API, role até o fim. Copie o valor em API Key e cole no Harbor. O Harbor salva automaticamente.",
+  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Lart. Lart saves it on its own.":
+    "De volta à página da API, role até o fim. Copie o valor em API Key e cole no Lart. O Lart salva automaticamente.",
   "Take the short API Key at the very bottom, not the long API Read Access Token above it.":
     "Use a chave curta no fim da página, não o longo API Read Access Token exibido acima.",
   "Get your free TMDB key": "Obtenha sua chave gratuita do TMDB",
@@ -151,8 +151,8 @@ const sourceCoverage: Record<string, string> = {
     "Gratuita para sempre no uso pessoal. Nenhuma cobrança.",
   "Bring your own keys": "Use suas próprias chaves",
   "Where you watch from": "De onde você assiste",
-  "Sets streaming availability and the Now Playing release window. Pick a country and Harbor offers to match the interface, metadata, subtitle, and audio languages to it.":
-    "Define a disponibilidade de streaming e a janela de lançamentos Em cartaz. Escolha um país e o Harbor poderá ajustar os idiomas da interface, dos metadados, das legendas e do áudio.",
+  "Sets streaming availability and the Now Playing release window. Pick a country and Lart offers to match the interface, metadata, subtitle, and audio languages to it.":
+    "Define a disponibilidade de streaming e a janela de lançamentos Em cartaz. Escolha um país e o Lart poderá ajustar os idiomas da interface, dos metadados, das legendas e do áudio.",
   "repo.json identifies and versions the plugin. Filtering, title cleanup, volumes, chapters, dates, and views are returned by example.plugin.js.":
     "O repo.json identifica e controla a versão do plugin. Filtros, limpeza de títulos, volumes, capítulos, datas e visualizações são retornados por example.plugin.js.",
   "70s": "Anos 70",
@@ -164,8 +164,8 @@ const sourceCoverage: Record<string, string> = {
   // Targeted terminology and variant repairs that must win over broad sweep layers.
   "No correction (default)": "Sem correção (padrão)",
   "Theme preset": "Tema predefinido",
-  "No metadata addon detected. Harbor is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
-    "Nenhum addon de metadados foi detectado. O Harbor está usando o Cinemeta para continuar carregando os títulos, mas reative esta opção a menos que esteja instalando outro addon.",
+  "No metadata addon detected. Lart is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
+    "Nenhum addon de metadados foi detectado. O Lart está usando o Cinemeta para continuar carregando os títulos, mas reative esta opção a menos que esteja instalando outro addon.",
   "Auto sync": "Sincronização automática",
   "Cancel sync": "Cancelar sincronização",
   "Choose where subtitle timing feedback appears and how large it is.":
@@ -359,13 +359,13 @@ const sourceCoverage: Record<string, string> = {
 };
 
 const pluralForms: Record<string, readonly [string, string]> = {
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.": [
-    "Adicionar {n} título da sua lista do Harbor ao Trakt? O Trakt ignora o que já tiver.",
-    "Adicionar {n} títulos da sua lista do Harbor ao Trakt? O Trakt ignora os que já tiver.",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.": [
+    "Adicionar {n} título da sua lista do Lart ao Trakt? O Trakt ignora o que já tiver.",
+    "Adicionar {n} títulos da sua lista do Lart ao Trakt? O Trakt ignora os que já tiver.",
   ],
-  "Add {n} titles from your Trakt watchlist to Harbor?": [
-    "Adicionar {n} título da sua lista do Trakt ao Harbor?",
-    "Adicionar {n} títulos da sua lista do Trakt ao Harbor?",
+  "Add {n} titles from your Trakt watchlist to Lart?": [
+    "Adicionar {n} título da sua lista do Trakt ao Lart?",
+    "Adicionar {n} títulos da sua lista do Trakt ao Lart?",
   ],
   "After {n} episodes": ["Após {n} episódio", "Após {n} episódios"],
   "All {n} channels loaded": ["{n} canal carregado", "Todos os {n} canais carregados"],
@@ -521,9 +521,9 @@ const pluralForms: Record<string, readonly [string, string]> = {
     "{n} títulos precisam de revisão. Ajude-nos a identificá-los.",
   ],
   "{n} titles together": ["{n} título junto", "{n} títulos juntos"],
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.": [
-    "{n} solicitação de rastreador bloqueada nesta sessão. O Harbor não envia telemetria.",
-    "{n} solicitações de rastreador bloqueadas nesta sessão. O Harbor não envia telemetria.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.": [
+    "{n} solicitação de rastreador bloqueada nesta sessão. O Lart não envia telemetria.",
+    "{n} solicitações de rastreador bloqueadas nesta sessão. O Lart não envia telemetria.",
   ],
   "{n} votes": ["{n} voto", "{n} votos"],
   "{n} winner": ["{n} vencedor", "{n} vencedores"],

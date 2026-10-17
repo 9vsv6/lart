@@ -11,10 +11,10 @@ const extra: Record<string, string> = {
   "24/7": "24 h/24, 7 j/7",
   "4 digits": "4 chiffres",
   "5s": "5 s",
-  "A browser tab opened on AniList. Approve Harbor there, then copy the text it shows and paste it below.":
-    "Un onglet du navigateur s’est ouvert sur AniList. Autorisez-y Harbor, puis copiez le texte affiché et collez-le ci-dessous.",
-  "A browser tab opened on MyAnimeList. Approve Harbor there, then copy the code or the page URL and paste it below.":
-    "Un onglet du navigateur s’est ouvert sur MyAnimeList. Autorisez-y Harbor, puis copiez le code ou l’URL de la page et collez-le ci-dessous.",
+  "A browser tab opened on AniList. Approve Lart there, then copy the text it shows and paste it below.":
+    "Un onglet du navigateur s’est ouvert sur AniList. Autorisez-y Lart, puis copiez le texte affiché et collez-le ci-dessous.",
+  "A browser tab opened on MyAnimeList. Approve Lart there, then copy the code or the page URL and paste it below.":
+    "Un onglet du navigateur s’est ouvert sur MyAnimeList. Autorisez-y Lart, puis copiez le code ou l’URL de la page et collez-le ci-dessous.",
   "A debrid service is connected. You'll get instant, high-quality streams.":
     "Un service de débridage est connecté. Vous bénéficierez de flux instantanés et de haute qualité.",
   "A grown-up can enter the parent PIN to keep watching.":
@@ -40,14 +40,14 @@ const extra: Record<string, string> = {
     "Ajoutez une clé API MDBList pour déverrouiller cette fonctionnalité.",
   "Add to MAL": "Ajouter à MAL",
   "Add to watchlist": "Ajouter à la liste de suivi",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.":
-    "Ajouter {n} titres de votre liste de suivi Harbor à Trakt ? Trakt ignore ceux qui y figurent déjà.",
-  "Add {n} titles from your Trakt watchlist to Harbor?":
-    "Ajouter {n} titres de votre liste de suivi Trakt à Harbor ?",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.":
+    "Ajouter {n} titres de votre liste de suivi Lart à Trakt ? Trakt ignore ceux qui y figurent déjà.",
+  "Add {n} titles from your Trakt watchlist to Lart?":
+    "Ajouter {n} titres de votre liste de suivi Trakt à Lart ?",
   "Add {title} to MyAnimeList": "Ajouter {title} à MyAnimeList",
   "Added to stremio-addons.net in the last 14 days":
     "Ajouté à stremio-addons.net au cours des 14 derniers jours",
-  "Added {n} to your Harbor watchlist": "{n} titres ajoutés à votre liste de suivi Harbor",
+  "Added {n} to your Lart watchlist": "{n} titres ajoutés à votre liste de suivi Lart",
   "Adds a blurred glass effect behind the stream picker panel.":
     "Ajoute un effet de verre flouté derrière le panneau de sélection des flux.",
   "Adds a Seasons/Arcs switch on shows that have a story-arc grouping (like One Piece), so you can browse by saga instead of scrolling seasons. Needs a TMDB key. Off by default.":
@@ -96,10 +96,10 @@ const extra: Record<string, string> = {
   "at {time}": "à {time}",
   "AudD API token": "Jeton d’API AudD",
   "AudD · in-player song ID": "AudD · identification des chansons dans le lecteur",
-  "Authorize Harbor on AniList": "Autoriser Harbor sur AniList",
-  "Authorize Harbor on MyAnimeList": "Autoriser Harbor sur MyAnimeList",
-  "Authorize Harbor on Simkl": "Autoriser Harbor sur Simkl",
-  "Authorize Harbor on Trakt": "Autoriser Harbor sur Trakt",
+  "Authorize Lart on AniList": "Autoriser Lart sur AniList",
+  "Authorize Lart on MyAnimeList": "Autoriser Lart sur MyAnimeList",
+  "Authorize Lart on Simkl": "Autoriser Lart sur Simkl",
+  "Authorize Lart on Trakt": "Autoriser Lart sur Trakt",
   "Authorized {when}": "Autorisé {when}",
   "Auto is best for most people. mpv handles the trickiest 4K, HDR, and audio formats.":
     "Le mode automatique convient à la plupart des utilisateurs. mpv gère les formats 4K, HDR et audio les plus complexes.",
@@ -143,8 +143,8 @@ const extra: Record<string, string> = {
     "Créez une seule fois un filtre nommé, puis appliquez-le dans le sélecteur de sources pour masquer tout ce qui ne correspond pas. Chaque filtre combine ses critères avec l’opérateur ET et ignore ceux laissés vides.",
   "Build your own palette": "Créez votre propre palette",
   "Cache location": "Emplacement du cache",
-  "Cap how much disk the cache can use. When it goes over, Harbor deletes the oldest files first. Enforced on launch and as streams close.":
-    "Limitez l’espace disque utilisable par le cache. En cas de dépassement, Harbor supprime d’abord les fichiers les plus anciens. Limite appliquée au lancement et à la fermeture des flux.",
+  "Cap how much disk the cache can use. When it goes over, Lart deletes the oldest files first. Enforced on launch and as streams close.":
+    "Limitez l’espace disque utilisable par le cache. En cas de dépassement, Lart supprime d’abord les fichiers les plus anciens. Limite appliquée au lancement et à la fermeture des flux.",
   "Change…": "Modifier…",
   "Changing the location restarts the engine. Clearing removes all cached stream files right away; anything you reopen will re-fetch.":
     "Changer l’emplacement redémarre le moteur. Le vider supprime immédiatement tous les fichiers de streaming en cache ; tout contenu rouvert sera téléchargé à nouveau.",
@@ -165,7 +165,7 @@ const extra: Record<string, string> = {
   "Click another": "Cliquez sur un autre élément",
   "Client ID": "ID client",
   "Client secret": "Secret client",
-  "Close Harbor?": "Fermer Harbor ?",
+  "Close Lart?": "Fermer Lart ?",
   "Close image viewer": "Fermer la visionneuse d’images",
   "Close match to host": "Fermer le match pour l’hôte",
   "Close overview": "Fermer l’aperçu",
@@ -196,8 +196,8 @@ const extra: Record<string, string> = {
   "Continue in your browser...": "Continuer dans votre navigateur...",
   "Copy diagnostics": "Copier les diagnostics",
   "Copy diagnostics grabs the engine status and your P2P settings as JSON, handy to paste into a bug report. The engine folder holds the DHT cache (dht.json) and active transfer data.": "Cette option copie au format JSON l’état du moteur et vos paramètres P2P, afin de les coller facilement dans un rapport de bug. Le dossier du moteur contient le cache DHT (dht.json) et les données des transferts actifs.",
-  "Copy your Harbor watchlist over to Trakt, or pull your Trakt watchlist into Harbor. Safe to run again, Trakt skips anything it already has.":
-    "Copiez votre liste de suivi Harbor vers Trakt, ou importez votre liste de suivi Trakt dans Harbor. Vous pouvez relancer l’opération sans risque, Trakt ignore les éléments déjà présents.",
+  "Copy your Lart watchlist over to Trakt, or pull your Trakt watchlist into Lart. Safe to run again, Trakt skips anything it already has.":
+    "Copiez votre liste de suivi Lart vers Trakt, ou importez votre liste de suivi Trakt dans Lart. Vous pouvez relancer l’opération sans risque, Trakt ignore les éléments déjà présents.",
   "Corner radius": "Rayon des coins",
   "Could not identify this title on Trakt.": "Impossible d’identifier ce titre sur Trakt.",
   "Could not send. Try again.": "Impossible d’envoyer. Réessayez.",
@@ -277,8 +277,8 @@ const extra: Record<string, string> = {
   "Episode details": "Détails de l’épisode",
   "Episode ordering": "Classement des épisodes",
   "Esc exits fullscreen first": "Échap quitte d’abord le plein écran",
-  "Everyone who uses this Harbor gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
-    "Chaque utilisateur de ce Harbor dispose de son propre historique de visionnage, avatar, couleur et code PIN facultatif. Changez de profil à tout moment.",
+  "Everyone who uses this Lart gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
+    "Chaque utilisateur de ce Lart dispose de son propre historique de visionnage, avatar, couleur et code PIN facultatif. Changez de profil à tout moment.",
   "Exit sync mode": "Quitter le mode de synchronisation",
   Experimental: "Expérimental",
   Expiring: "Expire bientôt",
@@ -327,10 +327,10 @@ const extra: Record<string, string> = {
   Gradient: "Dégradé",
   "Group episodes by story arc": "Regrouper les épisodes par arc narratif",
   "Grown-ups only": "Réservé aux adultes",
-  "Harbor keeps your MyAnimeList watch progress in sync.":
-    "Harbor synchronise votre progression de visionnage avec MyAnimeList.",
-  "Harbor ranking puts the best-scoring sources first. Addon order follows your addon priority (organize it in Addons, Installed tab, Reorder) and keeps each addon's results in the order it returned them, like the Stremio and Vidi apps.":
-    "Le classement Harbor place en tête les sources ayant le meilleur score. L’ordre des extensions suit leur priorité (à définir dans extensions, onglet Installés, Réorganiser) et conserve les résultats de chaque extension dans l’ordre où il les a renvoyés, comme dans les applications Stremio et Vidi.",
+  "Lart keeps your MyAnimeList watch progress in sync.":
+    "Lart synchronise votre progression de visionnage avec MyAnimeList.",
+  "Lart ranking puts the best-scoring sources first. Addon order follows your addon priority (organize it in Addons, Installed tab, Reorder) and keeps each addon's results in the order it returned them, like the Stremio and Vidi apps.":
+    "Le classement Lart place en tête les sources ayant le meilleur score. L’ordre des extensions suit leur priorité (à définir dans extensions, onglet Installés, Réorganiser) et conserve les résultats de chaque extension dans l’ordre où il les a renvoyés, comme dans les applications Stremio et Vidi.",
   HDR: "HDR",
   "HDR to SDR: Off": "HDR vers SDR : désactivé",
   "HDR to SDR: On": "HDR vers SDR : activé",
@@ -345,8 +345,8 @@ const extra: Record<string, string> = {
   "Hides the button on its own after a few seconds so a wrong one doesn't sit there the whole episode.":
     "Masque automatiquement le bouton au bout de quelques secondes, afin qu’un bouton incorrect ne reste pas affiché pendant tout l’épisode.",
   "High-quality episode images": "Images d’épisodes en haute qualité",
-  "Hold Ctrl or Cmd and scroll to resize Harbor's interface smoothly.":
-    "Maintenez Ctrl ou Cmd et faites défiler pour redimensionner l’interface de Harbor en douceur.",
+  "Hold Ctrl or Cmd and scroll to resize Lart's interface smoothly.":
+    "Maintenez Ctrl ou Cmd et faites défiler pour redimensionner l’interface de Lart en douceur.",
   "Home hero shadow": "Ombre de la bannière principale de l’accueil",
   "Home languages": "Langues de l’accueil",
   "Home Rail Settings": "Paramètres des rangées d’accueil",
@@ -395,8 +395,8 @@ const extra: Record<string, string> = {
   "Keep watching": "Continuer à regarder",
   "Keeps fetching the full torrent in the background, even when paused, so you can pre-buffer big remuxes and scrub a finished file with no re-downloading. Uses more bandwidth and disk; cleaned up when you switch or close like normal.":
     "Continue à récupérer le torrent complet en arrière-plan, même en pause, afin de précharger les remux volumineux et de parcourir un fichier entièrement téléchargé sans nouveau téléchargement. Utilise davantage de bande passante et d’espace disque, le nettoyage s’effectue normalement lorsque vous changez de contenu ou fermez l’application.",
-  "Keeps HDR inside Harbor with the controls floating above the video. Subtitles render on the video. If the control bar does not appear, press Esc or use separate window.":
-    "Conserve le HDR dans Harbor, avec les commandes flottant au-dessus de la vidéo. Les sous-titres s’affichent sur la vidéo. Si la barre de commandes n’apparaît pas, appuyez sur Esc ou utilisez une fenêtre séparée.",
+  "Keeps HDR inside Lart with the controls floating above the video. Subtitles render on the video. If the control bar does not appear, press Esc or use separate window.":
+    "Conserve le HDR dans Lart, avec les commandes flottant au-dessus de la vidéo. Les sous-titres s’affichent sur la vidéo. Si la barre de commandes n’apparaît pas, appuyez sur Esc ou utilisez une fenêtre séparée.",
   "Kids profile": "Profil enfant",
   "Last updated {ago}": "Dernière mise à jour {ago}",
   "Leave the show?": "Quitter la série ?",
@@ -509,8 +509,8 @@ const extra: Record<string, string> = {
   "OpenRouter API key (sk-or-...)": "Clé API OpenRouter (sk-or-...)",
   "Opens Stremio in your browser. Works with email, Facebook, and Apple accounts.":
     "Ouvre Stremio dans votre navigateur. Fonctionne avec les comptes de messagerie, Facebook et Apple.",
-  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Harbor writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
-    "Options de l’onglet Bibliothèque → Local : dossiers à analyser sur votre propre disque. Lors de l’exportation des métadonnées, Harbor crée un fichier .nfo au format Kodi et télécharge les illustrations à côté de chaque fichier, dans les dimensions indiquées ci-dessous.",
+  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Lart writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
+    "Options de l’onglet Bibliothèque → Local : dossiers à analyser sur votre propre disque. Lors de l’exportation des métadonnées, Lart crée un fichier .nfo au format Kodi et télécharge les illustrations à côté de chaque fichier, dans les dimensions indiquées ci-dessous.",
   "or use email": "ou utiliser l’adresse e-mail",
   "out of 5": "sur 5",
   "Output device": "Périphérique de sortie",
@@ -522,13 +522,13 @@ const extra: Record<string, string> = {
   "Paste the text from AniList": "Collez le texte provenant d’AniList",
   "Peers, speed and progress while a torrent streams. Sits clear of the exit button, top left.":
     "Pairs, vitesse et progression pendant la diffusion d’un torrent. S’affichent en haut à gauche, à l’écart du bouton de sortie.",
-  "Pick a display and body pairing, or upload your own font to use across Harbor.":
-    "Choisissez une combinaison de polices pour les titres et le corps du texte, ou importez votre propre police pour l’utiliser dans tout Harbor.",
+  "Pick a display and body pairing, or upload your own font to use across Lart.":
+    "Choisissez une combinaison de polices pour les titres et le corps du texte, ou importez votre propre police pour l’utiliser dans tout Lart.",
   "Pick a list to view it.": "Choisissez une liste pour l’afficher.",
   "Pick a look. Every color and surface updates instantly.":
     "Choisissez une apparence. Toutes les couleurs et surfaces sont mises à jour instantanément.",
-  "Pick a source once and Harbor keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
-    "Choisissez une source une seule fois et Harbor continuera à lire le reste de la saison depuis la même version, sans avoir à refaire votre choix. Fonctionne mieux avec un pack de saison debrid. Non appliqué aux anime.",
+  "Pick a source once and Lart keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
+    "Choisissez une source une seule fois et Lart continuera à lire le reste de la saison depuis la même version, sans avoir à refaire votre choix. Fonctionne mieux avec un pack de saison debrid. Non appliqué aux anime.",
   "Pick a video": "Choisir une vidéo",
   "Pick a World": "Choisissez un monde",
   "Pick an avatar": "Choisir un avatar",
@@ -536,8 +536,8 @@ const extra: Record<string, string> = {
     "Choisissez OLED pour les écrans aux noirs parfaits afin de révéler les détails dans les ombres du HDR avec mappage des tons.",
   "Pick up partly-watched episodes and movies at your saved spot. Anything watched past 80% always restarts. Turn this off to always start from the beginning, handy if you rewatch shows.":
     "Reprenez les épisodes et les films partiellement visionnés à l’endroit enregistré. Tout contenu visionné à plus de 80% redémarre toujours du début. Désactivez cette option pour toujours commencer au début, ce qui est pratique lorsque vous re regardez une série.",
-  "Pick which audio and subtitle languages Harbor reaches for first.":
-    "Choisissez les langues audio et de sous-titres que Harbor doit privilégier.",
+  "Pick which audio and subtitle languages Lart reaches for first.":
+    "Choisissez les langues audio et de sous-titres que Lart doit privilégier.",
   "Pick which score anime cards show. IMDb falls back to MAL when a title has no IMDb rating yet.":
     "Choisissez la note affichée sur les cartes d’anime. IMDb utilise la note MAL lorsqu’un titre n’a pas encore de note IMDb.",
   "Pick your source": "Choisissez votre source",
@@ -552,8 +552,8 @@ const extra: Record<string, string> = {
     "Lancez la lecture, puis touchez la réplique entendue à deux endroits (un vers le début, l’autre vers la fin) pour corriger le décalage progressif.",
   "Player log": "Journal du lecteur",
   "Playing now": "En cours de lecture",
-  "Plays + ratings sync from Harbor to Trakt.tv.":
-    "Synchronisation des lectures et des notes de Harbor vers Trakt.tv.",
+  "Plays + ratings sync from Lart to Trakt.tv.":
+    "Synchronisation des lectures et des notes de Lart vers Trakt.tv.",
   "Plays a muted trailer in the backdrop when you open a title. Click the speaker to unmute. Falls back to the image when no trailer is available.":
     "Lit une bande-annonce sans le son en arrière-plan lorsque vous ouvrez un titre. Cliquez sur le haut-parleur pour activer le son. Affiche l’image si aucune bande-annonce n’est disponible.",
   "Plays HDR in its own window so Windows shows real HDR and the SDR brightness slider stops dimming it. The most reliable way to get true HDR.":
@@ -680,8 +680,8 @@ const extra: Record<string, string> = {
   "Service-specific browsing needs a TMDB key. Pick All / Movies / Shows to browse via Cinemeta.":
     "La navigation par service nécessite une clé TMDB. Sélectionnez Tout / Films / Séries pour parcourir le catalogue via Cinemeta.",
   "Set to where the video is right now": "Définir à la position actuelle de la vidéo",
-  "Set your MyAnimeList profile picture as your Harbor avatar.":
-    "Utilisez votre photo de profil MyAnimeList comme avatar Harbor.",
+  "Set your MyAnimeList profile picture as your Lart avatar.":
+    "Utilisez votre photo de profil MyAnimeList comme avatar Lart.",
   Shadow: "Ombre",
   Show: "Afficher",
   "Show a button on the detail page to mark a title or episode as watched. Syncs to Trakt and Simkl if connected.":
@@ -690,8 +690,8 @@ const extra: Record<string, string> = {
     "Afficher brièvement le volume en surimpression lorsque vous le modifiez alors que les commandes du lecteur sont masquées, afin que les changements effectués au clavier ou avec la molette soient toujours visibles.",
   "Show a Skip button when a known injected ad plays, and a small report button on new releases so you can mark ads for review.":
     "Afficher un bouton Passer lorsqu’une publicité ajoutée répertoriée est diffusée, ainsi qu’un petit bouton de signalement sur les nouveautés afin de marquer les publicités à vérifier.",
-  "Show a Skip Intro / Skip Credits button when Harbor detects one. Turn this off to never show it. You can also tap the X on the button to dismiss a wrong one for the rest of the episode.":
-    "Afficher un bouton Passer l’intro / Passer le générique lorsque Harbor en détecte un. Désactivez cette option pour ne jamais l’afficher. Vous pouvez aussi toucher le X du bouton pour masquer une détection erronée jusqu’à la fin de l’épisode.",
+  "Show a Skip Intro / Skip Credits button when Lart detects one. Turn this off to never show it. You can also tap the X on the button to dismiss a wrong one for the rest of the episode.":
+    "Afficher un bouton Passer l’intro / Passer le générique lorsque Lart en détecte un. Désactivez cette option pour ne jamais l’afficher. Vous pouvez aussi toucher le X du bouton pour masquer une détection erronée jusqu’à la fin de l’épisode.",
   "Show an “on disk” badge on cards": "Afficher un badge « présent sur le disque » sur les fiches",
   "Show audience score on cards": "Afficher la note du public sur les fiches",
   "Show comments on detail pages": "Afficher les commentaires sur les pages de détails",
@@ -729,8 +729,8 @@ const extra: Record<string, string> = {
   "Show Up Next on Simkl rail": "Afficher la rangée À suivre sur Simkl",
   "Show what you're actually watching, under the title in the player.":
     "Afficher sous le titre, dans le lecteur, ce que vous regardez réellement.",
-  "Show your operating system's own title bar with its minimize, maximize, and close buttons. They stay reachable everywhere, including while a video is playing. Turn this off to use Harbor's built-in window buttons.":
-    "Afficher la barre de titre native de votre système d’exploitation, avec ses boutons Réduire, Agrandir et Fermer. Ils restent accessibles partout, y compris pendant la lecture d’une vidéo. Désactivez cette option pour utiliser les boutons de fenêtre intégrés à Harbor.",
+  "Show your operating system's own title bar with its minimize, maximize, and close buttons. They stay reachable everywhere, including while a video is playing. Turn this off to use Lart's built-in window buttons.":
+    "Afficher la barre de titre native de votre système d’exploitation, avec ses boutons Réduire, Agrandir et Fermer. Ils restent accessibles partout, y compris pendant la lecture d’une vidéo. Désactivez cette option pour utiliser les boutons de fenêtre intégrés à Lart.",
   "Show {n} more reviews": "Afficher {n} avis supplémentaires",
   "Showing {shown} of {total}.": "{shown} éléments affichés sur {total}.",
   "Shows each episode's rating. Add your free OMDb API key for real IMDb scores; without it, ratings fall back to TMDB.":
@@ -738,8 +738,8 @@ const extra: Record<string, string> = {
   "Shows the episode synopsis on the cards. Turn it off to hide it.":
     "Affiche le synopsis de l’épisode sur les fiches. Désactivez cette option pour le masquer.",
   "Shows titles suitable up to age {age}.": "Affiche les titres adaptés jusqu’à {age} ans.",
-  "Sign in to Stremio first so Harbor knows which watchlist to sync.":
-    "Connectez-vous d’abord à Stremio pour que Harbor sache quelle liste à voir synchroniser.",
+  "Sign in to Stremio first so Lart knows which watchlist to sync.":
+    "Connectez-vous d’abord à Stremio pour que Lart sache quelle liste à voir synchroniser.",
   "Sign in to Stremio first. This reads the active profile's library.":
     "Connectez-vous d’abord à Stremio. Cette opération consulte la médiathèque du profil actif.",
   "Sign in to Stremio first. This scans the active profile's library.":
@@ -751,8 +751,8 @@ const extra: Record<string, string> = {
   "Skip injected ad?": "Passer la pub injectée ?",
   "Skip injected ads automatically": "Passer automatiquement les pubs injectées",
   "Skip intros & credits": "Passer les intros et les génériques",
-  "Skip the 'stream over peer-to-peer?' prompt and start uncached torrents immediately. Harbor remembers your choice after the first confirmation anyway.":
-    "Ignorer la demande « diffuser en pair-à-pair ? » et lancer immédiatement les torrents non mis en cache. Harbor mémorise de toute façon votre choix après la première confirmation.",
+  "Skip the 'stream over peer-to-peer?' prompt and start uncached torrents immediately. Lart remembers your choice after the first confirmation anyway.":
+    "Ignorer la demande « diffuser en pair-à-pair ? » et lancer immédiatement les torrents non mis en cache. Lart mémorise de toute façon votre choix après la première confirmation.",
   "Skip Who's watching and always start as this profile. PIN-locked profiles can't be a default.":
     "Ignorer l’écran « Qui regarde ? » et toujours démarrer avec ce profil. Les profils verrouillés par un code PIN ne peuvent pas être définis par défaut.",
   "skipped {n} anime": "{n} anime ignorés",
@@ -779,8 +779,8 @@ const extra: Record<string, string> = {
   "Stream cache": "Cache des flux",
   "Stream descriptions": "Descriptions des flux",
   "Stream quality in player": "Qualité du flux dans le lecteur",
-  "Stream torrents straight from Harbor's built-in engine when you have no debrid set up, or a torrent isn't cached. This connects to peers over your own connection. Turn off to only ever play debrid and direct links.":
-    "Diffusez des torrents directement depuis le moteur intégré de Harbor si aucun service de débridage n’est configuré ou si un torrent n’est pas en cache. Cela vous connecte à des pairs via votre propre connexion. Désactivez cette option pour ne lire que des liens débridés et directs.",
+  "Stream torrents straight from Lart's built-in engine when you have no debrid set up, or a torrent isn't cached. This connects to peers over your own connection. Turn off to only ever play debrid and direct links.":
+    "Diffusez des torrents directement depuis le moteur intégré de Lart si aucun service de débridage n’est configuré ou si un torrent n’est pas en cache. Cela vous connecte à des pairs via votre propre connexion. Désactivez cette option pour ne lire que des liens débridés et directs.",
   "Streaming quality": "Qualité du streaming",
   "Style name": "Nom du style",
   "Submit report": "Envoyer le rapport",
@@ -824,8 +824,8 @@ const extra: Record<string, string> = {
   "This list needs your {key} API key. Add it in Settings, then refresh.":
     "Cette liste nécessite votre clé API {key}. Ajoutez-la dans les Paramètres, puis actualisez.",
   "This trailer plays on YouTube.": "Cette bande-annonce est lue sur YouTube.",
-  "This usually means antivirus removed the server file (stremio-server.exe). Add Harbor's install folder to your antivirus exclusions, then reinstall.":
-    "Cela signifie généralement que l’antivirus a supprimé le fichier du serveur (stremio-server.exe). Ajoutez le dossier d’installation de Harbor aux exclusions de votre antivirus, puis réinstallez l’application.",
+  "This usually means antivirus removed the server file (stremio-server.exe). Add Lart's install folder to your antivirus exclusions, then reinstall.":
+    "Cela signifie généralement que l’antivirus a supprimé le fichier du serveur (stremio-server.exe). Ajoutez le dossier d’installation de Lart aux exclusions de votre antivirus, puis réinstallez l’application.",
   "Time's up!": "Temps écoulé !",
   "TMDB Rating": "Note TMDB",
   "To the side": "Sur le côté",
@@ -837,8 +837,8 @@ const extra: Record<string, string> = {
   "Top left": "En haut à gauche",
   "Top right": "En haut à droite",
   "Torrent name": "Nom du torrent",
-  "Track everything you watch, see your watchlist, and get personalized recommendations on Harbor's home page. Free at trakt.tv.":
-    "Suivez tout ce que vous regardez, consultez votre liste de suivi et obtenez des recommandations personnalisées sur la page d’accueil de Harbor. Gratuit sur trakt.tv.",
+  "Track everything you watch, see your watchlist, and get personalized recommendations on Lart's home page. Free at trakt.tv.":
+    "Suivez tout ce que vous regardez, consultez votre liste de suivi et obtenez des recommandations personnalisées sur la page d’accueil de Lart. Gratuit sur trakt.tv.",
   "Track people": "Suivre des personnes",
   Trakt: "Trakt",
   "Trakt account limit reached. Upgrade to Trakt VIP or trim your watchlist.":
@@ -922,8 +922,8 @@ const extra: Record<string, string> = {
     "Au démarrage d’un film ou d’un épisode, affiche brièvement le guide parental d’IMDb (violence, grossièretés, substances, scènes effrayantes, etc.) avec le niveau de gravité. Il disparaît automatiquement.",
   "When a title is in your local library":
     "Lorsqu’un titre se trouve dans votre médiathèque locale",
-  "When auto-playing the next episode, keep the same release/source you were just watching instead of Harbor's top-ranked stream. Falls back to the best stream if that source isn't available.":
-    "Lors de la lecture automatique de l’épisode suivant, conserve la même version ou source que celle que vous regardiez au lieu du flux le mieux classé par Harbor. Si cette source n’est pas disponible, le meilleur flux est utilisé.",
+  "When auto-playing the next episode, keep the same release/source you were just watching instead of Lart's top-ranked stream. Falls back to the best stream if that source isn't available.":
+    "Lors de la lecture automatique de l’épisode suivant, conserve la même version ou source que celle que vous regardiez au lieu du flux le mieux classé par Lart. Si cette source n’est pas disponible, le meilleur flux est utilisé.",
   "When in fullscreen, Esc leaves fullscreen instead of closing the player. Press Esc again to close. Turn off to make Esc always close.":
     "En plein écran, Esc quitte le mode plein écran au lieu de fermer le lecteur. Appuyez de nouveau sur Esc pour le fermer. Désactivez cette option pour qu’Esc ferme toujours le lecteur.",
   "When time's up, the ship sails away until a parent unlocks it.":
@@ -963,8 +963,8 @@ const extra: Record<string, string> = {
   "{count} community ratings on stremio-addons.net":
     "{count} notes de la communauté sur stremio-addons.net",
   "{count} selected": "{count} sélectionnés",
-  "{count} tracker request blocked this session. Harbor itself sends zero telemetry.":
-    "{count} requête de traqueur bloquée pendant cette session. Harbor n’envoie aucune télémétrie.",
+  "{count} tracker request blocked this session. Lart itself sends zero telemetry.":
+    "{count} requête de traqueur bloquée pendant cette session. Lart n’envoie aucune télémétrie.",
   "{d}d ago": "il y a {d} j",
   "{h}h ago": "il y a {h} h",
   "{langs} only": "{langs} uniquement",

@@ -69,7 +69,7 @@ function MonitorCard({
  * Renders nothing unless this is Windows and more than one display is attached,
  * so single-monitor and non-Windows users never see it.
  *
- * `value` defaults to Automatic (follow Harbor). When the stored monitor is no
+ * `value` defaults to Automatic (follow Lart). When the stored monitor is no
  * longer connected the Rust side silently falls back to Automatic, so a stale
  * choice is harmless.
  */
@@ -119,10 +119,10 @@ export function DisplayPickerRow({
         <MonitorCard
           icon={<Tv size={26} strokeWidth={1.8} />}
           name={t("Automatic")}
-          detail={t("Follow Harbor")}
+          detail={t("Follow Lart")}
           selected={selectedId === "auto"}
           onSelect={() => onChange(AUTO_DISPLAY)}
-          ariaLabel={t("Open on the same monitor as Harbor")}
+          ariaLabel={t("Open on the same monitor as Lart")}
         />
         {monitors.map((m) => (
           <MonitorCard

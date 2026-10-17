@@ -342,13 +342,13 @@ export async function downloadBackup(selected?: BackupSectionKey[]): Promise<boo
   const backup = await buildBackup(selected);
   const text = JSON.stringify(backup, null, 2);
   const stamp = new Date().toISOString().slice(0, 10);
-  return downloadText(`harbor-backup-${stamp}.harbx`, text, ["harbx"], "Harbor backup");
+  return downloadText(`harbor-backup-${stamp}.harbx`, text, ["harbx"], "Lart backup");
 }
 
 export type BackupValidationError =
   | "That file is not valid JSON."
   | "Unrecognized file."
-  | "This is not a Harbor backup file."
+  | "This is not a Lart backup file."
   | "This backup has no data in it."
   | "This backup contained nothing restorable.";
 
@@ -368,7 +368,7 @@ export function parseBackup(text: string): ParsedBackup {
   }
   const b = json as Partial<Backup>;
   if (b.format !== FORMAT) {
-    return { ok: false, error: "This is not a Harbor backup file." };
+    return { ok: false, error: "This is not a Lart backup file." };
   }
   if (!b.data || typeof b.data !== "object") {
     return { ok: false, error: "This backup has no data in it." };

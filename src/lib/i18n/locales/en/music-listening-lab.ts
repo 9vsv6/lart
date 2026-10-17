@@ -36,7 +36,7 @@ const musicListeningLab: Record<string, string> = {
   "music.lab.crossfeed": "Headphone crossfeed",
   "music.lab.crossfeedHelp":
     "Blends a filtered part of each stereo channel into the other for a less separated headphone image. 0% is off.",
-  "music.lab.bypass": "Bypass Harbor DSP",
+  "music.lab.bypass": "Bypass Lart DSP",
   "music.lab.bypassHelp":
     "Bypasses EQ, preamp, crossfeed, balance and ReplayGain after Apply. Output settings and playback volume remain active. This does not verify bit-perfect playback.",
   "music.lab.exclusive": "Request exclusive output",

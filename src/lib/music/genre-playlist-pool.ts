@@ -23,7 +23,7 @@ export const US_HIP_HOP_SCENES = [
 export const isPlaylistScene = (slug: string) => slug === 'internet-classics' || US_HIP_HOP_SCENES.some(scene => scene[0] === slug);
 
 // Vetted for early web, viral songs and creator music. Contents are fetched live,
-// not bundled into Harbor. See the source review in the task handoff.
+// not bundled into Lart. See the source review in the task handoff.
 export const INTERNET_PLAYLISTS = [11799766821,14978443383,14478144483,5389738762,12658267603];
 const INTERNET_QUERIES = ['meme songs','internet nostalgia','Parry Gripp'];
 type Entry = Record<string, unknown>;

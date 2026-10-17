@@ -46,7 +46,7 @@ export function TypeSpecimenCard({
           className="truncate text-[24px] leading-none tracking-tight text-ink"
           style={{ fontFamily: display }}
         >
-          Harbor
+          Lart
         </span>
         <span
           className="truncate text-[15.5px] leading-[22px] text-ink-muted"

@@ -4,19 +4,19 @@ const musicSpotifyLibrary: Record<string, string> = {
   "music.spotifyLibrary.connect": "Подключить Spotify",
   "music.spotifyLibrary.liked": "Любимые треки",
   "music.spotifyLibrary.playlists": "Плейлисты Spotify",
-  "music.spotifyLibrary.harbor": "Плейлисты Harbor",
+  "music.spotifyLibrary.harbor": "Плейлисты Lart",
   "music.spotifyLibrary.back": "Назад к библиотеке Spotify",
-  "music.spotifyLibrary.import": "Импортировать в Harbor",
+  "music.spotifyLibrary.import": "Импортировать в Lart",
   "music.spotifyLibrary.importBody":
-    "Сохраните копию этого списка в Harbor. Треки по-прежнему будут воспроизводиться из своего музыкального источника.",
+    "Сохраните копию этого списка в Lart. Треки по-прежнему будут воспроизводиться из своего музыкального источника.",
   "music.spotifyLibrary.importing": "Чтение треков: {count}…",
   "music.spotifyLibrary.imported": "В {name} импортировано треков: {count}.",
   "music.spotifyLibrary.skipped":
-    "Пропущено записей, которые Harbor не может импортировать: {count}.",
+    "Пропущено записей, которые Lart не может импортировать: {count}.",
   "music.spotifyLibrary.loaded": "{count} из {total}",
   "music.spotifyLibrary.empty": "В этой коллекции Spotify пока ничего нет.",
   "music.spotifyLibrary.noImportable":
-    "В этой коллекции нет треков, которые Harbor может импортировать.",
+    "В этой коллекции нет треков, которые Lart может импортировать.",
   "music.spotifyLibrary.error":
     "Spotify не удалось выполнить запрос. Проверьте подключение и повторите попытку.",
   "music.spotifyLibrary.permission":

@@ -115,7 +115,7 @@ export function CheatSheet({ onClose }: { onClose: () => void }) {
             {t("Cheat sheet")}
           </h2>
           <span className="hidden max-w-[70ch] text-[15.5px] leading-[22px] text-ink-subtle md:block">
-            {t("Every variable, selector, hook, and recipe for building custom Harbor themes.")}
+            {t("Every variable, selector, hook, and recipe for building custom Lart themes.")}
           </span>
         </div>
         <button
@@ -157,7 +157,7 @@ export function CheatSheet({ onClose }: { onClose: () => void }) {
             <Section
               id="tokens-color"
               title={t("Color tokens")}
-              sub={t("Every surface in Harbor maps to one of these 12 variables.")}
+              sub={t("Every surface in Lart maps to one of these 12 variables.")}
             >
               <TokenTable rows={COLOR_TOKENS} swatch />
             </Section>
@@ -182,7 +182,7 @@ export function CheatSheet({ onClose }: { onClose: () => void }) {
               id="api"
               title={t("window.harbor API")}
               sub={t(
-                "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Harbor feature, so your chrome never goes stale when Harbor adds menu items.",
+                "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Lart feature, so your chrome never goes stale when Lart adds menu items.",
               )}
             >
               <div className="flex flex-col gap-1.5">
@@ -299,7 +299,7 @@ export function CheatSheet({ onClose }: { onClose: () => void }) {
               id="events"
               title={t("Window events")}
               sub={t(
-                "Dispatched on window. Listen from your theme JS to react to Harbor's lifecycle.",
+                "Dispatched on window. Listen from your theme JS to react to Lart's lifecycle.",
               )}
             >
               <div className="flex flex-col gap-1.5">

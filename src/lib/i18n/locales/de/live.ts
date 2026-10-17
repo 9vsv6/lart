@@ -75,8 +75,8 @@ const live: Record<string, string> = {
   Grid: "Raster",
   "HEVC, HDR, TrueHD, plus real subtitle and audio menus.":
     "HEVC, HDR, TrueHD sowie echte Menüs für Untertitel und Tonspuren.",
-  "Harbor caps playlists at 80 MB to stay responsive. Most providers offer a filtered URL with fewer channels.":
-    "Harbor begrenzt Playlists auf 80 MB, damit die App reaktionsschnell bleibt. Die meisten Anbieter stellen eine gefilterte URL mit weniger Sendern bereit.",
+  "Lart caps playlists at 80 MB to stay responsive. Most providers offer a filtered URL with fewer channels.":
+    "Lart begrenzt Playlists auf 80 MB, damit die App reaktionsschnell bleibt. Die meisten Anbieter stellen eine gefilterte URL mit weniger Sendern bereit.",
   Height: "Höhe",
   "Hide category": "Kategorie ausblenden",
   Hits: "Treffer",

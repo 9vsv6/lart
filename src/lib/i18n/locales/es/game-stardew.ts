@@ -18,7 +18,7 @@ export default {
   "games.stardew.refresh": "Actualizar mods",
 
   "games.stardew.import": "Importar ZIP de mod",
-  "games.stardew.manage": "Gestionado con Harbor",
+  "games.stardew.manage": "Gestionado con Lart",
   "games.stardew.manageNote": "Importa un mod de SMAPI descargado para gestionarlo aquí. Para actualizarlo, importa su ZIP más reciente.",
   "games.stardew.previous": "Versiones anteriores",
   "games.stardew.review": "Revisar cambios",
@@ -31,7 +31,7 @@ export default {
   "games.stardew.running": "Cierra Stardew Valley y SMAPI antes de cambiar archivos de mods.",
   "games.stardew.requirementsError": "Falta un mod necesario o la versión de SMAPI es demasiado antigua. Comprueba los requisitos del mod.",
   "games.stardew.dependentsError": "Un mod activado necesita esta versión. Desactívalo primero o elige una versión compatible.",
-  "games.stardew.unmanagedError": "Este mod ya existe fuera de los registros de Harbor. Aparta la copia existente antes de importarlo.",
+  "games.stardew.unmanagedError": "Este mod ya existe fuera de los registros de Lart. Aparta la copia existente antes de importarlo.",
   "games.stardew.archiveError": "Elige un ZIP con una carpeta de mod lista para usar, de hasta 32 MB (128 MB extraídos). Las descargas de código fuente no son mods instalables.",
   "games.stardew.moreFiles": "{count} archivos más",
   "games.stardew.partialError": "No se pudieron comprobar algunos mods. Resuelve el análisis incompleto antes de cambiar archivos.",

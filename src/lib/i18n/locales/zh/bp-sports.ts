@@ -15,8 +15,8 @@ const bpSports: Record<string, string> = {
   "Following {name}": "已关注 {name}",
   "Game finished": "比赛结束",
   "Grand Prix weekend": "大奖赛周末",
-  "Harbor couldn't reach the sports servers. Check the connection and open the event again.":
-    "Harbor 无法连接体育服务器。请检查网络连接，然后重新打开该赛事。",
+  "Lart couldn't reach the sports servers. Check the connection and open the event again.":
+    "Lart 无法连接体育服务器。请检查网络连接，然后重新打开该赛事。",
   "Hide bench": "隐藏替补",
   "Hot right now": "此刻热门",
   "If the broadcast asks you to sign in or confirm your age, open it in a browser.":
@@ -36,8 +36,8 @@ const bpSports: Record<string, string> = {
   "No installed addon offers a sports catalog yet.": "已安装的插件中，暂时没有提供体育目录的插件。",
   "No matching addon listing yet. Browse every addon channel to look for the broadcast.":
     "插件中暂无匹配条目。可浏览全部插件频道，查找该转播。",
-  "No playlists yet. Add one in Live TV and Harbor will match its channels to fixtures.":
-    "暂无播放列表。在直播电视中添加一个，Harbor 会将其中的频道与赛程匹配。",
+  "No playlists yet. Add one in Live TV and Lart will match its channels to fixtures.":
+    "暂无播放列表。在直播电视中添加一个，Lart 会将其中的频道与赛程匹配。",
   "No venue page published": "未公布场馆页面",
   "None of your channels match this fixture. Search your channels and pin the one that carries it.":
     "你的频道中没有与这场比赛匹配的。请搜索你的频道，并固定转播这场比赛的频道。",

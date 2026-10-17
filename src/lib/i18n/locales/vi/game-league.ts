@@ -77,7 +77,7 @@ export default {
   "games.league.metaScope": "OP.GG cung cấp xếp hạng đường từ mẫu mặc định mà không nêu bản cập nhật, khu vực hay nhóm bậc. Tỉ lệ thắng tính từ số trận và trận thắng được báo cáo; tỉ lệ chọn được nguồn làm tròn. Xếp hạng và trang bị dùng mẫu riêng.",
   "games.league.buildNote": "Mỗi bộ trang bị có mẫu riêng. Trang bị hoàn chỉnh thiên về các trận đủ dài để mua chúng; tỉ lệ thắng đó không phải tỉ lệ chung của tướng. Mẫu kèo đấu có thể nhỏ. Hãy điều chỉnh theo đội và đối thủ. Video có thể từ bản cập nhật cũ.",
   "games.league.patchDifference": "Thống kê trang bị từ {patch}; dữ liệu trang bị và kỹ năng từ {assets}.",
-  "games.league.attribution": "Harbor is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
+  "games.league.attribution": "Lart is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
   "games.league.tierList": "Bảng xếp hạng",
   "games.league.tierScope": "Xếp hạng đơn/đôi · Lục Bảo+ · Toàn cầu",
   "games.league.patchFilter": "Chọn bản cập nhật",

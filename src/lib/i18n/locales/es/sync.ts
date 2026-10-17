@@ -34,8 +34,8 @@ const sync: Record<string, string> = {
   "Every collection": "Cada colección",
   "First anchor": "Primer punto de anclaje",
   "Guests pick their own source": "Los invitados eligen su propia fuente",
-  "Harbor's public relay has not rolled out the latest protocol yet.":
-    "El retransmisor público de Harbor aún no ha implementado el protocolo más reciente.",
+  "Lart's public relay has not rolled out the latest protocol yet.":
+    "El retransmisor público de Lart aún no ha implementado el protocolo más reciente.",
   "Invite link": "Enlace de invitación",
   "Invite via link": "Invitar mediante un enlace",
   "It updates automatically; nothing to do.":
@@ -69,8 +69,8 @@ const sync: Record<string, string> = {
   "Prompts guests to choose instead of auto-matching":
     "Pide a los invitados que elijan en lugar de asignarlos automáticamente",
   "Ready to save": "Listo para guardar",
-  "Redeploy it to get the latest Watch Together fixes. Harbor's public relay updates on its own.":
-    "Vuelve a implementarlo para obtener las correcciones más recientes de Ver juntos. El relé público de Harbor se actualiza automáticamente.",
+  "Redeploy it to get the latest Watch Together fixes. Lart's public relay updates on its own.":
+    "Vuelve a implementarlo para obtener las correcciones más recientes de Ver juntos. El relé público de Lart se actualiza automáticamente.",
   "Relay outdated. Your self-hosted relay is running an older version.":
     "El retransmisor está desactualizado. Tu retransmisor autoalojado ejecuta una versión anterior.",
   "Remove from AniList": "Quitar de AniList",
@@ -82,8 +82,8 @@ const sync: Record<string, string> = {
   "Say hi.": "Di hola.",
   "Second anchor": "Segundo anclaje",
   "Show cursors": "Mostrar cursores",
-  "Show your AniList lists as rails on the Anime page, keep your watch progress in sync as you finish episodes, and use your AniList avatar as your Harbor photo. Free at anilist.co.":
-    "Mostrar tus listas de AniList como filas en la página Anime, mantener sincronizado tu progreso de visualización al terminar episodios y usar tu avatar de AniList como foto de Harbor. Gratis en anilist.co.",
+  "Show your AniList lists as rails on the Anime page, keep your watch progress in sync as you finish episodes, and use your AniList avatar as your Lart photo. Free at anilist.co.":
+    "Mostrar tus listas de AniList como filas en la página Anime, mantener sincronizado tu progreso de visualización al terminar episodios y usar tu avatar de AniList como foto de Lart. Gratis en anilist.co.",
   "Sign in to": "Iniciar sesión en",
   "Sign in to filter by your library": "Inicia sesión para filtrar por tu biblioteca",
   "Sign in to see your library calendar": "Inicia sesión para ver el calendario de tu biblioteca",
@@ -96,8 +96,8 @@ const sync: Record<string, string> = {
   "Start a new room": "Iniciar una nueva sala",
   "Start a room first.": "Primero inicia una sala.",
   "Starting…": "Iniciando…",
-  "Sync and track movies, shows, and anime across everything you use. Harbor marks what you finish as watched on Simkl and keeps your plan-to-watch list in step. Free at simkl.com.":
-    "Sincroniza y lleva un registro de películas, series y anime en todos tus dispositivos. Harbor marca en Simkl como visto lo que terminas y mantiene actualizada tu lista de pendientes. Gratis en simkl.com.",
+  "Sync and track movies, shows, and anime across everything you use. Lart marks what you finish as watched on Simkl and keeps your plan-to-watch list in step. Free at simkl.com.":
+    "Sincroniza y lleva un registro de películas, series y anime en todos tus dispositivos. Lart marca en Simkl como visto lo que terminas y mantiene actualizada tu lista de pendientes. Gratis en simkl.com.",
   "Sync subtitles via text": "Sincronizar subtítulos mediante texto",
   "Sync unavailable": "Sincronización no disponible",
   "Sync via text": "Sincronizar mediante texto",

@@ -36,7 +36,7 @@ const musicListeningLab: Record<string, string> = {
   "music.lab.crossfeed": "تغذية متقاطعة لسماعات الرأس",
   "music.lab.crossfeedHelp":
     "يمزج جزءًا مرشحًا من كل قناة ستيريو في الأخرى لتقليل الانفصال في سماعات الرأس. 0% يوقف التأثير.",
-  "music.lab.bypass": "تجاوز DSP في Harbor",
+  "music.lab.bypass": "تجاوز DSP في Lart",
   "music.lab.bypassHelp":
     "بعد التطبيق يتجاوز EQ والتضخيم الأولي والتغذية المتقاطعة والتوازن وReplayGain. يبقى المخرج ومستوى التشغيل فعالين. لا يؤكد تشغيلًا مطابقًا للبتات.",
   "music.lab.exclusive": "طلب مخرج حصري",

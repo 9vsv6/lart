@@ -63,12 +63,12 @@ const surfaces: Record<string, string> = {
     "Настройте стиль {selector}, и постеры справа будут обновляться в реальном времени. Нажмите «Вставить шаблон», чтобы быстро начать.",
   "Click to copy": "Нажмите, чтобы скопировать",
   "Copy {text}": "Копировать {text}",
-  "Harbor snippet": "Фрагмент Harbor",
+  "Lart snippet": "Фрагмент Lart",
   example: "пример",
   "Cheat sheet": "Шпаргалка",
   Contents: "Содержание",
-  "Every surface in Harbor maps to one of these 12 variables.":
-    "Каждой поверхности в Harbor соответствует одна из этих 12 переменных.",
+  "Every surface in Lart maps to one of these 12 variables.":
+    "Каждой поверхности в Lart соответствует одна из этих 12 переменных.",
   "Font tokens": "Токены шрифтов",
   "Set on the root. Override any to swap typography.":
     "Задаются в корневом элементе. Переопределите любой из них, чтобы изменить типографику.",
@@ -76,8 +76,8 @@ const surfaces: Record<string, string> = {
   "Shared transition curves. Use anywhere you transition.":
     "Общие кривые переходов. Используйте для любых переходов.",
   "window.harbor API": "API window.harbor",
-  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Harbor feature, so your chrome never goes stale when Harbor adds menu items.":
-    "Вызывайте их из обработчиков onclick или JS-кода темы. Эти методы стабильны и безопасны: каждый из них управляет реальной функцией Harbor, поэтому ваша оболочка не устареет при добавлении новых пунктов меню в Harbor.",
+  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Lart feature, so your chrome never goes stale when Lart adds menu items.":
+    "Вызывайте их из обработчиков onclick или JS-кода темы. Эти методы стабильны и безопасны: каждый из них управляет реальной функцией Lart, поэтому ваша оболочка не устареет при добавлении новых пунктов меню в Lart.",
   "Root data attributes": "Корневые атрибуты данных",
   "Set on <html>. Use them to scope styles to a specific layout/card/button choice.":
     "Задаются в <html>. Используйте их, чтобы ограничить стили выбранным вариантом макета, карточки или кнопки.",
@@ -90,16 +90,16 @@ const surfaces: Record<string, string> = {
   "Pick a z-index for your overlays that sits where you want it.":
     "Выберите z-index, чтобы разместить наложения на нужном уровне.",
   "Window events": "События window",
-  "Dispatched on window. Listen from your theme JS to react to Harbor's lifecycle.":
-    "Отправляются в window. Отслеживайте их в JS-коде темы, чтобы реагировать на этапы жизненного цикла Harbor.",
+  "Dispatched on window. Listen from your theme JS to react to Lart's lifecycle.":
+    "Отправляются в window. Отслеживайте их в JS-коде темы, чтобы реагировать на этапы жизненного цикла Lart.",
   "View identifiers": "Идентификаторы представлений",
   "Use these strings if you wire a custom navbar that needs to navigate.":
     "Используйте эти строки, если настраиваете навигацию в собственной панели.",
   Recipes: "Примеры",
   "Copy-paste starters for common customizations.": "Готовые заготовки для типовых настроек.",
-  "Harbor theme": "Тема Harbor",
-  "{file} is empty. Start typing to restyle Harbor.":
-    "Файл {file} пуст. Начните вводить код, чтобы изменить оформление Harbor.",
+  "Lart theme": "Тема Lart",
+  "{file} is empty. Start typing to restyle Lart.":
+    "Файл {file} пуст. Начните вводить код, чтобы изменить оформление Lart.",
   "Open code editor": "Открыть редактор кода",
   "CSS {css} · HTML {html} · JS {js}": "CSS {css} · HTML {html} · JS {js}",
   "No custom code yet.": "Пользовательского кода пока нет.",
@@ -223,22 +223,22 @@ const surfaces: Record<string, string> = {
   "Theme author. Your published themes are tied to this account.":
     "Автор тем. Опубликованные вами темы привязаны к этой учётной записи.",
   "Change password": "Изменить пароль",
-  "Set a Harbor profile picture first": "Сначала установите фото профиля Harbor",
-  "Re-sync from your Harbor profile picture": "Повторно синхронизировать с фото профиля Harbor",
+  "Set a Lart profile picture first": "Сначала установите фото профиля Lart",
+  "Re-sync from your Lart profile picture": "Повторно синхронизировать с фото профиля Lart",
   "Update photo": "Обновить фото",
   "Remove community photo": "Удалить фото сообщества",
   "Remove your community photo": "Удалить ваше фото сообщества",
-  "Show your Harbor profile picture on the community":
-    "Показывать фото профиля Harbor в сообществе",
+  "Show your Lart profile picture on the community":
+    "Показывать фото профиля Lart в сообществе",
   "Use my photo": "Использовать моё фото",
   "Current password": "Текущий пароль",
   "Password updated": "Пароль обновлён",
   "Update password": "Обновить пароль",
-  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Harbor handles the shaders.":
-    "GPU-шейдеры, которые при воспроизведении аниме делают линии чётче и сглаживают градиенты. Выберите режим, а Harbor настроит шейдеры.",
-  "Harbor, from a public domain frame": "Harbor, на основе кадра из общественного достояния",
-  "One-time setup downloads the shader pack (about 1 MB) into Harbor. No files to hunt down.":
-    "При однократной настройке Harbor загрузит пакет шейдеров (около 1 МБ). Искать файлы не придётся.",
+  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Lart handles the shaders.":
+    "GPU-шейдеры, которые при воспроизведении аниме делают линии чётче и сглаживают градиенты. Выберите режим, а Lart настроит шейдеры.",
+  "Lart, from a public domain frame": "Lart, на основе кадра из общественного достояния",
+  "One-time setup downloads the shader pack (about 1 MB) into Lart. No files to hunt down.":
+    "При однократной настройке Lart загрузит пакет шейдеров (около 1 МБ). Искать файлы не придётся.",
   "Downloading shaders…": "Загрузка шейдеров…",
   Performance: "Производительность",
   "Shaders installed": "Шейдеры установлены",
@@ -313,8 +313,8 @@ const surfaces: Record<string, string> = {
   "Custom profile": "Настраиваемый профиль",
   "Hidden from visitors": "Скрыто от посетителей",
   "How the canvas works": "Как работает холст",
-  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Harbor. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
-    "Ваши HTML и CSS отображаются в изолированном фрейме и полностью отделены от остальной части Harbor. Оформляйте их как небольшую самостоятельную страницу. Шрифт и фон страницы настраиваются отдельно выше и применяются ко всему профилю.",
+  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Lart. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
+    "Ваши HTML и CSS отображаются в изолированном фрейме и полностью отделены от остальной части Lart. Оформляйте их как небольшую самостоятельную страницу. Шрифт и фон страницы настраиваются отдельно выше и применяются ко всему профилю.",
   Allowed: "Разрешено",
   "Not allowed": "Запрещено",
   "HTML and CSS are each capped at 16,384 characters.":
@@ -381,8 +381,8 @@ const surfaces: Record<string, string> = {
   "End of manga": "Конец манги",
   "Reconnecting to your computer": "Повторное подключение к компьютеру",
   "Reader closed on your computer": "Читалка закрыта на компьютере",
-  "Open a manga on Harbor to control the reader from here.":
-    "Откройте мангу в Harbor, чтобы управлять чтением отсюда.",
+  "Open a manga on Lart to control the reader from here.":
+    "Откройте мангу в Lart, чтобы управлять чтением отсюда.",
   "Your computer": "Ваш компьютер",
   Reconnecting: "Повторное подключение",
   "Read on this device": "Читать на этом устройстве",
@@ -406,8 +406,8 @@ const surfaces: Record<string, string> = {
     "Добавьте API-ключ Google Books для получения названий, обложек, авторов и описаний книг. Wikidata автоматически используется как последний резервный источник метаданных.",
   "Google Books API key": "API-ключ Google Books",
   "Loading models…": "Загрузка моделей…",
-  "Storage is full. Clear Harbor cache storage, then try saving again.":
-    "Хранилище заполнено. Очистите кеш Harbor и повторите сохранение.",
+  "Storage is full. Clear Lart cache storage, then try saving again.":
+    "Хранилище заполнено. Очистите кеш Lart и повторите сохранение.",
   "DeepSeek model is working.": "Модель DeepSeek работает.",
   "Translation test failed": "Проверка перевода не выполнена",
   Translation: "Перевод",
@@ -428,7 +428,7 @@ const surfaces: Record<string, string> = {
     "Выберите одну папку библиотеки. Каждая вложенная папка представляет собой отдельную электронную книгу. Поместите в неё главы в виде файлов TXT, Markdown, HTML или EPUB и при желании добавьте изображение обложки.",
   "My eBooks": "Мои электронные книги",
   "Choose eBook folder": "Выбрать папку с электронными книгами",
-  "Folder selection is available in the Harbor app": "Выбор папки доступен в приложении Harbor",
+  "Folder selection is available in the Lart app": "Выбор папки доступен в приложении Lart",
   "Read eBook files you already have": "Читайте имеющиеся у вас электронные книги",
   "Enable {name}": "Включить {name}",
   "Update repository": "Обновить репозиторий",
@@ -438,8 +438,8 @@ const surfaces: Record<string, string> = {
     "В этом репозитории нет расширений для электронных книг.",
   "Could not load that eBook extension repository":
     "Не удалось загрузить этот репозиторий расширений для электронных книг",
-  "eBook extensions use Harbor’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
-    "Расширения для электронных книг используют изолированный воркер Harbor, HTTP-мост и HTML-парсер, то есть ту же песочницу, что и расширения для манги. Добавляйте только доверенные репозитории.",
+  "eBook extensions use Lart’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
+    "Расширения для электронных книг используют изолированный воркер Lart, HTTP-мост и HTML-парсер, то есть ту же песочницу, что и расширения для манги. Добавляйте только доверенные репозитории.",
   "No repositories yet. Add one above to browse eBook extensions.":
     "Репозиториев пока нет. Добавьте репозиторий выше, чтобы просматривать дополнения для электронных книг.",
   "{count} connected": "Подключено: {count}",
@@ -448,26 +448,26 @@ const surfaces: Record<string, string> = {
   "{count} repositories": "Репозитории: {count}",
   "Build your own": "Создайте свою",
   "living library.": "живую библиотеку.",
-  "Connect books you own, trusted reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "Подключайте свои книги, проверенные источники для чтения и сервисы метаданных. Harbor поддерживает порядок на полке, а все источники остаются под вашим контролем.",
+  "Connect books you own, trusted reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "Подключайте свои книги, проверенные источники для чтения и сервисы метаданных. Lart поддерживает порядок на полке, а все источники остаются под вашим контролем.",
   "Source overview": "Обзор источников",
   Repositories: "Репозитории",
   "Private reading collection": "Личная коллекция книг",
   "eBook source settings": "Настройки источников электронных книг",
   "Your shelf, your rules.": "Ваша полка, ваши правила.",
-  "Harbor never hosts your books.": "Harbor никогда не размещает ваши книги у себя.",
+  "Lart never hosts your books.": "Lart никогда не размещает ваши книги у себя.",
   "01 · Collection": "01 · Коллекция",
   "Library sources": "Источники библиотеки",
-  "Manage every place Harbor can read from, whether it lives on disk or across the web.":
-    "Управляйте всеми источниками, из которых Harbor может читать, будь то локальный диск или интернет.",
+  "Manage every place Lart can read from, whether it lives on disk or across the web.":
+    "Управляйте всеми источниками, из которых Lart может читать, будь то локальный диск или интернет.",
   "02 · Enrichment": "02 · Обогащение",
   "Library intelligence": "Интеллектуальные функции библиотеки",
-  "Shape the metadata and reading language Harbor uses without changing your original files.":
-    "Настройте метаданные и язык чтения в Harbor, не изменяя исходные файлы.",
+  "Shape the metadata and reading language Lart uses without changing your original files.":
+    "Настройте метаданные и язык чтения в Lart, не изменяя исходные файлы.",
   "03 · Expand": "03 · Расширение",
   "Extension dock": "Панель расширений",
-  "Bring trusted source packages aboard through Harbor’s isolated extension worker.":
-    "Подключайте доверенные пакеты источников через изолированный воркер расширений Harbor.",
+  "Bring trusted source packages aboard through Lart’s isolated extension worker.":
+    "Подключайте доверенные пакеты источников через изолированный воркер расширений Lart.",
   "Saved locally; AniList sync is pending": "Сохранено локально; ожидается синхронизация с AniList",
   "{format} added to Downloads": "{format} добавлен в загрузки",
   "This eBook could not be exported": "Не удалось экспортировать эту электронную книгу",
@@ -512,8 +512,8 @@ const surfaces: Record<string, string> = {
   "Auto-download": "Автозагрузка",
   "Episodes that air after you add a series grab themselves":
     "Новые серии, вышедшие после добавления сериала, скачиваются автоматически",
-  "Add a series above and Harbor will grab each new episode as it airs, on your terms.":
-    "Добавьте сериал выше, и Harbor будет скачивать каждую новую серию сразу после выхода с учётом ваших настроек.",
+  "Add a series above and Lart will grab each new episode as it airs, on your terms.":
+    "Добавьте сериал выше, и Lart будет скачивать каждую новую серию сразу после выхода с учётом ваших настроек.",
   "Checking...": "Проверка...",
   "Check now": "Проверить сейчас",
   "{count} grabbed": "Скачано: {count}",
@@ -544,9 +544,9 @@ const surfaces: Record<string, string> = {
   "Save failed for an unknown reason.": "Не удалось сохранить по неизвестной причине.",
   "My layout": "Мой макет",
   "Not valid JSON. The file may be corrupted.": "Недопустимый JSON. Возможно, файл повреждён.",
-  "File is not a Harbor layout profile.": "Файл не является профилем макета Harbor.",
-  "Unsupported profile version ({version}). Update Harbor or use an older profile.":
-    "Версия профиля ({version}) не поддерживается. Обновите Harbor или используйте более старый профиль.",
+  "File is not a Lart layout profile.": "Файл не является профилем макета Lart.",
+  "Unsupported profile version ({version}). Update Lart or use an older profile.":
+    "Версия профиля ({version}) не поддерживается. Обновите Lart или используйте более старый профиль.",
   "Profile file has no chrome config.": "В файле профиля нет конфигурации chrome.",
   "Your theme": "Ваша тема",
   "{actor} commented on {name}": "{actor} оставил комментарий к {name}",
@@ -555,7 +555,7 @@ const surfaces: Record<string, string> = {
   "New badge unlocked": "Получен новый значок",
   "Congrats! Tap to view your badges.": "Поздравляем! Нажмите, чтобы посмотреть свои значки.",
   "{staff} requested your diagnostics": "{staff} запросил ваши диагностические данные",
-  "Harbor Staff": "Команда Harbor",
+  "Lart Staff": "Команда Lart",
   "New profile comment": "Новый комментарий к профилю",
   "Mute / Unmute": "Выключить / включить звук",
   "Unlock player controls ({binding})": "Разблокировать элементы управления плеером ({binding})",

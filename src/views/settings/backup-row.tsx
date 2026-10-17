@@ -105,7 +105,7 @@ export function BackupRow() {
         icon={<Upload size={20} strokeWidth={2.1} className="text-ink-muted" />}
         label={t("Restore from a backup")}
         desc={t(
-          "Choose a Harbor backup and review what it contains before restoring. Your Stremio sign-in stays on this device.",
+          "Choose a Lart backup and review what it contains before restoring. Your Stremio sign-in stays on this device.",
         )}
       >
         <SButton onClick={() => fileRef.current?.click()}>
@@ -313,7 +313,7 @@ function RestoreConfirm({
       <div className="flex items-start gap-2.5 rounded-[10px] bg-elevated px-4 py-3">
         <Info size={18} className="mt-[2px] shrink-0 text-ink-subtle" />
         <p className={`max-w-[66ch] ${ROW_DESC}`}>
-          {t("Saved {when} from Harbor {app}. Your Stremio sign-in stays as is.", {
+          {t("Saved {when} from Lart {app}. Your Stremio sign-in stays as is.", {
             when,
             app: backup.app,
           })}

@@ -1,4 +1,4 @@
-// Original Harbor navigation marks: cartridge, console, collection, patch and library.
+// Original Lart navigation marks: cartridge, console, collection, patch and library.
 export function RomMark({ kind }: { kind: "discover" | "consoles" | "collections" | "hacks" | "library" }) {
   return <svg viewBox="0 0 80 64" fill="none" aria-hidden="true" className="games-rom-mark">
     {kind === "discover" ? <><path d="M19 9h39l7 8v40H15V17z" fill="currentColor" opacity=".2"/><path d="M19 9h39l7 8v40H15V17zM24 9v25h31V9M26 49h28" stroke="currentColor" strokeWidth="2.5" strokeLinejoin="round"/><path d="m35 17 12 7-12 7z" fill="currentColor"/></>

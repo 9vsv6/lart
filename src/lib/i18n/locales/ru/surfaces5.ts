@@ -15,10 +15,10 @@ const surfaces5: Record<string, string> = {
   "No PiP session. Closing.": "Сеанс PiP отсутствует. Окно будет закрыто.",
   "Failed to read session: {message}": "Не удалось прочитать данные сеанса: {message}",
   "Subtitle {number}": "Субтитры {number}",
-  "Harbor Relay Documentation": "Документация по ретранслятору Harbor",
-  "Harbor Relay docs": "Документация по ретранслятору Harbor",
-  "Harbor test message ({service}). If you can read this, your webhook is wired up.":
-    "Тестовое сообщение Harbor ({service}). Если вы его видите, вебхук подключён.",
+  "Lart Relay Documentation": "Документация по ретранслятору Lart",
+  "Lart Relay docs": "Документация по ретранслятору Lart",
+  "Lart test message ({service}). If you can read this, your webhook is wired up.":
+    "Тестовое сообщение Lart ({service}). Если вы его видите, вебхук подключён.",
   "Use a TTF, OTF, WOFF or WOFF2 file.": "Используйте файл TTF, OTF, WOFF или WOFF2.",
   "That font is over 32 MB. Try a lighter file.":
     "Размер этого шрифта превышает 32 МБ. Выберите файл меньшего размера.",
@@ -28,7 +28,7 @@ const surfaces5: Record<string, string> = {
   "Browsing the theme library": "Просмотр библиотеки тем",
   "This theme is missing a color ({color}).": "В этой теме отсутствует цвет ({color}).",
   "This file isn't a readable theme.": "Не удалось прочитать тему из этого файла.",
-  "This file isn't a Harbor theme.": "Этот файл не является темой Harbor.",
+  "This file isn't a Lart theme.": "Этот файл не является темой Lart.",
   "Theme is missing a name.": "У темы отсутствует название.",
   "This theme's preview colors look invalid.":
     "Цвета предварительного просмотра этой темы некорректны.",
@@ -69,10 +69,10 @@ const surfaces5: Record<string, string> = {
   "+15s": "+15 с",
   "Connecting to": "Подключение к",
   "Paused on": "Приостановлено на",
-  "Harbor queried 1 addon and got nothing back":
-    "Harbor запросил 1 дополнение, но ничего не получил",
-  "Harbor queried {n} addons and got nothing back":
-    "Harbor запросил дополнения ({n}), но ничего не получил",
+  "Lart queried 1 addon and got nothing back":
+    "Lart запросил 1 дополнение, но ничего не получил",
+  "Lart queried {n} addons and got nothing back":
+    "Lart запросил дополнения ({n}), но ничего не получил",
   "Tried IDs: {ids}": "Проверенные ID: {ids}",
   " · +{n} more": " · ещё +{n}",
   "sketchy files": "подозрительные файлы",
@@ -90,10 +90,10 @@ const surfaces5: Record<string, string> = {
   "wrong movie": "неверный фильм",
   "1 source · 0 made it through": "1 источник · ни один не прошёл отбор",
   "{n} sources · 0 made it through": "{n} источников · ни один не прошёл отбор",
-  "Harbor blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
-    "По умолчанию Harbor блокирует подозрительные файлы и неподходящие релизы. Для старых сериалов и необычных названий эти ограничения иногда слишком строги.",
-  "No clean release has surfaced yet. This may be too new. Harbor's filters dropped everything that came back as wrong-movie noise.":
-    "Подходящих релизов пока нет. Возможно, новинка вышла совсем недавно. Фильтры Harbor отсеяли все результаты как не относящиеся к нужному фильму.",
+  "Lart blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
+    "По умолчанию Lart блокирует подозрительные файлы и неподходящие релизы. Для старых сериалов и необычных названий эти ограничения иногда слишком строги.",
+  "No clean release has surfaced yet. This may be too new. Lart's filters dropped everything that came back as wrong-movie noise.":
+    "Подходящих релизов пока нет. Возможно, новинка вышла совсем недавно. Фильтры Lart отсеяли все результаты как не относящиеся к нужному фильму.",
   "Create a custom filter": "Создать пользовательский фильтр",
   Remux: "Ремукс",
   Debrid: "Debrid",
@@ -203,19 +203,19 @@ const surfaces5: Record<string, string> = {
     "{title} запрещает встраивание за пределами своего сайта.",
   "That's a normal security setting. Use the button below to open it in your browser instead.":
     "Это обычная настройка безопасности. Нажмите кнопку ниже, чтобы открыть страницу в браузере.",
-  "You're leaving Harbor": "Вы покидаете Harbor",
-  "This link goes to an external site that Harbor does not control or vouch for. Triple-check the address before you continue, and never enter your Harbor password anywhere but Harbor.":
-    "Эта ссылка ведёт на внешний сайт, который Harbor не контролирует и не гарантирует его надёжность. Трижды проверьте адрес, прежде чем продолжить, и вводите пароль Harbor только в Harbor.",
+  "You're leaving Lart": "Вы покидаете Lart",
+  "This link goes to an external site that Lart does not control or vouch for. Triple-check the address before you continue, and never enter your Lart password anywhere but Lart.":
+    "Эта ссылка ведёт на внешний сайт, который Lart не контролирует и не гарантирует его надёжность. Трижды проверьте адрес, прежде чем продолжить, и вводите пароль Lart только в Lart.",
   Destination: "Адрес назначения",
   "Only continue if you fully trust this link":
     "Продолжайте, только если полностью доверяете этой ссылке",
-  "Harbor can open only HTTP or HTTPS destinations.":
-    "Harbor может открывать только адреса HTTP или HTTPS.",
-  "Harbor cannot open links that include embedded credentials.":
-    "Harbor не может открывать ссылки со встроенными учётными данными.",
-  "Harbor could not verify this destination.": "Harbor не удалось проверить этот адрес.",
-  "Harbor's temporary viewer requires HTTPS.":
-    "Для временного средства просмотра Harbor требуется HTTPS.",
+  "Lart can open only HTTP or HTTPS destinations.":
+    "Lart может открывать только адреса HTTP или HTTPS.",
+  "Lart cannot open links that include embedded credentials.":
+    "Lart не может открывать ссылки со встроенными учётными данными.",
+  "Lart could not verify this destination.": "Lart не удалось проверить этот адрес.",
+  "Lart's temporary viewer requires HTTPS.":
+    "Для временного средства просмотра Lart требуется HTTPS.",
   "Source mode": "Режим источников",
   "Use debrid/addon sources and fall back to peer-to-peer":
     "Использовать источники debrid и дополнений, а при их недоступности переходить на peer-to-peer",
@@ -232,8 +232,8 @@ const surfaces5: Record<string, string> = {
     "Удалённый сервер потоковой передачи недоступен. Проверьте его адрес в настройках.",
   "No playable video file was found in this torrent.":
     "В этом торренте не найдено видеофайлов для воспроизведения.",
-  "Direct torrent play needs the Harbor desktop app.":
-    "Для прямого воспроизведения торрентов требуется приложение Harbor для компьютера.",
+  "Direct torrent play needs the Lart desktop app.":
+    "Для прямого воспроизведения торрентов требуется приложение Lart для компьютера.",
   "The streaming engine is still starting up. Give it a moment and press Play again.":
     "Модуль потоковой передачи ещё запускается. Подождите немного и снова нажмите «Воспроизвести».",
   "Could not find any peers for this torrent yet. It may be dead or very low on seeders.":
@@ -266,22 +266,22 @@ const surfaces5: Record<string, string> = {
   "A local folder": "Локальная папка",
   "Advanced: build a plugin": "Для опытных: создайте плагин",
   "Also Known As": "Другие названия",
-  "Back in Harbor: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
-    "Вернитесь в Harbor и выберите «Манга > Настроить источник > Ваш сервер», затем вставьте адрес сервера, например {localUrl}. Если сервер работает на другом устройстве, укажите его IP-адрес в локальной сети, например {lanUrl}.",
+  "Back in Lart: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
+    "Вернитесь в Lart и выберите «Манга > Настроить источник > Ваш сервер», затем вставьте адрес сервера, например {localUrl}. Если сервер работает на другом устройстве, укажите его IP-адрес в локальной сети, например {lanUrl}.",
   "Controller preview": "Предпросмотр контроллера",
   "Couldn't save that font. It may be invalid, or storage is full.":
     "Не удалось сохранить этот шрифт. Возможно, файл повреждён или хранилище заполнено.",
   "Download and run Suwayomi Server:": "Скачайте и запустите Suwayomi Server:",
-  "Every source you enable in Suwayomi then shows up in Harbor. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
-    "Все источники, включённые в Suwayomi, затем появятся в Harbor. Suwayomi обновляет расширения при изменениях на сайтах, поэтому они продолжают работать.",
+  "Every source you enable in Suwayomi then shows up in Lart. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
+    "Все источники, включённые в Suwayomi, затем появятся в Lart. Suwayomi обновляет расширения при изменениях на сайтах, поэтому они продолжают работать.",
   "Everything else, through your own server (Suwayomi)":
     "Все остальные источники через собственный сервер (Suwayomi)",
   "Expand {title} image": "Развернуть изображение «{title}»",
-  "Getting manga sources into Harbor": "Добавление источников манги в Harbor",
-  "Harbor also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Harbor repository. Only install plugins from repositories you trust.":
-    "Harbor также поддерживает экспериментальную среду выполнения плагинов. Если вы хотите написать плагин источника, ознакомьтесь с файлом {path} в репозитории Harbor. Устанавливайте плагины только из доверенных репозиториев.",
-  "Harbor ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Harbor. There are two ways to add sources.":
-    "Harbor не поставляет мангу и скраперы, это приложение для чтения. Источники добавляете вы, а за их содержимое отвечают владельцы этих источников, а не Harbor. Добавить источники можно двумя способами.",
+  "Getting manga sources into Lart": "Добавление источников манги в Lart",
+  "Lart also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Lart repository. Only install plugins from repositories you trust.":
+    "Lart также поддерживает экспериментальную среду выполнения плагинов. Если вы хотите написать плагин источника, ознакомьтесь с файлом {path} в репозитории Lart. Устанавливайте плагины только из доверенных репозиториев.",
+  "Lart ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Lart. There are two ways to add sources.":
+    "Lart не поставляет мангу и скраперы, это приложение для чтения. Источники добавляете вы, а за их содержимое отвечают владельцы этих источников, а не Lart. Добавить источники можно двумя способами.",
   "Import failed": "Не удалось импортировать",
   "It serves a web UI at {url}": "Веб-интерфейс сервера доступен по адресу {url}",
   "Manga > Set up a source > Local folder, and choose a folder of manga you already own (CBZ files or folders of images).":
@@ -319,8 +319,8 @@ const surfaces5: Record<string, string> = {
   "didn't see that coming": "вот это поворот",
   "no way 😂": "да ладно 😂",
   "this scene is wild": "эта сцена просто огонь",
-  "Open the signed-in user's own Harbor profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
-    "Сразу открывает собственный профиль вошедшего пользователя Harbor, когда загружено его имя пользователя. Возвращает true, если переход начался, и false в противном случае.",
+  "Open the signed-in user's own Lart profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
+    "Сразу открывает собственный профиль вошедшего пользователя Lart, когда загружено его имя пользователя. Возвращает true, если переход начался, и false в противном случае.",
   "AI search failed.": "Не удалось выполнить поиск с помощью ИИ.",
   "Add a debrid provider in Settings first.": "Сначала добавьте debrid-провайдера в настройках.",
   "Cancelled.": "Отменено.",
@@ -332,9 +332,9 @@ const surfaces5: Record<string, string> = {
     "Не удалось подготовить этот P2P-источник. Возможно, у него нет доступных пиров. Повторите попытку или выберите другой источник.",
   "Direct torrent streaming is turned off. Turn it on in Settings > P2P & servers to stream torrents without a debrid.":
     "Прямая потоковая передача торрентов отключена. Включите её в разделе «Настройки > P2P и серверы», чтобы смотреть торренты без debrid-сервиса.",
-  "Harbor could not open your browser.": "Harbor не удалось открыть браузер.",
-  "Harbor's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
-    "P2P-движок Harbor запускается. Через несколько секунд это сообщение исчезнет само, и воспроизведение станет доступно.",
+  "Lart could not open your browser.": "Lart не удалось открыть браузер.",
+  "Lart's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
+    "P2P-движок Lart запускается. Через несколько секунд это сообщение исчезнет само, и воспроизведение станет доступно.",
   Minus: "Минус",
   "None of your debrid services could deliver a working file. Pick another stream.":
     "Ни один из ваших debrid-сервисов не смог предоставить рабочий файл. Выберите другой поток.",
@@ -362,8 +362,8 @@ const surfaces5: Record<string, string> = {
     "Это исходный файл NZB. Сначала скачайте его с помощью SABnzbd или NZBGet, а затем воспроизведите.",
   "This source isn't ready on your debrid yet. Try it again in a moment or pick another.":
     "Этот источник ещё не готов на вашем debrid-сервисе. Повторите попытку через несколько секунд или выберите другой источник.",
-  "This source only opens in an external browser, not in Harbor's player.":
-    "Этот источник можно открыть только во внешнем браузере, но не в плеере Harbor.",
+  "This source only opens in an external browser, not in Lart's player.":
+    "Этот источник можно открыть только во внешнем браузере, но не в плеере Lart.",
   "This stream has no playable source.":
     "У этого потока нет источника, пригодного для воспроизведения.",
   "This stream isn't cached on your debrid yet. Try a different one from the list.":
@@ -380,16 +380,16 @@ const surfaces5: Record<string, string> = {
     "Ключ вашего debrid-сервиса отклонён. Проверьте его в настройках.",
   "Your debrid served a placeholder/error video instead of the real file. Pick another stream.":
     "Ваш debrid-сервис вернул видео-заполнитель или сообщение об ошибке вместо настоящего файла. Выберите другой поток.",
-  "Your debrid service doesn't support queueing torrents from Harbor yet.":
-    "Ваш debrid-сервис пока не поддерживает добавление торрентов в очередь из Harbor.",
+  "Your debrid service doesn't support queueing torrents from Lart yet.":
+    "Ваш debrid-сервис пока не поддерживает добавление торрентов в очередь из Lart.",
   "Your debrid subscription has expired.": "Срок действия подписки на debrid-сервис истёк.",
   "Your debrid took too long to respond. Hit Play again, or try another stream.":
     "Ваш debrid-сервис слишком долго не отвечал. Снова нажмите «Воспроизвести» или попробуйте другой поток.",
   "Your {name} subscription looks expired.": "Похоже, срок действия вашей подписки {name} истёк.",
   "{name} is over its traffic or fair-use limit right now.":
     "Сервис {name} сейчас исчерпал лимит трафика или добросовестного использования.",
-  "{name} is rate-limiting Harbor right now.":
-    "Сервис {name} сейчас ограничивает частоту запросов Harbor.",
+  "{name} is rate-limiting Lart right now.":
+    "Сервис {name} сейчас ограничивает частоту запросов Lart.",
   "{name} is temporarily unavailable (server error).":
     "Сервис {name} временно недоступен из-за ошибки сервера.",
   "{name} rejected your API key.": "Сервис {name} отклонил ваш API-ключ.",
@@ -422,8 +422,8 @@ const surfaces5: Record<string, string> = {
   "Connect Jellyfin, Emby, or Plex in Streaming sources.":
     "Подключите Jellyfin, Emby или Plex в разделе «Источники потокового видео».",
   "Connect and sync": "Подключить и синхронизировать",
-  "Connect books you own, reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "Подключите принадлежащие вам книги, источники для чтения и службы метаданных. Harbor поддерживает порядок на полке, а каждый источник остаётся под вашим контролем.",
+  "Connect books you own, reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "Подключите принадлежащие вам книги, источники для чтения и службы метаданных. Lart поддерживает порядок на полке, а каждый источник остаётся под вашим контролем.",
   "Connect home server": "Подключить домашний сервер",
   "Connect now": "Подключить сейчас",
   "Connect server": "Подключить сервер",
@@ -435,18 +435,18 @@ const surfaces5: Record<string, string> = {
   Disable: "Отключить",
   "Download media": "Скачать медиафайлы",
   "Download selected ({n})": "Скачать выбранное ({n})",
-  "Edge voices need the Harbor desktop app. Reading with the device voice.":
-    "Для голосов Edge требуется приложение Harbor для компьютера. Используется голос устройства.",
+  "Edge voices need the Lart desktop app. Reading with the device voice.":
+    "Для голосов Edge требуется приложение Lart для компьютера. Используется голос устройства.",
   "Edit home server": "Изменить домашний сервер",
   Enrichment: "Дополнение метаданных",
   "Every…": "Каждые…",
   "Featured book": "Рекомендуемая книга",
-  "Harbor does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Harbor open it.":
-    "Harbor не размещает книги. Откройте папку на этом устройстве, установите расширение источника или подключите собственный сервер. Метаданные могут описать книгу, но открыть её в Harbor можно только через источник.",
-  "Harbor opens Plex in your browser. Your Plex password is never entered in Harbor.":
-    "Harbor откроет Plex в браузере. Пароль Plex никогда не вводится в Harbor.",
-  "Harbor tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
-    "Harbor пробует HTTP, HTTPS, обратные прокси-серверы и стандартный порт провайдера. Учётные данные хранятся отдельно.",
+  "Lart does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Lart open it.":
+    "Lart не размещает книги. Откройте папку на этом устройстве, установите расширение источника или подключите собственный сервер. Метаданные могут описать книгу, но открыть её в Lart можно только через источник.",
+  "Lart opens Plex in your browser. Your Plex password is never entered in Lart.":
+    "Lart откроет Plex в браузере. Пароль Plex никогда не вводится в Lart.",
+  "Lart tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
+    "Lart пробует HTTP, HTTPS, обратные прокси-серверы и стандартный порт провайдера. Учётные данные хранятся отдельно.",
   "Home server": "Домашний сервер",
   "Home server quality": "Качество с домашнего сервера",
   "Home servers": "Домашние серверы",
@@ -472,7 +472,7 @@ const surfaces5: Record<string, string> = {
   "Prefer this device": "Предпочитать это устройство",
   "Preferred home server": "Предпочтительный домашний сервер",
   "Preparing narration audio": "Подготовка озвучивания",
-  "Read eBooks in Harbor": "Читайте электронные книги в Harbor",
+  "Read eBooks in Lart": "Читайте электронные книги в Lart",
   "Refresh interval in days": "Интервал обновления в днях",
   "Refresh policy": "Режим обновления",
   "Remove folder?": "Удалить папку?",

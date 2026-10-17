@@ -3,10 +3,10 @@ const ebookSources: Record<string, string> = {
     "Gunakan ekstensi hanya untuk konten yang boleh Anda akses secara sah, termasuk buku domain publik, konten berlisensi, atau penggunaan yang diizinkan hukum.",
   "You are responsible for checking copyright status, local law, and each source’s terms.":
     "Anda bertanggung jawab untuk memeriksa status hak cipta, hukum setempat, dan ketentuan setiap sumber.",
-  "Extensions come from repositories you add. Harbor does not verify their content rights.":
-    "Ekstensi berasal dari repositori yang Anda tambahkan. Harbor tidak memverifikasi hak atas kontennya.",
-  "Harbor does not support copyright infringement.":
-    "Harbor tidak mendukung pelanggaran hak cipta.",
+  "Extensions come from repositories you add. Lart does not verify their content rights.":
+    "Ekstensi berasal dari repositori yang Anda tambahkan. Lart tidak memverifikasi hak atas kontennya.",
+  "Lart does not support copyright infringement.":
+    "Lart tidak mendukung pelanggaran hak cipta.",
   "Copyright & third-party sources":
     "Hak cipta dan sumber pihak ketiga",
   "Build a source for a library you are authorized to access.":

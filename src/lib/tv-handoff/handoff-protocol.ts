@@ -99,7 +99,7 @@ const ID_RE = /^[0-9A-Za-z]{4,32}$/;
 const TMDB_KEY_RE = /^[A-Za-z0-9]{8,128}$/;
 const AUTH_KEY_RE = /^[A-Za-z0-9._~+/=-]{8,512}$/;
 const SESSION_RE = /^[A-Za-z0-9._~+/=-]{8,4096}$/;
-/** Wider than a username field: existing Harbor handles carry dots and dashes. */
+/** Wider than a username field: existing Lart handles carry dots and dashes. */
 const HANDLE_RE = /^[a-zA-Z0-9._-]{2,40}$/;
 const LABEL_MAX = 64;
 

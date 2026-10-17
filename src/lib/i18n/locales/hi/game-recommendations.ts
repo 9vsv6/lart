@@ -37,7 +37,7 @@ export default {
   "games.recommend.retrySome": "बाकी संबंधित गेम फिर लोड करें",
   "games.recommend.saveError": "इस डिवाइस पर आपकी खोज संबंधी पसंद सहेजी नहीं जा सकी। फिर कोशिश करें।",
   "games.recommend.influences": "आपके सुझावों का आधार",
-  "games.recommend.influencesNote": "चुनें कि Harbor किन गेम का उपयोग करे। आपकी लाइब्रेरी नहीं बदलेगी।",
+  "games.recommend.influencesNote": "चुनें कि Lart किन गेम का उपयोग करे। आपकी लाइब्रेरी नहीं बदलेगी।",
   "games.recommend.exclude": "{name} का उपयोग बंद करें",
   "games.recommend.excluded": "हटाए गए आधार ({count})",
   "games.recommend.useAgain": "{name} का फिर उपयोग करें",

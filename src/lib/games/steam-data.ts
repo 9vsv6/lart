@@ -105,7 +105,7 @@ export function parseSteamArtwork(value: unknown, steamId: number): GameArtwork 
   return result;
 }
 
-/** Only extract numeric app identities. Remote search markup is never injected into Harbor. */
+/** Only extract numeric app identities. Remote search markup is never injected into Lart. */
 export function parseSteamSearchIds(value: unknown): number[] {
   const root = record(value);
   if (root.success !== 1 || typeof root.results_html !== "string") throw new Error("Invalid Steam search response");

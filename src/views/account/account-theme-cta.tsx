@@ -34,7 +34,7 @@ export function AccountThemeCta() {
             {t("Share your style")}
           </h3>
           <p className="max-w-[45ch] text-[15.5px] leading-[23px] text-ink-muted">
-            {t("Create a theme or share one you've made with the Harbor community.")}
+            {t("Create a theme or share one you've made with the Lart community.")}
           </p>
         </div>
         <button

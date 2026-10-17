@@ -54,7 +54,7 @@ export function AutoSyncPanel() {
   const serverDesc = urlSaved
     ? t("Saved.")
     : storedUrl ||
-      t("Harbor uses its own community server. You can point it at a server you run yourself.");
+      t("Lart uses its own community server. You can point it at a server you run yourself.");
 
   return (
     <div className="hset-form-page">
@@ -67,7 +67,7 @@ export function AutoSyncPanel() {
         <ToggleRow
           label={t("Auto-sync subtitles")}
           sub={t(
-            "When a subtitle runs early or late, Harbor measures the speech and corrects the timing on its own. Off by default.",
+            "When a subtitle runs early or late, Lart measures the speech and corrects the timing on its own. Off by default.",
           )}
           value={master}
           onChange={(v) => update({ subtitleAutoSync: v })}
@@ -95,7 +95,7 @@ export function AutoSyncPanel() {
               <ToggleRow
                 label={t("Smart resync with speech recognition")}
                 sub={t(
-                  "For the hardest files and the Try again button, Harbor transcribes a little speech on your device and lines the subtitle up to the actual words. Needs a build with the asr-whisper feature and downloads a small model the first time you use it.",
+                  "For the hardest files and the Try again button, Lart transcribes a little speech on your device and lines the subtitle up to the actual words. Needs a build with the asr-whisper feature and downloads a small model the first time you use it.",
                 )}
                 value={settings.subtitleAutoSyncAsr}
                 onChange={(v) => update({ subtitleAutoSyncAsr: v })}
@@ -103,7 +103,7 @@ export function AutoSyncPanel() {
               <ToggleRow
                 label={t("Match subtitles across languages (experimental)")}
                 sub={t(
-                  "When the audio and subtitle use different languages, Harbor compares a release-matched subtitle in the audio language. It only offers a fix unless every safety check is measured.",
+                  "When the audio and subtitle use different languages, Lart compares a release-matched subtitle in the audio language. It only offers a fix unless every safety check is measured.",
                 )}
                 value={settings.subtitleAutoSyncPivot}
                 onChange={(v) => update({ subtitleAutoSyncPivot: v })}
@@ -137,7 +137,7 @@ export function AutoSyncPanel() {
           label={t("Community sync server")}
           desc={serverDesc}
           tip={t(
-            "Leave blank to use Harbor's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.",
+            "Leave blank to use Lart's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.",
           )}
         >
           <button type="button" onClick={openServer} className={ROW_ACTION}>
@@ -158,7 +158,7 @@ export function AutoSyncPanel() {
           onClose={() => setServerOpen(false)}
           title={t("Community sync server")}
           sub={t(
-            "Leave this blank to use Harbor's own community server, or enter the address of a server you run yourself.",
+            "Leave this blank to use Lart's own community server, or enter the address of a server you run yourself.",
           )}
           actions={<>
             <ModalButton ghost onClick={() => setServerOpen(false)}>{t("Cancel")}</ModalButton>
@@ -184,7 +184,7 @@ export function AutoSyncPanel() {
               className="h-11 w-full min-w-0 max-w-[520px] rounded-[10px] border border-edge-soft bg-elevated px-4 text-[16.5px] text-ink outline-none placeholder:text-ink-subtle/55 focus-visible:border-edge focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             />
             {urlError && <p role="alert" className="text-[15px] text-danger">
-              {t("Enter a full http:// or https:// address, or leave blank to use Harbor's server.")}
+              {t("Enter a full http:// or https:// address, or leave blank to use Lart's server.")}
             </p>}
             <p className={`max-w-[70ch] ${ROW_DESC}`}>
               {t("Private mode stops all contact with this server in either direction.")}

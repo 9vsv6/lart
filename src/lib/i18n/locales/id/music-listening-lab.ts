@@ -36,7 +36,7 @@ const musicListeningLab: Record<string, string> = {
   "music.lab.crossfeed": "Crossfeed headphone",
   "music.lab.crossfeedHelp":
     "Mencampur bagian terfilter dari setiap kanal stereo ke kanal lain untuk mengurangi pemisahan pada headphone. 0% menonaktifkan.",
-  "music.lab.bypass": "Lewati DSP Harbor",
+  "music.lab.bypass": "Lewati DSP Lart",
   "music.lab.bypassHelp":
     "Setelah diterapkan, melewati EQ, preamp, crossfeed, keseimbangan dan ReplayGain. Keluaran dan volume pemutaran tetap aktif. Ini tidak memverifikasi pemutaran bit-perfect.",
   "music.lab.exclusive": "Minta keluaran eksklusif",

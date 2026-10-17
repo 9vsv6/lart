@@ -52,7 +52,7 @@ export function UpNextTab() {
         <SettingRow
           wide
           label={t("Still watching check-in")}
-          desc={t("How many episodes auto-play back to back before Harbor pauses to ask.")}
+          desc={t("How many episodes auto-play back to back before Lart pauses to ask.")}
         >
           <Segmented
             value={String(settings.stillWatchingAfter)}

@@ -277,7 +277,7 @@ export function isVisible(el: HTMLElement) {
     const label = el.getAttribute("aria-label") ?? "";
     if (
       label.toLowerCase().includes("harbor home") ||
-      (label.includes("Harbor") && label.includes("الرئيسية")) ||
+      (label.includes("Lart") && label.includes("الرئيسية")) ||
       el.hasAttribute("data-brand-logo") ||
       !!el.querySelector("svg.harbor-logo, img.harbor-logo")
     ) {

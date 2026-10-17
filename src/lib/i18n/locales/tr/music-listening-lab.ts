@@ -36,7 +36,7 @@ const musicListeningLab: Record<string, string> = {
   "music.lab.crossfeed": "Kulaklık çapraz beslemesi",
   "music.lab.crossfeedHelp":
     "Her stereo kanalın filtrelenmiş bir bölümünü diğerine karıştırarak kulaklıkta ayrılığı azaltır. %0 kapatır.",
-  "music.lab.bypass": "Harbor DSP’yi atla",
+  "music.lab.bypass": "Lart DSP’yi atla",
   "music.lab.bypassHelp":
     "Uyguladıktan sonra EQ, ön yükseltici, çapraz besleme, denge ve ReplayGain atlanır. Çıkış ve çalma sesi etkin kalır. Bu, bit-perfect çalmayı doğrulamaz.",
   "music.lab.exclusive": "Özel çıkış iste",

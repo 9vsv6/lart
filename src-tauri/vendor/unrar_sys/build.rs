@@ -1,17 +1,23 @@
 fn main() {
     println!("cargo:rerun-if-changed=vendor/unrar");
     println!("cargo:rerun-if-changed=harbor_layout.cpp");
-    if cfg!(windows) {
+    // cfg!() in a build script describes the host, so read the target from
+    // cargo; otherwise an Android build on Windows compiles the Windows units.
+    let target_os = std::env::var("CARGO_CFG_TARGET_OS").unwrap_or_default();
+    let target_env = std::env::var("CARGO_CFG_TARGET_ENV").unwrap_or_default();
+    let windows = target_os == "windows";
+    if windows {
         println!("cargo:rustc-flags=-lpowrprof");
         println!("cargo:rustc-link-lib=shell32");
         println!("cargo:rustc-link-lib=advapi32");
-        if cfg!(target_env = "gnu") {
+        if target_env == "gnu" {
             println!("cargo:rustc-link-lib=pthread");
         }
-    } else {
+    } else if target_os != "android" {
+        // Android's libc carries pthreads; there is no separate libpthread.
         println!("cargo:rustc-link-lib=pthread");
     }
-    let files: Vec<String> = [
+    let mut units: Vec<&str> = vec![
         "strlist",
         "strfn",
         "pathfn",
@@ -24,8 +30,6 @@ fn main() {
         "arcread",
         "unicode",
         "system",
-        #[cfg(windows)]
-        "isnt",
         "crypt",
         "crc",
         "rawread",
@@ -59,12 +63,15 @@ fn main() {
         "scantree",
         "dll",
         "qopen",
+        "largepage",
+    ];
+    if windows {
+        units.push("isnt");
         // rar.hpp only declares MarkOfTheWeb under PROPAGATE_MOTW, and the Zone.Identifier
         // stream it reads is an NTFS feature, so this unit has nothing to compile elsewhere.
-        #[cfg(windows)]
-        "motw",
-        "largepage",
-    ].iter().map(|&s| format!("vendor/unrar/{s}.cpp")).collect();
+        units.push("motw");
+    }
+    let files: Vec<String> = units.iter().map(|s| format!("vendor/unrar/{s}.cpp")).collect();
     cc::Build::new()
         .cpp(true) // Switch to C++ library compilation.
         .opt_level(2)

@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { hydrateCustomThemes } from "@/lib/custom-themes";
-import { applyOsDataset } from "@/lib/platform";
+import { applyOsDataset, isPhoneApp } from "@/lib/platform";
 import { getUiLanguage } from "@/lib/i18n/store";
 import { ensureUiLocale } from "@/lib/i18n/load-locale";
 import { loadSecrets } from "@/lib/secret-store";
@@ -33,11 +33,34 @@ async function mount() {
   // The other catalogs never enter this entry's graph.
   await ensureUiLocale(getUiLanguage());
   performance.mark("harbor:locale-done");
-  createRoot(document.getElementById("root")!).render(
-    <StrictMode>
-      <BpTvApp />
-    </StrictMode>,
-  );
+  const root = createRoot(document.getElementById("root")!);
+  if (isPhoneApp()) {
+    // Phones get the touch UI. App renders MobileShell because isMobileWeb()
+    // is true for the phone app, and plays streams locally in the webview.
+    const [{ App }] = await Promise.all([
+      import("@/App"),
+      import("@/lib/awards-history-eager"),
+      import("flag-icons/css/flag-icons.min.css"),
+    ]);
+    const hideBoot = () => {
+      const boot = document.getElementById("boot");
+      if (!boot) return;
+      boot.style.transition = "opacity 240ms ease-out";
+      boot.style.opacity = "0";
+      window.setTimeout(() => boot.remove(), 260);
+    };
+    root.render(
+      <StrictMode>
+        <App onReady={hideBoot} />
+      </StrictMode>,
+    );
+  } else {
+    root.render(
+      <StrictMode>
+        <BpTvApp />
+      </StrictMode>,
+    );
+  }
   performance.mark("harbor:render-called");
   // The subtitle cache configures storage hooks that nothing reads until a
   // stream plays, and importing it up here put the whole subtitle stack in

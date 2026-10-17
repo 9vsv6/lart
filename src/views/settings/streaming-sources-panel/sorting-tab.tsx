@@ -13,7 +13,7 @@ export function SortingTab() {
     <Section
       title={t("Result order")}
       subtitle={t(
-        "Harbor ranking puts the best-scoring sources first. Addon order keeps each addon's results in the order it returned them, like the Stremio and Vidi apps. Stream priority below decides which addon leads, in both modes.",
+        "Lart ranking puts the best-scoring sources first. Addon order keeps each addon's results in the order it returned them, like the Stremio and Vidi apps. Stream priority below decides which addon leads, in both modes.",
       )}
     >
       <StreamSortPicker value={settings.streamSort} onChange={(v) => update({ streamSort: v })} />
@@ -22,7 +22,7 @@ export function SortingTab() {
         icon={<Info size={18} strokeWidth={2.2} className="text-ink-subtle" />}
         label={t("Aggregator addons")}
         desc={t(
-          "Using AIOStreams or another aggregator addon? Its own sorting and filtering happen inside the addon before Harbor ever sees the results, then Harbor applies the stream filter and result order above on top. If results look thinner than expected, keep one side permissive: either relax the addon's internal filters or set Harbor's stream filter to Balanced or Off.",
+          "Using AIOStreams or another aggregator addon? Its own sorting and filtering happen inside the addon before Lart ever sees the results, then Lart applies the stream filter and result order above on top. If results look thinner than expected, keep one side permissive: either relax the addon's internal filters or set Lart's stream filter to Balanced or Off.",
         )}
       />
     </Section>
@@ -40,8 +40,8 @@ function StreamSortPicker({
   const options: Array<{ id: "harbor" | "addon"; label: string; sub: string }> = [
     {
       id: "harbor",
-      label: t("Harbor ranking"),
-      sub: t("Default. Harbor parses and scores every source and surfaces the best quality first."),
+      label: t("Lart ranking"),
+      sub: t("Default. Lart parses and scores every source and surfaces the best quality first."),
     },
     {
       id: "addon",

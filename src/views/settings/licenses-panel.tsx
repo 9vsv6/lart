@@ -227,27 +227,27 @@ function LicenseRow({
 const PARTNERS: Credit[] = [
   {
     name: "Crowdin",
-    blurb: "Provides the localisation platform Harbor is translated on, free of charge.",
+    blurb: "Provides the localisation platform Lart is translated on, free of charge.",
     url: "https://crowdin.com",
     logo: crowdinLogo,
     fill: true,
   },
   {
     name: "Cloudsmith",
-    blurb: "Hosts Harbor's apt and rpm package repositories, free of charge.",
+    blurb: "Hosts Lart's apt and rpm package repositories, free of charge.",
     url: "https://cloudsmith.com",
     logo: cloudsmithLogo,
     fill: true,
   },
   {
     name: "ElfHosted",
-    blurb: "Runs Harbor's community addon infrastructure and the hosted build.",
+    blurb: "Runs Lart's community addon infrastructure and the hosted build.",
     url: "https://elfhosted.com",
     logo: elfhostedLogo,
   },
   {
     name: "stremio-addons.net",
-    blurb: "Provides the community addon directory used by Harbor's Addons page.",
+    blurb: "Provides the community addon directory used by Lart's Addons page.",
     url: "https://stremio-addons.net",
     logo: stremioAddonsLogo,
     fill: true,
@@ -332,7 +332,7 @@ const CASTING: Credit[] = [
 const ADDONS: Credit[] = [
   {
     name: "Stremio",
-    blurb: "The open addon protocol Harbor implements. Harbor is an independent client for that protocol.",
+    blurb: "The open addon protocol Lart implements. Lart is an independent client for that protocol.",
     url: "https://www.stremio.com",
     logo: stremioLogo,
   },
@@ -344,8 +344,8 @@ const ADDONS: Credit[] = [
 
 const MANGA: Credit[] = [
   { name: "MangaUpdates", blurb: "Series metadata, chapter counts and release tracking.", url: "https://www.mangaupdates.com", logo: mangaupdatesLogo },
-  { name: "Suwayomi", blurb: "The manga source server Harbor connects to.", url: "https://github.com/Suwayomi", logo: suwayomiLogo },
-  { name: "Mangayomi", blurb: "Source extensions Harbor can read.", url: "https://github.com/kodjodevf/mangayomi", logo: mangayomiLogo },
+  { name: "Suwayomi", blurb: "The manga source server Lart connects to.", url: "https://github.com/Suwayomi", logo: suwayomiLogo },
+  { name: "Mangayomi", blurb: "Source extensions Lart can read.", url: "https://github.com/kodjodevf/mangayomi", logo: mangayomiLogo },
 ];
 
 const AI: Credit[] = [
@@ -359,7 +359,7 @@ const AI: Credit[] = [
 const NOTIFY: Credit[] = [
   { name: "Discord", blurb: "Webhook notifications and Rich Presence.", url: "https://discord.com", logo: discordLogo },
   { name: "Telegram", blurb: "Webhook notifications.", url: "https://telegram.org", logo: telegramLogo },
-  { name: "Cloudflare", blurb: "Edge delivery for the services Harbor connects to.", url: "https://www.cloudflare.com", logo: cloudflareLogo },
+  { name: "Cloudflare", blurb: "Edge delivery for the services Lart connects to.", url: "https://www.cloudflare.com", logo: cloudflareLogo },
 ];
 
 const DEPS: Dep[] = [
@@ -374,8 +374,8 @@ const DEPS: Dep[] = [
 
 const LICENSES: LicenseDoc[] = [
   { id: "miku-visualizer", title: "Hatsune Miku · MikuMikuDance", used: "music.miku.adaptation", file: "miku-visualizer" },
-  { id: "harbor", title: "Harbor, MIT License", used: "The licence Harbor itself is released under.", file: "Harbor" },
-  { id: "mit", title: "MIT License", used: "Used by the majority of Harbor's bundled components, including React and Tauri.", file: "MIT" },
+  { id: "harbor", title: "Lart, MIT License", used: "The licence Lart itself is released under.", file: "Lart" },
+  { id: "mit", title: "MIT License", used: "Used by the majority of Lart's bundled components, including React and Tauri.", file: "MIT" },
   { id: "apache", title: "Apache License 2.0", used: "Used by Tauri, librqbit and other bundled components.", file: "Apache-2.0" },
   { id: "gpl2", title: "GNU General Public License v2.0", used: "Applies to mpv, and to FFmpeg builds configured with GPL components.", file: "GPL-2.0-or-later" },
   { id: "lgpl21", title: "GNU Lesser General Public License v2.1", used: "Applies to FFmpeg and to mpv's LGPL configuration.", file: "LGPL-2.1-or-later" },
@@ -412,17 +412,17 @@ export function LicensesPanel() {
     <>
       <div className="hset-attr-hero">
         <span className="hset-attr-wordmark">
-          <img src={harborWordmark} alt="Harbor" draggable={false} />
+          <img src={harborWordmark} alt="Lart" draggable={false} />
           <span className="hset-attr-version">{APP_VERSION}</span>
         </span>
         <p className="hset-attr-license">
-          {t("Harbor is free and open source software, released under the MIT License.")}
+          {t("Lart is free and open source software, released under the MIT License.")}
         </p>
       </div>
 
       <Section
         title={t("Acknowledgements")}
-        subtitle={t("These organisations provide their services to Harbor at no cost.")}
+        subtitle={t("These organisations provide their services to Lart at no cost.")}
       >
         <div className="hset-brandgrid">
           {PARTNERS.map((c) => (
@@ -431,23 +431,23 @@ export function LicensesPanel() {
         </div>
       </Section>
 
-      <Group title="Metadata and artwork" subtitle="Sources of the information and imagery shown in Harbor." items={METADATA} />
+      <Group title="Metadata and artwork" subtitle="Sources of the information and imagery shown in Lart." items={METADATA} />
       <Group
         title="Trackers and lists"
-        subtitle="Services that can record viewing activity. Harbor is not affiliated with any of them."
+        subtitle="Services that can record viewing activity. Lart is not affiliated with any of them."
         items={TRACKERS}
       />
       <Group title="Subtitles" subtitle="Providers queried when searching for subtitles." items={SUBTITLES} />
       <Group title="Intro and credits skipping" subtitle="Sources of chapter and segment timing data." items={SKIPPING} />
-      <Group title="Debrid" subtitle="Services Harbor can resolve streams through." items={DEBRID} />
-      <Group title="Media servers" subtitle="Personal media servers Harbor can play from." items={SERVERS} />
-      <Group title="Casting" subtitle="Protocols and devices Harbor can cast to." items={CASTING} />
+      <Group title="Debrid" subtitle="Services Lart can resolve streams through." items={DEBRID} />
+      <Group title="Media servers" subtitle="Personal media servers Lart can play from." items={SERVERS} />
+      <Group title="Casting" subtitle="Protocols and devices Lart can cast to." items={CASTING} />
       <Group title="Addons and usenet" subtitle="Sources of the streams themselves." items={ADDONS} />
       <Group title="Manga" subtitle="Manga sources, readers and tracking services." items={MANGA} />
       <Group title="AI and track identification" subtitle="Providers behind natural-language search and song identification." items={AI} />
       <Group title="Notifications and delivery" subtitle="Services used to deliver notifications and content." items={NOTIFY} />
 
-      <Section title={t("Built on")} subtitle={t("The principal open source components Harbor is built from.")}>
+      <Section title={t("Built on")} subtitle={t("The principal open source components Lart is built from.")}>
         <div className="hset-osslist">
           {DEPS.map((d) => (
             <DepRow key={d.name} dep={d} />
@@ -458,7 +458,7 @@ export function LicensesPanel() {
       <Section
         title={t("Licence texts")}
         subtitle={t(
-          "The full text of every licence covering software distributed with Harbor. Select any entry to save a copy.",
+          "The full text of every licence covering software distributed with Lart. Select any entry to save a copy.",
         )}
       >
         {LICENSES.map((doc) => (
@@ -474,12 +474,12 @@ export function LicensesPanel() {
       <Section title={t("Independence")}>
         <p className={"max-w-[74ch] " + ROW_DESC}>
           {t(
-            "Harbor is an independent client. It is not affiliated with, endorsed by, or sponsored by Stremio, or by any company, addon author, or trademark holder referenced in this application. All trademarks are the property of their respective owners.",
+            "Lart is an independent client. It is not affiliated with, endorsed by, or sponsored by Stremio, or by any company, addon author, or trademark holder referenced in this application. All trademarks are the property of their respective owners.",
           )}
         </p>
         <p className="hset-attr-fineprint mt-3">
           {t(
-            "Harbor hosts no media and indexes no media. The sources and addons available to you are the ones you choose to configure, and their use is subject to the laws of your jurisdiction and the terms of the services concerned.",
+            "Lart hosts no media and indexes no media. The sources and addons available to you are the ones you choose to configure, and their use is subject to the laws of your jurisdiction and the terms of the services concerned.",
           )}
         </p>
       </Section>

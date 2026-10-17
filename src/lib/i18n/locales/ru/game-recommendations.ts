@@ -37,7 +37,7 @@ export default {
   "games.recommend.retrySome": "Повторить загрузку недостающих связей",
   "games.recommend.saveError": "Не удалось сохранить настройки рекомендаций на этом устройстве. Попробуйте ещё раз.",
   "games.recommend.influences": "Что влияет на рекомендации",
-  "games.recommend.influencesNote": "Выберите игры, которые Harbor учитывает. Ваша библиотека останется без изменений.",
+  "games.recommend.influencesNote": "Выберите игры, которые Lart учитывает. Ваша библиотека останется без изменений.",
   "games.recommend.exclude": "Не учитывать {name}",
   "games.recommend.excluded": "Исключённые основы ({count})",
   "games.recommend.useAgain": "Снова учитывать {name}",

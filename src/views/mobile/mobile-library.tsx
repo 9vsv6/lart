@@ -40,12 +40,12 @@ const EMPTY: Record<SectionId, { icon: LucideIcon; title: string; body: string }
   local: {
     icon: FolderOpen,
     title: "Your local library is empty",
-    body: "Scan local folders in Harbor and your movies and shows will appear here.",
+    body: "Scan local folders in Lart and your movies and shows will appear here.",
   },
   mediaServers: {
     icon: Server,
     title: "No media-server titles",
-    body: "Enable and sync Plex, Jellyfin, or Emby in Harbor to browse them here.",
+    body: "Enable and sync Plex, Jellyfin, or Emby in Lart to browse them here.",
   },
 };
 
@@ -245,7 +245,7 @@ function NotConnected() {
       <div className="flex flex-col gap-1">
         <h2 className="text-[15px] font-semibold text-ink">{t("Not connected to a computer")}</h2>
         <p className="max-w-[260px] text-[13px] leading-relaxed text-ink-muted">
-          {t("Your library lives on Harbor. Connect to your computer and it shows up here.")}
+          {t("Your library lives on Lart. Connect to your computer and it shows up here.")}
         </p>
       </div>
     </div>

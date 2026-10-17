@@ -28,8 +28,8 @@ const coverage: Record<string, string> = {
   'A document needs to be "notarised". You take it to someone who will:':
     'किसी दस्तावेज़ को "नोटरीकृत" कराना है। आप उसे ऐसे व्यक्ति के पास ले जाते हैं जो:',
   "A fixed amount every month": "हर महीने एक तय राशि",
-  "A full screen, couch friendly Harbor for TVs, handhelds and big monitors.":
-    "TV, हैंडहेल्ड और बड़े मॉनिटर के लिए फ़ुल-स्क्रीन, सोफ़े से आसानी से इस्तेमाल होने वाला Harbor।",
+  "A full screen, couch friendly Lart for TVs, handhelds and big monitors.":
+    "TV, हैंडहेल्ड और बड़े मॉनिटर के लिए फ़ुल-स्क्रीन, सोफ़े से आसानी से इस्तेमाल होने वाला Lart।",
   'A job offer\'s compensation is described as "competitive". That tells you:':
     'नौकरी के ऑफ़र में वेतन-पैकेज को "प्रतिस्पर्धी" बताया गया है। इससे आपको पता चलता है:',
   'A laid-off employee receives "severance". That\'s:':
@@ -67,8 +67,8 @@ const coverage: Record<string, string> = {
   "Addon not installed": "ऐडऑन इंस्टॉल नहीं है",
   "Addons ({n})": "ऐडऑन ({n})",
   "Addons you could install": "ऐडऑन जिन्हें आप इंस्टॉल कर सकते हैं",
-  "Adds a Big Picture button to Harbor's navigation. Turn this off to keep it out of the way.":
-    "Harbor के नेविगेशन में Big Picture बटन जोड़ता है। इसे छिपाए रखने के लिए बंद करें।",
+  "Adds a Big Picture button to Lart's navigation. Turn this off to keep it out of the way.":
+    "Lart के नेविगेशन में Big Picture बटन जोड़ता है। इसे छिपाए रखने के लिए बंद करें।",
   Adventure: "रोमांच",
   "Air Date": "प्रसारण तिथि",
   Airing: "प्रसारण जारी है",
@@ -81,8 +81,8 @@ const coverage: Record<string, string> = {
   "All-time body of work, not who is trending. Trending and Top on TMDB are the live tabs.":
     "पूरे करियर का काम, न कि अभी कौन ट्रेंड कर रहा है. TMDB पर ट्रेंडिंग और टॉप लाइव टैब हैं.",
   "Almost done": "लगभग पूरा हो गया",
-  "Linking your Discord account also joins you to Harbor's Discord server, so the bot can send your Backup keys privately.":
-    "Linking your Discord account also joins you to Harbor's Discord server, so the bot can send your Backup keys privately.",
+  "Linking your Discord account also joins you to Lart's Discord server, so the bot can send your Backup keys privately.":
+    "Linking your Discord account also joins you to Lart's Discord server, so the bot can send your Backup keys privately.",
   "An agreement between landlord and tenant": "मकान मालिक और किरायेदार के बीच समझौता",
   "An unexpected error occurred": "एक अनपेक्षित त्रुटि हुई",
   "AniList Comments": "AniList टिप्पणियाँ",
@@ -92,8 +92,8 @@ const coverage: Record<string, string> = {
   Anime4K: "Anime4K",
   Announcement: "घोषणा",
   Anonymous: "अनाम",
-  "Another program already holds this port, usually a Stremio server that is running on this machine. Harbor tried its spare ports too. Stop that server, or leave it running and point Harbor at it in Remote streaming server below.":
-    "यह पोर्ट पहले से किसी दूसरे प्रोग्राम के पास है, आमतौर पर इस मशीन पर चल रहा Stremio सर्वर। Harbor ने अपने अतिरिक्त पोर्ट भी आज़माए। उस सर्वर को बंद करें या उसे चलता रहने दें और नीचे रिमोट स्ट्रीमिंग सर्वर में Harbor को उससे कनेक्ट करें।",
+  "Another program already holds this port, usually a Stremio server that is running on this machine. Lart tried its spare ports too. Stop that server, or leave it running and point Lart at it in Remote streaming server below.":
+    "यह पोर्ट पहले से किसी दूसरे प्रोग्राम के पास है, आमतौर पर इस मशीन पर चल रहा Stremio सर्वर। Lart ने अपने अतिरिक्त पोर्ट भी आज़माए। उस सर्वर को बंद करें या उसे चलता रहने दें और नीचे रिमोट स्ट्रीमिंग सर्वर में Lart को उससे कनेक्ट करें।",
   "Apply and reload": "लागू करें और फिर से लोड करें",
   "Approve the will in court": "वसीयत को अदालत से मंज़ूर कराएँ",
   Arabic: "अरबी",
@@ -144,8 +144,8 @@ const coverage: Record<string, string> = {
   Cast: "कलाकार",
   Catalog: "कैटलॉग",
   "Change handle": "हैंडल बदलें",
-  "Changing the metadata language reloads Harbor so the new language takes effect. Apply when you're done with the options above.":
-    "मेटाडेटा की भाषा बदलने पर Harbor फिर से लोड होता है, ताकि नई भाषा लागू हो सके। ऊपर दिए गए विकल्प पूरे करने के बाद लागू करें।",
+  "Changing the metadata language reloads Lart so the new language takes effect. Apply when you're done with the options above.":
+    "मेटाडेटा की भाषा बदलने पर Lart फिर से लोड होता है, ताकि नई भाषा लागू हो सके। ऊपर दिए गए विकल्प पूरे करने के बाद लागू करें।",
   Channel: "चैनल",
   Characters: "किरदार",
   "Charge a one-time fee only": "सिर्फ़ एक बार शुल्क लें",
@@ -157,8 +157,8 @@ const coverage: Record<string, string> = {
   "Chinese (Simplified)": "चीनी (सरलीकृत)",
   "Chinese Cinema": "चीनी सिनेमा",
   Choose: "चुनें",
-  "Choose one season package. Harbor will match and download every available episode from it.":
-    "एक सीज़न पैकेज चुनें। Harbor उसमें उपलब्ध हर एपिसोड का मिलान करके उसे डाउनलोड करेगा।",
+  "Choose one season package. Lart will match and download every available episode from it.":
+    "एक सीज़न पैकेज चुनें। Lart उसमें उपलब्ध हर एपिसोड का मिलान करके उसे डाउनलोड करेगा।",
   "Choose source": "स्रोत चुनें",
   "Choose where subtitle timing feedback appears and how large it is.":
     "चुनें कि सबटाइटल टाइमिंग का फ़ीडबैक कहाँ दिखे और कितना बड़ा हो।",
@@ -166,8 +166,8 @@ const coverage: Record<string, string> = {
     "चुनें कि आपकी प्रोफ़ाइल पर आपके दोस्तों को कौन देख सकता है",
   "Choose your username": "अपना यूज़रनेम चुनें",
   Cinematography: "सिनेमैटोग्राफ़ी",
-  "Claim one so people can find you across Harbor.":
-    "एक हैंडल अपने नाम करें, ताकि लोग आपको पूरे Harbor में खोज सकें।",
+  "Claim one so people can find you across Lart.":
+    "एक हैंडल अपने नाम करें, ताकि लोग आपको पूरे Lart में खोज सकें।",
   "Clear filters": "फ़िल्टर हटाएँ",
   "Clear recent searches": "हाल की खोजें मिटाएँ",
   "Clear the balance in equal monthly steps": "बकाया राशि को बराबर मासिक किस्तों में चुकाएँ",
@@ -262,8 +262,8 @@ const coverage: Record<string, string> = {
     "अपडेट पूरा करने के लिए इंस्टॉलर डाउनलोड करके चलाएँ। अगर यह बार-बार विफल हो, तो इसे एक बार एडमिनिस्ट्रेटर के रूप में चलाएँ।",
   "Download episode by episode": "हर एपिसोड अलग-अलग डाउनलोड करें",
   "Download installer": "इंस्टॉलर डाउनलोड करें",
-  "Downloaded subtitles can arrive after playback starts. Harbor switches from a temporary track when a stronger release match becomes available.":
-    "डाउनलोड किए गए सबटाइटल प्लेबैक शुरू होने के बाद आ सकते हैं। रिलीज़ से बेहतर मेल खाने वाला सबटाइटल उपलब्ध होने पर Harbor अस्थायी ट्रैक से उस पर स्विच कर देता है।",
+  "Downloaded subtitles can arrive after playback starts. Lart switches from a temporary track when a stronger release match becomes available.":
+    "डाउनलोड किए गए सबटाइटल प्लेबैक शुरू होने के बाद आ सकते हैं। रिलीज़ से बेहतर मेल खाने वाला सबटाइटल उपलब्ध होने पर Lart अस्थायी ट्रैक से उस पर स्विच कर देता है।",
   Drama: "ड्रामा",
   "Drift fixed": "ड्रिफ्ट ठीक किया गया",
   "Drifting poster wall behind the interface. Turn off on low power devices.":
@@ -295,8 +295,8 @@ const coverage: Record<string, string> = {
     "आप जो कुछ चुनते हैं, वह एक फ़ाइल में सेव हो जाता है। बाद में उसे रीस्टोर करने पर सिर्फ़ फ़ाइल में शामिल चीज़ें ही बदली जाती हैं। आपके Stremio साइन-इन की जानकारी कभी शामिल नहीं होती।",
   Exit: "बाहर निकलें",
   Explore: "एक्सप्लोर करें",
-  "Export your Harbor setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
-    "अपने Harbor सेटअप को एक फ़ाइल में एक्सपोर्ट करें: उसमें क्या जाएगा, यह ठीक-ठीक चुनें। रीस्टोर करने पर केवल फ़ाइल में मौजूद चीज़ें वापस आती हैं। आपका Stremio साइन-इन हमेशा बाहर रखा जाता है।",
+  "Export your Lart setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
+    "अपने Lart सेटअप को एक फ़ाइल में एक्सपोर्ट करें: उसमें क्या जाएगा, यह ठीक-ठीक चुनें। रीस्टोर करने पर केवल फ़ाइल में मौजूद चीज़ें वापस आती हैं। आपका Stremio साइन-इन हमेशा बाहर रखा जाता है।",
   "Export your setup": "अपना सेटअप एक्सपोर्ट करें",
   "Export {n} sections": "{n} सेक्शन एक्सपोर्ट करें",
   External: "बाहरी",
@@ -322,7 +322,7 @@ const coverage: Record<string, string> = {
   "Filter by name or title": "नाम या शीर्षक के अनुसार फ़िल्टर करें",
   Filtered: "फ़िल्टर किया गया",
   "Finish creating my account": "मेरा अकाउंट बनाना पूरा करें",
-  "Finish updating Harbor": "Harbor का अपडेट पूरा करें",
+  "Finish updating Lart": "Lart का अपडेट पूरा करें",
   "Flip the switch above and the addresses and scan codes appear here.":
     "ऊपर का स्विच चालू करें और पते व स्कैन कोड यहाँ दिखाई देंगे।",
   "Focus GIF URL": "फ़ोकस GIF URL",
@@ -360,21 +360,21 @@ const coverage: Record<string, string> = {
   HI: "HI",
   "Hall of Fame": "हॉल ऑफ़ फ़ेम",
   Handle: "हैंडल",
-  Harbor: "Harbor",
-  "Harbor Rank": "Harbor रैंक",
-  "Harbor couldn't reach the catalog servers. Check the connection and reopen Big Picture.":
-    "Harbor कैटलॉग सर्वर से कनेक्ट नहीं कर पाया। कनेक्शन जाँचें और Big Picture फिर से खोलें।",
-  "Harbor found episode sources for {season}, but none of them is a single downloadable package. It can still fetch the episodes one at a time.":
-    "Harbor को {season} के लिए एपिसोड के स्रोत मिले, लेकिन उनमें से कोई भी एक ही डाउनलोड करने योग्य पैकेज में नहीं है। फिर भी यह एपिसोड एक-एक करके ला सकता है।",
-  "Harbor found episode sources, but none was a downloadable package for {season}. Try another addon or refresh the sources.":
-    "Harbor को एपिसोड स्रोत मिले, लेकिन उनमें से कोई भी {season} के लिए डाउनलोड योग्य पैकेज नहीं था। कोई दूसरा ऐडऑन आज़माएँ या स्रोतों को रिफ़्रेश करें।",
-  "Harbor in a browser": "ब्राउज़र में Harbor",
-  "Harbor is closing. Harbor Setup will finish and reopen it.":
-    "Harbor बंद हो रहा है। Harbor Setup प्रक्रिया पूरी करके इसे फिर से खोलेगा।",
-  "Harbor {version} downloaded but did not install on its own.":
-    "Harbor {version} डाउनलोड हो गया, लेकिन अपने आप इंस्टॉल नहीं हुआ।",
-  "Harbor's full video engine. Plays anything you throw at it.":
-    "Harbor का पूरा वीडियो इंजन। इसमें जो भी चलाएँ, यह चला देता है।",
+  Lart: "Lart",
+  "Lart Rank": "Lart रैंक",
+  "Lart couldn't reach the catalog servers. Check the connection and reopen Big Picture.":
+    "Lart कैटलॉग सर्वर से कनेक्ट नहीं कर पाया। कनेक्शन जाँचें और Big Picture फिर से खोलें।",
+  "Lart found episode sources for {season}, but none of them is a single downloadable package. It can still fetch the episodes one at a time.":
+    "Lart को {season} के लिए एपिसोड के स्रोत मिले, लेकिन उनमें से कोई भी एक ही डाउनलोड करने योग्य पैकेज में नहीं है। फिर भी यह एपिसोड एक-एक करके ला सकता है।",
+  "Lart found episode sources, but none was a downloadable package for {season}. Try another addon or refresh the sources.":
+    "Lart को एपिसोड स्रोत मिले, लेकिन उनमें से कोई भी {season} के लिए डाउनलोड योग्य पैकेज नहीं था। कोई दूसरा ऐडऑन आज़माएँ या स्रोतों को रिफ़्रेश करें।",
+  "Lart in a browser": "ब्राउज़र में Lart",
+  "Lart is closing. Lart Setup will finish and reopen it.":
+    "Lart बंद हो रहा है। Lart Setup प्रक्रिया पूरी करके इसे फिर से खोलेगा।",
+  "Lart {version} downloaded but did not install on its own.":
+    "Lart {version} डाउनलोड हो गया, लेकिन अपने आप इंस्टॉल नहीं हुआ।",
+  "Lart's full video engine. Plays anything you throw at it.":
+    "Lart का पूरा वीडियो इंजन। इसमें जो भी चलाएँ, यह चला देता है।",
   "Harvey Award Winners": "हार्वे पुरस्कार विजेता",
   "Harvey Winner": "हार्वे विजेता",
   "Have the policy cancelled automatically": "पॉलिसी अपने-आप रद्द हो जाए",
@@ -390,11 +390,11 @@ const coverage: Record<string, string> = {
   Horror: "हॉरर",
   Host: "होस्ट",
   "Hours you worked this week": "इस सप्ताह आपके काम के घंटे",
-  "How Harbor Rank works": "Harbor रैंक कैसे काम करती है",
+  "How Lart Rank works": "Lart रैंक कैसे काम करती है",
   "How many months the loan lasts": "लोन कितने महीनों तक चलेगा",
-  "How people find you across Harbor.": "लोग Harbor पर आपको कैसे ढूँढते हैं।",
-  "How quickly the Harbor cursor moves with the right stick.":
-    "दाईं स्टिक से Harbor कर्सर कितनी तेज़ी से चलता है।",
+  "How people find you across Lart.": "लोग Lart पर आपको कैसे ढूँढते हैं।",
+  "How quickly the Lart cursor moves with the right stick.":
+    "दाईं स्टिक से Lart कर्सर कितनी तेज़ी से चलता है।",
   "How this is ranked": "इसकी रैंकिंग कैसे होती है",
   ID: "ID",
   IMDb: "IMDb",
@@ -431,7 +431,7 @@ const coverage: Record<string, string> = {
   "Japan's top science-fiction comic honor": "जापान का सर्वोच्च साइंस-फिक्शन कॉमिक सम्मान",
   Japanese: "जापानी",
   "Japanese Cinema": "जापानी सिनेमा",
-  "Join Harbor": "Harbor से जुड़ें",
+  "Join Lart": "Lart से जुड़ें",
   "Jump back in": "वापस वहीं से शुरू करें",
   "Just the bonus portion": "सिर्फ़ बोनस वाला हिस्सा",
   Keep: "रखें",
@@ -446,9 +446,9 @@ const coverage: Record<string, string> = {
   Latest: "नवीनतम",
   "Latest chapter": "नवीनतम अध्याय",
   "Latest chapters": "नवीनतम अध्याय",
-  "Launch straight into Big Picture when Harbor starts": "Harbor शुरू होते ही सीधे बिग पिक्चर खोलें",
-  "Launch straight into Big Picture when Harbor starts. Press Esc at any time to leave.":
-    "Harbor शुरू होते ही सीधे बिग पिक्चर खोलें। बाहर निकलने के लिए कभी भी Esc दबाएँ।",
+  "Launch straight into Big Picture when Lart starts": "Lart शुरू होते ही सीधे बिग पिक्चर खोलें",
+  "Launch straight into Big Picture when Lart starts. Press Esc at any time to leave.":
+    "Lart शुरू होते ही सीधे बिग पिक्चर खोलें। बाहर निकलने के लिए कभी भी Esc दबाएँ।",
   "Lease it and return it after a while": "इसे किराए पर लें और कुछ समय बाद लौटा दें",
   Leave: "छोड़ें",
   "Leave Big Picture": "बिग पिक्चर से बाहर निकलें",
@@ -461,7 +461,7 @@ const coverage: Record<string, string> = {
   "Link Discord": "Discord लिंक करें",
   "Linked as {username}": "{username} के रूप में लिंक किया गया",
   "Linked to a real Stremio account.": "वास्तविक Stremio अकाउंट से लिंक है।",
-  "Linked to your Harbor account.": "आपके Harbor अकाउंट से लिंक है।",
+  "Linked to your Lart account.": "आपके Lart अकाउंट से लिंक है।",
   List: "सूची",
   Live: "लाइव",
   "Load more threads": "और थ्रेड लोड करें",
@@ -542,8 +542,8 @@ const coverage: Record<string, string> = {
   "No threads for this title yet.": "इस शीर्षक के लिए अभी कोई थ्रेड नहीं।",
   "No trailer available for {name}": "{name} का कोई ट्रेलर उपलब्ध नहीं है",
   Nominee: "नामांकित",
-  "None of your addons returned a downloadable package for {season}. Harbor can still fetch the episodes one at a time, or you can refresh the sources.":
-    "आपके किसी भी ऐडऑन ने {season} के लिए डाउनलोड करने योग्य पैकेज नहीं दिया। Harbor फिर भी एपिसोड एक-एक करके ला सकता है, या आप स्रोतों को रीफ़्रेश कर सकते हैं।",
+  "None of your addons returned a downloadable package for {season}. Lart can still fetch the episodes one at a time, or you can refresh the sources.":
+    "आपके किसी भी ऐडऑन ने {season} के लिए डाउनलोड करने योग्य पैकेज नहीं दिया। Lart फिर भी एपिसोड एक-एक करके ला सकता है, या आप स्रोतों को रीफ़्रेश कर सकते हैं।",
   "None of your addons returned a downloadable package for {season}. Refresh the sources or check your source settings.":
     "आपके किसी भी ऐडऑन ने {season} के लिए डाउनलोड करने योग्य पैकेज नहीं दिया। स्रोतों को रीफ़्रेश करें या अपनी स्रोत सेटिंग जाँचें।",
   "Not enough rated work yet": "अभी पर्याप्त कृतियों को रेटिंग नहीं मिली है",
@@ -572,17 +572,17 @@ const coverage: Record<string, string> = {
   "On the poster": "पोस्टर पर",
   "On-screen keyboard": "ऑन-स्क्रीन कीबोर्ड",
   "One free account for your handle, themes, and sync.": "आपके हैंडल, थीम और सिंक के लिए एक मुफ़्त अकाउंट।",
-  "One switch serves Harbor on your network. Scan a code below with your phone, or open an address on any device on the same Wi-Fi.":
-    "एक स्विच आपके नेटवर्क पर Harbor उपलब्ध कराता है। नीचे दिया गया कोड अपने फ़ोन से स्कैन करें या उसी Wi-Fi नेटवर्क से जुड़े किसी भी डिवाइस पर दिया गया पता खोलें।",
+  "One switch serves Lart on your network. Scan a code below with your phone, or open an address on any device on the same Wi-Fi.":
+    "एक स्विच आपके नेटवर्क पर Lart उपलब्ध कराता है। नीचे दिया गया कोड अपने फ़ोन से स्कैन करें या उसी Wi-Fi नेटवर्क से जुड़े किसी भी डिवाइस पर दिया गया पता खोलें।",
   Ongoing: "जारी",
   Online: "ऑनलाइन",
   "Only embedded subtitles are available right now.": "अभी केवल एम्बेडेड सबटाइटल उपलब्ध हैं।",
   "Only me": "केवल मैं",
   "Only the cash you withdrew": "केवल वह नकद राशि जो आपने निकाली",
   "Only the original sum borrowed": "केवल उधार ली गई मूल राशि",
-  "Open Harbor on desktop to link Discord.": "Discord को लिंक करने के लिए डेस्कटॉप पर Harbor खोलें।",
-  "Open Harbor on desktop to verify ownership in your browser.":
-    "अपने ब्राउज़र में स्वामित्व सत्यापित करने के लिए डेस्कटॉप पर Harbor खोलें।",
+  "Open Lart on desktop to link Discord.": "Discord को लिंक करने के लिए डेस्कटॉप पर Lart खोलें।",
+  "Open Lart on desktop to verify ownership in your browser.":
+    "अपने ब्राउज़र में स्वामित्व सत्यापित करने के लिए डेस्कटॉप पर Lart खोलें।",
   "Open here": "यहाँ खोलें",
   "Open in Big Picture": "बिग पिक्चर में खोलें",
   "Open on AniList": "AniList पर खोलें",
@@ -590,8 +590,8 @@ const coverage: Record<string, string> = {
   "Open settings": "सेटिंग्स खोलें",
   "Open {name}, ranked {rank}": "{name} खोलें, रैंक {rank}",
   "Open {title}": "{title} खोलें",
-  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Harbor never sees your password.":
-    "Stremio को आपके ब्राउज़र में खोलता है। ईमेल, Facebook और Apple के साथ काम करता है। Harbor को आपका पासवर्ड कभी दिखाई नहीं देता।",
+  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Lart never sees your password.":
+    "Stremio को आपके ब्राउज़र में खोलता है। ईमेल, Facebook और Apple के साथ काम करता है। Lart को आपका पासवर्ड कभी दिखाई नहीं देता।",
   "Our all-time ranking of a body of work, fully explained.":
     "कृतियों के इस पूरे समूह की हमारी सर्वकालिक रैंकिंग, पूरे स्पष्टीकरण के साथ।",
   "Override their existing will": "उनकी मौजूदा वसीयत को निष्प्रभावी करें",
@@ -599,8 +599,8 @@ const coverage: Record<string, string> = {
   "Owe more, because interest keeps building on the rest":
     "ज़्यादा रकम बकाया होगी, क्योंकि बाकी रकम पर ब्याज बढ़ता रहता है",
   "Ownership verified": "मालिकाना हक़ सत्यापित",
-  "PNG, WEBP, SVG or GIF. Harbor shrinks it to 128px so it stays small on disk.":
-    "PNG, WEBP, SVG या GIF। Harbor इसे घटाकर 128px कर देता है, ताकि यह डिस्क पर कम जगह ले।",
+  "PNG, WEBP, SVG or GIF. Lart shrinks it to 128px so it stays small on disk.":
+    "PNG, WEBP, SVG या GIF। Lart इसे घटाकर 128px कर देता है, ताकि यह डिस्क पर कम जगह ले।",
   "Page background": "पेज का बैकग्राउंड",
   Paid: "सशुल्क",
   Paste: "पेस्ट करें",
@@ -661,8 +661,8 @@ const coverage: Record<string, string> = {
   Queue: "क्यू",
   Queued: "क्यू में जोड़ा गया",
   "Queued {queued} of {total} episodes.": "{total} में से {queued} एपिसोड क्यू में जोड़े गए।",
-  "Queued {queued} of {total} episodes. Harbor could not match every episode in this package.":
-    "{total} में से {queued} एपिसोड क्यू में जोड़े गए। Harbor इस पैकेज के हर एपिसोड का मिलान नहीं कर सका।",
+  "Queued {queued} of {total} episodes. Lart could not match every episode in this package.":
+    "{total} में से {queued} एपिसोड क्यू में जोड़े गए। Lart इस पैकेज के हर एपिसोड का मिलान नहीं कर सका।",
   "Quick panel": "क्विक पैनल",
   Quiet: "शांत",
   REC: "REC",
@@ -734,8 +734,8 @@ const coverage: Record<string, string> = {
   "Saved on your device, but it couldn't be uploaded for others to see. Try again.":
     "आपके डिवाइस पर सेव किया गया, लेकिन दूसरों को दिखाने के लिए इसे अपलोड नहीं किया जा सका। फिर कोशिश करें।",
   "Saved to your collections": "आपके कलेक्शन में सेव किया गया",
-  "Saved {when} from Harbor {app}. Your Stremio sign-in stays as is.":
-    "Harbor {app} से {when} सेव किया गया। आपका Stremio साइन-इन वैसा ही रहेगा।",
+  "Saved {when} from Lart {app}. Your Stremio sign-in stays as is.":
+    "Lart {app} से {when} सेव किया गया। आपका Stremio साइन-इन वैसा ही रहेगा।",
   "Scan with your phone camera, or type the address above.":
     "अपने फ़ोन के कैमरे से स्कैन करें या ऊपर दिया गया पता टाइप करें।",
   Scanning: "स्कैन हो रहा है",
@@ -745,7 +745,7 @@ const coverage: Record<string, string> = {
   "Scroll awards left": "अवार्ड सूची को बाईं ओर स्क्रॉल करें",
   "Scroll awards right": "अवार्ड सूची को दाईं ओर स्क्रॉल करें",
   Search: "खोजें",
-  "Search Harbor": "Harbor में खोजें",
+  "Search Lart": "Lart में खोजें",
   "Search all sources again": "सभी स्रोतों में फिर से खोजें",
   "Search movies, shows, and manga to add": "जोड़ने के लिए फ़िल्में, शो और मंगा खोजें",
   Searching: "खोज जारी है",
@@ -757,8 +757,8 @@ const coverage: Record<string, string> = {
   Servers: "सर्वर",
   "Settle the estate's affairs": "मृतक की संपत्ति के मामलों का निपटारा करें",
   Share: "साझा करें",
-  "Shared collections from across Harbor will show up here soon.":
-    "पूरे Harbor से साझा किए गए कलेक्शन जल्द ही यहाँ दिखाई देंगे।",
+  "Shared collections from across Lart will show up here soon.":
+    "पूरे Lart से साझा किए गए कलेक्शन जल्द ही यहाँ दिखाई देंगे।",
   "Shift + Arrows": "Shift + Arrows",
   "Short {word} {n} seconds": "छोटा {word} {n} सेकंड",
   "Show 1 reply": "1 जवाब दिखाएँ",
@@ -786,12 +786,12 @@ const coverage: Record<string, string> = {
   Shown: "दिखाया गया",
   "Shown on the card and at the top of the page.": "कार्ड पर और पेज के सबसे ऊपर दिखाया जाता है।",
   Shows: "शो",
-  "Sign in to Harbor to check availability.": "उपलब्धता जाँचने के लिए Harbor में साइन इन करें।",
+  "Sign in to Lart to check availability.": "उपलब्धता जाँचने के लिए Lart में साइन इन करें।",
   "Sign in to pick up where you left off.": "जहाँ आपने छोड़ा था, वहीं से जारी रखने के लिए साइन इन करें।",
   "Sign in to upload a custom image.": "कस्टम इमेज अपलोड करने के लिए साइन इन करें।",
   "Sign in with Discord": "Discord से साइन इन करें",
   "Signed in as {username}": "{username} के रूप में साइन इन हैं",
-  "Signed in to your Harbor account": "अपने Harbor अकाउंट में साइन इन हैं",
+  "Signed in to your Lart account": "अपने Lart अकाउंट में साइन इन हैं",
   Silent: "साइलेंट",
   Size: "आकार",
   "Size of the controller on-screen keyboard.": "कंट्रोलर के ऑन-स्क्रीन कीबोर्ड का आकार।",
@@ -869,8 +869,8 @@ const coverage: Record<string, string> = {
   'The economy has "inflation". What\'s happening?': 'अर्थव्यवस्था में "महँगाई" है। क्या हो रहा है?',
   "The full annual amount upfront": "पूरी सालाना राशि का अग्रिम भुगतान",
   "The hourly rate": "प्रति घंटे की दर",
-  "The pointer your right stick moves around Harbor. Pick a shape or use your own image.":
-    "वह पॉइंटर जिसे आपकी दाईं स्टिक Harbor में इधर-उधर ले जाती है। कोई आकार चुनें या अपनी इमेज इस्तेमाल करें।",
+  "The pointer your right stick moves around Lart. Pick a shape or use your own image.":
+    "वह पॉइंटर जिसे आपकी दाईं स्टिक Lart में इधर-उधर ले जाती है। कोई आकार चुनें या अपनी इमेज इस्तेमाल करें।",
   "The price drops by half": "कीमत आधी हो जाती है",
   "The same as gross": "सकल राशि के समान",
   "The signing bonus from year one": "पहले वर्ष का साइनिंग बोनस",
@@ -946,8 +946,8 @@ const coverage: Record<string, string> = {
   "Update ready": "अपडेट तैयार है",
   Uploads: "अपलोड",
   "Use a different Stremio account": "किसी दूसरे Stremio अकाउंट का इस्तेमाल करें",
-  "Use a gamepad or remote to move around Harbor":
-    "Harbor में नेविगेट करने के लिए गेमपैड या रिमोट इस्तेमाल करें",
+  "Use a gamepad or remote to move around Lart":
+    "Lart में नेविगेट करने के लिए गेमपैड या रिमोट इस्तेमाल करें",
   "Use color to distinguish severity, or keep every advisory monochrome.":
     "गंभीरता के स्तर अलग दिखाने के लिए रंग इस्तेमाल करें, या हर चेतावनी को एक ही रंग में रखें।",
   Verified: "सत्यापित",
@@ -987,8 +987,8 @@ const coverage: Record<string, string> = {
   "Whatever's left at year-end": "साल के अंत में जो भी बचा हो",
   "When a movie or episode starts, briefly show its Common Sense Media parental guide (violence, nudity, profanity, substances) with severity. Fades on its own.":
     "कोई फ़िल्म या एपिसोड शुरू होने पर, उसकी Common Sense Media अभिभावक गाइड (हिंसा, नग्नता, अभद्र भाषा, नशीले पदार्थ) गंभीरता के स्तर सहित कुछ देर दिखाएँ। यह अपने-आप गायब हो जाती है।",
-  "When a subtitle runs early or late, Harbor measures the speech and corrects the timing on its own.":
-    "जब कोई सबटाइटल समय से पहले या देर से चलता है, तो Harbor बोली का विश्लेषण करके उसकी टाइमिंग अपने-आप ठीक करता है।",
+  "When a subtitle runs early or late, Lart measures the speech and corrects the timing on its own.":
+    "जब कोई सबटाइटल समय से पहले या देर से चलता है, तो Lart बोली का विश्लेषण करके उसकी टाइमिंग अपने-आप ठीक करता है।",
   "When people share a collection it shows up here. Build one you love and share it, that is how it starts.":
     "जब लोग कोई कलेक्शन शेयर करते हैं, तो वह यहाँ दिखाई देता है। अपनी पसंद का कलेक्शन बनाएँ और शेयर करें, शुरुआत ऐसे ही होती है।",
   "Who is breaking out this week. Live, with weekly movement.":
@@ -1017,8 +1017,8 @@ const coverage: Record<string, string> = {
   "You hit the savings ceiling": "आप बचत की अधिकतम सीमा तक पहुँच गए हैं",
   "You make an insurance claim. Before the insurer pays out, you usually:":
     "आप बीमा क्लेम करते हैं। बीमा कंपनी के भुगतान करने से पहले, आप आमतौर पर:",
-  "You must install this addon in your Stremio account first so Harbor can fetch its works.":
-    "आपको पहले यह ऐडऑन अपने Stremio अकाउंट में इंस्टॉल करना होगा, ताकि Harbor इससे कंटेंट ला सके।",
+  "You must install this addon in your Stremio account first so Lart can fetch its works.":
+    "आपको पहले यह ऐडऑन अपने Stremio अकाउंट में इंस्टॉल करना होगा, ताकि Lart इससे कंटेंट ला सके।",
   "You only ever pay the minimum on a credit card each month. Over time you:":
     "आप हर महीने क्रेडिट कार्ड पर केवल न्यूनतम राशि चुकाते हैं। समय के साथ आप:",
   'You sign an "NDA" with a company. You\'re agreeing to:':
@@ -1065,7 +1065,7 @@ const coverage: Record<string, string> = {
   categories: "श्रेणियाँ",
   category: "श्रेणी",
   "chrome.backToTop": "सबसे ऊपर जाएँ",
-  "chrome.harborHome": "Harbor होम",
+  "chrome.harborHome": "Lart होम",
   "chrome.locked": "लॉक है",
   "chrome.lockedRequiresPin": "{label} (लॉक है, PIN ज़रूरी है)",
   "chrome.lockedShort": "{label} · लॉक है",
@@ -1100,8 +1100,8 @@ const coverage: Record<string, string> = {
   finished: "समाप्त",
   hr: "घं",
   "lead roles": "मुख्य भूमिकाएँ",
-  "libmpv did not load, so playback falls back to HTML5 and formats like MKV may refuse to play. On Linux, install your distribution's libmpv package, then restart Harbor.":
-    "libmpv लोड नहीं हुआ, इसलिए प्लेबैक के लिए HTML5 का इस्तेमाल होगा और MKV जैसे फ़ॉर्मैट शायद न चलें। Linux पर अपने डिस्ट्रिब्यूशन का libmpv पैकेज इंस्टॉल करें, फिर Harbor को रीस्टार्ट करें।",
+  "libmpv did not load, so playback falls back to HTML5 and formats like MKV may refuse to play. On Linux, install your distribution's libmpv package, then restart Lart.":
+    "libmpv लोड नहीं हुआ, इसलिए प्लेबैक के लिए HTML5 का इस्तेमाल होगा और MKV जैसे फ़ॉर्मैट शायद न चलें। Linux पर अपने डिस्ट्रिब्यूशन का libmpv पैकेज इंस्टॉल करें, फिर Lart को रीस्टार्ट करें।",
   local: "लोकल",
   "m:ss": "m:ss",
   "major awards": "प्रमुख पुरस्कार",
@@ -1177,19 +1177,19 @@ const coverage: Record<string, string> = {
   "update.errorServer": "अपडेट सर्वर से कनेक्ट करने में गड़बड़ी हुई.",
   "update.failed": "अपडेट विफल हुआ",
   "update.fetching": "नवीनतम वर्ज़न प्राप्त किया जा रहा है",
-  "update.harborVersion": "Harbor {version}",
+  "update.harborVersion": "Lart {version}",
   "update.installRestart": "इंस्टॉल करके रीस्टार्ट करें",
   "update.installing": "अपडेट इंस्टॉल हो रहा है",
-  "update.keepUsing": "डाउनलोड के दौरान Harbor का इस्तेमाल जारी रखें",
+  "update.keepUsing": "डाउनलोड के दौरान Lart का इस्तेमाल जारी रखें",
   "update.later": "बाद में",
   "update.of": "{total} में से {downloaded}",
   "update.ready": "अपडेट इंस्टॉल करने के लिए तैयार है",
-  "update.restartAuto": "Harbor अपने-आप रीस्टार्ट होगा.",
+  "update.restartAuto": "Lart अपने-आप रीस्टार्ट होगा.",
   "update.tryAgain": "फिर कोशिश करें",
   watched: "देखा गया",
   "welcome.dismiss": "शुरू करें",
   "welcome.subtitle": "इंटरफ़ेस अब अरबी में है। आप सेटिंग्स से कभी भी पिछली भाषा पर वापस जा सकते हैं।",
-  "welcome.title": "Harbor में आपका स्वागत है",
+  "welcome.title": "Lart में आपका स्वागत है",
   yourhandle: "yourhandle",
   yourname: "yourname",
   "{avg} avg · {n} rated": "{avg} औसत · {n} को रेट किया",
@@ -1222,22 +1222,22 @@ const coverage: Record<string, string> = {
   "A local folder": "लोकल फ़ोल्डर",
   "Advanced: build a plugin": "उन्नत: प्लगइन बनाएँ",
   "Also Known As": "अन्य नाम",
-  "Back in Harbor: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
-    "Harbor में वापस जाएँ: मंगा > स्रोत सेट अप करें > आपका सर्वर, और अपने सर्वर का पता पेस्ट करें (जैसे {localUrl}, या अगर सर्वर किसी दूसरे कंप्यूटर पर चल रहा है तो उसका LAN IP, जैसे {lanUrl})।",
+  "Back in Lart: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
+    "Lart में वापस जाएँ: मंगा > स्रोत सेट अप करें > आपका सर्वर, और अपने सर्वर का पता पेस्ट करें (जैसे {localUrl}, या अगर सर्वर किसी दूसरे कंप्यूटर पर चल रहा है तो उसका LAN IP, जैसे {lanUrl})।",
   "Controller preview": "कंट्रोलर का प्रीव्यू",
   "Couldn't save that font. It may be invalid, or storage is full.":
     "उस फ़ॉन्ट को सेव नहीं किया जा सका। वह अमान्य हो सकता है या स्टोरेज भर गया है।",
   "Download and run Suwayomi Server:": "Suwayomi Server डाउनलोड करके चलाएँ:",
-  "Every source you enable in Suwayomi then shows up in Harbor. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
-    "Suwayomi में चालू किया गया हर स्रोत फिर Harbor में दिखाई देता है। किसी साइट में बदलाव होने पर Suwayomi उसके एक्सटेंशन को अपडेट रखता है, इसलिए वे काम करते रहते हैं।",
+  "Every source you enable in Suwayomi then shows up in Lart. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
+    "Suwayomi में चालू किया गया हर स्रोत फिर Lart में दिखाई देता है। किसी साइट में बदलाव होने पर Suwayomi उसके एक्सटेंशन को अपडेट रखता है, इसलिए वे काम करते रहते हैं।",
   "Everything else, through your own server (Suwayomi)":
     "बाकी सभी स्रोत, अपने सर्वर (Suwayomi) के ज़रिए",
   "Expand {title} image": "{title} की तस्वीर बड़ी करें",
-  "Getting manga sources into Harbor": "Harbor में मंगा स्रोत जोड़ना",
-  "Harbor also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Harbor repository. Only install plugins from repositories you trust.":
-    "Harbor में प्रयोगात्मक प्लगइन रनटाइम भी है। अगर आप स्रोत प्लगइन लिखना चाहते हैं, तो Harbor रिपॉज़िटरी में {path} देखें। केवल भरोसेमंद रिपॉज़िटरी के प्लगइन ही इंस्टॉल करें।",
-  "Harbor ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Harbor. There are two ways to add sources.":
-    "Harbor मंगा या स्क्रैपर उपलब्ध नहीं कराता। यह केवल रीडर है। स्रोत आप जोड़ते हैं और उनमें मौजूद सामग्री उन्हें चलाने वालों की है, Harbor की नहीं। स्रोत जोड़ने के दो तरीके हैं।",
+  "Getting manga sources into Lart": "Lart में मंगा स्रोत जोड़ना",
+  "Lart also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Lart repository. Only install plugins from repositories you trust.":
+    "Lart में प्रयोगात्मक प्लगइन रनटाइम भी है। अगर आप स्रोत प्लगइन लिखना चाहते हैं, तो Lart रिपॉज़िटरी में {path} देखें। केवल भरोसेमंद रिपॉज़िटरी के प्लगइन ही इंस्टॉल करें।",
+  "Lart ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Lart. There are two ways to add sources.":
+    "Lart मंगा या स्क्रैपर उपलब्ध नहीं कराता। यह केवल रीडर है। स्रोत आप जोड़ते हैं और उनमें मौजूद सामग्री उन्हें चलाने वालों की है, Lart की नहीं। स्रोत जोड़ने के दो तरीके हैं।",
   "Import failed": "इम्पोर्ट विफल रहा",
   "It serves a web UI at {url}": "इसकी वेब UI {url} पर उपलब्ध है",
   "Manga > Set up a source > Local folder, and choose a folder of manga you already own (CBZ files or folders of images).":
@@ -1277,8 +1277,8 @@ const coverage: Record<string, string> = {
   heard: "सुना",
   of: "में से",
   orig: "मूल",
-  "Open the signed-in user's own Harbor profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
-    "साइन-इन किए हुए उपयोगकर्ता का हैंडल लोड होते ही उसकी अपनी Harbor प्रोफ़ाइल तुरंत खोलें। नेविगेशन शुरू होने पर true और अन्यथा false लौटाता है।",
+  "Open the signed-in user's own Lart profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
+    "साइन-इन किए हुए उपयोगकर्ता का हैंडल लोड होते ही उसकी अपनी Lart प्रोफ़ाइल तुरंत खोलें। नेविगेशन शुरू होने पर true और अन्यथा false लौटाता है।",
   "AI search failed.": "AI खोज विफल रही।",
   "Add a debrid provider in Settings first.": "पहले सेटिंग्स में कोई डीब्रिड प्रदाता जोड़ें।",
   "Cancelled.": "रद्द किया गया।",
@@ -1290,9 +1290,9 @@ const coverage: Record<string, string> = {
     "यह P2P स्रोत तैयार नहीं हो सका। हो सकता है कोई पहुँच योग्य पीयर न हो। फिर कोशिश करें या दूसरा स्रोत चुनें।",
   "Direct torrent streaming is turned off. Turn it on in Settings > P2P & servers to stream torrents without a debrid.":
     "डायरेक्ट टॉरेंट स्ट्रीमिंग बंद है। डीब्रिड के बिना टॉरेंट स्ट्रीम करने के लिए इसे सेटिंग्स > P2P और सर्वर में चालू करें।",
-  "Harbor could not open your browser.": "Harbor आपका ब्राउज़र नहीं खोल सका।",
-  "Harbor's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
-    "Harbor का पीयर-टू-पीयर इंजन तैयार हो रहा है। यह कुछ सेकंड में अपने-आप ठीक हो जाएगा, फिर Play काम करेगा।",
+  "Lart could not open your browser.": "Lart आपका ब्राउज़र नहीं खोल सका।",
+  "Lart's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
+    "Lart का पीयर-टू-पीयर इंजन तैयार हो रहा है। यह कुछ सेकंड में अपने-आप ठीक हो जाएगा, फिर Play काम करेगा।",
   Minus: "घटाएँ",
   "None of your debrid services could deliver a working file. Pick another stream.":
     "आपकी किसी भी डीब्रिड सेवा से काम करने वाली फ़ाइल नहीं मिली। कोई दूसरी स्ट्रीम चुनें।",
@@ -1320,8 +1320,8 @@ const coverage: Record<string, string> = {
     "यह एक रॉ NZB फ़ाइल है। चलाने से पहले इसे SABnzbd या NZBGet से डाउनलोड करना होगा।",
   "This source isn't ready on your debrid yet. Try it again in a moment or pick another.":
     "यह स्रोत अभी आपके डीब्रिड पर तैयार नहीं है। थोड़ी देर में फिर कोशिश करें या दूसरा स्रोत चुनें।",
-  "This source only opens in an external browser, not in Harbor's player.":
-    "यह स्रोत केवल बाहरी ब्राउज़र में खुलता है, Harbor के प्लेयर में नहीं।",
+  "This source only opens in an external browser, not in Lart's player.":
+    "यह स्रोत केवल बाहरी ब्राउज़र में खुलता है, Lart के प्लेयर में नहीं।",
   "This stream has no playable source.": "इस स्ट्रीम में चलाने योग्य कोई स्रोत नहीं है।",
   "This stream isn't cached on your debrid yet. Try a different one from the list.":
     "यह स्ट्रीम अभी आपके डीब्रिड पर कैश नहीं है। सूची से कोई दूसरी स्ट्रीम आज़माएँ।",
@@ -1336,15 +1336,15 @@ const coverage: Record<string, string> = {
     "आपकी डीब्रिड कुंजी अस्वीकार कर दी गई। इसे सेटिंग्स में जाँचें।",
   "Your debrid served a placeholder/error video instead of the real file. Pick another stream.":
     "आपके डीब्रिड ने असली फ़ाइल की जगह प्लेसहोल्डर या गड़बड़ी वाला वीडियो दिया। कोई दूसरी स्ट्रीम चुनें।",
-  "Your debrid service doesn't support queueing torrents from Harbor yet.":
-    "आपकी डीब्रिड सेवा अभी Harbor से टॉरेंट कतार में लगाने की सुविधा नहीं देती।",
+  "Your debrid service doesn't support queueing torrents from Lart yet.":
+    "आपकी डीब्रिड सेवा अभी Lart से टॉरेंट कतार में लगाने की सुविधा नहीं देती।",
   "Your debrid subscription has expired.": "आपकी डीब्रिड सदस्यता समाप्त हो गई है।",
   "Your debrid took too long to respond. Hit Play again, or try another stream.":
     "आपके डीब्रिड ने जवाब देने में बहुत देर की। फिर Play दबाएँ या कोई दूसरी स्ट्रीम आज़माएँ।",
   "Your {name} subscription looks expired.": "आपकी {name} सदस्यता शायद समाप्त हो गई है।",
   "{name} is over its traffic or fair-use limit right now.":
     "{name} ने अभी अपनी ट्रैफ़िक या उचित-उपयोग सीमा पार कर ली है।",
-  "{name} is rate-limiting Harbor right now.": "{name} अभी Harbor के अनुरोधों की दर सीमित कर रहा है।",
+  "{name} is rate-limiting Lart right now.": "{name} अभी Lart के अनुरोधों की दर सीमित कर रहा है।",
   "{name} is temporarily unavailable (server error).": "{name} अभी उपलब्ध नहीं है (सर्वर गड़बड़ी)।",
   "{name} rejected your API key.": "{name} ने आपकी API कुंजी अस्वीकार कर दी।",
   "{name} returned an error ({code}).": "{name} ने एक गड़बड़ी लौटाई ({code})।",
@@ -1374,8 +1374,8 @@ const coverage: Record<string, string> = {
   "Connect Jellyfin, Emby, or Plex in Streaming sources.":
     "स्ट्रीमिंग स्रोतों में Jellyfin, Emby या Plex कनेक्ट करें।",
   "Connect and sync": "कनेक्ट करके सिंक करें",
-  "Connect books you own, reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "अपनी किताबें, पढ़ने के स्रोत और मेटाडेटा सेवाएँ कनेक्ट करें। हर स्रोत आपके नियंत्रण में रहता है और Harbor शेल्फ़ को व्यवस्थित रखता है।",
+  "Connect books you own, reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "अपनी किताबें, पढ़ने के स्रोत और मेटाडेटा सेवाएँ कनेक्ट करें। हर स्रोत आपके नियंत्रण में रहता है और Lart शेल्फ़ को व्यवस्थित रखता है।",
   "Connect home server": "होम सर्वर कनेक्ट करें",
   "Connect now": "अभी कनेक्ट करें",
   "Connect server": "सर्वर कनेक्ट करें",
@@ -1387,18 +1387,18 @@ const coverage: Record<string, string> = {
   Disable: "बंद करें",
   "Download media": "मीडिया डाउनलोड करें",
   "Download selected ({n})": "चुने गए डाउनलोड करें ({n})",
-  "Edge voices need the Harbor desktop app. Reading with the device voice.":
-    "Edge आवाज़ों के लिए Harbor डेस्कटॉप ऐप चाहिए। अभी डिवाइस की आवाज़ से पढ़ा जा रहा है।",
+  "Edge voices need the Lart desktop app. Reading with the device voice.":
+    "Edge आवाज़ों के लिए Lart डेस्कटॉप ऐप चाहिए। अभी डिवाइस की आवाज़ से पढ़ा जा रहा है।",
   "Edit home server": "होम सर्वर संपादित करें",
   Enrichment: "अतिरिक्त जानकारी",
   "Every…": "हर…",
   "Featured book": "चुनिंदा किताब",
-  "Harbor does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Harbor open it.":
-    "Harbor किसी किताब को होस्ट नहीं करता। इस डिवाइस पर कोई फ़ोल्डर खोलें, स्रोत एक्सटेंशन इंस्टॉल करें या अपना सर्वर कनेक्ट करें। मेटाडेटा किताब का विवरण दे सकता है, लेकिन उसे Harbor में खोलने के लिए स्रोत ज़रूरी है।",
-  "Harbor opens Plex in your browser. Your Plex password is never entered in Harbor.":
-    "Harbor आपके ब्राउज़र में Plex खोलता है। आपका Plex पासवर्ड कभी Harbor में दर्ज नहीं होता।",
-  "Harbor tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
-    "Harbor HTTP, HTTPS, रिवर्स प्रॉक्सी और प्रदाता का डिफ़ॉल्ट पोर्ट आज़माता है। क्रेडेंशियल अलग से सुरक्षित रखे जाते हैं।",
+  "Lart does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Lart open it.":
+    "Lart किसी किताब को होस्ट नहीं करता। इस डिवाइस पर कोई फ़ोल्डर खोलें, स्रोत एक्सटेंशन इंस्टॉल करें या अपना सर्वर कनेक्ट करें। मेटाडेटा किताब का विवरण दे सकता है, लेकिन उसे Lart में खोलने के लिए स्रोत ज़रूरी है।",
+  "Lart opens Plex in your browser. Your Plex password is never entered in Lart.":
+    "Lart आपके ब्राउज़र में Plex खोलता है। आपका Plex पासवर्ड कभी Lart में दर्ज नहीं होता।",
+  "Lart tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
+    "Lart HTTP, HTTPS, रिवर्स प्रॉक्सी और प्रदाता का डिफ़ॉल्ट पोर्ट आज़माता है। क्रेडेंशियल अलग से सुरक्षित रखे जाते हैं।",
   "Home server": "होम सर्वर",
   "Home server quality": "होम सर्वर क्वालिटी",
   "Home servers": "होम सर्वर",
@@ -1424,7 +1424,7 @@ const coverage: Record<string, string> = {
   "Prefer this device": "इस डिवाइस को प्राथमिकता दें",
   "Preferred home server": "पसंदीदा होम सर्वर",
   "Preparing narration audio": "वाचन ऑडियो तैयार किया जा रहा है",
-  "Read eBooks in Harbor": "Harbor में eBook पढ़ें",
+  "Read eBooks in Lart": "Lart में eBook पढ़ें",
   "Refresh interval in days": "रीफ़्रेश अंतराल, दिनों में",
   "Refresh policy": "रीफ़्रेश नीति",
   "Remove folder?": "फ़ोल्डर हटाएँ?",
@@ -1470,14 +1470,14 @@ const coverage: Record<string, string> = {
   "Direct/debrid only": "केवल सीधा/debrid",
   "Match subtitles across languages (experimental)":
     "अलग-अलग भाषाओं के उपशीर्षकों का मिलान करें (प्रायोगिक)",
-  "When the audio and subtitle use different languages, Harbor compares a release-matched subtitle in the audio language. It only offers a fix unless every safety check is measured.":
-    "जब ऑडियो और उपशीर्षक अलग भाषाओं में हों, Harbor ऑडियो की भाषा में उसी रिलीज़ से मेल खाने वाले उपशीर्षक की तुलना करता है। सभी सुरक्षा जाँच मापे जाने तक यह केवल सुधार का सुझाव देता है।",
+  "When the audio and subtitle use different languages, Lart compares a release-matched subtitle in the audio language. It only offers a fix unless every safety check is measured.":
+    "जब ऑडियो और उपशीर्षक अलग भाषाओं में हों, Lart ऑडियो की भाषा में उसी रिलीज़ से मेल खाने वाले उपशीर्षक की तुलना करता है। सभी सुरक्षा जाँच मापे जाने तक यह केवल सुधार का सुझाव देता है।",
   "New York Times": "New York Times",
   "Bestseller lists in the eBook section.": "eBook अनुभाग में बेस्टसेलर सूचियाँ।",
   "New York Times · bestseller lists": "New York Times · बेस्टसेलर सूचियाँ",
   "NYT Books API key": "NYT Books API कुंजी",
-  "Choose whether Harbor prefers direct and debrid sources, peer-to-peer torrents, or shows both.":
-    "चुनें कि Harbor सीधे और debrid स्रोतों, peer-to-peer टोरेंट को प्राथमिकता दे या दोनों दिखाए।",
+  "Choose whether Lart prefers direct and debrid sources, peer-to-peer torrents, or shows both.":
+    "चुनें कि Lart सीधे और debrid स्रोतों, peer-to-peer टोरेंट को प्राथमिकता दे या दोनों दिखाए।",
 };
 
 export default coverage;

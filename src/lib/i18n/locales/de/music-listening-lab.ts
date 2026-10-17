@@ -36,7 +36,7 @@ const musicListeningLab: Record<string, string> = {
   "music.lab.crossfeed": "Kopfhörer-Crossfeed",
   "music.lab.crossfeedHelp":
     "Mischt einen gefilterten Anteil jedes Stereokanals in den anderen für weniger getrennte Kopfhörerwiedergabe. 0 % ist aus.",
-  "music.lab.bypass": "Harbor-DSP umgehen",
+  "music.lab.bypass": "Lart-DSP umgehen",
   "music.lab.bypassHelp":
     "Umgeht nach Anwenden EQ, Vorverstärker, Crossfeed, Balance und ReplayGain. Ausgang und Wiedergabelautstärke bleiben aktiv. Kein Nachweis bitgenauer Wiedergabe.",
   "music.lab.exclusive": "Exklusiven Ausgang anfordern",

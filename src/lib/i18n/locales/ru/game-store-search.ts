@@ -1,9 +1,9 @@
 export default {
   "Search shortcuts": "Сокращения для поиска",
   "Steam search shortcut": "Сокращение для поиска в Steam",
-  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Harbor search for these queries.": "Введите «st » или «st:», чтобы искать в магазине Steam. Отключите, чтобы использовать обычный поиск Harbor для таких запросов.",
+  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Lart search for these queries.": "Введите «st » или «st:», чтобы искать в магазине Steam. Отключите, чтобы использовать обычный поиск Lart для таких запросов.",
   "games.storeSearch.title": "Магазин Steam",
-  "games.storeSearch.hint": "Введите «st » в поиске Harbor, чтобы искать прямо в Steam.",
+  "games.storeSearch.hint": "Введите «st » в поиске Lart, чтобы искать прямо в Steam.",
   "games.storeSearch.automatic": "Автоматически",
   "games.storeSearch.region": "Регион магазина",
   "games.storeSearch.showLibrary": "Отмечать игры, уже добавленные в библиотеку",

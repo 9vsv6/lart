@@ -14,7 +14,7 @@ export default {
   "games.mods.backupNote": "Các phiên bản được thay thế được sao lưu cục bộ. Dùng Khôi phục bản trước trong bộ mod của bạn để quay lại; các phụ thuộc vẫn được kiểm tra.",
   "games.mods.currentVersion": "Đã cài: {version}",
   "games.mods.current": "Đã cài",
-  "games.mods.versionNote": "Chọn phiên bản tương thích. Harbor kiểm tra thay đổi và giữ lại phiên bản trước trên máy. Đóng Minecraft trước khi áp dụng.",
+  "games.mods.versionNote": "Chọn phiên bản tương thích. Lart kiểm tra thay đổi và giữ lại phiên bản trước trên máy. Đóng Minecraft trước khi áp dụng.",
   "games.mods.applyChanges": "Áp dụng thay đổi",
   "games.mods.reviewChanges": "Xem lại thay đổi",
   "games.mods.previousVersion": "Bản trước: {version}",

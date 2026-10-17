@@ -2,18 +2,18 @@
 // are picked by translate.ts from the count; the bare key is the "many" form.
 // Generated - see the i18n plural pass.
 const plurals: Record<string, string> = {
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.":
-    "Добавить {n} названий из списка к просмотру Harbor в Trakt? Trakt пропустит те, что уже есть.",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#one":
-    "Добавить {n} название из списка к просмотру Harbor в Trakt? Trakt пропустит те, что уже есть.",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#few":
-    "Добавить {n} названия из списка к просмотру Harbor в Trakt? Trakt пропустит те, что уже есть.",
-  "Add {n} titles from your Trakt watchlist to Harbor?":
-    "Добавить {n} названий из списка к просмотру Trakt в Harbor?",
-  "Add {n} titles from your Trakt watchlist to Harbor?#one":
-    "Добавить {n} название из списка к просмотру Trakt в Harbor?",
-  "Add {n} titles from your Trakt watchlist to Harbor?#few":
-    "Добавить {n} названия из списка к просмотру Trakt в Harbor?",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.":
+    "Добавить {n} названий из списка к просмотру Lart в Trakt? Trakt пропустит те, что уже есть.",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#one":
+    "Добавить {n} название из списка к просмотру Lart в Trakt? Trakt пропустит те, что уже есть.",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#few":
+    "Добавить {n} названия из списка к просмотру Lart в Trakt? Trakt пропустит те, что уже есть.",
+  "Add {n} titles from your Trakt watchlist to Lart?":
+    "Добавить {n} названий из списка к просмотру Trakt в Lart?",
+  "Add {n} titles from your Trakt watchlist to Lart?#one":
+    "Добавить {n} название из списка к просмотру Trakt в Lart?",
+  "Add {n} titles from your Trakt watchlist to Lart?#few":
+    "Добавить {n} названия из списка к просмотру Trakt в Lart?",
   "After {n} episodes": "После {n} серий",
   "After {n} episodes#one": "После {n} серии",
   "After {n} episodes#few": "После {n} серий",
@@ -304,12 +304,12 @@ const plurals: Record<string, string> = {
     "{n} названия требуют проверки – помогите их определить.",
   "{n} titles together#one": "{n} проект вместе",
   "{n} titles together#few": "{n} проекта вместе",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.":
-    "За сессию заблокировано {n} запросов трекеров. Сам Harbor не отправляет телеметрию.",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#one":
-    "За сессию заблокирован {n} запрос трекеров. Сам Harbor не отправляет телеметрию.",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#few":
-    "За сессию заблокировано {n} запроса трекеров. Сам Harbor не отправляет телеметрию.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.":
+    "За сессию заблокировано {n} запросов трекеров. Сам Lart не отправляет телеметрию.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#one":
+    "За сессию заблокирован {n} запрос трекеров. Сам Lart не отправляет телеметрию.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#few":
+    "За сессию заблокировано {n} запроса трекеров. Сам Lart не отправляет телеметрию.",
   "{n} votes": "{n} голосов",
   "{n} votes#one": "{n} голос",
   "{n} votes#few": "{n} голоса",

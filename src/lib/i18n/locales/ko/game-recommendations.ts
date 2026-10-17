@@ -37,7 +37,7 @@ export default {
   "games.recommend.retrySome": "불러오지 못한 관련 정보 재시도",
   "games.recommend.saveError": "이 기기에 탐색 설정을 저장하지 못했어요. 다시 시도해 주세요.",
   "games.recommend.influences": "추천에 반영되는 게임",
-  "games.recommend.influencesNote": "Harbor가 참고할 게임을 선택하세요. 라이브러리는 바뀌지 않아요.",
+  "games.recommend.influencesNote": "Lart가 참고할 게임을 선택하세요. 라이브러리는 바뀌지 않아요.",
   "games.recommend.exclude": "{name} 참고하지 않기",
   "games.recommend.excluded": "추천 기준에서 제외된 게임 ({count})",
   "games.recommend.useAgain": "{name} 다시 참고하기",

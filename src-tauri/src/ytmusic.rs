@@ -61,7 +61,7 @@ pub async fn ytmusic_open(app: AppHandle) -> Result<(), String> {
         #[allow(unused_mut)]
         let mut builder =
             WebviewWindowBuilder::new(&app_for_main, YTM_LABEL, WebviewUrl::External(parsed))
-                .title("Harbor Music")
+                .title("Lart Music")
                 .inner_size(width, height)
                 .position(x, y)
                 .resizable(true)
@@ -150,7 +150,7 @@ pub async fn ytmusic_embed(app: AppHandle, geom: crate::mpv::MpvGeometry) -> Res
             WebviewWindowBuilder::new(&app_for_main, YTM_EMBED_LABEL, WebviewUrl::External(parsed))
                 // Do NOT let this title start with "Harbor". mpv.rs finds its own embedded
                 // child by enumerating children of the main HWND and matching
-                // `class == "mpv"` or `(class.is_empty() && title.starts_with("Harbor"))`.
+                // `class == "mpv"` or `(class.is_empty() && title.starts_with("Lart"))`.
                 // A "Harbor..." title here risks this webview being taken for mpv and shoved
                 // to HWND_BOTTOM or hidden with it.
                 .title("YouTube Music")

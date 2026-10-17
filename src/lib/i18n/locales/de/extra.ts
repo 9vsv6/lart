@@ -44,12 +44,12 @@ const extra: Record<string, string> = {
   Next: "Weiter",
   "No corrupted anime found. You're clean.": "Kein beschädigter Anime gefunden. Alles sauber.",
   "Pick a list to view it.": "Wähle eine Liste aus, um sie anzusehen.",
-  "Pick a source once and Harbor keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
-    "Wähle einmal eine Quelle aus, und Harbor spielt den Rest der Staffel aus demselben Release ab, ohne dass du erneut wählen musst. Funktioniert am besten mit einem Debrid-Staffelpaket. Wird bei Anime übersprungen.",
+  "Pick a source once and Lart keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
+    "Wähle einmal eine Quelle aus, und Lart spielt den Rest der Staffel aus demselben Release ab, ohne dass du erneut wählen musst. Funktioniert am besten mit einem Debrid-Staffelpaket. Wird bei Anime übersprungen.",
   "Play, then tap the line you hear at two spots (one early, one late) to fix drift.":
     "Starte die Wiedergabe und tippe dann an zwei Stellen auf die gehörte Zeile (einmal früh, einmal spät), um die Abweichung zu korrigieren.",
-  "Plays + ratings sync from Harbor to Trakt.tv.":
-    "Wiedergaben und Bewertungen werden von Harbor zu Trakt.tv synchronisiert.",
+  "Plays + ratings sync from Lart to Trakt.tv.":
+    "Wiedergaben und Bewertungen werden von Lart zu Trakt.tv synchronisiert.",
   Previous: "Zurück",
   "Refresh list": "Liste aktualisieren",
   "Reset offset": "Versatz zurücksetzen",

@@ -14,16 +14,16 @@ import { errorText, kindLabel } from "./copy";
 function foreignText(t: (k: string) => string, kind: RepoView["foreign"]): string {
   if (kind === "tachiyomi") {
     return t(
-      "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Harbor can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Harbor to it from the Servers section.",
+      "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Lart can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Lart to it from the Servers section.",
     );
   }
   if (kind === "paperback") {
     return t(
-      "This is a Paperback (iOS) repo, which Harbor can't use. For desktop sources, connect a Suwayomi server from the Servers section.",
+      "This is a Paperback (iOS) repo, which Lart can't use. For desktop sources, connect a Suwayomi server from the Servers section.",
     );
   }
   return t(
-    "This does not look like a plugin repository. Harbor reads its own plugin manifests, provider-script manifests and Android extension repositories.",
+    "This does not look like a plugin repository. Lart reads its own plugin manifests, provider-script manifests and Android extension repositories.",
   );
 }
 

@@ -18,7 +18,7 @@ export default {
   "games.warhammerUniverse.screenNote": "41번째 천년기의 오리지널 애니메이션과 장편 영화.",
   "games.warhammerUniverse.free": "Warhammer TV에서 무료",
   "games.warhammerUniverse.subscription": "Warhammer+ 구독이 필요할 수 있음",
-  "games.warhammerUniverse.movieNote": "2010년 애니메이션 영화. Harbor 상세에서 출연진, 예고편과 제공 소스를 확인하세요.",
+  "games.warhammerUniverse.movieNote": "2010년 애니메이션 영화. Lart 상세에서 출연진, 예고편과 제공 소스를 확인하세요.",
   "games.warhammerUniverse.screenScope": "Warhammer TV 공개 선별 목록입니다. Hammer and Bolter는 여러 세계를 다루며 시청 가능 여부는 제공자가 결정합니다.",
   "games.warhammerUniverse.lore": "세계관 속으로",
   "games.warhammerUniverse.loreNote": "세계를 만든 이들이 이미지로 전하는 인물, 세력과 주요 사건.",

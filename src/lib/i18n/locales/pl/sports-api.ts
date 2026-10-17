@@ -3,8 +3,8 @@ export default {
     "API-Sports odrzuciło ten klucz. Sprawdź go w panelu API-Sports.",
   "Your API-Sports request allowance is exhausted. Public feeds remain available.":
     "Limit zapytań API-Sports został wyczerpany. Publiczne źródła danych pozostają dostępne.",
-  "API-Sports is limiting requests. Harbor will retry after the waiting period.":
-    "API-Sports ogranicza zapytania. Harbor spróbuje ponownie po upływie czasu oczekiwania.",
+  "API-Sports is limiting requests. Lart will retry after the waiting period.":
+    "API-Sports ogranicza zapytania. Lart spróbuje ponownie po upływie czasu oczekiwania.",
   "API-Sports is unavailable right now. Public feeds remain available.":
     "API-Sports jest teraz niedostępne. Publiczne źródła danych pozostają dostępne.",
   "The key could not be saved. Your previous key is unchanged.":

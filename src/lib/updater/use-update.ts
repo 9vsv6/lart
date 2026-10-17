@@ -196,7 +196,7 @@ async function verifyExperimentalAction(
   if (access === "unavailable") {
     set({
       status: "error",
-      error: t("Couldn't verify your Harbor account access. Check your connection and try again."),
+      error: t("Couldn't verify your Lart account access. Check your connection and try again."),
     });
     return false;
   }
@@ -255,7 +255,7 @@ async function readExperimentalManifest(path = "latest-experimental.json"): Prom
 
 export async function checkForUpdate(manual = false): Promise<void> {
   if (!IS_TAURI) return;
-  // The downloaded update package always installs to the real Harbor install
+  // The downloaded update package always installs to the real Lart install
   // location regardless of this build's identifier, so in dev it would silently
   // update and relaunch the user's separately installed release build instead
   // of this one. Never check for updates from a dev build.
@@ -808,7 +808,7 @@ async function detectFailedHandoff(pending: {
     version: pending.version ?? null,
     experimentalVersion: pending.experimentalVersion ?? null,
     handoff: plan,
-    error: t("Harbor Setup did not finish updating Harbor. Check for updates to try again."),
+    error: t("Lart Setup did not finish updating Lart. Check for updates to try again."),
     channel: pending.channel ?? selectedUpdateChannel(),
     panelOpen: true,
   });
@@ -853,7 +853,7 @@ async function detectFailedUpdate(): Promise<boolean> {
     installFailed: true,
     version: pending.version,
     channel: pending.channel ?? selectedUpdateChannel(),
-    error: t("Harbor {version} downloaded but did not install on its own.", {
+    error: t("Lart {version} downloaded but did not install on its own.", {
       version: pending.version,
     }),
     panelOpen: true,

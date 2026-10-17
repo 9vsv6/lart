@@ -76,7 +76,7 @@ export function DebridTab({
               {t("Get yours at")}{" "}
               <ExtLink href="https://real-debrid.com/apitoken">real-debrid.com/apitoken</ExtLink>.{" "}
               {t(
-                "Used to check cache and unrestrict links. Harbor never adds or removes anything on your account on its own.",
+                "Used to check cache and unrestrict links. Lart never adds or removes anything on your account on its own.",
               )}
             </>
           }

@@ -181,7 +181,7 @@ export function HotkeysPanel() {
                     ? t("Inside the playback view.")
                     : scope === "Manga"
                       ? t("In the manga reader.")
-                      : t("Anywhere in Harbor.")
+                      : t("Anywhere in Lart.")
                 }
               >
                 {Array.from(subgroups.entries()).map(([groupName, items]) => (
@@ -216,7 +216,7 @@ export function HotkeysPanel() {
                       <ReadOnlyHotkeyRow
                         label={t("Adjust interface scale with wheel")}
                         description={t(
-                          "Hold Ctrl or Cmd and scroll to resize Harbor's interface smoothly. This one cannot be changed.",
+                          "Hold Ctrl or Cmd and scroll to resize Lart's interface smoothly. This one cannot be changed.",
                         )}
                         binding="Ctrl / ⌘ + Scroll"
                       />
@@ -237,7 +237,7 @@ export function HotkeysPanel() {
             <ToggleRow
               label={t("TV navigation")}
               sub={t(
-                "Use the arrow keys and Enter to move focus through Harbor. Turn this off to keep arrow keys free and disable focus navigation everywhere.",
+                "Use the arrow keys and Enter to move focus through Lart. Turn this off to keep arrow keys free and disable focus navigation everywhere.",
               )}
               value={settings.tvNavigation}
               onChange={(v) => update({ tvNavigation: v })}

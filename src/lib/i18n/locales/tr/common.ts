@@ -42,8 +42,8 @@ const common: Record<string, string> = {
   "Controller support": "Kumanda desteği",
   Controllers: "Kumandalar",
   "Controllers / gamepad": "Kumandalar / gamepad",
-  "Controllers Harbor can see right now. Connect one over USB or Bluetooth and it shows up here.":
-    "Harbor'ın şu anda algıladığı kumandalar. USB veya Bluetooth üzerinden bir kumanda bağladığınızda burada görünür.",
+  "Controllers Lart can see right now. Connect one over USB or Bluetooth and it shows up here.":
+    "Lart'ın şu anda algıladığı kumandalar. USB veya Bluetooth üzerinden bir kumanda bağladığınızda burada görünür.",
   "Copied to clipboard": "Panoya kopyalandı",
   "Copy URL": "URL'yi kopyala",
   "Copy link": "Bağlantıyı kopyala",
@@ -91,8 +91,8 @@ const common: Record<string, string> = {
   "Hide titles under posters": "Posterlerin altındaki başlıkları gizle",
   "Home layout": "Ana sayfa düzeni",
   "Hover preview": "Üzerine gelince önizleme",
-  "How far you push the stick before Harbor reacts. Raise it if the focus drifts on its own.":
-    "Harbor'ın tepki vermesi için analog çubuğu ne kadar itmeniz gerektiğini belirler. Odak kendiliğinden kayıyorsa artırın.",
+  "How far you push the stick before Lart reacts. Raise it if the focus drifts on its own.":
+    "Lart'ın tepki vermesi için analog çubuğu ne kadar itmeniz gerektiğini belirler. Odak kendiliğinden kayıyorsa artırın.",
   "How fast a held direction keeps moving the focus.":
     "Bir yön basılı tutulduğunda odağın ne kadar hızlı hareket etmeye devam edeceğini belirler.",
   "How long you hold a direction before it starts repeating.":
@@ -251,10 +251,10 @@ const common: Record<string, string> = {
   "Use AniList avatar": "AniList avatarını kullan",
   "Use Simkl avatar": "Simkl avatarını kullan",
   "Use Trakt avatar": "Trakt avatarını kullan",
-  "Use a game controller to browse Harbor and control playback. Tune the sticks and see the button map.":
-    "Harbor'da gezinmek ve oynatmayı kontrol etmek için oyun kumandası kullanın. Analog çubukları ayarlayın ve düğme eşlemesini görüntüleyin.",
-  "Use a game controller to browse Harbor and control playback. Works with Xbox, PlayStation, and most USB or Bluetooth gamepads.":
-    "Harbor'da gezinmek ve oynatmayı kontrol etmek için oyun kumandası kullanın. Xbox, PlayStation ve çoğu USB veya Bluetooth gamepad ile çalışır.",
+  "Use a game controller to browse Lart and control playback. Tune the sticks and see the button map.":
+    "Lart'da gezinmek ve oynatmayı kontrol etmek için oyun kumandası kullanın. Analog çubukları ayarlayın ve düğme eşlemesini görüntüleyin.",
+  "Use a game controller to browse Lart and control playback. Works with Xbox, PlayStation, and most USB or Bluetooth gamepads.":
+    "Lart'da gezinmek ve oynatmayı kontrol etmek için oyun kumandası kullanın. Xbox, PlayStation ve çoğu USB veya Bluetooth gamepad ile çalışır.",
   "Use a separate Stremio account": "Ayrı bir Stremio hesabı kullan",
   "Use the primary profile's Stremio library, watchlist, and addons.":
     "Birincil profilin Stremio kütüphanesini, izleme listesini ve eklentilerini kullanın.",
@@ -262,8 +262,8 @@ const common: Record<string, string> = {
   "Volume up or down": "Sesi artır veya azalt",
   "Watch again": "Tekrar izle",
   "Watch on": "Şurada izle",
-  "When on, a connected controller moves focus around Harbor and drives the player. Turn it off to ignore all controllers.":
-    "Açıkken bağlı kumanda Harbor'da odağı hareket ettirir ve oynatıcıyı kontrol eder. Tüm kumandaları yok saymak için kapatın.",
+  "When on, a connected controller moves focus around Lart and drives the player. Turn it off to ignore all controllers.":
+    "Açıkken bağlı kumanda Lart'da odağı hareket ettirir ve oynatıcıyı kontrol eder. Tüm kumandaları yok saymak için kapatın.",
   "Where to watch": "Nerede izlenir",
   "Who's watching?": "Kim izliyor?",
   "X / Square": "X / Kare",
@@ -281,7 +281,7 @@ const common: Record<string, string> = {
   "arabic.row.ramadan": "2026 Ramazan Dizileri",
   "arabic.row.trending": "Popüler Arapça İçerikler",
   "chrome.backToTop": "Başa dön",
-  "chrome.harborHome": "Harbor ana sayfası",
+  "chrome.harborHome": "Lart ana sayfası",
   "chrome.locked": "Kilitli",
   "chrome.lockedRequiresPin": "{label} (kilitli, PIN gerekli)",
   "chrome.lockedShort": "{label} · kilitli",
@@ -343,7 +343,7 @@ const common: Record<string, string> = {
   "welcome.dismiss": "Başlayın",
   "welcome.subtitle":
     "Arayüz artık Arapça. Ayarlar'dan istediğiniz zaman geri değiştirebilirsiniz.",
-  "welcome.title": "Harbor'a hoş geldiniz",
+  "welcome.title": "Lart'a hoş geldiniz",
   "{count} dl": "{count} ind.",
   "{h}h left": "{h} sa kaldı",
   "{h}h {m}m left": "{h} sa {m} dk kaldı",

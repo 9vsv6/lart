@@ -158,18 +158,18 @@ const fallbackNarrationVoices: ReaderNarrationVoice[] = narrationVoices.map((voi
 
 const VOICE_SAMPLE_TEXT: Record<string, string> = {
   ar: "مرحباً، هذا نموذج قصير لاختبار نبرة الصوت ووضوح القراءة في هاربور.",
-  en: "Welcome to Harbor. This short sample helps you compare the voice, tone, and reading clarity.",
-  es: "Bienvenido a Harbor. Esta breve muestra permite comparar la voz, el tono y la claridad.",
-  fr: "Bienvenue dans Harbor. Ce court extrait permet de comparer la voix, le ton et la clarté.",
-  de: "Willkommen bei Harbor. Mit diesem kurzen Beispiel können Sie Stimme und Klarheit vergleichen.",
-  it: "Benvenuto in Harbor. Questo breve esempio aiuta a confrontare voce, tono e chiarezza.",
-  pt: "Bem-vindo ao Harbor. Esta breve amostra ajuda a comparar a voz, o tom e a clareza.",
-  ru: "Добро пожаловать в Harbor. Этот короткий пример поможет сравнить голос и ясность чтения.",
+  en: "Welcome to Lart. This short sample helps you compare the voice, tone, and reading clarity.",
+  es: "Bienvenido a Lart. Esta breve muestra permite comparar la voz, el tono y la claridad.",
+  fr: "Bienvenue dans Lart. Ce court extrait permet de comparer la voix, le ton et la clarté.",
+  de: "Willkommen bei Lart. Mit diesem kurzen Beispiel können Sie Stimme und Klarheit vergleichen.",
+  it: "Benvenuto in Lart. Questo breve esempio aiuta a confrontare voce, tono e chiarezza.",
+  pt: "Bem-vindo ao Lart. Esta breve amostra ajuda a comparar a voz, o tom e a clareza.",
+  ru: "Добро пожаловать в Lart. Этот короткий пример поможет сравнить голос и ясность чтения.",
   ja: "ハーバーへようこそ。この短いサンプルで、声の調子と読みやすさを比較できます。",
   ko: "하버에 오신 것을 환영합니다. 이 짧은 샘플로 목소리와 읽기 명료도를 비교할 수 있습니다.",
-  zh: "欢迎使用 Harbor。这个简短示例可以帮助你比较声音、语调和朗读清晰度。",
+  zh: "欢迎使用 Lart。这个简短示例可以帮助你比较声音、语调和朗读清晰度。",
   hi: "हार्बर में आपका स्वागत है। यह छोटा नमूना आवाज़ और पढ़ने की स्पष्टता की तुलना करता है।",
-  tr: "Harbor'a hoş geldiniz. Bu kısa örnek ses tonunu ve okuma netliğini karşılaştırır.",
+  tr: "Lart'a hoş geldiniz. Bu kısa örnek ses tonunu ve okuma netliğini karşılaştırır.",
 };
 const VOICE_SAMPLE_BY_LOCALE: Record<string, string> = {
   "ar-SA": "هلا والله، كيف حالك؟ إن شاء الله أمورك طيبة. هذا صوت تجريبي من هاربور.",
@@ -1486,7 +1486,7 @@ export function HarborReader({
       const message = error instanceof Error ? error.message : t("Edge TTS failed");
       if (/desktop app/i.test(message)) {
         setNarrationNotice(
-          t("Edge voices need the Harbor desktop app. Reading with the device voice."),
+          t("Edge voices need the Lart desktop app. Reading with the device voice."),
         );
         speakWithDevice(index);
         return;
@@ -1893,7 +1893,7 @@ export function HarborReader({
                 className="mb-2 text-xs font-semibold uppercase tracking-[.24em]"
                 style={{ color: colors.muted }}
               >
-                {t("Harbor Reader")}
+                {t("Lart Reader")}
               </div>
               <h1 className="text-balance text-[1.85em] font-semibold leading-tight">
                 {readerTitle}
@@ -2831,7 +2831,7 @@ function Settings({
         <div className="grid grid-cols-2 gap-2">
           {(
             [
-              { mode: "harbor", label: t("Harbor"), icon: <Type size={18} /> },
+              { mode: "harbor", label: t("Lart"), icon: <Type size={18} /> },
               { mode: "book", label: t("Book"), icon: <BookOpen size={18} /> },
             ] as const
           ).map((item) => (

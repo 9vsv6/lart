@@ -35,7 +35,7 @@ export default {
   "games.valorant.empty": "لا توجد نتائج لهذه المرشحات.",
   "games.valorant.checked": "آخر تحقق: {date}",
   "games.valorant.metaScope": "بيانات OP.GG التنافسية للتحديث المحدد. نسبة الاختيار هي حصة مرات ظهور العميل. تمثل النتائج عينة المصدر وليس جميع اللاعبين.",
-  "games.valorant.referenceScope": "صور اللعبة ومراجعها عبر Valorant-API. قد تتأخر التحديثات عن اللعبة. Harbor غير معتمد من Riot Games.",
+  "games.valorant.referenceScope": "صور اللعبة ومراجعها عبر Valorant-API. قد تتأخر التحديثات عن اللعبة. Lart غير معتمد من Riot Games.",
   "games.valorant.samples": "{count} ظهور",
   "games.valorant.smallSample": "عينة صغيرة",
   "games.valorant.abilities": "القدرات",

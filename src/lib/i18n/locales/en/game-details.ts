@@ -95,7 +95,7 @@ export default {
   "games.details.scan": "Check installed games",
   "games.details.scanning": "Checking your Steam libraries…",
   "games.details.scanError": "Couldn't check your Steam libraries.",
-  "games.details.desktop": "Harbor desktop detects your installed Steam games.",
+  "games.details.desktop": "Lart desktop detects your installed Steam games.",
   "games.details.notInstalled": "Not found in your Steam libraries",
   "games.details.updating": "Updating in Steam",
   "games.details.missing": "Game files are unavailable",

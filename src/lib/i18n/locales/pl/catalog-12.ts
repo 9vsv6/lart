@@ -70,8 +70,8 @@ const catalog12: Record<string, string> = {
     "Pochwal się. [b]pogrubienie[/b], [color=gold]kolor[/color], [youtube]link[/youtube], [img]https://...[/img] i nie tylko.",
   "Show on Discord": "Pokaż na Discordzie",
   "Show what you are listening to": "Pokaż, czego słuchasz",
-  "Share the track, artist and album art while music plays, with a Listen in Harbor button.":
-    "Udostępniaj utwór, wykonawcę i okładkę albumu podczas odtwarzania muzyki wraz z przyciskiem «Listen in Harbor».",
+  "Share the track, artist and album art while music plays, with a Listen in Lart button.":
+    "Udostępniaj utwór, wykonawcę i okładkę albumu podczas odtwarzania muzyki wraz z przyciskiem «Listen in Lart».",
   "Show on home": "Pokaż na stronie głównej",
   "Show or hide the playback stats overlay.":
     "Pokaż lub ukryj nakładkę ze statystykami odtwarzania.",
@@ -133,18 +133,18 @@ const catalog12: Record<string, string> = {
     "Pokazuj pod tytułem w odtwarzaczu, co faktycznie oglądasz.",
   "Show while browsing": "Pokazuj podczas przeglądania",
   "Show while paused": "Pokazuj po wstrzymaniu",
-  "Show your AniList lists as rails on the Anime page, keep your watch progress in sync as you finish episodes, and use your AniList avatar as your Harbor photo. Free at anilist.co.":
-    "Wyświetlaj listy AniList jako rzędy na stronie Anime, synchronizuj postęp oglądania po ukończeniu odcinków i używaj awatara AniList jako zdjęcia w Harbor. Bezpłatnie na anilist.co.",
-  "Show your AniList profile picture as your Harbor avatar.":
-    "Używaj zdjęcia profilowego AniList jako awatara Harbor.",
-  "Show your Harbor profile picture on the community":
-    "Pokaż swoje zdjęcie profilowe Harbor w społeczności",
+  "Show your AniList lists as rails on the Anime page, keep your watch progress in sync as you finish episodes, and use your AniList avatar as your Lart photo. Free at anilist.co.":
+    "Wyświetlaj listy AniList jako rzędy na stronie Anime, synchronizuj postęp oglądania po ukończeniu odcinków i używaj awatara AniList jako zdjęcia w Lart. Bezpłatnie na anilist.co.",
+  "Show your AniList profile picture as your Lart avatar.":
+    "Używaj zdjęcia profilowego AniList jako awatara Lart.",
+  "Show your Lart profile picture on the community":
+    "Pokaż swoje zdjęcie profilowe Lart w społeczności",
   "Show your Letterboxd card": "Pokaż swoją kartę Letterboxd",
   "Show your Simkl card": "Pokaż swoją kartę Simkl",
   "Show your favourite games, books and music on your profile":
     "Pokaż na swoim profilu ulubione gry, książki i muzykę",
-  "Show your operating system's own title bar with its minimize, maximize, and close buttons. They stay reachable everywhere, including while a video is playing. Turn this off to use Harbor's built-in window buttons.":
-    "Pokazuj systemowy pasek tytułu z przyciskami minimalizacji, maksymalizacji i zamykania. Będą zawsze dostępne, także podczas odtwarzania filmu. Wyłącz tę opcję, aby używać wbudowanych przycisków okna Harbor.",
+  "Show your operating system's own title bar with its minimize, maximize, and close buttons. They stay reachable everywhere, including while a video is playing. Turn this off to use Lart's built-in window buttons.":
+    "Pokazuj systemowy pasek tytułu z przyciskami minimalizacji, maksymalizacji i zamykania. Będą zawsze dostępne, także podczas odtwarzania filmu. Wyłącz tę opcję, aby używać wbudowanych przycisków okna Lart.",
   "Show {count} more": "Pokaż jeszcze {count}",
   "Show {count} replies": "Pokaż {count} odpowiedzi",
   "Show {label}": "Pokaż {label}",
@@ -205,11 +205,11 @@ const catalog12: Record<string, string> = {
     "Zaloguj się na karcie Moje motywy, aby dołączyć do rozmowy.",
   "Sign in from the sidebar after saving. Library and addons stay separate.":
     "Po zapisaniu zaloguj się z paska bocznego. Biblioteka i dodatki pozostaną oddzielne.",
-  "Sign in to Harbor": "Zaloguj się do Harbor",
-  "Sign in to Harbor to check availability.": "Zaloguj się do Harbor, aby sprawdzić dostępność.",
+  "Sign in to Lart": "Zaloguj się do Lart",
+  "Sign in to Lart to check availability.": "Zaloguj się do Lart, aby sprawdzić dostępność.",
   "Sign in to Stremio": "Zaloguj się do Stremio",
-  "Sign in to Stremio first so Harbor knows which watchlist to sync.":
-    "Najpierw zaloguj się do Stremio, aby Harbor wiedział, którą listę do obejrzenia synchronizować.",
+  "Sign in to Stremio first so Lart knows which watchlist to sync.":
+    "Najpierw zaloguj się do Stremio, aby Lart wiedział, którą listę do obejrzenia synchronizować.",
   "Sign in to Stremio first.": "Najpierw zaloguj się do Stremio.",
   "Sign in to Stremio first. The repair scans only the active profile's library.":
     "Najpierw zaloguj się do Stremio. Naprawa obejmuje tylko bibliotekę aktywnego profilu.",
@@ -231,8 +231,8 @@ const catalog12: Record<string, string> = {
   "Sign in to filter by your library": "Zaloguj się, aby filtrować według swojej biblioteki",
   "Sign in to get a shareable link.": "Zaloguj się, aby uzyskać link do udostępnienia.",
   "Sign in to leave a comment": "Zaloguj się, aby dodać komentarz",
-  "Sign in to mirror your Continue Watching, watchlist, and any addons you've already curated. Optional; Harbor works fully signed-out.":
-    "Zaloguj się, aby zsynchronizować sekcję Kontynuuj oglądanie, listę do obejrzenia oraz wszystkie wcześniej skonfigurowane dodatki. Jest to opcjonalne, Harbor działa w pełni bez logowania.",
+  "Sign in to mirror your Continue Watching, watchlist, and any addons you've already curated. Optional; Lart works fully signed-out.":
+    "Zaloguj się, aby zsynchronizować sekcję Kontynuuj oglądanie, listę do obejrzenia oraz wszystkie wcześniej skonfigurowane dodatki. Jest to opcjonalne, Lart działa w pełni bez logowania.",
   "Sign in to pick up where you left off.":
     "Zaloguj się, aby kontynuować od miejsca, w którym przerwano.",
   "Sign in to rate": "Zaloguj się, aby ocenić",
@@ -242,23 +242,23 @@ const catalog12: Record<string, string> = {
   "Sign in to sync your library, watch progress, and addons.":
     "Zaloguj się, aby synchronizować bibliotekę, postęp oglądania i dodatki.",
   "Sign in to upload a custom image.": "Zaloguj się, aby przesłać własny obraz.",
-  "Sign in to your Harbor account first. Imported ratings are saved to your profile.":
-    "Najpierw zaloguj się na konto Harbor. Zaimportowane oceny zostaną zapisane w Twoim profilu.",
+  "Sign in to your Lart account first. Imported ratings are saved to your profile.":
+    "Najpierw zaloguj się na konto Lart. Zaimportowane oceny zostaną zapisane w Twoim profilu.",
   "Sign in with": "Zaloguj się przez",
   "Sign in with Stremio": "Zaloguj się przez Stremio",
   "Sign in with a server, username and password":
     "Zaloguj się przy użyciu serwera, nazwy użytkownika i hasła",
   "Sign in, or make an account": "Zaloguj się lub utwórz konto",
   "Sign out": "Wyloguj się",
-  "Sign out of Harbor account": "Wyloguj się z konta Harbor",
+  "Sign out of Lart account": "Wyloguj się z konta Lart",
   "Sign-in failed.": "Logowanie nie powiodło się.",
   "Signed in as {name}": "Zalogowano jako {name}",
   "Signed in as {username}": "Zalogowano jako {username}",
-  "Signed in to your Harbor account": "Zalogowano na Twoje konto Harbor",
+  "Signed in to your Lart account": "Zalogowano na Twoje konto Lart",
   "Signed in. Your library is on the TV.":
     "Zalogowano. Twoja biblioteka jest dostępna na telewizorze.",
-  "Signing in to your Harbor account. Your profiles will appear in a moment.":
-    "Logowanie do konta Harbor. Twoje profile pojawią się za chwilę.",
+  "Signing in to your Lart account. Your profiles will appear in a moment.":
+    "Logowanie do konta Lart. Twoje profile pojawią się za chwilę.",
   "Signing in…": "Logowanie…",
   "Signing the TV in to Stremio, Trakt, AniList and the metadata keys. Scan the code with your phone from the TV itself.":
     "Logowanie telewizora do Stremio, Trakt i AniList oraz dodawanie kluczy metadanych. Zeskanuj kod telefonem bezpośrednio z ekranu telewizora.",
@@ -302,8 +302,8 @@ const catalog12: Record<string, string> = {
     "Pomijaj ekran „Kto ogląda?” i zawsze uruchamiaj ten profil. Profil chroniony kodem PIN nie może być domyślny.",
   "Skip ad": "Pomiń reklamę",
   "Skip for now": "Pomiń na razie",
-  "Skip if you'd rather just use Cinemeta. Harbor still works, you'll just see fewer rails.":
-    "Pomiń, jeśli wolisz korzystać tylko z Cinemeta. Harbor nadal będzie działać, ale zobaczysz mniej sekcji.",
+  "Skip if you'd rather just use Cinemeta. Lart still works, you'll just see fewer rails.":
+    "Pomiń, jeśli wolisz korzystać tylko z Cinemeta. Lart nadal będzie działać, ale zobaczysz mniej sekcji.",
   "Skip injected ad": "Pomiń wstrzykniętą reklamę",
   "Skip injected ad?": "Pominąć wstawioną reklamę?",
   "Skip injected ads automatically": "Automatycznie pomijaj wstawione reklamy",
@@ -311,19 +311,19 @@ const catalog12: Record<string, string> = {
   "Skip intros & credits": "Pomijaj czołówki i napisy końcowe",
   "Skip intros and credits": "Pomijaj czołówki i napisy końcowe",
   "Skip setup": "Pomiń konfigurację",
-  "Skip the 'stream over peer-to-peer?' prompt and start uncached torrents immediately. Harbor remembers your choice after the first confirmation anyway.":
-    "Pomijaj pytanie „Odtworzyć strumień przez sieć peer-to-peer?” i od razu uruchamiaj torrenty, których nie ma w pamięci podręcznej. Po pierwszym potwierdzeniu Harbor i tak zapamięta Twój wybór.",
+  "Skip the 'stream over peer-to-peer?' prompt and start uncached torrents immediately. Lart remembers your choice after the first confirmation anyway.":
+    "Pomijaj pytanie „Odtworzyć strumień przez sieć peer-to-peer?” i od razu uruchamiaj torrenty, których nie ma w pamięci podręcznej. Po pierwszym potwierdzeniu Lart i tak zapamięta Twój wybór.",
   "Skip the launch": "Pomiń ekran startowy",
   "Skip these tracks": "Pomiń te ścieżki",
-  "Skip this and Harbor runs on Cinemeta. You just see fewer rows.":
-    "Możesz to pominąć, a Harbor będzie korzystać z Cinemeta. Zobaczysz tylko mniej rzędów.",
-  "Skip this and Harbor still works. Your library just stays local.":
-    "Możesz to pominąć, a Harbor nadal będzie działać. Biblioteka pozostanie tylko lokalna.",
+  "Skip this and Lart runs on Cinemeta. You just see fewer rows.":
+    "Możesz to pominąć, a Lart będzie korzystać z Cinemeta. Zobaczysz tylko mniej rzędów.",
+  "Skip this and Lart still works. Your library just stays local.":
+    "Możesz to pominąć, a Lart nadal będzie działać. Biblioteka pozostanie tylko lokalna.",
   "Skip to the next episode if available.": "Przejdź do następnego odcinka, jeśli jest dostępny.",
   "Skip to the previous episode if available.":
     "Przejdź do poprzedniego odcinka, jeśli jest dostępny.",
   "Skip, I can do this later": "Pomiń, mogę zrobić to później",
-  "Skip, let Harbor choose": "Pomiń, niech Harbor wybierze",
+  "Skip, let Lart choose": "Pomiń, niech Lart wybierze",
   "Skipped, not rated or not supported": "Pominięto, nie oceniono lub brak obsługi",
   "Sleep at end": "Uśpij po zakończeniu",
   "Sleep at end of episode": "Uśpij po zakończeniu odcinka",
@@ -362,8 +362,8 @@ const catalog12: Record<string, string> = {
     "Inteligentna ponowna synchronizacja z rozpoznawaniem mowy",
   "Smooth motion": "Płynny ruch",
   "Smooth motion (interpolation) & SVP": "Płynny ruch (interpolacja) i SVP",
-  "Smooth motion runs on the bundled mpv engine in the Harbor desktop app. It has no effect in the browser.":
-    "Płynny ruch działa w aplikacji komputerowej Harbor za pośrednictwem dołączonego silnika mpv. Nie ma wpływu na odtwarzanie w przeglądarce.",
+  "Smooth motion runs on the bundled mpv engine in the Lart desktop app. It has no effect in the browser.":
+    "Płynny ruch działa w aplikacji komputerowej Lart za pośrednictwem dołączonego silnika mpv. Nie ma wpływu na odtwarzanie w przeglądarce.",
   "Smooth on weak PCs": "Płynne odtwarzanie na słabszych komputerach",
   "Smooth scrolling": "Płynne przewijanie",
   "Smoothing off": "Wygładzanie wyłączone",
@@ -400,8 +400,8 @@ const catalog12: Record<string, string> = {
   "Something unexpected went wrong. Nothing may have been written. Retry to re-check.":
     "Wystąpił nieoczekiwany błąd. Możliwe, że nic nie zostało zapisane. Spróbuj ponownie, aby to sprawdzić.",
   "Something went wrong on the way there.": "Po drodze wystąpił problem.",
-  "Something went wrong reaching Harbor. Check your connection and try again.":
-    "Wystąpił problem z połączeniem z Harbor. Sprawdź połączenie i spróbuj ponownie.",
+  "Something went wrong reaching Lart. Check your connection and try again.":
+    "Wystąpił problem z połączeniem z Lart. Sprawdź połączenie i spróbuj ponownie.",
   "Something went wrong.": "Coś poszło nie tak.",
   Song: "Piosenka",
   "Song ID provider": "Dostawca rozpoznawania utworów",
@@ -411,8 +411,8 @@ const catalog12: Record<string, string> = {
   Soon: "Wkrótce",
   "Sorry this one is not better. Tell us what went wrong and we will fix it for you.":
     "Przykro nam, że ta wersja nie jest lepsza. Opisz, co poszło nie tak, a postaramy się to naprawić.",
-  "Sorry, Harbor crashed the last time it was running. You can review the details and choose whether to send a report.":
-    "Niestety podczas ostatniego uruchomienia Harbor uległ awarii. Możesz przejrzeć szczegóły i zdecydować, czy wysłać raport.",
+  "Sorry, Lart crashed the last time it was running. You can review the details and choose whether to send a report.":
+    "Niestety podczas ostatniego uruchomienia Lart uległ awarii. Możesz przejrzeć szczegóły i zdecydować, czy wysłać raport.",
   Sort: "Sortuj",
   "Sort by": "Sortuj według",
   "Sort by source": "Sortuj według źródła",
@@ -442,8 +442,8 @@ const catalog12: Record<string, string> = {
     "Kod źródłowy: {code}. Około 200 wierszy JavaScriptu, bez zależności. Jeśli chcesz wiedzieć, co zostanie uruchomione, przeczytaj go przed wdrożeniem.",
   Sources: "Źródła",
   "Sources & library": "Źródła i biblioteka",
-  "Sources Harbor flagged as broken. Clear to give them another chance.":
-    "Źródła oznaczone przez Harbor jako niedziałające. Wyczyść, aby dać im kolejną szansę.",
+  "Sources Lart flagged as broken. Clear to give them another chance.":
+    "Źródła oznaczone przez Lart jako niedziałające. Wyczyść, aby dać im kolejną szansę.",
   "Sources are not cached for this title. Open the picker page to refresh.":
     "Źródła tego tytułu nie znajdują się w pamięci podręcznej. Otwórz stronę wyboru, aby je odświeżyć.",
   "Sources by addon": "Źródła według dodatku",
@@ -519,8 +519,8 @@ const catalog12: Record<string, string> = {
   "Start here. The ones almost everyone has.": "Zacznij tutaj. Te dodatki ma prawie każdy.",
   "Start import": "Rozpocznij import",
   "Start of manga": "Początek mangi",
-  "Start or stop recording a GIF of the video (no subtitles). Saves to Pictures/Harbor.":
-    "Rozpocznij lub zatrzymaj nagrywanie obrazu do pliku GIF (bez napisów). Plik zostanie zapisany w folderze Obrazy/Harbor.",
+  "Start or stop recording a GIF of the video (no subtitles). Saves to Pictures/Lart.":
+    "Rozpocznij lub zatrzymaj nagrywanie obrazu do pliku GIF (bez napisów). Plik zostanie zapisany w folderze Obrazy/Lart.",
   "Start over": "Zacznij od nowa",
   "Start playback": "Rozpocznij odtwarzanie",
   "Start recording": "Rozpocznij nagrywanie",
@@ -589,8 +589,8 @@ const catalog12: Record<string, string> = {
   "Stop drawing": "Przestań rysować",
   "Stop feeding the hero carousel (back to automatic)":
     "Przestań zasilać główną karuzelę (powrót do trybu automatycznego)",
-  "Stop playback when you minimize Harbor or send it to the tray.":
-    "Zatrzymuj odtwarzanie po zminimalizowaniu Harbor lub schowaniu go do zasobnika.",
+  "Stop playback when you minimize Lart or send it to the tray.":
+    "Zatrzymuj odtwarzanie po zminimalizowaniu Lart lub schowaniu go do zasobnika.",
   "Stop playback whenever another window takes focus.":
     "Zatrzymuj odtwarzanie, gdy inne okno przejmie fokus.",
   "Stop recording": "Zatrzymaj nagrywanie",
@@ -607,8 +607,8 @@ const catalog12: Record<string, string> = {
   "Stops the TV playing to an empty room all night.":
     "Zapobiega odtwarzaniu przez telewizor przez całą noc w pustym pokoju.",
   Storage: "Pamięć",
-  "Storage is full. Clear Harbor cache storage, then try saving again.":
-    "Pamięć jest pełna. Wyczyść pamięć podręczną Harbor, a następnie spróbuj zapisać ponownie.",
+  "Storage is full. Clear Lart cache storage, then try saving again.":
+    "Pamięć jest pełna. Wyczyść pamięć podręczną Lart, a następnie spróbuj zapisać ponownie.",
   "Storage location": "Lokalizacja przechowywania",
   "Storage overview": "Przegląd pamięci",
   "Store each title in its own folder with its EPUB or PDF":
@@ -644,10 +644,10 @@ const catalog12: Record<string, string> = {
     "Odtwarzanie strumienia powinno rozpocząć się w ciągu kilku sekund.",
   "Stream switcher": "Przełącznik strumieni",
   "Stream this via peer-to-peer?": "Odtworzyć ten materiał przez sieć peer-to-peer?",
-  "Stream torrents straight from Harbor's built-in engine when you have no debrid set up, or a torrent isn't cached. This connects to peers over your own connection. Turn off to only ever play debrid and direct links.":
-    "Odtwarzaj torrenty bezpośrednio z wbudowanego silnika Harbor, gdy nie masz skonfigurowanej usługi debrid lub torrent nie znajduje się w pamięci podręcznej. Powoduje to łączenie z peerami przez Twoje połączenie. Wyłącz tę opcję, aby odtwarzać wyłącznie linki debrid i bezpośrednie.",
-  "Stream torrents through Harbor's own Rust peer-to-peer engine instead of the bundled Stremio Server. Falls back automatically if it can't connect. Status and a self-test live in the Local engine card below.":
-    "Strumieniuj torrenty przez własny silnik peer-to-peer Harbor napisany w języku Rust zamiast przez dołączony Stremio Server. Jeśli połączenie się nie powiedzie, automatycznie użyte zostanie rozwiązanie zapasowe. Stan i autotest znajdują się na karcie Silnik lokalny poniżej.",
+  "Stream torrents straight from Lart's built-in engine when you have no debrid set up, or a torrent isn't cached. This connects to peers over your own connection. Turn off to only ever play debrid and direct links.":
+    "Odtwarzaj torrenty bezpośrednio z wbudowanego silnika Lart, gdy nie masz skonfigurowanej usługi debrid lub torrent nie znajduje się w pamięci podręcznej. Powoduje to łączenie z peerami przez Twoje połączenie. Wyłącz tę opcję, aby odtwarzać wyłącznie linki debrid i bezpośrednie.",
+  "Stream torrents through Lart's own Rust peer-to-peer engine instead of the bundled Stremio Server. Falls back automatically if it can't connect. Status and a self-test live in the Local engine card below.":
+    "Strumieniuj torrenty przez własny silnik peer-to-peer Lart napisany w języku Rust zamiast przez dołączony Stremio Server. Jeśli połączenie się nie powiedzie, automatycznie użyte zostanie rozwiązanie zapasowe. Stan i autotest znajdują się na karcie Silnik lokalny poniżej.",
   "Streamer release rule": "Reguła premiery dla serwisu streamingowego",
   Streamers: "Serwisy streamingowe",
   Streaming: "Streaming",
@@ -669,12 +669,12 @@ const catalog12: Record<string, string> = {
   "Streams over {cap} Mbps will rank lower, even when cached.":
     "Strumienie o przepływności powyżej {cap} Mb/s będą zajmować niższą pozycję, nawet jeśli znajdują się w pamięci podręcznej.",
   "Stremio ID": "Identyfikator Stremio",
-  "Stremio Supporters get a special badge on their Harbor profile.":
-    "Osoby wspierające Stremio otrzymują specjalną odznakę na swoim profilu Harbor.",
+  "Stremio Supporters get a special badge on their Lart profile.":
+    "Osoby wspierające Stremio otrzymują specjalną odznakę na swoim profilu Lart.",
   "Stremio account": "Konto Stremio",
   "Stremio account (email / sign out)": "Konto Stremio (adres e-mail / wylogowanie)",
-  "Stremio addon, packaged into Harbor's catalog.":
-    "Dodatek Stremio umieszczony w katalogu Harbor.",
+  "Stremio addon, packaged into Lart's catalog.":
+    "Dodatek Stremio umieszczony w katalogu Lart.",
   "Stremio cards": "Karty Stremio",
   "Stremio did not accept that email and password.":
     "Stremio nie zaakceptowało tego adresu e-mail i hasła.",

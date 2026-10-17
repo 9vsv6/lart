@@ -35,7 +35,7 @@ export default {
   "games.valorant.empty": "Nenhum resultado para estes filtros.",
   "games.valorant.checked": "Verificado em {date}",
   "games.valorant.metaScope": "Dados competitivos do OP.GG para a atualização selecionada. A taxa de escolha é a proporção de aparições de agentes. Os resultados representam a amostra da fonte, não todos os jogadores.",
-  "games.valorant.referenceScope": "Imagens e referências via Valorant-API. As atualizações podem chegar com atraso. Harbor não é endossado pela Riot Games.",
+  "games.valorant.referenceScope": "Imagens e referências via Valorant-API. As atualizações podem chegar com atraso. Lart não é endossado pela Riot Games.",
   "games.valorant.samples": "{count} aparições",
   "games.valorant.smallSample": "Amostra pequena",
   "games.valorant.abilities": "Habilidades",

@@ -37,7 +37,7 @@ export default {
   "games.recommend.retrySome": "Réessayer les liens manquants",
   "games.recommend.saveError": "Impossible d'enregistrer vos préférences de découverte sur cet appareil. Réessayez.",
   "games.recommend.influences": "Ce qui façonne vos suggestions",
-  "games.recommend.influencesNote": "Choisissez les jeux pris en compte par Harbor. Votre bibliothèque reste inchangée.",
+  "games.recommend.influencesNote": "Choisissez les jeux pris en compte par Lart. Votre bibliothèque reste inchangée.",
   "games.recommend.exclude": "Ne plus utiliser {name}",
   "games.recommend.excluded": "Influences exclues ({count})",
   "games.recommend.useAgain": "Réutiliser {name}",

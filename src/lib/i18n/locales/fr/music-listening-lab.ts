@@ -36,7 +36,7 @@ const musicListeningLab: Record<string, string> = {
   "music.lab.crossfeed": "Crossfeed pour casque",
   "music.lab.crossfeedHelp":
     "Mélange une partie filtrée de chaque canal dans l’autre pour réduire la séparation au casque. 0 % désactive l’effet.",
-  "music.lab.bypass": "Contourner le DSP Harbor",
+  "music.lab.bypass": "Contourner le DSP Lart",
   "music.lab.bypassHelp":
     "Après application, contourne EQ, préampli, crossfeed, balance et ReplayGain. Sortie et volume restent actifs. Ne vérifie pas une lecture bit-perfect.",
   "music.lab.exclusive": "Demander une sortie exclusive",

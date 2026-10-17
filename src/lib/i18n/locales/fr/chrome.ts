@@ -12,7 +12,7 @@ const chrome: Record<string, string> = {
   "arabic.row.trending": "Tendances en arabe",
   Board: "Tableau",
   "chrome.backToTop": "Retour en haut",
-  "chrome.harborHome": "Accueil Harbor",
+  "chrome.harborHome": "Accueil Lart",
   "chrome.locked": "Verrouillé",
   "chrome.lockedRequiresPin": "{label} (verrouillé, code PIN requis)",
   "chrome.lockedShort": "{label} · verrouillé",
@@ -131,7 +131,7 @@ const chrome: Record<string, string> = {
   "welcome.dismiss": "Commencer",
   "welcome.subtitle":
     "L’interface est maintenant en arabe. Vous pouvez revenir à une autre langue à tout moment dans les Paramètres.",
-  "welcome.title": "Bienvenue sur Harbor",
+  "welcome.title": "Bienvenue sur Lart",
   "Who's watching?": "Qui regarde ?",
   "{n} tabs locked": "{n} onglets verrouillés",
   "{n} tabs require this profile's PIN.": "Les {n} onglets nécessitent le code PIN de ce profil.",

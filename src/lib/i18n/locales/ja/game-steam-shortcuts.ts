@@ -5,7 +5,7 @@ export default {
 
   "games.shortcuts.activity.open": "アクティビティ",
   "games.shortcuts.activity.title": "ショートカットのアクティビティ",
-  "games.shortcuts.activity.note": "この Harbor プロフィールでの最近のスキャンと起動。最大300件。",
+  "games.shortcuts.activity.note": "この Lart プロフィールでの最近のスキャンと起動。最大300件。",
   "games.shortcuts.activity.remember": "セッション間で保持",
   "games.shortcuts.activity.detailed": "スキャンの詳細を記録",
   "games.shortcuts.activity.storageError": "保存済みのアクティビティにアクセスできません。このセッションの記録は引き続き表示されます。",
@@ -47,7 +47,7 @@ export default {
   "games.shortcuts.tags": "タグ",
   "games.shortcuts.storeError": "設定を保存できませんでした。",
   "games.shortcuts.shortcut_location": "Steam フォルダーまたはその userdata フォルダーを選択してください。",
-  "games.shortcuts.shortcut_account": "このショートカットのアカウントで Steam を開いて更新してください。Harbor は同じ Steam インストールを使用する必要があります。",
+  "games.shortcuts.shortcut_account": "このショートカットのアカウントで Steam を開いて更新してください。Lart は同じ Steam インストールを使用する必要があります。",
   "games.shortcuts.shortcut_missing": "このショートカットは存在しません。ライブラリを更新してください。",
   "games.shortcuts.shortcut_executable": "実行ファイルがないか、その絶対パスはサポートされていません。",
   "games.shortcuts.shortcut_launch": "Steam でこのショートカットを開けませんでした。もう一度お試しください。",

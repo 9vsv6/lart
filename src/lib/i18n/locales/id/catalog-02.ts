@@ -38,14 +38,14 @@ const catalog: Record<string, string> = {
   Connect: "Hubungkan",
   "Connect / Verify": "Hubungkan / Verifikasi",
   "Connect AniList": "Hubungkan AniList",
-  "Connect AniList in Harbor on your computer to see your lists here.":
-    "Hubungkan AniList di Harbor pada komputer Anda untuk melihat daftar Anda di sini.",
-  "Connect Discord or Telegram and Harbor posts a message when something you follow is about to drop. Hit Test to send yourself a sample first.":
-    "Hubungkan Discord atau Telegram, lalu Harbor akan mengirim pesan saat sesuatu yang Anda ikuti akan segera dirilis. Tekan Uji untuk mengirim contoh pesan kepada diri sendiri terlebih dahulu.",
+  "Connect AniList in Lart on your computer to see your lists here.":
+    "Hubungkan AniList di Lart pada komputer Anda untuk melihat daftar Anda di sini.",
+  "Connect Discord or Telegram and Lart posts a message when something you follow is about to drop. Hit Test to send yourself a sample first.":
+    "Hubungkan Discord atau Telegram, lalu Lart akan mengirim pesan saat sesuatu yang Anda ikuti akan segera dirilis. Tekan Uji untuk mengirim contoh pesan kepada diri sendiri terlebih dahulu.",
   "Connect Letterboxd": "Hubungkan Letterboxd",
   "Connect MyAnimeList": "Hubungkan MyAnimeList",
-  "Connect MyAnimeList in Harbor on your computer to see your lists here.":
-    "Hubungkan MyAnimeList di Harbor pada komputer Anda untuk melihat daftar Anda di sini.",
+  "Connect MyAnimeList in Lart on your computer to see your lists here.":
+    "Hubungkan MyAnimeList di Lart pada komputer Anda untuk melihat daftar Anda di sini.",
   "Connect Simkl": "Hubungkan Simkl",
   "Connect TMDB": "Hubungkan TMDB",
   "Connect Trakt": "Hubungkan Trakt",
@@ -120,8 +120,8 @@ const catalog: Record<string, string> = {
     "Lanjutkan Menonton terlebih dahulu, lalu katalog addon Anda sesuai urutan instalasi.",
   "Continue Watching screenshots": "Tangkapan layar Lanjutkan Menonton",
   "Continue Watching suggestions cache": "Cache saran Lanjutkan Menonton",
-  "Continue Watching, then your addon catalogs in install order. No hero, no Harbor rails.":
-    "Lanjutkan Menonton, lalu katalog addon Anda sesuai urutan pemasangan. Tanpa hero, tanpa baris Harbor.",
+  "Continue Watching, then your addon catalogs in install order. No hero, no Lart rails.":
+    "Lanjutkan Menonton, lalu katalog addon Anda sesuai urutan pemasangan. Tanpa hero, tanpa baris Lart.",
   "Continue Watching, then your installed addons. Every catalog renders as its own row, install order, no dedup, no hero.":
     "Lanjutkan Menonton, lalu addon yang Anda pasang. Setiap katalog ditampilkan sebagai baris tersendiri sesuai urutan pemasangan, tanpa menghapus duplikat dan tanpa hero.",
   "Continue from last watched": "Lanjutkan dari tontonan terakhir",
@@ -150,8 +150,8 @@ const catalog: Record<string, string> = {
   "Controller support": "Dukungan pengontrol",
   Controllers: "Pengontrol",
   "Controllers / gamepad": "Pengontrol / gamepad",
-  "Controllers Harbor can see right now. Connect one over USB or Bluetooth and it shows up here.":
-    "Pengontrol yang dapat dideteksi Harbor saat ini. Hubungkan melalui USB atau Bluetooth dan pengontrol akan muncul di sini.",
+  "Controllers Lart can see right now. Connect one over USB or Bluetooth and it shows up here.":
+    "Pengontrol yang dapat dideteksi Lart saat ini. Hubungkan melalui USB atau Bluetooth dan pengontrol akan muncul di sini.",
   Controls: "Kontrol",
   "Controls & devices": "Kontrol & perangkat",
   "Convert your currency": "Konversikan mata uang Anda",
@@ -184,8 +184,8 @@ const catalog: Record<string, string> = {
   'Copy the value labelled "API Key (v3 auth)".': 'Salin nilai berlabel "API Key (v3 auth)".',
   "Copy theme": "Salin tema",
   "Copy your API Key": "Salin API Key Anda",
-  "Copy your Harbor watchlist over to Trakt, or pull your Trakt watchlist into Harbor. Safe to run again, Trakt skips anything it already has.":
-    "Salin daftar tontonan Harbor Anda ke Trakt, atau impor daftar tontonan Trakt ke Harbor. Aman dijalankan lagi karena Trakt melewati item yang sudah ada.",
+  "Copy your Lart watchlist over to Trakt, or pull your Trakt watchlist into Lart. Safe to run again, Trakt skips anything it already has.":
+    "Salin daftar tontonan Lart Anda ke Trakt, atau impor daftar tontonan Trakt ke Lart. Aman dijalankan lagi karena Trakt melewati item yang sudah ada.",
   "Copy {label} handle": "Salin handle {label}",
   Corner: "Sudut",
   "Corner Kicks": "Tendangan Sudut",
@@ -222,8 +222,8 @@ const catalog: Record<string, string> = {
   "Could not post.": "Tidak dapat memposting.",
   "Could not process image.": "Tidak dapat memproses gambar.",
   "Could not queue these episodes.": "Tidak dapat memasukkan episode ini ke antrean.",
-  "Could not reach Harbor. Check your phone's connection and try again.":
-    "Tidak dapat menghubungi Harbor. Periksa koneksi ponsel Anda dan coba lagi.",
+  "Could not reach Lart. Check your phone's connection and try again.":
+    "Tidak dapat menghubungi Lart. Periksa koneksi ponsel Anda dan coba lagi.",
   "Could not reach Simkl.": "Tidak dapat menghubungi Simkl.",
   "Could not reach Stremio. Check your phone's connection and try again.":
     "Tidak dapat menghubungi Stremio. Periksa koneksi ponsel Anda dan coba lagi.",
@@ -327,10 +327,10 @@ const catalog: Record<string, string> = {
   "Couldn't reach AniList. Check the connection and reopen Big Picture.":
     "Tidak dapat menghubungi AniList. Periksa koneksi lalu buka kembali Big Picture.",
   "Couldn't reach AniList. Try refreshing.": "Tidak dapat menghubungi AniList. Coba muat ulang.",
-  "Couldn't reach Harbor, check your connection":
-    "Tidak dapat menghubungi Harbor, periksa koneksi Anda",
-  "Couldn't reach Harbor. Showing this device only.":
-    "Tidak dapat menghubungi Harbor. Hanya menampilkan perangkat ini.",
+  "Couldn't reach Lart, check your connection":
+    "Tidak dapat menghubungi Lart, periksa koneksi Anda",
+  "Couldn't reach Lart. Showing this device only.":
+    "Tidak dapat menghubungi Lart. Hanya menampilkan perangkat ini.",
   "Couldn't reach Letterboxd. Try refreshing.":
     "Tidak dapat menghubungi Letterboxd. Coba muat ulang.",
   "Couldn't reach MyAnimeList. Check the connection and reopen Big Picture.":
@@ -392,9 +392,9 @@ const catalog: Record<string, string> = {
   "Cozy Autumn Nights": "Malam Musim Gugur yang Nyaman",
   Create: "Buat",
   "Create Custom Token": "Buat Token Kustom",
-  "Create Harbor account": "Buat akun Harbor",
+  "Create Lart account": "Buat akun Lart",
   "Create Token": "Buat Token",
-  "Create a Harbor account": "Buat akun Harbor",
+  "Create a Lart account": "Buat akun Lart",
   "Create a group": "Buat grup",
   "Create a group to watch and share together.": "Buat grup untuk menonton dan berbagi bersama.",
   "Create account": "Buat akun",
@@ -559,13 +559,13 @@ const catalog: Record<string, string> = {
   "Default art": "Ilustrasi bawaan",
   "Default picture shape on the mpv engine. Fit keeps the source as-is with any black bars; the rest stretch or crop to fill, handy for old 4:3 shows on a widescreen TV.":
     "Bentuk gambar bawaan pada mesin mpv. Pas mempertahankan sumber apa adanya beserta bilah hitamnya; opsi lain meregangkan atau memangkas agar memenuhi layar, cocok untuk acara lama berformat 4:3 di TV layar lebar.",
-  "Default. Harbor parses and scores every source and surfaces the best quality first.":
-    "Bawaan. Harbor mengurai dan menilai setiap sumber, lalu menampilkan kualitas terbaik terlebih dahulu.",
+  "Default. Lart parses and scores every source and surfaces the best quality first.":
+    "Bawaan. Lart mengurai dan menilai setiap sumber, lalu menampilkan kualitas terbaik terlebih dahulu.",
   "Default. Humanist serif, warm sans.": "Bawaan. Serif humanis, sans hangat.",
   "Default. Rejects size outliers, suspicious extensions, year/episode mismatches, season packs (for episode requests), trailers, and likely cams.":
     "Bawaan. Menolak ukuran yang tidak wajar, ekstensi mencurigakan, ketidakcocokan tahun/episode, paket musim (untuk permintaan episode), trailer, dan rekaman kamera yang terdeteksi.",
-  "Default. Top pick at the top, quality tiles, and an All-Sources drawer. Harbor scores and ranks results.":
-    "Bawaan. Pilihan teratas di bagian atas, petak kualitas, dan panel Semua Sumber. Harbor menilai dan mengurutkan hasil.",
+  "Default. Top pick at the top, quality tiles, and an All-Sources drawer. Lart scores and ranks results.":
+    "Bawaan. Pilihan teratas di bagian atas, petak kualitas, dan panel Semua Sumber. Lart menilai dan mengurutkan hasil.",
   "Defending champion": "Juara bertahan",
   "Defends privacy, free expression, and the open internet, in the courts and in the code.":
     "Membela privasi, kebebasan berekspresi, dan internet terbuka, baik di pengadilan maupun melalui kode.",
@@ -688,8 +688,8 @@ const catalog: Record<string, string> = {
   "Discord confirmed. Pick a username and password to finish.":
     "Discord terkonfirmasi. Pilih nama pengguna dan kata sandi untuk menyelesaikan.",
   "Discord linked": "Discord ditautkan",
-  "Discord posts a message to a channel whenever Harbor pings it. Takes about a minute to set up.":
-    "Discord mengirim pesan ke sebuah channel setiap kali menerima ping dari Harbor. Penyiapannya memerlukan waktu sekitar satu menit.",
+  "Discord posts a message to a channel whenever Lart pings it. Takes about a minute to set up.":
+    "Discord mengirim pesan ke sebuah channel setiap kali menerima ping dari Lart. Penyiapannya memerlukan waktu sekitar satu menit.",
   "Discord webhook URL": "URL webhook Discord",
   Discover: "Jelajahi",
   "Discover more": "Jelajahi lainnya",
@@ -700,8 +700,8 @@ const catalog: Record<string, string> = {
   "Dismiss notification": "Tutup notifikasi",
   "Disney+": "Disney+",
   "Disney+ Originals": "Disney+ Originals",
-  "Display 'Browsing Harbor' when nothing is playing.":
-    "Tampilkan 'Menjelajahi Harbor' saat tidak ada yang diputar.",
+  "Display 'Browsing Lart' when nothing is playing.":
+    "Tampilkan 'Menjelajahi Lart' saat tidak ada yang diputar.",
   "Display SIMKL Community Ratings": "Tampilkan Rating Komunitas SIMKL",
   "Display SIMKL community score badge on details pages.":
     "Tampilkan lencana skor komunitas SIMKL di halaman detail.",
@@ -739,14 +739,14 @@ const catalog: Record<string, string> = {
   "Documentary Spotlight": "Sorotan Dokumenter",
   Documentation: "Dokumentasi",
   "Documentation: run your own relay": "Dokumentasi: jalankan relay Anda sendiri",
-  "Does Harbor {version} feel better or worse than the version you had before?":
-    "Apakah Harbor {version} terasa lebih baik atau lebih buruk daripada versi yang Anda gunakan sebelumnya?",
+  "Does Lart {version} feel better or worse than the version you had before?":
+    "Apakah Lart {version} terasa lebih baik atau lebih buruk daripada versi yang Anda gunakan sebelumnya?",
   "Does this stream look right?": "Apakah stream ini terlihat benar?",
   "Don't ask again": "Jangan tanya lagi",
   "Don't ask me again": "Jangan tanya saya lagi",
   "Don't have an account?": "Belum punya akun?",
   "Don't have an account? Create one →": "Belum punya akun? Buat akun →",
-  "Donating to Harbor": "Berdonasi ke Harbor",
+  "Donating to Lart": "Berdonasi ke Lart",
   Done: "Selesai",
   "Done editing": "Selesai mengedit",
   "Done.": "Selesai.",
@@ -803,8 +803,8 @@ const catalog: Record<string, string> = {
     "File stream P2P yang diunduh disimpan di disk agar saat judul dibuka kembali, pemutaran langsung dilanjutkan tanpa mengulang dari awal. Atur berapa lama file disimpan dan lokasi penyimpanannya.",
   "Downloaded subtitles can arrive a moment after playback starts. Leave this off to keep whatever subtitle is already showing; turn it on to switch to the best language match as soon as it loads.":
     "Subtitle yang diunduh mungkin tersedia sesaat setelah pemutaran dimulai. Biarkan nonaktif untuk mempertahankan subtitle yang sedang ditampilkan; aktifkan untuk beralih ke bahasa yang paling cocok segera setelah dimuat.",
-  "Downloaded subtitles can arrive after playback starts. Harbor switches from a temporary track when a stronger release match becomes available.":
-    "Subtitle yang diunduh mungkin tersedia setelah pemutaran dimulai. Harbor akan beralih dari trek sementara saat tersedia subtitle yang lebih cocok dengan rilis.",
+  "Downloaded subtitles can arrive after playback starts. Lart switches from a temporary track when a stronger release match becomes available.":
+    "Subtitle yang diunduh mungkin tersedia setelah pemutaran dimulai. Lart akan beralih dari trek sementara saat tersedia subtitle yang lebih cocok dengan rilis.",
   "Downloaded themes are managed in Theme & appearance. Video and manga downloads are managed on the Downloads page.":
     "Tema yang diunduh dikelola di Tema & tampilan. Unduhan video dan manga dikelola di halaman Unduhan.",
   "Downloaded. Ready to install and restart.": "Sudah diunduh. Siap diinstal dan dimulai ulang.",
@@ -847,8 +847,8 @@ const catalog: Record<string, string> = {
     "Koreksi penyimpangan aktif (2 titik). Sesuaikan dengan tombol, atau perbaiki bagian yang menyimpang.",
   "Drift fixed": "Penyimpangan diperbaiki",
   "Drift monitor": "Pemantau penyimpangan",
-  "Drift through cinematic backdrops while Harbor sits idle.":
-    "Nikmati latar sinematik yang berganti saat Harbor tidak digunakan.",
+  "Drift through cinematic backdrops while Lart sits idle.":
+    "Nikmati latar sinematik yang berganti saat Lart tidak digunakan.",
   "Drifting poster wall behind the interface. Turn off on low power devices.":
     "Dinding poster bergerak di belakang antarmuka. Nonaktifkan pada perangkat berdaya rendah.",
   "Drop a clip of the bug if you can. A 5-second screen recording usually says more than five paragraphs.":
@@ -889,8 +889,8 @@ const catalog: Record<string, string> = {
     "Setiap kunci di atas adalah ID penghargaan. Kunci yang tidak Anda sertakan akan memakai trofi bawaan (atau paket berprioritas lebih rendah). Daftar lengkap ID mencakup semua penghargaan yang ditampilkan pada kisi di atas.",
   "Each rule fires independently. Define what triggers a ping and where it goes.":
     "Setiap aturan berjalan sendiri-sendiri. Tentukan pemicu notifikasi dan tujuannya.",
-  "Each shader is hosted by its author, not bundled with Harbor. Download the ones you want; Harbor chains them in the right order and applies them in the player.":
-    "Setiap shader dihosting oleh pembuatnya, bukan disertakan bersama Harbor. Unduh yang Anda inginkan; Harbor merangkainya dalam urutan yang tepat dan menerapkannya di pemutar.",
+  "Each shader is hosted by its author, not bundled with Lart. Download the ones you want; Lart chains them in the right order and applies them in the player.":
+    "Setiap shader dihosting oleh pembuatnya, bukan disertakan bersama Lart. Unduh yang Anda inginkan; Lart merangkainya dalam urutan yang tepat dan menerapkannya di pemutar.",
   "Each style keeps its own arrangement, icons and profiles, so switching back and forth never loses work.":
     "Setiap gaya menyimpan susunan, ikon, dan profilnya sendiri, jadi pekerjaan tidak akan hilang saat berganti-ganti gaya.",
   Earlier: "Sebelumnya",
@@ -898,8 +898,8 @@ const catalog: Record<string, string> = {
     "Raih lencana dan lencana akan ditampilkan di sini",
   "Eases mouse-wheel scrolling instead of jumping line by line. Turn off if you prefer an instant response or notice any lag.":
     "Memperhalus pengguliran roda mouse agar tidak melompat per baris. Nonaktifkan jika Anda lebih suka respons instan atau mengalami lag.",
-  "Easiest path. Harbor uploads the worker, creates the Durable Object namespace, and stores the resulting URL.":
-    "Cara termudah. Harbor mengunggah worker, membuat namespace Durable Object, dan menyimpan URL yang dihasilkan.",
+  "Easiest path. Lart uploads the worker, creates the Durable Object namespace, and stores the resulting URL.":
+    "Cara termudah. Lart mengunggah worker, membuat namespace Durable Object, dan menyimpan URL yang dihasilkan.",
   "Easing into series": "Mulai menikmati serial",
   Easy: "Mudah",
   "Easy half-hours and lighter dramas to ride out the afternoon.":
@@ -951,7 +951,7 @@ const catalog: Record<string, string> = {
   Embed: "Sematkan",
   "Embed a YouTube video": "Sematkan video YouTube",
   "Embed from Spotify": "Sematkan dari Spotify",
-  "Embed mpv inside Harbor window": "Sematkan mpv di dalam jendela Harbor",
+  "Embed mpv inside Lart window": "Sematkan mpv di dalam jendela Lart",
   Embedded: "Tertanam",
   "Embedded subtitles changing size between titles, or showing empty boxes? Switch to Use my style for a consistent size. For boxes, also choose Arabic under Font.":
     "Ukuran subtitle tertanam berubah antarjudul, atau muncul kotak kosong? Beralihlah ke Gunakan gaya saya agar ukurannya konsisten. Untuk kotak kosong, pilih juga bahasa Arab di bagian Font.",

@@ -26,13 +26,13 @@ const sync: Record<string, string> = {
   Send: "送信",
   "Guests pick their own source": "ゲストが自分でソースを選ぶ",
   "Prompts guests to choose instead of auto-matching": "自動で照合せず、ゲストに選択を求めます",
-  "Harbor's public relay has not rolled out the latest protocol yet.":
-    "Harborの公開リレーには、まだ最新のプロトコルが導入されていません。",
+  "Lart's public relay has not rolled out the latest protocol yet.":
+    "Lartの公開リレーには、まだ最新のプロトコルが導入されていません。",
   "It updates automatically; nothing to do.": "自動的に更新されるため、対応は不要です。",
   "Relay outdated. Your self-hosted relay is running an older version.":
     "リレーが古くなっています。セルフホストしているリレーは旧バージョンです。",
-  "Redeploy it to get the latest Watch Together fixes. Harbor's public relay updates on its own.":
-    "最新の同時視聴の修正を適用するには、再デプロイしてください。Harborの公開リレーは自動的に更新されます。",
+  "Redeploy it to get the latest Watch Together fixes. Lart's public relay updates on its own.":
+    "最新の同時視聴の修正を適用するには、再デプロイしてください。Lartの公開リレーは自動的に更新されます。",
   "Open relay settings": "リレー設定を開く",
   Dismiss: "閉じる",
   "Start a room first.": "先にルームを作成してください。",
@@ -129,21 +129,21 @@ const sync: Record<string, string> = {
   "to bring in your library.": "ライブラリを取り込めます。",
   "Bring your lists with you": "リストも一緒に持ち運べます",
   "Connect your AniList account": "AniListアカウントを接続",
-  "Show your AniList lists as rails on the Anime page, keep your watch progress in sync as you finish episodes, and use your AniList avatar as your Harbor photo. Free at anilist.co.":
-    "AniListのリストを「アニメ」ページに横並びで表示し、エピソードを見終えるたびに視聴進捗を同期できます。AniListのアバターをHarborのプロフィール画像として使用することもできます。anilist.coで無料で利用できます。",
+  "Show your AniList lists as rails on the Anime page, keep your watch progress in sync as you finish episodes, and use your AniList avatar as your Lart photo. Free at anilist.co.":
+    "AniListのリストを「アニメ」ページに横並びで表示し、エピソードを見終えるたびに視聴進捗を同期できます。AniListのアバターをLartのプロフィール画像として使用することもできます。anilist.coで無料で利用できます。",
   "Connect AniList": "AniListを連携",
   "About AniList": "AniListについて",
   Connected: "接続済み",
-  "Harbor shows your AniList lists on the Anime page and keeps your progress in sync.":
-    "Harborでは、「アニメ」ページにAniListのリストを表示し、進捗を同期します。",
+  "Lart shows your AniList lists on the Anime page and keeps your progress in sync.":
+    "Lartでは、「アニメ」ページにAniListのリストを表示し、進捗を同期します。",
   Authorized: "認証済み",
   "Open profile": "プロフィールを開く",
   "Sync watch progress": "視聴進捗を同期",
   "Finishing an anime episode updates your AniList progress. Forward only: it never lowers a count you already have.":
     "アニメのエピソードを見終えると、AniListの進捗が更新されます。進捗は増える方向にのみ同期され、すでに登録されている話数が減ることはありません。",
-  "Use my AniList avatar as my Harbor avatar": "AniListのアバターをHarborのアバターとして使用",
-  "Show your AniList profile picture as your Harbor avatar.":
-    "AniListのプロフィール画像をHarborのアバターとして表示します。",
+  "Use my AniList avatar as my Lart avatar": "AniListのアバターをLartのアバターとして使用",
+  "Show your AniList profile picture as your Lart avatar.":
+    "AniListのプロフィール画像をLartのアバターとして表示します。",
   "Disconnect from AniList": "AniListとの接続を解除",
   "Disconnect AniList? Your lists will stop showing on the Anime page until you reconnect.":
     "AniListを接続解除しますか？再接続するまで「アニメ」ページにリストが表示されなくなります。",
@@ -155,16 +155,16 @@ const sync: Record<string, string> = {
   "1 month ago": "1か月前",
   "{count} months ago": "{count}か月前",
   "Connect your Simkl account": "Simklアカウントを接続",
-  "Sync and track movies, shows, and anime across everything you use. Harbor marks what you finish as watched on Simkl and keeps your plan-to-watch list in step. Free at simkl.com.":
-    "利用中のすべてのサービスで、映画、ドラマ、アニメを同期して記録できます。Harborは見終えた作品をSimklで視聴済みにし、「視聴予定」リストも同期します。simkl.comで無料で利用できます。",
+  "Sync and track movies, shows, and anime across everything you use. Lart marks what you finish as watched on Simkl and keeps your plan-to-watch list in step. Free at simkl.com.":
+    "利用中のすべてのサービスで、映画、ドラマ、アニメを同期して記録できます。Lartは見終えた作品をSimklで視聴済みにし、「視聴予定」リストも同期します。simkl.comで無料で利用できます。",
   "Connect Simkl": "Simklに接続",
   "About Simkl": "Simklについて",
-  "Harbor will mark what you finish as watched on Simkl and sync your plan-to-watch list.":
-    "Harborで見終えた作品をSimklで視聴済みにし、視聴予定リストを同期します。",
+  "Lart will mark what you finish as watched on Simkl and sync your plan-to-watch list.":
+    "Lartで見終えた作品をSimklで視聴済みにし、視聴予定リストを同期します。",
   "Authorized on this device": "このデバイスで認証済み",
-  "Use my Simkl avatar as my Harbor avatar": "SimklのアバターをHarborのアバターとして使用",
-  "Wear your Simkl profile picture across Harbor instead of the default.":
-    "デフォルトの代わりに、Harbor全体でSimklのプロフィール画像を使用します。",
+  "Use my Simkl avatar as my Lart avatar": "SimklのアバターをLartのアバターとして使用",
+  "Wear your Simkl profile picture across Lart instead of the default.":
+    "デフォルトの代わりに、Lart全体でSimklのプロフィール画像を使用します。",
   "Disconnect from Simkl": "Simklとの接続を解除",
   "Disconnect Simkl? Syncing will stop until you reconnect.":
     "Simklとの接続を解除しますか？再接続するまで同期は停止します。",

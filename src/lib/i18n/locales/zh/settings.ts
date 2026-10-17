@@ -28,10 +28,10 @@ const settings: Record<string, string> = {
   "Most common cause: this account is at its max simultaneous connections. Close other devices and players using these credentials.":
     "最常见的原因是此账号已达到最大同时连接数。请关闭其他正在使用这些凭据的设备和播放器。",
   profile: "个人资料",
-  "Create Harbor account": "创建 Harbor 账户",
-  "Sign out of Harbor account": "退出 Harbor 账户",
+  "Create Lart account": "创建 Lart 账户",
+  "Sign out of Lart account": "退出 Lart 账户",
   "Settings for this profile (shared or independent)": "此个人资料的设置（共享或独立）",
-  "Home style (Harbor curated / Classic Stremio)": "首页样式（Harbor 精选 / 经典 Stremio）",
+  "Home style (Lart curated / Classic Stremio)": "首页样式（Lart 精选 / 经典 Stremio）",
   "Show an on-disk badge on cards": "在卡片上显示本地文件徽章",
   "Export badge setup": "导出徽章设置",
   "Downloaded community badge packs": "已下载的社区徽章包",
@@ -42,12 +42,12 @@ const settings: Record<string, string> = {
   "Badge remaps": "徽章重新映射",
   "Badge updated": "徽章已更新",
   "Edit layout": "编辑布局",
-  "Every format badge Harbor can show on streams. Click one to swap its art, hide it, or reset it. Changes apply everywhere badges appear.":
-    "Harbor 可在片源上显示的所有格式徽章。点击任一徽章即可替换其图稿、隐藏或重置。更改会应用到所有显示徽章的位置。",
+  "Every format badge Lart can show on streams. Click one to swap its art, hide it, or reset it. Changes apply everywhere badges appear.":
+    "Lart 可在片源上显示的所有格式徽章。点击任一徽章即可替换其图稿、隐藏或重置。更改会应用到所有显示徽章的位置。",
   "Hide badge": "隐藏徽章",
   "Image too large. Keep badge files under 250 KB.": "图片过大。徽章文件请保持在 250 KB 以下。",
-  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Harbor's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
-    "一键安装社区包。规则集提供自带匹配规则的完整徽章套装；图稿重映射仅替换 Harbor 内置徽章的图片。Nuvio Discord 或 Reddit 上以 badges.json 链接分享的内容也可在此导入。",
+  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Lart's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
+    "一键安装社区包。规则集提供自带匹配规则的完整徽章套装；图稿重映射仅替换 Lart 内置徽章的图片。Nuvio Discord 或 Reddit 上以 badges.json 链接分享的内容也可在此导入。",
   "Restore previous settings": "恢复之前的设置",
   "Settings for this profile": "此配置文件的设置",
   "Show badge": "显示徽章",
@@ -63,7 +63,7 @@ const settings: Record<string, string> = {
   "Metadata language": "元数据语言",
   "Region & language": "地区和语言",
   "Apply {language}": "应用{language}",
-  "Switch Harbor to {language}?": "将 Harbor 切换为{language}？",
+  "Switch Lart to {language}?": "将 Lart 切换为{language}？",
   "If disabled, titles remain in their original language.": "若关闭，标题将保留原始语言。",
   "If disabled, overviews and taglines remain in their original language. (Applies only inside the details page)":
     "若关闭，简介和宣传语将保留原始语言。（仅适用于详情页）",
@@ -73,16 +73,16 @@ const settings: Record<string, string> = {
     "将菜单和按钮切换为你的语言。阿拉伯语会将布局改为从右到左。",
   "Titles, overviews, and taglines from TMDB display in this language when a translation exists. Needs a TMDB key.":
     "如有译文，TMDB 中的标题、简介和宣传语将以此语言显示。需要 TMDB 密钥。",
-  "Heads up: Harbor was built in English. Multi-language support is partial, so your addons usually catch what Harbor's own filters miss. If you speak another language and want to help fill the gaps, the source is open.":
-    "提示：Harbor 最初以英语开发，多语言支持尚不完整，因此插件通常能找到 Harbor 自身筛选器遗漏的内容。如果你使用其他语言并愿意协助补全，源代码已开源。",
+  "Heads up: Lart was built in English. Multi-language support is partial, so your addons usually catch what Lart's own filters miss. If you speak another language and want to help fill the gaps, the source is open.":
+    "提示：Lart 最初以英语开发，多语言支持尚不完整，因此插件通常能找到 Lart 自身筛选器遗漏的内容。如果你使用其他语言并愿意协助补全，源代码已开源。",
   "Stremio account": "Stremio 账户",
   "Search settings": "搜索设置",
   Account: "账户",
   "A Cloudflare Worker on your own account that hosts your Watch Together rooms.":
     "在你自己的账户中运行的 Cloudflare Worker，用于托管你的“共同观看”房间。",
   "Theme & appearance": "主题和外观",
-  "Color presets, custom backgrounds, and the font pair Harbor renders in.":
-    "Harbor 使用的配色预设、自定义背景和字体组合。",
+  "Color presets, custom backgrounds, and the font pair Lart renders in.":
+    "Lart 使用的配色预设、自定义背景和字体组合。",
   "Badge position": "徽章位置",
   Appearance: "外观",
   Theme: "主题",
@@ -104,19 +104,19 @@ const settings: Record<string, string> = {
   "Click the button below. It opens Cloudflare's token page in your browser. Sign in (free, takes 30 seconds if you don't have an account).":
     "点击下方按钮，在浏览器中打开 Cloudflare 令牌页面。登录即可（免费；如果没有账户，注册约需 30 秒）。",
   "Which account should the relay live in?": "要将中继部署到哪个账户？",
-  "Send this to anyone you want to watch with. They paste it in their Settings → Harbor Relay. After that, share a 6-character room code from the people icon up top.":
-    "将此 URL 发给想一起观看的人。对方需将其粘贴到“设置 → Harbor 中继”。之后，通过顶部的人物图标分享一个 6 字符房间代码。",
+  "Send this to anyone you want to watch with. They paste it in their Settings → Lart Relay. After that, share a 6-character room code from the people icon up top.":
+    "将此 URL 发给想一起观看的人。对方需将其粘贴到“设置 → Lart 中继”。之后，通过顶部的人物图标分享一个 6 字符房间代码。",
   "Open profile": "打开个人资料",
   "Connect your AniList account": "连接你的 AniList 账户",
-  "Show your AniList profile picture as your Harbor avatar.":
-    "使用你的 AniList 头像作为 Harbor 头像。",
+  "Show your AniList profile picture as your Lart avatar.":
+    "使用你的 AniList 头像作为 Lart 头像。",
   "Open Settings": "打开设置",
   "add one in settings": "在设置中添加一个",
   "New profile": "新建个人资料",
   "{n} tab requires this profile's PIN.": "{n} 个标签页需要此个人资料的 PIN。",
   Accessibility: "无障碍",
-  "Power-user knob. Inject your own CSS, JS, and HTML into Harbor. Lives in your local settings; nothing leaves your machine.":
-    "高级用户选项。将你自己的 CSS、JS 和 HTML 注入 Harbor。代码保存在本地设置中，不会离开你的设备。",
+  "Power-user knob. Inject your own CSS, JS, and HTML into Lart. Lives in your local settings; nothing leaves your machine.":
+    "高级用户选项。将你自己的 CSS、JS 和 HTML 注入 Lart。代码保存在本地设置中，不会离开你的设备。",
   Profile: "配置方案",
   "on the {themeName} theme.": "在 {themeName} 主题中。",
   "Couldn't save your layout. {error}": "无法保存布局。{error}",
@@ -127,17 +127,17 @@ const settings: Record<string, string> = {
     "要永久删除此配置方案吗？此操作无法撤销。",
   "Couldn't delete the profile. {error}": "无法删除配置方案。{error}",
   "A free Cloudflare account.": "一个免费的 Cloudflare 账户。",
-  "Open Settings, then Harbor Relay.": "打开“设置”，然后进入“Harbor 中继”。",
+  "Open Settings, then Lart Relay.": "打开“设置”，然后进入“Lart 中继”。",
   "Pick the Cloudflare account to deploy under.": "选择用于部署的 Cloudflare 账户。",
-  "Wait for the upload to finish. The relay URL gets written to {code} in Harbor settings.":
-    "等待上传完成。中继 URL 会写入 Harbor 设置中的 {code}。",
-  "In Harbor: Settings, Harbor Relay, then {kbd}. Paste the URL with {code1} as the scheme instead of {code2}.":
-    "在 Harbor 中依次进入“设置”、“Harbor 中继”，然后点击 {kbd}。粘贴 URL，并使用 {code1} 作为协议，而不是 {code2}。",
-  "Settings, Harbor Relay, then {kbd}.": "依次进入“设置”、“Harbor 中继”，然后点击 {kbd}。",
-  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Harbor users paste it into Settings, Harbor Relay, {kbd}.":
-    "如需运行公共中继，请将 {code} URL 发布到 r/Stremio 或你的社区活跃的平台。其他 Harbor 用户可将其粘贴到“设置”>“Harbor 中继”> {kbd} 中。",
-  "Cloudflare token form filled with name 'Harbor Relay' and one permission row set to Account / Workers Scripts / Edit":
-    "Cloudflare 令牌表单，名称填写为“Harbor Relay”，其中一行权限设为“账户 / Workers Scripts / 编辑”",
+  "Wait for the upload to finish. The relay URL gets written to {code} in Lart settings.":
+    "等待上传完成。中继 URL 会写入 Lart 设置中的 {code}。",
+  "In Lart: Settings, Lart Relay, then {kbd}. Paste the URL with {code1} as the scheme instead of {code2}.":
+    "在 Lart 中依次进入“设置”、“Lart 中继”，然后点击 {kbd}。粘贴 URL，并使用 {code1} 作为协议，而不是 {code2}。",
+  "Settings, Lart Relay, then {kbd}.": "依次进入“设置”、“Lart 中继”，然后点击 {kbd}。",
+  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Lart users paste it into Settings, Lart Relay, {kbd}.":
+    "如需运行公共中继，请将 {code} URL 发布到 r/Stremio 或你的社区活跃的平台。其他 Lart 用户可将其粘贴到“设置”>“Lart 中继”> {kbd} 中。",
+  "Cloudflare token form filled with name 'Lart Relay' and one permission row set to Account / Workers Scripts / Edit":
+    "Cloudflare 令牌表单，名称填写为“Lart Relay”，其中一行权限设为“账户 / Workers Scripts / 编辑”",
   "Your account hasn't picked its free {code} address yet. Cloudflare only asks the first time. Quick to set up.":
     "您的账户尚未选择免费的 {code} 地址。Cloudflare 只会在首次使用时询问，设置很快即可完成。",
   "Your color": "你的颜色",
@@ -170,13 +170,13 @@ const settings: Record<string, string> = {
     "在 Discord 个人资料中显示你正在观看的内容，并附带节目海报和实时进度条。需要运行 Discord 桌面应用。",
   "Punchier color": "更鲜艳的色彩",
   "Color & HDR": "色彩与 HDR",
-  "in Harbor settings.": "Harbor 设置中。",
-  "In Harbor: Settings, Harbor Relay, then": "在 Harbor 中，依次前往“设置”>“Harbor Relay”，然后",
-  "Settings, Harbor Relay, then": "依次前往“设置”>“Harbor Relay”，然后",
-  "URL on r/Stremio or wherever your community lives. Other Harbor users paste it into Settings, Harbor Relay,":
-    "URL 发布到 r/Stremio 或您的社区所在平台。其他 Harbor 用户可将其粘贴到“设置”>“Harbor Relay”中，",
-  "You must install this addon in your Stremio account first so Harbor can fetch its works.":
-    "必须先在 Stremio 账户中安装此插件，Harbor 才能获取其中的作品。",
+  "in Lart settings.": "Lart 设置中。",
+  "In Lart: Settings, Lart Relay, then": "在 Lart 中，依次前往“设置”>“Lart Relay”，然后",
+  "Settings, Lart Relay, then": "依次前往“设置”>“Lart Relay”，然后",
+  "URL on r/Stremio or wherever your community lives. Other Lart users paste it into Settings, Lart Relay,":
+    "URL 发布到 r/Stremio 或您的社区所在平台。其他 Lart 用户可将其粘贴到“设置”>“Lart Relay”中，",
+  "You must install this addon in your Stremio account first so Lart can fetch its works.":
+    "必须先在 Stremio 账户中安装此插件，Lart 才能获取其中的作品。",
   "No filter. Home shows every language.": "不筛选。首页显示所有语言的内容。",
   "language. Home filters to it.": "种语言。首页会按该语言筛选。",
   "Type what you want in plain language and let a model find it. Bring your own OpenRouter key.":
@@ -189,30 +189,30 @@ const settings: Record<string, string> = {
     "只显示当前个人资料的“继续观看”。每个个人资料只能看到自己的观看进度，因此与你共用此 Stremio 账号的其他个人资料无法得知你观看的内容。",
   "A subtle tvOS style light sweep across a poster when you hover it. Off by default; the card lift stays either way.":
     "鼠标悬停时，海报上会出现细腻的 tvOS 风格扫光效果。默认关闭；无论是否开启，卡片浮起效果都会保留。",
-  "Remotes are served by the desktop app. Open these settings on your computer's Harbor to get the links.":
-    "遥控器服务由桌面应用提供。请在电脑上的 Harbor 中打开这些设置以获取链接。",
+  "Remotes are served by the desktop app. Open these settings on your computer's Lart to get the links.":
+    "遥控器服务由桌面应用提供。请在电脑上的 Lart 中打开这些设置以获取链接。",
   "Settings storage": "设置存储空间",
   "Badge art packs you installed from the community store. Remove one to put its badges back to default.":
     "你从社区商店安装的徽章图包。移除某个图包后，其中的徽章会恢复默认样式。",
   "View community badge packs": "查看社区徽章图包",
-  "Use liquid glass for the search pill and row scroll arrows. The appearance settings below are shared by glass surfaces across Harbor.":
-    "为胶囊形搜索框和横栏滚动箭头使用液态玻璃效果。以下外观设置会应用于 Harbor 中的所有玻璃表面。",
+  "Use liquid glass for the search pill and row scroll arrows. The appearance settings below are shared by glass surfaces across Lart.":
+    "为胶囊形搜索框和横栏滚动箭头使用液态玻璃效果。以下外观设置会应用于 Lart 中的所有玻璃表面。",
   "Native-style hybrid bar": "原生风格混合标题栏",
-  "The operating system draws native window controls, so Harbor cannot change their appearance.":
-    "原生窗口控件由操作系统绘制，因此 Harbor 无法更改其外观。",
+  "The operating system draws native window controls, so Lart cannot change their appearance.":
+    "原生窗口控件由操作系统绘制，因此 Lart 无法更改其外观。",
   "Give to any charity below or subscribe to ElfHosted, and the badge lands on your profile.":
     "向下方任一慈善机构捐款或订阅 ElfHosted，徽章就会显示在你的个人资料中。",
   "To get a Charity badge, forward your donation receipt or invoice to":
     "要获得慈善徽章，请将捐款收据或发票转发至",
   "with your @handle in the body so we can match it to your account.":
     "并在正文中注明你的 @handle，以便我们与你的账号匹配。",
-  "Stremio Supporters get a special badge on their Harbor profile.":
-    "Stremio 支持者会在 Harbor 个人资料中获得专属徽章。",
+  "Stremio Supporters get a special badge on their Lart profile.":
+    "Stremio 支持者会在 Lart 个人资料中获得专属徽章。",
   "Support ElfHosted or Stremio, or give to any charity below, and the badge lands on your profile.":
     "支持 ElfHosted 或 Stremio，或向下方任一慈善机构捐款，徽章就会显示在你的个人资料中。",
   "Clock style": "时钟样式",
   "Uses your theme's accent color.": "使用主题的强调色。",
-  "Finish setting up Harbor": "完成 Harbor 设置",
+  "Finish setting up Lart": "完成 Lart 设置",
   "Your name and the details shown at the top of your profile.":
     "你的姓名及个人资料顶部显示的详细信息。",
   "Your avatar, banner, and how the whole profile is styled.":
@@ -221,9 +221,9 @@ const settings: Record<string, string> = {
     "选择个人资料中显示的内容及其顺序。",
   "Show a Minecraft card on your profile. Leave the username blank to hide it.":
     "在个人资料中显示 Minecraft 卡片。将用户名留空即可隐藏。",
-  "Ratings need a Harbor account": "评分需要 Harbor 账号",
-  "Your Harbor account is separate from your Stremio sign in. Create one free or sign in from Settings.":
-    "你的 Harbor 账号与 Stremio 登录账号相互独立。可免费创建账号，或前往“设置”登录。",
+  "Ratings need a Lart account": "评分需要 Lart 账号",
+  "Your Lart account is separate from your Stremio sign in. Create one free or sign in from Settings.":
+    "你的 Lart 账号与 Stremio 登录账号相互独立。可免费创建账号，或前往“设置”登录。",
   "Open account settings": "打开账号设置",
   "Your review contains language that is not allowed": "你的短评包含不允许使用的语言",
   "Choose which stats show in the row at the top of your profile":
@@ -250,7 +250,7 @@ const settings: Record<string, string> = {
   "Pick up to {max} games to show on your profile.": "最多选择 {max} 款游戏展示在个人资料中。",
   "Pick up to {max} books to show on your profile.": "最多选择 {max} 本书展示在个人资料中。",
   "Pick up to {max} artists to show on your profile.": "最多选择 {max} 位艺人展示在个人资料中。",
-  "Use your Harbor color": "使用你的 Harbor 主题色",
+  "Use your Lart color": "使用你的 Lart 主题色",
   "Transfer to another profile": "转移到其他个人资料",
   "Add your Groq API key in Settings, AI search to use this model.":
     "在“设置”中添加 Groq API 密钥，以便 AI 搜索使用此模型。",
@@ -275,7 +275,7 @@ const settings: Record<string, string> = {
   "View my profile": "查看我的个人资料",
   "Heads up: most IPTV providers cap how many streams an account can run at the same time. If other devices or players are using these credentials, close them and try again.":
     "请注意：大多数 IPTV 提供商会限制同一账号的并发播放数量。如果其他设备或播放器正在使用这些登录凭据，请将其关闭后重试。",
-  "Harbor account": "Harbor 账号",
+  "Lart account": "Lart 账号",
   "Everything here is already in your account.": "这里的所有内容都已在你的账号中。",
   "Moved 1 addon to your Stremio account. It now syncs everywhere you sign in.":
     "已将 1 个插件移至你的 Stremio 账号。现在，该插件会在你登录的所有设备上同步。",
@@ -317,8 +317,8 @@ const settings: Record<string, string> = {
   "Reset this profile to factory defaults? Your tweaks on it will be lost.":
     "要将此配置重置为出厂默认设置吗？您对此配置所做的调整将会丢失。",
   "Addon order synced to your Stremio account": "插件顺序已同步到您的 Stremio 账号",
-  "Anything you install in Harbor pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
-    "您在 Harbor 中安装的任何插件都会同步回 Stremio 账号，因此也会显示在移动端。请通过侧边栏左下角的头像登录。",
+  "Anything you install in Lart pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
+    "您在 Lart 中安装的任何插件都会同步回 Stremio 账号，因此也会显示在移动端。请通过侧边栏左下角的头像登录。",
   "Captions in your language": "您所选语言的字幕",
   "Add a TMDB key in Settings to load Arabic content.":
     "在“设置”中添加 TMDB 密钥以加载阿拉伯语内容。",
@@ -341,8 +341,8 @@ const settings: Record<string, string> = {
   "This order syncs to every Stremio app signed into this account.":
     "此顺序会同步到所有已登录此账户的 Stremio 应用。",
   "No addons are synced to this account yet.": "此账户尚未同步任何插件。",
-  "These live in Harbor on this computer and never touch your account.":
-    "这些插件仅保存在这台电脑上的 Harbor 中，绝不会同步到你的账户。",
+  "These live in Lart on this computer and never touch your account.":
+    "这些插件仅保存在这台电脑上的 Lart 中，绝不会同步到你的账户。",
   "Sign in to Stremio to organize the addons synced to your account.":
     "登录 Stremio 以整理同步到你账户的插件。",
   "Proper search across providers, foreign-language coverage.":
@@ -364,15 +364,15 @@ const settings: Record<string, string> = {
   "New hover style": "全新悬停样式",
   "Nothing matched this filter. Try another category or change your region in Settings.":
     "没有符合此筛选器的内容。请尝试其他类别，或在“设置”中更改你的地区。",
-  "Pick a display and body pairing, or upload your own font to use across Harbor.":
-    "选择一种标题与正文字体组合，或上传你自己的字体以在整个 Harbor 中使用。",
+  "Pick a display and body pairing, or upload your own font to use across Lart.":
+    "选择一种标题与正文字体组合，或上传你自己的字体以在整个 Lart 中使用。",
   "Pick a look. Every color and surface updates instantly.":
     "选择一种外观。所有颜色和界面元素都会立即更新。",
   "Picker layout": "选择器布局",
   "Poster card style": "海报卡片样式",
   "Profile details not available.": "无法获取个人资料详情。",
-  "Set your MyAnimeList profile picture as your Harbor avatar.":
-    "将你的 MyAnimeList 头像设为 Harbor 头像。",
+  "Set your MyAnimeList profile picture as your Lart avatar.":
+    "将你的 MyAnimeList 头像设为 Lart 头像。",
   "Show an “on disk” badge on cards": "在卡片上显示“本地已有”徽标",
   "Show each source's full release filename on the condensed layout. The Stremio layout already shows it.":
     "在紧凑布局中显示每个来源的完整发行文件名。Stremio 布局已默认显示。",
@@ -403,7 +403,7 @@ const settings: Record<string, string> = {
   "User-made badge packs from the community store": "来自社区商店的用户自制徽章包",
   "You earned a new badge": "你获得了一枚新徽章",
   "You earned the {name} badge": "你获得了「{name}」徽章",
-  "A Harbor account": "一个 Harbor 账号",
+  "A Lart account": "一个 Lart 账号",
   "A public profile with your stats, lists, badges, and custom styling.":
     "公开展示你的统计数据、列表、徽章和自定义样式的个人资料。",
   "Add a TMDB key in Settings to fill this page with curated series rows.":
@@ -418,7 +418,7 @@ const settings: Record<string, string> = {
   "Copy my settings to the TV": "将我的设置复制到电视",
   "Copy the settings you already tuned here onto the TV in one go. It overwrites the matching TV rows and leaves everything else alone.":
     "一次性将你已在此调好的设置复制到电视。此操作会覆盖电视端对应的设置项，其他设置保持不变。",
-  "Create a Harbor account": "创建 Harbor 账号",
+  "Create a Lart account": "创建 Lart 账号",
   "Create your account": "创建账号",
   "Custom regex badge rules": "自定义正则表达式徽章规则",
   "Deletes the Worker from your Cloudflare account. Rooms in progress end immediately.":
@@ -428,20 +428,20 @@ const settings: Record<string, string> = {
     "每种样式都有各自的布局、图标和配置，因此来回切换也不会丢失设置。",
   "Engine status and your P2P settings as JSON, ready to paste into a bug report.":
     "引擎状态和你的 P2P 设置，以 JSON 格式提供，可直接粘贴到错误报告中。",
-  "Every Harbor that announces itself on this network appears here as it answers, with the theme it is wearing.":
-    "此网络中所有广播自身信息的 Harbor 都会在响应时显示于此，并附带其当前使用的主题。",
+  "Every Lart that announces itself on this network appears here as it answers, with the theme it is wearing.":
+    "此网络中所有广播自身信息的 Lart 都会在响应时显示于此，并附带其当前使用的主题。",
   "Finish creating my account": "完成账号创建",
-  "Harbor account linked as {name}": "Harbor 账号已关联为 {name}",
-  "Harbor account signed in": "已登录 Harbor 账号",
-  "Harbor asks your addons for titles and descriptions in this language. The TV menus stay in English.":
-    "Harbor 会以此语言向你的插件请求片名和描述。电视端菜单仍为英文。",
-  "Harbor creates a Cloudflare Worker on your own free account and saves the URL.":
-    "Harbor 会在你自己的免费账号上创建 Cloudflare Worker 并保存 URL。",
-  "Harbor identity (avatar / color)": "Harbor 身份（头像/颜色）",
-  "Harbor speaks this everywhere. You can change it later in Settings.":
-    "Harbor 会在所有界面使用此语言。你可以稍后在设置中更改。",
-  "Harbor was built in English. Multi-language support is partial, so your addons usually catch what Harbor's own filters miss. If you speak another language and want to help, the source is open.":
-    "Harbor 最初以英文开发。多语言支持尚不完整，因此你的插件通常能找到 Harbor 自带筛选器漏掉的内容。如果你使用其他语言并愿意提供帮助，源代码已开放。",
+  "Lart account linked as {name}": "Lart 账号已关联为 {name}",
+  "Lart account signed in": "已登录 Lart 账号",
+  "Lart asks your addons for titles and descriptions in this language. The TV menus stay in English.":
+    "Lart 会以此语言向你的插件请求片名和描述。电视端菜单仍为英文。",
+  "Lart creates a Cloudflare Worker on your own free account and saves the URL.":
+    "Lart 会在你自己的免费账号上创建 Cloudflare Worker 并保存 URL。",
+  "Lart identity (avatar / color)": "Lart 身份（头像/颜色）",
+  "Lart speaks this everywhere. You can change it later in Settings.":
+    "Lart 会在所有界面使用此语言。你可以稍后在设置中更改。",
+  "Lart was built in English. Multi-language support is partial, so your addons usually catch what Lart's own filters miss. If you speak another language and want to help, the source is open.":
+    "Lart 最初以英文开发。多语言支持尚不完整，因此你的插件通常能找到 Lart 自带筛选器漏掉的内容。如果你使用其他语言并愿意提供帮助，源代码已开放。",
   "Home layout on the TV": "电视端首页布局",
   "Home style": "首页样式",
   "Hover style": "悬停样式",
@@ -459,8 +459,8 @@ const settings: Record<string, string> = {
   LANGUAGE: "语言",
   "Language for titles": "标题语言",
   "Let the TV keep its own theme": "让电视保留自己的主题",
-  "Linked to your Harbor account.": "已关联到你的 Harbor 账号。",
-  "No Harbor account yet": "还没有 Harbor 账号",
+  "Linked to your Lart account.": "已关联到你的 Lart 账号。",
+  "No Lart account yet": "还没有 Lart 账号",
   "No files from your computer yet. Add a folder in Settings.":
     "您的电脑上还没有文件。请在“设置”中添加文件夹。",
   "No language matches that search.": "没有与该搜索匹配的语言。",
@@ -486,8 +486,8 @@ const settings: Record<string, string> = {
   "Settings, lists and progress follow you between machines.":
     "设置、列表和进度会在不同设备间同步。",
   "Show an on disk badge on cards": "在卡片上显示“已存储到磁盘”徽章",
-  "Signing in to your Harbor account. Your profiles will appear in a moment.":
-    "正在登录你的 Harbor 账户。你的个人资料稍后就会显示。",
+  "Signing in to your Lart account. Your profiles will appear in a moment.":
+    "正在登录你的 Lart 账户。你的个人资料稍后就会显示。",
   "Skip Who's watching and always start as this profile.": "跳过“谁在观看”，始终以此个人资料启动。",
   "Sound profile": "声音配置",
   "Sound style": "声音风格",
@@ -511,16 +511,16 @@ const settings: Record<string, string> = {
     "这些设置属于个人资料，而此电脑当前未选择任何个人资料。请选择一个个人资料，电视将随之切换。",
   "This is the only way back into your account if you forget your password. It is shown once.":
     "如果忘记密码，这是找回账户的唯一方式。它只会显示一次。",
-  "This opens Harbor to devices on your Wi-Fi. You can turn it off again in Settings.":
-    "这会允许 Wi-Fi 网络中的设备访问 Harbor。你可以随时在“设置”中再次关闭。",
+  "This opens Lart to devices on your Wi-Fi. You can turn it off again in Settings.":
+    "这会允许 Wi-Fi 网络中的设备访问 Lart。你可以随时在“设置”中再次关闭。",
   "Upload a font": "上传字体",
   "When you open a profile": "打开个人资料时",
   "Who watches on the TV. The roster already syncs from your account, so add people here on the computer and they appear on the TV.":
     "在电视上观看的用户。成员名单已从你的账户同步，因此在电脑上添加用户后，他们也会出现在电视上。",
-  "You are not signed in to a Harbor account, so nothing here can reach the TV.":
-    "你尚未登录 Harbor 账号，因此此处的任何内容都无法发送到电视。",
-  "Your Harbor account": "你的 Harbor 账号",
-  "Your Harbor account is signed in on the TV.": "你的 Harbor 账号已在电视上登录。",
+  "You are not signed in to a Lart account, so nothing here can reach the TV.":
+    "你尚未登录 Lart 账号，因此此处的任何内容都无法发送到电视。",
+  "Your Lart account": "你的 Lart 账号",
+  "Your Lart account is signed in on the TV.": "你的 Lart 账号已在电视上登录。",
   "Your handle, your themes, your settings. Signed in once, waiting on the next machine you open.":
     "你的用户名、主题和设置。登录一次，即可同步至你接下来打开的设备。",
   "Your themes, lists, and profile follow you to any device.":
@@ -532,15 +532,15 @@ const settings: Record<string, string> = {
   "None of your addons returned a downloadable package for {season}. Refresh the sources or check your source settings.":
     "你的插件均未返回 {season} 的可下载资源包。请刷新来源或检查来源设置。",
   "Prove you own a real Stremio account.": "证明你拥有真实的 Stremio 账号。",
-  "Signed in to your Harbor account": "已登录你的 Harbor 账号",
+  "Signed in to your Lart account": "已登录你的 Lart 账号",
   "Source settings": "来源设置",
   "The 20-character key from when you created your account. Paste it or type each block.":
     "这是创建账号时获得的 20 个字符密钥。请粘贴密钥或逐段输入。",
   "This font did not load. Remove it and upload it again.": "此字体加载失败。请移除后重新上传。",
   "Use a different Stremio account": "使用其他 Stremio 账号",
   "Loading settings": "正在加载设置",
-  "Changing the metadata language reloads Harbor so the new language takes effect. Apply when you're done with the options above.":
-    "更改元数据语言会重新加载 Harbor，以使新语言生效。完成上方选项设置后再应用。",
+  "Changing the metadata language reloads Lart so the new language takes effect. Apply when you're done with the options above.":
+    "更改元数据语言会重新加载 Lart，以使新语言生效。完成上方选项设置后再应用。",
   "Content advisory style": "内容提示样式",
   "On shows titles in your metadata language (English by default). Off keeps titles in English.":
     "开启后，标题将以你的元数据语言显示（默认为英语）；关闭后，标题保留英语。",
@@ -560,9 +560,9 @@ const settings: Record<string, string> = {
   "Profile data is too large ({mb} MB). Remove unused custom icons or delete an old profile, then try again.":
     "配置方案数据过大（{mb} MB）。请移除未使用的自定义图标或删除旧配置方案，然后重试。",
   "My layout": "我的布局",
-  "File is not a Harbor layout profile.": "该文件不是 Harbor 布局配置方案。",
-  "Unsupported profile version ({version}). Update Harbor or use an older profile.":
-    "不支持的配置方案版本（{version}）。请更新 Harbor 或使用较旧的配置方案。",
+  "File is not a Lart layout profile.": "该文件不是 Lart 布局配置方案。",
+  "Unsupported profile version ({version}). Update Lart or use an older profile.":
+    "不支持的配置方案版本（{version}）。请更新 Lart 或使用较旧的配置方案。",
   "Profile file has no chrome config.": "配置方案文件中没有界面配置。",
   "Your theme": "你的主题",
   "New badge unlocked": "已解锁新徽章",
@@ -580,8 +580,8 @@ const settings: Record<string, string> = {
   "Tracker color": "追踪器颜色",
   "Use {color} for the line tracker": "将{color}用于行追踪器",
   "Choose a custom tracker color": "选择自定义追踪器颜色",
-  "Your Roku is set to block control requests from apps on your network, so Harbor can't reach it. This is a one-time setting on the Roku.":
-    "你的 Roku 已设置为阻止网络中应用发出的控制请求，因此 Harbor 无法访问它。此设置只需在 Roku 上更改一次。",
+  "Your Roku is set to block control requests from apps on your network, so Lart can't reach it. This is a one-time setting on the Roku.":
+    "你的 Roku 已设置为阻止网络中应用发出的控制请求，因此 Lart 无法访问它。此设置只需在 Roku 上更改一次。",
   "Open Settings, then System, then Advanced system settings.":
     "依次打开“设置”、“系统”和“高级系统设置”。",
   "Show off. [b]bold[/b], [color=gold]color[/color], [youtube]link[/youtube], [img]https://...[/img] and more.":
@@ -589,8 +589,8 @@ const settings: Record<string, string> = {
   "Custom profile": "自定义个人资料",
   "Any HTML layout: headings, paragraphs, lists, tables, sections, divs.":
     "任意 HTML 布局：标题、段落、列表、表格、区块、div。",
-  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Harbor. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
-    "你的 HTML 和 CSS 会在沙盒框架内渲染，与 Harbor 的其余部分完全隔离。请将其编写成一个独立的微型页面。字体和页面背景可在上方单独设置，并应用于整个个人资料页。",
+  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Lart. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
+    "你的 HTML 和 CSS 会在沙盒框架内渲染，与 Lart 的其余部分完全隔离。请将其编写成一个独立的微型页面。字体和页面背景可在上方单独设置，并应用于整个个人资料页。",
   "Profile font": "个人资料字体",
   "Page background color": "页面背景颜色",
   "Customize profile": "自定义个人资料",
@@ -616,12 +616,12 @@ const settings: Record<string, string> = {
     "这是你唯一一次看到它。如果忘记密码，此代码是重新登录账号的唯一途径。请将它妥善保存在安全的位置。",
   "Theme author. Your published themes are tied to this account.":
     "主题作者。你发布的主题将与此账号关联。",
-  "Set a Harbor profile picture first": "请先设置 Harbor 头像",
-  "Show your Harbor profile picture on the community": "在社区中显示你的 Harbor 头像",
+  "Set a Lart profile picture first": "请先设置 Lart 头像",
+  "Show your Lart profile picture on the community": "在社区中显示你的 Lart 头像",
   "Your badge pack": "你的徽章包",
   "Badge pack": "徽章包",
-  "Want a badge that moves? Drop in a GIF up to 8 MB. Harbor shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
-    "想让徽章动起来？添加不超过 8 MB 的 GIF 即可。Harbor 会将其缩小并转换为轻量的动画格式，确保画面清晰、加载迅速。建议控制体积并设为循环播放。",
+  "Want a badge that moves? Drop in a GIF up to 8 MB. Lart shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
+    "想让徽章动起来？添加不超过 8 MB 的 GIF 即可。Lart 会将其缩小并转换为轻量的动画格式，确保画面清晰、加载迅速。建议控制体积并设为循环播放。",
   "How badge packs work": "徽章包的工作方式",
   "Create a free account to publish. No email required.": "创建免费账号即可发布，无需邮箱。",
   "Open {name} profile": "打开 {name} 的个人资料",
@@ -642,13 +642,13 @@ const settings: Record<string, string> = {
   "Style {selector} and the posters on the right update live. Hit Insert starter for a head start.":
     "为 {selector} 编写样式，右侧海报会实时更新。点击“插入起始模板”即可快速开始。",
   "Font tokens": "字体令牌",
-  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Harbor feature, so your chrome never goes stale when Harbor adds menu items.":
-    "可从 onclick 处理程序或主题 JS 中调用。这些 API 稳定且安全：每个 API 都会调用 Harbor 的实际功能，因此即使 Harbor 添加菜单项，你的界面也不会过时。",
+  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Lart feature, so your chrome never goes stale when Lart adds menu items.":
+    "可从 onclick 处理程序或主题 JS 中调用。这些 API 稳定且安全：每个 API 都会调用 Lart 的实际功能，因此即使 Lart 添加菜单项，你的界面也不会过时。",
   "Set on <html>. Use them to scope styles to a specific layout/card/button choice.":
     "在 <html> 上设置。可用它们将样式限定到特定的布局、卡片或按钮选项。",
-  "Dispatched on window. Listen from your theme JS to react to Harbor's lifecycle.":
-    "在 window 上派发。可在主题 JS 中监听，以响应 Harbor 的生命周期。",
-  "Harbor theme": "Harbor 主题",
+  "Dispatched on window. Listen from your theme JS to react to Lart's lifecycle.":
+    "在 window 上派发。可在主题 JS 中监听，以响应 Lart 的生命周期。",
+  "Lart theme": "Lart 主题",
   "Remove font": "移除字体",
   "Name your theme": "为主题命名",
   Layout: "布局",

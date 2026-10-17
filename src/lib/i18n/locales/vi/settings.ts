@@ -2,17 +2,17 @@ const settings: Record<string, string> = {
   "Smooth scrolling": "Cuộn mượt",
   "Eases mouse-wheel scrolling instead of jumping line by line. Turn off if you prefer an instant response or notice any lag.":
     "Giúp thao tác cuộn bằng con lăn chuột mượt hơn thay vì nhảy từng dòng. Hãy tắt nếu bạn muốn phản hồi tức thì hoặc thấy bị giật.",
-  "Sign in to Harbor": "Đăng nhập Harbor",
-  "Create Harbor account": "Tạo tài khoản Harbor",
+  "Sign in to Lart": "Đăng nhập Lart",
+  "Create Lart account": "Tạo tài khoản Lart",
   "Claim your handle": "Đăng ký tên định danh",
   "Reset password (recovery key)": "Đặt lại mật khẩu (khóa khôi phục)",
-  "Sign out of Harbor account": "Đăng xuất khỏi tài khoản Harbor",
+  "Sign out of Lart account": "Đăng xuất khỏi tài khoản Lart",
   "Verified status": "Trạng thái xác minh",
   "Settings for this profile (shared or independent)":
     "Cài đặt cho hồ sơ này (dùng chung hoặc độc lập)",
   "PIN-locked profiles": "Hồ sơ khóa bằng PIN",
-  "Home style (Harbor curated / Classic Stremio)":
-    "Kiểu trang chủ (Harbor tuyển chọn / Stremio cổ điển)",
+  "Home style (Lart curated / Classic Stremio)":
+    "Kiểu trang chủ (Lart tuyển chọn / Stremio cổ điển)",
   "When the latest episode ends (Hide / Timer)": "Khi tập mới nhất kết thúc (Ẩn / Hẹn giờ)",
   "Remove shows once you're caught up": "Xóa phim bộ khi bạn đã xem hết tập mới nhất",
   "AI search provider (OpenRouter / Groq)": "Nhà cung cấp tìm kiếm AI (OpenRouter / Groq)",
@@ -103,8 +103,8 @@ const settings: Record<string, string> = {
     "Sau một lúc ở một trang trình chiếu, trailer của nội dung nổi bật sẽ phát không tiếng trong nền. Tốn nhiều băng thông hơn.",
   "After the current show's episodes, Next flows into your queue. Off keeps Next/Previous within the current show only.":
     "Sau các tập của phim bộ hiện tại, nút Tiếp sẽ chuyển sang hàng chờ. Khi tắt, Tiếp/Trước chỉ chuyển trong phim bộ hiện tại.",
-  "After you pick a source, show a subtitle picker so you can set the exact track and language before the video starts. Off by default, Harbor keeps picking one for you automatically.":
-    "Sau khi bạn chọn nguồn, hiển thị trình chọn phụ đề để đặt chính xác phụ đề và ngôn ngữ trước khi video bắt đầu. Tính năng này mặc định tắt; Harbor sẽ tiếp tục tự động chọn cho bạn.",
+  "After you pick a source, show a subtitle picker so you can set the exact track and language before the video starts. Off by default, Lart keeps picking one for you automatically.":
+    "Sau khi bạn chọn nguồn, hiển thị trình chọn phụ đề để đặt chính xác phụ đề và ngôn ngữ trước khi video bắt đầu. Tính năng này mặc định tắt; Lart sẽ tiếp tục tự động chọn cho bạn.",
   Aired: "Đã phát sóng",
   "All badges back to default": "Đã đặt lại tất cả huy hiệu về mặc định",
   "All custom rules removed": "Đã xóa tất cả quy tắc tùy chỉnh",
@@ -163,8 +163,8 @@ const settings: Record<string, string> = {
   "Episode 2": "Tập 2",
   "Episode 3": "Tập 3",
   "Episode 4": "Tập 4",
-  "Every format badge Harbor can show on streams. Click one to swap its art, hide it, or reset it. Changes apply everywhere badges appear.":
-    "Tất cả huy hiệu định dạng mà Harbor có thể hiển thị trên các luồng phát. Nhấp vào một huy hiệu để đổi hình, ẩn hoặc đặt lại. Thay đổi áp dụng ở mọi nơi huy hiệu xuất hiện.",
+  "Every format badge Lart can show on streams. Click one to swap its art, hide it, or reset it. Changes apply everywhere badges appear.":
+    "Tất cả huy hiệu định dạng mà Lart có thể hiển thị trên các luồng phát. Nhấp vào một huy hiệu để đổi hình, ẩn hoặc đặt lại. Thay đổi áp dụng ở mọi nơi huy hiệu xuất hiện.",
   "Export artwork": "Xuất hình ảnh",
   "Export my setup": "Xuất thiết lập của tôi",
   "Extra large": "Cực lớn",
@@ -188,7 +188,7 @@ const settings: Record<string, string> = {
   "Groq API key (gsk-...)": "Khóa API Groq (gsk-...)",
   "Group Refresh on the left beside Back instead of the far right of the header.":
     "Đặt Làm mới ở bên trái cạnh Quay lại, thay vì ngoài cùng bên phải của tiêu đề.",
-  "Harbor will not start the P2P engine, contact trackers, or run DHT. Use this if you only want debrid and direct links. Turn off to re-enable P2P streaming.": "Harbor sẽ không khởi động công cụ P2P, liên hệ tracker hoặc chạy DHT. Dùng tùy chọn này nếu bạn chỉ muốn liên kết debrid và trực tiếp. Tắt tùy chọn để bật lại phát trực tuyến qua P2P.",
+  "Lart will not start the P2P engine, contact trackers, or run DHT. Use this if you only want debrid and direct links. Turn off to re-enable P2P streaming.": "Lart sẽ không khởi động công cụ P2P, liên hệ tracker hoặc chạy DHT. Dùng tùy chọn này nếu bạn chỉ muốn liên kết debrid và trực tiếp. Tắt tùy chọn để bật lại phát trực tuyến qua P2P.",
   "Hide badge": "Ẩn huy hiệu",
   "Hide manga": "Ẩn manga",
   "Hide pack instructions": "Ẩn hướng dẫn về gói",
@@ -215,8 +215,8 @@ const settings: Record<string, string> = {
   Logo: "Logo",
   "Logo & app icon": "Logo và biểu tượng ứng dụng",
   MB: "MB",
-  "Make Harbor yours: swap the sidebar logo and the window/taskbar icon.":
-    "Cá nhân hóa Harbor: đổi logo thanh bên và biểu tượng cửa sổ/thanh tác vụ.",
+  "Make Lart yours: swap the sidebar logo and the window/taskbar icon.":
+    "Cá nhân hóa Lart: đổi logo thanh bên và biểu tượng cửa sổ/thanh tác vụ.",
   "Make your own": "Tự tạo",
   "Max scores per card": "Số điểm tối đa trên mỗi thẻ",
   "Minimum file size": "Kích thước tệp tối thiểu",
@@ -226,8 +226,8 @@ const settings: Record<string, string> = {
     "Di chuyển tiêu điểm bằng bàn phím như dùng điều khiển TV.",
   NEW: "MỚI",
   "Name (e.g. REMUX)": "Tên (ví dụ: REMUX)",
-  "Native to Harbor. No RPDB or ratings addon needed.":
-    "Tích hợp sẵn trong Harbor. Không cần RPDB hoặc tiện ích bổ sung xếp hạng.",
+  "Native to Lart. No RPDB or ratings addon needed.":
+    "Tích hợp sẵn trong Lart. Không cần RPDB hoặc tiện ích bổ sung xếp hạng.",
   "No badges match this title.": "Không có huy hiệu nào phù hợp với tựa phim này.",
   "No custom rules yet. Add one below, or install a pack to bring some in.":
     "Chưa có quy tắc tùy chỉnh. Hãy thêm một quy tắc bên dưới hoặc cài đặt một gói để bổ sung quy tắc.",
@@ -235,15 +235,15 @@ const settings: Record<string, string> = {
     "Không phát hiện vấn đề. Thư viện anime của bạn không có lỗi.",
   "No rules match your search.": "Không có quy tắc nào khớp với tìm kiếm.",
   "Nothing usable in that file": "Không có nội dung nào dùng được trong tệp đó",
-  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Harbor's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
-    "Gói cộng đồng cài bằng một cú nhấp. Bộ quy tắc cung cấp đầy đủ các huy hiệu cùng cơ chế đối sánh riêng; bản ánh xạ lại hình ảnh chỉ thay hình trên các huy hiệu tích hợp của Harbor. Mọi liên kết badges.json được chia sẻ trên Discord Nuvio hoặc Reddit cũng có thể nhập tại đây.",
+  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Lart's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
+    "Gói cộng đồng cài bằng một cú nhấp. Bộ quy tắc cung cấp đầy đủ các huy hiệu cùng cơ chế đối sánh riêng; bản ánh xạ lại hình ảnh chỉ thay hình trên các huy hiệu tích hợp của Lart. Mọi liên kết badges.json được chia sẻ trên Discord Nuvio hoặc Reddit cũng có thể nhập tại đây.",
   "Optional overlays that appear over the video.": "Các lớp phủ tùy chọn xuất hiện trên video.",
   "Or just zip up images": "Hoặc chỉ cần nén ảnh thành tệp zip",
   "Or try one of ours": "Hoặc thử một gói của chúng tôi",
   "Packs & import": "Gói & nhập",
   "Paste an image URL (png, webp, svg)": "Dán URL hình ảnh (png, webp, svg)",
-  "Pick a source once and Harbor keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. For anime it locks the whole series to that release.":
-    "Chỉ cần chọn nguồn một lần, Harbor sẽ tiếp tục phát các tập còn lại của mùa đó từ cùng một bản phát hành mà không cần chọn lại. Hoạt động tốt nhất với gói debrid theo mùa. Với anime, toàn bộ phim bộ sẽ được khóa vào bản phát hành đó.",
+  "Pick a source once and Lart keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. For anime it locks the whole series to that release.":
+    "Chỉ cần chọn nguồn một lần, Lart sẽ tiếp tục phát các tập còn lại của mùa đó từ cùng một bản phát hành mà không cần chọn lại. Hoạt động tốt nhất với gói debrid theo mùa. Với anime, toàn bộ phim bộ sẽ được khóa vào bản phát hành đó.",
   "Play a short sound when changing the player volume. Off by default.":
     "Phát âm thanh ngắn khi thay đổi âm lượng trình phát. Mặc định tắt.",
   "Play trailers in the hero": "Phát trailer trong khu vực nổi bật",
@@ -273,8 +273,8 @@ const settings: Record<string, string> = {
   "Score badges on cards": "Huy hiệu điểm trên thẻ phim",
   "Score position": "Vị trí điểm",
   "Search rules by name or pattern…": "Tìm quy tắc theo tên hoặc mẫu…",
-  "Serves this exact install of Harbor as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer. You can also use the phone remote to control playback and cast to another device on this machine.":
-    "Cung cấp chính bản cài đặt Harbor này dưới dạng ứng dụng web trên mạng của bạn. Mở ứng dụng trong trình duyệt trên điện thoại, máy tính xách tay hoặc TV, đăng nhập tại đó và nội dung sẽ được truyền phát qua máy tính này. Bạn cũng có thể dùng điều khiển trên điện thoại để điều khiển phát và truyền đến một thiết bị khác trên máy này.",
+  "Serves this exact install of Lart as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer. You can also use the phone remote to control playback and cast to another device on this machine.":
+    "Cung cấp chính bản cài đặt Lart này dưới dạng ứng dụng web trên mạng của bạn. Mở ứng dụng trong trình duyệt trên điện thoại, máy tính xách tay hoặc TV, đăng nhập tại đó và nội dung sẽ được truyền phát qua máy tính này. Bạn cũng có thể dùng điều khiển trên điện thoại để điều khiển phát và truyền đến một thiết bị khác trên máy này.",
   "Set active": "Đặt làm đang hoạt động",
   "Settings for this profile": "Cài đặt cho hồ sơ này",
   "Setup copied to clipboard as JSON": "Đã sao chép thiết lập vào bảng nhớ tạm dưới dạng JSON",
@@ -324,8 +324,8 @@ const settings: Record<string, string> = {
     "Nhãn điểm nhỏ hiển thị trên các thẻ áp phích trong các hàng và lưới.",
   "The ratings row on a title's detail page, next to runtime and genre.":
     "Hàng điểm đánh giá trên trang chi tiết nội dung, bên cạnh thời lượng và thể loại.",
-  "The resolution Harbor downloads for each image when you export a title's metadata next to the file on disk.":
-    "Độ phân giải hình ảnh mà Harbor tải xuống khi bạn xuất siêu dữ liệu của nội dung cạnh tệp trên ổ đĩa.",
+  "The resolution Lart downloads for each image when you export a title's metadata next to the file on disk.":
+    "Độ phân giải hình ảnh mà Lart tải xuống khi bạn xuất siêu dữ liệu của nội dung cạnh tệp trên ổ đĩa.",
   "The window and taskbar icon updates right away. The installed shortcut refreshes on the next update.":
     "Biểu tượng cửa sổ và thanh tác vụ được cập nhật ngay. Lối tắt đã cài đặt sẽ được làm mới trong lần cập nhật tiếp theo.",
   "These badges are drawn on posters as you browse. RPDB, in the keys above, is a separate option that bakes scores into the poster image itself.":
@@ -338,8 +338,8 @@ const settings: Record<string, string> = {
   "Turn off to hide the sync badge during playback.": "Tắt để ẩn huy hiệu đồng bộ trong khi phát.",
   "Type what you want in plain language and let a model find it. Bring your own API key.":
     "Nhập nội dung bạn muốn bằng ngôn ngữ tự nhiên và để mô hình tìm kiếm. Dùng khóa API của riêng bạn.",
-  "Updating separated settings per profile, which may have reset your theme and keys. Harbor still has your old setup saved. Bring it back on this profile, then reload.":
-    "Đang cập nhật để tách riêng Cài đặt theo từng hồ sơ, việc này có thể đã đặt lại giao diện và các khóa của bạn. Harbor vẫn lưu thiết lập cũ. Hãy khôi phục thiết lập đó cho hồ sơ này rồi tải lại.",
+  "Updating separated settings per profile, which may have reset your theme and keys. Lart still has your old setup saved. Bring it back on this profile, then reload.":
+    "Đang cập nhật để tách riêng Cài đặt theo từng hồ sơ, việc này có thể đã đặt lại giao diện và các khóa của bạn. Lart vẫn lưu thiết lập cũ. Hãy khôi phục thiết lập đó cho hồ sơ này rồi tải lại.",
   Upload: "Tải lên",
   "Upload image": "Tải hình ảnh lên",
   "Upload multiple images": "Tải nhiều hình ảnh lên",
@@ -347,8 +347,8 @@ const settings: Record<string, string> = {
     "Dùng các phím mũi tên và Select/Space để chuyển tiêu điểm giữa các nút điều khiển trình phát. Tắt tùy chọn này để dùng phím mũi tên để tua và Space để phát/tạm dừng.",
   "Use in Nuvio": "Dùng trong Nuvio",
   "Use live web context": "Dùng ngữ cảnh web trực tiếp",
-  "Use the arrow keys and Enter to move focus through Harbor. Turn this off to keep arrow keys free and disable focus navigation everywhere.":
-    "Dùng các phím mũi tên và Enter để di chuyển tiêu điểm trong Harbor. Tắt tùy chọn này để không dùng phím mũi tên cho điều hướng và vô hiệu hóa điều hướng bằng tiêu điểm ở mọi nơi.",
+  "Use the arrow keys and Enter to move focus through Lart. Turn this off to keep arrow keys free and disable focus navigation everywhere.":
+    "Dùng các phím mũi tên và Enter để di chuyển tiêu điểm trong Lart. Tắt tùy chọn này để không dùng phím mũi tên cho điều hướng và vô hiệu hóa điều hướng bằng tiêu điểm ở mọi nơi.",
   "Use your own image as the app icon": "Dùng hình ảnh của bạn làm biểu tượng ứng dụng",
   "Watchlist bookmark": "Dấu trang danh sách xem",
   "When off, a P2P transfer stops the moment you close or switch the stream, so nothing keeps downloading in the background. Turn on to let it keep going after you leave; manage or pause those from the Downloads tab.": "Khi tắt, lượt truyền P2P sẽ dừng ngay khi bạn đóng hoặc chuyển luồng, nên không có nội dung nào tiếp tục tải xuống trong nền. Bật để nó tiếp tục sau khi bạn rời đi; quản lý hoặc tạm dừng chúng trong thẻ Tải xuống.",
@@ -369,7 +369,7 @@ const settings: Record<string, string> = {
   "jina_...": "jina_...",
   skipped: "đã bỏ qua",
   "{a} badges remapped, {b} rules added": "Đã ánh xạ lại {a} huy hiệu, thêm {b} quy tắc",
-  "{n} Harbor icons": "{n} biểu tượng Harbor",
+  "{n} Lart icons": "{n} biểu tượng Lart",
   "{n} badges customized": "Đã tùy chỉnh {n} huy hiệu",
   "{n} enabled": "Đã bật {n}",
   "{n} rules · {m} on": "{n} quy tắc · {m} đang bật",
@@ -390,7 +390,7 @@ const settings: Record<string, string> = {
   "Region & language": "Khu vực & ngôn ngữ",
   "English (default)": "Tiếng Anh (mặc định)",
   "Apply {language}": "Áp dụng {language}",
-  "Switch Harbor to {language}?": "Chuyển Harbor sang {language}?",
+  "Switch Lart to {language}?": "Chuyển Lart sang {language}?",
   "Just change region": "Chỉ đổi khu vực",
   "Translate titles": "Dịch tiêu đề",
   "If disabled, titles remain in their original language.":
@@ -405,18 +405,18 @@ const settings: Record<string, string> = {
     "Tính năng dịch áp phích bị tắt vì đang sử dụng dịch vụ áp phích tùy chỉnh.",
   "Metadata providers": "Nhà cung cấp siêu dữ liệu",
   "Content filters": "Bộ lọc nội dung",
-  "Sets the language of Harbor's own interface: menus, buttons, and labels. Arabic switches the layout to right to left. This is separate from subtitle and metadata languages below.":
-    "Đặt ngôn ngữ cho giao diện của Harbor: menu, nút và nhãn. Tiếng Ả Rập chuyển bố cục sang từ phải sang trái. Cài đặt này tách biệt với ngôn ngữ phụ đề và siêu dữ liệu bên dưới.",
+  "Sets the language of Lart's own interface: menus, buttons, and labels. Arabic switches the layout to right to left. This is separate from subtitle and metadata languages below.":
+    "Đặt ngôn ngữ cho giao diện của Lart: menu, nút và nhãn. Tiếng Ả Rập chuyển bố cục sang từ phải sang trái. Cài đặt này tách biệt với ngôn ngữ phụ đề và siêu dữ liệu bên dưới.",
   "Switch the menus and buttons to your language. Arabic flips the layout to right to left.":
     "Chuyển menu và nút sang ngôn ngữ của bạn. Tiếng Ả Rập đảo bố cục sang từ phải sang trái.",
   "This sets the interface, metadata, subtitle, and audio languages to match.":
     "Cài đặt này đồng bộ ngôn ngữ giao diện, siêu dữ liệu, phụ đề và âm thanh.",
   "Titles, overviews, and taglines from TMDB display in this language when a translation exists. Needs a TMDB key.":
     "Tiêu đề, phần tổng quan và câu giới thiệu từ TMDB sẽ hiển thị bằng ngôn ngữ này khi có bản dịch. Cần khóa TMDB.",
-  "Used for streaming availability and the Now Playing release window. Pick a country and Harbor can match the interface, metadata, and subtitle languages to it.":
-    "Dùng cho tình trạng có thể phát trực tuyến và khung thời gian phát hành Đang chiếu. Chọn một quốc gia để Harbor đồng bộ ngôn ngữ giao diện, siêu dữ liệu và phụ đề tương ứng.",
-  "A free TMDB key is highly recommended. It unlocks the full Harbor experience. The rest are optional, and Cinemeta works out of the box without any.":
-    "Rất nên dùng khóa TMDB miễn phí. Khóa này mở khóa đầy đủ trải nghiệm Harbor. Các khóa còn lại là tùy chọn, còn Cinemeta hoạt động ngay mà không cần khóa nào.",
+  "Used for streaming availability and the Now Playing release window. Pick a country and Lart can match the interface, metadata, and subtitle languages to it.":
+    "Dùng cho tình trạng có thể phát trực tuyến và khung thời gian phát hành Đang chiếu. Chọn một quốc gia để Lart đồng bộ ngôn ngữ giao diện, siêu dữ liệu và phụ đề tương ứng.",
+  "A free TMDB key is highly recommended. It unlocks the full Lart experience. The rest are optional, and Cinemeta works out of the box without any.":
+    "Rất nên dùng khóa TMDB miễn phí. Khóa này mở khóa đầy đủ trải nghiệm Lart. Các khóa còn lại là tùy chọn, còn Cinemeta hoạt động ngay mà không cần khóa nào.",
   "TMDB asks for an app URL when you create the key. Put any URL at all, like https://harbor.app. The only thing you need back is the API key.":
     "TMDB yêu cầu URL ứng dụng khi bạn tạo khóa. Nhập URL bất kỳ, chẳng hạn https://harbor.app. Thứ duy nhất bạn cần nhận lại là khóa API.",
   "RPDB already paints scores onto the poster. Toggle to override.":
@@ -464,8 +464,8 @@ const settings: Record<string, string> = {
   "Hides anime from the Home Continue Watching row. It still appears in the Anime tab's own Continue Watching.":
     "Ẩn anime khỏi hàng Xem tiếp trên Trang chủ. Nội dung này vẫn xuất hiện trong hàng Xem tiếp riêng của thẻ Anime.",
   "Keep anime in the Anime room only": "Chỉ giữ anime trong khu vực Anime",
-  "Harbor still finds and loads subtitles so they're one click away in the player, it just won't turn them on automatically.":
-    "Harbor vẫn tìm và tải phụ đề để bạn có thể bật bằng một lần nhấp trong trình phát, nhưng sẽ không tự động bật.",
+  "Lart still finds and loads subtitles so they're one click away in the player, it just won't turn them on automatically.":
+    "Lart vẫn tìm và tải phụ đề để bạn có thể bật bằng một lần nhấp trong trình phát, nhưng sẽ không tự động bật.",
   "When the file ships its own subtitle track, keep it selected instead of switching to a downloaded one. Embedded tracks are usually the best synced.":
     "Khi tệp có sẵn rãnh phụ đề, giữ rãnh đó được chọn thay vì chuyển sang phụ đề đã tải xuống. Các rãnh nhúng thường đồng bộ tốt nhất.",
   "When the audio already matches your subtitle language, pick a forced track (foreign dialogue and signs only) instead of full subtitles. If the file has no forced track, subtitles stay off.":
@@ -476,24 +476,24 @@ const settings: Record<string, string> = {
     "Ẩn các luồng không phát hiện được ngôn ngữ ưu tiên. Bản phát hành đa âm thanh vẫn được tính là khớp.",
   "Streams in these languages rank first. Toggle below to drop everything else.":
     "Các luồng bằng những ngôn ngữ này được xếp trước. Bật tùy chọn bên dưới để loại bỏ mọi ngôn ngữ khác.",
-  "When playback starts, Harbor automatically finds and loads a subtitle in one of these languages, so you never have to search by hand. The first available match wins, so put your main language first.":
-    "Khi bắt đầu phát, Harbor tự động tìm và tải phụ đề bằng một trong các ngôn ngữ này để bạn không phải tìm thủ công. Kết quả khớp đầu tiên sẽ được chọn, vì vậy hãy đặt ngôn ngữ chính lên đầu.",
+  "When playback starts, Lart automatically finds and loads a subtitle in one of these languages, so you never have to search by hand. The first available match wins, so put your main language first.":
+    "Khi bắt đầu phát, Lart tự động tìm và tải phụ đề bằng một trong các ngôn ngữ này để bạn không phải tìm thủ công. Kết quả khớp đầu tiên sẽ được chọn, vì vậy hãy đặt ngôn ngữ chính lên đầu.",
   "Never auto-select tracks containing": "Không bao giờ tự động chọn rãnh có chứa",
   "commentary, descriptive": "bình luận, mô tả",
   "Comma-separated words. Audio or subtitle tracks whose name matches any of these are skipped during automatic selection. You can still pick them by hand in the player.":
     "Các từ phân tách bằng dấu phẩy. Rãnh âm thanh hoặc phụ đề có tên khớp với bất kỳ từ nào trong số này sẽ bị bỏ qua khi chọn tự động. Bạn vẫn có thể chọn thủ công trong trình phát.",
-  "When a release ships multiple audio tracks, Harbor selects the first match from this list.":
-    "Khi một bản phát hành có nhiều rãnh âm thanh, Harbor sẽ chọn kết quả khớp đầu tiên trong danh sách này.",
+  "When a release ships multiple audio tracks, Lart selects the first match from this list.":
+    "Khi một bản phát hành có nhiều rãnh âm thanh, Lart sẽ chọn kết quả khớp đầu tiên trong danh sách này.",
   "By default, addon rails that duplicate the built-in ones (Trending, Popular, Top Rated, etc.) are merged so you don't see the same row twice. Turn this on to show every one, duplicates and all.":
     "Theo mặc định, các hàng của tiện ích bổ sung trùng với hàng tích hợp (Thịnh hành, Phổ biến, Đánh giá cao nhất, v.v.) sẽ được hợp nhất để bạn không thấy cùng một hàng hai lần. Bật tùy chọn này để hiện tất cả, kể cả các mục trùng lặp.",
-  "When you back out of a title, Harbor saves a frame so the Continue Watching card looks like the spot you left. Tune how long they stick around, or wipe them all.":
-    "Khi bạn thoát khỏi một nội dung, Harbor lưu một khung hình để thẻ Xem tiếp hiển thị đúng vị trí bạn đã dừng. Hãy điều chỉnh thời gian lưu hoặc xóa tất cả.",
+  "When you back out of a title, Lart saves a frame so the Continue Watching card looks like the spot you left. Tune how long they stick around, or wipe them all.":
+    "Khi bạn thoát khỏi một nội dung, Lart lưu một khung hình để thẻ Xem tiếp hiển thị đúng vị trí bạn đã dừng. Hãy điều chỉnh thời gian lưu hoặc xóa tất cả.",
   "When you finish an episode, the Home Continue Watching card moves on to the next episode instead of sitting at 0 minutes left.":
     "Khi bạn xem xong một tập, thẻ Xem tiếp trên Trang chủ sẽ chuyển sang tập tiếp theo thay vì dừng ở mốc còn 0 phút.",
   "Keep the Library Watchlist tab limited to titles you added in Stremio. Turn this off to also include anything Stremio auto-added when you pressed play.":
     "Giới hạn thẻ Danh sách xem trong Thư viện ở những nội dung bạn đã thêm vào Stremio. Tắt tùy chọn này để bao gồm cả nội dung Stremio tự động thêm khi bạn nhấn phát.",
-  "Heads up: Harbor was built in English. Multi-language support is partial, so your addons usually catch what Harbor's own filters miss. If you speak another language and want to help fill the gaps, the source is open.":
-    "Lưu ý: Harbor được xây dựng bằng tiếng Anh. Hỗ trợ đa ngôn ngữ vẫn còn hạn chế, vì vậy các tiện ích bổ sung thường tìm được những nội dung mà bộ lọc của Harbor bỏ sót. Nếu bạn sử dụng ngôn ngữ khác và muốn góp phần hoàn thiện, mã nguồn được công khai.",
+  "Heads up: Lart was built in English. Multi-language support is partial, so your addons usually catch what Lart's own filters miss. If you speak another language and want to help fill the gaps, the source is open.":
+    "Lưu ý: Lart được xây dựng bằng tiếng Anh. Hỗ trợ đa ngôn ngữ vẫn còn hạn chế, vì vậy các tiện ích bổ sung thường tìm được những nội dung mà bộ lọc của Lart bỏ sót. Nếu bạn sử dụng ngôn ngữ khác và muốn góp phần hoàn thiện, mã nguồn được công khai.",
   "Contribute on GitHub": "Đóng góp trên GitHub",
   "Stremio account": "Tài khoản Stremio",
   Custom: "Tùy chỉnh",
@@ -512,26 +512,26 @@ const settings: Record<string, string> = {
   Simkl: "Simkl",
   "Connect your Simkl account to mark what you finish as watched and sync your plan-to-watch list across apps.":
     "Kết nối tài khoản Simkl để đánh dấu nội dung đã xem xong và đồng bộ danh sách dự định xem giữa các ứng dụng.",
-  "Harbor Relay": "Harbor Relay",
+  "Lart Relay": "Lart Relay",
   "A Cloudflare Worker on your own account that hosts your Watch Together rooms.":
     "Một Cloudflare Worker trên tài khoản của bạn để lưu trữ các phòng Xem cùng nhau.",
   "Streaming sources": "Nguồn phát trực tuyến",
-  "How Harbor finds and resolves playable streams. Debrid keys and addon installs live here.":
-    "Cách Harbor tìm và phân giải các luồng có thể phát. Khóa debrid và tiện ích bổ sung đã cài đặt nằm ở đây.",
+  "How Lart finds and resolves playable streams. Debrid keys and addon installs live here.":
+    "Cách Lart tìm và phân giải các luồng có thể phát. Khóa debrid và tiện ích bổ sung đã cài đặt nằm ở đây.",
   "Which audio and subtitle languages rank first in stream lists.":
     "Ngôn ngữ âm thanh và phụ đề nào được ưu tiên trong danh sách luồng.",
   Hotkeys: "Phím tắt",
-  "Every shortcut Harbor responds to. Click a binding to rebind it.":
-    "Tất cả phím tắt mà Harbor hỗ trợ. Nhấp vào một tổ hợp phím để gán lại.",
+  "Every shortcut Lart responds to. Click a binding to rebind it.":
+    "Tất cả phím tắt mà Lart hỗ trợ. Nhấp vào một tổ hợp phím để gán lại.",
   "Theme & appearance": "Chủ đề & giao diện",
-  "Color presets, custom backgrounds, and the font pair Harbor renders in.":
-    "Bảng màu có sẵn, hình nền tùy chỉnh và cặp phông chữ Harbor sử dụng.",
+  "Color presets, custom backgrounds, and the font pair Lart renders in.":
+    "Bảng màu có sẵn, hình nền tùy chỉnh và cặp phông chữ Lart sử dụng.",
   Webhooks: "Webhook",
   "Push upcoming releases to Discord or Telegram. Pick which calendars feed the notifications.":
     "Gửi thông báo về các nội dung sắp phát hành đến Discord hoặc Telegram. Chọn lịch dùng để tạo thông báo.",
   "Report a bug": "Báo lỗi",
-  "Send a bug report straight to the Harbor team. Screenshots and screen recordings welcome.":
-    "Gửi báo cáo lỗi trực tiếp đến đội ngũ Harbor. Khuyến khích đính kèm ảnh chụp hoặc bản ghi màn hình.",
+  "Send a bug report straight to the Lart team. Screenshots and screen recordings welcome.":
+    "Gửi báo cáo lỗi trực tiếp đến đội ngũ Lart. Khuyến khích đính kèm ảnh chụp hoặc bản ghi màn hình.",
   "Show Rotten Tomatoes score on cards": "Hiện điểm Rotten Tomatoes trên thẻ",
   "Fresh tomatoes for 60% and up, splat for anything under.":
     "Cà chua tươi cho điểm từ 60% trở lên, cà chua vỡ cho điểm thấp hơn.",
@@ -557,31 +557,31 @@ const settings: Record<string, string> = {
     "Đã lưu {count} khung hình. Xóa sẽ tạo lại vào lần xem tiếp theo.",
   "Diagnostics, manual overrides, things most users never need.":
     "Chẩn đoán, ghi đè thủ công và những tùy chọn hầu hết người dùng không bao giờ cần.",
-  "Watch Together rooms are routed through Harbor's hosted relay.":
-    "Các phòng Xem cùng nhau được định tuyến qua relay do Harbor lưu trữ.",
+  "Watch Together rooms are routed through Lart's hosted relay.":
+    "Các phòng Xem cùng nhau được định tuyến qua relay do Lart lưu trữ.",
   Streaming: "Phát trực tuyến",
   Playback: "Phát",
   Appearance: "Giao diện",
   Notifications: "Thông báo",
   Help: "Trợ giúp",
-  "When you back out of a title, Harbor saves a frame so the Continue Watching card looks like the spot you left.":
-    "Khi bạn thoát khỏi một tựa phim, Harbor lưu lại một khung hình để thẻ Xem tiếp hiển thị đúng đoạn bạn đã dừng.",
+  "When you back out of a title, Lart saves a frame so the Continue Watching card looks like the spot you left.":
+    "Khi bạn thoát khỏi một tựa phim, Lart lưu lại một khung hình để thẻ Xem tiếp hiển thị đúng đoạn bạn đã dừng.",
   "Used for streaming availability and the Now Playing release window.":
     "Dùng để xác định khả năng xem trực tuyến và khoảng thời gian phát hành của mục Đang chiếu.",
   "MyAnimeList scores for anime titles.": "Điểm MyAnimeList cho các tựa anime.",
   "Hero carousel, Top 10, Trending, In Theaters, per-service rails.":
     "Băng chuyền nổi bật, Top 10, Thịnh hành, Đang chiếu tại rạp, các hàng theo từng dịch vụ.",
   Updates: "Cập nhật",
-  "Harbor checks harbor.site for new versions and installs them in place.":
-    "Harbor kiểm tra phiên bản mới trên harbor.site và cài đặt trực tiếp.",
+  "Lart checks harbor.site for new versions and installs them in place.":
+    "Lart kiểm tra phiên bản mới trên harbor.site và cài đặt trực tiếp.",
   "Backup & restore": "Sao lưu và khôi phục",
-  "Export your entire Harbor setup to a single file, then restore it on a new computer or keep it as a backup.":
-    "Xuất toàn bộ thiết lập Harbor thành một tệp duy nhất, sau đó khôi phục trên máy tính mới hoặc lưu làm bản sao lưu.",
+  "Export your entire Lart setup to a single file, then restore it on a new computer or keep it as a backup.":
+    "Xuất toàn bộ thiết lập Lart thành một tệp duy nhất, sau đó khôi phục trên máy tính mới hoặc lưu làm bản sao lưu.",
   Privacy: "Quyền riêng tư",
   "System tray": "Khay hệ thống",
   "Stremio install links": "Liên kết cài đặt Stremio",
-  "Harbor catches stremio:// install links so the configure-and-install flow stays inside the app.":
-    "Harbor tiếp nhận các liên kết cài đặt stremio:// để toàn bộ quy trình cấu hình và cài đặt diễn ra trong ứng dụng.",
+  "Lart catches stremio:// install links so the configure-and-install flow stays inside the app.":
+    "Lart tiếp nhận các liên kết cài đặt stremio:// để toàn bộ quy trình cấu hình và cài đặt diễn ra trong ứng dụng.",
   "Discord Rich Presence": "Discord Rich Presence",
   "Let your Discord friends see what you are watching, with the show poster and a live progress bar.":
     "Cho bạn bè trên Discord biết bạn đang xem gì, kèm áp phích phim và thanh tiến trình trực tiếp.",
@@ -600,7 +600,7 @@ const settings: Record<string, string> = {
   "Reveal the show or movie artwork.": "Hiện hình ảnh của phim bộ hoặc phim điện ảnh.",
   Legal: "Pháp lý",
   "Made with": "Được tạo nên bằng",
-  "by Harbor contributors": "bởi những người đóng góp cho Harbor",
+  "by Lart contributors": "bởi những người đóng góp cho Lart",
   "Know more": "Tìm hiểu thêm",
   "A special thank you to the team at Stremio-Addons. Please consider supporting them.":
     "Đặc biệt cảm ơn đội ngũ Stremio-Addons. Hãy cân nhắc ủng hộ họ.",
@@ -620,8 +620,8 @@ const settings: Record<string, string> = {
   "The little 4K · HDR · codec · audio chips that ride along each stream in the play picker.":
     "Các nhãn nhỏ 4K · HDR · codec · âm thanh đi kèm mỗi luồng trong trình chọn phát.",
   "Synced addons": "Tiện ích bổ sung đã đồng bộ",
-  "How aggressively Harbor rejects shady or mismatched streams before showing them in the picker.":
-    "Mức độ Harbor loại bỏ các luồng đáng ngờ hoặc không khớp trước khi hiển thị trong trình chọn.",
+  "How aggressively Lart rejects shady or mismatched streams before showing them in the picker.":
+    "Mức độ Lart loại bỏ các luồng đáng ngờ hoặc không khớp trước khi hiển thị trong trình chọn.",
   Strict: "Nghiêm ngặt",
   "Default. Rejects size outliers, suspicious extensions, year/episode mismatches, season packs (for episode requests), trailers, and likely cams.":
     "Mặc định. Loại bỏ tệp có kích thước bất thường, phần mở rộng đáng ngờ, sai năm/tập, gói cả mùa (khi yêu cầu một tập), trailer và bản quay rạp khả nghi.",
@@ -631,13 +631,13 @@ const settings: Record<string, string> = {
   "No filtering. Every stream every addon returns shows up, including obvious junk. You'll be on your own.":
     "Không lọc. Mọi luồng do mọi tiện ích bổ sung trả về đều xuất hiện, kể cả nội dung rác rõ ràng. Bạn phải tự cân nhắc.",
   Condensed: "Thu gọn",
-  "Default. Top pick at the top, quality tiles, and an All-Sources drawer. Harbor scores and ranks results.":
-    "Mặc định. Lựa chọn hàng đầu ở trên cùng, các ô chất lượng và ngăn Tất cả nguồn. Harbor chấm điểm và xếp hạng kết quả.",
+  "Default. Top pick at the top, quality tiles, and an All-Sources drawer. Lart scores and ranks results.":
+    "Mặc định. Lựa chọn hàng đầu ở trên cùng, các ô chất lượng và ngăn Tất cả nguồn. Lart chấm điểm và xếp hạng kết quả.",
   "Flat list of sources grouped by addon, with a filter dropdown. No re-ranking. Closest match to the Stremio app's stream picker.":
     "Danh sách nguồn dạng phẳng, nhóm theo tiện ích bổ sung, kèm menu bộ lọc thả xuống. Không xếp hạng lại. Gần giống nhất với trình chọn luồng của ứng dụng Stremio.",
-  "Harbor ranking": "Xếp hạng của Harbor",
-  "Default. Harbor parses and scores every source and surfaces the best quality first.":
-    "Mặc định. Harbor phân tích và chấm điểm mọi nguồn, rồi đưa chất lượng tốt nhất lên đầu.",
+  "Lart ranking": "Xếp hạng của Lart",
+  "Default. Lart parses and scores every source and surfaces the best quality first.":
+    "Mặc định. Lart phân tích và chấm điểm mọi nguồn, rồi đưa chất lượng tốt nhất lên đầu.",
   "Addon order": "Thứ tự tiện ích bổ sung",
   "Show each addon's results in the order it returned them, grouped by your addon list. Matches the Stremio and Vidi apps.":
     "Hiển thị kết quả của từng tiện ích bổ sung theo đúng thứ tự trả về, nhóm theo danh sách tiện ích bổ sung của bạn. Giống các ứng dụng Stremio và Vidi.",
@@ -650,8 +650,8 @@ const settings: Record<string, string> = {
   "Searches and streams directly off Easynews. No debrid needed. Just your Easynews login.":
     "Tìm kiếm và phát trực tiếp từ Easynews. Không cần dịch vụ debrid. Chỉ cần thông tin đăng nhập Easynews.",
   Expired: "Đã hết hạn",
-  "Harbor pulls your addon collection from Stremio. Manage individual addons in Streaming sources.":
-    "Harbor lấy bộ sưu tập tiện ích bổ sung của bạn từ Stremio. Quản lý từng tiện ích bổ sung trong Nguồn phát trực tuyến.",
+  "Lart pulls your addon collection from Stremio. Manage individual addons in Streaming sources.":
+    "Lart lấy bộ sưu tập tiện ích bổ sung của bạn từ Stremio. Quản lý từng tiện ích bổ sung trong Nguồn phát trực tuyến.",
   "A specific summary lands faster than a long paragraph. Steps to reproduce help most of all.":
     "Bản tóm tắt cụ thể dễ được chú ý hơn một đoạn văn dài. Các bước tái hiện lỗi là hữu ích nhất.",
   Summary: "Tóm tắt",
@@ -667,7 +667,7 @@ const settings: Record<string, string> = {
   Theme: "Giao diện",
   "Theme Library": "Thư viện giao diện",
   "Your themes": "Giao diện của bạn",
-  "Ships with Harbor. Always available.": "Đi kèm Harbor. Luôn có sẵn.",
+  "Ships with Lart. Always available.": "Đi kèm Lart. Luôn có sẵn.",
   "Themes you imported or built.": "Giao diện bạn đã nhập hoặc tạo.",
   "Build a new theme": "Tạo giao diện mới",
   "Copy theme": "Sao chép giao diện",
@@ -678,7 +678,7 @@ const settings: Record<string, string> = {
   "The quick brown fox jumps over the lazy dog":
     "Con cáo nâu nhanh nhẹn nhảy qua chú chó lười biếng",
   "Default. Humanist serif, warm sans.": "Mặc định. Serif nhân văn, sans ấm áp.",
-  "Classic. Was Harbor's original pair.": "Cổ điển. Cặp phông chữ ban đầu của Harbor.",
+  "Classic. Was Lart's original pair.": "Cổ điển. Cặp phông chữ ban đầu của Lart.",
   "Clean modern. Sans across the board.": "Hiện đại, gọn gàng. Dùng sans toàn bộ.",
   "Editorial. Headline-strong display.": "Phong cách biên tập. Kiểu hiển thị nổi bật cho tiêu đề.",
   "Technical. IBM's open family.": "Kỹ thuật. Họ phông chữ mở của IBM.",
@@ -723,8 +723,8 @@ const settings: Record<string, string> = {
   "Pick a layout, set colors and fonts, save it to your library. No code needed.":
     "Chọn bố cục, đặt màu sắc và phông chữ, rồi lưu vào thư viện. Không cần viết mã.",
   "Open studio": "Mở studio",
-  "Every variable, selector, hook, and recipe for building custom Harbor themes.":
-    "Toàn bộ biến, bộ chọn, hook và công thức để tạo giao diện Harbor tùy chỉnh.",
+  "Every variable, selector, hook, and recipe for building custom Lart themes.":
+    "Toàn bộ biến, bộ chọn, hook và công thức để tạo giao diện Lart tùy chỉnh.",
   "Make your own in the Theme Studio, or import one a friend shared.":
     "Tự tạo trong Theme Studio hoặc nhập giao diện do bạn bè chia sẻ.",
   "Open library": "Mở thư viện",
@@ -735,13 +735,13 @@ const settings: Record<string, string> = {
   "Got a theme a friend shared? Drop it in.": "Có giao diện do bạn bè chia sẻ? Thả vào đây.",
   "Choose file": "Chọn tệp",
   "Window title bar": "Thanh tiêu đề cửa sổ",
-  "Use your operating system's native title bar and window buttons instead of Harbor's built-in ones. Handy if the in-app buttons ever feel out of reach, like during playback.":
-    "Dùng thanh tiêu đề và các nút cửa sổ gốc của hệ điều hành thay cho các nút tích hợp của Harbor. Hữu ích khi các nút trong ứng dụng khó thao tác, chẳng hạn lúc đang phát.",
+  "Use your operating system's native title bar and window buttons instead of Lart's built-in ones. Handy if the in-app buttons ever feel out of reach, like during playback.":
+    "Dùng thanh tiêu đề và các nút cửa sổ gốc của hệ điều hành thay cho các nút tích hợp của Lart. Hữu ích khi các nút trong ứng dụng khó thao tác, chẳng hạn lúc đang phát.",
   "{name} imported to your library": "Đã nhập {name} vào thư viện",
   "Click any binding to rebind it. Press Esc while capturing to cancel. Letters ignore Shift (so K and Shift+K trigger the same action).":
     "Nhấp vào phím tắt bất kỳ để gán lại. Nhấn Esc trong khi ghi nhận để hủy. Các chữ cái bỏ qua Shift (vì vậy K và Shift+K kích hoạt cùng một thao tác).",
   Global: "Toàn cục",
-  "Anywhere in Harbor.": "Ở mọi nơi trong Harbor.",
+  "Anywhere in Lart.": "Ở mọi nơi trong Lart.",
   NAVIGATION: "ĐIỀU HƯỚNG",
   PLAYBACK: "PHÁT",
   VOLUME: "ÂM LƯỢNG",
@@ -753,12 +753,12 @@ const settings: Record<string, string> = {
   "Focus search": "Chuyển đến ô tìm kiếm",
   "Jump to the top-bar search from anywhere.":
     "Chuyển đến ô tìm kiếm trên thanh trên cùng từ bất kỳ đâu.",
-  "Open Harbor's settings outside playback.": "Mở Cài đặt của Harbor khi không phát.",
+  "Open Lart's settings outside playback.": "Mở Cài đặt của Lart khi không phát.",
   "Your face in Watch Together rooms, sessions, and chat. Sits on top of your Stremio account.":
     "Ảnh đại diện của bạn trong các phòng, phiên và cuộc trò chuyện Xem cùng nhau. Được hiển thị trên tài khoản Stremio của bạn.",
-  "Use my AniList avatar as my Harbor avatar": "Dùng ảnh đại diện AniList làm ảnh đại diện Harbor",
-  "Use my Trakt avatar as my Harbor avatar": "Dùng ảnh đại diện Trakt làm ảnh đại diện Harbor",
-  "Use my Simkl avatar as my Harbor avatar": "Dùng ảnh đại diện Simkl làm ảnh đại diện Harbor",
+  "Use my AniList avatar as my Lart avatar": "Dùng ảnh đại diện AniList làm ảnh đại diện Lart",
+  "Use my Trakt avatar as my Lart avatar": "Dùng ảnh đại diện Trakt làm ảnh đại diện Lart",
+  "Use my Simkl avatar as my Lart avatar": "Dùng ảnh đại diện Simkl làm ảnh đại diện Lart",
   "Not signed in": "Chưa đăng nhập",
   "addon synced": "đã đồng bộ tiện ích bổ sung",
   "addons synced": "đã đồng bộ các tiện ích bổ sung",
@@ -785,8 +785,8 @@ const settings: Record<string, string> = {
   "URL is saved and ready to share.": "URL đã được lưu và sẵn sàng chia sẻ.",
   "Your relay URL": "URL relay của bạn",
   "Copied. Paste it to your friend.": "Đã sao chép. Hãy gửi cho bạn bè.",
-  "Send this to anyone you want to watch with. They paste it in their Settings → Harbor Relay. After that, share a 6-character room code from the people icon up top.":
-    "Gửi URL này cho bất kỳ ai bạn muốn xem cùng. Họ dán URL vào Cài đặt → Harbor Relay. Sau đó, chia sẻ mã phòng gồm 6 ký tự từ biểu tượng mọi người ở phía trên.",
+  "Send this to anyone you want to watch with. They paste it in their Settings → Lart Relay. After that, share a 6-character room code from the people icon up top.":
+    "Gửi URL này cho bất kỳ ai bạn muốn xem cùng. Họ dán URL vào Cài đặt → Lart Relay. Sau đó, chia sẻ mã phòng gồm 6 ký tự từ biểu tượng mọi người ở phía trên.",
   "One last thing on Cloudflare's side": "Còn một bước cuối trên Cloudflare",
   "Click the button below to open Cloudflare's Workers page.":
     "Nhấp vào nút bên dưới để mở trang Workers của Cloudflare.",
@@ -800,12 +800,12 @@ const settings: Record<string, string> = {
   "Connect your Trakt account": "Kết nối tài khoản Trakt",
   "Connect Trakt": "Kết nối Trakt",
   "About Trakt": "Giới thiệu về Trakt",
-  "Harbor will scrobble your playback to Trakt and sync your watchlist.":
-    "Harbor sẽ ghi nhận hoạt động phát của bạn trên Trakt và đồng bộ danh sách xem.",
+  "Lart will scrobble your playback to Trakt and sync your watchlist.":
+    "Lart sẽ ghi nhận hoạt động phát của bạn trên Trakt và đồng bộ danh sách xem.",
   Authorized: "Đã cấp quyền",
   "Open profile": "Mở hồ sơ",
-  "Wear your Trakt profile picture across Harbor instead of the default.":
-    "Dùng ảnh hồ sơ Trakt của bạn trên Harbor thay cho ảnh mặc định.",
+  "Wear your Trakt profile picture across Lart instead of the default.":
+    "Dùng ảnh hồ sơ Trakt của bạn trên Lart thay cho ảnh mặc định.",
   "Disconnect from Trakt": "Ngắt kết nối Trakt",
   "Disconnect Trakt? Scrobbles and syncs will stop until you reconnect.":
     "Ngắt kết nối Trakt? Việc ghi nhận hoạt động xem và đồng bộ sẽ dừng cho đến khi bạn kết nối lại.",
@@ -822,24 +822,24 @@ const settings: Record<string, string> = {
   "Connect your Simkl account": "Kết nối tài khoản Simkl",
   "Connect Simkl": "Kết nối Simkl",
   "About Simkl": "Giới thiệu về Simkl",
-  "Harbor will mark what you finish as watched on Simkl and sync your plan-to-watch list.":
-    "Harbor sẽ đánh dấu nội dung bạn xem xong là đã xem trên Simkl và đồng bộ danh sách dự định xem.",
+  "Lart will mark what you finish as watched on Simkl and sync your plan-to-watch list.":
+    "Lart sẽ đánh dấu nội dung bạn xem xong là đã xem trên Simkl và đồng bộ danh sách dự định xem.",
   "Authorized on this device": "Đã cấp quyền trên thiết bị này",
-  "Wear your Simkl profile picture across Harbor instead of the default.":
-    "Dùng ảnh hồ sơ Simkl của bạn trên Harbor thay cho ảnh mặc định.",
+  "Wear your Simkl profile picture across Lart instead of the default.":
+    "Dùng ảnh hồ sơ Simkl của bạn trên Lart thay cho ảnh mặc định.",
   "Disconnect from Simkl": "Ngắt kết nối Simkl",
   "Disconnect Simkl? Syncing will stop until you reconnect.":
     "Ngắt kết nối Simkl? Việc đồng bộ sẽ dừng cho đến khi bạn kết nối lại.",
   "Connect your AniList account": "Kết nối tài khoản AniList",
   "Connect AniList": "Kết nối AniList",
   "About AniList": "Giới thiệu về AniList",
-  "Harbor shows your AniList lists on the Anime page and keeps your progress in sync.":
-    "Harbor hiển thị các danh sách AniList của bạn trên trang Anime và đồng bộ tiến độ xem.",
+  "Lart shows your AniList lists on the Anime page and keeps your progress in sync.":
+    "Lart hiển thị các danh sách AniList của bạn trên trang Anime và đồng bộ tiến độ xem.",
   "Sync watch progress": "Đồng bộ tiến độ xem",
   "Finishing an anime episode updates your AniList progress. Forward only: it never lowers a count you already have.":
     "Khi xem xong một tập anime, tiến độ AniList của bạn sẽ được cập nhật. Chỉ tăng tiến độ: số tập hiện có sẽ không bao giờ bị giảm.",
-  "Show your AniList profile picture as your Harbor avatar.":
-    "Dùng ảnh hồ sơ AniList làm ảnh đại diện Harbor của bạn.",
+  "Show your AniList profile picture as your Lart avatar.":
+    "Dùng ảnh hồ sơ AniList làm ảnh đại diện Lart của bạn.",
   "Disconnect from AniList": "Ngắt kết nối AniList",
   "Discord webhook URL": "URL webhook Discord",
   Sources: "Nguồn",
@@ -870,8 +870,8 @@ const settings: Record<string, string> = {
     "Thêm URL Discord hoặc Telegram ở trên trước khi tạo quy tắc.",
   "No automations yet. Hit New rule to wire one up.":
     "Chưa có quy trình tự động nào. Nhấn Quy tắc mới để thiết lập.",
-  "Discord posts a message to a channel whenever Harbor pings it. Takes about a minute to set up.":
-    "Discord đăng tin nhắn lên một kênh mỗi khi nhận được tín hiệu từ Harbor. Chỉ mất khoảng một phút để thiết lập.",
+  "Discord posts a message to a channel whenever Lart pings it. Takes about a minute to set up.":
+    "Discord đăng tin nhắn lên một kênh mỗi khi nhận được tín hiệu từ Lart. Chỉ mất khoảng một phút để thiết lập.",
   "Open the Discord server where you want notifications to land.":
     "Mở máy chủ Discord mà bạn muốn nhận thông báo.",
   "Edit Channel": "Chỉnh sửa kênh",
@@ -895,8 +895,8 @@ const settings: Record<string, string> = {
   "Open Settings": "Mở Cài đặt",
   "Open Library settings": "Mở Cài đặt thư viện",
   "add one in settings": "thêm trong Cài đặt",
-  "Using AIOStreams or another aggregator addon? Its own sorting and filtering happen inside the addon before Harbor ever sees the results, then Harbor applies the stream filter and result order above on top. If results look thinner than expected, keep one side permissive: either relax the addon's internal filters or set Harbor's stream filter to Balanced or Off.":
-    "Bạn đang dùng AIOStreams hoặc tiện ích bổ sung tổng hợp khác? Việc sắp xếp và lọc riêng sẽ diễn ra trong tiện ích bổ sung trước khi Harbor nhận kết quả, sau đó Harbor tiếp tục áp dụng bộ lọc luồng phát và thứ tự kết quả ở trên. Nếu kết quả ít hơn dự kiến, hãy để một bên thoáng hơn: nới lỏng bộ lọc nội bộ của tiện ích bổ sung hoặc đặt bộ lọc luồng phát của Harbor thành Cân bằng hoặc Tắt.",
+  "Using AIOStreams or another aggregator addon? Its own sorting and filtering happen inside the addon before Lart ever sees the results, then Lart applies the stream filter and result order above on top. If results look thinner than expected, keep one side permissive: either relax the addon's internal filters or set Lart's stream filter to Balanced or Off.":
+    "Bạn đang dùng AIOStreams hoặc tiện ích bổ sung tổng hợp khác? Việc sắp xếp và lọc riêng sẽ diễn ra trong tiện ích bổ sung trước khi Lart nhận kết quả, sau đó Lart tiếp tục áp dụng bộ lọc luồng phát và thứ tự kết quả ở trên. Nếu kết quả ít hơn dự kiến, hãy để một bên thoáng hơn: nới lỏng bộ lọc nội bộ của tiện ích bổ sung hoặc đặt bộ lọc luồng phát của Lart thành Cân bằng hoặc Tắt.",
   "Easynews+": "Easynews+",
   "{n} services need attention": "{n} dịch vụ cần được xử lý",
   "Health for {n} services below": "Tình trạng của {n} dịch vụ bên dưới",
@@ -909,7 +909,7 @@ const settings: Record<string, string> = {
   "Last synced {n}s ago.": "Đồng bộ lần cuối cách đây {n} giây.",
   "Show {n} more addons": "Hiển thị thêm {n} tiện ích bổ sung",
   "All addons ({n})": "Tất cả tiện ích bổ sung ({n})",
-  "Harbor identity": "Danh tính Harbor",
+  "Lart identity": "Danh tính Lart",
   "New profile": "Hồ sơ mới",
   "Upload photo": "Tải ảnh lên",
   Confirm: "Xác nhận",
@@ -964,8 +964,8 @@ const settings: Record<string, string> = {
   "Night mode gently compresses loud moments for late-night watching. Profiles take effect when the next track loads and stack with the normalizer.":
     "Chế độ ban đêm nén nhẹ những đoạn âm thanh lớn để xem khuya. Cấu hình có hiệu lực khi tải bản âm thanh tiếp theo và được kết hợp với bộ chuẩn hóa.",
   "Skip intros": "Bỏ qua phần mở đầu",
-  "Harbor finds intro and credits timing from AniSkip, TheIntroDB, and the file's own chapters, then shows a Skip button at the right moment.":
-    "Harbor lấy thời điểm phần mở đầu và danh đề từ AniSkip, TheIntroDB cùng các chương trong tệp, rồi hiện nút Bỏ qua đúng lúc.",
+  "Lart finds intro and credits timing from AniSkip, TheIntroDB, and the file's own chapters, then shows a Skip button at the right moment.":
+    "Lart lấy thời điểm phần mở đầu và danh đề từ AniSkip, TheIntroDB cùng các chương trong tệp, rồi hiện nút Bỏ qua đúng lúc.",
   "Timing sources": "Nguồn dữ liệu thời điểm",
   "TheIntroDB · intro and credits timing": "TheIntroDB · thời điểm phần mở đầu và danh đề",
   "Paste your TheIntroDB API key": "Dán khóa API TheIntroDB của bạn",
@@ -982,15 +982,15 @@ const settings: Record<string, string> = {
   "1 min": "1 phút",
   "1.5 min": "1,5 phút",
   "2 min": "2 phút",
-  "Where Harbor saves videos when you hit Download in the player. Pick any folder, including one on a different drive.":
-    "Vị trí Harbor lưu video khi bạn nhấn Tải xuống trong trình phát. Chọn thư mục bất kỳ, kể cả trên ổ đĩa khác.",
+  "Where Lart saves videos when you hit Download in the player. Pick any folder, including one on a different drive.":
+    "Vị trí Lart lưu video khi bạn nhấn Tải xuống trong trình phát. Chọn thư mục bất kỳ, kể cả trên ổ đĩa khác.",
   HTML5: "HTML5",
   mpv: "mpv",
   "Anime4K upscaling": "Nâng cấp độ phân giải bằng Anime4K",
   Flat_Style: "Flat_Style",
   Background: "Nền",
-  "{name} will be removed from Harbor. Anything you've set to use it will fall back to Inter.":
-    "{name} sẽ bị xóa khỏi Harbor. Mọi mục được đặt để sử dụng phông chữ này sẽ chuyển về Inter.",
+  "{name} will be removed from Lart. Anything you've set to use it will fall back to Inter.":
+    "{name} sẽ bị xóa khỏi Lart. Mọi mục được đặt để sử dụng phông chữ này sẽ chuyển về Inter.",
   "Player & quality": "Trình phát và chất lượng",
   "Pick the playback engine and which quality chips show up on cards.":
     "Chọn công cụ phát và các nhãn chất lượng hiển thị trên thẻ.",
@@ -998,13 +998,13 @@ const settings: Record<string, string> = {
   "Not running": "Chưa chạy",
   "Start server": "Khởi động máy chủ",
   "Your streaming server address": "Địa chỉ máy chủ phát trực tuyến của bạn",
-  "Harbor runs a small streaming server right on this computer. This is where it lives. To stream from this machine on another device, copy the Wi-Fi address and paste it into Remote streaming server in Harbor over there.":
-    "Harbor chạy một máy chủ phát trực tuyến nhỏ ngay trên máy tính này. Đây là địa chỉ của máy chủ. Để phát từ máy này trên thiết bị khác, hãy sao chép địa chỉ Wi-Fi rồi dán vào Máy chủ phát trực tuyến từ xa trong Harbor trên thiết bị đó.",
+  "Lart runs a small streaming server right on this computer. This is where it lives. To stream from this machine on another device, copy the Wi-Fi address and paste it into Remote streaming server in Lart over there.":
+    "Lart chạy một máy chủ phát trực tuyến nhỏ ngay trên máy tính này. Đây là địa chỉ của máy chủ. Để phát từ máy này trên thiết bị khác, hãy sao chép địa chỉ Wi-Fi rồi dán vào Máy chủ phát trực tuyến từ xa trong Lart trên thiết bị đó.",
   "On this computer": "Trên máy tính này",
   "From other devices on your Wi-Fi": "Từ các thiết bị khác trên Wi-Fi của bạn",
-  "Harbor in your browser": "Harbor trong trình duyệt",
-  "Serves this exact install of Harbor as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer.":
-    "Cung cấp chính bản cài đặt Harbor này dưới dạng ứng dụng web trên mạng của bạn. Mở ứng dụng trong trình duyệt trên điện thoại, máy tính xách tay hoặc TV, đăng nhập tại đó và nội dung sẽ được phát qua máy tính này.",
+  "Lart in your browser": "Lart trong trình duyệt",
+  "Serves this exact install of Lart as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer.":
+    "Cung cấp chính bản cài đặt Lart này dưới dạng ứng dụng web trên mạng của bạn. Mở ứng dụng trong trình duyệt trên điện thoại, máy tính xách tay hoặc TV, đăng nhập tại đó và nội dung sẽ được phát qua máy tính này.",
   "From any browser on your Wi-Fi": "Từ mọi trình duyệt trên Wi-Fi của bạn",
   "Couldn't start on port {WEB_PORT}. Another app may be using it; toggle off and on to retry.":
     "Không thể khởi động trên cổng {WEB_PORT}. Có thể một ứng dụng khác đang sử dụng cổng này; hãy tắt rồi bật lại để thử lại.",
@@ -1019,10 +1019,10 @@ const settings: Record<string, string> = {
   "Injected into a fixed-position layer above the app (pointer-events disabled by default). Wrap in a div with pointer-events:auto to make it interactive.":
     "Được chèn vào một lớp có vị trí cố định phía trên ứng dụng (pointer-events mặc định bị tắt). Bọc trong div có pointer-events:auto để cho phép tương tác.",
   "Custom code": "Mã tùy chỉnh",
-  "Power-user knob. Inject your own CSS, JS, and HTML into Harbor. Lives in your local settings; nothing leaves your machine.":
-    "Tùy chọn dành cho người dùng nâng cao. Chèn CSS, JS và HTML của riêng bạn vào Harbor. Mã được lưu trong cài đặt cục bộ và không rời khỏi máy của bạn.",
-  "You're modding your own client. Custom JS has full access to your Harbor session. Only paste code you wrote or fully trust.":
-    "Bạn đang tự sửa đổi ứng dụng khách của mình. JS tùy chỉnh có toàn quyền truy cập vào phiên Harbor của bạn. Chỉ dán mã do bạn viết hoặc hoàn toàn tin cậy.",
+  "Power-user knob. Inject your own CSS, JS, and HTML into Lart. Lives in your local settings; nothing leaves your machine.":
+    "Tùy chọn dành cho người dùng nâng cao. Chèn CSS, JS và HTML của riêng bạn vào Lart. Mã được lưu trong cài đặt cục bộ và không rời khỏi máy của bạn.",
+  "You're modding your own client. Custom JS has full access to your Lart session. Only paste code you wrote or fully trust.":
+    "Bạn đang tự sửa đổi ứng dụng khách của mình. JS tùy chỉnh có toàn quyền truy cập vào phiên Lart của bạn. Chỉ dán mã do bạn viết hoặc hoàn toàn tin cậy.",
   "{n} chars": "{n} ký tự",
   "Player layout": "Bố cục trình phát",
   "Pick a theme, then rearrange every button in the player chrome. Hide what you never use, promote what you do.":
@@ -1034,7 +1034,7 @@ const settings: Record<string, string> = {
   hidden: "ẩn",
   "on the {themeName} theme.": "trên giao diện {themeName}.",
   "Edit player layout": "Chỉnh sửa bố cục trình phát",
-  "Harbor's native player chrome.": "Thanh điều khiển trình phát gốc của Harbor.",
+  "Lart's native player chrome.": "Thanh điều khiển trình phát gốc của Lart.",
   Stremio: "Stremio",
   "Familiar Stremio button order.": "Thứ tự nút quen thuộc của Stremio.",
   "Confirm full reset": "Xác nhận đặt lại toàn bộ",
@@ -1076,11 +1076,11 @@ const settings: Record<string, string> = {
   "Back to relay": "Quay lại relay",
   Documentation: "Tài liệu",
   "Self-host": "Tự lưu trữ",
-  "Run your own Harbor Relay": "Chạy Harbor Relay của riêng bạn",
-  "Two paths: Harbor handles the deploy for you, or you do it yourself with wrangler.":
-    "Có hai cách: để Harbor triển khai cho bạn hoặc tự triển khai bằng wrangler.",
-  "The Harbor relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Harbor server.":
-    "Harbor relay là một Cloudflare Worker lưu trữ các phòng WebSocket cho Xem cùng nhau. Mỗi người dùng chạy relay riêng. Không có máy chủ Harbor trung tâm.",
+  "Run your own Lart Relay": "Chạy Lart Relay của riêng bạn",
+  "Two paths: Lart handles the deploy for you, or you do it yourself with wrangler.":
+    "Có hai cách: để Lart triển khai cho bạn hoặc tự triển khai bằng wrangler.",
+  "The Lart relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Lart server.":
+    "Lart relay là một Cloudflare Worker lưu trữ các phòng WebSocket cho Xem cùng nhau. Mỗi người dùng chạy relay riêng. Không có máy chủ Lart trung tâm.",
   "Source: {code}. About 200 lines of JavaScript, no dependencies. Read it before deploying if you want to know what runs.":
     "Mã nguồn: {code}. Khoảng 200 dòng JavaScript, không có phần phụ thuộc. Hãy đọc trước khi triển khai nếu muốn biết mã nào sẽ chạy.",
   Requirements: "Yêu cầu",
@@ -1088,30 +1088,30 @@ const settings: Record<string, string> = {
   "About two minutes for the auto-deploy path.": "Khoảng hai phút nếu triển khai tự động.",
   "For the manual path: {code} 20+ and {code} CLI.":
     "Nếu triển khai thủ công: {code} 20+ và CLI {code}.",
-  "Auto-deploy from Harbor": "Tự động triển khai từ Harbor",
-  "Easiest path. Harbor uploads the worker, creates the Durable Object namespace, and stores the resulting URL.":
-    "Cách dễ nhất. Harbor tải worker lên, tạo không gian tên Durable Object và lưu URL nhận được.",
-  "Open Settings, then Harbor Relay.": "Mở Cài đặt, rồi chọn Harbor Relay.",
+  "Auto-deploy from Lart": "Tự động triển khai từ Lart",
+  "Easiest path. Lart uploads the worker, creates the Durable Object namespace, and stores the resulting URL.":
+    "Cách dễ nhất. Lart tải worker lên, tạo không gian tên Durable Object và lưu URL nhận được.",
+  "Open Settings, then Lart Relay.": "Mở Cài đặt, rồi chọn Lart Relay.",
   "Click {kbd}.": "Nhấp vào {kbd}.",
-  "Generate a Cloudflare API token with {code1} and {code2} permissions at {code3}. Paste it into Harbor.":
-    "Tạo token Cloudflare API có quyền {code1} và {code2} tại {code3}. Dán token vào Harbor.",
+  "Generate a Cloudflare API token with {code1} and {code2} permissions at {code3}. Paste it into Lart.":
+    "Tạo token Cloudflare API có quyền {code1} và {code2} tại {code3}. Dán token vào Lart.",
   "Pick the Cloudflare account to deploy under.": "Chọn tài khoản Cloudflare để triển khai.",
-  "Wait for the upload to finish. The relay URL gets written to {code} in Harbor settings.":
-    "Chờ tải lên hoàn tất. URL relay sẽ được ghi vào {code} trong phần cài đặt Harbor.",
+  "Wait for the upload to finish. The relay URL gets written to {code} in Lart settings.":
+    "Chờ tải lên hoàn tất. URL relay sẽ được ghi vào {code} trong phần cài đặt Lart.",
   "Manual deploy with wrangler": "Triển khai thủ công bằng wrangler",
   "For users who want to deploy themselves or already have a wrangler workflow.":
     "Dành cho người dùng muốn tự triển khai hoặc đã có quy trình làm việc với wrangler.",
   "Install wrangler and authenticate:": "Cài đặt wrangler và xác thực:",
-  "Save the worker source. Copy {code1} from the Harbor repo into a new directory as {code2}.":
-    "Lưu mã nguồn worker. Sao chép {code1} từ kho mã Harbor vào một thư mục mới dưới tên {code2}.",
+  "Save the worker source. Copy {code1} from the Lart repo into a new directory as {code2}.":
+    "Lưu mã nguồn worker. Sao chép {code1} từ kho mã Lart vào một thư mục mới dưới tên {code2}.",
   "Save this {code} next to it:": "Lưu {code} này bên cạnh tệp đó:",
   "Deploy:": "Triển khai:",
   "Note the URL Cloudflare returns. It looks like {code}.":
     "Ghi lại URL do Cloudflare trả về. URL có dạng {code}.",
-  "In Harbor: Settings, Harbor Relay, then {kbd}. Paste the URL with {code1} as the scheme instead of {code2}.":
-    "Trong Harbor: Cài đặt, Harbor Relay, rồi {kbd}. Dán URL với lược đồ {code1} thay cho {code2}.",
+  "In Lart: Settings, Lart Relay, then {kbd}. Paste the URL with {code1} as the scheme instead of {code2}.":
+    "Trong Lart: Cài đặt, Lart Relay, rồi {kbd}. Dán URL với lược đồ {code1} thay cho {code2}.",
   "Verify it works": "Xác minh hoạt động",
-  "Settings, Harbor Relay, then {kbd}.": "Cài đặt, Harbor Relay, rồi {kbd}.",
+  "Settings, Lart Relay, then {kbd}.": "Cài đặt, Lart Relay, rồi {kbd}.",
   "The test calls {code} and confirms the worker is reachable and running a current version. A passing test means Watch Together rooms will connect.":
     "Bài kiểm tra gọi {code} và xác nhận worker có thể truy cập được cũng như đang chạy phiên bản hiện tại. Nếu kiểm tra thành công, các phòng Xem cùng nhau sẽ kết nối được.",
   "If the Watch Together popover shows an outdated-relay banner, redeploying with the steps above is the fix. The banner clears automatically the next time you connect once the relay reports the current version.":
@@ -1119,8 +1119,8 @@ const settings: Record<string, string> = {
   "Sharing your relay": "Chia sẻ relay",
   "A relay URL is shareable. Anyone with the URL can join Watch Together rooms hosted on your relay. The unique {code} subdomain acts as the access token. There is no login.":
     "Bạn có thể chia sẻ URL relay. Bất kỳ ai có URL đều có thể tham gia các phòng Xem cùng nhau được lưu trữ trên relay của bạn. Tên miền phụ {code} duy nhất đóng vai trò là token truy cập. Không cần đăng nhập.",
-  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Harbor users paste it into Settings, Harbor Relay, {kbd}.":
-    "Để chạy relay công khai, hãy đăng URL {code} lên r/Stremio hoặc nơi cộng đồng của bạn hoạt động. Người dùng Harbor khác dán URL vào Cài đặt, Harbor Relay, {kbd}.",
+  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Lart users paste it into Settings, Lart Relay, {kbd}.":
+    "Để chạy relay công khai, hãy đăng URL {code} lên r/Stremio hoặc nơi cộng đồng của bạn hoạt động. Người dùng Lart khác dán URL vào Cài đặt, Lart Relay, {kbd}.",
   Costs: "Chi phí",
   "Cloudflare Workers free tier:": "Gói miễn phí của Cloudflare Workers:",
   "100,000 requests per day.": "100.000 yêu cầu mỗi ngày.",
@@ -1161,8 +1161,8 @@ const settings: Record<string, string> = {
   "Create Token": "Tạo token",
   "Create Custom Token": "Tạo token tùy chỉnh",
   "Get started": "Bắt đầu",
-  "Cloudflare token form filled with name 'Harbor Relay' and one permission row set to Account / Workers Scripts / Edit":
-    "Biểu mẫu token Cloudflare được điền tên 'Harbor Relay' và một hàng quyền được đặt thành Account / Workers Scripts / Edit",
+  "Cloudflare token form filled with name 'Lart Relay' and one permission row set to Account / Workers Scripts / Edit":
+    "Biểu mẫu token Cloudflare được điền tên 'Lart Relay' và một hàng quyền được đặt thành Account / Workers Scripts / Edit",
   "Token name can be anything. The permission row must be exactly {b1} + {b2} + {b3}.":
     "Tên token có thể là bất kỳ tên nào. Hàng quyền phải chính xác là {b1} + {b2} + {b3}.",
   "Workers Scripts": "Workers Scripts",
@@ -1210,11 +1210,11 @@ const settings: Record<string, string> = {
   "Step zoom in to crop baked-in black bars (Zoom mode).":
     "Phóng to từng mức để cắt các dải đen có sẵn trong video (chế độ Thu phóng).",
   Screenshot: "Chụp màn hình",
-  "Save the current frame (video only, no subtitles) as a PNG to Pictures/Harbor.":
-    "Lưu khung hình hiện tại (chỉ video, không có phụ đề) dưới dạng PNG vào Pictures/Harbor.",
+  "Save the current frame (video only, no subtitles) as a PNG to Pictures/Lart.":
+    "Lưu khung hình hiện tại (chỉ video, không có phụ đề) dưới dạng PNG vào Pictures/Lart.",
   "Record GIF": "Quay GIF",
-  "Start or stop recording a GIF of the video (no subtitles). Saves to Pictures/Harbor.":
-    "Bắt đầu hoặc dừng quay GIF từ video (không có phụ đề). Lưu vào Pictures/Harbor.",
+  "Start or stop recording a GIF of the video (no subtitles). Saves to Pictures/Lart.":
+    "Bắt đầu hoặc dừng quay GIF từ video (không có phụ đề). Lưu vào Pictures/Lart.",
   "Jump back by the Back seek step set under Behavior.":
     "Lùi theo khoảng tua lùi được đặt trong Hành vi.",
   "Jump forward by the Forward seek step set under Behavior.":
@@ -1270,8 +1270,8 @@ const settings: Record<string, string> = {
   "Re-open the stream you are watching and pick it back up where you left off.":
     "Mở lại luồng phát bạn đang xem và tiếp tục từ đúng chỗ bạn đã dừng.",
   "Restart streaming server": "Khởi động lại máy chủ phát trực tuyến",
-  "Restart Harbor's own streaming server, then reload the stream once it is back. Desktop only.":
-    "Khởi động lại máy chủ phát trực tuyến của riêng Harbor, rồi tải lại luồng phát khi máy chủ hoạt động trở lại. Chỉ dành cho máy tính.",
+  "Restart Lart's own streaming server, then reload the stream once it is back. Desktop only.":
+    "Khởi động lại máy chủ phát trực tuyến của riêng Lart, rồi tải lại luồng phát khi máy chủ hoạt động trở lại. Chỉ dành cho máy tính.",
   Low: "Thấp",
   "cosmetic, minor": "thẩm mỹ, nhỏ",
   annoying: "gây khó chịu",
@@ -1288,8 +1288,8 @@ const settings: Record<string, string> = {
   "Credit me in the release notes if this report leads to a fix.":
     "Ghi tên tôi trong ghi chú phát hành nếu báo cáo này giúp khắc phục lỗi.",
   "Want to fix it yourself?": "Bạn muốn tự sửa lỗi?",
-  "Harbor is open source. PRs that reference a bug get reviewed within 48h and ship with credit in the release notes.":
-    "Harbor là mã nguồn mở. PR có dẫn chiếu đến lỗi sẽ được xem xét trong vòng 48 giờ và được ghi tên trong ghi chú phát hành khi ra mắt.",
+  "Lart is open source. PRs that reference a bug get reviewed within 48h and ship with credit in the release notes.":
+    "Lart là mã nguồn mở. PR có dẫn chiếu đến lỗi sẽ được xem xét trong vòng 48 giờ và được ghi tên trong ghi chú phát hành khi ra mắt.",
   "Open repo on GitHub": "Mở kho mã trên GitHub",
   "Browse pull requests": "Duyệt các pull request",
   "What gets sent": "Dữ liệu được gửi",
@@ -1304,10 +1304,10 @@ const settings: Record<string, string> = {
   "Loading environment details…": "Đang tải thông tin môi trường…",
   "Auto-included. No keys, no library, no URLs. Just structural flags so reproductions go faster.":
     "Tự động đính kèm. Không có khóa, thư viện hay URL. Chỉ có các cờ cấu trúc để tái hiện lỗi nhanh hơn.",
-  "Harbor test message (Discord). If you can read this, your webhook is wired up.":
-    "Tin nhắn thử nghiệm Harbor (Discord). Nếu đọc được tin nhắn này, webhook của bạn đã được kết nối.",
-  "Harbor test message (Telegram). If you can read this, your webhook is wired up.":
-    "Tin nhắn thử nghiệm Harbor (Telegram). Nếu đọc được tin nhắn này, webhook của bạn đã được kết nối.",
+  "Lart test message (Discord). If you can read this, your webhook is wired up.":
+    "Tin nhắn thử nghiệm Lart (Discord). Nếu đọc được tin nhắn này, webhook của bạn đã được kết nối.",
+  "Lart test message (Telegram). If you can read this, your webhook is wired up.":
+    "Tin nhắn thử nghiệm Lart (Telegram). Nếu đọc được tin nhắn này, webhook của bạn đã được kết nối.",
   Failed: "Thất bại",
   Types: "Thể loại",
   Movies: "Phim điện ảnh",
@@ -1316,12 +1316,12 @@ const settings: Record<string, string> = {
   "Right-click a text channel, pick": "Nhấp chuột phải vào một kênh văn bản, chọn",
   Click: "Nhấp vào",
   "on the left, then": "ở bên trái, rồi",
-  "name it Harbor, hit": "đặt tên là Harbor, nhấn",
+  "name it Lart, hit": "đặt tên là Lart, nhấn",
   "Telegram sends through a bot you create. You need two things: a":
     "Telegram gửi qua bot do bạn tạo. Bạn cần hai thứ: một",
   "and your": "và",
-  "Both go in the boxes above. Harbor builds the URL for you.":
-    "Nhập cả hai vào các ô bên trên. Harbor sẽ tạo URL cho bạn.",
+  "Both go in the boxes above. Lart builds the URL for you.":
+    "Nhập cả hai vào các ô bên trên. Lart sẽ tạo URL cho bạn.",
   Tap: "Nhấn vào",
   "below. In Telegram, send him": "bên dưới. Trong Telegram, gửi cho bot đó",
   "Pick any name. Pick a username ending in": "Chọn tên bất kỳ. Chọn tên người dùng kết thúc bằng",
@@ -1369,8 +1369,8 @@ const settings: Record<string, string> = {
   Countries: "Quốc gia",
   "Only my favorited channels": "Chỉ các kênh yêu thích của tôi",
   "Heads up": "Lưu ý",
-  "Harbor scans your IPTV playlists' EPG every 30 min for programs about to start.":
-    "Harbor quét EPG trong danh sách phát IPTV của bạn mỗi 30 phút để tìm các chương trình sắp bắt đầu.",
+  "Lart scans your IPTV playlists' EPG every 30 min for programs about to start.":
+    "Lart quét EPG trong danh sách phát IPTV của bạn mỗi 30 phút để tìm các chương trình sắp bắt đầu.",
   "Add people in the Custom calendar manager first, then come back here.":
     "Trước tiên, hãy thêm người trong trình quản lý lịch Tùy chỉnh, sau đó quay lại đây.",
   "People (empty = all tracked)": "Người (để trống = tất cả người đang theo dõi)",
@@ -1379,24 +1379,24 @@ const settings: Record<string, string> = {
   "My library": "Thư viện của tôi",
   Anticipated: "Được mong đợi",
   "Custom calendar": "Lịch tùy chỉnh",
-  "Harbor checks harbor.site for new versions and installs them in place. Nothing installs until you choose to, and a dismissed update never nags you again.":
-    "Harbor kiểm tra phiên bản mới trên harbor.site và cài đặt trực tiếp. Không có gì được cài đặt cho đến khi bạn chọn, và bản cập nhật đã bỏ qua sẽ không nhắc lại.",
+  "Lart checks harbor.site for new versions and installs them in place. Nothing installs until you choose to, and a dismissed update never nags you again.":
+    "Lart kiểm tra phiên bản mới trên harbor.site và cài đặt trực tiếp. Không có gì được cài đặt cho đến khi bạn chọn, và bản cập nhật đã bỏ qua sẽ không nhắc lại.",
   "Library, watch progress, and addon collection sync from this account.":
     "Thư viện, tiến độ xem và bộ sưu tập tiện ích bổ sung được đồng bộ từ tài khoản này.",
-  "Export your entire Harbor setup to a single file, then restore it on a new computer or keep it as a backup. Everything is included except your Stremio sign-in.":
-    "Xuất toàn bộ thiết lập Harbor ra một tệp duy nhất, sau đó khôi phục trên máy tính mới hoặc giữ làm bản sao lưu. Mọi thứ đều được bao gồm, ngoại trừ thông tin đăng nhập Stremio của bạn.",
-  "Harbor sends no telemetry. This also drops outbound ad, analytics, and tracker requests that addons or metadata providers try to make, before they leave your machine.":
-    "Harbor không gửi dữ liệu đo từ xa. Tính năng này cũng chặn các yêu cầu quảng cáo, phân tích và theo dõi gửi đi mà tiện ích bổ sung hoặc nhà cung cấp siêu dữ liệu cố thực hiện, trước khi chúng rời khỏi máy của bạn.",
-  "Keep Harbor a click away. Close it to the system tray instead of quitting, and control it from the tray menu. These also mirror into the tray menu live.":
-    "Luôn dễ dàng truy cập Harbor. Đóng ứng dụng xuống khay hệ thống thay vì thoát và điều khiển ứng dụng từ menu khay. Các tùy chọn này cũng được cập nhật tức thì trong menu khay.",
+  "Export your entire Lart setup to a single file, then restore it on a new computer or keep it as a backup. Everything is included except your Stremio sign-in.":
+    "Xuất toàn bộ thiết lập Lart ra một tệp duy nhất, sau đó khôi phục trên máy tính mới hoặc giữ làm bản sao lưu. Mọi thứ đều được bao gồm, ngoại trừ thông tin đăng nhập Stremio của bạn.",
+  "Lart sends no telemetry. This also drops outbound ad, analytics, and tracker requests that addons or metadata providers try to make, before they leave your machine.":
+    "Lart không gửi dữ liệu đo từ xa. Tính năng này cũng chặn các yêu cầu quảng cáo, phân tích và theo dõi gửi đi mà tiện ích bổ sung hoặc nhà cung cấp siêu dữ liệu cố thực hiện, trước khi chúng rời khỏi máy của bạn.",
+  "Keep Lart a click away. Close it to the system tray instead of quitting, and control it from the tray menu. These also mirror into the tray menu live.":
+    "Luôn dễ dàng truy cập Lart. Đóng ứng dụng xuống khay hệ thống thay vì thoát và điều khiển ứng dụng từ menu khay. Các tùy chọn này cũng được cập nhật tức thì trong menu khay.",
   "Your color": "Màu của bạn",
   "Used for your cursor in Watch Together, your draw color, and your name pill in chat.":
     "Dùng cho con trỏ của bạn trong Xem cùng nhau, màu vẽ và thẻ tên trong cuộc trò chuyện.",
-  "Harbor catches stremio:// install links so the configure-and-install flow stays inside the app. Every install also syncs to your Stremio account, so the official app remains the canonical home for your library.":
-    "Harbor tiếp nhận các liên kết cài đặt stremio:// để quy trình cấu hình và cài đặt luôn diễn ra trong ứng dụng. Mỗi lượt cài đặt cũng được đồng bộ với tài khoản Stremio của bạn, vì vậy ứng dụng chính thức vẫn là nơi quản lý chuẩn cho thư viện của bạn.",
-  "Let your Discord friends see what you are watching, with the show poster and a live progress bar. Desktop only, and only your own Discord client is involved (nothing touches a Harbor server).":
-    "Cho phép bạn bè trên Discord biết bạn đang xem gì, kèm áp phích phim và thanh tiến độ trực tiếp. Chỉ dành cho máy tính và chỉ liên quan đến ứng dụng Discord của bạn (không có dữ liệu nào đi qua máy chủ Harbor).",
-  "Saved {d} from Harbor {a}.": "Đã lưu {d} từ Harbor {a}.",
+  "Lart catches stremio:// install links so the configure-and-install flow stays inside the app. Every install also syncs to your Stremio account, so the official app remains the canonical home for your library.":
+    "Lart tiếp nhận các liên kết cài đặt stremio:// để quy trình cấu hình và cài đặt luôn diễn ra trong ứng dụng. Mỗi lượt cài đặt cũng được đồng bộ với tài khoản Stremio của bạn, vì vậy ứng dụng chính thức vẫn là nơi quản lý chuẩn cho thư viện của bạn.",
+  "Let your Discord friends see what you are watching, with the show poster and a live progress bar. Desktop only, and only your own Discord client is involved (nothing touches a Lart server).":
+    "Cho phép bạn bè trên Discord biết bạn đang xem gì, kèm áp phích phim và thanh tiến độ trực tiếp. Chỉ dành cho máy tính và chỉ liên quan đến ứng dụng Discord của bạn (không có dữ liệu nào đi qua máy chủ Lart).",
+  "Saved {d} from Lart {a}.": "Đã lưu {d} từ Lart {a}.",
   "MPV (native, recommended)": "MPV (gốc, khuyên dùng)",
   "HTML5 (browser-based)": "HTML5 (dựa trên trình duyệt)",
   "Player shell": "Giao diện trình phát",
@@ -1473,8 +1473,8 @@ const settings: Record<string, string> = {
   "Show this panel": "Hiện bảng này",
   "Hide this panel": "Ẩn bảng này",
   "Manual picker": "Chọn thủ công",
-  "Hitting Play jumps straight into playback with the best stream Harbor finds.":
-    "Nhấn Phát để phát ngay luồng tốt nhất mà Harbor tìm thấy.",
+  "Hitting Play jumps straight into playback with the best stream Lart finds.":
+    "Nhấn Phát để phát ngay luồng tốt nhất mà Lart tìm thấy.",
   "Hitting Play opens the source list so you can choose quality, debrid, and audio yourself.":
     "Nhấn Phát để mở danh sách nguồn, cho phép bạn tự chọn chất lượng, debrid và âm thanh.",
   "Remember last stream": "Ghi nhớ luồng gần nhất",
@@ -1487,10 +1487,10 @@ const settings: Record<string, string> = {
     "mpv trên ứng dụng máy tính, HTML5 trong trình duyệt. Tự động dùng công cụ phát phù hợp.",
   "Native webview playback. Smooth and integrated, but limited codec coverage.":
     "Phát bằng webview gốc. Mượt mà và tích hợp tốt, nhưng hỗ trợ codec còn hạn chế.",
-  "Bundled with Harbor. Plays anything you throw at it.": "Đi kèm Harbor. Phát được mọi nội dung.",
-  "Embed mpv inside Harbor window": "Nhúng mpv vào cửa sổ Harbor",
-  "Renders mpv inline so playback lives in Harbor itself. Disable to open it in a separate window instead.":
-    "Hiển thị mpv ngay trong Harbor để phát trực tiếp trong ứng dụng. Tắt để mở trong cửa sổ riêng.",
+  "Bundled with Lart. Plays anything you throw at it.": "Đi kèm Lart. Phát được mọi nội dung.",
+  "Embed mpv inside Lart window": "Nhúng mpv vào cửa sổ Lart",
+  "Renders mpv inline so playback lives in Lart itself. Disable to open it in a separate window instead.":
+    "Hiển thị mpv ngay trong Lart để phát trực tiếp trong ứng dụng. Tắt để mở trong cửa sổ riêng.",
   "HDR-to-SDR tonemapping": "Ánh xạ tông màu HDR sang SDR",
   "Maps HDR sources to SDR using bt.2446a. Recommended on SDR displays.":
     "Ánh xạ nguồn HDR sang SDR bằng bt.2446a. Khuyên dùng trên màn hình SDR.",
@@ -1498,8 +1498,8 @@ const settings: Record<string, string> = {
   "Plays HDR content in its own window so Windows treats it as true HDR (the SDR brightness slider stops dimming it). Turn off HDR-to-SDR tonemapping above to use this on an HDR display.":
     "Phát nội dung HDR trong cửa sổ riêng để Windows nhận diện là HDR thực (thanh trượt độ sáng SDR sẽ không còn làm tối nội dung). Tắt Ánh xạ tông màu HDR sang SDR ở trên để dùng tính năng này trên màn hình HDR.",
   "HDR display mode": "Chế độ hiển thị HDR",
-  "Keeps Harbor embedded but lifts the HDR video onto its own opaque plane with the controls floating above, so Windows shows true HDR without the brightness slider dimming it. Needs HDR-to-SDR tonemapping off.":
-    "Vẫn nhúng Harbor nhưng đưa video HDR lên một lớp hiển thị riêng, không trong suốt, với các nút điều khiển nổi phía trên, để Windows hiển thị HDR thực mà không bị thanh trượt độ sáng làm tối. Cần tắt Ánh xạ tông màu HDR sang SDR.",
+  "Keeps Lart embedded but lifts the HDR video onto its own opaque plane with the controls floating above, so Windows shows true HDR without the brightness slider dimming it. Needs HDR-to-SDR tonemapping off.":
+    "Vẫn nhúng Lart nhưng đưa video HDR lên một lớp hiển thị riêng, không trong suốt, với các nút điều khiển nổi phía trên, để Windows hiển thị HDR thực mà không bị thanh trượt độ sáng làm tối. Cần tắt Ánh xạ tông màu HDR sang SDR.",
   "Line-free video mode": "Chế độ video không viền sáng",
   "Forces a compatibility present mode that removes a thin bright line some monitors show at the screen edge. Side effects: 4K playback can drop to a slideshow and HDR content looks dimmer (this mode bypasses the HDR display path). Leave OFF unless you see that line. Restart playback to apply.":
     "Buộc dùng chế độ hiển thị tương thích để loại bỏ đường sáng mảnh mà một số màn hình hiển thị ở mép. Tác dụng phụ: phát 4K có thể giật như trình chiếu và nội dung HDR trông tối hơn (chế độ này bỏ qua đường dẫn hiển thị HDR). Chỉ BẬT nếu bạn thấy đường sáng đó. Khởi động lại quá trình phát để áp dụng.",
@@ -1509,9 +1509,9 @@ const settings: Record<string, string> = {
   "Direct P2P streaming": "Phát P2P trực tiếp",
   "When you have no debrid set up, or a torrent isn't cached, stream it straight from the bundled engine on localhost:11470. This connects to peers over your own connection, the same way Stremio's built-in streaming does.":
     "Khi chưa thiết lập debrid hoặc torrent chưa được lưu đệm, phát trực tiếp bằng công cụ đi kèm tại localhost:11470. Tính năng này kết nối với các peer qua kết nối mạng của bạn, tương tự tính năng phát tích hợp của Stremio.",
-  "Use Harbor's built-in engine (beta)": "Dùng công cụ tích hợp của Harbor (beta)",
-  "Stream torrents through Harbor's own Rust peer-to-peer engine instead of the bundled Stremio Server. Falls back automatically if it can't connect. Status and a self-test live in the Local engine card below.":
-    "Phát torrent qua công cụ peer-to-peer Rust riêng của Harbor thay vì Stremio Server đi kèm. Tự động chuyển sang phương án dự phòng nếu không thể kết nối. Trạng thái và tính năng tự kiểm tra nằm trong thẻ Công cụ cục bộ bên dưới.",
+  "Use Lart's built-in engine (beta)": "Dùng công cụ tích hợp của Lart (beta)",
+  "Stream torrents through Lart's own Rust peer-to-peer engine instead of the bundled Stremio Server. Falls back automatically if it can't connect. Status and a self-test live in the Local engine card below.":
+    "Phát torrent qua công cụ peer-to-peer Rust riêng của Lart thay vì Stremio Server đi kèm. Tự động chuyển sang phương án dự phòng nếu không thể kết nối. Trạng thái và tính năng tự kiểm tra nằm trong thẻ Công cụ cục bộ bên dưới.",
   "Always re-encode when casting (recommended)": "Luôn mã hóa lại khi truyền (khuyên dùng)",
   "On by default. Pipes every cast through ffmpeg as H.264 + AAC + MPEG-TS so Samsung, LG, Sony, and other DLNA TVs accept the stream regardless of source codec. Turn off only if you have a beefy receiver that handles raw HEVC/DTS and want max quality. Requires ffmpeg in PATH.":
     "Mặc định bật. Chuyển mọi nội dung truyền qua ffmpeg thành H.264 + AAC + MPEG-TS để TV DLNA của Samsung, LG, Sony và các hãng khác nhận luồng bất kể codec nguồn. Chỉ tắt nếu thiết bị nhận mạnh, xử lý được HEVC/DTS thô và bạn muốn chất lượng tối đa. Yêu cầu ffmpeg trong PATH.",
@@ -1557,8 +1557,8 @@ const settings: Record<string, string> = {
   "Remove {name}": "Xóa {name}",
   "Upload font": "Tải phông chữ lên",
   "Delete this font?": "Xóa phông chữ này?",
-  "will be removed from Harbor. Anything you've set to use it will fall back to Inter.":
-    "sẽ bị xóa khỏi Harbor. Mọi nội dung đang dùng phông chữ này sẽ chuyển về Inter.",
+  "will be removed from Lart. Anything you've set to use it will fall back to Inter.":
+    "sẽ bị xóa khỏi Lart. Mọi nội dung đang dùng phông chữ này sẽ chuyển về Inter.",
   "Show thumbnail preview on hover": "Hiện hình thu nhỏ xem trước khi di chuột",
   "Generates a frame on the fly as you scrub the seek bar. Works on debrid streams and local files.":
     "Tạo khung hình tức thì khi bạn tua trên thanh tiến trình. Hoạt động với luồng debrid và tệp cục bộ.",
@@ -1600,7 +1600,7 @@ const settings: Record<string, string> = {
   "Self-test is disabled while strict remote streaming is on. It downloads a small test file over peer-to-peer on this machine.": "Tính năng tự kiểm tra bị tắt khi chế độ phát trực tuyến từ xa nghiêm ngặt đang bật. Tính năng này tải một tệp thử nghiệm nhỏ qua mạng ngang hàng trên máy này.",
   "Self-test": "Tự kiểm tra",
   "Remote streaming server": "Máy chủ phát trực tuyến từ xa",
-  "Point Harbor at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.": "Kết nối Harbor với máy chủ phát trực tuyến trên một máy khác, chẳng hạn như dịch vụ Stremio trên máy chủ tại nhà. Luồng P2P sẽ được tải xuống và phát từ máy đó thay vì máy này.",
+  "Point Lart at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.": "Kết nối Lart với máy chủ phát trực tuyến trên một máy khác, chẳng hạn như dịch vụ Stremio trên máy chủ tại nhà. Luồng P2P sẽ được tải xuống và phát từ máy đó thay vì máy này.",
   "Use exclusively (never fall back to local)":
     "Chỉ sử dụng máy chủ này (không bao giờ chuyển về cục bộ)",
   "If the server is unreachable, playback fails instead of streaming locally. Use this when your VPN runs on the server machine and torrent traffic must never leave this one.":
@@ -1612,8 +1612,8 @@ const settings: Record<string, string> = {
   "Test failed": "Kiểm tra thất bại",
   "The server answered with status {status}. Is that a streaming server?":
     "Máy chủ phản hồi với trạng thái {status}. Đây có phải là máy chủ phát trực tuyến không?",
-  "Server reachable in {ms}ms. Harbor will use it for torrent streaming.":
-    "Đã kết nối với máy chủ trong {ms}ms. Harbor sẽ dùng máy chủ này để phát trực tuyến torrent.",
+  "Server reachable in {ms}ms. Lart will use it for torrent streaming.":
+    "Đã kết nối với máy chủ trong {ms}ms. Lart sẽ dùng máy chủ này để phát trực tuyến torrent.",
   "Could not reach the server within 1.5 seconds. Check the address and that the server machine is online.":
     "Không thể kết nối với máy chủ trong vòng 1.5 giây. Hãy kiểm tra địa chỉ và đảm bảo máy chủ đang trực tuyến.",
   "No limit": "Không giới hạn",
@@ -1624,7 +1624,7 @@ const settings: Record<string, string> = {
     "Không lọc. Mọi bitrate đều được đánh giá như nhau.",
   "Streams over {cap} Mbps will rank lower, even when cached.":
     "Các luồng trên {cap} Mbps sẽ xếp hạng thấp hơn, kể cả khi đã được lưu vào bộ nhớ đệm.",
-  "Harbor curated": "Do Harbor tuyển chọn",
+  "Lart curated": "Do Lart tuyển chọn",
   "Hero carousel, Top 10, Trending, In Theaters, per-service rails. Addon catalogs append underneath, deduped.":
     "Băng chuyền nổi bật, Top 10, Thịnh hành, Đang chiếu rạp và các hàng theo từng dịch vụ. Danh mục của tiện ích bổ sung được thêm bên dưới và loại bỏ mục trùng lặp.",
   "Classic Stremio": "Stremio cổ điển",
@@ -1664,28 +1664,28 @@ const settings: Record<string, string> = {
   "Lead with the show name instead of the episode title at the top of the player.":
     "Đặt tên phim bộ trước tên tập ở đầu trình phát.",
   "Block ads & trackers": "Chặn quảng cáo và trình theo dõi",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.":
-    "Đã chặn {n} yêu cầu theo dõi trong phiên này. Bản thân Harbor không gửi dữ liệu đo từ xa.",
-  "{n} tracker requests blocked this session. Harbor itself sends zero telemetry.":
-    "Đã chặn {n} yêu cầu theo dõi trong phiên này. Bản thân Harbor không gửi dữ liệu đo từ xa.",
-  "Watching for ad, analytics, and tracking requests. Harbor itself sends zero telemetry.":
-    "Đang giám sát các yêu cầu quảng cáo, phân tích và theo dõi. Bản thân Harbor không gửi dữ liệu đo từ xa.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.":
+    "Đã chặn {n} yêu cầu theo dõi trong phiên này. Bản thân Lart không gửi dữ liệu đo từ xa.",
+  "{n} tracker requests blocked this session. Lart itself sends zero telemetry.":
+    "Đã chặn {n} yêu cầu theo dõi trong phiên này. Bản thân Lart không gửi dữ liệu đo từ xa.",
+  "Watching for ad, analytics, and tracking requests. Lart itself sends zero telemetry.":
+    "Đang giám sát các yêu cầu quảng cáo, phân tích và theo dõi. Bản thân Lart không gửi dữ liệu đo từ xa.",
   "Ad, analytics, and tracking requests pass through untouched.":
     "Các yêu cầu quảng cáo, phân tích và theo dõi được truyền qua mà không bị can thiệp.",
   "Close to the system tray": "Thu nhỏ vào khay hệ thống khi đóng",
-  "Closing the window tucks Harbor into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
-    "Khi đóng cửa sổ, Harbor sẽ thu gọn vào khay thay vì thoát để có thể mở lại ngay. Nhấp chuột phải vào biểu tượng khay để dùng các điều khiển nhanh hoặc chọn Thoát để thoát hoàn toàn.",
+  "Closing the window tucks Lart into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
+    "Khi đóng cửa sổ, Lart sẽ thu gọn vào khay thay vì thoát để có thể mở lại ngay. Nhấp chuột phải vào biểu tượng khay để dùng các điều khiển nhanh hoặc chọn Thoát để thoát hoàn toàn.",
   "Always on top": "Luôn ở trên cùng",
-  "Keep the Harbor window above other windows.": "Giữ cửa sổ Harbor nằm trên các cửa sổ khác.",
+  "Keep the Lart window above other windows.": "Giữ cửa sổ Lart nằm trên các cửa sổ khác.",
   "Pause when minimized": "Tạm dừng khi thu nhỏ",
-  "Stop playback when you minimize Harbor or send it to the tray.":
-    "Dừng phát khi bạn thu nhỏ Harbor hoặc đưa ứng dụng vào khay.",
+  "Stop playback when you minimize Lart or send it to the tray.":
+    "Dừng phát khi bạn thu nhỏ Lart hoặc đưa ứng dụng vào khay.",
   "Pause when unfocused": "Tạm dừng khi mất tiêu điểm",
   "Stop playback whenever another window takes focus.":
     "Dừng phát mỗi khi cửa sổ khác nhận tiêu điểm.",
   "Export everything": "Xuất tất cả",
-  "Saves your whole Harbor setup to one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
-    "Lưu toàn bộ thiết lập Harbor vào một tệp: chủ đề, bố cục trang chủ, cài đặt, tiện ích bổ sung, hồ sơ, danh sách xem, bố cục trình phát, tiến độ xem và nhiều nội dung khác. Thông tin đăng nhập Stremio được chủ động loại trừ.",
+  "Saves your whole Lart setup to one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
+    "Lưu toàn bộ thiết lập Lart vào một tệp: chủ đề, bố cục trang chủ, cài đặt, tiện ích bổ sung, hồ sơ, danh sách xem, bố cục trình phát, tiến độ xem và nhiều nội dung khác. Thông tin đăng nhập Stremio được chủ động loại trừ.",
   "Restore from a backup": "Khôi phục từ bản sao lưu",
   "Loads a backup file and replaces your current setup with it. Perfect for a new computer. Your Stremio sign-in on this device stays as is.":
     "Tải tệp sao lưu và thay thế thiết lập hiện tại. Rất phù hợp khi chuyển sang máy tính mới. Thông tin đăng nhập Stremio trên thiết bị này vẫn được giữ nguyên.",
@@ -1693,9 +1693,9 @@ const settings: Record<string, string> = {
   "Could not read that file.": "Không thể đọc tệp đó.",
   "an unknown date": "ngày không xác định",
   "Restore this backup?": "Khôi phục bản sao lưu này?",
-  "This replaces your current Harbor setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Harbor reloads when it finishes.":
-    "Thao tác này sẽ thay thế thiết lập Harbor hiện tại của bạn (giao diện, bố cục trang chủ, cài đặt, tiện ích bổ sung, hồ sơ và nhiều mục khác) bằng {n} mục đã lưu trong tệp này. Trạng thái đăng nhập Stremio của bạn vẫn được giữ nguyên. Harbor sẽ tải lại sau khi hoàn tất.",
-  "Saved {when} from Harbor {app}.": "Đã lưu vào {when} từ Harbor {app}.",
+  "This replaces your current Lart setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Lart reloads when it finishes.":
+    "Thao tác này sẽ thay thế thiết lập Lart hiện tại của bạn (giao diện, bố cục trang chủ, cài đặt, tiện ích bổ sung, hồ sơ và nhiều mục khác) bằng {n} mục đã lưu trong tệp này. Trạng thái đăng nhập Stremio của bạn vẫn được giữ nguyên. Lart sẽ tải lại sau khi hoàn tất.",
+  "Saved {when} from Lart {app}.": "Đã lưu vào {when} từ Lart {app}.",
   "Restoring...": "Đang khôi phục...",
   "Restore and reload": "Khôi phục và tải lại",
   "Xtream credentials were left out of this backup.":
@@ -1703,29 +1703,29 @@ const settings: Record<string, string> = {
   "Get beta updates": "Nhận bản cập nhật beta",
   "Receive early builds with the newest fixes before they reach the stable release. Betas can be rough around the edges; switch this off to return to stable at the next update.":
     "Nhận sớm các bản dựng có bản sửa lỗi mới nhất trước khi được phát hành ổn định. Bản beta có thể chưa hoàn thiện; hãy tắt tùy chọn này để trở lại bản ổn định trong lần cập nhật tiếp theo.",
-  "Catch stremio:// install links inside Harbor": "Mở liên kết cài đặt stremio:// trong Harbor",
-  "Harbor's in-app installer animates the manifest install and keeps you in context. Anything Harbor installs is also synced to your Stremio account, so the official app stays the canonical library. Turn this off and Stremio becomes the only handler for stremio:// links; Harbor still installs anything you trigger from inside the app (Configure & install, paste, drag-and-drop).":
-    "Trình cài đặt trong Harbor sẽ hiển thị hoạt ảnh khi cài manifest và giúp bạn không bị gián đoạn. Mọi nội dung Harbor cài đặt cũng được đồng bộ với tài khoản Stremio của bạn, nên ứng dụng chính thức vẫn là thư viện chuẩn. Nếu tắt tùy chọn này, Stremio sẽ là ứng dụng duy nhất xử lý liên kết stremio://; Harbor vẫn cài đặt mọi nội dung bạn kích hoạt từ trong ứng dụng (Định cấu hình và cài đặt, dán, kéo và thả).",
-  "Heads up: if Stremio is also installed, Windows may ask which app to use the first time a stremio:// link fires. Pick Harbor to make it stick.":
-    "Lưu ý: nếu Stremio cũng được cài đặt, Windows có thể hỏi ứng dụng cần dùng trong lần đầu mở liên kết stremio://. Chọn Harbor để đặt làm mặc định.",
-  "stremio:// links now open in the Stremio app. Harbor will only install when you trigger it from inside Harbor.":
-    "Liên kết stremio:// hiện sẽ mở trong ứng dụng Stremio. Harbor chỉ cài đặt khi bạn kích hoạt từ trong Harbor.",
+  "Catch stremio:// install links inside Lart": "Mở liên kết cài đặt stremio:// trong Lart",
+  "Lart's in-app installer animates the manifest install and keeps you in context. Anything Lart installs is also synced to your Stremio account, so the official app stays the canonical library. Turn this off and Stremio becomes the only handler for stremio:// links; Lart still installs anything you trigger from inside the app (Configure & install, paste, drag-and-drop).":
+    "Trình cài đặt trong Lart sẽ hiển thị hoạt ảnh khi cài manifest và giúp bạn không bị gián đoạn. Mọi nội dung Lart cài đặt cũng được đồng bộ với tài khoản Stremio của bạn, nên ứng dụng chính thức vẫn là thư viện chuẩn. Nếu tắt tùy chọn này, Stremio sẽ là ứng dụng duy nhất xử lý liên kết stremio://; Lart vẫn cài đặt mọi nội dung bạn kích hoạt từ trong ứng dụng (Định cấu hình và cài đặt, dán, kéo và thả).",
+  "Heads up: if Stremio is also installed, Windows may ask which app to use the first time a stremio:// link fires. Pick Lart to make it stick.":
+    "Lưu ý: nếu Stremio cũng được cài đặt, Windows có thể hỏi ứng dụng cần dùng trong lần đầu mở liên kết stremio://. Chọn Lart để đặt làm mặc định.",
+  "stremio:// links now open in the Stremio app. Lart will only install when you trigger it from inside Lart.":
+    "Liên kết stremio:// hiện sẽ mở trong ứng dụng Stremio. Lart chỉ cài đặt khi bạn kích hoạt từ trong Lart.",
   "Checking harbor.site for a newer build.": "Đang kiểm tra bản dựng mới hơn trên harbor.site.",
   "Downloading {pct}%": "Đang tải xuống {pct}%",
   "Downloaded. Ready to install and restart.": "Đã tải xuống. Sẵn sàng cài đặt và khởi động lại.",
-  "Installing. Harbor will restart.": "Đang cài đặt. Harbor sẽ khởi động lại.",
+  "Installing. Lart will restart.": "Đang cài đặt. Lart sẽ khởi động lại.",
   "A new version is ready to download.": "Đã có phiên bản mới để tải xuống.",
   "You're on the latest version.": "Bạn đang dùng phiên bản mới nhất.",
   "Couldn't reach the update server. Try again in a moment.":
     "Không thể kết nối với máy chủ cập nhật. Hãy thử lại sau giây lát.",
-  "Harbor checks automatically every few hours.": "Harbor tự động kiểm tra vài giờ một lần.",
-  "Harbor {version} available": "Đã có Harbor {version}",
+  "Lart checks automatically every few hours.": "Lart tự động kiểm tra vài giờ một lần.",
+  "Lart {version} available": "Đã có Lart {version}",
   "Update now": "Cập nhật ngay",
   "Check for updates": "Kiểm tra bản cập nhật",
   "Show on Discord": "Hiển thị trên Discord",
   "Show what you are listening to": "Hiển thị bài bạn đang nghe",
-  "Share the track, artist and album art while music plays, with a Listen in Harbor button.":
-    "Chia sẻ bài hát, nghệ sĩ và ảnh bìa album khi nhạc đang phát, kèm nút «Listen in Harbor».",
+  "Share the track, artist and album art while music plays, with a Listen in Lart button.":
+    "Chia sẻ bài hát, nghệ sĩ và ảnh bìa album khi nhạc đang phát, kèm nút «Listen in Lart».",
   "Display what you are watching on your Discord profile, with the show poster and a live progress bar. Requires the Discord desktop app to be running.":
     "Hiển thị nội dung bạn đang xem trên hồ sơ Discord, kèm áp phích và thanh tiến trình trực tiếp. Yêu cầu ứng dụng Discord trên máy tính đang chạy.",
   "Hide the title": "Ẩn tiêu đề",
@@ -1735,8 +1735,8 @@ const settings: Record<string, string> = {
   "Keep the presence visible when playback is paused.":
     "Tiếp tục hiển thị trạng thái khi tạm dừng phát.",
   "Show while browsing": "Hiển thị khi duyệt",
-  "Display 'Browsing Harbor' when nothing is playing.":
-    "Hiển thị 'Đang duyệt Harbor' khi không phát nội dung nào.",
+  "Display 'Browsing Lart' when nothing is playing.":
+    "Hiển thị 'Đang duyệt Lart' khi không phát nội dung nào.",
   "Show poster": "Hiển thị áp phích",
   "Reveal the show or movie artwork. Off keeps the title but hides the poster.":
     "Hiển thị hình ảnh của phim bộ hoặc phim. Khi tắt, tiêu đề vẫn hiện nhưng áp phích sẽ bị ẩn.",
@@ -1771,8 +1771,8 @@ const settings: Record<string, string> = {
   "Library is empty. Nothing to repair.": "Thư viện trống. Không có gì cần sửa chữa.",
   "{repaired} fixed, {clean} already clean": "Đã sửa {repaired}, {clean} mục không có lỗi",
   ", {n} unrepairable": ", không thể sửa {n} mục",
-  "Rewrites every library item to match Stremio's exact schema. Run once if your Stremio app started crashing after Harbor synced playback.":
-    "Viết lại mọi mục trong thư viện để khớp chính xác với cấu trúc dữ liệu của Stremio. Chạy một lần nếu ứng dụng Stremio bắt đầu bị lỗi sau khi Harbor đồng bộ trạng thái phát.",
+  "Rewrites every library item to match Stremio's exact schema. Run once if your Stremio app started crashing after Lart synced playback.":
+    "Viết lại mọi mục trong thư viện để khớp chính xác với cấu trúc dữ liệu của Stremio. Chạy một lần nếu ứng dụng Stremio bắt đầu bị lỗi sau khi Lart đồng bộ trạng thái phát.",
   "Fetching {n} items…": "Đang tải {n} mục…",
   "Fetching library index…": "Đang tải chỉ mục thư viện…",
   "{n} items need repair.": "Có {n} mục cần sửa.",
@@ -1784,11 +1784,11 @@ const settings: Record<string, string> = {
   "Repair now": "Sửa ngay",
   "Web build": "Bản web",
   "Where your data lives": "Nơi lưu dữ liệu của bạn",
-  "Everything you save here stays in this browser. Your Stremio login, API keys, watch progress, picker cache, dismissed tips. Harbor servers never see any of it. Clearing your browser data wipes it.":
-    "Mọi thứ bạn lưu tại đây đều nằm trong trình duyệt này: thông tin đăng nhập Stremio, khóa API, tiến độ xem, bộ nhớ đệm của trình chọn và các mẹo đã bỏ qua. Máy chủ Harbor không bao giờ thấy bất kỳ dữ liệu nào trong số đó. Việc xóa dữ liệu trình duyệt sẽ xóa sạch tất cả.",
+  "Everything you save here stays in this browser. Your Stremio login, API keys, watch progress, picker cache, dismissed tips. Lart servers never see any of it. Clearing your browser data wipes it.":
+    "Mọi thứ bạn lưu tại đây đều nằm trong trình duyệt này: thông tin đăng nhập Stremio, khóa API, tiến độ xem, bộ nhớ đệm của trình chọn và các mẹo đã bỏ qua. Máy chủ Lart không bao giờ thấy bất kỳ dữ liệu nào trong số đó. Việc xóa dữ liệu trình duyệt sẽ xóa sạch tất cả.",
   "The web build can't run mpv, the trickplay generator, the local bandwidth probe, or your own Cloudflare relay. If you want HDR passthrough, TrueHD or DTS-HD audio, and smoother seeking, grab the desktop app.":
     "Bản web không thể chạy mpv, trình tạo trickplay, công cụ đo băng thông cục bộ hoặc relay Cloudflare riêng của bạn. Nếu muốn truyền thẳng HDR, âm thanh TrueHD hoặc DTS-HD và tua mượt hơn, hãy tải ứng dụng máy tính.",
-  "Get Harbor for desktop": "Tải Harbor cho máy tính",
+  "Get Lart for desktop": "Tải Lart cho máy tính",
   "Source code": "Mã nguồn",
   "Your relay is live": "Relay của bạn đang hoạt động",
   "Connected to relay": "Đã kết nối với relay",
@@ -1801,15 +1801,15 @@ const settings: Record<string, string> = {
   "Testing…": "Đang kiểm tra…",
   "Relay version {version}. Update available.": "Relay phiên bản {version}. Có bản cập nhật.",
   "Relay is current (v{version}).": "Relay đã được cập nhật (v{version}).",
-  "Harbor's public relay updates automatically; nothing to do.":
-    "Relay công khai của Harbor tự động cập nhật, bạn không cần làm gì.",
+  "Lart's public relay updates automatically; nothing to do.":
+    "Relay công khai của Lart tự động cập nhật, bạn không cần làm gì.",
   "Redeploy to pick up the latest Watch Together fixes. The in-app banner clears once the new version is live.":
     "Triển khai lại để nhận các bản sửa lỗi Xem cùng nhau mới nhất. Biểu ngữ trong ứng dụng sẽ biến mất khi phiên bản mới hoạt động.",
   "Running the latest Watch Together protocol.": "Đang chạy giao thức Xem cùng nhau mới nhất.",
   "Redeploy instructions": "Hướng dẫn triển khai lại",
   "Backup credentials": "Sao lưu thông tin xác thực",
-  "Cloudflare shows API tokens only once. Save a copy now or you'll lose the ability to stop or redeploy this relay from Harbor.":
-    "Cloudflare chỉ hiển thị token API một lần. Hãy lưu một bản sao ngay, nếu không bạn sẽ không thể dừng hoặc triển khai lại relay này từ Harbor.",
+  "Cloudflare shows API tokens only once. Save a copy now or you'll lose the ability to stop or redeploy this relay from Lart.":
+    "Cloudflare chỉ hiển thị token API một lần. Hãy lưu một bản sao ngay, nếu không bạn sẽ không thể dừng hoặc triển khai lại relay này từ Lart.",
   "Relay verified end-to-end": "Đã xác minh relay từ đầu đến cuối",
   "Relay test failed": "Kiểm tra relay thất bại",
   "Redeploy relay": "Triển khai lại relay",
@@ -1825,9 +1825,9 @@ const settings: Record<string, string> = {
   "Enter an existing relay URL:": "Nhập URL relay hiện có:",
   "Only enter URLs for relays you operate or trust. A relay only carries Watch Together sync messages (play, pause, seek). Nothing else passes through it.":
     "Chỉ nhập URL của relay do bạn vận hành hoặc tin cậy. Relay chỉ truyền các thông báo đồng bộ Xem cùng nhau (phát, tạm dừng, tua). Không có dữ liệu nào khác đi qua relay.",
-  "Hit your daily quota? Use Harbor's public relay, or host your own.":
-    "Đã hết hạn mức hằng ngày? Hãy dùng relay công khai của Harbor hoặc tự lưu trữ relay.",
-  "Use Harbor's public relay": "Dùng relay công khai của Harbor",
+  "Hit your daily quota? Use Lart's public relay, or host your own.":
+    "Đã hết hạn mức hằng ngày? Hãy dùng relay công khai của Lart hoặc tự lưu trữ relay.",
+  "Use Lart's public relay": "Dùng relay công khai của Lart",
   "Documentation: run your own relay": "Tài liệu: tự chạy relay",
   "Install failed": "Cài đặt thất bại",
   "Installed via {label}": "Đã cài đặt qua {label}",
@@ -1839,8 +1839,8 @@ const settings: Record<string, string> = {
     "Dán URL manifest do trang cấu hình cung cấp",
   "View all": "Xem tất cả",
   "Where alerts go": "Nơi nhận cảnh báo",
-  "Connect Discord or Telegram and Harbor posts a message when something you follow is about to drop. Hit Test to send yourself a sample first.":
-    "Kết nối Discord hoặc Telegram để Harbor gửi tin nhắn khi nội dung bạn theo dõi sắp phát hành. Trước tiên, nhấn Kiểm tra để tự gửi một tin nhắn mẫu.",
+  "Connect Discord or Telegram and Lart posts a message when something you follow is about to drop. Hit Test to send yourself a sample first.":
+    "Kết nối Discord hoặc Telegram để Lart gửi tin nhắn khi nội dung bạn theo dõi sắp phát hành. Trước tiên, nhấn Kiểm tra để tự gửi một tin nhắn mẫu.",
   "What to send": "Nội dung gửi",
   "Pick which calendars feed your alerts. Items are deduped across sources before sending.":
     "Chọn lịch dùng để tạo cảnh báo. Các mục trùng lặp giữa các nguồn sẽ được loại bỏ trước khi gửi.",
@@ -1851,8 +1851,8 @@ const settings: Record<string, string> = {
   "Anime tweaks": "Tinh chỉnh anime",
   "Anime4K real-time upscaling, smooth motion, and where SVP fits in. All the anime-specific picture enhancements in one place.":
     "Nâng cấp hình ảnh theo thời gian thực bằng Anime4K, làm mượt chuyển động và cách SVP hoạt động. Mọi cải tiến hình ảnh dành riêng cho anime đều ở cùng một nơi.",
-  "Real-time GPU upscaling that sharpens lines and cleans up gradients on anime, built right into Harbor's player. The one-tap setup below grabs the shaders; nothing else to install.":
-    "Nâng cấp hình ảnh bằng GPU theo thời gian thực, giúp đường nét sắc hơn và dải màu mượt hơn trong anime, được tích hợp ngay vào trình phát của Harbor. Thiết lập một chạm bên dưới sẽ tải các shader; không cần cài thêm gì khác.",
+  "Real-time GPU upscaling that sharpens lines and cleans up gradients on anime, built right into Lart's player. The one-tap setup below grabs the shaders; nothing else to install.":
+    "Nâng cấp hình ảnh bằng GPU theo thời gian thực, giúp đường nét sắc hơn và dải màu mượt hơn trong anime, được tích hợp ngay vào trình phát của Lart. Thiết lập một chạm bên dưới sẽ tải các shader; không cần cài thêm gì khác.",
   "Enable Anime4K": "Bật Anime4K",
   "Sharper lines and cleaner gradients on anime, in real time. Heaviest on the graphics card of everything here.":
     "Giúp đường nét sắc hơn và dải màu mượt hơn trong anime theo thời gian thực. Tính năng dùng card đồ họa nhiều nhất tại đây.",
@@ -1862,29 +1862,29 @@ const settings: Record<string, string> = {
   "Smooth motion": "Làm mượt chuyển động",
   "Anime is drawn on twos and threes, so fast pans can judder. Smoothing fills in the gaps so motion glides.":
     "Anime thường chỉ thay đổi hình sau mỗi hai hoặc ba khung hình nên các cảnh lia nhanh có thể bị giật. Tính năng làm mượt sẽ chèn thêm khung hình để chuyển động trơn tru hơn.",
-  "Harbor's built-in frame interpolation. Smooths panning, best on anime. Needs a display refresh rate above the video's frame rate, and can stutter on weak GPUs. Lighter than SVP.":
-    "Tính năng nội suy khung hình tích hợp của Harbor. Làm mượt cảnh lia, phù hợp nhất với anime. Cần màn hình có tần số quét cao hơn tốc độ khung hình của video và có thể bị giật trên GPU yếu. Nhẹ hơn SVP.",
+  "Lart's built-in frame interpolation. Smooths panning, best on anime. Needs a display refresh rate above the video's frame rate, and can stutter on weak GPUs. Lighter than SVP.":
+    "Tính năng nội suy khung hình tích hợp của Lart. Làm mượt cảnh lia, phù hợp nhất với anime. Cần màn hình có tần số quét cao hơn tốc độ khung hình của video và có thể bị giật trên GPU yếu. Nhẹ hơn SVP.",
   "SVP frame interpolation": "Nội suy khung hình SVP",
-  "Genuine 48/60fps motion on anime, rendered right inside Harbor's player. SVP supplies the engine (VapourSynth + svpflow) and runs in your tray for licensing; Harbor's own player applies the interpolation, so it stays embedded and fully under your control. One-time install, then flip it on.":
-    "Chuyển động 48/60fps thực sự cho anime, được kết xuất ngay trong trình phát của Harbor. SVP cung cấp bộ máy (VapourSynth + svpflow) và chạy trong khay hệ thống để xác thực giấy phép; trình phát riêng của Harbor thực hiện nội suy nên tính năng vẫn được tích hợp và hoàn toàn do bạn kiểm soát. Chỉ cần cài một lần rồi bật lên.",
+  "Genuine 48/60fps motion on anime, rendered right inside Lart's player. SVP supplies the engine (VapourSynth + svpflow) and runs in your tray for licensing; Lart's own player applies the interpolation, so it stays embedded and fully under your control. One-time install, then flip it on.":
+    "Chuyển động 48/60fps thực sự cho anime, được kết xuất ngay trong trình phát của Lart. SVP cung cấp bộ máy (VapourSynth + svpflow) và chạy trong khay hệ thống để xác thực giấy phép; trình phát riêng của Lart thực hiện nội suy nên tính năng vẫn được tích hợp và hoàn toàn do bạn kiểm soát. Chỉ cần cài một lần rồi bật lên.",
   "SVP (free)": "SVP (miễn phí)",
-  "Install SVP once (the free tier is enough). It bundles VapourSynth + svpflow; Harbor reuses them, no extra setup.":
-    "Cài SVP một lần (gói miễn phí là đủ). SVP đi kèm VapourSynth + svpflow; Harbor sẽ dùng lại mà không cần thiết lập thêm.",
-  "Installed and detected. Harbor found its interpolation engine and will drive it directly.":
-    "Đã cài đặt và phát hiện. Harbor đã tìm thấy bộ máy nội suy và sẽ điều khiển trực tiếp.",
-  "SVP is installed but Harbor couldn't find its engine files (svpflow + VapourSynth). Try repairing the SVP install, or reopen SVP once.":
-    "SVP đã được cài đặt nhưng Harbor không tìm thấy các tệp bộ máy (svpflow + VapourSynth). Hãy thử sửa chữa bản cài đặt SVP hoặc mở lại SVP một lần.",
+  "Install SVP once (the free tier is enough). It bundles VapourSynth + svpflow; Lart reuses them, no extra setup.":
+    "Cài SVP một lần (gói miễn phí là đủ). SVP đi kèm VapourSynth + svpflow; Lart sẽ dùng lại mà không cần thiết lập thêm.",
+  "Installed and detected. Lart found its interpolation engine and will drive it directly.":
+    "Đã cài đặt và phát hiện. Lart đã tìm thấy bộ máy nội suy và sẽ điều khiển trực tiếp.",
+  "SVP is installed but Lart couldn't find its engine files (svpflow + VapourSynth). Try repairing the SVP install, or reopen SVP once.":
+    "SVP đã được cài đặt nhưng Lart không tìm thấy các tệp bộ máy (svpflow + VapourSynth). Hãy thử sửa chữa bản cài đặt SVP hoặc mở lại SVP một lần.",
   "Get SVP (free)": "Tải SVP (miễn phí)",
   "Open SVP": "Mở SVP",
   "Enable SVP": "Bật SVP",
-  "Harbor's player applies the interpolation itself, embedded like normal playback, and starts SVP Manager in the tray for licensing. Restart playback to apply. If video goes black or won't start, turn this off.":
-    "Trình phát của Harbor tự thực hiện nội suy, tích hợp như khi phát bình thường, đồng thời khởi động SVP Manager trong khay hệ thống để xác thực giấy phép. Khởi động lại quá trình phát để áp dụng. Nếu video bị đen hoặc không phát được, hãy tắt tính năng này.",
-  "Finish the install above first. Flipping this on now won't do anything until Harbor can find SVP's engine.":
-    "Trước tiên, hãy hoàn tất quá trình cài đặt ở trên. Bật tùy chọn này lúc này sẽ không có tác dụng cho đến khi Harbor tìm thấy bộ máy của SVP.",
+  "Lart's player applies the interpolation itself, embedded like normal playback, and starts SVP Manager in the tray for licensing. Restart playback to apply. If video goes black or won't start, turn this off.":
+    "Trình phát của Lart tự thực hiện nội suy, tích hợp như khi phát bình thường, đồng thời khởi động SVP Manager trong khay hệ thống để xác thực giấy phép. Khởi động lại quá trình phát để áp dụng. Nếu video bị đen hoặc không phát được, hãy tắt tính năng này.",
+  "Finish the install above first. Flipping this on now won't do anything until Lart can find SVP's engine.":
+    "Trước tiên, hãy hoàn tất quá trình cài đặt ở trên. Bật tùy chọn này lúc này sẽ không có tác dụng cho đến khi Lart tìm thấy bộ máy của SVP.",
   "Couldn't start SVP Manager: {err}": "Không thể khởi động SVP Manager: {err}",
   "Couldn't set up SVP: {err}": "Không thể thiết lập SVP: {err}",
-  "Anime4K and smooth-motion run on the bundled mpv engine in the Harbor desktop app. They have no effect in the browser.":
-    "Anime4K và tính năng làm mượt chuyển động chạy trên bộ máy mpv đi kèm ứng dụng Harbor cho máy tính. Các tính năng này không có tác dụng trong trình duyệt.",
+  "Anime4K and smooth-motion run on the bundled mpv engine in the Lart desktop app. They have no effect in the browser.":
+    "Anime4K và tính năng làm mượt chuyển động chạy trên bộ máy mpv đi kèm ứng dụng Lart cho máy tính. Các tính năng này không có tác dụng trong trình duyệt.",
   "Download the desktop app to use anime enhancements.":
     "Tải ứng dụng cho máy tính để dùng các cải tiến dành cho anime.",
   "Match the picture quality to your computer, smooth out weak connections, and fine-tune the mpv engine with plain-language controls.":
@@ -1913,8 +1913,8 @@ const settings: Record<string, string> = {
     "CPU giải mã mọi nội dung. Tương thích tốt nhất nhưng máy sẽ nóng và có thể bị giật khi phát 4K. Chỉ dùng chế độ này nếu hình ảnh bị lỗi khi bật giải mã phần cứng.",
   "Forces the graphics card on. Smoothest and coolest, but a few old or unusual files may refuse to play. Switch back to Auto if something won't start.":
     "Buộc dùng card đồ họa. Mượt nhất và ít nóng máy nhất, nhưng một số tệp cũ hoặc không phổ biến có thể không phát được. Chuyển lại Tự động nếu nội dung không bắt đầu phát.",
-  "Harbor uses the graphics card when it's safe and falls back to the CPU when it isn't. The right call for almost everyone.":
-    "Harbor dùng card đồ họa khi an toàn và chuyển sang CPU khi cần. Đây là lựa chọn phù hợp với hầu hết mọi người.",
+  "Lart uses the graphics card when it's safe and falls back to the CPU when it isn't. The right call for almost everyone.":
+    "Lart dùng card đồ họa khi an toàn và chuyển sang CPU khi cần. Đây là lựa chọn phù hợp với hầu hết mọi người.",
   "Picture adjustments": "Điều chỉnh hình ảnh",
   "Nudge the image to taste. Start with a one-tap look below, then fine-tune with the dials. Everything resets cleanly, so you can't break anything.":
     "Điều chỉnh hình ảnh theo ý thích. Bắt đầu với một giao diện một chạm bên dưới, sau đó tinh chỉnh bằng các nút xoay. Mọi thứ đều có thể đặt lại hoàn toàn nên bạn không thể làm hỏng gì.",
@@ -1936,8 +1936,8 @@ const settings: Record<string, string> = {
   Sharpen: "Độ sắc nét",
   "Reset picture": "Đặt lại hình ảnh",
   "Color & HDR": "Màu sắc & HDR",
-  "How Harbor squeezes HDR movies onto a normal screen. Auto is right for almost everyone; the curves below just change the look (punchy vs soft). Only matters on HDR sources.":
-    "Cách Harbor hiển thị phim HDR trên màn hình thường. Tự động phù hợp với hầu hết mọi người; các đường cong bên dưới chỉ thay đổi phong cách hình ảnh (rực rỡ hoặc dịu). Chỉ có tác dụng với nguồn HDR.",
+  "How Lart squeezes HDR movies onto a normal screen. Auto is right for almost everyone; the curves below just change the look (punchy vs soft). Only matters on HDR sources.":
+    "Cách Lart hiển thị phim HDR trên màn hình thường. Tự động phù hợp với hầu hết mọi người; các đường cong bên dưới chỉ thay đổi phong cách hình ảnh (rực rỡ hoặc dịu). Chỉ có tác dụng với nguồn HDR.",
   "Tone-mapping curve": "Đường cong ánh xạ tông màu",
   "Auto (recommended)": "Tự động (khuyên dùng)",
   "Reference (bt.2390)": "Tham chiếu (bt.2390)",
@@ -1949,8 +1949,8 @@ const settings: Record<string, string> = {
   "On an HDR display, stretches normal (non-HDR) movies to use the extra brightness range. Leave off on a regular screen; it can look washed out.":
     "Trên màn hình HDR, mở rộng phim thường (không phải HDR) để tận dụng dải độ sáng bổ sung. Hãy tắt trên màn hình thường vì hình ảnh có thể bị nhợt nhạt.",
   "Slow or unstable connection": "Kết nối chậm hoặc không ổn định",
-  "If video keeps pausing to buffer, or you're on spotty Wi-Fi or a far-away server, this gives Harbor a bigger head start so playback rides through the rough patches.":
-    "Nếu video liên tục tạm dừng để tải đệm, hoặc Wi-Fi chập chờn hay máy chủ ở xa, tùy chọn này giúp Harbor tải trước nhiều hơn để phát mượt qua những lúc kết nối kém.",
+  "If video keeps pausing to buffer, or you're on spotty Wi-Fi or a far-away server, this gives Lart a bigger head start so playback rides through the rough patches.":
+    "Nếu video liên tục tạm dừng để tải đệm, hoặc Wi-Fi chập chờn hay máy chủ ở xa, tùy chọn này giúp Lart tải trước nhiều hơn để phát mượt qua những lúc kết nối kém.",
   "Build a bigger buffer": "Tăng bộ đệm",
   "Loads more of the video ahead of time before playing. Smoother on weak connections, uses a little more memory and takes a moment longer to start.":
     "Tải trước nhiều nội dung video hơn trước khi phát. Mượt hơn khi kết nối yếu, dùng thêm một chút bộ nhớ và mất thêm chút thời gian để bắt đầu.",
@@ -1963,8 +1963,8 @@ const settings: Record<string, string> = {
   "Wait before playing": "Chờ trước khi phát",
   "Holds up to {size} in memory while a video plays.":
     "Giữ tối đa {size} trong bộ nhớ khi video đang phát.",
-  "Harbor sizes the head start for each title and grows it once playback settles. Right for almost everyone.":
-    "Harbor tự chọn mức tải trước cho từng tựa phim và tăng dần khi việc phát đã ổn định. Phù hợp với hầu hết mọi người.",
+  "Lart sizes the head start for each title and grows it once playback settles. Right for almost everyone.":
+    "Lart tự chọn mức tải trước cho từng tựa phim và tăng dần khi việc phát đã ổn định. Phù hợp với hầu hết mọi người.",
   "The quickest start and the least memory used. Good on a fast, steady connection, or on a machine that is short on memory.":
     "Khởi động nhanh nhất và dùng ít bộ nhớ nhất. Phù hợp khi kết nối nhanh, ổn định hoặc khi máy có ít bộ nhớ.",
   "A couple of minutes of head start. Rides out a brief hiccup without much of a wait before playback begins.":
@@ -1979,8 +1979,8 @@ const settings: Record<string, string> = {
   "Turn on if you watch on a laptop or headphones and dialogue feels too quiet next to the effects. Leave off if you have a real surround setup or a soundbar.":
     "Bật nếu bạn xem trên laptop hoặc bằng tai nghe và lời thoại quá nhỏ so với hiệu ứng. Hãy tắt nếu bạn có hệ thống âm thanh vòm thực thụ hoặc soundbar.",
   "Advanced (mpv.conf)": "Nâng cao (mpv.conf)",
-  "The escape hatch for power users. One mpv option per line as key=value, exactly like mpv.conf. These apply last, so they override every dial above. Anything Harbor can't read is skipped, so a typo won't break playback. Restart playback to apply.":
-    "Lối tùy chỉnh dành cho người dùng chuyên sâu. Mỗi dòng nhập một tùy chọn mpv theo dạng key=value, giống hệt mpv.conf. Các tùy chọn này được áp dụng sau cùng nên sẽ ghi đè mọi thiết lập bên trên. Mọi nội dung Harbor không đọc được sẽ bị bỏ qua, vì vậy lỗi chính tả sẽ không làm hỏng việc phát. Khởi động lại nội dung đang phát để áp dụng.",
+  "The escape hatch for power users. One mpv option per line as key=value, exactly like mpv.conf. These apply last, so they override every dial above. Anything Lart can't read is skipped, so a typo won't break playback. Restart playback to apply.":
+    "Lối tùy chỉnh dành cho người dùng chuyên sâu. Mỗi dòng nhập một tùy chọn mpv theo dạng key=value, giống hệt mpv.conf. Các tùy chọn này được áp dụng sau cùng nên sẽ ghi đè mọi thiết lập bên trên. Mọi nội dung Lart không đọc được sẽ bị bỏ qua, vì vậy lỗi chính tả sẽ không làm hỏng việc phát. Khởi động lại nội dung đang phát để áp dụng.",
   "1 option active": "1 tùy chọn đang hoạt động",
   "{n} options active": "{n} tùy chọn đang hoạt động",
   "1 line skipped (not valid)": "Đã bỏ qua 1 dòng (không hợp lệ)",
@@ -1990,8 +1990,8 @@ const settings: Record<string, string> = {
   "Heads up: {keys} can load outside scripts or open your player to the network. Only keep these if you know exactly what they do.":
     "Lưu ý: {keys} có thể tải tập lệnh bên ngoài hoặc cho phép truy cập trình phát qua mạng. Chỉ giữ lại nếu bạn biết chính xác tác dụng của chúng.",
   "See the mpv.conf your dials above generate": "Xem mpv.conf được tạo từ các thiết lập bên trên",
-  "These tune the bundled mpv engine, which runs in the Harbor desktop app. They have no effect in the browser.":
-    "Các tùy chọn này tinh chỉnh công cụ mpv tích hợp, chạy trong ứng dụng Harbor cho máy tính. Chúng không có tác dụng trên trình duyệt.",
+  "These tune the bundled mpv engine, which runs in the Lart desktop app. They have no effect in the browser.":
+    "Các tùy chọn này tinh chỉnh công cụ mpv tích hợp, chạy trong ứng dụng Lart cho máy tính. Chúng không có tác dụng trên trình duyệt.",
   "Download the desktop app to use video tuning.": "Tải ứng dụng cho máy tính để tinh chỉnh video.",
   "Ask to resume or start over": "Hỏi tiếp tục xem hay xem lại từ đầu",
   "When you hit Play on something you've partly watched, show a prompt to resume from where you left off or start over. Also covers items synced from Stremio or Trakt.":
@@ -2024,19 +2024,19 @@ const settings: Record<string, string> = {
   "Generate a Cloudflare API token with": "Tạo token API Cloudflare với",
   and: "và",
   "permissions at": "quyền tại",
-  "Paste it into Harbor.": "Dán token vào Harbor.",
+  "Paste it into Lart.": "Dán token vào Lart.",
   "Wait for the upload to finish. The relay URL gets written to":
     "Chờ quá trình tải lên hoàn tất. URL relay sẽ được ghi vào",
-  "in Harbor settings.": "trong phần cài đặt Harbor.",
+  "in Lart settings.": "trong phần cài đặt Lart.",
   "Save the worker source. Copy": "Lưu mã nguồn worker. Sao chép",
-  "from the Harbor repo into a new directory as": "từ kho mã Harbor vào một thư mục mới với tên",
+  "from the Lart repo into a new directory as": "từ kho mã Lart vào một thư mục mới với tên",
   "Save this": "Lưu nội dung này",
   "next to it:": "bên cạnh tệp đó:",
   "Note the URL Cloudflare returns. It looks like": "Ghi lại URL do Cloudflare trả về. URL có dạng",
-  "In Harbor: Settings, Harbor Relay, then": "Trong Harbor: Cài đặt, Harbor Relay, rồi",
+  "In Lart: Settings, Lart Relay, then": "Trong Lart: Cài đặt, Lart Relay, rồi",
   "Paste the URL with": "Dán URL với",
   "as the scheme instead of": "làm giao thức thay cho",
-  "Settings, Harbor Relay, then": "Cài đặt, Harbor Relay, rồi",
+  "Settings, Lart Relay, then": "Cài đặt, Lart Relay, rồi",
   "The test calls": "Quy trình kiểm tra gọi",
   "and confirms the worker is reachable and running a current version. A passing test means Watch Together rooms will connect.":
     "và xác nhận worker có thể truy cập được cũng như đang chạy phiên bản hiện tại. Nếu kiểm tra đạt, các phòng Xem cùng nhau sẽ kết nối được.",
@@ -2045,8 +2045,8 @@ const settings: Record<string, string> = {
   "subdomain acts as the access token. There is no login.":
     "đóng vai trò là token truy cập. Không cần đăng nhập.",
   "To run a public relay, post the": "Để vận hành relay công khai, hãy đăng",
-  "URL on r/Stremio or wherever your community lives. Other Harbor users paste it into Settings, Harbor Relay,":
-    "URL lên r/Stremio hoặc nơi cộng đồng của bạn hoạt động. Người dùng Harbor khác dán URL này vào Cài đặt, Harbor Relay,",
+  "URL on r/Stremio or wherever your community lives. Other Lart users paste it into Settings, Lart Relay,":
+    "URL lên r/Stremio hoặc nơi cộng đồng của bạn hoạt động. Người dùng Lart khác dán URL này vào Cài đặt, Lart Relay,",
   "returns JSON with the worker version. Used by the test button.":
     "trả về JSON chứa phiên bản worker. Được nút kiểm tra sử dụng.",
   "with a WebSocket upgrade: opens a Watch Together room. State is held in a Durable Object, no persistence beyond the active session.":
@@ -2065,8 +2065,8 @@ const settings: Record<string, string> = {
   "Focus GIF URL": "URL GIF khi lấy nét",
   "Addon not installed": "Chưa cài đặt tiện ích bổ sung",
   "This section depends on the addon": "Mục này phụ thuộc vào tiện ích bổ sung",
-  "You must install this addon in your Stremio account first so Harbor can fetch its works.":
-    "Trước tiên, bạn phải cài đặt tiện ích bổ sung này trong tài khoản Stremio để Harbor có thể tải các tác phẩm từ đó.",
+  "You must install this addon in your Stremio account first so Lart can fetch its works.":
+    "Trước tiên, bạn phải cài đặt tiện ích bổ sung này trong tài khoản Stremio để Lart có thể tải các tác phẩm từ đó.",
   "Missing TMDB Key": "Thiếu khóa TMDB",
   "This section relies on TMDB discovery features.":
     "Mục này phụ thuộc vào các tính năng khám phá của TMDB.",
@@ -2074,8 +2074,8 @@ const settings: Record<string, string> = {
     "Vui lòng thêm khóa API TMDB trong phần cài đặt Thư viện & Siêu dữ liệu để xem thư mục này.",
   OK: "OK",
   "Loading...": "Đang tải...",
-  "Bring your Letterboxd watchlist, diary, liked films and lists into Harbor via the Stremboxd bridge.":
-    "Đưa danh sách xem, nhật ký, phim đã thích và các danh sách trên Letterboxd vào Harbor qua cầu nối Stremboxd.",
+  "Bring your Letterboxd watchlist, diary, liked films and lists into Lart via the Stremboxd bridge.":
+    "Đưa danh sách xem, nhật ký, phim đã thích và các danh sách trên Letterboxd vào Lart qua cầu nối Stremboxd.",
   "Enable Letterboxd integration": "Bật tích hợp Letterboxd",
   "Shows your Letterboxd catalogs on the home page and a Letterboxd panel on film pages.":
     "Hiển thị các danh mục Letterboxd trên trang chủ và bảng Letterboxd trên trang phim.",
@@ -2084,8 +2084,8 @@ const settings: Record<string, string> = {
   Full: "Đầy đủ",
   "Public mode uses just your username: watchlist, liked films, popular and Top 250. No password needed.":
     "Chế độ công khai chỉ sử dụng tên người dùng của bạn: danh sách xem, phim đã thích, phim phổ biến và Top 250. Không cần mật khẩu.",
-  "Full mode signs in with your Letterboxd password to also unlock your diary, friends activity and your personal ratings. Your password is sent only to Stremboxd to obtain a token — Harbor never stores it.":
-    "Chế độ đầy đủ đăng nhập bằng mật khẩu Letterboxd để mở khóa thêm nhật ký, hoạt động của bạn bè và điểm đánh giá cá nhân. Mật khẩu chỉ được gửi đến Stremboxd để lấy mã thông báo - Harbor không bao giờ lưu mật khẩu.",
+  "Full mode signs in with your Letterboxd password to also unlock your diary, friends activity and your personal ratings. Your password is sent only to Stremboxd to obtain a token — Lart never stores it.":
+    "Chế độ đầy đủ đăng nhập bằng mật khẩu Letterboxd để mở khóa thêm nhật ký, hoạt động của bạn bè và điểm đánh giá cá nhân. Mật khẩu chỉ được gửi đến Stremboxd để lấy mã thông báo - Lart không bao giờ lưu mật khẩu.",
   "Letterboxd username": "Tên người dùng Letterboxd",
   "Letterboxd password": "Mật khẩu Letterboxd",
   "Your Letterboxd password": "Mật khẩu Letterboxd của bạn",
@@ -2118,8 +2118,8 @@ const settings: Record<string, string> = {
   "Choose an avatar": "Chọn ảnh đại diện",
   "{n} avatars across film, TV, and anime.": "{n} ảnh đại diện từ phim điện ảnh, phim bộ và anime.",
   "Rights and usage": "Quyền và cách sử dụng",
-  "Fan-made avatars for personal use. Harbor claims no rights to these characters; they belong to their creators and studios, shown here under fair use. Every one is optimized down to a tiny WebP.":
-    "Ảnh đại diện do người hâm mộ tạo, dành cho mục đích sử dụng cá nhân. Harbor không tuyên bố quyền sở hữu các nhân vật này; họ thuộc về tác giả và hãng phim tương ứng, được hiển thị tại đây theo nguyên tắc sử dụng hợp lý. Mỗi ảnh đều được tối ưu thành tệp WebP dung lượng cực nhỏ.",
+  "Fan-made avatars for personal use. Lart claims no rights to these characters; they belong to their creators and studios, shown here under fair use. Every one is optimized down to a tiny WebP.":
+    "Ảnh đại diện do người hâm mộ tạo, dành cho mục đích sử dụng cá nhân. Lart không tuyên bố quyền sở hữu các nhân vật này; họ thuộc về tác giả và hãng phim tương ứng, được hiển thị tại đây theo nguyên tắc sử dụng hợp lý. Mỗi ảnh đều được tối ưu thành tệp WebP dung lượng cực nhỏ.",
   "or use one of our avatars": "hoặc dùng một trong các ảnh đại diện của chúng tôi",
   "Random avatar": "Ảnh đại diện ngẫu nhiên",
   "More soon": "Sắp có thêm",

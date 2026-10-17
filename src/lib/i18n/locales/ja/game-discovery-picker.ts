@@ -45,7 +45,7 @@ export default {
   "games.pick.hours": "時間",
   "games.pick.noHistory": "履歴がまだありません。お気に入りを選ぶか、ゲーム設定でSteamを接続してください。",
   "games.pick.manualOnly": "お気に入りと選択したフィルターのみを使います。",
-  "games.pick.addedNote": "「最近追加」は初回取り込み後にHarborで初めて確認した時点です。購入日ではありません。",
+  "games.pick.addedNote": "「最近追加」は初回取り込み後にLartで初めて確認した時点です。購入日ではありません。",
   "games.pick.because": "{name}が好きなあなたに",
   "games.pick.matches": "選択内容に合うゲーム",
   "games.pick.steamCatalog": "Steamカタログ",

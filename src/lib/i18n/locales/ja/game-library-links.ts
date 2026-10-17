@@ -2,7 +2,7 @@ export default {
   "games.links.title": "リンク",
   "games.links.sort": "リンクを並べ替え",
   "games.links.note": "URLのA〜Z順に並べ替えます。名前とリンク先は変わりません。",
-  "games.links.available": "Harborに保存済みのリンクを使用します。新しく見つかったリンクは保存した順序の後に追加されます。",
+  "games.links.available": "Lartに保存済みのリンクを使用します。新しく見つかったリンクは保存した順序の後に追加されます。",
   "games.links.original": "元の順序に戻す",
   "games.links.applied": "{count}件のゲームのリンクを更新しました。",
   "games.links.changes": "{count}件のゲームが変更されます。",

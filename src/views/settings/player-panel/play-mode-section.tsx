@@ -53,7 +53,7 @@ export function PlayModePanel() {
         <SettingRow
           label={t("Picture in picture style")}
           desc={t(
-            "Resize shrinks the Harbor window itself, so the app goes with it. Detached moves the video into its own floating window and hands Harbor back to you, so you can keep browsing while it plays.",
+            "Resize shrinks the Lart window itself, so the app goes with it. Detached moves the video into its own floating window and hands Lart back to you, so you can keep browsing while it plays.",
           )}
         >
           <Segmented<"resize" | "native">
@@ -201,7 +201,7 @@ export function PlayModePanel() {
         <ToggleRow
           label={t("Keep same source on next episode")}
           sub={t(
-            "When auto-playing the next episode, keep the same release/source you were just watching instead of Harbor's top-ranked stream. Falls back to the best stream if that source isn't available.",
+            "When auto-playing the next episode, keep the same release/source you were just watching instead of Lart's top-ranked stream. Falls back to the best stream if that source isn't available.",
           )}
           value={settings.keepSourceNextEpisode}
           onChange={(v) => update({ keepSourceNextEpisode: v })}

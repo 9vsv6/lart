@@ -31,8 +31,8 @@ const catalog09: Record<string, string> = {
   "Self-test is disabled while strict remote streaming is on. It downloads a small test file over peer-to-peer on this machine.": "엄격한 원격 스트리밍이 켜져 있는 동안에는 자체 테스트를 사용할 수 없습니다. 이 기기에서 P2P로 작은 테스트 파일을 다운로드합니다.",
   Send: "보내기",
   "Send a bug report": "버그 신고 보내기",
-  "Send a bug report straight to the Harbor team. Screenshots and screen recordings welcome.":
-    "Harbor 팀에 버그 신고를 바로 보냅니다. 스크린샷과 화면 녹화를 첨부해 주세요.",
+  "Send a bug report straight to the Lart team. Screenshots and screen recordings welcome.":
+    "Lart 팀에 버그 신고를 바로 보냅니다. 스크린샷과 화면 녹화를 첨부해 주세요.",
   "Send audio to specific speakers, headphones or a receiver. System default follows Windows.":
     "특정 스피커, 헤드폰 또는 리시버로 오디오를 출력합니다. 시스템 기본값은 Windows 설정을 따릅니다.",
   "Send code": "코드 보내기",
@@ -41,21 +41,21 @@ const catalog09: Record<string, string> = {
   "Send test": "테스트 전송",
   "Send the theme you are looking at right now, exactly as it is here.":
     "현재 보고 있는 테마를 여기 표시된 그대로 전송합니다.",
-  "Send this title to your Harbor app": "이 작품을 Harbor 앱으로 보내기",
-  "Send this to anyone you want to watch with. They paste it in their Settings → Harbor Relay. After that, share a 6-character room code from the people icon up top.":
-    "함께 시청할 사람에게 이 주소를 보내세요. 상대방은 설정 → Harbor 릴레이에 붙여 넣으면 됩니다. 그런 다음 상단의 사람 아이콘에서 6자 방 코드를 공유하세요.",
+  "Send this title to your Lart app": "이 작품을 Lart 앱으로 보내기",
+  "Send this to anyone you want to watch with. They paste it in their Settings → Lart Relay. After that, share a 6-character room code from the people icon up top.":
+    "함께 시청할 사람에게 이 주소를 보내세요. 상대방은 설정 → Lart 릴레이에 붙여 넣으면 됩니다. 그런 다음 상단의 사람 아이콘에서 6자 방 코드를 공유하세요.",
   "Send to TV": "TV로 보내기",
   "Send to TV now": "지금 TV로 보내기",
   Sending: "전송 중",
   "Sending to Trakt…": "Trakt로 전송 중…",
-  "Sending to that Harbor": "해당 Harbor로 전송 중",
+  "Sending to that Lart": "해당 Lart로 전송 중",
   "Sending to your TV": "TV로 전송 중",
   "Sending...": "전송 중...",
   "Sending…": "전송 중…",
   "Sends only the chapter you open to DeepSeek. Volumes, chapters, and metadata stay unchanged.":
     "열어 본 챕터만 DeepSeek로 전송합니다. 권, 챕터 및 메타데이터는 변경되지 않습니다.",
-  "Sends the context above straight to the Harbor team. No keys or library data.":
-    "위 정보를 Harbor 팀에 바로 보냅니다. 키나 라이브러리 데이터는 포함되지 않습니다.",
+  "Sends the context above straight to the Lart team. No keys or library data.":
+    "위 정보를 Lart 팀에 바로 보냅니다. 키나 라이브러리 데이터는 포함되지 않습니다.",
   Sent: "전송됨",
   "Sent {n} to Trakt": "{n}개를 Trakt로 전송함",
   "Sent. Check your channel.": "전송했습니다. 채널을 확인하세요.",
@@ -82,7 +82,7 @@ const catalog09: Record<string, string> = {
   "Series · {n}": "시리즈 · {n}",
   "Series, Critically Acclaimed": "평단의 찬사를 받은 시리즈",
   Serif: "명조체",
-  "Serve Harbor on your network": "네트워크에서 Harbor 제공",
+  "Serve Lart on your network": "네트워크에서 Lart 제공",
   Server: "서버",
   "Server + login": "서버 + 로그인",
   "Server URL": "서버 URL",
@@ -92,14 +92,14 @@ const catalog09: Record<string, string> = {
   "Server couldn't start:": "서버를 시작할 수 없음:",
   "Server did not respond": "서버가 응답하지 않았습니다",
   "Server reachable": "서버 연결 가능",
-  "Server reachable in {ms}ms. Harbor will use it for torrent streaming.":
-    "{ms}ms 만에 서버에 연결했습니다. Harbor에서 이 서버를 토렌트 스트리밍에 사용합니다.",
+  "Server reachable in {ms}ms. Lart will use it for torrent streaming.":
+    "{ms}ms 만에 서버에 연결했습니다. Lart에서 이 서버를 토렌트 스트리밍에 사용합니다.",
   "Server returned an empty response": "서버에서 빈 응답을 반환했습니다",
   Servers: "서버",
-  "Serves this exact install of Harbor as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer.":
-    "현재 설치된 Harbor를 네트워크에서 웹 앱으로 제공합니다. 휴대폰, 노트북 또는 TV 브라우저에서 열어 로그인하면 이 컴퓨터를 통해 스트리밍됩니다.",
-  "Serves this exact install of Harbor as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer. You can also use the phone remote to control playback and cast to another device on this machine.":
-    "이 Harbor 설치본을 네트워크에서 웹 앱으로 제공합니다. 휴대폰, 노트북 또는 TV 브라우저에서 열어 로그인하면 이 컴퓨터를 통해 스트리밍됩니다. 휴대폰 리모컨으로 재생을 제어하고 이 컴퓨터의 다른 기기로 전송할 수도 있습니다.",
+  "Serves this exact install of Lart as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer.":
+    "현재 설치된 Lart를 네트워크에서 웹 앱으로 제공합니다. 휴대폰, 노트북 또는 TV 브라우저에서 열어 로그인하면 이 컴퓨터를 통해 스트리밍됩니다.",
+  "Serves this exact install of Lart as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer. You can also use the phone remote to control playback and cast to another device on this machine.":
+    "이 Lart 설치본을 네트워크에서 웹 앱으로 제공합니다. 휴대폰, 노트북 또는 TV 브라우저에서 열어 로그인하면 이 컴퓨터를 통해 스트리밍됩니다. 휴대폰 리모컨으로 재생을 제어하고 이 컴퓨터의 다른 기기로 전송할 수도 있습니다.",
   "Service status": "서비스 상태",
   "Service-specific browsing needs a TMDB key. Pick All / Movies / Shows to browse via Cinemeta.":
     "서비스별 탐색에는 TMDB 키가 필요합니다. Cinemeta를 통해 탐색하려면 전체 / 영화 / 시리즈를 선택하세요.",
@@ -109,7 +109,7 @@ const catalog09: Record<string, string> = {
   "Session ID or v4 access token": "세션 ID 또는 v4 액세스 토큰",
   "Set PIN": "PIN 설정",
   "Set a 4-digit PIN": "4자리 PIN 설정",
-  "Set a Harbor profile picture first": "먼저 Harbor 프로필 사진을 설정하세요",
+  "Set a Lart profile picture first": "먼저 Lart 프로필 사진을 설정하세요",
   "Set a PIN": "PIN 설정",
   "Set a PIN for {name}": "{name}의 PIN 설정",
   "Set a course": "항로 설정",
@@ -136,26 +136,26 @@ const catalog09: Record<string, string> = {
   "Set to where the video is right now": "현재 영상 위치로 설정",
   "Set up": "설정",
   "Set up Anime4K": "Anime4K 설정",
-  "Set up Harbor": "Harbor 설정",
+  "Set up Lart": "Lart 설정",
   "Set up Live TV": "실시간 TV 설정",
   "Set up a Cloudflare relay for Watch Together": "함께 보기를 위한 Cloudflare 릴레이 설정",
   "Set up a debrid": "debrid 설정",
   "Set up a source": "소스 설정",
-  "Set up at least one readable eBook source to begin. Metadata can describe a book, but a folder, extension, or custom source is what lets Harbor open it.":
-    "시작하려면 읽을 수 있는 eBook 소스를 하나 이상 설정하세요. 메타데이터는 책의 정보를 제공하지만, Harbor에서 책을 열려면 폴더, 확장 프로그램 또는 사용자 지정 소스가 필요합니다.",
+  "Set up at least one readable eBook source to begin. Metadata can describe a book, but a folder, extension, or custom source is what lets Lart open it.":
+    "시작하려면 읽을 수 있는 eBook 소스를 하나 이상 설정하세요. 메타데이터는 책의 정보를 제공하지만, Lart에서 책을 열려면 폴더, 확장 프로그램 또는 사용자 지정 소스가 필요합니다.",
   "Set up eBooks": "eBook 설정",
   "Set up my TV from this computer": "이 컴퓨터에서 내 TV 설정",
   "Set up your own Cloudflare Worker rather than borrowing this one.":
     "이 Worker를 빌려 쓰는 대신 자체 Cloudflare Worker를 설정합니다.",
-  "Set your MyAnimeList profile picture as your Harbor avatar.":
-    "MyAnimeList 프로필 사진을 Harbor 아바타로 설정합니다.",
+  "Set your MyAnimeList profile picture as your Lart avatar.":
+    "MyAnimeList 프로필 사진을 Lart 아바타로 설정합니다.",
   "Set your status": "상태 설정",
   "Set. If the subtitles drift later on, play ahead and Sync from here again at a later line to fix the drift.":
     "설정되었습니다. 나중에 자막이 다시 어긋나면 더 뒤쪽을 재생하고 해당 줄에서 여기서 동기화를 다시 선택해 오차를 보정하세요.",
-  "Sets streaming availability and the Now Playing release window. Pick a country and Harbor offers to match the interface, metadata, subtitle, and audio languages to it.":
-    "스트리밍 제공 여부와 현재 상영작의 개봉 기간을 설정합니다. 국가를 선택하면 Harbor에서 인터페이스, 메타데이터, 자막 및 음성 언어를 해당 국가에 맞추도록 제안합니다.",
-  "Sets the language of Harbor's own interface: menus, buttons, and labels. Arabic switches the layout to right to left. This is separate from subtitle and metadata languages below.":
-    "메뉴, 버튼, 레이블 등 Harbor 자체 인터페이스의 언어를 설정합니다. 아랍어를 선택하면 레이아웃이 오른쪽에서 왼쪽으로 전환됩니다. 아래의 자막 및 메타데이터 언어와는 별개입니다.",
+  "Sets streaming availability and the Now Playing release window. Pick a country and Lart offers to match the interface, metadata, subtitle, and audio languages to it.":
+    "스트리밍 제공 여부와 현재 상영작의 개봉 기간을 설정합니다. 국가를 선택하면 Lart에서 인터페이스, 메타데이터, 자막 및 음성 언어를 해당 국가에 맞추도록 제안합니다.",
+  "Sets the language of Lart's own interface: menus, buttons, and labels. Arabic switches the layout to right to left. This is separate from subtitle and metadata languages below.":
+    "메뉴, 버튼, 레이블 등 Lart 자체 인터페이스의 언어를 설정합니다. 아랍어를 선택하면 레이아웃이 오른쪽에서 왼쪽으로 전환됩니다. 아래의 자막 및 메타데이터 언어와는 별개입니다.",
   "Setting up an addon": "애드온 설정 중",
   "Setting up the hand-off…": "전환 설정 중…",
   Settings: "설정",
@@ -163,8 +163,8 @@ const catalog09: Record<string, string> = {
   "Settings for this profile (shared or independent)": "이 프로필의 설정(공유 또는 독립)",
   "Settings storage": "설정 저장 공간",
   "Settings storage breakdown": "설정 저장 공간 내역",
-  "Settings, Harbor Relay, then": "설정, Harbor 릴레이로 이동한 다음",
-  "Settings, Harbor Relay, then {kbd}.": "설정, Harbor Relay로 이동한 다음 {kbd}을(를) 선택합니다.",
+  "Settings, Lart Relay, then": "설정, Lart 릴레이로 이동한 다음",
+  "Settings, Lart Relay, then {kbd}.": "설정, Lart Relay로 이동한 다음 {kbd}을(를) 선택합니다.",
   "Settings, lists and progress follow you between machines.":
     "설정, 목록 및 진행 상황이 기기 간에 동기화됩니다.",
   Setup: "설정",
@@ -181,8 +181,8 @@ const catalog09: Record<string, string> = {
   "Shaders (Anime4K + installed)": "셰이더(Anime4K + 설치됨)",
   "Shaders installed": "셰이더 설치됨",
   Shadow: "그림자",
-  "Shape the metadata and reading language Harbor uses without changing your original files.":
-    "원본 파일을 변경하지 않고 Harbor에서 사용할 메타데이터와 독서 언어를 설정하세요.",
+  "Shape the metadata and reading language Lart uses without changing your original files.":
+    "원본 파일을 변경하지 않고 Lart에서 사용할 메타데이터와 독서 언어를 설정하세요.",
   "Shape the sound without touching your system EQ. Applies on the mpv engine; the HTML5 engine plays audio untouched.":
     "시스템 EQ를 건드리지 않고 음색을 조절합니다. mpv 엔진에 적용되며 HTML5 엔진에서는 오디오가 원음 그대로 재생됩니다.",
   "Shape your anime feed.": "애니메이션 피드를 취향에 맞게 설정하세요.",
@@ -207,8 +207,8 @@ const catalog09: Record<string, string> = {
   "Share with {name}": "{name}과(와) 공유",
   "Share your thoughts (optional)": "의견을 남겨 주세요(선택 사항)",
   Shared: "공유됨",
-  "Shared collections from across Harbor will show up here soon.":
-    "Harbor 전역에서 공유된 컬렉션이 곧 여기에 표시됩니다.",
+  "Shared collections from across Lart will show up here soon.":
+    "Lart 전역에서 공유된 컬렉션이 곧 여기에 표시됩니다.",
   "Shared to the community": "커뮤니티에 공유됨",
   "Shared transition curves. Use anywhere you transition.":
     "공통 전환 곡선입니다. 전환 효과가 필요한 어디서나 사용할 수 있습니다.",
@@ -239,16 +239,16 @@ const catalog09: Record<string, string> = {
     "자막 타이밍을 앞당깁니다(미세 조절하려면 Shift를 누름).",
   "Shift subtitle timing later (Shift for fine steps).":
     "자막 타이밍을 늦춥니다(미세 조절하려면 Shift를 누름).",
-  "Ships with Harbor. Always available.": "Harbor에 기본 제공되며 언제든 사용할 수 있습니다.",
+  "Ships with Lart. Always available.": "Lart에 기본 제공되며 언제든 사용할 수 있습니다.",
   Short: "단편",
   "Short of the Year": "Short of the Year",
   "Short seek (Shift + arrows)": "짧게 탐색(Shift + 방향키)",
   "Short seek back": "짧게 뒤로 탐색",
   "Short seek forward": "짧게 앞으로 탐색",
-  "Short version: don't. Harbor takes no donations and no cut of anything on this page.":
-    "요약하면, 기부하지 마세요. Harbor는 기부를 받지 않으며 이 페이지의 어떤 항목에서도 수익을 배분받지 않습니다.",
-  "Short version: don't. Harbor takes no donations.":
-    "요약하면, 기부하지 마세요. Harbor는 기부를 받지 않습니다.",
+  "Short version: don't. Lart takes no donations and no cut of anything on this page.":
+    "요약하면, 기부하지 마세요. Lart는 기부를 받지 않으며 이 페이지의 어떤 항목에서도 수익을 배분받지 않습니다.",
+  "Short version: don't. Lart takes no donations.":
+    "요약하면, 기부하지 마세요. Lart는 기부를 받지 않습니다.",
   "Short {word} {n} seconds": "짧게 {word} {n}초",
   Shortcuts: "단축키",
   Shots: "슈팅",
@@ -280,8 +280,8 @@ const catalog09: Record<string, string> = {
   "Show a Minecraft card on your profile. Leave the username blank to hide it.":
     "프로필에 Minecraft 카드를 표시합니다. 숨기려면 사용자 이름을 비워 두세요.",
   "Show a Minecraft card with your username": "사용자 이름이 포함된 Minecraft 카드 표시",
-  "Show a Skip Intro / Skip Credits button when Harbor detects one. Turn this off to never show it. You can also tap the X on the button to dismiss a wrong one for the rest of the episode.":
-    "Harbor가 오프닝 또는 엔딩을 감지하면 오프닝 건너뛰기 / 엔딩 건너뛰기 버튼을 표시합니다. 표시하지 않으려면 이 옵션을 끄세요. 잘못 감지된 경우 버튼의 X를 눌러 해당 에피소드가 끝날 때까지 숨길 수도 있습니다.",
+  "Show a Skip Intro / Skip Credits button when Lart detects one. Turn this off to never show it. You can also tap the X on the button to dismiss a wrong one for the rest of the episode.":
+    "Lart가 오프닝 또는 엔딩을 감지하면 오프닝 건너뛰기 / 엔딩 건너뛰기 버튼을 표시합니다. 표시하지 않으려면 이 옵션을 끄세요. 잘못 감지된 경우 버튼의 X를 눌러 해당 에피소드가 끝날 때까지 숨길 수도 있습니다.",
   "Show a Skip button when a known injected ad plays, and a small report button on new releases so you can mark ads for review.":
     "알려진 삽입 광고가 재생될 때 건너뛰기 버튼을 표시하고, 새로 공개된 콘텐츠에는 작은 신고 버튼을 표시하여 광고를 검토 대상으로 지정할 수 있게 합니다.",
   "Show a bookmark on saved titles": "저장한 제목에 북마크 표시",
@@ -361,8 +361,8 @@ const catalog09: Record<string, string> = {
     "마음껏 꾸며 보세요. [b]굵게[/b], [color=gold]색상[/color], [youtube]링크[/youtube], [img]https://...[/img] 등을 사용할 수 있습니다.",
   "Show on Discord": "Discord에 표시",
   "Show what you are listening to": "듣고 있는 음악 표시",
-  "Share the track, artist and album art while music plays, with a Listen in Harbor button.":
-    "음악을 재생하는 동안 곡, 아티스트, 앨범 아트를 공유하고 'Listen in Harbor' 버튼을 함께 표시합니다.",
+  "Share the track, artist and album art while music plays, with a Listen in Lart button.":
+    "음악을 재생하는 동안 곡, 아티스트, 앨범 아트를 공유하고 'Listen in Lart' 버튼을 함께 표시합니다.",
   "Show on home": "홈에 표시",
   "Show or hide the playback stats overlay.": "재생 통계 오버레이를 표시하거나 숨깁니다.",
   "Show original language": "원문 보기",
@@ -424,17 +424,17 @@ const catalog09: Record<string, string> = {
     "플레이어의 제목 아래에 실제로 시청 중인 콘텐츠를 표시합니다.",
   "Show while browsing": "탐색 중에도 표시",
   "Show while paused": "일시 정지 중에도 표시",
-  "Show your AniList lists as rails on the Anime page, keep your watch progress in sync as you finish episodes, and use your AniList avatar as your Harbor photo. Free at anilist.co.":
-    "Anime 페이지에 AniList 목록을 레일로 표시하고, 에피소드를 끝까지 볼 때마다 시청 진행 상황을 동기화하며, AniList 아바타를 Harbor 프로필 사진으로 사용할 수 있습니다. anilist.co에서 무료로 이용할 수 있습니다.",
-  "Show your AniList profile picture as your Harbor avatar.":
-    "AniList 프로필 사진을 Harbor 아바타로 표시합니다.",
-  "Show your Harbor profile picture on the community": "커뮤니티에 Harbor 프로필 사진 표시",
+  "Show your AniList lists as rails on the Anime page, keep your watch progress in sync as you finish episodes, and use your AniList avatar as your Lart photo. Free at anilist.co.":
+    "Anime 페이지에 AniList 목록을 레일로 표시하고, 에피소드를 끝까지 볼 때마다 시청 진행 상황을 동기화하며, AniList 아바타를 Lart 프로필 사진으로 사용할 수 있습니다. anilist.co에서 무료로 이용할 수 있습니다.",
+  "Show your AniList profile picture as your Lart avatar.":
+    "AniList 프로필 사진을 Lart 아바타로 표시합니다.",
+  "Show your Lart profile picture on the community": "커뮤니티에 Lart 프로필 사진 표시",
   "Show your Letterboxd card": "Letterboxd 카드 표시",
   "Show your Simkl card": "Simkl 카드 표시",
   "Show your favourite games, books and music on your profile":
     "프로필에 좋아하는 게임, 책, 음악을 표시하세요",
-  "Show your operating system's own title bar with its minimize, maximize, and close buttons. They stay reachable everywhere, including while a video is playing. Turn this off to use Harbor's built-in window buttons.":
-    "운영 체제의 최소화, 최대화, 닫기 버튼이 있는 기본 제목 표시줄을 표시합니다. 동영상 재생 중을 포함해 어디서나 사용할 수 있습니다. Harbor의 기본 제공 창 버튼을 사용하려면 이 옵션을 끄세요.",
+  "Show your operating system's own title bar with its minimize, maximize, and close buttons. They stay reachable everywhere, including while a video is playing. Turn this off to use Lart's built-in window buttons.":
+    "운영 체제의 최소화, 최대화, 닫기 버튼이 있는 기본 제목 표시줄을 표시합니다. 동영상 재생 중을 포함해 어디서나 사용할 수 있습니다. Lart의 기본 제공 창 버튼을 사용하려면 이 옵션을 끄세요.",
   "Show {count} more": "{count}개 더 표시",
   "Show {count} replies": "답글 {count}개 보기",
   "Show {label}": "{label} 표시",
@@ -501,11 +501,11 @@ const catalog09: Record<string, string> = {
   "Sign in from the sidebar after saving. Library and addons stay separate.":
     "저장한 후 사이드바에서 로그인하세요. 라이브러리와 애드온은 별도로 유지됩니다.",
   "Sign in to": "서비스에 로그인",
-  "Sign in to Harbor": "Harbor에 로그인",
-  "Sign in to Harbor to check availability.": "이용 가능 여부를 확인하려면 Harbor에 로그인하세요.",
+  "Sign in to Lart": "Lart에 로그인",
+  "Sign in to Lart to check availability.": "이용 가능 여부를 확인하려면 Lart에 로그인하세요.",
   "Sign in to Stremio": "Stremio에 로그인",
-  "Sign in to Stremio first so Harbor knows which watchlist to sync.":
-    "Harbor에서 동기화할 관심 목록을 확인할 수 있도록 먼저 Stremio에 로그인하세요.",
+  "Sign in to Stremio first so Lart knows which watchlist to sync.":
+    "Lart에서 동기화할 관심 목록을 확인할 수 있도록 먼저 Stremio에 로그인하세요.",
   "Sign in to Stremio first.": "먼저 Stremio에 로그인하세요.",
   "Sign in to Stremio first. The repair scans only the active profile's library.":
     "먼저 Stremio에 로그인하세요. 복구 작업은 현재 프로필의 라이브러리만 검사합니다.",
@@ -527,8 +527,8 @@ const catalog09: Record<string, string> = {
   "Sign in to filter by your library": "내 라이브러리로 필터링하려면 로그인",
   "Sign in to get a shareable link.": "공유 링크를 받으려면 로그인하세요.",
   "Sign in to leave a comment": "댓글을 남기려면 로그인하세요",
-  "Sign in to mirror your Continue Watching, watchlist, and any addons you've already curated. Optional; Harbor works fully signed-out.":
-    "로그인하면 이어보기, 관심 목록, 기존에 구성한 애드온을 그대로 동기화할 수 있습니다. 선택 사항이며, 로그아웃 상태에서도 Harbor의 모든 기능을 사용할 수 있습니다.",
+  "Sign in to mirror your Continue Watching, watchlist, and any addons you've already curated. Optional; Lart works fully signed-out.":
+    "로그인하면 이어보기, 관심 목록, 기존에 구성한 애드온을 그대로 동기화할 수 있습니다. 선택 사항이며, 로그아웃 상태에서도 Lart의 모든 기능을 사용할 수 있습니다.",
   "Sign in to pick up where you left off.": "이어서 이용하려면 로그인하세요.",
   "Sign in to rate": "평가하려면 로그인하세요",
   "Sign in to see your library calendar": "라이브러리 캘린더를 보려면 로그인",
@@ -536,8 +536,8 @@ const catalog09: Record<string, string> = {
   "Sign in to sync your library, watch progress, and addons.":
     "로그인하여 라이브러리, 시청 진도, 애드온을 동기화하세요.",
   "Sign in to upload a custom image.": "사용자 지정 이미지를 업로드하려면 로그인하세요.",
-  "Sign in to your Harbor account first. Imported ratings are saved to your profile.":
-    "먼저 Harbor 계정에 로그인하세요. 가져온 평점은 프로필에 저장됩니다.",
+  "Sign in to your Lart account first. Imported ratings are saved to your profile.":
+    "먼저 Lart 계정에 로그인하세요. 가져온 평점은 프로필에 저장됩니다.",
   "Sign in with": "다음으로 로그인",
   "Sign in with Discord": "Discord로 로그인",
   "Sign in with Stremio": "Stremio로 로그인",
@@ -545,15 +545,15 @@ const catalog09: Record<string, string> = {
   "Sign in with email": "이메일로 로그인",
   "Sign in, or make an account": "로그인 또는 계정 만들기",
   "Sign out": "로그아웃",
-  "Sign out of Harbor account": "Harbor 계정에서 로그아웃",
+  "Sign out of Lart account": "Lart 계정에서 로그아웃",
   "Sign-in failed": "로그인 실패",
   "Sign-in failed.": "로그인에 실패했습니다.",
   "Signed in as {name}": "{name}(으)로 로그인됨",
   "Signed in as {username}": "{username}(으)로 로그인됨",
-  "Signed in to your Harbor account": "Harbor 계정에 로그인됨",
+  "Signed in to your Lart account": "Lart 계정에 로그인됨",
   "Signed in. Your library is on the TV.": "로그인되었습니다. 라이브러리가 TV에 표시됩니다.",
-  "Signing in to your Harbor account. Your profiles will appear in a moment.":
-    "Harbor 계정에 로그인 중입니다. 잠시 후 프로필이 표시됩니다.",
+  "Signing in to your Lart account. Your profiles will appear in a moment.":
+    "Lart 계정에 로그인 중입니다. 잠시 후 프로필이 표시됩니다.",
   "Signing in...": "로그인 중...",
   "Signing in…": "로그인 중…",
   "Signing the TV in to Stremio, Trakt, AniList and the metadata keys. Scan the code with your phone from the TV itself.":
@@ -597,8 +597,8 @@ const catalog09: Record<string, string> = {
     "시청자 선택을 건너뛰고 항상 이 프로필로 시작합니다. PIN으로 잠긴 프로필은 기본 프로필로 설정할 수 없습니다.",
   "Skip ad": "광고 건너뛰기",
   "Skip for now": "나중에 하기",
-  "Skip if you'd rather just use Cinemeta. Harbor still works, you'll just see fewer rails.":
-    "Cinemeta만 사용하려면 건너뛰세요. Harbor는 계속 작동하지만 표시되는 콘텐츠 줄이 줄어듭니다.",
+  "Skip if you'd rather just use Cinemeta. Lart still works, you'll just see fewer rails.":
+    "Cinemeta만 사용하려면 건너뛰세요. Lart는 계속 작동하지만 표시되는 콘텐츠 줄이 줄어듭니다.",
   "Skip injected ad": "삽입 광고 건너뛰기",
   "Skip injected ad?": "삽입된 광고를 건너뛸까요?",
   "Skip injected ads automatically": "삽입된 광고 자동 건너뛰기",
@@ -606,18 +606,18 @@ const catalog09: Record<string, string> = {
   "Skip intros & credits": "인트로 및 엔딩 크레딧 건너뛰기",
   "Skip intros and credits": "오프닝 및 엔딩 크레딧 건너뛰기",
   "Skip setup": "설정 건너뛰기",
-  "Skip the 'stream over peer-to-peer?' prompt and start uncached torrents immediately. Harbor remembers your choice after the first confirmation anyway.":
-    "'P2P로 스트리밍할까요?' 메시지를 건너뛰고 캐시되지 않은 토렌트를 즉시 시작합니다. 첫 확인 후에는 Harbor가 선택을 기억합니다.",
+  "Skip the 'stream over peer-to-peer?' prompt and start uncached torrents immediately. Lart remembers your choice after the first confirmation anyway.":
+    "'P2P로 스트리밍할까요?' 메시지를 건너뛰고 캐시되지 않은 토렌트를 즉시 시작합니다. 첫 확인 후에는 Lart가 선택을 기억합니다.",
   "Skip the launch": "시작 화면 건너뛰기",
   "Skip these tracks": "이 트랙 건너뛰기",
-  "Skip this and Harbor runs on Cinemeta. You just see fewer rows.":
-    "건너뛰어도 Harbor는 Cinemeta로 실행됩니다. 표시되는 행만 줄어듭니다.",
-  "Skip this and Harbor still works. Your library just stays local.":
-    "건너뛰어도 Harbor는 계속 작동합니다. 라이브러리만 이 기기에 저장됩니다.",
+  "Skip this and Lart runs on Cinemeta. You just see fewer rows.":
+    "건너뛰어도 Lart는 Cinemeta로 실행됩니다. 표시되는 행만 줄어듭니다.",
+  "Skip this and Lart still works. Your library just stays local.":
+    "건너뛰어도 Lart는 계속 작동합니다. 라이브러리만 이 기기에 저장됩니다.",
   "Skip to the next episode if available.": "가능한 경우 다음 에피소드로 건너뜁니다.",
   "Skip to the previous episode if available.": "가능한 경우 이전 에피소드로 건너뜁니다.",
   "Skip, I can do this later": "건너뛰기, 나중에 설정",
-  "Skip, let Harbor choose": "건너뛰고 Harbor가 선택",
+  "Skip, let Lart choose": "건너뛰고 Lart가 선택",
   "Skipped, not rated or not supported": "건너뜀, 평점 없음 또는 지원되지 않음",
   "Sleep at end": "종료 후 취침",
   "Sleep at end of episode": "에피소드 종료 시 취침",
@@ -657,8 +657,8 @@ const catalog09: Record<string, string> = {
   "Smart resync with speech recognition": "음성 인식으로 스마트 재동기화",
   "Smooth motion": "부드러운 모션",
   "Smooth motion (interpolation) & SVP": "부드러운 모션(프레임 보간) 및 SVP",
-  "Smooth motion runs on the bundled mpv engine in the Harbor desktop app. It has no effect in the browser.":
-    "부드러운 모션은 Harbor 데스크톱 앱에 내장된 mpv 엔진에서 작동합니다. 브라우저에서는 적용되지 않습니다.",
+  "Smooth motion runs on the bundled mpv engine in the Lart desktop app. It has no effect in the browser.":
+    "부드러운 모션은 Lart 데스크톱 앱에 내장된 mpv 엔진에서 작동합니다. 브라우저에서는 적용되지 않습니다.",
   "Smooth on weak PCs": "저사양 PC에서 부드럽게",
   "Smooth scrolling": "부드러운 스크롤",
   "Smoothing off": "부드럽게 처리 꺼짐",
@@ -694,8 +694,8 @@ const catalog09: Record<string, string> = {
   "Something unexpected went wrong. Nothing may have been written. Retry to re-check.":
     "예기치 않은 오류가 발생했습니다. 변경 사항이 저장되지 않았을 수 있습니다. 다시 시도하여 확인하세요.",
   "Something went wrong on the way there.": "이동하는 중 문제가 발생했습니다.",
-  "Something went wrong reaching Harbor. Check your connection and try again.":
-    "Harbor에 연결하는 중 문제가 발생했습니다. 연결 상태를 확인하고 다시 시도하세요.",
+  "Something went wrong reaching Lart. Check your connection and try again.":
+    "Lart에 연결하는 중 문제가 발생했습니다. 연결 상태를 확인하고 다시 시도하세요.",
   "Something went wrong.": "문제가 발생했습니다.",
   Song: "노래",
   "Song ID provider": "노래 식별 제공업체",
@@ -705,8 +705,8 @@ const catalog09: Record<string, string> = {
   Soon: "곧 공개",
   "Sorry this one is not better. Tell us what went wrong and we will fix it for you.":
     "죄송합니다. 기대에 미치지 못한 점을 알려 주시면 바로 개선하겠습니다.",
-  "Sorry, Harbor crashed the last time it was running. You can review the details and choose whether to send a report.":
-    "죄송합니다. 지난 실행 중 Harbor가 충돌했습니다. 세부 정보를 검토한 후 보고서를 보낼지 선택할 수 있습니다.",
+  "Sorry, Lart crashed the last time it was running. You can review the details and choose whether to send a report.":
+    "죄송합니다. 지난 실행 중 Lart가 충돌했습니다. 세부 정보를 검토한 후 보고서를 보낼지 선택할 수 있습니다.",
   Sort: "정렬",
   "Sort by": "정렬 기준",
   "Sort by source": "소스순 정렬",
@@ -735,8 +735,8 @@ const catalog09: Record<string, string> = {
     "소스: {code}. 의존성 없이 약 200줄의 JavaScript로 구성됩니다. 무엇이 실행되는지 알고 싶다면 배포 전에 읽어 보세요.",
   Sources: "소스",
   "Sources & library": "소스 및 라이브러리",
-  "Sources Harbor flagged as broken. Clear to give them another chance.":
-    "Harbor에서 작동하지 않는 것으로 표시한 소스입니다. 다시 시도하려면 삭제하세요.",
+  "Sources Lart flagged as broken. Clear to give them another chance.":
+    "Lart에서 작동하지 않는 것으로 표시한 소스입니다. 다시 시도하려면 삭제하세요.",
   "Sources are not cached for this title. Open the picker page to refresh.":
     "이 타이틀에는 캐시된 소스가 없습니다. 선택 페이지를 열어 새로 고침하세요.",
   "Sources by addon": "애드온별 소스",
@@ -814,8 +814,8 @@ const catalog09: Record<string, string> = {
     "여기서 시작하세요. 거의 모두가 사용하는 애드온입니다.",
   "Start import": "가져오기 시작",
   "Start of manga": "만화 시작",
-  "Start or stop recording a GIF of the video (no subtitles). Saves to Pictures/Harbor.":
-    "자막 없이 동영상의 GIF 녹화를 시작하거나 중지합니다. Pictures/Harbor에 저장됩니다.",
+  "Start or stop recording a GIF of the video (no subtitles). Saves to Pictures/Lart.":
+    "자막 없이 동영상의 GIF 녹화를 시작하거나 중지합니다. Pictures/Lart에 저장됩니다.",
   "Start over": "처음부터 다시",
   "Start playback": "재생 시작",
   "Start recording": "녹화 시작",
@@ -888,8 +888,8 @@ const catalog09: Record<string, string> = {
   "Stop drawing": "그리기 중지",
   "Stop feeding the hero carousel (back to automatic)":
     "히어로 캐러셀에 더 이상 제공하지 않기(자동으로 되돌리기)",
-  "Stop playback when you minimize Harbor or send it to the tray.":
-    "Harbor를 최소화하거나 트레이로 보낼 때 재생을 일시 정지합니다.",
+  "Stop playback when you minimize Lart or send it to the tray.":
+    "Lart를 최소화하거나 트레이로 보낼 때 재생을 일시 정지합니다.",
   "Stop playback whenever another window takes focus.":
     "다른 창으로 포커스가 이동할 때마다 재생을 일시 정지합니다.",
   "Stop recording": "녹화 중지",
@@ -906,8 +906,8 @@ const catalog09: Record<string, string> = {
   "Stops the TV playing to an empty room all night.":
     "밤새 빈 방에서 TV가 재생되지 않도록 중지합니다.",
   Storage: "저장 공간",
-  "Storage is full. Clear Harbor cache storage, then try saving again.":
-    "저장 공간이 가득 찼습니다. Harbor 캐시 저장 공간을 비운 후 다시 저장해 보세요.",
+  "Storage is full. Clear Lart cache storage, then try saving again.":
+    "저장 공간이 가득 찼습니다. Lart 캐시 저장 공간을 비운 후 다시 저장해 보세요.",
   "Storage location": "저장 위치",
   "Storage overview": "저장 공간 개요",
   "Store each title in its own folder with its EPUB or PDF":
@@ -942,10 +942,10 @@ const catalog09: Record<string, string> = {
     "몇 초 안에 스트림 재생이 시작되어야 합니다.",
   "Stream switcher": "스트림 전환기",
   "Stream this via peer-to-peer?": "P2P 방식으로 이 스트림을 재생할까요?",
-  "Stream torrents straight from Harbor's built-in engine when you have no debrid set up, or a torrent isn't cached. This connects to peers over your own connection. Turn off to only ever play debrid and direct links.":
-    "디브리드가 설정되지 않았거나 토렌트가 캐시되지 않은 경우 Harbor의 기본 제공 엔진에서 토렌트를 바로 스트리밍합니다. 사용자의 인터넷 연결을 통해 피어에 연결됩니다. 디브리드 및 직접 링크만 재생하려면 이 옵션을 끄세요.",
-  "Stream torrents through Harbor's own Rust peer-to-peer engine instead of the bundled Stremio Server. Falls back automatically if it can't connect. Status and a self-test live in the Local engine card below.":
-    "내장 Stremio Server 대신 Harbor의 자체 Rust P2P 엔진으로 토렌트를 스트리밍합니다. 연결할 수 없으면 자동으로 대체 엔진을 사용합니다. 상태와 자체 테스트는 아래의 로컬 엔진 카드에서 확인할 수 있습니다.",
+  "Stream torrents straight from Lart's built-in engine when you have no debrid set up, or a torrent isn't cached. This connects to peers over your own connection. Turn off to only ever play debrid and direct links.":
+    "디브리드가 설정되지 않았거나 토렌트가 캐시되지 않은 경우 Lart의 기본 제공 엔진에서 토렌트를 바로 스트리밍합니다. 사용자의 인터넷 연결을 통해 피어에 연결됩니다. 디브리드 및 직접 링크만 재생하려면 이 옵션을 끄세요.",
+  "Stream torrents through Lart's own Rust peer-to-peer engine instead of the bundled Stremio Server. Falls back automatically if it can't connect. Status and a self-test live in the Local engine card below.":
+    "내장 Stremio Server 대신 Lart의 자체 Rust P2P 엔진으로 토렌트를 스트리밍합니다. 연결할 수 없으면 자동으로 대체 엔진을 사용합니다. 상태와 자체 테스트는 아래의 로컬 엔진 카드에서 확인할 수 있습니다.",
   "Streamer release rule": "스트리머 출시 규칙",
   Streamers: "스트리밍 서비스",
   Streaming: "스트리밍",
@@ -967,8 +967,8 @@ const catalog09: Record<string, string> = {
     "{cap}Mbps를 넘는 스트림은 캐시된 경우에도 순위가 낮아집니다.",
   Stremio: "Stremio",
   "Stremio ID": "Stremio ID",
-  "Stremio Supporters get a special badge on their Harbor profile.":
-    "Stremio 후원자는 Harbor 프로필에 특별 배지를 받습니다.",
+  "Stremio Supporters get a special badge on their Lart profile.":
+    "Stremio 후원자는 Lart 프로필에 특별 배지를 받습니다.",
   "Stremio account": "Stremio 계정",
 };
 

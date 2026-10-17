@@ -48,7 +48,7 @@ export function SportsAccessRow() {
         label={t("Show Sports without a TV provider")}
         value={anyway}
         sub={t(
-          "Scores, schedules and standings come from public sports data and need no provider. Harbor does not supply streams: watching a game still needs your own Live TV, M3U or Xtream source.",
+          "Scores, schedules and standings come from public sports data and need no provider. Lart does not supply streams: watching a game still needs your own Live TV, M3U or Xtream source.",
         )}
         onChange={(value) => update({ sportsWithoutProvider: value })}
       />
@@ -73,7 +73,7 @@ export function SportsAccessRow() {
       {!consent.persisted && consent.status !== "unknown" && (
         <p role="status" className={ROW_DESC}>
           {t(
-            "Your choice is active for this session but could not be saved. You may be asked again when Harbor restarts.",
+            "Your choice is active for this session but could not be saved. You may be asked again when Lart restarts.",
           )}
         </p>
       )}

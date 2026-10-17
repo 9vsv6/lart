@@ -48,7 +48,7 @@ export function CustomCodeCard() {
     <Section
       title={t("Custom code")}
       subtitle={t(
-        "Customize Harbor with your own CSS, JavaScript, and HTML. Changes apply as you type.",
+        "Customize Lart with your own CSS, JavaScript, and HTML. Changes apply as you type.",
       )}
     >
       <SRow
@@ -80,7 +80,7 @@ export function CustomCodePanel() {
       <div className="flex items-start gap-2.5 rounded-[10px] bg-elevated px-4 py-3">
         <AlertTriangle size={18} strokeWidth={2.2} className="mt-[2px] shrink-0 text-danger" />
         <p className={`max-w-[66ch] ${ROW_DESC}`}>
-          {t("You're modding your own client. Custom JS has full access to your Harbor session. Only paste code you wrote or fully trust.")}
+          {t("You're modding your own client. Custom JS has full access to your Lart session. Only paste code you wrote or fully trust.")}
         </p>
       </div>
 
@@ -119,7 +119,7 @@ export function CustomCodePanel() {
         open={clearField !== null}
         onClose={() => setClearField(null)}
         title={t("Clear this code?")}
-        sub={clearField === "customJs" ? t("The saved JavaScript will be removed. Restart Harbor to clear any effects from scripts that already ran.") : t("The saved {name} will be removed and its changes will stop applying.", { name: t(FIELDS.find((f) => f.id === clearField)?.label ?? "code") })}
+        sub={clearField === "customJs" ? t("The saved JavaScript will be removed. Restart Lart to clear any effects from scripts that already ran.") : t("The saved {name} will be removed and its changes will stop applying.", { name: t(FIELDS.find((f) => f.id === clearField)?.label ?? "code") })}
         actions={<><ModalButton ghost onClick={() => setClearField(null)}>{t("Keep code")}</ModalButton><button type="button" className={ROW_ACTION_DANGER} onClick={() => { if (clearField) update({ [clearField]: "" } as Partial<Settings>); setClearField(null); }}>{t("Clear code")}</button></>}
       >
         <p className={ROW_DESC}>{t("Copy any code you want to keep before clearing it.")}</p>

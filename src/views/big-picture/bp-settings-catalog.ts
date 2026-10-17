@@ -136,7 +136,7 @@ export function bpConnectedNames(facts: {
   return [
     facts.tmdbKey.trim() ? "TMDB" : null,
     facts.stremioName ? "Stremio" : null,
-    facts.harborName ? "Harbor" : null,
+    facts.harborName ? "Lart" : null,
   ].filter((v): v is string => v !== null);
 }
 
@@ -308,7 +308,7 @@ export function bpSettingsControls(
         label: t("Home layout"),
         value: s.homeMode,
         options: [
-          { value: "harbor", label: t("Harbor") },
+          { value: "harbor", label: t("Lart") },
           { value: "classic", label: t("Classic") },
         ],
       },
@@ -413,7 +413,7 @@ export function bpSettingsCategories(
     language: language?.nativeLabel ?? s.uiLanguage,
     subtitles: subLang ? `${subLang} / ${s.subFontSize}px` : t("Off"),
     playback: `${s.playerEngine === "auto" ? t("Auto") : s.playerEngine === "mpv" ? "mpv" : "HTML5"}`,
-    home: s.homeMode === "harbor" ? t("Harbor") : t("Classic"),
+    home: s.homeMode === "harbor" ? t("Lart") : t("Classic"),
     services: t("{n} on", { n: services }),
     setup: connected.length > 0 ? connected.join(", ") : t("None"),
     interface: bpSoundLabel(t, s.bigPictureSound),

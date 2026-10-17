@@ -1,7 +1,7 @@
 const audit: Record<string, string> = {
   " · away": " · sedang pergi",
-  "'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    " halaman penyiapannya di browser bawaan Harbor. Pilih opsi yang Anda inginkan. Saat Anda mengeklik Instal di halaman tersebut, Harbor otomatis menangkap tautannya dan memperbarui addon.",
+  "'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    " halaman penyiapannya di browser bawaan Lart. Pilih opsi yang Anda inginkan. Saat Anda mengeklik Instal di halaman tersebut, Lart otomatis menangkap tautannya dan memperbarui addon.",
   "'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     " halaman penyiapannya. Pilih opsi yang Anda inginkan, lalu salin tautan instalasi yang diberikan dan tempel di bawah untuk memperbarui addon.",
   "1 title needs review — help us identify it.": "1 judul perlu ditinjau; bantu kami mengenalinya.",
@@ -20,10 +20,10 @@ const audit: Record<string, string> = {
     "Sumber yang tidak aktif dilewati dan sumber berikutnya dimulai.",
   "A fast community subtitle index. Off by default; turn it on for extra coverage on newer or niche releases.":
     "Indeks subtitle komunitas yang cepat. Nonaktif secara default; aktifkan untuk cakupan tambahan pada rilisan yang lebih baru atau kurang populer.",
-  "A full screen, couch friendly Harbor for TVs, handhelds and big monitors.":
-    "Pengalaman Harbor layar penuh yang nyaman digunakan dari sofa untuk TV, perangkat genggam, dan monitor besar.",
-  "A good correction only has to be found once. Harbor can share verified fixes so the next person with the same file and subtitle gets an instant result. Records are keyed by salted fingerprints, never your files or anything personal.":
-    "Koreksi yang tepat hanya perlu ditemukan sekali. Harbor dapat membagikan perbaikan terverifikasi agar pengguna berikutnya dengan file dan subtitle yang sama langsung mendapatkan hasil. Catatan disimpan berdasarkan sidik jari dengan salt, bukan berdasarkan file Anda atau data pribadi apa pun.",
+  "A full screen, couch friendly Lart for TVs, handhelds and big monitors.":
+    "Pengalaman Lart layar penuh yang nyaman digunakan dari sofa untuk TV, perangkat genggam, dan monitor besar.",
+  "A good correction only has to be found once. Lart can share verified fixes so the next person with the same file and subtitle gets an instant result. Records are keyed by salted fingerprints, never your files or anything personal.":
+    "Koreksi yang tepat hanya perlu ditemukan sekali. Lart dapat membagikan perbaikan terverifikasi agar pengguna berikutnya dengan file dan subtitle yang sama langsung mendapatkan hasil. Catatan disimpan berdasarkan sidik jari dengan salt, bukan berdasarkan file Anda atau data pribadi apa pun.",
   "A hero up top, then Top 10, Trending, In Theaters and your service rows.":
     "Bagian hero di atas, lalu Top 10, Sedang Tren, Sedang Tayang di Bioskop, dan deretan layanan Anda.",
   "A high quality chroma upscaler. Fixes the color blur and bleeding of default chroma scaling, most visible on saturated edges and subtitles.":
@@ -64,8 +64,8 @@ const audit: Record<string, string> = {
     "Tambahkan beberapa teman agar aktivitas menonton, penilaian, dan favorit mereka muncul di sini.",
   "Add a profile for someone else and everyone keeps their own Continue Watching, watch history, and progress.":
     "Tambahkan profil untuk orang lain agar bagian Lanjutkan Menonton, riwayat tontonan, dan progres setiap orang tetap terpisah.",
-  "Add a series above and Harbor will grab each new episode as it airs, on your terms.":
-    "Tambahkan serial di atas dan Harbor akan mengunduh setiap episode baru saat tayang, sesuai preferensi Anda.",
+  "Add a series above and Lart will grab each new episode as it airs, on your terms.":
+    "Tambahkan serial di atas dan Lart akan mengunduh setiap episode baru saat tayang, sesuai preferensi Anda.",
   "Add an M3U link or Xtream Codes login":
     "Tambahkan tautan M3U atau kredensial login Xtream Codes",
   "Add people in the Custom calendar manager first, then come back here.":
@@ -87,8 +87,8 @@ const audit: Record<string, string> = {
   "Adventure Master": "Ahli Petualangan",
   "After several episodes auto-play in a row with no input, pause and check you're still there before continuing. Off by default.":
     "Setelah beberapa episode diputar otomatis berturut-turut tanpa interaksi, pemutaran akan dijeda dan Anda akan diminta memastikan bahwa Anda masih menonton sebelum dilanjutkan. Dinonaktifkan secara default.",
-  "After you pick a source, show a subtitle picker so you can set the exact track and language before the video starts. Off by default, Harbor keeps picking one for you automatically.":
-    "Setelah Anda memilih sumber, tampilkan pemilih subtitle agar Anda dapat menentukan trek dan bahasa sebelum video dimulai. Dinonaktifkan secara default; Harbor akan tetap memilihkannya secara otomatis.",
+  "After you pick a source, show a subtitle picker so you can set the exact track and language before the video starts. Off by default, Lart keeps picking one for you automatically.":
+    "Setelah Anda memilih sumber, tampilkan pemilih subtitle agar Anda dapat menentukan trek dan bahasa sebelum video dimulai. Dinonaktifkan secara default; Lart akan tetap memilihkannya secara otomatis.",
   "Airing Now": "Sedang Tayang",
   Aligned: "Selaras",
   "Aligned here": "Selaras di sini",
@@ -103,8 +103,8 @@ const audit: Record<string, string> = {
   "Always show the report button": "Selalu tampilkan tombol Laporkan",
   "Amazon-style X-Ray: open the cast while you watch and tap anyone for their bio and everything they have been in. On-device face matching to show who is on screen is coming next. Off by default.":
     "X-Ray ala Amazon: buka daftar pemeran sambil menonton dan ketuk siapa saja untuk melihat biodata serta semua karya yang pernah mereka bintangi. Pencocokan wajah di perangkat untuk menunjukkan siapa yang ada di layar akan segera hadir. Nonaktif secara default.",
-  "An award pack is a single JSON file plus the images it points to. Host both anywhere public (your own server, a GitHub repo, etc.) and share the JSON URL. Harbor only stores the URLs you install, never the images.":
-    "Paket penghargaan adalah satu file JSON beserta gambar yang dirujuknya. Tempatkan keduanya di mana saja yang dapat diakses publik (server Anda sendiri, repo GitHub, dll.) lalu bagikan URL JSON. Harbor hanya menyimpan URL yang Anda instal, bukan gambarnya.",
+  "An award pack is a single JSON file plus the images it points to. Host both anywhere public (your own server, a GitHub repo, etc.) and share the JSON URL. Lart only stores the URLs you install, never the images.":
+    "Paket penghargaan adalah satu file JSON beserta gambar yang dirujuknya. Tempatkan keduanya di mana saja yang dapat diakses publik (server Anda sendiri, repo GitHub, dll.) lalu bagikan URL JSON. Lart hanya menyimpan URL yang Anda instal, bukan gambarnya.",
   "Anchor Selection": "Pemilihan Jangkar",
   "And for the naughty ones: browsing or rating an adult addon never shows on Discord.":
     "Dan untuk yang nakal: aktivitas menjelajahi atau memberi rating pada addon dewasa tidak pernah muncul di Discord.",
@@ -176,8 +176,8 @@ const audit: Record<string, string> = {
   "Bottom end": "Akhir bawah",
   "Bring a server-rendered library aboard with your own source configuration.":
     "Hubungkan perpustakaan yang dirender oleh server dengan konfigurasi sumber Anda sendiri.",
-  "Bring trusted source packages aboard through Harbor’s isolated extension worker.":
-    "Tambahkan paket sumber tepercaya melalui worker ekstensi Harbor yang terisolasi.",
+  "Bring trusted source packages aboard through Lart’s isolated extension worker.":
+    "Tambahkan paket sumber tepercaya melalui worker ekstensi Lart yang terisolasi.",
   "Bring your own extensions": "Gunakan ekstensi Anda sendiri",
   "British Independent Film Awards": "British Independent Film Awards",
   "British TV's biggest night": "Malam terbesar di TV Britania",
@@ -190,14 +190,14 @@ const audit: Record<string, string> = {
   "Build a pack in any of these, export the JSON, host it as a gist, and paste the raw link below.":
     "Buat paket dengan salah satu alat ini, ekspor JSON, unggah sebagai gist, lalu tempel tautan mentahnya di bawah.",
   "Build from source": "Kompilasi dari kode sumber",
-  "Built into Harbor": "Terintegrasi dalam Harbor",
+  "Built into Lart": "Terintegrasi dalam Lart",
   "Built-in peer-to-peer streaming, served from your own machine.":
     "Streaming peer-to-peer bawaan, dialirkan dari perangkat Anda sendiri.",
-  "Bundled with Harbor. Plays anything you throw at it.":
-    "Disertakan dengan Harbor. Dapat memutar apa pun.",
+  "Bundled with Lart. Plays anything you throw at it.":
+    "Disertakan dengan Lart. Dapat memutar apa pun.",
   "Cache buffering": "Buffering ke cache",
-  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Harbor feature, so your chrome never goes stale when Harbor adds menu items.":
-    "Panggil ini dari pengendali onclick atau JS tema Anda. Semuanya stabil dan aman: masing-masing menjalankan fitur Harbor yang sebenarnya, sehingga chrome Anda tidak akan menjadi usang saat Harbor menambahkan item menu.",
+  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Lart feature, so your chrome never goes stale when Lart adds menu items.":
+    "Panggil ini dari pengendali onclick atau JS tema Anda. Semuanya stabil dan aman: masing-masing menjalankan fitur Lart yang sebenarnya, sehingga chrome Anda tidak akan menjadi usang saat Lart menambahkan item menu.",
   "Cam-quality picture with audio plugged into the projector or a separate recorder. Sound is clean, but the image is still a theater capture. Better than CAM, far below a real release.":
     "Gambar berkualitas CAM dengan audio yang diambil langsung dari proyektor atau perekam terpisah. Suaranya jernih, tetapi gambarnya masih merupakan rekaman bioskop. Lebih baik daripada CAM, tetapi jauh di bawah kualitas rilisan resmi.",
   "Camcorder rip": "Rip dari camcorder",
@@ -217,7 +217,7 @@ const audit: Record<string, string> = {
     "Pilih tempat munculnya umpan balik pengaturan waktu subtitle dan ukurannya.",
   "Class names and data attributes that won't change between releases. Safe to target from your CSS.":
     "Nama class dan atribut data yang tidak akan berubah antarrilis. Dapat ditargetkan dengan aman melalui CSS Anda.",
-  "Classic. Was Harbor's original pair.": "Klasik. Ini adalah pasangan awal Harbor.",
+  "Classic. Was Lart's original pair.": "Klasik. Ini adalah pasangan awal Lart.",
   "Clean transparent": "Transparan minimalis",
   "Click any binding to rebind it. Press Esc while capturing to cancel. Letters ignore Shift (so K and Shift+K trigger the same action).":
     "Klik pemetaan tombol mana pun untuk menetapkannya ulang. Tekan Esc saat merekam untuk membatalkan. Huruf mengabaikan Shift (jadi K dan Shift+K memicu tindakan yang sama).",
@@ -328,7 +328,7 @@ const audit: Record<string, string> = {
     "Lakukan sekali di halaman jelajah, sekali di halaman serial, dan sekali di tampilan baca.",
   "Documentary & Discovery": "Dokumenter & Eksplorasi",
   "Does this stream look right?": "Apakah tampilan stream ini sudah benar?",
-  "Donating to Harbor": "Berdonasi untuk Harbor",
+  "Donating to Lart": "Berdonasi untuk Lart",
   "Double page gap": "Jarak antardua halaman",
   "Down {n} this week": "Turun {n} posisi minggu ini",
   "Download Subtitle": "Unduh subtitle",
@@ -340,8 +340,8 @@ const audit: Record<string, string> = {
   Draw: "Gambar",
   "Drop a wallpaper behind the app. The dim slider keeps text readable.":
     "Pasang wallpaper di belakang aplikasi. Penggeser peredupan menjaga teks tetap mudah dibaca.",
-  "Drop in art at any resolution. Harbor resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
-    "Masukkan gambar dengan resolusi apa pun. Harbor akan mengubah ukuran dan mengompresi gambar yang terlalu besar, sehingga tidak ada yang dilewati karena terlalu besar. PNG persegi dengan latar belakang transparan memberikan hasil terbaik.",
+  "Drop in art at any resolution. Lart resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
+    "Masukkan gambar dengan resolusi apa pun. Lart akan mengubah ukuran dan mengompresi gambar yang terlalu besar, sehingga tidak ada yang dilewati karena terlalu besar. PNG persegi dengan latar belakang transparan memberikan hasil terbaik.",
   "Drop screenshots or screen recordings, or click to browse":
     "Taruh tangkapan layar atau rekaman layar, atau klik untuk menelusuri",
   "Drop-in chapters and long arcs for the post-dinner stretch.":
@@ -371,24 +371,24 @@ const audit: Record<string, string> = {
     "Menyeimbangkan dialog lirih dan adegan aksi yang bersuara keras dengan normalizer dinamis.",
   "Every saga in one place. Search anything: if it exists, it's here.":
     "Semua saga di satu tempat. Cari apa saja: jika ada, berarti ada di sini.",
-  "Every source Harbor tried failed to start. Pick a different one, or try again in a moment.":
-    "Semua sumber yang dicoba Harbor gagal dijalankan. Pilih sumber lain, atau coba lagi sebentar lagi.",
-  "Every surface in Harbor maps to one of these 12 variables.":
-    "Setiap bagian antarmuka Harbor dipetakan ke salah satu dari 12 variabel ini.",
-  "Every theme you share gets a private owner token. On the device where you shared it, Harbor saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
-    "Setiap tema yang Anda bagikan mendapat token pemilik pribadi. Di perangkat tempat Anda membagikannya, Harbor menyimpannya secara otomatis, sehingga tema tersebut muncul di sini dan dapat diklaim dengan satu ketukan. Untuk mengklaim tema dari perangkat lain, tempel token tersebut di bawah. Tema baru yang dibagikan kini langsung ditautkan ke akun Anda, jadi Anda tidak perlu melakukan ini lagi.",
-  "Everyone who uses this Harbor gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
-    "Setiap pengguna Harbor ini mendapatkan riwayat tontonan, avatar, warna, dan PIN opsional sendiri. Beralih kapan saja.",
+  "Every source Lart tried failed to start. Pick a different one, or try again in a moment.":
+    "Semua sumber yang dicoba Lart gagal dijalankan. Pilih sumber lain, atau coba lagi sebentar lagi.",
+  "Every surface in Lart maps to one of these 12 variables.":
+    "Setiap bagian antarmuka Lart dipetakan ke salah satu dari 12 variabel ini.",
+  "Every theme you share gets a private owner token. On the device where you shared it, Lart saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
+    "Setiap tema yang Anda bagikan mendapat token pemilik pribadi. Di perangkat tempat Anda membagikannya, Lart menyimpannya secara otomatis, sehingga tema tersebut muncul di sini dan dapat diklaim dengan satu ketukan. Untuk mengklaim tema dari perangkat lain, tempel token tersebut di bawah. Tema baru yang dibagikan kini langsung ditautkan ke akun Anda, jadi Anda tidak perlu melakukan ini lagi.",
+  "Everyone who uses this Lart gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
+    "Setiap pengguna Lart ini mendapatkan riwayat tontonan, avatar, warna, dan PIN opsional sendiri. Beralih kapan saja.",
   "Everything from {year}, sorted across trending, top rated, and hidden gems.":
     "Semua rilisan tahun {year}, diurutkan berdasarkan tren, peringkat tertinggi, dan pilihan tersembunyi.",
   "Everything you pick is saved into one file. Restoring it later only touches what is in the file. Your Stremio sign-in is always left out.":
     "Semua yang Anda pilih disimpan dalam satu file. Saat dipulihkan nanti, prosesnya hanya memengaruhi isi file tersebut. Informasi login Stremio Anda selalu dikecualikan.",
-  "Everything you save here stays in this browser. Your Stremio login, API keys, watch progress, picker cache, dismissed tips. Harbor servers never see any of it. Clearing your browser data wipes it.":
-    "Semua yang Anda simpan di sini tetap berada di browser ini. Data login Stremio Anda, kunci API, progres tontonan, cache pemilih, tips yang ditutup. Server Harbor tidak pernah menerima data tersebut. Menghapus data browser akan menghapus semuanya.",
-  "Export your Harbor setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
-    "Ekspor pengaturan Harbor Anda ke satu file - pilih dengan tepat apa saja yang disertakan. Pemulihan hanya mengembalikan isi file tersebut. Informasi login Stremio Anda selalu dikecualikan.",
-  "Export your entire Harbor setup to a single file, then restore it on a new computer or keep it as a backup. Everything is included except your Stremio sign-in.":
-    "Ekspor seluruh pengaturan Harbor Anda ke satu file, lalu pulihkan di komputer baru atau simpan sebagai cadangan. Semuanya disertakan kecuali informasi login Stremio Anda.",
+  "Everything you save here stays in this browser. Your Stremio login, API keys, watch progress, picker cache, dismissed tips. Lart servers never see any of it. Clearing your browser data wipes it.":
+    "Semua yang Anda simpan di sini tetap berada di browser ini. Data login Stremio Anda, kunci API, progres tontonan, cache pemilih, tips yang ditutup. Server Lart tidak pernah menerima data tersebut. Menghapus data browser akan menghapus semuanya.",
+  "Export your Lart setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
+    "Ekspor pengaturan Lart Anda ke satu file - pilih dengan tepat apa saja yang disertakan. Pemulihan hanya mengembalikan isi file tersebut. Informasi login Stremio Anda selalu dikecualikan.",
+  "Export your entire Lart setup to a single file, then restore it on a new computer or keep it as a backup. Everything is included except your Stremio sign-in.":
+    "Ekspor seluruh pengaturan Lart Anda ke satu file, lalu pulihkan di komputer baru atau simpan sebagai cadangan. Semuanya disertakan kecuali informasi login Stremio Anda.",
   "FSRCNNX neural upscaler": "Peningkat resolusi berbasis jaringan neural FSRCNNX",
   "Fade between backdrops": "Efek pudar di antara latar",
   "Failed to load match details.": "Gagal memuat detail pertandingan.",
@@ -435,8 +435,8 @@ const audit: Record<string, string> = {
   "Fresh tomatoes for 60% and up, splat for anything under.":
     "Tomat segar untuk 60% ke atas, ikon splat untuk nilai di bawahnya.",
   "Frost the top bar on scroll": "Beri efek buram pada bilah atas saat menggulir",
-  "Frosted, refractive surfaces on Harbor's floating controls.":
-    "Permukaan buram yang membiaskan cahaya pada kontrol mengambang Harbor.",
+  "Frosted, refractive surfaces on Lart's floating controls.":
+    "Permukaan buram yang membiaskan cahaya pada kontrol mengambang Lart.",
   "Full hero banner": "Hero banner penuh",
   "Full mode — diary, friends & ratings enabled": "Mode penuh - diari, teman & peringkat aktif",
   "Full quality frames": "Frame dengan kualitas penuh",
@@ -453,8 +453,8 @@ const audit: Record<string, string> = {
     "Perbesar secara halus poster di sekitarnya saat Anda bergerak di sepanjang baris poster, seperti dock. Dinonaktifkan secara default.",
   "Gently magnify nearby posters as you move across a poster row.":
     "Perbesar secara halus poster di sekitarnya saat Anda bergerak di sepanjang baris poster.",
-  "Genuine 48/60fps motion on anime, rendered right inside Harbor's player. SVP supplies the engine (VapourSynth + svpflow) and runs in your tray for licensing; Harbor's own player applies the interpolation, so it stays embedded and fully under your control. One-time install, then flip it on.":
-    "Gerakan 48/60fps asli pada anime, dirender langsung di dalam pemutar Harbor. SVP menyediakan mesin (VapourSynth + svpflow) dan berjalan di baki sistem untuk lisensi; pemutar Harbor sendiri menerapkan interpolasi sehingga tetap tertanam dan sepenuhnya dalam kendali Anda. Cukup instal sekali, lalu aktifkan.",
+  "Genuine 48/60fps motion on anime, rendered right inside Lart's player. SVP supplies the engine (VapourSynth + svpflow) and runs in your tray for licensing; Lart's own player applies the interpolation, so it stays embedded and fully under your control. One-time install, then flip it on.":
+    "Gerakan 48/60fps asli pada anime, dirender langsung di dalam pemutar Lart. SVP menyediakan mesin (VapourSynth + svpflow) dan berjalan di baki sistem untuk lisensi; pemutar Lart sendiri menerapkan interpolasi sehingga tetap tertanam dan sepenuhnya dalam kendali Anda. Cukup instal sekali, lalu aktifkan.",
   "Get {name} hosted, plus {n} more addons.":
     "Dapatkan hosting untuk {name}, ditambah {n} addon lainnya.",
   "Give to any charity below or subscribe to ElfHosted, and the badge lands on your profile.":
@@ -477,35 +477,35 @@ const audit: Record<string, string> = {
     "HTML dan CSS masing-masing dibatasi hingga 16,384 karakter.",
   "Half-hours, anthologies, and a few epics for the morning routine.":
     "Tayangan setengah jam, antologi, dan beberapa kisah epik untuk rutinitas pagi.",
-  "Harbor couldn't start any source": "Harbor tidak dapat menjalankan sumber apa pun",
-  "Harbor curated": "Dikurasi Harbor",
-  "Harbor double-checks with Stremio after saving, so a half-written order can't slip through.":
-    "Harbor memeriksa ulang dengan Stremio setelah menyimpan, sehingga urutan yang belum tertulis lengkap tidak akan lolos.",
-  "Harbor is open source. PRs that reference a bug get reviewed within 48h and ship with credit in the release notes.":
-    "Harbor bersifat sumber terbuka. PR yang merujuk pada bug akan ditinjau dalam 48h dan dirilis dengan kredit di catatan rilis.",
-  "Harbor loads it automatically when a track in that language exists. You can also set or clear the second track for one video from the subtitle menu in the player.":
-    "Harbor memuatnya secara otomatis saat tersedia trek dalam bahasa tersebut. Anda juga dapat memilih atau membatalkan pilihan trek kedua untuk satu video melalui menu subtitle di pemutar.",
-  "Harbor needs to be serving on your network before a phone can reach it.":
-    "Harbor harus menjalankan layanan di jaringan Anda sebelum dapat diakses oleh ponsel.",
-  "Harbor reads the speech in the audio, then slides the subtitle track until the two line up.":
-    "Harbor mengenali ucapan dalam audio, lalu menggeser trek subtitle hingga keduanya selaras.",
-  "Harbor sends no telemetry. This also drops outbound ad, analytics, and tracker requests that addons or metadata providers try to make, before they leave your machine.":
-    "Harbor tidak mengirim telemetri. Opsi ini juga memblokir permintaan keluar untuk iklan, analitik, dan pelacak yang coba dikirim oleh addon atau penyedia metadata, sebelum permintaan tersebut meninggalkan komputer Anda.",
-  "Harbor ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Harbor. There are two ways to add sources.":
-    "Harbor tidak menyertakan manga maupun scraper. Harbor adalah aplikasi pembaca. Anda menyediakan sumbernya, dan isi sumber tersebut adalah milik pengelolanya, bukan Harbor. Ada dua cara untuk menambahkan sumber.",
-  "Harbor ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Harbor reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
-    "Harbor menyediakan mesinnya, bukan situsnya. Anda menulis konfigurasi JSON singkat yang menjelaskan situs dengan pemilih CSS, lalu Harbor membaca situs dengan pemilih tersebut. Tidak ada yang disertakan: arahkan hanya ke situs yang berhak Anda baca.",
-  "Harbor will mark what you finish as watched on Simkl and sync your plan-to-watch list.":
-    "Harbor akan menandai tontonan yang Anda selesaikan sebagai sudah ditonton di Simkl dan menyinkronkan daftar tontonan yang Anda rencanakan.",
-  "Harbor's built-in OpenSubtitles search, on by default. If you install an OpenSubtitles addon, this steps aside automatically so your results are never duplicated.":
-    "Pencarian OpenSubtitles bawaan Harbor, aktif secara default. Jika Anda menginstal addon OpenSubtitles, fitur ini otomatis dinonaktifkan agar hasil tidak pernah terduplikasi.",
-  "Harbor's full video engine. Plays anything you throw at it.":
-    "Mesin video lengkap Harbor. Dapat memutar apa pun.",
-  "Harbor's in-app installer animates the manifest install and keeps you in context. Anything Harbor installs is also synced to your Stremio account, so the official app stays the canonical library. Turn this off and Stremio becomes the only handler for stremio:// links; Harbor still installs anything you trigger from inside the app (Configure & install, paste, drag-and-drop).":
-    "Penginstal dalam aplikasi Harbor menampilkan animasi pemasangan manifes tanpa mengalihkan Anda dari halaman saat ini. Apa pun yang diinstal Harbor juga disinkronkan ke akun Stremio Anda, sehingga aplikasi resmi tetap menjadi perpustakaan acuan. Nonaktifkan opsi ini agar Stremio menjadi satu-satunya penangan tautan stremio://; Harbor tetap menginstal apa pun yang Anda picu dari dalam aplikasi (Konfigurasikan & instal, tempel, seret dan lepas).",
-  "Harbor's own menus and labels. Subtitle languages come later, and you can change both in Settings.":
-    "Menu dan label Harbor sendiri. Bahasa subtitle ditentukan nanti, dan keduanya dapat Anda ubah di Pengaturan.",
-  "Harbor, from a public domain frame": "Harbor, dari cuplikan domain publik",
+  "Lart couldn't start any source": "Lart tidak dapat menjalankan sumber apa pun",
+  "Lart curated": "Dikurasi Lart",
+  "Lart double-checks with Stremio after saving, so a half-written order can't slip through.":
+    "Lart memeriksa ulang dengan Stremio setelah menyimpan, sehingga urutan yang belum tertulis lengkap tidak akan lolos.",
+  "Lart is open source. PRs that reference a bug get reviewed within 48h and ship with credit in the release notes.":
+    "Lart bersifat sumber terbuka. PR yang merujuk pada bug akan ditinjau dalam 48h dan dirilis dengan kredit di catatan rilis.",
+  "Lart loads it automatically when a track in that language exists. You can also set or clear the second track for one video from the subtitle menu in the player.":
+    "Lart memuatnya secara otomatis saat tersedia trek dalam bahasa tersebut. Anda juga dapat memilih atau membatalkan pilihan trek kedua untuk satu video melalui menu subtitle di pemutar.",
+  "Lart needs to be serving on your network before a phone can reach it.":
+    "Lart harus menjalankan layanan di jaringan Anda sebelum dapat diakses oleh ponsel.",
+  "Lart reads the speech in the audio, then slides the subtitle track until the two line up.":
+    "Lart mengenali ucapan dalam audio, lalu menggeser trek subtitle hingga keduanya selaras.",
+  "Lart sends no telemetry. This also drops outbound ad, analytics, and tracker requests that addons or metadata providers try to make, before they leave your machine.":
+    "Lart tidak mengirim telemetri. Opsi ini juga memblokir permintaan keluar untuk iklan, analitik, dan pelacak yang coba dikirim oleh addon atau penyedia metadata, sebelum permintaan tersebut meninggalkan komputer Anda.",
+  "Lart ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Lart. There are two ways to add sources.":
+    "Lart tidak menyertakan manga maupun scraper. Lart adalah aplikasi pembaca. Anda menyediakan sumbernya, dan isi sumber tersebut adalah milik pengelolanya, bukan Lart. Ada dua cara untuk menambahkan sumber.",
+  "Lart ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Lart reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
+    "Lart menyediakan mesinnya, bukan situsnya. Anda menulis konfigurasi JSON singkat yang menjelaskan situs dengan pemilih CSS, lalu Lart membaca situs dengan pemilih tersebut. Tidak ada yang disertakan: arahkan hanya ke situs yang berhak Anda baca.",
+  "Lart will mark what you finish as watched on Simkl and sync your plan-to-watch list.":
+    "Lart akan menandai tontonan yang Anda selesaikan sebagai sudah ditonton di Simkl dan menyinkronkan daftar tontonan yang Anda rencanakan.",
+  "Lart's built-in OpenSubtitles search, on by default. If you install an OpenSubtitles addon, this steps aside automatically so your results are never duplicated.":
+    "Pencarian OpenSubtitles bawaan Lart, aktif secara default. Jika Anda menginstal addon OpenSubtitles, fitur ini otomatis dinonaktifkan agar hasil tidak pernah terduplikasi.",
+  "Lart's full video engine. Plays anything you throw at it.":
+    "Mesin video lengkap Lart. Dapat memutar apa pun.",
+  "Lart's in-app installer animates the manifest install and keeps you in context. Anything Lart installs is also synced to your Stremio account, so the official app stays the canonical library. Turn this off and Stremio becomes the only handler for stremio:// links; Lart still installs anything you trigger from inside the app (Configure & install, paste, drag-and-drop).":
+    "Penginstal dalam aplikasi Lart menampilkan animasi pemasangan manifes tanpa mengalihkan Anda dari halaman saat ini. Apa pun yang diinstal Lart juga disinkronkan ke akun Stremio Anda, sehingga aplikasi resmi tetap menjadi perpustakaan acuan. Nonaktifkan opsi ini agar Stremio menjadi satu-satunya penangan tautan stremio://; Lart tetap menginstal apa pun yang Anda picu dari dalam aplikasi (Konfigurasikan & instal, tempel, seret dan lepas).",
+  "Lart's own menus and labels. Subtitle languages come later, and you can change both in Settings.":
+    "Menu dan label Lart sendiri. Bahasa subtitle ditentukan nanti, dan keduanya dapat Anda ubah di Pengaturan.",
+  "Lart, from a public domain frame": "Lart, dari cuplikan domain publik",
   "Harvey Winner": "Pemenang Harvey Award",
   "Have the policy cancelled automatically": "Atur agar polis dibatalkan secara otomatis",
   "Heads up: {keys} can load outside scripts or open your player to the network. Only keep these if you know exactly what they do.":
@@ -535,22 +535,22 @@ const audit: Record<string, string> = {
   "Highest rated": "Peringkat tertinggi",
   "Highly Rated, Quietly Loved": "Berperingkat Tinggi, Disukai Tanpa Banyak Sorotan",
   "His Comedy": "Karya Komedinya",
-  "Hit your daily quota? Use Harbor's public relay, or host your own.":
-    "Kuota harian habis? Gunakan relay publik Harbor, atau host relay Anda sendiri.",
+  "Hit your daily quota? Use Lart's public relay, or host your own.":
+    "Kuota harian habis? Gunakan relay publik Lart, atau host relay Anda sendiri.",
   Hits: "Populer",
   "Holdover Picks": "Pilihan yang Masih Tayang",
   "Horror & Supernatural": "Horor & Supranatural",
   "Host it with a repo.json": "Host menggunakan repo.json",
   "Hover a band to inspect a pillar": "Arahkan kursor ke rentang untuk memeriksa pilar",
-  "How Harbor Rank works": "Cara kerja Harbor Rank",
-  "How Harbor finds and resolves playable streams. Debrid keys and addon installs live here.":
-    "Cara Harbor menemukan dan menentukan stream yang dapat diputar. Kunci debrid dan penginstalan addon dikelola di sini.",
-  "How Harbor squeezes HDR movies onto a normal screen. Auto is right for almost everyone; the curves below just change the look (punchy vs soft). Only matters on HDR sources.":
-    "Cara Harbor menyesuaikan film HDR agar tampil di layar biasa. Otomatis cocok untuk hampir semua orang; kurva di bawah hanya mengubah tampilannya (tegas vs lembut). Hanya berpengaruh pada sumber HDR.",
+  "How Lart Rank works": "Cara kerja Lart Rank",
+  "How Lart finds and resolves playable streams. Debrid keys and addon installs live here.":
+    "Cara Lart menemukan dan menentukan stream yang dapat diputar. Kunci debrid dan penginstalan addon dikelola di sini.",
+  "How Lart squeezes HDR movies onto a normal screen. Auto is right for almost everyone; the curves below just change the look (punchy vs soft). Only matters on HDR sources.":
+    "Cara Lart menyesuaikan film HDR agar tampil di layar biasa. Otomatis cocok untuk hampir semua orang; kurva di bawah hanya mengubah tampilannya (tegas vs lembut). Hanya berpengaruh pada sumber HDR.",
   "How far you can boost past 100 percent on the volume bar. Higher settings can get very loud.":
     "Seberapa jauh volume dapat dinaikkan melampaui 100 persen pada bilah volume. Pengaturan yang lebih tinggi dapat membuat volumenya sangat keras.",
-  "How long Harbor waits for each addon to return streams. Aggregators that search many sources can need 45s or more. Results appear as each addon answers, so a longer wait never delays the fast ones.":
-    "Berapa lama Harbor menunggu setiap addon mengembalikan stream. Agregator yang mencari banyak sumber mungkin memerlukan 45 dtk atau lebih. Hasil muncul saat setiap addon merespons, jadi waktu tunggu yang lebih lama tidak akan menunda hasil dari addon yang merespons cepat.",
+  "How long Lart waits for each addon to return streams. Aggregators that search many sources can need 45s or more. Results appear as each addon answers, so a longer wait never delays the fast ones.":
+    "Berapa lama Lart menunggu setiap addon mengembalikan stream. Agregator yang mencari banyak sumber mungkin memerlukan 45 dtk atau lebih. Hasil muncul saat setiap addon merespons, jadi waktu tunggu yang lebih lama tidak akan menunda hasil dari addon yang merespons cepat.",
   "How you appear in Watch Together, sessions, and chat. Sits on top of your Stremio account.":
     "Tampilan Anda di Watch Together, sesi, dan obrolan. Profil ini menjadi identitas tambahan di atas akun Stremio Anda.",
   "Identifies the song with Google Gemini (free tier, no usage cap). Get a key at":
@@ -567,8 +567,8 @@ const audit: Record<string, string> = {
     "Jika server tidak dapat dijangkau, pemutaran akan gagal alih-alih melakukan stream secara lokal. Gunakan ini jika VPN berjalan di mesin server dan lalu lintas torrent tidak boleh keluar dari mesin ini.",
   "If this account has Discord linked, we'll DM you a code to reset your password without the recovery key.":
     "Jika akun ini terhubung ke Discord, kami akan mengirimkan kode melalui DM untuk mengatur ulang kata sandi Anda tanpa kunci pemulihan.",
-  "If video keeps pausing to buffer, or you're on spotty Wi-Fi or a far-away server, this gives Harbor a bigger head start so playback rides through the rough patches.":
-    "Jika video terus berhenti untuk melakukan buffering, atau Wi-Fi Anda tidak stabil maupun servernya jauh, opsi ini memberi Harbor lebih banyak waktu untuk memuat di awal agar pemutaran tetap lancar saat koneksi bermasalah.",
+  "If video keeps pausing to buffer, or you're on spotty Wi-Fi or a far-away server, this gives Lart a bigger head start so playback rides through the rough patches.":
+    "Jika video terus berhenti untuk melakukan buffering, atau Wi-Fi Anda tidak stabil maupun servernya jauh, opsi ini memberi Lart lebih banyak waktu untuk memuat di awal agar pemutaran tetap lancar saat koneksi bermasalah.",
   "Image too large. Keep badge files under 250 KB.":
     "Gambar terlalu besar. Pastikan ukuran file lencana kurang dari 250 KB.",
   "Images and video from https or data URLs.": "Gambar dan video dari URL https atau URL data.",
@@ -588,8 +588,8 @@ const audit: Record<string, string> = {
   "Inherit their property automatically": "Mewarisi harta mereka secara otomatis",
   "Injected ad skip (experimental)": "Pelewatan iklan yang disisipkan (eksperimental)",
   Inspector: "Pemeriksa",
-  "Installed and detected. Harbor found the native svpflow plugins and VapourSynth script library.":
-    "Terinstal dan terdeteksi. Harbor menemukan plugin native svpflow dan perpustakaan skrip VapourSynth.",
+  "Installed and detected. Lart found the native svpflow plugins and VapourSynth script library.":
+    "Terinstal dan terdeteksi. Lart menemukan plugin native svpflow dan perpustakaan skrip VapourSynth.",
   "Installing and ordering addons on the TV. Addon lists already travel with your account, so install here and the TV picks them up.":
     "Menginstal dan mengurutkan addon di TV. Daftar addon sudah tersinkronisasi dengan akun Anda, jadi instal di sini dan TV akan otomatis memuatnya.",
   "Instant Play: clicking Play queues the next stream automatically.":
@@ -616,7 +616,7 @@ const audit: Record<string, string> = {
     "Lompat maju sebesar interval Pendek yang lebih singkat dan diatur di bagian Perilaku.",
   "Keep Continue Watching private to each profile":
     "Pastikan Lanjutkan Menonton tetap bersifat pribadi untuk setiap profil",
-  "Keep controlling Harbor in the background": "Tetap kendalikan Harbor di latar belakang",
+  "Keep controlling Lart in the background": "Tetap kendalikan Lart di latar belakang",
   "Keep it up": "Lanjutkan",
   "Keep the Library Watchlist tab limited to titles you added in Stremio. Turn this off to also include anything Stremio auto-added when you pressed play.":
     "Batasi tab Daftar Tontonan di Perpustakaan hanya untuk judul yang Anda tambahkan di Stremio. Nonaktifkan ini agar judul yang otomatis ditambahkan Stremio saat Anda menekan tombol putar juga disertakan.",
@@ -625,14 +625,14 @@ const audit: Record<string, string> = {
   "Keep the original look, scaled by your size. It multiplies the built-in size, so different releases can still differ.":
     "Pertahankan tampilan asli, yang diskalakan sesuai ukuran pilihan Anda. Ukuran tersebut dikalikan dengan ukuran bawaan, sehingga rilis yang berbeda tetap dapat terlihat berbeda.",
   "Keep typing, or paste the full list URL.": "Lanjutkan mengetik, atau tempel URL lengkap daftar.",
-  "Keeping Harbor's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Harbor stays funded at the same time.":
-    "Menjaga backend Harbor tetap online memerlukan biaya, dan ElfHosted menanggungnya agar komunitas tidak perlu membayar. Menjadi pelanggan adalah cara terbaik untuk memastikan hal ini terus berlanjut, dan ini bukan donasi. Anda mendapatkan infrastruktur yang layak untuk konfigurasi Anda sendiri, sekaligus membantu Harbor tetap didanai.",
+  "Keeping Lart's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Lart stays funded at the same time.":
+    "Menjaga backend Lart tetap online memerlukan biaya, dan ElfHosted menanggungnya agar komunitas tidak perlu membayar. Menjadi pelanggan adalah cara terbaik untuk memastikan hal ini terus berlanjut, dan ini bukan donasi. Anda mendapatkan infrastruktur yang layak untuk konfigurasi Anda sendiri, sekaligus membantu Lart tetap didanai.",
   "Keeps fetching the full torrent in the background, even when paused, so you can pre-buffer big remuxes and scrub a finished file with no re-downloading. Uses more bandwidth and disk; cleaned up when you switch or close like normal.":
     "Terus mengunduh seluruh torrent di latar belakang, bahkan saat dijeda, sehingga Anda dapat melakukan pra-buffer pada remux besar dan menelusuri file yang telah selesai diunduh tanpa perlu mengunduh ulang. Menggunakan lebih banyak bandwidth dan ruang disk; dibersihkan seperti biasa saat Anda beralih atau menutup.",
   "Keeps the malware/year/episode-mismatch checks but allows season packs and oversized files. Same as hitting Search wider in the picker.":
     "Tetap menjalankan pemeriksaan malware/tahun/ketidakcocokan episode, tetapi mengizinkan paket musim dan file berukuran sangat besar. Sama seperti menekan Cari lebih luas di dialog pemilihan.",
-  "Keeps the web's memory alive. Harbor would be poorer without it.":
-    "Menjaga memori web tetap hidup. Harbor akan lebih miskin tanpanya.",
+  "Keeps the web's memory alive. Lart would be poorer without it.":
+    "Menjaga memori web tetap hidup. Lart akan lebih miskin tanpanya.",
   "Kept. Your TV gets your account when you continue.":
     "Disimpan. Akun Anda akan ditambahkan ke TV saat Anda melanjutkan.",
   Korean: "Bahasa Korea",
@@ -640,20 +640,20 @@ const audit: Record<string, string> = {
     "Beri label pada subfolder di dalam folder yang Anda pilih, lalu masing-masing akan menjadi set tersendiri (seperti Pahlawan atau Kucing). Gambar yang tidak berada dalam subfolder akan masuk ke Unggah.",
   "Landmark winners in science fiction and fantasy":
     "Karya pemenang penting dalam fiksi ilmiah dan fantasi",
-  "Launch straight into Big Picture when Harbor starts":
-    "Langsung buka Big Picture saat Harbor dijalankan",
-  "Launch straight into Big Picture when Harbor starts. Press Esc at any time to leave.":
-    "Langsung buka Big Picture saat Harbor dijalankan. Tekan Esc kapan saja untuk keluar.",
+  "Launch straight into Big Picture when Lart starts":
+    "Langsung buka Big Picture saat Lart dijalankan",
+  "Launch straight into Big Picture when Lart starts. Press Esc at any time to leave.":
+    "Langsung buka Big Picture saat Lart dijalankan. Tekan Esc kapan saja untuk keluar.",
   "Learn Lagoon": "Learn Lagoon",
-  "Leave blank to use Harbor's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.":
-    "Kosongkan untuk menggunakan server komunitas Harbor. Masukkan URL untuk menggunakan server Anda sendiri. Mode privat di bawah akan menghentikan semua komunikasi dalam kedua kasus.",
+  "Leave blank to use Lart's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.":
+    "Kosongkan untuk menggunakan server komunitas Lart. Masukkan URL untuk menggunakan server Anda sendiri. Mode privat di bawah akan menghentikan semua komunikasi dalam kedua kasus.",
   "Leave everything below it alone. Scroll down, click {b1}, then {b2}. Copy the long string it shows you (you only see it once) and bring it back here.":
     "Biarkan semua yang ada di bawahnya apa adanya. Gulir ke bawah, klik {b1}, lalu {b2}. Salin string panjang yang ditampilkan (hanya dapat dilihat sekali), lalu masukkan di sini.",
   "Leave the show?": "Tinggalkan tayangan ini?",
-  "Leave this blank to use Harbor's own community server, or enter the address of a server you run yourself.":
-    "Kosongkan untuk menggunakan server komunitas milik Harbor sendiri, atau masukkan alamat server yang Anda jalankan sendiri.",
-  "Leftover installers from past updates, cached trailers, and casting scratch files. Harbor clears old ones on launch, keeping only the most recent installer.":
-    "Penginstal sisa pembaruan sebelumnya, trailer yang tersimpan di cache, dan file sementara untuk casting. Harbor menghapus file lama saat diluncurkan dan hanya menyimpan penginstal terbaru.",
+  "Leave this blank to use Lart's own community server, or enter the address of a server you run yourself.":
+    "Kosongkan untuk menggunakan server komunitas milik Lart sendiri, atau masukkan alamat server yang Anda jalankan sendiri.",
+  "Leftover installers from past updates, cached trailers, and casting scratch files. Lart clears old ones on launch, keeping only the most recent installer.":
+    "Penginstal sisa pembaruan sebelumnya, trailer yang tersimpan di cache, dan file sementara untuk casting. Lart menghapus file lama saat diluncurkan dan hanya menyimpan penginstal terbaru.",
   "Less bass": "Bass lebih rendah",
   "Let your graphics card do the heavy lifting of decoding video. It saves battery and keeps the CPU cool. Auto is right for almost everyone; only switch if playback looks wrong or won't start.":
     "Biarkan kartu grafis Anda menangani beban berat dalam mendekode video. Ini menghemat baterai dan menjaga CPU tetap dingin. Otomatis cocok untuk hampir semua orang; ubah hanya jika pemutaran tampak bermasalah atau tidak dapat dimulai.",
@@ -675,9 +675,9 @@ const audit: Record<string, string> = {
   "Live TV playlists": "Daftar putar TV Langsung",
   "Live TV · {scope} · {minutes} min lead": "TV Langsung · {scope} · {minutes} mnt lebih awal",
   "Live controller preview": "Pratinjau pengontrol secara langsung",
-  "Live face scanning loads on-device AI models and can significantly increase RAM, CPU, and GPU usage while playback is active. Turn it off if Harbor slows down or your device gets hot.":
-    "Pemindaian wajah real-time memuat model AI di perangkat dan dapat meningkatkan penggunaan RAM, CPU, dan GPU secara signifikan selama pemutaran aktif. Nonaktifkan jika Harbor melambat atau perangkat Anda menjadi panas.",
-  "Live state of Harbor's own P2P engine on this machine.": "Status langsung mesin P2P milik Harbor di perangkat ini.",
+  "Live face scanning loads on-device AI models and can significantly increase RAM, CPU, and GPU usage while playback is active. Turn it off if Lart slows down or your device gets hot.":
+    "Pemindaian wajah real-time memuat model AI di perangkat dan dapat meningkatkan penggunaan RAM, CPU, dan GPU secara signifikan selama pemutaran aktif. Nonaktifkan jika Lart melambat atau perangkat Anda menjadi panas.",
+  "Live state of Lart's own P2P engine on this machine.": "Status langsung mesin P2P milik Lart di perangkat ini.",
   "Live sync": "Sinkronisasi real-time",
   "Live web": "Web real-time",
   "Live web (Jina Reader)": "Web real-time (Jina Reader)",
@@ -728,8 +728,8 @@ const audit: Record<string, string> = {
     "1 addon dipindahkan ke akun Stremio Anda. Kini addon tersebut disinkronkan di setiap perangkat yang Anda gunakan untuk masuk.",
   "Moved {n} addons to your Stremio account. They now sync everywhere you sign in.":
     "{n} addon dipindahkan ke akun Stremio Anda. Kini semua addon tersebut disinkronkan di setiap perangkat yang Anda gunakan untuk masuk.",
-  "Moved, but Harbor couldn't confirm the result. Reload to see the current state.":
-    "Dipindahkan, tetapi Harbor tidak dapat mengonfirmasi hasilnya. Muat ulang untuk melihat status saat ini.",
+  "Moved, but Lart couldn't confirm the result. Reload to see the current state.":
+    "Dipindahkan, tetapi Lart tidak dapat mengonfirmasi hasilnya. Muat ulang untuk melihat status saat ini.",
   "Moves: {moves}": "Pemindahan: {moves}",
   "Multi-view": "Multi-view",
   "Mute / Unmute": "Bisukan / Aktifkan suara",
@@ -738,13 +738,13 @@ const audit: Record<string, string> = {
   My: "Milik Saya",
   "NVIDIA Image Scaling. A light spatial upscaler and sharpener, an alternative to FSR that runs well on any GPU.":
     "NVIDIA Image Scaling. Peningkat resolusi spasial sekaligus penajam yang ringan, sebagai alternatif FSR yang berjalan lancar di GPU apa pun.",
-  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Harbor's embedded player.":
-    "Gerakan native 48/60fps melalui instalasi Linux SVP dan VapourSynth Anda, dirender di dalam pemutar tersemat Harbor.",
+  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Lart's embedded player.":
+    "Gerakan native 48/60fps melalui instalasi Linux SVP dan VapourSynth Anda, dirender di dalam pemutar tersemat Lart.",
   "Needs artwork-rich titles to feed the hero":
     "Memerlukan judul dengan materi visual lengkap untuk mengisi banner utama",
   "Needs pairing": "Memerlukan penyandingan",
-  "Neural upscalers, sharpeners, and HDR tone-mapping ported for mpv. Each is hosted by its author, not bundled with Harbor. Download the ones you want; Harbor chains them in the right order and applies them in the player.":
-    "Peningkat resolusi neural, penajam, dan pemetaan rona HDR yang diadaptasi untuk mpv. Masing-masing dihosting oleh pembuatnya, bukan disertakan dalam Harbor. Unduh yang Anda inginkan; Harbor akan merangkainya dalam urutan yang tepat dan menerapkannya di pemutar.",
+  "Neural upscalers, sharpeners, and HDR tone-mapping ported for mpv. Each is hosted by its author, not bundled with Lart. Download the ones you want; Lart chains them in the right order and applies them in the player.":
+    "Peningkat resolusi neural, penajam, dan pemetaan rona HDR yang diadaptasi untuk mpv. Masing-masing dihosting oleh pembuatnya, bukan disertakan dalam Lart. Unduh yang Anda inginkan; Lart akan merangkainya dalam urutan yang tepat dan menerapkannya di pemutar.",
   "Never auto-select tracks containing": "Jangan pernah memilih secara otomatis trek yang memuat",
   "Never contact the community server in either direction. Nothing is looked up and nothing is contributed from this device.":
     "Jangan pernah menghubungi server komunitas, baik untuk menerima maupun mengirim data. Tidak ada yang dicari dan tidak ada yang dikontribusikan dari perangkat ini.",
@@ -764,19 +764,19 @@ const audit: Record<string, string> = {
   "No JavaScript. Scripts, inline handlers, and javascript: URLs are removed.":
     "Tanpa JavaScript. Skrip, pengendali inline, dan URL javascript: dihapus.",
   "No PiP session. Closing.": "Tidak ada sesi PiP. Akan ditutup.",
-  "No affiliation, no referral links, and Harbor gets nothing from these. They are just places where money goes further than it does here.":
-    "Tidak ada afiliasi, tidak ada tautan rujukan, dan Harbor tidak mendapat apa pun dari semua ini. Ini hanyalah tempat-tempat di mana uang memberikan dampak lebih besar daripada di sini.",
+  "No affiliation, no referral links, and Lart gets nothing from these. They are just places where money goes further than it does here.":
+    "Tidak ada afiliasi, tidak ada tautan rujukan, dan Lart tidak mendapat apa pun dari semua ini. Ini hanyalah tempat-tempat di mana uang memberikan dampak lebih besar daripada di sini.",
   "No channels match. Try a different category or clear the search.":
     "Tidak ada saluran yang cocok. Coba kategori lain atau kosongkan pencarian.",
-  "No clean release has surfaced yet. This may be too new. Harbor's filters dropped everything that came back as wrong-movie noise.":
-    "Belum ada rilis yang valid. Judul ini mungkin terlalu baru. Filter Harbor membuang semua hasil sampah yang ternyata bukan film yang dimaksud.",
+  "No clean release has surfaced yet. This may be too new. Lart's filters dropped everything that came back as wrong-movie noise.":
+    "Belum ada rilis yang valid. Judul ini mungkin terlalu baru. Filter Lart membuang semua hasil sampah yang ternyata bukan film yang dimaksud.",
   "No collections yet. Add a collections addon to browse curated sets.":
     "Belum ada koleksi. Tambahkan addon koleksi untuk menjelajahi kumpulan pilihan.",
   "No forms or popups. The canvas cannot navigate the page.":
     "Tanpa formulir atau pop-up. Canvas tidak dapat mengalihkan halaman.",
   "No more found for this category.": "Tidak ada lagi yang ditemukan untuk kategori ini.",
-  "No other Harbor answered on this network. One shows up here a moment after it starts.":
-    "Tidak ada Harbor lain yang merespons di jaringan ini. Harbor akan muncul di sini sesaat setelah aktif.",
+  "No other Lart answered on this network. One shows up here a moment after it starts.":
+    "Tidak ada Lart lain yang merespons di jaringan ini. Lart akan muncul di sini sesaat setelah aktif.",
   "No playable streams turned up, and no debrid is configured. Real-Debrid, TorBox, AllDebrid, Premiumize, or Debrid-Link will unlock raw torrent results. Some addons bake debrid in (Sootio, Comet/ElfHosted, MediaFusion/ElfHosted) and play without your own keys.":
     "Tidak ditemukan stream yang dapat diputar dan debrid belum dikonfigurasi. Real-Debrid, TorBox, AllDebrid, Premiumize, atau Debrid-Link akan membuka hasil torrent mentah. Beberapa addon menyertakan debrid bawaan (Sootio, Comet/ElfHosted, MediaFusion/ElfHosted) dan dapat memutar konten tanpa kunci Anda sendiri.",
   "No styling": "Tanpa gaya",
@@ -786,8 +786,8 @@ const audit: Record<string, string> = {
   "Not cached": "Tidak tersimpan dalam cache",
   "Not cached yet": "Belum tersimpan dalam cache",
   "Not right?": "Tidak benar?",
-  "Nothing else answered. A Harbor shows up here a moment after it starts on this network.":
-    "Tidak ada yang lain yang merespons. Harbor akan muncul di sini sesaat setelah aktif di jaringan ini.",
+  "Nothing else answered. A Lart shows up here a moment after it starts on this network.":
+    "Tidak ada yang lain yang merespons. Lart akan muncul di sini sesaat setelah aktif di jaringan ini.",
   "Nothing from your library this month": "Tidak ada apa pun dari perpustakaan Anda bulan ini",
   "Nothing left in today's picks": "Tidak ada lagi di pilihan hari ini",
   "Nothing to send. All {n} watchlist items are anime, which Trakt can't track.":
@@ -815,9 +815,9 @@ const audit: Record<string, string> = {
   "Only enter URLs for relays you operate or trust. A relay only carries Watch Together sync messages (play, pause, seek). Nothing else passes through it.":
     "Hanya masukkan URL relay yang Anda kelola atau percayai. Relay hanya meneruskan pesan sinkronisasi Watch Together (putar, jeda, seek). Tidak ada hal lain yang melewatinya.",
   "Only my favorited channels": "Hanya saluran favorit saya",
-  "Open Harbor's settings outside playback.": "Buka pengaturan Harbor di luar pemutaran.",
-  "Open a manga on Harbor to control the reader from here.":
-    "Buka manga di Harbor untuk mengontrol penampil manga dari sini.",
+  "Open Lart's settings outside playback.": "Buka pengaturan Lart di luar pemutaran.",
+  "Open a manga on Lart to control the reader from here.":
+    "Buka manga di Lart untuk mengontrol penampil manga dari sini.",
   "Open or close the live TV guide (live channels only).":
     "Buka atau tutup panduan TV siaran langsung (khusus saluran siaran langsung).",
   "Open or close the live TV recorder (live channels only).":
@@ -838,9 +838,9 @@ const audit: Record<string, string> = {
   "Pack removed, badges back to default": "Paket dihapus, lencana kembali ke bawaan",
   "Page {page} of {count}, tap to jump": "Halaman {page} dari {count}, ketuk untuk berpindah",
   Pair: "Pasangkan",
-  "Pair once from here and this Harbor will take commands.":
-    "Pasangkan sekali dari sini agar Harbor ini dapat menerima perintah.",
-  "Pair with this Harbor": "Pasangkan dengan Harbor ini",
+  "Pair once from here and this Lart will take commands.":
+    "Pasangkan sekali dari sini agar Lart ini dapat menerima perintah.",
+  "Pair with this Lart": "Pasangkan dengan Lart ini",
   Paired: "Dipasangkan",
   "Paired with {name}": "Dipasangkan dengan {name}",
   "Parsed playlists, program guide, and series info. Re-downloads on next open.":
@@ -855,8 +855,8 @@ const audit: Record<string, string> = {
     "Orang dari judul terpopuler minggu ini, diberi bobot berdasarkan seberapa banyak mereka dibicarakan.",
   "Pick OLED for perfect-black panels to unlock shadow detail in tonemapped HDR.":
     "Pilih OLED untuk panel dengan warna hitam sempurna guna menampilkan detail bayangan dalam HDR dengan tone mapping.",
-  "Pick a display and body pairing, or upload your own font to use across Harbor.":
-    "Pilih pasangan font display dan font isi, atau unggah font Anda sendiri untuk digunakan di seluruh Harbor.",
+  "Pick a display and body pairing, or upload your own font to use across Lart.":
+    "Pilih pasangan font display dan font isi, atau unggah font Anda sendiri untuk digunakan di seluruh Lart.",
   "Pick a drive with room to spare. Files already cached stay where they are.":
     "Pilih drive dengan ruang kosong yang cukup. File yang sudah disimpan dalam cache akan tetap berada di lokasi semula.",
   "Pick a line when you hear it (1/2)": "Pilih dialog saat Anda mendengarnya (1/2)",
@@ -879,9 +879,9 @@ const audit: Record<string, string> = {
   "Player volume sounds": "Suara saat mengubah volume pemutar",
   "Plays HDR content in its own window so Windows treats it as true HDR (the SDR brightness slider stops dimming it). Turn off HDR-to-SDR tonemapping above to use this on an HDR display.":
     "Memutar konten HDR di jendela tersendiri agar Windows memperlakukannya sebagai HDR asli (penggeser kecerahan SDR tidak lagi meredupkannya). Nonaktifkan tonemapping HDR-ke-SDR di atas untuk menggunakannya pada layar HDR.",
-  "Point Harbor at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.": "Arahkan Harbor ke server streaming di perangkat lain, seperti layanan Stremio di server rumah. Stream P2P akan diunduh dan diputar dari perangkat tersebut, bukan perangkat ini.",
-  "Point Harbor at your self-hosted library to browse and install sources":
-    "Arahkan Harbor ke perpustakaan yang dihosting sendiri untuk menjelajahi dan menginstal sumber",
+  "Point Lart at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.": "Arahkan Lart ke server streaming di perangkat lain, seperti layanan Stremio di server rumah. Stream P2P akan diunduh dan diputar dari perangkat tersebut, bukan perangkat ini.",
+  "Point Lart at your self-hosted library to browse and install sources":
+    "Arahkan Lart ke perpustakaan yang dihosting sendiri untuk menjelajahi dan menginstal sumber",
   "Pop out subtitles": "Tampilkan subtitle di jendela terpisah",
   Post: "Memposting",
   "Poster reset to default": "Poster diatur ulang ke pengaturan bawaan",
@@ -1017,7 +1017,7 @@ const audit: Record<string, string> = {
   "Run self-test": "Jalankan uji mandiri",
   "Run speed test": "Jalankan uji kecepatan",
   "Run test": "Jalankan pengujian",
-  "Run your own Harbor Relay": "Jalankan Harbor Relay Anda sendiri",
+  "Run your own Lart Relay": "Jalankan Lart Relay Anda sendiri",
   "Run your own server": "Jalankan server Anda sendiri",
   Running: "Sedang berjalan",
   "Running on Cinemeta for now. Add a TMDB key from Settings whenever you're ready.":
@@ -1041,8 +1041,8 @@ const audit: Record<string, string> = {
   "Russian Drama": "Drama Rusia",
   "SVP couldn't start, playing without smoothing":
     "SVP gagal dimulai, pemutaran dilanjutkan tanpa pemulusan",
-  "SVP is installed but Harbor couldn't find its engine files (svpflow + VapourSynth). Try repairing the SVP install, or reopen SVP once.":
-    "SVP sudah terinstal, tetapi Harbor tidak dapat menemukan file mesinnya (svpflow + VapourSynth). Coba perbaiki instalasi SVP, atau buka kembali SVP sekali.",
+  "SVP is installed but Lart couldn't find its engine files (svpflow + VapourSynth). Try repairing the SVP install, or reopen SVP once.":
+    "SVP sudah terinstal, tetapi Lart tidak dapat menemukan file mesinnya (svpflow + VapourSynth). Coba perbaiki instalasi SVP, atau buka kembali SVP sekali.",
   "Safe by design": "Dirancang agar aman",
   "Safe to clear anytime. Nothing here touches your watch history, library, themes, or sign-ins.":
     "Dapat dihapus kapan saja dengan aman. Tidak ada di sini yang memengaruhi riwayat tontonan, perpustakaan, tema, atau login Anda.",
@@ -1052,8 +1052,8 @@ const audit: Record<string, string> = {
   "Save sharper frames instead of light thumbnails. They look crisper on the card but take more space, so fewer are kept before the oldest roll off.":
     "Simpan frame yang lebih tajam alih-alih thumbnail hemat ruang. Frame tampak lebih tajam pada kartu, tetapi menggunakan lebih banyak ruang, sehingga lebih sedikit yang disimpan sebelum yang terlama dihapus.",
   "Save the worker source. Copy": "Simpan kode sumber worker. Salin",
-  "Save the worker source. Copy {code1} from the Harbor repo into a new directory as {code2}.":
-    "Simpan kode sumber worker. Salin {code1} dari repo Harbor ke direktori baru sebagai {code2}.",
+  "Save the worker source. Copy {code1} from the Lart repo into a new directory as {code2}.":
+    "Simpan kode sumber worker. Salin {code1} dari repo Lart ke direktori baru sebagai {code2}.",
   "Saved audio deleted": "Audio yang disimpan telah dihapus",
   "Saved for Now": "Disimpan untuk sementara",
   "Saved from @{handle}. You can share their link, but only they can list it in the community.":
@@ -1061,7 +1061,7 @@ const audit: Record<string, string> = {
   "Saved offline": "Disimpan secara offline",
   "Saved on your device, but it couldn't be uploaded for others to see. Try again.":
     "Disimpan di perangkat Anda, tetapi gagal diunggah agar dapat dilihat orang lain. Coba lagi.",
-  "Saved {d} from Harbor {a}.": "Disimpan {d} dari Harbor {a}.",
+  "Saved {d} from Lart {a}.": "Disimpan {d} dari Lart {a}.",
   "Saved {n} entries to {path}. Send us that file.":
     "Sebanyak {n} entri disimpan ke {path}. Kirimkan file tersebut kepada kami.",
   "Saved {n} entries to {path}. Send us that file.#few":
@@ -1108,12 +1108,12 @@ const audit: Record<string, string> = {
   "Send test": "Kirim tes",
   "Sends only the chapter you open to DeepSeek. Volumes, chapters, and metadata stay unchanged.":
     "Hanya mengirim bab yang Anda buka ke DeepSeek. Volume, bab, dan metadata tidak berubah.",
-  "Serve Harbor on your network": "Jalankan Harbor di jaringan Anda",
+  "Serve Lart on your network": "Jalankan Lart di jaringan Anda",
   "Server couldn't start:": "Server gagal dimulai:",
-  "Serves this exact install of Harbor as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer.":
-    "Menjalankan instalasi Harbor ini tanpa perubahan sebagai aplikasi web di jaringan Anda. Buka di browser ponsel, laptop, atau TV, masuk di sana, lalu konten di-stream melalui komputer ini.",
-  "Serves this exact install of Harbor as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer. You can also use the phone remote to control playback and cast to another device on this machine.":
-    "Menjalankan instalasi Harbor ini tanpa perubahan sebagai aplikasi web di jaringan Anda. Buka di browser ponsel, laptop, atau TV, masuk di sana, lalu konten di-stream melalui komputer ini. Anda juga dapat menggunakan remote ponsel untuk mengontrol pemutaran dan melakukan cast dari komputer ini ke perangkat lain.",
+  "Serves this exact install of Lart as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer.":
+    "Menjalankan instalasi Lart ini tanpa perubahan sebagai aplikasi web di jaringan Anda. Buka di browser ponsel, laptop, atau TV, masuk di sana, lalu konten di-stream melalui komputer ini.",
+  "Serves this exact install of Lart as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer. You can also use the phone remote to control playback and cast to another device on this machine.":
+    "Menjalankan instalasi Lart ini tanpa perubahan sebagai aplikasi web di jaringan Anda. Buka di browser ponsel, laptop, atau TV, masuk di sana, lalu konten di-stream melalui komputer ini. Anda juga dapat menggunakan remote ponsel untuk mengontrol pemutaran dan melakukan cast dari komputer ini ke perangkat lain.",
   "Service-specific browsing needs a TMDB key. Pick All / Movies / Shows to browse via Cinemeta.":
     "Penjelajahan khusus layanan memerlukan kunci TMDB. Pilih Semua / Film / Serial untuk menjelajah melalui Cinemeta.",
   "Services you have": "Layanan Anda",
@@ -1127,19 +1127,19 @@ const audit: Record<string, string> = {
   "Set up a Cloudflare relay for Watch Together": "Siapkan relay Cloudflare untuk Watch Together",
   "Set. If the subtitles drift later on, play ahead and Sync from here again at a later line to fix the drift.":
     "Atur. Jika subtitle kembali melenceng nanti, lanjutkan pemutaran lalu pilih Sinkronkan dari sini lagi pada baris yang lebih akhir untuk memperbaiki pergeseran tersebut.",
-  "Sets streaming availability and the Now Playing release window. Pick a country and Harbor offers to match the interface, metadata, subtitle, and audio languages to it.":
-    "Mengatur ketersediaan stream dan rentang waktu rilis Sedang Diputar. Pilih negara dan Harbor akan menawarkan untuk menyesuaikan bahasa antarmuka, metadata, subtitle, dan audio dengan negara tersebut.",
-  "Settings, Harbor Relay, then": "Pengaturan, Harbor Relay, lalu",
-  "Settings, Harbor Relay, then {kbd}.": "Pengaturan, Harbor Relay, lalu {kbd}.",
+  "Sets streaming availability and the Now Playing release window. Pick a country and Lart offers to match the interface, metadata, subtitle, and audio languages to it.":
+    "Mengatur ketersediaan stream dan rentang waktu rilis Sedang Diputar. Pilih negara dan Lart akan menawarkan untuk menyesuaikan bahasa antarmuka, metadata, subtitle, dan audio dengan negara tersebut.",
+  "Settings, Lart Relay, then": "Pengaturan, Lart Relay, lalu",
+  "Settings, Lart Relay, then {kbd}.": "Pengaturan, Lart Relay, lalu {kbd}.",
   "Share live watching status": "Bagikan status menonton secara real-time",
-  "Shared collections from across Harbor will show up here soon.":
-    "Koleksi yang dibagikan dari seluruh Harbor akan segera muncul di sini.",
+  "Shared collections from across Lart will show up here soon.":
+    "Koleksi yang dibagikan dari seluruh Lart akan segera muncul di sini.",
   "Shift + Arrows": "Shift + Arrows",
-  "Short version: don't. Harbor takes no donations and no cut of anything on this page.":
-    "Singkatnya: jangan. Harbor tidak menerima donasi maupun komisi apa pun dari apa pun di halaman ini.",
+  "Short version: don't. Lart takes no donations and no cut of anything on this page.":
+    "Singkatnya: jangan. Lart tidak menerima donasi maupun komisi apa pun dari apa pun di halaman ini.",
   "Short {word} {n} seconds": "Persingkat {word} {n} detik",
-  "Show a Skip Intro / Skip Credits button when Harbor detects one. Turn this off to never show it. You can also tap the X on the button to dismiss a wrong one for the rest of the episode.":
-    "Tampilkan tombol Lewati Intro / Lewati Kredit saat Harbor mendeteksinya. Nonaktifkan ini agar tombol tidak pernah ditampilkan. Anda juga dapat mengetuk X pada tombol untuk menutup tombol yang keliru selama sisa episode.",
+  "Show a Skip Intro / Skip Credits button when Lart detects one. Turn this off to never show it. You can also tap the X on the button to dismiss a wrong one for the rest of the episode.":
+    "Tampilkan tombol Lewati Intro / Lewati Kredit saat Lart mendeteksinya. Nonaktifkan ini agar tombol tidak pernah ditampilkan. Anda juga dapat mengetuk X pada tombol untuk menutup tombol yang keliru selama sisa episode.",
   "Show a Skip button when a known injected ad plays, and a small report button on new releases so you can mark ads for review.":
     "Tampilkan tombol Lewati saat iklan sisipan yang dikenali diputar, serta tombol kecil untuk melaporkan pada rilisan baru agar Anda dapat menandai iklan untuk ditinjau.",
   "Show an on disk badge on cards": "Tampilkan lencana tersimpan di disk pada kartu",
@@ -1164,19 +1164,19 @@ const audit: Record<string, string> = {
   "Shows in the browser tab; defaults to your avatar":
     "Ditampilkan di tab browser; secara default menggunakan avatar Anda",
   "Side rail": "Bilah navigasi samping",
-  "Sign in to mirror your Continue Watching, watchlist, and any addons you've already curated. Optional; Harbor works fully signed-out.":
-    "Masuk untuk menyinkronkan Lanjutkan Menonton, daftar tontonan, dan addon yang telah Anda kurasi. Opsional; Harbor tetap berfungsi penuh tanpa masuk.",
+  "Sign in to mirror your Continue Watching, watchlist, and any addons you've already curated. Optional; Lart works fully signed-out.":
+    "Masuk untuk menyinkronkan Lanjutkan Menonton, daftar tontonan, dan addon yang telah Anda kurasi. Opsional; Lart tetap berfungsi penuh tanpa masuk.",
   "Sits above the title strip": "Berada di atas bilah judul",
   "Size of the controller on-screen keyboard.": "Ukuran keyboard di layar untuk pengontrol.",
   "Sketch Royalty": "Legenda Sketsa",
-  "Skip if you'd rather just use Cinemeta. Harbor still works, you'll just see fewer rails.":
-    "Lewati jika Anda lebih suka hanya menggunakan Cinemeta. Harbor tetap berfungsi, tetapi Anda hanya akan melihat lebih sedikit deretan.",
-  "Skip the 'stream over peer-to-peer?' prompt and start uncached torrents immediately. Harbor remembers your choice after the first confirmation anyway.":
-    "Lewati pertanyaan 'stream lewat peer-to-peer?' dan langsung mulai torrent yang belum tersimpan dalam cache. Harbor tetap mengingat pilihan Anda setelah konfirmasi pertama.",
-  "Skip this and Harbor runs on Cinemeta. You just see fewer rows.":
-    "Lewati ini dan Harbor akan menggunakan Cinemeta. Anda hanya akan melihat lebih sedikit baris.",
-  "Skip this and Harbor still works. Your library just stays local.":
-    "Lewati ini dan Harbor tetap berfungsi. Perpustakaan Anda hanya tetap tersimpan secara lokal.",
+  "Skip if you'd rather just use Cinemeta. Lart still works, you'll just see fewer rails.":
+    "Lewati jika Anda lebih suka hanya menggunakan Cinemeta. Lart tetap berfungsi, tetapi Anda hanya akan melihat lebih sedikit deretan.",
+  "Skip the 'stream over peer-to-peer?' prompt and start uncached torrents immediately. Lart remembers your choice after the first confirmation anyway.":
+    "Lewati pertanyaan 'stream lewat peer-to-peer?' dan langsung mulai torrent yang belum tersimpan dalam cache. Lart tetap mengingat pilihan Anda setelah konfirmasi pertama.",
+  "Skip this and Lart runs on Cinemeta. You just see fewer rows.":
+    "Lewati ini dan Lart akan menggunakan Cinemeta. Anda hanya akan melihat lebih sedikit baris.",
+  "Skip this and Lart still works. Your library just stays local.":
+    "Lewati ini dan Lart tetap berfungsi. Perpustakaan Anda hanya tetap tersimpan secara lokal.",
   "Sleep at end": "Aktifkan mode tidur di akhir",
   "Sleep at end of episode": "Aktifkan mode tidur di akhir episode",
   "Slot is getting crowded ({count}/{limit}). May overflow on narrow screens.":
@@ -1193,8 +1193,8 @@ const audit: Record<string, string> = {
   "Solid fill, no texture. Cleanest baseline.":
     "Isian polos, tanpa tekstur. Tampilan dasar yang paling bersih.",
   "Something went wrong on the way there.": "Terjadi masalah saat menuju ke sana.",
-  "Sources Harbor flagged as broken. Clear to give them another chance.":
-    "Harbor menandai sumber sebagai rusak. Hapus tanda tersebut untuk mencobanya lagi.",
+  "Sources Lart flagged as broken. Clear to give them another chance.":
+    "Lart menandai sumber sebagai rusak. Hapus tanda tersebut untuk mencobanya lagi.",
   "Sources are not cached for this title. Open the picker page to refresh.":
     "Sumber belum disimpan dalam cache untuk judul ini. Buka halaman pemilih untuk memperbarui.",
   "Speed & sleep": "Kecepatan & timer tidur",
@@ -1205,8 +1205,8 @@ const audit: Record<string, string> = {
   "Start a room first.": "Buat ruang terlebih dahulu.",
   "Start anyway ({n} still loading)": "Mulai saja ({n} masih dimuat)",
   "Start of manga": "Awal manga",
-  "Start or stop recording a GIF of the video (no subtitles). Saves to Pictures/Harbor.":
-    "Mulai atau hentikan perekaman GIF video (tanpa subtitle). Disimpan ke Pictures/Harbor.",
+  "Start or stop recording a GIF of the video (no subtitles). Saves to Pictures/Lart.":
+    "Mulai atau hentikan perekaman GIF video (tanpa subtitle). Disimpan ke Pictures/Lart.",
   "Start over": "Mulai dari awal",
   "Start playback": "Mulai pemutaran",
   "Start recording": "Mulai merekam",
@@ -1233,12 +1233,12 @@ const audit: Record<string, string> = {
   "Straight into the apps you already pay for.": "Langsung ke aplikasi yang sudah Anda langgani.",
   "Stream / addons instead": "Gunakan stream / addon sebagai gantinya",
   "Stream this via peer-to-peer?": "Streaming konten ini melalui peer-to-peer?",
-  "Stream torrents straight from Harbor's built-in engine when you have no debrid set up, or a torrent isn't cached. This connects to peers over your own connection. Turn off to only ever play debrid and direct links.":
-    "Stream torrent langsung dari mesin bawaan Harbor saat debrid belum disiapkan atau torrent tidak tersedia di cache. Ini terhubung ke peer melalui koneksi Anda sendiri. Nonaktifkan agar hanya memutar tautan debrid dan tautan langsung.",
-  "Stream torrents through Harbor's own Rust peer-to-peer engine instead of the bundled Stremio Server. Falls back automatically if it can't connect. Status and a self-test live in the Local engine card below.":
-    "Stream torrent melalui mesin peer-to-peer Rust milik Harbor, bukan Stremio Server bawaan. Jika tidak dapat terhubung, Harbor otomatis kembali menggunakan Stremio Server. Status dan uji mandiri tersedia di kartu Mesin lokal di bawah.",
-  "Stremio Supporters get a special badge on their Harbor profile.":
-    "Stremio Supporters mendapatkan lencana khusus di profil Harbor mereka.",
+  "Stream torrents straight from Lart's built-in engine when you have no debrid set up, or a torrent isn't cached. This connects to peers over your own connection. Turn off to only ever play debrid and direct links.":
+    "Stream torrent langsung dari mesin bawaan Lart saat debrid belum disiapkan atau torrent tidak tersedia di cache. Ini terhubung ke peer melalui koneksi Anda sendiri. Nonaktifkan agar hanya memutar tautan debrid dan tautan langsung.",
+  "Stream torrents through Lart's own Rust peer-to-peer engine instead of the bundled Stremio Server. Falls back automatically if it can't connect. Status and a self-test live in the Local engine card below.":
+    "Stream torrent melalui mesin peer-to-peer Rust milik Lart, bukan Stremio Server bawaan. Jika tidak dapat terhubung, Lart otomatis kembali menggunakan Stremio Server. Status dan uji mandiri tersedia di kartu Mesin lokal di bawah.",
+  "Stremio Supporters get a special badge on their Lart profile.":
+    "Stremio Supporters mendapatkan lencana khusus di profil Lart mereka.",
   "Stremio didn't confirm the save. Your collection may be unchanged. Retry will re-check before writing again.":
     "Stremio tidak mengonfirmasi penyimpanan. Koleksi Anda mungkin tidak berubah. Saat mencoba lagi, sistem akan memeriksa ulang sebelum menulis kembali.",
   "Stretch the featured hero edge to edge and taller, across every layout.":
@@ -1278,8 +1278,8 @@ const audit: Record<string, string> = {
   "The Boogeyman": "The Boogeyman",
   "The Boss": "The Boss",
   "The British Academy": "The British Academy",
-  "The Harbor relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Harbor server.":
-    "Relai Harbor adalah Cloudflare Worker yang menghosting ruang WebSocket untuk Watch Together. Setiap pengguna menjalankan miliknya sendiri. Tidak ada server Harbor pusat.",
+  "The Lart relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Lart server.":
+    "Relai Lart adalah Cloudflare Worker yang menghosting ruang WebSocket untuk Watch Together. Setiap pengguna menjalankan miliknya sendiri. Tidak ada server Lart pusat.",
   "The Home Front": "The Home Front",
   "The King": "The King",
   "The Last Stand": "The Last Stand",
@@ -1305,15 +1305,15 @@ const audit: Record<string, string> = {
     "Label menunjukkan resolusi tinggi (1080p / 4K), tetapi tidak sesuai dengan perkiraan ukuran file atau waktu rilis. Sering kali ini adalah CAM atau TS yang diberi label baru. Coba stream Theater Capture atau periksa daftar sumber sebelum memilih.",
   "The next three screens need typing. Scan this and your phone does it for you.":
     "Pada tiga layar berikutnya, Anda perlu mengetik. Pindai ini agar ponsel Anda melakukannya.",
-  "The operating system draws native window controls, so Harbor cannot change their appearance.":
-    "Sistem operasi menampilkan kontrol jendela bawaan, jadi Harbor tidak dapat mengubah tampilannya.",
+  "The operating system draws native window controls, so Lart cannot change their appearance.":
+    "Sistem operasi menampilkan kontrol jendela bawaan, jadi Lart tidak dapat mengubah tampilannya.",
   "The price drops by half": "Harganya turun separuh",
   "The provider refused the request. The link is likely expired, region locked, or out of quota.":
     "Penyedia menolak permintaan. Tautan mungkin kedaluwarsa, dibatasi berdasarkan wilayah, atau kuotanya habis.",
-  "The resolution Harbor downloads for each image when you export a title's metadata next to the file on disk.":
-    "Resolusi yang digunakan Harbor untuk mengunduh setiap gambar saat Anda mengekspor metadata judul di sebelah file pada disk.",
-  "The ship is sailing away. Thanks for watching with Harbor, it's time to listen to your grown-ups.":
-    "Kapalnya akan berlayar menjauh. Terima kasih telah menonton bersama Harbor, sekarang saatnya mendengarkan orang dewasa di sekitarmu.",
+  "The resolution Lart downloads for each image when you export a title's metadata next to the file on disk.":
+    "Resolusi yang digunakan Lart untuk mengunduh setiap gambar saat Anda mengekspor metadata judul di sebelah file pada disk.",
+  "The ship is sailing away. Thanks for watching with Lart, it's time to listen to your grown-ups.":
+    "Kapalnya akan berlayar menjauh. Terima kasih telah menonton bersama Lart, sekarang saatnya mendengarkan orang dewasa di sekitarmu.",
   "The streaming engine is still starting up. Give it a moment and press Play again.":
     "Mesin streaming masih dalam proses inisialisasi. Tunggu sebentar, lalu tekan Putar lagi.",
   "The test calls {code} and confirms the worker is reachable and running a current version. A passing test means Watch Together rooms will connect.":
@@ -1332,26 +1332,26 @@ const audit: Record<string, string> = {
     "Saat ini, koleksi ini tidak berisi judul apa pun.",
   "This exact install, served as a web app. Open it on a phone, laptop or TV browser and it streams through this computer.":
     "Instalasi yang sama persis ini disajikan sebagai aplikasi web. Buka di browser ponsel, laptop, atau TV, lalu lakukan streaming melalui komputer ini.",
-  "This instance of Harbor is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
-    "Versi Harbor ini dibuat untuk desktop. Aplikasi mandiri kami untuk iOS dan Android akan segera hadir, masing-masing dengan pengalaman khusus yang mengutamakan perangkat seluler dan dirancang untuk platformnya sendiri.",
-  "This link goes to an external site that Harbor does not control or vouch for. Triple-check the address before you continue, and never enter your Harbor password anywhere but Harbor.":
-    "Tautan ini menuju situs eksternal yang tidak dikendalikan atau dijamin tepercaya oleh Harbor. Periksa alamatnya tiga kali sebelum melanjutkan, dan jangan pernah memasukkan kata sandi Harbor Anda di tempat selain Harbor.",
+  "This instance of Lart is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
+    "Versi Lart ini dibuat untuk desktop. Aplikasi mandiri kami untuk iOS dan Android akan segera hadir, masing-masing dengan pengalaman khusus yang mengutamakan perangkat seluler dan dirancang untuk platformnya sendiri.",
+  "This link goes to an external site that Lart does not control or vouch for. Triple-check the address before you continue, and never enter your Lart password anywhere but Lart.":
+    "Tautan ini menuju situs eksternal yang tidak dikendalikan atau dijamin tepercaya oleh Lart. Periksa alamatnya tiga kali sebelum melanjutkan, dan jangan pernah memasukkan kata sandi Lart Anda di tempat selain Lart.",
   "This member has hidden their showcase, activity and friends from public view.":
     "Anggota ini menyembunyikan etalase, aktivitas, dan daftar temannya dari publik.",
-  "This one also replaces Harbor's bundled players and tools, so it installs through Harbor Setup. Harbor closes, the installer finishes, then Harbor reopens.":
-    "Yang ini juga menggantikan pemutar dan alat bawaan Harbor, jadi pemasangannya dilakukan melalui Harbor Setup. Harbor akan ditutup, penginstal menyelesaikan prosesnya, lalu Harbor dibuka kembali.",
-  "This one installs through Harbor Setup, but the update manifest carries no signature for it. Harbor will not run an installer it cannot verify. Download it and run it yourself.":
-    "Yang ini dipasang melalui Harbor Setup, tetapi manifes pembaruannya tidak memiliki tanda tangan. Harbor tidak akan menjalankan penginstal yang tidak dapat diverifikasi. Unduh dan jalankan sendiri.",
-  "This opens Harbor to devices on your Wi-Fi. You can turn it off again in Settings.":
-    "Ini membuat Harbor dapat diakses oleh perangkat di Wi-Fi Anda. Anda dapat menonaktifkannya lagi di Pengaturan.",
+  "This one also replaces Lart's bundled players and tools, so it installs through Lart Setup. Lart closes, the installer finishes, then Lart reopens.":
+    "Yang ini juga menggantikan pemutar dan alat bawaan Lart, jadi pemasangannya dilakukan melalui Lart Setup. Lart akan ditutup, penginstal menyelesaikan prosesnya, lalu Lart dibuka kembali.",
+  "This one installs through Lart Setup, but the update manifest carries no signature for it. Lart will not run an installer it cannot verify. Download it and run it yourself.":
+    "Yang ini dipasang melalui Lart Setup, tetapi manifes pembaruannya tidak memiliki tanda tangan. Lart tidak akan menjalankan penginstal yang tidak dapat diverifikasi. Unduh dan jalankan sendiri.",
+  "This opens Lart to devices on your Wi-Fi. You can turn it off again in Settings.":
+    "Ini membuat Lart dapat diakses oleh perangkat di Wi-Fi Anda. Anda dapat menonaktifkannya lagi di Pengaturan.",
   "This page cannot reach your TV": "Halaman ini tidak dapat terhubung ke TV Anda",
   "This page works while your TV is showing its setup screen. Go back to that screen on the TV, then try again.":
     "Halaman ini berfungsi saat TV Anda menampilkan layar penyiapan. Kembali ke layar tersebut di TV, lalu coba lagi.",
   "This phone cannot reach your TV": "Ponsel ini tidak dapat terhubung ke TV Anda",
   "This screen stopped. Going back to Home usually clears it.":
     "Layar ini berhenti merespons. Kembali ke Beranda biasanya mengatasinya.",
-  "This server is too old to add repos from Harbor":
-    "Server ini terlalu usang untuk menambahkan repositori dari Harbor",
+  "This server is too old to add repos from Lart":
+    "Server ini terlalu usang untuk menambahkan repositori dari Lart",
   "This session cannot refresh its token. Sign out and back in, or the TV will never see these changes.":
     "Sesi ini tidak dapat memperbarui tokennya. Keluar lalu masuk kembali, atau perubahan ini tidak akan pernah muncul di TV.",
   "This subtitle appears to be for a different cut. Try another match.":
@@ -1367,8 +1367,8 @@ const audit: Record<string, string> = {
   "Timing looks aligned": "Pewaktuan tampak selaras",
   "Timing rate": "Laju pewaktuan",
   "To run a public relay, post the": "Untuk menjalankan relai publik, publikasikan",
-  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Harbor users paste it into Settings, Harbor Relay, {kbd}.":
-    "Untuk menjalankan relai publik, publikasikan URL {code} di r/Stremio atau tempat komunitas Anda berkumpul. Pengguna Harbor lain menempelkannya ke Pengaturan, Harbor Relay, {kbd}.",
+  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Lart users paste it into Settings, Lart Relay, {kbd}.":
+    "Untuk menjalankan relai publik, publikasikan URL {code} di r/Stremio atau tempat komunitas Anda berkumpul. Pengguna Lart lain menempelkannya ke Pengaturan, Lart Relay, {kbd}.",
   Toggle: "Aktifkan/nonaktifkan",
   "Toggle Anime4K": "Aktifkan/nonaktifkan Anime4K",
   "Toggle Fullscreen": "Aktifkan/nonaktifkan Layar Penuh",
@@ -1406,15 +1406,15 @@ const audit: Record<string, string> = {
   Transport: "Transport",
   "Trending and Top on TMDB read live data, which needs your own TMDB key.":
     "Bagian Sedang Tren dan Teratas di TMDB menggunakan data langsung, yang memerlukan kunci TMDB Anda sendiri.",
-  "Trending tracks star growth across your Harbor visits. Open the addons page again tomorrow and the top risers will appear here.":
-    "Sedang Tren melacak pertumbuhan jumlah bintang selama kunjungan Anda ke Harbor. Buka lagi halaman addon besok dan addon dengan kenaikan tertinggi akan muncul di sini.",
+  "Trending tracks star growth across your Lart visits. Open the addons page again tomorrow and the top risers will appear here.":
+    "Sedang Tren melacak pertumbuhan jumlah bintang selama kunjungan Anda ke Lart. Buka lagi halaman addon besok dan addon dengan kenaikan tertinggi akan muncul di sini.",
   "True fullscreen": "Layar penuh sesungguhnya",
   "True fullscreen covers the whole screen and hides the taskbar. Maximize fills the screen but keeps the taskbar and title bar, so you can still switch apps.":
     "Layar penuh sesungguhnya menutupi seluruh layar dan menyembunyikan bilah tugas. Maksimalkan memenuhi layar tetapi tetap menampilkan bilah tugas dan bilah judul, sehingga Anda masih dapat beralih aplikasi.",
-  "Tuck clean, native-looking window buttons into the top corner, with hover labels. On macOS they become traffic-light dots. Blends into Harbor while feeling like your system's own title bar.":
-    "Tempatkan tombol jendela yang rapi dan tampak seperti bawaan sistem di sudut atas, dengan label saat disorot. Di macOS, tombol ini menjadi titik lampu lalu lintas. Menyatu dengan Harbor sekaligus terasa seperti bilah judul bawaan sistem Anda.",
-  "Turn off the native window title bar above to use Harbor's hybrid bar instead.":
-    "Nonaktifkan bilah judul jendela bawaan di atas untuk menggunakan bilah hibrida Harbor sebagai gantinya.",
+  "Tuck clean, native-looking window buttons into the top corner, with hover labels. On macOS they become traffic-light dots. Blends into Lart while feeling like your system's own title bar.":
+    "Tempatkan tombol jendela yang rapi dan tampak seperti bawaan sistem di sudut atas, dengan label saat disorot. Di macOS, tombol ini menjadi titik lampu lalu lintas. Menyatu dengan Lart sekaligus terasa seperti bilah judul bawaan sistem Anda.",
+  "Turn off the native window title bar above to use Lart's hybrid bar instead.":
+    "Nonaktifkan bilah judul jendela bawaan di atas untuk menggunakan bilah hibrida Lart sebagai gantinya.",
   "Turn on network serving": "Aktifkan layanan melalui jaringan",
   "Turn this off to take Cinemeta out entirely and use only your own metadata addons, such as AIOMetadata or AIOStreams. Cinemeta can go stale and show already released episodes as TBA. Leave it on unless you have a metadata addon installed, or titles will have no details.":
     "Nonaktifkan ini untuk menghapus Cinemeta sepenuhnya dan hanya menggunakan addon metadata Anda sendiri, seperti AIOMetadata atau AIOStreams. Data Cinemeta dapat menjadi usang dan menampilkan episode yang sudah dirilis sebagai TBA. Biarkan aktif kecuali Anda telah memasang addon metadata, atau judul tidak akan memiliki detail.",
@@ -1438,28 +1438,28 @@ const audit: Record<string, string> = {
   "Update queued.": "Pembaruan diantrekan.",
   "Update submitted": "Pembaruan diajukan",
   "Updates & rollback": "Pembaruan & rollback",
-  "Updating separated settings per profile, which may have reset your theme and keys. Harbor still has your old setup saved. Bring it back on this profile, then reload.":
-    "Memperbarui pengaturan yang dipisahkan per profil, yang mungkin telah mereset tema dan kunci Anda. Harbor masih menyimpan konfigurasi lama Anda. Pulihkan konfigurasi tersebut di profil ini, lalu muat ulang.",
+  "Updating separated settings per profile, which may have reset your theme and keys. Lart still has your old setup saved. Bring it back on this profile, then reload.":
+    "Memperbarui pengaturan yang dipisahkan per profil, yang mungkin telah mereset tema dan kunci Anda. Lart masih menyimpan konfigurasi lama Anda. Pulihkan konfigurasi tersebut di profil ini, lalu muat ulang.",
   "Upgrade subtitles when better ones load": "Ganti subtitle saat subtitle yang lebih baik dimuat",
   "Use Cinemeta instead": "Gunakan Cinemeta sebagai gantinya",
   "Use a better match": "Gunakan hasil yang lebih cocok",
   "Use arrows and Select/Space to move focus between player controls. Turn this off to keep arrows for seeking and Space for play/pause.":
     "Gunakan tombol panah dan Select/Space untuk memindahkan fokus di antara kontrol pemutar. Nonaktifkan ini agar tombol panah tetap digunakan untuk menggeser posisi pemutaran dan Space untuk putar/jeda.",
   "Use default": "Gunakan opsi bawaan",
-  "Use liquid glass for the search pill and row scroll arrows. The appearance settings below are shared by glass surfaces across Harbor.":
-    "Gunakan liquid glass untuk bidang pencarian berbentuk kapsul dan panah gulir baris. Pengaturan tampilan di bawah berlaku untuk semua elemen kaca di Harbor.",
+  "Use liquid glass for the search pill and row scroll arrows. The appearance settings below are shared by glass surfaces across Lart.":
+    "Gunakan liquid glass untuk bidang pencarian berbentuk kapsul dan panah gulir baris. Pengaturan tampilan di bawah berlaku untuk semua elemen kaca di Lart.",
   "Use your API key to Translate Chapters to Your Language. Get a key from the":
     "Gunakan kunci API Anda untuk menerjemahkan bab ke bahasa Anda. Dapatkan kunci dari",
   "Used at 55% / 25% alpha.": "Digunakan pada alpha 55% / 25%.",
   "Used for streaming availability and the Now Playing release window.":
     "Digunakan untuk ketersediaan streaming dan periode rilis Sedang Diputar.",
-  "Used for streaming availability and the Now Playing release window. Pick a country and Harbor can match the interface, metadata, and subtitle languages to it.":
-    "Digunakan untuk ketersediaan streaming dan periode rilis Sedang Diputar. Pilih negara agar Harbor dapat menyesuaikan bahasa antarmuka, metadata, dan subtitle dengan negara tersebut.",
+  "Used for streaming availability and the Now Playing release window. Pick a country and Lart can match the interface, metadata, and subtitle languages to it.":
+    "Digunakan untuk ketersediaan streaming dan periode rilis Sedang Diputar. Pilih negara agar Lart dapat menyesuaikan bahasa antarmuka, metadata, dan subtitle dengan negara tersebut.",
   "Used for your cursor in Watch Together, your draw color, and your name pill in chat.":
     "Digunakan untuk kursor Anda di Nonton Bersama, warna untuk menggambar, dan label nama Anda di obrolan.",
-  "Used to check cache and unrestrict links. Harbor never adds or removes anything on your account on its own.": "Digunakan untuk memeriksa cache dan membuka batasan tautan. Harbor tidak pernah menambahkan atau menghapus apa pun di akun Anda secara otomatis.",
-  "Using AIOStreams or another aggregator addon? Its own sorting and filtering happen inside the addon before Harbor ever sees the results, then Harbor applies the stream filter and result order above on top. If results look thinner than expected, keep one side permissive: either relax the addon's internal filters or set Harbor's stream filter to Balanced or Off.":
-    "Menggunakan AIOStreams atau addon agregator lain? Pengurutan dan pemfilteran internalnya dilakukan di dalam addon sebelum Harbor melihat hasilnya, lalu Harbor menambahkan filter stream dan urutan hasil di atas. Jika hasil lebih sedikit dari yang diharapkan, buat salah satu sisi lebih longgar: longgarkan filter internal addon atau atur filter stream Harbor ke Seimbang atau Nonaktif.",
+  "Used to check cache and unrestrict links. Lart never adds or removes anything on your account on its own.": "Digunakan untuk memeriksa cache dan membuka batasan tautan. Lart tidak pernah menambahkan atau menghapus apa pun di akun Anda secara otomatis.",
+  "Using AIOStreams or another aggregator addon? Its own sorting and filtering happen inside the addon before Lart ever sees the results, then Lart applies the stream filter and result order above on top. If results look thinner than expected, keep one side permissive: either relax the addon's internal filters or set Lart's stream filter to Balanced or Off.":
+    "Menggunakan AIOStreams atau addon agregator lain? Pengurutan dan pemfilteran internalnya dilakukan di dalam addon sebelum Lart melihat hasilnya, lalu Lart menambahkan filter stream dan urutan hasil di atas. Jika hasil lebih sedikit dari yang diharapkan, buat salah satu sisi lebih longgar: longgarkan filter internal addon atau atur filter stream Lart ke Seimbang atau Nonaktif.",
   Venice: "Venice",
   "Venice Film Festival": "Venice Film Festival",
   "Version and capabilities come straight from the addon's manifest. Ratings and categories come from the":
@@ -1472,8 +1472,8 @@ const audit: Record<string, string> = {
   "Vote average ≥ 8.0": "Rata-rata nilai ≥ 8.0",
   "WWII on Film": "WWII dalam Film",
   "Waiting for the host to start": "Menunggu host memulai sesi",
-  "Want a badge that moves? Drop in a GIF up to 8 MB. Harbor shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
-    "Ingin lencana yang bergerak? Masukkan GIF berukuran hingga 8 MB. Harbor akan mengecilkan dan mengonversinya ke format animasi ringan agar tetap tajam dan cepat dimuat. Gunakan ukuran kecil dan animasi berulang.",
+  "Want a badge that moves? Drop in a GIF up to 8 MB. Lart shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
+    "Ingin lencana yang bergerak? Masukkan GIF berukuran hingga 8 MB. Lart akan mengecilkan dan mengonversinya ke format animasi ringan agar tetap tajam dan cepat dimuat. Gunakan ukuran kecil dan animasi berulang.",
   "Want to change the ratio mid-playback? The live aspect button is hidden by default to keep the player tidy.":
     "Ingin mengubah rasio saat pemutaran berlangsung? Tombol rasio aspek saat pemutaran disembunyikan secara default agar pemutar tetap rapi.",
   "Warming up": "Sedang melakukan persiapan",
@@ -1504,16 +1504,16 @@ const audit: Record<string, string> = {
     "Yang terjadi saat Anda menekan Putar pada suatu judul. Mode Instan langsung memulai pemutaran; mode Manual memungkinkan Anda memilih sumber.",
   "What the clock labels show on the seek bar.":
     "Yang ditampilkan oleh label waktu pada bilah pemutaran.",
-  "When Harbor sits idle in the foreground, it drifts through cinematic backdrops with a clock and what's trending. Any movement or key brings you back. Off by default.":
-    "Saat Harbor menganggur di latar depan, tampilan akan beralih di antara latar sinematik dengan jam dan konten yang sedang tren. Gerakan atau tombol apa pun akan membawa Anda kembali. Nonaktif secara default.",
+  "When Lart sits idle in the foreground, it drifts through cinematic backdrops with a clock and what's trending. Any movement or key brings you back. Off by default.":
+    "Saat Lart menganggur di latar depan, tampilan akan beralih di antara latar sinematik dengan jam dan konten yang sedang tren. Gerakan atau tombol apa pun akan membawa Anda kembali. Nonaktif secara default.",
   "When a movie or episode starts, briefly show its Common Sense Media parental guide (violence, nudity, profanity, substances) with severity. Fades on its own.":
     "Saat film atau episode dimulai, tampilkan sebentar panduan orang tua Common Sense Media (kekerasan, ketelanjangan, kata-kata kasar, penggunaan zat) beserta tingkat keparahannya. Menghilang otomatis.",
   "When a movie or episode starts, briefly show its IMDb parental guide (violence, profanity, substances, frightening scenes and more) with severity. Fades on its own.":
     "Saat film atau episode dimulai, tampilkan sebentar panduan orang tua IMDb (kekerasan, kata-kata kasar, penggunaan zat, adegan menakutkan, dan lainnya) beserta tingkat keparahannya. Menghilang otomatis.",
-  "When a subtitle runs early or late, Harbor measures the speech and corrects the timing on its own.":
-    "Jika subtitle muncul terlalu awal atau terlambat, Harbor menganalisis ucapan dan mengoreksi waktu subtitle secara otomatis.",
-  "When a subtitle runs early or late, Harbor measures the speech and corrects the timing on its own. Off by default.":
-    "Jika subtitle muncul terlalu awal atau terlambat, Harbor menganalisis ucapan dan mengoreksi waktu subtitle secara otomatis. Nonaktif secara default.",
+  "When a subtitle runs early or late, Lart measures the speech and corrects the timing on its own.":
+    "Jika subtitle muncul terlalu awal atau terlambat, Lart menganalisis ucapan dan mengoreksi waktu subtitle secara otomatis.",
+  "When a subtitle runs early or late, Lart measures the speech and corrects the timing on its own. Off by default.":
+    "Jika subtitle muncul terlalu awal atau terlambat, Lart menganalisis ucapan dan mengoreksi waktu subtitle secara otomatis. Nonaktif secara default.",
   "When the Up Next pill appears before an episode ends. Auto scales to the episode length, so short episodes stop prompting so early. Off hides it.":
     "Waktu munculnya label Berikutnya sebelum episode berakhir. Otomatis menyesuaikan dengan durasi episode agar episode pendek tidak memunculkannya terlalu dini. Jika dinonaktifkan, label akan disembunyikan.",
   "When you exit playback, keep the window fullscreen instead of dropping back to a window. Turn off to leave fullscreen automatically whenever the player closes.":
@@ -1524,8 +1524,8 @@ const audit: Record<string, string> = {
     "Jika Anda belum menyiapkan debrid atau torrent belum tersimpan dalam cache, gunakan stream langsung dari mesin bawaan di localhost:11470. Mesin ini terhubung ke peer melalui koneksi Anda sendiri, sama seperti streaming bawaan Stremio.",
   "When you reopen a show you were already browsing, jump straight back to your spot (usually the episode list) instead of starting at the top. The jump happens before the page shows, so there is no flash.":
     "Saat Anda membuka kembali acara yang sudah dijelajahi, langsung kembali ke posisi terakhir Anda (biasanya daftar episode), bukan mulai dari atas. Perpindahan terjadi sebelum halaman ditampilkan, sehingga halaman tidak sempat berkedip.",
-  "Where Harbor saves videos when you hit Download in the player. Pick any folder, including one on a different drive.":
-    "Tempat Harbor menyimpan video saat Anda menekan Unduh di pemutar. Pilih folder apa pun, termasuk di drive lain.",
+  "Where Lart saves videos when you hit Download in the player. Pick any folder, including one on a different drive.":
+    "Tempat Lart menyimpan video saat Anda menekan Unduh di pemutar. Pilih folder apa pun, termasuk di drive lain.",
   "Where you watch from": "Tempat Anda menonton",
   "Which account should the relay live in?": "Di akun mana relay harus berada?",
   "Which subtitle languages, in order?": "Bahasa subtitle apa saja, sesuai urutan?",
@@ -1549,12 +1549,12 @@ const audit: Record<string, string> = {
     "Tulis scraper untuk situs apa pun, host scraper tersebut, lalu instal seperti plugin lainnya",
   "Wrong channel or source?": "Saluran atau sumbernya salah?",
   "Wrong episode or quality?": "Episode atau kualitasnya salah?",
-  "You are not signed in to a Harbor account, so nothing here can reach the TV.":
-    "Anda belum masuk ke akun Harbor, jadi tidak ada apa pun dari sini yang dapat dikirim ke TV.",
+  "You are not signed in to a Lart account, so nothing here can reach the TV.":
+    "Anda belum masuk ke akun Lart, jadi tidak ada apa pun dari sini yang dapat dikirim ke TV.",
   "You have unsaved anchors. They will be lost.":
     "Anda memiliki titik acuan yang belum disimpan. Titik acuan tersebut akan hilang.",
-  "You must install this addon in your Stremio account first so Harbor can fetch its works.":
-    "Anda harus menginstal addon ini terlebih dahulu di akun Stremio agar Harbor dapat mengambil kontennya.",
+  "You must install this addon in your Stremio account first so Lart can fetch its works.":
+    "Anda harus menginstal addon ini terlebih dahulu di akun Stremio agar Lart dapat mengambil kontennya.",
   "You only ever pay the minimum on a credit card each month. Over time you:":
     "Anda hanya membayar jumlah minimum tagihan kartu kredit setiap bulan. Seiring waktu, Anda:",
   "You picked only one anchor. This applies a constant shift (no FPS-drift correction). Continue?":
@@ -1562,8 +1562,8 @@ const audit: Record<string, string> = {
   "You've sailed these waters dry.": "Anda sudah menjelajahi semuanya.",
   "Your IP or device is blocked. Some providers geo restrict or limit how many devices can connect at once.":
     "IP atau perangkat Anda diblokir. Beberapa penyedia memberlakukan pembatasan geografis atau membatasi jumlah perangkat yang dapat terhubung sekaligus.",
-  "Your Roku is set to block control requests from apps on your network, so Harbor can't reach it. This is a one-time setting on the Roku.":
-    "Roku Anda diatur untuk memblokir permintaan kontrol dari aplikasi di jaringan Anda, sehingga Harbor tidak dapat menjangkaunya. Pengaturan ini hanya perlu diubah sekali di Roku.",
+  "Your Roku is set to block control requests from apps on your network, so Lart can't reach it. This is a one-time setting on the Roku.":
+    "Roku Anda diatur untuk memblokir permintaan kontrol dari aplikasi di jaringan Anda, sehingga Lart tidak dapat menjangkaunya. Pengaturan ini hanya perlu diubah sekali di Roku.",
   "Your Simkl plan-to-watch list has no episodes airing this month. Switch to All upcoming to browse everything.":
     "Daftar rencana tontonan Simkl Anda tidak memiliki episode yang tayang bulan ini. Beralih ke Semua yang akan datang untuk melihat semuanya.",
   "Your TV would not accept that value. Check it for stray characters and try again.":
@@ -1585,8 +1585,8 @@ const audit: Record<string, string> = {
   "checks any moment": "akan memeriksa sebentar lagi",
   "contains login credentials": "berisi kredensial login",
   "cosmetic, minor": "kosmetis, ringan",
-  "eBook extensions use Harbor’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
-    "Ekstensi eBook menggunakan worker terisolasi, bridge HTTP, dan parser HTML Harbor dalam sandbox yang sama dengan yang digunakan ekstensi Manga. Hanya tambahkan repositori yang Anda percayai.",
+  "eBook extensions use Lart’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
+    "Ekstensi eBook menggunakan worker terisolasi, bridge HTTP, dan parser HTML Lart dalam sandbox yang sama dengan yang digunakan ekstensi Manga. Hanya tambahkan repositori yang Anda percayai.",
   favorited: "ditambahkan ke favorit",
   "for higher rate limits; leave blank for the free anonymous tier.":
     "untuk batas jumlah permintaan yang lebih tinggi; biarkan kosong untuk paket anonim gratis.",
@@ -1629,13 +1629,13 @@ const audit: Record<string, string> = {
   "{count} picks ready": "{count} pilihan sudah siap",
   "{count} slot reskinned": "Tampilan {count} slot diubah",
   "{count} slots reskinned": "Tampilan {count} slot diubah",
-  "{deviceName} is an audio-only device. Harbor can't transcode video to audio yet, so this device can only stream audio files. Pick a TV, Chromecast, or display-equipped device to stream video.":
-    "{deviceName} adalah perangkat khusus audio. Harbor belum dapat mentranskode video menjadi audio, jadi perangkat ini hanya dapat melakukan stream file audio. Pilih TV, Chromecast, atau perangkat yang dilengkapi layar untuk melakukan stream video.",
+  "{deviceName} is an audio-only device. Lart can't transcode video to audio yet, so this device can only stream audio files. Pick a TV, Chromecast, or display-equipped device to stream video.":
+    "{deviceName} adalah perangkat khusus audio. Lart belum dapat mentranskode video menjadi audio, jadi perangkat ini hanya dapat melakukan stream file audio. Pilih TV, Chromecast, atau perangkat yang dilengkapi layar untuk melakukan stream video.",
   "{label} handle": "Handle {label}",
   "{media} from {name}: popular, acclaimed, and hidden alike.":
     "{media} dari {name}: yang populer, menuai pujian, maupun kurang dikenal.",
-  "{name} will be removed from Harbor. Anything you've set to use it will fall back to Inter.":
-    "{name} akan dihapus dari Harbor. Semua yang telah diatur untuk menggunakannya akan kembali menggunakan Inter.",
+  "{name} will be removed from Lart. Anything you've set to use it will fall back to Inter.":
+    "{name} akan dihapus dari Lart. Semua yang telah diatur untuk menggunakannya akan kembali menggunakan Inter.",
   "{n} award wins": "{n} penghargaan yang dimenangkan",
   "{n} badges customized": "{n} lencana telah disesuaikan",
   "{n} hidden by trust filter": "{n} disembunyikan oleh filter tingkat kepercayaan",

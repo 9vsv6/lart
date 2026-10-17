@@ -7,7 +7,7 @@ const HARBOR_LOGO = `${HARBOR_API_BASE}/discord/harbordiscord.png`;
 // Discord strips buttons that link to its own invites: discord.gg makes it
 // reject the whole activity (presence vanishes), discord.com/invite is dropped
 // silently. A community-invite button needs a redirect on a domain we own.
-const STATIC_BUTTONS = [{ label: "Harbor Website", url: "https://harbor.elfhosted.com/" }];
+const STATIC_BUTTONS = [{ label: "Lart Website", url: "https://harbor.elfhosted.com/" }];
 
 type DiscordConfig = {
   enabled: boolean;
@@ -145,7 +145,7 @@ function computeBase(): Base {
     const credit = music.album ? `${music.artist} · ${music.album}` : music.artist;
     const state = music.paused ? `Paused · ${music.artist}` : credit;
     const buttons = music.trackUrl
-      ? [{ label: "Listen in Harbor", url: music.trackUrl }, ...STATIC_BUTTONS]
+      ? [{ label: "Listen in Lart", url: music.trackUrl }, ...STATIC_BUTTONS]
       : STATIC_BUTTONS;
     return {
       payload: {
@@ -191,12 +191,12 @@ function computeBase(): Base {
   if (browse && config.showWhenBrowsing) {
     if (config.hideTitle)
       return {
-        payload: { details: "Browsing Harbor", posterUrl: HARBOR_LOGO },
+        payload: { details: "Browsing Lart", posterUrl: HARBOR_LOGO },
         key: "browse:hide",
       };
     return {
       payload: {
-        details: browse.details ?? "Browsing Harbor",
+        details: browse.details ?? "Browsing Lart",
         state: browse.state,
         posterUrl: (config.showPoster && browse.largeImage) || HARBOR_LOGO,
         largeText: browse.largeText ?? browse.details,
@@ -216,7 +216,7 @@ function compute(): Computed {
     const headcount = Math.max(1, party.size);
     const payload: Record<string, unknown> = base ? { ...base.payload } : {};
     let context = base && !config.hideTitle ? (payload.details as string | undefined) : undefined;
-    if (context && context.startsWith("Browsing Harbor")) context = undefined;
+    if (context && context.startsWith("Browsing Lart")) context = undefined;
     if (context && playback && !config.hideTitle) {
       const sub = payload.state as string | undefined;
       if (sub) context = `${context} · ${sub}`;

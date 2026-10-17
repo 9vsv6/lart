@@ -18,7 +18,7 @@ export default {
   "games.stardew.refresh": "Segarkan mod",
 
   "games.stardew.import": "Impor ZIP mod",
-  "games.stardew.manage": "Dikelola dengan Harbor",
+  "games.stardew.manage": "Dikelola dengan Lart",
   "games.stardew.manageNote": "Impor mod SMAPI yang sudah diunduh untuk mengelolanya di sini. Impor ZIP versi barunya untuk memperbarui.",
   "games.stardew.previous": "Versi sebelumnya",
   "games.stardew.review": "Tinjau perubahan",
@@ -31,7 +31,7 @@ export default {
   "games.stardew.running": "Tutup Stardew Valley dan SMAPI sebelum mengubah file mod.",
   "games.stardew.requirementsError": "Mod yang diperlukan atau versi SMAPI tidak ada atau terlalu lama. Periksa persyaratan mod.",
   "games.stardew.dependentsError": "Mod aktif memerlukan versi ini. Nonaktifkan mod tersebut dahulu atau pilih versi yang kompatibel.",
-  "games.stardew.unmanagedError": "Mod ini sudah ada di luar catatan Harbor. Pindahkan salinan yang ada sebelum mengimpor.",
+  "games.stardew.unmanagedError": "Mod ini sudah ada di luar catatan Lart. Pindahkan salinan yang ada sebelum mengimpor.",
   "games.stardew.archiveError": "Pilih ZIP berisi satu folder mod siap pakai, maksimal 32 MB (128 MB setelah diekstrak). Unduhan kode sumber bukan mod yang dapat dipasang.",
   "games.stardew.moreFiles": "{count} file lainnya",
   "games.stardew.partialError": "Beberapa mod tidak dapat diperiksa. Selesaikan masalah pemindaian sebelum mengubah file.",

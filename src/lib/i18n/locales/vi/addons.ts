@@ -34,8 +34,8 @@ const addons: Record<string, string> = {
     "Cấu hình lại tiện ích bổ sung này và áp dụng liên kết đã cập nhật",
   "Sign in to sync your addons across devices":
     "Đăng nhập để đồng bộ tiện ích bổ sung trên các thiết bị",
-  "Anything you install in Harbor pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
-    "Mọi tiện ích bạn cài trong Harbor đều được đồng bộ lại với tài khoản Stremio để cũng xuất hiện trên thiết bị di động. Đăng nhập qua ảnh đại diện ở góc dưới bên trái của thanh bên.",
+  "Anything you install in Lart pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
+    "Mọi tiện ích bạn cài trong Lart đều được đồng bộ lại với tài khoản Stremio để cũng xuất hiện trên thiết bị di động. Đăng nhập qua ảnh đại diện ở góc dưới bên trái của thanh bên.",
   "Common picks for a fresh setup.": "Các lựa chọn phổ biến cho thiết lập mới.",
   "Browse by category": "Duyệt theo danh mục",
   "Six places to start. Tap one and we'll filter the catalog for you.":
@@ -55,8 +55,8 @@ const addons: Record<string, string> = {
   "Configure on the addon's setup page": "Cấu hình trên trang thiết lập của tiện ích bổ sung",
   "Click to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "Nhấp để mở trang thiết lập của {name}. Chọn các tùy chọn, sau đó sao chép liên kết cài đặt được cung cấp và dán vào bên dưới để cập nhật tiện ích bổ sung.",
-  "Click to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "Nhấp để mở trang thiết lập của {name} trong trình duyệt tích hợp của Harbor. Chọn các tùy chọn. Khi bạn nhấp vào Cài đặt trên trang đó, Harbor sẽ tự động nhận liên kết và cập nhật tiện ích bổ sung.",
+  "Click to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "Nhấp để mở trang thiết lập của {name} trong trình duyệt tích hợp của Lart. Chọn các tùy chọn. Khi bạn nhấp vào Cài đặt trên trang đó, Lart sẽ tự động nhận liên kết và cập nhật tiện ích bổ sung.",
   "Open setup page": "Mở trang thiết lập",
   'Heads-up: a few addons (like AIOStatus) don\'t pre-fill from the URL. If the form loads blank, paste the existing manifest URL into their "Import from URL" field to restore your settings.':
     'Lưu ý: một số tiện ích bổ sung (như AIOStatus) không tự điền dữ liệu từ URL. Nếu biểu mẫu trống, hãy dán URL manifest hiện có vào trường "Import from URL" để khôi phục cài đặt.',
@@ -97,8 +97,8 @@ const addons: Record<string, string> = {
     "URL có thể chứa khóa hoặc token debrid; chỉ hiển thị khi cần sao chép",
   "Hidden by default. Manifest paths often carry API keys (debrid tokens, OMDB keys, etc.) you don't want over a shoulder.":
     "Ẩn theo mặc định. Đường dẫn manifest thường chứa khóa API (token debrid, khóa OMDB, v.v.) mà bạn không muốn người khác nhìn thấy.",
-  "Stremio addon, packaged into Harbor's catalog.":
-    "Tiện ích bổ sung Stremio, được đưa vào danh mục của Harbor.",
+  "Stremio addon, packaged into Lart's catalog.":
+    "Tiện ích bổ sung Stremio, được đưa vào danh mục của Lart.",
   "Version and capabilities come straight from the addon's manifest. Ratings and categories come from the":
     "Phiên bản và tính năng được lấy trực tiếp từ manifest của tiện ích bổ sung. Điểm đánh giá và danh mục được lấy từ",
   "community API. Star, browse, and contribute on their site.":
@@ -111,8 +111,8 @@ const addons: Record<string, string> = {
   "View more": "Xem thêm",
   "You've reached the end · {n} addons": "Bạn đã xem hết · {n} tiện ích bổ sung",
   "No velocity data yet": "Chưa có dữ liệu tăng trưởng",
-  "Trending tracks star growth across your Harbor visits. Open the addons page again tomorrow and the top risers will appear here.":
-    "Mục Thịnh hành theo dõi mức tăng sao qua các lần bạn truy cập Harbor. Hãy mở lại trang tiện ích bổ sung vào ngày mai để xem các tiện ích tăng nhanh nhất tại đây.",
+  "Trending tracks star growth across your Lart visits. Open the addons page again tomorrow and the top risers will appear here.":
+    "Mục Thịnh hành theo dõi mức tăng sao qua các lần bạn truy cập Lart. Hãy mở lại trang tiện ích bổ sung vào ngày mai để xem các tiện ích tăng nhanh nhất tại đây.",
   "Organize addons": "Sắp xếp tiện ích bổ sung",
   "Back to addons": "Quay lại tiện ích bổ sung",
   "This order drives your catalog rows and the default stream order. A stream priority set in Settings overrides it for streams.":
@@ -134,8 +134,8 @@ const addons: Record<string, string> = {
   "No addons are synced to this account yet.":
     "Chưa có tiện ích bổ sung nào được đồng bộ với tài khoản này.",
   "On this device only": "Chỉ trên thiết bị này",
-  "These live in Harbor on this computer and never touch your account.":
-    "Các tiện ích này được lưu trong Harbor trên máy tính này và không bao giờ được đồng bộ với tài khoản của bạn.",
+  "These live in Lart on this computer and never touch your account.":
+    "Các tiện ích này được lưu trong Lart trên máy tính này và không bao giờ được đồng bộ với tài khoản của bạn.",
   "On this device": "Trên thiết bị này",
   "Sign in to Stremio to organize the addons synced to your account.":
     "Đăng nhập Stremio để sắp xếp các tiện ích bổ sung đã đồng bộ với tài khoản của bạn.",
@@ -148,8 +148,8 @@ const addons: Record<string, string> = {
     "Sẽ không có gì thay đổi cho đến khi bạn nhấn Lưu. Rời khỏi trang này sẽ hủy các chỉnh sửa.",
   "The Backups button at the top keeps your last five orders. One click restores any of them.":
     "Nút Bản sao lưu ở trên cùng lưu năm thứ tự gần nhất. Chỉ cần một lần nhấp để khôi phục bất kỳ thứ tự nào.",
-  "Harbor double-checks with Stremio after saving, so a half-written order can't slip through.":
-    "Harbor kiểm tra lại với Stremio sau khi lưu để đảm bảo không áp dụng thứ tự chưa được ghi đầy đủ.",
+  "Lart double-checks with Stremio after saving, so a half-written order can't slip through.":
+    "Lart kiểm tra lại với Stremio sau khi lưu để đảm bảo không áp dụng thứ tự chưa được ghi đầy đủ.",
   "{n} addon": "{n} tiện ích bổ sung",
   "{n} addons": "{n} tiện ích bổ sung",
   "Drag to reorder": "Kéo để sắp xếp lại",
@@ -161,12 +161,12 @@ const addons: Record<string, string> = {
     "Bộ sưu tập tiện ích bổ sung của bạn đã thay đổi trên thiết bị khác. Không có gì được ghi.",
   "Stremio didn't confirm the save. Your collection may be unchanged. Retry will re-check before writing again.":
     "Stremio chưa xác nhận việc lưu. Bộ sưu tập của bạn có thể chưa thay đổi. Thử lại sẽ kiểm tra lại trước khi ghi lần nữa.",
-  "Saved, but Harbor couldn't confirm the new order. Retry to re-check.":
-    "Đã lưu, nhưng Harbor không thể xác nhận thứ tự mới. Hãy thử lại để kiểm tra lại.",
+  "Saved, but Lart couldn't confirm the new order. Retry to re-check.":
+    "Đã lưu, nhưng Lart không thể xác nhận thứ tự mới. Hãy thử lại để kiểm tra lại.",
   "Stremio reports a different order than was saved.":
     "Stremio báo cáo thứ tự khác với thứ tự đã lưu.",
-  "A safety copy of your addon order. One is saved automatically before Harbor writes any change, and you can save one yourself any time. The five most recent are kept.":
-    "Bản sao an toàn của thứ tự tiện ích bổ sung. Một bản sẽ tự động được lưu trước khi Harbor ghi bất kỳ thay đổi nào và bạn cũng có thể tự lưu bất cứ lúc nào. Năm bản gần nhất sẽ được giữ lại.",
+  "A safety copy of your addon order. One is saved automatically before Lart writes any change, and you can save one yourself any time. The five most recent are kept.":
+    "Bản sao an toàn của thứ tự tiện ích bổ sung. Một bản sẽ tự động được lưu trước khi Lart ghi bất kỳ thay đổi nào và bạn cũng có thể tự lưu bất cứ lúc nào. Năm bản gần nhất sẽ được giữ lại.",
   "Back up current order": "Sao lưu thứ tự hiện tại",
   "No backups yet. Press the button above to save your first one.":
     "Chưa có bản sao lưu. Nhấn nút ở trên để lưu bản đầu tiên.",
@@ -179,8 +179,8 @@ const addons: Record<string, string> = {
     "Cài đặt từ URL: dán manifest hoặc liên kết stremio:// bất kỳ",
   "Click below to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "Nhấp bên dưới để mở trang thiết lập của {name}. Chọn các tùy chọn, sau đó sao chép liên kết cài đặt được cung cấp và dán vào bên dưới để cập nhật tiện ích bổ sung.",
-  "Click below to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "Nhấp bên dưới để mở trang thiết lập của {name} trong trình duyệt tích hợp của Harbor. Chọn các tùy chọn. Khi bạn nhấp vào Cài đặt trên trang đó, Harbor sẽ tự động nhận liên kết và cập nhật tiện ích bổ sung.",
+  "Click below to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "Nhấp bên dưới để mở trang thiết lập của {name} trong trình duyệt tích hợp của Lart. Chọn các tùy chọn. Khi bạn nhấp vào Cài đặt trên trang đó, Lart sẽ tự động nhận liên kết và cập nhật tiện ích bổ sung.",
   "Essential addons": "Tiện ích bổ sung thiết yếu",
   "Start here. The ones almost everyone has.":
     "Hãy bắt đầu tại đây. Những tiện ích mà hầu như ai cũng dùng.",

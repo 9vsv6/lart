@@ -37,7 +37,7 @@ export default {
   "games.recommend.retrySome": "Fehlende Verbindungen erneut laden",
   "games.recommend.saveError": "Deine Einstellungen für Spielvorschläge konnten auf diesem Gerät nicht gespeichert werden. Versuche es erneut.",
   "games.recommend.influences": "Grundlage deiner Vorschläge",
-  "games.recommend.influencesNote": "Wähle, welche Spiele Harbor berücksichtigt. Deine Bibliothek bleibt unverändert.",
+  "games.recommend.influencesNote": "Wähle, welche Spiele Lart berücksichtigt. Deine Bibliothek bleibt unverändert.",
   "games.recommend.exclude": "{name} nicht mehr berücksichtigen",
   "games.recommend.excluded": "Ausgeschlossene Grundlagen ({count})",
   "games.recommend.useAgain": "{name} wieder berücksichtigen",

@@ -14,7 +14,7 @@ const chrome: Record<string, string> = {
   "arabic.row.trending": "Tendencias en árabe",
   Board: "Tablero",
   "chrome.backToTop": "Volver arriba",
-  "chrome.harborHome": "Inicio de Harbor",
+  "chrome.harborHome": "Inicio de Lart",
   "chrome.locked": "Bloqueado",
   "chrome.lockedRequiresPin": "{label} (bloqueado, requiere PIN)",
   "chrome.lockedShort": "{label} · bloqueado",
@@ -134,7 +134,7 @@ const chrome: Record<string, string> = {
   "welcome.dismiss": "Comenzar",
   "welcome.subtitle":
     "La interfaz ahora está en árabe. Puedes volver a cambiarla cuando quieras desde Configuración.",
-  "welcome.title": "Te damos la bienvenida a Harbor",
+  "welcome.title": "Te damos la bienvenida a Lart",
   "Who's watching?": "¿Quién está viendo?",
 };
 

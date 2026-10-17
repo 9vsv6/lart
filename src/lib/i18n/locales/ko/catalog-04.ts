@@ -25,12 +25,12 @@ const catalog04: Record<string, string> = {
   "Export my setup": "내 설정 내보내기",
   "Export player log": "플레이어 로그 내보내기",
   "Export to Trakt": "Trakt로 내보내기",
-  "Export your Harbor setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
-    "Harbor 설정을 하나의 파일로 내보내고 포함할 항목을 정확히 선택하세요. 복원하면 파일에 포함된 항목만 돌아옵니다. Stremio 로그인 정보는 항상 제외됩니다.",
-  "Export your entire Harbor setup to a single file, then restore it on a new computer or keep it as a backup.":
-    "Harbor 설정 전체를 파일 하나로 내보낸 후 새 컴퓨터에서 복원하거나 백업으로 보관합니다.",
-  "Export your entire Harbor setup to a single file, then restore it on a new computer or keep it as a backup. Everything is included except your Stremio sign-in.":
-    "Harbor 설정 전체를 파일 하나로 내보낸 후 새 컴퓨터에서 복원하거나 백업으로 보관할 수 있습니다. Stremio 로그인 정보를 제외한 모든 항목이 포함됩니다.",
+  "Export your Lart setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
+    "Lart 설정을 하나의 파일로 내보내고 포함할 항목을 정확히 선택하세요. 복원하면 파일에 포함된 항목만 돌아옵니다. Stremio 로그인 정보는 항상 제외됩니다.",
+  "Export your entire Lart setup to a single file, then restore it on a new computer or keep it as a backup.":
+    "Lart 설정 전체를 파일 하나로 내보낸 후 새 컴퓨터에서 복원하거나 백업으로 보관합니다.",
+  "Export your entire Lart setup to a single file, then restore it on a new computer or keep it as a backup. Everything is included except your Stremio sign-in.":
+    "Lart 설정 전체를 파일 하나로 내보낸 후 새 컴퓨터에서 복원하거나 백업으로 보관할 수 있습니다. Stremio 로그인 정보를 제외한 모든 항목이 포함됩니다.",
   "Export your setup": "설정 내보내기",
   "Export {n} sections": "섹션 {n}개 내보내기",
   Exported: "내보냄",
@@ -73,8 +73,8 @@ const catalog04: Record<string, string> = {
   Family: "가족",
   "Family Favorites": "온 가족의 인기작",
   "Family Heart": "가족의 온기",
-  "Fan-made avatars for personal use. Harbor claims no rights to these characters; they belong to their creators and studios, shown here under fair use. Every one is optimized down to a tiny WebP.":
-    "개인용 팬 제작 아바타입니다. Harbor는 이 캐릭터에 대한 권리를 주장하지 않으며, 캐릭터의 권리는 제작자와 스튜디오에 있습니다. 여기에는 공정 이용 원칙에 따라 표시됩니다. 모든 이미지는 작은 WebP 파일로 최적화되었습니다.",
+  "Fan-made avatars for personal use. Lart claims no rights to these characters; they belong to their creators and studios, shown here under fair use. Every one is optimized down to a tiny WebP.":
+    "개인용 팬 제작 아바타입니다. Lart는 이 캐릭터에 대한 권리를 주장하지 않으며, 캐릭터의 권리는 제작자와 스튜디오에 있습니다. 여기에는 공정 이용 원칙에 따라 표시됩니다. 모든 이미지는 작은 WebP 파일로 최적화되었습니다.",
   "Fanart.tv": "Fanart.tv",
   "Fanart.tv · logos and backdrops": "Fanart.tv · 로고 및 배경 이미지",
   Fantasy: "판타지",
@@ -132,7 +132,7 @@ const catalog04: Record<string, string> = {
   Fight: "격투",
   File: "파일",
   "File another": "다른 신고 제출",
-  "File is not a Harbor layout profile.": "Harbor 레이아웃 프로필 파일이 아닙니다.",
+  "File is not a Lart layout profile.": "Lart 레이아웃 프로필 파일이 아닙니다.",
   Filename: "파일 이름",
   "Filename hidden": "파일 이름 숨김",
   "Filename shown": "파일 이름 표시",
@@ -209,10 +209,10 @@ const catalog04: Record<string, string> = {
     "에피소드를 끝까지 보면 카드가 0분 남음에 머무르지 않고 다음 에피소드로 넘어갑니다.",
   "Finish creating my account": "내 계정 생성 완료",
   "Finish later": "나중에 완료",
-  "Finish setting up Harbor": "Harbor 설정 마치기",
+  "Finish setting up Lart": "Lart 설정 마치기",
   "Finish setup on your phone": "휴대폰에서 설정 완료",
-  "Finish the install above first. Flipping this on now won't do anything until Harbor can find SVP's engine.":
-    "먼저 위의 설치를 완료하세요. 지금 켜도 Harbor에서 SVP 엔진을 찾기 전까지는 작동하지 않습니다.",
+  "Finish the install above first. Flipping this on now won't do anything until Lart can find SVP's engine.":
+    "먼저 위의 설치를 완료하세요. 지금 켜도 Lart에서 SVP 엔진을 찾기 전까지는 작동하지 않습니다.",
   Finished: "완료함",
   "Finishing an anime episode updates your AniList progress. Forward only: it never lowers a count you already have.":
     "애니메이션 에피소드를 끝까지 보면 AniList 진도가 업데이트됩니다. 진도는 증가만 하며 기존 횟수보다 낮아지지 않습니다.",
@@ -262,11 +262,11 @@ const catalog04: Record<string, string> = {
   Folder: "폴더",
   "Folder picker is only available in the desktop app":
     "폴더 선택은 데스크톱 앱에서만 사용할 수 있습니다.",
-  "Folder selection is available in the Harbor app":
-    "폴더 선택은 Harbor 앱에서 사용할 수 있습니다.",
+  "Folder selection is available in the Lart app":
+    "폴더 선택은 Lart 앱에서 사용할 수 있습니다.",
   Folders: "폴더",
-  "Folders Harbor imported your movies and shows from. Rescan to pick up new files.":
-    "Harbor가 영화와 시리즈를 가져온 폴더입니다. 새 파일을 추가하려면 다시 스캔하세요.",
+  "Folders Lart imported your movies and shows from. Rescan to pick up new files.":
+    "Lart가 영화와 시리즈를 가져온 폴더입니다. 새 파일을 추가하려면 다시 스캔하세요.",
   "Follow them out?": "따라 나갈까요?",
   "Following addon order": "애드온 순서 적용 중",
   Font: "글꼴",
@@ -284,14 +284,14 @@ const catalog04: Record<string, string> = {
   "For giving more than $100 to charity.": "자선단체에 $100 넘게 기부한 경우 지급됩니다.",
   "For laptop speakers and headphones. Movies mixed for 5.1 or 7.1 surround can sound hollow or have quiet dialogue on two speakers. This folds them down properly.":
     "노트북 스피커와 헤드폰용입니다. 5.1 또는 7.1 서라운드로 믹싱된 영화는 두 개의 스피커에서 소리가 비거나 대사가 작게 들릴 수 있습니다. 이 기능으로 스테레오에 맞게 올바르게 다운믹스합니다.",
-  "For now, please open this site on a desktop, or build Harbor from source.":
-    "현재는 데스크톱에서 이 사이트를 열거나 Harbor를 소스에서 빌드해 주세요.",
+  "For now, please open this site on a desktop, or build Lart from source.":
+    "현재는 데스크톱에서 이 사이트를 열거나 Lart를 소스에서 빌드해 주세요.",
   "For reliable HDR on this display, switch to True HDR, separate window in Settings.":
     "이 디스플레이에서 HDR을 안정적으로 사용하려면 설정에서 True HDR, 별도 창으로 전환하세요.",
   "For series and anime, keep playing the rest of the season from the release you first picked. Applies whether Play is instant or manual.":
     "시리즈와 애니메이션은 처음 선택한 릴리스로 남은 시즌을 계속 재생합니다. 재생 방식이 즉시 또는 수동인지와 관계없이 적용됩니다.",
-  "For the hardest files and the Try again button, Harbor transcribes a little speech on your device and lines the subtitle up to the actual words. Needs a build with the asr-whisper feature and downloads a small model the first time you use it.":
-    "가장 까다로운 파일과 다시 시도 버튼을 위해 Harbor가 기기에서 짧은 음성을 텍스트로 변환하고 자막을 실제 단어에 맞춥니다. asr-whisper 기능이 포함된 빌드가 필요하며 처음 사용할 때 소형 모델을 다운로드합니다.",
+  "For the hardest files and the Try again button, Lart transcribes a little speech on your device and lines the subtitle up to the actual words. Needs a build with the asr-whisper feature and downloads a small model the first time you use it.":
+    "가장 까다로운 파일과 다시 시도 버튼을 위해 Lart가 기기에서 짧은 음성을 텍스트로 변환하고 자막을 실제 단어에 맞춥니다. asr-whisper 기능이 포함된 빌드가 필요하며 처음 사용할 때 소형 모델을 다운로드합니다.",
   "For the manual path:": "수동 방식:",
   "For the manual path: {code} 20+ and {code} CLI.": "수동 방식: {code} 20 이상 및 {code} CLI.",
   "For users who want to deploy themselves or already have a wrangler workflow.":
@@ -378,7 +378,7 @@ const catalog04: Record<string, string> = {
   "Frequent Collaborators": "자주 협업한 인물",
   "Fresh from the community": "커뮤니티 신규 테마",
   "Fresh from the studio": "스튜디오 최신작",
-  "Fresh looks shared by the Harbor community": "Harbor 커뮤니티가 공유한 새로운 디자인",
+  "Fresh looks shared by the Lart community": "Lart 커뮤니티가 공유한 새로운 디자인",
   "Fresh on TV": "TV 신작",
   "Fresh tomato for 60%+, splat for under.":
     "60% 이상이면 신선한 토마토, 미만이면 으깨진 토마토를 표시합니다.",
@@ -414,8 +414,8 @@ const catalog04: Record<string, string> = {
   "Frontline Valor": "최전선의 용기",
   "Frost the top bar on scroll": "스크롤 시 상단 바 반투명 효과",
   "Frosted glass": "반투명 유리",
-  "Frosted, refractive surfaces on Harbor's floating controls.":
-    "Harbor의 플로팅 컨트롤에 적용되는 반투명 굴절 표면입니다.",
+  "Frosted, refractive surfaces on Lart's floating controls.":
+    "Lart의 플로팅 컨트롤에 적용되는 반투명 굴절 표면입니다.",
   Fubo: "Fubo",
   FuboTV: "FuboTV",
   Full: "전체",
@@ -425,8 +425,8 @@ const catalog04: Record<string, string> = {
   "Full details": "전체 상세 정보",
   "Full hero banner": "전체 히어로 배너",
   "Full list": "전체 목록",
-  "Full mode signs in with your Letterboxd password to also unlock your diary, friends activity and your personal ratings. Your password is sent only to Stremboxd to obtain a token — Harbor never stores it.":
-    "전체 모드는 Letterboxd 비밀번호로 로그인하여 다이어리, 친구 활동 및 개인 평점도 이용할 수 있습니다. 비밀번호는 토큰 발급을 위해 Stremboxd에만 전송되며 Harbor에는 절대 저장되지 않습니다.",
+  "Full mode signs in with your Letterboxd password to also unlock your diary, friends activity and your personal ratings. Your password is sent only to Stremboxd to obtain a token — Lart never stores it.":
+    "전체 모드는 Letterboxd 비밀번호로 로그인하여 다이어리, 친구 활동 및 개인 평점도 이용할 수 있습니다. 비밀번호는 토큰 발급을 위해 Stremboxd에만 전송되며 Lart에는 절대 저장되지 않습니다.",
   "Full mode — diary, friends & ratings enabled": "전체 모드 · 다이어리, 친구 및 평점 사용 가능",
   "Full quality frames": "최고 화질 프레임",
   "Full quality hero image": "최고 화질 히어로 이미지",
@@ -440,8 +440,8 @@ const catalog04: Record<string, string> = {
   "GIF export failed": "GIF 내보내기 실패",
   "GIF saved to {path}": "GIF를 {path}에 저장했습니다",
   GL: "GL",
-  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Harbor handles the shaders.":
-    "애니메이션 재생 중 선을 선명하게 하고 그라데이션을 정리하는 GPU 셰이더입니다. 모드를 선택하면 Harbor가 셰이더를 처리합니다.",
+  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Lart handles the shaders.":
+    "애니메이션 재생 중 선을 선명하게 하고 그라데이션을 정리하는 GPU 셰이더입니다. 모드를 선택하면 Lart가 셰이더를 처리합니다.",
   Gallery: "갤러리",
   "Game search needs an API key before it can run.": "게임을 검색하려면 API 키가 필요합니다.",
   Games: "게임",
@@ -455,8 +455,8 @@ const catalog04: Record<string, string> = {
   General: "일반",
   "General Sans": "General Sans",
   "Generate a Cloudflare API token with": "Cloudflare API 토큰 생성:",
-  "Generate a Cloudflare API token with {code1} and {code2} permissions at {code3}. Paste it into Harbor.":
-    "{code3}에서 {code1} 및 {code2} 권한이 있는 Cloudflare API 토큰을 생성한 뒤 Harbor에 붙여 넣습니다.",
+  "Generate a Cloudflare API token with {code1} and {code2} permissions at {code3}. Paste it into Lart.":
+    "{code3}에서 {code1} 및 {code2} 권한이 있는 Cloudflare API 토큰을 생성한 뒤 Lart에 붙여 넣습니다.",
   "Generates a frame on the fly as you scrub the seek bar. Works on debrid streams and local files.":
     "탐색 바를 움직일 때 즉시 프레임을 생성합니다. 디브리드 스트림과 로컬 파일에서 작동합니다.",
   Genre: "장르",
@@ -473,13 +473,13 @@ const catalog04: Record<string, string> = {
     "포스터 행을 따라 이동할 때 독처럼 주변 포스터를 부드럽게 확대합니다. 기본적으로 꺼져 있습니다.",
   "Gently magnify nearby posters as you move across a poster row.":
     "포스터 행을 이동할 때 주변 포스터를 부드럽게 확대합니다.",
-  "Genuine 48/60fps motion on anime, rendered right inside Harbor's player. SVP supplies the engine (VapourSynth + svpflow) and runs in your tray for licensing; Harbor's own player applies the interpolation, so it stays embedded and fully under your control. One-time install, then flip it on.":
-    "Harbor 플레이어 안에서 직접 렌더링되는 실제 48/60fps 애니메이션 모션입니다. SVP는 엔진(VapourSynth + svpflow)을 제공하고 라이선스를 위해 시스템 트레이에서 실행됩니다. 보간은 Harbor 자체 플레이어에서 적용되므로 내장된 상태로 모든 기능을 직접 제어할 수 있습니다. 한 번 설치한 후 켜기만 하면 됩니다.",
+  "Genuine 48/60fps motion on anime, rendered right inside Lart's player. SVP supplies the engine (VapourSynth + svpflow) and runs in your tray for licensing; Lart's own player applies the interpolation, so it stays embedded and fully under your control. One-time install, then flip it on.":
+    "Lart 플레이어 안에서 직접 렌더링되는 실제 48/60fps 애니메이션 모션입니다. SVP는 엔진(VapourSynth + svpflow)을 제공하고 라이선스를 위해 시스템 트레이에서 실행됩니다. 보간은 Lart 자체 플레이어에서 적용되므로 내장된 상태로 모든 기능을 직접 제어할 수 있습니다. 한 번 설치한 후 켜기만 하면 됩니다.",
   "German Cinema": "독일 영화",
   "German Films": "독일 영화",
   Germany: "독일",
   Get: "받기",
-  "Get Harbor for desktop": "데스크톱용 Harbor 받기",
+  "Get Lart for desktop": "데스크톱용 Lart 받기",
   "Get SVP (free)": "SVP 받기(무료)",
   "Get Started": "시작하기",
   "Get a free key at opensubtitles.com": "opensubtitles.com에서 무료 키 받기",
@@ -618,218 +618,218 @@ const catalog04: Record<string, string> = {
   "Handles P2P playback and transcoding for this machine.": "이 기기에서 P2P 재생과 트랜스코딩을 처리합니다.",
   "Hang tight, won't be a sec.": "잠시만 기다려 주세요. 금방 끝납니다.",
   "Hangout Comedy": "행아웃 코미디",
-  "Harbor Rank scores a whole career, not a single hit. Four things move a rank: how good the work is on average, how much of it earned wide acclaim, the major awards it won, and how often the person carried the work as a lead. Each pillar is weighted, added up, then adjusted for the breadth and recency of the body of work. Every number that feeds a score is shown on the card, so you can always see why.":
-    "Harbor 순위는 한 번의 성공이 아닌 전체 경력을 평가합니다. 순위에는 작품의 평균 완성도, 널리 호평받은 작품의 비중, 주요 수상 실적, 주연으로 작품을 이끈 빈도라는 네 가지 요소가 반영됩니다. 각 축에 가중치를 적용해 합산한 다음, 작품 경력의 폭과 최근성을 기준으로 조정합니다. 점수에 반영되는 모든 수치는 카드에 표시되므로 그 이유를 언제든 확인할 수 있습니다.",
-  "Harbor Reader": "Harbor 리더",
-  "Harbor Relay": "Harbor Relay",
-  "Harbor Setup did not finish updating Harbor. Nothing was changed.":
-    "Harbor Setup에서 Harbor 업데이트를 완료하지 못했습니다. 변경된 사항이 없습니다.",
-  "Harbor Staff": "Harbor 스태프",
-  "Harbor Voyages": "Harbor Voyages",
-  "Harbor accepted that but returned no session. Try again.":
-    "Harbor에서 이를 수락했지만 세션이 반환되지 않았습니다. 다시 시도하세요.",
-  "Harbor account": "Harbor 계정",
-  "Harbor account linked as {name}": "{name}(으)로 Harbor 계정 연결됨",
-  "Harbor account signed in": "Harbor 계정에 로그인됨",
-  "Harbor asks your addons for titles and descriptions in this language. The TV menus stay in English.":
-    "Harbor가 애드온에 이 언어로 제목과 설명을 요청합니다. TV 메뉴는 영어로 유지됩니다.",
-  "Harbor can open only HTTP or HTTPS destinations.":
-    "Harbor에서는 HTTP 또는 HTTPS 주소만 열 수 있습니다.",
-  "Harbor cannot find this TV's network address, so the phone hand-off is unavailable here.":
-    "Harbor에서 이 TV의 네트워크 주소를 찾을 수 없어 여기서는 휴대폰으로 넘길 수 없습니다.",
-  "Harbor cannot open links that include embedded credentials.":
-    "Harbor에서는 인증 정보가 포함된 링크를 열 수 없습니다.",
-  "Harbor caps playlists at 80 MB to stay responsive. Most providers offer a filtered URL with fewer channels.":
-    "Harbor는 원활한 작동을 위해 재생목록을 80 MB로 제한합니다. 대부분의 제공업체는 채널 수가 적은 필터링된 URL을 제공합니다.",
-  "Harbor catches stremio:// install links so the configure-and-install flow stays inside the app.":
-    "Harbor가 stremio:// 설치 링크를 처리하여 구성 및 설치 과정이 앱 안에서 진행되게 합니다.",
-  "Harbor catches stremio:// install links so the configure-and-install flow stays inside the app. Every install also syncs to your Stremio account, so the official app remains the canonical home for your library.":
-    "Harbor가 stremio:// 설치 링크를 처리하므로 구성 및 설치 과정이 앱 안에서 진행됩니다. 설치할 때마다 Stremio 계정에도 동기화되므로 공식 앱이 라이브러리의 기준으로 유지됩니다.",
-  "Harbor checks a few times a day while it's open and lets you know here.":
-    "Harbor가 열려 있는 동안 하루에 몇 차례 확인하여 이곳에서 알려드립니다.",
-  "Harbor checks automatically every few hours.": "Harbor는 몇 시간마다 자동으로 확인합니다.",
-  "Harbor checks harbor.site for new versions and installs them in place.":
-    "Harbor가 harbor.site에서 새 버전을 확인하고 현재 위치에 설치합니다.",
-  "Harbor checks harbor.site for new versions and installs them in place. Nothing installs until you choose to, and a dismissed update never nags you again.":
-    "Harbor는 harbor.site에서 새 버전을 확인하고 현재 위치에 설치합니다. 사용자가 선택하기 전에는 아무것도 설치되지 않으며, 무시한 업데이트는 다시 알리지 않습니다.",
-  "Harbor could not find these": "Harbor가 다음 항목을 찾지 못했습니다",
-  "Harbor could not open its web server. Try again, or set this up on the TV.":
-    "Harbor에서 웹 서버를 열 수 없습니다. 다시 시도하거나 TV에서 설정하세요.",
-  "Harbor could not verify this destination.": "Harbor에서 이 주소를 확인할 수 없습니다.",
-  "Harbor couldn't analyze the audio for this source. Try again or adjust it manually.":
-    "Harbor가 이 소스의 오디오를 분석할 수 없습니다. 다시 시도하거나 직접 조정하세요.",
-  "Harbor couldn't find a reliable timing correction for this subtitle.":
-    "Harbor가 이 자막에 적용할 신뢰할 만한 타이밍 보정값을 찾지 못했습니다.",
-  "Harbor couldn't play this source": "Harbor에서 이 소스를 재생할 수 없습니다",
-  "Harbor couldn't reach MyAnimeList or AniList. Check the connection and reopen Big Picture.":
-    "Harbor에서 MyAnimeList 또는 AniList에 연결할 수 없습니다. 연결을 확인한 후 Big Picture를 다시 여세요.",
-  "Harbor couldn't reach MyAnimeList or AniList. Check your connection and try again.":
-    "Harbor에서 MyAnimeList 또는 AniList에 연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요.",
-  "Harbor couldn't reach the catalog servers.": "Harbor에서 카탈로그 서버에 연결할 수 없습니다.",
-  "Harbor couldn't reach the catalog servers. Check the connection and reopen Big Picture.":
-    "Harbor가 카탈로그 서버에 연결할 수 없습니다. 연결을 확인하고 빅 픽처를 다시 여세요.",
-  "Harbor couldn't reach the catalog servers. Check your connection and try again.":
-    "Harbor에서 카탈로그 서버에 연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요.",
-  "Harbor couldn't resolve a usable ID for this title. Add a TMDB key in Library settings or sign in to Stremio to broaden coverage.":
-    "Harbor에서 이 작품에 사용할 수 있는 ID를 확인하지 못했습니다. 라이브러리 설정에 TMDB 키를 추가하거나 Stremio에 로그인하여 검색 범위를 넓히세요.",
-  "Harbor couldn't start any source": "Harbor에서 어떤 소스도 시작할 수 없습니다",
-  "Harbor creates a Cloudflare Worker on your own free account and saves the URL.":
-    "Harbor가 사용자의 무료 계정에 Cloudflare Worker를 만들고 URL을 저장합니다.",
-  "Harbor curated": "Harbor 큐레이션",
-  "Harbor default": "Harbor 기본값",
-  "Harbor does not host any manga or any sources. Connect a self-hosted server you run, install a source plugin from a repository you trust, or open a folder you already have.":
-    "Harbor는 만화나 소스를 호스팅하지 않습니다. 직접 운영하는 자체 호스팅 서버에 연결하거나, 신뢰하는 저장소에서 소스 플러그인을 설치하거나, 이미 보유한 폴더를 여세요.",
-  "Harbor does not host any manga or any sources. Connect your own server or open a folder you already have, and mix as many as you like.":
-    "Harbor는 어떤 만화나 소스도 호스팅하지 않습니다. 자체 서버를 연결하거나 이미 보유한 폴더를 열어 원하는 만큼 함께 이용하세요.",
-  "Harbor does not host any manga. Add a source plugin from a repository you trust, connect your own server, or open a local folder. You can turn this off anytime in Settings.":
-    "Harbor는 만화를 호스팅하지 않습니다. 신뢰하는 저장소에서 소스 플러그인을 추가하거나, 자체 서버를 연결하거나, 로컬 폴더를 여세요. 설정에서 언제든지 이 기능을 끌 수 있습니다.",
-  "Harbor double-checks with Stremio after saving, so a half-written order can't slip through.":
-    "Harbor는 저장 후 Stremio에서 다시 확인하므로 순서가 일부만 저장되는 일이 없습니다.",
-  "Harbor dropped {n} suspicious or mismatched result.":
-    "Harbor가 의심스럽거나 일치하지 않는 결과 {n}개를 제외했습니다.",
-  "Harbor dropped {n} suspicious or mismatched results.":
-    "Harbor가 의심스럽거나 일치하지 않는 결과 {n}개를 제외했습니다.",
-  "Harbor eBook": "Harbor eBook",
-  "Harbor finds intro and credits timing from AniSkip, TheIntroDB, and the file's own chapters, then shows a Skip button at the right moment.":
-    "Harbor는 AniSkip, TheIntroDB 및 파일에 포함된 챕터에서 인트로와 엔딩 크레딧 구간을 찾아 적절한 순간에 건너뛰기 버튼을 표시합니다.",
-  "Harbor found episode sources for {season}, but none of them is a single downloadable package. It can still fetch the episodes one at a time.":
-    "Harbor가 {season}의 에피소드 소스를 찾았지만 단일 다운로드 패키지는 없습니다. 에피소드를 하나씩 가져올 수는 있습니다.",
-  "Harbor found episode sources, but none was a downloadable package for {season}. Try another addon or refresh the sources.":
-    "Harbor가 에피소드 소스를 찾았지만 {season}에 다운로드 가능한 패키지가 없습니다. 다른 애드온을 사용하거나 소스를 새로고침하세요.",
-  "Harbor found something at this address that looked like a Roku, but it didn't respond like one. The device may be offline or another product picked up the same broadcast.":
-    "Harbor가 이 주소에서 Roku로 보이는 기기를 찾았지만 Roku처럼 응답하지 않았습니다. 기기가 오프라인이거나 다른 제품이 동일한 브로드캐스트에 감지되었을 수 있습니다.",
-  "Harbor identity": "Harbor 프로필",
-  "Harbor identity (avatar / color)": "Harbor 프로필(아바타 / 색상)",
-  "Harbor in a browser": "브라우저의 Harbor",
-  "Harbor in your browser": "브라우저에서 Harbor 사용",
-  "Harbor is an independent client. It is not affiliated with or endorsed by Stremio.":
-    "Harbor는 독립 클라이언트이며 Stremio와 제휴 관계가 없고 Stremio의 보증을 받지 않습니다.",
-  "Harbor is having trouble, try again in a moment":
-    "Harbor에 문제가 발생했습니다. 잠시 후 다시 시도하세요",
-  "Harbor is open source. PRs that reference a bug get reviewed within 48h and ship with credit in the release notes.":
-    "Harbor는 오픈 소스입니다. 버그를 참조한 PR은 48시간 이내에 검토되며 릴리스 노트에 기여자 이름과 함께 반영됩니다.",
-  "Harbor keeps your MyAnimeList watch progress in sync.":
-    "Harbor가 MyAnimeList 시청 진행 상황을 동기화합니다.",
-  "Harbor leads with one big title. Classic leads with rows.":
-    "Harbor는 큰 대표 작품 하나를 먼저 표시하고, 클래식은 여러 행을 먼저 표시합니다.",
-  "Harbor list": "Harbor 목록",
-  "Harbor loads it automatically when a track in that language exists. You can also set or clear the second track for one video from the subtitle menu in the player.":
-    "해당 언어 트랙이 있으면 Harbor가 자동으로 불러옵니다. 플레이어의 자막 메뉴에서 동영상 하나에만 보조 트랙을 설정하거나 해제할 수도 있습니다.",
-  "Harbor loads the native svpflow filter through VapourSynth and starts SVP Manager when available. Restart playback to apply.":
-    "Harbor는 VapourSynth를 통해 네이티브 svpflow 필터를 불러오고, 가능한 경우 SVP Manager를 시작합니다. 적용하려면 재생을 다시 시작하세요.",
-  "Harbor logs into nothing and bypasses no password, paywall, or access control, and must not be used to attempt it. Point it only at content you are legally allowed to read, and never at official or licensed publisher sites. You alone are responsible for what you connect and for following copyright and each site's terms. Harbor bundles and endorses no sites.":
-    "Harbor는 어디에도 로그인하지 않으며 비밀번호, 유료 장벽 또는 접근 제어를 우회하지 않고, 그러한 시도에 사용해서도 안 됩니다. 합법적으로 읽을 권한이 있는 콘텐츠에만 연결하고, 공식 또는 정식 라이선스 출판사 사이트에는 절대 연결하지 마세요. 연결 대상과 저작권 및 각 사이트의 이용 약관 준수에 대한 책임은 전적으로 사용자에게 있습니다. Harbor는 어떤 사이트도 포함하거나 보증하지 않습니다.",
-  "Harbor needs a TMDB key for artwork, rows and collections. It is free.":
-    "Harbor에서 아트워크, 행 및 컬렉션을 사용하려면 무료 TMDB 키가 필요합니다.",
-  "Harbor needs at least one streaming source before it can play {title}. Install a stream addon or add a debrid key in settings.":
-    "Harbor에서 {title}을(를) 재생하려면 스트리밍 소스가 하나 이상 필요합니다. 스트림 애드온을 설치하거나 설정에서 디브리드 키를 추가하세요.",
-  "Harbor needs to be serving on your network before a phone can reach it.":
-    "휴대폰에서 접속하려면 먼저 Harbor가 네트워크에서 서비스 중이어야 합니다.",
-  "Harbor never hosts your books or source files.":
-    "Harbor는 사용자의 도서나 소스 파일을 호스팅하지 않습니다.",
-  "Harbor never hosts your books.": "Harbor는 책을 호스팅하지 않습니다.",
-  "Harbor normally starts its P2P engine at launch so the first P2P stream connects faster. That keeps a DHT node running and talking to the network even when you are not watching anything. Turn this on if you are on a metered or limited connection: the engine then starts the first time you actually play a P2P stream. Takes effect next launch.": "Harbor는 일반적으로 첫 P2P 스트림에 더 빨리 연결할 수 있도록 실행 시 P2P 엔진을 시작합니다. 이 경우 아무것도 시청하지 않을 때도 DHT 노드가 실행되며 네트워크와 통신합니다. 종량제 또는 제한된 연결을 사용한다면 이 옵션을 켜세요. 그러면 실제로 P2P 스트림을 처음 재생할 때 엔진이 시작됩니다. 다음 실행부터 적용됩니다.",
-  "Harbor on other devices": "다른 기기의 Harbor",
-  "Harbor on other devices (web app)": "다른 기기의 Harbor(웹 앱)",
-  "Harbor on the server display": "서버 디스플레이의 Harbor",
-  "Harbor opens 4 parallel requests to": "Harbor가 다음 위치에 4개의 병렬 요청을 보냅니다",
-  "Harbor pick": "Harbor 추천",
-  "Harbor plays IPTV from your own provider. Add a playlist and the guide fills in.":
-    "Harbor는 사용 중인 제공업체의 IPTV를 재생합니다. 재생목록을 추가하면 편성표가 채워집니다.",
-  "Harbor pulls the most popular titles each service has right now. Toggle off anything you don't subscribe to.":
-    "Harbor는 각 서비스에서 현재 가장 인기 있는 콘텐츠를 가져옵니다. 구독하지 않는 서비스는 끄세요.",
-  "Harbor pulls your addon collection from Stremio. Manage individual addons in Streaming sources.":
-    "Harbor가 Stremio에서 애드온 모음을 가져옵니다. 개별 애드온은 스트리밍 소스에서 관리하세요.",
-  "Harbor ranking": "Harbor 순위",
-  "Harbor ranking puts the best-scoring sources first. Addon order follows your addon priority (organize it in Addons, Installed tab, Reorder) and keeps each addon's results in the order it returned them, like the Stremio and Vidi apps.":
-    "Harbor 순위는 점수가 가장 높은 소스를 먼저 표시합니다. 애드온 순서는 애드온 우선순위(애드온의 설치됨 탭에서 순서 변경)에 따르며, Stremio 및 Vidi 앱처럼 각 애드온의 결과는 반환된 순서대로 유지합니다.",
-  "Harbor ranking puts the best-scoring sources first. Addon order keeps each addon's results in the order it returned them, like the Stremio and Vidi apps. Stream priority below decides which addon leads, in both modes.":
-    "Harbor 순위는 점수가 가장 높은 소스를 먼저 표시합니다. 애드온 순서는 Stremio 및 Vidi 앱처럼 각 애드온이 반환한 결과 순서를 유지합니다. 아래의 스트림 우선순위는 두 모드 모두에서 어느 애드온을 먼저 표시할지 결정합니다.",
-  "Harbor reading room": "Harbor 독서실",
-  "Harbor reads the speech in the audio, then slides the subtitle track until the two line up.":
-    "Harbor가 오디오의 음성을 인식한 다음, 서로 일치할 때까지 자막 트랙을 이동합니다.",
-  "Harbor runs a small streaming server right on this computer. This is where it lives. To stream from this machine on another device, copy the Wi-Fi address and paste it into Remote streaming server in Harbor over there.":
-    "Harbor는 이 컴퓨터에서 소형 스트리밍 서버를 실행합니다. 여기에 서버 주소가 표시됩니다. 다른 기기에서 이 컴퓨터의 콘텐츠를 스트리밍하려면 Wi-Fi 주소를 복사해 해당 기기의 Harbor에 있는 원격 스트리밍 서버에 붙여 넣으세요.",
-  "Harbor scans your IPTV playlists' EPG every 30 min for programs about to start.":
-    "Harbor는 곧 시작할 프로그램을 찾기 위해 30분마다 IPTV 재생 목록의 EPG를 확인합니다.",
-  "Harbor searches every source you enable at the same time, then merges and de-duplicates the results into one clean list. Turn a source off to stop pulling from it.":
-    "Harbor는 활성화된 모든 소스를 동시에 검색한 후 결과를 병합하고 중복을 제거하여 하나의 깔끔한 목록으로 표시합니다. 소스에서 결과를 가져오지 않으려면 해당 소스를 끄세요.",
-  "Harbor sends no telemetry. This also drops outbound ad, analytics, and tracker requests that addons or metadata providers try to make, before they leave your machine.":
-    "Harbor는 원격 측정 데이터를 전송하지 않습니다. 또한 애드온이나 메타데이터 제공업체가 보내려는 광고, 분석, 추적기 요청을 기기에서 나가기 전에 차단합니다.",
-  "Harbor ships a neutral trophy for every award. Install an icon pack or upload your own image per award to make them yours. Packs are hosted by whoever makes them, so the artwork is theirs, not bundled with Harbor.":
-    "Harbor는 모든 어워드에 기본 트로피를 제공합니다. 아이콘 팩을 설치하거나 어워드별로 이미지를 업로드해 꾸밀 수 있습니다. 팩은 제작자가 직접 호스팅하므로 아트워크는 제작자 소유이며 Harbor에 포함되지 않습니다.",
-  "Harbor ships no manga sources and hosts nothing. Extensions come from repositories other people maintain. Paste a repository URL below to browse its plugins, then install the ones you want. Every plugin runs sandboxed in an isolated worker with no access to your files, accounts, or the rest of the app.":
-    "Harbor에는 만화 소스가 포함되어 있지 않으며 어떤 콘텐츠도 호스팅하지 않습니다. 확장 프로그램은 다른 사람이 관리하는 저장소에서 제공됩니다. 아래에 저장소 URL을 붙여 넣어 플러그인을 둘러본 다음 원하는 플러그인을 설치하세요. 모든 플러그인은 파일, 계정 또는 앱의 나머지 부분에 접근할 수 없는 격리된 워커의 샌드박스에서 실행됩니다.",
-  "Harbor ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Harbor reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
-    "Harbor는 엔진만 제공하며 사이트는 제공하지 않습니다. CSS 선택자로 사이트를 설명하는 간단한 JSON 설정을 작성하면 Harbor가 이를 사용해 사이트를 읽습니다. 아무것도 기본 제공되지 않으므로 읽을 권한이 있는 사이트만 지정하세요.",
-  "Harbor shows your AniList lists on the Anime page and keeps your progress in sync.":
-    "Harbor가 애니메이션 페이지에 AniList 목록을 표시하고 진도를 동기화합니다.",
-  "Harbor signed you up but returned no session. Try signing in instead.":
-    "Harbor 가입은 완료되었지만 세션이 반환되지 않았습니다. 대신 로그인해 보세요.",
-  "Harbor sizes the head start for each title and grows it once playback settles. Right for almost everyone.":
-    "Harbor가 작품마다 미리 받아 둘 분량을 정하고, 재생이 안정되면 그 분량을 늘립니다. 대부분의 경우에 알맞습니다.",
-  "Harbor snippet": "Harbor 스니펫",
-  "Harbor speaks Stremio's addon protocol, and the whole ecosystem of addons grows out of their work. Stremio is funded by its community, and supporters who chip in get early access to experimental features. If you have it to spare, send some their way too.":
-    "Harbor는 Stremio의 애드온 프로토콜을 사용하며, 전체 애드온 생태계도 이들의 작업을 바탕으로 성장했습니다. Stremio는 커뮤니티의 후원으로 운영되며, 후원자는 실험적 기능을 미리 이용할 수 있습니다. 여유가 있다면 Stremio도 후원해 주세요.",
-  "Harbor speaks this everywhere. You can change it later in Settings.":
-    "Harbor의 모든 음성에 이 언어가 사용됩니다. 나중에 설정에서 변경할 수 있습니다.",
-  "Harbor still finds and loads subtitles so they're one click away in the player, it just won't turn them on automatically.":
-    "Harbor는 자막을 계속 찾아 불러오므로 플레이어에서 클릭 한 번으로 사용할 수 있지만, 자동으로 켜지는 않습니다.",
-  "Harbor test message (Discord). If you can read this, your webhook is wired up.":
-    "Harbor 테스트 메시지(Discord). 이 메시지가 보이면 웹후크가 연결된 것입니다.",
-  "Harbor test message (Telegram). If you can read this, your webhook is wired up.":
-    "Harbor 테스트 메시지(Telegram). 이 메시지가 보이면 웹후크가 연결된 것입니다.",
-  "Harbor theme": "Harbor 테마",
-  "Harbor times out-of-sync subtitles to the audio for you, on any external subtitle. It works on the mpv player and leaves embedded tracks alone, since those are already in sync.":
-    "Harbor가 외부 자막의 싱크를 오디오에 맞게 자동으로 조정합니다. mpv 플레이어에서 작동하며, 이미 동기화된 내장 트랙은 변경하지 않습니다.",
-  "Harbor tried {n} sources for {title} and none of them played. Usually that means a debrid key has expired, no stream addon is installed yet, or nothing has this title cached.":
-    "Harbor가 {title}에 대해 {n}개의 소스를 시도했지만 모두 재생되지 않았습니다. 일반적으로 디브리드 키가 만료되었거나, 스트림 애드온이 아직 설치되지 않았거나, 이 작품이 어디에도 캐시되지 않았다는 의미입니다.",
-  "Harbor uses ffmpeg to convert streams into formats TVs can play. It's a one-time install and Harbor will pick it up automatically.":
-    "Harbor는 ffmpeg를 사용해 스트림을 TV에서 재생할 수 있는 형식으로 변환합니다. 한 번만 설치하면 Harbor가 자동으로 감지합니다.",
-  "Harbor uses the graphics card when it's safe and falls back to the CPU when it isn't. The right call for almost everyone.":
-    "안전한 경우 Harbor가 그래픽 카드를 사용하고, 그렇지 않으면 CPU로 전환합니다. 거의 모든 사용자에게 적합합니다.",
-  "Harbor was built in English. Multi-language support is partial, so your addons usually catch what Harbor's own filters miss. If you speak another language and want to help, the source is open.":
-    "Harbor는 영어로 개발되었습니다. 다국어 지원은 일부만 제공되므로 Harbor 자체 필터가 놓친 항목은 대개 애드온에서 찾을 수 있습니다. 다른 언어를 사용하며 도움을 주고 싶다면 소스 코드가 공개되어 있습니다.",
-  "Harbor will mark what you finish as watched on Simkl and sync your plan-to-watch list.":
-    "Harbor가 끝까지 본 콘텐츠를 Simkl에서 시청 완료로 표시하고 시청 예정 목록을 동기화합니다.",
-  "Harbor will not start the P2P engine, contact trackers, or run DHT. Use this if you only want debrid and direct links. Turn off to re-enable P2P streaming.": "Harbor에서 P2P 엔진을 시작하거나 트래커에 접속하거나 DHT를 실행하지 않습니다. 디브리드와 직접 링크만 사용하려면 선택하세요. P2P 스트리밍을 다시 사용하려면 끄세요.",
-  "Harbor will scrobble your playback to Trakt and sync your watchlist.":
-    "Harbor가 재생 내역을 Trakt에 스크로블하고 관심 목록을 동기화합니다.",
-  "Harbor would not be possible without Stremio. It is the foundation everything here is built on.":
-    "Stremio가 없었다면 Harbor도 존재할 수 없었습니다. 이곳의 모든 것은 Stremio를 기반으로 합니다.",
-  "Harbor {version} available": "Harbor {version} 사용 가능",
-  "Harbor's backend runs on ElfHosted. They run our servers at no cost to the community.":
-    "Harbor의 백엔드는 ElfHosted에서 운영됩니다. 커뮤니티에 비용을 청구하지 않고 서버를 운영해 줍니다.",
-  "Harbor's backend runs on ElfHosted. They took it on without being asked, and Harbor has never charged for anything.":
-    "Harbor의 백엔드는 ElfHosted에서 운영됩니다. 요청하지 않았는데도 맡아 주었으며, Harbor는 어떤 기능에도 요금을 받은 적이 없습니다.",
-  "Harbor's built-in HDR to SDR conversion is on. Turn it off in Video tuning to use this instead. Running both double-processes the picture.":
-    "Harbor의 내장 HDR-SDR 변환이 켜져 있습니다. 이 기능을 사용하려면 동영상 조정에서 내장 변환을 끄세요. 둘 다 실행하면 화면이 이중 처리됩니다.",
-  "Harbor's built-in OpenSubtitles search, on by default. If you install an OpenSubtitles addon, this steps aside automatically so your results are never duplicated.":
-    "Harbor에 내장된 OpenSubtitles 검색으로, 기본적으로 켜져 있습니다. OpenSubtitles 애드온을 설치하면 결과가 중복되지 않도록 자동으로 비활성화됩니다.",
-  "Harbor's built-in frame interpolation. Smooths panning, best on anime. Needs a display refresh rate above the video's frame rate, and can stutter on weak GPUs. Lighter than SVP.":
-    "Harbor에 내장된 프레임 보간 기능입니다. 패닝을 부드럽게 하며 애니메이션에 가장 적합합니다. 디스플레이 주사율이 영상 프레임 레이트보다 높아야 하며, 성능이 낮은 GPU에서는 끊길 수 있습니다. SVP보다 가볍습니다.",
-  "Harbor's full video engine. Plays anything you throw at it.":
-    "Harbor의 완전한 동영상 엔진입니다. 어떤 파일이든 재생합니다.",
-  "Harbor's in-app installer animates the manifest install and keeps you in context. Anything Harbor installs is also synced to your Stremio account, so the official app stays the canonical library. Turn this off and Stremio becomes the only handler for stremio:// links; Harbor still installs anything you trigger from inside the app (Configure & install, paste, drag-and-drop).":
-    "Harbor의 앱 내 설치 프로그램은 매니페스트 설치 과정을 애니메이션으로 보여 주며 현재 화면을 벗어나지 않게 합니다. Harbor에서 설치한 항목은 Stremio 계정에도 동기화되므로 공식 앱이 기준 라이브러리로 유지됩니다. 이 기능을 끄면 stremio:// 링크는 Stremio에서만 처리됩니다. 단, Harbor 앱 안에서 실행한 설치(구성 및 설치, 붙여넣기, 끌어서 놓기)는 계속 Harbor에서 처리됩니다.",
-  "Harbor's native player chrome.": "Harbor 기본 플레이어 컨트롤.",
-  "Harbor's own bar": "Harbor 자체 바",
-  "Harbor's own community server": "Harbor 자체 커뮤니티 서버",
-  "Harbor's own menus and labels. Subtitle languages come later, and you can change both in Settings.":
-    "Harbor 자체 메뉴와 레이블에 적용됩니다. 자막 언어는 추후 지원되며, 둘 다 설정에서 변경할 수 있습니다.",
-  "Harbor's player applies the interpolation itself, embedded like normal playback, and starts SVP Manager in the tray for licensing. Restart playback to apply. If video goes black or won't start, turn this off.":
-    "Harbor 플레이어가 일반 재생처럼 내장된 상태로 직접 보간을 적용하며, 라이선스를 위해 시스템 트레이에서 SVP Manager를 시작합니다. 적용하려면 재생을 다시 시작하세요. 화면이 검게 변하거나 재생이 시작되지 않으면 이 기능을 끄세요.",
-  "Harbor's public relay": "Harbor 공개 릴레이",
-  "Harbor's public relay has not rolled out the latest protocol yet.":
-    "Harbor의 공개 릴레이에는 아직 최신 프로토콜이 적용되지 않았습니다.",
-  "Harbor's public relay updates automatically; nothing to do.":
-    "Harbor 공개 릴레이는 자동으로 업데이트되므로 별도의 작업이 필요하지 않습니다.",
-  "Harbor's streaming server only runs in the desktop app.":
-    "Harbor 스트리밍 서버는 데스크톱 앱에서만 실행됩니다.",
-  "Harbor's temporary viewer requires HTTPS.":
-    "Harbor의 임시 뷰어를 사용하려면 HTTPS가 필요합니다.",
-  "Harbor, from a public domain frame": "퍼블릭 도메인 프레임에서 가져온 Harbor",
-  "Harbors on your network": "네트워크의 Harbor",
+  "Lart Rank scores a whole career, not a single hit. Four things move a rank: how good the work is on average, how much of it earned wide acclaim, the major awards it won, and how often the person carried the work as a lead. Each pillar is weighted, added up, then adjusted for the breadth and recency of the body of work. Every number that feeds a score is shown on the card, so you can always see why.":
+    "Lart 순위는 한 번의 성공이 아닌 전체 경력을 평가합니다. 순위에는 작품의 평균 완성도, 널리 호평받은 작품의 비중, 주요 수상 실적, 주연으로 작품을 이끈 빈도라는 네 가지 요소가 반영됩니다. 각 축에 가중치를 적용해 합산한 다음, 작품 경력의 폭과 최근성을 기준으로 조정합니다. 점수에 반영되는 모든 수치는 카드에 표시되므로 그 이유를 언제든 확인할 수 있습니다.",
+  "Lart Reader": "Lart 리더",
+  "Lart Relay": "Lart Relay",
+  "Lart Setup did not finish updating Lart. Nothing was changed.":
+    "Lart Setup에서 Lart 업데이트를 완료하지 못했습니다. 변경된 사항이 없습니다.",
+  "Lart Staff": "Lart 스태프",
+  "Lart Voyages": "Lart Voyages",
+  "Lart accepted that but returned no session. Try again.":
+    "Lart에서 이를 수락했지만 세션이 반환되지 않았습니다. 다시 시도하세요.",
+  "Lart account": "Lart 계정",
+  "Lart account linked as {name}": "{name}(으)로 Lart 계정 연결됨",
+  "Lart account signed in": "Lart 계정에 로그인됨",
+  "Lart asks your addons for titles and descriptions in this language. The TV menus stay in English.":
+    "Lart가 애드온에 이 언어로 제목과 설명을 요청합니다. TV 메뉴는 영어로 유지됩니다.",
+  "Lart can open only HTTP or HTTPS destinations.":
+    "Lart에서는 HTTP 또는 HTTPS 주소만 열 수 있습니다.",
+  "Lart cannot find this TV's network address, so the phone hand-off is unavailable here.":
+    "Lart에서 이 TV의 네트워크 주소를 찾을 수 없어 여기서는 휴대폰으로 넘길 수 없습니다.",
+  "Lart cannot open links that include embedded credentials.":
+    "Lart에서는 인증 정보가 포함된 링크를 열 수 없습니다.",
+  "Lart caps playlists at 80 MB to stay responsive. Most providers offer a filtered URL with fewer channels.":
+    "Lart는 원활한 작동을 위해 재생목록을 80 MB로 제한합니다. 대부분의 제공업체는 채널 수가 적은 필터링된 URL을 제공합니다.",
+  "Lart catches stremio:// install links so the configure-and-install flow stays inside the app.":
+    "Lart가 stremio:// 설치 링크를 처리하여 구성 및 설치 과정이 앱 안에서 진행되게 합니다.",
+  "Lart catches stremio:// install links so the configure-and-install flow stays inside the app. Every install also syncs to your Stremio account, so the official app remains the canonical home for your library.":
+    "Lart가 stremio:// 설치 링크를 처리하므로 구성 및 설치 과정이 앱 안에서 진행됩니다. 설치할 때마다 Stremio 계정에도 동기화되므로 공식 앱이 라이브러리의 기준으로 유지됩니다.",
+  "Lart checks a few times a day while it's open and lets you know here.":
+    "Lart가 열려 있는 동안 하루에 몇 차례 확인하여 이곳에서 알려드립니다.",
+  "Lart checks automatically every few hours.": "Lart는 몇 시간마다 자동으로 확인합니다.",
+  "Lart checks harbor.site for new versions and installs them in place.":
+    "Lart가 harbor.site에서 새 버전을 확인하고 현재 위치에 설치합니다.",
+  "Lart checks harbor.site for new versions and installs them in place. Nothing installs until you choose to, and a dismissed update never nags you again.":
+    "Lart는 harbor.site에서 새 버전을 확인하고 현재 위치에 설치합니다. 사용자가 선택하기 전에는 아무것도 설치되지 않으며, 무시한 업데이트는 다시 알리지 않습니다.",
+  "Lart could not find these": "Lart가 다음 항목을 찾지 못했습니다",
+  "Lart could not open its web server. Try again, or set this up on the TV.":
+    "Lart에서 웹 서버를 열 수 없습니다. 다시 시도하거나 TV에서 설정하세요.",
+  "Lart could not verify this destination.": "Lart에서 이 주소를 확인할 수 없습니다.",
+  "Lart couldn't analyze the audio for this source. Try again or adjust it manually.":
+    "Lart가 이 소스의 오디오를 분석할 수 없습니다. 다시 시도하거나 직접 조정하세요.",
+  "Lart couldn't find a reliable timing correction for this subtitle.":
+    "Lart가 이 자막에 적용할 신뢰할 만한 타이밍 보정값을 찾지 못했습니다.",
+  "Lart couldn't play this source": "Lart에서 이 소스를 재생할 수 없습니다",
+  "Lart couldn't reach MyAnimeList or AniList. Check the connection and reopen Big Picture.":
+    "Lart에서 MyAnimeList 또는 AniList에 연결할 수 없습니다. 연결을 확인한 후 Big Picture를 다시 여세요.",
+  "Lart couldn't reach MyAnimeList or AniList. Check your connection and try again.":
+    "Lart에서 MyAnimeList 또는 AniList에 연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요.",
+  "Lart couldn't reach the catalog servers.": "Lart에서 카탈로그 서버에 연결할 수 없습니다.",
+  "Lart couldn't reach the catalog servers. Check the connection and reopen Big Picture.":
+    "Lart가 카탈로그 서버에 연결할 수 없습니다. 연결을 확인하고 빅 픽처를 다시 여세요.",
+  "Lart couldn't reach the catalog servers. Check your connection and try again.":
+    "Lart에서 카탈로그 서버에 연결할 수 없습니다. 인터넷 연결을 확인하고 다시 시도하세요.",
+  "Lart couldn't resolve a usable ID for this title. Add a TMDB key in Library settings or sign in to Stremio to broaden coverage.":
+    "Lart에서 이 작품에 사용할 수 있는 ID를 확인하지 못했습니다. 라이브러리 설정에 TMDB 키를 추가하거나 Stremio에 로그인하여 검색 범위를 넓히세요.",
+  "Lart couldn't start any source": "Lart에서 어떤 소스도 시작할 수 없습니다",
+  "Lart creates a Cloudflare Worker on your own free account and saves the URL.":
+    "Lart가 사용자의 무료 계정에 Cloudflare Worker를 만들고 URL을 저장합니다.",
+  "Lart curated": "Lart 큐레이션",
+  "Lart default": "Lart 기본값",
+  "Lart does not host any manga or any sources. Connect a self-hosted server you run, install a source plugin from a repository you trust, or open a folder you already have.":
+    "Lart는 만화나 소스를 호스팅하지 않습니다. 직접 운영하는 자체 호스팅 서버에 연결하거나, 신뢰하는 저장소에서 소스 플러그인을 설치하거나, 이미 보유한 폴더를 여세요.",
+  "Lart does not host any manga or any sources. Connect your own server or open a folder you already have, and mix as many as you like.":
+    "Lart는 어떤 만화나 소스도 호스팅하지 않습니다. 자체 서버를 연결하거나 이미 보유한 폴더를 열어 원하는 만큼 함께 이용하세요.",
+  "Lart does not host any manga. Add a source plugin from a repository you trust, connect your own server, or open a local folder. You can turn this off anytime in Settings.":
+    "Lart는 만화를 호스팅하지 않습니다. 신뢰하는 저장소에서 소스 플러그인을 추가하거나, 자체 서버를 연결하거나, 로컬 폴더를 여세요. 설정에서 언제든지 이 기능을 끌 수 있습니다.",
+  "Lart double-checks with Stremio after saving, so a half-written order can't slip through.":
+    "Lart는 저장 후 Stremio에서 다시 확인하므로 순서가 일부만 저장되는 일이 없습니다.",
+  "Lart dropped {n} suspicious or mismatched result.":
+    "Lart가 의심스럽거나 일치하지 않는 결과 {n}개를 제외했습니다.",
+  "Lart dropped {n} suspicious or mismatched results.":
+    "Lart가 의심스럽거나 일치하지 않는 결과 {n}개를 제외했습니다.",
+  "Lart eBook": "Lart eBook",
+  "Lart finds intro and credits timing from AniSkip, TheIntroDB, and the file's own chapters, then shows a Skip button at the right moment.":
+    "Lart는 AniSkip, TheIntroDB 및 파일에 포함된 챕터에서 인트로와 엔딩 크레딧 구간을 찾아 적절한 순간에 건너뛰기 버튼을 표시합니다.",
+  "Lart found episode sources for {season}, but none of them is a single downloadable package. It can still fetch the episodes one at a time.":
+    "Lart가 {season}의 에피소드 소스를 찾았지만 단일 다운로드 패키지는 없습니다. 에피소드를 하나씩 가져올 수는 있습니다.",
+  "Lart found episode sources, but none was a downloadable package for {season}. Try another addon or refresh the sources.":
+    "Lart가 에피소드 소스를 찾았지만 {season}에 다운로드 가능한 패키지가 없습니다. 다른 애드온을 사용하거나 소스를 새로고침하세요.",
+  "Lart found something at this address that looked like a Roku, but it didn't respond like one. The device may be offline or another product picked up the same broadcast.":
+    "Lart가 이 주소에서 Roku로 보이는 기기를 찾았지만 Roku처럼 응답하지 않았습니다. 기기가 오프라인이거나 다른 제품이 동일한 브로드캐스트에 감지되었을 수 있습니다.",
+  "Lart identity": "Lart 프로필",
+  "Lart identity (avatar / color)": "Lart 프로필(아바타 / 색상)",
+  "Lart in a browser": "브라우저의 Lart",
+  "Lart in your browser": "브라우저에서 Lart 사용",
+  "Lart is an independent client. It is not affiliated with or endorsed by Stremio.":
+    "Lart는 독립 클라이언트이며 Stremio와 제휴 관계가 없고 Stremio의 보증을 받지 않습니다.",
+  "Lart is having trouble, try again in a moment":
+    "Lart에 문제가 발생했습니다. 잠시 후 다시 시도하세요",
+  "Lart is open source. PRs that reference a bug get reviewed within 48h and ship with credit in the release notes.":
+    "Lart는 오픈 소스입니다. 버그를 참조한 PR은 48시간 이내에 검토되며 릴리스 노트에 기여자 이름과 함께 반영됩니다.",
+  "Lart keeps your MyAnimeList watch progress in sync.":
+    "Lart가 MyAnimeList 시청 진행 상황을 동기화합니다.",
+  "Lart leads with one big title. Classic leads with rows.":
+    "Lart는 큰 대표 작품 하나를 먼저 표시하고, 클래식은 여러 행을 먼저 표시합니다.",
+  "Lart list": "Lart 목록",
+  "Lart loads it automatically when a track in that language exists. You can also set or clear the second track for one video from the subtitle menu in the player.":
+    "해당 언어 트랙이 있으면 Lart가 자동으로 불러옵니다. 플레이어의 자막 메뉴에서 동영상 하나에만 보조 트랙을 설정하거나 해제할 수도 있습니다.",
+  "Lart loads the native svpflow filter through VapourSynth and starts SVP Manager when available. Restart playback to apply.":
+    "Lart는 VapourSynth를 통해 네이티브 svpflow 필터를 불러오고, 가능한 경우 SVP Manager를 시작합니다. 적용하려면 재생을 다시 시작하세요.",
+  "Lart logs into nothing and bypasses no password, paywall, or access control, and must not be used to attempt it. Point it only at content you are legally allowed to read, and never at official or licensed publisher sites. You alone are responsible for what you connect and for following copyright and each site's terms. Lart bundles and endorses no sites.":
+    "Lart는 어디에도 로그인하지 않으며 비밀번호, 유료 장벽 또는 접근 제어를 우회하지 않고, 그러한 시도에 사용해서도 안 됩니다. 합법적으로 읽을 권한이 있는 콘텐츠에만 연결하고, 공식 또는 정식 라이선스 출판사 사이트에는 절대 연결하지 마세요. 연결 대상과 저작권 및 각 사이트의 이용 약관 준수에 대한 책임은 전적으로 사용자에게 있습니다. Lart는 어떤 사이트도 포함하거나 보증하지 않습니다.",
+  "Lart needs a TMDB key for artwork, rows and collections. It is free.":
+    "Lart에서 아트워크, 행 및 컬렉션을 사용하려면 무료 TMDB 키가 필요합니다.",
+  "Lart needs at least one streaming source before it can play {title}. Install a stream addon or add a debrid key in settings.":
+    "Lart에서 {title}을(를) 재생하려면 스트리밍 소스가 하나 이상 필요합니다. 스트림 애드온을 설치하거나 설정에서 디브리드 키를 추가하세요.",
+  "Lart needs to be serving on your network before a phone can reach it.":
+    "휴대폰에서 접속하려면 먼저 Lart가 네트워크에서 서비스 중이어야 합니다.",
+  "Lart never hosts your books or source files.":
+    "Lart는 사용자의 도서나 소스 파일을 호스팅하지 않습니다.",
+  "Lart never hosts your books.": "Lart는 책을 호스팅하지 않습니다.",
+  "Lart normally starts its P2P engine at launch so the first P2P stream connects faster. That keeps a DHT node running and talking to the network even when you are not watching anything. Turn this on if you are on a metered or limited connection: the engine then starts the first time you actually play a P2P stream. Takes effect next launch.": "Lart는 일반적으로 첫 P2P 스트림에 더 빨리 연결할 수 있도록 실행 시 P2P 엔진을 시작합니다. 이 경우 아무것도 시청하지 않을 때도 DHT 노드가 실행되며 네트워크와 통신합니다. 종량제 또는 제한된 연결을 사용한다면 이 옵션을 켜세요. 그러면 실제로 P2P 스트림을 처음 재생할 때 엔진이 시작됩니다. 다음 실행부터 적용됩니다.",
+  "Lart on other devices": "다른 기기의 Lart",
+  "Lart on other devices (web app)": "다른 기기의 Lart(웹 앱)",
+  "Lart on the server display": "서버 디스플레이의 Lart",
+  "Lart opens 4 parallel requests to": "Lart가 다음 위치에 4개의 병렬 요청을 보냅니다",
+  "Lart pick": "Lart 추천",
+  "Lart plays IPTV from your own provider. Add a playlist and the guide fills in.":
+    "Lart는 사용 중인 제공업체의 IPTV를 재생합니다. 재생목록을 추가하면 편성표가 채워집니다.",
+  "Lart pulls the most popular titles each service has right now. Toggle off anything you don't subscribe to.":
+    "Lart는 각 서비스에서 현재 가장 인기 있는 콘텐츠를 가져옵니다. 구독하지 않는 서비스는 끄세요.",
+  "Lart pulls your addon collection from Stremio. Manage individual addons in Streaming sources.":
+    "Lart가 Stremio에서 애드온 모음을 가져옵니다. 개별 애드온은 스트리밍 소스에서 관리하세요.",
+  "Lart ranking": "Lart 순위",
+  "Lart ranking puts the best-scoring sources first. Addon order follows your addon priority (organize it in Addons, Installed tab, Reorder) and keeps each addon's results in the order it returned them, like the Stremio and Vidi apps.":
+    "Lart 순위는 점수가 가장 높은 소스를 먼저 표시합니다. 애드온 순서는 애드온 우선순위(애드온의 설치됨 탭에서 순서 변경)에 따르며, Stremio 및 Vidi 앱처럼 각 애드온의 결과는 반환된 순서대로 유지합니다.",
+  "Lart ranking puts the best-scoring sources first. Addon order keeps each addon's results in the order it returned them, like the Stremio and Vidi apps. Stream priority below decides which addon leads, in both modes.":
+    "Lart 순위는 점수가 가장 높은 소스를 먼저 표시합니다. 애드온 순서는 Stremio 및 Vidi 앱처럼 각 애드온이 반환한 결과 순서를 유지합니다. 아래의 스트림 우선순위는 두 모드 모두에서 어느 애드온을 먼저 표시할지 결정합니다.",
+  "Lart reading room": "Lart 독서실",
+  "Lart reads the speech in the audio, then slides the subtitle track until the two line up.":
+    "Lart가 오디오의 음성을 인식한 다음, 서로 일치할 때까지 자막 트랙을 이동합니다.",
+  "Lart runs a small streaming server right on this computer. This is where it lives. To stream from this machine on another device, copy the Wi-Fi address and paste it into Remote streaming server in Lart over there.":
+    "Lart는 이 컴퓨터에서 소형 스트리밍 서버를 실행합니다. 여기에 서버 주소가 표시됩니다. 다른 기기에서 이 컴퓨터의 콘텐츠를 스트리밍하려면 Wi-Fi 주소를 복사해 해당 기기의 Lart에 있는 원격 스트리밍 서버에 붙여 넣으세요.",
+  "Lart scans your IPTV playlists' EPG every 30 min for programs about to start.":
+    "Lart는 곧 시작할 프로그램을 찾기 위해 30분마다 IPTV 재생 목록의 EPG를 확인합니다.",
+  "Lart searches every source you enable at the same time, then merges and de-duplicates the results into one clean list. Turn a source off to stop pulling from it.":
+    "Lart는 활성화된 모든 소스를 동시에 검색한 후 결과를 병합하고 중복을 제거하여 하나의 깔끔한 목록으로 표시합니다. 소스에서 결과를 가져오지 않으려면 해당 소스를 끄세요.",
+  "Lart sends no telemetry. This also drops outbound ad, analytics, and tracker requests that addons or metadata providers try to make, before they leave your machine.":
+    "Lart는 원격 측정 데이터를 전송하지 않습니다. 또한 애드온이나 메타데이터 제공업체가 보내려는 광고, 분석, 추적기 요청을 기기에서 나가기 전에 차단합니다.",
+  "Lart ships a neutral trophy for every award. Install an icon pack or upload your own image per award to make them yours. Packs are hosted by whoever makes them, so the artwork is theirs, not bundled with Lart.":
+    "Lart는 모든 어워드에 기본 트로피를 제공합니다. 아이콘 팩을 설치하거나 어워드별로 이미지를 업로드해 꾸밀 수 있습니다. 팩은 제작자가 직접 호스팅하므로 아트워크는 제작자 소유이며 Lart에 포함되지 않습니다.",
+  "Lart ships no manga sources and hosts nothing. Extensions come from repositories other people maintain. Paste a repository URL below to browse its plugins, then install the ones you want. Every plugin runs sandboxed in an isolated worker with no access to your files, accounts, or the rest of the app.":
+    "Lart에는 만화 소스가 포함되어 있지 않으며 어떤 콘텐츠도 호스팅하지 않습니다. 확장 프로그램은 다른 사람이 관리하는 저장소에서 제공됩니다. 아래에 저장소 URL을 붙여 넣어 플러그인을 둘러본 다음 원하는 플러그인을 설치하세요. 모든 플러그인은 파일, 계정 또는 앱의 나머지 부분에 접근할 수 없는 격리된 워커의 샌드박스에서 실행됩니다.",
+  "Lart ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Lart reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
+    "Lart는 엔진만 제공하며 사이트는 제공하지 않습니다. CSS 선택자로 사이트를 설명하는 간단한 JSON 설정을 작성하면 Lart가 이를 사용해 사이트를 읽습니다. 아무것도 기본 제공되지 않으므로 읽을 권한이 있는 사이트만 지정하세요.",
+  "Lart shows your AniList lists on the Anime page and keeps your progress in sync.":
+    "Lart가 애니메이션 페이지에 AniList 목록을 표시하고 진도를 동기화합니다.",
+  "Lart signed you up but returned no session. Try signing in instead.":
+    "Lart 가입은 완료되었지만 세션이 반환되지 않았습니다. 대신 로그인해 보세요.",
+  "Lart sizes the head start for each title and grows it once playback settles. Right for almost everyone.":
+    "Lart가 작품마다 미리 받아 둘 분량을 정하고, 재생이 안정되면 그 분량을 늘립니다. 대부분의 경우에 알맞습니다.",
+  "Lart snippet": "Lart 스니펫",
+  "Lart speaks Stremio's addon protocol, and the whole ecosystem of addons grows out of their work. Stremio is funded by its community, and supporters who chip in get early access to experimental features. If you have it to spare, send some their way too.":
+    "Lart는 Stremio의 애드온 프로토콜을 사용하며, 전체 애드온 생태계도 이들의 작업을 바탕으로 성장했습니다. Stremio는 커뮤니티의 후원으로 운영되며, 후원자는 실험적 기능을 미리 이용할 수 있습니다. 여유가 있다면 Stremio도 후원해 주세요.",
+  "Lart speaks this everywhere. You can change it later in Settings.":
+    "Lart의 모든 음성에 이 언어가 사용됩니다. 나중에 설정에서 변경할 수 있습니다.",
+  "Lart still finds and loads subtitles so they're one click away in the player, it just won't turn them on automatically.":
+    "Lart는 자막을 계속 찾아 불러오므로 플레이어에서 클릭 한 번으로 사용할 수 있지만, 자동으로 켜지는 않습니다.",
+  "Lart test message (Discord). If you can read this, your webhook is wired up.":
+    "Lart 테스트 메시지(Discord). 이 메시지가 보이면 웹후크가 연결된 것입니다.",
+  "Lart test message (Telegram). If you can read this, your webhook is wired up.":
+    "Lart 테스트 메시지(Telegram). 이 메시지가 보이면 웹후크가 연결된 것입니다.",
+  "Lart theme": "Lart 테마",
+  "Lart times out-of-sync subtitles to the audio for you, on any external subtitle. It works on the mpv player and leaves embedded tracks alone, since those are already in sync.":
+    "Lart가 외부 자막의 싱크를 오디오에 맞게 자동으로 조정합니다. mpv 플레이어에서 작동하며, 이미 동기화된 내장 트랙은 변경하지 않습니다.",
+  "Lart tried {n} sources for {title} and none of them played. Usually that means a debrid key has expired, no stream addon is installed yet, or nothing has this title cached.":
+    "Lart가 {title}에 대해 {n}개의 소스를 시도했지만 모두 재생되지 않았습니다. 일반적으로 디브리드 키가 만료되었거나, 스트림 애드온이 아직 설치되지 않았거나, 이 작품이 어디에도 캐시되지 않았다는 의미입니다.",
+  "Lart uses ffmpeg to convert streams into formats TVs can play. It's a one-time install and Lart will pick it up automatically.":
+    "Lart는 ffmpeg를 사용해 스트림을 TV에서 재생할 수 있는 형식으로 변환합니다. 한 번만 설치하면 Lart가 자동으로 감지합니다.",
+  "Lart uses the graphics card when it's safe and falls back to the CPU when it isn't. The right call for almost everyone.":
+    "안전한 경우 Lart가 그래픽 카드를 사용하고, 그렇지 않으면 CPU로 전환합니다. 거의 모든 사용자에게 적합합니다.",
+  "Lart was built in English. Multi-language support is partial, so your addons usually catch what Lart's own filters miss. If you speak another language and want to help, the source is open.":
+    "Lart는 영어로 개발되었습니다. 다국어 지원은 일부만 제공되므로 Lart 자체 필터가 놓친 항목은 대개 애드온에서 찾을 수 있습니다. 다른 언어를 사용하며 도움을 주고 싶다면 소스 코드가 공개되어 있습니다.",
+  "Lart will mark what you finish as watched on Simkl and sync your plan-to-watch list.":
+    "Lart가 끝까지 본 콘텐츠를 Simkl에서 시청 완료로 표시하고 시청 예정 목록을 동기화합니다.",
+  "Lart will not start the P2P engine, contact trackers, or run DHT. Use this if you only want debrid and direct links. Turn off to re-enable P2P streaming.": "Lart에서 P2P 엔진을 시작하거나 트래커에 접속하거나 DHT를 실행하지 않습니다. 디브리드와 직접 링크만 사용하려면 선택하세요. P2P 스트리밍을 다시 사용하려면 끄세요.",
+  "Lart will scrobble your playback to Trakt and sync your watchlist.":
+    "Lart가 재생 내역을 Trakt에 스크로블하고 관심 목록을 동기화합니다.",
+  "Lart would not be possible without Stremio. It is the foundation everything here is built on.":
+    "Stremio가 없었다면 Lart도 존재할 수 없었습니다. 이곳의 모든 것은 Stremio를 기반으로 합니다.",
+  "Lart {version} available": "Lart {version} 사용 가능",
+  "Lart's backend runs on ElfHosted. They run our servers at no cost to the community.":
+    "Lart의 백엔드는 ElfHosted에서 운영됩니다. 커뮤니티에 비용을 청구하지 않고 서버를 운영해 줍니다.",
+  "Lart's backend runs on ElfHosted. They took it on without being asked, and Lart has never charged for anything.":
+    "Lart의 백엔드는 ElfHosted에서 운영됩니다. 요청하지 않았는데도 맡아 주었으며, Lart는 어떤 기능에도 요금을 받은 적이 없습니다.",
+  "Lart's built-in HDR to SDR conversion is on. Turn it off in Video tuning to use this instead. Running both double-processes the picture.":
+    "Lart의 내장 HDR-SDR 변환이 켜져 있습니다. 이 기능을 사용하려면 동영상 조정에서 내장 변환을 끄세요. 둘 다 실행하면 화면이 이중 처리됩니다.",
+  "Lart's built-in OpenSubtitles search, on by default. If you install an OpenSubtitles addon, this steps aside automatically so your results are never duplicated.":
+    "Lart에 내장된 OpenSubtitles 검색으로, 기본적으로 켜져 있습니다. OpenSubtitles 애드온을 설치하면 결과가 중복되지 않도록 자동으로 비활성화됩니다.",
+  "Lart's built-in frame interpolation. Smooths panning, best on anime. Needs a display refresh rate above the video's frame rate, and can stutter on weak GPUs. Lighter than SVP.":
+    "Lart에 내장된 프레임 보간 기능입니다. 패닝을 부드럽게 하며 애니메이션에 가장 적합합니다. 디스플레이 주사율이 영상 프레임 레이트보다 높아야 하며, 성능이 낮은 GPU에서는 끊길 수 있습니다. SVP보다 가볍습니다.",
+  "Lart's full video engine. Plays anything you throw at it.":
+    "Lart의 완전한 동영상 엔진입니다. 어떤 파일이든 재생합니다.",
+  "Lart's in-app installer animates the manifest install and keeps you in context. Anything Lart installs is also synced to your Stremio account, so the official app stays the canonical library. Turn this off and Stremio becomes the only handler for stremio:// links; Lart still installs anything you trigger from inside the app (Configure & install, paste, drag-and-drop).":
+    "Lart의 앱 내 설치 프로그램은 매니페스트 설치 과정을 애니메이션으로 보여 주며 현재 화면을 벗어나지 않게 합니다. Lart에서 설치한 항목은 Stremio 계정에도 동기화되므로 공식 앱이 기준 라이브러리로 유지됩니다. 이 기능을 끄면 stremio:// 링크는 Stremio에서만 처리됩니다. 단, Lart 앱 안에서 실행한 설치(구성 및 설치, 붙여넣기, 끌어서 놓기)는 계속 Lart에서 처리됩니다.",
+  "Lart's native player chrome.": "Lart 기본 플레이어 컨트롤.",
+  "Lart's own bar": "Lart 자체 바",
+  "Lart's own community server": "Lart 자체 커뮤니티 서버",
+  "Lart's own menus and labels. Subtitle languages come later, and you can change both in Settings.":
+    "Lart 자체 메뉴와 레이블에 적용됩니다. 자막 언어는 추후 지원되며, 둘 다 설정에서 변경할 수 있습니다.",
+  "Lart's player applies the interpolation itself, embedded like normal playback, and starts SVP Manager in the tray for licensing. Restart playback to apply. If video goes black or won't start, turn this off.":
+    "Lart 플레이어가 일반 재생처럼 내장된 상태로 직접 보간을 적용하며, 라이선스를 위해 시스템 트레이에서 SVP Manager를 시작합니다. 적용하려면 재생을 다시 시작하세요. 화면이 검게 변하거나 재생이 시작되지 않으면 이 기능을 끄세요.",
+  "Lart's public relay": "Lart 공개 릴레이",
+  "Lart's public relay has not rolled out the latest protocol yet.":
+    "Lart의 공개 릴레이에는 아직 최신 프로토콜이 적용되지 않았습니다.",
+  "Lart's public relay updates automatically; nothing to do.":
+    "Lart 공개 릴레이는 자동으로 업데이트되므로 별도의 작업이 필요하지 않습니다.",
+  "Lart's streaming server only runs in the desktop app.":
+    "Lart 스트리밍 서버는 데스크톱 앱에서만 실행됩니다.",
+  "Lart's temporary viewer requires HTTPS.":
+    "Lart의 임시 뷰어를 사용하려면 HTTPS가 필요합니다.",
+  "Lart, from a public domain frame": "퍼블릭 도메인 프레임에서 가져온 Lart",
+  "Harbors on your network": "네트워크의 Lart",
   "Hard Boiled": "하드보일드",
   "Hard outline": "선명한 외곽선",
   "Hard stroke around each letter. High contrast.":
@@ -844,10 +844,10 @@ const catalog04: Record<string, string> = {
   "Headings above every row on Home.": "홈의 모든 행 위에 표시되는 제목입니다.",
   "Headphone series": "헤드폰으로 볼 시리즈",
   "Heads up": "알림",
-  "Heads up: Harbor was built in English. Multi-language support is partial, so your addons usually catch what Harbor's own filters miss. If you speak another language and want to help fill the gaps, the source is open.":
-    "참고: Harbor는 영어로 제작되었습니다. 다국어 지원은 일부만 제공되므로 Harbor 자체 필터가 놓치는 항목은 대개 애드온이 보완합니다. 다른 언어를 사용하며 미비한 부분을 채우는 데 도움을 주고 싶다면 소스가 공개되어 있습니다.",
-  "Heads up: if Stremio is also installed, Windows may ask which app to use the first time a stremio:// link fires. Pick Harbor to make it stick.":
-    "알림: Stremio도 설치되어 있으면 stremio:// 링크를 처음 열 때 Windows에서 사용할 앱을 물을 수 있습니다. 계속 Harbor로 열려면 Harbor를 선택하세요.",
+  "Heads up: Lart was built in English. Multi-language support is partial, so your addons usually catch what Lart's own filters miss. If you speak another language and want to help fill the gaps, the source is open.":
+    "참고: Lart는 영어로 제작되었습니다. 다국어 지원은 일부만 제공되므로 Lart 자체 필터가 놓치는 항목은 대개 애드온이 보완합니다. 다른 언어를 사용하며 미비한 부분을 채우는 데 도움을 주고 싶다면 소스가 공개되어 있습니다.",
+  "Heads up: if Stremio is also installed, Windows may ask which app to use the first time a stremio:// link fires. Pick Lart to make it stick.":
+    "알림: Stremio도 설치되어 있으면 stremio:// 링크를 처음 열 때 Windows에서 사용할 앱을 물을 수 있습니다. 계속 Lart로 열려면 Lart를 선택하세요.",
   "Heads up: most IPTV providers cap how many streams an account can run at the same time. If other devices or players are using these credentials, close them and try again.":
     "주의: 대부분의 IPTV 제공업체는 계정에서 동시에 재생할 수 있는 스트림 수를 제한합니다. 다른 기기나 플레이어에서 이 로그인 정보를 사용 중이라면 해당 스트림을 종료한 후 다시 시도하세요.",
   "Heads up: this is a large file for peer-to-peer streaming, so it can take a while to start. A 1080p source or a debrid service will load faster.":
@@ -879,7 +879,7 @@ const catalog04: Record<string, string> = {
   Help: "도움말",
   "Help & feedback": "도움말 및 의견 보내기",
   "Help & support": "도움말 및 지원",
-  "Help translate Harbor": "Harbor 번역 돕기",
+  "Help translate Lart": "Lart 번역 돕기",
   "Here for the late-night sci-fi": "심야 SF를 즐기러 왔어요",
   Hero: "영웅",
   "Hero carousel, Top 10, Trending, In Theaters, per-service rails.":
@@ -989,8 +989,8 @@ const catalog04: Record<string, string> = {
   Highlights: "하이라이트",
   "Highly Rated, Quietly Loved": "높은 평점, 조용한 사랑",
   "Highly rated by the community": "커뮤니티에서 높은 평가를 받음",
-  "Highly recommended. This is what gives you the full Harbor experience: Popular, Trending, In Theaters, and per-service rails. Free at":
-    "적극 권장합니다. Popular, Trending, In Theaters 및 서비스별 레일 등 Harbor의 모든 기능을 이용할 수 있습니다. 다음에서 무료로 받기",
+  "Highly recommended. This is what gives you the full Lart experience: Popular, Trending, In Theaters, and per-service rails. Free at":
+    "적극 권장합니다. Popular, Trending, In Theaters 및 서비스별 레일 등 Lart의 모든 기능을 이용할 수 있습니다. 다음에서 무료로 받기",
   "His Best": "그의 최고작",
   "His Comedy": "그의 코미디",
   "Historical Drama": "역사 드라마",

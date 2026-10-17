@@ -1,7 +1,7 @@
 import type { MatchEvent } from "@/lib/sports/espn";
 import { playIcon } from "@/lib/sports/play-icon";
 
-// Original 24px event glyphs share Harbor's rounded, single-weight sports strokes.
+// Original 24px event glyphs share Lart's rounded, single-weight sports strokes.
 const paths: Record<string, string> = {
   timeout: "M8 3h8M12 3v3M8 11v6m8-6v6M19 5l2 2 M20 14a8 8 0 1 1-16 0 8 8 0 0 1 16 0",
   interception: "M3 7h11l4 4-4 4H8m0 0 4 4m-4-4 4-4M18 3l3 3-3 3",

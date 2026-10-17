@@ -60,7 +60,7 @@ export function LibraryRepairRow() {
     }
     if (!progress)
       return t(
-        "Rewrites every library item to match Stremio's exact schema. Run once if your Stremio app started crashing after Harbor synced playback.",
+        "Rewrites every library item to match Stremio's exact schema. Run once if your Stremio app started crashing after Lart synced playback.",
       );
     if (progress.phase === "fetching") {
       return progress.total

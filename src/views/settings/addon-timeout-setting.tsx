@@ -18,7 +18,7 @@ export function AddonTimeoutSetting() {
     <Section title={t("Addon wait time")}>
       <SettingRow
         label={t("Addon wait time")}
-        desc={t("How long Harbor waits for each addon to return results.")}
+        desc={t("How long Lart waits for each addon to return results.")}
       >
         <select
           id={id}

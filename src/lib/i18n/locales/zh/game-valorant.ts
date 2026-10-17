@@ -35,7 +35,7 @@ export default {
   "games.valorant.empty": "没有符合筛选条件的结果。",
   "games.valorant.checked": "查看于 {date}",
   "games.valorant.metaScope": "所选版本的 OP.GG 竞技数据。选取率是特工出场占比。结果仅代表来源样本，并非全部玩家。",
-  "games.valorant.referenceScope": "游戏图片和资料由 Valorant-API 提供，更新可能晚于游戏。Harbor 未获 Riot Games 官方认可。",
+  "games.valorant.referenceScope": "游戏图片和资料由 Valorant-API 提供，更新可能晚于游戏。Lart 未获 Riot Games 官方认可。",
   "games.valorant.samples": "{count} 次出场",
   "games.valorant.smallSample": "样本较少",
   "games.valorant.abilities": "技能",

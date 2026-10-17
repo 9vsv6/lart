@@ -97,7 +97,7 @@ export function BpExitConfirm({
               lineHeight: 1.45,
             }}
           >
-            {t("Big Picture closes. Harbor keeps running behind it.")}
+            {t("Big Picture closes. Lart keeps running behind it.")}
           </p>
         </div>
 

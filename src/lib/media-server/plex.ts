@@ -145,7 +145,7 @@ export class PlexAdapter implements MediaServerAdapter {
     const auth = token ?? (connection ? mediaServerToken(connection) : null);
     return {
       Accept: "application/json",
-      "X-Plex-Product": "Harbor",
+      "X-Plex-Product": "Lart",
       "X-Plex-Client-Identifier": "harbor",
       "X-Plex-Version": "1",
       ...(auth ? { "X-Plex-Token": auth } : {}),
@@ -329,9 +329,9 @@ export class PlexAdapter implements MediaServerAdapter {
       maxVideoBitrate: String(preset.maxBitrateKbps ?? 100_000),
       videoResolution: `${preset.maxWidth ?? 3840}x${preset.maxHeight ?? 2160}`,
       "X-Plex-Client-Identifier": "harbor",
-      "X-Plex-Product": "Harbor",
+      "X-Plex-Product": "Lart",
       "X-Plex-Platform": "Generic",
-      "X-Plex-Device": "Harbor",
+      "X-Plex-Device": "Lart",
       "X-Plex-Client-Profile-Name": "Generic",
       "X-Plex-Client-Profile-Extra": profile,
       "X-Plex-Token": token,

@@ -14,7 +14,7 @@ export default {
   "games.mods.backupNote": "교체된 버전은 로컬 백업으로 보관됩니다. 내 구성에서 이전 버전 복원을 선택해 되돌릴 수 있으며, 종속성을 다시 확인합니다.",
   "games.mods.currentVersion": "설치됨: {version}",
   "games.mods.current": "설치됨",
-  "games.mods.versionNote": "호환되는 버전을 선택하세요. Harbor가 변경 사항을 확인하고 이전 버전을 로컬에 보관합니다. 적용하기 전에 Minecraft를 종료하세요.",
+  "games.mods.versionNote": "호환되는 버전을 선택하세요. Lart가 변경 사항을 확인하고 이전 버전을 로컬에 보관합니다. 적용하기 전에 Minecraft를 종료하세요.",
   "games.mods.applyChanges": "변경 사항 적용",
   "games.mods.reviewChanges": "변경 사항 검토",
   "games.mods.previousVersion": "이전: {version}",

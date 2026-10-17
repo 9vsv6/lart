@@ -75,7 +75,7 @@ export function TraktPanel() {
       ) : (
         <Section
           title={t("Your Trakt account")}
-          subtitle={t("Harbor scrobbles your playback to Trakt and keeps your watchlist in sync.")}
+          subtitle={t("Lart scrobbles your playback to Trakt and keeps your watchlist in sync.")}
         >
           <TrackerIdentity
             logo={traktLogo}
@@ -90,8 +90,8 @@ export function TraktPanel() {
           />
           {traktAvatar && (
             <ToggleRow
-              label={t("Use my Trakt avatar as my Harbor avatar")}
-              sub={t("Wear your Trakt profile picture across Harbor instead of the default.")}
+              label={t("Use my Trakt avatar as my Lart avatar")}
+              sub={t("Wear your Trakt profile picture across Lart instead of the default.")}
               value={settings.useTraktAvatar}
               onChange={toggleTraktAvatar}
             />
@@ -133,7 +133,7 @@ export function TraktPanel() {
       {isConnected && (
         <Section
           title={t("Move your watchlist")}
-          subtitle={t("Copy your Harbor watchlist over to Trakt, or pull your Trakt watchlist into Harbor.")}
+          subtitle={t("Copy your Lart watchlist over to Trakt, or pull your Trakt watchlist into Lart.")}
         >
           <WatchlistSync />
         </Section>

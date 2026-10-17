@@ -66,6 +66,11 @@ export function isAndroidTv(): boolean {
   return cachedTv;
 }
 
+/** The standalone Android phone app: native Android that is not a television. */
+export function isPhoneApp(): boolean {
+  return isAndroid() && !isAndroidTv();
+}
+
 export function isMobileDevice(): boolean {
   if (typeof navigator === "undefined" || typeof window === "undefined") return false;
   // A television reports Android and answers the touch heuristics below with a
@@ -119,7 +124,7 @@ export function isMobileWeb(): boolean {
   } catch {
     /* ignore */
   }
-  mobileWebCache = forcedOn || (isWeb() && isMobileDevice());
+  mobileWebCache = forcedOn || (isWeb() && isMobileDevice()) || isPhoneApp();
   return mobileWebCache;
 }
 

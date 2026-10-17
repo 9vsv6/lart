@@ -3,8 +3,8 @@ export default {
     "API-Sports ने इस कुंजी को अस्वीकार कर दिया। अपने API-Sports डैशबोर्ड में इसकी जाँच करें।",
   "Your API-Sports request allowance is exhausted. Public feeds remain available.":
     "आपकी API-Sports अनुरोध सीमा समाप्त हो गई है। सार्वजनिक फ़ीड उपलब्ध हैं।",
-  "API-Sports is limiting requests. Harbor will retry after the waiting period.":
-    "API-Sports अनुरोध सीमित कर रहा है। प्रतीक्षा अवधि के बाद Harbor दोबारा प्रयास करेगा।",
+  "API-Sports is limiting requests. Lart will retry after the waiting period.":
+    "API-Sports अनुरोध सीमित कर रहा है। प्रतीक्षा अवधि के बाद Lart दोबारा प्रयास करेगा।",
   "API-Sports is unavailable right now. Public feeds remain available.":
     "API-Sports अभी उपलब्ध नहीं है। सार्वजनिक फ़ीड उपलब्ध हैं।",
   "The key could not be saved. Your previous key is unchanged.":

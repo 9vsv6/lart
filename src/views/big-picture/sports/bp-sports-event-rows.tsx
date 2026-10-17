@@ -313,7 +313,7 @@ export function BpSportsWhereRow({ game }: { game: SportsGame }) {
               "Subscriptions, pay-per-view and regional availability are set by each provider. Check that the event is included before purchasing.",
             )}{" "}
             {t(
-              "Use only sources you are authorized to access. Harbor does not bypass subscriptions or access restrictions.",
+              "Use only sources you are authorized to access. Lart does not bypass subscriptions or access restrictions.",
             )}
           </p>
         ) : undefined

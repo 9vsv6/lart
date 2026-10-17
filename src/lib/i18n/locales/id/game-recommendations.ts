@@ -37,7 +37,7 @@ export default {
   "games.recommend.retrySome": "Coba lagi kaitan yang belum dimuat",
   "games.recommend.saveError": "Preferensi penemuan tidak dapat disimpan di perangkat ini. Coba lagi.",
   "games.recommend.influences": "Dasar saranmu",
-  "games.recommend.influencesNote": "Pilih gim yang digunakan Harbor. Koleksimu tidak berubah.",
+  "games.recommend.influencesNote": "Pilih gim yang digunakan Lart. Koleksimu tidak berubah.",
   "games.recommend.exclude": "Berhenti menggunakan {name}",
   "games.recommend.excluded": "Dasar yang dikecualikan ({count})",
   "games.recommend.useAgain": "Gunakan {name} lagi",

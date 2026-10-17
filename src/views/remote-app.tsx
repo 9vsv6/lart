@@ -399,7 +399,7 @@ function RendererSheet({
               <span className="flex flex-1 flex-col">
                 <span className="text-[16px] font-medium">{t("This PC")}</span>
                 <span className="text-[12px] text-ink-muted">
-                  {t("Harbor on the server display")}
+                  {t("Lart on the server display")}
                 </span>
               </span>
             </button>

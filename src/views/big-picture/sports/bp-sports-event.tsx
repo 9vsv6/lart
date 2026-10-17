@@ -104,7 +104,7 @@ export function BpSportsEvent({ game }: { game: SportsGame }) {
       <BpPageMessage
         title={t("Couldn't load this event.")}
         body={t(
-          "Harbor couldn't reach the sports servers. Check the connection and open the event again.",
+          "Lart couldn't reach the sports servers. Check the connection and open the event again.",
         )}
         action={t("Go back")}
         onAction={() => runBpBack()}

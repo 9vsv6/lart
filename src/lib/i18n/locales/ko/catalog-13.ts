@@ -28,14 +28,14 @@ const catalog13: Record<string, string> = {
   "{n} titles you like": "좋아하는 작품 {n}개",
   "{n} titles#few": "작품 {n}개#few",
   "{n} titles#one": "작품 {n}개#one",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.":
-    "이번 세션에서 추적기 요청 {n}개를 차단했습니다. Harbor는 원격 측정 데이터를 전혀 전송하지 않습니다.",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#few":
-    "이번 세션에서 추적기 요청 {n}건을 차단했습니다. Harbor 자체는 원격 측정 데이터를 전혀 전송하지 않습니다.#few",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#one":
-    "이번 세션에서 추적기 요청 {n}건을 차단했습니다. Harbor 자체는 원격 측정 데이터를 전혀 전송하지 않습니다.#one",
-  "{n} tracker requests blocked this session. Harbor itself sends zero telemetry.":
-    "이번 세션에서 추적기 요청 {n}개를 차단했습니다. Harbor는 원격 측정 데이터를 전혀 전송하지 않습니다.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.":
+    "이번 세션에서 추적기 요청 {n}개를 차단했습니다. Lart는 원격 측정 데이터를 전혀 전송하지 않습니다.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#few":
+    "이번 세션에서 추적기 요청 {n}건을 차단했습니다. Lart 자체는 원격 측정 데이터를 전혀 전송하지 않습니다.#few",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#one":
+    "이번 세션에서 추적기 요청 {n}건을 차단했습니다. Lart 자체는 원격 측정 데이터를 전혀 전송하지 않습니다.#one",
+  "{n} tracker requests blocked this session. Lart itself sends zero telemetry.":
+    "이번 세션에서 추적기 요청 {n}개를 차단했습니다. Lart는 원격 측정 데이터를 전혀 전송하지 않습니다.",
   "{n} tracks": "트랙 {n}개",
   "{n} uncached hidden": "캐시되지 않은 항목 {n}개 숨김",
   "{n} versions": "버전 {n}개",
@@ -109,13 +109,13 @@ const catalog13: Record<string, string> = {
   "{title} cover": "{title} 표지",
   "{title} image viewer": "{title} 이미지 뷰어",
   "{title} internal cover": "{title} 내부 표지",
-  "{title} on Harbor": "Harbor의 {title}",
+  "{title} on Lart": "Lart의 {title}",
   "{title} overview": "{title} 개요",
   "{title} poster": "{title} 포스터",
   "{title} trailer": "{title} 예고편",
   "{title} will not come back in the Discovery Queue.":
     "{title} 작품은 탐색 대기열에 다시 표시되지 않습니다.",
-  "{title} won't load inside Harbor.": "Harbor 내에서 {title}을(를) 불러올 수 없습니다.",
+  "{title} won't load inside Lart.": "Lart 내에서 {title}을(를) 불러올 수 없습니다.",
   "{title} · Episode {episode}": "{title} · 에피소드 {episode}",
   "{total} found across 1 source": "1개 소스에서 총 {total}개 발견",
   "{total} found across {n} sources": "{n}개 소스에서 총 {total}개 발견",
@@ -150,8 +150,8 @@ const catalog13: Record<string, string> = {
   "التنس (WTA)": "테니스(WTA)",
   "بطولة PGA": "PGA 챔피언십",
   "دوري MLS": "MLS 리그",
-  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Harbor problem: pick another source, or give it a minute to finish caching and try again.":
-    "‘캐시됨’은 애드온에서 해당 파일이 디브리드에 이미 저장되어 즉시 재생할 수 있다고 판단한다는 의미일 뿐입니다. 이 표시는 항상 정확하지 않으며, 실제로는 파일이 아직 없을 수도 있습니다. 이 경우 소스가 시작되지 않거나 짧고 손상된 클립이 재생됩니다. Harbor의 문제가 아닙니다. 다른 소스를 선택하거나 캐시가 완료되도록 잠시 기다린 후 다시 시도하세요.",
+  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Lart problem: pick another source, or give it a minute to finish caching and try again.":
+    "‘캐시됨’은 애드온에서 해당 파일이 디브리드에 이미 저장되어 즉시 재생할 수 있다고 판단한다는 의미일 뿐입니다. 이 표시는 항상 정확하지 않으며, 실제로는 파일이 아직 없을 수도 있습니다. 이 경우 소스가 시작되지 않거나 짧고 손상된 클립이 재생됩니다. Lart의 문제가 아닙니다. 다른 소스를 선택하거나 캐시가 완료되도록 잠시 기다린 후 다시 시도하세요.",
   "← folder or .cbz / .zip": "← 폴더 또는 .cbz / .zip",
   "← name it like the manga": "← 만화와 같은 이름으로 지정",
   "≈{count}m left": "약 {count}분 남음",

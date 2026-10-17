@@ -111,7 +111,7 @@ export function IdentityTab() {
     <>
       <Section
         title={t("Your profile")}
-        subtitle={t("Your avatar, name, and handle across Harbor.")}
+        subtitle={t("Your avatar, name, and handle across Lart.")}
       >
         <div className="hset-profile-identity flex items-center gap-6 py-3">
           <AvatarRing
@@ -187,7 +187,7 @@ export function IdentityTab() {
                 : syncPhase === "saving"
                   ? t("Syncing display name…")
                   : syncPhase === "saved" && !nameDirty
-                    ? t("Display name saved to your Harbor account.")
+                    ? t("Display name saved to your Lart account.")
                     : ""}
             </p>
           </div>
@@ -197,7 +197,7 @@ export function IdentityTab() {
           wide
           icon={<ImagePlus size={18} strokeWidth={2} />}
           label={t("Avatar")}
-          desc={t("Upload a picture of your own, or pick one from the Harbor catalog.")}
+          desc={t("Upload a picture of your own, or pick one from the Lart catalog.")}
         >
           <div className="flex w-full flex-wrap items-center gap-2.5">
             <input

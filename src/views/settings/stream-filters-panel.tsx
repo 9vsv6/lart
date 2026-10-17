@@ -127,7 +127,7 @@ export function StreamFiltersPanel() {
   return (
     <Section
       title={t("Saved stream filters")}
-      subtitle={t("Save the stream quality you prefer. Streams must match every category you set; leave a category blank to accept any value. If nothing matches, Harbor uses the next best available source.")}
+      subtitle={t("Save the stream quality you prefer. Streams must match every category you set; leave a category blank to accept any value. If nothing matches, Lart uses the next best available source.")}
     >
       <SettingRow
         label={t("No filter")}
@@ -194,7 +194,7 @@ export function StreamFiltersPanel() {
             ? t("Create your first filter with the stream quality you prefer.")
             : t("Choose a name, then select the resolutions, sources, codecs and audio you prefer.")
         }
-        tip={t("A filter applies everywhere Harbor picks a stream: the source picker, the instant pick, and Big Picture on TV.")}
+        tip={t("A filter applies everywhere Lart picks a stream: the source picker, the instant pick, and Big Picture on TV.")}
       >
         <button
           type="button"

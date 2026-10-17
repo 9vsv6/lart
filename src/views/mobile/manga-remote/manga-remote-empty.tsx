@@ -21,7 +21,7 @@ export function MangaRemoteEmpty({ variant }: { variant: "closed" | "reconnectin
       </span>
       <p className="text-[15px] font-semibold text-ink">{t("Reader closed on your computer")}</p>
       <p className="max-w-[240px] text-[13px] leading-relaxed text-ink-subtle">
-        {t("Open a manga on Harbor to control the reader from here.")}
+        {t("Open a manga on Lart to control the reader from here.")}
       </p>
     </div>
   );

@@ -66,13 +66,13 @@ const used: Record<string, string> = {
     "Phóng to nhẹ các áp phích lân cận khi bạn di chuyển qua một hàng áp phích.",
   "German Cinema": "Điện ảnh Đức",
   "German Films": "Phim Đức",
-  "Harbor Rank scores a whole career, not a single hit. Four things move a rank: how good the work is on average, how much of it earned wide acclaim, the major awards it won, and how often the person carried the work as a lead. Each pillar is weighted, added up, then adjusted for the breadth and recency of the body of work. Every number that feeds a score is shown on the card, so you can always see why.":
-    "Harbor Rank chấm điểm toàn bộ sự nghiệp, không chỉ một tác phẩm thành công. Bốn yếu tố ảnh hưởng đến thứ hạng: chất lượng trung bình của các tác phẩm, tỷ lệ tác phẩm được công chúng đánh giá cao, các giải thưởng lớn đã giành được và tần suất người đó đảm nhận vai trò chính trong tác phẩm. Mỗi trụ cột được gán trọng số, cộng lại, rồi điều chỉnh theo độ phong phú và tính gần đây của sự nghiệp. Mọi con số dùng để tính điểm đều hiển thị trên thẻ, nên bạn luôn có thể biết lý do.",
-  "Harbor could not find these": "Harbor không tìm thấy các mục này",
-  "Harbor loads the native svpflow filter through VapourSynth and starts SVP Manager when available. Restart playback to apply.":
-    "Harbor tải bộ lọc svpflow gốc qua VapourSynth và khởi động SVP Manager khi có thể. Hãy khởi động lại quá trình phát để áp dụng.",
-  "Harbor's own menus and labels. Subtitle languages come later, and you can change both in Settings.":
-    "Các menu và nhãn riêng của Harbor. Ngôn ngữ phụ đề sẽ được chọn sau và bạn có thể thay đổi cả hai trong Cài đặt.",
+  "Lart Rank scores a whole career, not a single hit. Four things move a rank: how good the work is on average, how much of it earned wide acclaim, the major awards it won, and how often the person carried the work as a lead. Each pillar is weighted, added up, then adjusted for the breadth and recency of the body of work. Every number that feeds a score is shown on the card, so you can always see why.":
+    "Lart Rank chấm điểm toàn bộ sự nghiệp, không chỉ một tác phẩm thành công. Bốn yếu tố ảnh hưởng đến thứ hạng: chất lượng trung bình của các tác phẩm, tỷ lệ tác phẩm được công chúng đánh giá cao, các giải thưởng lớn đã giành được và tần suất người đó đảm nhận vai trò chính trong tác phẩm. Mỗi trụ cột được gán trọng số, cộng lại, rồi điều chỉnh theo độ phong phú và tính gần đây của sự nghiệp. Mọi con số dùng để tính điểm đều hiển thị trên thẻ, nên bạn luôn có thể biết lý do.",
+  "Lart could not find these": "Lart không tìm thấy các mục này",
+  "Lart loads the native svpflow filter through VapourSynth and starts SVP Manager when available. Restart playback to apply.":
+    "Lart tải bộ lọc svpflow gốc qua VapourSynth và khởi động SVP Manager khi có thể. Hãy khởi động lại quá trình phát để áp dụng.",
+  "Lart's own menus and labels. Subtitle languages come later, and you can change both in Settings.":
+    "Các menu và nhãn riêng của Lart. Ngôn ngữ phụ đề sẽ được chọn sau và bạn có thể thay đổi cả hai trong Cài đặt.",
   "Hide breakdown": "Ẩn chi tiết",
   "Hide card": "Ẩn thẻ",
   "Hide curated packs": "Ẩn các gói tuyển chọn",
@@ -83,8 +83,8 @@ const used: Record<string, string> = {
   "Hover a band to inspect a pillar": "Di chuột lên một dải để xem trụ cột",
   "How cards look across Home, Discover, and your library. The preview updates live.":
     "Giao diện thẻ trên Trang chủ, Khám phá và thư viện của bạn. Bản xem trước cập nhật theo thời gian thực.",
-  "How long Harbor waits for each addon to return streams. Aggregators that search many sources can need 45s or more. Results appear as each addon answers, so a longer wait never delays the fast ones.":
-    "Khoảng thời gian Harbor chờ mỗi tiện ích bổ sung trả về luồng phát. Các trình tổng hợp tìm kiếm nhiều nguồn có thể cần từ 45 giây trở lên. Kết quả xuất hiện ngay khi từng tiện ích bổ sung phản hồi, nên thời gian chờ dài hơn không bao giờ làm chậm các tiện ích nhanh.",
+  "How long Lart waits for each addon to return streams. Aggregators that search many sources can need 45s or more. Results appear as each addon answers, so a longer wait never delays the fast ones.":
+    "Khoảng thời gian Lart chờ mỗi tiện ích bổ sung trả về luồng phát. Các trình tổng hợp tìm kiếm nhiều nguồn có thể cần từ 45 giây trở lên. Kết quả xuất hiện ngay khi từng tiện ích bổ sung phản hồi, nên thời gian chờ dài hơn không bao giờ làm chậm các tiện ích nhanh.",
   "How the four pillars are weighted": "Cách phân bổ trọng số cho bốn trụ cột",
   "If you already rated a title, the imported score replaces it.":
     "Nếu bạn đã chấm điểm một phim, điểm nhập vào sẽ thay thế điểm đó.",
@@ -99,8 +99,8 @@ const used: Record<string, string> = {
   Insert: "Chèn",
   "Install more shaders in Settings, Shaders to switch between them here.":
     "Cài đặt thêm shader trong Cài đặt, Shader để chuyển đổi giữa chúng tại đây.",
-  "Installed and detected. Harbor found the native svpflow plugins and VapourSynth script library.":
-    "Đã cài đặt và phát hiện. Harbor đã tìm thấy các plugin svpflow gốc và thư viện tập lệnh VapourSynth.",
+  "Installed and detected. Lart found the native svpflow plugins and VapourSynth script library.":
+    "Đã cài đặt và phát hiện. Lart đã tìm thấy các plugin svpflow gốc và thư viện tập lệnh VapourSynth.",
   "Installed packs": "Gói đã cài đặt",
   "Installed shaders": "Shader đã cài đặt",
   "Invited by {name}": "Được {name} mời",
@@ -110,18 +110,18 @@ const used: Record<string, string> = {
   "Japanese Films": "Phim Nhật Bản",
   "Korean Films": "Phim Hàn Quốc",
   "Last source tried": "Nguồn thử gần nhất",
-  "Leftover installers from past updates, cached trailers, and casting scratch files. Harbor clears old ones on launch, keeping only the most recent installer.":
-    "Các trình cài đặt còn sót lại từ những bản cập nhật trước, trailer đã lưu vào bộ nhớ đệm và tệp tạm dùng để truyền nội dung. Harbor xóa các tệp cũ khi khởi chạy và chỉ giữ lại trình cài đặt gần nhất.",
+  "Leftover installers from past updates, cached trailers, and casting scratch files. Lart clears old ones on launch, keeping only the most recent installer.":
+    "Các trình cài đặt còn sót lại từ những bản cập nhật trước, trailer đã lưu vào bộ nhớ đệm và tệp tạm dùng để truyền nội dung. Lart xóa các tệp cũ khi khởi chạy và chỉ giữ lại trình cài đặt gần nhất.",
   "Local storage is full, these ratings live on your account only.":
     "Bộ nhớ cục bộ đã đầy, các đánh giá này chỉ được lưu trên tài khoản của bạn.",
-  "Manga cannot be matched to a Harbor title yet, so {n} were left out.":
-    "Hiện chưa thể đối chiếu manga với nội dung trên Harbor, nên đã bỏ qua {n} mục.",
+  "Manga cannot be matched to a Lart title yet, so {n} were left out.":
+    "Hiện chưa thể đối chiếu manga với nội dung trên Lart, nên đã bỏ qua {n} mục.",
   "Mark all read": "Đánh dấu tất cả là đã đọc",
   Minecraft: "Minecraft",
   "Modern Russian Series": "Phim bộ Nga hiện đại",
   "Mute all profile songs": "Tắt tiếng tất cả nhạc hồ sơ",
-  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Harbor's embedded player.":
-    "Chuyển động 48/60fps nguyên bản qua bản cài đặt SVP và VapourSynth trên Linux, được kết xuất trong trình phát tích hợp của Harbor.",
+  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Lart's embedded player.":
+    "Chuyển động 48/60fps nguyên bản qua bản cài đặt SVP và VapourSynth trên Linux, được kết xuất trong trình phát tích hợp của Lart.",
   "New Year Classics": "Tác phẩm kinh điển năm mới",
   "Next in {days}d {hours}h": "Tiếp theo sau {days} ngày {hours} giờ",
   "Next in {hours}h {minutes}m": "Tiếp theo sau {hours} giờ {minutes} phút",
@@ -163,14 +163,14 @@ const used: Record<string, string> = {
   "Russian Drama": "Phim chính kịch Nga",
   "Russian Films": "Phim điện ảnh Nga",
   "Russian Movies": "Phim Nga",
-  "SVP is not supported by this Harbor package.": "Gói Harbor này không hỗ trợ SVP.",
+  "SVP is not supported by this Lart package.": "Gói Lart này không hỗ trợ SVP.",
   "Search movies, shows, anime, manga": "Tìm phim điện ảnh, phim bộ, anime, manga",
   Shaders: "Bộ đổ bóng",
   "Show card": "Thẻ phim bộ",
   "Shows a small green dot on the player's subtitle button while a subtitle track is active. Turn it off if you would rather keep the controls clean.":
     "Hiển thị một chấm xanh nhỏ trên nút phụ đề của trình phát khi đang bật một rãnh phụ đề. Tắt tùy chọn này nếu bạn muốn giao diện điều khiển gọn hơn.",
-  "Sign in to your Harbor account first. Imported ratings are saved to your profile.":
-    "Trước tiên, hãy đăng nhập vào tài khoản Harbor. Các đánh giá đã nhập sẽ được lưu vào hồ sơ của bạn.",
+  "Sign in to your Lart account first. Imported ratings are saved to your profile.":
+    "Trước tiên, hãy đăng nhập vào tài khoản Lart. Các đánh giá đã nhập sẽ được lưu vào hồ sơ của bạn.",
   "Skip ad": "Bỏ qua quảng cáo",
   "Skipped, not rated or not supported": "Đã bỏ qua, chưa đánh giá hoặc không được hỗ trợ",
   Sort: "Sắp xếp",
@@ -214,7 +214,7 @@ const used: Record<string, string> = {
   "You were mentioned": "Bạn được nhắc đến",
   "Your Lists": "Danh sách của bạn",
   "Your MAL Lists": "Danh sách MAL của bạn",
-  "Your handle across Harbor.": "Tên định danh của bạn trên Harbor.",
+  "Your handle across Lart.": "Tên định danh của bạn trên Lart.",
   "and {count} more": "và {count} mục khác",
   "and {n} more": "và {n} mục khác",
   "avg rating {r} across {n} titles": "điểm trung bình {r} trên {n} tựa phim",

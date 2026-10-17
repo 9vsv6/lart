@@ -37,7 +37,7 @@ export default {
   "games.recommend.retrySome": "Ponów brakujące powiązania",
   "games.recommend.saveError": "Nie udało się zapisać preferencji odkrywania na tym urządzeniu. Spróbuj ponownie.",
   "games.recommend.influences": "Co wpływa na propozycje",
-  "games.recommend.influencesNote": "Wybierz gry, które Harbor bierze pod uwagę. Twoja biblioteka pozostanie bez zmian.",
+  "games.recommend.influencesNote": "Wybierz gry, które Lart bierze pod uwagę. Twoja biblioteka pozostanie bez zmian.",
   "games.recommend.exclude": "Nie uwzględniaj {name}",
   "games.recommend.excluded": "Wykluczone podstawy ({count})",
   "games.recommend.useAgain": "Ponownie uwzględniaj {name}",

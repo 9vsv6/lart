@@ -3,8 +3,8 @@ export default {
     "API-Sports từ chối khóa này. Hãy kiểm tra trong bảng điều khiển API-Sports.",
   "Your API-Sports request allowance is exhausted. Public feeds remain available.":
     "Bạn đã dùng hết hạn mức yêu cầu API-Sports. Các nguồn công khai vẫn có sẵn.",
-  "API-Sports is limiting requests. Harbor will retry after the waiting period.":
-    "API-Sports đang giới hạn yêu cầu. Harbor sẽ thử lại sau thời gian chờ.",
+  "API-Sports is limiting requests. Lart will retry after the waiting period.":
+    "API-Sports đang giới hạn yêu cầu. Lart sẽ thử lại sau thời gian chờ.",
   "API-Sports is unavailable right now. Public feeds remain available.":
     "API-Sports hiện không khả dụng. Các nguồn công khai vẫn có sẵn.",
   "The key could not be saved. Your previous key is unchanged.":

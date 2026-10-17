@@ -10,7 +10,7 @@ import {
   subscribeSportsConsent,
 } from "@/lib/sports/consent";
 
-/** Local reminders intentionally run only while Harbor is open. No credentials are copied
+/** Local reminders intentionally run only while Lart is open. No credentials are copied
  * into reminder storage, and a successful destination is not retried with a failed peer. */
 export function SportsReminderLoop() {
   const { settings } = useSettings();

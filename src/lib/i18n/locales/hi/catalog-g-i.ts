@@ -3,8 +3,8 @@ const catalogGI: Record<string, string> = {
   "GIF export failed": "GIF एक्सपोर्ट विफल रहा",
   "GIF saved to {path}": "GIF {path} में सेव हुआ",
   GL: "GL",
-  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Harbor handles the shaders.":
-    "GPU शेडर, जो एनीमे चलते समय रेखाओं को पैना और ग्रेडिएंट को साफ़ करते हैं। कोई मोड चुनें, शेडर Harbor संभाल लेगा।",
+  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Lart handles the shaders.":
+    "GPU शेडर, जो एनीमे चलते समय रेखाओं को पैना और ग्रेडिएंट को साफ़ करते हैं। कोई मोड चुनें, शेडर Lart संभाल लेगा।",
   Gallery: "गैलरी",
   "Game search needs an API key before it can run.": "गेम खोज चलाने से पहले API कुंजी चाहिए।",
   Games: "गेम",
@@ -18,8 +18,8 @@ const catalogGI: Record<string, string> = {
   General: "सामान्य",
   "General Sans": "General Sans",
   "Generate a Cloudflare API token with": "इसके साथ Cloudflare API टोकन जनरेट करें",
-  "Generate a Cloudflare API token with {code1} and {code2} permissions at {code3}. Paste it into Harbor.":
-    "{code3} पर {code1} और {code2} अनुमतियों वाला Cloudflare API टोकन जनरेट करें। इसे Harbor में पेस्ट करें।",
+  "Generate a Cloudflare API token with {code1} and {code2} permissions at {code3}. Paste it into Lart.":
+    "{code3} पर {code1} और {code2} अनुमतियों वाला Cloudflare API टोकन जनरेट करें। इसे Lart में पेस्ट करें।",
   "Generates a frame on the fly as you scrub the seek bar. Works on debrid streams and local files.":
     "सीक बार पर आगे-पीछे करते समय तुरंत फ़्रेम बनाता है। डीब्रिड स्ट्रीम और लोकल फ़ाइलों पर काम करता है।",
   Genre: "शैली",
@@ -36,14 +36,14 @@ const catalogGI: Record<string, string> = {
     "पोस्टर की पंक्ति में आगे बढ़ते समय आस-पास के पोस्टर को डॉक की तरह हल्का बड़ा करें। डिफ़ॉल्ट रूप से बंद।",
   "Gently magnify nearby posters as you move across a poster row.":
     "पोस्टर की पंक्ति में आगे बढ़ते समय आस-पास के पोस्टर को हल्का बड़ा करें।",
-  "Genuine 48/60fps motion on anime, rendered right inside Harbor's player. SVP supplies the engine (VapourSynth + svpflow) and runs in your tray for licensing; Harbor's own player applies the interpolation, so it stays embedded and fully under your control. One-time install, then flip it on.":
-    "ऐनिमे पर असली 48/60fps मोशन, जो सीधे Harbor के प्लेयर में रेंडर होता है। SVP इंजन (VapourSynth + svpflow) देता है और लाइसेंसिंग के लिए आपकी ट्रे में चलता है; Harbor का अपना प्लेयर इंटरपोलेशन लागू करता है, इसलिए यह एम्बेडेड और पूरी तरह आपके नियंत्रण में रहता है। बस एक बार इंस्टॉल करें, फिर इसे चालू कर दें।",
+  "Genuine 48/60fps motion on anime, rendered right inside Lart's player. SVP supplies the engine (VapourSynth + svpflow) and runs in your tray for licensing; Lart's own player applies the interpolation, so it stays embedded and fully under your control. One-time install, then flip it on.":
+    "ऐनिमे पर असली 48/60fps मोशन, जो सीधे Lart के प्लेयर में रेंडर होता है। SVP इंजन (VapourSynth + svpflow) देता है और लाइसेंसिंग के लिए आपकी ट्रे में चलता है; Lart का अपना प्लेयर इंटरपोलेशन लागू करता है, इसलिए यह एम्बेडेड और पूरी तरह आपके नियंत्रण में रहता है। बस एक बार इंस्टॉल करें, फिर इसे चालू कर दें।",
   German: "जर्मन",
   "German Cinema": "जर्मन सिनेमा",
   "German Films": "जर्मन फ़िल्में",
   Germany: "जर्मनी",
   Get: "पाएँ",
-  "Get Harbor for desktop": "डेस्कटॉप के लिए Harbor डाउनलोड करें",
+  "Get Lart for desktop": "डेस्कटॉप के लिए Lart डाउनलोड करें",
   "Get SVP (free)": "SVP डाउनलोड करें (मुफ़्त)",
   "Get Started": "शुरू करें",
   "Get a discount for paying early": "जल्दी भुगतान करने पर छूट पाएँ",
@@ -192,230 +192,230 @@ const catalogGI: Record<string, string> = {
   "Handles P2P playback and transcoding for this machine.": "इस मशीन के लिए P2P प्लेबैक और ट्रांसकोडिंग संभालता है।",
   "Hang tight, won't be a sec.": "ज़रा रुकें, बस एक पल लगेगा।",
   "Hangout Comedy": "मेलजोल वाली कॉमेडी",
-  Harbor: "Harbor",
-  "Harbor Rank": "Harbor रैंक",
-  "Harbor Rank scores a whole career, not a single hit. Four things move a rank: how good the work is on average, how much of it earned wide acclaim, the major awards it won, and how often the person carried the work as a lead. Each pillar is weighted, added up, then adjusted for the breadth and recency of the body of work. Every number that feeds a score is shown on the card, so you can always see why.":
-    "Harbor रैंक किसी एक हिट को नहीं, पूरे करियर को स्कोर करता है। रैंक चार बातों पर निर्भर करती है: काम औसतन कितना अच्छा है, उसके कितने हिस्से को व्यापक सराहना मिली, उसने कौन-कौन से प्रमुख पुरस्कार जीते और उस व्यक्ति ने कितनी बार मुख्य भूमिका में काम का नेतृत्व किया। हर पहलू को अलग भार देकर जोड़ा जाता है, फिर पूरे काम के दायरे और उसके हालिया होने के आधार पर स्कोर समायोजित किया जाता है। स्कोर में शामिल हर संख्या कार्ड पर दिखाई जाती है, इसलिए आप हमेशा देख सकते हैं कि वह स्कोर क्यों मिला।",
-  "Harbor Reader": "Harbor रीडर",
-  "Harbor Relay": "Harbor Relay",
-  "Harbor Relay Documentation": "Harbor Relay दस्तावेज़",
-  "Harbor Relay docs": "Harbor Relay दस्तावेज़",
-  "Harbor Setup did not finish updating Harbor. Nothing was changed.":
-    "Harbor Setup Harbor का अपडेट पूरा नहीं कर पाया। कुछ भी नहीं बदला गया।",
-  "Harbor Staff": "Harbor स्टाफ़",
-  "Harbor Voyages": "Harbor की यात्राएँ",
-  "Harbor accepted that but returned no session. Try again.":
-    "Harbor ने इसे स्वीकार किया, लेकिन कोई सेशन नहीं लौटाया। फिर से कोशिश करें।",
-  "Harbor account": "Harbor अकाउंट",
-  "Harbor account linked as {name}": "Harbor अकाउंट {name} के रूप में लिंक किया गया",
-  "Harbor account signed in": "Harbor अकाउंट में साइन इन किया हुआ है",
-  "Harbor asks your addons for titles and descriptions in this language. The TV menus stay in English.":
-    "Harbor आपके ऐडऑन से इसी भाषा में शीर्षक और विवरण माँगता है। TV मेन्यू अंग्रेज़ी में ही रहते हैं।",
-  "Harbor blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
-    "Harbor डिफ़ॉल्ट रूप से संदिग्ध फ़ाइलों और बेमेल रिलीज़ को ब्लॉक करता है। पुराने शो और असामान्य शीर्षकों के लिए यह कभी-कभी बहुत सख्त होता है।",
-  "Harbor can open only HTTP or HTTPS destinations.": "Harbor केवल HTTP या HTTPS गंतव्य खोल सकता है।",
-  "Harbor cannot find this TV's network address, so the phone hand-off is unavailable here.":
-    "Harbor को इस TV का नेटवर्क पता नहीं मिल रहा, इसलिए यहाँ फ़ोन हैंड-ऑफ़ उपलब्ध नहीं है।",
-  "Harbor cannot open links that include embedded credentials.":
-    "Harbor ऐसे लिंक नहीं खोल सकता जिनमें क्रेडेंशियल एम्बेड किए गए हों।",
-  "Harbor caps playlists at 80 MB to stay responsive. Most providers offer a filtered URL with fewer channels.":
-    "तेज़ी से काम करते रहने के लिए Harbor प्लेलिस्ट को 80 MB तक सीमित रखता है। अधिकतर प्रदाता कम चैनलों वाला फ़िल्टर किया हुआ URL देते हैं।",
-  "Harbor catches stremio:// install links so the configure-and-install flow stays inside the app.":
-    "Harbor stremio:// इंस्टॉल लिंक को सँभालता है, ताकि कॉन्फ़िगर और इंस्टॉल करने की प्रक्रिया ऐप के अंदर ही रहे।",
-  "Harbor catches stremio:// install links so the configure-and-install flow stays inside the app. Every install also syncs to your Stremio account, so the official app remains the canonical home for your library.":
-    "Harbor stremio:// इंस्टॉल लिंक को सँभालता है, ताकि कॉन्फ़िगर और इंस्टॉल करने की प्रक्रिया ऐप के अंदर ही रहे। हर इंस्टॉल आपके Stremio अकाउंट से भी सिंक होता है, इसलिए आधिकारिक ऐप आपकी लाइब्रेरी की मुख्य आधिकारिक जगह बना रहता है।",
-  "Harbor checks a few times a day while it's open and lets you know here.":
-    "Harbor खुला रहने के दौरान दिन में कुछ बार जाँच करता है और आपको यहाँ सूचित करता है।",
-  "Harbor checks automatically every few hours.": "Harbor हर कुछ घंटों में अपने आप जाँच करता है।",
-  "Harbor checks harbor.site for new versions and installs them in place.":
-    "Harbor नए वर्ज़न के लिए harbor.site की जाँच करता है और उन्हें सीधे इंस्टॉल कर देता है।",
-  "Harbor checks harbor.site for new versions and installs them in place. Nothing installs until you choose to, and a dismissed update never nags you again.":
-    "Harbor नए वर्ज़न के लिए harbor.site की जाँच करता है और उन्हें सीधे इंस्टॉल कर देता है। आपके चुने बिना कुछ भी इंस्टॉल नहीं होता और खारिज किया गया अपडेट आपको फिर कभी परेशान नहीं करता।",
-  "Harbor could not find these": "Harbor इन्हें नहीं ढूँढ पाया",
-  "Harbor could not open its web server. Try again, or set this up on the TV.":
-    "Harbor अपना वेब सर्वर नहीं खोल पाया। फिर से कोशिश करें या इसे TV पर सेट अप करें।",
-  "Harbor could not verify this destination.": "Harbor इस गंतव्य की पुष्टि नहीं कर सका।",
-  "Harbor couldn't analyze the audio for this source. Try again or adjust it manually.":
-    "Harbor इस स्रोत के ऑडियो का विश्लेषण नहीं कर पाया। फिर से कोशिश करें या इसे मैन्युअल रूप से समायोजित करें।",
-  "Harbor couldn't find a reliable timing correction for this subtitle.":
-    "Harbor को इस सबटाइटल की टाइमिंग के लिए कोई भरोसेमंद सुधार नहीं मिला।",
-  "Harbor couldn't play this source": "Harbor इस स्रोत को नहीं चला पाया",
-  "Harbor couldn't reach MyAnimeList or AniList. Check the connection and reopen Big Picture.":
-    "Harbor MyAnimeList या AniList से कनेक्ट नहीं कर पाया। कनेक्शन जाँचें और Big Picture फिर से खोलें।",
-  "Harbor couldn't reach MyAnimeList or AniList. Check your connection and try again.":
-    "Harbor, MyAnimeList या AniList से संपर्क नहीं कर सका। अपना कनेक्शन जाँचें और फिर कोशिश करें।",
-  "Harbor couldn't reach the catalog servers.": "Harbor कैटलॉग सर्वर से कनेक्ट नहीं कर पाया।",
-  "Harbor couldn't reach the catalog servers. Check the connection and reopen Big Picture.":
-    "Harbor कैटलॉग सर्वर से कनेक्ट नहीं कर पाया। कनेक्शन जाँचें और Big Picture फिर से खोलें।",
-  "Harbor couldn't reach the catalog servers. Check your connection and try again.":
-    "Harbor कैटलॉग सर्वर से संपर्क नहीं कर सका। अपना कनेक्शन जाँचें और फिर कोशिश करें।",
-  "Harbor couldn't resolve a usable ID for this title. Add a TMDB key in Library settings or sign in to Stremio to broaden coverage.":
-    "Harbor इस शीर्षक के लिए उपयोग योग्य ID निर्धारित नहीं कर पाया। कवरेज बढ़ाने के लिए लाइब्रेरी सेटिंग्स में TMDB कुंजी जोड़ें या Stremio में साइन इन करें।",
-  "Harbor couldn't start any source": "Harbor कोई भी स्रोत शुरू नहीं कर पाया",
-  "Harbor creates a Cloudflare Worker on your own free account and saves the URL.":
-    "Harbor आपके अपने मुफ़्त अकाउंट पर Cloudflare Worker बनाता है और URL सेव करता है।",
-  "Harbor curated": "Harbor द्वारा चयनित",
-  "Harbor default": "Harbor डिफ़ॉल्ट",
-  "Harbor does not host any manga or any sources. Connect a self-hosted server you run, install a source plugin from a repository you trust, or open a folder you already have.":
-    "Harbor किसी भी मंगा या स्रोत को होस्ट नहीं करता। खुद चलाया जा रहा सेल्फ़-होस्टेड सर्वर कनेक्ट करें, किसी भरोसेमंद रिपॉज़िटरी से स्रोत प्लगइन इंस्टॉल करें या अपने पास पहले से मौजूद फ़ोल्डर खोलें।",
-  "Harbor does not host any manga or any sources. Connect your own server or open a folder you already have, and mix as many as you like.":
-    "Harbor किसी मंगा या स्रोत को होस्ट नहीं करता। अपना सर्वर कनेक्ट करें या अपने पास पहले से मौजूद फ़ोल्डर खोलें और अपनी पसंद के अनुसार जितने चाहें मिलाएँ।",
-  "Harbor does not host any manga. Add a source plugin from a repository you trust, connect your own server, or open a local folder. You can turn this off anytime in Settings.":
-    "Harbor किसी मंगा को होस्ट नहीं करता। किसी भरोसेमंद रिपॉज़िटरी से स्रोत प्लगइन जोड़ें, अपना सर्वर कनेक्ट करें या लोकल फ़ोल्डर खोलें। आप इसे सेटिंग्स में कभी भी बंद कर सकते हैं।",
-  "Harbor double-checks with Stremio after saving, so a half-written order can't slip through.":
-    "सेव करने के बाद Harbor Stremio से दोबारा पुष्टि करता है, ताकि अधूरा सेव हुआ क्रम लागू न हो सके।",
-  "Harbor dropped {n} suspicious or mismatched result.":
-    "Harbor ने {n} संदिग्ध या बेमेल नतीजा हटा दिया।",
-  "Harbor dropped {n} suspicious or mismatched results.": "Harbor ने {n} संदिग्ध या बेमेल नतीजे हटा दिए।",
-  "Harbor eBook": "Harbor eBook",
-  "Harbor finds intro and credits timing from AniSkip, TheIntroDB, and the file's own chapters, then shows a Skip button at the right moment.":
-    "Harbor, AniSkip, TheIntroDB और फ़ाइल के अपने चैप्टर से इंट्रो और क्रेडिट का समय ढूँढता है, फिर सही समय पर स्किप बटन दिखाता है।",
-  "Harbor found episode sources for {season}, but none of them is a single downloadable package. It can still fetch the episodes one at a time.":
-    "Harbor को {season} के लिए एपिसोड के स्रोत मिले, लेकिन उनमें से कोई भी एक ही डाउनलोड करने योग्य पैकेज में नहीं है। फिर भी यह एपिसोड एक-एक करके ला सकता है।",
-  "Harbor found episode sources, but none was a downloadable package for {season}. Try another addon or refresh the sources.":
-    "Harbor को एपिसोड स्रोत मिले, लेकिन उनमें से कोई भी {season} के लिए डाउनलोड योग्य पैकेज नहीं था। कोई दूसरा ऐडऑन आज़माएँ या स्रोतों को रिफ़्रेश करें।",
-  "Harbor found something at this address that looked like a Roku, but it didn't respond like one. The device may be offline or another product picked up the same broadcast.":
-    "Harbor को इस पते पर ऐसा डिवाइस मिला जो Roku जैसा लगा, लेकिन उसने Roku की तरह जवाब नहीं दिया। हो सकता है कि डिवाइस ऑफ़लाइन हो या उसी ब्रॉडकास्ट का जवाब किसी दूसरे प्रोडक्ट ने दिया हो।",
-  "Harbor identity": "Harbor की पहचान",
-  "Harbor identity (avatar / color)": "Harbor की पहचान (अवतार / रंग)",
-  "Harbor in a browser": "ब्राउज़र में Harbor",
-  "Harbor in your browser": "आपके ब्राउज़र में Harbor",
-  "Harbor is an independent client. It is not affiliated with or endorsed by Stremio.":
-    "Harbor एक स्वतंत्र क्लाइंट है। यह Stremio से संबद्ध नहीं है और न ही उसके द्वारा अनुमोदित है।",
-  "Harbor is closing. Harbor Setup will finish and reopen it.":
-    "Harbor बंद हो रहा है। Harbor Setup प्रक्रिया पूरी करके इसे फिर से खोलेगा।",
-  "Harbor is having trouble, try again in a moment":
-    "Harbor में समस्या आ रही है, कुछ देर बाद फिर कोशिश करें",
-  "Harbor is open source. PRs that reference a bug get reviewed within 48h and ship with credit in the release notes.":
-    "Harbor ओपन सोर्स है। किसी बग का उल्लेख करने वाले PRs की 48h के भीतर समीक्षा की जाती है और उन्हें रिलीज़ नोट्स में श्रेय के साथ जारी किया जाता है।",
-  "Harbor keeps your MyAnimeList watch progress in sync.":
-    "Harbor आपकी MyAnimeList वॉच प्रोग्रेस को सिंक रखता है।",
-  "Harbor leads with one big title. Classic leads with rows.":
-    "Harbor एक बड़े शीर्षक को प्रमुखता देता है। क्लासिक में पंक्तियाँ प्रमुख होती हैं।",
-  "Harbor list": "Harbor सूची",
-  "Harbor loads it automatically when a track in that language exists. You can also set or clear the second track for one video from the subtitle menu in the player.":
-    "उस भाषा में ट्रैक मौजूद होने पर Harbor उसे अपने आप लोड करता है। आप प्लेयर के सबटाइटल मेन्यू से किसी एक वीडियो के लिए दूसरा ट्रैक सेट या हटा भी सकते हैं।",
-  "Harbor loads the native svpflow filter through VapourSynth and starts SVP Manager when available. Restart playback to apply.":
-    "Harbor, VapourSynth के ज़रिए नेटिव svpflow फ़िल्टर लोड करता है और उपलब्ध होने पर SVP Manager शुरू करता है। लागू करने के लिए प्लेबैक फिर से शुरू करें।",
-  "Harbor logs into nothing and bypasses no password, paywall, or access control, and must not be used to attempt it. Point it only at content you are legally allowed to read, and never at official or licensed publisher sites. You alone are responsible for what you connect and for following copyright and each site's terms. Harbor bundles and endorses no sites.":
-    "Harbor किसी भी सेवा में लॉग इन नहीं करता और किसी पासवर्ड, पेवॉल या एक्सेस कंट्रोल को बायपास नहीं करता। ऐसा करने की कोशिश के लिए भी इसका इस्तेमाल नहीं किया जाना चाहिए। इसे केवल ऐसे कॉन्टेंट से जोड़ें जिसे पढ़ने की आपको कानूनी अनुमति है और कभी भी आधिकारिक या लाइसेंस प्राप्त प्रकाशकों की साइटों से न जोड़ें। आप इसे किससे कनेक्ट करते हैं और कॉपीराइट व हर साइट की शर्तों का पालन करते हैं या नहीं, इसकी ज़िम्मेदारी केवल आपकी है। Harbor न किसी साइट को साथ शामिल करता है, न उसका समर्थन करता है।",
-  "Harbor needs a TMDB key for artwork, rows and collections. It is free.":
-    "आर्टवर्क, पंक्तियों और संग्रहों के लिए Harbor को TMDB कुंजी चाहिए। यह मुफ़्त है।",
-  "Harbor needs at least one streaming source before it can play {title}. Install a stream addon or add a debrid key in settings.":
-    "{title} चलाने से पहले Harbor को कम से कम एक स्ट्रीमिंग स्रोत चाहिए। कोई स्ट्रीम ऐडऑन इंस्टॉल करें या सेटिंग्स में debrid कुंजी जोड़ें।",
-  "Harbor needs to be serving on your network before a phone can reach it.":
-    "फ़ोन से Harbor तक पहुँचने के लिए Harbor का आपके नेटवर्क पर चालू होना ज़रूरी है।",
-  "Harbor never hosts your books or source files.":
-    "Harbor आपकी किताबों या स्रोत फ़ाइलों को कभी होस्ट नहीं करता।",
-  "Harbor never hosts your books.": "Harbor आपकी किताबों को कभी होस्ट नहीं करता।",
-  "Harbor normally starts its P2P engine at launch so the first P2P stream connects faster. That keeps a DHT node running and talking to the network even when you are not watching anything. Turn this on if you are on a metered or limited connection: the engine then starts the first time you actually play a P2P stream. Takes effect next launch.": "Harbor आम तौर पर लॉन्च होते ही अपना P2P इंजन शुरू करता है, ताकि पहली P2P स्ट्रीम तेज़ी से कनेक्ट हो। इससे DHT नोड चलता रहता है और नेटवर्क से संपर्क करता रहता है, भले ही आप कुछ न देख रहे हों। अगर आपका कनेक्शन मीटर्ड या सीमित है, तो इसे चालू करें: तब इंजन पहली बार वास्तव में कोई P2P स्ट्रीम चलाने पर शुरू होगा। यह अगले लॉन्च से प्रभावी होगा।",
-  "Harbor on other devices": "अन्य डिवाइसों पर Harbor",
-  "Harbor on other devices (web app)": "अन्य डिवाइसों पर Harbor (वेब ऐप)",
-  "Harbor on the server display": "सर्वर डिस्प्ले पर Harbor",
-  "Harbor opens 4 parallel requests to": "Harbor इस पते पर 4 समानांतर रिक्वेस्ट भेजता है",
-  "Harbor pick": "Harbor की पसंद",
-  "Harbor plays IPTV from your own provider. Add a playlist and the guide fills in.":
-    "Harbor आपके अपने प्रदाता से IPTV चलाता है। कोई प्लेलिस्ट जोड़ें और गाइड अपने आप भर जाएगी।",
-  "Harbor pulls the most popular titles each service has right now. Toggle off anything you don't subscribe to.":
-    "Harbor हर सेवा पर इस समय मौजूद सबसे लोकप्रिय टाइटल लाता है। जिनकी आपने सदस्यता नहीं ली है, उन्हें बंद कर दें।",
-  "Harbor pulls your addon collection from Stremio. Manage individual addons in Streaming sources.":
-    "Harbor आपके ऐडऑन का संग्रह Stremio से लाता है। अलग-अलग ऐडऑन को स्ट्रीमिंग स्रोतों में मैनेज करें।",
-  "Harbor queried 1 addon and got nothing back": "Harbor ने 1 ऐडऑन से जानकारी माँगी, लेकिन कुछ नहीं मिला",
-  "Harbor queried {n} addons and got nothing back":
-    "Harbor ने {n} ऐडऑन से जानकारी माँगी, लेकिन कुछ नहीं मिला",
-  "Harbor ranking": "Harbor रैंकिंग",
-  "Harbor ranking puts the best-scoring sources first. Addon order follows your addon priority (organize it in Addons, Installed tab, Reorder) and keeps each addon's results in the order it returned them, like the Stremio and Vidi apps.":
-    "Harbor रैंकिंग सबसे अच्छे स्कोर वाले स्रोतों को पहले रखती है। ऐडऑन का क्रम आपकी ऐडऑन प्राथमिकता के अनुसार होता है (इसे ऐडऑन > इंस्टॉल किए गए > क्रम बदलें में व्यवस्थित करें) और हर ऐडऑन के नतीजों को उसी क्रम में रखता है जिसमें उसने उन्हें लौटाया था, ठीक Stremio और Vidi ऐप्स की तरह।",
-  "Harbor ranking puts the best-scoring sources first. Addon order keeps each addon's results in the order it returned them, like the Stremio and Vidi apps. Stream priority below decides which addon leads, in both modes.":
-    "Harbor रैंकिंग सबसे अच्छे स्कोर वाले स्रोतों को पहले रखती है। ऐडऑन का क्रम हर ऐडऑन के नतीजों को उसी क्रम में रखता है जिसमें उसने उन्हें लौटाया था, ठीक Stremio और Vidi ऐप्स की तरह। नीचे दी गई स्ट्रीम प्राथमिकता तय करती है कि दोनों मोड में कौन-सा ऐडऑन पहले रहेगा।",
-  "Harbor reading room": "Harbor वाचन कक्ष",
-  "Harbor reads the speech in the audio, then slides the subtitle track until the two line up.":
-    "Harbor ऑडियो में बोले गए शब्दों को पहचानता है, फिर सबटाइटल ट्रैक को तब तक खिसकाता है, जब तक दोनों मेल न खा जाएँ।",
-  "Harbor runs a small streaming server right on this computer. This is where it lives. To stream from this machine on another device, copy the Wi-Fi address and paste it into Remote streaming server in Harbor over there.":
-    "Harbor इसी कंप्यूटर पर एक छोटा स्ट्रीमिंग सर्वर चलाता है। यह उसका पता है। इस मशीन से किसी दूसरे डिवाइस पर स्ट्रीम करने के लिए, Wi-Fi पता कॉपी करें और उस डिवाइस के Harbor में रिमोट स्ट्रीमिंग सर्वर फ़ील्ड में पेस्ट करें।",
-  "Harbor scans your IPTV playlists' EPG every 30 min for programs about to start.":
-    "Harbor जल्द शुरू होने वाले कार्यक्रमों के लिए हर 30 मिनट में आपकी IPTV प्लेलिस्ट का EPG स्कैन करता है।",
-  "Harbor searches every source you enable at the same time, then merges and de-duplicates the results into one clean list. Turn a source off to stop pulling from it.":
-    "Harbor आपके चालू किए गए सभी स्रोतों में एक साथ खोजता है, फिर नतीजों को मिलाकर डुप्लिकेट हटाता है और एक साफ़ सूची बनाता है। किसी स्रोत से नतीजे लाना रोकने के लिए उसे बंद कर दें।",
-  "Harbor sends no telemetry. This also drops outbound ad, analytics, and tracker requests that addons or metadata providers try to make, before they leave your machine.":
-    "Harbor कोई टेलीमेट्री नहीं भेजता। ऐडऑन या मेटाडेटा प्रदाता जो विज्ञापन, एनालिटिक्स और ट्रैकर रिक्वेस्ट भेजने की कोशिश करते हैं, यह उन्हें भी आपकी मशीन से बाहर जाने से पहले रोक देता है।",
-  "Harbor ships a neutral trophy for every award. Install an icon pack or upload your own image per award to make them yours. Packs are hosted by whoever makes them, so the artwork is theirs, not bundled with Harbor.":
-    "Harbor हर पुरस्कार के लिए एक सामान्य ट्रॉफ़ी देता है। इन्हें अपना रूप देने के लिए कोई आइकन पैक इंस्टॉल करें या हर पुरस्कार के लिए अपनी तस्वीर अपलोड करें। पैक उन्हें बनाने वालों द्वारा होस्ट किए जाते हैं, इसलिए आर्टवर्क उनका है और Harbor के साथ बंडल नहीं किया गया है।",
-  "Harbor ships no manga sources and hosts nothing. Extensions come from repositories other people maintain. Paste a repository URL below to browse its plugins, then install the ones you want. Every plugin runs sandboxed in an isolated worker with no access to your files, accounts, or the rest of the app.":
-    "Harbor के साथ कोई मंगा स्रोत नहीं आता और यह कुछ भी होस्ट नहीं करता। एक्सटेंशन उन रिपॉज़िटरी से आते हैं जिनका रखरखाव दूसरे लोग करते हैं। किसी रिपॉज़िटरी के प्लगइन ब्राउज़ करने के लिए नीचे उसका URL पेस्ट करें, फिर जो प्लगइन चाहिए उन्हें इंस्टॉल करें। हर प्लगइन सैंडबॉक्स में एक अलग वर्कर के अंदर चलता है और उसे आपकी फ़ाइलों, अकाउंट या ऐप के बाकी हिस्से तक कोई पहुँच नहीं होती।",
-  "Harbor ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Harbor reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
-    "Harbor इंजन उपलब्ध कराता है, साइटें नहीं। आप एक छोटा JSON कॉन्फ़िग लिखते हैं, जो CSS सेलेक्टर के ज़रिए किसी साइट का विवरण देता है, और Harbor उनकी मदद से साइट को पढ़ता है। इसमें कुछ भी बंडल नहीं है: इसे केवल उन्हीं साइटों की ओर इंगित करें जिन्हें पढ़ने का आपको अधिकार है।",
-  "Harbor shows your AniList lists on the Anime page and keeps your progress in sync.":
-    "Harbor एनीमे पेज पर आपकी AniList सूचियाँ दिखाता है और आपकी प्रगति सिंक रखता है।",
-  "Harbor signed you up but returned no session. Try signing in instead.":
-    "Harbor ने आपका साइन अप कर दिया, लेकिन कोई सेशन नहीं मिला। इसके बजाय साइन इन करके देखें।",
-  "Harbor sizes the head start for each title and grows it once playback settles. Right for almost everyone.":
-    "Harbor हर शीर्षक के लिए शुरुआती बढ़त खुद तय करता है और प्लेबैक स्थिर होने पर उसे बढ़ा देता है। लगभग सभी के लिए यही सही है।",
-  "Harbor snippet": "Harbor स्निपेट",
-  "Harbor speaks Stremio's addon protocol, and the whole ecosystem of addons grows out of their work. Stremio is funded by its community, and supporters who chip in get early access to experimental features. If you have it to spare, send some their way too.":
-    "Harbor Stremio का ऐडऑन प्रोटोकॉल इस्तेमाल करता है और ऐडऑन का पूरा इकोसिस्टम उनके काम की ही देन है। Stremio को उसके समुदाय से फ़ंड मिलता है और योगदान देने वाले समर्थकों को प्रयोगात्मक सुविधाओं का अर्ली ऐक्सेस मिलता है। अगर आपके लिए संभव हो, तो उन्हें भी कुछ सहयोग दें।",
-  "Harbor speaks this everywhere. You can change it later in Settings.":
-    "Harbor हर जगह इसी भाषा का उपयोग करता है। आप इसे बाद में सेटिंग्स में बदल सकते हैं।",
-  "Harbor still finds and loads subtitles so they're one click away in the player, it just won't turn them on automatically.":
-    "Harbor फिर भी सबटाइटल ढूँढकर लोड करता है, ताकि वे प्लेयर में एक क्लिक पर उपलब्ध हों; बस उन्हें अपने आप चालू नहीं करेगा।",
-  "Harbor test message (Discord). If you can read this, your webhook is wired up.":
-    "Harbor परीक्षण संदेश (Discord)। अगर आप इसे पढ़ पा रहे हैं, तो आपका वेबहुक जुड़ा हुआ है।",
-  "Harbor test message (Telegram). If you can read this, your webhook is wired up.":
-    "Harbor परीक्षण संदेश (Telegram)। अगर आप इसे पढ़ पा रहे हैं, तो आपका वेबहुक जुड़ा हुआ है।",
-  "Harbor test message ({service}). If you can read this, your webhook is wired up.":
-    "Harbor परीक्षण संदेश ({service})। अगर आप इसे पढ़ सकते हैं, तो आपका वेबहुक कनेक्ट हो चुका है।",
-  "Harbor theme": "Harbor थीम",
-  "Harbor times out-of-sync subtitles to the audio for you, on any external subtitle. It works on the mpv player and leaves embedded tracks alone, since those are already in sync.":
-    "Harbor किसी भी बाहरी सबटाइटल के समय को आपके लिए ऑडियो से मिलाता है। यह mpv प्लेयर पर काम करता है और एम्बेडेड ट्रैक को नहीं बदलता, क्योंकि वे पहले से सिंक होते हैं।",
-  "Harbor tried {n} sources for {title} and none of them played. Usually that means a debrid key has expired, no stream addon is installed yet, or nothing has this title cached.":
-    "Harbor ने {title} के लिए {n} स्रोत आज़माए, लेकिन उनमें से कोई भी नहीं चला। आम तौर पर इसका मतलब है कि डीब्रिड की एक्सपायर हो गई है, अभी कोई स्ट्रीम ऐडऑन इंस्टॉल नहीं है या यह टाइटल कहीं भी कैश नहीं है।",
-  "Harbor uses ffmpeg to convert streams into formats TVs can play. It's a one-time install and Harbor will pick it up automatically.":
-    "Harbor स्ट्रीम को ऐसे फ़ॉर्मैट में बदलने के लिए ffmpeg का उपयोग करता है जिन्हें TV पर चलाया जा सके। इसे केवल एक बार इंस्टॉल करना होता है और Harbor इसे अपने-आप पहचान लेगा।",
-  "Harbor uses the graphics card when it's safe and falls back to the CPU when it isn't. The right call for almost everyone.":
-    "सुरक्षित होने पर Harbor ग्राफ़िक्स कार्ड का उपयोग करता है और सुरक्षित न होने पर CPU पर लौट जाता है। लगभग सभी लोगों के लिए यही सही विकल्प है।",
-  "Harbor was built in English. Multi-language support is partial, so your addons usually catch what Harbor's own filters miss. If you speak another language and want to help, the source is open.":
-    "Harbor मूल रूप से अंग्रेज़ी में बनाया गया था। बहुभाषी सपोर्ट अभी सीमित है, इसलिए Harbor के अपने फ़िल्टर से छूटी चीज़ें आम तौर पर आपके ऐडऑन पकड़ लेते हैं। अगर आप कोई दूसरी भाषा जानते हैं और मदद करना चाहते हैं, तो सोर्स कोड ओपन है।",
-  "Harbor will mark what you finish as watched on Simkl and sync your plan-to-watch list.":
-    "आप जो पूरा देख लेंगे, Harbor उसे Simkl पर देखा हुआ चिह्नित करेगा और आपकी देखने की योजना वाली सूची सिंक करेगा।",
-  "Harbor will not start the P2P engine, contact trackers, or run DHT. Use this if you only want debrid and direct links. Turn off to re-enable P2P streaming.": "Harbor P2P इंजन शुरू नहीं करेगा, ट्रैकर से संपर्क नहीं करेगा और DHT नहीं चलाएगा। अगर आपको केवल डीब्रिड और सीधे लिंक चाहिए, तो इसका उपयोग करें। P2P स्ट्रीमिंग फिर से चालू करने के लिए इसे बंद करें।",
-  "Harbor will scrobble your playback to Trakt and sync your watchlist.":
-    "Harbor आपके प्लेबैक को Trakt पर स्क्रॉबल करेगा और आपकी वॉचलिस्ट सिंक करेगा।",
-  "Harbor would not be possible without Stremio. It is the foundation everything here is built on.":
-    "Stremio के बिना Harbor संभव नहीं होता। यहाँ की हर चीज़ उसी नींव पर बनी है।",
-  "Harbor {version} available": "Harbor {version} उपलब्ध है",
-  "Harbor {version} downloaded but did not install on its own.":
-    "Harbor {version} डाउनलोड हो गया, लेकिन अपने आप इंस्टॉल नहीं हुआ।",
-  "Harbor's backend runs on ElfHosted. They run our servers at no cost to the community.":
-    "Harbor का बैकएंड ElfHosted पर चलता है। वे समुदाय से कोई शुल्क लिए बिना हमारे सर्वर चलाते हैं।",
-  "Harbor's backend runs on ElfHosted. They took it on without being asked, and Harbor has never charged for anything.":
-    "Harbor का बैकएंड ElfHosted पर चलता है। उन्होंने बिना कहे इसकी ज़िम्मेदारी संभाली, और Harbor ने कभी किसी चीज़ के लिए शुल्क नहीं लिया।",
-  "Harbor's built-in HDR to SDR conversion is on. Turn it off in Video tuning to use this instead. Running both double-processes the picture.":
-    "Harbor का बिल्ट-इन HDR से SDR कन्वर्ज़न चालू है। इसकी जगह इसे इस्तेमाल करने के लिए वीडियो ट्यूनिंग में बिल्ट-इन कन्वर्ज़न बंद करें। दोनों को साथ चलाने पर तस्वीर दो बार प्रोसेस होती है।",
-  "Harbor's built-in OpenSubtitles search, on by default. If you install an OpenSubtitles addon, this steps aside automatically so your results are never duplicated.":
-    "Harbor की बिल्ट-इन OpenSubtitles खोज डिफ़ॉल्ट रूप से चालू रहती है। अगर आप कोई OpenSubtitles ऐडऑन इंस्टॉल करते हैं, तो यह अपने आप बंद हो जाती है, ताकि नतीजे डुप्लिकेट न हों।",
-  "Harbor's built-in frame interpolation. Smooths panning, best on anime. Needs a display refresh rate above the video's frame rate, and can stutter on weak GPUs. Lighter than SVP.":
-    "Harbor का बिल्ट-इन फ़्रेम इंटरपोलेशन। यह पैनिंग को सहज बनाता है और एनीमे के लिए सबसे अच्छा है। इसके लिए डिस्प्ले का रिफ़्रेश रेट वीडियो के फ़्रेम रेट से अधिक होना चाहिए और कमज़ोर GPUs पर यह अटक सकता है। SVP से हल्का है।",
-  "Harbor's full video engine. Plays anything you throw at it.":
-    "Harbor का पूरा वीडियो इंजन। इसमें जो भी चलाएँ, यह चला देता है।",
-  "Harbor's in-app installer animates the manifest install and keeps you in context. Anything Harbor installs is also synced to your Stremio account, so the official app stays the canonical library. Turn this off and Stremio becomes the only handler for stremio:// links; Harbor still installs anything you trigger from inside the app (Configure & install, paste, drag-and-drop).":
-    "Harbor का इन-ऐप इंस्टॉलर मैनिफ़ेस्ट इंस्टॉल होने का एनिमेशन दिखाता है और आपको वहीं बनाए रखता है। Harbor जो कुछ भी इंस्टॉल करता है, वह आपके Stremio अकाउंट से भी सिंक होता है, इसलिए आधिकारिक ऐप ही आपकी मुख्य लाइब्रेरी बना रहता है। इसे बंद करने पर stremio:// लिंक केवल Stremio में खुलेंगे; ऐप के अंदर से शुरू की गई कोई भी चीज़ Harbor फिर भी इंस्टॉल करेगा (कॉन्फ़िगर & इंस्टॉल करें, पेस्ट, ड्रैग-एंड-ड्रॉप)।",
-  "Harbor's native player chrome.": "Harbor के अपने प्लेयर कंट्रोल।",
-  "Harbor's own bar": "Harbor की अपनी पट्टी",
-  "Harbor's own community server": "Harbor का अपना कम्युनिटी सर्वर",
-  "Harbor's own menus and labels. Subtitle languages come later, and you can change both in Settings.":
-    "Harbor के अपने मेन्यू और लेबल। सबटाइटल की भाषाएँ बाद में सेट की जाती हैं और आप दोनों को सेटिंग्स में बदल सकते हैं।",
-  "Harbor's player applies the interpolation itself, embedded like normal playback, and starts SVP Manager in the tray for licensing. Restart playback to apply. If video goes black or won't start, turn this off.":
-    "Harbor का प्लेयर इंटरपोलेशन खुद लागू करता है और इसे सामान्य प्लेबैक की तरह एम्बेड रखता है। लाइसेंसिंग के लिए यह ट्रे में SVP Manager भी शुरू करता है। इसे लागू करने के लिए प्लेबैक फिर से शुरू करें। अगर वीडियो काला हो जाए या शुरू न हो, तो इसे बंद कर दें।",
-  "Harbor's public relay": "Harbor का सार्वजनिक रिले",
-  "Harbor's public relay has not rolled out the latest protocol yet.":
-    "Harbor के सार्वजनिक रिले पर नवीनतम प्रोटोकॉल अभी लागू नहीं हुआ है।",
-  "Harbor's public relay updates automatically; nothing to do.":
-    "Harbor का सार्वजनिक रिले अपने आप अपडेट होता है; आपको कुछ करने की ज़रूरत नहीं है।",
-  "Harbor's streaming server only runs in the desktop app.":
-    "Harbor का स्ट्रीमिंग सर्वर केवल डेस्कटॉप ऐप में चलता है।",
-  "Harbor's temporary viewer requires HTTPS.": "Harbor के अस्थायी व्यूअर के लिए HTTPS आवश्यक है।",
-  "Harbor, from a public domain frame": "Harbor, सार्वजनिक डोमेन के एक फ़्रेम से",
-  "Harbors on your network": "आपके नेटवर्क पर मौजूद Harbor इंस्टेंस",
+  Lart: "Lart",
+  "Lart Rank": "Lart रैंक",
+  "Lart Rank scores a whole career, not a single hit. Four things move a rank: how good the work is on average, how much of it earned wide acclaim, the major awards it won, and how often the person carried the work as a lead. Each pillar is weighted, added up, then adjusted for the breadth and recency of the body of work. Every number that feeds a score is shown on the card, so you can always see why.":
+    "Lart रैंक किसी एक हिट को नहीं, पूरे करियर को स्कोर करता है। रैंक चार बातों पर निर्भर करती है: काम औसतन कितना अच्छा है, उसके कितने हिस्से को व्यापक सराहना मिली, उसने कौन-कौन से प्रमुख पुरस्कार जीते और उस व्यक्ति ने कितनी बार मुख्य भूमिका में काम का नेतृत्व किया। हर पहलू को अलग भार देकर जोड़ा जाता है, फिर पूरे काम के दायरे और उसके हालिया होने के आधार पर स्कोर समायोजित किया जाता है। स्कोर में शामिल हर संख्या कार्ड पर दिखाई जाती है, इसलिए आप हमेशा देख सकते हैं कि वह स्कोर क्यों मिला।",
+  "Lart Reader": "Lart रीडर",
+  "Lart Relay": "Lart Relay",
+  "Lart Relay Documentation": "Lart Relay दस्तावेज़",
+  "Lart Relay docs": "Lart Relay दस्तावेज़",
+  "Lart Setup did not finish updating Lart. Nothing was changed.":
+    "Lart Setup Lart का अपडेट पूरा नहीं कर पाया। कुछ भी नहीं बदला गया।",
+  "Lart Staff": "Lart स्टाफ़",
+  "Lart Voyages": "Lart की यात्राएँ",
+  "Lart accepted that but returned no session. Try again.":
+    "Lart ने इसे स्वीकार किया, लेकिन कोई सेशन नहीं लौटाया। फिर से कोशिश करें।",
+  "Lart account": "Lart अकाउंट",
+  "Lart account linked as {name}": "Lart अकाउंट {name} के रूप में लिंक किया गया",
+  "Lart account signed in": "Lart अकाउंट में साइन इन किया हुआ है",
+  "Lart asks your addons for titles and descriptions in this language. The TV menus stay in English.":
+    "Lart आपके ऐडऑन से इसी भाषा में शीर्षक और विवरण माँगता है। TV मेन्यू अंग्रेज़ी में ही रहते हैं।",
+  "Lart blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
+    "Lart डिफ़ॉल्ट रूप से संदिग्ध फ़ाइलों और बेमेल रिलीज़ को ब्लॉक करता है। पुराने शो और असामान्य शीर्षकों के लिए यह कभी-कभी बहुत सख्त होता है।",
+  "Lart can open only HTTP or HTTPS destinations.": "Lart केवल HTTP या HTTPS गंतव्य खोल सकता है।",
+  "Lart cannot find this TV's network address, so the phone hand-off is unavailable here.":
+    "Lart को इस TV का नेटवर्क पता नहीं मिल रहा, इसलिए यहाँ फ़ोन हैंड-ऑफ़ उपलब्ध नहीं है।",
+  "Lart cannot open links that include embedded credentials.":
+    "Lart ऐसे लिंक नहीं खोल सकता जिनमें क्रेडेंशियल एम्बेड किए गए हों।",
+  "Lart caps playlists at 80 MB to stay responsive. Most providers offer a filtered URL with fewer channels.":
+    "तेज़ी से काम करते रहने के लिए Lart प्लेलिस्ट को 80 MB तक सीमित रखता है। अधिकतर प्रदाता कम चैनलों वाला फ़िल्टर किया हुआ URL देते हैं।",
+  "Lart catches stremio:// install links so the configure-and-install flow stays inside the app.":
+    "Lart stremio:// इंस्टॉल लिंक को सँभालता है, ताकि कॉन्फ़िगर और इंस्टॉल करने की प्रक्रिया ऐप के अंदर ही रहे।",
+  "Lart catches stremio:// install links so the configure-and-install flow stays inside the app. Every install also syncs to your Stremio account, so the official app remains the canonical home for your library.":
+    "Lart stremio:// इंस्टॉल लिंक को सँभालता है, ताकि कॉन्फ़िगर और इंस्टॉल करने की प्रक्रिया ऐप के अंदर ही रहे। हर इंस्टॉल आपके Stremio अकाउंट से भी सिंक होता है, इसलिए आधिकारिक ऐप आपकी लाइब्रेरी की मुख्य आधिकारिक जगह बना रहता है।",
+  "Lart checks a few times a day while it's open and lets you know here.":
+    "Lart खुला रहने के दौरान दिन में कुछ बार जाँच करता है और आपको यहाँ सूचित करता है।",
+  "Lart checks automatically every few hours.": "Lart हर कुछ घंटों में अपने आप जाँच करता है।",
+  "Lart checks harbor.site for new versions and installs them in place.":
+    "Lart नए वर्ज़न के लिए harbor.site की जाँच करता है और उन्हें सीधे इंस्टॉल कर देता है।",
+  "Lart checks harbor.site for new versions and installs them in place. Nothing installs until you choose to, and a dismissed update never nags you again.":
+    "Lart नए वर्ज़न के लिए harbor.site की जाँच करता है और उन्हें सीधे इंस्टॉल कर देता है। आपके चुने बिना कुछ भी इंस्टॉल नहीं होता और खारिज किया गया अपडेट आपको फिर कभी परेशान नहीं करता।",
+  "Lart could not find these": "Lart इन्हें नहीं ढूँढ पाया",
+  "Lart could not open its web server. Try again, or set this up on the TV.":
+    "Lart अपना वेब सर्वर नहीं खोल पाया। फिर से कोशिश करें या इसे TV पर सेट अप करें।",
+  "Lart could not verify this destination.": "Lart इस गंतव्य की पुष्टि नहीं कर सका।",
+  "Lart couldn't analyze the audio for this source. Try again or adjust it manually.":
+    "Lart इस स्रोत के ऑडियो का विश्लेषण नहीं कर पाया। फिर से कोशिश करें या इसे मैन्युअल रूप से समायोजित करें।",
+  "Lart couldn't find a reliable timing correction for this subtitle.":
+    "Lart को इस सबटाइटल की टाइमिंग के लिए कोई भरोसेमंद सुधार नहीं मिला।",
+  "Lart couldn't play this source": "Lart इस स्रोत को नहीं चला पाया",
+  "Lart couldn't reach MyAnimeList or AniList. Check the connection and reopen Big Picture.":
+    "Lart MyAnimeList या AniList से कनेक्ट नहीं कर पाया। कनेक्शन जाँचें और Big Picture फिर से खोलें।",
+  "Lart couldn't reach MyAnimeList or AniList. Check your connection and try again.":
+    "Lart, MyAnimeList या AniList से संपर्क नहीं कर सका। अपना कनेक्शन जाँचें और फिर कोशिश करें।",
+  "Lart couldn't reach the catalog servers.": "Lart कैटलॉग सर्वर से कनेक्ट नहीं कर पाया।",
+  "Lart couldn't reach the catalog servers. Check the connection and reopen Big Picture.":
+    "Lart कैटलॉग सर्वर से कनेक्ट नहीं कर पाया। कनेक्शन जाँचें और Big Picture फिर से खोलें।",
+  "Lart couldn't reach the catalog servers. Check your connection and try again.":
+    "Lart कैटलॉग सर्वर से संपर्क नहीं कर सका। अपना कनेक्शन जाँचें और फिर कोशिश करें।",
+  "Lart couldn't resolve a usable ID for this title. Add a TMDB key in Library settings or sign in to Stremio to broaden coverage.":
+    "Lart इस शीर्षक के लिए उपयोग योग्य ID निर्धारित नहीं कर पाया। कवरेज बढ़ाने के लिए लाइब्रेरी सेटिंग्स में TMDB कुंजी जोड़ें या Stremio में साइन इन करें।",
+  "Lart couldn't start any source": "Lart कोई भी स्रोत शुरू नहीं कर पाया",
+  "Lart creates a Cloudflare Worker on your own free account and saves the URL.":
+    "Lart आपके अपने मुफ़्त अकाउंट पर Cloudflare Worker बनाता है और URL सेव करता है।",
+  "Lart curated": "Lart द्वारा चयनित",
+  "Lart default": "Lart डिफ़ॉल्ट",
+  "Lart does not host any manga or any sources. Connect a self-hosted server you run, install a source plugin from a repository you trust, or open a folder you already have.":
+    "Lart किसी भी मंगा या स्रोत को होस्ट नहीं करता। खुद चलाया जा रहा सेल्फ़-होस्टेड सर्वर कनेक्ट करें, किसी भरोसेमंद रिपॉज़िटरी से स्रोत प्लगइन इंस्टॉल करें या अपने पास पहले से मौजूद फ़ोल्डर खोलें।",
+  "Lart does not host any manga or any sources. Connect your own server or open a folder you already have, and mix as many as you like.":
+    "Lart किसी मंगा या स्रोत को होस्ट नहीं करता। अपना सर्वर कनेक्ट करें या अपने पास पहले से मौजूद फ़ोल्डर खोलें और अपनी पसंद के अनुसार जितने चाहें मिलाएँ।",
+  "Lart does not host any manga. Add a source plugin from a repository you trust, connect your own server, or open a local folder. You can turn this off anytime in Settings.":
+    "Lart किसी मंगा को होस्ट नहीं करता। किसी भरोसेमंद रिपॉज़िटरी से स्रोत प्लगइन जोड़ें, अपना सर्वर कनेक्ट करें या लोकल फ़ोल्डर खोलें। आप इसे सेटिंग्स में कभी भी बंद कर सकते हैं।",
+  "Lart double-checks with Stremio after saving, so a half-written order can't slip through.":
+    "सेव करने के बाद Lart Stremio से दोबारा पुष्टि करता है, ताकि अधूरा सेव हुआ क्रम लागू न हो सके।",
+  "Lart dropped {n} suspicious or mismatched result.":
+    "Lart ने {n} संदिग्ध या बेमेल नतीजा हटा दिया।",
+  "Lart dropped {n} suspicious or mismatched results.": "Lart ने {n} संदिग्ध या बेमेल नतीजे हटा दिए।",
+  "Lart eBook": "Lart eBook",
+  "Lart finds intro and credits timing from AniSkip, TheIntroDB, and the file's own chapters, then shows a Skip button at the right moment.":
+    "Lart, AniSkip, TheIntroDB और फ़ाइल के अपने चैप्टर से इंट्रो और क्रेडिट का समय ढूँढता है, फिर सही समय पर स्किप बटन दिखाता है।",
+  "Lart found episode sources for {season}, but none of them is a single downloadable package. It can still fetch the episodes one at a time.":
+    "Lart को {season} के लिए एपिसोड के स्रोत मिले, लेकिन उनमें से कोई भी एक ही डाउनलोड करने योग्य पैकेज में नहीं है। फिर भी यह एपिसोड एक-एक करके ला सकता है।",
+  "Lart found episode sources, but none was a downloadable package for {season}. Try another addon or refresh the sources.":
+    "Lart को एपिसोड स्रोत मिले, लेकिन उनमें से कोई भी {season} के लिए डाउनलोड योग्य पैकेज नहीं था। कोई दूसरा ऐडऑन आज़माएँ या स्रोतों को रिफ़्रेश करें।",
+  "Lart found something at this address that looked like a Roku, but it didn't respond like one. The device may be offline or another product picked up the same broadcast.":
+    "Lart को इस पते पर ऐसा डिवाइस मिला जो Roku जैसा लगा, लेकिन उसने Roku की तरह जवाब नहीं दिया। हो सकता है कि डिवाइस ऑफ़लाइन हो या उसी ब्रॉडकास्ट का जवाब किसी दूसरे प्रोडक्ट ने दिया हो।",
+  "Lart identity": "Lart की पहचान",
+  "Lart identity (avatar / color)": "Lart की पहचान (अवतार / रंग)",
+  "Lart in a browser": "ब्राउज़र में Lart",
+  "Lart in your browser": "आपके ब्राउज़र में Lart",
+  "Lart is an independent client. It is not affiliated with or endorsed by Stremio.":
+    "Lart एक स्वतंत्र क्लाइंट है। यह Stremio से संबद्ध नहीं है और न ही उसके द्वारा अनुमोदित है।",
+  "Lart is closing. Lart Setup will finish and reopen it.":
+    "Lart बंद हो रहा है। Lart Setup प्रक्रिया पूरी करके इसे फिर से खोलेगा।",
+  "Lart is having trouble, try again in a moment":
+    "Lart में समस्या आ रही है, कुछ देर बाद फिर कोशिश करें",
+  "Lart is open source. PRs that reference a bug get reviewed within 48h and ship with credit in the release notes.":
+    "Lart ओपन सोर्स है। किसी बग का उल्लेख करने वाले PRs की 48h के भीतर समीक्षा की जाती है और उन्हें रिलीज़ नोट्स में श्रेय के साथ जारी किया जाता है।",
+  "Lart keeps your MyAnimeList watch progress in sync.":
+    "Lart आपकी MyAnimeList वॉच प्रोग्रेस को सिंक रखता है।",
+  "Lart leads with one big title. Classic leads with rows.":
+    "Lart एक बड़े शीर्षक को प्रमुखता देता है। क्लासिक में पंक्तियाँ प्रमुख होती हैं।",
+  "Lart list": "Lart सूची",
+  "Lart loads it automatically when a track in that language exists. You can also set or clear the second track for one video from the subtitle menu in the player.":
+    "उस भाषा में ट्रैक मौजूद होने पर Lart उसे अपने आप लोड करता है। आप प्लेयर के सबटाइटल मेन्यू से किसी एक वीडियो के लिए दूसरा ट्रैक सेट या हटा भी सकते हैं।",
+  "Lart loads the native svpflow filter through VapourSynth and starts SVP Manager when available. Restart playback to apply.":
+    "Lart, VapourSynth के ज़रिए नेटिव svpflow फ़िल्टर लोड करता है और उपलब्ध होने पर SVP Manager शुरू करता है। लागू करने के लिए प्लेबैक फिर से शुरू करें।",
+  "Lart logs into nothing and bypasses no password, paywall, or access control, and must not be used to attempt it. Point it only at content you are legally allowed to read, and never at official or licensed publisher sites. You alone are responsible for what you connect and for following copyright and each site's terms. Lart bundles and endorses no sites.":
+    "Lart किसी भी सेवा में लॉग इन नहीं करता और किसी पासवर्ड, पेवॉल या एक्सेस कंट्रोल को बायपास नहीं करता। ऐसा करने की कोशिश के लिए भी इसका इस्तेमाल नहीं किया जाना चाहिए। इसे केवल ऐसे कॉन्टेंट से जोड़ें जिसे पढ़ने की आपको कानूनी अनुमति है और कभी भी आधिकारिक या लाइसेंस प्राप्त प्रकाशकों की साइटों से न जोड़ें। आप इसे किससे कनेक्ट करते हैं और कॉपीराइट व हर साइट की शर्तों का पालन करते हैं या नहीं, इसकी ज़िम्मेदारी केवल आपकी है। Lart न किसी साइट को साथ शामिल करता है, न उसका समर्थन करता है।",
+  "Lart needs a TMDB key for artwork, rows and collections. It is free.":
+    "आर्टवर्क, पंक्तियों और संग्रहों के लिए Lart को TMDB कुंजी चाहिए। यह मुफ़्त है।",
+  "Lart needs at least one streaming source before it can play {title}. Install a stream addon or add a debrid key in settings.":
+    "{title} चलाने से पहले Lart को कम से कम एक स्ट्रीमिंग स्रोत चाहिए। कोई स्ट्रीम ऐडऑन इंस्टॉल करें या सेटिंग्स में debrid कुंजी जोड़ें।",
+  "Lart needs to be serving on your network before a phone can reach it.":
+    "फ़ोन से Lart तक पहुँचने के लिए Lart का आपके नेटवर्क पर चालू होना ज़रूरी है।",
+  "Lart never hosts your books or source files.":
+    "Lart आपकी किताबों या स्रोत फ़ाइलों को कभी होस्ट नहीं करता।",
+  "Lart never hosts your books.": "Lart आपकी किताबों को कभी होस्ट नहीं करता।",
+  "Lart normally starts its P2P engine at launch so the first P2P stream connects faster. That keeps a DHT node running and talking to the network even when you are not watching anything. Turn this on if you are on a metered or limited connection: the engine then starts the first time you actually play a P2P stream. Takes effect next launch.": "Lart आम तौर पर लॉन्च होते ही अपना P2P इंजन शुरू करता है, ताकि पहली P2P स्ट्रीम तेज़ी से कनेक्ट हो। इससे DHT नोड चलता रहता है और नेटवर्क से संपर्क करता रहता है, भले ही आप कुछ न देख रहे हों। अगर आपका कनेक्शन मीटर्ड या सीमित है, तो इसे चालू करें: तब इंजन पहली बार वास्तव में कोई P2P स्ट्रीम चलाने पर शुरू होगा। यह अगले लॉन्च से प्रभावी होगा।",
+  "Lart on other devices": "अन्य डिवाइसों पर Lart",
+  "Lart on other devices (web app)": "अन्य डिवाइसों पर Lart (वेब ऐप)",
+  "Lart on the server display": "सर्वर डिस्प्ले पर Lart",
+  "Lart opens 4 parallel requests to": "Lart इस पते पर 4 समानांतर रिक्वेस्ट भेजता है",
+  "Lart pick": "Lart की पसंद",
+  "Lart plays IPTV from your own provider. Add a playlist and the guide fills in.":
+    "Lart आपके अपने प्रदाता से IPTV चलाता है। कोई प्लेलिस्ट जोड़ें और गाइड अपने आप भर जाएगी।",
+  "Lart pulls the most popular titles each service has right now. Toggle off anything you don't subscribe to.":
+    "Lart हर सेवा पर इस समय मौजूद सबसे लोकप्रिय टाइटल लाता है। जिनकी आपने सदस्यता नहीं ली है, उन्हें बंद कर दें।",
+  "Lart pulls your addon collection from Stremio. Manage individual addons in Streaming sources.":
+    "Lart आपके ऐडऑन का संग्रह Stremio से लाता है। अलग-अलग ऐडऑन को स्ट्रीमिंग स्रोतों में मैनेज करें।",
+  "Lart queried 1 addon and got nothing back": "Lart ने 1 ऐडऑन से जानकारी माँगी, लेकिन कुछ नहीं मिला",
+  "Lart queried {n} addons and got nothing back":
+    "Lart ने {n} ऐडऑन से जानकारी माँगी, लेकिन कुछ नहीं मिला",
+  "Lart ranking": "Lart रैंकिंग",
+  "Lart ranking puts the best-scoring sources first. Addon order follows your addon priority (organize it in Addons, Installed tab, Reorder) and keeps each addon's results in the order it returned them, like the Stremio and Vidi apps.":
+    "Lart रैंकिंग सबसे अच्छे स्कोर वाले स्रोतों को पहले रखती है। ऐडऑन का क्रम आपकी ऐडऑन प्राथमिकता के अनुसार होता है (इसे ऐडऑन > इंस्टॉल किए गए > क्रम बदलें में व्यवस्थित करें) और हर ऐडऑन के नतीजों को उसी क्रम में रखता है जिसमें उसने उन्हें लौटाया था, ठीक Stremio और Vidi ऐप्स की तरह।",
+  "Lart ranking puts the best-scoring sources first. Addon order keeps each addon's results in the order it returned them, like the Stremio and Vidi apps. Stream priority below decides which addon leads, in both modes.":
+    "Lart रैंकिंग सबसे अच्छे स्कोर वाले स्रोतों को पहले रखती है। ऐडऑन का क्रम हर ऐडऑन के नतीजों को उसी क्रम में रखता है जिसमें उसने उन्हें लौटाया था, ठीक Stremio और Vidi ऐप्स की तरह। नीचे दी गई स्ट्रीम प्राथमिकता तय करती है कि दोनों मोड में कौन-सा ऐडऑन पहले रहेगा।",
+  "Lart reading room": "Lart वाचन कक्ष",
+  "Lart reads the speech in the audio, then slides the subtitle track until the two line up.":
+    "Lart ऑडियो में बोले गए शब्दों को पहचानता है, फिर सबटाइटल ट्रैक को तब तक खिसकाता है, जब तक दोनों मेल न खा जाएँ।",
+  "Lart runs a small streaming server right on this computer. This is where it lives. To stream from this machine on another device, copy the Wi-Fi address and paste it into Remote streaming server in Lart over there.":
+    "Lart इसी कंप्यूटर पर एक छोटा स्ट्रीमिंग सर्वर चलाता है। यह उसका पता है। इस मशीन से किसी दूसरे डिवाइस पर स्ट्रीम करने के लिए, Wi-Fi पता कॉपी करें और उस डिवाइस के Lart में रिमोट स्ट्रीमिंग सर्वर फ़ील्ड में पेस्ट करें।",
+  "Lart scans your IPTV playlists' EPG every 30 min for programs about to start.":
+    "Lart जल्द शुरू होने वाले कार्यक्रमों के लिए हर 30 मिनट में आपकी IPTV प्लेलिस्ट का EPG स्कैन करता है।",
+  "Lart searches every source you enable at the same time, then merges and de-duplicates the results into one clean list. Turn a source off to stop pulling from it.":
+    "Lart आपके चालू किए गए सभी स्रोतों में एक साथ खोजता है, फिर नतीजों को मिलाकर डुप्लिकेट हटाता है और एक साफ़ सूची बनाता है। किसी स्रोत से नतीजे लाना रोकने के लिए उसे बंद कर दें।",
+  "Lart sends no telemetry. This also drops outbound ad, analytics, and tracker requests that addons or metadata providers try to make, before they leave your machine.":
+    "Lart कोई टेलीमेट्री नहीं भेजता। ऐडऑन या मेटाडेटा प्रदाता जो विज्ञापन, एनालिटिक्स और ट्रैकर रिक्वेस्ट भेजने की कोशिश करते हैं, यह उन्हें भी आपकी मशीन से बाहर जाने से पहले रोक देता है।",
+  "Lart ships a neutral trophy for every award. Install an icon pack or upload your own image per award to make them yours. Packs are hosted by whoever makes them, so the artwork is theirs, not bundled with Lart.":
+    "Lart हर पुरस्कार के लिए एक सामान्य ट्रॉफ़ी देता है। इन्हें अपना रूप देने के लिए कोई आइकन पैक इंस्टॉल करें या हर पुरस्कार के लिए अपनी तस्वीर अपलोड करें। पैक उन्हें बनाने वालों द्वारा होस्ट किए जाते हैं, इसलिए आर्टवर्क उनका है और Lart के साथ बंडल नहीं किया गया है।",
+  "Lart ships no manga sources and hosts nothing. Extensions come from repositories other people maintain. Paste a repository URL below to browse its plugins, then install the ones you want. Every plugin runs sandboxed in an isolated worker with no access to your files, accounts, or the rest of the app.":
+    "Lart के साथ कोई मंगा स्रोत नहीं आता और यह कुछ भी होस्ट नहीं करता। एक्सटेंशन उन रिपॉज़िटरी से आते हैं जिनका रखरखाव दूसरे लोग करते हैं। किसी रिपॉज़िटरी के प्लगइन ब्राउज़ करने के लिए नीचे उसका URL पेस्ट करें, फिर जो प्लगइन चाहिए उन्हें इंस्टॉल करें। हर प्लगइन सैंडबॉक्स में एक अलग वर्कर के अंदर चलता है और उसे आपकी फ़ाइलों, अकाउंट या ऐप के बाकी हिस्से तक कोई पहुँच नहीं होती।",
+  "Lart ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Lart reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
+    "Lart इंजन उपलब्ध कराता है, साइटें नहीं। आप एक छोटा JSON कॉन्फ़िग लिखते हैं, जो CSS सेलेक्टर के ज़रिए किसी साइट का विवरण देता है, और Lart उनकी मदद से साइट को पढ़ता है। इसमें कुछ भी बंडल नहीं है: इसे केवल उन्हीं साइटों की ओर इंगित करें जिन्हें पढ़ने का आपको अधिकार है।",
+  "Lart shows your AniList lists on the Anime page and keeps your progress in sync.":
+    "Lart एनीमे पेज पर आपकी AniList सूचियाँ दिखाता है और आपकी प्रगति सिंक रखता है।",
+  "Lart signed you up but returned no session. Try signing in instead.":
+    "Lart ने आपका साइन अप कर दिया, लेकिन कोई सेशन नहीं मिला। इसके बजाय साइन इन करके देखें।",
+  "Lart sizes the head start for each title and grows it once playback settles. Right for almost everyone.":
+    "Lart हर शीर्षक के लिए शुरुआती बढ़त खुद तय करता है और प्लेबैक स्थिर होने पर उसे बढ़ा देता है। लगभग सभी के लिए यही सही है।",
+  "Lart snippet": "Lart स्निपेट",
+  "Lart speaks Stremio's addon protocol, and the whole ecosystem of addons grows out of their work. Stremio is funded by its community, and supporters who chip in get early access to experimental features. If you have it to spare, send some their way too.":
+    "Lart Stremio का ऐडऑन प्रोटोकॉल इस्तेमाल करता है और ऐडऑन का पूरा इकोसिस्टम उनके काम की ही देन है। Stremio को उसके समुदाय से फ़ंड मिलता है और योगदान देने वाले समर्थकों को प्रयोगात्मक सुविधाओं का अर्ली ऐक्सेस मिलता है। अगर आपके लिए संभव हो, तो उन्हें भी कुछ सहयोग दें।",
+  "Lart speaks this everywhere. You can change it later in Settings.":
+    "Lart हर जगह इसी भाषा का उपयोग करता है। आप इसे बाद में सेटिंग्स में बदल सकते हैं।",
+  "Lart still finds and loads subtitles so they're one click away in the player, it just won't turn them on automatically.":
+    "Lart फिर भी सबटाइटल ढूँढकर लोड करता है, ताकि वे प्लेयर में एक क्लिक पर उपलब्ध हों; बस उन्हें अपने आप चालू नहीं करेगा।",
+  "Lart test message (Discord). If you can read this, your webhook is wired up.":
+    "Lart परीक्षण संदेश (Discord)। अगर आप इसे पढ़ पा रहे हैं, तो आपका वेबहुक जुड़ा हुआ है।",
+  "Lart test message (Telegram). If you can read this, your webhook is wired up.":
+    "Lart परीक्षण संदेश (Telegram)। अगर आप इसे पढ़ पा रहे हैं, तो आपका वेबहुक जुड़ा हुआ है।",
+  "Lart test message ({service}). If you can read this, your webhook is wired up.":
+    "Lart परीक्षण संदेश ({service})। अगर आप इसे पढ़ सकते हैं, तो आपका वेबहुक कनेक्ट हो चुका है।",
+  "Lart theme": "Lart थीम",
+  "Lart times out-of-sync subtitles to the audio for you, on any external subtitle. It works on the mpv player and leaves embedded tracks alone, since those are already in sync.":
+    "Lart किसी भी बाहरी सबटाइटल के समय को आपके लिए ऑडियो से मिलाता है। यह mpv प्लेयर पर काम करता है और एम्बेडेड ट्रैक को नहीं बदलता, क्योंकि वे पहले से सिंक होते हैं।",
+  "Lart tried {n} sources for {title} and none of them played. Usually that means a debrid key has expired, no stream addon is installed yet, or nothing has this title cached.":
+    "Lart ने {title} के लिए {n} स्रोत आज़माए, लेकिन उनमें से कोई भी नहीं चला। आम तौर पर इसका मतलब है कि डीब्रिड की एक्सपायर हो गई है, अभी कोई स्ट्रीम ऐडऑन इंस्टॉल नहीं है या यह टाइटल कहीं भी कैश नहीं है।",
+  "Lart uses ffmpeg to convert streams into formats TVs can play. It's a one-time install and Lart will pick it up automatically.":
+    "Lart स्ट्रीम को ऐसे फ़ॉर्मैट में बदलने के लिए ffmpeg का उपयोग करता है जिन्हें TV पर चलाया जा सके। इसे केवल एक बार इंस्टॉल करना होता है और Lart इसे अपने-आप पहचान लेगा।",
+  "Lart uses the graphics card when it's safe and falls back to the CPU when it isn't. The right call for almost everyone.":
+    "सुरक्षित होने पर Lart ग्राफ़िक्स कार्ड का उपयोग करता है और सुरक्षित न होने पर CPU पर लौट जाता है। लगभग सभी लोगों के लिए यही सही विकल्प है।",
+  "Lart was built in English. Multi-language support is partial, so your addons usually catch what Lart's own filters miss. If you speak another language and want to help, the source is open.":
+    "Lart मूल रूप से अंग्रेज़ी में बनाया गया था। बहुभाषी सपोर्ट अभी सीमित है, इसलिए Lart के अपने फ़िल्टर से छूटी चीज़ें आम तौर पर आपके ऐडऑन पकड़ लेते हैं। अगर आप कोई दूसरी भाषा जानते हैं और मदद करना चाहते हैं, तो सोर्स कोड ओपन है।",
+  "Lart will mark what you finish as watched on Simkl and sync your plan-to-watch list.":
+    "आप जो पूरा देख लेंगे, Lart उसे Simkl पर देखा हुआ चिह्नित करेगा और आपकी देखने की योजना वाली सूची सिंक करेगा।",
+  "Lart will not start the P2P engine, contact trackers, or run DHT. Use this if you only want debrid and direct links. Turn off to re-enable P2P streaming.": "Lart P2P इंजन शुरू नहीं करेगा, ट्रैकर से संपर्क नहीं करेगा और DHT नहीं चलाएगा। अगर आपको केवल डीब्रिड और सीधे लिंक चाहिए, तो इसका उपयोग करें। P2P स्ट्रीमिंग फिर से चालू करने के लिए इसे बंद करें।",
+  "Lart will scrobble your playback to Trakt and sync your watchlist.":
+    "Lart आपके प्लेबैक को Trakt पर स्क्रॉबल करेगा और आपकी वॉचलिस्ट सिंक करेगा।",
+  "Lart would not be possible without Stremio. It is the foundation everything here is built on.":
+    "Stremio के बिना Lart संभव नहीं होता। यहाँ की हर चीज़ उसी नींव पर बनी है।",
+  "Lart {version} available": "Lart {version} उपलब्ध है",
+  "Lart {version} downloaded but did not install on its own.":
+    "Lart {version} डाउनलोड हो गया, लेकिन अपने आप इंस्टॉल नहीं हुआ।",
+  "Lart's backend runs on ElfHosted. They run our servers at no cost to the community.":
+    "Lart का बैकएंड ElfHosted पर चलता है। वे समुदाय से कोई शुल्क लिए बिना हमारे सर्वर चलाते हैं।",
+  "Lart's backend runs on ElfHosted. They took it on without being asked, and Lart has never charged for anything.":
+    "Lart का बैकएंड ElfHosted पर चलता है। उन्होंने बिना कहे इसकी ज़िम्मेदारी संभाली, और Lart ने कभी किसी चीज़ के लिए शुल्क नहीं लिया।",
+  "Lart's built-in HDR to SDR conversion is on. Turn it off in Video tuning to use this instead. Running both double-processes the picture.":
+    "Lart का बिल्ट-इन HDR से SDR कन्वर्ज़न चालू है। इसकी जगह इसे इस्तेमाल करने के लिए वीडियो ट्यूनिंग में बिल्ट-इन कन्वर्ज़न बंद करें। दोनों को साथ चलाने पर तस्वीर दो बार प्रोसेस होती है।",
+  "Lart's built-in OpenSubtitles search, on by default. If you install an OpenSubtitles addon, this steps aside automatically so your results are never duplicated.":
+    "Lart की बिल्ट-इन OpenSubtitles खोज डिफ़ॉल्ट रूप से चालू रहती है। अगर आप कोई OpenSubtitles ऐडऑन इंस्टॉल करते हैं, तो यह अपने आप बंद हो जाती है, ताकि नतीजे डुप्लिकेट न हों।",
+  "Lart's built-in frame interpolation. Smooths panning, best on anime. Needs a display refresh rate above the video's frame rate, and can stutter on weak GPUs. Lighter than SVP.":
+    "Lart का बिल्ट-इन फ़्रेम इंटरपोलेशन। यह पैनिंग को सहज बनाता है और एनीमे के लिए सबसे अच्छा है। इसके लिए डिस्प्ले का रिफ़्रेश रेट वीडियो के फ़्रेम रेट से अधिक होना चाहिए और कमज़ोर GPUs पर यह अटक सकता है। SVP से हल्का है।",
+  "Lart's full video engine. Plays anything you throw at it.":
+    "Lart का पूरा वीडियो इंजन। इसमें जो भी चलाएँ, यह चला देता है।",
+  "Lart's in-app installer animates the manifest install and keeps you in context. Anything Lart installs is also synced to your Stremio account, so the official app stays the canonical library. Turn this off and Stremio becomes the only handler for stremio:// links; Lart still installs anything you trigger from inside the app (Configure & install, paste, drag-and-drop).":
+    "Lart का इन-ऐप इंस्टॉलर मैनिफ़ेस्ट इंस्टॉल होने का एनिमेशन दिखाता है और आपको वहीं बनाए रखता है। Lart जो कुछ भी इंस्टॉल करता है, वह आपके Stremio अकाउंट से भी सिंक होता है, इसलिए आधिकारिक ऐप ही आपकी मुख्य लाइब्रेरी बना रहता है। इसे बंद करने पर stremio:// लिंक केवल Stremio में खुलेंगे; ऐप के अंदर से शुरू की गई कोई भी चीज़ Lart फिर भी इंस्टॉल करेगा (कॉन्फ़िगर & इंस्टॉल करें, पेस्ट, ड्रैग-एंड-ड्रॉप)।",
+  "Lart's native player chrome.": "Lart के अपने प्लेयर कंट्रोल।",
+  "Lart's own bar": "Lart की अपनी पट्टी",
+  "Lart's own community server": "Lart का अपना कम्युनिटी सर्वर",
+  "Lart's own menus and labels. Subtitle languages come later, and you can change both in Settings.":
+    "Lart के अपने मेन्यू और लेबल। सबटाइटल की भाषाएँ बाद में सेट की जाती हैं और आप दोनों को सेटिंग्स में बदल सकते हैं।",
+  "Lart's player applies the interpolation itself, embedded like normal playback, and starts SVP Manager in the tray for licensing. Restart playback to apply. If video goes black or won't start, turn this off.":
+    "Lart का प्लेयर इंटरपोलेशन खुद लागू करता है और इसे सामान्य प्लेबैक की तरह एम्बेड रखता है। लाइसेंसिंग के लिए यह ट्रे में SVP Manager भी शुरू करता है। इसे लागू करने के लिए प्लेबैक फिर से शुरू करें। अगर वीडियो काला हो जाए या शुरू न हो, तो इसे बंद कर दें।",
+  "Lart's public relay": "Lart का सार्वजनिक रिले",
+  "Lart's public relay has not rolled out the latest protocol yet.":
+    "Lart के सार्वजनिक रिले पर नवीनतम प्रोटोकॉल अभी लागू नहीं हुआ है।",
+  "Lart's public relay updates automatically; nothing to do.":
+    "Lart का सार्वजनिक रिले अपने आप अपडेट होता है; आपको कुछ करने की ज़रूरत नहीं है।",
+  "Lart's streaming server only runs in the desktop app.":
+    "Lart का स्ट्रीमिंग सर्वर केवल डेस्कटॉप ऐप में चलता है।",
+  "Lart's temporary viewer requires HTTPS.": "Lart के अस्थायी व्यूअर के लिए HTTPS आवश्यक है।",
+  "Lart, from a public domain frame": "Lart, सार्वजनिक डोमेन के एक फ़्रेम से",
+  "Harbors on your network": "आपके नेटवर्क पर मौजूद Lart इंस्टेंस",
   "Hard Boiled": "सख़्तमिज़ाज",
   "Hard outline": "ठोस आउटलाइन",
   "Hard stroke around each letter. High contrast.": "हर अक्षर के चारों ओर मोटी रेखा। अधिक कंट्रास्ट।",
@@ -432,10 +432,10 @@ const catalogGI: Record<string, string> = {
   "Headings above every row on Home.": "होम पर हर पंक्ति के ऊपर शीर्षक।",
   "Headphone series": "हेडफ़ोन सीरीज़",
   "Heads up": "ध्यान दें",
-  "Heads up: Harbor was built in English. Multi-language support is partial, so your addons usually catch what Harbor's own filters miss. If you speak another language and want to help fill the gaps, the source is open.":
-    "ध्यान दें: Harbor मूल रूप से अंग्रेज़ी में बनाया गया था। बहुभाषी सपोर्ट अभी सीमित है, इसलिए Harbor के अपने फ़िल्टर से छूटी चीज़ें आम तौर पर आपके ऐडऑन पकड़ लेते हैं। अगर आप कोई दूसरी भाषा जानते हैं और इन कमियों को दूर करने में मदद करना चाहते हैं, तो सोर्स कोड ओपन है।",
-  "Heads up: if Stremio is also installed, Windows may ask which app to use the first time a stremio:// link fires. Pick Harbor to make it stick.":
-    "ध्यान दें: अगर Stremio भी इंस्टॉल है, तो पहली बार कोई stremio:// लिंक खुलने पर Windows पूछ सकता है कि किस ऐप का उपयोग करना है। इसे स्थायी बनाने के लिए Harbor चुनें।",
+  "Heads up: Lart was built in English. Multi-language support is partial, so your addons usually catch what Lart's own filters miss. If you speak another language and want to help fill the gaps, the source is open.":
+    "ध्यान दें: Lart मूल रूप से अंग्रेज़ी में बनाया गया था। बहुभाषी सपोर्ट अभी सीमित है, इसलिए Lart के अपने फ़िल्टर से छूटी चीज़ें आम तौर पर आपके ऐडऑन पकड़ लेते हैं। अगर आप कोई दूसरी भाषा जानते हैं और इन कमियों को दूर करने में मदद करना चाहते हैं, तो सोर्स कोड ओपन है।",
+  "Heads up: if Stremio is also installed, Windows may ask which app to use the first time a stremio:// link fires. Pick Lart to make it stick.":
+    "ध्यान दें: अगर Stremio भी इंस्टॉल है, तो पहली बार कोई stremio:// लिंक खुलने पर Windows पूछ सकता है कि किस ऐप का उपयोग करना है। इसे स्थायी बनाने के लिए Lart चुनें।",
   "Heads up: most IPTV providers cap how many streams an account can run at the same time. If other devices or players are using these credentials, close them and try again.":
     "ध्यान दें: ज़्यादातर IPTV प्रदाता एक खाते से एक साथ चलने वाली स्ट्रीम की संख्या सीमित रखते हैं। अगर दूसरे डिवाइस या प्लेयर इन लॉगिन विवरणों का उपयोग कर रहे हैं, तो उन्हें बंद करके फिर से कोशिश करें।",
   "Heads up: this is a large file for peer-to-peer streaming, so it can take a while to start. A 1080p source or a debrid service will load faster.":
@@ -467,7 +467,7 @@ const catalogGI: Record<string, string> = {
   Help: "मदद",
   "Help & feedback": "सहायता & फ़ीडबैक",
   "Help & support": "मदद और सहायता",
-  "Help translate Harbor": "Harbor का अनुवाद करने में मदद करें",
+  "Help translate Lart": "Lart का अनुवाद करने में मदद करें",
   "Here for the late-night sci-fi": "देर रात की साइंस फ़िक्शन के लिए यहाँ हूँ",
   Hero: "हीरो",
   "Hero carousel, Top 10, Trending, In Theaters, per-service rails.":
@@ -582,8 +582,8 @@ const catalogGI: Record<string, string> = {
   Highlights: "हाइलाइट्स",
   "Highly Rated, Quietly Loved": "बेहतरीन रेटिंग, कम चर्चा में खूब पसंद किए गए",
   "Highly rated by the community": "कम्युनिटी ने बहुत अच्छी रेटिंग दी",
-  "Highly recommended. This is what gives you the full Harbor experience: Popular, Trending, In Theaters, and per-service rails. Free at":
-    "इसकी पुरज़ोर सिफ़ारिश की जाती है। इसी से आपको Harbor का पूरा अनुभव मिलता है: लोकप्रिय, ट्रेंडिंग, सिनेमाघरों में और हर सेवा की अलग-अलग पंक्तियाँ। यहाँ मुफ़्त पाएँ",
+  "Highly recommended. This is what gives you the full Lart experience: Popular, Trending, In Theaters, and per-service rails. Free at":
+    "इसकी पुरज़ोर सिफ़ारिश की जाती है। इसी से आपको Lart का पूरा अनुभव मिलता है: लोकप्रिय, ट्रेंडिंग, सिनेमाघरों में और हर सेवा की अलग-अलग पंक्तियाँ। यहाँ मुफ़्त पाएँ",
   Hindi: "हिंदी",
   "His Best": "उनकी सर्वश्रेष्ठ कृतियाँ",
   "His Comedy": "उनकी कॉमेडी",
@@ -591,15 +591,15 @@ const catalogGI: Record<string, string> = {
   History: "इतिहास",
   "History Buff": "इतिहास प्रेमी",
   Hit: "हिट",
-  "Hit your daily quota? Use Harbor's public relay, or host your own.":
-    "आपका आज का कोटा पूरा हो गया? Harbor का सार्वजनिक रिले इस्तेमाल करें या अपना रिले खुद होस्ट करें।",
+  "Hit your daily quota? Use Lart's public relay, or host your own.":
+    "आपका आज का कोटा पूरा हो गया? Lart का सार्वजनिक रिले इस्तेमाल करें या अपना रिले खुद होस्ट करें।",
   Hits: "हिट शीर्षक",
-  "Hitting Play jumps straight into playback with the best stream Harbor finds.":
-    "प्ले दबाते ही Harbor द्वारा खोजी गई सबसे अच्छी स्ट्रीम सीधे चलने लगती है।",
+  "Hitting Play jumps straight into playback with the best stream Lart finds.":
+    "प्ले दबाते ही Lart द्वारा खोजी गई सबसे अच्छी स्ट्रीम सीधे चलने लगती है।",
   "Hitting Play opens the source list so you can choose quality, debrid, and audio yourself.":
     "प्ले दबाने पर स्रोत सूची खुलती है, ताकि आप गुणवत्ता, डिब्रिड और ऑडियो खुद चुन सकें।",
-  "Hold Ctrl or Cmd and scroll to resize Harbor's interface smoothly.":
-    "Harbor के इंटरफ़ेस का आकार आसानी से बदलने के लिए Ctrl या Cmd दबाकर रखें और स्क्रॉल करें।",
+  "Hold Ctrl or Cmd and scroll to resize Lart's interface smoothly.":
+    "Lart के इंटरफ़ेस का आकार आसानी से बदलने के लिए Ctrl या Cmd दबाकर रखें और स्क्रॉल करें।",
   "Hold for more options": "और विकल्पों के लिए दबाकर रखें",
   "Hold or right-click for models": "मॉडल के लिए दबाकर रखें या राइट-क्लिक करें",
   "Hold to continue": "जारी रखने के लिए दबाकर रखें",
@@ -624,8 +624,8 @@ const catalogGI: Record<string, string> = {
   "Home layout on the TV": "TV पर होम लेआउट",
   "Home rail categories (Movies, TV, Anime)": "होम रेल श्रेणियाँ (फ़िल्में, TV, एनीमे)",
   "Home style": "होम स्टाइल",
-  "Home style (Harbor curated / Classic Stremio)":
-    "होम स्टाइल (Harbor द्वारा चयनित / क्लासिक Stremio)",
+  "Home style (Lart curated / Classic Stremio)":
+    "होम स्टाइल (Lart द्वारा चयनित / क्लासिक Stremio)",
   "Home · Continue Watching": "होम · देखना जारी रखें",
   "Honored writers": "सम्मानित लेखक",
   Hoopla: "Hoopla",
@@ -647,18 +647,18 @@ const catalogGI: Record<string, string> = {
   "Hover the row": "पंक्ति पर होवर करें",
   "Hover the speaker to reveal a horizontal slider.": "क्षैतिज स्लाइडर दिखाने के लिए स्पीकर पर होवर करें।",
   "Hover to peek": "झलक देखने के लिए होवर करें",
-  "How Harbor Rank works": "Harbor रैंक कैसे काम करती है",
-  "How Harbor finds and resolves playable streams. Debrid keys and addon installs live here.":
-    "Harbor चलाने योग्य स्ट्रीम कैसे खोजता और रिज़ॉल्व करता है। डीब्रिड कीज़ और ऐडऑन इंस्टॉल यहीं मैनेज किए जाते हैं।",
-  "How Harbor squeezes HDR movies onto a normal screen. Auto is right for almost everyone; the curves below just change the look (punchy vs soft). Only matters on HDR sources.":
-    "Harbor HDR फ़िल्मों को सामान्य स्क्रीन के अनुकूल कैसे बनाता है। लगभग सभी के लिए ऑटो सही है; नीचे दिए गए कर्व सिर्फ़ उनका रूप बदलते हैं (दमदार या सौम्य)। इसका असर केवल HDR स्रोतों पर होता है।",
+  "How Lart Rank works": "Lart रैंक कैसे काम करती है",
+  "How Lart finds and resolves playable streams. Debrid keys and addon installs live here.":
+    "Lart चलाने योग्य स्ट्रीम कैसे खोजता और रिज़ॉल्व करता है। डीब्रिड कीज़ और ऐडऑन इंस्टॉल यहीं मैनेज किए जाते हैं।",
+  "How Lart squeezes HDR movies onto a normal screen. Auto is right for almost everyone; the curves below just change the look (punchy vs soft). Only matters on HDR sources.":
+    "Lart HDR फ़िल्मों को सामान्य स्क्रीन के अनुकूल कैसे बनाता है। लगभग सभी के लिए ऑटो सही है; नीचे दिए गए कर्व सिर्फ़ उनका रूप बदलते हैं (दमदार या सौम्य)। इसका असर केवल HDR स्रोतों पर होता है।",
   "How Play works": "प्ले कैसे काम करता है",
   "How Watch Together and the window buttons are drawn.":
     "Watch Together और विंडो बटन कैसे दिखाए जाते हैं।",
   "How a show or movie detail page behaves when you open it.":
     "किसी शो या फ़िल्म का विवरण पेज खुलने पर कैसे काम करता है।",
-  "How aggressively Harbor rejects shady or mismatched streams before showing them in the picker.":
-    "Harbor पिकर में दिखाने से पहले संदिग्ध या बेमेल स्ट्रीम को कितनी सख़्ती से अस्वीकार करता है।",
+  "How aggressively Lart rejects shady or mismatched streams before showing them in the picker.":
+    "Lart पिकर में दिखाने से पहले संदिग्ध या बेमेल स्ट्रीम को कितनी सख़्ती से अस्वीकार करता है।",
   "How award packs work": "अवॉर्ड पैक कैसे काम करते हैं",
   "How badge packs work": "बैज पैक कैसे काम करते हैं",
   "How big episode cards are in the strip and grid layouts. Bigger cards show larger artwork.":
@@ -671,8 +671,8 @@ const catalogGI: Record<string, string> = {
     "शो और एनीमे के एपिसोड कैसे समूहबद्ध किए जाएँ। TVDB डिफ़ॉल्ट है: यह बिना किसी की के आर्क, DVD और एब्सोल्यूट क्रम देता है, जिसकी एनीमे प्रशंसक अपेक्षा करते हैं। TMDB सामान्य प्रसारण क्रम बनाए रखता है। किसी भी विकल्प में हर एपिसोड वैसे ही चलता है और उसे देखा गया भी उसी तरह मार्क किया जाता है।",
   "How far you can boost past 100 percent on the volume bar. Higher settings can get very loud.":
     "वॉल्यूम बार पर आवाज़ को 100 प्रतिशत से कितना ज़्यादा बढ़ा सकते हैं। मान बढ़ाने पर आवाज़ बहुत तेज़ हो सकती है।",
-  "How far you push the stick before Harbor reacts. Raise it if the focus drifts on its own.":
-    "Harbor के प्रतिक्रिया देने से पहले स्टिक को कितना धकेलना होगा। अगर फ़ोकस अपने आप खिसकता है, तो इसे बढ़ाएँ।",
+  "How far you push the stick before Lart reacts. Raise it if the focus drifts on its own.":
+    "Lart के प्रतिक्रिया देने से पहले स्टिक को कितना धकेलना होगा। अगर फ़ोकस अपने आप खिसकता है, तो इसे बढ़ाएँ।",
   "How fast a held direction keeps moving the focus.":
     "दिशा दबाए रखने पर फ़ोकस कितनी तेज़ी से आगे बढ़ता रहता है।",
   "How is this build treating you?": "यह बिल्ड आपके लिए कैसा काम कर रहा है?",
@@ -681,9 +681,9 @@ const catalogGI: Record<string, string> = {
   "How keys behave during playback.": "प्लेबैक के दौरान कुंजियाँ कैसे काम करती हैं।",
   "How large a backdrop image the TV fetches. It does not change video quality. Balanced is the safe choice on older hardware.":
     "TV कितने बड़े आकार की बैकड्रॉप इमेज डाउनलोड करता है। इससे वीडियो क्वालिटी नहीं बदलती। पुराने हार्डवेयर पर संतुलित विकल्प सुरक्षित है।",
-  "How long Harbor waits before drifting off.": "निष्क्रिय होने से पहले Harbor कितनी देर इंतज़ार करता है।",
-  "How long Harbor waits for each addon to return streams. Aggregators that search many sources can need 45s or more. Results appear as each addon answers, so a longer wait never delays the fast ones.":
-    "Harbor हर ऐडऑन से स्ट्रीम मिलने के लिए कितनी देर इंतज़ार करता है। कई स्रोत खोजने वाले एग्रीगेटर को 45s या उससे ज़्यादा लग सकते हैं। हर ऐडऑन का जवाब मिलते ही नतीजे दिखते हैं, इसलिए लंबा इंतज़ार तेज़ ऐडऑन के नतीजों में कभी देरी नहीं करता।",
+  "How long Lart waits before drifting off.": "निष्क्रिय होने से पहले Lart कितनी देर इंतज़ार करता है।",
+  "How long Lart waits for each addon to return streams. Aggregators that search many sources can need 45s or more. Results appear as each addon answers, so a longer wait never delays the fast ones.":
+    "Lart हर ऐडऑन से स्ट्रीम मिलने के लिए कितनी देर इंतज़ार करता है। कई स्रोत खोजने वाले एग्रीगेटर को 45s या उससे ज़्यादा लग सकते हैं। हर ऐडऑन का जवाब मिलते ही नतीजे दिखते हैं, इसलिए लंबा इंतज़ार तेज़ ऐडऑन के नतीजों में कभी देरी नहीं करता।",
   "How long a saved frame sticks around before the oldest roll off.":
     "सबसे पुराने फ़्रेम के हटने से पहले कोई सेव किया गया फ़्रेम कितनी देर तक रहता है।",
   "How long files stay": "फ़ाइलें कितनी देर तक रहें",
@@ -700,11 +700,11 @@ const catalogGI: Record<string, string> = {
   "How often the profile screen appears when you have more than one profile.":
     "एक से ज़्यादा प्रोफ़ाइल होने पर प्रोफ़ाइल स्क्रीन कितनी बार दिखाई देती है।",
   "How packs work": "पैक कैसे काम करते हैं",
-  "How people find you across Harbor.": "लोग Harbor पर आपको कैसे ढूँढते हैं।",
+  "How people find you across Lart.": "लोग Lart पर आपको कैसे ढूँढते हैं।",
   "How posters appear as they load. Blur up looks smoothest; Fade is lighter on older or low-power devices; Instant turns it off.":
     "लोड होते समय पोस्टर कैसे दिखाई देते हैं। ब्लर अप सबसे सहज दिखता है; फ़ेड पुराने या कम पावर वाले डिवाइस पर कम संसाधन इस्तेमाल करता है; इंस्टेंट यह प्रभाव बंद कर देता है।",
-  "How quickly the Harbor cursor moves with the right stick.":
-    "दाईं स्टिक से Harbor कर्सर कितनी तेज़ी से चलता है।",
+  "How quickly the Lart cursor moves with the right stick.":
+    "दाईं स्टिक से Lart कर्सर कितनी तेज़ी से चलता है।",
   "How sharp the trailer is when you hit the preview button. Auto picks from your connection speed. 1080p and Best merge separate video and audio with the bundled ffmpeg, so they take a beat longer to start.":
     "प्रीव्यू बटन दबाने पर ट्रेलर कितना स्पष्ट होगा। ऑटो आपके कनेक्शन की स्पीड के अनुसार चुनता है। 1080p और सर्वश्रेष्ठ, साथ दिए गए ffmpeg से अलग वीडियो और ऑडियो को मिलाते हैं, इसलिए शुरू होने में थोड़ा ज़्यादा समय लेते हैं।",
   "How sharp trailers play, and when they start on their own.":
@@ -798,16 +798,16 @@ const catalogGI: Record<string, string> = {
     "अगर सर्वर तक नहीं पहुँचा जा सके, तो लोकल स्ट्रीमिंग के बजाय प्लेबैक विफल हो जाएगा। इसका उपयोग तब करें जब आपका VPN सर्वर मशीन पर चलता हो और टोरेंट ट्रैफ़िक इस मशीन से कभी बाहर नहीं जाना चाहिए।",
   "If this account has Discord linked, we'll DM you a code to reset your password without the recovery key.":
     "अगर इस अकाउंट से Discord लिंक है, तो रिकवरी कुंजी के बिना पासवर्ड रीसेट करने के लिए हम आपको DM में एक कोड भेजेंगे।",
-  "If video keeps pausing to buffer, or you're on spotty Wi-Fi or a far-away server, this gives Harbor a bigger head start so playback rides through the rough patches.":
-    "अगर वीडियो बफ़रिंग के लिए बार-बार रुकता है, आपका Wi-Fi अस्थिर है या सर्वर बहुत दूर है, तो इससे Harbor को ज़्यादा शुरुआती बढ़त मिलती है, ताकि खराब कनेक्शन के दौरान भी प्लेबैक चलता रहे।",
+  "If video keeps pausing to buffer, or you're on spotty Wi-Fi or a far-away server, this gives Lart a bigger head start so playback rides through the rough patches.":
+    "अगर वीडियो बफ़रिंग के लिए बार-बार रुकता है, आपका Wi-Fi अस्थिर है या सर्वर बहुत दूर है, तो इससे Lart को ज़्यादा शुरुआती बढ़त मिलती है, ताकि खराब कनेक्शन के दौरान भी प्लेबैक चलता रहे।",
   "If you already rated a title, the imported score replaces it.":
     "अगर आपने किसी शीर्षक को पहले ही रेट किया है, तो इम्पोर्ट किया गया स्कोर उसे बदल देगा।",
   "If you exceed free tier, the Workers Paid plan is $5 per month and bumps the request allowance to 10 million per day.":
     "अगर आप मुफ़्त टियर की सीमा पार करते हैं, तो Workers Paid प्लान $5 प्रति माह का है और अनुरोध सीमा बढ़ाकर हर दिन 10 मिलियन कर देता है।",
   "If you left a {service} username, you'll be tagged in the release notes when this lands.":
     "अगर आपने {service} यूज़रनेम दिया है, तो यह उपलब्ध होने पर रिलीज़ नोट्स में आपको टैग किया जाएगा।",
-  "If you want to put money somewhere and you use Harbor, an ElfHosted subscription is the most useful place for it. You get a managed instance, and the servers Harbor depends on stay paid for.":
-    "अगर आप कहीं पैसे देना चाहते हैं और Harbor इस्तेमाल करते हैं, तो ElfHosted की सदस्यता सबसे उपयोगी विकल्प है। आपको एक मैनेज्ड इंस्टेंस मिलता है और Harbor जिन सर्वरों पर निर्भर है, उनका खर्च चलता रहता है।",
+  "If you want to put money somewhere and you use Lart, an ElfHosted subscription is the most useful place for it. You get a managed instance, and the servers Lart depends on stay paid for.":
+    "अगर आप कहीं पैसे देना चाहते हैं और Lart इस्तेमाल करते हैं, तो ElfHosted की सदस्यता सबसे उपयोगी विकल्प है। आपको एक मैनेज्ड इंस्टेंस मिलता है और Lart जिन सर्वरों पर निर्भर है, उनका खर्च चलता रहता है।",
   "If you were going to send something, send it to ElfHosted above so the servers stay paid for, or to one of the charities below. Both do more good with it.":
     "अगर आप कुछ भेजना ही चाहते हैं, तो ऊपर ElfHosted को भेजें ताकि सर्वरों का खर्च चलता रहे, या नीचे दी गई किसी चैरिटी को दें। दोनों ही इसका ज़्यादा अच्छा उपयोग करेंगे।",
   "If you were going to send something, send it to ElfHosted or Stremio above, or to one of the charities below. They all do more good with it.":
@@ -869,9 +869,9 @@ const catalogGI: Record<string, string> = {
   "Importing {done} / {total}": "इंपोर्ट जारी: {done} / {total}",
   "Importing {done} of {total}": "इंपोर्ट जारी: {total} में से {done}",
   "In Cinema": "सिनेमाघरों में",
-  "In Harbor: Settings, Harbor Relay, then": "Harbor में: सेटिंग्स, Harbor Relay, फिर",
-  "In Harbor: Settings, Harbor Relay, then {kbd}. Paste the URL with {code1} as the scheme instead of {code2}.":
-    "Harbor में: सेटिंग्स, Harbor Relay, फिर {kbd}। URL पेस्ट करें और स्कीम में {code2} के बजाय {code1} का इस्तेमाल करें।",
+  "In Lart: Settings, Lart Relay, then": "Lart में: सेटिंग्स, Lart Relay, फिर",
+  "In Lart: Settings, Lart Relay, then {kbd}. Paste the URL with {code1} as the scheme instead of {code2}.":
+    "Lart में: सेटिंग्स, Lart Relay, फिर {kbd}। URL पेस्ट करें और स्कीम में {code2} के बजाय {code1} का इस्तेमाल करें।",
   "In My List": "मेरी सूची में",
   "In Theaters": "सिनेमाघरों में",
   "In Theaters Now": "अभी सिनेमाघरों में",
@@ -933,8 +933,8 @@ const catalogGI: Record<string, string> = {
   Inspector: "इंस्पेक्टर",
   Install: "इंस्टॉल करें",
   "Install Media Assistant": "मीडिया असिस्टेंट इंस्टॉल करें",
-  "Install SVP once (the free tier is enough). It bundles VapourSynth + svpflow; Harbor reuses them, no extra setup.":
-    "SVP को एक बार इंस्टॉल करें (मुफ़्त टियर काफ़ी है)। इसमें VapourSynth + svpflow शामिल हैं; Harbor इन्हीं का इस्तेमाल करता है, इसलिए अलग से सेटअप की ज़रूरत नहीं।",
+  "Install SVP once (the free tier is enough). It bundles VapourSynth + svpflow; Lart reuses them, no extra setup.":
+    "SVP को एक बार इंस्टॉल करें (मुफ़्त टियर काफ़ी है)। इसमें VapourSynth + svpflow शामिल हैं; Lart इन्हीं का इस्तेमाल करता है, इसलिए अलग से सेटअप की ज़रूरत नहीं।",
   "Install a Stremio addon and its catalogs show up here as poster rails, ready to browse.":
     "कोई Stremio ऐडऑन इंस्टॉल करें। उसके कैटलॉग यहाँ ब्राउज़ करने के लिए तैयार पोस्टर रेल्स के रूप में दिखेंगे।",
   "Install a pack": "पैक इंस्टॉल करें",
@@ -958,10 +958,10 @@ const catalogGI: Record<string, string> = {
   "Install wrangler and authenticate:": "wrangler इंस्टॉल करें और ऑथेंटिकेट करें:",
   Installed: "इंस्टॉल हो गया",
   "Installed addons": "इंस्टॉल किए गए ऐडऑन",
-  "Installed and detected. Harbor found its interpolation engine and will drive it directly.":
-    "इंस्टॉल हो गया और पहचान लिया गया। Harbor ने इसका इंटरपोलेशन इंजन ढूँढ लिया है और इसे सीधे इस्तेमाल करेगा।",
-  "Installed and detected. Harbor found the native svpflow plugins and VapourSynth script library.":
-    "इंस्टॉल हो गया और पहचान लिया गया। Harbor ने नेटिव svpflow प्लगइन्स और VapourSynth स्क्रिप्ट लाइब्रेरी ढूँढ ली है।",
+  "Installed and detected. Lart found its interpolation engine and will drive it directly.":
+    "इंस्टॉल हो गया और पहचान लिया गया। Lart ने इसका इंटरपोलेशन इंजन ढूँढ लिया है और इसे सीधे इस्तेमाल करेगा।",
+  "Installed and detected. Lart found the native svpflow plugins and VapourSynth script library.":
+    "इंस्टॉल हो गया और पहचान लिया गया। Lart ने नेटिव svpflow प्लगइन्स और VapourSynth स्क्रिप्ट लाइब्रेरी ढूँढ ली है।",
   "Installed locally": "लोकल रूप से इंस्टॉल किया गया",
   "Installed packs": "इंस्टॉल किए गए पैक",
   "Installed shaders": "इंस्टॉल किए गए शेडर",
@@ -974,7 +974,7 @@ const catalogGI: Record<string, string> = {
     "TV पर ऐडऑन इंस्टॉल करना और उनका क्रम तय करना। ऐडऑन की सूचियाँ पहले से आपके अकाउंट के साथ सिंक होती हैं, इसलिए यहाँ इंस्टॉल करने पर वे TV पर भी उपलब्ध हो जाएँगे।",
   "Installing {name}": "{name} इंस्टॉल हो रहा है",
   "Installing {title}": "{title} इंस्टॉल हो रहा है",
-  "Installing. Harbor will restart.": "इंस्टॉल हो रहा है. Harbor रीस्टार्ट होगा.",
+  "Installing. Lart will restart.": "इंस्टॉल हो रहा है. Lart रीस्टार्ट होगा.",
   "Installing...": "इंस्टॉल हो रहा है...",
   "Installing…": "इंस्टॉल हो रहा है…",
   Instant: "तुरंत",
@@ -1079,7 +1079,7 @@ const catalogGI: Record<string, string> = {
   "if the site blocks hotlinked images.": "अगर साइट हॉटलिंक की गई इमेज को ब्लॉक करती है।",
   "igv (gist)": "igv (gist)",
   "in 24h": "24 घंटे में",
-  "in Harbor settings.": "Harbor की सेटिंग्स में।",
+  "in Lart settings.": "Lart की सेटिंग्स में।",
   "in {d} days": "{d} दिनों में",
   "in {n} weeks": "{n} हफ़्तों में",
   "in {n} weeks#few": "{n} हफ़्तों में",
@@ -1090,8 +1090,8 @@ const catalogGI: Record<string, string> = {
   "is a page number. Add": "एक पेज नंबर है। जोड़ें",
   "is a regex for the part to change": "बदले जाने वाले हिस्से का रेगेक्स है",
   "is each chapter row": "हर अध्याय की पंक्ति है",
-  "is how many items to skip, starting at 0. Harbor auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
-    "0 से शुरू करके छोड़े जाने वाले आइटम की संख्या है। Harbor साइट का पेज साइज़ अपने आप पहचानकर सभी पेज देखता है, इसलिए आपको कभी पेज साइज़ सेट नहीं करना पड़ता। इसका इस्तेमाल तब करें जब URL में आइटम की संख्या दी जाती हो।",
+  "is how many items to skip, starting at 0. Lart auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
+    "0 से शुरू करके छोड़े जाने वाले आइटम की संख्या है। Lart साइट का पेज साइज़ अपने आप पहचानकर सभी पेज देखता है, इसलिए आपको कभी पेज साइज़ सेट नहीं करना पड़ता। इसका इस्तेमाल तब करें जब URL में आइटम की संख्या दी जाती हो।",
   "is not an image we can read": "ऐसी इमेज नहीं है जिसे हम पढ़ सकें",
   "is now using your new configuration.": "अब आपके नए कॉन्फ़िगरेशन का इस्तेमाल कर रहा है।",
   "is ready. Open Discover or hit Play on a title to use it.":

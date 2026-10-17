@@ -4,16 +4,16 @@ const catalog10: Record<string, string> = {
   "Posts are not available yet": "Posty nie są jeszcze dostępne",
   "Power tools": "Narzędzia dla zaawansowanych",
   "Power tools & diagnostics": "Narzędzia zaawansowane i diagnostyka",
-  "Power-user knob. Inject your own CSS, JS, and HTML into Harbor. Lives in your local settings; nothing leaves your machine.":
-    "Opcja dla zaawansowanych użytkowników. Wstrzykuj własny kod CSS, JS i HTML do Harbor. Jest przechowywany w ustawieniach lokalnych, nic nie opuszcza Twojego urządzenia.",
+  "Power-user knob. Inject your own CSS, JS, and HTML into Lart. Lives in your local settings; nothing leaves your machine.":
+    "Opcja dla zaawansowanych użytkowników. Wstrzykuj własny kod CSS, JS i HTML do Lart. Jest przechowywany w ustawieniach lokalnych, nic nie opuszcza Twojego urządzenia.",
   "Powers everything on this page: the web app, the phone remote, and the manga reader remote.":
     "Obsługuje wszystko na tej stronie: aplikację internetową, pilota na telefonie i pilota do czytnika mangi.",
   "Powers the Identify song button in the player.":
     "Obsługuje przycisk Rozpoznaj utwór w odtwarzaczu.",
   "Powers the Identify-song button in the player. Get a token at":
     "Obsługuje przycisk rozpoznawania utworu w odtwarzaczu. Token uzyskasz na",
-  "Prefer a server? Run every source through your own Suwayomi and point Harbor at it":
-    "Wolisz serwer? Uruchom każde źródło przez własny serwer Suwayomi i skieruj do niego Harbor",
+  "Prefer a server? Run every source through your own Suwayomi and point Lart at it":
+    "Wolisz serwer? Uruchom każde źródło przez własny serwer Suwayomi i skieruj do niego Lart",
   "Prefer embedded subtitles": "Preferuj wbudowane napisy",
   "Prefer my installed metadata addon": "Preferuj mój zainstalowany dodatek metadanych",
   "Preferred language for anime titles displayed on poster cards.":
@@ -34,11 +34,11 @@ const catalog10: Record<string, string> = {
   "Preparing…": "Przygotowywanie…",
   Preset: "Ustawienie wstępne",
   Presets: "Ustawienia wstępne",
-  "Press OK on a field to type, or use the Harbor remote on your phone.":
-    "Naciśnij OK na polu, aby wpisać tekst, albo użyj pilota Harbor w telefonie.",
+  "Press OK on a field to type, or use the Lart remote on your phone.":
+    "Naciśnij OK na polu, aby wpisać tekst, albo użyj pilota Lart w telefonie.",
   "Press Play": "Włącz odtwarzanie",
-  "Press Play and Harbor picks the source itself instead of opening the list.":
-    "Naciśnij Odtwórz, a Harbor sam wybierze źródło zamiast otwierać listę.",
+  "Press Play and Lart picks the source itself instead of opening the list.":
+    "Naciśnij Odtwórz, a Lart sam wybierze źródło zamiast otwierać listę.",
   "Press T": "Naciśnij T",
   "Press a key…": "Naciśnij klawisz…",
   "Press buttons and move the sticks. This mirrors your controller in real time.":
@@ -198,8 +198,8 @@ const catalog10: Record<string, string> = {
   Queued: "W kolejce",
   "Queued on {provider}": "W kolejce w {provider}",
   "Queued {queued} of {total} episodes.": "Dodano do kolejki {queued} z {total} odcinków.",
-  "Queued {queued} of {total} episodes. Harbor could not match every episode in this package.":
-    "W kolejce: {queued} z {total} odcinków. Harbor nie zdołał dopasować wszystkich odcinków w tym pakiecie.",
+  "Queued {queued} of {total} episodes. Lart could not match every episode in this package.":
+    "W kolejce: {queued} z {total} odcinków. Lart nie zdołał dopasować wszystkich odcinków w tym pakiecie.",
   "Quick Watches Under 90": "Szybkie seanse do 90 minut",
   "Quick panel": "Panel podręczny",
   Quiet: "Cicho",
@@ -267,7 +267,7 @@ const catalog10: Record<string, string> = {
   "Rating saved": "Ocena została zapisana",
   Ratings: "Oceny",
   "Ratings count from {movie}+ votes, {tv}+ for TV": "Oceny od {movie}+ głosów, dla TV od {tv}+",
-  "Ratings need a Harbor account": "Ocenianie wymaga konta Harbor",
+  "Ratings need a Lart account": "Ocenianie wymaga konta Lart",
   "Raw Nerve": "Żywy nerw",
   "Re-apply to the window and taskbar now": "Zastosuj ponownie do okna i paska zadań",
   "Re-authenticate": "Uwierzytelnij ponownie",
@@ -280,8 +280,8 @@ const catalog10: Record<string, string> = {
     "Ponownie uruchom wdrożenie lub wklej prawidłowy adres URL",
   "Re-runs the welcome flow and clears every dismissed tip.":
     "Ponownie uruchamia ekran powitalny i przywraca wszystkie odrzucone wskazówki.",
-  "Re-sync from your Harbor profile picture":
-    "Zsynchronizuj ponownie ze zdjęciem profilowym Harbor",
+  "Re-sync from your Lart profile picture":
+    "Zsynchronizuj ponownie ze zdjęciem profilowym Lart",
   "Re-test": "Przetestuj ponownie",
   Reach: "Zasięg ramion",
   "Reach HTTP sources with harbor.http(url, opts), binary gRPC sources with harbor.grpc(url, protobufBytes, opts), and parse HTML with harbor.parseHtml(html). There is no fetch, DOM, or storage in the sandbox.":
@@ -301,7 +301,7 @@ const catalog10: Record<string, string> = {
   "Read here": "Czytaj tutaj",
   "Read latest": "Czytaj najnowszy",
   "Read manga files you already have": "Czytaj posiadane pliki mangi",
-  "Read manga in Harbor": "Czytaj mangę w Harbor",
+  "Read manga in Lart": "Czytaj mangę w Lart",
   "Read more": "Czytaj więcej",
   "Read now": "Czytaj teraz",
   "Read on": "Czytaj na",
@@ -343,8 +343,8 @@ const catalog10: Record<string, string> = {
     "Real-Debrid, TorBox, AllDebrid i Premiumize miewają krótkie awarie, podczas których przestają zwracać łącza. Poczekaj kilka minut i spróbuj ponownie lub sprawdź stronę stanu usługi.",
   "Real-Debrid, TorBox, AllDebrid, Premiumize, Debrid-Link. Cached streams play direct. Keys stay local.":
     "Real-Debrid, TorBox, AllDebrid, Premiumize, Debrid-Link. Strumienie zapisane w pamięci podręcznej są odtwarzane bezpośrednio. Klucze pozostają lokalnie.",
-  "Real-time GPU upscaling that sharpens lines and cleans up gradients on anime, built right into Harbor's player. The one-tap setup below grabs the shaders; nothing else to install.":
-    "Skalowanie GPU w czasie rzeczywistym, które wyostrza linie i wygładza gradienty w anime, wbudowane bezpośrednio w odtwarzacz Harbor. Poniższa konfiguracja jednym kliknięciem pobiera shadery, nie trzeba instalować niczego więcej.",
+  "Real-time GPU upscaling that sharpens lines and cleans up gradients on anime, built right into Lart's player. The one-tap setup below grabs the shaders; nothing else to install.":
+    "Skalowanie GPU w czasie rzeczywistym, które wyostrza linie i wygładza gradienty w anime, wbudowane bezpośrednio w odtwarzacz Lart. Poniższa konfiguracja jednym kliknięciem pobiera shadery, nie trzeba instalować niczego więcej.",
   "Real-time anime upscaling. GPU-intensive.":
     "Skalowanie anime w czasie rzeczywistym. Duże obciążenie GPU.",
   Reality: "Reality show",
@@ -390,8 +390,8 @@ const catalog10: Record<string, string> = {
   "Rede aberta": "Telewizja niekodowana",
   Redeploy: "Wdróż ponownie",
   "Redeploy instructions": "Instrukcja ponownego wdrożenia",
-  "Redeploy it to get the latest Watch Together fixes. Harbor's public relay updates on its own.":
-    "Wdróż go ponownie, aby uzyskać najnowsze poprawki funkcji wspólnego oglądania. Publiczny przekaźnik Harbor aktualizuje się automatycznie.",
+  "Redeploy it to get the latest Watch Together fixes. Lart's public relay updates on its own.":
+    "Wdróż go ponownie, aby uzyskać najnowsze poprawki funkcji wspólnego oglądania. Publiczny przekaźnik Lart aktualizuje się automatycznie.",
   "Redeploy relay": "Wdróż przekaźnik ponownie",
   "Redeploy to pick up the latest Watch Together fixes. The in-app banner clears once the new version is live.":
     "Wdróż ponownie, aby uzyskać najnowsze poprawki Watch Together. Baner w aplikacji zniknie, gdy nowa wersja zacznie działać.",
@@ -465,19 +465,19 @@ const catalog10: Record<string, string> = {
   "Reminder updated": "Przypomnienie zaktualizowane",
   Reminders: "Przypomnienia",
   Remote: "Pilot",
-  "Remote control is off on that Harbor, so it cannot be driven from here.":
-    "Zdalne sterowanie jest wyłączone w tamtym Harbor, więc nie można nim sterować stąd.",
+  "Remote control is off on that Lart, so it cannot be driven from here.":
+    "Zdalne sterowanie jest wyłączone w tamtym Lart, więc nie można nim sterować stąd.",
   "Remote control is off, so other Harbors can see this one but cannot drive it.":
-    "Zdalne sterowanie jest wyłączone, więc inne urządzenia Harbor widzą to urządzenie, ale nie mogą nim sterować.",
+    "Zdalne sterowanie jest wyłączone, więc inne urządzenia Lart widzą to urządzenie, ale nie mogą nim sterować.",
   "Remote control is on, so other Harbors on this network can drive this one.":
-    "Zdalne sterowanie jest włączone, więc inne urządzenia Harbor w tej sieci mogą sterować tym urządzeniem.",
+    "Zdalne sterowanie jest włączone, więc inne urządzenia Lart w tej sieci mogą sterować tym urządzeniem.",
   "Remote off": "Pilot wyłączony",
   "Remote server": "Serwer zdalny",
   "Remote streaming server": "Zdalny serwer strumieniowania",
   "Remote style": "Styl pilota",
   Remotes: "Piloty",
-  "Remotes are served by the desktop app. Open these settings on your computer's Harbor to get the links.":
-    "Piloty są udostępniane przez aplikację komputerową. Otwórz te ustawienia w Harbor na komputerze, aby uzyskać łącza.",
+  "Remotes are served by the desktop app. Open these settings on your computer's Lart to get the links.":
+    "Piloty są udostępniane przez aplikację komputerową. Otwórz te ustawienia w Lart na komputerze, aby uzyskać łącza.",
   "Remove all": "Usuń wszystko",
   "Remove all extensions ({n})": "Usuń wszystkie rozszerzenia ({n})",
   "Remove bookmark": "Usuń zakładkę",
@@ -554,8 +554,8 @@ const catalog10: Record<string, string> = {
   Renamed: "Zmieniono nazwę",
   "Render subtitles in a heavier weight. Turn off to use your font's normal weight.":
     "Wyświetlaj napisy grubszą czcionką. Wyłącz tę opcję, aby używać standardowej grubości wybranej czcionki.",
-  "Renders mpv inline so playback lives in Harbor itself. Disable to open it in a separate window instead.":
-    "Wyświetla mpv bezpośrednio w interfejsie, dzięki czemu odtwarzanie odbywa się w samym Harbor. Wyłącz tę opcję, aby zamiast tego otwierać je w osobnym oknie.",
+  "Renders mpv inline so playback lives in Lart itself. Disable to open it in a separate window instead.":
+    "Wyświetla mpv bezpośrednio w interfejsie, dzięki czemu odtwarzanie odbywa się w samym Lart. Wyłącz tę opcję, aby zamiast tego otwierać je w osobnym oknie.",
   "Reopening a title within this window resumes instead of re-downloading.":
     "Ponowne otwarcie tytułu w tym czasie wznowi odtwarzanie zamiast ponownego pobierania.",
   Reorder: "Zmień kolejność",
@@ -642,8 +642,8 @@ const catalog10: Record<string, string> = {
     "Zmieniono rozmiar {count} obrazu, aby go dopasować. Nie pominięto niczego ze względu na rozmiar.",
   "Resized {count} images to fit. Nothing was skipped for size.":
     "Zmieniono rozmiar {count} obrazów, aby je dopasować. Nie pominięto niczego ze względu na rozmiar.",
-  "Reskin the award trophies shown across Harbor. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
-    "Zmień wygląd trofeów wyświetlanych w całym Harbor. Kliknij dowolną nagrodę, aby dodać plik PNG lub animowany GIF, dodaj własne typy nagród albo zaimportuj cały zestaw naraz.",
+  "Reskin the award trophies shown across Lart. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
+    "Zmień wygląd trofeów wyświetlanych w całym Lart. Kliknij dowolną nagrodę, aby dodać plik PNG lub animowany GIF, dodaj własne typy nagród albo zaimportuj cały zestaw naraz.",
   "Reskin the quality chips (4K, HDR, Dolby Vision, Atmos and more) that ride each stream in the play picker. Click any slot to drop in your own PNG or animated GIF, or import a whole set at once. You do not have to fill every slot.":
     "Zmień wygląd znaczników jakości (4K, HDR, Dolby Vision, Atmos i innych) widocznych przy każdym strumieniu w selektorze odtwarzania. Kliknij dowolne miejsce, aby dodać własny plik PNG lub animowany GIF, albo zaimportuj cały zestaw naraz. Nie musisz wypełniać wszystkich miejsc.",
   Resolution: "Rozdzielczość",
@@ -659,10 +659,10 @@ const catalog10: Record<string, string> = {
   "Rest the cursor on a poster to peek at the rating, story, and quick actions without opening it.":
     "Zatrzymaj kursor na plakacie, aby bez otwierania wyświetlić ocenę, opis fabuły i szybkie działania.",
   Restart: "Uruchom ponownie",
-  "Restart Harbor after the install completes.":
-    "Po zakończeniu instalacji uruchom ponownie Harbor.",
-  "Restart Harbor's own streaming server, then reload the stream once it is back. Desktop only.":
-    "Uruchom ponownie własny serwer strumieniowania Harbor, a następnie wczytaj strumień ponownie, gdy serwer wróci do działania. Tylko na komputerze.",
+  "Restart Lart after the install completes.":
+    "Po zakończeniu instalacji uruchom ponownie Lart.",
+  "Restart Lart's own streaming server, then reload the stream once it is back. Desktop only.":
+    "Uruchom ponownie własny serwer strumieniowania Lart, a następnie wczytaj strumień ponownie, gdy serwer wróci do działania. Tylko na komputerze.",
   "Restart engine": "Uruchom silnik ponownie",
   "Restart game": "Uruchom grę ponownie",
   "Restart streaming server": "Uruchom ponownie serwer strumieniowania",
@@ -671,7 +671,7 @@ const catalog10: Record<string, string> = {
   Restore: "Przywróć",
   "Restore + upscale. The best all-rounder for most anime.":
     "Przywracanie + skalowanie w górę. Najlepszy wszechstronny wybór do większości anime.",
-  "Restore Harbor's interface scale to 100%.": "Przywróć skalę interfejsu Harbor do 100%.",
+  "Restore Lart's interface scale to 100%.": "Przywróć skalę interfejsu Lart do 100%.",
   "Restore and reload": "Przywróć i uruchom ponownie",
   "Restore dismissed hints": "Przywróć odrzucone wskazówki",
   "Restore from a backup": "Przywróć z kopii zapasowej",

@@ -36,7 +36,7 @@ export function RendererSheet({
   const target = snapshot.target;
   const localActive = target.kind === "local";
   const localName =
-    hostLabel(target.kind === "local" ? target.label : undefined) ?? t("This Harbor");
+    hostLabel(target.kind === "local" ? target.label : undefined) ?? t("This Lart");
 
   return (
     <div
@@ -57,10 +57,10 @@ export function RendererSheet({
           )}
         </div>
         <div className="flex flex-col px-2 pb-2">
-          <SectionLabel>Harbor</SectionLabel>
+          <SectionLabel>Lart</SectionLabel>
           <DeviceRow
             name={localName}
-            badge={`Harbor ${hostVersion}`}
+            badge={`Lart ${hostVersion}`}
             icon={<MonitorSmartphone size={20} strokeWidth={2} />}
             active={localActive}
             onSelect={() => {

@@ -44,8 +44,8 @@ const books: Record<string, string> = {
     "动漫页面上的评论在你主动显示前会被模糊处理，即使未标记为剧透。",
   "Show forum threads and comments from AniList on anime detail pages.":
     "在动漫详情页显示 AniList 论坛主题和评论。",
-  "Harbor shows your AniList lists on the Anime page and keeps your progress in sync.":
-    "Harbor 会在动漫页面显示你的 AniList 列表，并持续同步观看进度。",
+  "Lart shows your AniList lists on the Anime page and keeps your progress in sync.":
+    "Lart 会在动漫页面显示你的 AniList 列表，并持续同步观看进度。",
   "Finishing an anime episode updates your AniList progress. Forward only: it never lowers a count you already have.":
     "看完一集动漫后会更新你的 AniList 进度。只增不减：绝不会降低已有集数。",
   Anime: "动漫",
@@ -67,22 +67,22 @@ const books: Record<string, string> = {
   "Anime tab": "动漫标签页",
   "Anime leaves Home Continue Watching and stays in the Anime tab's own row.":
     "动漫内容会从首页的“继续观看”中移除，并仅保留在“动漫”标签页自己的内容行中。",
-  "Harbor ships a neutral trophy for every award. Install an icon pack or upload your own image per award to make them yours. Packs are hosted by whoever makes them, so the artwork is theirs, not bundled with Harbor.":
-    "Harbor 为每个奖项都提供一个中性风格的奖杯。安装图标包或为各奖项上传自己的图片，即可打造专属外观。图标包由其制作者托管，因此其中的美术作品归制作者所有，并未内置于 Harbor。",
+  "Lart ships a neutral trophy for every award. Install an icon pack or upload your own image per award to make them yours. Packs are hosted by whoever makes them, so the artwork is theirs, not bundled with Lart.":
+    "Lart 为每个奖项都提供一个中性风格的奖杯。安装图标包或为各奖项上传自己的图片，即可打造专属外观。图标包由其制作者托管，因此其中的美术作品归制作者所有，并未内置于 Lart。",
   "View community award packs": "查看社区奖项图标包",
   "Icon packs and single-award art from the community": "社区提供的图标包和单个奖项图稿",
   "Upload an image per award, or name your zip files after the ID shown under each one (tap to copy). Natural names work too, so best_soundtrack, movie_of_the_year, etc. still match.":
     "为每个奖项上传一张图片，或按各奖项下方显示的 ID 为 .zip 文件命名（点按即可复制）。自然名称也能识别，例如 best_soundtrack、movie_of_the_year 等仍可正确匹配。",
-  "An award pack is a single JSON file plus the images it points to. Host both anywhere public (your own server, a GitHub repo, etc.) and share the JSON URL. Harbor only stores the URLs you install, never the images.":
-    "奖项图标包由一个 JSON 文件及其指向的图片组成。你可以将两者托管在任何公开位置（自己的服务器、GitHub 仓库等），然后分享 JSON URL。Harbor 只会存储你安装的 URL，绝不会存储图片。",
+  "An award pack is a single JSON file plus the images it points to. Host both anywhere public (your own server, a GitHub repo, etc.) and share the JSON URL. Lart only stores the URLs you install, never the images.":
+    "奖项图标包由一个 JSON 文件及其指向的图片组成。你可以将两者托管在任何公开位置（自己的服务器、GitHub 仓库等），然后分享 JSON URL。Lart 只会存储你安装的 URL，绝不会存储图片。",
   "Each key above is an award ID. Any key you omit falls back to the default trophy (or a lower-priority pack). The full list of IDs is every award shown in the grid above.":
     "上方每个键都是一个奖项 ID。任何省略的键都会回退到默认奖杯（或优先级较低的图标包）。完整 ID 列表就是上方网格中显示的所有奖项。",
-  'Name each image file after its award ID and put them in a .zip, then use "Import a .zip pack" above. No JSON, no hosting needed. Harbor matches each file to its award, stores it locally, resizes it, and skips anything it doesn\'t recognize.':
-    "以对应奖项 ID 为每个图片文件命名并放入 .zip，然后使用上方的“导入 .zip 图标包”。无需 JSON，也无需托管。Harbor 会将每个文件与对应奖项匹配，存储在本地并调整尺寸，同时跳过无法识别的文件。",
+  'Name each image file after its award ID and put them in a .zip, then use "Import a .zip pack" above. No JSON, no hosting needed. Lart matches each file to its award, stores it locally, resizes it, and skips anything it doesn\'t recognize.':
+    "以对应奖项 ID 为每个图片文件命名并放入 .zip，然后使用上方的“导入 .zip 图标包”。无需 JSON，也无需托管。Lart 会将每个文件与对应奖项匹配，存储在本地并调整尺寸，同时跳过无法识别的文件。",
   "How episodes are grouped for shows and anime. TVDB is the default: it gives the arc, DVD, and absolute orderings anime fans expect, with no key needed. TMDB keeps the plain aired order. Either way, every episode still plays and marks watched the same.":
     "剧集和动漫的分集编排方式。默认使用 TVDB：无需密钥即可提供动漫爱好者需要的篇章顺序、DVD 顺序和绝对顺序。TMDB 则保留普通的首播顺序。无论选择哪种方式，所有单集的播放和已观看标记都不受影响。",
-  "Turns the season button into a full panel: order tabs (Aired, DVD, Absolute, and any the show has) plus a season table with air-date ranges and episode counts. On by default for anime through Harbor's TVDB service, no key needed. Add your own TVDB key to use it for regular shows too.":
-    "将季按钮变成完整面板，其中包含顺序标签页（首播、DVD、绝对顺序以及该剧提供的任何其他顺序）和显示播出日期范围及集数的季表格。通过 Harbor 的 TVDB 服务，此功能默认对动漫开启且无需密钥。添加你自己的 TVDB 密钥后，也可用于普通剧集。",
+  "Turns the season button into a full panel: order tabs (Aired, DVD, Absolute, and any the show has) plus a season table with air-date ranges and episode counts. On by default for anime through Lart's TVDB service, no key needed. Add your own TVDB key to use it for regular shows too.":
+    "将季按钮变成完整面板，其中包含顺序标签页（首播、DVD、绝对顺序以及该剧提供的任何其他顺序）和显示播出日期范围及集数的季表格。通过 Lart 的 TVDB 服务，此功能默认对动漫开启且无需密钥。添加你自己的 TVDB 密钥后，也可用于普通剧集。",
   "Control the manga flipbook from your phone while reading on the big screen: turn pages, zoom, and switch modes. The reader also shows this link while you read.":
     "在大屏幕上阅读时，用手机控制漫画翻页阅读器：翻页、缩放和切换模式。阅读期间，阅读器也会显示此链接。",
   "Manga browse cache": "漫画浏览缓存",
@@ -110,21 +110,21 @@ const books: Record<string, string> = {
   "Add anime to your MyAnimeList and they show up here, grouped by status and ready to edit.":
     "将动画添加到 MyAnimeList 后，它们会按状态分组显示在这里，并可随时编辑。",
   "Add a manga source": "添加漫画源",
-  "Harbor does not host any manga or any sources. Connect a self-hosted server you run, install a source plugin from a repository you trust, or open a folder you already have.":
-    "Harbor 不托管任何漫画或内容源。你可以连接自己运行的自托管服务器、从信任的仓库安装源插件，或打开已有的文件夹。",
+  "Lart does not host any manga or any sources. Connect a self-hosted server you run, install a source plugin from a repository you trust, or open a folder you already have.":
+    "Lart 不托管任何漫画或内容源。你可以连接自己运行的自托管服务器、从信任的仓库安装源插件，或打开已有的文件夹。",
   "Browse manga": "浏览漫画",
-  "Read manga in Harbor": "在 Harbor 中阅读漫画",
-  "Harbor does not host any manga. Add a source plugin from a repository you trust, connect your own server, or open a local folder. You can turn this off anytime in Settings.":
-    "Harbor 不托管任何漫画。你可以从信任的仓库添加源插件、连接自己的服务器，或打开本地文件夹。你可以随时在“设置”中关闭此功能。",
+  "Read manga in Lart": "在 Lart 中阅读漫画",
+  "Lart does not host any manga. Add a source plugin from a repository you trust, connect your own server, or open a local folder. You can turn this off anytime in Settings.":
+    "Lart 不托管任何漫画。你可以从信任的仓库添加源插件、连接自己的服务器，或打开本地文件夹。你可以随时在“设置”中关闭此功能。",
   "Enable manga sources": "启用漫画源",
   "Keep going in the manga behind the anime you've been watching": "继续阅读你所看动画的原作漫画",
   "Open this link on a phone on the same Wi-Fi to flip pages, zoom, and pick chapters with gestures. Keep this reader open.":
     "在连接同一 Wi-Fi 的手机上打开此链接，即可使用手势翻页、缩放和选择章节。请保持此阅读器打开。",
   "Chapter finished": "本章已读完",
-  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Harbor can't import them.":
-    "这是 Mangayomi 仓库，但其中的内容源使用 Dart 或并非漫画源，因此 Harbor 无法导入。",
-  "This is a Mangayomi repo. Harbor runs its JavaScript sources natively. Import them to add these sources to your manga library.":
-    "这是 Mangayomi 仓库。Harbor 可原生运行其中的 JavaScript 内容源。导入后即可将这些内容源添加到你的漫画库。",
+  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Lart can't import them.":
+    "这是 Mangayomi 仓库，但其中的内容源使用 Dart 或并非漫画源，因此 Lart 无法导入。",
+  "This is a Mangayomi repo. Lart runs its JavaScript sources natively. Import them to add these sources to your manga library.":
+    "这是 Mangayomi 仓库。Lart 可原生运行其中的 JavaScript 内容源。导入后即可将这些内容源添加到你的漫画库。",
   "Reading subtitles...": "正在读取字幕…",
   "Chapter-finished hint": "章节结束提示",
   "Open in Anime": "在动漫中打开",
@@ -133,12 +133,12 @@ const books: Record<string, string> = {
     "添加到 AniList 的动漫会按状态分组显示在这里，并可随时编辑。",
   "Simkl lists no new shows or anime premiering this month. Try a different month.":
     "Simkl 本月没有新剧或动漫首播。请尝试其他月份。",
-  "Show your AniList lists as rails on the Anime page, keep your watch progress in sync as you finish episodes, and use your AniList avatar as your Harbor photo. Free at anilist.co.":
-    "在动漫页面以横向内容栏显示您的 AniList 列表，在看完单集后同步观看进度，并将 AniList 头像用作您的 Harbor 头像。可在 anilist.co 免费使用。",
+  "Show your AniList lists as rails on the Anime page, keep your watch progress in sync as you finish episodes, and use your AniList avatar as your Lart photo. Free at anilist.co.":
+    "在动漫页面以横向内容栏显示您的 AniList 列表，在看完单集后同步观看进度，并将 AniList 头像用作您的 Lart 头像。可在 anilist.co 免费使用。",
   "Disconnect AniList? Your lists will stop showing on the Anime page until you reconnect.":
     "要断开 AniList 连接吗？重新连接前，您的列表将不再显示在动漫页面。",
-  "Sync and track movies, shows, and anime across everything you use. Harbor marks what you finish as watched on Simkl and keeps your plan-to-watch list in step. Free at simkl.com.":
-    "在您使用的所有平台间同步并追踪电影、剧集和动漫。Harbor 会在 Simkl 上将您看完的内容标记为已观看，并同步您的待看列表。可在 simkl.com 免费使用。",
+  "Sync and track movies, shows, and anime across everything you use. Lart marks what you finish as watched on Simkl and keeps your plan-to-watch list in step. Free at simkl.com.":
+    "在您使用的所有平台间同步并追踪电影、剧集和动漫。Lart 会在 Simkl 上将您看完的内容标记为已观看，并同步您的待看列表。可在 simkl.com 免费使用。",
   "Trending Anime": "热门动漫",
   "New Anime Releases": "动漫新作",
   "Popular Anime": "热门动漫",
@@ -210,10 +210,10 @@ const books: Record<string, string> = {
     "分别在浏览页面、系列页面和阅读器中执行一次。",
   "Download chapter": "下载章节",
   "Featured manga": "精选漫画",
-  "Harbor does not host any manga or any sources. Connect your own server or open a folder you already have, and mix as many as you like.":
-    "Harbor 不托管任何漫画或来源。请连接你自己的服务器或打开已有文件夹，并可按需混合使用任意数量的来源。",
-  "Harbor ships no manga sources and hosts nothing. Extensions come from repositories other people maintain. Paste a repository URL below to browse its plugins, then install the ones you want. Every plugin runs sandboxed in an isolated worker with no access to your files, accounts, or the rest of the app.":
-    "Harbor 不内置任何漫画来源，也不托管任何内容。扩展来自他人维护的仓库。请在下方粘贴仓库 URL 以浏览其中的插件，然后安装所需插件。每个插件都在隔离的 Worker 沙盒中运行，无法访问你的文件、账号或应用的其他部分。",
+  "Lart does not host any manga or any sources. Connect your own server or open a folder you already have, and mix as many as you like.":
+    "Lart 不托管任何漫画或来源。请连接你自己的服务器或打开已有文件夹，并可按需混合使用任意数量的来源。",
+  "Lart ships no manga sources and hosts nothing. Extensions come from repositories other people maintain. Paste a repository URL below to browse its plugins, then install the ones you want. Every plugin runs sandboxed in an isolated worker with no access to your files, accounts, or the rest of the app.":
+    "Lart 不内置任何漫画来源，也不托管任何内容。扩展来自他人维护的仓库。请在下方粘贴仓库 URL 以浏览其中的插件，然后安装所需插件。每个插件都在隔离的 Worker 沙盒中运行，无法访问你的文件、账号或应用的其他部分。",
   "Inside it, one folder per manga, named like the title.":
     "在其中为每部漫画创建一个以漫画标题命名的文件夹。",
   "Loading chapter...": "正在加载章节…",
@@ -261,8 +261,8 @@ const books: Record<string, string> = {
   "Add a manga source to open these": "添加漫画源以打开这些内容",
   "Add tags (anime, horror, cozy...)": "添加标签（动漫、恐怖、治愈等）",
   "Award winner": "获奖者",
-  "Manga cannot be matched to a Harbor title yet, so {n} were left out.":
-    "漫画目前无法与 Harbor 作品匹配，因此有 {n} 部漫画未导入。",
+  "Manga cannot be matched to a Lart title yet, so {n} were left out.":
+    "漫画目前无法与 Lart 作品匹配，因此有 {n} 部漫画未导入。",
   "Search movies, shows, anime, manga": "搜索电影、剧集、动漫、漫画",
   "Top Manga": "漫画排行榜",
   "{award} winner": "{award} 得主",
@@ -297,8 +297,8 @@ const books: Record<string, string> = {
     "对于剧集和动漫，继续播放你首次所选版本的本季其余内容。无论“播放”是即时还是手动均适用。",
   "Goya Award": "戈雅奖",
   "Make an award pack": "制作奖项包",
-  "Name each file after its award ID. Harbor resizes them and skips anything it cannot match.":
-    "请以奖项 ID 为每个文件命名。Harbor 会调整文件尺寸，并跳过无法匹配的文件。",
+  "Name each file after its award ID. Lart resizes them and skips anything it cannot match.":
+    "请以奖项 ID 为每个文件命名。Lart 会调整文件尺寸，并跳过无法匹配的文件。",
   "New Face Award": "新人奖",
   "Only on anime": "仅限动漫",
   "Popular Manga": "热门漫画",
@@ -311,8 +311,8 @@ const books: Record<string, string> = {
   "Saturn Award": "土星奖",
   "Spirit Award": "独立精神奖",
   "Tokyo Anime Award Festival": "东京动画奖节",
-  "Turn anime back on in Harbor's content settings to browse it here.":
-    "请在 Harbor 的内容设置中重新启用动漫，以便在此浏览。",
+  "Turn anime back on in Lart's content settings to browse it here.":
+    "请在 Lart 的内容设置中重新启用动漫，以便在此浏览。",
   "Which language anime titles appear in on poster cards.": "海报卡片上的动漫标题使用哪种语言。",
   "Your {n} character and manga favorites live on the desktop Favorites tab.":
     "你收藏的 {n} 个角色和漫画项目可在桌面版的“收藏”标签页中查看。",
@@ -349,18 +349,18 @@ const books: Record<string, string> = {
   "Hugo Award Winners": "雨果奖获奖作品",
   "Nebula Award Winners": "星云奖获奖作品",
   "The eBook download was canceled.": "已取消下载电子书。",
-  "Harbor eBook": "Harbor 电子书",
+  "Lart eBook": "Lart 电子书",
   "This eBook is not connected to an installed source.": "此电子书未关联到已安装的来源。",
   "Loading chapter list…": "正在加载章节列表…",
   "EPUB eBook": "EPUB 电子书",
   "The eBook export was canceled.": "已取消导出电子书。",
   "Download a movie, episode, or eBook and it will appear here with its progress and offline status.":
     "下载电影、剧集或电子书后，它会显示在此处，并展示下载进度和离线状态。",
-  "Add trusted eBook sources from a Harbor-compatible repository.":
-    "从 Harbor 兼容仓库添加可信的电子书来源。",
-  "Harbor reading room": "Harbor 阅览室",
-  "Set up at least one readable eBook source to begin. Metadata can describe a book, but a folder, extension, or custom source is what lets Harbor open it.":
-    "请至少设置一个可读取的电子书来源。元数据可以描述图书，但只有文件夹、扩展或自定义来源才能让 Harbor 打开图书。",
+  "Add trusted eBook sources from a Lart-compatible repository.":
+    "从 Lart 兼容仓库添加可信的电子书来源。",
+  "Lart reading room": "Lart 阅览室",
+  "Set up at least one readable eBook source to begin. Metadata can describe a book, but a folder, extension, or custom source is what lets Lart open it.":
+    "请至少设置一个可读取的电子书来源。元数据可以描述图书，但只有文件夹、扩展或自定义来源才能让 Lart 打开图书。",
   "Reserved for your next book": "留给你的下一本书",
   "Ways to add an eBook source": "添加电子书来源的方式",
   "Add a Google Books API key for book titles, covers, authors, and descriptions. Wikidata works automatically as the final metadata fallback.":
@@ -376,16 +376,16 @@ const books: Record<string, string> = {
   "Read eBook files you already have": "阅读你已有的电子书文件",
   "This repository lists no eBook extensions.": "此仓库中没有电子书扩展。",
   "Could not load that eBook extension repository": "无法加载该电子书扩展仓库",
-  "eBook extensions use Harbor’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
-    "电子书扩展使用 Harbor 的隔离式 Worker、HTTP 桥接和 HTML 解析器，与漫画扩展使用相同的沙盒。请仅添加你信任的仓库。",
+  "eBook extensions use Lart’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
+    "电子书扩展使用 Lart 的隔离式 Worker、HTTP 桥接和 HTML 解析器，与漫画扩展使用相同的沙盒。请仅添加你信任的仓库。",
   "No repositories yet. Add one above to browse eBook extensions.":
     "暂无仓库。请在上方添加仓库以浏览电子书扩展。",
-  "Connect books you own, trusted reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "连接你拥有的图书、可信的阅读来源和元数据服务。Harbor 会保持书架井然有序，而所有来源始终由你掌控。",
+  "Connect books you own, trusted reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "连接你拥有的图书、可信的阅读来源和元数据服务。Lart 会保持书架井然有序，而所有来源始终由你掌控。",
   "Private reading collection": "私人阅读收藏",
   "eBook source settings": "电子书来源设置",
-  "Shape the metadata and reading language Harbor uses without changing your original files.":
-    "设置 Harbor 使用的元数据和阅读语言，而不更改原始文件。",
+  "Shape the metadata and reading language Lart uses without changing your original files.":
+    "设置 Lart 使用的元数据和阅读语言，而不更改原始文件。",
   "{count} chapter": "{count} 章",
   "This eBook could not be exported": "无法导出此电子书",
   "Continue Reading": "继续阅读",
@@ -404,7 +404,7 @@ const books: Record<string, string> = {
   Chapter: "章节",
   "Search chapter": "搜索章节",
   "Preparing book…": "正在准备图书…",
-  "Harbor Reader": "Harbor 阅读器",
+  "Lart Reader": "Lart 阅读器",
   "Translate chapter": "翻译章节",
   "Read chapter with Edge TTS": "使用 Edge TTS 朗读章节",
   "Read the complete chapter with Edge TTS": "使用 Edge TTS 朗读完整章节",
@@ -442,16 +442,16 @@ const books: Record<string, string> = {
   "Start of manga": "漫画开头",
   "End of manga": "漫画结尾",
   "Reader closed on your computer": "电脑上的阅读器已关闭",
-  "Open a manga on Harbor to control the reader from here.":
-    "在 Harbor 中打开漫画，即可从这里控制阅读器。",
+  "Open a manga on Lart to control the reader from here.":
+    "在 Lart 中打开漫画，即可从这里控制阅读器。",
   "Recognized at the {award}.": "获得 {award} 认可。",
   "Jina Reader": "Jina Reader",
-  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Harbor handles the shaders.":
-    "在动漫播放时实时锐化线条并平滑渐变的 GPU 着色器。选择一种模式，其余交给 Harbor。",
+  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Lart handles the shaders.":
+    "在动漫播放时实时锐化线条并平滑渐变的 GPU 着色器。选择一种模式，其余交给 Lart。",
   "Your award pack": "你的奖杯包",
   "Award pack": "奖杯包",
-  "Reskin the award trophies shown across Harbor. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
-    "更换 Harbor 各处所显示奖杯的外观。点击任意奖项即可添加 PNG 或动态 GIF，也可添加自定义奖项类型，或一次导入整套素材。",
+  "Reskin the award trophies shown across Lart. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
+    "更换 Lart 各处所显示奖杯的外观。点击任意奖项即可添加 PNG 或动态 GIF，也可添加自定义奖项类型，或一次导入整套素材。",
   "Reading…": "正在读取…",
   "Custom award name (e.g. My Festival)": "自定义奖项名称（例如：我的电影节）",
   "Add a custom award type": "添加自定义奖项类型",

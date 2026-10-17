@@ -32,7 +32,7 @@ export function PlayerWindowOptions() {
           </Anchored>
           <ToggleRow
             label={t("Stay in fullscreen after closing the player")}
-            sub={t("Keep Harbor fullscreen when you close the player.")}
+            sub={t("Keep Lart fullscreen when you close the player.")}
             value={settings.keepFullscreenOnExit}
             onChange={(v) => update({ keepFullscreenOnExit: v })}
           />

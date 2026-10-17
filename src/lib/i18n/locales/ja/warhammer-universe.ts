@@ -18,7 +18,7 @@ export default {
   "games.warhammerUniverse.screenNote": "第41千年紀のオリジナルアニメと長編映画。",
   "games.warhammerUniverse.free": "Warhammer TVで無料",
   "games.warhammerUniverse.subscription": "Warhammer+の契約が必要な場合があります",
-  "games.warhammerUniverse.movieNote": "2010年のアニメ映画。Harborの詳細でキャスト、予告編、配信元を確認。",
+  "games.warhammerUniverse.movieNote": "2010年のアニメ映画。Lartの詳細でキャスト、予告編、配信元を確認。",
   "games.warhammerUniverse.screenScope": "Warhammer TVの公開セレクション。Hammer and Bolterは複数の世界を扱います。視聴可否は配信元によります。",
   "games.warhammerUniverse.lore": "物語を深く知る",
   "games.warhammerUniverse.loreNote": "世界の作り手が描く人物、勢力、重要な出来事。",

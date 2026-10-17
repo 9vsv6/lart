@@ -88,17 +88,17 @@ const catalog: Record<string, string> = {
   "{count}w ago": "Hace {count} sem.",
   "{count}y ago": "Hace {count} años",
   "{country} Films": "Películas de {country}",
-  "{deviceLabel} can't decode this stream natively ({reasons}). Harbor uses ffmpeg to convert it into a format your TV understands.":
-    "{deviceLabel} no puede decodificar esta fuente de forma nativa ({reasons}). Harbor usa ffmpeg para convertirla a un formato compatible con tu TV.",
+  "{deviceLabel} can't decode this stream natively ({reasons}). Lart uses ffmpeg to convert it into a format your TV understands.":
+    "{deviceLabel} no puede decodificar esta fuente de forma nativa ({reasons}). Lart usa ffmpeg para convertirla a un formato compatible con tu TV.",
   "{deviceLabel} can't play this stream ({reasons}) and none of the {count} available alternatives match its capabilities.":
     "{deviceLabel} no puede reproducir esta fuente ({reasons}) y ninguna de las {count} alternativas disponibles es compatible con sus capacidades.",
   '{deviceLabel} can\'t play this stream ({reasons}). Click "Pick another" first to load alternatives, then try casting again.':
     '{deviceLabel} no puede reproducir esta fuente ({reasons}). Primero haz clic en "Elegir otra" para cargar alternativas y luego intenta transmitir de nuevo.',
-  "{deviceName} is an audio-only device. Harbor can't transcode video to audio yet, so this device can only stream audio files. Pick a TV, Chromecast, or display-equipped device to stream video.":
-    "{deviceName} es un dispositivo de solo audio. Harbor todavía no puede transcodificar video a audio, por lo que este dispositivo solo puede reproducir archivos de audio. Elige una TV, un Chromecast o un dispositivo con pantalla para reproducir video.",
+  "{deviceName} is an audio-only device. Lart can't transcode video to audio yet, so this device can only stream audio files. Pick a TV, Chromecast, or display-equipped device to stream video.":
+    "{deviceName} es un dispositivo de solo audio. Lart todavía no puede transcodificar video a audio, por lo que este dispositivo solo puede reproducir archivos de audio. Elige una TV, un Chromecast o un dispositivo con pantalla para reproducir video.",
   "{facet} filter: {value}": "Filtro de {facet}: {value}",
-  "{file} is empty. Start typing to restyle Harbor.":
-    "{file} está vacío. Empieza a escribir para cambiar el estilo de Harbor.",
+  "{file} is empty. Start typing to restyle Lart.":
+    "{file} está vacío. Empieza a escribir para cambiar el estilo de Lart.",
   "{first} and {second}": "{first} y {second}",
   "{format} added to Downloads": "{format} se agregó a Descargas",
   "{genreA} + {genreB}": "{genreA} + {genreB}",
@@ -226,10 +226,10 @@ const catalog: Record<string, string> = {
   "{n} titles together#one": "{n} títulos juntos",
   "{n} titles#few": "{n} títulos",
   "{n} titles#one": "{n} títulos",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#few":
-    "{n} solicitud de rastreador bloqueada en esta sesión. Harbor no envía telemetría.",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#one":
-    "{n} solicitud de rastreador bloqueada en esta sesión. Harbor no envía telemetría.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#few":
+    "{n} solicitud de rastreador bloqueada en esta sesión. Lart no envía telemetría.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#one":
+    "{n} solicitud de rastreador bloqueada en esta sesión. Lart no envía telemetría.",
   "{n} votes#few": "{n} votos",
   "{n} votes#one": "{n} votos",
   "{n} winner#few": "{n} ganador",
@@ -278,7 +278,7 @@ const catalog: Record<string, string> = {
   "{title} internal cover": "Portada interna de {title}",
   "{title} poster": "Póster de {title}",
   "{title} trailer": "Tráiler de {title}",
-  "{title} won't load inside Harbor.": "{title} no se carga dentro de Harbor.",
+  "{title} won't load inside Lart.": "{title} no se carga dentro de Lart.",
   "{total} found across {n} sources": "{total} encontrados en {n} fuentes",
   "{total} found across 1 source": "{total} encontrados en 1 fuente",
   "{value} +{n}": "{value} +{n}",
@@ -371,14 +371,14 @@ const catalog: Record<string, string> = {
   "Accept the terms": "Aceptar los términos",
   Actor: "Actor",
   "Actor, title, genre": "Actor, título, género",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#few":
-    "¿Agregar {n} títulos de tu lista de seguimiento de Harbor a Trakt? Trakt omitirá los que ya tenga.",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#one":
-    "¿Agregar {n} títulos de tu lista de seguimiento de Harbor a Trakt? Trakt omitirá los que ya tenga.",
-  "Add {n} titles from your Trakt watchlist to Harbor?#few":
-    "¿Agregar {n} títulos de tu lista de seguimiento de Trakt a Harbor?",
-  "Add {n} titles from your Trakt watchlist to Harbor?#one":
-    "¿Agregar {n} títulos de tu lista de seguimiento de Trakt a Harbor?",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#few":
+    "¿Agregar {n} títulos de tu lista de seguimiento de Lart a Trakt? Trakt omitirá los que ya tenga.",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#one":
+    "¿Agregar {n} títulos de tu lista de seguimiento de Lart a Trakt? Trakt omitirá los que ya tenga.",
+  "Add {n} titles from your Trakt watchlist to Lart?#few":
+    "¿Agregar {n} títulos de tu lista de seguimiento de Trakt a Lart?",
+  "Add {n} titles from your Trakt watchlist to Lart?#one":
+    "¿Agregar {n} títulos de tu lista de seguimiento de Trakt a Lart?",
   "Add a channel": "Agregar un canal",
   "Add a cover image": "Agregar una imagen de portada",
   "Add a custom award type": "Agregar un tipo de premio personalizado",
@@ -386,8 +386,8 @@ const catalog: Record<string, string> = {
     "Primero agrega un nombre para mostrar. Es el nombre que aparecerá en tu perfil.",
   "Add a Google Books API key for book titles, covers, authors, and descriptions. Wikidata works automatically as the final metadata fallback.":
     "Agrega una clave de API de Google Books para obtener títulos, portadas, autores y descripciones de libros. Wikidata funciona automáticamente como fuente final alternativa de metadatos.",
-  "Add a series above and Harbor will grab each new episode as it airs, on your terms.":
-    "Agrega una serie arriba y Harbor obtendrá cada episodio nuevo a medida que se emita, según tus preferencias.",
+  "Add a series above and Lart will grab each new episode as it airs, on your terms.":
+    "Agrega una serie arriba y Lart obtendrá cada episodio nuevo a medida que se emita, según tus preferencias.",
   "Add a series to auto-download": "Agregar una serie a las descargas automáticas",
   "Add a TMDB key in Settings to browse service catalogs.":
     "Agrega una clave de TMDB en Configuración para explorar los catálogos de servicios.",
@@ -407,12 +407,12 @@ const catalog: Record<string, string> = {
   "Add to Shelf": "Agregar al Estante",
   "Add to tile {n}": "Agregar al mosaico {n}",
   "Add to your watchlist": "Agregar a tu lista de seguimiento",
-  "Add trusted eBook sources from a Harbor-compatible repository.":
-    "Agrega fuentes de eBooks confiables desde un repositorio compatible con Harbor.",
+  "Add trusted eBook sources from a Lart-compatible repository.":
+    "Agrega fuentes de eBooks confiables desde un repositorio compatible con Lart.",
   "Add up to 6 screenshots so people can see your theme in action. Optional, but they sell it.":
     "Agrega hasta 6 capturas de pantalla para que la gente vea tu tema en acción. Es opcional, pero ayudan a convencer.",
   "Added to downloads": "Agregado a descargas",
-  "Added to Harbor": "Agregado a Harbor",
+  "Added to Lart": "Agregado a Lart",
   "Added to library": "Agregado a la biblioteca",
   "Added to Shelf": "Agregado al Estante",
   "Adding font…": "Agregando fuente…",
@@ -500,8 +500,8 @@ const catalog: Record<string, string> = {
   "Back {n} seconds#few": "Retroceder {n} segundos",
   "Back {n} seconds#one": "Retroceder {n} segundos",
   "Back on display": "De nuevo en pantalla",
-  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Harbor. Harbor saves it on its own.":
-    "De vuelta en la página de la API, desplázate hasta el final. Copia el valor de API Key y pégalo en Harbor. Harbor lo guarda automáticamente.",
+  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Lart. Lart saves it on its own.":
+    "De vuelta en la página de la API, desplázate hasta el final. Copia el valor de API Key y pégalo en Lart. Lart lo guarda automáticamente.",
   "Back on TMDB, click your avatar in the top right and choose Settings from the menu.":
     "De vuelta en TMDB, haz clic en tu avatar arriba a la derecha y selecciona Configuración en el menú.",
   "Back to eBook actions": "Volver a las acciones del eBook",
@@ -549,8 +549,8 @@ const catalog: Record<string, string> = {
     "Integra una biblioteca generada por servidor con tu propia configuración de fuentes.",
   "Bring friends here": "Trae amigos aquí",
   "Bring friends to {label}": "Trae amigos a {label}",
-  "Bring trusted source packages aboard through Harbor’s isolated extension worker.":
-    "Integra paquetes de fuentes confiables mediante el proceso aislado de extensiones de Harbor.",
+  "Bring trusted source packages aboard through Lart’s isolated extension worker.":
+    "Integra paquetes de fuentes confiables mediante el proceso aislado de extensiones de Lart.",
   "Bring your own keys": "Usa tus propias claves",
   "British Independent Film Awards": "Premios del Cine Independiente Británico",
   Bromance: "Amistad entre hombres",
@@ -575,8 +575,8 @@ const catalog: Record<string, string> = {
   "by {authors}": "de {authors}",
   "Cache on {provider}": "En caché en {provider}",
   "Cached on {providers}": "En caché en {providers}",
-  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Harbor feature, so your chrome never goes stale when Harbor adds menu items.":
-    "Usa estas funciones desde controladores onclick o desde el JS de tu tema. Son estables y seguras: cada una activa la función real de Harbor, por lo que tu interfaz nunca queda desactualizada cuando Harbor agrega elementos al menú.",
+  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Lart feature, so your chrome never goes stale when Lart adds menu items.":
+    "Usa estas funciones desde controladores onclick o desde el JS de tu tema. Son estables y seguras: cada una activa la función real de Lart, por lo que tu interfaz nunca queda desactualizada cuando Lart agrega elementos al menú.",
   "cam rips": "grabaciones CAM",
   "Cancel audio generation": "Cancelar generación de audio",
   "Cancel Edge TTS generation": "Cancelar generación de Edge TTS",
@@ -595,8 +595,8 @@ const catalog: Record<string, string> = {
   "Change channel": "Cambiar de canal",
   "Change password": "Cambiar contraseña",
   "Change your handle?": "¿Cambiar tu alias?",
-  "Changing the metadata language reloads Harbor so the new language takes effect. Apply when you're done with the options above.":
-    "Al cambiar el idioma de los metadatos, Harbor se recarga para aplicar el nuevo idioma. Cuando termines con las opciones anteriores, aplica los cambios.",
+  "Changing the metadata language reloads Lart so the new language takes effect. Apply when you're done with the options above.":
+    "Al cambiar el idioma de los metadatos, Lart se recarga para aplicar el nuevo idioma. Cuando termines con las opciones anteriores, aplica los cambios.",
   Chapter: "Capítulo",
   "Chapter {chapter}": "Capítulo {chapter}",
   "Chapters not reported": "Capítulos no reportados",
@@ -655,7 +655,7 @@ const catalog: Record<string, string> = {
   Colored: "Con color",
   Colors: "Colores",
   "Colors, layout, and fonts. No code.": "Colores, diseño y fuentes. Sin código.",
-  "Come back to Harbor and try casting again.": "Vuelve a Harbor e intenta transmitir de nuevo.",
+  "Come back to Lart and try casting again.": "Vuelve a Lart e intenta transmitir de nuevo.",
   "Community index": "Índice de la comunidad",
   Compact: "Compacta",
   "Complete book": "Libro completo",
@@ -669,8 +669,8 @@ const catalog: Record<string, string> = {
     "Confirma una vez más que es para uso personal y marca la casilla para aceptar los términos de la API.",
   "Congrats! Tap to view your badges.": "¡Felicidades! Toca para ver tus insignias.",
   "Connect a source": "Conectar una fuente",
-  "Connect books you own, trusted reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "Conecta libros que poseas, fuentes de lectura confiables y servicios de metadatos. Harbor mantiene la estantería organizada mientras cada fuente permanece bajo tu control.",
+  "Connect books you own, trusted reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "Conecta libros que poseas, fuentes de lectura confiables y servicios de metadatos. Lart mantiene la estantería organizada mientras cada fuente permanece bajo tu control.",
   "Connect to your computer to manage your library.":
     "Conéctate a tu computadora para administrar tu biblioteca.",
   "Connect to your computer to switch": "Conéctate a tu computadora para cambiar",
@@ -679,7 +679,7 @@ const catalog: Record<string, string> = {
   "Content advisory style": "Estilo de la advertencia de contenido",
   Contents: "Contenido",
   "Continue in browser": "Continuar en el navegador",
-  "Continue in Harbor": "Continuar en Harbor",
+  "Continue in Lart": "Continuar en Lart",
   "Continue Reading": "Seguir leyendo",
   "Continue Watching": "Seguir viendo",
   "Continue your bookmarks": "Continúa con tus marcadores",
@@ -788,12 +788,12 @@ const catalog: Record<string, string> = {
   "Didn't catch that": "No entendí eso",
   "Direct link": "Enlace directo",
   "Direct stream": "Fuente directa",
-  "Direct torrent play needs the Harbor desktop app.":
-    "La reproducción directa de torrents requiere la aplicación de escritorio de Harbor.",
+  "Direct torrent play needs the Lart desktop app.":
+    "La reproducción directa de torrents requiere la aplicación de escritorio de Lart.",
   "Disc Source": "Fuente del disco",
   Discard: "Descartar",
-  "Dispatched on window. Listen from your theme JS to react to Harbor's lifecycle.":
-    "Se envía en window. Escúchalo desde el JS de tu tema para responder al ciclo de vida de Harbor.",
+  "Dispatched on window. Listen from your theme JS to react to Lart's lifecycle.":
+    "Se envía en window. Escúchalo desde el JS de tu tema para responder al ciclo de vida de Lart.",
   "Display the artist and album under the title on the card.":
     "Mostrar el artista y el álbum debajo del título en la tarjeta.",
   "Distinguished fiction honored by the Pulitzer Prize":
@@ -821,8 +821,8 @@ const catalog: Record<string, string> = {
   "Drop a {extension}": "Suelta un archivo {extension}",
   "Drop a theme file here or click to browse.":
     "Suelta aquí un archivo de tema o haz clic para buscarlo.",
-  "Drop in art at any resolution. Harbor resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
-    "Suelta una imagen en cualquier resolución. Harbor redimensiona y comprime por ti todo lo que sea demasiado grande, para que nada se omita por su tamaño. Los PNG cuadrados con fondo transparente se ven mejor.",
+  "Drop in art at any resolution. Lart resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
+    "Suelta una imagen en cualquier resolución. Lart redimensiona y comprime por ti todo lo que sea demasiado grande, para que nada se omita por su tamaño. Los PNG cuadrados con fondo transparente se ven mejor.",
   "Drop many images, GIFs, or a .zip at once. Name each file after its slot ({example}) and we match them. Any size is fine, we resize big images and keep animated GIFs light.":
     "Suelta varias imágenes, GIF o un archivo .zip a la vez. Nombra cada archivo según su espacio ({example}) y los vincularemos. Cualquier tamaño funciona: redimensionamos las imágenes grandes y optimizamos los GIF animados.",
   "Drop the About and Custom labels so an embed fills the card cleanly.":
@@ -831,8 +831,8 @@ const catalog: Record<string, string> = {
   "E-AC-3 unsupported": "E-AC-3 no compatible",
   "Easing tokens": "Tokens de transición",
   "eBook actions": "Acciones de eBook",
-  "eBook extensions use Harbor’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
-    "Las extensiones de eBook usan el worker aislado, el puente HTTP y el analizador HTML de Harbor, el mismo entorno aislado que usan las extensiones de manga. Agrega solo repositorios en los que confíes.",
+  "eBook extensions use Lart’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
+    "Las extensiones de eBook usan el worker aislado, el puente HTTP y el analizador HTML de Lart, el mismo entorno aislado que usan las extensiones de manga. Agrega solo repositorios en los que confíes.",
   "eBook source settings": "Configuración de fuentes de eBook",
   eBooks: "eBooks",
   "Edge TTS failed": "Falló TTS de Edge",
@@ -863,12 +863,12 @@ const catalog: Record<string, string> = {
   "Every color token, stable selector, {api} call, live hook (bell, account menu, avatar, status dot, unread badge), and copy-paste recipe.":
     "Cada token de color, selector estable, llamada a {api}, integración en vivo (campana, menú de cuenta, avatar, punto de estado, insignia de no leídos) y guía para copiar y pegar.",
   "Every slot name": "Cada nombre de espacio",
-  "Every surface in Harbor maps to one of these 12 variables.":
-    "Cada superficie de Harbor corresponde a una de estas 12 variables.",
+  "Every surface in Lart maps to one of these 12 variables.":
+    "Cada superficie de Lart corresponde a una de estas 12 variables.",
   "Every theme is sandboxed, scanned, and reviewed before it reaches the library, so you can try any look without a second thought.":
     "Cada tema está aislado, analizado y revisado antes de llegar a la biblioteca, para que puedas probar cualquier estilo con total tranquilidad.",
-  "Every theme you share gets a private owner token. On the device where you shared it, Harbor saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
-    "Cada tema que compartes recibe un token privado de propietario. Harbor lo guardó automáticamente en el dispositivo desde el que lo compartiste, por lo que esos temas aparecen aquí para que los reclames con un toque. Para reclamar uno desde otro dispositivo, pega ese token abajo. Ahora, los nuevos temas compartidos se vinculan directamente con tu cuenta, así que no volverás a necesitarlo.",
+  "Every theme you share gets a private owner token. On the device where you shared it, Lart saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
+    "Cada tema que compartes recibe un token privado de propietario. Lart lo guardó automáticamente en el dispositivo desde el que lo compartiste, por lo que esos temas aparecen aquí para que los reclames con un toque. Para reclamar uno desde otro dispositivo, pega ese token abajo. Ahora, los nuevos temas compartidos se vinculan directamente con tu cuenta, así que no volverás a necesitarlo.",
   example: "ejemplo",
   "exceeds the {count} slot limit": "supera el límite de {count} espacios",
   Excellence: "Excelencia",
@@ -877,8 +877,8 @@ const catalog: Record<string, string> = {
     "Adaptaciones experimentales 1:1 de otras apps. Es posible que tengan detalles por pulir.",
   "Explore {name}": "Explorar {name}",
   "Explore, discover and earn stars": "Explora, descubre y gana estrellas",
-  "Export your Harbor setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
-    "Exporta tu configuración de Harbor a un solo archivo y elige exactamente qué incluir. Al restaurarlo, solo se recuperará lo que contenga el archivo. Tu inicio de sesión de Stremio nunca se incluye.",
+  "Export your Lart setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
+    "Exporta tu configuración de Lart a un solo archivo y elige exactamente qué incluir. Al restaurarlo, solo se recuperará lo que contenga el archivo. Tu inicio de sesión de Stremio nunca se incluye.",
   "Extension dock": "Panel de extensiones",
   "External | {hostname}": "Externo | {hostname}",
   "External site: {hostname}": "Sitio externo: {hostname}",
@@ -900,7 +900,7 @@ const catalog: Record<string, string> = {
   Fiction: "Ficción",
   Fight: "Pelea",
   "File another": "Reportar otro",
-  "File is not a Harbor layout profile.": "El archivo no es un perfil de diseño de Harbor.",
+  "File is not a Lart layout profile.": "El archivo no es un perfil de diseño de Lart.",
   "File it with the government": "Presentarlo ante el gobierno",
   "Fill in the details, then Subscribe": "Completa los datos y luego selecciona Suscribirse",
   "Fills in where TMDB comes up empty (anime, older catalog). Free at":
@@ -908,12 +908,12 @@ const catalog: Record<string, string> = {
   Film: "Película",
   "Filter eBooks": "Filtrar eBooks",
   "Find a word or passage": "Buscar una palabra o pasaje",
-  "Finish updating Harbor": "Terminar de actualizar Harbor",
+  "Finish updating Lart": "Terminar de actualizar Lart",
   "first check pending": "primera comprobación pendiente",
   "Floating orbs over the canvas.": "Orbes flotantes sobre el lienzo.",
   Folder: "Carpeta",
-  "Folder selection is available in the Harbor app":
-    "La selección de carpetas está disponible en la app Harbor",
+  "Folder selection is available in the Lart app":
+    "La selección de carpetas está disponible en la app Lart",
   "Follow them out?": "¿Seguirlos afuera?",
   "Font tokens": "Tokens de fuente",
   "for {count} more episodes": "durante {count} episodios más",
@@ -961,55 +961,55 @@ const catalog: Record<string, string> = {
   "Google Books API key": "Clave de API de Google Books",
   "Google Fonts family": "Familia de fuentes de Google Fonts",
   "Got one a friend shared? Drop it in.": "¿Tienes uno que compartió un amigo? Suéltalo aquí.",
-  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Harbor handles the shaders.":
-    "Shaders de GPU que realzan las líneas y suavizan los degradados del anime durante la reproducción. Elige un modo y Harbor se encarga de los shaders.",
+  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Lart handles the shaders.":
+    "Shaders de GPU que realzan las líneas y suavizan los degradados del anime durante la reproducción. Elige un modo y Lart se encarga de los shaders.",
   Grab: "Obtener",
   "Great job!": "¡Excelente trabajo!",
   guest: "invitado",
   Guest: "Invitado",
   H: "H",
-  "Harbor {version} downloaded but did not install on its own.":
-    "Harbor {version} se descargó, pero no se instaló automáticamente.",
-  "Harbor blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
-    "Harbor bloquea de forma predeterminada los archivos sospechosos y las versiones que no coinciden. A veces, este filtro es demasiado estricto para series antiguas y títulos inusuales.",
-  "Harbor can open only HTTP or HTTPS destinations.":
-    "Harbor solo puede abrir destinos HTTP o HTTPS.",
-  "Harbor cannot open links that include embedded credentials.":
-    "Harbor no puede abrir enlaces que incluyan credenciales integradas.",
-  "Harbor could not verify this destination.": "Harbor no pudo verificar este destino.",
-  "Harbor couldn't reach MyAnimeList or AniList. Check your connection and try again.":
-    "Harbor no pudo acceder a MyAnimeList ni a AniList. Revisa tu conexión e inténtalo de nuevo.",
-  "Harbor couldn't reach the catalog servers. Check your connection and try again.":
-    "Harbor no pudo acceder a los servidores del catálogo. Revisa tu conexión e inténtalo de nuevo.",
-  "Harbor dropped {n} suspicious or mismatched result.":
-    "Harbor descartó {n} resultado sospechoso o que no coincidía.",
-  "Harbor dropped {n} suspicious or mismatched results.":
-    "Harbor descartó {n} resultados sospechosos o que no coincidían.",
-  "Harbor eBook": "Libro electrónico de Harbor",
-  "Harbor found something at this address that looked like a Roku, but it didn't respond like one. The device may be offline or another product picked up the same broadcast.":
-    "Harbor encontró en esta dirección algo que parecía un Roku, pero no respondió como tal. Es posible que el dispositivo esté desconectado o que otro producto haya emitido la misma señal.",
-  "Harbor never hosts your books or source files.":
-    "Harbor nunca aloja tus libros ni archivos fuente.",
-  "Harbor never hosts your books.": "Harbor nunca aloja tus libros.",
-  "Harbor on the server display": "Harbor en la pantalla del servidor",
-  "Harbor opens 4 parallel requests to": "Harbor abre 4 solicitudes en paralelo a",
-  "Harbor queried {n} addons and got nothing back":
-    "Harbor consultó {n} complementos y no obtuvo resultados",
-  "Harbor queried 1 addon and got nothing back":
-    "Harbor consultó 1 complemento y no obtuvo resultados",
-  "Harbor Reader": "Lector de Harbor",
-  "Harbor reading room": "Sala de lectura de Harbor",
-  "Harbor Relay docs": "Documentación de Harbor Relay",
-  "Harbor Relay Documentation": "Documentación de Harbor Relay",
-  "Harbor snippet": "Fragmento de Harbor",
-  "Harbor Staff": "Equipo de Harbor",
-  "Harbor test message ({service}). If you can read this, your webhook is wired up.":
-    "Mensaje de prueba de Harbor ({service}). Si puedes leer esto, tu webhook está configurado.",
-  "Harbor theme": "Tema de Harbor",
-  "Harbor uses ffmpeg to convert streams into formats TVs can play. It's a one-time install and Harbor will pick it up automatically.":
-    "Harbor usa ffmpeg para convertir las fuentes a formatos compatibles con las TV. Se instala una sola vez y Harbor lo detectará automáticamente.",
-  "Harbor, from a public domain frame": "Harbor, de un fotograma de dominio público",
-  "Harbor's temporary viewer requires HTTPS.": "El visor temporal de Harbor requiere HTTPS.",
+  "Lart {version} downloaded but did not install on its own.":
+    "Lart {version} se descargó, pero no se instaló automáticamente.",
+  "Lart blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
+    "Lart bloquea de forma predeterminada los archivos sospechosos y las versiones que no coinciden. A veces, este filtro es demasiado estricto para series antiguas y títulos inusuales.",
+  "Lart can open only HTTP or HTTPS destinations.":
+    "Lart solo puede abrir destinos HTTP o HTTPS.",
+  "Lart cannot open links that include embedded credentials.":
+    "Lart no puede abrir enlaces que incluyan credenciales integradas.",
+  "Lart could not verify this destination.": "Lart no pudo verificar este destino.",
+  "Lart couldn't reach MyAnimeList or AniList. Check your connection and try again.":
+    "Lart no pudo acceder a MyAnimeList ni a AniList. Revisa tu conexión e inténtalo de nuevo.",
+  "Lart couldn't reach the catalog servers. Check your connection and try again.":
+    "Lart no pudo acceder a los servidores del catálogo. Revisa tu conexión e inténtalo de nuevo.",
+  "Lart dropped {n} suspicious or mismatched result.":
+    "Lart descartó {n} resultado sospechoso o que no coincidía.",
+  "Lart dropped {n} suspicious or mismatched results.":
+    "Lart descartó {n} resultados sospechosos o que no coincidían.",
+  "Lart eBook": "Libro electrónico de Lart",
+  "Lart found something at this address that looked like a Roku, but it didn't respond like one. The device may be offline or another product picked up the same broadcast.":
+    "Lart encontró en esta dirección algo que parecía un Roku, pero no respondió como tal. Es posible que el dispositivo esté desconectado o que otro producto haya emitido la misma señal.",
+  "Lart never hosts your books or source files.":
+    "Lart nunca aloja tus libros ni archivos fuente.",
+  "Lart never hosts your books.": "Lart nunca aloja tus libros.",
+  "Lart on the server display": "Lart en la pantalla del servidor",
+  "Lart opens 4 parallel requests to": "Lart abre 4 solicitudes en paralelo a",
+  "Lart queried {n} addons and got nothing back":
+    "Lart consultó {n} complementos y no obtuvo resultados",
+  "Lart queried 1 addon and got nothing back":
+    "Lart consultó 1 complemento y no obtuvo resultados",
+  "Lart Reader": "Lector de Lart",
+  "Lart reading room": "Sala de lectura de Lart",
+  "Lart Relay docs": "Documentación de Lart Relay",
+  "Lart Relay Documentation": "Documentación de Lart Relay",
+  "Lart snippet": "Fragmento de Lart",
+  "Lart Staff": "Equipo de Lart",
+  "Lart test message ({service}). If you can read this, your webhook is wired up.":
+    "Mensaje de prueba de Lart ({service}). Si puedes leer esto, tu webhook está configurado.",
+  "Lart theme": "Tema de Lart",
+  "Lart uses ffmpeg to convert streams into formats TVs can play. It's a one-time install and Lart will pick it up automatically.":
+    "Lart usa ffmpeg para convertir las fuentes a formatos compatibles con las TV. Se instala una sola vez y Lart lo detectará automáticamente.",
+  "Lart, from a public domain frame": "Lart, de un fotograma de dominio público",
+  "Lart's temporary viewer requires HTTPS.": "El visor temporal de Lart requiere HTTPS.",
   "Harvey Award Winners": "Ganadores del Premio Harvey",
   "Harvey Winner": "Ganador del Harvey",
   "Have a file?": "¿Tienes un archivo?",
@@ -1047,8 +1047,8 @@ const catalog: Record<string, string> = {
   "Highlight {color}": "Resaltado: {color}",
   "Highlighted passage": "Pasaje resaltado",
   "Highly rated by the community": "Muy valorado por la comunidad",
-  "Highly recommended. This is what gives you the full Harbor experience: Popular, Trending, In Theaters, and per-service rails. Free at":
-    "Muy recomendado. Esto te brinda la experiencia completa de Harbor: Popular, Tendencias, En cines y secciones por servicio. Gratis en",
+  "Highly recommended. This is what gives you the full Lart experience: Popular, Trending, In Theaters, and per-service rails. Free at":
+    "Muy recomendado. Esto te brinda la experiencia completa de Lart: Popular, Tendencias, En cines y secciones por servicio. Gratis en",
   "hit {count} downloads": "alcanzó {count} descargas",
   "Holding the funds before settling": "Retener los fondos antes de completar el cobro",
   HOME: "INICIO",
@@ -1057,8 +1057,8 @@ const catalog: Record<string, string> = {
   "How badge packs work": "Cómo funcionan los paquetes de insignias",
   "How it'll look": "Cómo se verá",
   "How many months the loan lasts": "Cuántos meses dura el préstamo",
-  "How quickly the Harbor cursor moves with the right stick.":
-    "La rapidez con que se mueve el cursor de Harbor con la palanca derecha.",
+  "How quickly the Lart cursor moves with the right stick.":
+    "La rapidez con que se mueve el cursor de Lart con la palanca derecha.",
   "How the canvas works": "Cómo funciona el lienzo",
   "How this is measured": "Cómo se mide",
   "HTML and CSS are each capped at 16,384 characters.":
@@ -1234,8 +1234,8 @@ const catalog: Record<string, string> = {
     "Asegúrate de que el Roku esté encendido y conectado a la misma red Wi-Fi que tu computadora.",
   "MAL Score": "Puntuación de MAL",
   "Manage eBook sources": "Administrar fuentes de eBooks",
-  "Manage every place Harbor can read from, whether it lives on disk or across the web.":
-    "Administra todos los lugares desde los que Harbor puede leer, ya sea en el disco o en la web.",
+  "Manage every place Lart can read from, whether it lives on disk or across the web.":
+    "Administra todos los lugares desde los que Lart puede leer, ya sea en el disco o en la web.",
   "Manga adaptation": "Adaptación de manga",
   "Mark all watched": "Marcar todo como visto",
   "Mark as Read": "Marcar como leído",
@@ -1316,8 +1316,8 @@ const catalog: Record<string, string> = {
     "Ningún canal coincide. Prueba con otro grupo o pega una URL.",
   "No Chromecast, DLNA, or Roku devices found. Make sure your TV is on, awake, and on the same Wi-Fi.":
     "No se encontraron dispositivos Chromecast, DLNA ni Roku. Asegúrate de que tu TV esté encendida, activa y conectada a la misma red Wi-Fi.",
-  "No clean release has surfaced yet. This may be too new. Harbor's filters dropped everything that came back as wrong-movie noise.":
-    "Aún no ha aparecido ninguna versión confiable. Puede que sea demasiado reciente. Los filtros de Harbor descartaron todos los resultados porque no correspondían a la película.",
+  "No clean release has surfaced yet. This may be too new. Lart's filters dropped everything that came back as wrong-movie noise.":
+    "Aún no ha aparecido ninguna versión confiable. Puede que sea demasiado reciente. Los filtros de Lart descartaron todos los resultados porque no correspondían a la película.",
   "No collections were found in the installed source catalog.":
     "No se encontraron colecciones en el catálogo de fuentes instalado.",
   "No collections yet. Add a collections addon to browse curated sets.":
@@ -1425,8 +1425,8 @@ const catalog: Record<string, string> = {
     "Una vez guardado, cada póster se vuelve a renderizar con IMDb, Rotten Tomatoes y Metacritic impresos.",
   "One line for the picker (optional)": "Una línea para el selector (opcional)",
   "One line shown under the name.": "Una línea que aparece debajo del nombre.",
-  "One-time setup downloads the shader pack (about 1 MB) into Harbor. No files to hunt down.":
-    "La configuración inicial descarga el paquete de shaders (aproximadamente 1 MB) en Harbor. No tendrás que buscar archivos.",
+  "One-time setup downloads the shader pack (about 1 MB) into Lart. No files to hunt down.":
+    "La configuración inicial descarga el paquete de shaders (aproximadamente 1 MB) en Lart. No tendrás que buscar archivos.",
   "Only addon/debrid sources, never peer-to-peer":
     "Solo fuentes de complementos o debrid, nunca entre pares",
   "Only continue if you fully trust this link":
@@ -1443,8 +1443,8 @@ const catalog: Record<string, string> = {
   "Open {site}": "Abrir {site}",
   "Open {type} adaptation: {title}": "Abrir adaptación de tipo {type}: {title}",
   "Open a folder": "Abrir una carpeta",
-  "Open a manga on Harbor to control the reader from here.":
-    "Abre un manga en Harbor para controlar el lector desde aquí.",
+  "Open a manga on Lart to control the reader from here.":
+    "Abre un manga en Lart para controlar el lector desde aquí.",
   "Open a terminal and run: brew install ffmpeg":
     "Abre una terminal y ejecuta: brew install ffmpeg",
   "Open a terminal and run: winget install Gyan.FFmpeg":
@@ -1607,8 +1607,8 @@ const catalog: Record<string, string> = {
   "Rate {count} stars": "Calificar con {count} estrellas",
   "Rate this pack": "Calificar este paquete",
   "Rate this theme": "Calificar este tema",
-  "Re-sync from your Harbor profile picture":
-    "Volver a sincronizar desde tu foto de perfil de Harbor",
+  "Re-sync from your Lart profile picture":
+    "Volver a sincronizar desde tu foto de perfil de Lart",
   "Re-test": "Volver a probar",
   "Reach HTTP sources with harbor.http(url, opts), binary gRPC sources with harbor.grpc(url, protobufBytes, opts), and parse HTML with harbor.parseHtml(html). There is no fetch, DOM, or storage in the sandbox.":
     "Accede a fuentes HTTP con harbor.http(url, opts), a fuentes gRPC binarias con harbor.grpc(url, protobufBytes, opts) y analiza HTML con harbor.parseHtml(html). No hay fetch, DOM ni almacenamiento en el entorno aislado.",
@@ -1704,13 +1704,13 @@ const catalog: Record<string, string> = {
     "Se redimensionó {count} imagen para ajustarla. No se omitió ninguna por su tamaño.",
   "Resized {count} images to fit. Nothing was skipped for size.":
     "Se redimensionaron {count} imágenes para ajustarlas. No se omitió ninguna por su tamaño.",
-  "Reskin the award trophies shown across Harbor. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
-    "Cambia el aspecto de los trofeos de premios que aparecen en Harbor. Haz clic en cualquier premio para agregar un PNG o GIF animado, agrega tus propios tipos de premios personalizados o importa un conjunto completo de una vez.",
+  "Reskin the award trophies shown across Lart. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
+    "Cambia el aspecto de los trofeos de premios que aparecen en Lart. Haz clic en cualquier premio para agregar un PNG o GIF animado, agrega tus propios tipos de premios personalizados o importa un conjunto completo de una vez.",
   "Reskin the quality chips (4K, HDR, Dolby Vision, Atmos and more) that ride each stream in the play picker. Click any slot to drop in your own PNG or animated GIF, or import a whole set at once. You do not have to fill every slot.":
     "Cambia el aspecto de las etiquetas de calidad (4K, HDR, Dolby Vision, Atmos y más) que acompañan a cada fuente en el selector de reproducción. Haz clic en cualquier espacio para colocar tu propio PNG o GIF animado, o importa un conjunto completo de una vez. No es necesario llenar todos los espacios.",
   "Resolving manifest": "Resolviendo el manifiesto",
   "Restart game": "Reiniciar juego",
-  "Restart Harbor after the install completes.": "Reinicia Harbor cuando termine la instalación.",
+  "Restart Lart after the install completes.": "Reinicia Lart cuando termine la instalación.",
   "Restart to update": "Reiniciar para actualizar",
   "Resume download": "Reanudar descarga",
   "Resume from your saved reading position": "Reanudar desde tu posición de lectura guardada",
@@ -1813,36 +1813,36 @@ const catalog: Record<string, string> = {
     "Selecciona un pasaje para agregar un resaltado, una nota o una referencia.",
   "Select a volume to see its chapters.": "Selecciona un volumen para ver sus capítulos.",
   "Select renderer": "Seleccionar renderizador",
-  "Send this title to your Harbor app": "Enviar este título a tu app de Harbor",
+  "Send this title to your Lart app": "Enviar este título a tu app de Lart",
   "Sending to {provider}": "Enviando a {provider}",
   "Sends only the chapter you open to DeepSeek. Volumes, chapters, and metadata stay unchanged.":
     "Solo envía a DeepSeek el capítulo que abras. Los volúmenes, capítulos y metadatos permanecen sin cambios.",
-  "Sends the context above straight to the Harbor team. No keys or library data.":
-    "Envía el contexto anterior directamente al equipo de Harbor. No incluye claves ni datos de la biblioteca.",
+  "Sends the context above straight to the Lart team. No keys or library data.":
+    "Envía el contexto anterior directamente al equipo de Lart. No incluye claves ni datos de la biblioteca.",
   "Sent. Thanks for the help!": "Enviado. ¡Gracias por tu ayuda!",
   "Series · {n}": "Series · {n}",
   service: "servicio",
   services: "servicios",
   "Services on the TV": "Servicios en la TV",
-  "Set a Harbor profile picture first": "Primero establece una foto de perfil de Harbor",
+  "Set a Lart profile picture first": "Primero establece una foto de perfil de Lart",
   "Set as a backdrop": "Establecer como fondo",
   "Set on <html>. Use them to scope styles to a specific layout/card/button choice.":
     "Se establecen en <html>. Úsalos para limitar los estilos a una opción específica de diseño, tarjeta o botón.",
   "Set on the root. Override any to swap typography.":
     "Se establecen en el elemento raíz. Sobrescribe cualquiera para cambiar la tipografía.",
-  "Set up at least one readable eBook source to begin. Metadata can describe a book, but a folder, extension, or custom source is what lets Harbor open it.":
-    "Configura al menos una fuente de eBooks compatible para comenzar. Los metadatos pueden describir un libro, pero Harbor necesita una carpeta, una extensión o una fuente personalizada para abrirlo.",
+  "Set up at least one readable eBook source to begin. Metadata can describe a book, but a folder, extension, or custom source is what lets Lart open it.":
+    "Configura al menos una fuente de eBooks compatible para comenzar. Los metadatos pueden describir un libro, pero Lart necesita una carpeta, una extensión o una fuente personalizada para abrirlo.",
   "Set up eBooks": "Configurar eBooks",
   "Set your status": "Establece tu estado",
-  "Sets streaming availability and the Now Playing release window. Pick a country and Harbor offers to match the interface, metadata, subtitle, and audio languages to it.":
-    "Establece la disponibilidad en streaming y el período de estrenos de En cartelera. Elige un país y Harbor te ofrecerá adaptar a este los idiomas de la interfaz, los metadatos, los subtítulos y el audio.",
+  "Sets streaming availability and the Now Playing release window. Pick a country and Lart offers to match the interface, metadata, subtitle, and audio languages to it.":
+    "Establece la disponibilidad en streaming y el período de estrenos de En cartelera. Elige un país y Lart te ofrecerá adaptar a este los idiomas de la interfaz, los metadatos, los subtítulos y el audio.",
   "Setting up an addon": "Configurando un complemento",
   "Setting up Multiview": "Configurando la vista múltiple",
   "Settle the estate's affairs": "Gestionar los asuntos de la herencia",
   "Setup · {title}": "Configuración · {title}",
   "Shaders installed": "Shaders instalados",
-  "Shape the metadata and reading language Harbor uses without changing your original files.":
-    "Define el idioma de los metadatos y de lectura que usa Harbor sin modificar tus archivos originales.",
+  "Shape the metadata and reading language Lart uses without changing your original files.":
+    "Define el idioma de los metadatos y de lectura que usa Lart sin modificar tus archivos originales.",
   "Share a pack": "Compartir un paquete",
   "Share a theme": "Compartir un tema",
   "Share an icon pack": "Compartir un paquete de iconos",
@@ -1885,8 +1885,8 @@ const catalog: Record<string, string> = {
   "Show them anyway": "Mostrarlos de todos modos",
   "Show translation": "Mostrar traducción",
   "Show up to 6 of your lists on your profile": "Mostrar hasta 6 de tus listas en tu perfil",
-  "Show your Harbor profile picture on the community":
-    "Mostrar tu foto de perfil de Harbor en la comunidad",
+  "Show your Lart profile picture on the community":
+    "Mostrar tu foto de perfil de Lart en la comunidad",
   "Showing {shown} of {total}. Refine the search to see more.":
     "Mostrando {shown} de {total}. Refina la búsqueda para ver más.",
   shown: "mostrado",
@@ -1917,8 +1917,8 @@ const catalog: Record<string, string> = {
   "Song identification failed": "No se pudo identificar la canción",
   soon: "pronto",
   Soon: "Próximamente",
-  "Sorry, Harbor crashed the last time it was running. You can review the details and choose whether to send a report.":
-    "Lo sentimos, Harbor falló la última vez que se ejecutó. Puedes revisar los detalles y decidir si quieres enviar un informe.",
+  "Sorry, Lart crashed the last time it was running. You can review the details and choose whether to send a report.":
+    "Lo sentimos, Lart falló la última vez que se ejecutó. Puedes revisar los detalles y decidir si quieres enviar un informe.",
   "Sort by": "Ordenar por",
   "Sorted newest first, tap for oldest": "Más recientes primero; toca para ver los más antiguos",
   "Sorted oldest first, tap for newest": "Más antiguos primero; toca para ver los más recientes",
@@ -1945,8 +1945,8 @@ const catalog: Record<string, string> = {
   "Stop feeding the hero carousel (back to automatic)":
     "Dejar de mostrarlo en el carrusel destacado (volver al modo automático)",
   "Stop sample": "Detener muestra",
-  "Storage is full. Clear Harbor cache storage, then try saving again.":
-    "El almacenamiento está lleno. Borra la caché de Harbor e intenta guardar de nuevo.",
+  "Storage is full. Clear Lart cache storage, then try saving again.":
+    "El almacenamiento está lleno. Borra la caché de Lart e intenta guardar de nuevo.",
   "Store each title in its own folder with its EPUB or PDF":
     "Guardar cada título en su propia carpeta junto con su EPUB o PDF",
   "Stories you love": "Historias que te encantan",
@@ -2078,10 +2078,10 @@ const catalog: Record<string, string> = {
   "This eBook could not be exported": "No se pudo exportar este eBook",
   "This eBook is not connected to an installed source.":
     "Este eBook no está conectado a una fuente instalada.",
-  "This file isn't a Harbor theme.": "Este archivo no es un tema de Harbor.",
+  "This file isn't a Lart theme.": "Este archivo no es un tema de Lart.",
   "This file isn't a readable theme.": "Este archivo de tema no se puede leer.",
   "This game couldn't load right now.": "Este juego no pudo cargarse en este momento.",
-  "This Harbor": "Este Harbor",
+  "This Lart": "Este Lart",
   "This is the only time you'll see it. If you ever forget your password, this code is the only way back into your account. Store it somewhere safe.":
     "Esta es la única vez que lo verás. Si alguna vez olvidas tu contraseña, este código será la única forma de recuperar el acceso a tu cuenta. Guárdalo en un lugar seguro.",
   "This is the part people get stuck on. None of it is checked and nothing is billed. Give the app any name, any URL, pick a type of use, and write a sentence for the summary. The contact fields can be anything real enough to look sensible. Tick the agreement and press Subscribe.":
@@ -2090,15 +2090,15 @@ const catalog: Record<string, string> = {
     "Este diseño solo muestra iconos, por lo que no se ven las etiquetas.",
   "This layout shows icons only, so renaming is off here. Reorder and hide still apply.":
     "Este diseño solo muestra iconos, así que aquí no se pueden cambiar los nombres. Aun así, puedes reordenar y ocultar.",
-  "This link goes to an external site that Harbor does not control or vouch for. Triple-check the address before you continue, and never enter your Harbor password anywhere but Harbor.":
-    "Este enlace lleva a un sitio externo que Harbor no controla ni respalda. Verifica tres veces la dirección antes de continuar y nunca ingreses tu contraseña de Harbor fuera de Harbor.",
+  "This link goes to an external site that Lart does not control or vouch for. Triple-check the address before you continue, and never enter your Lart password anywhere but Lart.":
+    "Este enlace lleva a un sitio externo que Lart no controla ni respalda. Verifica tres veces la dirección antes de continuar y nunca ingreses tu contraseña de Lart fuera de Lart.",
   "This PC": "Esta PC",
   "This playlist hasn't been loaded yet, or it has no channels.":
     "Esta lista de reproducción aún no se ha cargado o no tiene canales.",
   "This repository lists no eBook extensions.":
     "Este repositorio no incluye extensiones de eBooks.",
-  "This site may not support Harbor's temporary viewer. Retry the original link or open it in your browser.":
-    "Es posible que este sitio no sea compatible con el visor temporal de Harbor. Vuelve a intentar con el enlace original o ábrelo en tu navegador.",
+  "This site may not support Lart's temporary viewer. Retry the original link or open it in your browser.":
+    "Es posible que este sitio no sea compatible con el visor temporal de Lart. Vuelve a intentar con el enlace original o ábrelo en tu navegador.",
   "This source did not provide any chapters.": "Esta fuente no proporcionó ningún capítulo.",
   "This source returned no chapters for this title.":
     "Esta fuente no devolvió capítulos para este título.",
@@ -2180,8 +2180,8 @@ const catalog: Record<string, string> = {
   "Unlock controls": "Desbloquear controles",
   "Unlock player controls ({binding})": "Desbloquear controles del reproductor ({binding})",
   "Unmute this cell": "Activar el sonido de esta celda",
-  "Unsupported profile version ({version}). Update Harbor or use an older profile.":
-    "Versión de perfil no compatible ({version}). Actualiza Harbor o usa un perfil anterior.",
+  "Unsupported profile version ({version}). Update Lart or use an older profile.":
+    "Versión de perfil no compatible ({version}). Actualiza Lart o usa un perfil anterior.",
   "until I stop": "hasta que lo detenga",
   "until the season ends": "hasta que termine la temporada",
   "Untitled theme": "Tema sin título",
@@ -2219,13 +2219,13 @@ const catalog: Record<string, string> = {
   "Use this icon for all states": "Usar este ícono para todos los estados",
   "Use your API key to Translate Chapters to Your Language. Get a key from the":
     "Usa tu clave de API para traducir capítulos a tu idioma. Obtén una clave de",
-  "Used to check cache and unrestrict links. Harbor never adds or removes anything on your account on its own.": "Se usa para comprobar la caché y desbloquear enlaces. Harbor nunca agrega ni elimina nada de tu cuenta por sí solo.",
+  "Used to check cache and unrestrict links. Lart never adds or removes anything on your account on its own.": "Se usa para comprobar la caché y desbloquear enlaces. Lart nunca agrega ni elimina nada de tu cuenta por sí solo.",
   "Uses the directdl endpoint, which skips queueing for anything already cached.":
     "Usa el endpoint directdl, que omite la cola para todo lo que ya esté en caché.",
   "Uses up to 150 MB": "Usa hasta 150 MB",
   VA: "VA",
   "Venice Film Festival": "Festival de Cine de Venecia",
-  "Verified Harbor Staff": "Personal verificado de Harbor",
+  "Verified Lart Staff": "Personal verificado de Lart",
   "Verify and witness the signing": "Verificar y presenciar la firma",
   Versions: "Versiones",
   "Versions ({count})": "Versiones ({count})",
@@ -2250,8 +2250,8 @@ const catalog: Record<string, string> = {
   "Wait {seconds}s": "Espera {seconds} s",
   "Waiting for": "Esperando a",
   "Waive any overtime claim": "Renunciar a cualquier reclamo por horas extra",
-  "Want a badge that moves? Drop in a GIF up to 8 MB. Harbor shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
-    "¿Quieres una insignia que se mueva? Usa un GIF de hasta 8 MB. Harbor lo reduce y lo convierte a un formato animado ligero para que se vea nítido y cargue rápido. Procura que sea pequeño y se repita en bucle.",
+  "Want a badge that moves? Drop in a GIF up to 8 MB. Lart shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
+    "¿Quieres una insignia que se mueva? Usa un GIF de hasta 8 MB. Lart lo reduce y lo convierte a un formato animado ligero para que se vea nítido y cargue rápido. Procura que sea pequeño y se repita en bucle.",
   "Warmer accent, fixed the sidebar contrast, new cover":
     "Acento más cálido, contraste de la barra lateral corregido y nueva portada",
   "warming up…": "preparando…",
@@ -2343,7 +2343,7 @@ const catalog: Record<string, string> = {
     "Estás editando la interfaz manualmente, así que el editor visual no interferirá.",
   'You\'re given "power of attorney" for a relative. You can:':
     'Te otorgan un "poder notarial" para un familiar. Puedes:',
-  "You're leaving Harbor": "Estás saliendo de Harbor",
+  "You're leaving Lart": "Estás saliendo de Lart",
   "You've reached the end · {count} titles#few": "Llegaste al final · {count} títulos",
   "You've reached the end · {count} titles#one": "Llegaste al final · {count} títulos",
   "You've reached the end · {n} addons#few": "Llegaste al final · {n} complementos",
@@ -2364,11 +2364,11 @@ const catalog: Record<string, string> = {
   "Your favorites": "Tus favoritos",
   "YOUR FILTERS": "TUS FILTROS",
   "Your holiday plans": "Tus planes de vacaciones",
-  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Harbor. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
-    "Tu HTML y CSS se renderizan dentro de un marco aislado, completamente separado del resto de Harbor. Escríbelo como una pequeña página independiente. La fuente y el fondo de la página se controlan por separado arriba y se aplican a todo el perfil.",
+  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Lart. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
+    "Tu HTML y CSS se renderizan dentro de un marco aislado, completamente separado del resto de Lart. Escríbelo como una pequeña página independiente. La fuente y el fondo de la página se controlan por separado arriba y se aplican a todo el perfil.",
   "Your icons, in everyone's library": "Tus íconos, en la biblioteca de todos",
-  "Your library lives on Harbor. Connect to your computer and it shows up here.":
-    "Tu biblioteca está en Harbor. Conéctate a tu computadora y aparecerá aquí.",
+  "Your library lives on Lart. Connect to your computer and it shows up here.":
+    "Tu biblioteca está en Lart. Conéctate a tu computadora y aparecerá aquí.",
   "Your navigation": "Tu navegación",
   "Your new version is in for a quick review. The live listing keeps working until this one is approved.":
     "Tu nueva versión está en una revisión rápida. La versión publicada seguirá funcionando hasta que se apruebe esta.",
@@ -2376,8 +2376,8 @@ const catalog: Record<string, string> = {
     'En tu recibo de nómina aparecen el sueldo "bruto" y el "neto". El neto es:',
   "Your remote streaming server is not reachable. Check its address in Settings.":
     "No se puede acceder a tu servidor remoto de streaming. Verifica su dirección en Configuración.",
-  "Your Roku is set to block control requests from apps on your network, so Harbor can't reach it. This is a one-time setting on the Roku.":
-    "Tu Roku está configurado para bloquear las solicitudes de control de las apps de tu red, por lo que Harbor no puede conectarse. Solo debes cambiar esta configuración una vez en el Roku.",
+  "Your Roku is set to block control requests from apps on your network, so Lart can't reach it. This is a one-time setting on the Roku.":
+    "Tu Roku está configurado para bloquear las solicitudes de control de las apps de tu red, por lo que Lart no puede conectarse. Solo debes cambiar esta configuración una vez en el Roku.",
   "Your shelf is": "Tu estante está",
   "Your shelf is waiting": "Tu estante te espera",
   "Your shelf, your rules.": "Tu estante, tus reglas.",

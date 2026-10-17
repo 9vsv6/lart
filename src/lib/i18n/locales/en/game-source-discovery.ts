@@ -11,11 +11,11 @@ export default {
 
   "games.sources.batch.failedFile": "Couldn't prepare {file}.",
 
-  "games.sources.batch.restart": "Restart Harbor after updating to download selected files together.",
+  "games.sources.batch.restart": "Restart Lart after updating to download selected files together.",
 
   "games.sources.verification.action": "Verify source",
 
-  "games.sources.verification.waiting": "Complete the verification in the source window. Harbor will check its catalog afterward.",
+  "games.sources.verification.waiting": "Complete the verification in the source window. Lart will check its catalog afterward.",
 
   "games.sources.source_verify_busy": "Another source is being verified. Finish or close that window first.",
 
@@ -23,31 +23,31 @@ export default {
 
   "games.sources.source_verify_timeout": "Verification timed out. Try again when you’re ready.",
 
-  "games.sources.source_verify_unavailable": "Update and restart Harbor to verify this source.",
+  "games.sources.source_verify_unavailable": "Update and restart Lart to verify this source.",
 
   "games.sources.browser.direct": "Direct download",
 
   "games.sources.site.title": "Open a site",
-  "games.sources.site.note": "Paste a download page from any site. Harbor opens it in its own window, you pick the file there, and it downloads into Harbor.",
+  "games.sources.site.note": "Paste a download page from any site. Lart opens it in its own window, you pick the file there, and it downloads into Lart.",
   "games.sources.site.url": "Page link",
   "games.sources.site.open": "Open site",
   "games.sources.site.invalid": "That needs to be a public https link.",
-  "games.sources.browser.intro": "No debrid account needed. Choose a file on {host}, then choose where Harbor saves it.",
-  "games.sources.browser.fallback": "If the download does not start on its own, use the fallback link {host} shows on the page. Harbor still catches the file.",
+  "games.sources.browser.intro": "No debrid account needed. Choose a file on {host}, then choose where Lart saves it.",
+  "games.sources.browser.fallback": "If the download does not start on its own, use the fallback link {host} shows on the page. Lart still catches the file.",
 
   "games.sources.browser.choose": "Choose file on {host}",
 
-  "games.sources.browser.waiting": "Choose the file in the {host} window. Harbor will ask where to save it.",
+  "games.sources.browser.waiting": "Choose the file in the {host} window. Lart will ask where to save it.",
 
-  "games.sources.browser.selected": "Ready to download in Harbor",
+  "games.sources.browser.selected": "Ready to download in Lart",
 
   "games.sources.browser.another": "Choose another file",
 
-  "games.sources.browser.failed": "{host} could not hand this file to Harbor. Try again, or open it on {host}.",
+  "games.sources.browser.failed": "{host} could not hand this file to Lart. Try again, or open it on {host}.",
 
   "games.sources.browser.timeout": "The file picker timed out. Open {host} again to choose a file.",
 
-  "games.sources.browser.restart": "Restart Harbor after updating to use direct {host} downloads.",
+  "games.sources.browser.restart": "Restart Lart after updating to use direct {host} downloads.",
 
   "games.sources.retrySavedCatalog": "Retry saved catalog",
 
@@ -87,9 +87,9 @@ export default {
 
   "games.sources.art.torrent": "Torrent download",
 
-  "games.sources.art.engine": "Harbor torrent engine",
+  "games.sources.art.engine": "Lart torrent engine",
 
-  "games.sources.art.reviewTorrent": "Download in Harbor",
+  "games.sources.art.reviewTorrent": "Download in Lart",
 
 
 
@@ -137,7 +137,7 @@ export default {
 
   "games.sources.discovery.change": "Change link",
 
-  "games.sources.discovery.harbor": "Harbor catalog",
+  "games.sources.discovery.harbor": "Lart catalog",
 
   "games.sources.discovery.community": "Hydra-compatible catalog",
 
@@ -145,7 +145,7 @@ export default {
 
   "games.sources.discovery.reviewNote": "Only catalog listings are saved. Files are downloaded when you choose them.",
 
-  "games.sources.source_no_catalog": "This website doesn't publish a catalog link Harbor can read. Paste its JSON catalog link instead.",
+  "games.sources.source_no_catalog": "This website doesn't publish a catalog link Lart can read. Paste its JSON catalog link instead.",
 
   "games.sources.source_url": "Enter a website address, HTTP(S) catalog URL or Hydra install link.",
 
@@ -199,7 +199,7 @@ export default {
 
   "games.sources.links.account": "The service rejected the connection. Check its key in Sources settings.",
 
-  "games.sources.links.rate": "The service asked Harbor to wait. Try again shortly.",
+  "games.sources.links.rate": "The service asked Lart to wait. Try again shortly.",
 
   "games.sources.links.limit": "The service returned too many files to review at once.",
 
@@ -211,7 +211,7 @@ export default {
 
   "games.sources.links.destination": "Choose destination",
 
-  "games.sources.links.desktop": "Open Harbor desktop to download files.",
+  "games.sources.links.desktop": "Open Lart desktop to download files.",
 
   "games.sources.web.web": "Web downloads",
 
@@ -237,7 +237,7 @@ export default {
 
   "games.sources.web.again": "Start another job",
 
-  "games.sources.web.storage": "Harbor could not save this job. Nothing will be submitted again automatically.",
+  "games.sources.web.storage": "Lart could not save this job. Nothing will be submitted again automatically.",
 
   "games.sources.web.preparing": "Preparing in TorBox",
 
@@ -323,7 +323,7 @@ export default {
 
   "games.sources.pm.select": "Use this transfer",
 
-  "games.sources.pm.review": "Select the transfer you submitted. Harbor cannot match its source automatically.",
+  "games.sources.pm.review": "Select the transfer you submitted. Lart cannot match its source automatically.",
 
   "games.sources.pm.retry": "Retry transfer",
 

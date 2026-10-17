@@ -20,8 +20,8 @@ const catalog01: Record<string, string> = {
     '"{name}" e tutto il suo contenuto verranno rimossi. L\'operazione non può essere annullata.',
   "#{position} in {label} Today": "#{position} in {label} oggi",
   "${n} for {days} days": "${n} per {days} giorni",
-  "'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "nella pagina di configurazione nel browser integrato di Harbor. Scegli le opzioni. Quando fai clic su Installa nella pagina, Harbor rileva automaticamente il link e aggiorna l'Add-on.",
+  "'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "nella pagina di configurazione nel browser integrato di Lart. Scegli le opzioni. Quando fai clic su Installa nella pagina, Lart rileva automaticamente il link e aggiorna l'Add-on.",
   "'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "nella pagina di configurazione. Scegli le opzioni, poi copia il link di installazione fornito e incollalo qui sotto per aggiornare l'Add-on.",
   "), put that suffix here.": "), inserisci qui quel suffisso.",
@@ -54,7 +54,7 @@ const catalog01: Record<string, string> = {
   "1 month ago": "1 mese fa",
   "1 new episode since you last watched": "1 nuovo episodio dall'ultima visione",
   "1 option active": "1 opzione attiva",
-  "1 other Harbor": "1 altro Harbor",
+  "1 other Lart": "1 altro Lart",
   "1 selected": "1 selezionato",
   "1 title needs review — help us identify it.": "1 titolo da verificare: aiutaci a identificarlo.",
   "1 week": "1 settimana",
@@ -153,7 +153,7 @@ const catalog01: Record<string, string> = {
   "A / Cross": "A / Croce",
   "A Cloudflare Worker on your own account that hosts your Watch Together rooms.":
     "Un Cloudflare Worker sul tuo account che ospita le tue stanze Guarda insieme.",
-  "A Harbor account": "Un account Harbor",
+  "A Lart account": "Un account Lart",
   "A Live TV program is about to start": "Un programma TV in diretta sta per iniziare",
   "A TOP 10 corner ribbon on the Top 10 rail posters. The watchlist marker auto-moves to the opposite corner so nothing overlaps.":
     "Un nastro TOP 10 nell'angolo delle locandine della sezione Top 10. L'indicatore della Lista si sposta automaticamente nell'angolo opposto per evitare sovrapposizioni.",
@@ -161,10 +161,10 @@ const catalog01: Record<string, string> = {
     "Il pagamento di una bolletta avviene tramite addebito diretto. Il fornitore può:",
   "A blend of the sources above by percentile. Degrades gracefully when one is missing.":
     "Una combinazione delle fonti indicate sopra basata sui percentili. Se ne manca una, continua a funzionare senza problemi.",
-  "A browser tab opened on AniList. Approve Harbor there, then copy the text it shows and paste it below.":
-    "Si è aperta una scheda del browser su AniList. Autorizza Harbor, poi copia il testo mostrato e incollalo qui sotto.",
-  "A browser tab opened on MyAnimeList. Approve Harbor there, then copy the code or the page URL and paste it below.":
-    "Si è aperta una scheda del browser su MyAnimeList. Autorizza Harbor, poi copia il codice o l'URL della pagina e incollalo qui sotto.",
+  "A browser tab opened on AniList. Approve Lart there, then copy the text it shows and paste it below.":
+    "Si è aperta una scheda del browser su AniList. Autorizza Lart, poi copia il testo mostrato e incollalo qui sotto.",
+  "A browser tab opened on MyAnimeList. Approve Lart there, then copy the code or the page URL and paste it below.":
+    "Si è aperta una scheda del browser su MyAnimeList. Autorizza Lart, poi copia il codice o l'URL della pagina e incollalo qui sotto.",
   'A charge on your bank app sits as "pending" for a day. The merchant is:':
     "Nell'app della banca, un addebito risulta «in sospeso» per un giorno. L'esercente sta:",
   "A classic neural edge-directed luma doubler. Very high quality, heavy on the GPU. More neurons means sharper and slower.":
@@ -187,17 +187,17 @@ const catalog01: Record<string, string> = {
     "Un documento deve essere autenticato. Lo porti da un notaio o da un altro pubblico ufficiale autorizzato, che:",
   "A fast community subtitle index. Off by default; turn it on for extra coverage on newer or niche releases.":
     "Un rapido indice di sottotitoli della community. Disattivato per impostazione predefinita; attivalo per una copertura maggiore delle uscite recenti o di nicchia.",
-  "A filter applies everywhere Harbor picks a stream: the source picker, the instant pick, and Big Picture on TV.":
-    "Un filtro si applica ovunque Harbor scelga un flusso: nel selettore della fonte, nella selezione istantanea e in Big Picture sulla TV.",
+  "A filter applies everywhere Lart picks a stream: the source picker, the instant pick, and Big Picture on TV.":
+    "Un filtro si applica ovunque Lart scelga un flusso: nel selettore della fonte, nella selezione istantanea e in Big Picture sulla TV.",
   "A fixed amount every month": "Un importo fisso ogni mese",
   "A folder you already have": "Una cartella che hai già",
   "A free Cloudflare account.": "Un account Cloudflare gratuito.",
-  "A free TMDB key is highly recommended. It unlocks the full Harbor experience. The rest are optional, and Cinemeta works out of the box without any.":
-    "Una chiave TMDB gratuita è fortemente consigliata. Sblocca l'esperienza completa di Harbor. Le altre sono facoltative e Cinemeta funziona subito senza alcuna chiave.",
-  "A full screen, couch friendly Harbor for TVs, handhelds and big monitors.":
-    "Una versione di Harbor a schermo intero, comoda dal divano, per TV, dispositivi portatili e grandi monitor.",
-  "A good correction only has to be found once. Harbor can share verified fixes so the next person with the same file and subtitle gets an instant result. Records are keyed by salted fingerprints, never your files or anything personal.":
-    "Una buona correzione deve essere trovata una sola volta. Harbor può condividere le correzioni verificate, così chi usa lo stesso file e lo stesso sottotitolo ottiene subito il risultato. I record sono associati a impronte digitali con salt, mai ai tuoi file o a dati personali.",
+  "A free TMDB key is highly recommended. It unlocks the full Lart experience. The rest are optional, and Cinemeta works out of the box without any.":
+    "Una chiave TMDB gratuita è fortemente consigliata. Sblocca l'esperienza completa di Lart. Le altre sono facoltative e Cinemeta funziona subito senza alcuna chiave.",
+  "A full screen, couch friendly Lart for TVs, handhelds and big monitors.":
+    "Una versione di Lart a schermo intero, comoda dal divano, per TV, dispositivi portatili e grandi monitor.",
+  "A good correction only has to be found once. Lart can share verified fixes so the next person with the same file and subtitle gets an instant result. Records are keyed by salted fingerprints, never your files or anything personal.":
+    "Una buona correzione deve essere trovata una sola volta. Lart può condividere le correzioni verificate, così chi usa lo stesso file e lo stesso sottotitolo ottiene subito il risultato. I record sono associati a impronte digitali con salt, mai ai tuoi file o a dati personali.",
   "A grown-up can enter the parent PIN to keep watching.":
     "Un adulto può inserire il PIN per i genitori per continuare la visione.",
   "A hero up top, then Top 10, Trending, In Theaters and your service rows.":
@@ -218,8 +218,8 @@ const catalog01: Record<string, string> = {
     "Uno scaffale vivo per nuovi mondi, storie amate e libri ancora da scoprire.",
   "A loan tied to the property": "Un prestito garantito dall'immobile",
   "A mortgage is essentially:": "Un mutuo ipotecario è essenzialmente:",
-  "A name people can find you by across Harbor.":
-    "Un nome con cui le persone possono trovarti su Harbor.",
+  "A name people can find you by across Lart.":
+    "Un nome con cui le persone possono trovarti su Lart.",
   "A name you keep watching": "Un titolo che continui a guardare",
   "A neural network that doubles luma resolution. The sharpest general-purpose upscaler, strong on both live action and anime. Pick one variant.":
     "Una rete neurale che raddoppia la risoluzione della luminanza. È l'upscaler generico più nitido, ottimo sia con contenuti live action sia con gli anime. Scegli una variante.",
@@ -253,8 +253,8 @@ const catalog01: Record<string, string> = {
     "Un effetto vetro più ricco. Può offrire un aspetto migliore usando più risorse grafiche.",
   "A safe, simple space: kid-friendly titles, big art, one-tap play, and a watch-time limit.":
     "Uno spazio semplice e sicuro: titoli adatti ai bambini, immagini grandi, riproduzione con un tocco e limite al tempo di visione.",
-  "A safety copy of your addon order. One is saved automatically before Harbor writes any change, and you can save one yourself any time. The five most recent are kept.":
-    "Una copia di sicurezza dell'ordine dei tuoi Add-on. Ne viene salvata una automaticamente prima che Harbor apporti modifiche e puoi salvarne una manualmente in qualsiasi momento. Vengono conservate le cinque più recenti.",
+  "A safety copy of your addon order. One is saved automatically before Lart writes any change, and you can save one yourself any time. The five most recent are kept.":
+    "Una copia di sicurezza dell'ordine dei tuoi Add-on. Ne viene salvata una automaticamente prima che Lart apporti modifiche e puoi salvarne una manualmente in qualsiasi momento. Vengono conservate le cinque più recenti.",
   "A second binding for the same action so muscle memory survives.":
     "Un secondo comando per la stessa azione, così puoi continuare a usare quello a cui sei abituato.",
   "A share matching your months worked": "Una quota proporzionale ai mesi lavorati",
@@ -393,8 +393,8 @@ const catalog01: Record<string, string> = {
   "Add a TMDB key above to unlock this.":
     "Aggiungi qui sopra una chiave TMDB per sbloccare questa funzione.",
   "Add a TMDB key above to unlock.": "Aggiungi qui sopra una chiave TMDB per sbloccare.",
-  "Add a TMDB key for the full Harbor":
-    "Aggiungi una chiave TMDB per la versione completa di Harbor",
+  "Add a TMDB key for the full Lart":
+    "Aggiungi una chiave TMDB per la versione completa di Lart",
   "Add a TMDB key in Library settings.":
     "Aggiungi una chiave TMDB nelle Impostazioni della Libreria.",
   "Add a TMDB key in Settings to browse collections.":
@@ -443,8 +443,8 @@ const catalog01: Record<string, string> = {
     "Aggiungi un profilo per un'altra persona: ognuno manterrà la propria sezione Continua a guardare, la propria cronologia e i propri progressi.",
   "Add a repository": "Aggiungi un repository",
   "Add a review": "Aggiungi una recensione",
-  "Add a series above and Harbor will grab each new episode as it airs, on your terms.":
-    "Aggiungi una serie qui sopra e Harbor scaricherà ogni nuovo episodio appena va in onda, secondo le tue preferenze.",
+  "Add a series above and Lart will grab each new episode as it airs, on your terms.":
+    "Aggiungi una serie qui sopra e Lart scaricherà ogni nuovo episodio appena va in onda, secondo le tue preferenze.",
   "Add a series to auto-download": "Aggiungi una serie da scaricare automaticamente",
   "Add a source": "Aggiungi una sorgente",
   "Add a tag": "Aggiungi un tag",
@@ -517,8 +517,8 @@ const catalog01: Record<string, string> = {
   "Add to watchlist": "Aggiungi alla lista",
   "Add to your watchlist": "Aggiungi alla tua Lista",
   "Add to {name}": "Aggiungi a {name}",
-  "Add trusted eBook sources from a Harbor-compatible repository.":
-    "Aggiungi fonti eBook affidabili da un repository compatibile con Harbor.",
+  "Add trusted eBook sources from a Lart-compatible repository.":
+    "Aggiungi fonti eBook affidabili da un repository compatibile con Lart.",
   "Add up to 6 screenshots so people can see your theme in action. Optional, but they sell it.":
     "Aggiungi fino a 6 screenshot per mostrare il tuo tema in azione. Sono facoltativi, ma aiutano a promuoverlo.",
   "Add up to {max} profiles. Enter your handle only, not the full link.":
@@ -535,18 +535,18 @@ const catalog01: Record<string, string> = {
   "Add your social links": "Aggiungi i tuoi link social",
   "Add {label}": "Aggiungi {label}",
   "Add {name}": "Aggiungi {name}",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.":
-    "Aggiungere {n} titoli dalla tua lista Harbor a Trakt? Trakt ignorerà quelli già presenti.",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#few":
-    "Aggiungere {n} titoli dalla tua lista Harbor a Trakt? Trakt ignorerà quelli già presenti.#few",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#one":
-    "Aggiungere {n} titolo dalla tua lista Harbor a Trakt? Trakt ignorerà quelli già presenti.#one",
-  "Add {n} titles from your Trakt watchlist to Harbor?":
-    "Aggiungere {n} titoli dalla tua lista Trakt a Harbor?",
-  "Add {n} titles from your Trakt watchlist to Harbor?#few":
-    "Aggiungere {n} titoli dalla tua lista Trakt a Harbor?#few",
-  "Add {n} titles from your Trakt watchlist to Harbor?#one":
-    "Aggiungere {n} titolo dalla tua lista Trakt a Harbor?#one",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.":
+    "Aggiungere {n} titoli dalla tua lista Lart a Trakt? Trakt ignorerà quelli già presenti.",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#few":
+    "Aggiungere {n} titoli dalla tua lista Lart a Trakt? Trakt ignorerà quelli già presenti.#few",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#one":
+    "Aggiungere {n} titolo dalla tua lista Lart a Trakt? Trakt ignorerà quelli già presenti.#one",
+  "Add {n} titles from your Trakt watchlist to Lart?":
+    "Aggiungere {n} titoli dalla tua lista Trakt a Lart?",
+  "Add {n} titles from your Trakt watchlist to Lart?#few":
+    "Aggiungere {n} titoli dalla tua lista Trakt a Lart?#few",
+  "Add {n} titles from your Trakt watchlist to Lart?#one":
+    "Aggiungere {n} titolo dalla tua lista Trakt a Lart?#one",
   "Add {title} to AniList": "Aggiungi {title} ad AniList",
   "Add {title} to MyAnimeList": "Aggiungi {title} a MyAnimeList",
   "Add {title} to Simkl": "Aggiungi {title} a Simkl",
@@ -559,7 +559,7 @@ const catalog01: Record<string, string> = {
     "Aggiunto a stremio-addons.net negli ultimi 14 giorni",
   "Added to {page}": "Aggiunto a {page}",
   "Added {count} more subtitles.": "Aggiunti altri {count} sottotitoli.",
-  "Added {n} to your Harbor watchlist": "Aggiunti {n} titoli alla tua lista Harbor",
+  "Added {n} to your Lart watchlist": "Aggiunti {n} titoli alla tua lista Lart",
   Adding: "Aggiunta in corso",
   Addon: "Add-on",
   "Addon not installed": "Add-on non installato",
@@ -575,8 +575,8 @@ const catalog01: Record<string, string> = {
   "Addons only": "Solo Add-on",
   "Addons you could install": "Add-on che potresti installare",
   Addresses: "Indirizzi",
-  "Adds a Big Picture button to Harbor's navigation. Turn this off to keep it out of the way.":
-    "Aggiunge un pulsante Big Picture alla navigazione di Harbor. Disattivalo per evitare che sia d'intralcio.",
+  "Adds a Big Picture button to Lart's navigation. Turn this off to keep it out of the way.":
+    "Aggiunge un pulsante Big Picture alla navigazione di Lart. Disattivalo per evitare che sia d'intralcio.",
   "Adds a Hide option when you right-click an episode. Hidden episodes disappear from the list and are skipped by Up Next. A Show hidden toggle on each show lets you bring them back.":
     "Aggiunge l'opzione Nascondi quando fai clic con il pulsante destro su un episodio. Gli episodi nascosti scompaiono dalla Lista e vengono saltati da Prossimo. L'opzione Mostra nascosti in ogni serie consente di visualizzarli di nuovo.",
   "Adds a Playlists item to the navigation for browsing movies and shows from your M3U or Xtream playlists (the same ones you add for Live TV). Off by default to keep the nav tidy.":
@@ -627,8 +627,8 @@ const catalog01: Record<string, string> = {
     "Dopo gli episodi della serie attuale, Prossimo passa alla coda. Se l'opzione è disattivata, Prossimo e Precedente restano all'interno della serie attuale.",
   "After the news": "Dopo il telegiornale",
   "After the one playing ends": "Al termine di quello in riproduzione",
-  "After you pick a source, show a subtitle picker so you can set the exact track and language before the video starts. Off by default, Harbor keeps picking one for you automatically.":
-    "Dopo aver scelto una fonte, mostra il selettore dei sottotitoli per impostare la traccia e la lingua esatte prima dell'avvio del video. È disattivato per impostazione predefinita; Harbor continua a sceglierle automaticamente.",
+  "After you pick a source, show a subtitle picker so you can set the exact track and language before the video starts. Off by default, Lart keeps picking one for you automatically.":
+    "Dopo aver scelto una fonte, mostra il selettore dei sottotitoli per impostare la traccia e la lingua esatte prima dell'avvio del video. È disattivato per impostazione predefinita; Lart continua a sceglierle automaticamente.",
   "After you stop watching, a stream file stays cached for this long so reopening resumes instead of re-downloading. Older files are cleaned up automatically. Off deletes the file as soon as you leave the player.":
     "Quando smetti di guardare, il file dello stream resta nella cache per questo periodo, così, se lo riapri, la riproduzione riprende senza scaricarlo di nuovo. I file meno recenti vengono rimossi automaticamente. Se l'opzione è disattivata, il file viene eliminato appena esci dal player.",
   "After {n} episodes": "Dopo {n} episodi",
@@ -711,8 +711,8 @@ const catalog01: Record<string, string> = {
     "Hai già un account TMDB? Accedi e salta i passaggi successivi. Altrimenti premi Registrati e inserisci nome utente, password ed email.",
   "Already on the closest match for this release":
     "Sei già sulla corrispondenza più vicina per questa versione",
-  "Linking your Discord account also joins you to Harbor's Discord server, so the bot can send your Backup keys privately.":
-    "Linking your Discord account also joins you to Harbor's Discord server, so the bot can send your Backup keys privately.",
+  "Linking your Discord account also joins you to Lart's Discord server, so the bot can send your Backup keys privately.":
+    "Linking your Discord account also joins you to Lart's Discord server, so the bot can send your Backup keys privately.",
   "Also known as": "Conosciuto anche come",
   "Also won": "Ha vinto anche",
   Alternate: "Alternativo",
@@ -738,8 +738,8 @@ const catalog01: Record<string, string> = {
     "Un indirizzo XMLTV per aggiungere la guida ai canali che hai già",
   "An actor you keep watching": "Un attore che continui a guardare",
   "An agreement between landlord and tenant": "Un contratto tra locatore e conduttore",
-  "An award pack is a single JSON file plus the images it points to. Host both anywhere public (your own server, a GitHub repo, etc.) and share the JSON URL. Harbor only stores the URLs you install, never the images.":
-    "Un pacchetto di premi è composto da un singolo file JSON e dalle immagini a cui rimanda. Ospita entrambi in uno spazio accessibile pubblicamente, come un server personale o un repository GitHub, e condividi l'URL del JSON. Harbor memorizza solo gli URL che installi, mai le immagini.",
+  "An award pack is a single JSON file plus the images it points to. Host both anywhere public (your own server, a GitHub repo, etc.) and share the JSON URL. Lart only stores the URLs you install, never the images.":
+    "Un pacchetto di premi è composto da un singolo file JSON e dalle immagini a cui rimanda. Ospita entrambi in uno spazio accessibile pubblicamente, come un server personale o un repository GitHub, e condividi l'URL del JSON. Lart memorizza solo gli URL che installi, mai le immagini.",
   "An empty selector before": "Un selettore vuoto prima",
   "An error occurred": "Si è verificato un errore",
   "An unexpected error occurred": "Si è verificato un errore imprevisto",
@@ -794,8 +794,8 @@ const catalog01: Record<string, string> = {
   "Anime titles": "Titoli anime",
   "Anime tweaks": "Ottimizzazioni per gli anime",
   Anime4K: "Anime4K",
-  "Anime4K and smooth-motion run on the bundled mpv engine in the Harbor desktop app. They have no effect in the browser.":
-    "Anime4K e la fluidificazione del movimento usano il motore mpv incluso nell'app desktop Harbor. Non hanno effetto nel browser.",
+  "Anime4K and smooth-motion run on the bundled mpv engine in the Lart desktop app. They have no effect in the browser.":
+    "Anime4K e la fluidificazione del movimento usano il motore mpv incluso nell'app desktop Lart. Non hanno effetto nel browser.",
   "Anime4K is tuned for drawn animation. Leave this on to skip live action, or turn it off to run it on everything you watch.":
     "Anime4K è ottimizzato per l'animazione disegnata. Lascia attiva questa opzione per escludere i contenuti live action oppure disattivala per applicarlo a tutto ciò che guardi.",
   "Anime4K isn't set up yet. Turn it on in Settings under Anime.":
@@ -815,8 +815,8 @@ const catalog01: Record<string, string> = {
   Anonymous: "Anonimo",
   "Another phone is already setting this TV up.":
     "Un altro telefono sta già configurando questa TV.",
-  "Another program already holds this port, usually a Stremio server that is running on this machine. Harbor tried its spare ports too. Stop that server, or leave it running and point Harbor at it in Remote streaming server below.":
-    "Un altro programma sta già usando questa porta, di solito un server Stremio in esecuzione su questo computer. Harbor ha provato anche le porte alternative. Arresta quel server oppure lascialo in esecuzione e indicalo a Harbor nella sezione Server di streaming remoto qui sotto.",
+  "Another program already holds this port, usually a Stremio server that is running on this machine. Lart tried its spare ports too. Stop that server, or leave it running and point Lart at it in Remote streaming server below.":
+    "Un altro programma sta già usando questa porta, di solito un server Stremio in esecuzione su questo computer. Lart ha provato anche le porte alternative. Arresta quel server oppure lascialo in esecuzione e indicalo a Lart nella sezione Server di streaming remoto qui sotto.",
   "Anti-War": "Contro la guerra",
   Anticipated: "Più attesi",
   Any: "Qualsiasi",
@@ -849,15 +849,15 @@ const catalog01: Record<string, string> = {
   "Anyone can find and join from search": "Chiunque può trovarla e partecipare dalla ricerca",
   "Anyone who opens this link gets the relay URL and room code set automatically. Works in the browser too: no install required for the joiner.":
     "Chiunque apra questo link riceve automaticamente l'URL del relay e il codice della stanza. Funziona anche nel browser: chi partecipa non deve installare nulla.",
-  "Anyone with the link can open this collection once your Harbor server is live.":
-    "Chiunque abbia il link potrà aprire questa raccolta quando il tuo server Harbor sarà online.",
+  "Anyone with the link can open this collection once your Lart server is live.":
+    "Chiunque abbia il link potrà aprire questa raccolta quando il tuo server Lart sarà online.",
   "Anything matching your Custom calendar: tracked people, genres, providers, countries.":
     "Tutti i contenuti che corrispondono al tuo calendario personalizzato: persone che segui, generi, provider e paesi.",
   "Anything you install here saves to your Stremio account, so your addons are ready when you open Stremio on your phone.":
     "Tutto ciò che installi qui viene salvato nel tuo account Stremio, così gli Add-on saranno pronti quando aprirai Stremio sul telefono.",
-  "Anything you install in Harbor pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
-    "Tutto ciò che installi in Harbor viene sincronizzato con il tuo account Stremio, così apparirà anche sui dispositivi mobili. Accedi tramite l'avatar in basso a sinistra nella barra laterale.",
-  "Anywhere in Harbor.": "Ovunque in Harbor.",
+  "Anything you install in Lart pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
+    "Tutto ciò che installi in Lart viene sincronizzato con il tuo account Stremio, così apparirà anche sui dispositivi mobili. Accedi tramite l'avatar in basso a sinistra nella barra laterale.",
+  "Anywhere in Lart.": "Ovunque in Lart.",
   "App icon": "Icona dell'app",
   "App logo": "Logo dell'app",
   "App storage": "Spazio di archiviazione dell'app",
@@ -910,7 +910,7 @@ const catalog01: Record<string, string> = {
   "Ask if you're still watching": "Chiedi se stai ancora guardando",
   "Ask to resume or start over": "Chiedi se riprendere o ricominciare",
   "Asking AI…": "Richiesta all'IA…",
-  "Asking that Harbor to show a code": "Richiesta a quell'Harbor di mostrare un codice",
+  "Asking that Lart to show a code": "Richiesta a quell'Lart di mostrare un codice",
   "Asks first: carry on, or start over.": "Prima chiede se continuare o ricominciare.",
   Aspect: "Formato",
   "Aspect ratio": "Proporzioni",
@@ -939,10 +939,10 @@ const catalog01: Record<string, string> = {
   Australia: "Australia",
   Author: "Autore",
   "Author account": "Account autore",
-  "Authorize Harbor on AniList": "Autorizza Harbor su AniList",
-  "Authorize Harbor on MyAnimeList": "Autorizza Harbor su MyAnimeList",
-  "Authorize Harbor on Simkl": "Autorizza Harbor su Simkl",
-  "Authorize Harbor on Trakt": "Autorizza Harbor su Trakt",
+  "Authorize Lart on AniList": "Autorizza Lart su AniList",
+  "Authorize Lart on MyAnimeList": "Autorizza Lart su MyAnimeList",
+  "Authorize Lart on Simkl": "Autorizza Lart su Simkl",
+  "Authorize Lart on Trakt": "Autorizza Lart su Trakt",
   Authorized: "Autorizzato",
   "Authorized on this device": "Autorizzato su questo dispositivo",
   "Authorized {when}": "Autorizzato {when}",
@@ -961,7 +961,7 @@ const catalog01: Record<string, string> = {
   "Auto-apply audio-derived sync fixes":
     "Applica automaticamente le correzioni di sincronizzazione basate sull'audio",
   "Auto-confirm peer-to-peer streaming": "Conferma automaticamente lo streaming peer-to-peer",
-  "Auto-deploy from Harbor": "Distribuisci automaticamente da Harbor",
+  "Auto-deploy from Lart": "Distribuisci automaticamente da Lart",
   "Auto-download": "Download automatico",
   "Auto-download new episodes": "Scarica automaticamente i nuovi episodi",
   "Auto-downloading new episodes": "Download automatico dei nuovi episodi",
@@ -1035,8 +1035,8 @@ const catalog01: Record<string, string> = {
   "Back 30 seconds": "Indietro di 30 secondi",
   "Back on TMDB, click your avatar in the top right and choose Settings from the menu.":
     "Tornato su TMDB, fai clic sul tuo avatar in alto a destra e scegli Impostazioni dal menu.",
-  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Harbor. Harbor saves it on its own.":
-    "Tornato sulla pagina API, scorri fino in fondo. Copia il valore sotto API Key e incollalo in Harbor. Harbor lo salva automaticamente.",
+  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Lart. Lart saves it on its own.":
+    "Tornato sulla pagina API, scorri fino in fondo. Copia il valore sotto API Key e incollalo in Lart. Lart lo salva automaticamente.",
   "Back out mid-episode and the card keeps the exact frame you stopped on, with your progress, so it looks like a pause instead of a thumbnail.":
     "Se esci a metà episodio, la card mantiene il fotogramma esatto in cui ti sei fermato e i tuoi progressi, così sembra una pausa anziché una miniatura.",
   "Back to Discover": "Torna a Scopri",
@@ -1171,8 +1171,8 @@ const catalog01: Record<string, string> = {
   "Beyond Hollywood": "Oltre Hollywood",
   "Beyond the kids' shelf": "Oltre lo scaffale dei bambini",
   "Big Picture": "Big Picture",
-  "Big Picture closes. Harbor keeps running behind it.":
-    "Big Picture si chiude. Harbor continua a funzionare in background.",
+  "Big Picture closes. Lart keeps running behind it.":
+    "Big Picture si chiude. Lart continua a funzionare in background.",
   "Big Swings": "Grandi azzardi",
   "Bigger buffer for slow connections": "Buffer più ampio per connessioni lente",
   "Bingeing on the TV": "Maratone in TV",

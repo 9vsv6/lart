@@ -246,7 +246,7 @@ export function HomeServersTab() {
                   key={`${connection.id}-quality`}
                   label={t("Streaming quality")}
                   desc={t(
-                    "Caps what Harbor asks {name} to send. Original streams the file exactly as it is stored.",
+                    "Caps what Lart asks {name} to send. Original streams the file exactly as it is stored.",
                     { name: connection.name },
                   )}
                 >
@@ -271,7 +271,7 @@ export function HomeServersTab() {
                   key={`${connection.id}-refresh`}
                   label={t("Refresh this library")}
                   desc={t(
-                    "How often Harbor re-reads the library index from {name}. Manual only refreshes when you press Sync now.",
+                    "How often Lart re-reads the library index from {name}. Manual only refreshes when you press Sync now.",
                     { name: connection.name },
                   )}
                 >
@@ -746,7 +746,7 @@ function ConnectionEditor({
       width={640}
       title={existing ? t("Edit home server") : t("Connect home server")}
       sub={t(
-        "Harbor tries HTTP, HTTPS, reverse proxies, and the provider's default port. Credentials are stored separately.",
+        "Lart tries HTTP, HTTPS, reverse proxies, and the provider's default port. Credentials are stored separately.",
       )}
       actions={
         <>
@@ -794,7 +794,7 @@ function ConnectionEditor({
             <p className={ROW_TITLE}>{t("Recommended: sign in with Plex")}</p>
             <p className={`max-w-[66ch] ${ROW_DESC}`}>
               {t(
-                "Harbor opens Plex in your browser. Your Plex password is never entered in Harbor.",
+                "Lart opens Plex in your browser. Your Plex password is never entered in Lart.",
               )}
             </p>
           </div>

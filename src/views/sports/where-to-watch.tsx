@@ -76,7 +76,7 @@ export function WhereToWatch({ game }: { game: SportsGame }) {
       </p>
       <p className="sh-authorized-note">
         {t(
-          "Use streams, M3U playlists and Xtream accounts you are authorized to access. Harbor does not provide subscriptions or bypass paywalls, DRM or access restrictions.",
+          "Use streams, M3U playlists and Xtream accounts you are authorized to access. Lart does not provide subscriptions or bypass paywalls, DRM or access restrictions.",
         )}
       </p>
     </section>

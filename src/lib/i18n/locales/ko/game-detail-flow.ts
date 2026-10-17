@@ -1,7 +1,7 @@
 export default {
   "games.details.broadcastPause": "방송 일시 정지",
   "games.details.broadcastResume": "방송 재생",
-  "games.details.broadcastPlay": "Harbor에서 시청",
+  "games.details.broadcastPlay": "Lart에서 시청",
   "games.details.watchRun": "런 시청",
   "games.details.viewRun": "기록 보기",
   "games.details.runVideo": "런 영상",

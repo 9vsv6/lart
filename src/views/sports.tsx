@@ -653,7 +653,7 @@ function SportsHubView({ active = false }: { active?: boolean }) {
           <span>{t("Coverage varies by league. Streams depend on your available sources.")}</span>
           <span>
             {t(
-              "Use only sources you are authorized to access. Harbor does not bypass subscriptions or access restrictions.",
+              "Use only sources you are authorized to access. Lart does not bypass subscriptions or access restrictions.",
             )}
           </span>
         </footer>

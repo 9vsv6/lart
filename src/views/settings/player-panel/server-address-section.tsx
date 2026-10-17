@@ -235,14 +235,14 @@ export function ServerAddressSection() {
             {PORT_TAKEN_RE.test(lastError) && (
               <span className={`max-w-[66ch] ${ROW_DESC}`}>
                 {t(
-                  "Another program already holds this port, usually a Stremio server that is running on this machine. Harbor tried its spare ports too. Stop that server, or leave it running and point Harbor at it in Remote streaming server below.",
+                  "Another program already holds this port, usually a Stremio server that is running on this machine. Lart tried its spare ports too. Stop that server, or leave it running and point Lart at it in Remote streaming server below.",
                 )}
               </span>
             )}
             {/not bundled/i.test(lastError) && (
               <span className={`max-w-[66ch] ${ROW_DESC}`}>
                 {t(
-                  "This usually means antivirus removed the server file (stremio-server.exe). Add Harbor's install folder to your antivirus exclusions, then reinstall.",
+                  "This usually means antivirus removed the server file (stremio-server.exe). Add Lart's install folder to your antivirus exclusions, then reinstall.",
                 )}
               </span>
             )}
@@ -257,7 +257,7 @@ export function ServerAddressSection() {
 
       <p className={`max-w-[70ch] ${ROW_DESC}`}>
         {t(
-          "Looking for Harbor in your browser, the phone remote, or the manga reader remote? They moved to the Remotes page.",
+          "Looking for Lart in your browser, the phone remote, or the manga reader remote? They moved to the Remotes page.",
         )}
       </p>
     </Section>

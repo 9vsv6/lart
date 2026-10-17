@@ -25,24 +25,24 @@ function foreignMessage(kind: ForeignRepoKind, count: number, t: (s: string) => 
     case "tachiyomi":
       return (
         t(
-          "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Harbor can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Harbor to it from the Servers section.",
+          "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Lart can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Lart to it from the Servers section.",
         ) + ` (${count})`
       );
     case "mangayomi":
       return (
         t(
-          "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Harbor to it from the Servers section.",
+          "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Lart to it from the Servers section.",
         ) + ` (${count})`
       );
     case "paperback":
       return (
         t(
-          "This is a Paperback (iOS) repo, which Harbor can't use. For desktop sources, connect a Suwayomi server from the Servers section.",
+          "This is a Paperback (iOS) repo, which Lart can't use. For desktop sources, connect a Suwayomi server from the Servers section.",
         ) + ` (${count})`
       );
     default:
       return t(
-        "This doesn't look like a Harbor plugin repo. Harbor expects a JSON file shaped { name, plugins: [ ... ] }.",
+        "This doesn't look like a Lart plugin repo. Lart expects a JSON file shaped { name, plugins: [ ... ] }.",
       );
   }
 }

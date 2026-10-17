@@ -115,7 +115,7 @@ function PacksSection() {
   return (
     <Section
       title={t("Packs & import")}
-      subtitle={t("Rulesets bring a full badge set with their own matching. Art remaps only swap the pictures on Harbor's built-in badges. Anything shared as a badges.json link imports here too.")}
+      subtitle={t("Rulesets bring a full badge set with their own matching. Art remaps only swap the pictures on Lart's built-in badges. Anything shared as a badges.json link imports here too.")}
     >
       <div ref={packsRef} className="grid grid-cols-1 gap-3 lg:grid-cols-2">
         {COMMUNITY_PACKS.map((p) => (
@@ -217,7 +217,7 @@ function CommunityInstalledSection() {
   return (
     <Section
       title={t("Downloaded from community")}
-      subtitle={t("Badge art packs you installed from the community store. Remove one to put its badges back to Harbor's default.")}
+      subtitle={t("Badge art packs you installed from the community store. Remove one to put its badges back to Lart's default.")}
     >
       {packs.map((p) => (
         <SettingRow
@@ -276,7 +276,7 @@ export function PacksTab() {
       },
     ],
     armed
-      ? "Every badge goes back to Harbor's art and every custom rule is removed. There is no undo."
+      ? "Every badge goes back to Lart's art and every custom rule is removed. There is no undo."
       : undefined,
   );
 
@@ -284,7 +284,7 @@ export function PacksTab() {
     <>
       <Section
         title={t("Where badges come from")}
-        subtitle={t("A pack swaps Harbor's built-in badge art, or adds whole new badges of its own.")}
+        subtitle={t("A pack swaps Lart's built-in badge art, or adds whole new badges of its own.")}
       >
         <SRow
           title={t("Browse community badge packs")}

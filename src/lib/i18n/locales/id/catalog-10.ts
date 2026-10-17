@@ -29,7 +29,7 @@ const catalog: Record<string, string> = {
   "Superstar!": "Superstar!",
   "Support ElfHosted or Stremio, or give to any charity below, and the badge lands on your profile.":
     "Dukung ElfHosted atau Stremio, atau berdonasi ke badan amal mana pun di bawah, dan lencana akan muncul di profil Anda.",
-  "Support Harbor": "Dukung Harbor",
+  "Support Lart": "Dukung Lart",
   "Support Stremio": "Dukung Stremio",
   Supporting: "Mendukung",
   Sure: "Tentu",
@@ -47,7 +47,7 @@ const catalog: Record<string, string> = {
   "Swedish Cinema": "Sinema Swedia",
   "Swedish Films": "Film Swedia",
   Switch: "Ganti",
-  "Switch Harbor to {language}?": "Ganti bahasa Harbor ke {language}?",
+  "Switch Lart to {language}?": "Ganti bahasa Lart ke {language}?",
   "Switch profile": "Ganti profil",
   "Switch source": "Ganti sumber",
   "Switch stream": "Ganti stream",
@@ -71,8 +71,8 @@ const catalog: Record<string, string> = {
   Sync: "Sinkronkan",
   "Sync Offset": "Offset Sinkronisasi",
   "Sync across your devices": "Sinkronkan di semua perangkat Anda",
-  "Sync and track movies, shows, and anime across everything you use. Harbor marks what you finish as watched on Simkl and keeps your plan-to-watch list in step. Free at simkl.com.":
-    "Sinkronkan dan lacak film, acara, serta anime di semua layanan yang Anda gunakan. Harbor menandai yang Anda selesaikan sebagai sudah ditonton di Simkl dan menyelaraskan daftar rencana tontonan Anda. Gratis di simkl.com.",
+  "Sync and track movies, shows, and anime across everything you use. Lart marks what you finish as watched on Simkl and keeps your plan-to-watch list in step. Free at simkl.com.":
+    "Sinkronkan dan lacak film, acara, serta anime di semua layanan yang Anda gunakan. Lart menandai yang Anda selesaikan sebagai sudah ditonton di Simkl dan menyelaraskan daftar rencana tontonan Anda. Gratis di simkl.com.",
   "Sync everywhere": "Sinkronkan di mana saja",
   "Sync from here": "Sinkronkan dari sini",
   "Sync indicator": "Indikator sinkronisasi",
@@ -172,8 +172,8 @@ const catalog: Record<string, string> = {
   "TV navigation": "Navigasi TV",
   "TV navigation in player": "Navigasi TV di pemutar",
   "TV only": "Khusus TV",
-  "TV only. Older sets crop the outer edge of the picture. Nudge Harbor inward until nothing is cut off.":
-    "Khusus TV. TV lama memotong tepi luar gambar. Geser Harbor ke dalam hingga tidak ada yang terpotong.",
+  "TV only. Older sets crop the outer edge of the picture. Nudge Lart inward until nothing is cut off.":
+    "Khusus TV. TV lama memotong tepi luar gambar. Geser Lart ke dalam hingga tidak ada yang terpotong.",
   "TV shows wide art cards with the logo on them. Poster is the classic grid.":
     "TV menampilkan kartu gambar lebar dengan logo. Poster menggunakan kisi klasik.",
   "TV uses wide rounded cards with the logo on the art, like a TV home screen. Poster is the classic grid.":
@@ -281,8 +281,8 @@ const catalog: Record<string, string> = {
     "Terima kasih! Ini membantu kami mengetahui apakah versi beta sudah menuju arah yang tepat.",
   "Thanks. Sent for review.": "Terima kasih. Dikirim untuk ditinjau.",
   "Thanks. Tracked as {id}.": "Terima kasih. Dilacak sebagai {id}.",
-  "That Harbor is on the network but is not answering, so it cannot be driven.":
-    "Harbor itu berada di jaringan tetapi tidak merespons, sehingga tidak dapat dikendalikan.",
+  "That Lart is on the network but is not answering, so it cannot be driven.":
+    "Lart itu berada di jaringan tetapi tidak merespons, sehingga tidak dapat dikendalikan.",
   "That SVG is {size} (max 512 KB). Optimize it at svgomg or save it smaller and try again.":
     "SVG itu berukuran {size} (maks. 512 KB). Optimalkan di svgomg atau simpan dengan ukuran lebih kecil, lalu coba lagi.",
   "That code has expired": "Kode itu sudah kedaluwarsa",
@@ -327,8 +327,8 @@ const catalog: Record<string, string> = {
   "That list is private or doesn't exist. Public lists only.":
     "Daftar itu bersifat privat atau tidak ada. Hanya daftar publik.",
   "That looks like spam, try rephrasing": "Itu tampak seperti spam, coba ubah kalimatnya",
-  'That looks like the v4 Read Access Token. Harbor needs the shorter "API Key (v3 auth)" from the same page.':
-    'Itu tampaknya v4 Read Access Token. Harbor memerlukan "API Key (v3 auth)" yang lebih pendek dari halaman yang sama.',
+  'That looks like the v4 Read Access Token. Lart needs the shorter "API Key (v3 auth)" from the same page.':
+    'Itu tampaknya v4 Read Access Token. Lart memerlukan "API Key (v3 auth)" yang lebih pendek dari halaman yang sama.',
   "That pack's file isn't valid JSON": "File paket itu bukan JSON yang valid",
   "That page is full": "Halaman itu penuh",
   "That route wouldn't chart. Try a different direction.":
@@ -365,8 +365,8 @@ const catalog: Record<string, string> = {
   "The CPU decodes everything. Most compatible, but it runs hot and can stutter on 4K. Use this only if the picture glitches with hardware decoding on.":
     "CPU mendekode semuanya. Paling kompatibel, tetapi cepat panas dan dapat tersendat pada 4K. Gunakan ini hanya jika gambar bermasalah saat dekode perangkat keras aktif.",
   "The CW": "The CW",
-  "The Harbor relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Harbor server.":
-    "Relai Harbor adalah Cloudflare Worker yang menghosting ruang WebSocket untuk Tonton Bersama. Setiap pengguna menjalankan miliknya sendiri. Tidak ada server Harbor pusat.",
+  "The Lart relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Lart server.":
+    "Relai Lart adalah Cloudflare Worker yang menghosting ruang WebSocket untuk Tonton Bersama. Setiap pengguna menjalankan miliknya sendiri. Tidak ada server Lart pusat.",
   "The Home Front": "Garis Depan",
   "The King": "Sang Raja",
   "The Last Stand": "Pertahanan Terakhir",
@@ -427,8 +427,8 @@ const catalog: Record<string, string> = {
     "Editor adalah salinan kerja pemutar. Klik kontrol apa pun untuk memindahkan, mengubah ukuran atau gaya, maupun menyembunyikannya.",
   "The end time has to be after the start.": "Waktu selesai harus setelah waktu mulai.",
   "The engine listens on a local port and joins the DHT to find peers. Active transfers are the streams it currently has open.": "Mesin mendengarkan di port lokal dan bergabung dengan DHT untuk menemukan peer. Transfer aktif adalah stream yang sedang dibukanya.",
-  "The escape hatch for power users. One mpv option per line as key=value, exactly like mpv.conf. These apply last, so they override every dial above. Anything Harbor can't read is skipped, so a typo won't break playback. Restart playback to apply.":
-    "Jalur khusus untuk pengguna mahir. Satu opsi mpv per baris dalam format key=value, persis seperti mpv.conf. Opsi ini diterapkan terakhir, jadi akan menimpa semua pengaturan di atas. Apa pun yang tidak dapat dibaca Harbor akan dilewati, jadi salah ketik tidak akan mengganggu pemutaran. Mulai ulang pemutaran untuk menerapkannya.",
+  "The escape hatch for power users. One mpv option per line as key=value, exactly like mpv.conf. These apply last, so they override every dial above. Anything Lart can't read is skipped, so a typo won't break playback. Restart playback to apply.":
+    "Jalur khusus untuk pengguna mahir. Satu opsi mpv per baris dalam format key=value, persis seperti mpv.conf. Opsi ini diterapkan terakhir, jadi akan menimpa semua pengaturan di atas. Apa pun yang tidak dapat dibaca Lart akan dilewati, jadi salah ketik tidak akan mengganggu pemutaran. Mulai ulang pemutaran untuk menerapkannya.",
   "The free tier is $0 for personal use. Just pick the first option, no payment needed.":
     "Paket gratis seharga $0 untuk penggunaan pribadi. Cukup pilih opsi pertama, tanpa perlu membayar.",
   "The full annual amount upfront": "Seluruh biaya tahunan dibayar di muka",
@@ -473,8 +473,8 @@ const catalog: Record<string, string> = {
   "The number is bytes divided by the time they actually took to arrive. Cloudflare is a single origin, so on a very fast line this can read lower than a multi-server test like speedtest.net.":
     "Angka ini adalah jumlah byte dibagi waktu yang benar-benar diperlukan untuk menerimanya. Cloudflare adalah satu sumber tunggal, jadi pada koneksi yang sangat cepat hasilnya bisa lebih rendah daripada pengujian dengan beberapa server seperti speedtest.net.",
   "The one you are about to watch stays readable.": "Yang akan Anda tonton tetap mudah dibaca.",
-  "The operating system draws native window controls, so Harbor cannot change their appearance.":
-    "Sistem operasi menggambar kontrol jendela bawaan, jadi Harbor tidak dapat mengubah tampilannya.",
+  "The operating system draws native window controls, so Lart cannot change their appearance.":
+    "Sistem operasi menggambar kontrol jendela bawaan, jadi Lart tidak dapat mengubah tampilannya.",
   "The order also decides which addon's rows win on your Home screen.":
     "Urutan ini juga menentukan baris addon mana yang diprioritaskan di layar Beranda Anda.",
   "The originals": "Karya orisinal",
@@ -488,8 +488,8 @@ const catalog: Record<string, string> = {
     "Server playlist menolak koneksi secara aktif.",
   "The playlist server is down or your network is blocking it. Try again in a few minutes.":
     "Server playlist sedang tidak aktif atau jaringan Anda memblokirnya. Coba lagi dalam beberapa menit.",
-  "The pointer your right stick moves around Harbor. Pick a shape or use your own image.":
-    "Penunjuk yang digerakkan stik kanan Anda di Harbor. Pilih bentuk atau gunakan gambar Anda sendiri.",
+  "The pointer your right stick moves around Lart. Pick a shape or use your own image.":
+    "Penunjuk yang digerakkan stik kanan Anda di Lart. Pilih bentuk atau gunakan gambar Anda sendiri.",
   "The practical default.": "Pilihan bawaan yang praktis.",
   "The price drops by half": "Harganya turun setengah",
   "The primary manages profiles and can't be deleted. Transfer it here to delete the old one.":
@@ -498,8 +498,8 @@ const catalog: Record<string, string> = {
     "Penyedia menolak permintaan. Tautan mungkin kedaluwarsa, dikunci berdasarkan wilayah, atau kuotanya habis.",
   "The provider's server could not be reached. It may be offline, or you have no connection.":
     "Server penyedia tidak dapat dijangkau. Server mungkin sedang luring, atau Anda tidak memiliki koneksi.",
-  "The provider's server returned an error. Nothing on Harbor's side can fix this. Pick another source.":
-    "Server penyedia mengembalikan kesalahan. Tidak ada yang dapat diperbaiki dari sisi Harbor. Pilih sumber lain.",
+  "The provider's server returned an error. Nothing on Lart's side can fix this. Pick another source.":
+    "Server penyedia mengembalikan kesalahan. Tidak ada yang dapat diperbaiki dari sisi Lart. Pilih sumber lain.",
   "The quick brown fox jumps": "Rubah cokelat yang gesit melompat",
   "The quick brown fox jumps over the lazy dog": "Rubah cokelat yang gesit melompati anjing malas",
   "The quickest start and the least memory used. Good on a fast, steady connection, or on a machine that is short on memory.":
@@ -507,8 +507,8 @@ const catalog: Record<string, string> = {
   "The ratings row on a title's detail page, next to runtime and genre.":
     "Baris rating di halaman detail judul, di sebelah durasi dan genre.",
   "The real footage": "Rekaman asli",
-  "The resolution Harbor downloads for each image when you export a title's metadata next to the file on disk.":
-    "Resolusi gambar yang diunduh Harbor saat Anda mengekspor metadata judul di samping file pada penyimpanan.",
+  "The resolution Lart downloads for each image when you export a title's metadata next to the file on disk.":
+    "Resolusi gambar yang diunduh Lart saat Anda mengekspor metadata judul di samping file pada penyimpanan.",
   "The same as gross": "Sama dengan bruto",
   "The same camera pan on each setting. The lit lane is what you get right now.":
     "Gerakan kamera yang sama pada setiap pengaturan. Jalur yang menyala menunjukkan hasil yang Anda dapatkan saat ini.",
@@ -533,8 +533,8 @@ const catalog: Record<string, string> = {
     "Halaman pengaturan memiliki daftar di sisi kiri. Klik API di dekat bagian bawah.",
   "The shape of the whole Home page. Everything below tunes the rows inside it.":
     "Bentuk keseluruhan halaman Beranda. Semua pengaturan di bawah menyesuaikan baris di dalamnya.",
-  "The ship is sailing away. Thanks for watching with Harbor, it's time to listen to your grown-ups.":
-    "Kapalnya akan berlayar pergi. Terima kasih telah menonton bersama Harbor, sekarang saatnya mendengarkan orang dewasa yang mengasuhmu.",
+  "The ship is sailing away. Thanks for watching with Lart, it's time to listen to your grown-ups.":
+    "Kapalnya akan berlayar pergi. Terima kasih telah menonton bersama Lart, sekarang saatnya mendengarkan orang dewasa yang mengasuhmu.",
   "The signing bonus from year one": "Bonus penandatanganan dari tahun pertama",
   "The source responded but the stream would not open. Try a different one.":
     "Sumber merespons, tetapi stream tidak dapat dibuka. Coba sumber lain.",
@@ -549,8 +549,8 @@ const catalog: Record<string, string> = {
   "The test calls": "Pengujian memanggil",
   "The test calls {code} and confirms the worker is reachable and running a current version. A passing test means Watch Together rooms will connect.":
     "Pengujian memanggil {code} dan memastikan worker dapat dijangkau serta menjalankan versi terbaru. Jika pengujian berhasil, ruang Nonton Bersama akan terhubung.",
-  "The timing checks disagreed, so Harbor left the subtitle unchanged.":
-    "Hasil pemeriksaan waktu berbeda, jadi Harbor tidak mengubah subtitle.",
+  "The timing checks disagreed, so Lart left the subtitle unchanged.":
+    "Hasil pemeriksaan waktu berbeda, jadi Lart tidak mengubah subtitle.",
   "The timing difference was too large to correct safely. Try another subtitle.":
     "Perbedaan waktunya terlalu besar untuk dikoreksi dengan aman. Coba subtitle lain.",
   "The title shown at the top of the player.": "Judul yang ditampilkan di bagian atas pemutar.",
@@ -593,15 +593,15 @@ const catalog: Record<string, string> = {
     "Dialog yang terbaca dalam subtitle ini tidak cukup untuk mengukur waktunya.",
   "There wasn't enough matching dialogue to make a safe correction.":
     "Dialog yang cocok tidak cukup untuk melakukan koreksi dengan aman.",
-  "These avatars are Harbor originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
-    "Avatar ini adalah karya asli Harbor. Paket yang diimpor hanya disimpan di perangkat ini: Anda memilih isinya dan bertanggung jawab atas konten tersebut.",
+  "These avatars are Lart originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
+    "Avatar ini adalah karya asli Lart. Paket yang diimpor hanya disimpan di perangkat ini: Anda memilih isinya dan bertanggung jawab atas konten tersebut.",
   "These badges are drawn on posters as you browse. RPDB, in the keys above, is a separate option that bakes scores into the poster image itself.":
     "Lencana ini ditampilkan pada poster saat Anda menjelajah. RPDB, pada bagian kunci di atas, adalah opsi terpisah yang menyematkan skor langsung ke gambar poster.",
   "These cards run down your public profile. Set the order they appear in, and hide any you would rather keep to yourself.":
     "Kartu ini ditampilkan berurutan di profil publik Anda. Atur urutan tampilnya dan sembunyikan yang ingin Anda rahasiakan.",
   "These episodes are already downloading.": "Episode ini sudah diunduh.",
-  "These live in Harbor on this computer and never touch your account.":
-    "Data ini tersimpan di Harbor pada komputer ini dan tidak pernah masuk ke akun Anda.",
+  "These live in Lart on this computer and never touch your account.":
+    "Data ini tersimpan di Lart pada komputer ini dan tidak pernah masuk ke akun Anda.",
   "These need the television in front of you, either because they show a pairing code or because the credential should never leave the device.":
     "Tindakan ini memerlukan televisi di depan Anda, baik karena menampilkan kode penyandingan maupun karena kredensial tidak boleh keluar dari perangkat.",
   "These rails activate once a TMDB key is set. You can come back to this anytime in Settings.":
@@ -610,8 +610,8 @@ const catalog: Record<string, string> = {
     "Baris ini memerlukan kunci TMDB sebelum dapat menampilkan apa pun.",
   "These settings belong to a profile, and this computer is not in one. Pick a profile and the TV will follow it.":
     "Pengaturan ini milik profil, dan komputer ini tidak berada dalam profil mana pun. Pilih profil agar TV mengikutinya.",
-  "These tune the bundled mpv engine, which runs in the Harbor desktop app. They have no effect in the browser.":
-    "Opsi ini menyesuaikan mesin mpv bawaan yang berjalan di aplikasi desktop Harbor. Opsi ini tidak berpengaruh di browser.",
+  "These tune the bundled mpv engine, which runs in the Lart desktop app. They have no effect in the browser.":
+    "Opsi ini menyesuaikan mesin mpv bawaan yang berjalan di aplikasi desktop Lart. Opsi ini tidak berpengaruh di browser.",
   "These two points are very close ({n}s apart). Pick one near the start and one near the end, or the timing can drift at the edges.":
     "Kedua titik ini sangat berdekatan (terpaut {n} dtk). Pilih satu di dekat awal dan satu di dekat akhir agar waktunya tidak meleset di bagian tepi.",
   "They email an activation link the first time. Click it, then come back and save.":
@@ -622,9 +622,9 @@ const catalog: Record<string, string> = {
   "Things you still do on the TV itself": "Hal yang masih Anda lakukan langsung di TV",
   "Thinner outline": "Garis luar lebih tipis",
   "This Afternoon": "Sore Ini",
-  "This Harbor": "Harbor Ini",
-  "This Harbor takes commands from this computer. Forget it to take that back.":
-    "Harbor ini menerima perintah dari komputer ini. Lupakan untuk mencabut akses tersebut.",
+  "This Lart": "Lart Ini",
+  "This Lart takes commands from this computer. Forget it to take that back.":
+    "Lart ini menerima perintah dari komputer ini. Lupakan untuk mencabut akses tersebut.",
   "This Morning": "Pagi Ini",
   "This PC": "PC Ini",
   "This Xtream account is expired, banned, or disabled on the provider side. Renew or confirm with your provider.":
@@ -651,8 +651,8 @@ const catalog: Record<string, string> = {
   "This comment can't be posted.": "Komentar ini tidak dapat diposting.",
   "This computer": "Komputer ini",
   "This device": "Perangkat ini",
-  "This doesn't look like a Harbor plugin repo. Harbor expects a JSON file shaped { name, plugins: [ ... ] }.":
-    "Ini tampaknya bukan repo plugin Harbor. Harbor mengharapkan file JSON dengan format { name, plugins: [ ... ] }.",
+  "This doesn't look like a Lart plugin repo. Lart expects a JSON file shaped { name, plugins: [ ... ] }.":
+    "Ini tampaknya bukan repo plugin Lart. Lart mengharapkan file JSON dengan format { name, plugins: [ ... ] }.",
   "This eBook could not be exported": "eBook ini tidak dapat diekspor",
   "This eBook is not connected to an installed source.":
     "eBook ini tidak terhubung ke sumber yang terpasang.",
@@ -663,7 +663,7 @@ const catalog: Record<string, string> = {
     "File ini ditandai tidak dapat diputar di web. Coba backend mpv di Pengaturan atau pilih stream lain.",
   'This file is in OneDrive. If "Files On-Demand" is on, the file is a cloud placeholder until it\'s downloaded. Right-click it in Explorer and pick':
     'File ini berada di OneDrive. Jika "Files On-Demand" aktif, file tersebut hanya menjadi placeholder cloud hingga diunduh. Klik kanan file di Explorer lalu pilih',
-  "This file isn't a Harbor theme.": "File ini bukan tema Harbor.",
+  "This file isn't a Lart theme.": "File ini bukan tema Lart.",
   "This file isn't a readable theme.": "File ini bukan tema yang dapat dibaca.",
   "This file restores its {n} saved entries and replaces only those parts of your setup. Anything it does not contain stays exactly as it is.":
     "File ini memulihkan {n} entri tersimpan dan hanya mengganti bagian tersebut dalam penyiapan Anda. Semua yang tidak tercantum di dalamnya akan tetap persis seperti semula.",
@@ -674,18 +674,18 @@ const catalog: Record<string, string> = {
   "This group has not written a description yet.": "Grup ini belum menulis deskripsi.",
   "This group's feed could not be loaded. Try again in a moment.":
     "Feed grup ini tidak dapat dimuat. Coba lagi sebentar lagi.",
-  "This instance of Harbor is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
-    "Versi Harbor ini dibuat untuk desktop. Aplikasi mandiri kami untuk iOS dan Android akan segera hadir, masing-masing dengan pengalaman khusus yang mengutamakan perangkat seluler dan dirancang untuk platform native-nya.",
-  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Harbor can't import them.":
-    "Ini adalah repo Mangayomi, tetapi sumbernya menggunakan Dart atau bukan manga, sehingga Harbor tidak dapat mengimpornya.",
-  "This is a Mangayomi repo. Harbor runs its JavaScript sources natively. Import them to add these sources to your manga library.":
-    "Ini adalah repo Mangayomi. Harbor menjalankan sumber JavaScript-nya secara native. Impor untuk menambahkan sumber ini ke perpustakaan manga Anda.",
-  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "Ini adalah repo Mangayomi. Impor native belum didukung. Untuk mendapatkan katalog terbesar saat ini, jalankan server Suwayomi dan hubungkan Harbor melalui bagian Server.",
-  "This is a Paperback (iOS) repo, which Harbor can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
-    "Ini adalah repo Paperback (iOS) yang tidak dapat digunakan Harbor. Untuk sumber desktop, hubungkan server Suwayomi melalui bagian Server.",
-  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Harbor can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "Ini adalah repo Tachiyomi / Mihon. Keduanya merupakan ekstensi Android (APK), sehingga Harbor tidak dapat menjalankannya secara langsung. Untuk menggunakan sumber ini di desktop, jalankan server Suwayomi dan hubungkan Harbor melalui bagian Server.",
+  "This instance of Lart is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
+    "Versi Lart ini dibuat untuk desktop. Aplikasi mandiri kami untuk iOS dan Android akan segera hadir, masing-masing dengan pengalaman khusus yang mengutamakan perangkat seluler dan dirancang untuk platform native-nya.",
+  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Lart can't import them.":
+    "Ini adalah repo Mangayomi, tetapi sumbernya menggunakan Dart atau bukan manga, sehingga Lart tidak dapat mengimpornya.",
+  "This is a Mangayomi repo. Lart runs its JavaScript sources natively. Import them to add these sources to your manga library.":
+    "Ini adalah repo Mangayomi. Lart menjalankan sumber JavaScript-nya secara native. Impor untuk menambahkan sumber ini ke perpustakaan manga Anda.",
+  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "Ini adalah repo Mangayomi. Impor native belum didukung. Untuk mendapatkan katalog terbesar saat ini, jalankan server Suwayomi dan hubungkan Lart melalui bagian Server.",
+  "This is a Paperback (iOS) repo, which Lart can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
+    "Ini adalah repo Paperback (iOS) yang tidak dapat digunakan Lart. Untuk sumber desktop, hubungkan server Suwayomi melalui bagian Server.",
+  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Lart can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "Ini adalah repo Tachiyomi / Mihon. Keduanya merupakan ekstensi Android (APK), sehingga Lart tidak dapat menjalankannya secara langsung. Untuk menggunakan sumber ini di desktop, jalankan server Suwayomi dan hubungkan Lart melalui bagian Server.",
   "This is a metadata-based release estimate, not a measured timing score.":
     "Ini adalah perkiraan rilis berdasarkan metadata, bukan skor waktu yang diukur.",
   "This is how a subtitle will look.": "Begini tampilan subtitle.",
@@ -704,8 +704,8 @@ const catalog: Record<string, string> = {
     "Tata letak ini hanya menampilkan ikon, jadi label tidak ditampilkan.",
   "This layout shows icons only, so renaming is off here. Reorder and hide still apply.":
     "Tata letak ini hanya menampilkan ikon, jadi penggantian nama dinonaktifkan di sini. Pengurutan ulang dan penyembunyian tetap berlaku.",
-  "This link goes to an external site that Harbor does not control or vouch for. Triple-check the address before you continue, and never enter your Harbor password anywhere but Harbor.":
-    "Tautan ini menuju situs eksternal yang tidak dikendalikan atau dijamin oleh Harbor. Periksa alamatnya tiga kali sebelum melanjutkan, dan jangan pernah memasukkan kata sandi Harbor Anda di tempat selain Harbor.",
+  "This link goes to an external site that Lart does not control or vouch for. Triple-check the address before you continue, and never enter your Lart password anywhere but Lart.":
+    "Tautan ini menuju situs eksternal yang tidak dikendalikan atau dijamin oleh Lart. Periksa alamatnya tiga kali sebelum melanjutkan, dan jangan pernah memasukkan kata sandi Lart Anda di tempat selain Lart.",
   "This list is empty, or its items couldn't be matched.":
     "Daftar ini kosong, atau itemnya tidak dapat dicocokkan.",
   "This list is full ({max} items)": "Daftar ini penuh ({max} item)",
@@ -715,14 +715,14 @@ const catalog: Record<string, string> = {
   "This member has hidden their showcase, activity and friends from public view.":
     "Anggota ini menyembunyikan etalase, aktivitas, dan teman mereka dari tampilan publik.",
   "This month": "Bulan ini",
-  "This one also replaces Harbor's bundled players and tools, so it installs through Harbor Setup. Harbor closes, the installer finishes, then Harbor reopens.":
-    "Yang ini juga menggantikan pemutar dan alat bawaan Harbor, jadi pemasangannya dilakukan melalui Harbor Setup. Harbor akan ditutup, pemasang menyelesaikan prosesnya, lalu Harbor dibuka kembali.",
-  "This one installs through Harbor Setup, but the update manifest carries no signature for it. Harbor will not run an installer it cannot verify. Download it and run it yourself.":
-    "Yang ini dipasang melalui Harbor Setup, tetapi manifes pembaruannya tidak memiliki tanda tangan. Harbor tidak akan menjalankan pemasang yang tidak dapat diverifikasi. Unduh dan jalankan sendiri.",
+  "This one also replaces Lart's bundled players and tools, so it installs through Lart Setup. Lart closes, the installer finishes, then Lart reopens.":
+    "Yang ini juga menggantikan pemutar dan alat bawaan Lart, jadi pemasangannya dilakukan melalui Lart Setup. Lart akan ditutup, pemasang menyelesaikan prosesnya, lalu Lart dibuka kembali.",
+  "This one installs through Lart Setup, but the update manifest carries no signature for it. Lart will not run an installer it cannot verify. Download it and run it yourself.":
+    "Yang ini dipasang melalui Lart Setup, tetapi manifes pembaruannya tidak memiliki tanda tangan. Lart tidak akan menjalankan pemasang yang tidak dapat diverifikasi. Unduh dan jalankan sendiri.",
   "This only takes a moment the first time.":
     "Ini hanya memerlukan waktu sejenak saat pertama kali.",
-  "This opens Harbor to devices on your Wi-Fi. You can turn it off again in Settings.":
-    "Ini membuka akses Harbor ke perangkat di Wi-Fi Anda. Anda dapat menonaktifkannya lagi di Pengaturan.",
+  "This opens Lart to devices on your Wi-Fi. You can turn it off again in Settings.":
+    "Ini membuka akses Lart ke perangkat di Wi-Fi Anda. Anda dapat menonaktifkannya lagi di Pengaturan.",
   "This order drives your catalog rows and the default stream order. A stream priority set in Settings overrides it for streams.":
     "Urutan ini menentukan baris katalog Anda dan urutan stream default. Prioritas stream yang ditetapkan di Pengaturan akan menggantikannya untuk stream.",
   "This order syncs to every Stremio app signed into this account.":
@@ -741,8 +741,8 @@ const catalog: Record<string, string> = {
     "Daftar putar ini belum dimuat, atau tidak memiliki saluran.",
   "This reads pages a browser can already load. It does not, and must not be made to, bypass a login, password, paywall, or any access control.":
     "Ini membaca halaman yang sudah dapat dimuat oleh browser. Fitur ini tidak dan tidak boleh dibuat untuk melewati login, kata sandi, paywall, atau kontrol akses apa pun.",
-  "This replaces your current Harbor setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Harbor reloads when it finishes.":
-    "Ini mengganti penyiapan Harbor Anda saat ini (tema, tata letak beranda, pengaturan, addon, profil, dan lainnya) dengan {n} entri tersimpan dalam file ini. Status login Stremio Anda tetap sama. Harbor dimuat ulang setelah selesai.",
+  "This replaces your current Lart setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Lart reloads when it finishes.":
+    "Ini mengganti penyiapan Lart Anda saat ini (tema, tata letak beranda, pengaturan, addon, profil, dan lainnya) dengan {n} entri tersimpan dalam file ini. Status login Stremio Anda tetap sama. Lart dimuat ulang setelah selesai.",
   "This repository lists no eBook extensions.": "Repositori ini tidak mencantumkan ekstensi eBook.",
   "This repository lists no plugins.": "Repositori ini tidak mencantumkan plugin.",
   "This score only appears on cards.": "Skor ini hanya muncul pada kartu.",
@@ -750,8 +750,8 @@ const catalog: Record<string, string> = {
     "Layar ini terhenti. Kembali ke Beranda biasanya mengatasinya.",
   "This section depends on the addon": "Bagian ini bergantung pada addon",
   "This section relies on TMDB discovery features.": "Bagian ini mengandalkan fitur penemuan TMDB.",
-  "This server is too old to add repos from Harbor":
-    "Server ini terlalu lama untuk menambahkan repositori dari Harbor",
+  "This server is too old to add repos from Lart":
+    "Server ini terlalu lama untuk menambahkan repositori dari Lart",
   "This server lists no extensions": "Server ini tidak mencantumkan ekstensi",
   "This server needs a username and password": "Server ini memerlukan nama pengguna dan kata sandi",
   "This server responded but is not supported": "Server ini merespons tetapi tidak didukung",
@@ -761,8 +761,8 @@ const catalog: Record<string, string> = {
     "Ini menyamakan bahasa antarmuka, metadata, subtitle, dan audio.",
   "This show": "Serial ini",
   "This show: {title}": "Serial ini: {title}",
-  "This site may not support Harbor's temporary viewer. Retry the original link or open it in your browser.":
-    "Situs ini mungkin tidak mendukung penampil sementara Harbor. Coba lagi tautan asli atau buka di browser Anda.",
+  "This site may not support Lart's temporary viewer. Retry the original link or open it in your browser.":
+    "Situs ini mungkin tidak mendukung penampil sementara Lart. Coba lagi tautan asli atau buka di browser Anda.",
   "This source": "Sumber ini",
   "This source did not provide any chapters.": "Sumber ini tidak menyediakan bab apa pun.",
   "This source did not respond": "Sumber ini tidak merespons",
@@ -770,11 +770,11 @@ const catalog: Record<string, string> = {
   "This source is down": "Sumber ini sedang tidak aktif",
   "This source is not a downloadable season package. Pick another package.":
     "Sumber ini bukan paket musim yang dapat diunduh. Pilih paket lain.",
-  "This source is not cached. Harbor will stream it peer to peer, which shares data with other peers.":
-    "Sumber ini tidak tersimpan dalam cache. Harbor akan melakukan stream secara peer-to-peer, yang membagikan data dengan peer lain.",
+  "This source is not cached. Lart will stream it peer to peer, which shares data with other peers.":
+    "Sumber ini tidak tersimpan dalam cache. Lart akan melakukan stream secara peer-to-peer, yang membagikan data dengan peer lain.",
   "This source is slow. Try another.": "Sumber ini lambat. Coba yang lain.",
-  "This source isn't cached on your debrid, so Harbor would pull it directly from peers. It can take a moment to start and may buffer on low-seed torrents.":
-    "Sumber ini tidak tersimpan dalam cache debrid Anda, jadi Harbor akan mengambilnya langsung dari peer. Mungkin perlu waktu sejenak untuk memulai dan dapat mengalami buffering pada torrent dengan sedikit seeder.",
+  "This source isn't cached on your debrid, so Lart would pull it directly from peers. It can take a moment to start and may buffer on low-seed torrents.":
+    "Sumber ini tidak tersimpan dalam cache debrid Anda, jadi Lart akan mengambilnya langsung dari peer. Mungkin perlu waktu sejenak untuk memulai dan dapat mengalami buffering pada torrent dengan sedikit seeder.",
   "This source rejected the stream": "Sumber ini menolak stream",
   "This source returned no chapters for this title.":
     "Sumber ini tidak memberikan bab apa pun untuk judul ini.",
@@ -799,8 +799,8 @@ const catalog: Record<string, string> = {
   "This user hasn't set a showcase": "Pengguna ini belum mengatur etalase",
   "This user hasn't written anything yet": "Pengguna ini belum menulis apa pun",
   "This user keeps their friends private": "Pengguna ini merahasiakan daftar temannya",
-  "This usually means antivirus removed the server file (stremio-server.exe). Add Harbor's install folder to your antivirus exclusions, then reinstall.":
-    "Ini biasanya berarti antivirus menghapus file server (stremio-server.exe). Tambahkan folder instalasi Harbor ke pengecualian antivirus Anda, lalu instal ulang.",
+  "This usually means antivirus removed the server file (stremio-server.exe). Add Lart's install folder to your antivirus exclusions, then reinstall.":
+    "Ini biasanya berarti antivirus menghapus file server (stremio-server.exe). Tambahkan folder instalasi Lart ke pengecualian antivirus Anda, lalu instal ulang.",
   "This week": "Minggu ini",
   "Thread body (optional)": "Isi utas (opsional)",
   "Thread title": "Judul utas",
@@ -850,8 +850,8 @@ const catalog: Record<string, string> = {
   "To get a Charity badge, forward your donation receipt or invoice to":
     "Untuk mendapatkan lencana Charity, teruskan tanda terima atau faktur donasi Anda ke",
   "To run a public relay, post the": "Untuk menjalankan relai publik, posting",
-  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Harbor users paste it into Settings, Harbor Relay, {kbd}.":
-    "Untuk menjalankan relai publik, posting URL {code} di r/Stremio atau tempat komunitas Anda berkumpul. Pengguna Harbor lain menempelkannya ke Pengaturan, Relai Harbor, {kbd}.",
+  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Lart users paste it into Settings, Lart Relay, {kbd}.":
+    "Untuk menjalankan relai publik, posting URL {code} di r/Stremio atau tempat komunitas Anda berkumpul. Pengguna Lart lain menempelkannya ke Pengaturan, Relai Lart, {kbd}.",
   "To the side": "Ke samping",
   Today: "Hari ini",
   "Today's openers": "Pembuka hari ini",
@@ -993,8 +993,8 @@ const catalog: Record<string, string> = {
   Tournaments: "Turnamen",
   "Towering Roles": "Peran Besar",
   Track: "Lacak",
-  "Track everything you watch, see your watchlist, and get personalized recommendations on Harbor's home page. Free at trakt.tv.":
-    "Lacak semua yang Anda tonton, lihat daftar tontonan Anda, dan dapatkan rekomendasi yang dipersonalisasi di halaman beranda Harbor. Gratis di trakt.tv.",
+  "Track everything you watch, see your watchlist, and get personalized recommendations on Lart's home page. Free at trakt.tv.":
+    "Lacak semua yang Anda tonton, lihat daftar tontonan Anda, dan dapatkan rekomendasi yang dipersonalisasi di halaman beranda Lart. Gratis di trakt.tv.",
   "Track people": "Lacak orang",
   "Track people ({n})": "Lacak orang ({n})",
   "Track switching isn't supported on the current engine. The file's default audio is playing.":

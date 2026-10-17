@@ -90,7 +90,7 @@ export function UpdatesRow() {
           : u.status === "downloaded"
             ? t("Downloaded. Ready to install and restart.")
             : u.status === "installing"
-              ? t("Installing. Harbor will restart.")
+              ? t("Installing. Lart will restart.")
               : u.status === "available"
                 ? t("A new version is ready to download.")
                 : u.status === "unavailable"
@@ -101,7 +101,7 @@ export function UpdatesRow() {
                       : t("You're on the latest version.")
                     : u.status === "error" && u.manualCheck
                       ? t("Couldn't reach the update server. Try again in a moment.")
-                      : t("Harbor checks automatically every few hours.");
+                      : t("Lart checks automatically every few hours.");
   return (
     <SettingRow
       icon={
@@ -117,10 +117,10 @@ export function UpdatesRow() {
             {ready && u.channel === "experimental" && u.experimentalVersion
               ? `${t("Experimental")} ${u.experimentalVersion}`
               : ready && u.version
-                ? t("Harbor {version} available", { version: u.version })
+                ? t("Lart {version} available", { version: u.version })
                 : installedExperimental
                   ? `${t("Experimental")} ${installedExperimental.experimentalVersion}`
-                  : `Harbor ${__APP_VERSION__}`}
+                  : `Lart ${__APP_VERSION__}`}
           </span>
           {u.channel === "experimental" ? (
             <span className={`${QUAL} bg-accent-soft text-accent`}>{t("Experimental")}</span>

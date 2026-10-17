@@ -562,7 +562,7 @@ function EmptyOwned({
         <h2 className="text-[18px] font-semibold text-ink">{t("Add files from your computer")}</h2>
         <p className="max-w-md text-[13px] leading-relaxed text-ink-muted">
           {t(
-            "Point Harbor at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.",
+            "Point Lart at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.",
           )}
         </p>
       </div>

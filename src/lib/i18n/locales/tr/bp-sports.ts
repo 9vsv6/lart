@@ -16,8 +16,8 @@ const bpSports: Record<string, string> = {
   "Following {name}": "Takip ediliyor: {name}",
   "Game finished": "Maç bitti",
   "Grand Prix weekend": "Grand Prix hafta sonu",
-  "Harbor couldn't reach the sports servers. Check the connection and open the event again.":
-    "Harbor spor sunucularına ulaşamadı. Bağlantınızı kontrol edip etkinliği yeniden açın.",
+  "Lart couldn't reach the sports servers. Check the connection and open the event again.":
+    "Lart spor sunucularına ulaşamadı. Bağlantınızı kontrol edip etkinliği yeniden açın.",
   "Hide bench": "Yedekleri gizle",
   "Hot right now": "Şu anda gündemde",
   "If the broadcast asks you to sign in or confirm your age, open it in a browser.":
@@ -39,8 +39,8 @@ const bpSports: Record<string, string> = {
     "Yüklü eklentilerin hiçbiri henüz spor kataloğu sunmuyor.",
   "No matching addon listing yet. Browse every addon channel to look for the broadcast.":
     "Henüz eşleşen bir eklenti kaydı yok. Yayını aramak için tüm eklenti kanallarına göz atın.",
-  "No playlists yet. Add one in Live TV and Harbor will match its channels to fixtures.":
-    "Henüz oynatma listeniz yok. Canlı TV'den bir liste ekleyin; Harbor da kanallarını maçlarla eşleştirir.",
+  "No playlists yet. Add one in Live TV and Lart will match its channels to fixtures.":
+    "Henüz oynatma listeniz yok. Canlı TV'den bir liste ekleyin; Lart da kanallarını maçlarla eşleştirir.",
   "No venue page published": "Yayımlanmış saha sayfası yok",
   "None of your channels match this fixture. Search your channels and pin the one that carries it.":
     "Kanallarınızın hiçbiri bu maçla eşleşmiyor. Kanallarınızda arama yapın ve maçı yayınlayan kanalı sabitleyin.",

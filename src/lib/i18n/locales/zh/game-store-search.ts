@@ -1,9 +1,9 @@
 export default {
   "Search shortcuts": "搜索快捷方式",
   "Steam search shortcut": "Steam 搜索快捷方式",
-  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Harbor search for these queries.": "输入“st ”或“st:”即可搜索 Steam 商店。关闭后，这些查询将使用普通 Harbor 搜索。",
+  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Lart search for these queries.": "输入“st ”或“st:”即可搜索 Steam 商店。关闭后，这些查询将使用普通 Lart 搜索。",
   "games.storeSearch.title": "Steam 商店",
-  "games.storeSearch.hint": "在 Harbor 搜索中输入“st ”即可直接搜索 Steam。",
+  "games.storeSearch.hint": "在 Lart 搜索中输入“st ”即可直接搜索 Steam。",
   "games.storeSearch.automatic": "自动",
   "games.storeSearch.region": "商店地区",
   "games.storeSearch.showLibrary": "标记已在我的游戏库中的游戏",

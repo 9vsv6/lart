@@ -91,7 +91,7 @@ export function useTextSync(
           if (path && generation === previewGeneration.current) {
             previewSelected.current = true;
             await b.addSubtitle(path, state.sourceTrack?.lang, "Preview", true, {
-              provider: "Harbor Live Sync",
+              provider: "Lart Live Sync",
               providerDerived: false,
             });
             if (generation === previewGeneration.current) b.setSubDelay(0);
@@ -265,7 +265,7 @@ export function useTextSync(
       const applied = await b.addSubtitle(path, source?.lang, title, true, {
         format: cur.sourceFormat,
         release,
-        provider: "Harbor Live Sync",
+        provider: "Lart Live Sync",
         providerDerived: false,
         fps: source?.fps,
         downloads: source?.downloads,
@@ -290,7 +290,7 @@ export function useTextSync(
         lang: source?.lang,
         title,
         subId: syncedSubId,
-        provider: "Harbor Live Sync",
+        provider: "Lart Live Sync",
         providerDerived: false,
         release,
         format: cur.sourceFormat,

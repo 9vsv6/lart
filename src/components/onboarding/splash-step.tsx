@@ -63,14 +63,14 @@ export function SplashStep({ onAdvance }: { onAdvance: () => void }) {
         <CustomArtwork role="launch" className="h-44 w-64" fallback={<h1 className="animate-splash-title flex items-center gap-3 font-display text-[88px] font-medium leading-none tracking-tight text-ink">
           <HarborMark className="h-[1em] w-[1em] shrink-0" />
           <span style={{ transform: "translateY(0.04em)" }}>
-            Harb
+            L
             <span
               className="inline-block"
               style={{ transform: "rotate(7deg)", transformOrigin: "50% 65%" }}
             >
-              o
+              a
             </span>
-            r
+            rt
           </span>
         </h1>} />
         <p

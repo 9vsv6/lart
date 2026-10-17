@@ -37,7 +37,7 @@ export default {
   "games.recommend.retrySome": "إعادة محاولة تحميل الروابط المفقودة",
   "games.recommend.saveError": "تعذّر حفظ تفضيلات الاكتشاف على هذا الجهاز. حاول مجددًا.",
   "games.recommend.influences": "ما يؤثر في اقتراحاتك",
-  "games.recommend.influencesNote": "اختر الألعاب التي يعتمد عليها Harbor. ستبقى مكتبتك كما هي.",
+  "games.recommend.influencesNote": "اختر الألعاب التي يعتمد عليها Lart. ستبقى مكتبتك كما هي.",
   "games.recommend.exclude": "التوقف عن استخدام {name}",
   "games.recommend.excluded": "المؤثرات المستبعدة ({count})",
   "games.recommend.useAgain": "استخدام {name} مجددًا",

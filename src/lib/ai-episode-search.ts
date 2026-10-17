@@ -32,7 +32,7 @@ export async function aiFindEpisodes(
   };
   if (!isGroq) {
     headers["HTTP-Referer"] = HARBOR_API_BASE;
-    headers["X-Title"] = "Harbor";
+    headers["X-Title"] = "Lart";
   }
   const resolved = migrateModelId(model.trim()) || DEFAULT_AI_MODEL;
   const res = await fetch(isGroq ? GROQ : OPENROUTER, {

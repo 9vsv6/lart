@@ -147,7 +147,7 @@ export function LocalEngineSection() {
           wide
           icon={<Activity size={18} strokeWidth={1.9} />}
           label={t("Engine status")}
-          desc={t("Live state of Harbor's own P2P engine on this machine.")}
+          desc={t("Live state of Lart's own P2P engine on this machine.")}
           tip={t(
             "The engine listens on a local port and joins the DHT to find peers. Active transfers are the streams it currently has open.",
           )}
@@ -208,7 +208,7 @@ export function LocalEngineSection() {
         <ToggleRow
           label={t("Only start the P2P engine when needed")}
           sub={t(
-            "Harbor normally starts its P2P engine at launch so the first P2P stream connects faster. That keeps a DHT node running and talking to the network even when you are not watching anything. Turn this on if you are on a metered or limited connection: the engine then starts the first time you actually play a P2P stream. Takes effect next launch.",
+            "Lart normally starts its P2P engine at launch so the first P2P stream connects faster. That keeps a DHT node running and talking to the network even when you are not watching anything. Turn this on if you are on a metered or limited connection: the engine then starts the first time you actually play a P2P stream. Takes effect next launch.",
           )}
           leading={<Timer size={18} strokeWidth={2.2} />}
           value={settings.deferTorrentEngine}

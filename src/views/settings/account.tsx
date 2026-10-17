@@ -23,7 +23,7 @@ export function AccountStub() {
   const tabs = [
     { id: "you" as const, label: t("Your profile") },
     { id: "profiles" as const, label: t("Profiles") },
-    { id: "harbor" as const, label: t("Harbor account") },
+    { id: "harbor" as const, label: t("Lart account") },
     { id: "stremio" as const, label: t("Stremio") },
   ];
 
@@ -43,9 +43,9 @@ function ProfilesTab() {
   return (
     <Section
       title={t("Profiles")}
-      subtitle={t("Create profiles for the people who use Harbor. Each can have its own appearance, settings, and PIN.")}
+      subtitle={t("Create profiles for the people who use Lart. Each can have its own appearance, settings, and PIN.")}
     >
-      <SettingGroup label={t("Everyone on this Harbor")}>
+      <SettingGroup label={t("Everyone on this Lart")}>
         <p className={`max-w-[70ch] ${ROW_DESC}`}>
           {t("Choose a profile to switch. Use the pencil to edit its details and access settings.")}
         </p>
@@ -65,7 +65,7 @@ function StremioTab() {
         <Section
           title={t("Stremio install links")}
           subtitle={t(
-            "Harbor catches stremio:// install links so the configure-and-install flow stays inside the app. Every install also syncs to your Stremio account, so the official app remains the canonical home for your library.",
+            "Lart catches stremio:// install links so the configure-and-install flow stays inside the app. Every install also syncs to your Stremio account, so the official app remains the canonical home for your library.",
           )}
         >
           <StremioDeeplinkRow />
@@ -80,7 +80,7 @@ function StremioTab() {
       </Section>
       <Section
         title={t("Synced addons")}
-        subtitle={t("Harbor pulls your addon collection from Stremio. Manage individual addons in Streaming sources.")}
+        subtitle={t("Lart pulls your addon collection from Stremio. Manage individual addons in Streaming sources.")}
       >
         <SyncedAddonsCard />
       </Section>
@@ -95,9 +95,9 @@ function StremioDeeplinkRow() {
   return (
     <SettingGroup>
       <ToggleRow
-        label={t("Catch stremio:// install links inside Harbor")}
+        label={t("Catch stremio:// install links inside Lart")}
         sub={t(
-          "Harbor's in-app installer animates the manifest install and keeps you in context. Anything Harbor installs is also synced to your Stremio account, so the official app stays the canonical library. Turn this off and Stremio becomes the only handler for stremio:// links; Harbor still installs anything you trigger from inside the app (Configure & install, paste, drag-and-drop).",
+          "Lart's in-app installer animates the manifest install and keeps you in context. Anything Lart installs is also synced to your Stremio account, so the official app stays the canonical library. Turn this off and Stremio becomes the only handler for stremio:// links; Lart still installs anything you trigger from inside the app (Configure & install, paste, drag-and-drop).",
         )}
         leading={<Link2 size={18} strokeWidth={2} />}
         value={on}
@@ -108,10 +108,10 @@ function StremioDeeplinkRow() {
         <p className={`max-w-[66ch] ${ROW_DESC}`}>
           {on
             ? t(
-                "Heads up: if Stremio is also installed, Windows may ask which app to use the first time a stremio:// link fires. Pick Harbor to make it stick.",
+                "Heads up: if Stremio is also installed, Windows may ask which app to use the first time a stremio:// link fires. Pick Lart to make it stick.",
               )
             : t(
-                "stremio:// links now open in the Stremio app. Harbor will only install when you trigger it from inside Harbor.",
+                "stremio:// links now open in the Stremio app. Lart will only install when you trigger it from inside Lart.",
               )}
         </p>
       </div>

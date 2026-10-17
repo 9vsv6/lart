@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { isAndroid } from "@/lib/platform";
 import snip404 from "@/assets/snip404.svg";
 import { HarborMark } from "@/components/icons/harbor-mark";
 import { submitErrorReport } from "@/lib/bug-report";
@@ -37,6 +38,10 @@ function isNoisyError(reason: unknown, message?: string): boolean {
   if (m.includes("request cancelled") || m.includes("request canceled")) return true;
   if (r?.name === "AbortError" || r?.name === "TimeoutError") return true;
   if (r?.name === "NetworkError") return true;
+  // The Android build registers only the plugins and commands a phone has.
+  // Desktop-only calls (window chrome, mpv, tray) reject there by design.
+  if (isAndroid() && (/^plugin [\w-]+ not initialized$/.test(m) || /^command \S+ not found$/.test(m)))
+    return true;
   return false;
 }
 
@@ -168,7 +173,7 @@ export function ErrorView() {
           )
         : error.code === "NativePanic"
           ? t(
-              "Sorry, Harbor crashed the last time it was running. You can review the details and choose whether to send a report.",
+              "Sorry, Lart crashed the last time it was running. You can review the details and choose whether to send a report.",
             )
           : error.message;
 
@@ -186,14 +191,14 @@ export function ErrorView() {
           className="font-display text-[24px] font-medium leading-none tracking-tight sm:text-[28px]"
           style={{ transform: "translateY(1px)" }}
         >
-          Harb
+          L
           <span
             className="inline-block"
             style={{ transform: "rotate(7deg)", transformOrigin: "50% 65%" }}
           >
-            o
+            a
           </span>
-          r
+          rt
         </span>
       </div>
 
@@ -270,7 +275,7 @@ export function ErrorView() {
               {t("Could not send: {message}", { message: report.message })}
             </span>
           ) : (
-            t("Sends the context above straight to the Harbor team. No keys or library data.")
+            t("Sends the context above straight to the Lart team. No keys or library data.")
           )}
         </p>
       </div>

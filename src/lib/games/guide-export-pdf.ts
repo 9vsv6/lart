@@ -57,7 +57,7 @@ export async function createGuidePdf({game,item,article}:GuideExport,signal:Abor
   const needed=new Set<PdfFont>();for(const char of allText){const font=guideCharacterFont(char);if(font)needed.add(font);}
   if(documents.some(doc=>doc.querySelector("pre,code")))needed.add("Mono");
   await Promise.all([...needed].map(async name=>{
-    const data=await guidePdfFont(name,signal),file=`Harbor-${name}.font`;
+    const data=await guidePdfFont(name,signal),file=`Lart-${name}.font`;
     pdfMake.addVirtualFileSystem({[file]:data});pdfMake.addFonts({[name]:{normal:file,bold:file,italics:file,bolditalics:file}});
   }));
   const source=item.source==="pcwiki"?"PCGamingWiki":"Steam Community";
@@ -95,7 +95,7 @@ export async function createGuidePdf({game,item,article}:GuideExport,signal:Abor
   const definition:TDocumentDefinitions={
     pageSize:"A4",pageMargins:[48,48,48,50],content,
     defaultStyle:{font:"Roboto",fontSize:10.5,lineHeight:1.3,color:"#20272d"},
-    info:{title:article.title,author,subject:game,creator:"Harbor"},
+    info:{title:article.title,author,subject:game,creator:"Lart"},
     header:page=>page===1?null:{text:fontRuns(game,"Roboto"),margin:[48,21,48,0],fontSize:8,color:"#71777c"},
     footer:(page,count)=>({columns:[{text:"HARBOR",width:"*"},{text:`${page} / ${count}`,alignment:"right"}],margin:[48,18,48,0],fontSize:8,color:"#71777c"}),
     pageBreakBefore:(node,queries)=>{

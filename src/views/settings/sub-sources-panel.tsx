@@ -122,12 +122,12 @@ export function SubSourcesPanel() {
     <>
       <Section
         title={t("Subtitle sources")}
-        subtitle={t("Choose where Harbor searches for subtitles. Results from enabled sources appear together, with duplicates removed.")}
+        subtitle={t("Choose where Lart searches for subtitles. Results from enabled sources appear together, with duplicates removed.")}
       >
-        <SettingGroup label={t("Built into Harbor")}>
+        <SettingGroup label={t("Built into Lart")}>
           <ToggleRow
             label={t("OpenSubtitles")}
-            sub={t("Harbor's built-in OpenSubtitles search, on by default. If you install an OpenSubtitles addon, this steps aside automatically so your results are never duplicated.")}
+            sub={t("Lart's built-in OpenSubtitles search, on by default. If you install an OpenSubtitles addon, this steps aside automatically so your results are never duplicated.")}
             value={osOn}
             onChange={(v) => setProv("opensubtitles", v)}
             leading={<img src={opensubtitlesLogo} alt="" draggable={false} className={LEAD_IMG} />}
@@ -142,7 +142,7 @@ export function SubSourcesPanel() {
                 onCommit={(v) => update({ opensubtitlesApiKey: v })}
                 help={
                   <>
-                    {t("Searching works without a key. Adding one lets Harbor line subtitles up with the audio on its own.")}{" "}
+                    {t("Searching works without a key. Adding one lets Lart line subtitles up with the audio on its own.")}{" "}
                     <ExtLink href="https://www.opensubtitles.com/consumers">
                       {t("Get a free key at opensubtitles.com")}
                     </ExtLink>
@@ -251,7 +251,7 @@ export function SubSourcesPanel() {
         <SRow
           leading={<Languages size={20} strokeWidth={2} />}
           title={t("Subtitle language order")}
-          description={t("Pick which languages Harbor looks for first, and which ones it falls back to.")}
+          description={t("Pick which languages Lart looks for first, and which ones it falls back to.")}
           trailing={<NavChevron />}
           onClick={() => setActive("subtitles", settingsAnchor("Subtitle languages"))}
         />

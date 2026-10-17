@@ -1,7 +1,7 @@
 export default {
   "games.details.broadcastPause": "Pausar transmisión",
   "games.details.broadcastResume": "Reproducir transmisión",
-  "games.details.broadcastPlay": "Ver en Harbor",
+  "games.details.broadcastPlay": "Ver en Lart",
   "games.details.watchRun": "Ver la partida",
   "games.details.viewRun": "Ver registro",
   "games.details.runVideo": "Vídeo de la partida",

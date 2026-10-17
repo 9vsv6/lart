@@ -1,7 +1,7 @@
 export default {
   "games.details.broadcastPause": "配信を一時停止",
   "games.details.broadcastResume": "配信を再生",
-  "games.details.broadcastPlay": "Harborで視聴",
+  "games.details.broadcastPlay": "Lartで視聴",
   "games.details.watchRun": "ランを視聴",
   "games.details.viewRun": "記録を見る",
   "games.details.runVideo": "ランの動画",

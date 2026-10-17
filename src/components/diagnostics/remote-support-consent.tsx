@@ -5,7 +5,7 @@ import { fetchDiagnosticsRequest, type DiagnosticsRequestSummary } from "@/lib/s
 import { t as translate, useT } from "@/lib/i18n";
 
 const TRUST_LINE =
-  "Harbor will always ask before requesting your logs. We never collect or transmit anything without your explicit consent.";
+  "Lart will always ask before requesting your logs. We never collect or transmit anything without your explicit consent.";
 
 const SHARED_ITEMS = [
   "mpv playback logs",
@@ -33,7 +33,7 @@ function StaffCard({ staff }: { staff: DiagnosticsRequestSummary["staff"] }) {
           </span>
         </div>
         <span className="truncate text-[12px] text-ink-subtle">
-          @{staff.handle} · {t("Verified Harbor Staff")}
+          @{staff.handle} · {t("Verified Lart Staff")}
         </span>
       </div>
     </div>

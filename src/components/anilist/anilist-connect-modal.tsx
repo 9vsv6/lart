@@ -41,7 +41,7 @@ export function AnilistConnectModal({ onClose }: { onClose: () => void }) {
       ? t("Connected")
       : connectState.kind === "verifying"
         ? t("Verifying")
-        : t("Authorize Harbor on AniList");
+        : t("Authorize Lart on AniList");
 
   return (
     <ModalShell closing={closing} onDismiss={onCancel}>
@@ -73,7 +73,7 @@ export function AnilistConnectModal({ onClose }: { onClose: () => void }) {
           {connectState.kind === "needs-code" && (
             <>
               <p className="text-[13px] leading-relaxed text-ink-muted">
-                {t("A browser tab opened on AniList. Approve Harbor there, then copy the text it shows and paste it below.")}
+                {t("A browser tab opened on AniList. Approve Lart there, then copy the text it shows and paste it below.")}
               </p>
               <textarea
                 value={draftCode}

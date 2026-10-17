@@ -84,7 +84,7 @@ export function Anime4kShaderList() {
     <SettingGroup label={t("Anime4K presets")}>
       <p className={`max-w-[70ch] ${ROW_DESC}`}>
         {t(
-          "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Harbor handles the shaders.",
+          "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Lart handles the shaders.",
         )}
       </p>
 
@@ -92,7 +92,7 @@ export function Anime4kShaderList() {
         demo={{
           before: "/shader-demos/anime4k/before.webp",
           after: "/shader-demos/anime4k/after.webp",
-          credit: t("Harbor, from a public domain frame"),
+          credit: t("Lart, from a public domain frame"),
         }}
       />
 
@@ -107,7 +107,7 @@ export function Anime4kShaderList() {
         <div className="flex flex-col gap-3">
           <p className={`max-w-[70ch] ${ROW_DESC}`}>
             {t(
-              "One-time setup downloads the shader pack (about 1 MB) into Harbor. No files to hunt down.",
+              "One-time setup downloads the shader pack (about 1 MB) into Lart. No files to hunt down.",
             )}
           </p>
           <button

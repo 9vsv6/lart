@@ -1,8 +1,8 @@
 const appFill: Record<string, string> = {
   "Only turn this off if you already have a metadata addon installed, such as AIOMetadata or AIOStreams. Without one, titles and collections can open completely blank. Cinemeta can go stale and show released episodes as TBA, which is the reason to replace it.":
     "Chỉ tắt mục này nếu bạn đã cài tiện ích bổ sung siêu dữ liệu, chẳng hạn như AIOMetadata hoặc AIOStreams. Nếu không có, tiêu đề và bộ sưu tập có thể mở ra nhưng hoàn toàn trống. Dữ liệu Cinemeta có thể lỗi thời và hiển thị các tập đã phát hành là TBA, vì vậy nên thay thế.",
-  "No metadata addon detected. Harbor is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
-    "Không phát hiện tiện ích bổ sung siêu dữ liệu. Harbor đang dùng Cinemeta dự phòng để tiêu đề vẫn tải được, nhưng hãy bật lại mục này trừ khi bạn đang cài một tiện ích khác.",
+  "No metadata addon detected. Lart is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
+    "Không phát hiện tiện ích bổ sung siêu dữ liệu. Lart đang dùng Cinemeta dự phòng để tiêu đề vẫn tải được, nhưng hãy bật lại mục này trừ khi bạn đang cài một tiện ích khác.",
   "Checking sources and audio": "Đang kiểm tra nguồn và âm thanh",
   "Downloading speech model {pct}%": "Đang tải xuống mô hình giọng nói {pct}%",
   "Downloading speech model": "Đang tải xuống mô hình giọng nói",
@@ -21,20 +21,20 @@ const appFill: Record<string, string> = {
   "Timing rate": "Tốc độ thời gian",
   "No timing change was needed. This subtitle already matches the audio.":
     "Không cần thay đổi thời gian. Phụ đề này đã khớp với âm thanh.",
-  "Harbor couldn't analyze the audio for this source. Try again or adjust it manually.":
-    "Harbor không thể phân tích âm thanh của nguồn này. Hãy thử lại hoặc điều chỉnh thủ công.",
+  "Lart couldn't analyze the audio for this source. Try again or adjust it manually.":
+    "Lart không thể phân tích âm thanh của nguồn này. Hãy thử lại hoặc điều chỉnh thủ công.",
   "There isn't enough readable dialogue in this subtitle to measure its timing.":
     "Phụ đề này không có đủ lời thoại đọc được để đo thời gian.",
   "This subtitle appears to be for a different cut. Try another match.":
     "Phụ đề này có vẻ dành cho một bản dựng khác. Hãy thử bản khớp khác.",
-  "The timing checks disagreed, so Harbor left the subtitle unchanged.":
-    "Các lần kiểm tra thời gian cho kết quả không thống nhất, nên Harbor giữ nguyên phụ đề.",
+  "The timing checks disagreed, so Lart left the subtitle unchanged.":
+    "Các lần kiểm tra thời gian cho kết quả không thống nhất, nên Lart giữ nguyên phụ đề.",
   "The timing difference was too large to correct safely. Try another subtitle.":
     "Chênh lệch thời gian quá lớn để sửa an toàn. Hãy thử phụ đề khác.",
   "There wasn't enough matching dialogue to make a safe correction.":
     "Không có đủ lời thoại trùng khớp để sửa an toàn.",
-  "Harbor couldn't find a reliable timing correction for this subtitle.":
-    "Harbor không tìm được cách sửa thời gian đáng tin cậy cho phụ đề này.",
+  "Lart couldn't find a reliable timing correction for this subtitle.":
+    "Lart không tìm được cách sửa thời gian đáng tin cậy cho phụ đề này.",
   "Looks right": "Có vẻ đã đúng",
   "Still off": "Vẫn bị lệch",
   "This subtitle looks like a different version of the video.":
@@ -100,12 +100,12 @@ const appFill: Record<string, string> = {
   "Copy magnet link": "Sao chép liên kết magnet",
   "Download this subtitle": "Tải phụ đề này xuống",
   "Open {title}": "Mở {title}",
-  "The ship is sailing away. Thanks for watching with Harbor, it's time to listen to your grown-ups.":
-    "Con tàu sắp ra khơi. Cảm ơn bạn đã xem cùng Harbor, giờ là lúc nghe lời người lớn nhé.",
-  "Use your Harbor color": "Dùng màu Harbor của bạn",
+  "The ship is sailing away. Thanks for watching with Lart, it's time to listen to your grown-ups.":
+    "Con tàu sắp ra khơi. Cảm ơn bạn đã xem cùng Lart, giờ là lúc nghe lời người lớn nhé.",
+  "Use your Lart color": "Dùng màu Lart của bạn",
   "{n} in your library": "{n} mục trong thư viện",
-  "These avatars are Harbor originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
-    "Các ảnh đại diện này là nội dung gốc của Harbor. Các gói đã nhập chỉ được lưu trên thiết bị này: bạn quyết định nội dung trong đó và chịu trách nhiệm về nội dung ấy.",
+  "These avatars are Lart originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
+    "Các ảnh đại diện này là nội dung gốc của Lart. Các gói đã nhập chỉ được lưu trên thiết bị này: bạn quyết định nội dung trong đó và chịu trách nhiệm về nội dung ấy.",
   "Import images": "Nhập hình ảnh",
   "Pick one or many images. They collect in an Uploads set in your library. PNG, JPG, WebP, and GIF all work.":
     "Chọn một hoặc nhiều hình ảnh. Chúng sẽ được tập hợp trong bộ Uploads ở thư viện. Hỗ trợ PNG, JPG, WebP và GIF.",
@@ -116,8 +116,8 @@ const appFill: Record<string, string> = {
   "Avatars display as squares, so square images fill the tile cleanly. Others are center-cropped.":
     "Ảnh đại diện hiển thị theo hình vuông, nên ảnh vuông sẽ lấp đầy ô gọn gàng. Các ảnh khác sẽ được cắt từ giữa.",
   "You own the content": "Bạn sở hữu nội dung",
-  "Nothing is uploaded and nothing ships with Harbor. Everything stays on this device and you are responsible for the images you add.":
-    "Không có gì được tải lên và Harbor cũng không đi kèm nội dung nào. Mọi thứ đều ở lại trên thiết bị này và bạn chịu trách nhiệm về những hình ảnh mình thêm vào.",
+  "Nothing is uploaded and nothing ships with Lart. Everything stays on this device and you are responsible for the images you add.":
+    "Không có gì được tải lên và Lart cũng không đi kèm nội dung nào. Mọi thứ đều ở lại trên thiết bị này và bạn chịu trách nhiệm về những hình ảnh mình thêm vào.",
   "About avatar packs": "Giới thiệu về gói ảnh đại diện",
   "Bring your own avatars into the library.": "Thêm ảnh đại diện của riêng bạn vào thư viện.",
   "Preparing your images": "Đang chuẩn bị hình ảnh",
@@ -156,8 +156,8 @@ const appFill: Record<string, string> = {
   "When a new season premieres": "Khi mùa mới ra mắt",
   "Remind me about": "Nhắc tôi về",
   "Set reminder": "Đặt lời nhắc",
-  "Harbor checks a few times a day while it's open and lets you know here.":
-    "Harbor kiểm tra vài lần mỗi ngày khi đang mở và sẽ thông báo cho bạn tại đây.",
+  "Lart checks a few times a day while it's open and lets you know here.":
+    "Lart kiểm tra vài lần mỗi ngày khi đang mở và sẽ thông báo cho bạn tại đây.",
   "Reminder on": "Đã bật lời nhắc",
   "Remind me": "Nhắc tôi",
   "Edit reminder": "Sửa lời nhắc",
@@ -187,8 +187,8 @@ const appFill: Record<string, string> = {
     "Bạn đã đạt giới hạn {max} danh sách. Hãy xóa một danh sách để tạo chỗ trống.",
   "Updated {when}": "Đã cập nhật {when}",
   "Pick a few you love": "Chọn vài phim bạn yêu thích",
-  "Choose up to 5 movies or shows you already like. Harbor uses them to tune your featured picks and recommendations. Totally optional.":
-    "Chọn tối đa 5 phim lẻ hoặc phim bộ bạn đã thích. Harbor sẽ dùng chúng để điều chỉnh các đề xuất nổi bật và nội dung gợi ý. Hoàn toàn không bắt buộc.",
+  "Choose up to 5 movies or shows you already like. Lart uses them to tune your featured picks and recommendations. Totally optional.":
+    "Chọn tối đa 5 phim lẻ hoặc phim bộ bạn đã thích. Lart sẽ dùng chúng để điều chỉnh các đề xuất nổi bật và nội dung gợi ý. Hoàn toàn không bắt buộc.",
   "Remove from Home": "Xóa khỏi Màn hình chính",
   "Add to Home Screen": "Thêm vào Màn hình chính",
   "Some copies of new releases have ads spliced into the video itself. This is experimental: the community marks where those ads are so others can skip them.":
@@ -196,7 +196,7 @@ const appFill: Record<string, string> = {
   "Your report is sent for review before it ever skips anything for anyone. Nothing about the video is uploaded, just the timestamps you mark. It is off by default and you can turn it off anytime in Settings.":
     "Báo cáo của bạn sẽ được gửi để xét duyệt trước khi dùng để bỏ qua bất kỳ nội dung nào cho người khác. Không có dữ liệu video nào được tải lên, chỉ có các mốc thời gian bạn đánh dấu. Tính năng này mặc định tắt và bạn có thể tắt bất cứ lúc nào trong Cài đặt.",
   "Open Voyages": "Mở Voyages",
-  "Harbor Voyages": "Harbor Voyages",
+  "Lart Voyages": "Lart Voyages",
   "Set a course": "Lên hải trình",
   "Pick up where you left off.": "Tiếp tục từ nơi bạn dừng lại.",
   "A short run of films you'll actually finish. You pick every stop.":
@@ -379,7 +379,7 @@ const appFill: Record<string, string> = {
   "List renamed": "Đã đổi tên danh sách",
   "View my profile": "Xem hồ sơ của tôi",
   "Manage profiles": "Quản lý hồ sơ",
-  "Quit Harbor": "Thoát Harbor",
+  "Quit Lart": "Thoát Lart",
   "Toggle Fullscreen": "Bật/tắt toàn màn hình",
   "Zoom In": "Phóng to",
   "Zoom Out": "Thu nhỏ",
@@ -462,8 +462,8 @@ const appFill: Record<string, string> = {
   "Schedule & options": "Lịch & tùy chọn",
   "Nothing found here": "Không tìm thấy nội dung nào ở đây",
   "That does not look like a repository URL": "Đây có vẻ không phải là URL kho lưu trữ",
-  "This server is too old to add repos from Harbor":
-    "Máy chủ này quá cũ để thêm kho lưu trữ từ Harbor",
+  "This server is too old to add repos from Lart":
+    "Máy chủ này quá cũ để thêm kho lưu trữ từ Lart",
   "The server could not load that repository": "Máy chủ không thể tải kho lưu trữ đó",
   "Extension repositories": "Kho tiện ích mở rộng",
   "Action failed": "Thao tác thất bại",
@@ -486,8 +486,8 @@ const appFill: Record<string, string> = {
   "Connected to {name}": "Đã kết nối với {name}",
   "Add server": "Thêm máy chủ",
   "Connect a Suwayomi server": "Kết nối máy chủ Suwayomi",
-  "Point Harbor at your self-hosted library to browse and install sources":
-    "Kết nối Harbor với thư viện tự lưu trữ để duyệt và cài đặt nguồn",
+  "Point Lart at your self-hosted library to browse and install sources":
+    "Kết nối Lart với thư viện tự lưu trữ để duyệt và cài đặt nguồn",
   "{n} / {max} lists": "{n} / {max} danh sách",
   "Create your first list": "Tạo danh sách đầu tiên",
   "Group the movies and shows you love. Rewatch shelf, weekend picks, whatever keeps them close.":
@@ -502,8 +502,8 @@ const appFill: Record<string, string> = {
   "Back to lists": "Quay lại danh sách",
   "{n} / {max} items": "{n} / {max} mục",
   "Your folders": "Thư mục của bạn",
-  "Folders Harbor imported your movies and shows from. Rescan to pick up new files.":
-    "Các thư mục mà Harbor đã nhập phim và phim bộ vào thư viện. Quét lại để tìm tệp mới.",
+  "Folders Lart imported your movies and shows from. Rescan to pick up new files.":
+    "Các thư mục mà Lart đã nhập phim và phim bộ vào thư viện. Quét lại để tìm tệp mới.",
   "1 file": "1 tệp",
   "{n} files": "{n} tệp",
   "Remove folder": "Xóa thư mục",
@@ -520,17 +520,17 @@ const appFill: Record<string, string> = {
   "Season {n} has started": "Mùa {n} đã bắt đầu",
   "S{s} E{e} is out now": "M{s} T{e} hiện đã phát hành",
   "{n} new episodes are out": "{n} tập mới đã phát hành",
-  "Harbor account": "Tài khoản Harbor",
-  "Your handle across Harbor, and your verified status.":
-    "Tên định danh của bạn trên Harbor và trạng thái xác minh.",
+  "Lart account": "Tài khoản Lart",
+  "Your handle across Lart, and your verified status.":
+    "Tên định danh của bạn trên Lart và trạng thái xác minh.",
   "No titles found in this collection.": "Không tìm thấy tựa phim nào trong bộ sưu tập này.",
   "Trending on {site}": "Thịnh hành trên {site}",
   "Top rated on {site}": "Được đánh giá cao nhất trên {site}",
   "Two columns": "Hai cột",
   "Stremio didn't confirm the move. Your collection may be unchanged. Reload to see the current state.":
     "Stremio chưa xác nhận việc di chuyển. Bộ sưu tập của bạn có thể chưa thay đổi. Hãy tải lại để xem trạng thái hiện tại.",
-  "Moved, but Harbor couldn't confirm the result. Reload to see the current state.":
-    "Đã di chuyển nhưng Harbor không thể xác nhận kết quả. Hãy tải lại để xem trạng thái hiện tại.",
+  "Moved, but Lart couldn't confirm the result. Reload to see the current state.":
+    "Đã di chuyển nhưng Lart không thể xác nhận kết quả. Hãy tải lại để xem trạng thái hiện tại.",
   "Everything here is already in your account.":
     "Mọi nội dung ở đây đều đã có trong tài khoản của bạn.",
   "Moved 1 addon to your Stremio account. It now syncs everywhere you sign in.":
@@ -554,24 +554,24 @@ const appFill: Record<string, string> = {
   "No sources match your filter": "Không có nguồn nào khớp với bộ lọc",
   "Install an extension above to get sources": "Cài đặt một tiện ích mở rộng ở trên để nhận nguồn",
   "Add a manga source": "Thêm nguồn manga",
-  "Harbor does not host any manga or any sources. Connect a self-hosted server you run, install a source plugin from a repository you trust, or open a folder you already have.":
-    "Harbor không lưu trữ manga hay bất kỳ nguồn nào. Hãy kết nối máy chủ tự lưu trữ do bạn vận hành, cài đặt plugin nguồn từ kho lưu trữ đáng tin cậy hoặc mở một thư mục có sẵn.",
+  "Lart does not host any manga or any sources. Connect a self-hosted server you run, install a source plugin from a repository you trust, or open a folder you already have.":
+    "Lart không lưu trữ manga hay bất kỳ nguồn nào. Hãy kết nối máy chủ tự lưu trữ do bạn vận hành, cài đặt plugin nguồn từ kho lưu trữ đáng tin cậy hoặc mở một thư mục có sẵn.",
   "Set up a source": "Thiết lập nguồn",
   "Browse manga": "Duyệt manga",
-  "Read manga in Harbor": "Đọc manga trong Harbor",
-  "Harbor does not host any manga. Add a source plugin from a repository you trust, connect your own server, or open a local folder. You can turn this off anytime in Settings.":
-    "Harbor không lưu trữ manga. Hãy thêm plugin nguồn từ kho lưu trữ đáng tin cậy, kết nối máy chủ riêng hoặc mở thư mục cục bộ. Bạn có thể tắt tính năng này bất cứ lúc nào trong Cài đặt.",
+  "Read manga in Lart": "Đọc manga trong Lart",
+  "Lart does not host any manga. Add a source plugin from a repository you trust, connect your own server, or open a local folder. You can turn this off anytime in Settings.":
+    "Lart không lưu trữ manga. Hãy thêm plugin nguồn từ kho lưu trữ đáng tin cậy, kết nối máy chủ riêng hoặc mở thư mục cục bộ. Bạn có thể tắt tính năng này bất cứ lúc nào trong Cài đặt.",
   "Enable manga sources": "Bật nguồn manga",
-  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Harbor problem: pick another source, or give it a minute to finish caching and try again.":
-    "“Đã lưu vào bộ nhớ đệm” chỉ có nghĩa là tiện ích bổ sung cho rằng tệp đó đã được lưu trên dịch vụ debrid của bạn và có thể phát ngay. Chỉ báo này không phải lúc nào cũng chính xác: đôi khi tệp thực tế vẫn chưa có ở đó. Khi đó, nguồn sẽ không phát hoặc chỉ phát một đoạn ngắn bị lỗi. Đây không phải lỗi của Harbor: hãy chọn nguồn khác hoặc đợi một phút để quá trình lưu vào bộ nhớ đệm hoàn tất rồi thử lại.",
+  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Lart problem: pick another source, or give it a minute to finish caching and try again.":
+    "“Đã lưu vào bộ nhớ đệm” chỉ có nghĩa là tiện ích bổ sung cho rằng tệp đó đã được lưu trên dịch vụ debrid của bạn và có thể phát ngay. Chỉ báo này không phải lúc nào cũng chính xác: đôi khi tệp thực tế vẫn chưa có ở đó. Khi đó, nguồn sẽ không phát hoặc chỉ phát một đoạn ngắn bị lỗi. Đây không phải lỗi của Lart: hãy chọn nguồn khác hoặc đợi một phút để quá trình lưu vào bộ nhớ đệm hoàn tất rồi thử lại.",
   "On your disk": "Trên ổ đĩa của bạn",
   "Choose subtitles": "Chọn phụ đề",
   "No subtitles": "Không có phụ đề",
   "Couldn't load subtitles. You can start anyway and add one later in the player.":
     "Không thể tải phụ đề. Bạn vẫn có thể bắt đầu phát và thêm phụ đề sau trong trình phát.",
-  "No subtitles found. Start anyway, Harbor keeps looking while you watch.":
-    "Không tìm thấy phụ đề. Vẫn bắt đầu phát, Harbor sẽ tiếp tục tìm trong khi bạn xem.",
-  "Skip, let Harbor choose": "Bỏ qua, để Harbor chọn",
+  "No subtitles found. Start anyway, Lart keeps looking while you watch.":
+    "Không tìm thấy phụ đề. Vẫn bắt đầu phát, Lart sẽ tiếp tục tìm trong khi bạn xem.",
+  "Skip, let Lart choose": "Bỏ qua, để Lart chọn",
   "Start playback": "Bắt đầu phát",
   "Best match": "Khớp nhất",
   "Finding subtitles…": "Đang tìm phụ đề…",
@@ -609,24 +609,24 @@ const appFill: Record<string, string> = {
     "Không thể phát hiện địa chỉ Wi-Fi của bạn. Hãy kết nối máy tính này với Wi-Fi hoặc tìm liên kết điều khiển bằng điện thoại trong Cài đặt, Phát.",
   "Chapter finished": "Đã đọc xong chương",
   "Hidden sections": "Mục bị ẩn",
-  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Harbor can't import them.":
-    "Đây là kho Mangayomi, nhưng các nguồn trong đó dùng Dart hoặc không phải nguồn manga nên Harbor không thể nhập.",
-  "This is a Mangayomi repo. Harbor runs its JavaScript sources natively. Import them to add these sources to your manga library.":
-    "Đây là kho Mangayomi. Harbor chạy trực tiếp các nguồn JavaScript trong đó. Nhập chúng để thêm các nguồn này vào thư viện manga của bạn.",
+  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Lart can't import them.":
+    "Đây là kho Mangayomi, nhưng các nguồn trong đó dùng Dart hoặc không phải nguồn manga nên Lart không thể nhập.",
+  "This is a Mangayomi repo. Lart runs its JavaScript sources natively. Import them to add these sources to your manga library.":
+    "Đây là kho Mangayomi. Lart chạy trực tiếp các nguồn JavaScript trong đó. Nhập chúng để thêm các nguồn này vào thư viện manga của bạn.",
   "Imported {n} sources, {f} could not load": "Đã nhập {n} nguồn, không thể tải {f} nguồn",
   "Imported {n} sources": "Đã nhập {n} nguồn",
   "Import failed, try again": "Nhập không thành công, hãy thử lại",
   "Importing {done} of {total}": "Đang nhập {done}/{total}",
   "Import {n} JavaScript sources": "Nhập {n} nguồn JavaScript",
   "Import JavaScript sources": "Nhập nguồn JavaScript",
-  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Harbor can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "Đây là kho Tachiyomi / Mihon. Các tiện ích mở rộng này dành cho Android (APK), nên Harbor không thể chạy trực tiếp. Để dùng các nguồn này trên máy tính, hãy chạy máy chủ Suwayomi rồi kết nối Harbor với máy chủ đó trong mục Máy chủ.",
-  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "Đây là kho Mangayomi. Tính năng nhập trực tiếp chưa được hỗ trợ. Để có danh mục lớn nhất hiện nay, hãy chạy máy chủ Suwayomi rồi kết nối Harbor với máy chủ đó trong mục Máy chủ.",
-  "This is a Paperback (iOS) repo, which Harbor can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
-    "Đây là kho Paperback (iOS) mà Harbor không thể sử dụng. Để dùng nguồn trên máy tính, hãy kết nối máy chủ Suwayomi trong mục Máy chủ.",
-  "This doesn't look like a Harbor plugin repo. Harbor expects a JSON file shaped { name, plugins: [ ... ] }.":
-    "Đây có vẻ không phải là kho plugin Harbor. Harbor cần một tệp JSON có cấu trúc { name, plugins: [ ... ] }.",
+  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Lart can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "Đây là kho Tachiyomi / Mihon. Các tiện ích mở rộng này dành cho Android (APK), nên Lart không thể chạy trực tiếp. Để dùng các nguồn này trên máy tính, hãy chạy máy chủ Suwayomi rồi kết nối Lart với máy chủ đó trong mục Máy chủ.",
+  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "Đây là kho Mangayomi. Tính năng nhập trực tiếp chưa được hỗ trợ. Để có danh mục lớn nhất hiện nay, hãy chạy máy chủ Suwayomi rồi kết nối Lart với máy chủ đó trong mục Máy chủ.",
+  "This is a Paperback (iOS) repo, which Lart can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
+    "Đây là kho Paperback (iOS) mà Lart không thể sử dụng. Để dùng nguồn trên máy tính, hãy kết nối máy chủ Suwayomi trong mục Máy chủ.",
+  "This doesn't look like a Lart plugin repo. Lart expects a JSON file shaped { name, plugins: [ ... ] }.":
+    "Đây có vẻ không phải là kho plugin Lart. Lart cần một tệp JSON có cấu trúc { name, plugins: [ ... ] }.",
   "Tap again to remove all {n} extensions": "Nhấn lại để xóa tất cả {n} tiện ích mở rộng",
   "Remove all extensions ({n})": "Xóa tất cả tiện ích mở rộng ({n})",
   "https:// API or site URL": "URL API hoặc trang web https://",
@@ -707,22 +707,22 @@ const appFill: Record<string, string> = {
     "Không tìm thấy phụ đề mới ngoài những phụ đề đã liệt kê.",
   "{time} left": "Còn {time}",
   "Loading your library…": "Đang tải thư viện của bạn…",
-  "Keep controlling Harbor in the background": "Tiếp tục điều khiển Harbor trong nền",
-  "Off by default, so your controller only drives Harbor while it is the focused window. Leave it off if you play games with the same controller.":
-    "Mặc định tắt, vì vậy tay cầm chỉ điều khiển Harbor khi cửa sổ Harbor đang được chọn. Hãy để tắt nếu bạn chơi game bằng cùng tay cầm.",
+  "Keep controlling Lart in the background": "Tiếp tục điều khiển Lart trong nền",
+  "Off by default, so your controller only drives Lart while it is the focused window. Leave it off if you play games with the same controller.":
+    "Mặc định tắt, vì vậy tay cầm chỉ điều khiển Lart khi cửa sổ Lart đang được chọn. Hãy để tắt nếu bạn chơi game bằng cùng tay cầm.",
   "Use Cinemeta for title metadata": "Dùng Cinemeta cho siêu dữ liệu phim",
   "Turn this off to take Cinemeta out entirely and use only your own metadata addons, such as AIOMetadata or AIOStreams. Cinemeta can go stale and show already released episodes as TBA. Leave it on unless you have a metadata addon installed, or titles will have no details.":
     "Tắt tùy chọn này để loại bỏ hoàn toàn Cinemeta và chỉ dùng các tiện ích bổ sung siêu dữ liệu của riêng bạn, như AIOMetadata hoặc AIOStreams. Dữ liệu của Cinemeta có thể lỗi thời và hiển thị các tập đã phát hành là TBA. Hãy để bật trừ khi bạn đã cài tiện ích bổ sung siêu dữ liệu, nếu không phim sẽ không có thông tin chi tiết.",
-  "This one also replaces Harbor's bundled players and tools, so it installs through Harbor Setup. Harbor closes, the installer finishes, then Harbor reopens.":
-    "Bản này cũng thay thế các trình phát và công cụ đi kèm Harbor, nên sẽ được cài đặt qua Harbor Setup. Harbor sẽ đóng, trình cài đặt hoàn tất rồi Harbor mở lại.",
-  "This one installs through Harbor Setup, but the update manifest carries no signature for it. Harbor will not run an installer it cannot verify. Download it and run it yourself.":
-    "Bản này được cài đặt qua Harbor Setup, nhưng tệp kê khai cập nhật không có chữ ký cho bản này. Harbor sẽ không chạy trình cài đặt không thể xác minh. Hãy tải xuống và tự chạy.",
+  "This one also replaces Lart's bundled players and tools, so it installs through Lart Setup. Lart closes, the installer finishes, then Lart reopens.":
+    "Bản này cũng thay thế các trình phát và công cụ đi kèm Lart, nên sẽ được cài đặt qua Lart Setup. Lart sẽ đóng, trình cài đặt hoàn tất rồi Lart mở lại.",
+  "This one installs through Lart Setup, but the update manifest carries no signature for it. Lart will not run an installer it cannot verify. Download it and run it yourself.":
+    "Bản này được cài đặt qua Lart Setup, nhưng tệp kê khai cập nhật không có chữ ký cho bản này. Lart sẽ không chạy trình cài đặt không thể xác minh. Hãy tải xuống và tự chạy.",
   "Download installer": "Tải trình cài đặt",
   "Install and reopen": "Cài đặt rồi mở lại",
-  "Harbor is closing. Harbor Setup will finish and reopen it.":
-    "Harbor đang đóng. Harbor Setup sẽ hoàn tất cài đặt rồi mở lại ứng dụng.",
-  "Harbor Setup did not finish updating Harbor. Nothing was changed.":
-    "Harbor Setup chưa hoàn tất cập nhật Harbor. Không có gì thay đổi.",
+  "Lart is closing. Lart Setup will finish and reopen it.":
+    "Lart đang đóng. Lart Setup sẽ hoàn tất cài đặt rồi mở lại ứng dụng.",
+  "Lart Setup did not finish updating Lart. Nothing was changed.":
+    "Lart Setup chưa hoàn tất cập nhật Lart. Không có gì thay đổi.",
   "Dismiss": "Bỏ qua",
 };
 

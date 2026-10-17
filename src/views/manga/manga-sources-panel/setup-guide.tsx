@@ -18,10 +18,10 @@ const SUWAYOMI_RELEASES = "https://github.com/Suwayomi/Suwayomi-Server/releases"
 type Translate = (key: string, vars?: Record<string, string | number>) => string;
 
 function buildCheatSheet(t: Translate): string {
-  return `# ${t("Getting manga sources into Harbor")}
+  return `# ${t("Getting manga sources into Lart")}
 
 ${t(
-  "Harbor ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Harbor. There are two ways to add sources.",
+  "Lart ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Lart. There are two ways to add sources.",
 )}
 
 ## 1. ${t("Everything else, through your own server (Suwayomi)")}
@@ -37,12 +37,12 @@ ${t("This is how you get hundreds of community sources.")}
   )}
 
   3. ${t(
-    "Back in Harbor: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).",
+    "Back in Lart: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).",
     { localUrl: "http://localhost:4567", lanUrl: "http://192.168.1.10:4567" },
   )}
 
   ${t(
-    "Every source you enable in Suwayomi then shows up in Harbor. Suwayomi keeps its extensions updated when a site changes, so they keep working.",
+    "Every source you enable in Suwayomi then shows up in Lart. Suwayomi keeps its extensions updated when a site changes, so they keep working.",
   )}
 
 ## 2. ${t("A local folder")}
@@ -52,7 +52,7 @@ ${t(
 
 ## ${t("Advanced: build a plugin")}
 ${t(
-  "Harbor also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Harbor repository. Only install plugins from repositories you trust.",
+  "Lart also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Lart repository. Only install plugins from repositories you trust.",
   { path: "docs/manga-plugins.md" },
 )}
 `;
@@ -156,7 +156,7 @@ export function SetupGuide() {
             </span>
             <span className="truncate text-[13px] text-ink-muted">
               {t(
-                "Prefer a server? Run every source through your own Suwayomi and point Harbor at it",
+                "Prefer a server? Run every source through your own Suwayomi and point Lart at it",
               )}
             </span>
           </span>

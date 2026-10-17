@@ -1,6 +1,6 @@
 export default {
   "floatingPlayer.playbackSettings": "再生設定",
-  "floatingPlayer.restoreVideo": "Harborに戻る",
+  "floatingPlayer.restoreVideo": "Lartに戻る",
   "floatingPlayer.closeVideo": "停止して閉じる",
   "floatingPlayer.chapters": "チャプター",
   "floatingPlayer.subtitleDelay": "字幕の遅延",

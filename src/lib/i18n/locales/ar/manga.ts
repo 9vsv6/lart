@@ -91,14 +91,14 @@ const manga: Record<string, string> = {
   "For an AI agent": "لوكيل ذكاء اصطناعي",
   Fullscreen: "ملء الشاشة",
   Go: "انتقال",
-  "Harbor does not host any manga or any sources. Connect your own server or open a folder you already have, and mix as many as you like.":
-    "لا يستضيف Harbor أي مانجا أو أي مصادر. اربط خادمك الخاص أو افتح مجلدًا تملكه بالفعل، وامزج ما تشاء منها.",
-  "Harbor logs into nothing and bypasses no password, paywall, or access control, and must not be used to attempt it. Point it only at content you are legally allowed to read, and never at official or licensed publisher sites. You alone are responsible for what you connect and for following copyright and each site's terms. Harbor bundles and endorses no sites.":
-    "لا يسجّل Harbor الدخول إلى أي شيء ولا يتجاوز أي كلمة مرور أو جدار دفع أو ضابط وصول، ويجب ألا يُستخدم لمحاولة ذلك. وجّهه فقط إلى المحتوى المسموح لك قانونيًا بقراءته، وليس أبدًا إلى مواقع الناشرين الرسمية أو المرخّصة. أنت وحدك المسؤول عمّا تربطه وعن الالتزام بحقوق النشر وشروط كل موقع. لا يحزم Harbor أي مواقع ولا يزكّيها.",
-  "Harbor ships no manga sources and hosts nothing. Extensions come from repositories other people maintain. Paste a repository URL below to browse its plugins, then install the ones you want. Every plugin runs sandboxed in an isolated worker with no access to your files, accounts, or the rest of the app.":
-    "لا يأتي Harbor بأي مصادر مانجا ولا يستضيف شيئًا. تأتي الإضافات من مستودعات يصونها أشخاص آخرون. الصق عنوان URL لمستودع أدناه لتصفّح إضافاته، ثم ثبّت ما تريد منها. تعمل كل إضافة في بيئة معزولة داخل عامل منفصل دون وصول إلى ملفاتك أو حساباتك أو بقية التطبيق.",
-  "Harbor ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Harbor reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
-    "يوفّر Harbor المحرّك، لا المواقع. تكتب إعداد JSON قصيرًا يصف موقعًا باستخدام مُحدِّدات CSS، ويقرأ Harbor الموقع بها. لا شيء محزوم: وجّهه فقط إلى المواقع التي تملك حق قراءتها.",
+  "Lart does not host any manga or any sources. Connect your own server or open a folder you already have, and mix as many as you like.":
+    "لا يستضيف Lart أي مانجا أو أي مصادر. اربط خادمك الخاص أو افتح مجلدًا تملكه بالفعل، وامزج ما تشاء منها.",
+  "Lart logs into nothing and bypasses no password, paywall, or access control, and must not be used to attempt it. Point it only at content you are legally allowed to read, and never at official or licensed publisher sites. You alone are responsible for what you connect and for following copyright and each site's terms. Lart bundles and endorses no sites.":
+    "لا يسجّل Lart الدخول إلى أي شيء ولا يتجاوز أي كلمة مرور أو جدار دفع أو ضابط وصول، ويجب ألا يُستخدم لمحاولة ذلك. وجّهه فقط إلى المحتوى المسموح لك قانونيًا بقراءته، وليس أبدًا إلى مواقع الناشرين الرسمية أو المرخّصة. أنت وحدك المسؤول عمّا تربطه وعن الالتزام بحقوق النشر وشروط كل موقع. لا يحزم Lart أي مواقع ولا يزكّيها.",
+  "Lart ships no manga sources and hosts nothing. Extensions come from repositories other people maintain. Paste a repository URL below to browse its plugins, then install the ones you want. Every plugin runs sandboxed in an isolated worker with no access to your files, accounts, or the rest of the app.":
+    "لا يأتي Lart بأي مصادر مانجا ولا يستضيف شيئًا. تأتي الإضافات من مستودعات يصونها أشخاص آخرون. الصق عنوان URL لمستودع أدناه لتصفّح إضافاته، ثم ثبّت ما تريد منها. تعمل كل إضافة في بيئة معزولة داخل عامل منفصل دون وصول إلى ملفاتك أو حساباتك أو بقية التطبيق.",
+  "Lart ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Lart reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
+    "يوفّر Lart المحرّك، لا المواقع. تكتب إعداد JSON قصيرًا يصف موقعًا باستخدام مُحدِّدات CSS، ويقرأ Lart الموقع بها. لا شيء محزوم: وجّهه فقط إلى المواقع التي تملك حق قراءتها.",
   "Hide help": "إخفاء المساعدة",
   "Host it with a repo.json": "استضفها باستخدام ملف repo.json",
   "How it works": "كيف يعمل",
@@ -150,8 +150,8 @@ const manga: Record<string, string> = {
   "Oldest first": "الأقدم أولًا",
   "One Piece, Naruto and more worlds": "ون بيس وناروتو وعوالم أخرى",
   Oneshot: "قصة مستقلة",
-  "Only add repositories you trust. Harbor cannot vouch for third-party plugins.":
-    "أضف فقط المستودعات التي تثق بها. لا يمكن لـHarbor أن يضمن الإضافات من جهات خارجية.",
+  "Only add repositories you trust. Lart cannot vouch for third-party plugins.":
+    "أضف فقط المستودعات التي تثق بها. لا يمكن لـLart أن يضمن الإضافات من جهات خارجية.",
   "Only sites you have the right to read.": "المواقع التي تملك حق قراءتها فقط.",
   "Open manga details": "فتح تفاصيل المانجا",
   "Open the site in a browser. Right-click the thing you want (a cover, a title, a chapter link) and choose Inspect.":
@@ -171,14 +171,14 @@ const manga: Record<string, string> = {
     "اختر مجلدًا واحدًا. كل مجلد فرعي بداخله هو مانجا واحدة، لذا سمِّه تمامًا كاسم العنوان. في كل منها، أضف مجلدات فصول من الصور أو ملفات .cbz / .zip. يعيّن ملف cover.jpg غلافًا مخصّصًا.",
   "Pick up the manga at {label}.": "تابِع المانجا من {label}.",
   "Pick up the manga where the anime ends.": "تابِع المانجا من حيث ينتهي الأنمي.",
-  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Harbor. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
-    "تعمل الإضافات في بيئة معزولة داخل عامل منفصل دون وصول إلى ملفاتك أو حساباتك أو بقية Harbor. ما تكشطه الإضافة أمر بينك وبين الموقع الذي تستهدفه. ثبّت الإضافات فقط من المستودعات التي تثق بها.",
-  "Point Harbor's built-in scraper at any HTML site with a config":
-    "وجّه كاشط Harbor المدمج إلى أي موقع HTML بإعداد",
+  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Lart. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
+    "تعمل الإضافات في بيئة معزولة داخل عامل منفصل دون وصول إلى ملفاتك أو حساباتك أو بقية Lart. ما تكشطه الإضافة أمر بينك وبين الموقع الذي تستهدفه. ثبّت الإضافات فقط من المستودعات التي تثق بها.",
+  "Point Lart's built-in scraper at any HTML site with a config":
+    "وجّه كاشط Lart المدمج إلى أي موقع HTML بإعداد",
   "Point Local folder at CBZ files or folders of images you already own.":
     "وجّه «المجلد المحلي» إلى ملفات CBZ أو مجلدات صور تملكها بالفعل.",
-  "Prefer a server? Run every source through your own Suwayomi and point Harbor at it":
-    "تفضّل خادمًا؟ شغّل كل مصدر عبر Suwayomi الخاص بك ووجّه Harbor إليه",
+  "Prefer a server? Run every source through your own Suwayomi and point Lart at it":
+    "تفضّل خادمًا؟ شغّل كل مصدر عبر Suwayomi الخاص بك ووجّه Lart إليه",
   Previous: "السابق",
   "Previous chapter": "الفصل السابق",
   "Previous page": "الصفحة السابقة",
@@ -277,8 +277,8 @@ const manga: Record<string, string> = {
   "Write a scraper for any site, host it, and install it like any other plugin":
     "اكتب كاشطًا لأي موقع، واستضفه، وثبّته كأي إضافة أخرى",
   "Write one JavaScript file": "اكتب ملف JavaScript واحدًا",
-  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Harbor bundles and endorses no sites; it only runs the config you supply.":
-    "أنت وحدك المسؤول عمّا تربطه وعن الالتزام بحقوق النشر وشروط كل موقع. لا يحزم Harbor أي مواقع ولا يزكّيها؛ إنه يشغّل فقط الإعداد الذي تزوّده به.",
+  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Lart bundles and endorses no sites; it only runs the config you supply.":
+    "أنت وحدك المسؤول عمّا تربطه وعن الالتزام بحقوق النشر وشروط كل موقع. لا يحزم Lart أي مواقع ولا يزكّيها؛ إنه يشغّل فقط الإعداد الذي تزوّده به.",
   "You have reached the latest chapter available.": "لقد وصلت إلى أحدث فصل متاح.",
   "Your AniList": "AniList الخاص بك",
   "Your config": "الإعداد الخاص بك",
@@ -304,8 +304,8 @@ const manga: Record<string, string> = {
   "is a page number. Add": "هو رقم صفحة. أضِف",
   "is a regex for the part to change": "هو تعبير نمطي للجزء المراد تغييره",
   "is each chapter row": "هو كل صف فصل",
-  "is how many items to skip, starting at 0. Harbor auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
-    "هو عدد العناصر المراد تخطّيها، بدءًا من 0. يكتشف Harbor حجم صفحة الموقع تلقائيًا ويتنقّل خلاله نيابةً عنك، فلا تضبط حجم صفحة أبدًا. استخدم هذا عندما يَعُدّ عنوان URL العناصر.",
+  "is how many items to skip, starting at 0. Lart auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
+    "هو عدد العناصر المراد تخطّيها، بدءًا من 0. يكتشف Lart حجم صفحة الموقع تلقائيًا ويتنقّل خلاله نيابةً عنك، فلا تضبط حجم صفحة أبدًا. استخدم هذا عندما يَعُدّ عنوان URL العناصر.",
   "is the box around one manga; inside it": "هو الإطار المحيط بمانجا واحدة؛ وبداخله",
   "is the manga URL": "هو عنوان URL للمانجا",
   "is the search text (searchPath only).": "هو نص البحث (searchPath فقط).",

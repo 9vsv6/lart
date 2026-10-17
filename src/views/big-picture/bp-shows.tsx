@@ -71,7 +71,7 @@ export function BpShows({ onSelect }: { onSelect: (m: Meta) => void }) {
         title={failed ? t("Couldn't load series") : t("No series to show yet")}
         body={
           failed
-            ? t("Harbor couldn't reach the catalog servers.")
+            ? t("Lart couldn't reach the catalog servers.")
             : t("Add a TMDB key in Settings to fill this page with curated series rows.")
         }
         action={failed ? t("Try again") : t("Open settings")}

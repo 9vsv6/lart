@@ -47,7 +47,7 @@ const TRACKERS: Array<{ id: TrackerId; name: string; logo: string; blurb: string
     id: "mal",
     name: "MyAnimeList",
     logo: malLogo,
-    blurb: "Syncs anime progress and lets you browse your MAL list inside Harbor.",
+    blurb: "Syncs anime progress and lets you browse your MAL list inside Lart.",
   },
   {
     id: "letterboxd",

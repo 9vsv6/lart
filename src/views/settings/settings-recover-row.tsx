@@ -47,7 +47,7 @@ export function SettingsRecoverRow() {
       icon={<History size={20} strokeWidth={2.1} className="text-accent" />}
       label={t("Restore previous settings")}
       desc={t(
-        "Updating separated settings per profile, which may have reset your theme and keys. Harbor still has your old setup saved. Bring it back on this profile, then reload.",
+        "Updating separated settings per profile, which may have reset your theme and keys. Lart still has your old setup saved. Bring it back on this profile, then reload.",
       )}
     >
       <SButton variant="primary" onClick={restore} disabled={applying}>

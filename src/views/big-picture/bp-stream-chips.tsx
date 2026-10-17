@@ -166,7 +166,7 @@ export function BpStreamChips({
                 ? t("Addon order (locked)")
                 : s.sort === "addon"
                   ? t("Addon order")
-                  : t("Harbor pick")
+                  : t("Lart pick")
             }
             selected={s.sort === "addon" || s.sortForced}
             disabled={s.sortForced}

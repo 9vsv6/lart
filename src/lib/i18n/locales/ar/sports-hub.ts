@@ -121,8 +121,8 @@ export default {
   Constructors: "الصانعون",
   "Coverage varies by league. Streams depend on your available sources.":
     "تختلف التغطية حسب الدوري. يعتمد البث على مصادرك المتاحة.",
-  "Delivery failed. Retrying while Harbor is open.":
-    "تعذر الإرسال. ستتكرر المحاولة ما دام Harbor مفتوحًا.",
+  "Delivery failed. Retrying while Lart is open.":
+    "تعذر الإرسال. ستتكرر المحاولة ما دام Lart مفتوحًا.",
   Driver: "السائق",
   Drivers: "السائقون",
   "Entrants and starting positions appear when the feed publishes them.":
@@ -157,7 +157,7 @@ export default {
     "من أكبر الدوريات إلى رياضتك المفضلة الجديدة.",
   "Inside the paddock": "داخل منطقة الفرق",
   "Jump to today": "الانتقال إلى اليوم",
-  "Keep Harbor open to deliver reminders.": "أبقِ Harbor مفتوحًا لإرسال التذكيرات.",
+  "Keep Lart open to deliver reminders.": "أبقِ Lart مفتوحًا لإرسال التذكيرات.",
   "Last saved score": "آخر نتيجة محفوظة",
   "Last update": "آخر تحديث",
   "Latest saved scores": "أحدث النتائج المحفوظة",
@@ -277,10 +277,10 @@ export default {
     "جرّب رياضة أو تاريخًا آخر. ستظهر الجداول المحفوظة هنا عند تعذر الوصول إلى المصدر.",
   "Up to date": "محدّث",
   "Updating schedules…": "جارٍ تحديث الجداول…",
-  "Use only sources you are authorized to access. Harbor does not bypass subscriptions or access restrictions.":
-    "استخدم فقط المصادر المصرح لك بالوصول إليها. لا يتجاوز Harbor الاشتراكات أو قيود الوصول.",
-  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Harbor does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
-    "استخدم البث وقوائم M3U وحسابات Xtream المصرح لك بالوصول إليها. لا يوفر Harbor اشتراكات ولا يتجاوز جدران الدفع أو DRM أو قيود الوصول.",
+  "Use only sources you are authorized to access. Lart does not bypass subscriptions or access restrictions.":
+    "استخدم فقط المصادر المصرح لك بالوصول إليها. لا يتجاوز Lart الاشتراكات أو قيود الوصول.",
+  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Lart does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
+    "استخدم البث وقوائم M3U وحسابات Xtream المصرح لك بالوصول إليها. لا يوفر Lart اشتراكات ولا يتجاوز جدران الدفع أو DRM أو قيود الوصول.",
   "View match statistics": "عرض إحصاءات المباراة",
   "Watch with your sources": "شاهد عبر مصادرك",
   "Your authorized IPTV, M3U and Xtream channels, in one place.":

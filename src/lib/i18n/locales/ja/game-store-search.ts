@@ -1,9 +1,9 @@
 export default {
   "Search shortcuts": "検索ショートカット",
   "Steam search shortcut": "Steam検索ショートカット",
-  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Harbor search for these queries.": "「st 」または「st:」と入力するとSteamストアを検索します。オフにすると、これらの入力でも通常のHarbor検索を使用します。",
+  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Lart search for these queries.": "「st 」または「st:」と入力するとSteamストアを検索します。オフにすると、これらの入力でも通常のLart検索を使用します。",
   "games.storeSearch.title": "Steamストア",
-  "games.storeSearch.hint": "Harborの検索で「st 」を入力すると、Steamを直接検索できます。",
+  "games.storeSearch.hint": "Lartの検索で「st 」を入力すると、Steamを直接検索できます。",
   "games.storeSearch.automatic": "自動",
   "games.storeSearch.region": "ストアの地域",
   "games.storeSearch.showLibrary": "ライブラリにあるゲームに印を付ける",

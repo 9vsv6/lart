@@ -23,8 +23,8 @@ const catalog: Record<string, string> = {
   "Anime titles": "Judul anime",
   "Anime tweaks": "Penyesuaian anime",
   Anime4K: "Anime4K",
-  "Anime4K and smooth-motion run on the bundled mpv engine in the Harbor desktop app. They have no effect in the browser.":
-    "Anime4K dan penghalusan gerakan berjalan di mesin mpv bawaan aplikasi desktop Harbor. Fitur ini tidak berfungsi di browser.",
+  "Anime4K and smooth-motion run on the bundled mpv engine in the Lart desktop app. They have no effect in the browser.":
+    "Anime4K dan penghalusan gerakan berjalan di mesin mpv bawaan aplikasi desktop Lart. Fitur ini tidak berfungsi di browser.",
   "Anime4K is tuned for drawn animation. Leave this on to skip live action, or turn it off to run it on everything you watch.":
     "Anime4K dioptimalkan untuk animasi gambar. Biarkan aktif agar tidak diterapkan pada tayangan live action, atau nonaktifkan untuk menerapkannya pada semua yang Anda tonton.",
   "Anime4K isn't set up yet. Turn it on in Settings under Anime.":
@@ -42,8 +42,8 @@ const catalog: Record<string, string> = {
   Announcement: "Pengumuman",
   Anonymous: "Anonim",
   "Another phone is already setting this TV up.": "Ponsel lain sedang menyiapkan TV ini.",
-  "Another program already holds this port, usually a Stremio server that is running on this machine. Harbor tried its spare ports too. Stop that server, or leave it running and point Harbor at it in Remote streaming server below.":
-    "Port ini sudah digunakan program lain, biasanya server Stremio yang berjalan di perangkat ini. Harbor juga sudah mencoba port cadangannya. Hentikan server tersebut, atau biarkan tetap berjalan dan arahkan Harbor ke server itu melalui Server streaming jarak jauh di bawah.",
+  "Another program already holds this port, usually a Stremio server that is running on this machine. Lart tried its spare ports too. Stop that server, or leave it running and point Lart at it in Remote streaming server below.":
+    "Port ini sudah digunakan program lain, biasanya server Stremio yang berjalan di perangkat ini. Lart juga sudah mencoba port cadangannya. Hentikan server tersebut, atau biarkan tetap berjalan dan arahkan Lart ke server itu melalui Server streaming jarak jauh di bawah.",
   "Anti-War": "Antiperang",
   Anticipated: "Paling dinantikan",
   Any: "Apa saja",
@@ -72,15 +72,15 @@ const catalog: Record<string, string> = {
     "Siapa pun dapat menemukan dan bergabung melalui pencarian",
   "Anyone who opens this link gets the relay URL and room code set automatically. Works in the browser too: no install required for the joiner.":
     "Siapa pun yang membuka tautan ini akan otomatis mendapatkan URL relay dan kode ruang. Juga berfungsi di browser: orang yang bergabung tidak perlu menginstal apa pun.",
-  "Anyone with the link can open this collection once your Harbor server is live.":
-    "Siapa pun yang memiliki tautan dapat membuka koleksi ini setelah server Harbor Anda aktif.",
+  "Anyone with the link can open this collection once your Lart server is live.":
+    "Siapa pun yang memiliki tautan dapat membuka koleksi ini setelah server Lart Anda aktif.",
   "Anything matching your Custom calendar: tracked people, genres, providers, countries.":
     "Semua yang cocok dengan kalender Khusus Anda: orang yang dipantau, genre, penyedia, negara.",
   "Anything you install here saves to your Stremio account, so your addons are ready when you open Stremio on your phone.":
     "Semua yang Anda pasang di sini akan disimpan ke akun Stremio Anda, sehingga addon siap digunakan saat Anda membuka Stremio di ponsel.",
-  "Anything you install in Harbor pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
-    "Semua yang Anda pasang di Harbor akan disinkronkan kembali ke akun Stremio agar juga muncul di perangkat seluler. Masuk melalui avatar di kiri bawah bilah samping.",
-  "Anywhere in Harbor.": "Di mana saja di Harbor.",
+  "Anything you install in Lart pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
+    "Semua yang Anda pasang di Lart akan disinkronkan kembali ke akun Stremio agar juga muncul di perangkat seluler. Masuk melalui avatar di kiri bawah bilah samping.",
+  "Anywhere in Lart.": "Di mana saja di Lart.",
   "App icon": "Ikon aplikasi",
   "App logo": "Logo aplikasi",
   "App storage": "Penyimpanan aplikasi",
@@ -127,7 +127,7 @@ const catalog: Record<string, string> = {
   "Ask if you're still watching": "Tanyakan apakah Anda masih menonton",
   "Ask to resume or start over": "Tanyakan apakah ingin melanjutkan atau memulai dari awal",
   "Asking AI…": "Menanyakan kepada AI…",
-  "Asking that Harbor to show a code": "Meminta Harbor menampilkan kode",
+  "Asking that Lart to show a code": "Meminta Lart menampilkan kode",
   "Asks first: carry on, or start over.": "Tanyakan dahulu: lanjutkan atau mulai dari awal.",
   Aspect: "Aspek",
   "Aspect ratio": "Rasio aspek",
@@ -154,10 +154,10 @@ const catalog: Record<string, string> = {
   Aurora: "Aurora",
   Australia: "Australia",
   Author: "Pembuat",
-  "Authorize Harbor on AniList": "Izinkan Harbor di AniList",
-  "Authorize Harbor on MyAnimeList": "Izinkan Harbor di MyAnimeList",
-  "Authorize Harbor on Simkl": "Izinkan Harbor di Simkl",
-  "Authorize Harbor on Trakt": "Izinkan Harbor di Trakt",
+  "Authorize Lart on AniList": "Izinkan Lart di AniList",
+  "Authorize Lart on MyAnimeList": "Izinkan Lart di MyAnimeList",
+  "Authorize Lart on Simkl": "Izinkan Lart di Simkl",
+  "Authorize Lart on Trakt": "Izinkan Lart di Trakt",
   Authorized: "Diizinkan",
   "Authorized on this device": "Diizinkan di perangkat ini",
   "Authorized {when}": "Diizinkan {when}",
@@ -174,7 +174,7 @@ const catalog: Record<string, string> = {
     "Menyesuaikan subtitle bergaya (ASS) secara otomatis agar ukuran dialog tetap sama di semua file, sekaligus mempertahankan warna, font, dan posisi teksnya.",
   "Auto-apply audio-derived sync fixes": "Terapkan otomatis perbaikan sinkronisasi berbasis audio",
   "Auto-confirm peer-to-peer streaming": "Konfirmasi otomatis streaming peer-to-peer",
-  "Auto-deploy from Harbor": "Deploy otomatis dari Harbor",
+  "Auto-deploy from Lart": "Deploy otomatis dari Lart",
   "Auto-download new episodes": "Unduh episode baru secara otomatis",
   "Auto-downloading new episodes": "Mengunduh episode baru secara otomatis",
   "Auto-hide the Skip button after": "Sembunyikan otomatis tombol Lewati setelah",
@@ -239,8 +239,8 @@ const catalog: Record<string, string> = {
   "Back 30 seconds": "Mundur 30 detik",
   "Back on TMDB, click your avatar in the top right and choose Settings from the menu.":
     "Kembali ke TMDB, klik avatar Anda di kanan atas, lalu pilih Pengaturan dari menu.",
-  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Harbor. Harbor saves it on its own.":
-    "Kembali ke halaman API, gulir ke bagian paling bawah. Salin nilai di bawah API Key, lalu tempelkan ke Harbor. Harbor akan menyimpannya secara otomatis.",
+  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Lart. Lart saves it on its own.":
+    "Kembali ke halaman API, gulir ke bagian paling bawah. Salin nilai di bawah API Key, lalu tempelkan ke Lart. Lart akan menyimpannya secara otomatis.",
   "Back out mid-episode and the card keeps the exact frame you stopped on, with your progress, so it looks like a pause instead of a thumbnail.":
     "Keluar saat episode masih diputar dan kartu akan tetap menampilkan frame persis saat Anda berhenti beserta progresnya, sehingga terlihat seperti dijeda, bukan sekadar thumbnail.",
   "Back to Discover": "Kembali ke Jelajahi",
@@ -365,8 +365,8 @@ const catalog: Record<string, string> = {
   "Beyond Hollywood": "Melampaui Hollywood",
   "Beyond the kids' shelf": "Bukan hanya untuk anak-anak",
   "Big Picture": "Big Picture",
-  "Big Picture closes. Harbor keeps running behind it.":
-    "Big Picture ditutup. Harbor tetap berjalan di latar belakang.",
+  "Big Picture closes. Lart keeps running behind it.":
+    "Big Picture ditutup. Lart tetap berjalan di latar belakang.",
   "Big Swings": "Gebrakan Besar",
   "Bigger buffer for slow connections": "Buffer lebih besar untuk koneksi lambat",
   "Bingeing on the TV": "Maraton tontonan di TV",
@@ -428,8 +428,8 @@ const catalog: Record<string, string> = {
   "Both Sides of the Law": "Kedua Sisi Hukum",
   "Both devices need to be on the same Wi-Fi network, and some guest networks block devices from seeing each other.":
     "Kedua perangkat harus terhubung ke jaringan Wi-Fi yang sama, dan beberapa jaringan tamu memblokir perangkat agar tidak dapat saling menemukan.",
-  "Both go in the boxes above. Harbor builds the URL for you.":
-    "Masukkan keduanya ke kotak di atas. Harbor akan membuat URL untuk Anda.",
+  "Both go in the boxes above. Lart builds the URL for you.":
+    "Masukkan keduanya ke kotak di atas. Lart akan membuat URL untuk Anda.",
   Bottom: "Bawah",
   "Bottom bar": "Bilah bawah",
   "Bottom center": "Tengah bawah",
@@ -455,8 +455,8 @@ const catalog: Record<string, string> = {
   "Bring in your Stremio library": "Impor perpustakaan Stremio Anda",
   "Bring in your library": "Impor perpustakaan Anda",
   "Bring the Tissues": "Siapkan Tisu",
-  "Bring your Letterboxd watchlist, diary, liked films and lists into Harbor via the Stremboxd bridge.":
-    "Impor daftar tontonan, diari, film yang disukai, dan daftar Letterboxd Anda ke Harbor melalui penghubung Stremboxd.",
+  "Bring your Letterboxd watchlist, diary, liked films and lists into Lart via the Stremboxd bridge.":
+    "Impor daftar tontonan, diari, film yang disukai, dan daftar Letterboxd Anda ke Lart melalui penghubung Stremboxd.",
   "Bring your lists with you": "Bawa serta daftar Anda",
   "Bring your own": "Bawa milik Anda sendiri",
   "Bring your own avatars into the library.": "Tambahkan avatar Anda sendiri ke perpustakaan.",
@@ -527,7 +527,7 @@ const catalog: Record<string, string> = {
   "Built for desktop resolutions": "Dirancang untuk resolusi desktop",
   "Built from IMDb's public datasets. Career ratings volume.":
     "Dibuat dari dataset publik IMDb. Jumlah rating sepanjang karier.",
-  "Built into Harbor": "Terintegrasi dengan Harbor",
+  "Built into Lart": "Terintegrasi dengan Lart",
   "Built on Stremio": "Dibangun di atas Stremio",
   "Built-in peer-to-peer streaming, served from your own machine.":
     "Streaming peer-to-peer bawaan, disajikan dari mesin Anda sendiri.",
@@ -535,8 +535,8 @@ const catalog: Record<string, string> = {
     "Unggah massal belum tersedia, jadi satu rating dikirim setiap detik.",
   "Bullet Ballet": "Bullet Ballet",
   "Bumpers (LB / RB)": "Tombol bumper (LB / RB)",
-  "Bundled with Harbor. Plays anything you throw at it.":
-    "Disertakan dengan Harbor. Memutar apa pun yang Anda berikan.",
+  "Bundled with Lart. Plays anything you throw at it.":
+    "Disertakan dengan Lart. Memutar apa pun yang Anda berikan.",
   "Burn in subtitles": "Tanamkan subtitle",
   "Button map": "Pemetaan tombol",
   "Buttons & sticks": "Tombol & stik",
@@ -583,8 +583,8 @@ const catalog: Record<string, string> = {
   Cannes: "Cannes",
   "Canvas height": "Tinggi kanvas",
   "Canvas unavailable.": "Kanvas tidak tersedia.",
-  "Cap how much disk the cache can use. When it goes over, Harbor deletes the oldest files first. Enforced on launch and as streams close.":
-    "Batasi ruang disk yang dapat digunakan cache. Jika batas terlampaui, Harbor akan menghapus file terlama terlebih dahulu. Batas diterapkan saat aplikasi dibuka dan ketika stream ditutup.",
+  "Cap how much disk the cache can use. When it goes over, Lart deletes the oldest files first. Enforced on launch and as streams close.":
+    "Batasi ruang disk yang dapat digunakan cache. Jika batas terlampaui, Lart akan menghapus file terlama terlebih dahulu. Batas diterapkan saat aplikasi dibuka dan ketika stream ditutup.",
   "Caps file size. Unknown sizes still pass.":
     "Membatasi ukuran file. File dengan ukuran yang tidak diketahui tetap diizinkan.",
   "Captions in your language": "Teks dalam bahasa Anda",
@@ -612,7 +612,7 @@ const catalog: Record<string, string> = {
   Catalogs: "Katalog",
   "Catalogs & metadata": "Katalog & metadata",
   "Catalogs to show": "Katalog yang ditampilkan",
-  "Catch stremio:// install links inside Harbor": "Tangani tautan pemasangan stremio:// di Harbor",
+  "Catch stremio:// install links inside Lart": "Tangani tautan pemasangan stremio:// di Lart",
   Categories: "Kategori",
   Cause: "Tujuan",
   "Celebrated actors": "Aktor ternama",
@@ -631,14 +631,14 @@ const catalog: Record<string, string> = {
   "Change the look": "Ubah tampilan",
   "Change the order addons are tried in": "Ubah urutan percobaan addon",
   "Change your handle?": "Ubah nama pengguna Anda?",
-  "Changes not saved to your Harbor account yet": "Perubahan belum disimpan ke akun Harbor Anda",
-  "Changes you make below will be saved on this computer, but they will not reach your TV. This is a fault in Harbor, not something you did.":
-    "Perubahan yang Anda buat di bawah akan disimpan di komputer ini, tetapi tidak akan diterapkan di TV Anda. Ini adalah masalah pada Harbor, bukan kesalahan Anda.",
+  "Changes not saved to your Lart account yet": "Perubahan belum disimpan ke akun Lart Anda",
+  "Changes you make below will be saved on this computer, but they will not reach your TV. This is a fault in Lart, not something you did.":
+    "Perubahan yang Anda buat di bawah akan disimpan di komputer ini, tetapi tidak akan diterapkan di TV Anda. Ini adalah masalah pada Lart, bukan kesalahan Anda.",
   "Change…": "Ubah…",
   "Changing the location restarts the engine. Clearing removes all cached stream files right away; anything you reopen will re-fetch.":
     "Mengubah lokasi akan memulai ulang mesin. Mengosongkannya akan langsung menghapus semua file stream dalam cache; apa pun yang Anda buka kembali akan diunduh ulang.",
-  "Changing the metadata language reloads Harbor so the new language takes effect. Apply when you're done with the options above.":
-    "Mengubah bahasa metadata akan memuat ulang Harbor agar bahasa baru diterapkan. Terapkan setelah Anda selesai mengatur opsi di atas.",
+  "Changing the metadata language reloads Lart so the new language takes effect. Apply when you're done with the options above.":
+    "Mengubah bahasa metadata akan memuat ulang Lart agar bahasa baru diterapkan. Terapkan setelah Anda selesai mengatur opsi di atas.",
   Channel: "Saluran",
   "Channel categories": "Kategori saluran",
   "Channel is taking a while": "Saluran memerlukan waktu agak lama",
@@ -725,23 +725,23 @@ const catalog: Record<string, string> = {
   "Choose lists": "Pilih daftar",
   "Choose manga download folder": "Pilih folder unduhan manga",
   "Choose manga folder": "Pilih folder manga",
-  "Choose one season package. Harbor will match and download every available episode from it.":
-    "Pilih satu paket musim. Harbor akan mencocokkan dan mengunduh setiap episode yang tersedia di dalamnya.",
+  "Choose one season package. Lart will match and download every available episode from it.":
+    "Pilih satu paket musim. Lart akan mencocokkan dan mengunduh setiap episode yang tersedia di dalamnya.",
   "Choose source": "Pilih sumber",
   "Choose subtitles": "Pilih subtitle",
   "Choose subtitles before playback": "Pilih subtitle sebelum pemutaran",
   "Choose the frame rate the subtitle was authored for.":
     "Pilih frame rate yang digunakan saat subtitle dibuat.",
-  "Choose up to 5 movies or shows you already like. Harbor uses them to tune your featured picks and recommendations. Totally optional.":
-    "Pilih hingga 5 film atau acara yang sudah Anda sukai. Harbor menggunakannya untuk menyesuaikan pilihan unggulan dan rekomendasi Anda. Sepenuhnya opsional.",
+  "Choose up to 5 movies or shows you already like. Lart uses them to tune your featured picks and recommendations. Totally optional.":
+    "Pilih hingga 5 film atau acara yang sudah Anda sukai. Lart menggunakannya untuk menyesuaikan pilihan unggulan dan rekomendasi Anda. Sepenuhnya opsional.",
   "Choose what happens when you hit Play on a title. Manual gives you full control over quality and source.":
     "Pilih apa yang terjadi saat Anda menekan Putar pada suatu judul. Mode manual memberi Anda kendali penuh atas kualitas dan sumber.",
   "Choose what shows, what stays hidden, and what sits up top.":
     "Pilih apa yang ditampilkan, disembunyikan, dan ditempatkan di bagian atas.",
   "Choose where subtitle timing feedback appears and how large it is.":
     "Pilih lokasi munculnya umpan balik waktu subtitle dan ukurannya.",
-  "Choose where you can grab Harbor to drag it around your screen.":
-    "Pilih area Harbor yang dapat Anda tarik untuk memindahkannya di layar.",
+  "Choose where you can grab Lart to drag it around your screen.":
+    "Pilih area Lart yang dapat Anda tarik untuk memindahkannya di layar.",
   "Choose which Simkl rails appear on your home screen.":
     "Pilih deretan Simkl yang muncul di layar beranda Anda.",
   "Choose which stats show in the row at the top of your profile":
@@ -762,15 +762,15 @@ const catalog: Record<string, string> = {
   Circle: "Lingkaran",
   Claim: "Klaim",
   "Claim a handle": "Klaim handle",
-  "Claim one so people can find you across Harbor.":
-    "Klaim satu agar orang dapat menemukan Anda di seluruh Harbor.",
+  "Claim one so people can find you across Lart.":
+    "Klaim satu agar orang dapat menemukan Anda di seluruh Lart.",
   "Claim your @handle": "Klaim @handle Anda",
   "Claim your handle": "Klaim handle Anda",
   Classic: "Klasik",
   "Classic Hollywood": "Hollywood Klasik",
   "Classic Mystery": "Misteri Klasik",
   "Classic Stremio": "Stremio Klasik",
-  "Classic. Was Harbor's original pair.": "Klasik. Dulu merupakan pasangan asli Harbor.",
+  "Classic. Was Lart's original pair.": "Klasik. Dulu merupakan pasangan asli Lart.",
   "Clean modern. Sans across the board.": "Modern dan bersih. Menggunakan sans di semua bagian.",
   "Clean releases for this title are still scarce. Confirm the filename and size before playing.":
     "Rilis yang cocok untuk judul ini masih langka. Periksa nama file dan ukurannya sebelum memutar.",
@@ -805,10 +805,10 @@ const catalog: Record<string, string> = {
   Cleared: "Dibersihkan",
   Clearing: "Membersihkan",
   "Clearing…": "Membersihkan…",
-  "Clears the URL from Harbor. The Worker keeps running on Cloudflare.":
-    "Menghapus URL dari Harbor. Worker tetap berjalan di Cloudflare.",
-  "Clears the saved URL so you can point Harbor at another relay.":
-    "Menghapus URL yang tersimpan agar Anda dapat mengarahkan Harbor ke relay lain.",
+  "Clears the URL from Lart. The Worker keeps running on Cloudflare.":
+    "Menghapus URL dari Lart. Worker tetap berjalan di Cloudflare.",
+  "Clears the saved URL so you can point Lart at another relay.":
+    "Menghapus URL yang tersimpan agar Anda dapat mengarahkan Lart ke relay lain.",
   Click: "Klik",
   "Click Activate in the email": "Klik Aktifkan di email",
   "Click a line": "Klik salah satu baris",
@@ -820,8 +820,8 @@ const catalog: Record<string, string> = {
   "Click any control to edit it.": "Klik kontrol mana pun untuk mengeditnya.",
   "Click any source to swap in place": "Klik sumber mana pun untuk langsung menggantinya",
   "Click anywhere to skip": "Klik di mana saja untuk melewati",
-  "Click below to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "Klik di bawah untuk membuka halaman penyiapan {name} di browser bawaan Harbor. Pilih opsi Anda. Saat Anda mengeklik Instal di halaman tersebut, Harbor otomatis menangkap tautannya dan memperbarui addon.",
+  "Click below to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "Klik di bawah untuk membuka halaman penyiapan {name} di browser bawaan Lart. Pilih opsi Anda. Saat Anda mengeklik Instal di halaman tersebut, Lart otomatis menangkap tautannya dan memperbarui addon.",
   "Click below to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "Klik di bawah untuk membuka halaman penyiapan {name}. Pilih opsi Anda, lalu salin tautan instalasi yang diberikan dan tempelkan di bawah untuk memperbarui addon.",
   "Click the button below to open Cloudflare's Workers page.":
@@ -831,8 +831,8 @@ const catalog: Record<string, string> = {
   "Click to apply · Right-click to delete": "Klik untuk menerapkan · Klik kanan untuk menghapus",
   "Click to choose a different file": "Klik untuk memilih file lain",
   "Click to cycle 100 / 75 / 50 / 25 / 0.": "Klik untuk beralih antara 100 / 75 / 50 / 25 / 0.",
-  "Click to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "Klik untuk membuka halaman penyiapan {name} di browser bawaan Harbor. Pilih opsi Anda. Saat Anda mengeklik Instal di halaman tersebut, Harbor otomatis menangkap tautannya dan memperbarui addon.",
+  "Click to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "Klik untuk membuka halaman penyiapan {name} di browser bawaan Lart. Pilih opsi Anda. Saat Anda mengeklik Instal di halaman tersebut, Lart otomatis menangkap tautannya dan memperbarui addon.",
   "Click to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "Klik untuk membuka halaman penyiapan {name}. Pilih opsi Anda, lalu salin tautan instalasi yang diberikan dan tempelkan di bawah untuk memperbarui addon.",
   "Click to turn off": "Klik untuk menonaktifkan",
@@ -848,7 +848,7 @@ const catalog: Record<string, string> = {
   "Clock size": "Ukuran jam",
   "Clock style": "Gaya jam",
   Close: "Tutup",
-  "Close Harbor?": "Tutup Harbor?",
+  "Close Lart?": "Tutup Lart?",
   "Close editor": "Tutup editor",
   "Close guide": "Tutup panduan",
   "Close image viewer": "Tutup penampil gambar",
@@ -862,16 +862,16 @@ const catalog: Record<string, string> = {
   "Close to the system tray": "Tutup ke baki sistem",
   "Close trailer": "Tutup trailer",
   "Close · Esc": "Tutup · Esc",
-  "Closing the window tucks Harbor into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
-    "Saat jendela ditutup, Harbor akan masuk ke baki alih-alih berhenti, sehingga dapat dibuka kembali seketika. Klik kanan ikon baki untuk kontrol cepat, atau pilih Keluar untuk menutup sepenuhnya.",
+  "Closing the window tucks Lart into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
+    "Saat jendela ditutup, Lart akan masuk ke baki alih-alih berhenti, sehingga dapat dibuka kembali seketika. Klik kanan ikon baki untuk kontrol cepat, atau pilih Keluar untuk menutup sepenuhnya.",
   Cloudflare: "Cloudflare",
   "Cloudflare Workers free tier:": "Paket gratis Cloudflare Workers:",
   "Cloudflare asks you to pick a name (this becomes {code}). Type any name (your first name works). Then click {b1}.":
     "Cloudflare meminta Anda memilih nama (nama ini akan menjadi {code}). Ketik nama apa saja (nama depan Anda juga bisa). Lalu klik {b1}.",
-  "Cloudflare shows API tokens only once. Save a copy now or you'll lose the ability to stop or redeploy this relay from Harbor.":
-    "Cloudflare hanya menampilkan token API satu kali. Simpan salinannya sekarang agar Anda tetap dapat menghentikan atau menerapkan ulang relay ini dari Harbor.",
-  "Cloudflare token form filled with name 'Harbor Relay' and one permission row set to Account / Workers Scripts / Edit":
-    "Formulir token Cloudflare diisi dengan nama 'Harbor Relay' dan satu baris izin yang diatur ke Account / Workers Scripts / Edit",
+  "Cloudflare shows API tokens only once. Save a copy now or you'll lose the ability to stop or redeploy this relay from Lart.":
+    "Cloudflare hanya menampilkan token API satu kali. Simpan salinannya sekarang agar Anda tetap dapat menghentikan atau menerapkan ulang relay ini dari Lart.",
+  "Cloudflare token form filled with name 'Lart Relay' and one permission row set to Account / Workers Scripts / Edit":
+    "Formulir token Cloudflare diisi dengan nama 'Lart Relay' dan satu baris izin yang diatur ke Account / Workers Scripts / Edit",
   Code: "Kode",
   "Code expired": "Kode kedaluwarsa",
   "Code expires in {left}": "Kode kedaluwarsa dalam {left}",
@@ -886,8 +886,8 @@ const catalog: Record<string, string> = {
   Color: "Warna",
   "Color & HDR": "Warna & HDR",
   "Color & HDR tone-mapping": "Pemetaan rona Warna & HDR",
-  "Color presets, custom backgrounds, and the font pair Harbor renders in.":
-    "Preset warna, latar belakang khusus, dan pasangan font yang digunakan Harbor.",
+  "Color presets, custom backgrounds, and the font pair Lart renders in.":
+    "Preset warna, latar belakang khusus, dan pasangan font yang digunakan Lart.",
   "Color tokens": "Token warna",
   Colored: "Berwarna",
   Colors: "Warna",
@@ -912,9 +912,9 @@ const catalog: Record<string, string> = {
     "Komentar diburamkan hingga Anda menampilkannya, meskipun tidak ditandai sebagai spoiler.",
   "Comments are hidden": "Komentar disembunyikan",
   "Hosted elsewhere": "Dihosting pihak lain",
-  "A third party runs these plans. Harbor is not affiliated with them and receives nothing from a signup. Current pricing and terms are on their site.": "Paket ini dijalankan pihak ketiga. Harbor tidak berafiliasi dan tidak menerima apa pun dari pendaftaran. Harga dan ketentuan terkini ada di situs mereka.",
+  "A third party runs these plans. Lart is not affiliated with them and receives nothing from a signup. Current pricing and terms are on their site.": "Paket ini dijalankan pihak ketiga. Lart tidak berafiliasi dan tidak menerima apa pun dari pendaftaran. Harga dan ketentuan terkini ada di situs mereka.",
   "{name} can run on a hosted instance": "{name} bisa berjalan di instans terkelola",
-  "A third party operates this. Harbor is not affiliated with them, does not resell it, and receives nothing if you sign up. Whatever it costs and whatever it includes is on their site.": "Layanan ini dijalankan pihak ketiga. Harbor tidak berafiliasi, tidak menjualnya kembali, dan tidak menerima apa pun jika kamu mendaftar. Harga dan isinya ada di situs mereka.",
+  "A third party operates this. Lart is not affiliated with them, does not resell it, and receives nothing if you sign up. Whatever it costs and whatever it includes is on their site.": "Layanan ini dijalankan pihak ketiga. Lart tidak berafiliasi, tidak menjualnya kembali, dan tidak menerima apa pun jika kamu mendaftar. Harga dan isinya ada di situs mereka.",
   "Show comments": "Tampilkan komentar",
   "Hide comments": "Sembunyikan komentar",
   "Comments may take a moment to appear on Trakt":

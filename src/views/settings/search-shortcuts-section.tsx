@@ -8,7 +8,7 @@ export function SearchShortcutsSection() {
   return <Section title={t("Search shortcuts")}>
     <ToggleRow
       label={t("Steam search shortcut")}
-      sub={t("Type “st ” or “st:” to search the Steam store. Turn off to use normal Harbor search for these queries.")}
+      sub={t("Type “st ” or “st:” to search the Steam store. Turn off to use normal Lart search for these queries.")}
       value={settings.steamSearchShortcut !== false}
       onChange={steamSearchShortcut => update({ steamSearchShortcut })}
     />

@@ -4,15 +4,15 @@ const uiFallback: Record<string, string> = {
   "Which monitor Big Picture opens on at startup.":
     "Which monitor Big Picture opens on at startup.",
   "Separate window display": "Separate window display",
-  "Which monitor the separate mpv window opens on. Harbor's own window stays where it is.":
-    "Which monitor the separate mpv window opens on. Harbor's own window stays where it is.",
+  "Which monitor the separate mpv window opens on. Lart's own window stays where it is.":
+    "Which monitor the separate mpv window opens on. Lart's own window stays where it is.",
   "Cover the taskbar": "Cover the taskbar",
   "Span the whole screen including the taskbar. Turn off to keep the taskbar visible on that monitor.":
     "Span the whole screen including the taskbar. Turn off to keep the taskbar visible on that monitor.",
   "True HDR, separate window is selected. That mode always plays in its own window, so mpv cannot be embedded. Choose a different HDR mode to change this.":
     "True HDR, separate window is selected. That mode always plays in its own window, so mpv cannot be embedded. Choose a different HDR mode to change this.",
-  "Follow Harbor": "Follow Harbor",
-  "Open on the same monitor as Harbor": "Open on the same monitor as Harbor",
+  "Follow Lart": "Follow Lart",
+  "Open on the same monitor as Lart": "Open on the same monitor as Lart",
   "Open on {name}": "Open on {name}",
   Primary: "Primary",
   "A source couldn't be reached": "A source couldn't be reached",
@@ -42,12 +42,12 @@ const uiFallback: Record<string, string> = {
   "Could not sync your display name. Check your connection and try again.":
     "Could not sync your display name. Check your connection and try again.",
   "Syncing display name…": "Syncing display name…",
-  "Display name saved to your Harbor account.": "Display name saved to your Harbor account.",
+  "Display name saved to your Lart account.": "Display name saved to your Lart account.",
   "Show ignore title button": "Show ignore title button",
   "Display a button on the content advisory card to permanently ignore the title.":
     "Display a button on the content advisory card to permanently ignore the title.",
-  "These are compiled Android extensions (.cs3). Harbor runs script plugins only, so they cannot be installed here.":
-    "These are compiled Android extensions (.cs3). Harbor runs script plugins only, so they cannot be installed here.",
+  "These are compiled Android extensions (.cs3). Lart runs script plugins only, so they cannot be installed here.":
+    "These are compiled Android extensions (.cs3). Lart runs script plugins only, so they cannot be installed here.",
   "This is a Stremio addon manifest. Add it from the Addons page instead.":
     "This is a Stremio addon manifest. Add it from the Addons page instead.",
   "Skipped: {reason}": "Skipped: {reason}",
@@ -88,8 +88,8 @@ const uiFallback: Record<string, string> = {
   "A short note about this list": "A short note about this list",
   "Return to beta": "Return to beta",
   "Experimental {version} · Build {buildId}": "Experimental {version} · Build {buildId}",
-  "Couldn't verify your Harbor account access. Check your connection and try again.":
-    "Couldn't verify your Harbor account access. Check your connection and try again.",
+  "Couldn't verify your Lart account access. Check your connection and try again.":
+    "Couldn't verify your Lart account access. Check your connection and try again.",
   "No verified experimental build is available for this device yet.":
     "No verified experimental build is available for this device yet.",
   "No tested return to beta is available for this build.":
@@ -104,8 +104,8 @@ const uiFallback: Record<string, string> = {
     "Couldn't save the recovery backup. Free some storage and try again.",
   "Return to beta did not finish. Your recovery files have been kept. Try again from Experimental builds.":
     "Return to beta did not finish. Your recovery files have been kept. Try again from Experimental builds.",
-  "Harbor Setup did not finish updating Harbor. Check for updates to try again.":
-    "Harbor Setup did not finish updating Harbor. Check for updates to try again.",
+  "Lart Setup did not finish updating Lart. Check for updates to try again.":
+    "Lart Setup did not finish updating Lart. Check for updates to try again.",
   "Couldn't save the update channel. Free some storage and try again.":
     "Couldn't save the update channel. Free some storage and try again.",
   "Leave experimental builds before changing your normal update channel.":
@@ -123,8 +123,8 @@ const uiFallback: Record<string, string> = {
   "Beta version": "Beta version",
   "Choose a tested beta": "Choose a tested beta",
   "Beta {version}": "Beta {version}",
-  "Harbor saves a local recovery backup before installing. It can contain account details. Old backups are not restored automatically, and recovery files use extra disk space.":
-    "Harbor saves a local recovery backup before installing. It can contain account details. Old backups are not restored automatically, and recovery files use extra disk space.",
+  "Lart saves a local recovery backup before installing. It can contain account details. Old backups are not restored automatically, and recovery files use extra disk space.":
+    "Lart saves a local recovery backup before installing. It can contain account details. Old backups are not restored automatically, and recovery files use extra disk space.",
   "Install beta {version} and restart? This replaces the experimental app, not your current settings.":
     "Install beta {version} and restart? This replaces the experimental app, not your current settings.",
   "Install beta {version} and restart": "Install beta {version} and restart",
@@ -135,18 +135,18 @@ const uiFallback: Record<string, string> = {
   "Checking the selected beta…": "Checking the selected beta…",
   "Experimental builds": "Experimental builds",
   "Return to a regular build": "Return to a regular build",
-  "Experimental access requires a Harbor account with a Tester, Moderator, Admin, or Dev badge.":
-    "Experimental access requires a Harbor account with a Tester, Moderator, Admin, or Dev badge.",
+  "Experimental access requires a Lart account with a Tester, Moderator, Admin, or Dev badge.":
+    "Experimental access requires a Lart account with a Tester, Moderator, Admin, or Dev badge.",
   "Checking experimental builds…": "Checking experimental builds…",
   "Experimental updates are enabled on this device.":
     "Experimental updates are enabled on this device.",
   "Experimental updates are off.": "Experimental updates are off.",
   "Test upcoming changes": "Test upcoming changes",
-  "Available to Harbor accounts with a Tester, Moderator, Admin, or Dev badge.":
-    "Available to Harbor accounts with a Tester, Moderator, Admin, or Dev badge.",
-  "These builds may crash or change your settings. Back up Harbor before installing. Downloads and installation still require your approval.":
-    "These builds may crash or change your settings. Back up Harbor before installing. Downloads and installation still require your approval.",
-  "Installed: Harbor {version}": "Installed: Harbor {version}",
+  "Available to Lart accounts with a Tester, Moderator, Admin, or Dev badge.":
+    "Available to Lart accounts with a Tester, Moderator, Admin, or Dev badge.",
+  "These builds may crash or change your settings. Back up Lart before installing. Downloads and installation still require your approval.":
+    "These builds may crash or change your settings. Back up Lart before installing. Downloads and installation still require your approval.",
+  "Installed: Lart {version}": "Installed: Lart {version}",
   "Update channel: {channel}": "Update channel: {channel}",
   "Experimental installation currently requires a managed Windows installation with a tested return to beta.":
     "Experimental installation currently requires a managed Windows installation with a tested return to beta.",
@@ -169,13 +169,13 @@ const uiFallback: Record<string, string> = {
   "Everything from {name}": "Everything from {name}",
   "Filter, sort and search the full catalogue": "Filter, sort and search the full catalogue",
   Launch: "Launch",
-  "Start Harbor in the couch-friendly Big Picture layout whenever the app opens.":
-    "Start Harbor in the couch-friendly Big Picture layout whenever the app opens.",
+  "Start Lart in the couch-friendly Big Picture layout whenever the app opens.":
+    "Start Lart in the couch-friendly Big Picture layout whenever the app opens.",
   "Animate backdrop art on Big Picture screens.": "Animate backdrop art on Big Picture screens.",
   "Press Esc to stop.": "Press Esc to stop.",
-  "Harbor and the installer": "Harbor and the installer",
-  "The Big Picture opener and the boat that builds itself while Harbor installs.":
-    "The Big Picture opener and the boat that builds itself while Harbor installs.",
+  "Lart and the installer": "Lart and the installer",
+  "The Big Picture opener and the boat that builds itself while Lart installs.":
+    "The Big Picture opener and the boat that builds itself while Lart installs.",
   "The General": "The General",
   "Anime upscalers": "Anime upscalers",
   "Screensaver style": "Screensaver style",
@@ -185,17 +185,17 @@ const uiFallback: Record<string, string> = {
   "Desktop notifications": "Desktop notifications",
   "Get a system notification on this device when something you follow drops.":
     "Get a system notification on this device when something you follow drops.",
-  "Notifications are blocked for Harbor. Enable them in your system settings, then turn this back on.":
-    "Notifications are blocked for Harbor. Enable them in your system settings, then turn this back on.",
+  "Notifications are blocked for Lart. Enable them in your system settings, then turn this back on.":
+    "Notifications are blocked for Lart. Enable them in your system settings, then turn this back on.",
   "Add a Discord or Telegram destination, or turn on Desktop notifications, first. Rules need somewhere to send their alerts.":
     "Add a Discord or Telegram destination, or turn on Desktop notifications, first. Rules need somewhere to send their alerts.",
   "Show a system notification on this device.": "Show a system notification on this device.",
   "Turn on Desktop notifications on the Destinations tab first.":
     "Turn on Desktop notifications on the Destinations tab first.",
-  "Harbor test message ({service}). If you can read this, it's wired up.":
-    "Harbor test message ({service}). If you can read this, it's wired up.",
-  "Connect Discord or Telegram, or turn on desktop notifications, and Harbor alerts you when something you follow is about to drop. Hit Send test to send yourself a sample first.":
-    "Connect Discord or Telegram, or turn on desktop notifications, and Harbor alerts you when something you follow is about to drop. Hit Send test to send yourself a sample first.",
+  "Lart test message ({service}). If you can read this, it's wired up.":
+    "Lart test message ({service}). If you can read this, it's wired up.",
+  "Connect Discord or Telegram, or turn on desktop notifications, and Lart alerts you when something you follow is about to drop. Hit Send test to send yourself a sample first.":
+    "Connect Discord or Telegram, or turn on desktop notifications, and Lart alerts you when something you follow is about to drop. Hit Send test to send yourself a sample first.",
   "Manga sync": "Manga sync",
   "{title} · Chapter {chapter}": "{title} · Chapter {chapter}",
   "Reorder extensions": "Reorder extensions",
@@ -249,10 +249,10 @@ const uiFallback: Record<string, string> = {
   "A list by {owner}.": "A list by {owner}.",
   "A pack file lists your images with names and sets. Point items at files next to the JSON, at http links, or inline them as data URIs. Hover a set you imported and press Export to write one out.":
     "A pack file lists your images with names and sets. Point items at files next to the JSON, at http links, or inline them as data URIs. Hover a set you imported and press Export to write one out.",
-  "A pack swaps Harbor's built-in badge art, or adds whole new badges of its own.":
-    "A pack swaps Harbor's built-in badge art, or adds whole new badges of its own.",
-  "A regular expression Harbor tests against each stream title. Every stream that matches gets this badge.":
-    "A regular expression Harbor tests against each stream title. Every stream that matches gets this badge.",
+  "A pack swaps Lart's built-in badge art, or adds whole new badges of its own.":
+    "A pack swaps Lart's built-in badge art, or adds whole new badges of its own.",
+  "A regular expression Lart tests against each stream title. Every stream that matches gets this badge.":
+    "A regular expression Lart tests against each stream title. Every stream that matches gets this badge.",
   "A rule watches for one kind of release and pings the channels you pick. Each rule fires on its own.":
     "A rule watches for one kind of release and pings the channels you pick. Each rule fires on its own.",
   "A short hand-picked list, plus a box for pasting any badges.json link you were sent.":
@@ -286,9 +286,9 @@ const uiFallback: Record<string, string> = {
   "Aggregator addons": "Aggregator addons",
   "All listed rules": "All listed rules",
   "All selected": "All selected",
-  "Linking your Discord account also joins you to Harbor's Discord server, so the bot can send your Backup keys privately.":
-    "Linking your Discord account also joins you to Harbor's Discord server, so the bot can send your Backup keys privately.",
-  "Also joins Harbor's Discord server.": "Also joins Harbor's Discord server.",
+  "Linking your Discord account also joins you to Lart's Discord server, so the bot can send your Backup keys privately.":
+    "Linking your Discord account also joins you to Lart's Discord server, so the bot can send your Backup keys privately.",
+  "Also joins Lart's Discord server.": "Also joins Lart's Discord server.",
   "Always use for {league}": "Always use for {league}",
   "An accent line down the side, with each line revealed as it arrives.":
     "An accent line down the side, with each line revealed as it arrives.",
@@ -297,25 +297,25 @@ const uiFallback: Record<string, string> = {
     "Another shortcut in this list now uses the same key. Change one of them.",
   "Any badges.json address works: a raw gist, Pastebin, or a file in a repo. Broken JSON gets repaired automatically.":
     "Any badges.json address works: a raw gist, Pastebin, or a file in a repo. Broken JSON gets repaired automatically.",
-  "Anything TMDB has not translated stays in English. Picking a new language reloads Harbor.":
-    "Anything TMDB has not translated stays in English. Picking a new language reloads Harbor.",
+  "Anything TMDB has not translated stays in English. Picking a new language reloads Lart.":
+    "Anything TMDB has not translated stays in English. Picking a new language reloads Lart.",
   "Appears in the release notes. Use whatever name you want credit under.":
     "Appears in the release notes. Use whatever name you want credit under.",
   "Apply and reload": "Apply and reload",
   "Attach a channel": "Attach a channel",
   "Attach a stream": "Attach a stream",
-  "Auto uses mpv when Harbor can reach it and falls back to the built in player. Pick one yourself if playback misbehaves.":
-    "Auto uses mpv when Harbor can reach it and falls back to the built in player. Pick one yourself if playback misbehaves.",
+  "Auto uses mpv when Lart can reach it and falls back to the built in player. Pick one yourself if playback misbehaves.":
+    "Auto uses mpv when Lart can reach it and falls back to the built in player. Pick one yourself if playback misbehaves.",
   Automatic: "Automatic",
   Avatar: "Avatar",
-  "Badge art packs you installed from the community store. Remove one to put its badges back to Harbor's default.":
-    "Badge art packs you installed from the community store. Remove one to put its badges back to Harbor's default.",
+  "Badge art packs you installed from the community store. Remove one to put its badges back to Lart's default.":
+    "Badge art packs you installed from the community store. Remove one to put its badges back to Lart's default.",
   "Badges you have changed": "Badges you have changed",
   Bench: "Bench",
   "Both shows direct, debrid, and peer-to-peer results together. Direct/debrid keeps torrents out of the way unless nothing else is available. P2P puts torrents first.":
     "Both shows direct, debrid, and peer-to-peer results together. Direct/debrid keeps torrents out of the way unless nothing else is available. P2P puts torrents first.",
-  "Bring your Letterboxd watchlist, diary, liked films and lists into Harbor through the Stremboxd bridge.":
-    "Bring your Letterboxd watchlist, diary, liked films and lists into Harbor through the Stremboxd bridge.",
+  "Bring your Letterboxd watchlist, diary, liked films and lists into Lart through the Stremboxd bridge.":
+    "Bring your Letterboxd watchlist, diary, liked films and lists into Lart through the Stremboxd bridge.",
   "Browse community badge packs": "Browse community badge packs",
   "Build a pack in one of these tools, export the JSON, host it as a gist, then paste the raw link below.":
     "Build a pack in one of these tools, export the JSON, host it as a gist, then paste the raw link below.",
@@ -330,16 +330,16 @@ const uiFallback: Record<string, string> = {
   "Came on": "Came on",
   "Caps how many score chips a poster shows. Extras drop off the end of the chip. You have {n} turned on.":
     "Caps how many score chips a poster shows. Extras drop off the end of the chip. You have {n} turned on.",
-  "Caps what Harbor asks {name} to send. Original streams the file exactly as it is stored.":
-    "Caps what Harbor asks {name} to send. Original streams the file exactly as it is stored.",
+  "Caps what Lart asks {name} to send. Original streams the file exactly as it is stored.":
+    "Caps what Lart asks {name} to send. Original streams the file exactly as it is stored.",
   Carousel: "Carousel",
   "Centered along the top edge, clear of the subtitles.":
     "Centered along the top edge, clear of the subtitles.",
   "Change the ratio while watching": "Change the ratio while watching",
   "Change the shortcut for {name}": "Change the shortcut for {name}",
   "Change your picture": "Change your picture",
-  "Changing the metadata language reloads Harbor so the new language takes effect. Apply when you're done with the options above.":
-    "Changing the metadata language reloads Harbor so the new language takes effect. Apply when you're done with the options above.",
+  "Changing the metadata language reloads Lart so the new language takes effect. Apply when you're done with the options above.":
+    "Changing the metadata language reloads Lart so the new language takes effect. Apply when you're done with the options above.",
   "Charity Navigator": "Charity Navigator",
   "Checks the username against Stremboxd and turns on the catalogs it finds.":
     "Checks the username against Stremboxd and turns on the catalogs it finds.",
@@ -348,10 +348,10 @@ const uiFallback: Record<string, string> = {
   "Choose source": "Choose source",
   "Choose whether Play asks you, prefers this device, prefers online sources, or goes straight to one of your home servers.":
     "Choose whether Play asks you, prefers this device, prefers online sources, or goes straight to one of your home servers.",
-  "Choose whether your operating system draws the title bar, or Harbor draws its own.":
-    "Choose whether your operating system draws the title bar, or Harbor draws its own.",
-  "Choose which services feed your Continue Watching row. Turn on as many as you like and Harbor merges them, keeping the most recent progress for each title. What you watch is still scrobbled to every connected service regardless of what you pick here.":
-    "Choose which services feed your Continue Watching row. Turn on as many as you like and Harbor merges them, keeping the most recent progress for each title. What you watch is still scrobbled to every connected service regardless of what you pick here.",
+  "Choose whether your operating system draws the title bar, or Lart draws its own.":
+    "Choose whether your operating system draws the title bar, or Lart draws its own.",
+  "Choose which services feed your Continue Watching row. Turn on as many as you like and Lart merges them, keeping the most recent progress for each title. What you watch is still scrobbled to every connected service regardless of what you pick here.":
+    "Choose which services feed your Continue Watching row. Turn on as many as you like and Lart merges them, keeping the most recent progress for each title. What you watch is still scrobbled to every connected service regardless of what you pick here.",
   "Choose your username": "Choose your username",
   "Clear home team": "Clear home team",
   "Clearing these is always safe. Nothing you downloaded on purpose is removed.":
@@ -364,8 +364,8 @@ const uiFallback: Record<string, string> = {
   "Comments and reviews posted by other Trakt members.":
     "Comments and reviews posted by other Trakt members.",
   Compatibility: "Compatibility",
-  "Connect Discord or Telegram and Harbor posts a message when something you follow is about to drop. Hit Send test to send yourself a sample first.":
-    "Connect Discord or Telegram and Harbor posts a message when something you follow is about to drop. Hit Send test to send yourself a sample first.",
+  "Connect Discord or Telegram and Lart posts a message when something you follow is about to drop. Hit Send test to send yourself a sample first.":
+    "Connect Discord or Telegram and Lart posts a message when something you follow is about to drop. Hit Send test to send yourself a sample first.",
   "Connect Jellyfin, Emby, and Plex libraries on this device. Credentials stay in native secret storage. Each server keeps its own refresh schedule, and cached titles stay available while a server is offline.":
     "Connect Jellyfin, Emby, and Plex libraries on this device. Credentials stay in native secret storage. Each server keeps its own refresh schedule, and cached titles stay available while a server is offline.",
   "Connected. {n} catalogs are available.": "Connected. {n} catalogs are available.",
@@ -379,8 +379,8 @@ const uiFallback: Record<string, string> = {
   "Copies your badge art and rules to the clipboard as JSON, ready to paste into a gist and share.":
     "Copies your badge art and rules to the clipboard as JSON, ready to paste into a gist and share.",
   "Copy JSON": "Copy JSON",
-  "Copy your Harbor watchlist over to Trakt, or pull your Trakt watchlist into Harbor.":
-    "Copy your Harbor watchlist over to Trakt, or pull your Trakt watchlist into Harbor.",
+  "Copy your Lart watchlist over to Trakt, or pull your Trakt watchlist into Lart.":
+    "Copy your Lart watchlist over to Trakt, or pull your Trakt watchlist into Lart.",
   "Could not reach that page.": "Could not reach that page.",
   "Could not reach the extension list. Check your server connection and try again.":
     "Could not reach the extension list. Check your server connection and try again.",
@@ -400,8 +400,8 @@ const uiFallback: Record<string, string> = {
   "Deep shadows keep their steps, so dark scenes stay readable.":
     "Deep shadows keep their steps, so dark scenes stay readable.",
   "Describe the result you were after.": "Describe the result you were after.",
-  "Describe what Harbor did instead, including any message on screen.":
-    "Describe what Harbor did instead, including any message on screen.",
+  "Describe what Lart did instead, including any message on screen.":
+    "Describe what Lart did instead, including any message on screen.",
   "Didn't get it? Send another code": "Didn't get it? Send another code",
   "Direct media link": "Direct media link",
   Direct3D: "Direct3D",
@@ -434,8 +434,8 @@ const uiFallback: Record<string, string> = {
   Estimated: "Estimated",
   "Every change on this page shows up here first. The art you pick below rides on rows exactly like this one.":
     "Every change on this page shows up here first. The art you pick below rides on rows exactly like this one.",
-  "Every format badge Harbor can show on streams. Pick one to swap its art, hide it, or put it back. Changes apply everywhere badges appear.":
-    "Every format badge Harbor can show on streams. Pick one to swap its art, hide it, or put it back. Changes apply everywhere badges appear.",
+  "Every format badge Lart can show on streams. Pick one to swap its art, hide it, or put it back. Changes apply everywhere badges appear.":
+    "Every format badge Lart can show on streams. Pick one to swap its art, hide it, or put it back. Changes apply everywhere badges appear.",
   "Every saved frame goes. Press again to confirm, or wait to cancel.":
     "Every saved frame goes. Press again to confirm, or wait to cancel.",
   "Every source above follows one language order, and it lives on the Languages page.":
@@ -451,8 +451,8 @@ const uiFallback: Record<string, string> = {
   "Export failed: {error}": "Export failed: {error}",
   "Export log": "Export log",
   "Export pack": "Export pack",
-  "Export your Harbor setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
-    "Export your Harbor setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.",
+  "Export your Lart setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
+    "Export your Lart setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.",
   "Export your setup": "Export your setup",
   "Export {n} sections": "Export {n} sections",
   "Exporting…": "Exporting…",
@@ -481,10 +481,10 @@ const uiFallback: Record<string, string> = {
     "Frosts the still image on each unwatched episode in the list.",
   "Full mode is active, so diary, friends activity and your ratings all work.":
     "Full mode is active, so diary, friends activity and your ratings all work.",
-  "Full mode signs in with your Letterboxd password so your diary, friends activity and personal ratings work too. The password goes only to Stremboxd to fetch a token, and Harbor never stores it.":
-    "Full mode signs in with your Letterboxd password so your diary, friends activity and personal ratings work too. The password goes only to Stremboxd to fetch a token, and Harbor never stores it.",
-  "Full pack format reference: docs/avatar-packs.md in the Harbor repository.":
-    "Full pack format reference: docs/avatar-packs.md in the Harbor repository.",
+  "Full mode signs in with your Letterboxd password so your diary, friends activity and personal ratings work too. The password goes only to Stremboxd to fetch a token, and Lart never stores it.":
+    "Full mode signs in with your Letterboxd password so your diary, friends activity and personal ratings work too. The password goes only to Stremboxd to fetch a token, and Lart never stores it.",
+  "Full pack format reference: docs/avatar-packs.md in the Lart repository.":
+    "Full pack format reference: docs/avatar-packs.md in the Lart repository.",
   "Full time": "Full time",
   GB: "GB",
   GD: "GD",
@@ -495,49 +495,49 @@ const uiFallback: Record<string, string> = {
   Graphics: "Graphics",
   "Groups Refresh beside Back at the start of the picker header. Off keeps it at the far end, across from Back.":
     "Groups Refresh beside Back at the start of the picker header. Off keeps it at the far end, across from Back.",
-  "Harbor did not draw its own icons. Two people did, and they are worth hiring.":
-    "Harbor did not draw its own icons. Two people did, and they are worth hiring.",
-  "Harbor hosts no media and indexes no media. The sources and addons available to you are the ones you choose to configure, and their use is subject to the laws of your jurisdiction and the terms of the services concerned.":
-    "Harbor hosts no media and indexes no media. The sources and addons available to you are the ones you choose to configure, and their use is subject to the laws of your jurisdiction and the terms of the services concerned.",
-  "Harbor is an independent client. It is not affiliated with, endorsed by, or sponsored by Stremio, or by any company, addon author, or trademark holder referenced in this application. All trademarks are the property of their respective owners.":
-    "Harbor is an independent client. It is not affiliated with, endorsed by, or sponsored by Stremio, or by any company, addon author, or trademark holder referenced in this application. All trademarks are the property of their respective owners.",
-  "Harbor is authorized on this device and syncing with Simkl.":
-    "Harbor is authorized on this device and syncing with Simkl.",
-  "Harbor is free and open source software, released under the MIT License.":
-    "Harbor is free and open source software, released under the MIT License.",
-  "Harbor is signed in to your MyAnimeList account.":
-    "Harbor is signed in to your MyAnimeList account.",
-  "Harbor is using {used} of the {quota} this computer allows.":
-    "Harbor is using {used} of the {quota} this computer allows.",
-  "Harbor library": "Harbor library",
-  "Harbor opens 4 parallel requests to speed.cloudflare.com, discards the first 1.2 seconds so TCP slow-start does not tank the result, then measures until it has 150 MB or 8 seconds of steady transfer.":
-    "Harbor opens 4 parallel requests to speed.cloudflare.com, discards the first 1.2 seconds so TCP slow-start does not tank the result, then measures until it has 150 MB or 8 seconds of steady transfer.",
-  "Harbor opens only the address you paste here and lists the media it finds in that page's own source. It does not search anywhere else.":
-    "Harbor opens only the address you paste here and lists the media it finds in that page's own source. It does not search anywhere else.",
-  "Harbor picks the best stream it can find and starts playing straight away.":
-    "Harbor picks the best stream it can find and starts playing straight away.",
-  "Harbor picks the size your connection can keep up with.":
-    "Harbor picks the size your connection can keep up with.",
-  "Harbor puts streams, audio tracks and subtitles in these languages first. Leave it empty to accept anything.":
-    "Harbor puts streams, audio tracks and subtitles in these languages first. Leave it empty to accept anything.",
-  "Harbor reads your display and lands between the two.":
-    "Harbor reads your display and lands between the two.",
-  "Harbor scales the prompt to the episode length, so a short episode does not ask this early. The bar shows the last three minutes.":
-    "Harbor scales the prompt to the episode length, so a short episode does not ask this early. The bar shows the last three minutes.",
-  "Harbor scrobbles your playback to Trakt and keeps your watchlist in sync.":
-    "Harbor scrobbles your playback to Trakt and keeps your watchlist in sync.",
-  "Harbor shows the full list of streams every time so you choose one yourself.":
-    "Harbor shows the full list of streams every time so you choose one yourself.",
-  "Harbor shows you a short code to type in at trakt.tv. Scrobbling and watchlist sync begin the moment you approve it.":
-    "Harbor shows you a short code to type in at trakt.tv. Scrobbling and watchlist sync begin the moment you approve it.",
-  "Harbor signs out and stops syncing. Your lists on Simkl are left exactly as they are.":
-    "Harbor signs out and stops syncing. Your lists on Simkl are left exactly as they are.",
-  "Harbor signs out and stops updating your progress. Your list on MyAnimeList is left as it is.":
-    "Harbor signs out and stops updating your progress. Your list on MyAnimeList is left as it is.",
-  "Harbor tries HTTP, HTTPS, reverse proxies, and the provider's default port. Credentials are stored separately.":
-    "Harbor tries HTTP, HTTPS, reverse proxies, and the provider's default port. Credentials are stored separately.",
-  "Harbor uses its own community server. You can point it at a server you run yourself.":
-    "Harbor uses its own community server. You can point it at a server you run yourself.",
+  "Lart did not draw its own icons. Two people did, and they are worth hiring.":
+    "Lart did not draw its own icons. Two people did, and they are worth hiring.",
+  "Lart hosts no media and indexes no media. The sources and addons available to you are the ones you choose to configure, and their use is subject to the laws of your jurisdiction and the terms of the services concerned.":
+    "Lart hosts no media and indexes no media. The sources and addons available to you are the ones you choose to configure, and their use is subject to the laws of your jurisdiction and the terms of the services concerned.",
+  "Lart is an independent client. It is not affiliated with, endorsed by, or sponsored by Stremio, or by any company, addon author, or trademark holder referenced in this application. All trademarks are the property of their respective owners.":
+    "Lart is an independent client. It is not affiliated with, endorsed by, or sponsored by Stremio, or by any company, addon author, or trademark holder referenced in this application. All trademarks are the property of their respective owners.",
+  "Lart is authorized on this device and syncing with Simkl.":
+    "Lart is authorized on this device and syncing with Simkl.",
+  "Lart is free and open source software, released under the MIT License.":
+    "Lart is free and open source software, released under the MIT License.",
+  "Lart is signed in to your MyAnimeList account.":
+    "Lart is signed in to your MyAnimeList account.",
+  "Lart is using {used} of the {quota} this computer allows.":
+    "Lart is using {used} of the {quota} this computer allows.",
+  "Lart library": "Lart library",
+  "Lart opens 4 parallel requests to speed.cloudflare.com, discards the first 1.2 seconds so TCP slow-start does not tank the result, then measures until it has 150 MB or 8 seconds of steady transfer.":
+    "Lart opens 4 parallel requests to speed.cloudflare.com, discards the first 1.2 seconds so TCP slow-start does not tank the result, then measures until it has 150 MB or 8 seconds of steady transfer.",
+  "Lart opens only the address you paste here and lists the media it finds in that page's own source. It does not search anywhere else.":
+    "Lart opens only the address you paste here and lists the media it finds in that page's own source. It does not search anywhere else.",
+  "Lart picks the best stream it can find and starts playing straight away.":
+    "Lart picks the best stream it can find and starts playing straight away.",
+  "Lart picks the size your connection can keep up with.":
+    "Lart picks the size your connection can keep up with.",
+  "Lart puts streams, audio tracks and subtitles in these languages first. Leave it empty to accept anything.":
+    "Lart puts streams, audio tracks and subtitles in these languages first. Leave it empty to accept anything.",
+  "Lart reads your display and lands between the two.":
+    "Lart reads your display and lands between the two.",
+  "Lart scales the prompt to the episode length, so a short episode does not ask this early. The bar shows the last three minutes.":
+    "Lart scales the prompt to the episode length, so a short episode does not ask this early. The bar shows the last three minutes.",
+  "Lart scrobbles your playback to Trakt and keeps your watchlist in sync.":
+    "Lart scrobbles your playback to Trakt and keeps your watchlist in sync.",
+  "Lart shows the full list of streams every time so you choose one yourself.":
+    "Lart shows the full list of streams every time so you choose one yourself.",
+  "Lart shows you a short code to type in at trakt.tv. Scrobbling and watchlist sync begin the moment you approve it.":
+    "Lart shows you a short code to type in at trakt.tv. Scrobbling and watchlist sync begin the moment you approve it.",
+  "Lart signs out and stops syncing. Your lists on Simkl are left exactly as they are.":
+    "Lart signs out and stops syncing. Your lists on Simkl are left exactly as they are.",
+  "Lart signs out and stops updating your progress. Your list on MyAnimeList is left as it is.":
+    "Lart signs out and stops updating your progress. Your list on MyAnimeList is left as it is.",
+  "Lart tries HTTP, HTTPS, reverse proxies, and the provider's default port. Credentials are stored separately.":
+    "Lart tries HTTP, HTTPS, reverse proxies, and the provider's default port. Credentials are stored separately.",
+  "Lart uses its own community server. You can point it at a server you run yourself.":
+    "Lart uses its own community server. You can point it at a server you run yourself.",
   "Head to head": "Head to head",
   "Heads-up time": "Heads-up time",
   "Hide email address": "Hide email address",
@@ -546,34 +546,34 @@ const uiFallback: Record<string, string> = {
     "Hides the episode name, which often gives the twist away on its own.",
   "Hides the synopsis text under each unwatched episode.":
     "Hides the synopsis text under each unwatched episode.",
-  "Hold Ctrl or Cmd and scroll to resize Harbor's interface smoothly. This one cannot be changed.":
-    "Hold Ctrl or Cmd and scroll to resize Harbor's interface smoothly. This one cannot be changed.",
+  "Hold Ctrl or Cmd and scroll to resize Lart's interface smoothly. This one cannot be changed.":
+    "Hold Ctrl or Cmd and scroll to resize Lart's interface smoothly. This one cannot be changed.",
   "Home team": "Home team",
-  "How Harbor draws its own interface. Leave this on Automatic unless the app itself stutters, flickers or tears while scrolling, which some G-SYNC and high refresh rate setups do. Switching backends usually settles it. This does not affect video playback.":
-    "How Harbor draws its own interface. Leave this on Automatic unless the app itself stutters, flickers or tears while scrolling, which some G-SYNC and high refresh rate setups do. Switching backends usually settles it. This does not affect video playback.",
+  "How Lart draws its own interface. Leave this on Automatic unless the app itself stutters, flickers or tears while scrolling, which some G-SYNC and high refresh rate setups do. Switching backends usually settles it. This does not affect video playback.":
+    "How Lart draws its own interface. Leave this on Automatic unless the app itself stutters, flickers or tears while scrolling, which some G-SYNC and high refresh rate setups do. Switching backends usually settles it. This does not affect video playback.",
   "How big the handle sits on the timeline while you scrub.":
     "How big the handle sits on the timeline while you scrub.",
   "How dark the gradient behind the featured title on Home is. 100% is the classic look.":
     "How dark the gradient behind the featured title on Home is. 100% is the classic look.",
-  "How far ahead of the start time Harbor pings you. It scans your playlist EPG every 30 minutes.":
-    "How far ahead of the start time Harbor pings you. It scans your playlist EPG every 30 minutes.",
+  "How far ahead of the start time Lart pings you. It scans your playlist EPG every 30 minutes.":
+    "How far ahead of the start time Lart pings you. It scans your playlist EPG every 30 minutes.",
   "How heavy the stroke around each letter is.": "How heavy the stroke around each letter is.",
   "How large every poster card is drawn across Home and search.":
     "How large every poster card is drawn across Home and search.",
   "How large subtitles are drawn on the video, at any window size.":
     "How large subtitles are drawn on the video, at any window size.",
-  "How long Harbor fills the buffer before the picture appears.":
-    "How long Harbor fills the buffer before the picture appears.",
+  "How long Lart fills the buffer before the picture appears.":
+    "How long Lart fills the buffer before the picture appears.",
   "How long a poster takes to grow and settle as the pointer passes it.":
     "How long a poster takes to grow and settle as the pointer passes it.",
-  "How many episodes auto-play back to back before Harbor pauses to ask.":
-    "How many episodes auto-play back to back before Harbor pauses to ask.",
-  "How much of the video Harbor downloads in front of where you are watching.":
-    "How much of the video Harbor downloads in front of where you are watching.",
-  "How often Harbor re-reads the library index from {name}. Manual only refreshes when you press Sync now.":
-    "How often Harbor re-reads the library index from {name}. Manual only refreshes when you press Sync now.",
-  "How quickly the Harbor cursor moves with the right stick.":
-    "How quickly the Harbor cursor moves with the right stick.",
+  "How many episodes auto-play back to back before Lart pauses to ask.":
+    "How many episodes auto-play back to back before Lart pauses to ask.",
+  "How much of the video Lart downloads in front of where you are watching.":
+    "How much of the video Lart downloads in front of where you are watching.",
+  "How often Lart re-reads the library index from {name}. Manual only refreshes when you press Sync now.":
+    "How often Lart re-reads the library index from {name}. Manual only refreshes when you press Sync now.",
+  "How quickly the Lart cursor moves with the right stick.":
+    "How quickly the Lart cursor moves with the right stick.",
   "How rounded the corners of every poster card are.":
     "How rounded the corners of every poster card are.",
   "How solid the panel behind the text looks over the video.":
@@ -622,7 +622,7 @@ const uiFallback: Record<string, string> = {
   Lineups: "Lineups",
   "Link Discord": "Link Discord",
   "Linked as {username}": "Linked as {username}",
-  "Linked to your Harbor account.": "Linked to your Harbor account.",
+  "Linked to your Lart account.": "Linked to your Lart account.",
   "Live TV, {scope}, {minutes} min lead": "Live TV, {scope}, {minutes} min lead",
   "Live now": "Live now",
   "Live preview is on. Save keeps what you've picked as your Custom theme. Reset reverts the editor to the saved palette.":
@@ -637,8 +637,8 @@ const uiFallback: Record<string, string> = {
     "Low end lifted, for weight on speakers that do not have it.",
   "Low end pulled back, kinder to small speakers and to the neighbours.":
     "Low end pulled back, kinder to small speakers and to the neighbours.",
-  "Low is cosmetic. Normal is annoying. High means a feature is broken. Critical means Harbor is unusable.":
-    "Low is cosmetic. Normal is annoying. High means a feature is broken. Critical means Harbor is unusable.",
+  "Low is cosmetic. Normal is annoying. High means a feature is broken. Critical means Lart is unusable.":
+    "Low is cosmetic. Normal is annoying. High means a feature is broken. Critical means Lart is unusable.",
   "Manage this rule": "Manage this rule",
   "Match details are not available yet.": "Match details are not available yet.",
   "Match preview": "Match preview",
@@ -702,11 +702,11 @@ const uiFallback: Record<string, string> = {
     "On shows titles in your metadata language (English by default). Off keeps titles in English.",
   "On the pad, hold {button} to stop.": "On the pad, hold {button} to stop.",
   "On the pitch": "On the pitch",
-  "One account covers football and hockey. The free plan allows 100 requests a day and Harbor paces itself to stay inside it.":
-    "One account covers football and hockey. The free plan allows 100 requests a day and Harbor paces itself to stay inside it.",
+  "One account covers football and hockey. The free plan allows 100 requests a day and Lart paces itself to stay inside it.":
+    "One account covers football and hockey. The free plan allows 100 requests a day and Lart paces itself to stay inside it.",
   "Only the card gets wider. The text stays the same size, so bigger cards mean bigger artwork and fewer of them on screen.":
     "Only the card gets wider. The text stays the same size, so bigger cards mean bigger artwork and fewer of them on screen.",
-  "Open Harbor on desktop to link Discord.": "Open Harbor on desktop to link Discord.",
+  "Open Lart on desktop to link Discord.": "Open Lart on desktop to link Discord.",
   "Open anilist.co": "Open anilist.co",
   "Open myanimelist.net": "Open myanimelist.net",
   "Open simkl.com": "Open simkl.com",
@@ -716,8 +716,8 @@ const uiFallback: Record<string, string> = {
     "Opens Stremio's donation page in your browser.",
   "Opens anilist.co in your browser, where you can read what AniList does and make a free account.":
     "Opens anilist.co in your browser, where you can read what AniList does and make a free account.",
-  "Opens stremboxd.com, the community bridge that reads Letterboxd on Harbor's behalf.":
-    "Opens stremboxd.com, the community bridge that reads Letterboxd on Harbor's behalf.",
+  "Opens stremboxd.com, the community bridge that reads Letterboxd on Lart's behalf.":
+    "Opens stremboxd.com, the community bridge that reads Letterboxd on Lart's behalf.",
   "Opens three editors for CSS, JavaScript, and an HTML overlay. Changes apply as you type.":
     "Opens three editors for CSS, JavaScript, and an HTML overlay. Changes apply as you type.",
   "Opens trakt.tv in your browser, where you can read what Trakt does and make a free account.":
@@ -731,8 +731,8 @@ const uiFallback: Record<string, string> = {
   "Page metadata": "Page metadata",
   "Page source": "Page source",
   Pages: "Pages",
-  "Paste a link to a png, webp, or svg. Harbor will use it for this badge everywhere streams show format chips.":
-    "Paste a link to a png, webp, or svg. Harbor will use it for this badge everywhere streams show format chips.",
+  "Paste a link to a png, webp, or svg. Lart will use it for this badge everywhere streams show format chips.":
+    "Paste a link to a png, webp, or svg. Lart will use it for this badge everywhere streams show format chips.",
   "Paste a stream": "Paste a stream",
   "Paste from clipboard": "Paste from clipboard",
   "Paste the address of any public Letterboxd list to add it as its own row.":
@@ -744,8 +744,8 @@ const uiFallback: Record<string, string> = {
     "Pick a badges.json that is already saved on this computer.",
   "Pick as many as you like. With none picked, every genre counts.":
     "Pick as many as you like. With none picked, every genre counts.",
-  "Pick the cap your connection can sustain. Streams that need more than this rank lower, so Harbor stops offering you files you cannot actually play.":
-    "Pick the cap your connection can sustain. Streams that need more than this rank lower, so Harbor stops offering you files you cannot actually play.",
+  "Pick the cap your connection can sustain. Streams that need more than this rank lower, so Lart stops offering you files you cannot actually play.":
+    "Pick the cap your connection can sustain. Streams that need more than this rank lower, so Lart stops offering you files you cannot actually play.",
   "Pick the clubs you follow and their next fixture and last result stay pinned here.":
     "Pick the clubs you follow and their next fixture and last result stay pinned here.",
   "Pick the countries of origin you follow. With none picked, every country counts.":
@@ -756,8 +756,8 @@ const uiFallback: Record<string, string> = {
     "Pick what to save, then everything you choose lands in one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.",
   "Pick which corner of the poster the bookmark sits in.":
     "Pick which corner of the poster the bookmark sits in.",
-  "Pick which languages Harbor looks for first, and which ones it falls back to.":
-    "Pick which languages Harbor looks for first, and which ones it falls back to.",
+  "Pick which languages Lart looks for first, and which ones it falls back to.":
+    "Pick which languages Lart looks for first, and which ones it falls back to.",
   "Pick who this rule watches. With nobody picked, everyone you track counts.":
     "Pick who this rule watches. With nobody picked, everyone you track counts.",
   Picked: "Picked",
@@ -768,8 +768,8 @@ const uiFallback: Record<string, string> = {
     "Play starts the best-ranked stream straight away.",
   "Player config": "Player config",
   "Player screen lock": "Player screen lock",
-  "Point Harbor at a hosted pack link, upload your own images, or import a .zip. Harbor stores the link, so the artwork stays with whoever made it.":
-    "Point Harbor at a hosted pack link, upload your own images, or import a .zip. Harbor stores the link, so the artwork stays with whoever made it.",
+  "Point Lart at a hosted pack link, upload your own images, or import a .zip. Lart stores the link, so the artwork stays with whoever made it.":
+    "Point Lart at a hosted pack link, upload your own images, or import a .zip. Lart stores the link, so the artwork stays with whoever made it.",
   "Post the alert to the Discord channel set up on the Destinations tab.":
     "Post the alert to the Discord channel set up on the Destinations tab.",
   "Prefer these sources": "Prefer these sources",
@@ -779,8 +779,8 @@ const uiFallback: Record<string, string> = {
     "Probes the server's settings endpoint from this device and reports what came back.",
   "Public mode reads your account with nothing but your username. You get your watchlist, liked films, popular this week and the Top 250, and no password is needed.":
     "Public mode reads your account with nothing but your username. You get your watchlist, liked films, popular this week and the Top 250, and no password is needed.",
-  "Pull every title on your Trakt watchlist into Harbor. Anything already saved is left alone.":
-    "Pull every title on your Trakt watchlist into Harbor. Anything already saved is left alone.",
+  "Pull every title on your Trakt watchlist into Lart. Anything already saved is left alone.":
+    "Pull every title on your Trakt watchlist into Lart. Anything already saved is left alone.",
   "Pulls what you have part-watched on Simkl into the row, marked with the Simkl logo. Requires a connected Simkl account.":
     "Pulls what you have part-watched on Simkl into the row, marked with the Simkl logo. Requires a connected Simkl account.",
   "Pulls what you have part-watched on Trakt into the row, marked with the Trakt logo. Requires a connected Trakt account.":
@@ -808,8 +808,8 @@ const uiFallback: Record<string, string> = {
   "Remove this stream": "Remove this stream",
   Renderer: "Renderer",
   "Rendering backend": "Rendering backend",
-  "Renders mpv inline so playback lives in Harbor itself. Turn off to open it in a separate window instead.":
-    "Renders mpv inline so playback lives in Harbor itself. Turn off to open it in a separate window instead.",
+  "Renders mpv inline so playback lives in Lart itself. Turn off to open it in a separate window instead.":
+    "Renders mpv inline so playback lives in Lart itself. Turn off to open it in a separate window instead.",
   "Renders subtitles in a heavier weight. Turn off to use your font's normal weight.":
     "Renders subtitles in a heavier weight. Turn off to use your font's normal weight.",
   "Replace selected data?": "Replace selected data?",
@@ -823,13 +823,13 @@ const uiFallback: Record<string, string> = {
   Role: "Role",
   "Rule is active": "Rule is active",
   "Rule name": "Rule name",
-  "Rulesets bring a full badge set with their own matching. Art remaps only swap the pictures on Harbor's built-in badges. Anything shared as a badges.json link imports here too.":
-    "Rulesets bring a full badge set with their own matching. Art remaps only swap the pictures on Harbor's built-in badges. Anything shared as a badges.json link imports here too.",
+  "Rulesets bring a full badge set with their own matching. Art remaps only swap the pictures on Lart's built-in badges. Anything shared as a badges.json link imports here too.":
+    "Rulesets bring a full badge set with their own matching. Art remaps only swap the pictures on Lart's built-in badges. Anything shared as a badges.json link imports here too.",
   "Run your own relay": "Run your own relay",
   "Running version {version} of the Watch Together protocol.":
     "Running version {version} of the Watch Together protocol.",
-  "Running version {version}. Harbor's public relay updates itself, so there is nothing for you to do.":
-    "Running version {version}. Harbor's public relay updates itself, so there is nothing for you to do.",
+  "Running version {version}. Lart's public relay updates itself, so there is nothing for you to do.":
+    "Running version {version}. Lart's public relay updates itself, so there is nothing for you to do.",
   "Running version {version}. Redeploy to pick up the latest Watch Together fixes. The in-app banner clears once the new version is live.":
     "Running version {version}. Redeploy to pick up the latest Watch Together fixes. The in-app banner clears once the new version is live.",
   "Runs a short download test against Cloudflare and shows the result here, so you can pick a cap that matches your real line.":
@@ -845,25 +845,25 @@ const uiFallback: Record<string, string> = {
   "Save the rule": "Save the rule",
   "Saved to Downloads as harbor-mpv-log.txt. Attach it above.":
     "Saved to Downloads as harbor-mpv-log.txt. Attach it above.",
-  "Saved {when} from Harbor {app}. Your Stremio sign-in stays as is.":
-    "Saved {when} from Harbor {app}. Your Stremio sign-in stays as is.",
+  "Saved {when} from Lart {app}. Your Stremio sign-in stays as is.":
+    "Saved {when} from Lart {app}. Your Stremio sign-in stays as is.",
   "Saved.": "Saved.",
   "Search channels": "Search channels",
   "Search rules": "Search rules",
   "Search teams": "Search teams",
   "Search your channels": "Search your channels",
-  "Searching works without a key. Adding one lets Harbor line subtitles up with the audio on its own.":
-    "Searching works without a key. Adding one lets Harbor line subtitles up with the audio on its own.",
+  "Searching works without a key. Adding one lets Lart line subtitles up with the audio on its own.":
+    "Searching works without a key. Adding one lets Lart line subtitles up with the audio on its own.",
   "See which fixes are already in review before you start on one.":
     "See which fixes are already in review before you start on one.",
   "Seek dot": "Seek dot",
   "Send code": "Send code",
-  "Send every title in your Harbor watchlist up to Trakt. Safe to run again, Trakt skips anything it already has.":
-    "Send every title in your Harbor watchlist up to Trakt. Safe to run again, Trakt skips anything it already has.",
+  "Send every title in your Lart watchlist up to Trakt. Safe to run again, Trakt skips anything it already has.":
+    "Send every title in your Lart watchlist up to Trakt. Safe to run again, Trakt skips anything it already has.",
   "Send the alert through the Telegram bot set up on the Destinations tab.":
     "Send the alert through the Telegram bot set up on the Destinations tab.",
-  "Sent once to Stremboxd to obtain a sign-in token. Harbor never keeps it.":
-    "Sent once to Stremboxd to obtain a sign-in token. Harbor never keeps it.",
+  "Sent once to Stremboxd to obtain a sign-in token. Lart never keeps it.":
+    "Sent once to Stremboxd to obtain a sign-in token. Lart never keeps it.",
   "Set as home team": "Set as home team",
   "Shader files": "Shader files",
   "Shadow strength": "Shadow strength",
@@ -888,12 +888,12 @@ const uiFallback: Record<string, string> = {
     "Shows everything the addon sends in the Stremio picker layout instead of trimming it to a few lines. That matters for AIOStreams and other custom formats. Off gives shorter, tidier rows.",
   "Sidebar icons play a short animation when you hover them. Turn this off to keep them as plain static icons.":
     "Sidebar icons play a short animation when you hover them. Turn this off to keep them as plain static icons.",
-  "Sign in at anilist.co and authorize Harbor. Your anime lists show up on the Anime page as soon as you are back.":
-    "Sign in at anilist.co and authorize Harbor. Your anime lists show up on the Anime page as soon as you are back.",
-  "Sign in once with MyAnimeList. Harbor then updates your episode count as you watch, and never lowers a count you already have.":
-    "Sign in once with MyAnimeList. Harbor then updates your episode count as you watch, and never lowers a count you already have.",
-  "Sign in once with a short device code. Harbor then marks what you finish as watched and keeps your plan-to-watch list in step.":
-    "Sign in once with a short device code. Harbor then marks what you finish as watched and keeps your plan-to-watch list in step.",
+  "Sign in at anilist.co and authorize Lart. Your anime lists show up on the Anime page as soon as you are back.":
+    "Sign in at anilist.co and authorize Lart. Your anime lists show up on the Anime page as soon as you are back.",
+  "Sign in once with MyAnimeList. Lart then updates your episode count as you watch, and never lowers a count you already have.":
+    "Sign in once with MyAnimeList. Lart then updates your episode count as you watch, and never lowers a count you already have.",
+  "Sign in once with a short device code. Lart then marks what you finish as watched and keeps your plan-to-watch list in step.":
+    "Sign in once with a short device code. Lart then marks what you finish as watched and keeps your plan-to-watch list in step.",
   "Sign in to sync your library, add-ons and watch history with Stremio.":
     "Sign in to sync your library, add-ons and watch history with Stremio.",
   "Sign in with Discord": "Sign in with Discord",
@@ -938,7 +938,7 @@ const uiFallback: Record<string, string> = {
   T: "T",
   "TMDB, Fanart, TVDB, OMDb and RPDB supply posters, artwork and ratings. Adding your own free keys makes artwork load faster and more completely.":
     "TMDB, Fanart, TVDB, OMDb and RPDB supply posters, artwork and ratings. Adding your own free keys makes artwork load faster and more completely.",
-  "Takes effect the next time Harbor starts.": "Takes effect the next time Harbor starts.",
+  "Takes effect the next time Lart starts.": "Takes effect the next time Lart starts.",
   "Test a stream title": "Test a stream title",
   "That pack could not be imported.": "That pack could not be imported.",
   "That page answered {status} and sent nothing back.":
@@ -961,26 +961,26 @@ const uiFallback: Record<string, string> = {
   "The chrome abiyyu drew for the player: transport, subtitles, shaders, and the rest.":
     "The chrome abiyyu drew for the player: transport, subtitles, shaders, and the rest.",
   "The color of the panel behind the text.": "The color of the panel behind the text.",
-  "The controller button glyphs elsewhere in Harbor are not ours. They come from Kenney's Input Prompts, released into the public domain under CC0.":
-    "The controller button glyphs elsewhere in Harbor are not ours. They come from Kenney's Input Prompts, released into the public domain under CC0.",
+  "The controller button glyphs elsewhere in Lart are not ours. They come from Kenney's Input Prompts, released into the public domain under CC0.":
+    "The controller button glyphs elsewhere in Lart are not ours. They come from Kenney's Input Prompts, released into the public domain under CC0.",
   "The darkest steps flatten together, which is how an LCD really behaves.":
     "The darkest steps flatten together, which is how an LCD really behaves.",
   "The entries taking the most room right now. Most of them are caches that rebuild themselves, so this list changes as you browse.":
     "The entries taking the most room right now. Most of them are caches that rebuild themselves, so this list changes as you browse.",
   "The fill color of the subtitle letters themselves.":
     "The fill color of the subtitle letters themselves.",
-  "The filled part of the timeline. Default follows your Harbor accent.":
-    "The filled part of the timeline. Default follows your Harbor accent.",
-  "The full text of every licence covering software distributed with Harbor. Select any entry to save a copy.":
-    "The full text of every licence covering software distributed with Harbor. Select any entry to save a copy.",
+  "The filled part of the timeline. Default follows your Lart accent.":
+    "The filled part of the timeline. Default follows your Lart accent.",
+  "The full text of every licence covering software distributed with Lart. Select any entry to save a copy.":
+    "The full text of every licence covering software distributed with Lart. Select any entry to save a copy.",
   "The handle in your profile address, letterboxd.com/your-name.":
     "The handle in your profile address, letterboxd.com/your-name.",
   "The most memory the head start is allowed to take while a video plays.":
     "The most memory the head start is allowed to take while a video plays.",
-  "The principal open source components Harbor is built from.":
-    "The principal open source components Harbor is built from.",
-  "The release Harbor watches for. Everything else on this page narrows it down.":
-    "The release Harbor watches for. Everything else on this page narrows it down.",
+  "The principal open source components Lart is built from.":
+    "The principal open source components Lart is built from.",
+  "The release Lart watches for. Everything else on this page narrows it down.":
+    "The release Lart watches for. Everything else on this page narrows it down.",
   "The shadow is what keeps the title and buttons readable. Drop it too far and the text starts fighting the artwork.":
     "The shadow is what keeps the title and buttons readable. Drop it too far and the text starts fighting the artwork.",
   "The sidebar set. Click any one to save the SVG.":
@@ -988,24 +988,24 @@ const uiFallback: Record<string, string> = {
   "The small on-screen readout that appears while you nudge subtitle timing with Z and X during playback. Automatic syncing lives in the Sync tab.":
     "The small on-screen readout that appears while you nudge subtitle timing with Z and X during playback. Automatic syncing lives in the Sync tab.",
   "The stroke or halo drawn behind the letters.": "The stroke or halo drawn behind the letters.",
-  "The text Harbor prints on the badge, for example REMUX.":
-    "The text Harbor prints on the badge, for example REMUX.",
+  "The text Lart prints on the badge, for example REMUX.":
+    "The text Lart prints on the badge, for example REMUX.",
   "The typeface subtitles are drawn in. Add your own TTF, OTF or WOFF file if none of these suit.":
     "The typeface subtitles are drawn in. Add your own TTF, OTF or WOFF file if none of these suit.",
   "The volume bar stops at 100 percent. No boost is available.":
     "The volume bar stops at 100 percent. No boost is available.",
   "Theme and appearance": "Theme and appearance",
   "Then notify": "Then notify",
-  "These are Harbor's own, drawn for Harbor. Take them for a theme, a fork, a mockup, a personal project. Keep the credit on the artists and do not sell the set on its own.":
-    "These are Harbor's own, drawn for Harbor. Take them for a theme, a fork, a mockup, a personal project. Keep the credit on the artists and do not sell the set on its own.",
-  "These organisations provide their services to Harbor at no cost.":
-    "These organisations provide their services to Harbor at no cost.",
+  "These are Lart's own, drawn for Lart. Take them for a theme, a fork, a mockup, a personal project. Keep the credit on the artists and do not sell the set on its own.":
+    "These are Lart's own, drawn for Lart. Take them for a theme, a fork, a mockup, a personal project. Keep the credit on the artists and do not sell the set on its own.",
+  "These organisations provide their services to Lart at no cost.":
+    "These organisations provide their services to Lart at no cost.",
   "These rows are switched on but hidden from your home page. Choose Show to bring one back.":
     "These rows are switched on but hidden from your home page. Choose Show to bring one back.",
   "This badge is hidden everywhere streams show format chips.":
     "This badge is hidden everywhere streams show format chips.",
-  "This badge uses art you picked instead of Harbor's default.":
-    "This badge uses art you picked instead of Harbor's default.",
+  "This badge uses art you picked instead of Lart's default.":
+    "This badge uses art you picked instead of Lart's default.",
   "This cannot be undone. You would need to deploy a new relay.":
     "This cannot be undone. You would need to deploy a new relay.",
   "This deletes those entries from your library. Playing them again re-adds them.":
@@ -1027,12 +1027,12 @@ const uiFallback: Record<string, string> = {
     "Turn this off and the report ships with no name attached.",
   "Turn this off to keep the rule but stop it sending anything for now.":
     "Turn this off to keep the rule but stop it sending anything for now.",
-  "Turn this on and Harbor watches just the Live TV channels you starred. Off means every channel in your playlists.":
-    "Turn this on and Harbor watches just the Live TV channels you starred. Off means every channel in your playlists.",
+  "Turn this on and Lart watches just the Live TV channels you starred. Off means every channel in your playlists.":
+    "Turn this on and Lart watches just the Live TV channels you starred. Off means every channel in your playlists.",
   "Turning this on adds your Letterboxd catalogs to the home page and a Letterboxd panel to every film page.":
     "Turning this on adds your Letterboxd catalogs to the home page and a Letterboxd panel to every film page.",
-  "Type any release name here to see what Harbor would badge it with.":
-    "Type any release name here to see what Harbor would badge it with.",
+  "Type any release name here to see what Lart would badge it with.":
+    "Type any release name here to see what Lart would badge it with.",
   "Unavailable while Continue Watching is kept private to each profile, because Simkl progress is shared across every profile on this account.":
     "Unavailable while Continue Watching is kept private to each profile, because Simkl progress is shared across every profile on this account.",
   "Unavailable while Continue Watching is kept private to each profile, because Trakt progress is shared across every profile on this account.":
@@ -1043,8 +1043,8 @@ const uiFallback: Record<string, string> = {
   "Unpin this competition": "Unpin this competition",
   "Up to 3840 × 2160 when the source has it. Takes a beat longer to start.":
     "Up to 3840 × 2160 when the source has it. Takes a beat longer to start.",
-  "Upload a picture of your own, or pick one from the Harbor catalog.":
-    "Upload a picture of your own, or pick one from the Harbor catalog.",
+  "Upload a picture of your own, or pick one from the Lart catalog.":
+    "Upload a picture of your own, or pick one from the Lart catalog.",
   "Uploads stay on this computer. Keep the file under 250 KB.":
     "Uploads stay on this computer. Keep the file under 250 KB.",
   "Use color to distinguish severity, or keep every advisory monochrome.":
@@ -1071,8 +1071,8 @@ const uiFallback: Record<string, string> = {
   "What should the backup include?": "What should the backup include?",
   "What the sidebar icons do when you land on them.":
     "What the sidebar icons do when you land on them.",
-  "What this rule is called in your list. Leave it empty and Harbor names it after the trigger.":
-    "What this rule is called in your list. Leave it empty and Harbor names it after the trigger.",
+  "What this rule is called in your list. Leave it empty and Lart names it after the trigger.":
+    "What this rule is called in your list. Leave it empty and Lart names it after the trigger.",
   "When a movie or episode starts, briefly show its Common Sense Media parental guide (violence, nudity, profanity, substances) with severity. Fades on its own.":
     "When a movie or episode starts, briefly show its Common Sense Media parental guide (violence, nudity, profanity, substances) with severity. Fades on its own.",
   "Where Play looks first": "Where Play looks first",
@@ -1087,15 +1087,15 @@ const uiFallback: Record<string, string> = {
   "Writes the last playback session to your Downloads folder so you can attach it above.":
     "Writes the last playback session to your Downloads folder so you can attach it above.",
   "Yellow cards": "Yellow cards",
-  "You have no automations yet. Create one and Harbor will message you the moment something matches.":
-    "You have no automations yet. Create one and Harbor will message you the moment something matches.",
+  "You have no automations yet. Create one and Lart will message you the moment something matches.":
+    "You have no automations yet. Create one and Lart will message you the moment something matches.",
   "You have not added any favourites yet": "You have not added any favourites yet",
   "Your AniList account": "Your AniList account",
   "Your MyAnimeList account": "Your MyAnimeList account",
   "Your Simkl account": "Your Simkl account",
   "Your Trakt account": "Your Trakt account",
-  "Your own Harbor account progress. The primary source for almost everyone.":
-    "Your own Harbor account progress. The primary source for almost everyone.",
+  "Your own Lart account progress. The primary source for almost everyone.":
+    "Your own Lart account progress. The primary source for almost everyone.",
   "Your pick for this competition": "Your pick for this competition",
   "Your preferences, layout state, and small lookup caches. Clearing caches shrinks this.":
     "Your preferences, layout state, and small lookup caches. Clearing caches shrinks this.",
@@ -1118,8 +1118,8 @@ const uiFallback: Record<string, string> = {
     "{count} installed. Their results are merged in with everything else.",
   "{ms} ms": "{ms} ms",
   "{m} of {n} on": "{m} of {n} on",
-  "{n} badges use art you picked instead of Harbor's default.":
-    "{n} badges use art you picked instead of Harbor's default.",
+  "{n} badges use art you picked instead of Lart's default.":
+    "{n} badges use art you picked instead of Lart's default.",
   "{n} badges, by {name}": "{n} badges, by {name}",
   "{n} films.": "{n} films.",
   "{n} followed": "{n} followed",
@@ -1130,9 +1130,9 @@ const uiFallback: Record<string, string> = {
   "{n} seconds": "{n} seconds",
   "{n}x card width": "{n}x card width",
   "{trigger}. Sends to {channels}.": "{trigger}. Sends to {channels}.",
-  "Harbor on Discord": "Harbor on Discord",
-  "Release notes, help from other people using Harbor, and somewhere to send bugs.":
-    "Release notes, help from other people using Harbor, and somewhere to send bugs.",
+  "Lart on Discord": "Lart on Discord",
+  "Release notes, help from other people using Lart, and somewhere to send bugs.":
+    "Release notes, help from other people using Lart, and somewhere to send bugs.",
   "Player controls in Big Picture": "Player controls in Big Picture",
   "Ten-foot uses large controls built for a remote across the room. Desktop keeps the same player you use in the normal window, which is quicker with a mouse and keyboard.":
     "Ten-foot uses large controls built for a remote across the room. Desktop keeps the same player you use in the normal window, which is quicker with a mouse and keyboard.",

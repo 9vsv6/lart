@@ -4,7 +4,7 @@ import { HarborMark } from "@/components/icons/harbor-mark";
 import type { SetupStepId } from "./setup-wire";
 
 /**
- * The real mark of whatever the step is about. Harbor's own is the inline
+ * The real mark of whatever the step is about. Lart's own is the inline
  * component rather than harbor-wordmark.svg, which bakes a fill hex into a
  * <style> block and so cannot follow a token.
  */

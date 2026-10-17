@@ -24,7 +24,7 @@ pub fn arguments(runtime: &Runtime, _game: &Path, session: &str, memory: u32, ac
         ("auth_player_name",account.name.clone()),("auth_uuid",uuid::Uuid::parse_str(&account.uuid).map_err(|_|"minecraft_response")?.simple().to_string()),("auth_access_token",account.access.clone()),("clientid",account.client.clone()),("auth_xuid",account.xuid.clone()),
         ("version_name",runtime.version.clone()),("version_type",runtime.version_type.clone()),("game_directory",".".into()),("assets_root","../.runtime/assets".into()),("assets_index_name",runtime.asset_index.clone()),
         ("natives_directory",format!("../.runtime/launch/{session}/natives")),("runtime_root","../.runtime".into()),("library_directory","../.runtime/libraries".into()),("classpath_separator",if cfg!(windows) { ";" } else { ":" }.into()),
-        ("launcher_name","Harbor".into()),("launcher_version",env!("CARGO_PKG_VERSION").into()),("classpath",classpath),("user_type","msa".into()),("user_properties","{}".into())
+        ("launcher_name","Lart".into()),("launcher_version",env!("CARGO_PKG_VERSION").into()),("classpath",classpath),("user_type","msa".into()),("user_properties","{}".into())
     ]);
     if runtime.jvm.iter().any(|v|v.contains("${auth_") || v.contains("${clientid}")) { return Err("launch_arguments"); }
     let mut jvm = runtime.jvm.iter().map(|v|expand(v,&values)).collect::<Result<Vec<_>>>()?;

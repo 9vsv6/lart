@@ -48,7 +48,7 @@ export function RollbackRow() {
 
         <p className={`max-w-[70ch] ${ROW_DESC}`}>
           {t(
-            "While beta updates are on, Harbor offers the newest build again on its next check. Turn beta updates off above to stay on an earlier one.",
+            "While beta updates are on, Lart offers the newest build again on its next check. Turn beta updates off above to stay on an earlier one.",
           )}
         </p>
       </div>

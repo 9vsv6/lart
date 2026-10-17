@@ -127,7 +127,7 @@ export function BpDetail({
   const homeServers = useTitleMediaServers(meta?.id, imdbId);
   const awardGroups = useBpTitleAwards(shell, imdbId);
   // No ref: a hero is on screen by definition. Surface "detail" is load bearing.
-  // Harbor keeps two independent settings families, showXBadge for cards and
+  // Lart keeps two independent settings families, showXBadge for cards and
   // showXDetail for detail pages, and they diverge on stock defaults, so reading
   // the card family here dropped six of the ten providers and ignored a user who
   // had switched a provider off for detail pages only.
@@ -227,7 +227,7 @@ export function BpDetail({
           loading
             ? ""
             : t(
-                "Harbor couldn't reach the catalog servers. Check the connection and reopen Big Picture.",
+                "Lart couldn't reach the catalog servers. Check the connection and reopen Big Picture.",
               )
         }
         action={t("Go back")}

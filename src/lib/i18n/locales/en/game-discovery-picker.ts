@@ -45,7 +45,7 @@ export default {
   "games.pick.hours": "h",
   "games.pick.noHistory": "No activity to use yet. Pick favorites above, or connect Steam in Games settings.",
   "games.pick.manualOnly": "Only your favorites and selected filters will shape these picks.",
-  "games.pick.addedNote": "“Recently added” means first seen in Harbor after your initial import, not a purchase date.",
+  "games.pick.addedNote": "“Recently added” means first seen in Lart after your initial import, not a purchase date.",
   "games.pick.because": "Because you like {name}",
   "games.pick.matches": "Matches your choices",
   "games.pick.steamCatalog": "Steam catalog",

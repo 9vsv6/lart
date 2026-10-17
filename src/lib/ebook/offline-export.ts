@@ -56,7 +56,7 @@ function fileName(value: string): string {
       .replace(/[<>:"/\\|?*\u0000-\u001f]/g, " ")
       .replace(/\s+/g, " ")
       .trim()
-      .slice(0, 120) || t("Harbor eBook")
+      .slice(0, 120) || t("Lart eBook")
   );
 }
 

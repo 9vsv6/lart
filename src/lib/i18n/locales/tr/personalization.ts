@@ -19,8 +19,8 @@ const personalization: Record<string, string> = {
     "Henüz listeniz yok. İlk listenizi aşağıdan oluşturun.",
   "No location": "Konum yok",
   "No matches. Try another title.": "Eşleşme yok. Başka bir ad deneyin.",
-  "No metadata addon detected. Harbor is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
-    "Meta veri eklentisi algılanmadı. İçeriklerin yüklenebilmesi için Harbor, Cinemeta'yı kullanıyor. Başka bir eklenti yüklemeyecekseniz bunu yeniden açın.",
+  "No metadata addon detected. Lart is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
+    "Meta veri eklentisi algılanmadı. İçeriklerin yüklenebilmesi için Lart, Cinemeta'yı kullanıyor. Başka bir eklenti yüklemeyecekseniz bunu yeniden açın.",
   "No more films to add. Start with what you picked.":
     "Eklenecek başka film yok. Seçtiklerinizle başlayın.",
   "No new subtitles found beyond what is already listed.":
@@ -44,8 +44,8 @@ const personalization: Record<string, string> = {
   "No status": "Durum yok",
   "No streams match": "Eşleşen yayın yok",
   "No subtitles": "Altyazı yok",
-  "No subtitles found. Start anyway, Harbor keeps looking while you watch.":
-    "Altyazı bulunamadı. Yine de başlatın; Harbor siz izlerken aramaya devam eder.",
+  "No subtitles found. Start anyway, Lart keeps looking while you watch.":
+    "Altyazı bulunamadı. Yine de başlatın; Lart siz izlerken aramaya devam eder.",
   "No subtitles found. Try another title above, or adjust the season and episode.":
     "Altyazı bulunamadı. Yukarıdan başka bir başlık deneyin ya da sezon ve bölümü değiştirin.",
   "No such captain": "Böyle bir kaptan yok",
@@ -72,8 +72,8 @@ const personalization: Record<string, string> = {
   "Nothing connected yet. Scan a code with your phone.":
     "Henüz bağlı bir hesap yok. Telefonunuzla bir kod tarayın.",
   "Nothing found here": "Burada hiçbir şey bulunamadı",
-  "Nothing is uploaded and nothing ships with Harbor. Everything stays on this device and you are responsible for the images you add.":
-    "Hiçbir şey yüklenmez ve Harbor ile birlikte hiçbir içerik sunulmaz. Her şey bu cihazda kalır ve eklediğiniz görsellerden siz sorumlusunuz.",
+  "Nothing is uploaded and nothing ships with Lart. Everything stays on this device and you are responsible for the images you add.":
+    "Hiçbir şey yüklenmez ve Lart ile birlikte hiçbir içerik sunulmaz. Her şey bu cihazda kalır ve eklediğiniz görsellerden siz sorumlusunuz.",
   "Nothing posted yet": "Henüz gönderi yok",
   "Nothing to show yet": "Henüz gösterilecek bir şey yok",
   "Nothing tracked on Simkl yet": "Simkl'de henüz takip edilen bir içerik yok",
@@ -87,8 +87,8 @@ const personalization: Record<string, string> = {
   "OMDB daily budget": "OMDB günlük kotası",
   "OMDb · Rotten Tomatoes scores": "OMDb · Rotten Tomatoes puanları",
   "Off (use CPU)": "Kapalı (CPU'yu kullan)",
-  "Off by default, so your controller only drives Harbor while it is the focused window. Leave it off if you play games with the same controller.":
-    "Varsayılan olarak kapalıdır; böylece kumandanız Harbor'ı yalnızca odaktaki pencere olduğunda kontrol eder. Aynı kumandayla oyun oynuyorsanız kapalı bırakın.",
+  "Off by default, so your controller only drives Lart while it is the focused window. Leave it off if you play games with the same controller.":
+    "Varsayılan olarak kapalıdır; böylece kumandanız Lart'ı yalnızca odaktaki pencere olduğunda kontrol eder. Aynı kumandayla oyun oynuyorsanız kapalı bırakın.",
   "Off by default. Shows your Letterboxd name, lists and film counts on your profile for anyone who visits. Manage the connection itself in Settings, Letterboxd.":
     "Varsayılan olarak kapalıdır. Profilinizi ziyaret eden herkese Letterboxd adınızı, listelerinizi ve film sayılarınızı gösterir. Bağlantıyı Ayarlar'daki Letterboxd bölümünden yönetebilirsiniz.",
   "Off by default. Shows your Simkl avatar, name and watch stats on your profile for anyone who visits. Manage the connection itself in Settings, Simkl.":
@@ -121,8 +121,8 @@ const personalization: Record<string, string> = {
   "One last thing on Cloudflare's side": "Cloudflare tarafında son bir işlem kaldı",
   "One switch powers everything on this page: the web app, the phone remote, and the manga reader remote.":
     "Tek bir anahtar bu sayfadaki her şeyi etkinleştirir: web uygulaması, telefon kumandası ve manga okuyucu kumandası.",
-  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Harbor's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
-    "Tek tıklamayla yüklenen topluluk paketleri. Kural setleri, kendi eşleştirmeleriyle birlikte eksiksiz rozet kümeleri sunar; görsel eşlemeleri ise yalnızca Harbor'ın yerleşik rozetlerindeki resimleri değiştirir. Nuvio Discord veya Reddit'te badges.json bağlantısı olarak paylaşılan her şeyi buradan da içe aktarabilirsiniz.",
+  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Lart's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
+    "Tek tıklamayla yüklenen topluluk paketleri. Kural setleri, kendi eşleştirmeleriyle birlikte eksiksiz rozet kümeleri sunar; görsel eşlemeleri ise yalnızca Lart'ın yerleşik rozetlerindeki resimleri değiştirir. Nuvio Discord veya Reddit'te badges.json bağlantısı olarak paylaşılan her şeyi buradan da içe aktarabilirsiniz.",
   "One-off donation": "Tek seferlik bağış",
   "Online now": "Şu anda çevrimiçi",
   "Only enter URLs for relays you operate or trust. A relay only carries Watch Together sync messages (play, pause, seek). Nothing else passes through it.":
@@ -141,13 +141,13 @@ const personalization: Record<string, string> = {
   "Open Cloudflare Workers": "Cloudflare Workers'ı aç",
   "Open Cloudflare token page": "Cloudflare token sayfasını aç",
   "Open Discord's webhook help": "Discord webhook yardımını aç",
-  "Open Harbor's settings outside playback.": "Oynatma dışında Harbor ayarlarını açın.",
+  "Open Lart's settings outside playback.": "Oynatma dışında Lart ayarlarını açın.",
   "Open Languages": "Dilleri aç",
   "Open Letterboxd profile": "Letterboxd profilini aç",
   "Open Library settings": "Kütüphane ayarlarını aç",
   "Open SVP": "SVP'yi aç",
   "Open Settings": "Ayarları Aç",
-  "Open Settings, then Harbor Relay.": "Ayarlar'ı, ardından Harbor Relay'i açın.",
+  "Open Settings, then Lart Relay.": "Ayarlar'ı, ardından Lart Relay'i açın.",
   "Open Simkl profile": "Simkl profilini aç",
   "Open Voyages": "Yolculukları aç",
   "Open account settings": "Hesap ayarlarını aç",
@@ -212,7 +212,7 @@ const personalization: Record<string, string> = {
     "İşlenmiş oynatma listeleri, program rehberi ve dizi bilgileri. Bir sonraki açılışta yeniden indirilir.",
   "Paste JSON": "JSON Yapıştır",
   "Paste an image URL (png, webp, svg)": "Bir görsel URL'si yapıştırın (png, webp, svg)",
-  "Paste it into Harbor.": "Harbor'a yapıştırın.",
+  "Paste it into Lart.": "Lart'a yapıştırın.",
   "Paste the URL into the box above and send a test.":
     "URL'yi yukarıdaki kutuya yapıştırıp bir test gönderin.",
   "Paste the URL with": "URL'yi",
@@ -246,8 +246,8 @@ const personalization: Record<string, string> = {
     "Bir düzen seçin, renkleri ve yazı tiplerini ayarlayın, ardından kitaplığınıza kaydedin. Kod gerekmez.",
   "Pick a layout, set colors and fonts. No code needed.":
     "Bir düzen seçin, renkleri ve yazı tiplerini ayarlayın. Kod gerekmez.",
-  "Pick a source once and Harbor keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. For anime it locks the whole series to that release.":
-    "Bir kez kaynak seçtiğinizde Harbor, yeniden seçim yaptırmadan sezonun kalanını aynı sürümden oynatır. En iyi sonucu bir debrid sezon paketiyle verir. Animelerde tüm seriyi bu sürüme sabitler.",
+  "Pick a source once and Lart keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. For anime it locks the whole series to that release.":
+    "Bir kez kaynak seçtiğinizde Lart, yeniden seçim yaptırmadan sezonun kalanını aynı sürümden oynatır. En iyi sonucu bir debrid sezon paketiyle verir. Animelerde tüm seriyi bu sürüme sabitler.",
   "Pick a star rating first": "Önce bir yıldız puanı seçin",
   "Pick a theme, then rearrange every button in the player chrome. Hide what you never use, promote what you do.":
     "Bir tema seçin, ardından oynatıcı arayüzündeki tüm düğmeleri yeniden düzenleyin. Hiç kullanmadıklarınızı gizleyin, kullandıklarınızı öne çıkarın.",
@@ -286,8 +286,8 @@ const personalization: Record<string, string> = {
   "Picks up right where you left off": "Tam kaldığınız yerden devam eder",
   "Picture adjustments": "Görüntü ayarları",
   "Picture quality": "Görüntü kalitesi",
-  "Picture shaders run on the bundled mpv engine in the Harbor desktop app. They have no effect in the browser.":
-    "Görüntü gölgelendiricileri, Harbor masaüstü uygulamasıyla birlikte gelen mpv motorunda çalışır. Tarayıcıda etkileri yoktur.",
+  "Picture shaders run on the bundled mpv engine in the Lart desktop app. They have no effect in the browser.":
+    "Görüntü gölgelendiricileri, Lart masaüstü uygulamasıyla birlikte gelen mpv motorunda çalışır. Tarayıcıda etkileri yoktur.",
   "Pin the catalogs you want up top, hide the ones you never open, and reorder your pinned rails. Your browse view updates instantly.":
     "İstediğiniz katalogları en üste sabitleyin, hiç açmadıklarınızı gizleyin ve sabitlenmiş raflarınızı yeniden sıralayın. Keşfet görünümünüz anında güncellenir.",
   "Pings your Worker at /health to confirm it's reachable from this device.":
@@ -318,9 +318,9 @@ const personalization: Record<string, string> = {
     "HDR içeriği kendi penceresinde oynatır; böylece Windows bunu gerçek HDR olarak işler (SDR parlaklık kaydırıcısı görüntüyü karartmaz). Bunu HDR ekranda kullanmak için yukarıdaki HDR'den SDR'ye ton eşlemeyi kapatın.",
   "Please add your TMDB API key in the Library & Metadata settings to view this folder.":
     "Bu klasörü görüntülemek için lütfen Kütüphane ve Meta Veriler ayarlarına TMDB API anahtarınızı ekleyin.",
-  "Point Harbor at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.": "Harbor'ı başka bir makinedeki yayın sunucusuna yönlendirin; örneğin bir ev sunucusundaki Stremio hizmetine. P2P yayınları bu makine yerine o makineden indirilir ve oynatılır.",
-  "Point Harbor at your self-hosted library to browse and install sources":
-    "Kaynaklara göz atmak ve yüklemek için Harbor'ı kendi barındırdığınız kütüphaneye bağlayın",
+  "Point Lart at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.": "Lart'ı başka bir makinedeki yayın sunucusuna yönlendirin; örneğin bir ev sunucusundaki Stremio hizmetine. P2P yayınları bu makine yerine o makineden indirilir ve oynatılır.",
+  "Point Lart at your self-hosted library to browse and install sources":
+    "Kaynaklara göz atmak ve yüklemek için Lart'ı kendi barındırdığınız kütüphaneye bağlayın",
   Popular: "Popüler",
   "Popular This Week": "Bu Haftanın Popülerleri",
   "Popular · AIO": "Popüler · AIO",
@@ -335,14 +335,14 @@ const personalization: Record<string, string> = {
   'Posters, logos, and title art load in the first available language from this list, falling back down the order. "Original" uses the title\'s own language. Put your main language first. Needs a TMDB key.':
     'Posterler, logolar ve başlık görselleri bu listedeki mevcut ilk dilde yüklenir; bulunamazsa sıradaki dile geçilir. "Orijinal", içeriğin kendi dilini kullanır. Ana dilinizi ilk sıraya koyun. TMDB anahtarı gerektirir.',
   "Posts are not available yet": "Gönderiler henüz kullanılamıyor",
-  "Power-user knob. Inject your own CSS, JS, and HTML into Harbor. Lives in your local settings; nothing leaves your machine.":
-    "İleri düzey kullanıcı ayarı. Harbor'a kendi CSS, JS ve HTML kodunuzu ekleyin. Yerel ayarlarınızda saklanır; makinenizden hiçbir veri çıkmaz.",
+  "Power-user knob. Inject your own CSS, JS, and HTML into Lart. Lives in your local settings; nothing leaves your machine.":
+    "İleri düzey kullanıcı ayarı. Lart'a kendi CSS, JS ve HTML kodunuzu ekleyin. Yerel ayarlarınızda saklanır; makinenizden hiçbir veri çıkmaz.",
   "Preferred languages": "Tercih edilen diller",
   "Premiumize API key": "Premiumize API anahtarı",
   "Preparing your images": "Görselleriniz hazırlanıyor",
   "Preparing…": "Hazırlanıyor…",
-  "Press OK on a field to type, or use the Harbor remote on your phone.":
-    "Yazmak için bir alanda OK düğmesine basın veya telefonunuzdaki Harbor kumandasını kullanın.",
+  "Press OK on a field to type, or use the Lart remote on your phone.":
+    "Yazmak için bir alanda OK düğmesine basın veya telefonunuzdaki Lart kumandasını kullanın.",
   "Press a key…": "Bir tuşa basın…",
   "Press buttons and move the sticks. This mirrors your controller in real time.":
     "Düğmelere basın ve çubukları hareket ettirin. Kumandanız burada gerçek zamanlı olarak gösterilir.",
@@ -380,7 +380,7 @@ const personalization: Record<string, string> = {
     "Yaklaşan yayınları Discord veya Telegram'a gönderin. Bildirimleri hangi takvimlerin besleyeceğini seçin.",
   "Pushing {pushed} of {total}…": "{total} öğeden {pushed} tanesi gönderiliyor…",
   "Queue drives Next/Previous": "Sonraki/Önceki'yi kuyruk belirlesin",
-  "Quit Harbor": "Harbor'dan çık",
+  "Quit Lart": "Lart'dan çık",
   "RAVU Lite prescaler": "RAVU Lite ön ölçekleyici",
   "RPDB already paints scores onto the poster. Toggle to override.":
     "RPDB puanları zaten posterin üzerine işler. Geçersiz kılmak için açın.",
@@ -400,7 +400,7 @@ const personalization: Record<string, string> = {
   "Rather not set any of this up?": "Bunların hiçbirini kurmak istemiyor musunuz?",
   "Rating removed": "Puan kaldırıldı",
   "Rating saved": "Puan kaydedildi",
-  "Ratings need a Harbor account": "Puan vermek için Harbor hesabı gerekir",
+  "Ratings need a Lart account": "Puan vermek için Lart hesabı gerekir",
   "Re-apply to the window and taskbar now": "Şimdi pencereye ve görev çubuğuna yeniden uygula",
   "Re-authenticate": "Yeniden kimlik doğrula",
   "Re-open the stream you are watching and pick it back up where you left off.":
@@ -410,7 +410,7 @@ const personalization: Record<string, string> = {
   "Re-runs the welcome flow and clears every dismissed tip.":
     "Karşılama akışını yeniden çalıştırır ve kapattığınız tüm ipuçlarını sıfırlar.",
   "Read from your phone": "Telefonunuzdan okuyun",
-  "Read manga in Harbor": "Harbor'da manga okuyun",
+  "Read manga in Lart": "Lart'da manga okuyun",
   "Read more": "Devamını oku",
   "Read the Manga": "Mangayı Oku",
   "Reading subtitles...": "Altyazılar okunuyor...",
@@ -421,8 +421,8 @@ const personalization: Record<string, string> = {
   "Real-Debrid API token": "Real-Debrid API belirteci",
   "Real-Debrid, TorBox, AllDebrid, Premiumize, Debrid-Link. Cached streams play direct. Keys stay local.":
     "Real-Debrid, TorBox, AllDebrid, Premiumize, Debrid-Link. Önbelleğe alınmış yayınlar doğrudan oynatılır. Anahtarlar cihazınızda kalır.",
-  "Real-time GPU upscaling that sharpens lines and cleans up gradients on anime, built right into Harbor's player. The one-tap setup below grabs the shaders; nothing else to install.":
-    "Anime çizgilerini keskinleştirip renk geçişlerini temizleyen gerçek zamanlı GPU ölçek yükseltme özelliği doğrudan Harbor'ın oynatıcısına yerleşiktir. Aşağıdaki tek dokunuşlu kurulum gölgelendiricileri indirir; başka bir şey yüklemeniz gerekmez.",
+  "Real-time GPU upscaling that sharpens lines and cleans up gradients on anime, built right into Lart's player. The one-tap setup below grabs the shaders; nothing else to install.":
+    "Anime çizgilerini keskinleştirip renk geçişlerini temizleyen gerçek zamanlı GPU ölçek yükseltme özelliği doğrudan Lart'ın oynatıcısına yerleşiktir. Aşağıdaki tek dokunuşlu kurulum gölgelendiricileri indirir; başka bir şey yüklemeniz gerekmez.",
   "Recalling the season": "Sezon gözden geçiriliyor",
   "Receive early builds with the newest fixes before they reach the stable release. Betas can be rough around the edges; switch this off to return to stable at the next update.":
     "En yeni düzeltmeleri kararlı sürüme ulaşmadan önce içeren erken derlemeleri alın. Beta sürümlerde bazı pürüzler olabilir. Bir sonraki güncellemede kararlı sürüme dönmek için bunu kapatın.",
@@ -473,8 +473,8 @@ const personalization: Record<string, string> = {
   "Reminder updated": "Hatırlatıcı güncellendi",
   "Remote server": "Uzak sunucu",
   "Remote streaming server": "Uzak yayın sunucusu",
-  "Remotes are served by the desktop app. Open these settings on your computer's Harbor to get the links.":
-    "Uzaktan kumandalar masaüstü uygulaması üzerinden sunulur. Bağlantıları almak için bilgisayarınızdaki Harbor'da bu ayarları açın.",
+  "Remotes are served by the desktop app. Open these settings on your computer's Lart to get the links.":
+    "Uzaktan kumandalar masaüstü uygulaması üzerinden sunulur. Bağlantıları almak için bilgisayarınızdaki Lart'da bu ayarları açın.",
   "Remove all extensions ({n})": "Tüm eklentileri kaldır ({n})",
   "Remove cached source (all episodes)": "Önbelleğe alınan kaynağı kaldır (tüm bölümler)",
   "Remove folder": "Klasörü kaldır",
@@ -509,8 +509,8 @@ const personalization: Record<string, string> = {
   "Rename list": "Listeyi yeniden adlandır",
   "Render subtitles in a heavier weight. Turn off to use your font's normal weight.":
     "Altyazıları daha kalın gösterir. Yazı tipinizin normal kalınlığını kullanmak için kapatın.",
-  "Renders mpv inline so playback lives in Harbor itself. Disable to open it in a separate window instead.":
-    "mpv'yi pencere içinde işler, böylece oynatma Harbor'ın içinde gerçekleşir. Ayrı bir pencerede açmak için devre dışı bırakın.",
+  "Renders mpv inline so playback lives in Lart itself. Disable to open it in a separate window instead.":
+    "mpv'yi pencere içinde işler, böylece oynatma Lart'ın içinde gerçekleşir. Ayrı bir pencerede açmak için devre dışı bırakın.",
   "Repair anime library": "Anime kitaplığını onar",
   "Repair library": "Kitaplığı onar",
   "Repair now": "Şimdi onar",
@@ -543,8 +543,8 @@ const personalization: Record<string, string> = {
   "Resolution filter": "Çözünürlük filtresi",
   "Resolution posters are decoded at. High is sized to your screen with headroom and looks identical to full res while using far less memory; Balanced saves the most; Maximum keeps original resolution.":
     "Posterlerin çözümleneceği çözünürlük. Yüksek, ek pay bırakılarak ekranınıza göre boyutlandırılır; çok daha az bellek kullanırken tam çözünürlükle aynı görünür. Dengeli en fazla tasarrufu sağlar. Maksimum ise özgün çözünürlüğü korur.",
-  "Restart Harbor's own streaming server, then reload the stream once it is back. Desktop only.":
-    "Harbor'ın kendi yayın sunucusunu yeniden başlatın; sunucu geri geldiğinde yayın yeniden yüklenir. Yalnızca masaüstünde çalışır.",
+  "Restart Lart's own streaming server, then reload the stream once it is back. Desktop only.":
+    "Lart'ın kendi yayın sunucusunu yeniden başlatın; sunucu geri geldiğinde yayın yeniden yüklenir. Yalnızca masaüstünde çalışır.",
   "Restart engine": "Motoru yeniden başlat",
   "Restart streaming server": "Yayın sunucusunu yeniden başlat",
   "Restore and reload": "Geri yükle ve yeniden yükle",
@@ -565,8 +565,8 @@ const personalization: Record<string, string> = {
   "Review saved": "İnceleme kaydedildi",
   "Reviews on film pages are blurred until you reveal them.":
     "Film sayfalarındaki incelemeler, siz gösterene kadar bulanık görünür.",
-  "Rewrites every library item to match Stremio's exact schema. Run once if your Stremio app started crashing after Harbor synced playback.":
-    "Tüm kitaplık öğelerini Stremio'nun tam şemasıyla eşleşecek şekilde yeniden yazar. Harbor oynatma verilerini eşitledikten sonra Stremio uygulamanız çökmeye başladıysa bir kez çalıştırın.",
+  "Rewrites every library item to match Stremio's exact schema. Run once if your Stremio app started crashing after Lart synced playback.":
+    "Tüm kitaplık öğelerini Stremio'nun tam şemasıyla eşleşecek şekilde yeniden yazar. Lart oynatma verilerini eşitledikten sonra Stremio uygulamanız çökmeye başladıysa bir kez çalıştırın.",
   "Ribbon corner": "Şerit köşesi",
   "Rich season and order panel": "Ayrıntılı sezon ve sıralama paneli",
   "Richer, more vivid picture with a touch more contrast.":
@@ -586,7 +586,7 @@ const personalization: Record<string, string> = {
   "Run self-test": "Öz sınamayı çalıştır",
   "Run speed test": "Hız testini çalıştır",
   "Run test": "Testi çalıştır",
-  "Run your own Harbor Relay": "Kendi Harbor Relay'inizi çalıştırın",
+  "Run your own Lart Relay": "Kendi Lart Relay'inizi çalıştırın",
   "Running self-test": "Öz sınama çalışıyor",
   "Running the latest Watch Together protocol.": "En yeni Birlikte İzle protokolü çalışıyor.",
   "Runs in the app's WebView. You're modding your own client. No sandbox, no safety net. Errors land in the console.":
@@ -597,10 +597,10 @@ const personalization: Record<string, string> = {
   "SUBDL subtitle source": "SUBDL altyazı kaynağı",
   "SVP (free)": "SVP (ücretsiz)",
   "SVP frame interpolation": "SVP kare ara değerleme",
-  "SVP is installed but Harbor couldn't find its engine files (svpflow + VapourSynth). Try repairing the SVP install, or reopen SVP once.":
-    "SVP yüklü ancak Harbor motor dosyalarını (svpflow + VapourSynth) bulamadı. SVP kurulumunu onarmayı veya SVP'yi bir kez yeniden açmayı deneyin.",
-  "SVP's files are here but its VapourSynth engine won't load ({err}). This usually means a stale VapourSynth entry or a missing Microsoft VC++ runtime. Reinstall SVP, or install the latest \"Visual C++ Redistributable (x64)\" from Microsoft, then reopen Harbor.":
-    "SVP dosyaları mevcut ancak VapourSynth motoru yüklenemiyor ({err}). Bunun nedeni genellikle eski bir VapourSynth girdisi veya eksik Microsoft VC++ çalışma zamanıdır. SVP'yi yeniden yükleyin ya da Microsoft'tan en yeni \"Visual C++ Redistributable (x64)\" paketini yükleyip Harbor'ı yeniden açın.",
+  "SVP is installed but Lart couldn't find its engine files (svpflow + VapourSynth). Try repairing the SVP install, or reopen SVP once.":
+    "SVP yüklü ancak Lart motor dosyalarını (svpflow + VapourSynth) bulamadı. SVP kurulumunu onarmayı veya SVP'yi bir kez yeniden açmayı deneyin.",
+  "SVP's files are here but its VapourSynth engine won't load ({err}). This usually means a stale VapourSynth entry or a missing Microsoft VC++ runtime. Reinstall SVP, or install the latest \"Visual C++ Redistributable (x64)\" from Microsoft, then reopen Lart.":
+    "SVP dosyaları mevcut ancak VapourSynth motoru yüklenemiyor ({err}). Bunun nedeni genellikle eski bir VapourSynth girdisi veya eksik Microsoft VC++ çalışma zamanıdır. SVP'yi yeniden yükleyin ya da Microsoft'tan en yeni \"Visual C++ Redistributable (x64)\" paketini yükleyip Lart'ı yeniden açın.",
   "Safe to clear anytime. Nothing here touches your watch history, library, themes, or sign-ins.":
     "İstediğiniz zaman güvenle temizleyebilirsiniz. Buradaki hiçbir şey izleme geçmişinizi, kitaplığınızı, temalarınızı veya oturumlarınızı etkilemez.",
   Saturation: "Doygunluk",
@@ -619,19 +619,19 @@ const personalization: Record<string, string> = {
   "Save review": "İncelemeyi kaydet",
   "Save rule": "Kuralı kaydet",
   "Save status": "Durumu kaydet",
-  "Save the current frame (video only, no subtitles) as a PNG to Pictures/Harbor.":
-    "Geçerli video karesini altyazılar olmadan PNG biçiminde Pictures/Harbor klasörüne kaydedin.",
-  "Save the worker source. Copy": "Worker kaynak kodunu kaydedin. Harbor reposundaki",
-  "Save the worker source. Copy {code1} from the Harbor repo into a new directory as {code2}.":
-    "Worker kaynak dosyasını kaydedin. Harbor deposundaki {code1} dosyasını yeni bir dizine {code2} adıyla kopyalayın.",
+  "Save the current frame (video only, no subtitles) as a PNG to Pictures/Lart.":
+    "Geçerli video karesini altyazılar olmadan PNG biçiminde Pictures/Lart klasörüne kaydedin.",
+  "Save the worker source. Copy": "Worker kaynak kodunu kaydedin. Lart reposundaki",
+  "Save the worker source. Copy {code1} from the Lart repo into a new directory as {code2}.":
+    "Worker kaynak dosyasını kaydedin. Lart deposundaki {code1} dosyasını yeni bir dizine {code2} adıyla kopyalayın.",
   "Save this": "Şunu da",
   "Save this {code} next to it:": "Bu {code} dosyasını yanına kaydedin:",
   "Save to my lists": "Listelerime kaydet",
   "Saved frame": "Kaydedilen kare",
-  "Saved {d} from Harbor {a}.": "{d}, Harbor {a} üzerinden kaydedildi.",
-  "Saved {when} from Harbor {app}.": "{when} tarihinde Harbor {app} sürümünden kaydedildi.",
-  "Saves your whole Harbor setup to one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
-    "Tema, ana sayfa düzeni, ayarlar, eklentiler, profiller, izleme listesi, oynatıcı düzenleri, izleme ilerlemesi ve daha fazlası dahil tüm Harbor kurulumunuzu tek bir dosyaya kaydeder. Stremio oturum bilgileriniz özellikle dahil edilmez.",
+  "Saved {d} from Lart {a}.": "{d}, Lart {a} üzerinden kaydedildi.",
+  "Saved {when} from Lart {app}.": "{when} tarihinde Lart {app} sürümünden kaydedildi.",
+  "Saves your whole Lart setup to one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
+    "Tema, ana sayfa düzeni, ayarlar, eklentiler, profiller, izleme listesi, oynatıcı düzenleri, izleme ilerlemesi ve daha fazlası dahil tüm Lart kurulumunuzu tek bir dosyaya kaydeder. Stremio oturum bilgileriniz özellikle dahil edilmez.",
   "Saving now could overwrite them. Try again in a moment.":
     "Şimdi kaydetmek mevcut favorilerinizin üzerine yazabilir. Birazdan tekrar deneyin.",
   "Saving…": "Kaydediliyor…",
@@ -709,24 +709,24 @@ const personalization: Record<string, string> = {
   "Self-host": "Kendiniz barındırın",
   "Self-test": "Öz sınama",
   "Self-test is disabled while strict remote streaming is on. It downloads a small test file over peer-to-peer on this machine.": "Yalnızca uzak sunucu kullanımı açıkken öz sınama devre dışıdır. Bu makinede eşler arası bağlantı üzerinden küçük bir test dosyası indirir.",
-  "Send a bug report straight to the Harbor team. Screenshots and screen recordings welcome.":
-    "Doğrudan Harbor ekibine hata raporu gönderin. Ekran görüntüleri ve ekran kayıtları faydalı olur.",
+  "Send a bug report straight to the Lart team. Screenshots and screen recordings welcome.":
+    "Doğrudan Lart ekibine hata raporu gönderin. Ekran görüntüleri ve ekran kayıtları faydalı olur.",
   "Send test": "Test gönder",
-  "Send this to anyone you want to watch with. They paste it in their Settings → Harbor Relay. After that, share a 6-character room code from the people icon up top.":
-    "Bunu birlikte izlemek istediğiniz herkese gönderin. Ayarlar → Harbor Relay bölümüne yapıştırmaları yeterli. Ardından üstteki kişiler simgesinden 6 karakterlik oda kodunu paylaşın.",
+  "Send this to anyone you want to watch with. They paste it in their Settings → Lart Relay. After that, share a 6-character room code from the people icon up top.":
+    "Bunu birlikte izlemek istediğiniz herkese gönderin. Ayarlar → Lart Relay bölümüne yapıştırmaları yeterli. Ardından üstteki kişiler simgesinden 6 karakterlik oda kodunu paylaşın.",
   "Sending…": "Gönderiliyor…",
   "Sent. Check your channel.": "Gönderildi. Kanalınızı kontrol edin.",
   "Sequels & Prequels": "Devam ve Öncesini Anlatan Yapımlar",
   "Series tab": "Diziler sekmesi",
-  "Serve Harbor on your network": "Harbor'ı ağınızda kullanıma açın",
+  "Serve Lart on your network": "Lart'ı ağınızda kullanıma açın",
   "Server address": "Sunucu adresi",
   "Server reachable": "Sunucuya erişilebiliyor",
-  "Server reachable in {ms}ms. Harbor will use it for torrent streaming.":
-    "Sunucuya {ms}ms içinde erişildi. Harbor torrent yayını için bu sunucuyu kullanacak.",
-  "Serves this exact install of Harbor as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer.":
-    "Harbor'ın bu kurulumunu ağınızda web uygulaması olarak sunar. Telefon, dizüstü bilgisayar veya TV tarayıcısında açıp oturum açın; yayın bu bilgisayar üzerinden aktarılır.",
-  "Serves this exact install of Harbor as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer. You can also use the phone remote to control playback and cast to another device on this machine.":
-    "Harbor'ın tam olarak bu kurulumunu ağınızda bir web uygulaması olarak sunar. Telefon, dizüstü bilgisayar veya TV tarayıcısında açıp oturum açtığınızda içerik bu bilgisayar üzerinden yayınlanır. Oynatmayı kontrol etmek ve bu makinedeki başka bir cihaza aktarmak için telefon kumandasını da kullanabilirsiniz.",
+  "Server reachable in {ms}ms. Lart will use it for torrent streaming.":
+    "Sunucuya {ms}ms içinde erişildi. Lart torrent yayını için bu sunucuyu kullanacak.",
+  "Serves this exact install of Lart as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer.":
+    "Lart'ın bu kurulumunu ağınızda web uygulaması olarak sunar. Telefon, dizüstü bilgisayar veya TV tarayıcısında açıp oturum açın; yayın bu bilgisayar üzerinden aktarılır.",
+  "Serves this exact install of Lart as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer. You can also use the phone remote to control playback and cast to another device on this machine.":
+    "Lart'ın tam olarak bu kurulumunu ağınızda bir web uygulaması olarak sunar. Telefon, dizüstü bilgisayar veya TV tarayıcısında açıp oturum açtığınızda içerik bu bilgisayar üzerinden yayınlanır. Oynatmayı kontrol etmek ve bu makinedeki başka bir cihaza aktarmak için telefon kumandasını da kullanabilirsiniz.",
   "Set a course": "Rota belirle",
   "Set active": "Etkin olarak ayarla",
   "Set active filter": "Etkin filtreyi ayarla",
@@ -744,15 +744,15 @@ const personalization: Record<string, string> = {
   "Set up a source": "Kaynak ayarla",
   "Set. If the subtitles drift later on, play ahead and Sync from here again at a later line to fix the drift.":
     "Ayarlandı. Altyazılar ileride kayarsa ileri sarın ve kaymayı düzeltmek için daha sonraki bir satırda Buradan eşitle'yi tekrar seçin.",
-  "Sets the language of Harbor's own interface: menus, buttons, and labels. Arabic switches the layout to right to left. This is separate from subtitle and metadata languages below.":
-    "Harbor'ın menü, düğme ve etiketlerden oluşan kendi arayüzünün dilini belirler. Arapça, düzeni sağdan sola geçirir. Bu ayar, aşağıdaki altyazı ve meta veri dillerinden ayrıdır.",
+  "Sets the language of Lart's own interface: menus, buttons, and labels. Arabic switches the layout to right to left. This is separate from subtitle and metadata languages below.":
+    "Lart'ın menü, düğme ve etiketlerden oluşan kendi arayüzünün dilini belirler. Arapça, düzeni sağdan sola geçirir. Bu ayar, aşağıdaki altyazı ve meta veri dillerinden ayrıdır.",
   "Settings for this profile": "Bu profilin ayarları",
   "Settings for this profile (shared or independent)":
     "Bu profilin ayarları (paylaşılan veya bağımsız)",
   "Settings storage": "Ayar depolama alanı",
   "Settings storage breakdown": "Ayarların kapladığı alanın dökümü",
-  "Settings, Harbor Relay, then": "Ayarlar, Harbor Relay, ardından",
-  "Settings, Harbor Relay, then {kbd}.": "Ayarlar, Harbor Aktarıcısı ve ardından {kbd}.",
+  "Settings, Lart Relay, then": "Ayarlar, Lart Relay, ardından",
+  "Settings, Lart Relay, then {kbd}.": "Ayarlar, Lart Aktarıcısı ve ardından {kbd}.",
   Setup: "Kurulum",
   "Setup QR code": "Kurulum QR kodu",
   "Setup copied to clipboard as JSON": "Ayarlar JSON olarak panoya kopyalandı",
@@ -780,14 +780,14 @@ const personalization: Record<string, string> = {
     "Altyazı zamanlamasını erkene alın (ince ayar için Shift tuşunu basılı tutun).",
   "Shift subtitle timing later (Shift for fine steps).":
     "Altyazı zamanlamasını ileri alın (ince ayar için Shift tuşunu basılı tutun).",
-  "Ships with Harbor. Always available.": "Harbor ile birlikte gelir. Her zaman kullanılabilir.",
+  "Ships with Lart. Always available.": "Lart ile birlikte gelir. Her zaman kullanılabilir.",
   "Short seek (Shift + arrows)": "Kısa sarma (Shift + ok tuşları)",
   "Short seek back": "Kısa geri sarma",
   "Short seek forward": "Kısa ileri sarma",
-  "Short version: don't. Harbor takes no donations and no cut of anything on this page.":
-    "Kısacası: Yapmayın. Harbor bağış kabul etmez ve bu sayfadaki hiçbir şeyden pay almaz.",
-  "Short version: don't. Harbor takes no donations.":
-    "Kısacası: Yapmayın. Harbor bağış kabul etmez.",
+  "Short version: don't. Lart takes no donations and no cut of anything on this page.":
+    "Kısacası: Yapmayın. Lart bağış kabul etmez ve bu sayfadaki hiçbir şeyden pay almaz.",
+  "Short version: don't. Lart takes no donations.":
+    "Kısacası: Yapmayın. Lart bağış kabul etmez.",
   "Show 'Watching something' with no show name or poster.":
     'İçerik adı veya afiş olmadan "Bir şey izliyor" ifadesini gösterin.',
   "Show AniList comments": "AniList yorumlarını göster",
@@ -825,8 +825,8 @@ const personalization: Record<string, string> = {
   "Show my rating on movie posters": "Film afişlerinde puanımı göster",
   "Show on Discord": "Discord'da göster",
   "Show what you are listening to": "Ne dinlediğinizi göster",
-  "Share the track, artist and album art while music plays, with a Listen in Harbor button.":
-    "Müzik çalarken parçayı, sanatçıyı ve albüm kapağını «Listen in Harbor» düğmesiyle birlikte paylaşın.",
+  "Share the track, artist and album art while music plays, with a Listen in Lart button.":
+    "Müzik çalarken parçayı, sanatçıyı ve albüm kapağını «Listen in Lart» düğmesiyle birlikte paylaşın.",
   "Show or hide the playback stats overlay.":
     "Oynatma istatistikleri katmanını gösterin veya gizleyin.",
   "Show pages": "İçerik sayfaları",
@@ -845,8 +845,8 @@ const personalization: Record<string, string> = {
   "Show thumbnail preview on hover": "Üzerine gelince küçük resim önizlemesini göster",
   "Show while browsing": "Göz atarken göster",
   "Show while paused": "Duraklatıldığında göster",
-  "Show your AniList profile picture as your Harbor avatar.":
-    "AniList profil resminizi Harbor avatarınız olarak gösterin.",
+  "Show your AniList profile picture as your Lart avatar.":
+    "AniList profil resminizi Lart avatarınız olarak gösterin.",
   "Show your Letterboxd card": "Letterboxd kartınızı gösterin",
   "Show your Simkl card": "Simkl kartınızı gösterin",
   "Show your favourite games, books and music on your profile":
@@ -865,7 +865,7 @@ const personalization: Record<string, string> = {
     "Letterboxd kataloglarınızı ana sayfada, Letterboxd panelini de film sayfalarında gösterir.",
   "Side rail": "Yan şerit",
   "Sidebar layout": "Kenar çubuğu düzeni",
-  "Sign in to Harbor": "Harbor'da oturum aç",
+  "Sign in to Lart": "Lart'da oturum aç",
   "Sign in to Stremio first.": "Önce Stremio'da oturum açın.",
   "Sign in to Stremio first. The repair scans only the active profile's library.":
     "Önce Stremio'da oturum açın. Onarım yalnızca etkin profilin kitaplığını tarar.",
@@ -875,7 +875,7 @@ const personalization: Record<string, string> = {
   "Sign in to rate": "Puan vermek için oturum açın",
   "Sign in to sync your library, watch progress, and addons.":
     "Kitaplığınızı, izleme ilerlemenizi ve eklentilerinizi eşitlemek için oturum açın.",
-  "Sign out of Harbor account": "Harbor hesabından çıkış yap",
+  "Sign out of Lart account": "Lart hesabından çıkış yap",
   "Signed in as {name}": "{name} olarak oturum açıldı",
   Simkl: "Simkl",
   "Single -1:12 label, both ends collapse.":
@@ -889,7 +889,7 @@ const personalization: Record<string, string> = {
   "Skip intros": "İntroları atla",
   "Skip to the next episode if available.": "Varsa sonraki bölüme geçin.",
   "Skip to the previous episode if available.": "Varsa önceki bölüme geçin.",
-  "Skip, let Harbor choose": "Atla, Harbor seçsin",
+  "Skip, let Lart choose": "Atla, Lart seçsin",
   "Sleep at end": "Bitince uykuya geç",
   "Sleep at end of episode": "Bölüm sonunda duraklat",
   "Sleep timer in the top bar": "Üst çubukta uyku zamanlayıcısı",
@@ -904,8 +904,8 @@ const personalization: Record<string, string> = {
   Small: "Küçük",
   "Smart resync with speech recognition": "Konuşma tanıma ile akıllı yeniden eşitleme",
   "Smooth motion": "Akıcı hareket",
-  "Smooth motion runs on the bundled mpv engine in the Harbor desktop app. It has no effect in the browser.":
-    "Akıcı hareket, Harbor masaüstü uygulamasındaki yerleşik mpv motorunda çalışır. Tarayıcıda etkisi yoktur.",
+  "Smooth motion runs on the bundled mpv engine in the Lart desktop app. It has no effect in the browser.":
+    "Akıcı hareket, Lart masaüstü uygulamasındaki yerleşik mpv motorunda çalışır. Tarayıcıda etkisi yoktur.",
   "Smooth on weak PCs": "Düşük donanımlı bilgisayarlarda akıcı",
   "Smooth scrolling": "Akıcı kaydırma",
   "Snapdragon SGSR upscaler": "Snapdragon SGSR çözünürlük yükseltici",
@@ -922,8 +922,8 @@ const personalization: Record<string, string> = {
     "Yeni çıkan bazı yapımların kopyalarında videonun içine yerleştirilmiş reklamlar bulunur. Bu deneysel bir özelliktir: Topluluk, başkalarının atlayabilmesi için bu reklamların yerlerini işaretler.",
   "Someone I track has a new release": "Takip ettiğim biriyle ilgili yeni bir yapım yayımlanır",
   "Something went wrong on the way there.": "Erişmeye çalışırken bir sorun oluştu.",
-  "Something went wrong reaching Harbor. Check your connection and try again.":
-    "Harbor'a ulaşılırken bir sorun oluştu. Bağlantınızı kontrol edip tekrar deneyin.",
+  "Something went wrong reaching Lart. Check your connection and try again.":
+    "Lart'a ulaşılırken bir sorun oluştu. Bağlantınızı kontrol edip tekrar deneyin.",
   "Something went wrong.": "Bir sorun oluştu.",
   "Song ID provider (AudD / Gemini)": "Şarkı tanıma sağlayıcısı (AudD / Gemini)",
   "Sort episodes": "Bölümleri sırala",
@@ -936,8 +936,8 @@ const personalization: Record<string, string> = {
   "Source: {code}. About 200 lines of JavaScript, no dependencies. Read it before deploying if you want to know what runs.":
     "Kaynak: {code}. Bağımlılığı olmayan yaklaşık 200 satır JavaScript. Nelerin çalışacağını öğrenmek istiyorsanız dağıtmadan önce okuyun.",
   Sources: "Kaynaklar",
-  "Sources Harbor flagged as broken. Clear to give them another chance.":
-    "Harbor'ın bozuk olarak işaretlediği kaynaklar. Bir şans daha vermek için temizleyin.",
+  "Sources Lart flagged as broken. Clear to give them another chance.":
+    "Lart'ın bozuk olarak işaretlediği kaynaklar. Bir şans daha vermek için temizleyin.",
   "Sources cached in the background for the streams you are watching":
     "İzlediğiniz yayınların arka planda önbelleğe alınan kaynakları",
   Speed: "Hız",
@@ -957,8 +957,8 @@ const personalization: Record<string, string> = {
   "Start a voyage": "Yolculuğa başla",
   "Start after": "Şu süreden sonra başlat",
   "Start another": "Yeni bir yolculuğa başla",
-  "Start or stop recording a GIF of the video (no subtitles). Saves to Pictures/Harbor.":
-    "Videonun GIF kaydını başlatın veya durdurun (altyazılar dâhil değildir). Pictures/Harbor klasörüne kaydedilir.",
+  "Start or stop recording a GIF of the video (no subtitles). Saves to Pictures/Lart.":
+    "Videonun GIF kaydını başlatın veya durdurun (altyazılar dâhil değildir). Pictures/Lart klasörüne kaydedilir.",
   "Start over": "Baştan başla",
   "Start playback": "Oynatmayı başlat",
   "Start server": "Sunucuyu başlat",
@@ -982,8 +982,8 @@ const personalization: Record<string, string> = {
   "Still off": "Hâlâ uyumsuz",
   "Still watching?": "Hâlâ izliyor musunuz?",
   "Stop ({n})": "Durdur ({n})",
-  "Stop playback when you minimize Harbor or send it to the tray.":
-    "Harbor'ı küçülttüğünüzde veya sistem tepsisine gönderdiğinizde oynatmayı duraklatın.",
+  "Stop playback when you minimize Lart or send it to the tray.":
+    "Lart'ı küçülttüğünüzde veya sistem tepsisine gönderdiğinizde oynatmayı duraklatın.",
   "Stop playback whenever another window takes focus.":
     "Başka bir pencere odağı aldığında oynatmayı duraklatın.",
   "Stop relay": "Aktarıcıyı durdur",
@@ -998,8 +998,8 @@ const personalization: Record<string, string> = {
   "Stream should start playing within a few seconds.":
     "Yayın birkaç saniye içinde oynatılmaya başlamalı.",
   "Stream switcher": "Yayın seçici",
-  "Stream torrents through Harbor's own Rust peer-to-peer engine instead of the bundled Stremio Server. Falls back automatically if it can't connect. Status and a self-test live in the Local engine card below.":
-    "Torrentleri paketle gelen Stremio Server yerine Harbor'ın kendi Rust eşler arası motoruyla yayınlar. Bağlanamazsa otomatik olarak Stremio Server'a geri döner. Durum bilgisi ve öz sınama aşağıdaki Yerel motor kartındadır.",
+  "Stream torrents through Lart's own Rust peer-to-peer engine instead of the bundled Stremio Server. Falls back automatically if it can't connect. Status and a self-test live in the Local engine card below.":
+    "Torrentleri paketle gelen Stremio Server yerine Lart'ın kendi Rust eşler arası motoruyla yayınlar. Bağlanamazsa otomatik olarak Stremio Server'a geri döner. Durum bilgisi ve öz sınama aşağıdaki Yerel motor kartındadır.",
   "Streamer release rule": "Yayıncı için yayın kuralı",
   Streamers: "Yayın platformları",
   Streaming: "Yayın",
@@ -1012,8 +1012,8 @@ const personalization: Record<string, string> = {
     "Önbelleğe alınmış olsa bile {cap} Mbps üzerindeki yayınlar daha alt sıralarda yer alır.",
   Stremio: "Stremio",
   "Stremio ID": "Stremio ID",
-  "Stremio Supporters get a special badge on their Harbor profile.":
-    "Stremio Destekçileri, Harbor profillerinde özel bir rozet kazanır.",
+  "Stremio Supporters get a special badge on their Lart profile.":
+    "Stremio Destekçileri, Lart profillerinde özel bir rozet kazanır.",
   "Stremio account": "Stremio hesabı",
   "Stremio cards": "Stremio kartları",
   "Stremio didn't confirm the move. Your collection may be unchanged. Reload to see the current state.":
@@ -1057,11 +1057,11 @@ const personalization: Record<string, string> = {
   "Summary needs at least 6 characters": "Özet en az 6 karakter olmalıdır",
   "Support ElfHosted or Stremio, or give to any charity below, and the badge lands on your profile.":
     "ElfHosted veya Stremio'yu destekleyin ya da aşağıdaki yardım kuruluşlarından birine bağış yapın; rozet profilinize eklenir.",
-  "Support Harbor": "Harbor'ı destekleyin",
+  "Support Lart": "Lart'ı destekleyin",
   "Support Stremio": "Stremio'yu destekleyin",
   "Sure?": "Emin misiniz?",
   "Suspicious file": "Şüpheli dosya",
-  "Switch Harbor to {language}?": "Harbor {language} diline geçirilsin mi?",
+  "Switch Lart to {language}?": "Lart {language} diline geçirilsin mi?",
   "Switch source": "Kaynağı değiştir",
   "Switch the menus and buttons to your language. Arabic flips the layout to right to left.":
     "Menüleri ve düğmeleri dilinize geçirin. Arapça, düzeni sağdan sola çevirir.",
@@ -1151,8 +1151,8 @@ const personalization: Record<string, string> = {
     "{max} oyun sınırına ulaştınız. Başka bir oyun eklemek için birini kaldırın.",
   "The CPU decodes everything. Most compatible, but it runs hot and can stutter on 4K. Use this only if the picture glitches with hardware decoding on.":
     "Her şeyin kodunu CPU çözer. En uyumlu seçenektir ancak sistemi ısıtır ve 4K videolarda takılabilir. Bunu yalnızca donanımsal kod çözme açıkken görüntüde bozulma olursa kullanın.",
-  "The Harbor relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Harbor server.":
-    "Harbor Relay, Birlikte İzle için WebSocket odaları barındıran bir Cloudflare Worker'dır. Her kullanıcı kendi Relay'ini çalıştırır. Merkezi bir Harbor sunucusu yoktur.",
+  "The Lart relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Lart server.":
+    "Lart Relay, Birlikte İzle için WebSocket odaları barındıran bir Cloudflare Worker'dır. Her kullanıcı kendi Relay'ini çalıştırır. Merkezi bir Lart sunucusu yoktur.",
   "The Last Stand": "Son Direniş",
   "The New, In Cinema, Rerun, and Awards chips. Turn off for a cleaner grid. Score chips are separate, below.":
     "Yeni, Sinemada, Tekrar Gösterim ve Ödüller etiketleri. Daha sade bir ızgara için kapatın. Puan etiketleri ayrıdır ve aşağıdadır.",
@@ -1163,8 +1163,8 @@ const personalization: Record<string, string> = {
     "Düzeninizin temel aldığı düğme seti. Özelleştirmeleriniz her stil için ayrı tutulur.",
   "The clock appears with the player controls.": "Saat, oynatıcı kontrolleriyle birlikte görünür.",
   "The default round dot.": "Varsayılan yuvarlak nokta.",
-  "The escape hatch for power users. One mpv option per line as key=value, exactly like mpv.conf. These apply last, so they override every dial above. Anything Harbor can't read is skipped, so a typo won't break playback. Restart playback to apply.":
-    "İleri düzey kullanıcılar için özel ayar alanıdır. Her satıra, tıpkı mpv.conf dosyasındaki gibi key=value biçiminde bir mpv seçeneği girin. Bunlar en son uygulandığından yukarıdaki tüm ayarları geçersiz kılar. Harbor'ın okuyamadığı her şey atlanır, dolayısıyla yazım hatası oynatmayı bozmaz. Uygulamak için oynatmayı yeniden başlatın.",
+  "The escape hatch for power users. One mpv option per line as key=value, exactly like mpv.conf. These apply last, so they override every dial above. Anything Lart can't read is skipped, so a typo won't break playback. Restart playback to apply.":
+    "İleri düzey kullanıcılar için özel ayar alanıdır. Her satıra, tıpkı mpv.conf dosyasındaki gibi key=value biçiminde bir mpv seçeneği girin. Bunlar en son uygulandığından yukarıdaki tüm ayarları geçersiz kılar. Lart'ın okuyamadığı her şey atlanır, dolayısıyla yazım hatası oynatmayı bozmaz. Uygulamak için oynatmayı yeniden başlatın.",
   "The free tier is $0 for personal use. Just pick the first option, no payment needed.":
     "Ücretsiz katman kişisel kullanım için $0'dır. İlk seçeneği seçmeniz yeterli, ödeme gerekmez.",
   "The home hero trailer plays with sound and a mute button in the corner, then shows a replay button when it ends. Auto-rotation pauses so it stays on the featured title.":
@@ -1179,8 +1179,8 @@ const personalization: Record<string, string> = {
     "Satır ve ızgaralarınızdaki poster kartlarında gösterilen küçük puan etiketi.",
   "The most anticipated upcoming releases on Trakt. No login needed.":
     "Trakt'ta en çok beklenen yaklaşan yapımlar. Oturum açmak gerekmez.",
-  "The operating system draws native window controls, so Harbor cannot change their appearance.":
-    "Yerel pencere denetimlerini işletim sistemi çizdiği için Harbor bunların görünümünü değiştiremez.",
+  "The operating system draws native window controls, so Lart cannot change their appearance.":
+    "Yerel pencere denetimlerini işletim sistemi çizdiği için Lart bunların görünümünü değiştiremez.",
   "The picker tags each stream with resolution, HDR flavor, codec, and audio format. Off hides them all.":
     "Seçici her yayını çözünürlük, HDR türü, codec ve ses biçimiyle etiketler. Kapalı seçeneği tümünü gizler.",
   "The primary manages profiles and can't be deleted. Transfer it here to delete the old one.":
@@ -1190,18 +1190,18 @@ const personalization: Record<string, string> = {
     "En hızlı başlangıç ve en az bellek kullanımı. Hızlı ve kararlı bağlantılarda ya da belleği kısıtlı makinelerde iyi sonuç verir.",
   "The ratings row on a title's detail page, next to runtime and genre.":
     "Bir içeriğin ayrıntı sayfasında süre ve türün yanında yer alan puanlar satırı.",
-  "The resolution Harbor downloads for each image when you export a title's metadata next to the file on disk.":
-    "Bir içeriğin meta verilerini diskte dosyanın yanına dışa aktarırken Harbor'ın her görsel için kullandığı indirme çözünürlüğü.",
+  "The resolution Lart downloads for each image when you export a title's metadata next to the file on disk.":
+    "Bir içeriğin meta verilerini diskte dosyanın yanına dışa aktarırken Lart'ın her görsel için kullandığı indirme çözünürlüğü.",
   "The server answered with status {status}. Is that a streaming server?":
     "Sunucu {status} durumuyla yanıt verdi. Bu bir yayın sunucusu mu?",
   "The server could not load that repository": "Sunucu bu depoyu yükleyemedi",
-  "The ship is sailing away. Thanks for watching with Harbor, it's time to listen to your grown-ups.":
-    "Gemi limandan ayrılıyor. Harbor ile izlediğiniz için teşekkürler, artık büyüklerinizi dinleme zamanı.",
+  "The ship is sailing away. Thanks for watching with Lart, it's time to listen to your grown-ups.":
+    "Gemi limandan ayrılıyor. Lart ile izlediğiniz için teşekkürler, artık büyüklerinizi dinleme zamanı.",
   "The test calls": "Test şunu çağırır:",
   "The test calls {code} and confirms the worker is reachable and running a current version. A passing test means Watch Together rooms will connect.":
     "Test, {code} uç noktasını çağırarak worker'a erişilebildiğini ve güncel bir sürümün çalıştığını doğrular. Test başarılı olursa Birlikte İzle odaları bağlantı kurar.",
-  "The timing checks disagreed, so Harbor left the subtitle unchanged.":
-    "Zamanlama kontrolleri birbiriyle uyuşmadığı için Harbor altyazıyı değiştirmedi.",
+  "The timing checks disagreed, so Lart left the subtitle unchanged.":
+    "Zamanlama kontrolleri birbiriyle uyuşmadığı için Lart altyazıyı değiştirmedi.",
   "The timing difference was too large to correct safely. Try another subtitle.":
     "Zamanlama farkı güvenle düzeltilemeyecek kadar büyüktü. Başka bir altyazı deneyin.",
   "The web build can't run mpv, the trickplay generator, the local bandwidth probe, or your own Cloudflare relay. If you want HDR passthrough, TrueHD or DTS-HD audio, and smoother seeking, grab the desktop app.":
@@ -1220,53 +1220,53 @@ const personalization: Record<string, string> = {
     "Bu altyazıda zamanlamayı ölçmeye yetecek kadar okunabilir diyalog yok.",
   "There wasn't enough matching dialogue to make a safe correction.":
     "Güvenli bir düzeltme yapmak için yeterli eşleşen diyalog yoktu.",
-  "These avatars are Harbor originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
-    "Bu avatarlar Harbor'a özgüdür. İçe aktarılan paketler yalnızca bu cihazda saklanır: içeriğini siz seçersiniz ve bu içerikten siz sorumlusunuz.",
+  "These avatars are Lart originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
+    "Bu avatarlar Lart'a özgüdür. İçe aktarılan paketler yalnızca bu cihazda saklanır: içeriğini siz seçersiniz ve bu içerikten siz sorumlusunuz.",
   "These badges are drawn on posters as you browse. RPDB, in the keys above, is a separate option that bakes scores into the poster image itself.":
     "Bu rozetler siz gezinirken posterlerin üzerine çizilir. Yukarıdaki anahtarlarda bulunan RPDB, puanları doğrudan poster görseline işleyen ayrı bir seçenektir.",
   "These cards run down your public profile. Set the order they appear in, and hide any you would rather keep to yourself.":
     "Bu kartlar herkese açık profilinizde alt alta gösterilir. Sıralarını belirleyin ve kendinize saklamak istediklerinizi gizleyin.",
-  "These tune the bundled mpv engine, which runs in the Harbor desktop app. They have no effect in the browser.":
-    "Bu ayarlar, Harbor masaüstü uygulamasında çalışan yerleşik mpv motoruna ince ayar yapar. Tarayıcıda etkileri yoktur.",
-  "This doesn't look like a Harbor plugin repo. Harbor expects a JSON file shaped { name, plugins: [ ... ] }.":
-    "Bu bir Harbor eklenti deposuna benzemiyor. Harbor, { name, plugins: [ ... ] } biçiminde bir JSON dosyası bekliyor.",
+  "These tune the bundled mpv engine, which runs in the Lart desktop app. They have no effect in the browser.":
+    "Bu ayarlar, Lart masaüstü uygulamasında çalışan yerleşik mpv motoruna ince ayar yapar. Tarayıcıda etkileri yoktur.",
+  "This doesn't look like a Lart plugin repo. Lart expects a JSON file shaped { name, plugins: [ ... ] }.":
+    "Bu bir Lart eklenti deposuna benzemiyor. Lart, { name, plugins: [ ... ] } biçiminde bir JSON dosyası bekliyor.",
   "This group could not be loaded.": "Bu grup yüklenemedi.",
   "This group has not written a description yet.": "Bu grup için henüz bir açıklama yazılmamış.",
   "This group's feed could not be loaded. Try again in a moment.":
     "Bu grubun akışı yüklenemedi. Birazdan tekrar deneyin.",
-  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Harbor can't import them.":
-    "Bu bir Mangayomi deposu, ancak kaynakları Dart kullanıyor ya da manga içeriği sunmuyor. Bu nedenle Harbor bunları içe aktaramaz.",
-  "This is a Mangayomi repo. Harbor runs its JavaScript sources natively. Import them to add these sources to your manga library.":
-    "Bu bir Mangayomi deposu. Harbor, JavaScript kaynaklarını doğrudan çalıştırır. Bu kaynakları manga kütüphanenize eklemek için içe aktarın.",
-  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "Bu bir Mangayomi deposu. Doğrudan içe aktarma henüz desteklenmiyor. Şu anda en geniş kataloğa erişmek için bir Suwayomi sunucusu çalıştırın ve Sunucular bölümünden Harbor'ı bu sunucuya bağlayın.",
-  "This is a Paperback (iOS) repo, which Harbor can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
-    "Bu, Harbor'ın kullanamadığı bir Paperback (iOS) deposu. Masaüstü kaynaklarını kullanmak için Sunucular bölümünden Harbor'ı bir Suwayomi sunucusuna bağlayın.",
-  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Harbor can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "Bu bir Tachiyomi / Mihon deposu. Bunlar Android (APK) eklentileri olduğundan Harbor bunları doğrudan çalıştıramaz. Bu kaynakları masaüstünde kullanmak için bir Suwayomi sunucusu çalıştırın ve Sunucular bölümünden Harbor'ı bu sunucuya bağlayın.",
+  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Lart can't import them.":
+    "Bu bir Mangayomi deposu, ancak kaynakları Dart kullanıyor ya da manga içeriği sunmuyor. Bu nedenle Lart bunları içe aktaramaz.",
+  "This is a Mangayomi repo. Lart runs its JavaScript sources natively. Import them to add these sources to your manga library.":
+    "Bu bir Mangayomi deposu. Lart, JavaScript kaynaklarını doğrudan çalıştırır. Bu kaynakları manga kütüphanenize eklemek için içe aktarın.",
+  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "Bu bir Mangayomi deposu. Doğrudan içe aktarma henüz desteklenmiyor. Şu anda en geniş kataloğa erişmek için bir Suwayomi sunucusu çalıştırın ve Sunucular bölümünden Lart'ı bu sunucuya bağlayın.",
+  "This is a Paperback (iOS) repo, which Lart can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
+    "Bu, Lart'ın kullanamadığı bir Paperback (iOS) deposu. Masaüstü kaynaklarını kullanmak için Sunucular bölümünden Lart'ı bir Suwayomi sunucusuna bağlayın.",
+  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Lart can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "Bu bir Tachiyomi / Mihon deposu. Bunlar Android (APK) eklentileri olduğundan Lart bunları doğrudan çalıştıramaz. Bu kaynakları masaüstünde kullanmak için bir Suwayomi sunucusu çalıştırın ve Sunucular bölümünden Lart'ı bu sunucuya bağlayın.",
   "This is the primary profile": "Bu, birincil profil",
   "This list is full ({max} items)": "Bu liste dolu ({max} öğe)",
   "This member has hidden their showcase, activity and friends from public view.":
     "Bu üye; vitrinini, etkinliğini ve arkadaşlarını herkese kapattı.",
-  "This one also replaces Harbor's bundled players and tools, so it installs through Harbor Setup. Harbor closes, the installer finishes, then Harbor reopens.":
-    "Bu güncelleme Harbor'ın yerleşik oynatıcılarını ve araçlarını da değiştirdiğinden Harbor Setup üzerinden yüklenir. Harbor kapanır, yükleyici işlemi tamamlar ve ardından Harbor yeniden açılır.",
-  "This one installs through Harbor Setup, but the update manifest carries no signature for it. Harbor will not run an installer it cannot verify. Download it and run it yourself.":
-    "Bu güncelleme Harbor Setup üzerinden yüklenir, ancak güncelleme manifestinde buna ait imza yok. Harbor doğrulayamadığı bir yükleyiciyi çalıştırmaz. İndirip kendiniz çalıştırın.",
-  "This replaces your current Harbor setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Harbor reloads when it finishes.":
-    "Bu işlem mevcut Harbor kurulumunuzu (tema, ana sayfa düzeni, ayarlar, eklentiler, profiller ve daha fazlası) bu dosyadaki {n} kayıtlı öğeyle değiştirir. Stremio oturumunuz değişmez. İşlem tamamlandığında Harbor yeniden yüklenir.",
+  "This one also replaces Lart's bundled players and tools, so it installs through Lart Setup. Lart closes, the installer finishes, then Lart reopens.":
+    "Bu güncelleme Lart'ın yerleşik oynatıcılarını ve araçlarını da değiştirdiğinden Lart Setup üzerinden yüklenir. Lart kapanır, yükleyici işlemi tamamlar ve ardından Lart yeniden açılır.",
+  "This one installs through Lart Setup, but the update manifest carries no signature for it. Lart will not run an installer it cannot verify. Download it and run it yourself.":
+    "Bu güncelleme Lart Setup üzerinden yüklenir, ancak güncelleme manifestinde buna ait imza yok. Lart doğrulayamadığı bir yükleyiciyi çalıştırmaz. İndirip kendiniz çalıştırın.",
+  "This replaces your current Lart setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Lart reloads when it finishes.":
+    "Bu işlem mevcut Lart kurulumunuzu (tema, ana sayfa düzeni, ayarlar, eklentiler, profiller ve daha fazlası) bu dosyadaki {n} kayıtlı öğeyle değiştirir. Stremio oturumunuz değişmez. İşlem tamamlandığında Lart yeniden yüklenir.",
   "This score only appears on cards.": "Bu puan yalnızca kartlarda görünür.",
   "This section depends on the addon": "Bu bölüm şu eklentiye bağlıdır:",
   "This section relies on TMDB discovery features.": "Bu bölüm TMDB keşif özelliklerini kullanır.",
-  "This server is too old to add repos from Harbor":
-    "Bu sunucu, Harbor üzerinden depo eklemek için çok eski",
+  "This server is too old to add repos from Lart":
+    "Bu sunucu, Lart üzerinden depo eklemek için çok eski",
   "This server lists no extensions": "Bu sunucuda eklenti listelenmiyor",
   "This server needs a username and password": "Bu sunucu için kullanıcı adı ve parola gerekiyor",
   "This server responded but is not supported": "Bu sunucu yanıt verdi ancak desteklenmiyor",
   "This sets the interface, metadata, subtitle, and audio languages to match.":
     "Arayüz, meta veri, altyazı ve ses dillerini eşleşecek şekilde ayarlar.",
   "This show": "Bu dizi",
-  "This source is not cached. Harbor will stream it peer to peer, which shares data with other peers.":
-    "Bu kaynak önbelleğe alınmamış. Harbor, verileri diğer eşlerle paylaşarak P2P üzerinden yayınlayacak.",
+  "This source is not cached. Lart will stream it peer to peer, which shares data with other peers.":
+    "Bu kaynak önbelleğe alınmamış. Lart, verileri diğer eşlerle paylaşarak P2P üzerinden yayınlayacak.",
   "This subtitle appears to be for a different cut. Try another match.":
     "Bu altyazı farklı bir kurguya ait gibi görünüyor. Başka bir eşleşme deneyin.",
   "This subtitle looks like a different version of the video.":
@@ -1288,8 +1288,8 @@ const personalization: Record<string, string> = {
   "To get a Charity badge, forward your donation receipt or invoice to":
     "Hayırsever rozeti almak için bağış makbuzunuzu veya faturanızı şu adrese iletin:",
   "To run a public relay, post the": "Herkese açık bir aktarıcı çalıştırmak için",
-  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Harbor users paste it into Settings, Harbor Relay, {kbd}.":
-    "Herkese açık bir aktarıcı çalıştırmak için {code} URL'sini r/Stremio'da veya topluluğunuzun bulunduğu yerde paylaşın. Diğer Harbor kullanıcıları bunu Ayarlar, Harbor Aktarıcısı, {kbd} alanına yapıştırabilir.",
+  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Lart users paste it into Settings, Lart Relay, {kbd}.":
+    "Herkese açık bir aktarıcı çalıştırmak için {code} URL'sini r/Stremio'da veya topluluğunuzun bulunduğu yerde paylaşın. Diğer Lart kullanıcıları bunu Ayarlar, Lart Aktarıcısı, {kbd} alanına yapıştırabilir.",
   "Toggle Fullscreen": "Tam ekranı aç/kapat",
   "Toggle a sleep timer that pauses when this episode ends.":
     "Bu bölüm bittiğinde oynatmayı duraklatan uyku zamanlayıcısını açın veya kapatın.",
@@ -1351,12 +1351,12 @@ const personalization: Record<string, string> = {
   "Try it": "Dene",
   "Try it for ${n}": "${n} karşılığında deneyin",
   "Trying source {n}": "{n}. kaynak deneniyor",
-  "Tuck clean, native-looking window buttons into the top corner, with hover labels. On macOS they become traffic-light dots. Blends into Harbor while feeling like your system's own title bar.":
-    "Üzerine gelindiğinde etiketleri görünen sade, yerel görünümlü pencere düğmelerini üst köşeye yerleştirir. macOS'te trafik ışığı noktalarına dönüşürler. Sisteminizin kendi başlık çubuğu hissini verirken Harbor ile bütünleşir.",
+  "Tuck clean, native-looking window buttons into the top corner, with hover labels. On macOS they become traffic-light dots. Blends into Lart while feeling like your system's own title bar.":
+    "Üzerine gelindiğinde etiketleri görünen sade, yerel görünümlü pencere düğmelerini üst köşeye yerleştirir. macOS'te trafik ışığı noktalarına dönüşürler. Sisteminizin kendi başlık çubuğu hissini verirken Lart ile bütünleşir.",
   "Tune anime": "Anime tercihlerini ayarla",
   "Turn it on in Player layout": "Oynatıcı düzeninden etkinleştirin",
-  "Turn off the native window title bar above to use Harbor's hybrid bar instead.":
-    "Harbor'ın hibrit çubuğunu kullanmak için yukarıdan yerel pencere başlık çubuğunu kapatın.",
+  "Turn off the native window title bar above to use Lart's hybrid bar instead.":
+    "Lart'ın hibrit çubuğunu kullanmak için yukarıdan yerel pencere başlık çubuğunu kapatın.",
   "Turn off to hide the sync badge during playback.":
     "Oynatma sırasında senkronizasyon rozetini gizlemek için kapatın.",
   "Turn on controller support to light up your inputs here.":
@@ -1370,13 +1370,13 @@ const personalization: Record<string, string> = {
     "Cinemeta'yı tamamen devre dışı bırakıp yalnızca AIOMetadata veya AIOStreams gibi kendi meta veri eklentilerinizi kullanmak için bunu kapatın. Cinemeta güncelliğini yitirip yayımlanmış bölümleri TBA olarak gösterebilir. Bir meta veri eklentiniz yüklü değilse açık bırakın; aksi takdirde içeriklerin ayrıntıları gösterilmez.",
   "Turns off the fancy scaling and effects so video just plays. The lightest on your machine. Pick this if anything ever stutters or your fan screams.":
     "Video sorunsuz oynasın diye gelişmiş ölçekleme ve efektleri kapatır. Bilgisayarınızı en az yoran seçenektir. Görüntü takılıyorsa veya fanınız çok hızlanıyorsa bunu seçin.",
-  "Turns the season button into a full panel: order tabs (Aired, DVD, Absolute, and any the show has) plus a season table with air-date ranges and episode counts. On by default for anime through Harbor's TVDB service, no key needed. Add your own TVDB key to use it for regular shows too.":
-    "Sezon düğmesini tam bir panele dönüştürür: sıralama sekmeleri (Yayın, DVD, Mutlak ve dizide bulunan diğerleri) ile yayın tarihi aralıklarını ve bölüm sayılarını içeren bir sezon tablosu. Harbor'ın TVDB hizmeti üzerinden animeler için varsayılan olarak açıktır ve anahtar gerekmez. Normal dizilerde de kullanmak için kendi TVDB anahtarınızı ekleyin.",
+  "Turns the season button into a full panel: order tabs (Aired, DVD, Absolute, and any the show has) plus a season table with air-date ranges and episode counts. On by default for anime through Lart's TVDB service, no key needed. Add your own TVDB key to use it for regular shows too.":
+    "Sezon düğmesini tam bir panele dönüştürür: sıralama sekmeleri (Yayın, DVD, Mutlak ve dizide bulunan diğerleri) ile yayın tarihi aralıklarını ve bölüm sayılarını içeren bir sezon tablosu. Lart'ın TVDB hizmeti üzerinden animeler için varsayılan olarak açıktır ve anahtar gerekmez. Normal dizilerde de kullanmak için kendi TVDB anahtarınızı ekleyin.",
   "Turns your phone into a remote for this computer: play, pause, seek, volume, and casting, all from the couch. Open the Wi-Fi address on your phone's browser.":
     "Telefonunuzu bu bilgisayar için bir kumandaya dönüştürür: koltuğunuzdan oynatın, duraklatın, ileri veya geri sarın, ses düzeyini ayarlayın ve yayınlayın. Wi-Fi adresini telefonunuzun tarayıcısında açın.",
   "Two columns": "İki sütun",
-  "Two paths: Harbor handles the deploy for you, or you do it yourself with wrangler.":
-    "İki yol vardır: Dağıtımı sizin için Harbor yapar veya wrangler ile kendiniz yaparsınız.",
+  "Two paths: Lart handles the deploy for you, or you do it yourself with wrangler.":
+    "İki yol vardır: Dağıtımı sizin için Lart yapar veya wrangler ile kendiniz yaparsınız.",
   "Two-factor authentication code": "İki faktörlü kimlik doğrulama kodu",
   "Type a key on this TV": "Bu TV'de bir anahtar girin",
   "Type a name to find their photo.": "Fotoğrafını bulmak için bir sanatçı adı yazın.",
@@ -1390,8 +1390,8 @@ const personalization: Record<string, string> = {
   Typography: "Tipografi",
   "URL cannot be empty": "URL boş olamaz",
   "URL is saved and ready to share.": "URL kaydedildi ve paylaşılmaya hazır.",
-  "URL on r/Stremio or wherever your community lives. Other Harbor users paste it into Settings, Harbor Relay,":
-    "URL'sini r/Stremio'da veya topluluğunuzun bulunduğu başka bir yerde paylaşın. Diğer Harbor kullanıcıları bunu Ayarlar, Harbor Relay bölümüne yapıştırabilir,",
+  "URL on r/Stremio or wherever your community lives. Other Lart users paste it into Settings, Lart Relay,":
+    "URL'sini r/Stremio'da veya topluluğunuzun bulunduğu başka bir yerde paylaşın. Diğer Lart kullanıcıları bunu Ayarlar, Lart Relay bölümüne yapıştırabilir,",
   Unavailable: "Kullanılamıyor",
   "Unlike comment": "Yorum beğenisini kaldır",
   "Unlike list": "Liste beğenisini kaldır",
@@ -1408,8 +1408,8 @@ const personalization: Record<string, string> = {
   "Update {name}": "{name} eklentisini güncelle",
   "Updated {when}": "Güncellendi: {when}",
   Updates: "Güncellemeler",
-  "Updating separated settings per profile, which may have reset your theme and keys. Harbor still has your old setup saved. Bring it back on this profile, then reload.":
-    "Profil başına ayrı ayarlar güncelleniyor. Bu işlem temanızı ve anahtarlarınızı sıfırlamış olabilir. Eski yapılandırmanız Harbor'da hâlâ kayıtlı. Bu profilde geri yükleyip yeniden yükleyin.",
+  "Updating separated settings per profile, which may have reset your theme and keys. Lart still has your old setup saved. Bring it back on this profile, then reload.":
+    "Profil başına ayrı ayarlar güncelleniyor. Bu işlem temanızı ve anahtarlarınızı sıfırlamış olabilir. Eski yapılandırmanız Lart'da hâlâ kayıtlı. Bu profilde geri yükleyip yeniden yükleyin.",
   Upload: "Yükle",
   "Upload a pattern to tile across the bar": "Çubuk boyunca döşenecek bir desen yükleyin",
   "Upload an image per award, or name your zip files after the ID shown under each one (tap to copy). Natural names work too, so best_soundtrack, movie_of_the_year, etc. still match.":
@@ -1423,8 +1423,8 @@ const personalization: Record<string, string> = {
   "Upload photo": "Fotoğraf yükle",
   "Uploading worker, wiring durable object…": "Worker yükleniyor, Durable Object bağlanıyor…",
   "Use Cinemeta for title metadata": "İçerik meta verileri için Cinemeta'yı kullan",
-  "Use Harbor's built-in engine (beta)": "Harbor'ın yerleşik motorunu kullan (beta)",
-  "Use Harbor's public relay": "Harbor'ın herkese açık aktarıcısını kullan",
+  "Use Lart's built-in engine (beta)": "Lart'ın yerleşik motorunu kullan (beta)",
+  "Use Lart's public relay": "Lart'ın herkese açık aktarıcısını kullan",
   "Use a better match": "Daha iyi bir eşleşme kullan",
   "Use a different URL": "Farklı bir URL kullan",
   "Use addon order": "Eklenti sırasını kullan",
@@ -1435,31 +1435,31 @@ const personalization: Record<string, string> = {
     "Yalnızca bunu kullan (asla yerel motora geri dönme)",
   "Use in Nuvio": "Nuvio'da kullan",
   "Use liquid glass": "Sıvı cam kullan",
-  "Use liquid glass for the search pill and row scroll arrows. The appearance settings below are shared by glass surfaces across Harbor.":
-    "Arama kapsülü ve satır kaydırma oklarında sıvı cam kullanın. Aşağıdaki görünüm ayarları Harbor'daki tüm cam yüzeylerde ortaktır.",
+  "Use liquid glass for the search pill and row scroll arrows. The appearance settings below are shared by glass surfaces across Lart.":
+    "Arama kapsülü ve satır kaydırma oklarında sıvı cam kullanın. Aşağıdaki görünüm ayarları Lart'daki tüm cam yüzeylerde ortaktır.",
   "Use live web context": "Canlı web bağlamını kullan",
   "Use live web context (Jina Reader)": "Güncel web bağlamını kullan (Jina Reader)",
   "Use model": "Modeli kullan",
-  "Use my AniList avatar as my Harbor avatar": "AniList avatarımı Harbor avatarım olarak kullan",
-  "Use my Simkl avatar as my Harbor avatar": "Simkl avatarımı Harbor avatarım olarak kullan",
-  "Use my Trakt avatar as my Harbor avatar": "Trakt avatarımı Harbor avatarım olarak kullan",
+  "Use my AniList avatar as my Lart avatar": "AniList avatarımı Lart avatarım olarak kullan",
+  "Use my Simkl avatar as my Lart avatar": "Simkl avatarımı Lart avatarım olarak kullan",
+  "Use my Trakt avatar as my Lart avatar": "Trakt avatarımı Lart avatarım olarak kullan",
   "Use my style": "Benim stilimi kullan",
-  "Use the arrow keys and Enter to move focus through Harbor. Turn this off to keep arrow keys free and disable focus navigation everywhere.":
-    "Harbor'da odağı taşımak için ok tuşlarını ve Enter'ı kullanın. Ok tuşlarını serbest bırakmak ve odakla gezinmeyi her yerde devre dışı bırakmak için bunu kapatın.",
+  "Use the arrow keys and Enter to move focus through Lart. Turn this off to keep arrow keys free and disable focus navigation everywhere.":
+    "Lart'da odağı taşımak için ok tuşlarını ve Enter'ı kullanın. Ok tuşlarını serbest bırakmak ve odakla gezinmeyi her yerde devre dışı bırakmak için bunu kapatın.",
   "Use the native window title bar": "Yerel pencere başlık çubuğunu kullan",
-  "Use your Harbor color": "Harbor renginizi kullanın",
-  "Use your operating system's native title bar and window buttons instead of Harbor's built-in ones. Handy if the in-app buttons ever feel out of reach, like during playback.":
-    "Harbor'ın yerleşik başlık çubuğu ve pencere düğmeleri yerine işletim sisteminizin yerel başlık çubuğunu ve pencere düğmelerini kullanın. Uygulama içi düğmelere erişmenin zor olduğu durumlarda, örneğin oynatma sırasında kullanışlıdır.",
+  "Use your Lart color": "Lart renginizi kullanın",
+  "Use your operating system's native title bar and window buttons instead of Lart's built-in ones. Handy if the in-app buttons ever feel out of reach, like during playback.":
+    "Lart'ın yerleşik başlık çubuğu ve pencere düğmeleri yerine işletim sisteminizin yerel başlık çubuğunu ve pencere düğmelerini kullanın. Uygulama içi düğmelere erişmenin zor olduğu durumlarda, örneğin oynatma sırasında kullanışlıdır.",
   "Use your own image as the app icon": "Uygulama simgesi olarak kendi görselinizi kullanın",
   "Used for streaming availability and the Now Playing release window.":
     "Yayın kullanılabilirliği ve Vizyondakiler tarih aralığı için kullanılır.",
-  "Used for streaming availability and the Now Playing release window. Pick a country and Harbor can match the interface, metadata, and subtitle languages to it.":
-    "Yayın izlenebilirliği ve Vizyondakiler gösterim aralığı için kullanılır. Bir ülke seçtiğinizde Harbor arayüz, meta veri ve altyazı dillerini bu ülkeyle eşleştirebilir.",
+  "Used for streaming availability and the Now Playing release window. Pick a country and Lart can match the interface, metadata, and subtitle languages to it.":
+    "Yayın izlenebilirliği ve Vizyondakiler gösterim aralığı için kullanılır. Bir ülke seçtiğinizde Lart arayüz, meta veri ve altyazı dillerini bu ülkeyle eşleştirebilir.",
   "Used for your cursor in Watch Together, your draw color, and your name pill in chat.":
     "Birlikte İzle'deki imleciniz, çizim renginiz ve sohbetteki ad etiketiniz için kullanılır.",
   "Uses your theme's accent color.": "Temanızın vurgu rengini kullanır.",
-  "Using AIOStreams or another aggregator addon? Its own sorting and filtering happen inside the addon before Harbor ever sees the results, then Harbor applies the stream filter and result order above on top. If results look thinner than expected, keep one side permissive: either relax the addon's internal filters or set Harbor's stream filter to Balanced or Off.":
-    "AIOStreams veya başka bir toplayıcı eklenti mi kullanıyorsunuz? Harbor sonuçları görmeden önce eklentinin kendi sıralama ve filtreleme işlemleri uygulanır; ardından Harbor yukarıdaki yayın filtresini ve sonuç sırasını bunların üzerine uygular. Sonuçlar beklenenden az görünüyorsa taraflardan birini esnek tutun: eklentinin dâhilî filtrelerini gevşetin veya Harbor'ın yayın filtresini Dengeli ya da Kapalı olarak ayarlayın.",
+  "Using AIOStreams or another aggregator addon? Its own sorting and filtering happen inside the addon before Lart ever sees the results, then Lart applies the stream filter and result order above on top. If results look thinner than expected, keep one side permissive: either relax the addon's internal filters or set Lart's stream filter to Balanced or Off.":
+    "AIOStreams veya başka bir toplayıcı eklenti mi kullanıyorsunuz? Lart sonuçları görmeden önce eklentinin kendi sıralama ve filtreleme işlemleri uygulanır; ardından Lart yukarıdaki yayın filtresini ve sonuç sırasını bunların üzerine uygular. Sonuçlar beklenenden az görünüyorsa taraflardan birini esnek tutun: eklentinin dâhilî filtrelerini gevşetin veya Lart'ın yayın filtresini Dengeli ya da Kapalı olarak ayarlayın.",
   VOLUME: "SES DÜZEYİ",
   "Variable timing corrected": "Değişken zamanlama düzeltildi",
   "Verified status": "Doğrulanma durumu",
@@ -1476,24 +1476,24 @@ const personalization: Record<string, string> = {
   WHEN: "ŞU DURUMDA",
   "Wait before playing": "Oynatmadan önce bekleme",
   "Wait for the upload to finish. The relay URL gets written to":
-    "Yüklemenin bitmesini bekleyin. Aktarıcı URL'si Harbor ayarlarındaki",
-  "Wait for the upload to finish. The relay URL gets written to {code} in Harbor settings.":
-    "Yüklemenin tamamlanmasını bekleyin. Aktarıcı URL'si Harbor ayarlarındaki {code} alanına yazılır.",
+    "Yüklemenin bitmesini bekleyin. Aktarıcı URL'si Lart ayarlarındaki",
+  "Wait for the upload to finish. The relay URL gets written to {code} in Lart settings.":
+    "Yüklemenin tamamlanmasını bekleyin. Aktarıcı URL'si Lart ayarlarındaki {code} alanına yazılır.",
   "Want to change the ratio mid-playback? The live aspect button is hidden by default to keep the player tidy.":
     "Oynatma sırasında oranı değiştirmek mi istiyorsunuz? Oynatıcıyı sade tutmak için en-boy oranı düğmesi varsayılan olarak gizlidir.",
   "Want to fix it yourself?": "Kendin düzeltmek ister misin?",
   "Warming up": "Hazırlanıyor",
   "Watch Together": "Birlikte İzle",
   "Watch Together panel": "Birlikte İzle paneli",
-  "Watch Together rooms are routed through Harbor's hosted relay.":
-    "Birlikte İzle odaları Harbor'ın barındırdığı aktarıcı üzerinden yönlendirilir.",
+  "Watch Together rooms are routed through Lart's hosted relay.":
+    "Birlikte İzle odaları Lart'ın barındırdığı aktarıcı üzerinden yönlendirilir.",
   "Watch Together rooms drop after 6 hours":
     "Birlikte İzle odalarının bağlantısı 6 saat sonra kesiliyor",
   "Watch party join button": "Birlikte İzle'ye katıl düğmesi",
   "Watch time": "İzleme süresi",
   "Watched badge": "İzlendi rozeti",
-  "Watching for ad, analytics, and tracking requests. Harbor itself sends zero telemetry.":
-    "Reklam, analiz ve izleme istekleri takip ediliyor. Harbor hiçbir telemetri verisi göndermez.",
+  "Watching for ad, analytics, and tracking requests. Lart itself sends zero telemetry.":
+    "Reklam, analiz ve izleme istekleri takip ediliyor. Lart hiçbir telemetri verisi göndermez.",
   "Watching right now": "Şu anda izliyor",
   Watchlist: "İzleme Listesi",
   "Watchlist bookmark": "İzleme Listesi yer imi",
@@ -1501,17 +1501,17 @@ const personalization: Record<string, string> = {
   "We could not find anyone at @{handle}. The handle may have changed or the profile was removed.":
     "@{handle} adresinde kimseyi bulamadık. Kullanıcı adı değişmiş veya profil kaldırılmış olabilir.",
   "We couldn't load your saved favourites": "Kaydedilmiş favorileriniz yüklenemedi",
-  "Wear your Simkl profile picture across Harbor instead of the default.":
-    "Varsayılan profil resmi yerine Harbor genelinde Simkl profil resminizi kullanın.",
-  "Wear your Trakt profile picture across Harbor instead of the default.":
-    "Varsayılan profil resmi yerine Harbor genelinde Trakt profil resminizi kullanın.",
+  "Wear your Simkl profile picture across Lart instead of the default.":
+    "Varsayılan profil resmi yerine Lart genelinde Simkl profil resminizi kullanın.",
+  "Wear your Trakt profile picture across Lart instead of the default.":
+    "Varsayılan profil resmi yerine Lart genelinde Trakt profil resminizi kullanın.",
   "Web build": "Web sürümü",
   Webhooks: "Webhook'lar",
   "Weekend watchlist": "Hafta sonu izleme listesi",
   "What actually happened": "Gerçekte ne oldu?",
   "What broke?": "Ne bozuldu?",
-  "What fills the hero. Trending is a fresh top list from Harbor, refreshed through the day. Classic uses your own Home rows.":
-    "Öne çıkan alanı neyin dolduracağını belirler. Gündem, Harbor'ın gün boyunca yenilenen güncel popüler içerikler listesini kullanır. Klasik ise kendi Ana Sayfa satırlarınızı kullanır.",
+  "What fills the hero. Trending is a fresh top list from Lart, refreshed through the day. Classic uses your own Home rows.":
+    "Öne çıkan alanı neyin dolduracağını belirler. Gündem, Lart'ın gün boyunca yenilenen güncel popüler içerikler listesini kullanır. Klasik ise kendi Ana Sayfa satırlarınızı kullanır.",
   "What fullscreen does": "Tam ekran davranışı",
   "What gets sent": "Gönderilen bilgiler",
   "What gets through": "Gösterilecekler",
@@ -1527,21 +1527,21 @@ const personalization: Record<string, string> = {
   "Whatever your OS uses.": "İşletim sisteminizin kullandığı yazı tipi.",
   'When Esc would close the player, show a quick confirm first. You can tick "Don\'t ask me again" in that prompt to always leave on Esc.':
     'Esc oynatıcıyı kapatacaksa önce hızlı bir onay gösterir. Esc ile her zaman çıkmak için bu istemde "Bir daha sorma" seçeneğini işaretleyebilirsiniz.',
-  "When Harbor sits idle in the foreground, it drifts through cinematic backdrops with a clock and what's trending. Any movement or key brings you back. Off by default.":
-    "Harbor ön planda boşta kaldığında saat ve gündemdeki içeriklerle birlikte sinematik arka planlar arasında gezinir. Fareyi hareket ettirdiğinizde veya bir tuşa bastığınızda geri dönersiniz. Varsayılan olarak kapalıdır.",
+  "When Lart sits idle in the foreground, it drifts through cinematic backdrops with a clock and what's trending. Any movement or key brings you back. Off by default.":
+    "Lart ön planda boşta kaldığında saat ve gündemdeki içeriklerle birlikte sinematik arka planlar arasında gezinir. Fareyi hareket ettirdiğinizde veya bir tuşa bastığınızda geri dönersiniz. Varsayılan olarak kapalıdır.",
   "When a flagged ad plays, a Skip button slides in so you jump straight past it.":
     "İşaretlenmiş bir reklam oynatıldığında Atla düğmesi belirir, böylece reklamı doğrudan geçebilirsiniz.",
   "When a new episode airs": "Yeni bir bölüm yayınlandığında",
   "When a new season premieres": "Yeni bir sezon başladığında",
-  "When a release ships multiple audio tracks, Harbor selects the first match from this list.":
-    "Bir sürüm birden fazla ses parçasıyla geldiğinde Harbor bu listedeki ilk eşleşmeyi seçer.",
-  "When a subtitle runs early or late, Harbor measures the speech and corrects the timing on its own. Off by default.":
-    "Altyazı erken veya geç geldiğinde Harbor konuşmayı ölçer ve zamanlamayı kendiliğinden düzeltir. Varsayılan olarak kapalıdır.",
+  "When a release ships multiple audio tracks, Lart selects the first match from this list.":
+    "Bir sürüm birden fazla ses parçasıyla geldiğinde Lart bu listedeki ilk eşleşmeyi seçer.",
+  "When a subtitle runs early or late, Lart measures the speech and corrects the timing on its own. Off by default.":
+    "Altyazı erken veya geç geldiğinde Lart konuşmayı ölçer ve zamanlamayı kendiliğinden düzeltir. Varsayılan olarak kapalıdır.",
   "When an episode ends, automatically start the next one. Off lets the episode finish and stop.":
     "Bir bölüm bittiğinde sonrakini otomatik olarak başlatır. Kapalı olduğunda bölüm biter ve oynatma durur.",
   "When off, a P2P transfer stops the moment you close or switch the stream, so nothing keeps downloading in the background. Turn on to let it keep going after you leave; manage or pause those from the Downloads tab.": "Kapalıyken, yayını kapattığınız veya değiştirdiğiniz anda P2P aktarımı durur; böylece arka planda indirme devam etmez. Ayrıldıktan sonra da sürmesini sağlamak için açın. Bu indirmeleri İndirilenler sekmesinden yönetebilir veya duraklatabilirsiniz.",
-  "When playback starts, Harbor automatically finds and loads a subtitle in one of these languages, so you never have to search by hand. The first available match wins, so put your main language first.":
-    "Oynatma başladığında Harbor bu dillerden birinde otomatik olarak altyazı bulup yükler, böylece elle aramanız gerekmez. Bulunan ilk eşleşme seçilir, bu nedenle ana dilinizi ilk sıraya koyun.",
+  "When playback starts, Lart automatically finds and loads a subtitle in one of these languages, so you never have to search by hand. The first available match wins, so put your main language first.":
+    "Oynatma başladığında Lart bu dillerden birinde otomatik olarak altyazı bulup yükler, böylece elle aramanız gerekmez. Bulunan ilk eşleşme seçilir, bu nedenle ana dilinizi ilk sıraya koyun.",
   "When the Up Next pill appears before an episode ends. Auto scales to the episode length, so short episodes stop prompting so early. Off hides it.":
     "Bölüm bitmeden önce Sıradaki rozetinin ne zaman görüneceğini belirler. Otomatik seçeneği bölüm uzunluğuna göre ayarlanır, böylece kısa bölümlerde bildirim çok erken gösterilmez. Kapalı seçeneği bildirimi gizler.",
   "When the audio already matches your subtitle language, pick a forced track (foreign dialogue and signs only) instead of full subtitles. If the file has no forced track, subtitles stay off.":
@@ -1549,10 +1549,10 @@ const personalization: Record<string, string> = {
   "When the file ships its own subtitle track, keep it selected instead of switching to a downloaded one. Embedded tracks are usually the best synced.":
     "Dosya kendi altyazı parçasıyla geliyorsa indirilen bir altyazıya geçmek yerine onu seçili tutun. Gömülü parçalar genellikle en iyi senkronizasyona sahiptir.",
   "When the latest episode ends (Hide / Timer)": "En son bölüm bittiğinde (Gizle / Zamanlayıcı)",
-  "When you back out of a title, Harbor saves a frame so the Continue Watching card looks like the spot you left.":
-    "Bir içerikten çıktığınızda Harbor bir kare kaydeder, böylece İzlemeye Devam Et kartı kaldığınız yeri gösterir.",
-  "When you back out of a title, Harbor saves a frame so the Continue Watching card looks like the spot you left. Tune how long they stick around, or wipe them all.":
-    "Bir içerikten çıktığınızda Harbor bir kare kaydeder, böylece İzlemeye Devam Et kartı kaldığınız yeri gösterir. Bunların ne kadar süre tutulacağını ayarlayın veya tümünü silin.",
+  "When you back out of a title, Lart saves a frame so the Continue Watching card looks like the spot you left.":
+    "Bir içerikten çıktığınızda Lart bir kare kaydeder, böylece İzlemeye Devam Et kartı kaldığınız yeri gösterir.",
+  "When you back out of a title, Lart saves a frame so the Continue Watching card looks like the spot you left. Tune how long they stick around, or wipe them all.":
+    "Bir içerikten çıktığınızda Lart bir kare kaydeder, böylece İzlemeye Devam Et kartı kaldığınız yeri gösterir. Bunların ne kadar süre tutulacağını ayarlayın veya tümünü silin.",
   "When you finish an episode, the Home Continue Watching card moves on to the next episode instead of sitting at 0 minutes left.":
     "Bir bölümü bitirdiğinizde Ana Sayfa'daki İzlemeye Devam Et kartı, 0 dakika kalmış hâlde beklemek yerine sonraki bölüme geçer.",
   "When you have no debrid set up, or a torrent isn't cached, stream it straight from the bundled engine on localhost:11470. This connects to peers over your own connection, the same way Stremio's built-in streaming does.":
@@ -1563,8 +1563,8 @@ const personalization: Record<string, string> = {
     "Daha önce göz attığınız bir diziyi yeniden açtığınızda, en baştan başlamak yerine doğrudan kaldığınız yere (genellikle bölüm listesine) gider. Geçiş sayfa gösterilmeden önce gerçekleştiği için görüntü sıçraması olmaz.",
   "When you resume something you were watching, replay the exact stream you last used (same addon and source) instead of opening the picker again. Turn off to always choose fresh.":
     "İzlemeye devam ettiğinizde seçim ekranını yeniden açmak yerine son kullandığınız yayını (aynı eklenti ve kaynak) oynatır. Her zaman yeniden seçim yapmak için kapatın.",
-  "Where Harbor saves videos when you hit Download in the player. Pick any folder, including one on a different drive.":
-    "Oynatıcıda İndir'e bastığınızda Harbor'ın videoları kaydedeceği konum. Farklı bir sürücüdekiler dâhil istediğiniz klasörü seçin.",
+  "Where Lart saves videos when you hit Download in the player. Pick any folder, including one on a different drive.":
+    "Oynatıcıda İndir'e bastığınızda Lart'ın videoları kaydedeceği konum. Farklı bir sürücüdekiler dâhil istediğiniz klasörü seçin.",
   "Where alerts go": "Uyarıların gönderileceği yer",
   "Where it shows": "Gösterileceği yer",
   "Where it started": "Başlangıç noktası",
@@ -1578,12 +1578,12 @@ const personalization: Record<string, string> = {
   "Which audio and subtitle languages rank first in stream lists.":
     "Yayın listelerinde hangi ses ve altyazı dillerinin ilk sıralarda yer alacağı.",
   "Which order": "Sıralama",
-  "While beta updates are on, Harbor offers the newest build again on its next check. Turn beta updates off above to stay on an earlier one.":
-    "Beta güncellemeleri açıkken Harbor, bir sonraki denetiminde en yeni derlemeyi yeniden sunar. Önceki bir sürümde kalmak için yukarıdan beta güncellemelerini kapatın.",
+  "While beta updates are on, Lart offers the newest build again on its next check. Turn beta updates off above to stay on an earlier one.":
+    "Beta güncellemeleri açıkken Lart, bir sonraki denetiminde en yeni derlemeyi yeniden sunar. Önceki bir sürümde kalmak için yukarıdan beta güncellemelerini kapatın.",
   "While you watch": "İzlerken",
   "Who can join": "Kimler katılabilir?",
-  "Who keeps the lights on, what Harbor is built on, and where to put money if you want to.":
-    "Sistemi kimin ayakta tuttuğu, Harbor'ın hangi temel üzerine kurulduğu ve isterseniz maddi desteği nereye yönlendirebileceğiniz.",
+  "Who keeps the lights on, what Lart is built on, and where to put money if you want to.":
+    "Sistemi kimin ayakta tuttuğu, Lart'ın hangi temel üzerine kurulduğu ve isterseniz maddi desteği nereye yönlendirebileceğiniz.",
   "Who keeps this running": "Bunu kim ayakta tutuyor?",
   "Who pays for the servers, and where to put money if you want to.":
     "Sunucuların masraflarını kimin karşıladığı ve isterseniz maddi desteği nereye yönlendirebileceğiniz.",
@@ -1622,22 +1622,22 @@ const personalization: Record<string, string> = {
     "Profil değiştirildiğinde kaybolacak kaydedilmemiş değişiklikleriniz var. Devam edilsin mi?",
   "You have unsaved changes. Close the editor and discard them?":
     "Kaydedilmemiş değişiklikleriniz var. Düzenleyici kapatılıp değişiklikler iptal edilsin mi?",
-  "You must install this addon in your Stremio account first so Harbor can fetch its works.":
-    "Harbor'ın içeriklerini alabilmesi için önce bu eklentiyi Stremio hesabınıza yüklemelisiniz.",
+  "You must install this addon in your Stremio account first so Lart can fetch its works.":
+    "Lart'ın içeriklerini alabilmesi için önce bu eklentiyi Stremio hesabınıza yüklemelisiniz.",
   "You own the content": "İçeriğin sahibi sizsiniz",
   "You saw the whole run through.": "Tüm serüveni baştan sona izlediniz.",
   "You should get a message from your new bot.": "Yeni botundan bir mesaj almalısın.",
   "You watched": "İzlediniz",
   "You'll leave the player and open the full details page.":
     "Oynatıcıdan çıkıp tüm ayrıntılar sayfasını açacaksınız.",
-  "You're modding your own client. Custom JS has full access to your Harbor session. Only paste code you wrote or fully trust.":
-    "Kendi istemcinizi değiştiriyorsunuz. Özel JS, Harbor oturumunuza tam erişebilir. Yalnızca yazdığınız veya tamamen güvendiğiniz kodu yapıştırın.",
+  "You're modding your own client. Custom JS has full access to your Lart session. Only paste code you wrote or fully trust.":
+    "Kendi istemcinizi değiştiriyorsunuz. Özel JS, Lart oturumunuza tam erişebilir. Yalnızca yazdığınız veya tamamen güvendiğiniz kodu yapıştırın.",
   "You're on the latest version.": "En son sürümü kullanıyorsunuz.",
   "You've hidden every catalog that matched.": "Eşleşen tüm katalogları gizlediniz.",
   "You've hidden the one catalog that matched.": "Eşleşen tek kataloğu gizlediniz.",
   "You've sailed these waters dry.": "Bu sularda keşfedecek bir şey kalmadı.",
-  "Your Harbor account is separate from your Stremio sign in. Create one free or sign in from Settings.":
-    "Harbor hesabınız Stremio hesabınızdan ayrıdır. Ücretsiz bir hesap oluşturun veya Ayarlar'dan oturum açın.",
+  "Your Lart account is separate from your Stremio sign in. Create one free or sign in from Settings.":
+    "Lart hesabınız Stremio hesabınızdan ayrıdır. Ücretsiz bir hesap oluşturun veya Ayarlar'dan oturum açın.",
   "Your Letterboxd password": "Letterboxd parolanız",
   "Your MyAnimeList is empty": "MyAnimeList'iniz boş",
   "Your Stremio library": "Stremio kütüphaneniz",
@@ -1646,8 +1646,8 @@ const personalization: Record<string, string> = {
   "Your Trakt watchlist": "Trakt izleme listeniz",
   "Your account hasn't picked its free {code} address yet. Cloudflare only asks the first time. Quick to set up.":
     "Hesabınız henüz ücretsiz {code} adresini seçmemiş. Cloudflare bunu yalnızca ilk seferde sorar. Kurulumu çok kısa sürer.",
-  "Your avatar, name, and handle across Harbor.":
-    "Harbor genelinde avatarınız, adınız ve kullanıcı adınız.",
+  "Your avatar, name, and handle across Lart.":
+    "Lart genelinde avatarınız, adınız ve kullanıcı adınız.",
   "Your canvas runs in a sandbox with no scripts, so use HTML and CSS for layout and art.":
     "Tuvaliniz, komut dosyalarının çalışmadığı korumalı bir alandadır. Düzen ve görseller için HTML ile CSS kullanın.",
   "Your color": "Renginiz",
@@ -1659,8 +1659,8 @@ const personalization: Record<string, string> = {
   "Your friends have not shared anything yet. Activity sharing is off by default.":
     "Arkadaşlarınız henüz hiçbir şey paylaşmadı. Etkinlik paylaşımı varsayılan olarak kapalıdır.",
   "Your groups": "Gruplarınız",
-  "Your handle across Harbor, and your verified status.":
-    "Harbor genelindeki kullanıcı adınız ve doğrulanma durumunuz.",
+  "Your handle across Lart, and your verified status.":
+    "Lart genelindeki kullanıcı adınız ve doğrulanma durumunuz.",
   "Your links": "Bağlantılarınız",
   "Your own badges, matched against the stream's name with a pattern. Great for release groups, providers, or anything the built-in badges don't cover. Imported packs land here too.":
     "Yayın adıyla bir desene göre eşleştirilen özel rozetleriniz. Sürüm grupları, sağlayıcılar veya yerleşik rozetlerin kapsamadığı her şey için idealdir. İçe aktarılan paketler de buraya eklenir.",
@@ -1708,7 +1708,7 @@ const personalization: Record<string, string> = {
   "bot token": "bot token'ı",
   "box above.": "kutusuna yapıştır.",
   "by @{handle}": "@{handle} tarafından",
-  "by Harbor contributors": "Harbor'a katkıda bulunanlar tarafından",
+  "by Lart contributors": "Lart'a katkıda bulunanlar tarafından",
   "by {name}": "{name} tarafından",
   "cancel anytime": "istediğiniz zaman iptal edin",
   "chat ID": "sohbet kimliği",
@@ -1723,14 +1723,14 @@ const personalization: Record<string, string> = {
     "filmi baştan sona izlediniz. İstediğiniz zaman yeni bir yolculuğa başlayın.",
   "for higher rate limits; leave blank for the free anonymous tier.":
     "daha yüksek istek sınırları için; ücretsiz anonim katmanı kullanmak için boş bırakın.",
-  "from the Harbor repo into a new directory as": "dosyasını yeni bir dizine şu adla kopyalayın:",
+  "from the Lart repo into a new directory as": "dosyasını yeni bir dizine şu adla kopyalayın:",
   hidden: "gizli",
   "hours watched": "saat izlendi",
   "https:// API or site URL": "https:// API veya site URL'si",
   "https://posters.example.com or a pattern with {id}":
     "https://posters.example.com veya {id} içeren bir desen",
   "https://sync.harbor.site": "https://sync.harbor.site",
-  "in Harbor settings.": "alanına yazılır.",
+  "in Lart settings.": "alanına yazılır.",
   "in {time}": "{time} sonra",
   "jina_...": "jina_...",
   "language. Home filters to it.": "dil. Ana sayfa buna göre filtrelenir.",
@@ -1740,7 +1740,7 @@ const personalization: Record<string, string> = {
   mpv: "mpv",
   "mpv on the desktop app, HTML5 in the browser. The right engine without thinking about it.":
     "Masaüstü uygulamasında mpv, tarayıcıda HTML5. Düşünmenize gerek kalmadan doğru motor.",
-  "name it Harbor, hit": "Harbor adını ver ve şuna bas:",
+  "name it Lart, hit": "Lart adını ver ve şuna bas:",
   "next to it:": "yanına kaydedin:",
   "no channel": "kanal yok",
   "not in your library": "kitaplığınızda değil",
@@ -1755,8 +1755,8 @@ const personalization: Record<string, string> = {
   "rpdb key": "RPDB anahtarı",
   shown: "gösterildi",
   skipped: "atlandı",
-  "stremio:// links now open in the Stremio app. Harbor will only install when you trigger it from inside Harbor.":
-    "stremio:// bağlantıları artık Stremio uygulamasında açılıyor. Harbor yalnızca Harbor içinden başlattığınızda yükleme yapacak.",
+  "stremio:// links now open in the Stremio app. Lart will only install when you trigger it from inside Lart.":
+    "stremio:// bağlantıları artık Stremio uygulamasında açılıyor. Lart yalnızca Lart içinden başlattığınızda yükleme yapacak.",
   "subdomain acts as the access token. There is no login.":
     "alt alan adı erişim anahtarı işlevi görür. Giriş gerekmez.",
   "subscriber API key": "abone API anahtarı",
@@ -1767,8 +1767,8 @@ const personalization: Record<string, string> = {
   "update available": "güncelleme mevcut",
   "v3 API key": "v3 API anahtarı",
   visible: "görünür",
-  "will be removed from Harbor. Anything you've set to use it will fall back to Inter.":
-    "Harbor'dan kaldırılacak. Bunu kullanacak şekilde ayarladığınız her şey Inter'a geri dönecek.",
+  "will be removed from Lart. Anything you've set to use it will fall back to Inter.":
+    "Lart'dan kaldırılacak. Bunu kullanacak şekilde ayarladığınız her şey Inter'a geri dönecek.",
   "with a WebSocket upgrade: opens a Watch Together room. State is held in a Durable Object, no persistence beyond the active session.":
     "WebSocket yükseltmesiyle bir Birlikte İzle odası açar. Durum bir Durable Object içinde tutulur ve etkin oturum sonrasında kalıcı olmaz.",
   "with your @handle in the body so we can match it to your account.":
@@ -1801,13 +1801,13 @@ const personalization: Record<string, string> = {
   "{done} of {total} watched so far.": "Şimdiye kadar {total} öğeden {done} tanesi izlendi.",
   "{label} handle": "{label} kullanıcı adı",
   "{name} imported to your library": "{name} kitaplığınıza içe aktarıldı",
-  "{name} on Harbor": "Harbor'da {name}",
-  "{name} will be removed from Harbor. Anything you've set to use it will fall back to Inter.":
-    "{name}, Harbor'dan kaldırılacak. Bunu kullanacak şekilde ayarladığınız her şey Inter'e geri dönecek.",
+  "{name} on Lart": "Lart'da {name}",
+  "{name} will be removed from Lart. Anything you've set to use it will fall back to Inter.":
+    "{name}, Lart'dan kaldırılacak. Bunu kullanacak şekilde ayarladığınız her şey Inter'e geri dönecek.",
   "{name}'s ratings": "{name} adlı kullanıcının puanları",
   "{n} / {max} items": "{n} / {max} öğe",
   "{n} / {max} lists": "{n} / {max} liste",
-  "{n} Harbor icons": "{n} Harbor simgesi",
+  "{n} Lart icons": "{n} Lart simgesi",
   "{n} addons don't provide streams and aren't listed.":
     "{n} eklenti yayın sağlamadığı için listelenmiyor.",
   "{n} addons run for you, with Debridge included: TorBox and Usenet accounts, so there is no debrid service to buy separately.":
@@ -1838,10 +1838,10 @@ const personalization: Record<string, string> = {
   "{n} services need attention": "{n} hizmetle ilgilenmeniz gerekiyor",
   "{n} tab locked": "{n} sekme kilitli",
   "{n} tab requires this profile's PIN.": "{n} sekme için bu profilin PIN'i gerekiyor.",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.":
-    "Bu oturumda {n} takip isteği engellendi. Harbor hiçbir telemetri verisi göndermez.",
-  "{n} tracker requests blocked this session. Harbor itself sends zero telemetry.":
-    "Bu oturumda {n} takip isteği engellendi. Harbor hiçbir telemetri verisi göndermez.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.":
+    "Bu oturumda {n} takip isteği engellendi. Lart hiçbir telemetri verisi göndermez.",
+  "{n} tracker requests blocked this session. Lart itself sends zero telemetry.":
+    "Bu oturumda {n} takip isteği engellendi. Lart hiçbir telemetri verisi göndermez.",
   "{n} uncached hidden": "Önbelleğe alınmamış {n} sonuç gizlendi",
   "{n}d left": "{n} gün kaldı",
   "{quota} available": "{quota} kullanılabilir",
@@ -1852,10 +1852,10 @@ const personalization: Record<string, string> = {
   "{shown} of {total} sources": "{total} kaynaktan {shown} tanesi",
   "{themeName} theme": "{themeName} teması",
   "{time} left": "{time} kaldı",
-  "{title} on Harbor": "Harbor'da {title}",
+  "{title} on Lart": "Lart'da {title}",
   "{used} / {limit} requests today.": "Bugün {used} / {limit} istek.",
-  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Harbor problem: pick another source, or give it a minute to finish caching and try again.":
-    "“Önbelleğe alınmış”, yalnızca eklentinizin bu dosyanın debrid hizmetinize zaten kaydedildiğini ve anında oynatılmaya hazır olduğunu düşündüğü anlamına gelir. Bu işaret her zaman doğru değildir; bazen dosya aslında henüz orada olmaz. Böyle bir durumda kaynak başlamaz veya kısa ve bozuk bir klip oynatılır. Bu Harbor kaynaklı bir sorun değildir. Başka bir kaynak seçin ya da önbelleğe alma işleminin tamamlanması için bir dakika bekleyip yeniden deneyin.",
+  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Lart problem: pick another source, or give it a minute to finish caching and try again.":
+    "“Önbelleğe alınmış”, yalnızca eklentinizin bu dosyanın debrid hizmetinize zaten kaydedildiğini ve anında oynatılmaya hazır olduğunu düşündüğü anlamına gelir. Bu işaret her zaman doğru değildir; bazen dosya aslında henüz orada olmaz. Böyle bir durumda kaynak başlamaz veya kısa ve bozuk bir klip oynatılır. Bu Lart kaynaklı bir sorun değildir. Başka bir kaynak seçin ya da önbelleğe alma işleminin tamamlanması için bir dakika bekleyip yeniden deneyin.",
 };
 
 export default personalization;

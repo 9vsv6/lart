@@ -21,6 +21,6 @@ export default {
   "games.match.use": "Bu oyunu kullan",
   "games.match.remove": "Eşleşmeyi kaldır",
   "games.match.source": "IGDB görselleri ve ayrıntıları",
-  "games.match.note": "Dosyanızla eşleşen sürümü seçin. Harbor özgün dosyayı ve dosya adını korur.",
+  "games.match.note": "Dosyanızla eşleşen sürümü seçin. Lart özgün dosyayı ve dosya adını korur.",
   "games.match.empty": "Oyun adını bölge veya revizyon etiketleri olmadan deneyin."
 };

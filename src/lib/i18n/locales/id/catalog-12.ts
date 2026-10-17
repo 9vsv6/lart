@@ -14,12 +14,12 @@ const catalog: Record<string, string> = {
   "Your Continue Watching, your watchlist and your addons.":
     "Lanjutkan Menonton, daftar tontonan, dan addon Anda.",
   "Your Discovery Queue": "Antrean Penemuan Anda",
-  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Harbor. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
-    "HTML dan CSS Anda dirender di dalam bingkai sandbox, sepenuhnya terisolasi dari bagian Harbor lainnya. Tulis seperti halaman kecil yang mandiri. Font dan latar belakang halaman dikontrol secara terpisah di atas dan diterapkan ke seluruh profil.",
-  "Your Harbor account": "Akun Harbor Anda",
-  "Your Harbor account is separate from your Stremio sign in. Create one free or sign in from Settings.":
-    "Akun Harbor Anda terpisah dari login Stremio. Buat akun gratis atau masuk melalui Pengaturan.",
-  "Your Harbor account is signed in on the TV.": "Akun Harbor Anda sudah masuk di TV.",
+  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Lart. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
+    "HTML dan CSS Anda dirender di dalam bingkai sandbox, sepenuhnya terisolasi dari bagian Lart lainnya. Tulis seperti halaman kecil yang mandiri. Font dan latar belakang halaman dikontrol secara terpisah di atas dan diterapkan ke seluruh profil.",
+  "Your Lart account": "Akun Lart Anda",
+  "Your Lart account is separate from your Stremio sign in. Create one free or sign in from Settings.":
+    "Akun Lart Anda terpisah dari login Stremio. Buat akun gratis atau masuk melalui Pengaturan.",
+  "Your Lart account is signed in on the TV.": "Akun Lart Anda sudah masuk di TV.",
   "Your IP or device is blocked. Some providers geo restrict or limit how many devices can connect at once.":
     "IP atau perangkat Anda diblokir. Beberapa penyedia membatasi wilayah atau jumlah perangkat yang dapat terhubung sekaligus.",
   "Your Letterboxd password": "Kata sandi Letterboxd Anda",
@@ -28,8 +28,8 @@ const catalog: Record<string, string> = {
   "Your MAL Lists": "Daftar MAL Anda",
   "Your MAL: {name}": "MAL Anda: {name}",
   "Your MyAnimeList is empty": "MyAnimeList Anda kosong",
-  "Your Roku is set to block control requests from apps on your network, so Harbor can't reach it. This is a one-time setting on the Roku.":
-    "Roku Anda diatur untuk memblokir permintaan kontrol dari aplikasi di jaringan Anda, sehingga Harbor tidak dapat menjangkaunya. Ini adalah pengaturan satu kali di Roku.",
+  "Your Roku is set to block control requests from apps on your network, so Lart can't reach it. This is a one-time setting on the Roku.":
+    "Roku Anda diatur untuk memblokir permintaan kontrol dari aplikasi di jaringan Anda, sehingga Lart tidak dapat menjangkaunya. Ini adalah pengaturan satu kali di Roku.",
   "Your Simkl plan-to-watch list has no episodes airing this month. Switch to All upcoming to browse everything.":
     "Daftar rencana tontonan Simkl Anda tidak memiliki episode yang tayang bulan ini. Beralih ke Semua mendatang untuk melihat semuanya.",
   "Your Streaming": "Streaming Anda",
@@ -65,8 +65,8 @@ const catalog: Record<string, string> = {
     'Addon Anda memberikan hasil untuk "{q}", tetapi tidak ada hasil yang dapat dibuka di sini.',
   "Your avatar, banner, and how the whole profile is styled.":
     "Avatar, banner, dan gaya seluruh profil Anda.",
-  "Your avatar, name, and handle across Harbor.":
-    "Avatar, nama, dan nama pengguna Anda di seluruh Harbor.",
+  "Your avatar, name, and handle across Lart.":
+    "Avatar, nama, dan nama pengguna Anda di seluruh Lart.",
   "Your award pack": "Paket penghargaan Anda",
   "Your badge pack": "Paket lencana Anda",
   "Your bank locked the account": "Bank Anda mengunci rekening",
@@ -100,9 +100,9 @@ const catalog: Record<string, string> = {
     "Teman Anda belum membagikan apa pun. Berbagi aktivitas dinonaktifkan secara default.",
   "Your groups": "Grup Anda",
   "Your handle": "Nama pengguna Anda",
-  "Your handle across Harbor, and your verified status.":
-    "Nama pengguna Anda di seluruh Harbor dan status verifikasi Anda.",
-  "Your handle across Harbor.": "Nama pengguna Anda di seluruh Harbor.",
+  "Your handle across Lart, and your verified status.":
+    "Nama pengguna Anda di seluruh Lart dan status verifikasi Anda.",
+  "Your handle across Lart.": "Nama pengguna Anda di seluruh Lart.",
   "Your handle, your themes, your settings. Signed in once, waiting on the next machine you open.":
     "Nama pengguna, tema, dan pengaturan Anda. Cukup masuk sekali, semuanya siap di perangkat berikutnya yang Anda buka.",
   "Your holiday plans": "Rencana liburan Anda",
@@ -111,8 +111,8 @@ const catalog: Record<string, string> = {
   "Your library and watch progress sync here.":
     "Perpustakaan dan progres tontonan Anda disinkronkan di sini.",
   "Your library is aboard.": "Perpustakaan Anda sudah siap.",
-  "Your library lives on Harbor. Connect to your computer and it shows up here.":
-    "Perpustakaan Anda berada di Harbor. Hubungkan ke komputer Anda dan perpustakaan akan muncul di sini.",
+  "Your library lives on Lart. Connect to your computer and it shows up here.":
+    "Perpustakaan Anda berada di Lart. Hubungkan ke komputer Anda dan perpustakaan akan muncul di sini.",
   "Your links": "Tautan Anda",
   "Your name": "Nama Anda",
   "Your name and the details shown at the top of your profile.":
@@ -241,7 +241,7 @@ const catalog: Record<string, string> = {
   "bot token": "token bot",
   "box above.": "kotak di atas.",
   "by @{handle}": "oleh @{handle}",
-  "by Harbor contributors": "oleh kontributor Harbor",
+  "by Lart contributors": "oleh kontributor Lart",
   "by {authors}": "oleh {authors}",
   "by {author}": "oleh {author}",
   "by {name}": "oleh {name}",
@@ -261,7 +261,7 @@ const catalog: Record<string, string> = {
   "checks in {count}m": "memeriksa dalam {count}m",
   "checks periodically": "memeriksa secara berkala",
   "chrome.backToTop": "Kembali ke atas",
-  "chrome.harborHome": "Beranda Harbor",
+  "chrome.harborHome": "Beranda Lart",
   "chrome.locked": "Terkunci",
   "chrome.lockedRequiresPin": "{label} (terkunci, memerlukan PIN)",
   "chrome.lockedShort": "{label} · terkunci",
@@ -312,8 +312,8 @@ const catalog: Record<string, string> = {
   "e.g. 20": "mis. 20",
   eBook: "eBook",
   "eBook actions": "tindakan eBook",
-  "eBook extensions use Harbor’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
-    "Ekstensi eBook menggunakan worker terisolasi, bridge HTTP, dan parser HTML Harbor, sandbox yang sama dengan yang digunakan ekstensi Manga. Hanya tambahkan repositori yang Anda percayai.",
+  "eBook extensions use Lart’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
+    "Ekstensi eBook menggunakan worker terisolasi, bridge HTTP, dan parser HTML Lart, sandbox yang sama dengan yang digunakan ekstensi Manga. Hanya tambahkan repositori yang Anda percayai.",
   "eBook source settings": "pengaturan sumber eBook",
   eBooks: "eBook",
   "each card on a browse/search page.": "setiap kartu di halaman jelajah/pencarian.",
@@ -335,7 +335,7 @@ const catalog: Record<string, string> = {
     "untuk batas laju yang lebih tinggi; biarkan kosong untuk tingkat anonim gratis.",
   "for {count} more episodes": "untuk {count} episode lagi",
   "found by": "ditemukan oleh",
-  "from the Harbor repo into a new directory as": "dari repo Harbor ke direktori baru sebagai",
+  "from the Lart repo into a new directory as": "dari repo Lart ke direktori baru sebagai",
   "from {source}": "dari {source}",
   "grabs lazy-loaded images.": "mengambil gambar yang dimuat saat diperlukan.",
   "grid view": "tampilan kisi",
@@ -362,7 +362,7 @@ const catalog: Record<string, string> = {
   "if the site blocks hotlinked images.": "jika situs memblokir gambar yang ditautkan langsung.",
   "igv (gist)": "igv (gist)",
   "in 24h": "dalam 24 jam",
-  "in Harbor settings.": "di pengaturan Harbor.",
+  "in Lart settings.": "di pengaturan Lart.",
   "in {d} days": "dalam {d} hari",
   "in {n} weeks": "dalam {n} minggu",
   "in {n} weeks#few": "dalam {n} minggu#few",
@@ -373,8 +373,8 @@ const catalog: Record<string, string> = {
   "is a page number. Add": "adalah nomor halaman. Tambahkan",
   "is a regex for the part to change": "adalah regex untuk bagian yang akan diubah",
   "is each chapter row": "adalah setiap baris bab",
-  "is how many items to skip, starting at 0. Harbor auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
-    "adalah jumlah item yang dilewati, dimulai dari 0. Harbor otomatis mendeteksi ukuran halaman situs dan menelusurinya untuk Anda, jadi Anda tidak perlu mengatur ukuran halaman. Gunakan ini jika URL menghitung item.",
+  "is how many items to skip, starting at 0. Lart auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
+    "adalah jumlah item yang dilewati, dimulai dari 0. Lart otomatis mendeteksi ukuran halaman situs dan menelusurinya untuk Anda, jadi Anda tidak perlu mengatur ukuran halaman. Gunakan ini jika URL menghitung item.",
   "is not an image we can read": "bukan gambar yang dapat kami baca",
   "is now using your new configuration.": "kini menggunakan konfigurasi baru Anda.",
   "is ready. Open Discover or hit Play on a title to use it.":
@@ -401,8 +401,8 @@ const catalog: Record<string, string> = {
   "lead roles": "peran utama",
   left: "kiri",
   "letterboxd.com/username/list/slug": "letterboxd.com/username/list/slug",
-  "libmpv did not load, so playback falls back to HTML5 and formats like MKV may refuse to play. On Linux, install your distribution's libmpv package, then restart Harbor.":
-    "libmpv gagal dimuat, jadi pemutaran beralih ke HTML5 dan format seperti MKV mungkin tidak dapat diputar. Di Linux, instal paket libmpv distribusi Anda, lalu mulai ulang Harbor.",
+  "libmpv did not load, so playback falls back to HTML5 and formats like MKV may refuse to play. On Linux, install your distribution's libmpv package, then restart Lart.":
+    "libmpv gagal dimuat, jadi pemutaran beralih ke HTML5 dan format seperti MKV mungkin tidak dapat diputar. Di Linux, instal paket libmpv distribusi Anda, lalu mulai ulang Lart.",
   like: "seperti",
   "limit reached": "batas tercapai",
   lineups: "susunan",
@@ -422,13 +422,13 @@ const catalog: Record<string, string> = {
   "more events": "acara lainnya",
   movies: "film",
   mpv: "mpv",
-  "mpv is required for recording. Install mpv and restart Harbor.":
-    "mpv diperlukan untuk merekam. Instal mpv dan mulai ulang Harbor.",
+  "mpv is required for recording. Install mpv and restart Lart.":
+    "mpv diperlukan untuk merekam. Instal mpv dan mulai ulang Lart.",
   "mpv on the desktop app, HTML5 in the browser. The right engine without thinking about it.":
     "mpv di aplikasi desktop, HTML5 di browser. Mesin yang tepat tanpa perlu memikirkannya.",
   "mpv.conf": "mpv.conf",
   "n/a": "t/a",
-  "name it Harbor, hit": "beri nama Harbor, tekan",
+  "name it Lart, hit": "beri nama Lart, tekan",
   "natural-harmonia-gropius/hdr-toys": "natural-harmonia-gropius/hdr-toys",
   "nav.addons": "Addon",
   "nav.anime": "Anime",
@@ -551,8 +551,8 @@ const catalog: Record<string, string> = {
   stars: "bintang",
   stats: "statistik",
   "stremio:// link": "tautan stremio://",
-  "stremio:// links now open in the Stremio app. Harbor will only install when you trigger it from inside Harbor.":
-    "tautan stremio:// kini dibuka di aplikasi Stremio. Harbor hanya akan diinstal saat Anda memicunya dari dalam Harbor.",
+  "stremio:// links now open in the Stremio app. Lart will only install when you trigger it from inside Lart.":
+    "tautan stremio:// kini dibuka di aplikasi Stremio. Lart hanya akan diinstal saat Anda memicunya dari dalam Lart.",
   "stremio://… or https://…/manifest.json": "stremio://… atau https://…/manifest.json",
   "stub files": "file stub",
   "study, character, quote": "studi, karakter, kutipan",
@@ -611,14 +611,14 @@ const catalog: Record<string, string> = {
   "update.errorServer": "Terjadi kesalahan saat menghubungkan ke server pembaruan.",
   "update.failed": "Pembaruan gagal",
   "update.fetching": "Mengambil versi terbaru",
-  "update.harborVersion": "Harbor {version}",
+  "update.harborVersion": "Lart {version}",
   "update.installRestart": "Instal dan mulai ulang",
   "update.installing": "Menginstal pembaruan",
-  "update.keepUsing": "Tetap gunakan Harbor selama pengunduhan",
+  "update.keepUsing": "Tetap gunakan Lart selama pengunduhan",
   "update.later": "Nanti",
   "update.of": "{downloaded} dari {total}",
   "update.ready": "Pembaruan siap diinstal",
-  "update.restartAuto": "Harbor akan dimulai ulang secara otomatis.",
+  "update.restartAuto": "Lart akan dimulai ulang secara otomatis.",
   "update.tryAgain": "Coba lagi",
   "v3 API key": "kunci API v3",
   via: "melalui",
@@ -630,9 +630,9 @@ const catalog: Record<string, string> = {
   "welcome.dismiss": "Mulai",
   "welcome.subtitle":
     "Antarmuka kini menggunakan bahasa Arab. Anda dapat beralih kembali kapan saja dari Pengaturan.",
-  "welcome.title": "Selamat datang di Harbor",
-  "will be removed from Harbor. Anything you've set to use it will fall back to Inter.":
-    "akan dihapus dari Harbor. Semua yang Anda atur untuk menggunakannya akan kembali menggunakan Inter.",
+  "welcome.title": "Selamat datang di Lart",
+  "will be removed from Lart. Anything you've set to use it will fall back to Inter.":
+    "akan dihapus dari Lart. Semua yang Anda atur untuk menggunakannya akan kembali menggunakan Inter.",
   "window.harbor API": "API window.harbor",
   "with a WebSocket upgrade: opens a Watch Together room. State is held in a Durable Object, no persistence beyond the active session.":
     "dengan peningkatan WebSocket: membuka ruang Nonton Bersama. Status disimpan dalam Durable Object, tanpa persistensi setelah sesi aktif berakhir.",
@@ -756,8 +756,8 @@ const catalog: Record<string, string> = {
     "{count} judul tidak akan pernah menampilkan peringatan konten lagi.",
   "{count} titles will never show the content advisory again.#one":
     "{count} judul tidak akan pernah menampilkan peringatan konten lagi.",
-  "{count} tracker request blocked this session. Harbor itself sends zero telemetry.":
-    "{count} permintaan pelacak diblokir dalam sesi ini. Harbor sendiri sama sekali tidak mengirim telemetri.",
+  "{count} tracker request blocked this session. Lart itself sends zero telemetry.":
+    "{count} permintaan pelacak diblokir dalam sesi ini. Lart sendiri sama sekali tidak mengirim telemetri.",
   "{count} views": "{count} tayangan",
   "{count} vols": "{count} jilid",
   "{count} volume": "{count} jilid",
@@ -778,14 +778,14 @@ const catalog: Record<string, string> = {
   "{count}w": "{count}mg",
   "{count}w ago": "{count}mg lalu",
   "{count}y ago": "{count}thn lalu",
-  "{deviceLabel} can't decode this stream natively ({reasons}). Harbor uses ffmpeg to convert it into a format your TV understands.":
-    "{deviceLabel} tidak dapat mendekode stream ini secara native ({reasons}). Harbor menggunakan ffmpeg untuk mengonversinya ke format yang dipahami TV Anda.",
+  "{deviceLabel} can't decode this stream natively ({reasons}). Lart uses ffmpeg to convert it into a format your TV understands.":
+    "{deviceLabel} tidak dapat mendekode stream ini secara native ({reasons}). Lart menggunakan ffmpeg untuk mengonversinya ke format yang dipahami TV Anda.",
   "{deviceLabel} can't play this stream ({reasons}) and none of the {count} available alternatives match its capabilities.":
     "{deviceLabel} tidak dapat memutar stream ini ({reasons}) dan tidak satu pun dari {count} alternatif yang tersedia sesuai dengan kemampuannya.",
   '{deviceLabel} can\'t play this stream ({reasons}). Click "Pick another" first to load alternatives, then try casting again.':
     '{deviceLabel} tidak dapat memutar stream ini ({reasons}). Klik "Pilih yang lain" terlebih dahulu untuk memuat alternatif, lalu coba transmisikan lagi.',
-  "{deviceName} is an audio-only device. Harbor can't transcode video to audio yet, so this device can only stream audio files. Pick a TV, Chromecast, or display-equipped device to stream video.":
-    "{deviceName} adalah perangkat khusus audio. Harbor belum dapat mentranskode video menjadi audio, jadi perangkat ini hanya dapat melakukan stream file audio. Pilih TV, Chromecast, atau perangkat berlayar untuk melakukan stream video.",
+  "{deviceName} is an audio-only device. Lart can't transcode video to audio yet, so this device can only stream audio files. Pick a TV, Chromecast, or display-equipped device to stream video.":
+    "{deviceName} adalah perangkat khusus audio. Lart belum dapat mentranskode video menjadi audio, jadi perangkat ini hanya dapat melakukan stream file audio. Pilih TV, Chromecast, atau perangkat berlayar untuk melakukan stream video.",
   "{done} of {total}": "{done} dari {total}",
   "{done} of {total} films picked.": "{done} dari {total} film dipilih.",
   "{done} of {total} picked": "{done} dari {total} dipilih",
@@ -793,8 +793,8 @@ const catalog: Record<string, string> = {
   "{done} of {total} watched so far.": "Sejauh ini, {done} dari {total} sudah ditonton.",
   "{d}d ago": "{d}h lalu",
   "{facet} filter: {value}": "Filter {facet}: {value}",
-  "{file} is empty. Start typing to restyle Harbor.":
-    "{file} kosong. Mulailah mengetik untuk mengubah gaya Harbor.",
+  "{file} is empty. Start typing to restyle Lart.":
+    "{file} kosong. Mulailah mengetik untuk mengubah gaya Lart.",
   "{first} and {second}": "{first} dan {second}",
   "{format} added to Downloads": "{format} ditambahkan ke Unduhan",
   "{genreA} + {genreB}": "{genreA} + {genreB}",
@@ -850,12 +850,12 @@ const catalog: Record<string, string> = {
   "{name} is over 100 MB.": "{name} berukuran lebih dari 100 MB.",
   "{name} is taken": "{name} sudah digunakan",
   "{name} left the video": "{name} keluar dari video",
-  "{name} on Harbor": "{name} di Harbor",
+  "{name} on Lart": "{name} di Lart",
   "{name} reached {count} five-star ratings": "{name} mencapai {count} penilaian bintang lima",
   "{name} started watching": "{name} mulai menonton",
   "{name} wants you here": "{name} ingin Anda berada di sini",
-  "{name} will be removed from Harbor. Anything you've set to use it will fall back to Inter.":
-    "{name} akan dihapus dari Harbor. Semua yang Anda atur untuk menggunakannya akan kembali menggunakan Inter.",
+  "{name} will be removed from Lart. Anything you've set to use it will fall back to Inter.":
+    "{name} akan dihapus dari Lart. Semua yang Anda atur untuk menggunakannya akan kembali menggunakan Inter.",
   "{name} · since {year}": "{name} · sejak {year}",
   "{name}'s ratings": "Penilaian {name}",
   "{name}'s {sub}": "{sub} {name}",
@@ -867,7 +867,7 @@ const catalog: Record<string, string> = {
   "{n} / {max} lists": "{n} / {max} daftar",
   "{n} / {max} titles": "{n} / {max} judul",
   "{n} GB": "{n} GB",
-  "{n} Harbor icons": "{n} ikon Harbor",
+  "{n} Lart icons": "{n} ikon Lart",
   "{n} LIVE": "{n} LANGSUNG",
   "{n} active": "{n} aktif",
   "{n} addon": "{n} addon",

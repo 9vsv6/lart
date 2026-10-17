@@ -14,7 +14,7 @@ export default {
   "games.mods.backupNote": "تُحفظ الإصدارات المستبدلة في نسخة احتياطية محلية. استخدم استعادة السابق في إعدادك للرجوع؛ سيُعاد فحص الاعتماديات.",
   "games.mods.currentVersion": "المثبّت: {version}",
   "games.mods.current": "مثبّت",
-  "games.mods.versionNote": "اختر إصدارًا متوافقًا. يراجع Harbor التغييرات ويحتفظ بالإصدار السابق محليًا. أغلق Minecraft قبل تطبيق التغييرات.",
+  "games.mods.versionNote": "اختر إصدارًا متوافقًا. يراجع Lart التغييرات ويحتفظ بالإصدار السابق محليًا. أغلق Minecraft قبل تطبيق التغييرات.",
   "games.mods.applyChanges": "تطبيق التغييرات",
   "games.mods.reviewChanges": "مراجعة التغييرات",
   "games.mods.previousVersion": "السابق: {version}",

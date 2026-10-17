@@ -2,7 +2,7 @@ export default {
   "games.links.title": "链接",
   "games.links.sort": "排序链接",
   "games.links.note": "按网址从 A 到 Z 排序。名称和目标地址保持不变。",
-  "games.links.available": "使用 Harbor 中已有的链接。新发现的链接将显示在已保存的顺序之后。",
+  "games.links.available": "使用 Lart 中已有的链接。新发现的链接将显示在已保存的顺序之后。",
   "games.links.original": "恢复原始顺序",
   "games.links.applied": "已更新 {count} 个游戏的链接。",
   "games.links.changes": "将更改 {count} 个游戏。",

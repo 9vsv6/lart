@@ -35,30 +35,30 @@ const wired: Record<string, string> = {
   "Store each title in its own folder with its EPUB or PDF":
     "Сохранять каждое название в отдельной папке с файлом EPUB или PDF",
   "Default location": "Папка по умолчанию",
-  "{deviceName} is an audio-only device. Harbor can't transcode video to audio yet, so this device can only stream audio files. Pick a TV, Chromecast, or display-equipped device to stream video.":
-    "Устройство {deviceName} поддерживает только звук. Harbor пока не умеет преобразовывать видео в аудио, поэтому на это устройство можно транслировать только аудиофайлы. Для видео выберите телевизор, Chromecast или устройство с экраном.",
+  "{deviceName} is an audio-only device. Lart can't transcode video to audio yet, so this device can only stream audio files. Pick a TV, Chromecast, or display-equipped device to stream video.":
+    "Устройство {deviceName} поддерживает только звук. Lart пока не умеет преобразовывать видео в аудио, поэтому на это устройство можно транслировать только аудиофайлы. Для видео выберите телевизор, Chromecast или устройство с экраном.",
   '{deviceLabel} can\'t play this stream ({reasons}). Click "Pick another" first to load alternatives, then try casting again.':
     "{deviceLabel} не может воспроизвести этот поток ({reasons}). Сначала нажмите «Выбрать другой», чтобы загрузить альтернативы, затем повторите трансляцию.",
   "{deviceLabel} can't play this stream ({reasons}) and none of the {count} available alternatives match its capabilities.":
     "{deviceLabel} не может воспроизвести этот поток ({reasons}), и ни один из {count} доступных вариантов не соответствует возможностям устройства.",
   "Install ffmpeg": "Установить ffmpeg",
-  "{deviceLabel} can't decode this stream natively ({reasons}). Harbor uses ffmpeg to convert it into a format your TV understands.":
-    "{deviceLabel} не может напрямую декодировать этот поток ({reasons}). Harbor использует ffmpeg, чтобы преобразовать его в формат, понятный телевизору.",
-  "Restart Harbor after the install completes.": "После завершения установки перезапустите Harbor.",
+  "{deviceLabel} can't decode this stream natively ({reasons}). Lart uses ffmpeg to convert it into a format your TV understands.":
+    "{deviceLabel} не может напрямую декодировать этот поток ({reasons}). Lart использует ffmpeg, чтобы преобразовать его в формат, понятный телевизору.",
+  "Restart Lart after the install completes.": "После завершения установки перезапустите Lart.",
   "Open the cast menu and try this device again.":
     "Откройте меню трансляции и снова выберите это устройство.",
   "Enable Roku Network Access": "Разрешить сетевой доступ к Roku",
-  "Your Roku is set to block control requests from apps on your network, so Harbor can't reach it. This is a one-time setting on the Roku.":
-    "В настройках Roku заблокированы команды управления от приложений в вашей сети, поэтому Harbor не может подключиться. Этот параметр нужно изменить на Roku только один раз.",
+  "Your Roku is set to block control requests from apps on your network, so Lart can't reach it. This is a one-time setting on the Roku.":
+    "В настройках Roku заблокированы команды управления от приложений в вашей сети, поэтому Lart не может подключиться. Этот параметр нужно изменить на Roku только один раз.",
   "On your Roku remote, press Home.": "На пульте Roku нажмите Home.",
   "Open Settings, then System, then Advanced system settings.":
     "Откройте Settings, затем System и Advanced system settings.",
   'Select "Control by mobile apps" and set Network access to "Default".':
     "Выберите «Control by mobile apps» и установите для Network access значение «Default».",
-  "Come back to Harbor and try casting again.": "Вернитесь в Harbor и повторите трансляцию.",
+  "Come back to Lart and try casting again.": "Вернитесь в Lart и повторите трансляцию.",
   "Couldn't reach this Roku": "Не удалось подключиться к Roku",
-  "Harbor found something at this address that looked like a Roku, but it didn't respond like one. The device may be offline or another product picked up the same broadcast.":
-    "Harbor обнаружил по этому адресу устройство, похожее на Roku, но оно ответило иначе. Возможно, устройство не в сети или на тот же сетевой сигнал откликнулся другой продукт.",
+  "Lart found something at this address that looked like a Roku, but it didn't respond like one. The device may be offline or another product picked up the same broadcast.":
+    "Lart обнаружил по этому адресу устройство, похожее на Roku, но оно ответило иначе. Возможно, устройство не в сети или на тот же сетевой сигнал откликнулся другой продукт.",
   "Make sure the Roku is powered on and on the same Wi-Fi as your computer.":
     "Убедитесь, что Roku включён и подключён к той же сети Wi-Fi, что и компьютер.",
   "Close the cast menu and reopen it to rescan the network.":
@@ -73,8 +73,8 @@ const wired: Record<string, string> = {
   'Search for "Media Assistant" (channel ID 782875, free).':
     "Найдите «Media Assistant» (ID канала 782875, бесплатно).",
   "Install it.": "Установите его.",
-  "Harbor uses ffmpeg to convert streams into formats TVs can play. It's a one-time install and Harbor will pick it up automatically.":
-    "Harbor использует ffmpeg, чтобы преобразовывать потоки в форматы, которые поддерживают телевизоры. Установить его нужно только один раз, после чего Harbor обнаружит его автоматически.",
+  "Lart uses ffmpeg to convert streams into formats TVs can play. It's a one-time install and Lart will pick it up automatically.":
+    "Lart использует ffmpeg, чтобы преобразовывать потоки в форматы, которые поддерживают телевизоры. Установить его нужно только один раз, после чего Lart обнаружит его автоматически.",
   "Could not cast to {deviceName}.": "Не удалось выполнить трансляцию на {deviceName}.",
   "Clip saved to {path}": "Клип сохранён: {path}",
   "Clip save failed": "Не удалось сохранить клип",
@@ -93,22 +93,22 @@ const wired: Record<string, string> = {
   "Read EPUB, text, Markdown, and HTML books already on this device.":
     "Читайте книги EPUB, текстовые, Markdown и HTML-файлы, уже сохранённые на этом устройстве.",
   "Install an extension": "Установить расширение",
-  "Add trusted eBook sources from a Harbor-compatible repository.":
-    "Добавьте доверенные источники электронных книг из совместимого с Harbor репозитория.",
+  "Add trusted eBook sources from a Lart-compatible repository.":
+    "Добавьте доверенные источники электронных книг из совместимого с Lart репозитория.",
   "Connect a source": "Подключить источник",
   "Bring a server-rendered library aboard with your own source configuration.":
     "Подключите библиотеку, которую отдаёт ваш сервер, с помощью собственной конфигурации источника.",
-  "Harbor reading room": "Читальный зал Harbor",
+  "Lart reading room": "Читальный зал Lart",
   "Your shelf is": "Ваша полка",
   "ready for a story.": "ждёт новую историю.",
-  "Set up at least one readable eBook source to begin. Metadata can describe a book, but a folder, extension, or custom source is what lets Harbor open it.":
-    "Чтобы начать, настройте хотя бы один доступный для чтения источник электронных книг. Метаданные могут описать книгу, но открыть её Harbor сможет только из папки, расширения или пользовательского источника.",
+  "Set up at least one readable eBook source to begin. Metadata can describe a book, but a folder, extension, or custom source is what lets Lart open it.":
+    "Чтобы начать, настройте хотя бы один доступный для чтения источник электронных книг. Метаданные могут описать книгу, но открыть её Lart сможет только из папки, расширения или пользовательского источника.",
   "Set up eBooks": "Настроить электронные книги",
-  "Harbor never hosts your books or source files.": "Harbor не хранит ваши книги и исходные файлы.",
+  "Lart never hosts your books or source files.": "Lart не хранит ваши книги и исходные файлы.",
   "Reserved for your next book": "Место для вашей следующей книги",
   "Ways to add an eBook source": "Способы добавить источник электронных книг",
-  "Harbor {version} downloaded but did not install on its own.":
-    "Версия Harbor {version} загружена, но не установилась автоматически.",
+  "Lart {version} downloaded but did not install on its own.":
+    "Версия Lart {version} загружена, но не установилась автоматически.",
   "Mark as unwatched": "Отметить непросмотренным",
   "Mark as watched": "Отметить просмотренным",
   "Mark watched up to here": "Отметить просмотренным до этого места",
@@ -116,8 +116,8 @@ const wired: Record<string, string> = {
   "Hide episode": "Скрыть серию",
   "Loading {hostname}": "Загрузка {hostname}",
   "Still loading?": "Всё ещё загружается?",
-  "This site may not support Harbor's temporary viewer. Retry the original link or open it in your browser.":
-    "Возможно, сайт не поддерживает временный просмотрщик Harbor. Повторите попытку с исходной ссылкой или откройте её в браузере.",
+  "This site may not support Lart's temporary viewer. Retry the original link or open it in your browser.":
+    "Возможно, сайт не поддерживает временный просмотрщик Lart. Повторите попытку с исходной ссылкой или откройте её в браузере.",
   "External site: {hostname}": "Внешний сайт: {hostname}",
   "External | {hostname}": "Внешний сайт | {hostname}",
   "Reload original link": "Повторно загрузить исходную ссылку",
@@ -133,7 +133,7 @@ const wired: Record<string, string> = {
     "Доступ к буферу обмена заблокирован. Вставьте ссылку вручную.",
   "Setup · {title}": "Настройка · {title}",
   "Loading {title}": "Загрузка {title}",
-  "{title} won't load inside Harbor.": "Не удаётся загрузить {title} внутри Harbor.",
+  "{title} won't load inside Lart.": "Не удаётся загрузить {title} внутри Lart.",
   "Open it in a regular browser, set it up there, then come back and paste the install link below.":
     "Откройте страницу в обычном браузере, выполните настройку, затем вернитесь и вставьте ссылку установки ниже.",
   "Configure the addon above, then copy its manifest URL and paste it here. The web app can't catch the Install button automatically the way the desktop app does.":
@@ -142,7 +142,7 @@ const wired: Record<string, string> = {
     "Вставьте URL манифеста или нажмите Install на странице настройки дополнения выше.",
   "stremio://… or https://…/manifest.json": "stremio://… или https://…/manifest.json",
   "From clipboard": "Из буфера обмена",
-  "Finish updating Harbor": "Завершить обновление Harbor",
+  "Finish updating Lart": "Завершить обновление Lart",
   "Download and run the installer to finish updating. If it keeps failing, run it as administrator once.":
     "Скачайте и запустите установщик, чтобы завершить обновление. Если ошибка повторится, один раз запустите его от имени администратора.",
   "Restart to update": "Перезапустить для обновления",

@@ -1,6 +1,6 @@
 export default {
   "floatingPlayer.playbackSettings": "Cài đặt phát",
-  "floatingPlayer.restoreVideo": "Quay lại Harbor",
+  "floatingPlayer.restoreVideo": "Quay lại Lart",
   "floatingPlayer.closeVideo": "Dừng và đóng",
   "floatingPlayer.chapters": "Chương",
   "floatingPlayer.subtitleDelay": "Độ trễ phụ đề",

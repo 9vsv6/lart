@@ -42,7 +42,7 @@ const chrome: Record<string, string> = {
   "chrome.parentalOn": "Đã bật kiểm soát của phụ huynh",
   "chrome.lockedRequiresPin": "{label} (đã khóa, cần PIN)",
   "chrome.lockedShort": "{label} · đã khóa",
-  "chrome.harborHome": "Trang chủ Harbor",
+  "chrome.harborHome": "Trang chủ Lart",
   "chrome.sectionLibrary": "Thư viện",
   "profile.whoWatching": "Ai đang xem",
   "profile.editThis": "Chỉnh sửa hồ sơ này",
@@ -53,7 +53,7 @@ const chrome: Record<string, string> = {
   "profile.primary": "Chính",
   "profile.signedIn": "Đã đăng nhập vào Stremio",
   "profile.fallback": "Hồ sơ",
-  "welcome.title": "Chào mừng đến với Harbor",
+  "welcome.title": "Chào mừng đến với Lart",
   "welcome.subtitle":
     "Giao diện hiện đã dùng tiếng Việt. Bạn có thể đổi lại bất cứ lúc nào trong Cài đặt.",
   "welcome.dismiss": "Bắt đầu",

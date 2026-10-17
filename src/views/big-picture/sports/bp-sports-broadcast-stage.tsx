@@ -30,7 +30,7 @@ function autoplaying(embed: string, platform: EsportsStream["platform"]): string
   );
 }
 
-// Twitch refuses every iframe at Harbor's packaged origin, so it plays as its own document.
+// Twitch refuses every iframe at Lart's packaged origin, so it plays as its own document.
 function openBroadcastWindow(url: string) {
   if (!("__TAURI_INTERNALS__" in window)) {
     openUrl(url);

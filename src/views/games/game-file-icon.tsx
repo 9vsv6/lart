@@ -1,4 +1,4 @@
-/** Original file marks; extensions identify the format, not whether Harbor can install it. */
+/** Original file marks; extensions identify the format, not whether Lart can install it. */
 export function gameFileFormat(filename: string): { kind: "archive" | "disc" | "installer" | "rom" | "file"; label: string } {
   const name = filename.trim().toLowerCase();
   const packed = /\.(zip|7z|rar)(?:\.\d{3})?$/.exec(name);

@@ -268,17 +268,17 @@ export function pushConfigToPairedHarbors(config: PlayOnConfig): Promise<PlayOnC
 }
 
 export function failureText(reason: string): string {
-  if (reason === "remote-off") return "Remote control is off on that Harbor";
-  if (reason === "off") return "Remote control is switched off on that Harbor";
-  if (reason === "not-paired") return "Pair with that Harbor before you can drive it";
-  if (reason === "untrusted") return "That Harbor does not trust this computer. Pair with it again.";
-  if (reason === "expired") return "That Harbor forgot this computer. Pair with it again.";
-  if (reason === "no-response") return "That Harbor did not answer";
-  if (reason === "no-ack") return "That Harbor answered but never confirmed the command";
-  if (reason === "busy") return "That Harbor is busy with another device";
-  if (reason === "refused") return "That Harbor refused the command";
-  if (reason === "closed") return "That Harbor closed the connection";
-  return "Could not reach that Harbor";
+  if (reason === "remote-off") return "Remote control is off on that Lart";
+  if (reason === "off") return "Remote control is switched off on that Lart";
+  if (reason === "not-paired") return "Pair with that Lart before you can drive it";
+  if (reason === "untrusted") return "That Lart does not trust this computer. Pair with it again.";
+  if (reason === "expired") return "That Lart forgot this computer. Pair with it again.";
+  if (reason === "no-response") return "That Lart did not answer";
+  if (reason === "no-ack") return "That Lart answered but never confirmed the command";
+  if (reason === "busy") return "That Lart is busy with another device";
+  if (reason === "refused") return "That Lart refused the command";
+  if (reason === "closed") return "That Lart closed the connection";
+  return "Could not reach that Lart";
 }
 
 export function needsPairing(reason: string): boolean {

@@ -73,7 +73,7 @@ async function firstDecoded(candidates: (string | undefined)[]): Promise<string 
   }
 }
 
-/** Harbor's player group mark, kept legible beside compact live counts. */
+/** Lart's player group mark, kept legible beside compact live counts. */
 export function PlayersMark() {
   return <svg className="games-players-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.65" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3.1" /><path d="M3 20v-3a6 6 0 0 1 12 0v3H3ZM16.5 4.7a3.1 3.1 0 0 1 0 6M18 13.3a5.2 5.2 0 0 1 3 4.7v2h-3" /></svg>;
 }

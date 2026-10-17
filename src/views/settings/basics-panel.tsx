@@ -123,7 +123,7 @@ export function BasicsPanel() {
         <SRow
           title={t("Player engine")}
           description={t(
-            "Auto uses mpv when Harbor can reach it and falls back to the built in player. Pick one yourself if playback misbehaves.",
+            "Auto uses mpv when Lart can reach it and falls back to the built in player. Pick one yourself if playback misbehaves.",
           )}
           onClick={() => setActive("player")}
           trailing={
@@ -137,7 +137,7 @@ export function BasicsPanel() {
         <SRow
           title={t("Preferred languages")}
           description={t(
-            "Harbor puts streams, audio tracks and subtitles in these languages first. Leave it empty to accept anything.",
+            "Lart puts streams, audio tracks and subtitles in these languages first. Leave it empty to accept anything.",
           )}
           onClick={() => setActive("language")}
           trailing={
@@ -163,7 +163,7 @@ export function BasicsPanel() {
         <SRow
           title={t("Instant")}
           description={t(
-            "Harbor picks the best stream it can find and starts playing straight away.",
+            "Lart picks the best stream it can find and starts playing straight away.",
           )}
           onClick={() => update({ instantPlay: true })}
           trailing={<Picked on={settings.instantPlay} />}
@@ -171,7 +171,7 @@ export function BasicsPanel() {
         <SRow
           title={t("Pick a source")}
           description={t(
-            "Harbor shows the full list of streams every time so you choose one yourself.",
+            "Lart shows the full list of streams every time so you choose one yourself.",
           )}
           onClick={() => update({ instantPlay: false })}
           trailing={<Picked on={!settings.instantPlay} />}

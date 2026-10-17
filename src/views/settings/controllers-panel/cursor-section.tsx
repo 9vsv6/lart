@@ -25,7 +25,7 @@ const IDLE_MS_STEP = 500;
 function presetLabel(id: ControllerCursorId, t: (s: string) => string): string {
   if (id === "ring") return t("Ring");
   if (id === "arrow") return t("Pointer");
-  if (id === "harbor") return t("Harbor");
+  if (id === "harbor") return t("Lart");
   if (id === "custom") return t("Custom");
   return t("Dot");
 }
@@ -82,7 +82,7 @@ export function CursorSection() {
     <Section
       title={t("Controller cursor")}
       subtitle={t(
-        "The pointer your right stick moves around Harbor. Pick a shape or use your own image.",
+        "The pointer your right stick moves around Lart. Pick a shape or use your own image.",
       )}
     >
       <ToggleRow
@@ -142,7 +142,7 @@ export function CursorSection() {
 
           <SettingRow
             label={t("Your own image")}
-            desc={t("PNG, WEBP, SVG or GIF. Harbor shrinks it to 128px so it stays small on disk.")}
+            desc={t("PNG, WEBP, SVG or GIF. Lart shrinks it to 128px so it stays small on disk.")}
             warn={
               failed ? t("That image could not be used. Try a smaller PNG or WEBP.") : undefined
             }

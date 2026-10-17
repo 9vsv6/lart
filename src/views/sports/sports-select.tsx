@@ -1,7 +1,7 @@
 import { Dropdown, type DropdownOption } from "@/components/dropdown";
 import "./sports-select.css";
 
-/** Shared Harbor menu, with the compact Sports control treatment. */
+/** Shared Lart menu, with the compact Sports control treatment. */
 export function SportsSelect({
   className = "",
   ...props

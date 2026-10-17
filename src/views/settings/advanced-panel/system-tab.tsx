@@ -34,7 +34,7 @@ export function SystemTab() {
         <Section
           title={t("Window behavior")}
           subtitle={t(
-            "Choose what happens when you close, minimize, or switch away from Harbor.",
+            "Choose what happens when you close, minimize, or switch away from Lart.",
           )}
         >
           <TrayRow />
@@ -44,7 +44,7 @@ export function SystemTab() {
         <Section
           title={t("Graphics")}
           subtitle={t(
-            "Leave this on Automatic unless Harbor's interface flickers or stutters. This controls the app window, not video playback.",
+            "Leave this on Automatic unless Lart's interface flickers or stutters. This controls the app window, not video playback.",
           )}
         >
           <Segmented<GfxBackend>
@@ -58,7 +58,7 @@ export function SystemTab() {
             ]}
             onChange={(uiGraphicsBackend) => update({ uiGraphicsBackend })}
             label={t("Rendering backend")}
-            sub={t("Takes effect the next time Harbor starts.")}
+            sub={t("Takes effect the next time Lart starts.")}
           />
         </Section>
       )}

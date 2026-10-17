@@ -71,7 +71,7 @@ export function SportsReminderButton({ game }: { game: SportsGame }) {
             .map((channel) => (channel === "discord" ? "Discord" : "Telegram"))
             .join(" + ")}
           {existing.failed.length > 0 &&
-            ` · ${t("Delivery failed. Retrying while Harbor is open.")}`}
+            ` · ${t("Delivery failed. Retrying while Lart is open.")}`}
         </small>
       )}
       {open && (
@@ -94,7 +94,7 @@ export function SportsReminderButton({ game }: { game: SportsGame }) {
                 {destinations
                   .map((channel) => (channel === "discord" ? "Discord" : "Telegram"))
                   .join(" + ")}{" "}
-                · {t("Keep Harbor open to deliver reminders.")}
+                · {t("Keep Lart open to deliver reminders.")}
               </p>
               <button className="sh-button primary" onClick={save}>
                 {t("Save reminder")}

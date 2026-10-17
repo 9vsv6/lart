@@ -32,7 +32,7 @@ export function StartupDefaults() {
           icon={<Clock size={18} strokeWidth={2} />}
           label={t("Who's watching")}
           desc={t(
-            "Choose when Harbor asks you to pick a profile. Timed prompts appear when you return to Harbor.",
+            "Choose when Lart asks you to pick a profile. Timed prompts appear when you return to Lart.",
           )}
         >
           <Segmented<Interval>

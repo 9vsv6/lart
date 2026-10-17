@@ -376,8 +376,8 @@ const player: Record<string, string> = {
   default: "padrão",
   "loading more…": "carregando mais…",
   min: "min",
-  "mpv is required for recording. Install mpv and restart Harbor.":
-    "o mpv é necessário para gravação. Instale o mpv e reinicie o Harbor.",
+  "mpv is required for recording. Install mpv and restart Lart.":
+    "o mpv é necessário para gravação. Instale o mpv e reinicie o Lart.",
   "to close": "para fechar",
   "unsaved changes": "alterações não salvas",
   "{count} dl": "{count} dl",
@@ -467,8 +467,8 @@ const player: Record<string, string> = {
   "Reloading the stream…": "Recarregando o stream…",
   "Couldn't reload the stream. Try picking another source.":
     "Não foi possível recarregar o stream. Tente escolher outra fonte.",
-  "Harbor's streaming server only runs in the desktop app.":
-    "O servidor de streaming do Harbor só funciona no app para computador.",
+  "Lart's streaming server only runs in the desktop app.":
+    "O servidor de streaming do Lart só funciona no app para computador.",
   "Restarting the streaming server…": "Reiniciando o servidor de streaming…",
   "Couldn't restart the streaming server.":
     "Não foi possível reiniciar o servidor de streaming.",

@@ -57,7 +57,7 @@ export function TmdbStep() {
           recognised as a direct user gesture; when it is blocked the caller
           swallows the failure and the tap can end up navigating the current tab
           instead. js hit exactly that: TMDB replaced the setup page and there
-          was no way back to Harbor.
+          was no way back to Lart.
           A user-activated anchor is never popup-blocked, so this is the one form
           that cannot strand the setup flow. preventDefault plus openUrl keeps
           the Tauri path, where the desktop app must hand the url to the OS
@@ -134,7 +134,7 @@ export function TmdbStep() {
         </button>
       </div>
       <p className="text-[13px] text-ink-subtle">
-        {t("Skip if you'd rather just use Cinemeta. Harbor still works, you'll just see fewer rails.")}
+        {t("Skip if you'd rather just use Cinemeta. Lart still works, you'll just see fewer rails.")}
       </p>
     </div>
   );

@@ -19,20 +19,20 @@ const sweepC: Record<string, string> = {
   "Every launch": "每次启动",
   "Every row": "每行均显示",
   "Every saga, in order": "按顺序排列的所有系列篇章",
-  "Every shortcut Harbor responds to. Click a binding to rebind it.":
-    "Harbor 支持的所有快捷键。点击按键绑定即可重新设置。",
+  "Every shortcut Lart responds to. Click a binding to rebind it.":
+    "Lart 支持的所有快捷键。点击按键绑定即可重新设置。",
   "Every slot name": "所有槽位名称",
-  "Every surface in Harbor maps to one of these 12 variables.":
-    "Harbor 中的每个界面区域都映射到这 12 个变量之一。",
-  "Every variable, selector, hook, and recipe for building custom Harbor themes.":
-    "构建自定义 Harbor 主题所需的所有变量、选择器、钩子和方案。",
-  "Every winner Harbor ships, browsable offline by year and category.":
-    "Harbor 内置的所有获奖作品，可离线按年份和类别浏览。",
+  "Every surface in Lart maps to one of these 12 variables.":
+    "Lart 中的每个界面区域都映射到这 12 个变量之一。",
+  "Every variable, selector, hook, and recipe for building custom Lart themes.":
+    "构建自定义 Lart 主题所需的所有变量、选择器、钩子和方案。",
+  "Every winner Lart ships, browsable offline by year and category.":
+    "Lart 内置的所有获奖作品，可离线按年份和类别浏览。",
   Everyone: "所有人",
   "Everyone else": "其他所有人",
   "Everyone is loaded in. Press play to start watching.": "所有人均已加载完成。按播放键开始观看。",
   "Everyone loses access. This cannot be undone.": "所有人都将失去访问权限。此操作无法撤销。",
-  "Everyone on this Harbor": "此 Harbor 上的所有人",
+  "Everyone on this Lart": "此 Lart 上的所有人",
   Everything: "全部",
   "Everything releasing in the current month from TMDB.": "TMDB 中当月上线的所有内容。",
   "Everything releasing this month from TMDB": "TMDB 中本月上线的所有内容",
@@ -86,8 +86,8 @@ const sweepC: Record<string, string> = {
   Family: "家庭",
   "Family Favorites": "合家欢精选",
   "Family Heart": "家庭温情",
-  "Fan-made avatars for personal use. Harbor claims no rights to these characters; they belong to their creators and studios, shown here under fair use. Every one is optimized down to a tiny WebP.":
-    "这些粉丝创作的头像仅供个人使用。Harbor 不主张拥有这些角色的任何权利；相关权利归其创作者和工作室所有，此处依据合理使用原则展示。每个头像均已优化为极小的 WebP 文件。",
+  "Fan-made avatars for personal use. Lart claims no rights to these characters; they belong to their creators and studios, shown here under fair use. Every one is optimized down to a tiny WebP.":
+    "这些粉丝创作的头像仅供个人使用。Lart 不主张拥有这些角色的任何权利；相关权利归其创作者和工作室所有，此处依据合理使用原则展示。每个头像均已优化为极小的 WebP 文件。",
   "Fanart.tv": "Fanart.tv",
   "Fanart.tv · logos and backdrops": "Fanart.tv · 徽标和背景图",
   Fantasy: "奇幻",
@@ -176,7 +176,7 @@ const sweepC: Record<string, string> = {
   "Finish an episode and the card jumps to the next one instead of sitting at 0m left.":
     "看完一集后，卡片会跳到下一集，而不会停留在“剩余 0 分钟”。",
   "Finish later": "稍后完成",
-  "Finish updating Harbor": "完成 Harbor 更新",
+  "Finish updating Lart": "完成 Lart 更新",
   finished: "看完了",
   Finished: "已看完",
   Finnish: "芬兰语",
@@ -215,10 +215,10 @@ const sweepC: Record<string, string> = {
   "Focused Card": "聚焦卡片",
   Folder: "文件夹",
   "Folder picker is only available in the desktop app": "文件夹选择器仅在桌面应用中可用",
-  "Folder selection is available in the Harbor app": "Harbor 应用中支持选择文件夹",
+  "Folder selection is available in the Lart app": "Lart 应用中支持选择文件夹",
   Folders: "文件夹",
-  "Folders Harbor imported your movies and shows from. Rescan to pick up new files.":
-    "Harbor 从这些文件夹导入了你的电影和剧集。重新扫描以添加新文件。",
+  "Folders Lart imported your movies and shows from. Rescan to pick up new files.":
+    "Lart 从这些文件夹导入了你的电影和剧集。重新扫描以添加新文件。",
   "Following addon order": "遵循插件顺序",
   "for {count} more episodes": "再下载 {count} 集",
   "for 1 more episode": "再下载 1 集",
@@ -234,8 +234,8 @@ const sweepC: Record<string, string> = {
     "可获得更高的速率限制；留空则使用免费的匿名方案。",
   "For laptop speakers and headphones. Movies mixed for 5.1 or 7.1 surround can sound hollow or have quiet dialogue on two speakers. This folds them down properly.":
     "适用于笔记本电脑扬声器和耳机。为 5.1 或 7.1 环绕声混音的影片通过两个扬声器播放时，声音可能显得空洞或对白过轻。此功能可将其正确下混。",
-  "For now, please open this site on a desktop, or build Harbor from source.":
-    "目前，请在桌面设备上打开此网站，或从源代码构建 Harbor。",
+  "For now, please open this site on a desktop, or build Lart from source.":
+    "目前，请在桌面设备上打开此网站，或从源代码构建 Lart。",
   "For the manual path:": "手动部署步骤：",
   "For the manual path: {code} 20+ and {code} CLI.": "手动部署方式需要 {code} 20+ 和 {code} CLI。",
   "For users who want to deploy themselves or already have a wrangler workflow.":
@@ -312,7 +312,7 @@ const sweepC: Record<string, string> = {
   "From Korea": "来自韩国",
   "From other devices on your Wi-Fi": "从同一 Wi-Fi 下的其他设备访问",
   "From stremio-addons.net": "来自 stremio-addons.net",
-  "from the Harbor repo into a new directory as": "到新目录，并另存为",
+  "from the Lart repo into a new directory as": "到新目录，并另存为",
   "From the Installed Source": "来自已安装的书源",
   "From the region": "来自该地区",
   "From the very top of a detail page, keep scrolling up to open the trailer. Off by default.":
@@ -324,8 +324,8 @@ const sweepC: Record<string, string> = {
   "Frontline Valor": "前线英勇",
   "Frost the top bar on scroll": "滚动时为顶部栏添加磨砂效果",
   "Frosted glass": "磨砂玻璃",
-  "Frosted, refractive surfaces on Harbor's floating controls.":
-    "Harbor 浮动控件上具有折射效果的磨砂表面。",
+  "Frosted, refractive surfaces on Lart's floating controls.":
+    "Lart 浮动控件上具有折射效果的磨砂表面。",
   FSRCNNX: "FSRCNNX",
   "FSRCNNX neural upscaler": "FSRCNNX 神经网络放大器",
   FT: "FT",
@@ -337,8 +337,8 @@ const sweepC: Record<string, string> = {
   "Full details": "完整详情",
   "Full hero banner": "全幅焦点横幅",
   "Full mode — diary, friends & ratings enabled": "完整模式，已启用日记、好友动态和评分",
-  "Full mode signs in with your Letterboxd password to also unlock your diary, friends activity and your personal ratings. Your password is sent only to Stremboxd to obtain a token — Harbor never stores it.":
-    "完整模式会使用你的 Letterboxd 密码登录，还可解锁日记、好友动态和个人评分。你的密码只会发送给 Stremboxd 以获取令牌，Harbor 绝不会存储密码。",
+  "Full mode signs in with your Letterboxd password to also unlock your diary, friends activity and your personal ratings. Your password is sent only to Stremboxd to obtain a token — Lart never stores it.":
+    "完整模式会使用你的 Letterboxd 密码登录，还可解锁日记、好友动态和个人评分。你的密码只会发送给 Stremboxd 以获取令牌，Lart 绝不会存储密码。",
   "Full Roster": "完整阵容",
   "Full screen": "全屏",
   Fullscreen: "全屏",
@@ -380,7 +380,7 @@ const sweepC: Record<string, string> = {
   "Get a relay": "获取中继",
   "Get all your past payments refunded": "获退所有以往缴纳的保费",
   "Get beta updates": "获取测试版更新",
-  "Get Harbor for desktop": "获取 Harbor 桌面版",
+  "Get Lart for desktop": "获取 Lart 桌面版",
   "Get one free at {url}": "可前往 {url} 免费获取",
   "Get started": "开始使用",
   "Get Started": "开始使用",
@@ -471,83 +471,83 @@ const sweepC: Record<string, string> = {
   Handle: "用户名",
   "Hang tight, won't be a sec.": "稍等一下，马上就好。",
   "Hangout Comedy": "好友群像喜剧",
-  Harbor: "Harbor",
-  "Harbor {version} available": "Harbor {version} 现已可用",
-  "Harbor accepted that but returned no session. Try again.":
-    "Harbor 已接受该操作，但未返回会话。请重试。",
-  "Harbor caps playlists at 80 MB to stay responsive. Most providers offer a filtered URL with fewer channels.":
-    "为确保流畅响应，Harbor 将播放列表大小限制为 80 MB。大多数提供商都可提供频道更少的筛选版 URL。",
-  "Harbor checks a few times a day while it's open and lets you know here.":
-    "Harbor 会在打开期间每天检查数次，并在此通知你。",
-  "Harbor checks automatically every few hours.": "Harbor 每隔几小时会自动检查一次。",
-  "Harbor checks harbor.site for new versions and installs them in place.":
-    "Harbor 会在 harbor.site 检查新版本并就地安装。",
-  "Harbor could not find these": "Harbor 找不到这些内容",
-  "Harbor couldn't play this source": "Harbor 无法播放此播放源",
-  "Harbor couldn't start any source": "Harbor 无法启动任何播放源",
-  "Harbor curated": "Harbor 精选",
-  "Harbor default": "Harbor 默认",
-  "Harbor double-checks with Stremio after saving, so a half-written order can't slip through.":
-    "保存后，Harbor 会向 Stremio 再次核对，避免保存不完整的顺序。",
-  "Harbor dropped {n} suspicious or mismatched result.": "Harbor 已剔除 {n} 个可疑或不匹配的结果。",
-  "Harbor dropped {n} suspicious or mismatched results.":
-    "Harbor 已剔除 {n} 个可疑或不匹配的结果。",
-  "Harbor found episode sources for {season}, but none of them is a single downloadable package. It can still fetch the episodes one at a time.":
-    "Harbor 已找到 {season} 的剧集来源，但其中没有可下载的整季包。仍可逐集获取。",
-  "Harbor found episode sources, but none was a downloadable package for {season}. Try another addon or refresh the sources.":
-    "Harbor 找到了剧集来源，但没有适用于 {season} 的可下载资源包。请尝试其他插件或刷新来源。",
-  "Harbor found something at this address that looked like a Roku, but it didn't respond like one. The device may be offline or another product picked up the same broadcast.":
-    "Harbor 在此地址发现了一个疑似 Roku 的设备，但其响应方式并不像 Roku。该设备可能已离线，也可能是其他产品接收到了同一广播。",
-  "Harbor identity": "Harbor 身份",
-  "Harbor in a browser": "浏览器中的 Harbor",
-  "Harbor in your browser": "在浏览器中使用 Harbor",
-  "Harbor is an independent client. It is not affiliated with or endorsed by Stremio.":
-    "Harbor 是独立客户端，与 Stremio 无关联，也未获其认可。",
-  "Harbor is having trouble, try again in a moment": "Harbor 暂时出现问题，请稍后再试",
-  "Harbor is open source. PRs that reference a bug get reviewed within 48h and ship with credit in the release notes.":
-    "Harbor 是开源软件。引用错误报告的 PR 会在 48 小时内得到审核，发布时还会在发行说明中注明贡献。",
-  "Harbor logs into nothing and bypasses no password, paywall, or access control, and must not be used to attempt it. Point it only at content you are legally allowed to read, and never at official or licensed publisher sites. You alone are responsible for what you connect and for following copyright and each site's terms. Harbor bundles and endorses no sites.":
-    "Harbor 不会登录任何服务，也不会绕过密码、付费墙或访问控制，且不得用于尝试此类行为。请仅将其指向你依法有权阅读的内容，切勿指向官方或获得授权的出版商网站。你须对所连接的内容以及遵守版权规定和各网站条款承担全部责任。Harbor 不捆绑或认可任何网站。",
-  "Harbor needs a TMDB key for artwork, rows and collections. It is free.":
-    "Harbor 需要 TMDB 密钥来获取图片、内容行和合集。密钥可免费获取。",
-  "Harbor never hosts your books or source files.": "Harbor 从不托管你的图书或源文件。",
-  "Harbor never hosts your books.": "Harbor 从不托管你的图书。",
-  "Harbor on other devices": "在其他设备上使用 Harbor",
-  "Harbor on other devices (web app)": "其他设备上的 Harbor（Web 应用）",
-  "Harbor opens 4 parallel requests to": "Harbor 会向以下地址发起 4 个并行请求",
-  "Harbor pick": "Harbor 精选",
-  "Harbor Rank": "Harbor 排名",
-  "Harbor Rank scores a whole career, not a single hit. Four things move a rank: how good the work is on average, how much of it earned wide acclaim, the major awards it won, and how often the person carried the work as a lead. Each pillar is weighted, added up, then adjusted for the breadth and recency of the body of work. Every number that feeds a score is shown on the card, so you can always see why.":
-    "Harbor Rank 评估的是整个职业生涯，而非某一部热门作品。排名由四个维度决定：作品的平均质量、其中有多少获得广泛赞誉、赢得的重要奖项，以及此人以核心身份担纲作品的频率。各维度按权重相加，再根据作品履历的广度和新近程度进行调整。影响得分的每项数据都会显示在卡片上，让你随时了解评分依据。",
-  "Harbor ranking": "Harbor 排序",
-  "Harbor ranking puts the best-scoring sources first. Addon order follows your addon priority (organize it in Addons, Installed tab, Reorder) and keeps each addon's results in the order it returned them, like the Stremio and Vidi apps.":
-    "Harbor 排序会将评分最高的来源放在最前。插件排序遵循你的插件优先级（可在“插件”的“已安装”标签页中通过“重新排序”进行调整），并保持各插件返回结果的原始顺序，与 Stremio 和 Vidi 应用一致。",
-  "Harbor Relay": "Harbor Relay",
-  "Harbor sends no telemetry. This also drops outbound ad, analytics, and tracker requests that addons or metadata providers try to make, before they leave your machine.":
-    "Harbor 不会发送任何遥测数据。它还会在广告、分析和跟踪器请求离开你的设备前，拦截插件或元数据提供商发出的此类请求。",
-  "Harbor ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Harbor reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
-    "Harbor 提供引擎，而非网站。你只需编写一份使用 CSS 选择器描述网站的简短 JSON 配置，Harbor 就会使用这些选择器读取网站。不内置任何内容：请仅将其指向你有权阅读的网站。",
-  "Harbor signed you up but returned no session. Try signing in instead.":
-    "Harbor 已为你注册账号，但未返回会话。请改为尝试登录。",
-  "Harbor snippet": "Harbor 代码片段",
-  "Harbor test message (Discord). If you can read this, your webhook is wired up.":
-    "Harbor 测试消息（Discord）。如果你能看到此消息，说明 webhook 已配置成功。",
-  "Harbor test message (Telegram). If you can read this, your webhook is wired up.":
-    "Harbor 测试消息（Telegram）。如果你能看到此消息，说明 webhook 已配置成功。",
-  "Harbor uses the graphics card when it's safe and falls back to the CPU when it isn't. The right call for almost everyone.":
-    "Harbor 会在适合时使用显卡，否则回退到 CPU。适合绝大多数人。",
-  "Harbor Voyages": "Harbor Voyages",
-  "Harbor would not be possible without Stremio. It is the foundation everything here is built on.":
-    "没有 Stremio，就不会有 Harbor。这里的一切都建立在它的基础之上。",
-  "Harbor, from a public domain frame": "Harbor，来自公版画面",
-  "Harbor's backend runs on ElfHosted. They took it on without being asked, and Harbor has never charged for anything.":
-    "Harbor 的后端运行在 ElfHosted 上。他们主动承担了这项工作，而 Harbor 从未对任何功能收费。",
-  "Harbor's own bar": "Harbor 自带栏",
-  "Harbor's public relay": "Harbor 公共中继",
-  "Harbor's public relay has not rolled out the latest protocol yet.":
-    "Harbor 的公共中继尚未部署最新协议。",
-  "Harbor's public relay updates automatically; nothing to do.":
-    "Harbor 公共中继会自动更新，无需操作。",
+  Lart: "Lart",
+  "Lart {version} available": "Lart {version} 现已可用",
+  "Lart accepted that but returned no session. Try again.":
+    "Lart 已接受该操作，但未返回会话。请重试。",
+  "Lart caps playlists at 80 MB to stay responsive. Most providers offer a filtered URL with fewer channels.":
+    "为确保流畅响应，Lart 将播放列表大小限制为 80 MB。大多数提供商都可提供频道更少的筛选版 URL。",
+  "Lart checks a few times a day while it's open and lets you know here.":
+    "Lart 会在打开期间每天检查数次，并在此通知你。",
+  "Lart checks automatically every few hours.": "Lart 每隔几小时会自动检查一次。",
+  "Lart checks harbor.site for new versions and installs them in place.":
+    "Lart 会在 harbor.site 检查新版本并就地安装。",
+  "Lart could not find these": "Lart 找不到这些内容",
+  "Lart couldn't play this source": "Lart 无法播放此播放源",
+  "Lart couldn't start any source": "Lart 无法启动任何播放源",
+  "Lart curated": "Lart 精选",
+  "Lart default": "Lart 默认",
+  "Lart double-checks with Stremio after saving, so a half-written order can't slip through.":
+    "保存后，Lart 会向 Stremio 再次核对，避免保存不完整的顺序。",
+  "Lart dropped {n} suspicious or mismatched result.": "Lart 已剔除 {n} 个可疑或不匹配的结果。",
+  "Lart dropped {n} suspicious or mismatched results.":
+    "Lart 已剔除 {n} 个可疑或不匹配的结果。",
+  "Lart found episode sources for {season}, but none of them is a single downloadable package. It can still fetch the episodes one at a time.":
+    "Lart 已找到 {season} 的剧集来源，但其中没有可下载的整季包。仍可逐集获取。",
+  "Lart found episode sources, but none was a downloadable package for {season}. Try another addon or refresh the sources.":
+    "Lart 找到了剧集来源，但没有适用于 {season} 的可下载资源包。请尝试其他插件或刷新来源。",
+  "Lart found something at this address that looked like a Roku, but it didn't respond like one. The device may be offline or another product picked up the same broadcast.":
+    "Lart 在此地址发现了一个疑似 Roku 的设备，但其响应方式并不像 Roku。该设备可能已离线，也可能是其他产品接收到了同一广播。",
+  "Lart identity": "Lart 身份",
+  "Lart in a browser": "浏览器中的 Lart",
+  "Lart in your browser": "在浏览器中使用 Lart",
+  "Lart is an independent client. It is not affiliated with or endorsed by Stremio.":
+    "Lart 是独立客户端，与 Stremio 无关联，也未获其认可。",
+  "Lart is having trouble, try again in a moment": "Lart 暂时出现问题，请稍后再试",
+  "Lart is open source. PRs that reference a bug get reviewed within 48h and ship with credit in the release notes.":
+    "Lart 是开源软件。引用错误报告的 PR 会在 48 小时内得到审核，发布时还会在发行说明中注明贡献。",
+  "Lart logs into nothing and bypasses no password, paywall, or access control, and must not be used to attempt it. Point it only at content you are legally allowed to read, and never at official or licensed publisher sites. You alone are responsible for what you connect and for following copyright and each site's terms. Lart bundles and endorses no sites.":
+    "Lart 不会登录任何服务，也不会绕过密码、付费墙或访问控制，且不得用于尝试此类行为。请仅将其指向你依法有权阅读的内容，切勿指向官方或获得授权的出版商网站。你须对所连接的内容以及遵守版权规定和各网站条款承担全部责任。Lart 不捆绑或认可任何网站。",
+  "Lart needs a TMDB key for artwork, rows and collections. It is free.":
+    "Lart 需要 TMDB 密钥来获取图片、内容行和合集。密钥可免费获取。",
+  "Lart never hosts your books or source files.": "Lart 从不托管你的图书或源文件。",
+  "Lart never hosts your books.": "Lart 从不托管你的图书。",
+  "Lart on other devices": "在其他设备上使用 Lart",
+  "Lart on other devices (web app)": "其他设备上的 Lart（Web 应用）",
+  "Lart opens 4 parallel requests to": "Lart 会向以下地址发起 4 个并行请求",
+  "Lart pick": "Lart 精选",
+  "Lart Rank": "Lart 排名",
+  "Lart Rank scores a whole career, not a single hit. Four things move a rank: how good the work is on average, how much of it earned wide acclaim, the major awards it won, and how often the person carried the work as a lead. Each pillar is weighted, added up, then adjusted for the breadth and recency of the body of work. Every number that feeds a score is shown on the card, so you can always see why.":
+    "Lart Rank 评估的是整个职业生涯，而非某一部热门作品。排名由四个维度决定：作品的平均质量、其中有多少获得广泛赞誉、赢得的重要奖项，以及此人以核心身份担纲作品的频率。各维度按权重相加，再根据作品履历的广度和新近程度进行调整。影响得分的每项数据都会显示在卡片上，让你随时了解评分依据。",
+  "Lart ranking": "Lart 排序",
+  "Lart ranking puts the best-scoring sources first. Addon order follows your addon priority (organize it in Addons, Installed tab, Reorder) and keeps each addon's results in the order it returned them, like the Stremio and Vidi apps.":
+    "Lart 排序会将评分最高的来源放在最前。插件排序遵循你的插件优先级（可在“插件”的“已安装”标签页中通过“重新排序”进行调整），并保持各插件返回结果的原始顺序，与 Stremio 和 Vidi 应用一致。",
+  "Lart Relay": "Lart Relay",
+  "Lart sends no telemetry. This also drops outbound ad, analytics, and tracker requests that addons or metadata providers try to make, before they leave your machine.":
+    "Lart 不会发送任何遥测数据。它还会在广告、分析和跟踪器请求离开你的设备前，拦截插件或元数据提供商发出的此类请求。",
+  "Lart ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Lart reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
+    "Lart 提供引擎，而非网站。你只需编写一份使用 CSS 选择器描述网站的简短 JSON 配置，Lart 就会使用这些选择器读取网站。不内置任何内容：请仅将其指向你有权阅读的网站。",
+  "Lart signed you up but returned no session. Try signing in instead.":
+    "Lart 已为你注册账号，但未返回会话。请改为尝试登录。",
+  "Lart snippet": "Lart 代码片段",
+  "Lart test message (Discord). If you can read this, your webhook is wired up.":
+    "Lart 测试消息（Discord）。如果你能看到此消息，说明 webhook 已配置成功。",
+  "Lart test message (Telegram). If you can read this, your webhook is wired up.":
+    "Lart 测试消息（Telegram）。如果你能看到此消息，说明 webhook 已配置成功。",
+  "Lart uses the graphics card when it's safe and falls back to the CPU when it isn't. The right call for almost everyone.":
+    "Lart 会在适合时使用显卡，否则回退到 CPU。适合绝大多数人。",
+  "Lart Voyages": "Lart Voyages",
+  "Lart would not be possible without Stremio. It is the foundation everything here is built on.":
+    "没有 Stremio，就不会有 Lart。这里的一切都建立在它的基础之上。",
+  "Lart, from a public domain frame": "Lart，来自公版画面",
+  "Lart's backend runs on ElfHosted. They took it on without being asked, and Lart has never charged for anything.":
+    "Lart 的后端运行在 ElfHosted 上。他们主动承担了这项工作，而 Lart 从未对任何功能收费。",
+  "Lart's own bar": "Lart 自带栏",
+  "Lart's public relay": "Lart 公共中继",
+  "Lart's public relay has not rolled out the latest protocol yet.":
+    "Lart 的公共中继尚未部署最新协议。",
+  "Lart's public relay updates automatically; nothing to do.":
+    "Lart 公共中继会自动更新，无需操作。",
   "Hard Boiled": "硬汉派",
   "Hard outline": "硬描边",
   "Hard stroke around each letter. High contrast.": "为每个字符添加硬边描边，对比度高。",
@@ -570,8 +570,8 @@ const sweepC: Record<string, string> = {
   Head: "页首",
   "Headphone series": "戴耳机看的剧",
   "Heads up": "提示",
-  "Heads up: if Stremio is also installed, Windows may ask which app to use the first time a stremio:// link fires. Pick Harbor to make it stick.":
-    "请注意：如果也安装了 Stremio，首次触发 stremio:// 链接时，Windows 可能会询问要使用哪个应用。选择 Harbor 即可将其设为默认应用。",
+  "Heads up: if Stremio is also installed, Windows may ask which app to use the first time a stremio:// link fires. Pick Lart to make it stick.":
+    "请注意：如果也安装了 Stremio，首次触发 stremio:// 链接时，Windows 可能会询问要使用哪个应用。选择 Lart 即可将其设为默认应用。",
   Health: "健康状态",
   "Health check returns 5xx": "健康检查返回 5xx",
   "Health for {n} service": "{n} 个服务的运行状况",
@@ -596,7 +596,7 @@ const sweepC: Record<string, string> = {
   HELP: "帮助",
   "Help & feedback": "帮助与反馈",
   "Help & support": "帮助与支持",
-  "Help translate Harbor": "帮助翻译 Harbor",
+  "Help translate Lart": "帮助翻译 Lart",
   "Here for the late-night sci-fi": "为深夜科幻而来",
   Hero: "英雄",
   "Hero stats": "顶部统计",
@@ -687,11 +687,11 @@ const sweepC: Record<string, string> = {
   "Historical Drama": "历史剧",
   Hit: "点击",
   "hit {count} downloads": "达到 {count} 次下载",
-  "Hit your daily quota? Use Harbor's public relay, or host your own.":
-    "每日配额用完了？可使用 Harbor 的公共中继，或自行托管。",
+  "Hit your daily quota? Use Lart's public relay, or host your own.":
+    "每日配额用完了？可使用 Lart 的公共中继，或自行托管。",
   Hits: "安打",
-  "Hold Ctrl or Cmd and scroll to resize Harbor's interface smoothly.":
-    "按住 Ctrl 或 Cmd 并滚动，即可平滑调整 Harbor 界面大小。",
+  "Hold Ctrl or Cmd and scroll to resize Lart's interface smoothly.":
+    "按住 Ctrl 或 Cmd 并滚动，即可平滑调整 Lart 界面大小。",
   "Hold for more options": "长按查看更多选项",
   "Hold or right-click for models": "长按或右键单击以选择模型",
   "Hold to continue": "长按继续",
@@ -721,19 +721,19 @@ const sweepC: Record<string, string> = {
   "Hover the row": "悬停整行",
   "Hover the speaker to reveal a horizontal slider.": "将鼠标悬停在扬声器图标上可显示水平滑块。",
   "Hover to peek": "悬停预览",
-  "How aggressively Harbor rejects shady or mismatched streams before showing them in the picker.":
-    "控制 Harbor 在播放源显示到选择器之前，对可疑或不匹配播放源的拦截严格程度。",
-  "How far you push the stick before Harbor reacts. Raise it if the focus drifts on its own.":
-    "摇杆推动多远后 Harbor 才会响应。如果焦点自行漂移，请调高此值。",
+  "How aggressively Lart rejects shady or mismatched streams before showing them in the picker.":
+    "控制 Lart 在播放源显示到选择器之前，对可疑或不匹配播放源的拦截严格程度。",
+  "How far you push the stick before Lart reacts. Raise it if the focus drifts on its own.":
+    "摇杆推动多远后 Lart 才会响应。如果焦点自行漂移，请调高此值。",
   "How fast a held direction keeps moving the focus.": "长按方向时焦点持续移动的速度。",
-  "How Harbor Rank works": "Harbor Rank 如何运作",
-  "How Harbor squeezes HDR movies onto a normal screen. Auto is right for almost everyone; the curves below just change the look (punchy vs soft). Only matters on HDR sources.":
-    "设置 Harbor 如何在普通屏幕上呈现 HDR 影片。自动模式适合绝大多数人；下方曲线仅改变画面风格（鲜明或柔和）。仅对 HDR 片源有效。",
+  "How Lart Rank works": "Lart Rank 如何运作",
+  "How Lart squeezes HDR movies onto a normal screen. Auto is right for almost everyone; the curves below just change the look (punchy vs soft). Only matters on HDR sources.":
+    "设置 Lart 如何在普通屏幕上呈现 HDR 影片。自动模式适合绝大多数人；下方曲线仅改变画面风格（鲜明或柔和）。仅对 HDR 片源有效。",
   "How is this build treating you?": "这个版本用起来怎么样？",
   "How it works": "工作原理",
   "How it'll look": "效果预览",
   "How long files stay": "文件保留时长",
-  "How long Harbor waits before drifting off.": "Harbor 在进入休眠前等待多久。",
+  "How long Lart waits before drifting off.": "Lart 在进入休眠前等待多久。",
   "How long to wait first": "首次等待时长",
   "How long you hold a direction before it starts repeating.": "长按方向多久后开始重复。",
   "How loud the interface sounds are.": "界面音效的音量。",
@@ -741,11 +741,11 @@ const sweepC: Record<string, string> = {
   "How many months the loan lasts": "贷款期限是多少个月",
   "How much the surface blurs what is behind it.": "表面对其背后内容的模糊程度。",
   "How packs work": "头像包使用说明",
-  "How people find you across Harbor.": "其他人在 Harbor 中找到你的方式。",
+  "How people find you across Lart.": "其他人在 Lart 中找到你的方式。",
   "How Play works": "播放按钮行为",
   "How posters appear as they load. Blur up looks smoothest; Fade is lighter on older or low-power devices; Instant turns it off.":
     "海报加载时的显示方式。“模糊渐显”最流畅；“淡入”更适合较旧或低功耗设备；“立即显示”会关闭加载效果。",
-  "How quickly the Harbor cursor moves with the right stick.": "Harbor 光标随右摇杆移动的速度。",
+  "How quickly the Lart cursor moves with the right stick.": "Lart 光标随右摇杆移动的速度。",
   "How sharp trailers play, and when they start on their own.":
     "预告片播放的清晰度，以及何时自动播放。",
   "How should we import this folder?": "要如何导入此文件夹？",
@@ -804,8 +804,8 @@ const sweepC: Record<string, string> = {
     "如果超出免费套餐限额，Workers 付费套餐每月 5 美元，并将请求限额提高到每天 1,000 万次。",
   "If you left a {service} username, you'll be tagged in the release notes when this lands.":
     "如果您留下了 {service} 用户名，此项上线后，发布说明中会提及您。",
-  "If you want to put money somewhere and you use Harbor, an ElfHosted subscription is the most useful place for it. You get a managed instance, and the servers Harbor depends on stay paid for.":
-    "如果你使用 Harbor 并愿意付费支持，订阅 ElfHosted 是最有帮助的方式。你会获得一个托管实例，同时也能帮助支付 Harbor 所依赖服务器的费用。",
+  "If you want to put money somewhere and you use Lart, an ElfHosted subscription is the most useful place for it. You get a managed instance, and the servers Lart depends on stay paid for.":
+    "如果你使用 Lart 并愿意付费支持，订阅 ElfHosted 是最有帮助的方式。你会获得一个托管实例，同时也能帮助支付 Lart 所依赖服务器的费用。",
   "If you were going to send something, send it to ElfHosted above so the servers stay paid for, or to one of the charities below. Both do more good with it.":
     "如果你本来打算捐点什么，请捐给上面的 ElfHosted，让服务器费用有着落，或者捐给下面任一慈善机构。这两种方式都能让钱发挥更大作用。",
   "If you were going to send something, send it to ElfHosted or Stremio above, or to one of the charities below. They all do more good with it.":
@@ -894,8 +894,8 @@ const sweepC: Record<string, string> = {
   Inspector: "检查器",
   Installed: "已安装",
   "Installed addons": "已安装的插件",
-  "Installed and detected. Harbor found its interpolation engine and will drive it directly.":
-    "已安装并检测到。Harbor 已找到其插值引擎，将直接调用。",
+  "Installed and detected. Lart found its interpolation engine and will drive it directly.":
+    "已安装并检测到。Lart 已找到其插值引擎，将直接调用。",
   "Installed locally": "已在本地安装",
   "Installed packs": "已安装的内容包",
   "Installed shaders": "已安装的着色器",
@@ -904,7 +904,7 @@ const sweepC: Record<string, string> = {
   "Installed via {name}": "通过 {name} 安装",
   Installing: "正在安装",
   "Installing {name}": "正在安装 {name}",
-  "Installing. Harbor will restart.": "正在安装。Harbor 将重新启动。",
+  "Installing. Lart will restart.": "正在安装。Lart 将重新启动。",
   "Installing...": "正在安装…",
   "Installing…": "正在安装…",
   Instant: "立即显示",
@@ -938,8 +938,8 @@ const sweepC: Record<string, string> = {
   "IPTV lists": "IPTV 列表",
   "is a page number. Add": "是页码。添加",
   "is a regex for the part to change": "是要更改部分的正则表达式",
-  "is how many items to skip, starting at 0. Harbor auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
-    "是要跳过的项目数，从 0 开始。Harbor 会自动检测网站的每页项目数并为您逐页访问，因此无需设置每页项目数。URL 按项目数计数时使用此项。",
+  "is how many items to skip, starting at 0. Lart auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
+    "是要跳过的项目数，从 0 开始。Lart 会自动检测网站的每页项目数并为您逐页访问，因此无需设置每页项目数。URL 按项目数计数时使用此项。",
   "is not an image we can read": "不是可读取的图片",
   "is now using your new configuration.": "现已采用你的新配置。",
   "is what to swap in. The example turns": "是替换后的内容。该示例会将",
@@ -985,7 +985,7 @@ const sweepC: Record<string, string> = {
   "JMAF (detail logo)": "JMAF（细节徽标）",
   Join: "加入",
   "Join group": "加入群组",
-  "Join Harbor": "加入 Harbor",
+  "Join Lart": "加入 Lart",
   "Join this group to post and see what everyone is watching.":
     "加入此小组即可发帖，并查看大家都在看什么。",
   "JPEG / PNG / WebP. Big files auto-compress to fit.":
@@ -1022,20 +1022,20 @@ const sweepC: Record<string, string> = {
   "Keep anyway": "仍然保留",
   "Keep at most": "最多保留",
   "Keep cached files for": "缓存文件保留时长",
-  "Keep controlling Harbor in the background": "在后台继续使用手柄控制 Harbor",
+  "Keep controlling Lart in the background": "在后台继续使用手柄控制 Lart",
   "Keep Dolby Vision, HDR10, HLG. Drop SDR.": "保留 Dolby Vision、HDR10、HLG，排除 SDR。",
   "Keep downloading after you leave": "离开后继续下载",
   "Keep frames for": "帧保留时长",
   "Keep going": "继续",
-  "Keep Harbor a click away. Close it to the system tray instead of quitting, and control it from the tray menu. These also mirror into the tray menu live.":
-    "让 Harbor 随手可用。关闭窗口时最小化到系统托盘而非退出，并可通过托盘菜单进行控制。这些设置也会实时同步到托盘菜单。",
+  "Keep Lart a click away. Close it to the system tray instead of quitting, and control it from the tray menu. These also mirror into the tray menu live.":
+    "让 Lart 随手可用。关闭窗口时最小化到系统托盘而非退出，并可通过托盘菜单进行控制。这些设置也会实时同步到托盘菜单。",
   "Keep it": "保留",
   "Keep it under 280 characters": "请控制在 280 个字符以内",
   "Keep it up": "继续保持",
   "Keep original": "保留原样",
   "Keep picking": "继续选择",
   "Keep same source on next episode": "下一集沿用相同来源",
-  "Keep the Harbor window above other windows.": "让 Harbor 窗口始终显示在其他窗口上方。",
+  "Keep the Lart window above other windows.": "让 Lart 窗口始终显示在其他窗口上方。",
   "Keep the key I have": "保留我现有的密钥",
   "Keep the next episode visible": "保持下一集可见",
   "Keep the original look but apply your size and position.":
@@ -1044,8 +1044,8 @@ const sweepC: Record<string, string> = {
     "保留原始样式，并按你设置的字号缩放。此选项会按比例调整内置字号，因此不同发布版本之间仍可能存在差异。",
   "Keep watching": "继续观看",
   "Keep Watching": "继续观看",
-  "Keeps the web's memory alive. Harbor would be poorer without it.":
-    "让互联网的记忆得以延续。没有它，Harbor 会逊色很多。",
+  "Keeps the web's memory alive. Lart would be poorer without it.":
+    "让互联网的记忆得以延续。没有它，Lart 会逊色很多。",
   Keyboard: "键盘",
   "Keyboard size": "键盘大小",
   "Kids & Family": "儿童与家庭",
@@ -1115,8 +1115,8 @@ const sweepC: Record<string, string> = {
   Left: "左对齐",
   "Left edge": "左边缘",
   "Left to right": "从左到右",
-  "Leftover installers from past updates, cached trailers, and casting scratch files. Harbor clears old ones on launch, keeping only the most recent installer.":
-    "以往更新留下的安装程序、缓存的预告片和投屏临时文件。Harbor 会在启动时清理旧文件，仅保留最新的安装程序。",
+  "Leftover installers from past updates, cached trailers, and casting scratch files. Lart clears old ones on launch, keeping only the most recent installer.":
+    "以往更新留下的安装程序、缓存的预告片和投屏临时文件。Lart 会在启动时清理旧文件，仅保留最新的安装程序。",
   Legal: "法律信息",
   "Legally enforce it": "依法强制执行该文件",
   Length: "时长",
@@ -1163,7 +1163,7 @@ const sweepC: Record<string, string> = {
   "Liquid Glass": "液态玻璃",
   Listen: "朗读",
   Listening: "正在聆听",
-  "Listening for Harbors": "正在侦听 Harbor 实例",
+  "Listening for Harbors": "正在侦听 Lart 实例",
   Lists: "列表",
   Literary: "文学",
   Live: "直播",

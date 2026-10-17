@@ -87,7 +87,7 @@ export function BetaReturnSection() {
               </select>
               <p className="text-[12px] leading-relaxed text-ink-subtle">
                 {t(
-                  "Harbor saves a local recovery backup before installing. It can contain account details. Old backups are not restored automatically, and recovery files use extra disk space.",
+                  "Lart saves a local recovery backup before installing. It can contain account details. Old backups are not restored automatically, and recovery files use extra disk space.",
                 )}
               </p>
               {selected && u.status === "downloaded" && (

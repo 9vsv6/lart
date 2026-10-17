@@ -66,7 +66,7 @@ const gameRoms: Record<string, string> = {
   "games.roms.era": "Era rilis",
   "games.roms.reset": "Atur ulang filter",
   "games.roms.empty": "Coba judul lain atau perluas filter untuk konsol ini.",
-  "games.roms.source": "Metadata game dan hubungan antarjudul berasal dari IGDB. Impor file lokal Anda untuk memainkan game yang didukung di Harbor.",
+  "games.roms.source": "Metadata game dan hubungan antarjudul berasal dari IGDB. Impor file lokal Anda untuk memainkan game yang didukung di Lart.",
   "games.roms.playerScore": "Penilaian pemain IGDB · {count} penilaian",
   "games.roms.combinedScore": "Penilaian gabungan IGDB · {count} penilaian",
   "games.roms.sort.discussed": "Paling banyak dinilai",

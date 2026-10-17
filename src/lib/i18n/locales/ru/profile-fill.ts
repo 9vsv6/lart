@@ -44,9 +44,9 @@ const profileFill: Record<string, string> = {
   "Add a review": "Добавить отзыв",
   "Edit your review": "Изменить ваш отзыв",
   "Save changes": "Сохранить изменения",
-  "Ratings need a Harbor account": "Для оценок нужен аккаунт Harbor",
-  "Your Harbor account is separate from your Stremio sign in. Create one free or sign in from Settings.":
-    "Аккаунт Harbor не связан с входом в Stremio. Создайте его бесплатно или войдите в настройках.",
+  "Ratings need a Lart account": "Для оценок нужен аккаунт Lart",
+  "Your Lart account is separate from your Stremio sign in. Create one free or sign in from Settings.":
+    "Аккаунт Lart не связан с входом в Stremio. Создайте его бесплатно или войдите в настройках.",
   "Open account settings": "Открыть настройки аккаунта",
   "Save rating": "Сохранить оценку",
   "Rate this": "Оценить",
@@ -65,9 +65,9 @@ const profileFill: Record<string, string> = {
   "You are rating too fast, try again in a moment": "Слишком частые оценки, повторите чуть позже",
   "Could not save your rating": "Не удалось сохранить оценку",
   "Could not remove your rating": "Не удалось удалить оценку",
-  "Couldn't reach Harbor, check your connection":
-    "Не удалось связаться с Harbor, проверьте подключение",
-  "Harbor is having trouble, try again in a moment": "У Harbor неполадки, повторите чуть позже",
+  "Couldn't reach Lart, check your connection":
+    "Не удалось связаться с Lart, проверьте подключение",
+  "Lart is having trouble, try again in a moment": "У Lart неполадки, повторите чуть позже",
   Ratings: "Оценки",
   "Move or hide your cards": "Переместить или скрыть карточки",
   "Watch time": "Время просмотра",
@@ -128,10 +128,10 @@ const profileFill: Record<string, string> = {
   Added: "Добавлен",
   "Unlike list": "Убрать лайк со списка",
   "Like list": "Поставить лайк списку",
-  "Harbor list": "Список Harbor",
+  "Lart list": "Список Lart",
   "Share list": "Поделиться списком",
   "List link": "Ссылка на список",
-  "{title} on Harbor": "{title} в Harbor",
+  "{title} on Lart": "{title} в Lart",
   "No location": "Без местоположения",
   "Could not save. Try again.": "Не удалось сохранить. Повторите.",
   "Featured lists": "Избранные списки",
@@ -232,7 +232,7 @@ const profileFill: Record<string, string> = {
   Share: "Поделиться",
   "Share profile": "Поделиться профилем",
   "Profile link": "Ссылка на профиль",
-  "{name} on Harbor": "{name} в Harbor",
+  "{name} on Lart": "{name} в Lart",
   "Removing...": "Удаление...",
   "Remove friend": "Удалить из друзей",
   "Accepting...": "Принятие...",
@@ -251,8 +251,8 @@ const profileFill: Record<string, string> = {
   "Change banner": "Изменить баннер",
   "Add banner": "Добавить баннер",
   "Could not load this profile": "Не удалось загрузить профиль",
-  "Something went wrong reaching Harbor. Check your connection and try again.":
-    "Не удалось связаться с Harbor. Проверьте подключение и повторите попытку.",
+  "Something went wrong reaching Lart. Check your connection and try again.":
+    "Не удалось связаться с Lart. Проверьте подключение и повторите попытку.",
   "No such captain": "Капитан не найден",
   "We could not find anyone at @{handle}. The handle may have changed or the profile was removed.":
     "Не удалось никого найти по @{handle}. Возможно, никнейм изменился или профиль удалён.",

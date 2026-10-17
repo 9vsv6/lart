@@ -120,7 +120,7 @@ export function WebhooksPanel() {
     const service =
       kind === "discord" ? "Discord" : kind === "telegram" ? "Telegram" : "your desktop";
     const testPayload: WebhookPayload = {
-      text: t("Harbor test message ({service}). If you can read this, it's wired up.", {
+      text: t("Lart test message ({service}). If you can read this, it's wired up.", {
         service,
       }),
       items: [],
@@ -155,7 +155,7 @@ export function WebhooksPanel() {
         <Section
           title={t("Where alerts go")}
           subtitle={t(
-            "Connect Discord or Telegram, or turn on desktop notifications, and Harbor alerts you when something you follow is about to drop. Hit Send test to send yourself a sample first.",
+            "Connect Discord or Telegram, or turn on desktop notifications, and Lart alerts you when something you follow is about to drop. Hit Send test to send yourself a sample first.",
           )}
         >
           <DesktopNotifyField

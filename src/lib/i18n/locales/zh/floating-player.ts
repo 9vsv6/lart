@@ -1,6 +1,6 @@
 export default {
   "floatingPlayer.playbackSettings": "播放设置",
-  "floatingPlayer.restoreVideo": "返回 Harbor",
+  "floatingPlayer.restoreVideo": "返回 Lart",
   "floatingPlayer.closeVideo": "停止并关闭",
   "floatingPlayer.chapters": "章节",
   "floatingPlayer.subtitleDelay": "字幕延迟",

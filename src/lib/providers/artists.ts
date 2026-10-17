@@ -147,7 +147,7 @@ async function run(
     if (json.error) {
       const detail = json.error.message ?? json.error.type ?? "unknown error";
       if (json.error.code === 4 || /quota/i.test(detail)) {
-        return { kind: "failed", message: "Deezer is rate limiting Harbor. Try again shortly." };
+        return { kind: "failed", message: "Deezer is rate limiting Lart. Try again shortly." };
       }
       return { kind: "failed", message: `Deezer refused the search: ${detail}` };
     }

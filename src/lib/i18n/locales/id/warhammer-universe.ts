@@ -18,7 +18,7 @@ export default {
   "games.warhammerUniverse.screenNote": "Animasi orisinal dan film panjang dari milenium ke-41.",
   "games.warhammerUniverse.free": "Gratis di Warhammer TV",
   "games.warhammerUniverse.subscription": "Mungkin perlu langganan Warhammer+",
-  "games.warhammerUniverse.movieNote": "Film animasi tahun 2010. Buka detail Harbor untuk pemeran, trailer, dan sumber.",
+  "games.warhammerUniverse.movieNote": "Film animasi tahun 2010. Buka detail Lart untuk pemeran, trailer, dan sumber.",
   "games.warhammerUniverse.screenScope": "Pilihan publik Warhammer TV. Hammer and Bolter mencakup beberapa dunia; ketersediaan ditentukan penyedia.",
   "games.warhammerUniverse.lore": "Mendalami cerita",
   "games.warhammerUniverse.loreNote": "Tokoh, faksi, dan peristiwa penting, dengan ilustrasi dari para pencipta dunia ini.",

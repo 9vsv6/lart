@@ -1,4 +1,4 @@
-const coverage: Record<string, string> = {
+const coverage: Record<string, string> = {
   "Sound descriptions": "소리 설명",
   "Hide sound effects and speaker names": "효과음과 화자 이름 숨기기",
   "Removes bracketed descriptions like [door creaks] and shouted speaker labels like JOHN: while subtitles play, so a release that only ships an SDH track still reads as plain dialogue. Song lyrics, ordinary parentheses and non-Latin scripts are left alone. Skipped on forced and picture-based tracks.": "재생 중인 자막에서 [문이 삐걱거린다] 같은 대괄호 설명과 JOHN: 처럼 대문자로 쓴 화자 이름을 지웁니다. SDH 자막만 들어 있는 릴리스도 일반 대사처럼 읽을 수 있습니다. 가사, 일반 괄호, 라틴 문자가 아닌 문자는 그대로 둡니다. 강제 자막과 이미지 자막에는 적용되지 않습니다.",
@@ -48,7 +48,7 @@ const coverage: Record<string, string> = {
   "chrome.parentalOn": "자녀 보호 기능 켜짐",
   "chrome.lockedRequiresPin": "{label} (잠김, PIN 필요)",
   "chrome.lockedShort": "{label} · 잠김",
-  "chrome.harborHome": "Harbor 홈",
+  "chrome.harborHome": "Lart 홈",
   "chrome.sectionLibrary": "라이브러리",
   "profile.whoWatching": "시청할 프로필 선택",
   "profile.editThis": "이 프로필 편집",
@@ -59,7 +59,7 @@ const coverage: Record<string, string> = {
   "profile.primary": "기본",
   "profile.signedIn": "Stremio에 로그인됨",
   "profile.fallback": "프로필",
-  "welcome.title": "Harbor에 오신 것을 환영합니다",
+  "welcome.title": "Lart에 오신 것을 환영합니다",
   "welcome.subtitle":
     "이제 인터페이스가 아랍어로 표시됩니다. 설정에서 언제든지 다시 변경할 수 있습니다.",
   "welcome.dismiss": "시작하기",
@@ -96,9 +96,9 @@ const coverage: Record<string, string> = {
   "Reveal comments": "댓글 표시",
   "Comments are hidden": "댓글이 숨겨져 있습니다",
   "Hosted elsewhere": "외부 호스팅",
-  "A third party runs these plans. Harbor is not affiliated with them and receives nothing from a signup. Current pricing and terms are on their site.": "이 요금제는 제3자가 운영합니다. Harbor는 제휴 관계가 없으며 가입으로 어떤 대가도 받지 않습니다. 현재 가격과 약관은 해당 사이트에 있습니다.",
+  "A third party runs these plans. Lart is not affiliated with them and receives nothing from a signup. Current pricing and terms are on their site.": "이 요금제는 제3자가 운영합니다. Lart는 제휴 관계가 없으며 가입으로 어떤 대가도 받지 않습니다. 현재 가격과 약관은 해당 사이트에 있습니다.",
   "{name} can run on a hosted instance": "{name}은(는) 호스팅 인스턴스에서 실행할 수 있습니다",
-  "A third party operates this. Harbor is not affiliated with them, does not resell it, and receives nothing if you sign up. Whatever it costs and whatever it includes is on their site.": "제3자가 운영합니다. Harbor는 제휴 관계가 없고 재판매하지 않으며 가입 시 어떤 대가도 받지 않습니다. 가격과 구성은 해당 사이트를 확인하세요.",
+  "A third party operates this. Lart is not affiliated with them, does not resell it, and receives nothing if you sign up. Whatever it costs and whatever it includes is on their site.": "제3자가 운영합니다. Lart는 제휴 관계가 없고 재판매하지 않으며 가입 시 어떤 대가도 받지 않습니다. 가격과 구성은 해당 사이트를 확인하세요.",
   "Show comments": "댓글 보기",
   "Hide comments": "댓글 숨기기",
   "You haven't commented yet": "아직 작성한 댓글이 없습니다",
@@ -169,8 +169,8 @@ const coverage: Record<string, string> = {
   "Focus GIF URL": "포커스 GIF URL",
   "Addon not installed": "애드온이 설치되지 않음",
   "This section depends on the addon": "이 섹션에는 다음 애드온이 필요합니다:",
-  "You must install this addon in your Stremio account first so Harbor can fetch its works.":
-    "Harbor에서 작품을 가져오려면 먼저 Stremio 계정에 이 애드온을 설치해야 합니다.",
+  "You must install this addon in your Stremio account first so Lart can fetch its works.":
+    "Lart에서 작품을 가져오려면 먼저 Stremio 계정에 이 애드온을 설치해야 합니다.",
   "Missing TMDB Key": "TMDB 키 없음",
   "This section relies on TMDB discovery features.": "이 섹션은 TMDB 탐색 기능을 사용합니다.",
   "Please add your TMDB API key in the Library & Metadata settings to view this folder.":
@@ -179,13 +179,13 @@ const coverage: Record<string, string> = {
   "Loading...": "로딩 중...",
   "Top People": "인기 인물",
   "Ranking source": "순위 출처",
-  "How Harbor Rank works": "Harbor 순위 산정 방식",
-  "Harbor Rank": "Harbor 순위",
+  "How Lart Rank works": "Lart 순위 산정 방식",
+  "Lart Rank": "Lart 순위",
   Trending: "인기 급상승",
   "Top on TMDB": "TMDB 인기 순위",
   "Top on IMDb": "IMDb 인기 순위",
   Consensus: "종합",
-  Harbor: "Harbor",
+  Lart: "Lart",
   TMDB: "TMDB",
   IMDb: "IMDb",
   "Our all-time ranking of a body of work, fully explained.":
@@ -264,16 +264,16 @@ const coverage: Record<string, string> = {
   "update.downloading": "업데이트 다운로드 중",
   "update.failed": "업데이트 실패",
   "update.available": "업데이트 있음",
-  "update.harborVersion": "Harbor {version}",
+  "update.harborVersion": "Lart {version}",
   "update.downloadComplete": "다운로드 완료",
   "update.fetching": "최신 버전 확인 중",
   "update.errorServer": "업데이트 서버에 연결하는 중 오류가 발생했습니다.",
   "update.later": "나중에",
   "update.download": "다운로드",
   "update.installRestart": "설치 후 다시 시작",
-  "update.restartAuto": "Harbor가 자동으로 다시 시작됩니다.",
+  "update.restartAuto": "Lart가 자동으로 다시 시작됩니다.",
   "update.tryAgain": "다시 시도",
-  "update.keepUsing": "다운로드하는 동안 Harbor 계속 사용",
+  "update.keepUsing": "다운로드하는 동안 Lart 계속 사용",
   "update.of": "{total} 중 {downloaded}",
   "mpv.conf": "mpv.conf",
   'Giving "two weeks\' notice" at a job means:': '직장에서 "2주 전 통보"를 한다는 뜻은:',
@@ -432,19 +432,19 @@ const coverage: Record<string, string> = {
   Turkish: "튀르키예어",
   Vietnamese: "베트남어",
   "Right to left": "오른쪽에서 왼쪽",
-  "Finish updating Harbor": "Harbor 업데이트 마무리",
+  "Finish updating Lart": "Lart 업데이트 마무리",
   "Download and run the installer to finish updating. If it keeps failing, run it as administrator once.":
     "업데이트를 완료하려면 설치 프로그램을 다운로드하여 실행하세요. 계속 실패하면 한 번 관리자 권한으로 실행하세요.",
   "Restart to update": "업데이트를 위해 다시 시작",
   "Update ready": "업데이트 준비 완료",
-  "Harbor {version} downloaded but did not install on its own.":
-    "Harbor {version} 다운로드가 완료되었지만 자동으로 설치되지 않았습니다.",
+  "Lart {version} downloaded but did not install on its own.":
+    "Lart {version} 다운로드가 완료되었지만 자동으로 설치되지 않았습니다.",
   "Big Picture": "빅 픽처",
   Dismiss: "닫기",
   "Download installer": "설치 프로그램 다운로드",
   "Install and reopen": "설치 후 다시 열기",
-  "Harbor is closing. Harbor Setup will finish and reopen it.":
-    "Harbor를 종료하는 중입니다. Harbor Setup이 설치를 완료한 뒤 다시 엽니다.",
+  "Lart is closing. Lart Setup will finish and reopen it.":
+    "Lart를 종료하는 중입니다. Lart Setup이 설치를 완료한 뒤 다시 엽니다.",
   "Most Popular": "최고 인기작",
   "What everyone is reading": "지금 모두가 읽는 작품",
   "Critically Acclaimed": "평단의 찬사를 받은 작품",
@@ -474,7 +474,7 @@ const coverage: Record<string, string> = {
   No: "아니요",
   "Jump back in": "이어서 보기",
   "On right now": "현재 방송 중",
-  "Now on Harbor": "지금 Harbor에서",
+  "Now on Lart": "지금 Lart에서",
   "Your services": "내 서비스",
   "Every saga, in order": "모든 사가를 순서대로",
   "Your addons": "내 애드온",
@@ -499,8 +499,8 @@ const coverage: Record<string, string> = {
     '"{name}" 및 그 안의 모든 항목이 삭제됩니다. 이 작업은 되돌릴 수 없습니다.',
   "#{position} in {label} Today": "오늘 {label} {position}위",
   "${n} for {days} days": "${n}에 {days}일",
-  "'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "의 설정 페이지를 Harbor 내장 브라우저에서 엽니다. 옵션을 선택하세요. 해당 페이지에서 설치를 클릭하면 Harbor가 링크를 자동으로 감지하여 애드온을 업데이트합니다.",
+  "'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "의 설정 페이지를 Lart 내장 브라우저에서 엽니다. 옵션을 선택하세요. 해당 페이지에서 설치를 클릭하면 Lart가 링크를 자동으로 감지하여 애드온을 업데이트합니다.",
   "'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "의 설정 페이지입니다. 옵션을 선택한 다음, 제공되는 설치 링크를 복사하여 아래에 붙여 넣으면 애드온이 업데이트됩니다.",
   "), put that suffix here.": "), 해당 접미사를 여기에 입력하세요.",
@@ -533,7 +533,7 @@ const coverage: Record<string, string> = {
   "1 month ago": "1개월 전",
   "1 new episode since you last watched": "마지막 시청 이후 새 에피소드 1개",
   "1 option active": "옵션 1개 활성화됨",
-  "1 other Harbor": "다른 Harbor 1개",
+  "1 other Lart": "다른 Lart 1개",
   "1 selected": "1개 선택됨",
   "1 title needs review — help us identify it.":
     "검토가 필요한 제목이 1개 있습니다. 식별을 도와주세요.",
@@ -634,14 +634,14 @@ const coverage: Record<string, string> = {
   "A / Cross": "A / Cross",
   "A Cloudflare Worker on your own account that hosts your Watch Together rooms.":
     "Watch Together 방을 호스팅하는 사용자 계정의 Cloudflare Worker입니다.",
-  "A Harbor account": "Harbor 계정",
+  "A Lart account": "Lart 계정",
   "A Live TV program is about to start": "실시간 TV 프로그램이 곧 시작됨",
   "A TOP 10 corner ribbon on the Top 10 rail posters. The watchlist marker auto-moves to the opposite corner so nothing overlaps.":
     "Top 10 레일 포스터 모서리에 표시되는 TOP 10 리본입니다. 겹치지 않도록 시청 목록 표시가 반대쪽 모서리로 자동 이동합니다.",
-  "A browser tab opened on AniList. Approve Harbor there, then copy the text it shows and paste it below.":
-    "브라우저의 새 탭에서 AniList가 열렸습니다. 그곳에서 Harbor를 승인한 다음, 표시되는 텍스트를 복사하여 아래에 붙여넣으세요.",
-  "A browser tab opened on MyAnimeList. Approve Harbor there, then copy the code or the page URL and paste it below.":
-    "브라우저의 새 탭에서 MyAnimeList가 열렸습니다. 그곳에서 Harbor를 승인한 다음, 코드 또는 페이지 URL을 복사하여 아래에 붙여넣으세요.",
+  "A browser tab opened on AniList. Approve Lart there, then copy the text it shows and paste it below.":
+    "브라우저의 새 탭에서 AniList가 열렸습니다. 그곳에서 Lart를 승인한 다음, 표시되는 텍스트를 복사하여 아래에 붙여넣으세요.",
+  "A browser tab opened on MyAnimeList. Approve Lart there, then copy the code or the page URL and paste it below.":
+    "브라우저의 새 탭에서 MyAnimeList가 열렸습니다. 그곳에서 Lart를 승인한 다음, 코드 또는 페이지 URL을 복사하여 아래에 붙여넣으세요.",
   "A classic neural edge-directed luma doubler. Very high quality, heavy on the GPU. More neurons means sharper and slower.":
     "고전적인 신경망 기반 윤곽선 지향 휘도 2배 확대 방식입니다. 품질이 매우 높지만 GPU 부하가 큽니다. 뉴런이 많을수록 더 선명하고 느려집니다.",
   "A client for the Stremio protocol. Two minutes to set up; most of it optional. You stay in control of every key.":
@@ -665,14 +665,14 @@ const coverage: Record<string, string> = {
   "Machine-translated": "기계 번역",
   "Direct/debrid only": "직접/debrid만",
   "Match subtitles across languages (experimental)": "서로 다른 언어의 자막 맞추기(실험적)",
-  "When the audio and subtitle use different languages, Harbor compares a release-matched subtitle in the audio language. It only offers a fix unless every safety check is measured.":
-    "오디오와 자막의 언어가 다르면 Harbor는 같은 릴리스에 맞는 오디오 언어 자막과 비교합니다. 모든 안전 검사가 측정되지 않으면 수정안을 제안만 합니다.",
+  "When the audio and subtitle use different languages, Lart compares a release-matched subtitle in the audio language. It only offers a fix unless every safety check is measured.":
+    "오디오와 자막의 언어가 다르면 Lart는 같은 릴리스에 맞는 오디오 언어 자막과 비교합니다. 모든 안전 검사가 측정되지 않으면 수정안을 제안만 합니다.",
   "New York Times": "New York Times",
   "Bestseller lists in the eBook section.": "eBook 섹션의 베스트셀러 목록입니다.",
   "New York Times · bestseller lists": "New York Times · 베스트셀러 목록",
   "NYT Books API key": "NYT Books API 키",
-  "Choose whether Harbor prefers direct and debrid sources, peer-to-peer torrents, or shows both.":
-    "Harbor가 직접 및 debrid 소스, P2P 토렌트를 우선할지 또는 둘 다 표시할지 선택합니다.",
+  "Choose whether Lart prefers direct and debrid sources, peer-to-peer torrents, or shows both.":
+    "Lart가 직접 및 debrid 소스, P2P 토렌트를 우선할지 또는 둘 다 표시할지 선택합니다.",
 };
 
 export default coverage;

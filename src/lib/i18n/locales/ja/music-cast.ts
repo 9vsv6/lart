@@ -1,13 +1,13 @@
 const musicCast: Record<string, string> = {
   "music.cast.title": "ネットワークスピーカー",
-  "music.cast.body": "スピーカーを起動し、Harborと同じネットワークに接続してください。",
+  "music.cast.body": "スピーカーを起動し、Lartと同じネットワークに接続してください。",
   "music.cast.discover": "スピーカーを探す",
   "music.cast.discovering": "スピーカーを検索中…",
   "music.cast.empty":
     "対応するスピーカーが見つかりません。ネットワークを確認して再検索してください。",
   "music.cast.compatibility":
-    "SonosとMarantzの対応状況は機種によって異なります。HarborはDLNAまたはChromecastを使用し、AirPlay 2には対応していません。",
-  "music.cast.airplay": "HarborはAirPlay 2の音声に対応していません。",
+    "SonosとMarantzの対応状況は機種によって異なります。LartはDLNAまたはChromecastを使用し、AirPlay 2には対応していません。",
+  "music.cast.airplay": "LartはAirPlay 2の音声に対応していません。",
   "music.cast.unsupportedDevice": "この機器のプロトコルはミュージックに対応していません。",
   "music.cast.invalidDevice": "機器情報が不完全です。再検索してください。",
   "music.cast.noTrack": "スピーカーに送る曲を選んでください。",
@@ -19,11 +19,11 @@ const musicCast: Record<string, string> = {
   "music.cast.controlFailed":
     "スピーカーが操作を確認できませんでした。状態を確認して再試行してください。",
   "music.cast.desktop":
-    "ネットワークスピーカーを探すにはHarborのデスクトップアプリを使用してください。",
+    "ネットワークスピーカーを探すにはLartのデスクトップアプリを使用してください。",
   "music.cast.spotify":
     "保護されたSpotifyの音声はこの方法では送信できません。SpotifyのSpotify Connectを使用してください。",
   "music.cast.local":
-    "Harborはまだローカルファイルをスピーカーに共有できません。オンライン音声ソースを選んでください。",
+    "Lartはまだローカルファイルをスピーカーに共有できません。オンライン音声ソースを選んでください。",
   "music.cast.unsupportedStream":
     "このソースから対応する音声ストリームを取得できませんでした。別のソースを選んでください。",
   "music.cast.disconnected":
@@ -32,7 +32,7 @@ const musicCast: Record<string, string> = {
   "music.cast.stop": "キャストを停止",
   "music.cast.selected": "選択中",
   "music.cast.eqHelp":
-    "HarborのEQとゲインはこのコンピューターのみに適用されます。音量はスピーカー側で調整してください。",
+    "LartのEQとゲインはこのコンピューターのみに適用されます。音量はスピーカー側で調整してください。",
   "music.cast.loading": "スピーカーに接続中…",
   "music.cast.playing": "スピーカーで再生中",
   "music.cast.paused": "スピーカーで一時停止中",

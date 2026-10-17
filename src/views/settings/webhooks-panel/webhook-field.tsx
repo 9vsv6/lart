@@ -120,7 +120,7 @@ export function DiscordTutorial() {
     <>
       <p className="max-w-[70ch]">
         {t(
-          "Discord posts a message to a channel whenever Harbor pings it. Takes about a minute to set up.",
+          "Discord posts a message to a channel whenever Lart pings it. Takes about a minute to set up.",
         )}
       </p>
       <ol className="ms-5 flex max-w-[70ch] list-decimal flex-col gap-2 marker:text-ink-subtle">
@@ -135,7 +135,7 @@ export function DiscordTutorial() {
         </li>
         <li>
           {t("Click")} <span className="text-ink">{t("New Webhook")}</span>,{" "}
-          {t("name it Harbor, hit")} <span className="text-ink">{t("Copy Webhook URL")}</span>.
+          {t("name it Lart, hit")} <span className="text-ink">{t("Copy Webhook URL")}</span>.
         </li>
         <li>{t("Paste the URL into the box above and send a test.")}</li>
       </ol>
@@ -160,7 +160,7 @@ export function TelegramTutorial() {
         {t("Telegram sends through a bot you create. You need two things: a")}{" "}
         <span className="text-ink">{t("bot token")}</span> {t("and your")}{" "}
         <span className="text-ink">{t("chat ID")}</span>.{" "}
-        {t("Both go in the boxes above. Harbor builds the URL for you.")}
+        {t("Both go in the boxes above. Lart builds the URL for you.")}
       </p>
       <ol className="ms-5 flex max-w-[70ch] list-decimal flex-col gap-2 marker:text-ink-subtle">
         <li>

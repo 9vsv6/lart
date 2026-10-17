@@ -101,7 +101,7 @@ export function VoyageBanner({ pool }: { pool: Meta[] }) {
   return (
     <section
       ref={rootRef}
-      aria-label={t("Harbor Voyages")}
+      aria-label={t("Lart Voyages")}
       style={{ height }}
       onKeyDown={(e) => {
         if (expanded && e.key === "Escape") { e.preventDefault(); e.stopPropagation(); collapse(); }
@@ -157,7 +157,7 @@ export function VoyageBanner({ pool }: { pool: Meta[] }) {
                 className="text-[10.5px] font-bold uppercase tracking-[0.22em]"
                 style={{ color: accent }}
               >
-                {t("Harbor Voyages")}
+                {t("Lart Voyages")}
                 {streak > 1 && (
                   <span className="ms-2 inline-flex h-[19px] items-baseline gap-0.5 rounded-full bg-elevated/70 ps-1.5 pe-2.5 align-middle text-ink">
                     <FlameStreak size={13} style={{ color: accent }} />

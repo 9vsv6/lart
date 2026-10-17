@@ -268,7 +268,7 @@ function CountdownRing({
       >
         <circle cx="22" cy="22" r={RING_R} fill="none" stroke="var(--bp-edge-2)" strokeWidth="3.5" />
         {/* stroke-dashoffset, not a conic-gradient. Gradient interpolation is
-            still uneven across the WebViews Harbor ships on, and a countdown
+            still uneven across the WebViews Lart ships on, and a countdown
             that steps in whole seconds on one platform reads as a stutter. */}
         <circle
           cx="22"

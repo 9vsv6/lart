@@ -86,7 +86,7 @@ export function UpdateCard() {
                       ? t("update.downloading")
                       : u.status === "error"
                         ? u.installFailed
-                          ? t("Finish updating Harbor")
+                          ? t("Finish updating Lart")
                           : t("update.failed")
                         : t("update.available")}
             </span>
@@ -120,10 +120,10 @@ export function UpdateCard() {
           <p className="mx-5 mb-2 text-[12px] leading-relaxed text-ink-subtle">
             {u.handoff.verifiable
               ? t(
-                  "This one also replaces Harbor's bundled players and tools, so it installs through Harbor Setup. Harbor closes, the installer finishes, then Harbor reopens.",
+                  "This one also replaces Lart's bundled players and tools, so it installs through Lart Setup. Lart closes, the installer finishes, then Lart reopens.",
                 )
               : t(
-                  "This one installs through Harbor Setup, but the update manifest carries no signature for it. Harbor will not run an installer it cannot verify. Download it and run it yourself.",
+                  "This one installs through Lart Setup, but the update manifest carries no signature for it. Lart will not run an installer it cannot verify. Download it and run it yourself.",
                 )}
           </p>
         )}
@@ -203,7 +203,7 @@ export function UpdateCard() {
           {u.status === "installing" && (
             <span className="text-[12px] text-ink-subtle">
               {u.handoff
-                ? t("Harbor is closing. Harbor Setup will finish and reopen it.")
+                ? t("Lart is closing. Lart Setup will finish and reopen it.")
                 : t("update.restartAuto")}
             </span>
           )}

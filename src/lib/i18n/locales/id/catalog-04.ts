@@ -63,16 +63,16 @@ const catalog: Record<string, string> = {
     "PNG, JPG, WebP, GIF, MP4, WebM, MOV. Hingga 6 file, masing-masing 100 MB.",
   "PNG, JPG, WebP, GIF, MP4, WebM, MOV. Up to {count} files, 100 MB each.":
     "PNG, JPG, WebP, GIF, MP4, WebM, MOV. Hingga {count} file, masing-masing 100 MB.",
-  "PNG, WEBP, SVG or GIF. Harbor shrinks it to 128px so it stays small on disk.":
-    "PNG, WEBP, SVG, atau GIF. Harbor memperkecilnya menjadi 128px agar tetap kecil di penyimpanan.",
+  "PNG, WEBP, SVG or GIF. Lart shrinks it to 128px so it stays small on disk.":
+    "PNG, WEBP, SVG, atau GIF. Lart memperkecilnya menjadi 128px agar tetap kecil di penyimpanan.",
   PREVIEW: "PRATINJAU",
   "Pack name": "Nama paket",
   "Pack removed, badges back to default": "Paket dihapus, lencana kembali ke default",
   Packaged: "Dikemas",
   Packs: "Paket",
   "Packs & import": "Paket & impor",
-  "Packs stay hosted by their maker. Harbor keeps the link, not the artwork.":
-    "Paket tetap dihosting oleh pembuatnya. Harbor hanya menyimpan tautan, bukan gambar.",
+  "Packs stay hosted by their maker. Lart keeps the link, not the artwork.":
+    "Paket tetap dihosting oleh pembuatnya. Lart hanya menyimpan tautan, bukan gambar.",
   Page: "Halaman",
   "Page background": "Latar belakang halaman",
   "Page background color": "Warna latar belakang halaman",
@@ -90,9 +90,9 @@ const catalog: Record<string, string> = {
     "Berbayar. Menyematkan skor langsung ke gambar poster.",
   "Painted Skies": "Painted Skies",
   Pair: "Hubungkan",
-  "Pair once from here and this Harbor will take commands.":
-    "Hubungkan sekali dari sini agar Harbor ini dapat menerima perintah.",
-  "Pair with this Harbor": "Hubungkan dengan Harbor ini",
+  "Pair once from here and this Lart will take commands.":
+    "Hubungkan sekali dari sini agar Lart ini dapat menerima perintah.",
+  "Pair with this Lart": "Hubungkan dengan Lart ini",
   Paired: "Terhubung",
   "Paired with {name}": "Terhubung dengan {name}",
   Palette: "Palet",
@@ -126,8 +126,8 @@ const catalog: Record<string, string> = {
     "Tempel URL daftar Trakt, MDBList, TMDB, Letterboxd, IMDb, atau MAL",
   "Paste a direct image link.": "Tempel tautan langsung ke gambar.",
   "Paste a direct video file link.": "Tempel tautan langsung ke file video.",
-  "Paste a public list from Trakt, MDBList, TMDB, Letterboxd, IMDb, or MyAnimeList. Harbor pulls the titles in and keeps the artwork sharp.":
-    "Tempel daftar publik dari Trakt, MDBList, TMDB, Letterboxd, IMDb, atau MyAnimeList. Harbor akan mengambil judulnya dan menjaga gambar tetap tajam.",
+  "Paste a public list from Trakt, MDBList, TMDB, Letterboxd, IMDb, or MyAnimeList. Lart pulls the titles in and keeps the artwork sharp.":
+    "Tempel daftar publik dari Trakt, MDBList, TMDB, Letterboxd, IMDb, atau MyAnimeList. Lart akan mengambil judulnya dan menjaga gambar tetap tajam.",
   "Paste a stremio:// link or an https://…/manifest.json URL.":
     "Tempel tautan stremio:// atau URL https://…/manifest.json.",
   "Paste a track, album or playlist link.": "Tempel tautan trek, album, atau playlist.",
@@ -137,7 +137,7 @@ const catalog: Record<string, string> = {
   "Paste any YouTube link. Watch, share, shorts or embed all work.":
     "Tempel tautan YouTube apa pun. Tautan tontonan, berbagi, Shorts, dan sematan semuanya didukung.",
   "Paste invite link": "Tempel tautan undangan",
-  "Paste it into Harbor.": "Tempel ke Harbor.",
+  "Paste it into Lart.": "Tempel ke Lart.",
   "Paste manifest URL or stremio:// link": "Tempel URL manifes atau tautan stremio://",
   "Paste the URL into the box above and send a test.":
     "Tempel URL ke kotak di atas lalu kirim pengujian.",
@@ -148,8 +148,8 @@ const catalog: Record<string, string> = {
   "Paste the manifest URL, or click Install on the addon's configuration page above.":
     "Tempel URL manifes, atau klik Instal di halaman konfigurasi addon di atas.",
   "Paste the text from AniList": "Tempel teks dari AniList",
-  "Paste this code into Harbor to open the collection.":
-    "Tempel kode ini ke Harbor untuk membuka koleksi.",
+  "Paste this code into Lart to open the collection.":
+    "Tempel kode ini ke Lart untuk membuka koleksi.",
   "Paste your API token first.": "Tempel token API Anda terlebih dahulu.",
   "Paste your OpenSubtitles API key": "Tempel kunci API OpenSubtitles Anda",
   "Paste your SUBDL API key": "Tempel kunci API SUBDL Anda",
@@ -224,8 +224,8 @@ const catalog: Record<string, string> = {
   "Pick a World": "Pilih Dunia",
   "Pick a direction. You steer from there, one film at a time.":
     "Pilih arah. Setelah itu, Anda menentukan jalannya, satu film setiap kali.",
-  "Pick a display and body pairing, or upload your own font to use across Harbor.":
-    "Pilih pasangan tampilan dan teks, atau unggah font sendiri untuk digunakan di seluruh Harbor.",
+  "Pick a display and body pairing, or upload your own font to use across Lart.":
+    "Pilih pasangan tampilan dan teks, atau unggah font sendiri untuk digunakan di seluruh Lart.",
   "Pick a drive with room to spare. Files already cached stay where they are.":
     "Pilih drive dengan ruang kosong yang cukup. File yang sudah di-cache akan tetap berada di lokasi semula.",
   "Pick a few you love": "Pilih beberapa yang Anda sukai",
@@ -245,10 +245,10 @@ const catalog: Record<string, string> = {
   "Pick a profile to continue.": "Pilih profil untuk melanjutkan.",
   "Pick a random title": "Pilih judul secara acak",
   "Pick a source": "Pilih sumber",
-  "Pick a source once and Harbor keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. For anime it locks the whole series to that release.":
-    "Pilih sumber sekali, lalu Harbor akan terus memutar sisa musim dari rilisan yang sama tanpa perlu memilih ulang. Paling cocok dengan paket musim debrid. Untuk anime, seluruh seri akan dikunci ke rilisan tersebut.",
-  "Pick a source once and Harbor keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
-    "Pilih sumber sekali, lalu Harbor akan terus memutar sisa musim dari rilisan yang sama tanpa perlu memilih ulang. Paling cocok dengan paket musim debrid. Tidak berlaku untuk anime.",
+  "Pick a source once and Lart keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. For anime it locks the whole series to that release.":
+    "Pilih sumber sekali, lalu Lart akan terus memutar sisa musim dari rilisan yang sama tanpa perlu memilih ulang. Paling cocok dengan paket musim debrid. Untuk anime, seluruh seri akan dikunci ke rilisan tersebut.",
+  "Pick a source once and Lart keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
+    "Pilih sumber sekali, lalu Lart akan terus memutar sisa musim dari rilisan yang sama tanpa perlu memilih ulang. Paling cocok dengan paket musim debrid. Tidak berlaku untuk anime.",
   "Pick a source to swap in place. Playback keeps running.":
     "Pilih sumber pengganti. Pemutaran tetap berjalan.",
   "Pick a star rating first": "Pilih rating bintang terlebih dahulu",
@@ -304,8 +304,8 @@ const catalog: Record<string, string> = {
     "Lanjutkan episode dan film yang belum selesai dari posisi tersimpan. Apa pun yang telah ditonton lebih dari 80% akan selalu dimulai ulang. Nonaktifkan ini agar selalu memulai dari awal, cocok jika Anda menonton ulang acara.",
   "Pick up the manga at {label}.": "Lanjutkan manga dari {label}.",
   "Pick up the manga where the anime ends.": "Lanjutkan manga dari bagian setelah anime berakhir.",
-  "Pick up to five. It shapes what Harbor surfaces first.":
-    "Pilih hingga lima. Pilihan ini menentukan apa yang pertama kali ditampilkan Harbor.",
+  "Pick up to five. It shapes what Lart surfaces first.":
+    "Pilih hingga lima. Pilihan ini menentukan apa yang pertama kali ditampilkan Lart.",
   "Pick up to {max} artists to show on your profile.":
     "Pilih hingga {max} artis untuk ditampilkan di profil Anda.",
   "Pick up to {max} badges to show by your name. Tap in the order you want them to appear.":
@@ -325,8 +325,8 @@ const catalog: Record<string, string> = {
   "Pick what you actually use": "Pilih yang benar-benar Anda gunakan",
   "Pick what you want in your calendar. Mix and match: tracked people, genres, streamers, countries, Trakt lists.":
     "Pilih yang ingin dimasukkan ke kalender Anda. Padukan sesuka hati: orang yang diikuti, genre, layanan streaming, negara, daftar Trakt.",
-  "Pick which audio and subtitle languages Harbor reaches for first.":
-    "Pilih bahasa audio dan subtitle yang diprioritaskan Harbor.",
+  "Pick which audio and subtitle languages Lart reaches for first.":
+    "Pilih bahasa audio dan subtitle yang diprioritaskan Lart.",
   "Pick which calendars feed your alerts. Items are deduped across sources before sending.":
     "Pilih kalender yang menjadi sumber notifikasi Anda. Item duplikat dari berbagai sumber akan dihapus sebelum dikirim.",
   "Pick which calendars feed your webhook. Items are deduped across sources before sending.":
@@ -356,8 +356,8 @@ const catalog: Record<string, string> = {
   "Picture quality": "Kualitas gambar",
   "Picture quality (weak PC / balanced / max)": "Kualitas gambar (PC lemah / seimbang / maks.)",
   "Picture quality on the TV": "Kualitas gambar di TV",
-  "Picture shaders run on the bundled mpv engine in the Harbor desktop app. They have no effect in the browser.":
-    "Shader gambar berjalan pada mesin mpv bawaan di aplikasi desktop Harbor. Fitur ini tidak berpengaruh di browser.",
+  "Picture shaders run on the bundled mpv engine in the Lart desktop app. They have no effect in the browser.":
+    "Shader gambar berjalan pada mesin mpv bawaan di aplikasi desktop Lart. Fitur ini tidak berpengaruh di browser.",
   "Picture-in-picture": "Gambar-dalam-gambar",
   "Pilots that pull you in and finales that earn the season.":
     "Episode perdana yang langsung memikat dan episode akhir yang menuntaskan musim dengan memuaskan.",
@@ -454,8 +454,8 @@ const catalog: Record<string, string> = {
   "Playlist contained no channels": "Daftar putar tidak berisi saluran",
   "Playlist is too large": "Daftar putar terlalu besar",
   Playlists: "Daftar putar",
-  "Plays + ratings sync from Harbor to Trakt.tv.":
-    "Riwayat pemutaran + rating disinkronkan dari Harbor ke Trakt.tv.",
+  "Plays + ratings sync from Lart to Trakt.tv.":
+    "Riwayat pemutaran + rating disinkronkan dari Lart ke Trakt.tv.",
   "Plays HDR content in its own window so Windows treats it as true HDR (the SDR brightness slider stops dimming it). Turn off HDR-to-SDR tonemapping above to use this on an HDR display.":
     "Memutar konten HDR di jendela tersendiri agar Windows memperlakukannya sebagai HDR asli (penggeser kecerahan SDR tidak lagi meredupkannya). Nonaktifkan pemetaan rona HDR-ke-SDR di atas untuk menggunakannya pada layar HDR.",
   "Plays HDR in its own window so Windows shows real HDR and the SDR brightness slider stops dimming it. The most reliable way to get true HDR.":
@@ -468,17 +468,17 @@ const catalog: Record<string, string> = {
   "Please add your TMDB API key in the Library & Metadata settings to view this folder.":
     "Tambahkan kunci API TMDB Anda di Pengaturan Perpustakaan & Metadata untuk melihat folder ini.",
   "Please choose a PNG, SVG, JPG, or WebP image.": "Pilih gambar PNG, SVG, JPG, atau WebP.",
-  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Harbor. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
-    "Plugin berjalan dalam sandbox di worker terisolasi tanpa akses ke file, akun, atau bagian lain Harbor. Data yang diambil plugin hanya menyangkut Anda dan situs tujuannya. Instal plugin hanya dari repositori yang Anda percayai.",
+  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Lart. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
+    "Plugin berjalan dalam sandbox di worker terisolasi tanpa akses ke file, akun, atau bagian lain Lart. Data yang diambil plugin hanya menyangkut Anda dan situs tujuannya. Instal plugin hanya dari repositori yang Anda percayai.",
   "Plus Jakarta Sans": "Plus Jakarta Sans",
   "Pluto TV": "Pluto TV",
-  "Point Harbor at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
-    "Arahkan Harbor ke sebuah folder. Kami akan memindainya untuk mencari film dan acara, mengurai judul dari nama file, lalu melengkapinya dengan TMDB agar tampil seragam dengan konten lain di sini. Kami hanya mengingat lokasinya; tidak ada yang disalin atau dipindahkan.",
-  "Point Harbor at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.": "Arahkan Harbor ke server streaming di perangkat lain, seperti layanan Stremio di server rumah. Stream P2P akan diunduh dan diputar dari perangkat tersebut, bukan perangkat ini.",
-  "Point Harbor at your self-hosted library to browse and install sources":
-    "Arahkan Harbor ke perpustakaan yang Anda hosting sendiri untuk menjelajahi dan menginstal sumber",
-  "Point Harbor's built-in scraper at any HTML site with a config":
-    "Arahkan scraper bawaan Harbor ke situs HTML mana pun dengan konfigurasi",
+  "Point Lart at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
+    "Arahkan Lart ke sebuah folder. Kami akan memindainya untuk mencari film dan acara, mengurai judul dari nama file, lalu melengkapinya dengan TMDB agar tampil seragam dengan konten lain di sini. Kami hanya mengingat lokasinya; tidak ada yang disalin atau dipindahkan.",
+  "Point Lart at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.": "Arahkan Lart ke server streaming di perangkat lain, seperti layanan Stremio di server rumah. Stream P2P akan diunduh dan diputar dari perangkat tersebut, bukan perangkat ini.",
+  "Point Lart at your self-hosted library to browse and install sources":
+    "Arahkan Lart ke perpustakaan yang Anda hosting sendiri untuk menjelajahi dan menginstal sumber",
+  "Point Lart's built-in scraper at any HTML site with a config":
+    "Arahkan scraper bawaan Lart ke situs HTML mana pun dengan konfigurasi",
   "Point Local folder at CBZ files or folders of images you already own.":
     "Arahkan Folder lokal ke file CBZ atau folder gambar yang sudah Anda miliki.",
   Pointer: "Penunjuk",
@@ -537,8 +537,8 @@ const catalog: Record<string, string> = {
   "Posts are not available yet": "Belum ada postingan",
   "Power tools": "Perkakas canggih",
   "Power tools & diagnostics": "Perkakas canggih & diagnostik",
-  "Power-user knob. Inject your own CSS, JS, and HTML into Harbor. Lives in your local settings; nothing leaves your machine.":
-    "Pengaturan untuk pengguna mahir. Sisipkan CSS, JS, dan HTML Anda sendiri ke Harbor. Tersimpan di Pengaturan lokal Anda; tidak ada yang dikirim dari perangkat Anda.",
+  "Power-user knob. Inject your own CSS, JS, and HTML into Lart. Lives in your local settings; nothing leaves your machine.":
+    "Pengaturan untuk pengguna mahir. Sisipkan CSS, JS, dan HTML Anda sendiri ke Lart. Tersimpan di Pengaturan lokal Anda; tidak ada yang dikirim dari perangkat Anda.",
   "Powers everything on this page: the web app, the phone remote, and the manga reader remote.":
     "Mendukung semua yang ada di halaman ini: aplikasi web, remote ponsel, dan remote pembaca manga.",
   "Powers the Identify song button in the player.":
@@ -547,8 +547,8 @@ const catalog: Record<string, string> = {
     "Mendukung tombol Identifikasi lagu di pemutar. Dapatkan token di",
   "Practise law in court for them": "Mewakili mereka sebagai pengacara di pengadilan",
   "Pre-paying the last month's rent": "Membayar di muka sewa bulan terakhir",
-  "Prefer a server? Run every source through your own Suwayomi and point Harbor at it":
-    "Lebih suka menggunakan server? Jalankan setiap sumber melalui Suwayomi Anda sendiri dan arahkan Harbor ke sana",
+  "Prefer a server? Run every source through your own Suwayomi and point Lart at it":
+    "Lebih suka menggunakan server? Jalankan setiap sumber melalui Suwayomi Anda sendiri dan arahkan Lart ke sana",
   "Prefer embedded subtitles": "Utamakan subtitle tertanam",
   "Prefer my installed metadata addon": "Utamakan addon metadata yang saya instal",
   "Preferred language for anime titles displayed on poster cards.":
@@ -569,11 +569,11 @@ const catalog: Record<string, string> = {
   "Preparing…": "Menyiapkan…",
   Preset: "Preset",
   Presets: "Preset",
-  "Press OK on a field to type, or use the Harbor remote on your phone.":
-    "Tekan OK pada kolom untuk mengetik, atau gunakan remote Harbor di ponsel Anda.",
+  "Press OK on a field to type, or use the Lart remote on your phone.":
+    "Tekan OK pada kolom untuk mengetik, atau gunakan remote Lart di ponsel Anda.",
   "Press Play": "Tekan Play",
-  "Press Play and Harbor picks the source itself instead of opening the list.":
-    "Tekan Play agar Harbor memilih sumber secara otomatis, bukan membuka daftar.",
+  "Press Play and Lart picks the source itself instead of opening the list.":
+    "Tekan Play agar Lart memilih sumber secara otomatis, bukan membuka daftar.",
   "Press T": "Tekan T",
   "Press a key…": "Tekan tombol…",
   "Press buttons and move the sticks. This mirrors your controller in real time.":
@@ -738,8 +738,8 @@ const catalog: Record<string, string> = {
   Queued: "Dalam antrean",
   "Queued on {provider}": "Dalam antrean di {provider}",
   "Queued {queued} of {total} episodes.": "{queued} dari {total} episode masuk antrean.",
-  "Queued {queued} of {total} episodes. Harbor could not match every episode in this package.":
-    "{queued} dari {total} episode masuk antrean. Harbor tidak dapat mencocokkan semua episode dalam paket ini.",
+  "Queued {queued} of {total} episodes. Lart could not match every episode in this package.":
+    "{queued} dari {total} episode masuk antrean. Lart tidak dapat mencocokkan semua episode dalam paket ini.",
   "Quick Watches Under 90": "Tontonan Singkat di Bawah 90 Menit",
   "Quick age check": "Pemeriksaan usia singkat",
   "Quick panel": "Panel cepat",
@@ -751,7 +751,7 @@ const catalog: Record<string, string> = {
     "Drama tenang, thriller tajam, dan serial yang Anda simpan untuk diri sendiri.",
   "Quiet favorites": "Favorit yang tenang",
   "Quietly great, {decade}": "Pilihan hebat yang tenang, {decade}",
-  "Quit Harbor": "Keluar dari Harbor",
+  "Quit Lart": "Keluar dari Lart",
   "Quiz time!": "Waktunya kuis!",
   Quote: "Kutipan",
   "RAVU Lite": "RAVU Lite",
@@ -814,7 +814,7 @@ const catalog: Record<string, string> = {
   Ratings: "Rating",
   "Ratings count from {movie}+ votes, {tv}+ for TV":
     "Jumlah rating dari {movie}+ suara, {tv}+ untuk TV",
-  "Ratings need a Harbor account": "Rating memerlukan akun Harbor",
+  "Ratings need a Lart account": "Rating memerlukan akun Lart",
   "Raw Nerve": "Raw Nerve",
   "Re-apply to the window and taskbar now": "Terapkan ulang ke jendela dan bilah tugas sekarang",
   "Re-authenticate": "Autentikasi ulang",
@@ -826,7 +826,7 @@ const catalog: Record<string, string> = {
   "Re-run deploy or paste the correct URL": "Jalankan ulang deploy atau tempel URL yang benar",
   "Re-runs the welcome flow and clears every dismissed tip.":
     "Menjalankan ulang alur sambutan dan menghapus semua tips yang ditutup.",
-  "Re-sync from your Harbor profile picture": "Sinkronkan ulang dari foto profil Harbor Anda",
+  "Re-sync from your Lart profile picture": "Sinkronkan ulang dari foto profil Lart Anda",
   "Re-test": "Uji ulang",
   Reach: "Jangkauan",
   "Reach HTTP sources with harbor.http(url, opts), binary gRPC sources with harbor.grpc(url, protobufBytes, opts), and parse HTML with harbor.parseHtml(html). There is no fetch, DOM, or storage in the sandbox.":
@@ -846,7 +846,7 @@ const catalog: Record<string, string> = {
   "Read here": "Baca di sini",
   "Read latest": "Baca terbaru",
   "Read manga files you already have": "Baca file manga yang sudah Anda miliki",
-  "Read manga in Harbor": "Baca manga di Harbor",
+  "Read manga in Lart": "Baca manga di Lart",
   "Read more": "Baca selengkapnya",
   "Read now": "Baca sekarang",
   "Read on": "Baca di",
@@ -888,8 +888,8 @@ const catalog: Record<string, string> = {
     "Real-Debrid, TorBox, AllDebrid, dan Premiumize terkadang mengalami gangguan singkat sehingga tidak menampilkan tautan. Tunggu beberapa menit lalu coba lagi, atau periksa halaman status layanan tersebut.",
   "Real-Debrid, TorBox, AllDebrid, Premiumize, Debrid-Link. Cached streams play direct. Keys stay local.":
     "Real-Debrid, TorBox, AllDebrid, Premiumize, Debrid-Link. Stream yang di-cache diputar langsung. Kunci tetap tersimpan lokal.",
-  "Real-time GPU upscaling that sharpens lines and cleans up gradients on anime, built right into Harbor's player. The one-tap setup below grabs the shaders; nothing else to install.":
-    "Peningkatan resolusi GPU secara real-time yang mempertajam garis dan memperhalus gradasi anime, langsung di pemutar Harbor. Penyiapan sekali ketuk di bawah akan mengambil shader; tidak ada lagi yang perlu diinstal.",
+  "Real-time GPU upscaling that sharpens lines and cleans up gradients on anime, built right into Lart's player. The one-tap setup below grabs the shaders; nothing else to install.":
+    "Peningkatan resolusi GPU secara real-time yang mempertajam garis dan memperhalus gradasi anime, langsung di pemutar Lart. Penyiapan sekali ketuk di bawah akan mengambil shader; tidak ada lagi yang perlu diinstal.",
   "Real-time anime upscaling. GPU-intensive.":
     "Peningkatan resolusi anime secara real-time. Membebani GPU.",
   Reality: "Realitas",
@@ -943,8 +943,8 @@ const catalog: Record<string, string> = {
   "Rede aberta": "Jaringan terbuka",
   Redeploy: "Deploy ulang",
   "Redeploy instructions": "Petunjuk deploy ulang",
-  "Redeploy it to get the latest Watch Together fixes. Harbor's public relay updates on its own.":
-    "Deploy ulang untuk mendapatkan perbaikan Watch Together terbaru. Relay publik Harbor diperbarui secara otomatis.",
+  "Redeploy it to get the latest Watch Together fixes. Lart's public relay updates on its own.":
+    "Deploy ulang untuk mendapatkan perbaikan Watch Together terbaru. Relay publik Lart diperbarui secara otomatis.",
   "Redeploy relay": "Deploy ulang relay",
   "Redeploy to pick up the latest Watch Together fixes. The in-app banner clears once the new version is live.":
     "Deploy ulang untuk mendapatkan perbaikan Watch Together terbaru. Banner dalam aplikasi akan hilang setelah versi baru aktif.",

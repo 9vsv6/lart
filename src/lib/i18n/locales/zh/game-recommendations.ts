@@ -37,7 +37,7 @@ export default {
   "games.recommend.retrySome": "重试缺失的关联信息",
   "games.recommend.saveError": "无法在此设备上保存你的探索偏好。请重试。",
   "games.recommend.influences": "影响推荐的游戏",
-  "games.recommend.influencesNote": "选择 Harbor 参考哪些游戏。你的游戏库不会改变。",
+  "games.recommend.influencesNote": "选择 Lart 参考哪些游戏。你的游戏库不会改变。",
   "games.recommend.exclude": "不再参考 {name}",
   "games.recommend.excluded": "已排除的推荐依据（{count}）",
   "games.recommend.useAgain": "重新参考 {name}",

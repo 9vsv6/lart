@@ -18,7 +18,7 @@ export default {
   "games.warhammerUniverse.screenNote": "Оригинальная анимация и полнометражный фильм о 41-м тысячелетии.",
   "games.warhammerUniverse.free": "Бесплатно на Warhammer TV",
   "games.warhammerUniverse.subscription": "Может потребоваться подписка Warhammer+",
-  "games.warhammerUniverse.movieNote": "Анимационный фильм 2010 года. Откройте карточку Harbor: актёры, трейлеры и источники.",
+  "games.warhammerUniverse.movieNote": "Анимационный фильм 2010 года. Откройте карточку Lart: актёры, трейлеры и источники.",
   "games.warhammerUniverse.screenScope": "Публичная подборка Warhammer TV. Hammer and Bolter охватывает несколько миров; доступность зависит от сервиса.",
   "games.warhammerUniverse.lore": "Погружение в историю",
   "games.warhammerUniverse.loreNote": "Персонажи, фракции и важные события в иллюстрациях создателей этих миров.",

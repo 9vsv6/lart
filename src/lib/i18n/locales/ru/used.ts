@@ -69,13 +69,13 @@ const used: Record<string, string> = {
     "Плавно увеличивать соседние постеры при движении по ряду.",
   "German Cinema": "Немецкое кино",
   "German Films": "Немецкие фильмы",
-  "Harbor Rank scores a whole career, not a single hit. Four things move a rank: how good the work is on average, how much of it earned wide acclaim, the major awards it won, and how often the person carried the work as a lead. Each pillar is weighted, added up, then adjusted for the breadth and recency of the body of work. Every number that feeds a score is shown on the card, so you can always see why.":
-    "Harbor Rank оценивает всю карьеру, а не один успех. На ранг влияют четыре вещи: насколько хороши работы в среднем, сколько из них получили широкое признание, какие крупные премии они взяли и как часто у человека была главная роль. Каждый показатель получает свой вес, всё складывается, а затем корректируется с учётом охвата и актуальности работ. Все числа, из которых складывается оценка, показаны на карточке, так что причину всегда видно.",
-  "Harbor could not find these": "Не удалось найти эти названия",
-  "Harbor loads the native svpflow filter through VapourSynth and starts SVP Manager when available. Restart playback to apply.":
-    "Harbor загружает нативный фильтр svpflow через VapourSynth и запускает SVP Manager, если он доступен. Перезапустите воспроизведение, чтобы применить.",
-  "Harbor's own menus and labels. Subtitle languages come later, and you can change both in Settings.":
-    "Меню и подписи самого Harbor. Языки субтитров вы выберете позже, и оба параметра можно изменить в Настройках.",
+  "Lart Rank scores a whole career, not a single hit. Four things move a rank: how good the work is on average, how much of it earned wide acclaim, the major awards it won, and how often the person carried the work as a lead. Each pillar is weighted, added up, then adjusted for the breadth and recency of the body of work. Every number that feeds a score is shown on the card, so you can always see why.":
+    "Lart Rank оценивает всю карьеру, а не один успех. На ранг влияют четыре вещи: насколько хороши работы в среднем, сколько из них получили широкое признание, какие крупные премии они взяли и как часто у человека была главная роль. Каждый показатель получает свой вес, всё складывается, а затем корректируется с учётом охвата и актуальности работ. Все числа, из которых складывается оценка, показаны на карточке, так что причину всегда видно.",
+  "Lart could not find these": "Не удалось найти эти названия",
+  "Lart loads the native svpflow filter through VapourSynth and starts SVP Manager when available. Restart playback to apply.":
+    "Lart загружает нативный фильтр svpflow через VapourSynth и запускает SVP Manager, если он доступен. Перезапустите воспроизведение, чтобы применить.",
+  "Lart's own menus and labels. Subtitle languages come later, and you can change both in Settings.":
+    "Меню и подписи самого Lart. Языки субтитров вы выберете позже, и оба параметра можно изменить в Настройках.",
   "Hide breakdown": "Скрыть разбор",
   "Hide card": "Скрыть карточку",
   "Hide curated packs": "Скрыть готовые наборы",
@@ -86,8 +86,8 @@ const used: Record<string, string> = {
   "Hover a band to inspect a pillar": "Наведите на сегмент, чтобы увидеть показатель",
   "How cards look across Home, Discover, and your library. The preview updates live.":
     "Как выглядят карточки на «Главной», в «Обзоре» и в библиотеке. Предпросмотр обновляется сразу.",
-  "How long Harbor waits for each addon to return streams. Aggregators that search many sources can need 45s or more. Results appear as each addon answers, so a longer wait never delays the fast ones.":
-    "Сколько Harbor ждёт потоки от каждого дополнения. Агрегаторам, которые ищут по многим источникам, может понадобиться 45 секунд и больше. Результаты появляются по мере ответа дополнений, поэтому долгое ожидание не задерживает быстрые.",
+  "How long Lart waits for each addon to return streams. Aggregators that search many sources can need 45s or more. Results appear as each addon answers, so a longer wait never delays the fast ones.":
+    "Сколько Lart ждёт потоки от каждого дополнения. Агрегаторам, которые ищут по многим источникам, может понадобиться 45 секунд и больше. Результаты появляются по мере ответа дополнений, поэтому долгое ожидание не задерживает быстрые.",
   "How the four pillars are weighted": "Как взвешены четыре показателя",
   "If you already rated a title, the imported score replaces it.":
     "Если вы уже оценили название, импортированная оценка заменит вашу.",
@@ -102,7 +102,7 @@ const used: Record<string, string> = {
   Insert: "Вставить",
   "Install more shaders in Settings, Shaders to switch between them here.":
     "Установите больше шейдеров в Настройках, раздел «Шейдеры», чтобы переключаться между ними здесь.",
-  "Installed and detected. Harbor found the native svpflow plugins and VapourSynth script library.":
+  "Installed and detected. Lart found the native svpflow plugins and VapourSynth script library.":
     "Установлено и обнаружено. Найдены нативные плагины svpflow и библиотека скриптов VapourSynth.",
   "Installed packs": "Установленные наборы",
   "Installed shaders": "Установленные шейдеры",
@@ -113,18 +113,18 @@ const used: Record<string, string> = {
   "Japanese Films": "Японские фильмы",
   "Korean Films": "Корейские фильмы",
   "Last source tried": "Последний источник",
-  "Leftover installers from past updates, cached trailers, and casting scratch files. Harbor clears old ones on launch, keeping only the most recent installer.":
-    "Оставшиеся установщики от прошлых обновлений, кэш трейлеров и временные файлы трансляции. При запуске Harbor удаляет старые, оставляя только самый свежий установщик.",
+  "Leftover installers from past updates, cached trailers, and casting scratch files. Lart clears old ones on launch, keeping only the most recent installer.":
+    "Оставшиеся установщики от прошлых обновлений, кэш трейлеров и временные файлы трансляции. При запуске Lart удаляет старые, оставляя только самый свежий установщик.",
   "Local storage is full, these ratings live on your account only.":
     "Локальное хранилище заполнено, эти оценки хранятся только в аккаунте.",
-  "Manga cannot be matched to a Harbor title yet, so {n} were left out.":
-    "Мангу пока нельзя сопоставить с названиями в Harbor, поэтому {n} пропущено.",
+  "Manga cannot be matched to a Lart title yet, so {n} were left out.":
+    "Мангу пока нельзя сопоставить с названиями в Lart, поэтому {n} пропущено.",
   "Mark all read": "Отметить все прочитанными",
   Minecraft: "Minecraft",
   "Modern Russian Series": "Современные российские сериалы",
   "Mute all profile songs": "Отключить музыку профилей",
-  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Harbor's embedded player.":
-    "Нативная плавность 48/60fps через вашу установку SVP и VapourSynth в Linux, с отрисовкой во встроенном плеере Harbor.",
+  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Lart's embedded player.":
+    "Нативная плавность 48/60fps через вашу установку SVP и VapourSynth в Linux, с отрисовкой во встроенном плеере Lart.",
   "New Year Classics": "Новогодняя классика",
   "Next in {days}d {hours}h": "Следующая через {days} д {hours} ч",
   "Next in {hours}h {minutes}m": "Следующая через {hours} ч {minutes} мин",
@@ -167,14 +167,14 @@ const used: Record<string, string> = {
   "Russian Drama": "Российские драмы",
   "Russian Films": "Фильмы России",
   "Russian Movies": "Российские фильмы",
-  "SVP is not supported by this Harbor package.": "Эта сборка Harbor не поддерживает SVP.",
+  "SVP is not supported by this Lart package.": "Эта сборка Lart не поддерживает SVP.",
   "Search movies, shows, anime, manga": "Поиск фильмов, сериалов, аниме, манги",
   Shaders: "Шейдеры",
   "Show card": "Показать карточку",
   "Shows a small green dot on the player's subtitle button while a subtitle track is active. Turn it off if you would rather keep the controls clean.":
     "Показывает небольшую зелёную точку на кнопке субтитров в плеере, когда дорожка субтитров активна. Выключите, если хотите, чтобы элементы управления оставались чистыми.",
-  "Sign in to your Harbor account first. Imported ratings are saved to your profile.":
-    "Сначала войдите в аккаунт Harbor. Импортированные оценки сохраняются в вашем профиле.",
+  "Sign in to your Lart account first. Imported ratings are saved to your profile.":
+    "Сначала войдите в аккаунт Lart. Импортированные оценки сохраняются в вашем профиле.",
   "Skip ad": "Пропустить рекламу",
   "Skipped, not rated or not supported": "Пропущено: без оценки или не поддерживается",
   Sort: "Сортировка",
@@ -218,7 +218,7 @@ const used: Record<string, string> = {
   "You were mentioned": "Вас упомянули",
   "Your Lists": "Ваши списки",
   "Your MAL Lists": "Ваши списки MAL",
-  "Your handle across Harbor.": "Ваш ник во всём Harbor.",
+  "Your handle across Lart.": "Ваш ник во всём Lart.",
   "and {count} more": "и ещё {count}",
   "and {n} more": "и ещё {n}",
   "avg rating {r} across {n} titles": "средняя оценка {r} по {n} названиям",

@@ -2,15 +2,15 @@ const addons: Record<string, string> = {
   "{n} addon": "{n} complemento",
   "{n} addons": "{n} complementos",
   "{names} +{n} more": "{names} +{n} más",
-  "A safety copy of your addon order. One is saved automatically before Harbor writes any change, and you can save one yourself any time. The five most recent are kept.":
-    "Una copia de seguridad del orden de tus complementos. Se guarda una automáticamente antes de que Harbor aplique cualquier cambio y puedes guardar otra cuando quieras. Se conservan las cinco más recientes.",
+  "A safety copy of your addon order. One is saved automatically before Lart writes any change, and you can save one yourself any time. The five most recent are kept.":
+    "Una copia de seguridad del orden de tus complementos. Se guarda una automáticamente antes de que Lart aplique cualquier cambio y puedes guardar otra cuando quieras. Se conservan las cinco más recientes.",
   "Add from URL": "Agregar desde una URL",
   "Addon order saved on this device": "El orden de los complementos se guardó en este dispositivo",
   "Addon order synced to your Stremio account":
     "El orden de los complementos se sincronizó con tu cuenta de Stremio",
   "Anime done right": "Anime bien hecho",
-  "Anything you install in Harbor pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
-    "Todo lo que instales en Harbor se sincroniza con tu cuenta de Stremio para que también aparezca en el móvil. Inicia sesión desde el avatar en la esquina inferior izquierda de la barra lateral.",
+  "Anything you install in Lart pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
+    "Todo lo que instales en Lart se sincroniza con tu cuenta de Stremio para que también aparezca en el móvil. Inicia sesión desde el avatar en la esquina inferior izquierda de la barra lateral.",
   "Back to addons": "Volver a los complementos",
   "Back up current order": "Respaldar el orden actual",
   "Backed up. The current account order is saved in the Backups panel.":
@@ -28,12 +28,12 @@ const addons: Record<string, string> = {
   "Catalogs & metadata": "Catálogos y metadatos",
   "Change the order addons are tried in": "Cambiar el orden en que se prueban los complementos",
   "Clear the search to see all {n} installed.": "Borra la búsqueda para ver los {n} instalados.",
-  "Click below to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "Haz clic abajo para abrir la página de configuración de {name} en el navegador integrado de Harbor. Elige tus opciones. Cuando hagas clic en Instalar en su página, Harbor detectará el enlace automáticamente y actualizará el complemento.",
+  "Click below to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "Haz clic abajo para abrir la página de configuración de {name} en el navegador integrado de Lart. Elige tus opciones. Cuando hagas clic en Instalar en su página, Lart detectará el enlace automáticamente y actualizará el complemento.",
   "Click below to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "Haz clic abajo para abrir la página de configuración de {name}. Elige tus opciones, copia el enlace de instalación que te proporciona y pégalo abajo para actualizar el complemento.",
-  "Click to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "Haz clic para abrir la página de configuración de {name} en el navegador integrado de Harbor. Elige tus opciones. Cuando hagas clic en Instalar en su página, Harbor detectará el enlace automáticamente y actualizará el complemento.",
+  "Click to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "Haz clic para abrir la página de configuración de {name} en el navegador integrado de Lart. Elige tus opciones. Cuando hagas clic en Instalar en su página, Lart detectará el enlace automáticamente y actualizará el complemento.",
   "Click to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "Haz clic para abrir la página de configuración de {name}. Elige tus opciones, copia el enlace de instalación que te proporciona y pégalo abajo para actualizar el complemento.",
   "Click to turn off": "Haz clic para desactivar",
@@ -63,8 +63,8 @@ const addons: Record<string, string> = {
   "Go back": "Volver",
   "Good to know": "Conviene saberlo",
   "Hang tight, won't be a sec.": "Espera un momento, no tardará.",
-  "Harbor double-checks with Stremio after saving, so a half-written order can't slip through.":
-    "Harbor vuelve a comprobarlo con Stremio después de guardar, para evitar que se aplique un orden incompleto.",
+  "Lart double-checks with Stremio after saving, so a half-written order can't slip through.":
+    "Lart vuelve a comprobarlo con Stremio después de guardar, para evitar que se aplique un orden incompleto.",
   "Head to Discover. Cinemeta and OpenSubtitles cover the basics; Torrentio + a debrid key cover almost everything else.":
     "Ve a Descubrir. Cinemeta y OpenSubtitles cubren lo básico; Torrentio + una clave de debrid cubren casi todo lo demás.",
   'Heads-up: a few addons (like AIOStatus) don\'t pre-fill from the URL. If the form loads blank, paste the existing manifest URL into their "Import from URL" field to restore your settings.':
@@ -142,8 +142,8 @@ const addons: Record<string, string> = {
   "Rising · +{n} star in 24h": "En ascenso · +{n} estrella en 24 h",
   "Rising · +{n} stars in 24h": "En ascenso · +{n} estrellas en 24 h",
   "Save order": "Guardar orden",
-  "Saved, but Harbor couldn't confirm the new order. Retry to re-check.":
-    "Guardado, pero Harbor no pudo confirmar el nuevo orden. Reintenta para volver a comprobarlo.",
+  "Saved, but Lart couldn't confirm the new order. Retry to re-check.":
+    "Guardado, pero Lart no pudo confirmar el nuevo orden. Reintenta para volver a comprobarlo.",
   "Saving to library": "Guardando en la biblioteca",
   "Search addons": "Buscar complementos",
   "See all ({n})": "Ver todo ({n})",
@@ -160,8 +160,8 @@ const addons: Record<string, string> = {
     "Ocurrió un error inesperado. Es posible que no se haya guardado nada. Reintenta para comprobarlo.",
   "Sports & live TV": "Deportes y TV en vivo",
   "Start here. The ones almost everyone has.": "Empieza aquí. Los que casi todos tienen.",
-  "Stremio addon, packaged into Harbor's catalog.":
-    "Complemento de Stremio integrado en el catálogo de Harbor.",
+  "Stremio addon, packaged into Lart's catalog.":
+    "Complemento de Stremio integrado en el catálogo de Lart.",
   "Stremio didn't confirm the save. Your collection may be unchanged. Retry will re-check before writing again.":
     "Stremio no confirmó que se guardara. Es posible que tu colección no haya cambiado. Al reintentar, se volverá a comprobar antes de guardar otra vez.",
   "Stremio link copied": "Enlace de Stremio copiado",
@@ -174,16 +174,16 @@ const addons: Record<string, string> = {
     "El botón Copias de seguridad de la parte superior conserva tus últimos cinco órdenes. Con un clic puedes restaurar cualquiera de ellos.",
   "The order also decides which addon's rows win on your Home screen.":
     "El orden también determina qué filas de cada complemento tienen prioridad en tu pantalla de Inicio.",
-  "These live in Harbor on this computer and never touch your account.":
-    "Estos datos se guardan en Harbor, en esta computadora, y nunca se vinculan con tu cuenta.",
+  "These live in Lart on this computer and never touch your account.":
+    "Estos datos se guardan en Lart, en esta computadora, y nunca se vinculan con tu cuenta.",
   "This order drives your catalog rows and the default stream order. A stream priority set in Settings overrides it for streams.":
     "Este orden determina las filas de tu catálogo y el orden predeterminado de las fuentes. La prioridad de fuentes establecida en Configuración lo reemplaza para las fuentes.",
   "This order syncs to every Stremio app signed into this account.":
     "Este orden se sincroniza con todas las apps de Stremio donde hayas iniciado sesión con esta cuenta.",
   "Top rated": "Mejor valorado",
   "Top rising": "En ascenso",
-  "Trending tracks star growth across your Harbor visits. Open the addons page again tomorrow and the top risers will appear here.":
-    "Las tendencias registran el aumento de estrellas entre tus visitas a Harbor. Vuelve a abrir la página de complementos mañana y aquí aparecerán los que más subieron.",
+  "Trending tracks star growth across your Lart visits. Open the addons page again tomorrow and the top risers will appear here.":
+    "Las tendencias registran el aumento de estrellas entre tus visitas a Lart. Vuelve a abrir la página de complementos mañana y aquí aparecerán los que más subieron.",
   "Turn {name} off": "Desactivar {name}",
   "Turn {name} on": "Activar {name}",
   "Untitled addon": "Complemento sin título",

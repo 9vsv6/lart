@@ -3,7 +3,7 @@ import { Blocks, Check, ChevronDown, Copy, Download, FileCode2 } from "lucide-re
 import { CARD } from "./shared";
 import { useT } from "@/lib/i18n";
 
-const EXAMPLE_PLUGIN = String.raw`// Harbor manga source plugin, minimal annotated example.
+const EXAMPLE_PLUGIN = String.raw`// Lart manga source plugin, minimal annotated example.
 //
 // This whole file runs as the body of a function that receives one argument named
 // harbor. There is no DOM, no fetch, no storage. Reach the network only through
@@ -20,7 +20,7 @@ async function getDoc(path) {
   return harbor.parseHtml(res.body);
 }
 
-// Covers and page images MUST be absolute http(s) or Harbor drops them.
+// Covers and page images MUST be absolute http(s) or Lart drops them.
 function abs(url) {
   if (!url) return undefined;
   if (/^https?:\/\//i.test(url)) return url;
@@ -35,7 +35,7 @@ function cardToSummary(el) {
   if (!link) return null;
   const href = link.attr("href") || "";
   return {
-    // The id is opaque to Harbor and handed straight back to detail/chapters.
+    // The id is opaque to Lart and handed straight back to detail/chapters.
     id: href.replace(/^\/manga\//, "").replace(/\/$/, ""),
     title: (link.attr("title") || el.querySelector(".title")?.text() || "").trim(),
     cover: abs(img?.attr("data-src") || img?.attr("src")),
@@ -155,12 +155,12 @@ const EBOOK_EXAMPLE_REPO = `{
 }
 `;
 
-const API_REFERENCE = String.raw`# Harbor manga source plugin API
+const API_REFERENCE = String.raw`# Lart manga source plugin API
 
-Harbor ships zero sources and hosts nothing. Every source is a plugin you install from a
+Lart ships zero sources and hosts nothing. Every source is a plugin you install from a
 repo URL you paste in yourself. A plugin is one JavaScript file that runs in a locked-down
 Web Worker: no DOM, no fetch, no storage, no Tauri. Its only link to the outside is the
-"harbor" bridge Harbor injects. You implement one object, MangaProvider, and Harbor drives
+"harbor" bridge Lart injects. You implement one object, MangaProvider, and Lart drives
 it.
 
 ## 1. The MangaProvider interface
@@ -179,7 +179,7 @@ it.
 - offset is an item offset, not a page number. Page one is 0, page two is 48 (MANGA_PAGE).
   If your backend pages by number, divide by 48.
 - tagId is set when the user filters by a tag. Defining tags() turns on that filter.
-- id values are opaque to Harbor and handed straight back to detail, chapters, and
+- id values are opaque to Lart and handed straight back to detail, chapters, and
   pageUrls. Encode whatever you need into them (slug, numeric id, path).
 
 ## 2. Return shapes
@@ -210,7 +210,7 @@ it.
 
     type MangaTag = { id: string; name: string; group?: string };
 
-Harbor sanitizes everything you return. Hard rules:
+Lart sanitizes everything you return. Hard rules:
 - Summaries missing id or title are dropped. Chapters missing id are dropped.
 - cover and every pageUrls entry must be absolute http(s). Resolve relative URLs yourself.
   Do not set chapter.downloaded.
@@ -254,7 +254,7 @@ encoding and decoding its source's Protobuf schema.
 
 It returns { status, ok, headers, body, messages, trailers, grpcStatus, grpcMessage }.
 body is the first response message as Uint8Array; messages contains every response frame,
-so unary and server-streaming methods are supported. Harbor requests identity encoding and
+so unary and server-streaming methods are supported. Lart requests identity encoding and
 rejects compressed, malformed, oversized, or incomplete frames. Standard binary gRPC is
 for Tauri desktop/mobile; web deployments require a CORS-enabled binary gRPC-Web endpoint.
 The same URL, 8 MB, timeout, header, and six-request concurrency protections apply.
@@ -299,7 +299,7 @@ methods idempotent and side-effect free (workers are warmed and respawned freely
 
 ## 6. The repo / manifest format
 
-A repo is a JSON file you host anywhere. Users paste its URL into Harbor.
+A repo is a JSON file you host anywhere. Users paste its URL into Lart.
 
     {
       "name": "My Manga Repo",
@@ -326,8 +326,8 @@ Serve repo.json and each plugin JS from any static HTTPS host (GitHub Pages,
 raw.githubusercontent.com, an object store, your own server). The simplest layout is
 repo.json and the plugin files side by side in one folder.
 
-In Harbor: Manga > Set up a source > Extensions > paste your repo.json URL > Install. On
-install Harbor fetches the source, hashes it (SHA-256), spins up a throwaway worker to
+In Lart: Manga > Set up a source > Extensions > paste your repo.json URL > Install. On
+install Lart fetches the source, hashes it (SHA-256), spins up a throwaway worker to
 confirm it registers a valid provider, then stores it. Enabled plugins load on startup as
 sources of kind "plugin", exactly like the built-in Suwayomi and local folder sources.
 
@@ -406,10 +406,10 @@ function asEBook(text: string): string {
 
 function asEBookPlugin(text: string): string {
   const converted = asEBook(text)
-    .replace("Harbor ebook source plugin", "Harbor eBook source plugin")
+    .replace("Lart ebook source plugin", "Lart eBook source plugin")
     .replace(
-      "Covers and page images MUST be absolute http(s) or Harbor drops them.",
-      "Covers MUST be absolute http(s) or Harbor drops them.",
+      "Covers and page images MUST be absolute http(s) or Lart drops them.",
+      "Covers MUST be absolute http(s) or Lart drops them.",
     )
     .replace(
       `async function getDoc(path) {
@@ -451,7 +451,7 @@ function cardToSummary(el) {`,
     )
     .replace(
       "function cardToSummary(el) {",
-      `// Harbor passes only tag IDs declared by tags(). Translate reserved IDs
+      `// Lart passes only tag IDs declared by tags(). Translate reserved IDs
 // to the real query parameters supported by the source.
 function browseQuery(tagId) {
   const params = new URLSearchParams();
@@ -505,7 +505,7 @@ function cardToSummary(el) {`,
     chapters: Number(el.attr("data-chapters")) || undefined,
     score: Number(el.attr("data-rating")) || undefined,
     trendingScore: Number(el.attr("data-trending-score")) || undefined,
-    // Customize these selectors/markers for the site. Harbor drops true entries.
+    // Customize these selectors/markers for the site. Lart drops true entries.
     isFanMade:
       !!el.querySelector("[data-edition='fan'], .fan-edition") ||
       /(?:fan[ -]?made|fan edition|نسخة\\s*الفان)/iu.test(rawTitle),`,
@@ -539,7 +539,7 @@ function cardToSummary(el) {`,
       "  async chapters(id) {",
       `  // Flat shape: return the source's explicit volume on every chapter. "0" is a
   // valid first volume. Never derive a volume from words in the chapter title.
-  // Harbor also accepts [{ volume: "0", chapters: [...] }, ...].
+  // Lart also accepts [{ volume: "0", chapters: [...] }, ...].
   async chapters(id) {`,
     )
     .replace(
@@ -582,7 +582,7 @@ function cardToSummary(el) {`,
   const tagsEnd = withContent.indexOf("\n  },\n};", tagsStart);
   if (tagsStart < 0 || tagsEnd < 0) return withContent;
   const nativeTags = `  // Optional native filters. Declare only IDs the source implements.
-  // Unsupported filters fall back to Harbor-side metadata filtering/sorting.
+  // Unsupported filters fall back to Lart-side metadata filtering/sorting.
   async tags() {
     return [
       { id: "status:ongoing", name: "Ongoing", group: "Status" },
@@ -596,9 +596,9 @@ function cardToSummary(el) {`,
   return `${withContent.slice(0, tagsStart)}${nativeTags}${withContent.slice(tagsEnd + 5)}`;
 }
 
-const EBOOK_API_REFERENCE = String.raw`# Harbor eBook source plugin API
+const EBOOK_API_REFERENCE = String.raw`# Lart eBook source plugin API
 
-An eBook plugin is one JavaScript file running in Harbor's isolated worker. It has no DOM,
+An eBook plugin is one JavaScript file running in Lart's isolated worker. It has no DOM,
 fetch, storage, files, or Tauri access. Networking and HTML parsing go through harbor.
 
     type EBookProvider = {
@@ -660,23 +660,23 @@ fetch, storage, files, or Tauri access. Networking and HTML parsing go through h
 EBookSummary requires id and title. It may include altTitle, cover, internalCover, year, status,
 description, author or authors, genres, chapters, volumes, siteUrl, and isFanMade. Cover,
 internalCover, and siteUrl must be absolute HTTP(S) URLs. Set isFanMade: true from the source site's own
-edition badge or metadata and Harbor will discard that entry. If a site only marks fan
+edition badge or metadata and Lart will discard that entry. If a site only marks fan
 editions in titles, detect that site's marker in the plugin and set isFanMade rather than
-making Harbor guess. Return the canonical title; Harbor also normalizes punctuation used
+making Lart guess. Return the canonical title; Lart also normalizes punctuation used
 as word separators and removes trailing source branding such as "kol"/"كول" before
 metadata matching.
 
 status should use a stable source value such as ongoing, completed, or hiatus.
 originalLanguage accepts a language name or ISO-style code such as zh, ko, or ja. score
 is the source rating, while trendingScore is an optional numeric signal used for
-Harbor-side Trending sorting. Return chapters on summaries when the source exposes a
+Lart-side Trending sorting. Return chapters on summaries when the source exposes a
 total chapter count.
 
 ## Browse filters and tags
 
     type EBookTag = { id: string; name: string; group?: string };
 
-tags() declares the native filters a source backend actually supports. Harbor forwards a
+tags() declares the native filters a source backend actually supports. Lart forwards a
 tagId to popular(offset, tagId) or search(query, offset, tagId) only when tags() includes
 that exact ID. Unsupported controls safely fall back to filtering and sorting the metadata
 already returned by the source.
@@ -690,12 +690,12 @@ Reserved eBook filter IDs:
     sort:chapters
     sort:rating
 
-Name and Trending currently use Harbor-side sorting. Return only the reserved IDs your
-backend truly implements; tags() may be omitted entirely. Harbor passes at most one native
+Name and Trending currently use Lart-side sorting. Return only the reserved IDs your
+backend truly implements; tags() may be omitted entirely. Lart passes at most one native
 tag per call. Translate status:* and sort:* into the source's real query parameters—do not
 treat them as genre slugs.
 
-Before Harbor renders a source result, it resolves metadata in this order:
+Before Lart renders a source result, it resolves metadata in this order:
 
 1. anilistId, when supplied by the source.
 2. AniList exact normalized title, seriesTitle, and alternate-title matching.
@@ -709,14 +709,14 @@ googleBooksId is the Google Books volume ID and wikidataId is a Q-prefixed Wikid
 isbn accepts ISBN-10 or ISBN-13; separators are allowed. seriesTitle groups separate books
 or volumes under one canonical work. altTitle accepts one alias; altTitles accepts all
 known language/native aliases. Better source hints mean fewer metadata requests and avoid
-wrong matches. Harbor preserves the source id and chapter route while replacing display
-metadata with the resolved canonical record. If no metadata provider matches, Harbor
+wrong matches. Lart preserves the source id and chapter route while replacing display
+metadata with the resolved canonical record. If no metadata provider matches, Lart
 shows the clean source record unchanged.
 
 EBookChapter requires id. chapter is the chapter number or source label. position is the
 zero-based reading position, where lower values are earlier. Supply position for every
-chapter or omit it from every chapter. When every chapter has a position, Harbor uses that
-exact order. Without positions, Harbor sorts numbered chapters numerically, followed by
+chapter or omit it from every chapter. When every chapter has a position, Lart uses that
+exact order. Without positions, Lart sorts numbered chapters numerically, followed by
 unnumbered chapters in natural title order. views accepts a number or the source's text
 count. publishAt accepts the source's date string.
 
@@ -744,15 +744,15 @@ Volume "0" is valid. Keep volume identifiers stable and return every source volu
 including volumes with one chapter or more than 1000 chapters. Do not derive volume data
 from chapter titles. Omit volume only when the source has no volume structure. Do not
 return volume headers as fake chapters. volumeTitle is optional and must contain the
-source's real volume name. Harbor displays it in the volume picker; volumes without a
+source's real volume name. Lart displays it in the volume picker; volumes without a
 title keep the generated Volume N label.
 
-Harbor groups chapters by the supplied volume and sorts numbered volumes numerically.
+Lart groups chapters by the supplied volume and sorts numbered volumes numerically.
 content() returns readable text, or an object containing text and/or absolute HTTP(S)
 image URLs. Return chapter blocks in their original source order. querySelectorAll returns
 nodes in DOM order, so map them directly and join them without sort(), reverse(), Set-based
 deduplication, or direction-dependent reordering. This rule also applies to decoded repeated
-fields and streamed messages from binary gRPC sources. Harbor handles RTL presentation; a
+fields and streamed messages from binary gRPC sources. Lart handles RTL presentation; a
 plugin must not reverse Arabic text or paragraph order.
 
 Select the narrowest real chapter container and its content blocks rather than reading the
@@ -774,8 +774,8 @@ and attr(name). Script, style, and iframe nodes are removed.
 
 Use the full RPC method URL, such as
 https://source.example/package.Service/ListBooks. request is one raw Protobuf message;
-Harbor adds the five-byte gRPC frame. The plugin must bundle the source's generated or
-handwritten Protobuf encoder and decoder because Harbor cannot infer a source's schema.
+Lart adds the five-byte gRPC frame. The plugin must bundle the source's generated or
+handwritten Protobuf encoder and decoder because Lart cannot infer a source's schema.
 
     type GrpcOptions = {
       headers?: Record<string, string>;
@@ -805,7 +805,7 @@ handwritten Protobuf encoder and decoder because Harbor cannot infer a source's 
 
 request accepts Uint8Array, ArrayBuffer, a byte array, or base64. body and messages are
 Uint8Array values inside the plugin. Unary calls normally return one message; server
-streaming returns every message in messages. Harbor currently requests identity encoding
+streaming returns every message in messages. Lart currently requests identity encoding
 and rejects compressed, malformed, incomplete, or responses larger than 8 MB. Native
 Tauri builds use binary gRPC. Browser builds require a CORS-enabled binary gRPC-Web
 endpoint and mode: "grpc-web"; browsers cannot call an ordinary HTTP/2 gRPC endpoint.
@@ -836,7 +836,7 @@ the plugin file on HTTPS, then paste the manifest URL into eBook > Sources > Ext
 The provider id must match the manifest id. repo.json contains installation metadata
 only. Return book metadata hints, volumes, chapters, dates, and views from
 example.plugin.js. Source files are
-limited to 2 MB. Harbor validates popular, search, detail, chapters, and content during
+limited to 2 MB. Lart validates popular, search, detail, chapters, and content during
 installation. Existing image-based plugins using pageUrls remain supported for
 compatibility.`;
 
@@ -1030,7 +1030,7 @@ export function PluginGuide({ kind = "manga" }: { kind?: "manga" | "ebook" }) {
 
             <p className="text-[12.5px] leading-relaxed text-ink-subtle">
               {t(
-                "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Harbor. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.",
+                "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Lart. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.",
               )}
             </p>
           </div>

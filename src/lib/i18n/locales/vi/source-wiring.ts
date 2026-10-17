@@ -102,12 +102,12 @@ const sourceWiring: Record<string, string> = {
     "Tạo kiểu cho {selector} và các áp phích bên phải sẽ cập nhật trực tiếp. Nhấn Chèn mẫu khởi đầu để bắt đầu nhanh.",
   "Click to copy": "Nhấp để sao chép",
   "Copy {text}": "Sao chép {text}",
-  "Harbor snippet": "Đoạn mã Harbor",
+  "Lart snippet": "Đoạn mã Lart",
   example: "ví dụ",
   "Cheat sheet": "Bảng tra nhanh",
   Contents: "Nội dung",
-  "Every surface in Harbor maps to one of these 12 variables.":
-    "Mọi bề mặt trong Harbor đều ánh xạ tới một trong 12 biến này.",
+  "Every surface in Lart maps to one of these 12 variables.":
+    "Mọi bề mặt trong Lart đều ánh xạ tới một trong 12 biến này.",
   "Font tokens": "Token phông chữ",
   "Set on the root. Override any to swap typography.":
     "Đặt trên phần tử gốc. Ghi đè bất kỳ token nào để thay kiểu chữ.",
@@ -115,8 +115,8 @@ const sourceWiring: Record<string, string> = {
   "Shared transition curves. Use anywhere you transition.":
     "Các đường cong chuyển tiếp dùng chung. Dùng ở bất kỳ đâu có hiệu ứng chuyển tiếp.",
   "window.harbor API": "API window.harbor",
-  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Harbor feature, so your chrome never goes stale when Harbor adds menu items.":
-    "Gọi các hàm này từ trình xử lý onclick hoặc JS của giao diện. Chúng ổn định và an toàn: mỗi hàm điều khiển trực tiếp một tính năng thực của Harbor, nên giao diện tùy chỉnh của bạn luôn được cập nhật khi Harbor thêm mục menu.",
+  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Lart feature, so your chrome never goes stale when Lart adds menu items.":
+    "Gọi các hàm này từ trình xử lý onclick hoặc JS của giao diện. Chúng ổn định và an toàn: mỗi hàm điều khiển trực tiếp một tính năng thực của Lart, nên giao diện tùy chỉnh của bạn luôn được cập nhật khi Lart thêm mục menu.",
   "Root data attributes": "Thuộc tính dữ liệu gốc",
   "Set on <html>. Use them to scope styles to a specific layout/card/button choice.":
     "Đặt trên <html>. Dùng chúng để giới hạn kiểu cho một lựa chọn bố cục/thẻ/nút cụ thể.",
@@ -129,18 +129,18 @@ const sourceWiring: Record<string, string> = {
   "Pick a z-index for your overlays that sits where you want it.":
     "Chọn z-index cho lớp phủ để đặt nó ở vị trí bạn muốn.",
   "Window events": "Sự kiện window",
-  "Dispatched on window. Listen from your theme JS to react to Harbor's lifecycle.":
-    "Được phát trên window. Lắng nghe từ JS của giao diện để phản hồi vòng đời của Harbor.",
+  "Dispatched on window. Listen from your theme JS to react to Lart's lifecycle.":
+    "Được phát trên window. Lắng nghe từ JS của giao diện để phản hồi vòng đời của Lart.",
   "View identifiers": "Mã định danh chế độ xem",
   "Use these strings if you wire a custom navbar that needs to navigate.":
     "Dùng các chuỗi này nếu bạn thiết lập thanh điều hướng tùy chỉnh cần chuyển trang.",
   Recipes: "Công thức",
   "Copy-paste starters for common customizations.": "Mẫu sao chép-dán cho các tùy chỉnh phổ biến.",
-  "Harbor theme": "Giao diện Harbor",
+  "Lart theme": "Giao diện Lart",
   "Undo (Ctrl/Cmd + Z)": "Hoàn tác (Ctrl/Cmd + Z)",
   "Redo (Ctrl/Cmd + Shift + Z)": "Làm lại (Ctrl/Cmd + Shift + Z)",
-  "{file} is empty. Start typing to restyle Harbor.":
-    "{file} đang trống. Bắt đầu nhập để thay đổi giao diện Harbor.",
+  "{file} is empty. Start typing to restyle Lart.":
+    "{file} đang trống. Bắt đầu nhập để thay đổi giao diện Lart.",
   "Open code editor": "Mở trình chỉnh sửa mã",
   "CSS {css} · HTML {html} · JS {js}": "CSS {css} · HTML {html} · JS {js}",
   "No custom code yet.": "Chưa có mã tùy chỉnh.",
@@ -300,22 +300,22 @@ const sourceWiring: Record<string, string> = {
   "Theme author. Your published themes are tied to this account.":
     "Tác giả giao diện. Các giao diện đã đăng của bạn được liên kết với tài khoản này.",
   "Change password": "Đổi mật khẩu",
-  "Set a Harbor profile picture first": "Trước tiên, hãy đặt ảnh hồ sơ Harbor",
-  "Re-sync from your Harbor profile picture": "Đồng bộ lại từ ảnh hồ sơ Harbor",
+  "Set a Lart profile picture first": "Trước tiên, hãy đặt ảnh hồ sơ Lart",
+  "Re-sync from your Lart profile picture": "Đồng bộ lại từ ảnh hồ sơ Lart",
   "Update photo": "Cập nhật ảnh",
   "Remove community photo": "Xóa ảnh cộng đồng",
   "Remove your community photo": "Xóa ảnh cộng đồng của bạn",
-  "Show your Harbor profile picture on the community":
-    "Hiển thị ảnh hồ sơ Harbor của bạn trong cộng đồng",
+  "Show your Lart profile picture on the community":
+    "Hiển thị ảnh hồ sơ Lart của bạn trong cộng đồng",
   "Use my photo": "Dùng ảnh của tôi",
   "Current password": "Mật khẩu hiện tại",
   "Password updated": "Đã cập nhật mật khẩu",
   "Update password": "Cập nhật mật khẩu",
-  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Harbor handles the shaders.":
-    "Shader GPU giúp làm sắc nét đường nét và làm mượt dải chuyển màu của anime khi phát. Chọn một chế độ, Harbor sẽ xử lý shader.",
-  "Harbor, from a public domain frame": "Harbor, từ một khung hình thuộc phạm vi công cộng",
-  "One-time setup downloads the shader pack (about 1 MB) into Harbor. No files to hunt down.":
-    "Trong lần thiết lập đầu tiên, gói shader (khoảng 1 MB) sẽ được tải xuống Harbor. Không cần tự tìm tệp.",
+  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Lart handles the shaders.":
+    "Shader GPU giúp làm sắc nét đường nét và làm mượt dải chuyển màu của anime khi phát. Chọn một chế độ, Lart sẽ xử lý shader.",
+  "Lart, from a public domain frame": "Lart, từ một khung hình thuộc phạm vi công cộng",
+  "One-time setup downloads the shader pack (about 1 MB) into Lart. No files to hunt down.":
+    "Trong lần thiết lập đầu tiên, gói shader (khoảng 1 MB) sẽ được tải xuống Lart. Không cần tự tìm tệp.",
   "Downloading shaders…": "Đang tải shader xuống…",
   Performance: "Hiệu năng",
   "Shaders installed": "Đã cài đặt shader",
@@ -395,8 +395,8 @@ const sourceWiring: Record<string, string> = {
   "Custom profile": "Hồ sơ tùy chỉnh",
   "Hidden from visitors": "Ẩn với khách truy cập",
   "How the canvas works": "Cách hoạt động của khung tùy chỉnh",
-  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Harbor. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
-    "HTML và CSS của bạn được hiển thị trong một khung cách ly, hoàn toàn tách biệt với phần còn lại của Harbor. Hãy viết như một trang nhỏ độc lập. Phông chữ và nền trang là các tùy chọn riêng ở phía trên, được áp dụng cho toàn bộ hồ sơ.",
+  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Lart. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
+    "HTML và CSS của bạn được hiển thị trong một khung cách ly, hoàn toàn tách biệt với phần còn lại của Lart. Hãy viết như một trang nhỏ độc lập. Phông chữ và nền trang là các tùy chọn riêng ở phía trên, được áp dụng cho toàn bộ hồ sơ.",
   Allowed: "Được phép",
   "Not allowed": "Không được phép",
   "HTML and CSS are each capped at 16,384 characters.":
@@ -434,14 +434,14 @@ const sourceWiring: Record<string, string> = {
   "AC-3 audio unsupported": "Không hỗ trợ âm thanh AC-3",
   "MKV container unsupported": "Không hỗ trợ định dạng chứa MKV",
   "audio must be re-encoded": "âm thanh phải được mã hóa lại",
-  "{deviceName} is an audio-only device. Harbor can't transcode video to audio yet, so this device can only stream audio files. Pick a TV, Chromecast, or display-equipped device to stream video.":
-    "{deviceName} là thiết bị chỉ phát âm thanh. Harbor chưa thể chuyển mã video thành âm thanh, nên thiết bị này chỉ có thể truyền phát tệp âm thanh. Hãy chọn TV, Chromecast hoặc thiết bị có màn hình để truyền phát video.",
+  "{deviceName} is an audio-only device. Lart can't transcode video to audio yet, so this device can only stream audio files. Pick a TV, Chromecast, or display-equipped device to stream video.":
+    "{deviceName} là thiết bị chỉ phát âm thanh. Lart chưa thể chuyển mã video thành âm thanh, nên thiết bị này chỉ có thể truyền phát tệp âm thanh. Hãy chọn TV, Chromecast hoặc thiết bị có màn hình để truyền phát video.",
   "{deviceLabel} can't play this stream ({reasons}) and none of the {count} available alternatives match its capabilities.":
     "{deviceLabel} không thể phát luồng này ({reasons}) và không có lựa chọn nào trong số {count} lựa chọn thay thế phù hợp với khả năng của thiết bị.",
   "Install ffmpeg": "Cài đặt ffmpeg",
-  "{deviceLabel} can't decode this stream natively ({reasons}). Harbor uses ffmpeg to convert it into a format your TV understands.":
-    "{deviceLabel} không thể giải mã trực tiếp luồng này ({reasons}). Harbor dùng ffmpeg để chuyển đổi luồng sang định dạng mà TV của bạn hỗ trợ.",
-  "Restart Harbor after the install completes.": "Khởi động lại Harbor sau khi cài đặt xong.",
+  "{deviceLabel} can't decode this stream natively ({reasons}). Lart uses ffmpeg to convert it into a format your TV understands.":
+    "{deviceLabel} không thể giải mã trực tiếp luồng này ({reasons}). Lart dùng ffmpeg để chuyển đổi luồng sang định dạng mà TV của bạn hỗ trợ.",
+  "Restart Lart after the install completes.": "Khởi động lại Lart sau khi cài đặt xong.",
   "Open the cast menu and try this device again.": "Mở menu truyền và thử lại thiết bị này.",
   '{deviceLabel} can\'t play this stream ({reasons}). Click "Pick another" first to load alternatives, then try casting again.':
     '{deviceLabel} không thể phát luồng này ({reasons}). Trước tiên, hãy nhấp vào "Chọn nội dung khác" để tải các lựa chọn thay thế, sau đó thử truyền lại.',
@@ -451,15 +451,15 @@ const sourceWiring: Record<string, string> = {
   "Open a terminal and run: winget install Gyan.FFmpeg":
     "Mở terminal và chạy: winget install Gyan.FFmpeg",
   "Enable Roku Network Access": "Bật quyền truy cập mạng trên Roku",
-  "Your Roku is set to block control requests from apps on your network, so Harbor can't reach it. This is a one-time setting on the Roku.":
-    "Roku của bạn đang chặn yêu cầu điều khiển từ các ứng dụng trong mạng, nên Harbor không thể kết nối với thiết bị. Đây là cài đặt chỉ cần thực hiện một lần trên Roku.",
+  "Your Roku is set to block control requests from apps on your network, so Lart can't reach it. This is a one-time setting on the Roku.":
+    "Roku của bạn đang chặn yêu cầu điều khiển từ các ứng dụng trong mạng, nên Lart không thể kết nối với thiết bị. Đây là cài đặt chỉ cần thực hiện một lần trên Roku.",
   "On your Roku remote, press Home.": "Trên điều khiển Roku, nhấn Home.",
   "Open Settings, then System, then Advanced system settings.":
     "Mở Cài đặt, rồi chọn Hệ thống, sau đó chọn Cài đặt hệ thống nâng cao.",
-  "Come back to Harbor and try casting again.": "Quay lại Harbor và thử truyền lại.",
+  "Come back to Lart and try casting again.": "Quay lại Lart và thử truyền lại.",
   "Couldn't reach this Roku": "Không thể kết nối với Roku này",
-  "Harbor found something at this address that looked like a Roku, but it didn't respond like one. The device may be offline or another product picked up the same broadcast.":
-    "Harbor tìm thấy một thiết bị tại địa chỉ này có vẻ là Roku, nhưng thiết bị không phản hồi như Roku. Thiết bị có thể đang ngoại tuyến hoặc một sản phẩm khác đã nhận cùng tín hiệu quảng bá.",
+  "Lart found something at this address that looked like a Roku, but it didn't respond like one. The device may be offline or another product picked up the same broadcast.":
+    "Lart tìm thấy một thiết bị tại địa chỉ này có vẻ là Roku, nhưng thiết bị không phản hồi như Roku. Thiết bị có thể đang ngoại tuyến hoặc một sản phẩm khác đã nhận cùng tín hiệu quảng bá.",
   "Make sure the Roku is powered on and on the same Wi-Fi as your computer.":
     "Đảm bảo Roku đã bật và kết nối cùng mạng Wi-Fi với máy tính của bạn.",
   "Close the cast menu and reopen it to rescan the network.":
@@ -472,8 +472,8 @@ const sourceWiring: Record<string, string> = {
   "On your Roku, open Streaming Channels from the home screen.":
     "Trên Roku, mở Kênh truyền phát từ màn hình chính.",
   "Install it.": "Cài đặt ứng dụng.",
-  "Harbor uses ffmpeg to convert streams into formats TVs can play. It's a one-time install and Harbor will pick it up automatically.":
-    "Harbor dùng ffmpeg để chuyển đổi luồng sang định dạng TV có thể phát. Chỉ cần cài đặt một lần và Harbor sẽ tự động nhận diện.",
+  "Lart uses ffmpeg to convert streams into formats TVs can play. It's a one-time install and Lart will pick it up automatically.":
+    "Lart dùng ffmpeg để chuyển đổi luồng sang định dạng TV có thể phát. Chỉ cần cài đặt một lần và Lart sẽ tự động nhận diện.",
   "Could not cast to {deviceName}.": "Không thể truyền tới {deviceName}.",
   'Select "Control by mobile apps" and set Network access to "Default".':
     'Chọn "Điều khiển bằng ứng dụng di động" và đặt Quyền truy cập mạng thành "Mặc định".',
@@ -522,8 +522,8 @@ const sourceWiring: Record<string, string> = {
   "End of manga": "Cuối manga",
   "Reconnecting to your computer": "Đang kết nối lại với máy tính",
   "Reader closed on your computer": "Trình đọc đã đóng trên máy tính",
-  "Open a manga on Harbor to control the reader from here.":
-    "Mở manga trên Harbor để điều khiển trình đọc từ đây.",
+  "Open a manga on Lart to control the reader from here.":
+    "Mở manga trên Lart để điều khiển trình đọc từ đây.",
   Reconnecting: "Đang kết nối lại",
   "Read on this device": "Đọc trên thiết bị này",
   "Read here": "Đọc tại đây",
@@ -549,19 +549,19 @@ const sourceWiring: Record<string, string> = {
   "Read EPUB, text, Markdown, and HTML books already on this device.":
     "Đọc sách EPUB, văn bản, Markdown và HTML có sẵn trên thiết bị này.",
   "Install an extension": "Cài đặt tiện ích mở rộng",
-  "Add trusted eBook sources from a Harbor-compatible repository.":
-    "Thêm nguồn eBook đáng tin cậy từ kho tương thích với Harbor.",
+  "Add trusted eBook sources from a Lart-compatible repository.":
+    "Thêm nguồn eBook đáng tin cậy từ kho tương thích với Lart.",
   "Connect a source": "Kết nối nguồn",
   "Bring a server-rendered library aboard with your own source configuration.":
     "Thêm thư viện được kết xuất từ máy chủ bằng cấu hình nguồn riêng.",
-  "Harbor reading room": "Phòng đọc Harbor",
+  "Lart reading room": "Phòng đọc Lart",
   "Your shelf is": "Kệ sách của bạn đã",
   "ready for a story.": "sẵn sàng đón một câu chuyện.",
-  "Set up at least one readable eBook source to begin. Metadata can describe a book, but a folder, extension, or custom source is what lets Harbor open it.":
-    "Hãy thiết lập ít nhất một nguồn eBook có thể đọc để bắt đầu. Siêu dữ liệu có thể mô tả sách, nhưng Harbor cần thư mục, tiện ích mở rộng hoặc nguồn tùy chỉnh để mở sách.",
+  "Set up at least one readable eBook source to begin. Metadata can describe a book, but a folder, extension, or custom source is what lets Lart open it.":
+    "Hãy thiết lập ít nhất một nguồn eBook có thể đọc để bắt đầu. Siêu dữ liệu có thể mô tả sách, nhưng Lart cần thư mục, tiện ích mở rộng hoặc nguồn tùy chỉnh để mở sách.",
   "Set up eBooks": "Thiết lập eBook",
-  "Harbor never hosts your books or source files.":
-    "Harbor không bao giờ lưu trữ sách hoặc tệp nguồn của bạn.",
+  "Lart never hosts your books or source files.":
+    "Lart không bao giờ lưu trữ sách hoặc tệp nguồn của bạn.",
   "Reserved for your next book": "Dành cho cuốn sách tiếp theo của bạn",
   "Ways to add an eBook source": "Các cách thêm nguồn eBook",
   "Could not validate this API key.": "Không thể xác thực khóa API này.",
@@ -569,8 +569,8 @@ const sourceWiring: Record<string, string> = {
     "Thêm khóa API Google Books để lấy tên sách, ảnh bìa, tác giả và mô tả. Wikidata tự động hoạt động như nguồn siêu dữ liệu dự phòng cuối cùng.",
   "Google Books API key": "Khóa API Google Books",
   "Loading models…": "Đang tải mô hình…",
-  "Storage is full. Clear Harbor cache storage, then try saving again.":
-    "Bộ nhớ đã đầy. Hãy xóa bộ nhớ đệm của Harbor rồi thử lưu lại.",
+  "Storage is full. Clear Lart cache storage, then try saving again.":
+    "Bộ nhớ đã đầy. Hãy xóa bộ nhớ đệm của Lart rồi thử lưu lại.",
   "DeepSeek model is working.": "Mô hình DeepSeek đang hoạt động.",
   "Translation test failed": "Kiểm tra bản dịch không thành công",
   Translation: "Dịch thuật",
@@ -591,8 +591,8 @@ const sourceWiring: Record<string, string> = {
     "Chọn một thư mục thư viện. Mỗi thư mục con là một eBook. Đặt các chương bên trong dưới dạng tệp TXT, Markdown, HTML hoặc EPUB và có thể thêm ảnh bìa.",
   "My eBooks": "eBook của tôi",
   "Choose eBook folder": "Chọn thư mục eBook",
-  "Folder selection is available in the Harbor app":
-    "Tính năng chọn thư mục có trong ứng dụng Harbor",
+  "Folder selection is available in the Lart app":
+    "Tính năng chọn thư mục có trong ứng dụng Lart",
   "Read eBook files you already have": "Đọc các tệp eBook bạn đã có",
   "Enable {name}": "Bật {name}",
   "Update repository": "Cập nhật kho",
@@ -600,8 +600,8 @@ const sourceWiring: Record<string, string> = {
   "Loading extensions…": "Đang tải tiện ích mở rộng…",
   "This repository lists no eBook extensions.": "Kho này không có tiện ích mở rộng eBook nào.",
   "Could not load that eBook extension repository": "Không thể tải kho tiện ích mở rộng eBook đó",
-  "eBook extensions use Harbor’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
-    "Tiện ích mở rộng eBook sử dụng worker biệt lập, cầu nối HTTP và trình phân tích HTML của Harbor, cùng một sandbox được tiện ích mở rộng Manga sử dụng. Chỉ thêm những kho bạn tin cậy.",
+  "eBook extensions use Lart’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
+    "Tiện ích mở rộng eBook sử dụng worker biệt lập, cầu nối HTTP và trình phân tích HTML của Lart, cùng một sandbox được tiện ích mở rộng Manga sử dụng. Chỉ thêm những kho bạn tin cậy.",
   "No repositories yet. Add one above to browse eBook extensions.":
     "Chưa có kho nào. Hãy thêm một kho ở trên để duyệt tiện ích mở rộng eBook.",
   "{count} connected": "Đã kết nối {count}",
@@ -610,26 +610,26 @@ const sourceWiring: Record<string, string> = {
   "{count} repositories": "{count} kho lưu trữ",
   "Build your own": "Tự xây dựng",
   "living library.": "thư viện sống động.",
-  "Connect books you own, trusted reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "Kết nối sách bạn sở hữu, các nguồn đọc đáng tin cậy và dịch vụ siêu dữ liệu. Harbor giữ giá sách nhất quán, đồng thời mọi nguồn vẫn do bạn kiểm soát.",
+  "Connect books you own, trusted reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "Kết nối sách bạn sở hữu, các nguồn đọc đáng tin cậy và dịch vụ siêu dữ liệu. Lart giữ giá sách nhất quán, đồng thời mọi nguồn vẫn do bạn kiểm soát.",
   "Source overview": "Tổng quan nguồn",
   Repositories: "Kho lưu trữ",
   "Private reading collection": "Bộ sưu tập đọc riêng tư",
   "eBook source settings": "Cài đặt nguồn eBook",
   "Your shelf, your rules.": "Giá sách của bạn, quy tắc của bạn.",
-  "Harbor never hosts your books.": "Harbor không bao giờ lưu trữ sách của bạn.",
+  "Lart never hosts your books.": "Lart không bao giờ lưu trữ sách của bạn.",
   "01 · Collection": "01 · Bộ sưu tập",
   "Library sources": "Nguồn thư viện",
-  "Manage every place Harbor can read from, whether it lives on disk or across the web.":
-    "Quản lý mọi nơi Harbor có thể đọc dữ liệu, dù nằm trên ổ đĩa hay trên web.",
+  "Manage every place Lart can read from, whether it lives on disk or across the web.":
+    "Quản lý mọi nơi Lart có thể đọc dữ liệu, dù nằm trên ổ đĩa hay trên web.",
   "02 · Enrichment": "02 · Bổ sung",
   "Library intelligence": "Trí tuệ thư viện",
-  "Shape the metadata and reading language Harbor uses without changing your original files.":
-    "Tùy chỉnh siêu dữ liệu và ngôn ngữ đọc mà Harbor sử dụng mà không thay đổi tệp gốc.",
+  "Shape the metadata and reading language Lart uses without changing your original files.":
+    "Tùy chỉnh siêu dữ liệu và ngôn ngữ đọc mà Lart sử dụng mà không thay đổi tệp gốc.",
   "03 · Expand": "03 · Mở rộng",
   "Extension dock": "Khu tiện ích mở rộng",
-  "Bring trusted source packages aboard through Harbor’s isolated extension worker.":
-    "Thêm các gói nguồn đáng tin cậy thông qua trình xử lý tiện ích mở rộng biệt lập của Harbor.",
+  "Bring trusted source packages aboard through Lart’s isolated extension worker.":
+    "Thêm các gói nguồn đáng tin cậy thông qua trình xử lý tiện ích mở rộng biệt lập của Lart.",
   "Saved locally; AniList sync is pending": "Đã lưu cục bộ; đang chờ đồng bộ AniList",
   "{format} added to Downloads": "Đã thêm {format} vào Tải xuống",
   "This eBook could not be exported": "Không thể xuất eBook này",
@@ -693,8 +693,8 @@ const sourceWiring: Record<string, string> = {
   "Auto-download": "Tự động tải xuống",
   "Episodes that air after you add a series grab themselves":
     "Các tập phát sóng sau khi bạn thêm phim bộ sẽ tự động được tải xuống",
-  "Add a series above and Harbor will grab each new episode as it airs, on your terms.":
-    "Thêm phim bộ ở trên và Harbor sẽ tải từng tập mới ngay khi phát sóng theo tùy chọn của bạn.",
+  "Add a series above and Lart will grab each new episode as it airs, on your terms.":
+    "Thêm phim bộ ở trên và Lart sẽ tải từng tập mới ngay khi phát sóng theo tùy chọn của bạn.",
   "Checking...": "Đang kiểm tra...",
   "Check now": "Kiểm tra ngay",
   "{count} grabbed": "Đã tải {count}",
@@ -726,9 +726,9 @@ const sourceWiring: Record<string, string> = {
   "Save failed for an unknown reason.": "Lưu không thành công vì lý do không xác định.",
   "My layout": "Bố cục của tôi",
   "Not valid JSON. The file may be corrupted.": "JSON không hợp lệ. Tệp có thể đã bị hỏng.",
-  "File is not a Harbor layout profile.": "Tệp này không phải là hồ sơ bố cục Harbor.",
-  "Unsupported profile version ({version}). Update Harbor or use an older profile.":
-    "Phiên bản hồ sơ ({version}) không được hỗ trợ. Hãy cập nhật Harbor hoặc dùng hồ sơ phiên bản cũ hơn.",
+  "File is not a Lart layout profile.": "Tệp này không phải là hồ sơ bố cục Lart.",
+  "Unsupported profile version ({version}). Update Lart or use an older profile.":
+    "Phiên bản hồ sơ ({version}) không được hỗ trợ. Hãy cập nhật Lart hoặc dùng hồ sơ phiên bản cũ hơn.",
   "Profile file has no chrome config.": "Tệp hồ sơ không có cấu hình chrome.",
   "Your theme": "Giao diện của bạn",
   "{actor} commented on {name}": "{actor} đã bình luận về {name}",
@@ -737,11 +737,11 @@ const sourceWiring: Record<string, string> = {
   "New badge unlocked": "Đã mở khóa huy hiệu mới",
   "Congrats! Tap to view your badges.": "Chúc mừng! Nhấn để xem huy hiệu của bạn.",
   "{staff} requested your diagnostics": "{staff} đã yêu cầu dữ liệu chẩn đoán của bạn",
-  "Harbor Staff": "Nhân viên Harbor",
+  "Lart Staff": "Nhân viên Lart",
   "New profile comment": "Bình luận hồ sơ mới",
   "Mute / Unmute": "Tắt tiếng / Bật tiếng",
   "The eBook download was canceled.": "Đã hủy tải eBook xuống.",
-  "Harbor eBook": "eBook Harbor",
+  "Lart eBook": "eBook Lart",
   "This eBook is not connected to an installed source.":
     "eBook này không được liên kết với nguồn đã cài đặt.",
   "Loading chapter list…": "Đang tải danh sách chương…",
@@ -763,8 +763,8 @@ const sourceWiring: Record<string, string> = {
   "Hide episode": "Ẩn tập",
   "Loading {hostname}": "Đang tải {hostname}",
   "Still loading?": "Vẫn đang tải?",
-  "This site may not support Harbor's temporary viewer. Retry the original link or open it in your browser.":
-    "Trang web này có thể không hỗ trợ trình xem tạm thời của Harbor. Hãy thử lại liên kết gốc hoặc mở trong trình duyệt.",
+  "This site may not support Lart's temporary viewer. Retry the original link or open it in your browser.":
+    "Trang web này có thể không hỗ trợ trình xem tạm thời của Lart. Hãy thử lại liên kết gốc hoặc mở trong trình duyệt.",
   "External site: {hostname}": "Trang ngoài: {hostname}",
   "External | {hostname}": "Bên ngoài | {hostname}",
   "Reload original link": "Tải lại liên kết gốc",
@@ -780,7 +780,7 @@ const sourceWiring: Record<string, string> = {
     "Quyền truy cập bảng nhớ tạm đã bị chặn. Hãy dán liên kết theo cách thủ công.",
   "Setup · {title}": "Thiết lập · {title}",
   "Loading {title}": "Đang tải {title}",
-  "{title} won't load inside Harbor.": "Không thể tải {title} trong Harbor.",
+  "{title} won't load inside Lart.": "Không thể tải {title} trong Lart.",
   "Open it in a regular browser, set it up there, then come back and paste the install link below.":
     "Hãy mở trong trình duyệt thông thường, thiết lập tại đó, rồi quay lại và dán liên kết cài đặt bên dưới.",
   "Configure the addon above, then copy its manifest URL and paste it here. The web app can't catch the Install button automatically the way the desktop app does.":
@@ -882,8 +882,8 @@ const sourceWiring: Record<string, string> = {
   "Award pack": "Gói giải thưởng",
   "Reskin the quality chips (4K, HDR, Dolby Vision, Atmos and more) that ride each stream in the play picker. Click any slot to drop in your own PNG or animated GIF, or import a whole set at once. You do not have to fill every slot.":
     "Thay đổi giao diện các nhãn chất lượng (4K, HDR, Dolby Vision, Atmos và nhiều loại khác) đi kèm từng luồng phát trong trình chọn nguồn phát. Nhấp vào ô bất kỳ để thêm PNG hoặc GIF động của riêng bạn, hoặc nhập cả bộ cùng lúc. Bạn không cần điền mọi ô.",
-  "Reskin the award trophies shown across Harbor. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
-    "Thay đổi giao diện các cúp giải thưởng hiển thị trên Harbor. Nhấp vào giải thưởng bất kỳ để thêm PNG hoặc GIF động, thêm loại giải thưởng tùy chỉnh của riêng bạn hoặc nhập cả bộ cùng lúc.",
+  "Reskin the award trophies shown across Lart. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
+    "Thay đổi giao diện các cúp giải thưởng hiển thị trên Lart. Nhấp vào giải thưởng bất kỳ để thêm PNG hoặc GIF động, thêm loại giải thưởng tùy chỉnh của riêng bạn hoặc nhập cả bộ cùng lúc.",
   "Import a set": "Nhập một bộ",
   "Drop many images, GIFs, or a .zip at once. Name each file after its slot ({example}) and we match them. Any size is fine, we resize big images and keep animated GIFs light.":
     "Thả nhiều hình ảnh, GIF hoặc một tệp .zip cùng lúc. Đặt tên từng tệp theo ô tương ứng ({example}) để chúng tôi tự ghép. Kích thước nào cũng được, chúng tôi sẽ thu nhỏ hình ảnh lớn và tối ưu GIF động.",
@@ -912,11 +912,11 @@ const sourceWiring: Record<string, string> = {
   "That is the whole trick. A file called {example} drops straight into the matching slot. The name before .png is all that matters, capitals and spaces are ignored.":
     "Chỉ cần vậy thôi. Tệp có tên {example} sẽ được đưa thẳng vào ô tương ứng. Chỉ phần tên trước .png là quan trọng, không phân biệt chữ hoa hay khoảng trắng.",
   "Any size works, we optimize it": "Kích thước nào cũng được, chúng tôi sẽ tối ưu hóa",
-  "Drop in art at any resolution. Harbor resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
-    "Thêm hình ở bất kỳ độ phân giải nào. Harbor sẽ đổi kích thước và nén mọi hình quá lớn, nên không có hình nào bị bỏ qua vì kích thước. PNG vuông có nền trong suốt sẽ đẹp nhất.",
+  "Drop in art at any resolution. Lart resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
+    "Thêm hình ở bất kỳ độ phân giải nào. Lart sẽ đổi kích thước và nén mọi hình quá lớn, nên không có hình nào bị bỏ qua vì kích thước. PNG vuông có nền trong suốt sẽ đẹp nhất.",
   "Animated GIFs are welcome": "Hỗ trợ GIF động",
-  "Want a badge that moves? Drop in a GIF up to 8 MB. Harbor shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
-    "Muốn huy hiệu chuyển động? Hãy thêm GIF tối đa 8 MB. Harbor sẽ thu nhỏ và chuyển đổi sang định dạng động nhẹ để hình ảnh luôn sắc nét và tải nhanh. Nên dùng GIF nhỏ và lặp liên tục.",
+  "Want a badge that moves? Drop in a GIF up to 8 MB. Lart shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
+    "Muốn huy hiệu chuyển động? Hãy thêm GIF tối đa 8 MB. Lart sẽ thu nhỏ và chuyển đổi sang định dạng động nhẹ để hình ảnh luôn sắc nét và tải nhanh. Nên dùng GIF nhỏ và lặp liên tục.",
   "Three ways to add art": "Ba cách để thêm hình",
   "Click any single slot to pick one file, select many PNGs at once, or drop a whole .zip of them. Named files land in their slots automatically, the rest you can place by hand.":
     "Nhấp vào một ô để chọn một tệp, chọn nhiều PNG cùng lúc hoặc thả cả tệp .zip. Tệp được đặt tên sẽ tự động vào đúng ô, các tệp còn lại bạn có thể xếp thủ công.",
@@ -962,7 +962,7 @@ const sourceWiring: Record<string, string> = {
   "Syncs to your {services}": "Đồng bộ với {services} của bạn",
   "Play trailer": "Phát trailer",
   "Open on computer": "Mở trên máy tính",
-  "Send this title to your Harbor app": "Gửi phim này đến ứng dụng Harbor của bạn",
+  "Send this title to your Lart app": "Gửi phim này đến ứng dụng Lart của bạn",
   "Saved to your favorites": "Đã lưu vào mục yêu thích",
   "Save to your favorites": "Lưu vào mục yêu thích",
   "Add to your watchlist": "Thêm vào danh sách xem",
@@ -1007,7 +1007,7 @@ const sourceWiring: Record<string, string> = {
   "Preparing book…": "Đang chuẩn bị sách…",
   "{title} cover": "Bìa {title}",
   "{title} internal cover": "Bìa trong của {title}",
-  "Harbor Reader": "Trình đọc Harbor",
+  "Lart Reader": "Trình đọc Lart",
   "Bookmark current passage": "Đánh dấu đoạn hiện tại",
   "Show translation": "Hiện bản dịch",
   "Show original language": "Hiện ngôn ngữ gốc",

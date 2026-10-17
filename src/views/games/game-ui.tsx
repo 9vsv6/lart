@@ -13,7 +13,7 @@ import { GamePosterSkeletons } from "./game-loading";
 
 export type GameMarkKind = "pick" | "worlds" | "runs" | "create" | "chart" | "release" | "offer" | "soon" | "filter";
 
-/** Original Harbor collection stamps; no storefront icon assets. */
+/** Original Lart collection stamps; no storefront icon assets. */
 export function GameMark({ kind, size = 20 }: { kind: GameMarkKind; size?: number }) {
   return <svg width={size} height={size} viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     {kind === "filter" && <><path d="M4 7h16m6 0h2M4 16h3m6 0h15M4 25h13m6 0h5" /><circle cx="23" cy="7" r="3" /><circle cx="10" cy="16" r="3" /><circle cx="20" cy="25" r="3" /></>}
@@ -53,7 +53,7 @@ export function GameCard({ game, open, portrait = false, posterInset = false, sh
   </button>{catalogRating ? <div className="games-card-overlays"><GamePosterSave game={game}/><GameCatalogRating {...catalogRating} open={()=>open(game)}/></div> : <GamePosterSave game={game}/>}</div>;
 }
 
-/** Use the same rail navigation and saved position as Harbor's media shelves. */
+/** Use the same rail navigation and saved position as Lart's media shelves. */
 export function PosterShelf({ games, open, title, note, upcoming = true, loading = false, compact = false }: { games: GameSummary[]; open: (game: GameSummary) => void; title: string; note: string; upcoming?: boolean; loading?: boolean; compact?: boolean }) {
   const t = useT();
   if (!games.length && !loading) return null;

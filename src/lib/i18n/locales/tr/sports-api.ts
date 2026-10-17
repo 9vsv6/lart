@@ -3,8 +3,8 @@ export default {
     "API-Sports bu anahtarı reddetti. API-Sports panelinizden kontrol edin.",
   "Your API-Sports request allowance is exhausted. Public feeds remain available.":
     "API-Sports istek kotanız tükendi. Genel veri kaynakları kullanılabilir durumda.",
-  "API-Sports is limiting requests. Harbor will retry after the waiting period.":
-    "API-Sports istekleri sınırlıyor. Harbor bekleme süresinden sonra yeniden deneyecek.",
+  "API-Sports is limiting requests. Lart will retry after the waiting period.":
+    "API-Sports istekleri sınırlıyor. Lart bekleme süresinden sonra yeniden deneyecek.",
   "API-Sports is unavailable right now. Public feeds remain available.":
     "API-Sports şu anda kullanılamıyor. Genel veri kaynakları kullanılabilir durumda.",
   "The key could not be saved. Your previous key is unchanged.":

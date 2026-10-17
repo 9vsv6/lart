@@ -76,7 +76,7 @@ export function SetupTmdb({
     if (looksLikeV4Token(trimmed)) {
       setError(
         t(
-          'That looks like the v4 Read Access Token. Harbor needs the shorter "API Key (v3 auth)" from the same page.',
+          'That looks like the v4 Read Access Token. Lart needs the shorter "API Key (v3 auth)" from the same page.',
         ),
       );
       return;

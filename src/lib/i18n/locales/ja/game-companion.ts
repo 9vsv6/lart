@@ -257,7 +257,7 @@ export default {
   "games.gw2.partial": "一部のアイテム情報を取得できません。価格は合計に含まれています。",
   "games.gw2.guide": "宝庫ガイド",
   "games.gw2.checked": "確認日時：{date}",
-  "games.gw2.scope": "このHarborプロフィールに保存されます。各選択は1つのオファーとして計算されます。残高、購入制限、拡張版へのアクセスは確認されません。入手条件を確認してゲーム内で購入してください。",
+  "games.gw2.scope": "このLartプロフィールに保存されます。各選択は1つのオファーとして計算されます。残高、購入制限、拡張版へのアクセスは確認されません。入手条件を確認してゲーム内で購入してください。",
   "games.gw2.total": "予定合計",
   "games.gw2.currency": "Astral Acclaim",
   "games.gw2.selected": "{count}件を選択済み",

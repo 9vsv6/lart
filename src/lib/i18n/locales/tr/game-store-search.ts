@@ -1,9 +1,9 @@
 export default {
   "Search shortcuts": "Arama kısayolları",
   "Steam search shortcut": "Steam arama kısayolu",
-  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Harbor search for these queries.": "Steam mağazasında aramak için “st ” veya “st:” yazın. Bu sorgularda normal Harbor aramasını kullanmak için kapatın.",
+  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Lart search for these queries.": "Steam mağazasında aramak için “st ” veya “st:” yazın. Bu sorgularda normal Lart aramasını kullanmak için kapatın.",
   "games.storeSearch.title": "Steam mağazası",
-  "games.storeSearch.hint": "Steam’de doğrudan aramak için Harbor aramasında “st ” kullanın.",
+  "games.storeSearch.hint": "Steam’de doğrudan aramak için Lart aramasında “st ” kullanın.",
   "games.storeSearch.automatic": "Otomatik",
   "games.storeSearch.region": "Mağaza bölgesi",
   "games.storeSearch.showLibrary": "Kütüphanemde bulunan oyunları işaretle",

@@ -2,16 +2,16 @@ const controllers: Record<string, string> = {
   Controllers: "コントローラー",
   "Controllers / gamepad": "コントローラー / ゲームパッド",
   "Controller support": "コントローラー対応",
-  "Use a game controller to browse Harbor and control playback. Works with Xbox, PlayStation, and most USB or Bluetooth gamepads.":
-    "ゲームコントローラーでHarborを操作し、再生をコントロールできます。Xbox、PlayStation、ほとんどのUSBまたはBluetoothゲームパッドに対応しています。",
-  "Use a game controller to browse Harbor and control playback. Tune the sticks and see the button map.":
-    "ゲームコントローラーでHarborを操作し、再生をコントロールできます。スティックを調整し、ボタン配置を確認できます。",
+  "Use a game controller to browse Lart and control playback. Works with Xbox, PlayStation, and most USB or Bluetooth gamepads.":
+    "ゲームコントローラーでLartを操作し、再生をコントロールできます。Xbox、PlayStation、ほとんどのUSBまたはBluetoothゲームパッドに対応しています。",
+  "Use a game controller to browse Lart and control playback. Tune the sticks and see the button map.":
+    "ゲームコントローラーでLartを操作し、再生をコントロールできます。スティックを調整し、ボタン配置を確認できます。",
   "Enable controller": "コントローラーを有効にする",
-  "When on, a connected controller moves focus around Harbor and drives the player. Turn it off to ignore all controllers.":
-    "オンにすると、接続したコントローラーでHarbor内のフォーカス移動とプレイヤー操作ができます。すべてのコントローラーを無視するにはオフにしてください。",
+  "When on, a connected controller moves focus around Lart and drives the player. Turn it off to ignore all controllers.":
+    "オンにすると、接続したコントローラーでLart内のフォーカス移動とプレイヤー操作ができます。すべてのコントローラーを無視するにはオフにしてください。",
   "Connected controllers": "接続済みのコントローラー",
-  "Controllers Harbor can see right now. Connect one over USB or Bluetooth and it shows up here.":
-    "Harborが現在認識しているコントローラーです。USBまたはBluetoothで接続すると、ここに表示されます。",
+  "Controllers Lart can see right now. Connect one over USB or Bluetooth and it shows up here.":
+    "Lartが現在認識しているコントローラーです。USBまたはBluetoothで接続すると、ここに表示されます。",
   "No controllers detected. Connect one over USB or Bluetooth.":
     "コントローラーが検出されません。USBまたはBluetoothで接続してください。",
   Connected: "接続済み",
@@ -42,8 +42,8 @@ const controllers: Record<string, string> = {
   "Fine-tune how far you push the stick before it registers and how quickly held directions repeat.":
     "スティックをどこまで倒すと反応するか、方向を押し続けたときにどのくらいの速さで繰り返すかを細かく調整します。",
   Deadzone: "デッドゾーン",
-  "How far you push the stick before Harbor reacts. Raise it if the focus drifts on its own.":
-    "スティックをどこまで倒すとHarborが反応するかを設定します。フォーカスが勝手に動く場合は値を上げてください。",
+  "How far you push the stick before Lart reacts. Raise it if the focus drifts on its own.":
+    "スティックをどこまで倒すとLartが反応するかを設定します。フォーカスが勝手に動く場合は値を上げてください。",
   "Repeat speed": "リピート速度",
   "How fast a held direction keeps moving the focus.":
     "方向を押し続けたときにフォーカスが移動する速さです。",

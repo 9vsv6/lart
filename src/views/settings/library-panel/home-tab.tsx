@@ -40,7 +40,7 @@ export function HomeTab() {
             icon={<LayoutTemplate size={18} strokeWidth={2} />}
             label={t("Featured source")}
             desc={t(
-              "What fills the hero. Trending is a fresh top list from Harbor, refreshed through the day. Classic uses your own Home rows.",
+              "What fills the hero. Trending is a fresh top list from Lart, refreshed through the day. Classic uses your own Home rows.",
             )}
           >
             <Segmented
@@ -234,12 +234,12 @@ export function HomeTab() {
         <SettingGroup label={t("Continue Watching sources")}>
           <p className={`${ROW_DESC} -mt-1 mb-1`}>
             {t(
-              "Choose which services feed your Continue Watching row. Turn on as many as you like and Harbor merges them, keeping the most recent progress for each title. What you watch is still scrobbled to every connected service regardless of what you pick here.",
+              "Choose which services feed your Continue Watching row. Turn on as many as you like and Lart merges them, keeping the most recent progress for each title. What you watch is still scrobbled to every connected service regardless of what you pick here.",
             )}
           </p>
           <ToggleRow
-            label={t("Harbor library")}
-            sub={t("Your own Harbor account progress. The primary source for almost everyone.")}
+            label={t("Lart library")}
+            sub={t("Your own Lart account progress. The primary source for almost everyone.")}
             value={settings.cwSources.library}
             onChange={(v) => update({ cwSources: { ...settings.cwSources, library: v } })}
             lockReason={
@@ -312,7 +312,7 @@ export function HomeTab() {
       <Section
         title={t("Continue Watching screenshots")}
         subtitle={t(
-          "When you back out of a title, Harbor saves a frame so the Continue Watching card looks like the spot you left. Tune how long they stick around, or wipe them all.",
+          "When you back out of a title, Lart saves a frame so the Continue Watching card looks like the spot you left. Tune how long they stick around, or wipe them all.",
         )}
       >
         <CwSnapshotShowcase />
@@ -354,7 +354,7 @@ function HomeModePicker({
   const options: Array<{ id: "harbor" | "classic"; label: string; sub: string; img: string }> = [
     {
       id: "harbor",
-      label: t("Harbor curated"),
+      label: t("Lart curated"),
       sub: t(
         "Hero carousel, Top 10, Trending, In Theaters, per-service rails. Addon catalogs append underneath, deduped.",
       ),

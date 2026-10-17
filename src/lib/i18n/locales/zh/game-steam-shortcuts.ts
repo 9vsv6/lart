@@ -5,7 +5,7 @@ export default {
 
   "games.shortcuts.activity.open": "活动",
   "games.shortcuts.activity.title": "快捷方式活动",
-  "games.shortcuts.activity.note": "此 Harbor 个人资料的近期扫描和启动记录，最多保留 300 条。",
+  "games.shortcuts.activity.note": "此 Lart 个人资料的近期扫描和启动记录，最多保留 300 条。",
   "games.shortcuts.activity.remember": "跨会话保留",
   "games.shortcuts.activity.detailed": "记录扫描详情",
   "games.shortcuts.activity.storageError": "无法访问已保存的活动。仍会显示本次会话的记录。",
@@ -47,7 +47,7 @@ export default {
   "games.shortcuts.tags": "标签",
   "games.shortcuts.storeError": "无法保存这些设置。",
   "games.shortcuts.shortcut_location": "请选择 Steam 文件夹或其中的 userdata 文件夹。",
-  "games.shortcuts.shortcut_account": "请使用此快捷方式所属的账户打开 Steam，然后刷新。Harbor 必须使用同一个 Steam 安装。",
+  "games.shortcuts.shortcut_account": "请使用此快捷方式所属的账户打开 Steam，然后刷新。Lart 必须使用同一个 Steam 安装。",
   "games.shortcuts.shortcut_missing": "此快捷方式已不存在，请刷新游戏库。",
   "games.shortcuts.shortcut_executable": "快捷方式的可执行文件缺失，或其绝对路径不受支持。",
   "games.shortcuts.shortcut_launch": "Steam 无法打开此快捷方式，请重试。",

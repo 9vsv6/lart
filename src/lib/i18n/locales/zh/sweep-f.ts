@@ -23,7 +23,7 @@ const sweepF: Record<string, string> = {
   Sundown: "日落",
   Superheroes: "超级英雄",
   Supernatural: "超自然",
-  "Support Harbor": "支持 Harbor",
+  "Support Lart": "支持 Lart",
   "Support Stremio": "支持 Stremio",
   Supporting: "配角",
   "Sure?": "确定吗？",
@@ -38,7 +38,7 @@ const sweepF: Record<string, string> = {
   "SVP couldn't start, playing without smoothing": "SVP 无法启动，将不进行平滑处理并继续播放",
   "SVP engine": "SVP 引擎",
   "SVP frame interpolation": "SVP 帧插值",
-  "SVP is not supported by this Harbor package.": "此 Harbor 软件包不支持 SVP。",
+  "SVP is not supported by this Lart package.": "此 Lart 软件包不支持 SVP。",
   "SVP's files are here, but its VapourSynth engine won't load.":
     "已找到 SVP 文件，但无法加载其 VapourSynth 引擎。",
   "Swap in Better Posters, PostersPlus, or your own URL template.":
@@ -222,8 +222,8 @@ const sweepF: Record<string, string> = {
   "The originals": "原创作品",
   "The PDF print content could not be created.": "无法创建 PDF 打印内容。",
   "The PDF print view could not be created.": "无法创建 PDF 打印视图。",
-  "The pointer your right stick moves around Harbor. Pick a shape or use your own image.":
-    "右摇杆可在 Harbor 中移动此指针。选择一种形状或使用自己的图片。",
+  "The pointer your right stick moves around Lart. Pick a shape or use your own image.":
+    "右摇杆可在 Lart 中移动此指针。选择一种形状或使用自己的图片。",
   "The practical default.": "实用的默认设置。",
   "The price drops by half": "价格会减半",
   "The primary manages profiles and can't be deleted. Transfer it here to delete the old one.":
@@ -235,8 +235,8 @@ const sweepF: Record<string, string> = {
   "The real footage": "真实影像",
   "The same as gross": "与税前工资相同",
   "The series that make the rest of the night disappear.": "让余下夜晚悄然消逝的剧集。",
-  "The ship is sailing away. Thanks for watching with Harbor, it's time to listen to your grown-ups.":
-    "小船要驶远了。感谢你使用 Harbor 观看，现在该听大人的话了。",
+  "The ship is sailing away. Thanks for watching with Lart, it's time to listen to your grown-ups.":
+    "小船要驶远了。感谢你使用 Lart 观看，现在该听大人的话了。",
   "The signing bonus from year one": "入职第一年的签约奖金",
   "the site root, like": "网站根地址，例如",
   "The standard year-end bonus": "标准年终奖",
@@ -254,8 +254,8 @@ const sweepF: Record<string, string> = {
   "THEN notify on": "然后通知到",
   "There wasn't enough matching dialogue to make a safe correction.":
     "匹配的对白不足，无法安全校正。",
-  "These avatars are Harbor originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
-    "这些头像是 Harbor 原创内容。导入的头像包仅存储在此设备上：其中包含什么由你决定，你也需要为这些内容负责。",
+  "These avatars are Lart originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
+    "这些头像是 Lart 原创内容。导入的头像包仅存储在此设备上：其中包含什么由你决定，你也需要为这些内容负责。",
   "These episodes are already downloading.": "这些剧集已在下载。",
   "These two points are very close ({n}s apart). Pick one near the start and one near the end, or the timing can drift at the edges.":
     "这两个时间点非常接近（相差 {n} 秒）。请选择一个靠近开头、另一个靠近结尾的时间点，否则两端的时间可能会发生偏移。",
@@ -279,11 +279,11 @@ const sweepF: Record<string, string> = {
   "This group has not written a description yet.": "这个小组还没有填写简介。",
   "This group's feed could not be loaded. Try again in a moment.":
     "无法加载此小组的动态。请稍后重试。",
-  "This Harbor": "当前 Harbor",
-  "This Harbor takes commands from this computer. Forget it to take that back.":
-    "此 Harbor 接受此电脑的控制。忘记它即可撤销控制。",
-  "This instance of Harbor is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
-    "此 Harbor 版本专为桌面设备打造。我们的独立 iOS 和 Android 应用即将推出，均将针对各自原生平台提供量身打造、移动优先的体验。",
+  "This Lart": "当前 Lart",
+  "This Lart takes commands from this computer. Forget it to take that back.":
+    "此 Lart 接受此电脑的控制。忘记它即可撤销控制。",
+  "This instance of Lart is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
+    "此 Lart 版本专为桌面设备打造。我们的独立 iOS 和 Android 应用即将推出，均将针对各自原生平台提供量身打造、移动优先的体验。",
   "This is a metadata-based release estimate, not a measured timing score.":
     "这是基于元数据对发行版作出的估算，并非实测的时间轴评分。",
   "This is how your subtitles will look.": "你的字幕显示效果如下。",
@@ -307,8 +307,8 @@ const sweepF: Record<string, string> = {
   "This section relies on TMDB discovery features.": "此部分依赖 TMDB 发现功能。",
   "This session cannot refresh its token. Sign out and back in, or the TV will never see these changes.":
     "此会话无法刷新令牌。请退出登录后重新登录，否则电视将无法看到这些更改。",
-  "This site may not support Harbor's temporary viewer. Retry the original link or open it in your browser.":
-    "此网站可能不支持 Harbor 的临时查看器。请重试原始链接或在浏览器中打开。",
+  "This site may not support Lart's temporary viewer. Retry the original link or open it in your browser.":
+    "此网站可能不支持 Lart 的临时查看器。请重试原始链接或在浏览器中打开。",
   "This source": "此来源",
   "This source did not provide any chapters.": "此来源未提供任何章节。",
   "This source did not respond": "此来源未响应",
@@ -575,8 +575,8 @@ const sweepF: Record<string, string> = {
   "TV guide": "电视节目表",
   "TV Guide": "电视节目指南",
   "TV only": "仅限电视",
-  "TV only. Older sets crop the outer edge of the picture. Nudge Harbor inward until nothing is cut off.":
-    "仅限电视。较旧的电视会裁切画面外缘。向内调整 Harbor，直到内容不再被截断。",
+  "TV only. Older sets crop the outer edge of the picture. Nudge Lart inward until nothing is cut off.":
+    "仅限电视。较旧的电视会裁切画面外缘。向内调整 Lart，直到内容不再被截断。",
   "TV Series": "电视动画系列",
   "TV Short": "电视动画短片",
   "TV Shows": "电视剧",
@@ -591,8 +591,8 @@ const sweepF: Record<string, string> = {
   "Twist Endings": "反转结局",
   "Two columns": "双列",
   "Two pages": "双页",
-  "Two paths: Harbor handles the deploy for you, or you do it yourself with wrangler.":
-    "有两种方式：让 Harbor 为你处理部署，或使用 wrangler 自行部署。",
+  "Two paths: Lart handles the deploy for you, or you do it yourself with wrangler.":
+    "有两种方式：让 Lart 为你处理部署，或使用 wrangler 自行部署。",
   "Two-factor authentication code": "双重身份验证码",
   Type: "类型",
   "Type a key on this TV": "在此电视上输入密钥",
@@ -600,7 +600,7 @@ const sweepF: Record<string, string> = {
   "Type into the focused field on the display": "在屏幕上当前聚焦的输入框中输入",
   "Type on your keyboard or tap the digits above.": "使用键盘输入，或点击上方数字。",
   "Type on your phone": "在手机上输入",
-  "Type the code showing on that Harbor.": "输入那台 Harbor 上显示的代码。",
+  "Type the code showing on that Lart.": "输入那台 Lart 上显示的代码。",
   "Type the same 4-digit PIN again.": "再次输入相同的 4 位 PIN。",
   "Type the same PIN one more time.": "请再次输入相同的 PIN。",
   Typeface: "字体",
@@ -652,8 +652,8 @@ const sweepF: Record<string, string> = {
   "Until {time} · {dur}": "至 {time} · {dur}",
   "until I stop": "直到我停止",
   "until the season ends": "直到本季结束",
-  "Until you pair, that Harbor ignores anything this computer sends it.":
-    "完成配对前，那台 Harbor 会忽略此电脑发送的所有内容。",
+  "Until you pair, that Lart ignores anything this computer sends it.":
+    "完成配对前，那台 Lart 会忽略此电脑发送的所有内容。",
   Untitled: "无标题",
   "Untitled addon": "未命名插件",
   "Untitled filter": "未命名筛选器",
@@ -705,20 +705,20 @@ const sweepF: Record<string, string> = {
   "Use default": "使用默认设置",
   "Use exclusively (never fall back to local)": "仅使用此服务器（绝不回退到本地）",
   "Use free IMDb data without a TMDB key": "无需 TMDB 密钥即可使用免费的 IMDb 数据",
-  "Use Harbor's built-in engine (beta)": "使用 Harbor 内置引擎（测试版）",
-  "Use Harbor's public relay": "使用 Harbor 的公共中继",
+  "Use Lart's built-in engine (beta)": "使用 Lart 内置引擎（测试版）",
+  "Use Lart's public relay": "使用 Lart 的公共中继",
   "Use in Nuvio": "在 Nuvio 中使用",
   "Use it": "使用此项",
   "Use liquid glass": "使用液态玻璃",
   "Use live web context": "使用实时 Web 上下文",
   "Use model": "使用模型",
-  "Use my AniList avatar as my Harbor avatar": "使用我的 AniList 头像作为 Harbor 头像",
+  "Use my AniList avatar as my Lart avatar": "使用我的 AniList 头像作为 Lart 头像",
   "Use my photo": "使用我的头像",
   "Use MyAnimeList avatar": "使用 MyAnimeList 头像",
   'Use the "personal" key, not the project one.': "请使用“personal”密钥，而不是项目密钥。",
-  "Use the arrow keys and Enter to move focus through Harbor. Turn this off to keep arrow keys free and disable focus navigation everywhere.":
-    "使用方向键和 Enter 在 Harbor 中移动焦点。关闭后，方向键可自由使用，并在所有位置禁用焦点导航。",
-  "Use the harbor bridge": "使用 Harbor Bridge",
+  "Use the arrow keys and Enter to move focus through Lart. Turn this off to keep arrow keys free and disable focus navigation everywhere.":
+    "使用方向键和 Enter 在 Lart 中移动焦点。关闭后，方向键可自由使用，并在所有位置禁用焦点导航。",
+  "Use the harbor bridge": "使用 Lart Bridge",
   "Use the v3 key, not the read access token.": "请使用 v3 密钥，而不是读取访问令牌。",
   "Use the wss:// scheme, not https://.": "请使用 wss:// 协议，而非 https://。",
   "Use these strings if you wire a custom navbar that needs to navigate.":
@@ -828,8 +828,8 @@ const sweepF: Record<string, string> = {
   "Watched by {name}": "{name} 已观看",
   Watching: "正在观看",
   WATCHING: "正在观看",
-  "Watching for ad, analytics, and tracking requests. Harbor itself sends zero telemetry.":
-    "正在监测广告、分析和跟踪请求。Harbor 本身不发送任何遥测数据。",
+  "Watching for ad, analytics, and tracking requests. Lart itself sends zero telemetry.":
+    "正在监测广告、分析和跟踪请求。Lart 本身不发送任何遥测数据。",
   "Watching right now": "正在观看",
   "We couldn't find what you were looking for. The wire got snipped: either the page moved, the addon's offline, or something glitched on our end.":
     "找不到你要的内容。连接已中断：页面可能已移动、插件可能已离线，或我们这边出了故障。",
@@ -938,16 +938,16 @@ const sweepF: Record<string, string> = {
   "Which end of the poster the score chip rides on.": "评分标签位于海报的哪一侧。",
   "Which line sits where while both are on screen.": "两行同时显示时各自所在的位置。",
   "Which order": "排序方式",
-  "While beta updates are on, Harbor offers the newest build again on its next check. Turn beta updates off above to stay on an earlier one.":
-    "开启 Beta 更新后，Harbor 会在下次检查更新时再次提供最新构建版本。若要停留在较早版本，请在上方关闭 Beta 更新。",
+  "While beta updates are on, Lart offers the newest build again on its next check. Turn beta updates off above to stay on an earlier one.":
+    "开启 Beta 更新后，Lart 会在下次检查更新时再次提供最新构建版本。若要停留在较早版本，请在上方关闭 Beta 更新。",
   "While the world's asleep": "当世界沉睡时",
   "While you watch": "观看时",
   White: "白色",
   "Who can join": "谁可以加入",
   "Who is breaking out this week. Live, with weekly movement.":
     "看看本周谁正在走红。实时更新，并显示每周排名变化。",
-  "Who keeps the lights on, what Harbor is built on, and where to put money if you want to.":
-    "谁在维持 Harbor 运转、Harbor 基于什么构建，以及如果你愿意支持，该把钱投向哪里。",
+  "Who keeps the lights on, what Lart is built on, and where to put money if you want to.":
+    "谁在维持 Lart 运转、Lart 基于什么构建，以及如果你愿意支持，该把钱投向哪里。",
   "Who keeps this running": "谁在维持这一切运转",
   "Who pays for the servers": "谁来承担服务器费用",
   "Who pays for the servers, and where to put money if you want to.":
@@ -967,8 +967,8 @@ const sweepF: Record<string, string> = {
   "Wider spacing": "加大间距",
   Width: "宽度",
   "Wild Bunch Era": "狂野帮时代",
-  "will be removed from Harbor. Anything you've set to use it will fall back to Inter.":
-    "将从 Harbor 中移除。所有设置为使用此字体的内容都将回退到 Inter。",
+  "will be removed from Lart. Anything you've set to use it will fall back to Inter.":
+    "将从 Lart 中移除。所有设置为使用此字体的内容都将回退到 Inter。",
   Win: "获奖",
   WIN: "WIN",
   Window: "窗口",
@@ -1047,8 +1047,8 @@ const sweepF: Record<string, string> = {
     "你还不是成员。接受邀请即可加入并参与。",
   "You are rating too fast, try again in a moment": "评分过于频繁，请稍后再试",
   "You are set up": "设置完成",
-  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Harbor bundles and endorses no sites; it only runs the config you supply.":
-    "您须对所连接的内容以及遵守版权规定和各网站条款负全部责任。Harbor 不内置或推荐任何网站，只会运行您提供的配置。",
+  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Lart bundles and endorses no sites; it only runs the config you supply.":
+    "您须对所连接的内容以及遵守版权规定和各网站条款负全部责任。Lart 不内置或推荐任何网站，只会运行您提供的配置。",
   'You buy something "in installments". That means you:': "你“分期付款”购买某件商品。这意味着：",
   "You can always mute or stop a song from the card itself.":
     "你随时可以直接在卡片上将歌曲静音或停止播放。",
@@ -1093,8 +1093,8 @@ const sweepF: Record<string, string> = {
     "你正在手动编辑界面，因此可视化构建器不会干扰你的操作。",
   'You\'re given "power of attorney" for a relative. You can:': "亲属授予你“代理权”。你可以：",
   "You're in": "登录成功",
-  "You're modding your own client. Custom JS has full access to your Harbor session. Only paste code you wrote or fully trust.":
-    "你正在修改自己的客户端。自定义 JS 可完全访问你的 Harbor 会话。请仅粘贴由你编写或完全信任的代码。",
+  "You're modding your own client. Custom JS has full access to your Lart session. Only paste code you wrote or fully trust.":
+    "你正在修改自己的客户端。自定义 JS 可完全访问你的 Lart 会话。请仅粘贴由你编写或完全信任的代码。",
   "You're offline": "你已离线",
   "You're offline. Your downloads still play.": "你已离线，但下载的内容仍可播放。",
   "You're on the latest version.": "当前已是最新版本。",
@@ -1114,7 +1114,7 @@ const sweepF: Record<string, string> = {
   "Your AniList": "您的 AniList",
   "Your AniList is empty": "您的 AniList 为空",
   "Your AniList: {name}": "您的 AniList：{name}",
-  "Your avatar, name, and handle across Harbor.": "你在 Harbor 中使用的头像、名称和账号名。",
+  "Your avatar, name, and handle across Lart.": "你在 Lart 中使用的头像、名称和账号名。",
   'Your boss says "submit your timesheet by Friday". You\'re recording:':
     "老板说“周五前提交工时表”。你需要记录：",
   "Your business profit": "你的经营利润",
@@ -1129,8 +1129,8 @@ const sweepF: Record<string, string> = {
     "你的好友还没有分享任何内容。动态分享默认关闭。",
   "Your groups": "你的小组",
   "Your handle": "你的用户名",
-  "Your handle across Harbor, and your verified status.": "你在 Harbor 中使用的用户名及认证状态。",
-  "Your handle across Harbor.": "你在 Harbor 各处使用的用户名。",
+  "Your handle across Lart, and your verified status.": "你在 Lart 中使用的用户名及认证状态。",
+  "Your handle across Lart.": "你在 Lart 各处使用的用户名。",
   "Your holiday plans": "你的休假计划",
   "Your IP or device is blocked. Some providers geo restrict or limit how many devices can connect at once.":
     "你的 IP 或设备已被屏蔽。部分提供商会实施地区限制，或限制同时连接的设备数量。",

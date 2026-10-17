@@ -35,7 +35,7 @@ export default {
   "games.valorant.empty": "条件に一致する結果がありません。",
   "games.valorant.checked": "確認日時：{date}",
   "games.valorant.metaScope": "選択したパッチのOP.GGコンペティティブデータです。選択率はエージェントの使用数に占める割合です。提供元の標本を示しており、全プレイヤーの結果ではありません。",
-  "games.valorant.referenceScope": "ゲーム画像と参考情報はValorant-API経由です。更新がゲームより遅れる場合があります。HarborはRiot Games公認ではありません。",
+  "games.valorant.referenceScope": "ゲーム画像と参考情報はValorant-API経由です。更新がゲームより遅れる場合があります。LartはRiot Games公認ではありません。",
   "games.valorant.samples": "使用数：{count}",
   "games.valorant.smallSample": "標本数が少ない",
   "games.valorant.abilities": "アビリティー",

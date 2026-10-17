@@ -26,8 +26,8 @@ function ruleSource(r: CustomBadgeRule): string | null {
   const id = r.id.startsWith("nuvio-") ? r.id.slice(6) : r.id;
   if (id.startsWith("minimal-")) return "Minimal";
   if (id.startsWith("abstract-")) return "Abstract";
-  if (id.startsWith("harborlight-")) return "Harbor Light";
-  if (id.startsWith("harborcolor-")) return "Harbor Color";
+  if (id.startsWith("harborlight-")) return "Lart Light";
+  if (id.startsWith("harborcolor-")) return "Lart Color";
   return r.id.startsWith("nuvio-") ? "Nuvio" : null;
 }
 
@@ -99,7 +99,7 @@ export function RemapRow({
       desc={
         hidden
           ? t("This badge is hidden everywhere streams show format chips.")
-          : t("This badge uses art you picked instead of Harbor's default.")
+          : t("This badge uses art you picked instead of Lart's default.")
       }
     >
       <SButton onClick={onEdit}>{t("Edit")}</SButton>

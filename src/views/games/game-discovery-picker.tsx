@@ -24,7 +24,7 @@ import { DiscoveryPickerIcon, DiscoveryStyleIcon } from "./game-discovery-picker
 import "./game-discovery-picker.css";
 
 /* ANIMATION STORYBOARD
- *   0ms  Harbor's modal enters; controls become available immediately.
+ *   0ms  Lart's modal enters; controls become available immediately.
  * 180ms  New step settles: opacity 0 → 1, y 6px → 0.
  * On response: result cards settle in 28ms steps, capped after six cards.
  * Reduced motion removes both translation and stagger. No artificial loading delay.

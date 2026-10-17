@@ -47,8 +47,8 @@ const surfaces3: Record<string, string> = {
   'Designing "{name}"': 'Design "{name}" gestalten',
   "Designing a theme": "Ein Design gestalten",
   Destination: "Ziel",
-  "Direct torrent play needs the Harbor desktop app.":
-    "Die direkte Torrent-Wiedergabe erfordert die Harbor-Desktop-App.",
+  "Direct torrent play needs the Lart desktop app.":
+    "Die direkte Torrent-Wiedergabe erfordert die Lart-Desktop-App.",
   "Disc Source": "Disc-Quelle",
   "Double-click to unlink rows": "Doppelklicken, um Zeilen zu trennen",
   "Drag or use arrow keys to resize columns": "Ziehen oder Spalten mit den Pfeiltasten skalieren",
@@ -64,22 +64,22 @@ const surfaces3: Record<string, string> = {
   "Great job!": "Gut gemacht!",
   H: "Std.",
   "HTTP {status}: {body}": "HTTP {status}: {body}",
-  "Harbor Relay Documentation": "Harbor Relay-Dokumentation",
-  "Harbor Relay docs": "Harbor Relay-Doku",
-  "Harbor blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
-    "Harbor blockiert standardmäßig verdächtige Dateien und nicht übereinstimmende Releases. Bei älteren Serien und ungewöhnlichen Titeln ist das manchmal zu streng.",
-  "Harbor can open only HTTP or HTTPS destinations.":
-    "Harbor kann nur HTTP- oder HTTPS-Ziele öffnen.",
-  "Harbor cannot open links that include embedded credentials.":
-    "Harbor kann keine Links mit eingebetteten Zugangsdaten öffnen.",
-  "Harbor could not verify this destination.": "Harbor konnte dieses Ziel nicht verifizieren.",
-  "Harbor queried 1 addon and got nothing back":
-    "Harbor hat 1 Add-on abgefragt und nichts zurückbekommen",
-  "Harbor queried {n} addons and got nothing back":
-    "Harbor hat {n} Add-ons abgefragt und nichts zurückbekommen",
-  "Harbor test message ({service}). If you can read this, your webhook is wired up.":
-    "Harbor-Testnachricht ({service}). Wenn du das lesen kannst, ist dein Webhook korrekt eingerichtet.",
-  "Harbor's temporary viewer requires HTTPS.": "Die temporäre Ansicht von Harbor erfordert HTTPS.",
+  "Lart Relay Documentation": "Lart Relay-Dokumentation",
+  "Lart Relay docs": "Lart Relay-Doku",
+  "Lart blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
+    "Lart blockiert standardmäßig verdächtige Dateien und nicht übereinstimmende Releases. Bei älteren Serien und ungewöhnlichen Titeln ist das manchmal zu streng.",
+  "Lart can open only HTTP or HTTPS destinations.":
+    "Lart kann nur HTTP- oder HTTPS-Ziele öffnen.",
+  "Lart cannot open links that include embedded credentials.":
+    "Lart kann keine Links mit eingebetteten Zugangsdaten öffnen.",
+  "Lart could not verify this destination.": "Lart konnte dieses Ziel nicht verifizieren.",
+  "Lart queried 1 addon and got nothing back":
+    "Lart hat 1 Add-on abgefragt und nichts zurückbekommen",
+  "Lart queried {n} addons and got nothing back":
+    "Lart hat {n} Add-ons abgefragt und nichts zurückbekommen",
+  "Lart test message ({service}). If you can read this, your webhook is wired up.":
+    "Lart-Testnachricht ({service}). Wenn du das lesen kannst, ist dein Webhook korrekt eingerichtet.",
+  "Lart's temporary viewer requires HTTPS.": "Die temporäre Ansicht von Lart erfordert HTTPS.",
   "Hidden Gems from the {decade}": "Verborgene Schätze aus {decade}",
   "Hide all sources": "Alle Quellen ausblenden",
   "Hide controls": "Steuerelemente ausblenden",
@@ -112,7 +112,7 @@ const surfaces3: Record<string, string> = {
   "New {genre} Series": "Neue {genre}-Serien",
   "Nice try!": "Guter Versuch!",
   "No PiP session. Closing.": "Keine PiP-Sitzung. Wird geschlossen.",
-  "No clean release has surfaced yet. This may be too new. Harbor's filters dropped everything that came back as wrong-movie noise.":
+  "No clean release has surfaced yet. This may be too new. Lart's filters dropped everything that came back as wrong-movie noise.":
     "Bisher ist noch kein passendes Release aufgetaucht. Vielleicht ist der Titel zu neu. Harbors Filter haben alles verworfen, was als unpassender Film-Treffer zurückkam.",
   "No playable video file was found in this torrent.":
     "In diesem Torrent wurde keine abspielbare Videodatei gefunden.",
@@ -182,10 +182,10 @@ const surfaces3: Record<string, string> = {
   "Theatrical Capture": "Kinoaufnahme",
   "Theme Studio": "Design-Studio",
   "Theme is missing a name.": "Dem Design fehlt ein Name.",
-  "This file isn't a Harbor theme.": "Diese Datei ist kein gültiges Harbor-Design.",
+  "This file isn't a Lart theme.": "Diese Datei ist kein gültiges Lart-Design.",
   "This file isn't a readable theme.": "Diese Datei ist kein lesbares Theme.",
-  "This link goes to an external site that Harbor does not control or vouch for. Triple-check the address before you continue, and never enter your Harbor password anywhere but Harbor.":
-    "Dieser Link führt zu einer externen Website, die Harbor weder kontrolliert noch für vertrauenswürdig erklärt. Prüfe die Adresse dreimal, bevor du fortfährst, und gib dein Harbor-Passwort ausschließlich bei Harbor ein.",
+  "This link goes to an external site that Lart does not control or vouch for. Triple-check the address before you continue, and never enter your Lart password anywhere but Lart.":
+    "Dieser Link führt zu einer externen Website, die Lart weder kontrolliert noch für vertrauenswürdig erklärt. Prüfe die Adresse dreimal, bevor du fortfährst, und gib dein Lart-Passwort ausschließlich bei Lart ein.",
   "This theme file is missing a name.": "Dieser Theme-Datei fehlt ein Name.",
   "This theme file is missing its colors.": "In dieser Theme-Datei fehlen die Farben.",
   "This theme is missing a color ({color}).": "Diesem Theme fehlt eine Farbe ({color}).",
@@ -210,7 +210,7 @@ const surfaces3: Record<string, string> = {
   Won: "Gewonnen",
   Y: "J",
   "You got {score} of {total} right!": "Du hast {score} von {total} richtig!",
-  "You're leaving Harbor": "Du verlässt Harbor",
+  "You're leaving Lart": "Du verlässt Lart",
   "Your changes to this theme aren't saved yet. They'll be lost if you leave now.":
     "Deine Änderungen an diesem Theme sind noch nicht gespeichert. Wenn du jetzt gehst, gehen sie verloren.",
   "Your remote streaming server is not reachable. Check its address in Settings.":

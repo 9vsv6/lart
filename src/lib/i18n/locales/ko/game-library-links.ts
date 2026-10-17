@@ -2,7 +2,7 @@ export default {
   "games.links.title": "링크",
   "games.links.sort": "링크 정렬",
   "games.links.note": "URL을 A–Z순으로 정렬합니다. 이름과 주소는 그대로 유지됩니다.",
-  "games.links.available": "Harbor에 이미 있는 링크를 사용합니다. 새로 발견된 링크는 저장된 순서 뒤에 표시됩니다.",
+  "games.links.available": "Lart에 이미 있는 링크를 사용합니다. 새로 발견된 링크는 저장된 순서 뒤에 표시됩니다.",
   "games.links.original": "원래 순서 복원",
   "games.links.applied": "게임 {count}개의 링크를 업데이트했습니다.",
   "games.links.changes": "게임 {count}개가 변경됩니다.",

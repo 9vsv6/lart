@@ -65,12 +65,12 @@ const wiringSweep: Record<string, string> = {
     "Estilize {selector} e os pôsteres à direita serão atualizados em tempo real. Clique em Inserir modelo inicial para começar mais rápido.",
   "Click to copy": "Clique para copiar",
   "Copy {text}": "Copiar {text}",
-  "Harbor snippet": "Trecho do Harbor",
+  "Lart snippet": "Trecho do Lart",
   example: "exemplo",
-  "Harbor theme": "Tema do Harbor",
+  "Lart theme": "Tema do Lart",
   "Cheat sheet": "Guia rápido",
-  "{file} is empty. Start typing to restyle Harbor.":
-    "{file} está vazio. Comece a digitar para mudar o visual do Harbor.",
+  "{file} is empty. Start typing to restyle Lart.":
+    "{file} está vazio. Comece a digitar para mudar o visual do Lart.",
   "Open code editor": "Abrir editor de código",
   "CSS {css} · HTML {html} · JS {js}": "CSS {css} · HTML {html} · JS {js}",
   "No custom code yet.": "Ainda não há código personalizado.",
@@ -174,23 +174,23 @@ const wiringSweep: Record<string, string> = {
   "Theme author. Your published themes are tied to this account.":
     "Autor do tema. Os seus temas publicados estão vinculados a esta conta.",
   "Change password": "Alterar senha",
-  "Set a Harbor profile picture first": "Primeiro, defina uma foto de perfil do Harbor",
-  "Re-sync from your Harbor profile picture":
-    "Sincronizar novamente a partir da sua foto de perfil do Harbor",
+  "Set a Lart profile picture first": "Primeiro, defina uma foto de perfil do Lart",
+  "Re-sync from your Lart profile picture":
+    "Sincronizar novamente a partir da sua foto de perfil do Lart",
   "Update photo": "Atualizar foto",
   "Remove community photo": "Remover foto da comunidade",
   "Remove your community photo": "Remover a sua foto da comunidade",
-  "Show your Harbor profile picture on the community":
-    "Mostrar a sua foto de perfil do Harbor na comunidade",
+  "Show your Lart profile picture on the community":
+    "Mostrar a sua foto de perfil do Lart na comunidade",
   "Use my photo": "Usar a minha foto",
   "Current password": "Senha atual",
   "Password updated": "Senha atualizada",
   "Update password": "Atualizar senha",
-  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Harbor handles the shaders.":
-    "Shaders de GPU que realçam as linhas e suavizam os gradientes dos animes durante a reprodução. Escolha um modo e o Harbor trata dos shaders.",
-  "Harbor, from a public domain frame": "Harbor, a partir de um fotograma em domínio público",
-  "One-time setup downloads the shader pack (about 1 MB) into Harbor. No files to hunt down.":
-    "A configuração inicial baixa o pacote de shaders (cerca de 1 MB) no Harbor. Não é preciso procurar arquivos.",
+  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Lart handles the shaders.":
+    "Shaders de GPU que realçam as linhas e suavizam os gradientes dos animes durante a reprodução. Escolha um modo e o Lart trata dos shaders.",
+  "Lart, from a public domain frame": "Lart, a partir de um fotograma em domínio público",
+  "One-time setup downloads the shader pack (about 1 MB) into Lart. No files to hunt down.":
+    "A configuração inicial baixa o pacote de shaders (cerca de 1 MB) no Lart. Não é preciso procurar arquivos.",
   "Downloading shaders…": "Baixando shaders…",
   Performance: "Desempenho",
   "Shaders installed": "Shaders instalados",
@@ -265,8 +265,8 @@ const wiringSweep: Record<string, string> = {
   "Custom profile": "Perfil personalizado",
   "Hidden from visitors": "Oculto para visitantes",
   "How the canvas works": "Como funciona a tela",
-  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Harbor. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
-    "Seu HTML e CSS são renderizados em um quadro isolado, totalmente separado do restante do Harbor. Crie o conteúdo como uma pequena página autossuficiente. A fonte e o fundo da página têm controles separados acima e são aplicados ao perfil inteiro.",
+  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Lart. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
+    "Seu HTML e CSS são renderizados em um quadro isolado, totalmente separado do restante do Lart. Crie o conteúdo como uma pequena página autossuficiente. A fonte e o fundo da página têm controles separados acima e são aplicados ao perfil inteiro.",
   Allowed: "Permitido",
   "Not allowed": "Não permitido",
   "HTML and CSS are each capped at 16,384 characters.":
@@ -338,8 +338,8 @@ const wiringSweep: Record<string, string> = {
   "End of manga": "Fim do mangá",
   "Reconnecting to your computer": "Reconectando ao seu computador",
   "Reader closed on your computer": "O leitor foi fechado no seu computador",
-  "Open a manga on Harbor to control the reader from here.":
-    "Abra um mangá no Harbor para controlar o leitor por aqui.",
+  "Open a manga on Lart to control the reader from here.":
+    "Abra um mangá no Lart para controlar o leitor por aqui.",
   "Your computer": "Seu computador",
   Reconnecting: "Reconectando",
   "Read on this device": "Ler neste dispositivo",
@@ -364,8 +364,8 @@ const wiringSweep: Record<string, string> = {
     "Adicione uma chave de API do Google Books para obter títulos, capas, autores e descrições de livros. O Wikidata funciona automaticamente como último recurso para metadados.",
   "Google Books API key": "Chave de API do Google Books",
   "Loading models…": "Carregando modelos…",
-  "Storage is full. Clear Harbor cache storage, then try saving again.":
-    "O armazenamento está cheio. Limpe o armazenamento de cache do Harbor e tente salvar novamente.",
+  "Storage is full. Clear Lart cache storage, then try saving again.":
+    "O armazenamento está cheio. Limpe o armazenamento de cache do Lart e tente salvar novamente.",
   "DeepSeek model is working.": "O modelo do DeepSeek está funcionando.",
   "Translation test failed": "Falha no teste de tradução",
   Translation: "Tradução",
@@ -386,8 +386,8 @@ const wiringSweep: Record<string, string> = {
     "Selecione uma pasta da biblioteca. Cada subpasta corresponde a um eBook. Coloque os capítulos nela como arquivos TXT, Markdown, HTML ou EPUB e, se quiser, adicione uma imagem de capa.",
   "My eBooks": "Meus eBooks",
   "Choose eBook folder": "Escolher pasta de eBooks",
-  "Folder selection is available in the Harbor app":
-    "A seleção de pastas está disponível no aplicativo Harbor",
+  "Folder selection is available in the Lart app":
+    "A seleção de pastas está disponível no aplicativo Lart",
   "Read eBook files you already have": "Leia arquivos de eBook que você já possui",
   "Enable {name}": "Ativar {name}",
   "Update repository": "Atualizar repositório",
@@ -396,8 +396,8 @@ const wiringSweep: Record<string, string> = {
   "This repository lists no eBook extensions.": "Este repositório não contém extensões de eBook.",
   "Could not load that eBook extension repository":
     "Não foi possível carregar esse repositório de extensões de eBook",
-  "eBook extensions use Harbor’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
-    "As extensões de eBook usam o processo isolado, a ponte HTTP e o analisador de HTML do Harbor, o mesmo ambiente restrito usado pelas extensões de mangá. Adicione apenas repositórios em que você confia.",
+  "eBook extensions use Lart’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
+    "As extensões de eBook usam o processo isolado, a ponte HTTP e o analisador de HTML do Lart, o mesmo ambiente restrito usado pelas extensões de mangá. Adicione apenas repositórios em que você confia.",
   "No repositories yet. Add one above to browse eBook extensions.":
     "Ainda não há repositórios. Adicione um acima para explorar extensões de eBook.",
   "{count} connected": "{count} conectados",
@@ -406,27 +406,27 @@ const wiringSweep: Record<string, string> = {
   "{count} repositories": "{count} repositórios",
   "Build your own": "Crie sua própria",
   "living library.": "biblioteca viva.",
-  "Connect books you own, trusted reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "Conecte livros que você possui, fontes de leitura confiáveis e serviços de metadados. O Harbor mantém a estante organizada, enquanto cada fonte permanece sob seu controle.",
+  "Connect books you own, trusted reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "Conecte livros que você possui, fontes de leitura confiáveis e serviços de metadados. O Lart mantém a estante organizada, enquanto cada fonte permanece sob seu controle.",
   "Source overview": "Visão geral das fontes",
   Repositories: "Repositórios",
   "Private reading collection": "Coleção de leitura privada",
   Contents: "Sumário",
   "eBook source settings": "Configurações das fontes de eBook",
   "Your shelf, your rules.": "Sua estante, suas regras.",
-  "Harbor never hosts your books.": "O Harbor nunca hospeda seus livros.",
+  "Lart never hosts your books.": "O Lart nunca hospeda seus livros.",
   "01 · Collection": "01 · Coleção",
   "Library sources": "Fontes da biblioteca",
-  "Manage every place Harbor can read from, whether it lives on disk or across the web.":
-    "Gerencie todos os locais dos quais o Harbor pode ler, estejam eles no disco ou na internet.",
+  "Manage every place Lart can read from, whether it lives on disk or across the web.":
+    "Gerencie todos os locais dos quais o Lart pode ler, estejam eles no disco ou na internet.",
   "02 · Enrichment": "02 · Enriquecimento",
   "Library intelligence": "Inteligência da biblioteca",
-  "Shape the metadata and reading language Harbor uses without changing your original files.":
-    "Defina os metadados e o idioma de leitura usados pelo Harbor sem alterar seus arquivos originais.",
+  "Shape the metadata and reading language Lart uses without changing your original files.":
+    "Defina os metadados e o idioma de leitura usados pelo Lart sem alterar seus arquivos originais.",
   "03 · Expand": "03 · Expandir",
   "Extension dock": "Central de extensões",
-  "Bring trusted source packages aboard through Harbor’s isolated extension worker.":
-    "Traga pacotes de fontes confiáveis a bordo por meio do processo isolado de extensões do Harbor.",
+  "Bring trusted source packages aboard through Lart’s isolated extension worker.":
+    "Traga pacotes de fontes confiáveis a bordo por meio do processo isolado de extensões do Lart.",
   "Saved locally; AniList sync is pending":
     "Salvo localmente; a sincronização com o AniList está pendente",
   "{format} added to Downloads": "{format} adicionado a Downloads",
@@ -473,8 +473,8 @@ const wiringSweep: Record<string, string> = {
   "Auto-download": "Download automático",
   "Episodes that air after you add a series grab themselves":
     "Os episódios que forem ao ar depois que você adicionar uma série serão baixados automaticamente",
-  "Add a series above and Harbor will grab each new episode as it airs, on your terms.":
-    "Adicione uma série acima e o Harbor baixará cada novo episódio assim que for ao ar, de acordo com suas preferências.",
+  "Add a series above and Lart will grab each new episode as it airs, on your terms.":
+    "Adicione uma série acima e o Lart baixará cada novo episódio assim que for ao ar, de acordo com suas preferências.",
   "Checking...": "Verificando...",
   "Check now": "Verificar agora",
   "{count} grabbed": "Total baixado: {count}",
@@ -498,9 +498,9 @@ const wiringSweep: Record<string, string> = {
   "Save failed for an unknown reason.": "Não foi possível salvar por um motivo desconhecido.",
   "My layout": "Meu layout",
   "Not valid JSON. The file may be corrupted.": "JSON inválido. O arquivo pode estar corrompido.",
-  "File is not a Harbor layout profile.": "O arquivo não é um perfil de layout do Harbor.",
-  "Unsupported profile version ({version}). Update Harbor or use an older profile.":
-    "Versão de perfil incompatível ({version}). Atualize o Harbor ou use um perfil mais antigo.",
+  "File is not a Lart layout profile.": "O arquivo não é um perfil de layout do Lart.",
+  "Unsupported profile version ({version}). Update Lart or use an older profile.":
+    "Versão de perfil incompatível ({version}). Atualize o Lart ou use um perfil mais antigo.",
   "Profile file has no chrome config.":
     "O arquivo de perfil não contém a configuração dos elementos da interface.",
   "Mute / Unmute": "Silenciar / Ativar som",

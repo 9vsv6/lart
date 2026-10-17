@@ -1,7 +1,7 @@
 export default {
   "games.details.broadcastPause": "Приостановить трансляцию",
   "games.details.broadcastResume": "Воспроизвести трансляцию",
-  "games.details.broadcastPlay": "Смотреть в Harbor",
+  "games.details.broadcastPlay": "Смотреть в Lart",
   "games.details.watchRun": "Смотреть забег",
   "games.details.viewRun": "Открыть рекорд",
   "games.details.runVideo": "Видео забега",

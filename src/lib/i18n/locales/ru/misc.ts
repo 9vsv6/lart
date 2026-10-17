@@ -33,36 +33,36 @@ const misc: Record<string, string> = {
   "Injected into a fixed-position layer above the app (pointer-events disabled by default). Wrap in a div with pointer-events:auto to make it interactive.":
     "Внедряется в фиксированный слой поверх приложения (pointer-events по умолчанию отключены). Оберните в div с pointer-events:auto, чтобы сделать его интерактивным.",
   "Custom code": "Свой код",
-  "Power-user knob. Inject your own CSS, JS, and HTML into Harbor. Lives in your local settings; nothing leaves your machine.":
-    "Для продвинутых. Внедряйте свои CSS, JS и HTML в Harbor. Хранится в локальных настройках; ничего не покидает ваш компьютер.",
-  "You're modding your own client. Custom JS has full access to your Harbor session. Only paste code you wrote or fully trust.":
-    "Вы модифицируете свой клиент. Свой JS получает полный доступ к вашей сессии Harbor. Вставляйте только тот код, который написали сами или которому полностью доверяете.",
+  "Power-user knob. Inject your own CSS, JS, and HTML into Lart. Lives in your local settings; nothing leaves your machine.":
+    "Для продвинутых. Внедряйте свои CSS, JS и HTML в Lart. Хранится в локальных настройках; ничего не покидает ваш компьютер.",
+  "You're modding your own client. Custom JS has full access to your Lart session. Only paste code you wrote or fully trust.":
+    "Вы модифицируете свой клиент. Свой JS получает полный доступ к вашей сессии Lart. Вставляйте только тот код, который написали сами или которому полностью доверяете.",
   "Close to the system tray": "Сворачивать в системный трей",
-  "Closing the window tucks Harbor into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
-    "При закрытии окна Harbor сворачивается в трей, а не завершается, поэтому открывается мгновенно. Правый клик по значку в трее – быстрые действия, «Выход» – полное завершение.",
+  "Closing the window tucks Lart into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
+    "При закрытии окна Lart сворачивается в трей, а не завершается, поэтому открывается мгновенно. Правый клик по значку в трее – быстрые действия, «Выход» – полное завершение.",
   "Always on top": "Поверх всех окон",
-  "Keep the Harbor window above other windows.": "Держать окно Harbor поверх других окон.",
+  "Keep the Lart window above other windows.": "Держать окно Lart поверх других окон.",
   "Pause when minimized": "Пауза при сворачивании",
-  "Stop playback when you minimize Harbor or send it to the tray.":
-    "Останавливать воспроизведение при сворачивании Harbor или отправке в трей.",
+  "Stop playback when you minimize Lart or send it to the tray.":
+    "Останавливать воспроизведение при сворачивании Lart или отправке в трей.",
   "Pause when unfocused": "Пауза при потере фокуса",
   "Stop playback whenever another window takes focus.":
     "Останавливать воспроизведение, когда фокус переходит к другому окну.",
   "Block ads & trackers": "Блокировать рекламу и трекеры",
-  "Watching for ad, analytics, and tracking requests. Harbor itself sends zero telemetry.":
-    "Отслеживаются рекламные, аналитические и трекинговые запросы. Сам Harbor не отправляет телеметрию.",
+  "Watching for ad, analytics, and tracking requests. Lart itself sends zero telemetry.":
+    "Отслеживаются рекламные, аналитические и трекинговые запросы. Сам Lart не отправляет телеметрию.",
   "Export everything": "Экспортировать всё",
-  "Saves your whole Harbor setup to one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
-    "Сохраняет всю конфигурацию Harbor в один файл: тему, макет главной, настройки, дополнения, профили, список к просмотру, раскладки плеера, прогресс просмотра и другое. Вход в Stremio намеренно не включается.",
+  "Saves your whole Lart setup to one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
+    "Сохраняет всю конфигурацию Lart в один файл: тему, макет главной, настройки, дополнения, профили, список к просмотру, раскладки плеера, прогресс просмотра и другое. Вход в Stremio намеренно не включается.",
   Export: "Экспорт",
   "Restore from a backup": "Восстановить из резервной копии",
   "Loads a backup file and replaces your current setup with it. Perfect for a new computer. Your Stremio sign-in on this device stays as is.":
     "Загружает файл резервной копии и заменяет ею текущую конфигурацию. Идеально для нового компьютера. Вход в Stremio на этом устройстве останется как есть.",
   "Restore this backup?": "Восстановить эту копию?",
-  "This replaces your current Harbor setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Harbor reloads when it finishes.":
-    "Текущая конфигурация Harbor (тема, макет главной, настройки, дополнения, профили и другое) будет заменена сохранёнными записями из этого файла ({n}). Вход в Stremio останется как есть. По завершении Harbor перезагрузится.",
+  "This replaces your current Lart setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Lart reloads when it finishes.":
+    "Текущая конфигурация Lart (тема, макет главной, настройки, дополнения, профили и другое) будет заменена сохранёнными записями из этого файла ({n}). Вход в Stremio останется как есть. По завершении Lart перезагрузится.",
   "an unknown date": "неизвестная дата",
-  "Saved {when} from Harbor {app}.": "Сохранено: {when}, Harbor {app}.",
+  "Saved {when} from Lart {app}.": "Сохранено: {when}, Lart {app}.",
   "Restoring...": "Восстановление...",
   "Restore and reload": "Восстановить и перезагрузить",
   "Hide watched titles in catalogs": "Скрывать просмотренные названия в каталогах",
@@ -72,8 +72,8 @@ const misc: Record<string, string> = {
   "Grid view": "Вид сеткой",
   "List view": "Вид списком",
   "How is this build treating you?": "Как вам эта сборка?",
-  "Does Harbor {version} feel better or worse than the version you had before?":
-    "Harbor {version} лучше или хуже предыдущей версии?",
+  "Does Lart {version} feel better or worse than the version you had before?":
+    "Lart {version} лучше или хуже предыдущей версии?",
   "Much worse": "Намного хуже",
   "About the same": "Примерно так же",
   "Much better": "Намного лучше",
@@ -169,9 +169,9 @@ const misc: Record<string, string> = {
   "Reveal comments": "Показать комментарии",
   "Comments are hidden": "Комментарии скрыты",
   "Hosted elsewhere": "Хостинг со стороны",
-  "A third party runs these plans. Harbor is not affiliated with them and receives nothing from a signup. Current pricing and terms are on their site.": "Эти тарифы ведёт сторонняя компания. Harbor не связан с ней и ничего не получает за подписку. Актуальные цены и условия — на их сайте.",
+  "A third party runs these plans. Lart is not affiliated with them and receives nothing from a signup. Current pricing and terms are on their site.": "Эти тарифы ведёт сторонняя компания. Lart не связан с ней и ничего не получает за подписку. Актуальные цены и условия — на их сайте.",
   "{name} can run on a hosted instance": "{name} может работать на хостинге",
-  "A third party operates this. Harbor is not affiliated with them, does not resell it, and receives nothing if you sign up. Whatever it costs and whatever it includes is on their site.": "Этим управляет сторонняя компания. Harbor не связан с ней, не перепродаёт её и ничего не получает. Цены и состав указаны на их сайте.",
+  "A third party operates this. Lart is not affiliated with them, does not resell it, and receives nothing if you sign up. Whatever it costs and whatever it includes is on their site.": "Этим управляет сторонняя компания. Lart не связан с ней, не перепродаёт её и ничего не получает. Цены и состав указаны на их сайте.",
   "Show comments": "Показать комментарии",
   "Hide comments": "Скрыть комментарии",
   "You haven't commented yet": "Вы ещё не оставили комментарий",
@@ -326,8 +326,8 @@ const misc: Record<string, string> = {
     "Выберите источник для сохранения офлайн. Прогресс можно отслеживать на странице «Загрузки».",
   "Last source wasn't actually cached on your debrid yet. Pick another from the list.":
     "Прошлый источник ещё не закэширован в вашем дебриде. Выберите другой из списка.",
-  "Harbor couldn't resolve a usable ID for this title. Add a TMDB key in Library settings or sign in to Stremio to broaden coverage.":
-    "Harbor не удалось определить подходящий ID для этого названия. Добавьте ключ TMDB в настройках Библиотеки или войдите в Stremio, чтобы расширить охват.",
+  "Lart couldn't resolve a usable ID for this title. Add a TMDB key in Library settings or sign in to Stremio to broaden coverage.":
+    "Lart не удалось определить подходящий ID для этого названия. Добавьте ключ TMDB в настройках Библиотеки или войдите в Stremio, чтобы расширить охват.",
   "No playable streams turned up, and no debrid is configured. Real-Debrid, TorBox, AllDebrid, Premiumize, or Debrid-Link will unlock raw torrent results. Some addons bake debrid in (Sootio, Comet/ElfHosted, MediaFusion/ElfHosted) and play without your own keys.":
     "Воспроизводимые потоки не найдены, и дебрид не настроен. Real-Debrid, TorBox, AllDebrid, Premiumize или Debrid-Link откроют доступ к торрент-результатам. В некоторые дополнения дебрид уже встроен (Sootio, Comet/ElfHosted, MediaFusion/ElfHosted), и они работают без ваших ключей.",
   "Set up a debrid": "Настроить дебрид",
@@ -341,10 +341,10 @@ const misc: Record<string, string> = {
   "No source returned a stream": "Ни один источник не вернул поток",
   "Anime sources are usually richer through Torrentio's anime config or AIOStreams. Make sure one is installed in Stremio.":
     "Источников аниме обычно больше через аниме-конфигурацию Torrentio или AIOStreams. Убедитесь, что одно из них установлено в Stremio.",
-  "On the web, Harbor can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
-    "В веб-версии Harbor доступны только дополнения, разрешающие доступ из браузера (Torrentio, TorBox, Cinemeta). Для ещё не вышедших названий источников обычно нет.",
-  "Try signing in to Stremio so Harbor can use your addon collection. Older or foreign titles often need Torrentio + a debrid addon to find anything.":
-    "Попробуйте войти в Stremio, чтобы Harbor мог использовать вашу коллекцию дополнений. Для старых или зарубежных названий обычно нужны Torrentio и дополнение дебрида.",
+  "On the web, Lart can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
+    "В веб-версии Lart доступны только дополнения, разрешающие доступ из браузера (Torrentio, TorBox, Cinemeta). Для ещё не вышедших названий источников обычно нет.",
+  "Try signing in to Stremio so Lart can use your addon collection. Older or foreign titles often need Torrentio + a debrid addon to find anything.":
+    "Попробуйте войти в Stremio, чтобы Lart мог использовать вашу коллекцию дополнений. Для старых или зарубежных названий обычно нужны Torrentio и дополнение дебрида.",
   "Strict filters dropped everything": "Строгие фильтры отсеяли всё",
   "Search wider": "Расширить поиск",
   "Wide search · still empty": "Расширенный поиск · всё равно пусто",
@@ -410,15 +410,15 @@ const misc: Record<string, string> = {
   "Back to relay": "Назад к relay",
   Documentation: "Документация",
   "Self-host": "Свой хостинг",
-  "Run your own Harbor Relay": "Запустите свой Harbor Relay",
-  "Two paths: Harbor handles the deploy for you, or you do it yourself with wrangler.":
-    "Два пути: Harbor развернёт всё за вас или вы сделаете это сами через wrangler.",
+  "Run your own Lart Relay": "Запустите свой Lart Relay",
+  "Two paths: Lart handles the deploy for you, or you do it yourself with wrangler.":
+    "Два пути: Lart развернёт всё за вас или вы сделаете это сами через wrangler.",
   Requirements: "Требования",
   "A free Cloudflare account.": "Бесплатный аккаунт Cloudflare.",
   "About two minutes for the auto-deploy path.":
     "Около двух минут для автоматического развёртывания.",
-  "Auto-deploy from Harbor": "Автоматическое развёртывание из Harbor",
-  "Open Settings, then Harbor Relay.": "Откройте Настройки, затем Harbor Relay.",
+  "Auto-deploy from Lart": "Автоматическое развёртывание из Lart",
+  "Open Settings, then Lart Relay.": "Откройте Настройки, затем Lart Relay.",
   "Pick the Cloudflare account to deploy under.": "Выберите аккаунт Cloudflare для развёртывания.",
   "Manual deploy with wrangler": "Ручное развёртывание через wrangler",
   "For users who want to deploy themselves or already have a wrangler workflow.":
@@ -542,7 +542,7 @@ const misc: Record<string, string> = {
   "update.downloading": "Загрузка обновления",
   "update.failed": "Не удалось обновить",
   "update.available": "Доступно обновление",
-  "update.harborVersion": "Harbor {version}",
+  "update.harborVersion": "Lart {version}",
   "update.downloadComplete": "Загрузка завершена",
   "update.fetching": "Получение обновления",
   "update.errorServer": "Ошибка сервера",
@@ -729,8 +729,8 @@ const misc: Record<string, string> = {
     "Отобрано по популярности и надёжности. Без платных размещений. Всё остальное можно установить по URL на вкладке «Каталог».",
   "Sign in to sync your addons across devices":
     "Войдите, чтобы синхронизировать дополнения между устройствами",
-  "Anything you install in Harbor pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
-    "Всё, что вы устанавливаете в Harbor, отправляется в ваш аккаунт Stremio и появляется в том числе на телефоне. Войдите через аватар в левом нижнем углу боковой панели.",
+  "Anything you install in Lart pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
+    "Всё, что вы устанавливаете в Lart, отправляется в ваш аккаунт Stremio и появляется в том числе на телефоне. Войдите через аватар в левом нижнем углу боковой панели.",
   Starters: "Для начала",
   "Common picks for a fresh setup.": "Частый выбор при первой настройке.",
   Streaming: "Стриминг",
@@ -746,8 +746,8 @@ const misc: Record<string, string> = {
   "OTA channels + IPTV": "Эфирные каналы + IPTV",
   New: "Новое",
   "You've reached the end · {n} addons": "Это всё · {n} дополнений",
-  "Trending tracks star growth across your Harbor visits. Open the addons page again tomorrow and the top risers will appear here.":
-    "«В тренде» отслеживает рост звёзд между вашими визитами в Harbor. Откройте страницу дополнений завтра, и лидеры роста появятся здесь.",
+  "Trending tracks star growth across your Lart visits. Open the addons page again tomorrow and the top risers will appear here.":
+    "«В тренде» отслеживает рост звёзд между вашими визитами в Lart. Откройте страницу дополнений завтра, и лидеры роста появятся здесь.",
   "Head to Discover. Cinemeta and OpenSubtitles cover the basics; Torrentio + a debrid key cover almost everything else.":
     "Перейдите в Обзор. Cinemeta и OpenSubtitles закрывают основное; Torrentio плюс ключ debrid закроют почти всё остальное.",
   "No installed addon matches that.": "Среди установленных дополнений совпадений нет.",
@@ -796,8 +796,8 @@ const misc: Record<string, string> = {
   Cancel: "Отмена",
   "'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     ". Выберите нужные параметры, скопируйте полученную ссылку установки и вставьте её ниже, чтобы обновить дополнение.",
-  "'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    ". Она откроется во встроенном браузере Harbor. Выберите нужные параметры. Когда вы нажмёте «Установить» на их странице, Harbor сам подхватит ссылку и обновит дополнение.",
+  "'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    ". Она откроется во встроенном браузере Lart. Выберите нужные параметры. Когда вы нажмёте «Установить» на их странице, Lart сам подхватит ссылку и обновит дополнение.",
   "Saving to library": "Сохранение в библиотеку",
   "Syncing to Stremio": "Синхронизация со Stremio",
   Done: "Готово",
@@ -806,14 +806,14 @@ const misc: Record<string, string> = {
   "Top 10": "Топ-10",
   "Add a TMDB key in Settings to load Arabic content.":
     "Добавьте ключ TMDB в Настройках, чтобы загрузить контент на арабском.",
-  "Add a TMDB key for the full Harbor": "Добавьте ключ TMDB, чтобы раскрыть Harbor полностью",
+  "Add a TMDB key for the full Lart": "Добавьте ключ TMDB, чтобы раскрыть Lart полностью",
   "Free key unlocks Trending, In Theaters, and per-service catalogs. 60 seconds.":
     "Бесплатный ключ открывает «В тренде», «В кино» и каталоги сервисов. 60 секунд.",
   "Built for desktop resolutions": "Рассчитано на десктопные разрешения",
-  "This instance of Harbor is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
-    "Эта версия Harbor сделана для десктопа. Отдельные приложения для iOS и Android скоро выйдут – каждое со своим мобильным интерфейсом под родную платформу.",
-  "For now, please open this site on a desktop, or build Harbor from source.":
-    "Пока откройте этот сайт на компьютере или соберите Harbor из исходников.",
+  "This instance of Lart is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
+    "Эта версия Lart сделана для десктопа. Отдельные приложения для iOS и Android скоро выйдут – каждое со своим мобильным интерфейсом под родную платформу.",
+  "For now, please open this site on a desktop, or build Lart from source.":
+    "Пока откройте этот сайт на компьютере или соберите Lart из исходников.",
   "Build from source": "Собрать из исходников",
   "Wrong PIN": "Неверный PIN",
   "PINs didn't match. Start over.": "PIN-коды не совпали. Начните заново.",
@@ -849,7 +849,7 @@ const misc: Record<string, string> = {
   "Skip setup": "Пропустить настройку",
   "Skip for now": "Пропустить пока",
   "Get Started": "Начать",
-  "Enter Harbor": "Войти в Harbor",
+  "Enter Lart": "Войти в Lart",
   "A client for the Stremio protocol. Two minutes to set up; most of it optional. You stay in control of every key.":
     "Клиент для протокола Stremio. Две минуты на настройку, и почти всё – по желанию. Все ключи остаются под вашим контролем.",
   "Trending, in theaters, what's on every streamer.":
@@ -858,12 +858,12 @@ const misc: Record<string, string> = {
     "Ваша библиотека Stremio и дополнения синхронизируются без изменений.",
   "No telemetry, no servers, no bundled keys.": "Без телеметрии, без серверов, без вшитых ключей.",
   "Built for Adventure!": "Создан для приключений!",
-  "Harbor curated": "Подборка Harbor",
+  "Lart curated": "Подборка Lart",
   "Hero, Top 10, Trending, In Theaters, per-service rails. Your addons append underneath.":
     "Баннер, Топ-10, «В тренде», «В кино», ряды по сервисам. Ваши дополнения – ниже.",
   "Classic Stremio": "Классический Stremio",
-  "Continue Watching, then your addon catalogs in install order. No hero, no Harbor rails.":
-    "Продолжить просмотр, затем каталоги дополнений в порядке установки. Без баннера и рядов Harbor.",
+  "Continue Watching, then your addon catalogs in install order. No hero, no Lart rails.":
+    "Продолжить просмотр, затем каталоги дополнений в порядке установки. Без баннера и рядов Lart.",
   "Pick a home layout": "Выберите вид главной",
   "You can switch later in Settings under Library & metadata.":
     "Переключить можно позже в Настройках, раздел «Библиотека и метаданные».",
@@ -872,8 +872,8 @@ const misc: Record<string, string> = {
     "Бесплатная регистрация за две минуты. Открывает «В тренде», «Сейчас в кино», «Лучшее по рейтингу» и каталоги сервисов (Netflix, Disney+, Hulu, …). Ключ остаётся на этом компьютере.",
   "Get a free key at themoviedb.org": "Получить бесплатный ключ на themoviedb.org",
   "v3 API key": "Ключ API v3",
-  "Skip if you'd rather just use Cinemeta. Harbor still works, you'll just see fewer rails.":
-    "Пропустите, если хотите обойтись Cinemeta. Harbor будет работать, просто рядов будет меньше.",
+  "Skip if you'd rather just use Cinemeta. Lart still works, you'll just see fewer rails.":
+    "Пропустите, если хотите обойтись Cinemeta. Lart будет работать, просто рядов будет меньше.",
   "Sign-in failed": "Не удалось войти",
   "Step 2 · Stremio": "Шаг 2 · Stremio",
   "You're in": "Вы вошли",
@@ -884,20 +884,20 @@ const misc: Record<string, string> = {
   "Don't have an account?": "Нет аккаунта?",
   "Create one": "Создать",
   "Bring in your library": "Перенесите свою библиотеку",
-  "Sign in to mirror your Continue Watching, watchlist, and any addons you've already curated. Optional; Harbor works fully signed-out.":
-    "Войдите, чтобы перенести «Продолжить просмотр», список к просмотру и уже собранные дополнения. Необязательно: Harbor полностью работает и без входа.",
+  "Sign in to mirror your Continue Watching, watchlist, and any addons you've already curated. Optional; Lart works fully signed-out.":
+    "Войдите, чтобы перенести «Продолжить просмотр», список к просмотру и уже собранные дополнения. Необязательно: Lart полностью работает и без входа.",
   "Sign in with": "Войти через",
   "Don't have an account? Create one →": "Нет аккаунта? Создать →",
   "Step 3 · Streaming": "Шаг 3 · Стриминг",
   "Pick what you actually use": "Отметьте то, чем реально пользуетесь",
-  "Harbor pulls the most popular titles each service has right now. Toggle off anything you don't subscribe to.":
-    "Harbor подтягивает самые популярные названия каждого сервиса прямо сейчас. Отключите те, на которые нет подписки.",
+  "Lart pulls the most popular titles each service has right now. Toggle off anything you don't subscribe to.":
+    "Lart подтягивает самые популярные названия каждого сервиса прямо сейчас. Отключите те, на которые нет подписки.",
   "These rails activate once a TMDB key is set. You can come back to this anytime in Settings.":
     "Эти ряды заработают после добавления ключа TMDB. Вернуться к этому можно в любой момент в Настройках.",
   "Step 4 · Subtitles": "Шаг 4 · Субтитры",
   "Pick your subtitle languages": "Выберите языки субтитров",
-  "When playback starts, Harbor finds and loads a subtitle in one of these languages automatically. The first available match wins, so put your main language first.":
-    "При запуске воспроизведения Harbor сам находит и загружает субтитры на одном из этих языков. Побеждает первое совпадение, поэтому ставьте основной язык первым.",
+  "When playback starts, Lart finds and loads a subtitle in one of these languages automatically. The first available match wins, so put your main language first.":
+    "При запуске воспроизведения Lart сам находит и загружает субтитры на одном из этих языков. Побеждает первое совпадение, поэтому ставьте основной язык первым.",
   "You're set.": "Всё готово.",
   "TMDB connected. {n} streaming {services} on. Welcome aboard.":
     "TMDB подключён. Включено {n} {services}. Добро пожаловать на борт.",
@@ -940,10 +940,10 @@ const misc: Record<string, string> = {
   Animation: "Мультфильм",
   Music: "Музыка",
   "Share collection": "Поделиться коллекцией",
-  "Anyone with the link can open this collection once your Harbor server is live.":
-    "Любой, у кого есть ссылка, сможет открыть эту коллекцию, как только ваш сервер Harbor заработает.",
-  "Paste this code into Harbor to open the collection.":
-    "Вставьте этот код в Harbor, чтобы открыть коллекцию.",
+  "Anyone with the link can open this collection once your Lart server is live.":
+    "Любой, у кого есть ссылка, сможет открыть эту коллекцию, как только ваш сервер Lart заработает.",
+  "Paste this code into Lart to open the collection.":
+    "Вставьте этот код в Lart, чтобы открыть коллекцию.",
   "Shared to the community": "Доступно сообществу",
   "Share to the community": "Поделиться с сообществом",
   "Listed collections will appear in community browse when that rolls out.":

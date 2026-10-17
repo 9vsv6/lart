@@ -1,4 +1,4 @@
-/** Original Harbor game cards: a small collection with a controller on the front. */
+/** Original Lart game cards: a small collection with a controller on the front. */
 export function DiscoveryPickerIcon({size=26}:{size?:number}) {
   return <svg width={size} height={size} viewBox="0 0 32 32" fill="none" aria-hidden="true">
     <path d="m9 6 14-2a3 3 0 0 1 3.4 2.5l2 14a3 3 0 0 1-2.5 3.4l-1.9.3V10a4 4 0 0 0-4-4Z" fill="currentColor" opacity=".32"/>

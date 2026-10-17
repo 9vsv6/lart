@@ -278,7 +278,7 @@ export type Settings = {
   discordShowPartyJoin: boolean;
   discordMusicPresence: boolean;
   playerEngine: "auto" | "html5" | "mpv";
-  /** resize shrinks the Harbor window; native floats the video in its own window. */
+  /** resize shrinks the Lart window; native floats the video in its own window. */
   pipBehavior: "resize" | "native";
   playerShellId: string;
   playerChromeTheme: "auto" | "default" | "stremio";

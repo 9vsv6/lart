@@ -5,7 +5,7 @@ export default {
 
   "games.shortcuts.activity.open": "Aktywność",
   "games.shortcuts.activity.title": "Aktywność skrótów",
-  "games.shortcuts.activity.note": "Ostatnie skanowania i uruchomienia dla tego profilu Harbor. Do 300 wpisów.",
+  "games.shortcuts.activity.note": "Ostatnie skanowania i uruchomienia dla tego profilu Lart. Do 300 wpisów.",
   "games.shortcuts.activity.remember": "Zachowuj między sesjami",
   "games.shortcuts.activity.detailed": "Uwzględniaj szczegóły skanowania",
   "games.shortcuts.activity.storageError": "Nie można uzyskać dostępu do zapisanej aktywności. Wpisy z tej sesji są nadal widoczne.",
@@ -47,7 +47,7 @@ export default {
   "games.shortcuts.tags": "Tagi",
   "games.shortcuts.storeError": "Nie można zapisać ustawień.",
   "games.shortcuts.shortcut_location": "Wybierz folder Steam lub jego folder userdata.",
-  "games.shortcuts.shortcut_account": "Otwórz Steam na koncie tego skrótu i odśwież. Harbor musi używać tej samej instalacji Steam.",
+  "games.shortcuts.shortcut_account": "Otwórz Steam na koncie tego skrótu i odśwież. Lart musi używać tej samej instalacji Steam.",
   "games.shortcuts.shortcut_missing": "Ten skrót już nie istnieje. Odśwież bibliotekę.",
   "games.shortcuts.shortcut_executable": "Brakuje pliku wykonywalnego lub jego ścieżka bezwzględna nie jest obsługiwana.",
   "games.shortcuts.shortcut_launch": "Steam nie mógł otworzyć skrótu. Spróbuj ponownie.",

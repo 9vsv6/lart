@@ -45,7 +45,7 @@ export default {
   "games.pick.hours": "giờ",
   "games.pick.noHistory": "Chưa có hoạt động. Chọn game yêu thích hoặc kết nối Steam trong cài đặt Game.",
   "games.pick.manualOnly": "Chỉ game yêu thích và bộ lọc đã chọn sẽ quyết định các gợi ý.",
-  "games.pick.addedNote": "“Mới thêm” là lần đầu được thấy trong Harbor sau lần nhập ban đầu, không phải ngày mua.",
+  "games.pick.addedNote": "“Mới thêm” là lần đầu được thấy trong Lart sau lần nhập ban đầu, không phải ngày mua.",
   "games.pick.because": "Vì bạn thích {name}",
   "games.pick.matches": "Khớp lựa chọn của bạn",
   "games.pick.steamCatalog": "Danh mục Steam",

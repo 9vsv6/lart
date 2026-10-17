@@ -3,6 +3,7 @@ import { Search } from "@/components/icons/search-icon";
 import type { ComponentType } from "react";
 import { useProfiles } from "@/lib/profiles";
 import { useT } from "@/lib/i18n";
+import { isPhoneApp } from "@/lib/platform";
 import { useMobileRemote } from "./mobile-remote";
 import { useSheetLock } from "./mobile-sheet-lock";
 
@@ -61,7 +62,7 @@ export function BottomTabBar({
     >
       <style>{TAB_BAR_SLIDE_CSS}</style>
       <div className="pointer-events-auto flex w-[min(400px,100%)] items-center justify-between rounded-xl border border-edge-soft/60 bg-elevated/80 px-2 py-2 shadow-[0_12px_34px_-10px_rgba(0,0,0,0.55)] backdrop-blur-2xl">
-        {TABS.map((t) => {
+        {TABS.filter((t) => !(t.id === "remote" && isPhoneApp())).map((t) => {
           const on = t.id === active;
           const Icon = t.icon;
           return (

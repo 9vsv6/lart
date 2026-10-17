@@ -411,7 +411,7 @@ function updateMediaSession(track: MusicTrack): void {
   navigator.mediaSession.metadata = new MediaMetadata({
     title: track.title,
     artist: track.artist,
-    album: track.album ?? "Harbor Music",
+    album: track.album ?? "Lart Music",
     artwork: track.artwork ? [{ src: track.artwork, sizes: "544x544" }] : [],
   });
 }

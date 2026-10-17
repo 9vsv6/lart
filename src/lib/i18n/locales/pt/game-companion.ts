@@ -257,7 +257,7 @@ export default {
   "games.gw2.partial": "Alguns detalhes de itens estão indisponíveis. Os preços continuam incluídos.",
   "games.gw2.guide": "Guia do cofre",
   "games.gw2.checked": "Verificado em {date}",
-  "games.gw2.scope": "Salvo neste perfil do Harbor. Cada seleção conta uma oferta; seu saldo, limites de compra e acesso a expansões não são verificados. Confirme a disponibilidade e compre no jogo.",
+  "games.gw2.scope": "Salvo neste perfil do Lart. Cada seleção conta uma oferta; seu saldo, limites de compra e acesso a expansões não são verificados. Confirme a disponibilidade e compre no jogo.",
   "games.gw2.total": "Total planejado",
   "games.gw2.currency": "Astral Acclaim",
   "games.gw2.selected": "{count} ofertas selecionadas",

@@ -66,7 +66,7 @@ const gameRoms: Record<string, string> = {
   "games.roms.era": "출시 시기",
   "games.roms.reset": "필터 초기화",
   "games.roms.empty": "다른 제목을 검색하거나 이 게임기의 필터 조건을 넓혀 보세요.",
-  "games.roms.source": "게임 정보와 연관 정보는 IGDB에서 제공합니다. 로컬 파일을 가져와 Harbor에서 지원하는 게임을 플레이하세요.",
+  "games.roms.source": "게임 정보와 연관 정보는 IGDB에서 제공합니다. 로컬 파일을 가져와 Lart에서 지원하는 게임을 플레이하세요.",
   "games.roms.playerScore": "IGDB 플레이어 평점 · 평가 {count}개",
   "games.roms.combinedScore": "IGDB 종합 평점 · 평가 {count}개",
   "games.roms.sort.discussed": "평가 수 많은 순",

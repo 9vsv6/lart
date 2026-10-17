@@ -386,7 +386,7 @@ export function StoragePanel() {
             />
             <ClearRow
               title={t("Dead stream marks")}
-              sub={t("Sources Harbor flagged as broken. Clear to give them another chance.")}
+              sub={t("Sources Lart flagged as broken. Clear to give them another chance.")}
               usage={fmtBytes(cacheUsage.dead)}
               onClear={() => {
                 clearDeadStreams();

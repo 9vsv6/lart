@@ -31,7 +31,7 @@ export function AnilistPanel() {
           <TrackerConnect
             service="AniList"
             logo={anilistLogo}
-            description={t("Browse your anime lists in Harbor and update your episode progress as you watch. Sign in to AniList to connect.")}
+            description={t("Browse your anime lists in Lart and update your episode progress as you watch. Sign in to AniList to connect.")}
             onConnect={() => setModalOpen(true)}
             website="https://anilist.co"
           />
@@ -39,7 +39,7 @@ export function AnilistPanel() {
       ) : (
         <Section
           title={t("Your AniList account")}
-          subtitle={t("Harbor shows your AniList lists on the Anime page and keeps your progress in sync.")}
+          subtitle={t("Lart shows your AniList lists on the Anime page and keeps your progress in sync.")}
         >
           <TrackerIdentity
             logo={anilistLogo}
@@ -61,8 +61,8 @@ export function AnilistPanel() {
               onChange={(v) => update({ anilistAutoSync: v })}
             />
             <ToggleRow
-              label={t("Use my AniList avatar as my Harbor avatar")}
-              sub={t("Show your AniList profile picture as your Harbor avatar.")}
+              label={t("Use my AniList avatar as my Lart avatar")}
+              sub={t("Show your AniList profile picture as your Lart avatar.")}
               value={settings.useAnilistAvatar}
               onChange={(v) => update({ useAnilistAvatar: v })}
             />

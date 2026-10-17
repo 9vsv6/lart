@@ -18,7 +18,7 @@ export default {
   "games.stardew.refresh": "تحديث التعديلات",
 
   "games.stardew.import": "استيراد ملف ZIP للإضافة",
-  "games.stardew.manage": "تُدار عبر Harbor",
+  "games.stardew.manage": "تُدار عبر Lart",
   "games.stardew.manageNote": "استورد إضافة SMAPI محمّلة لإدارتها هنا. لتحديثها، استورد ملف ZIP الأحدث لها.",
   "games.stardew.previous": "الإصدارات السابقة",
   "games.stardew.review": "مراجعة التغييرات",
@@ -31,7 +31,7 @@ export default {
   "games.stardew.running": "أغلق Stardew Valley وSMAPI قبل تغيير ملفات الإضافات.",
   "games.stardew.requirementsError": "إضافة مطلوبة أو إصدار SMAPI مفقود أو قديم جداً. تحقق من متطلبات الإضافة.",
   "games.stardew.dependentsError": "تتطلب إضافة مفعّلة هذا الإصدار. عطّلها أولاً أو اختر إصداراً متوافقاً.",
-  "games.stardew.unmanagedError": "هذه الإضافة موجودة بالفعل خارج سجلات Harbor. انقل النسخة الموجودة جانباً قبل الاستيراد.",
+  "games.stardew.unmanagedError": "هذه الإضافة موجودة بالفعل خارج سجلات Lart. انقل النسخة الموجودة جانباً قبل الاستيراد.",
   "games.stardew.archiveError": "اختر ZIP يحتوي على مجلد إضافة جاهزة واحد، حتى 32 ميغابايت (128 ميغابايت بعد الاستخراج). ملفات الشفرة المصدرية ليست إضافات قابلة للتثبيت.",
   "games.stardew.moreFiles": "{count} ملفات أخرى",
   "games.stardew.partialError": "تعذر فحص بعض الإضافات. عالج الفحص غير المكتمل قبل تغيير الملفات.",

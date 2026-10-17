@@ -90,8 +90,8 @@ const sweepE: Record<string, string> = {
   "Queens & Icons": "女王与偶像",
   Queued: "已加入队列",
   "Queued {queued} of {total} episodes.": "已将 {queued}/{total} 集加入队列。",
-  "Queued {queued} of {total} episodes. Harbor could not match every episode in this package.":
-    "已将 {total} 集中的 {queued} 集加入队列。Harbor 无法匹配此资源包中的所有剧集。",
+  "Queued {queued} of {total} episodes. Lart could not match every episode in this package.":
+    "已将 {total} 集中的 {queued} 集加入队列。Lart 无法匹配此资源包中的所有剧集。",
   "Quick age check": "快速年龄验证",
   "Quick panel": "快捷面板",
   "Quick Watches Under 90": "90 分钟内看完",
@@ -102,7 +102,7 @@ const sweepE: Record<string, string> = {
   "Quiet Force": "静默力量",
   "Quiet Hours": "静谧时光",
   "Quiet Menace": "无声威胁",
-  "Quit Harbor": "退出 Harbor",
+  "Quit Lart": "退出 Lart",
   "Quiz time!": "测验时间！",
   Quote: "引用",
   Radius: "圆角",
@@ -413,7 +413,7 @@ const sweepE: Record<string, string> = {
   Restore: "恢复",
   "Restore dismissed hints": "恢复已忽略的提示",
   "Restore from a backup": "从备份恢复",
-  "Restore Harbor's interface scale to 100%.": "将 Harbor 的界面缩放恢复为 100%。",
+  "Restore Lart's interface scale to 100%.": "将 Lart 的界面缩放恢复为 100%。",
   "Restore this backup?": "要恢复此备份吗？",
   "Restore window position after fullscreen": "退出全屏后恢复窗口位置",
   Restored: "已恢复",
@@ -517,7 +517,7 @@ const sweepE: Record<string, string> = {
   "Run self-test": "运行自检",
   "Run speed test": "运行速度测试",
   "Run test": "运行测试",
-  "Run your own Harbor Relay": "运行你自己的 Harbor Relay",
+  "Run your own Lart Relay": "运行你自己的 Lart Relay",
   Running: "正在运行",
   "Running self-test": "正在运行自检",
   Runs: "得分",
@@ -574,9 +574,9 @@ const sweepE: Record<string, string> = {
     "保存清晰画面，而非低画质缩略图。卡片上的画面会更清晰，但占用空间更大，因此旧画面被清除前能保留的数量更少。",
   "Save status": "保存状态",
   "Save the last 30 seconds": "保存最近 30 秒",
-  "Save the worker source. Copy": "保存 Worker 源代码。从 Harbor 仓库复制",
-  "Save the worker source. Copy {code1} from the Harbor repo into a new directory as {code2}.":
-    "保存 Worker 源代码。将 Harbor 仓库中的 {code1} 复制到新目录，并命名为 {code2}。",
+  "Save the worker source. Copy": "保存 Worker 源代码。从 Lart 仓库复制",
+  "Save the worker source. Copy {code1} from the Lart repo into a new directory as {code2}.":
+    "保存 Worker 源代码。将 Lart 仓库中的 {code1} 复制到新目录，并命名为 {code2}。",
   "Save this": "将以下内容保存为",
   "Save this {code} next to it:": "在同一目录中保存此 {code}：",
   "Save this look": "保存此外观",
@@ -683,8 +683,8 @@ const sweepE: Record<string, string> = {
   "Self-test": "自检",
   Send: "发送",
   "Send a bug report": "发送错误报告",
-  "Send a bug report straight to the Harbor team. Screenshots and screen recordings welcome.":
-    "直接向 Harbor 团队发送错误报告。欢迎附上截图和屏幕录像。",
+  "Send a bug report straight to the Lart team. Screenshots and screen recordings welcome.":
+    "直接向 Lart 团队发送错误报告。欢迎附上截图和屏幕录像。",
   "Send code": "发送代码",
   "Send rating": "提交评分",
   "Send suggestion": "发送建议",
@@ -692,7 +692,7 @@ const sweepE: Record<string, string> = {
   "Send to TV": "发送到电视",
   "Send to TV now": "立即发送到电视",
   Sending: "正在发送",
-  "Sending to that Harbor": "正在发送到该 Harbor",
+  "Sending to that Lart": "正在发送到该 Lart",
   "Sending to your TV": "正在发送到你的电视",
   "Sending...": "正在发送…",
   "Sending…": "正在发送…",
@@ -746,7 +746,7 @@ const sweepE: Record<string, string> = {
   "Set up a source": "设置内容源",
   "Set up Anime4K": "设置 Anime4K",
   "Set up eBooks": "设置电子书",
-  "Set up Harbor": "设置 Harbor",
+  "Set up Lart": "设置 Lart",
   "Set up my TV from this computer": "从此电脑设置我的电视",
   "Set up your own Cloudflare Worker rather than borrowing this one.":
     "设置你自己的 Cloudflare Worker，而不是借用这个。",
@@ -777,13 +777,13 @@ const sweepE: Record<string, string> = {
   Shelf: "书架",
   Shift: "Shift",
   "Shift + Arrows": "Shift + 方向键",
-  "Ships with Harbor. Always available.": "Harbor 内置，始终可用。",
+  "Ships with Lart. Always available.": "Lart 内置，始终可用。",
   Short: "短片",
   "Short {word} {n} seconds": "将{word}缩短 {n} 秒",
   "Short of the Year": "年度短片奖",
-  "Short version: don't. Harbor takes no donations and no cut of anything on this page.":
-    "简而言之：请不要。Harbor 不接受捐款，也不从本页面的任何项目中抽成。",
-  "Short version: don't. Harbor takes no donations.": "简而言之：别捐。Harbor 不接受任何捐款。",
+  "Short version: don't. Lart takes no donations and no cut of anything on this page.":
+    "简而言之：请不要。Lart 不接受捐款，也不从本页面的任何项目中抽成。",
+  "Short version: don't. Lart takes no donations.": "简而言之：别捐。Lart 不接受任何捐款。",
   Shortcuts: "快捷键",
   Shots: "射门",
   SHOTS: "射门",
@@ -823,8 +823,8 @@ const sweepE: Record<string, string> = {
     "请从“我的主题”标签页登录以参与讨论。",
   "Sign in to": "登录",
   "Sign in to get a shareable link.": "登录以获取可分享链接。",
-  "Sign in to Harbor": "登录 Harbor",
-  "Sign in to Harbor to check availability.": "登录 Harbor 以检查可用性。",
+  "Sign in to Lart": "登录 Lart",
+  "Sign in to Lart to check availability.": "登录 Lart 以检查可用性。",
   "Sign in to pick up where you left off.": "登录后即可从上次中断处继续。",
   "Sign in to rate": "登录后即可评分",
   "Sign in to Stremio": "登录 Stremio",
@@ -857,8 +857,8 @@ const sweepE: Record<string, string> = {
   "Skip ad": "跳过广告",
   "Skip Credits": "跳过片尾",
   "Skip for now": "暂时跳过",
-  "Skip if you'd rather just use Cinemeta. Harbor still works, you'll just see fewer rails.":
-    "如果只想使用 Cinemeta，可以跳过。Harbor 仍可正常使用，但显示的内容栏会较少。",
+  "Skip if you'd rather just use Cinemeta. Lart still works, you'll just see fewer rails.":
+    "如果只想使用 Cinemeta，可以跳过。Lart 仍可正常使用，但显示的内容栏会较少。",
   "Skip injected ad": "跳过注入式广告",
   "Skip injected ad?": "跳过插入的广告？",
   "Skip injected ads automatically": "自动跳过插入的广告",
@@ -869,12 +869,12 @@ const sweepE: Record<string, string> = {
   "Skip Recap": "跳过前情回顾",
   "Skip the launch": "跳过启动画面",
   "Skip these tracks": "跳过这些轨道",
-  "Skip this and Harbor runs on Cinemeta. You just see fewer rows.":
-    "跳过后，Harbor 将使用 Cinemeta。你只会看到较少的内容行。",
+  "Skip this and Lart runs on Cinemeta. You just see fewer rows.":
+    "跳过后，Lart 将使用 Cinemeta。你只会看到较少的内容行。",
   "Skip to the next episode if available.": "如果有下一集，则跳到下一集。",
   "Skip to the previous episode if available.": "如果有上一集，则跳到上一集。",
   "Skip, I can do this later": "跳过，稍后再做",
-  "Skip, let Harbor choose": "跳过，让 Harbor 选择",
+  "Skip, let Lart choose": "跳过，让 Lart 选择",
   skipped: "已跳过",
   "Skipped, not rated or not supported": "已跳过、未评分或不受支持",
   SLAM: "SLAM",
@@ -971,8 +971,8 @@ const sweepE: Record<string, string> = {
   "Sources by addon": "按插件显示来源",
   "Sources cached in the background for the streams you are watching":
     "你正在观看的流媒体来源会在后台缓存",
-  "Sources Harbor flagged as broken. Clear to give them another chance.":
-    "Harbor 标记为已失效的播放源。清除这些标记后，可再次尝试这些播放源。",
+  "Sources Lart flagged as broken. Clear to give them another chance.":
+    "Lart 标记为已失效的播放源。清除这些标记后，可再次尝试这些播放源。",
   "Sources in these languages sort to the top of the picker.":
     "这些语言的来源将在选择器中优先显示。",
   "South Korea": "韩国",

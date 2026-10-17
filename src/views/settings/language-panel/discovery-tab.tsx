@@ -43,11 +43,11 @@ export function DiscoveryLanguageTab() {
         />
       </Section>
 
-      <Section title={t("Help translate Harbor")}>
+      <Section title={t("Help translate Lart")}>
         <SettingRow
           wide
           label={t("Fill the gaps")}
-          desc={t("Harbor was built in English. Multi-language support is partial, so your addons usually catch what Harbor's own filters miss. If you speak another language and want to help, the source is open.")}
+          desc={t("Lart was built in English. Multi-language support is partial, so your addons usually catch what Lart's own filters miss. If you speak another language and want to help, the source is open.")}
         >
           <span className="flex flex-wrap items-center gap-2.5">
             <button

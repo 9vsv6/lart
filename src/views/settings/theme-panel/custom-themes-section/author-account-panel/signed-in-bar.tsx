@@ -117,7 +117,7 @@ function AvatarButton({ author }: { author: Author }) {
     }
   };
 
-  const hint = !profileAvatar ? t("Set a Harbor profile picture first") : undefined;
+  const hint = !profileAvatar ? t("Set a Lart profile picture first") : undefined;
 
   if (author.avatar) {
     return (
@@ -125,7 +125,7 @@ function AvatarButton({ author }: { author: Author }) {
         <button
           onClick={use}
           disabled={busy != null || !profileAvatar}
-          title={hint ?? t("Re-sync from your Harbor profile picture")}
+          title={hint ?? t("Re-sync from your Lart profile picture")}
           className={ROW_ACTION}
         >
           {busy === "set" ? (
@@ -155,7 +155,7 @@ function AvatarButton({ author }: { author: Author }) {
     <button
       onClick={use}
       disabled={busy != null || !profileAvatar}
-      title={hint ?? t("Show your Harbor profile picture on the community")}
+      title={hint ?? t("Show your Lart profile picture on the community")}
       className={ROW_ACTION}
     >
       {busy === "set" ? (

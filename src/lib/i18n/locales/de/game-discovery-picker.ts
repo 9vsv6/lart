@@ -45,7 +45,7 @@ export default {
   "games.pick.hours": "Std.",
   "games.pick.noHistory": "Noch keine Aktivität. Wähle Favoriten oder verbinde Steam in den Spieleinstellungen.",
   "games.pick.manualOnly": "Nur deine Favoriten und gewählten Filter bestimmen diese Auswahl.",
-  "games.pick.addedNote": "„Neu hinzugefügt“ bedeutet nach dem ersten Import in Harbor entdeckt, kein Kaufdatum.",
+  "games.pick.addedNote": "„Neu hinzugefügt“ bedeutet nach dem ersten Import in Lart entdeckt, kein Kaufdatum.",
   "games.pick.because": "Weil du {name} magst",
   "games.pick.matches": "Passt zu deiner Auswahl",
   "games.pick.steamCatalog": "Steam-Katalog",

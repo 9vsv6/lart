@@ -125,8 +125,8 @@ export default {
   Constructors: "コンストラクター",
   "Coverage varies by league. Streams depend on your available sources.":
     "対応状況はリーグにより異なります。配信は利用可能なソースによって決まります。",
-  "Delivery failed. Retrying while Harbor is open.":
-    "送信できませんでした。Harborが開いている間に再試行します。",
+  "Delivery failed. Retrying while Lart is open.":
+    "送信できませんでした。Lartが開いている間に再試行します。",
   Driver: "ドライバー",
   Drivers: "ドライバー",
   "Entrants and starting positions appear when the feed publishes them.":
@@ -161,8 +161,8 @@ export default {
     "人気リーグから、新たなお気に入りのスポーツまで。",
   "Inside the paddock": "パドックの内側",
   "Jump to today": "今日に移動",
-  "Keep Harbor open to deliver reminders.":
-    "リマインダーを送信するにはHarborを開いたままにしてください。",
+  "Keep Lart open to deliver reminders.":
+    "リマインダーを送信するにはLartを開いたままにしてください。",
   "Last saved score": "最後に保存したスコア",
   "Last update": "最終更新",
   "Latest saved scores": "最近保存したスコア",
@@ -287,10 +287,10 @@ export default {
     "別のスポーツや日付をお試しください。データ元が利用できない場合は保存した日程が表示されます。",
   "Up to date": "最新です",
   "Updating schedules…": "日程を更新中…",
-  "Use only sources you are authorized to access. Harbor does not bypass subscriptions or access restrictions.":
-    "アクセス権限のあるソースのみご利用ください。Harborは契約やアクセス制限を回避しません。",
-  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Harbor does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
-    "アクセス権限のある配信、M3Uプレイリスト、Xtreamアカウントをご利用ください。Harborは契約を提供せず、有料制限、DRM、アクセス制限を回避しません。",
+  "Use only sources you are authorized to access. Lart does not bypass subscriptions or access restrictions.":
+    "アクセス権限のあるソースのみご利用ください。Lartは契約やアクセス制限を回避しません。",
+  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Lart does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
+    "アクセス権限のある配信、M3Uプレイリスト、Xtreamアカウントをご利用ください。Lartは契約を提供せず、有料制限、DRM、アクセス制限を回避しません。",
   "View match statistics": "試合の統計を見る",
   "Watch with your sources": "お持ちのソースで視聴",
   "Your authorized IPTV, M3U and Xtream channels, in one place.":

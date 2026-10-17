@@ -4,7 +4,7 @@ const repairs: Record<string, string> = {
   "BAFTA Television": "Телевизионная премия BAFTA",
   "Crunchyroll Anime Awards": "Премия Crunchyroll Anime Awards",
   "Discord Rich Presence": "Расширенный статус Discord",
-  "Harbor Relay": "Ретранслятор Harbor",
+  "Lart Relay": "Ретранслятор Lart",
   "{n} ms": "{n} мс",
   "{n} px/s": "{n} пикс./с",
   "{n} titles need review — help us identify them.":
@@ -35,21 +35,21 @@ const repairs: Record<string, string> = {
   "Already have a TMDB login? Sign in and skip ahead. Otherwise press Register and fill in a username, password and email.":
     "Уже есть аккаунт TMDB? Войдите и пропустите следующие шаги. Если нет, нажмите Register и укажите имя пользователя, пароль и адрес эл. почты.",
   "Autoplay trailer on detail pages": "Автовоспроизведение трейлера на страницах контента",
-  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Harbor. Harbor saves it on its own.":
-    "На странице API прокрутите вниз. Скопируйте значение в поле API Key и вставьте его в Harbor. Harbor сохранит его автоматически.",
+  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Lart. Lart saves it on its own.":
+    "На странице API прокрутите вниз. Скопируйте значение в поле API Key и вставьте его в Lart. Lart сохранит его автоматически.",
   "Back on TMDB, click your avatar in the top right and choose Settings from the menu.":
     "Вернувшись на TMDB, нажмите свой аватар в правом верхнем углу и выберите в меню Settings.",
   Born: "Дата рождения",
   Both: "Оба варианта",
   "Bring your own keys": "Используйте свои ключи",
   "Change your handle?": "Изменить никнейм?",
-  "Changing the metadata language reloads Harbor so the new language takes effect. Apply when you're done with the options above.":
-    "При изменении языка метаданных Harbor перезапустится, чтобы применить новый язык. Закончив с параметрами выше, нажмите «Применить».",
+  "Changing the metadata language reloads Lart so the new language takes effect. Apply when you're done with the options above.":
+    "При изменении языка метаданных Lart перезапустится, чтобы применить новый язык. Закончив с параметрами выше, нажмите «Применить».",
   "Choose API in the sidebar": "Выберите API на боковой панели",
   "Click Activate in the email": "Нажмите Activate в письме",
   "Click to apply · Right-click to delete": "Клик – применить · Правый клик – удалить",
-  "Closing the window tucks Harbor into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
-    "При закрытии окна Harbor сворачивается в трей, а не завершается, поэтому открывается мгновенно. Правый клик по значку в трее – быстрые действия, «Выход» – полное завершение.",
+  "Closing the window tucks Lart into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
+    "При закрытии окна Lart сворачивается в трей, а не завершается, поэтому открывается мгновенно. Правый клик по значку в трее – быстрые действия, «Выход» – полное завершение.",
   Colored: "Цветной",
   "Condensed shows a top pick, quality tiles, and a drawer. Stremio is a flat list grouped by addon, no scoring.":
     "«Компактно» показывает лучший вариант, плитки качества и панель. «Stremio» – плоский список по дополнениям, без оценок.",
@@ -84,13 +84,13 @@ const repairs: Record<string, string> = {
   Ep: "Сер.",
   "Esc or click outside to close": "Esc или клик вне окна – закрыть",
   "Every addon": "Все дополнения",
-  "Every Harbor that announces itself on this network appears here as it answers, with the theme it is wearing.":
-    "Каждый Harbor, объявивший себя в этой сети, появляется здесь по мере ответа – вместе с темой, в которую он одет.",
-  "Every winner Harbor ships, browsable offline by year and category.":
-    "Все победители, входящие в Harbor, – просмотр офлайн по годам и категориям.",
+  "Every Lart that announces itself on this network appears here as it answers, with the theme it is wearing.":
+    "Каждый Lart, объявивший себя в этой сети, появляется здесь по мере ответа – вместе с темой, в которую он одет.",
+  "Every winner Lart ships, browsable offline by year and category.":
+    "Все победители, входящие в Lart, – просмотр офлайн по годам и категориям.",
   "Everything else, via your own server": "Всё остальное – через свой сервер",
-  "Export your Harbor setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
-    "Экспортируйте настройки Harbor в один файл и выберите, что именно сохранить. При восстановлении вернутся только данные из файла. Вход в Stremio никогда не включается.",
+  "Export your Lart setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
+    "Экспортируйте настройки Lart в один файл и выберите, что именно сохранить. При восстановлении вернутся только данные из файла. Вход в Stremio никогда не включается.",
   "Fill in the details, then Subscribe": "Заполните данные и нажмите Subscribe",
   "For Application URL anything works, for example https://harbor.site. TMDB never visits it.":
     "В поле Application URL подойдёт любой адрес, например https://harbor.site. TMDB не будет его открывать.",
@@ -100,8 +100,8 @@ const repairs: Record<string, string> = {
   "From your addons": "Из ваших дополнений",
   "Full mode — diary, friends & ratings enabled":
     "Полный режим – дневник, друзья и оценки включены",
-  "Full mode signs in with your Letterboxd password to also unlock your diary, friends activity and your personal ratings. Your password is sent only to Stremboxd to obtain a token — Harbor never stores it.":
-    "Полный режим выполняет вход с паролем Letterboxd и дополнительно открывает дневник, активность друзей и ваши оценки. Пароль отправляется только в Stremboxd для получения токена – Harbor его не хранит.",
+  "Full mode signs in with your Letterboxd password to also unlock your diary, friends activity and your personal ratings. Your password is sent only to Stremboxd to obtain a token — Lart never stores it.":
+    "Полный режим выполняет вход с паролем Letterboxd и дополнительно открывает дневник, активность друзей и ваши оценки. Пароль отправляется только в Stremboxd для получения токена – Lart его не хранит.",
   "Genres are only recorded for files scanned after this feature was added — re-add a folder to pick them up.":
     "Жанры записываются только для файлов, просканированных после появления этой функции – добавьте папку заново, чтобы их подтянуть.",
   "Get your free TMDB key": "Получите бесплатный ключ TMDB",
@@ -110,32 +110,32 @@ const repairs: Record<string, string> = {
     "Пожертвуйте любой организации ниже или оформите подписку ElfHosted – и значок появится в вашем профиле.",
   "Group the movies and shows you love. Rewatch shelf, weekend picks, whatever keeps them close.":
     "Соберите любимые фильмы и сериалы. Полка для пересмотра, подборка на выходные – что угодно, лишь бы они были под рукой.",
-  "Harbor asks your addons for titles and descriptions in this language. The TV menus stay in English.":
-    "Harbor запрашивает у ваших дополнений названия и описания на этом языке. Меню на ТВ остаются на английском.",
-  "Harbor is an independent client. It is not affiliated with or endorsed by Stremio.":
-    "Harbor – независимый клиент. Он не связан со Stremio и не одобрен им.",
-  "Harbor leads with one big title. Classic leads with rows.":
-    "Harbor начинает с одного крупного названия. Classic – с рядов.",
-  "Harbor needs at least one streaming source before it can play {title}. Install a stream addon or add a debrid key in settings.":
-    "Harbor нужен хотя бы один источник, чтобы воспроизвести {title}. Установите дополнение с потоками или добавьте ключ debrid в настройках.",
-  "Harbor sends no telemetry. This also drops outbound ad, analytics, and tracker requests that addons or metadata providers try to make, before they leave your machine.":
-    "Harbor не отправляет телеметрию. Также блокируются исходящие рекламные, аналитические и трекерные запросы дополнений и провайдеров метаданных ещё до выхода с вашего устройства.",
-  "Harbor tried {n} sources for {title} and none of them played. Usually that means a debrid key has expired, no stream addon is installed yet, or nothing has this title cached.":
-    "Harbor перепробовал источники для {title} (всего: {n}), и ни один не заработал. Обычно это значит, что истёк ключ debrid, ещё не установлено дополнение с потоками или это название нигде не закешировано.",
-  "Harbor was built in English. Multi-language support is partial, so your addons usually catch what Harbor's own filters miss. If you speak another language and want to help, the source is open.":
-    "Harbor создавался на английском. Поддержка других языков неполная, поэтому ваши дополнения обычно находят то, что пропускают собственные фильтры Harbor. Если вы владеете другим языком и хотите помочь, исходный код открыт.",
+  "Lart asks your addons for titles and descriptions in this language. The TV menus stay in English.":
+    "Lart запрашивает у ваших дополнений названия и описания на этом языке. Меню на ТВ остаются на английском.",
+  "Lart is an independent client. It is not affiliated with or endorsed by Stremio.":
+    "Lart – независимый клиент. Он не связан со Stremio и не одобрен им.",
+  "Lart leads with one big title. Classic leads with rows.":
+    "Lart начинает с одного крупного названия. Classic – с рядов.",
+  "Lart needs at least one streaming source before it can play {title}. Install a stream addon or add a debrid key in settings.":
+    "Lart нужен хотя бы один источник, чтобы воспроизвести {title}. Установите дополнение с потоками или добавьте ключ debrid в настройках.",
+  "Lart sends no telemetry. This also drops outbound ad, analytics, and tracker requests that addons or metadata providers try to make, before they leave your machine.":
+    "Lart не отправляет телеметрию. Также блокируются исходящие рекламные, аналитические и трекерные запросы дополнений и провайдеров метаданных ещё до выхода с вашего устройства.",
+  "Lart tried {n} sources for {title} and none of them played. Usually that means a debrid key has expired, no stream addon is installed yet, or nothing has this title cached.":
+    "Lart перепробовал источники для {title} (всего: {n}), и ни один не заработал. Обычно это значит, что истёк ключ debrid, ещё не установлено дополнение с потоками или это название нигде не закешировано.",
+  "Lart was built in English. Multi-language support is partial, so your addons usually catch what Lart's own filters miss. If you speak another language and want to help, the source is open.":
+    "Lart создавался на английском. Поддержка других языков неполная, поэтому ваши дополнения обычно находят то, что пропускают собственные фильтры Lart. Если вы владеете другим языком и хотите помочь, исходный код открыт.",
   "Head to Discover. Cinemeta and OpenSubtitles cover the basics; Torrentio + a debrid key cover almost everything else.":
     "Загляните в «Обзор». Cinemeta и OpenSubtitles закрывают основное; Torrentio + ключ debrid – почти всё остальное.",
   "Hero, Top 10, Trending, In Theaters, per-service rails. Your addons append underneath.":
     "Баннер, Топ-10, «В тренде», «В кино», ряды по сервисам. Ваши дополнения – ниже.",
-  "How quickly the Harbor cursor moves with the right stick.":
-    "Скорость движения курсора Harbor при использовании правого стика.",
+  "How quickly the Lart cursor moves with the right stick.":
+    "Скорость движения курсора Lart при использовании правого стика.",
   "How the 4K and HDR tags beside the title look. Bar draws a vertical accent line and reveals each line as it appears; Chips shows small outlined pills that slide in.":
     "Как выглядят метки 4K и HDR рядом с названием. «Полоса» рисует вертикальную акцентную линию и показывает строки по мере появления; «Чипы» – маленькие контурные плашки, которые выезжают сбоку.",
   "If a stream hasn't started playing within 10 seconds (a dead source or an addon that's down), automatically try the next available stream. Off by default.":
     "Если поток не начал воспроизводиться за 10 секунд (мёртвый источник или недоступное дополнение), автоматически пробовать следующий доступный поток. По умолчанию выключено.",
-  "If you want to put money somewhere and you use Harbor, an ElfHosted subscription is the most useful place for it. You get a managed instance, and the servers Harbor depends on stay paid for.":
-    "Если вы пользуетесь Harbor и хотите куда-то вложить деньги, подписка ElfHosted – самое полезное место. Вы получаете управляемый экземпляр, а серверы, от которых зависит Harbor, остаются оплаченными.",
+  "If you want to put money somewhere and you use Lart, an ElfHosted subscription is the most useful place for it. You get a managed instance, and the servers Lart depends on stay paid for.":
+    "Если вы пользуетесь Lart и хотите куда-то вложить деньги, подписка ElfHosted – самое полезное место. Вы получаете управляемый экземпляр, а серверы, от которых зависит Lart, остаются оплаченными.",
   "Inside it, one folder per manga, named like the title.":
     "Внутри – по одной папке на каждую мангу, названной по её названию.",
   "Install a Stremio addon and its catalogs show up here as poster rails, ready to browse.":
@@ -143,15 +143,15 @@ const repairs: Record<string, string> = {
   "is a page number. Add": "– номер страницы. Добавьте",
   "is a regex for the part to change": "– регулярное выражение для заменяемой части",
   "is each chapter row": "– строка каждой главы",
-  "is how many items to skip, starting at 0. Harbor auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
-    "– сколько элементов пропустить, начиная с 0. Harbor сам определяет размер страницы сайта и листает её за вас, поэтому размер страницы задавать не нужно. Используйте, если URL считает элементы.",
+  "is how many items to skip, starting at 0. Lart auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
+    "– сколько элементов пропустить, начиная с 0. Lart сам определяет размер страницы сайта и листает её за вас, поэтому размер страницы задавать не нужно. Используйте, если URL считает элементы.",
   "is the box around one manga; inside it": "– контейнер вокруг одной манги; внутри него",
   "is the manga URL": "– URL манги",
   "is the search text (searchPath only).": "– текст поиска (только searchPath).",
   "is what to swap in. The example turns": "– то, на что заменить. Пример превращает",
   "Jina Reader": "Jina Reader",
-  "Keeping Harbor's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Harbor stays funded at the same time.":
-    "Поддержание бэкенда Harbor в сети стоит реальных денег, и ElfHosted берёт это на себя, чтобы сообществу не пришлось. Оформить подписку – лучший способ сохранить это, и это не пожертвование. Вы получаете полноценную инфраструктуру для собственной настройки, и при этом Harbor остаётся профинансированным.",
+  "Keeping Lart's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Lart stays funded at the same time.":
+    "Поддержание бэкенда Lart в сети стоит реальных денег, и ElfHosted берёт это на себя, чтобы сообществу не пришлось. Оформить подписку – лучший способ сохранить это, и это не пожертвование. Вы получаете полноценную инфраструктуру для собственной настройки, и при этом Lart остаётся профинансированным.",
   "Keyboard size": "Размер клавиатуры",
   "Library is everything from Stremio, Trakt, and this device. Watchlist is only titles you haven't watched yet. History is what you've watched. Local is files on your computer.":
     "Библиотека – это всё из Stremio, Trakt и с этого устройства. Список к просмотру – только названия, которые вы ещё не смотрели. История – то, что уже просмотрено. Локальные – файлы на вашем компьютере.",
@@ -187,8 +187,8 @@ const repairs: Record<string, string> = {
   "Right after registering TMDB tells you the account is not active yet. Nothing is broken, the email is on its way.":
     "Сразу после регистрации TMDB сообщает, что аккаунт ещё не активирован. Всё в порядке: письмо уже отправлено.",
   "Say it is for personal use": "Укажите личное использование",
-  "Sets streaming availability and the Now Playing release window. Pick a country and Harbor offers to match the interface, metadata, subtitle, and audio languages to it.":
-    "Определяет доступность стриминговых сервисов и период премьер для раздела «Сейчас в кино». Выберите страну, и Harbor предложит привести в соответствие язык интерфейса, метаданных, субтитров и аудио.",
+  "Sets streaming availability and the Now Playing release window. Pick a country and Lart offers to match the interface, metadata, subtitle, and audio languages to it.":
+    "Определяет доступность стриминговых сервисов и период премьер для раздела «Сейчас в кино». Выберите страну, и Lart предложит привести в соответствие язык интерфейса, метаданных, субтитров и аудио.",
   "Show a lock control in the player that blocks mouse, keyboard, remote, and media-key input until you unlock it.":
     "Показывать в плеере кнопку блокировки, которая отключает мышь, клавиатуру, пульт и мультимедийные клавиши до разблокировки.",
   "Sign in, or make an account": "Войдите или создайте аккаунт",
@@ -198,8 +198,8 @@ const repairs: Record<string, string> = {
   soon: "скоро",
   "Spoiler — Click": "Спойлер – нажмите",
   "Spoiler — Click to reveal": "Спойлер – нажмите, чтобы показать",
-  "Stream torrents through Harbor's own Rust peer-to-peer engine instead of the bundled Stremio Server. Falls back automatically if it can't connect. Status and a self-test live in the Local engine card below.":
-    "Воспроизводить торренты через собственный P2P-движок Harbor на Rust вместо встроенного Stremio Server. При сбое подключения автоматически используется запасной вариант. Состояние и самопроверка – в карточке «Локальный движок» ниже.",
+  "Stream torrents through Lart's own Rust peer-to-peer engine instead of the bundled Stremio Server. Falls back automatically if it can't connect. Status and a self-test live in the Local engine card below.":
+    "Воспроизводить торренты через собственный P2P-движок Lart на Rust вместо встроенного Stremio Server. При сбое подключения автоматически используется запасной вариант. Состояние и самопроверка – в карточке «Локальный движок» ниже.",
   "Support ElfHosted or Stremio, or give to any charity below, and the badge lands on your profile.":
     "Поддержите ElfHosted или Stremio, или пожертвуйте любой организации ниже – и значок появится в вашем профиле.",
   "Take the short API Key at the very bottom, not the long API Read Access Token above it.":
@@ -218,8 +218,8 @@ const repairs: Record<string, string> = {
     "Слева на странице настроек есть список. Нажмите API ближе к его концу.",
   "The two clock labels are ordinary controls. Move or hide either of them in the layout editor.":
     "Две метки времени – обычные элементы управления. Их можно переместить или скрыть в редакторе макета.",
-  "This instance of Harbor is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
-    "Эта версия Harbor сделана для десктопа. Отдельные приложения для iOS и Android скоро выйдут – каждое со своим мобильным интерфейсом под родную платформу.",
+  "This instance of Lart is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
+    "Эта версия Lart сделана для десктопа. Отдельные приложения для iOS и Android скоро выйдут – каждое со своим мобильным интерфейсом под родную платформу.",
   "This is the part people get stuck on. None of it is checked and nothing is billed. Give the app any name, any URL, pick a type of use, and write a sentence for the summary. The contact fields can be anything real enough to look sensible. Tick the agreement and press Subscribe.":
     "На этом шаге часто возникают вопросы. Данные не проверяются, оплата не взимается. Укажите любое название приложения и URL, выберите тип использования и напишите одно предложение в описании. В контактных полях укажите правдоподобные данные. Установите флажок согласия и нажмите Subscribe.",
   "TMDB asks what the key is for. Choose Yes, this is for my own personal use only.":
@@ -230,8 +230,8 @@ const repairs: Record<string, string> = {
     "Во время регистрации TMDB может показать капчу. Пройдите её, чтобы продолжить.",
   "TMDB powers the firehose of every release this month. The free tier covers it. About 60 seconds to set up. Switch to My Library if you'd rather only see what you've saved.":
     "TMDB даёт полный поток всех релизов месяца. Бесплатного тарифа хватает. Настройка – около 60 секунд. Переключитесь на «Мою библиотеку», если хотите видеть только сохранённое.",
-  "Trending tracks star growth across your Harbor visits. Open the addons page again tomorrow and the top risers will appear here.":
-    "Тренды отслеживают прирост звёзд между вашими визитами в Harbor. Откройте страницу дополнений завтра – здесь появятся лидеры роста.",
+  "Trending tracks star growth across your Lart visits. Open the addons page again tomorrow and the top risers will appear here.":
+    "Тренды отслеживают прирост звёзд между вашими визитами в Lart. Откройте страницу дополнений завтра – здесь появятся лидеры роста.",
   "Type what you want in plain language and let a model find it. Bring your own API key from either service.":
     "Опишите обычными словами, что хотите найти, и модель выполнит поиск. Нужен собственный API-ключ одного из сервисов.",
   "Use color to distinguish severity, or keep every advisory monochrome.":
@@ -263,16 +263,16 @@ const repairs: Record<string, string> = {
   "Which account should the relay live in?": "В каком аккаунте разместить ретранслятор?",
   "Relay is live": "Ретранслятор запущен",
   "Your relay URL": "Ваш URL ретранслятора",
-  "The Harbor relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Harbor server.":
-    "Ретранслятор Harbor работает как Cloudflare Worker и содержит WebSocket-комнаты для совместного просмотра. Каждый пользователь запускает свой. Центрального сервера Harbor нет.",
-  "Wait for the upload to finish. The relay URL gets written to {code} in Harbor settings.":
-    "Дождитесь окончания загрузки. URL ретранслятора записывается в {code} в настройках Harbor.",
+  "The Lart relay is a Cloudflare Worker that hosts WebSocket rooms for Watch Together. Each user runs their own. There is no central Lart server.":
+    "Ретранслятор Lart работает как Cloudflare Worker и содержит WebSocket-комнаты для совместного просмотра. Каждый пользователь запускает свой. Центрального сервера Lart нет.",
+  "Wait for the upload to finish. The relay URL gets written to {code} in Lart settings.":
+    "Дождитесь окончания загрузки. URL ретранслятора записывается в {code} в настройках Lart.",
   "If the Watch Together popover shows an outdated-relay banner, redeploying with the steps above is the fix. The banner clears automatically the next time you connect once the relay reports the current version.":
     "Если во всплывающем окне совместного просмотра появляется баннер об устаревшем ретрансляторе, поможет повторное развёртывание по шагам выше. Баннер исчезнет сам при следующем подключении, когда ретранслятор сообщит об актуальной версии.",
   "A relay URL is shareable. Anyone with the URL can join Watch Together rooms hosted on your relay. The unique {code} subdomain acts as the access token. There is no login.":
     "URL ретранслятора можно передавать другим. Любой, у кого есть этот URL, сможет входить в комнаты совместного просмотра на вашем ретрансляторе. Уникальный поддомен {code} служит токеном доступа. Входа в аккаунт нет.",
-  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Harbor users paste it into Settings, Harbor Relay, {kbd}.":
-    "Чтобы сделать ретранслятор публичным, опубликуйте URL {code} на r/Stremio или там, где живёт ваше сообщество. Другие пользователи Harbor вставят его в «Настройки», «Ретранслятор Harbor», {kbd}.",
+  "To run a public relay, post the {code} URL on r/Stremio or wherever your community lives. Other Lart users paste it into Settings, Lart Relay, {kbd}.":
+    "Чтобы сделать ретранслятор публичным, опубликуйте URL {code} на r/Stremio или там, где живёт ваше сообщество. Другие пользователи Lart вставят его в «Настройки», «Ретранслятор Lart», {kbd}.",
   "Deploy relay": "Развернуть ретранслятор",
   "Relay URL": "URL ретранслятора",
   "Test relay": "Тест ретранслятора",
@@ -295,12 +295,12 @@ const repairs: Record<string, string> = {
     "URL ретранслятора можно передавать другим. Любой, у кого есть этот URL, сможет войти в комнаты совместного просмотра на вашем ретрансляторе. Уникальный",
   "To run a public relay, post the": "Чтобы сделать ретранслятор публичным, опубликуйте",
   "Watch Together needs a relay.": "Для совместного просмотра нужен ретранслятор.",
-  "Harbor's public relay has not rolled out the latest protocol yet.":
-    "Публичный ретранслятор Harbor ещё не обновлён до последней версии протокола.",
+  "Lart's public relay has not rolled out the latest protocol yet.":
+    "Публичный ретранслятор Lart ещё не обновлён до последней версии протокола.",
   "Relay outdated. Your self-hosted relay is running an older version.":
     "Ретранслятор устарел. На вашем ретрансляторе работает более старая версия.",
-  "Redeploy it to get the latest Watch Together fixes. Harbor's public relay updates on its own.":
-    "Разверните его заново, чтобы получить свежие исправления совместного просмотра. Публичный ретранслятор Harbor обновляется сам.",
+  "Redeploy it to get the latest Watch Together fixes. Lart's public relay updates on its own.":
+    "Разверните его заново, чтобы получить свежие исправления совместного просмотра. Публичный ретранслятор Lart обновляется сам.",
   "Open relay settings": "Открыть настройки ретранслятора",
   "Once you're in a room you can copy a link that joins anyone instantly: it sets the relay URL and the room code in one click.":
     "Когда вы в комнате, можно скопировать ссылку для мгновенного подключения: она задаёт URL ретранслятора и код комнаты в один клик.",
@@ -323,12 +323,12 @@ const repairs: Record<string, string> = {
     "Для вас работают {n} дополнений, включая Debridge с аккаунтами TorBox и Usenet, поэтому отдельный debrid-сервис покупать не нужно.",
   "Private Stremio add-ons with 10x the rate limits and built-in stream proxying, from $9 a month.":
     "Частные дополнения Stremio с десятикратными лимитами запросов и встроенным проксированием потоков, от $9 в месяц.",
-  "Harbor speaks Stremio's addon protocol, and the whole ecosystem of addons grows out of their work. Stremio is funded by its community, and supporters who chip in get early access to experimental features. If you have it to spare, send some their way too.":
-    "Harbor использует протокол дополнений Stremio, и вся экосистема дополнений выросла из их работы. Stremio финансируется сообществом, а поддержавшие проект получают ранний доступ к экспериментальным функциям. Если можете, поддержите и их.",
+  "Lart speaks Stremio's addon protocol, and the whole ecosystem of addons grows out of their work. Stremio is funded by its community, and supporters who chip in get early access to experimental features. If you have it to spare, send some their way too.":
+    "Lart использует протокол дополнений Stremio, и вся экосистема дополнений выросла из их работы. Stremio финансируется сообществом, а поддержавшие проект получают ранний доступ к экспериментальным функциям. Если можете, поддержите и их.",
   "Only turn this off if you already have a metadata addon installed, such as AIOMetadata or AIOStreams. Without one, titles and collections can open completely blank. Cinemeta can go stale and show released episodes as TBA, which is the reason to replace it.":
     "Отключайте этот параметр, только если у вас уже установлено дополнение метаданных, например AIOMetadata или AIOStreams. Без него страницы контента и коллекции могут открываться пустыми. Данные Cinemeta могут устаревать и показывать вышедшие серии как TBA, поэтому её и заменяют.",
-  "No metadata addon detected. Harbor is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
-    "Дополнение метаданных не найдено. Harbor использует Cinemeta, чтобы страницы контента продолжали загружаться. Включите этот параметр обратно, если не устанавливаете другое дополнение.",
+  "No metadata addon detected. Lart is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
+    "Дополнение метаданных не найдено. Lart использует Cinemeta, чтобы страницы контента продолжали загружаться. Включите этот параметр обратно, если не устанавливаете другое дополнение.",
   "Your addons": "Ваши дополнения",
   "What each addon is actually serving up right now.":
     "Что сейчас предоставляет каждое дополнение.",

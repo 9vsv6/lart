@@ -36,7 +36,7 @@ const musicListeningLab: Record<string, string> = {
   "music.lab.crossfeed": "Кроссфид для наушников",
   "music.lab.crossfeedHelp":
     "Подмешивает отфильтрованную часть каждого стереоканала в другой, уменьшая разделение в наушниках. 0% выключает эффект.",
-  "music.lab.bypass": "Обойти DSP Harbor",
+  "music.lab.bypass": "Обойти DSP Lart",
   "music.lab.bypassHelp":
     "После применения обходит EQ, предусилитель, кроссфид, баланс и ReplayGain. Выход и громкость остаются активными. Это не подтверждает побитовую точность воспроизведения.",
   "music.lab.exclusive": "Запросить монопольный выход",

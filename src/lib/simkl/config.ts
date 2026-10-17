@@ -10,4 +10,4 @@ export const WATCHED_RATIO = 0.85;
 export const SIMKL_WATCHED_RATIO = 0.9;
 export const SIMKL_APP_NAME = "harbor";
 export const SIMKL_APP_VERSION = APP_VERSION;
-export const SIMKL_USER_AGENT = `Harbor/${APP_VERSION} (+${HARBOR_API_BASE})`;
+export const SIMKL_USER_AGENT = `Lart/${APP_VERSION} (+${HARBOR_API_BASE})`;

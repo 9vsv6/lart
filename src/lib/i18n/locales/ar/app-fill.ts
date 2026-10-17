@@ -1,8 +1,8 @@
 const appFill: Record<string, string> = {
   "Only turn this off if you already have a metadata addon installed, such as AIOMetadata or AIOStreams. Without one, titles and collections can open completely blank. Cinemeta can go stale and show released episodes as TBA, which is the reason to replace it.":
     "\u0644\u0627 \u062a\u0639\u0637\u0644 \u0647\u0630\u0627 \u0627\u0644\u062e\u064a\u0627\u0631 \u0625\u0644\u0627 \u0625\u0630\u0627 \u0643\u0627\u0646 \u0644\u062f\u064a\u0643 \u0625\u0636\u0627\u0641\u0629 \u0628\u064a\u0627\u0646\u0627\u062a \u0648\u0635\u0641\u064a\u0629 \u0645\u062b\u0628\u062a\u0629 \u0628\u0627\u0644\u0641\u0639\u0644 \u0645\u062b\u0644 AIOMetadata \u0623\u0648 AIOStreams. \u0628\u062f\u0648\u0646\u0647\u0627 \u0642\u062f \u062a\u0641\u062a\u062d \u0627\u0644\u0639\u0646\u0627\u0648\u064a\u0646 \u0648\u0627\u0644\u0645\u062c\u0645\u0648\u0639\u0627\u062a \u0641\u0627\u0631\u063a\u0629 \u062a\u0645\u0627\u0645\u0627. \u0642\u062f \u062a\u062a\u0642\u0627\u062f\u0645 Cinemeta \u0648\u062a\u0639\u0631\u0636 \u0627\u0644\u062d\u0644\u0642\u0627\u062a \u0627\u0644\u0635\u0627\u062f\u0631\u0629 \u0639\u0644\u0649 \u0623\u0646\u0647\u0627 TBA\u060c \u0648\u0647\u0630\u0627 \u0633\u0628\u0628 \u0627\u0633\u062a\u0628\u062f\u0627\u0644\u0647\u0627.",
-  "No metadata addon detected. Harbor is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
-    "\u0644\u0645 \u064a\u062a\u0645 \u0627\u0644\u0639\u062b\u0648\u0631 \u0639\u0644\u0649 \u0625\u0636\u0627\u0641\u0629 \u0628\u064a\u0627\u0646\u0627\u062a \u0648\u0635\u0641\u064a\u0629. \u064a\u0639\u0648\u062f Harbor \u0625\u0644\u0649 Cinemeta \u062d\u062a\u0649 \u062a\u0638\u0644 \u0627\u0644\u0639\u0646\u0627\u0648\u064a\u0646 \u062a\u064f\u062d\u0645\u0651\u0644\u060c \u0644\u0643\u0646 \u0623\u0639\u062f \u062a\u0641\u0639\u064a\u0644 \u0647\u0630\u0627 \u0627\u0644\u062e\u064a\u0627\u0631 \u0645\u0627 \u0644\u0645 \u062a\u0643\u0646 \u0628\u0635\u062f\u062f \u062a\u062b\u0628\u064a\u062a \u0625\u0636\u0627\u0641\u0629.",
+  "No metadata addon detected. Lart is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
+    "\u0644\u0645 \u064a\u062a\u0645 \u0627\u0644\u0639\u062b\u0648\u0631 \u0639\u0644\u0649 \u0625\u0636\u0627\u0641\u0629 \u0628\u064a\u0627\u0646\u0627\u062a \u0648\u0635\u0641\u064a\u0629. \u064a\u0639\u0648\u062f Lart \u0625\u0644\u0649 Cinemeta \u062d\u062a\u0649 \u062a\u0638\u0644 \u0627\u0644\u0639\u0646\u0627\u0648\u064a\u0646 \u062a\u064f\u062d\u0645\u0651\u0644\u060c \u0644\u0643\u0646 \u0623\u0639\u062f \u062a\u0641\u0639\u064a\u0644 \u0647\u0630\u0627 \u0627\u0644\u062e\u064a\u0627\u0631 \u0645\u0627 \u0644\u0645 \u062a\u0643\u0646 \u0628\u0635\u062f\u062f \u062a\u062b\u0628\u064a\u062a \u0625\u0636\u0627\u0641\u0629.",
   "Ad {n}": "إعلان {n}",
   "Starts at": "يبدأ عند",
   "Ends at": "ينتهي عند",
@@ -73,10 +73,10 @@ const appFill: Record<string, string> = {
     "{count} تقييم من المجتمع على stremio-addons.net",
   "Added to stremio-addons.net in the last 14 days": "أُضيف إلى stremio-addons.net في آخر 14 يومًا",
   Verifying: "جارٍ التحقق",
-  "Authorize Harbor on AniList": "تفويض Harbor على AniList",
+  "Authorize Lart on AniList": "تفويض Lart على AniList",
   "Opening AniList...": "جارٍ فتح AniList...",
-  "A browser tab opened on AniList. Approve Harbor there, then copy the text it shows and paste it below.":
-    "فُتحت علامة تبويب في المتصفح على AniList. وافق على Harbor هناك، ثم انسخ النص الظاهر والصقه في الأسفل.",
+  "A browser tab opened on AniList. Approve Lart there, then copy the text it shows and paste it below.":
+    "فُتحت علامة تبويب في المتصفح على AniList. وافق على Lart هناك، ثم انسخ النص الظاهر والصقه في الأسفل.",
   "Paste the text from AniList": "الصق النص من AniList",
   "Open AniList again": "افتح AniList مرة أخرى",
   "Checking with AniList...": "جارٍ التحقق مع AniList...",
@@ -201,16 +201,16 @@ const appFill: Record<string, string> = {
   "Scroll cast left": "تمرير طاقم التمثيل إلى اليسار",
   "Scroll cast right": "تمرير طاقم التمثيل إلى اليمين",
   "Time's up!": "انتهى الوقت!",
-  "The ship is sailing away. Thanks for watching with Harbor, it's time to listen to your grown-ups.":
-    "السفينة تبحر مبتعدة. شكرًا لمشاهدتك مع Harbor، حان وقت الإصغاء إلى الكبار.",
+  "The ship is sailing away. Thanks for watching with Lart, it's time to listen to your grown-ups.":
+    "السفينة تبحر مبتعدة. شكرًا لمشاهدتك مع Lart، حان وقت الإصغاء إلى الكبار.",
   "A grown-up can enter the parent PIN to keep watching.":
     "يمكن لشخص بالغ إدخال رمز PIN الأبوي لمواصلة المشاهدة.",
   "Ask a grown-up to switch profiles.": "اطلب من شخص بالغ تبديل الملفات الشخصية.",
   "Switch profile": "تبديل الملف الشخصي",
-  "Use your Harbor color": "استخدم لون Harbor الخاص بك",
+  "Use your Lart color": "استخدم لون Lart الخاص بك",
   "{n} in your library": "{n} في مكتبتك",
-  "These avatars are Harbor originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
-    "هذه الصور الرمزية من إبداع Harbor. تُخزَّن الحزم المستوردة على هذا الجهاز فقط: أنت من يختار ما يوضع فيها، وأنت المسؤول عن ذلك المحتوى.",
+  "These avatars are Lart originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
+    "هذه الصور الرمزية من إبداع Lart. تُخزَّن الحزم المستوردة على هذا الجهاز فقط: أنت من يختار ما يوضع فيها، وأنت المسؤول عن ذلك المحتوى.",
   "Import images": "استيراد الصور",
   "Pick one or many images. They collect in an Uploads set in your library. PNG, JPG, WebP, and GIF all work.":
     "اختر صورة واحدة أو عدة صور. تُجمَع في مجموعة Uploads داخل مكتبتك. تعمل جميع صيغ PNG وJPG وWebP وGIF.",
@@ -221,8 +221,8 @@ const appFill: Record<string, string> = {
   "Avatars display as squares, so square images fill the tile cleanly. Others are center-cropped.":
     "تظهر الصور الرمزية على هيئة مربعات، لذا تملأ الصور المربعة الخانة بالكامل. أما الصور الأخرى فتُقتَص من المنتصف.",
   "You own the content": "المحتوى ملكك",
-  "Nothing is uploaded and nothing ships with Harbor. Everything stays on this device and you are responsible for the images you add.":
-    "لا يُرفَع أي شيء ولا يأتي أي شيء مضمَّنًا مع Harbor. يبقى كل شيء على هذا الجهاز، وأنت المسؤول عن الصور التي تضيفها.",
+  "Nothing is uploaded and nothing ships with Lart. Everything stays on this device and you are responsible for the images you add.":
+    "لا يُرفَع أي شيء ولا يأتي أي شيء مضمَّنًا مع Lart. يبقى كل شيء على هذا الجهاز، وأنت المسؤول عن الصور التي تضيفها.",
   "About avatar packs": "حول حزم الصور الرمزية",
   "Bring your own avatars into the library.": "أضِف صورك الرمزية الخاصة إلى المكتبة.",
   "Preparing your images": "جارٍ تحضير صورك",
@@ -289,7 +289,7 @@ const appFill: Record<string, string> = {
   'No matches for "{query}"': 'لا توجد نتائج لـ "{query}"',
   'Try a different spelling, a person\'s name, a year like "1972", or a genre like "Horror".':
     'جرّب تهجئة مختلفة، أو اسم شخص، أو سنة مثل "1972"، أو نوعًا مثل "رعب".',
-  "Authorize Harbor on Simkl": "تفويض Harbor على Simkl",
+  "Authorize Lart on Simkl": "تفويض Lart على Simkl",
   "Requesting code from Simkl…": "جارٍ طلب رمز من Simkl…",
   "Step 1 · Open Simkl": "الخطوة 1 · افتح Simkl",
   "Step 2 · Enter this code": "الخطوة 2 · أدخل هذا الرمز",
@@ -302,7 +302,7 @@ const appFill: Record<string, string> = {
   "Pick your source": "اختر مصدرك",
   "{name} started watching": "بدأ {name} المشاهدة",
   Choose: "اختر",
-  "Authorize Harbor on Trakt": "تفويض Harbor على Trakt",
+  "Authorize Lart on Trakt": "تفويض Lart على Trakt",
   "Requesting code from Trakt…": "جارٍ طلب رمز من Trakt…",
   "Step 1 · Open Trakt": "الخطوة 1 · افتح Trakt",
   "Waiting for you to authorize on trakt.tv…": "في انتظار تفويضك على trakt.tv…",
@@ -336,8 +336,8 @@ const appFill: Record<string, string> = {
   "Remind me about": "ذكّرني بشأن",
   Tone: "النغمة",
   "Set reminder": "ضبط التذكير",
-  "Harbor checks a few times a day while it's open and lets you know here.":
-    "يتحقق Harbor عدة مرات يوميًا ما دام مفتوحًا ويُعلمك هنا.",
+  "Lart checks a few times a day while it's open and lets you know here.":
+    "يتحقق Lart عدة مرات يوميًا ما دام مفتوحًا ويُعلمك هنا.",
   "Reminder on": "التذكير مُفعّل",
   "Remind me": "ذكّرني",
   "Edit reminder": "تعديل التذكير",
@@ -382,18 +382,18 @@ const appFill: Record<string, string> = {
   "Updated {when}": "تم التحديث {when}",
   "Add {title} to MyAnimeList": "إضافة {title} إلى MyAnimeList",
   "Add to MAL": "إضافة إلى MAL",
-  "Authorize Harbor on MyAnimeList": "تفويض Harbor على MyAnimeList",
+  "Authorize Lart on MyAnimeList": "تفويض Lart على MyAnimeList",
   "Opening MyAnimeList...": "جارٍ فتح MyAnimeList...",
-  "A browser tab opened on MyAnimeList. Approve Harbor there, then copy the code or the page URL and paste it below.":
-    "فُتحت علامة تبويب في المتصفح على MyAnimeList. وافق على Harbor هناك، ثم انسخ الرمز أو رابط URL الصفحة والصقه أدناه.",
+  "A browser tab opened on MyAnimeList. Approve Lart there, then copy the code or the page URL and paste it below.":
+    "فُتحت علامة تبويب في المتصفح على MyAnimeList. وافق على Lart هناك، ثم انسخ الرمز أو رابط URL الصفحة والصقه أدناه.",
   "Paste the code or page URL": "الصق الرمز أو رابط URL الصفحة",
   "Open MyAnimeList again": "افتح MyAnimeList مرة أخرى",
   "Checking with MyAnimeList...": "جارٍ التحقق مع MyAnimeList...",
   "Connected to MyAnimeList": "تم الاتصال بـ MyAnimeList",
   "Couldn't connect to MyAnimeList": "تعذّر الاتصال بـ MyAnimeList",
   "Pick a few you love": "اختر بعضًا مما تحب",
-  "Choose up to 5 movies or shows you already like. Harbor uses them to tune your featured picks and recommendations. Totally optional.":
-    "اختر حتى 5 أفلام أو مسلسلات تحبها بالفعل. يستخدمها Harbor لضبط مختاراتك المميزة وتوصياتك. اختياري تمامًا.",
+  "Choose up to 5 movies or shows you already like. Lart uses them to tune your featured picks and recommendations. Totally optional.":
+    "اختر حتى 5 أفلام أو مسلسلات تحبها بالفعل. يستخدمها Lart لضبط مختاراتك المميزة وتوصياتك. اختياري تمامًا.",
   Verify: "تحقّق",
   Quiet: "هادئ",
   "Grown-ups only": "للكبار فقط",
@@ -416,7 +416,7 @@ const appFill: Record<string, string> = {
     "أفاد Trakt بأنه تم رفض التفويض. حاول مرة أخرى إن لم يكن ذلك مقصودًا.",
   "Couldn't reach Trakt": "تعذّر الوصول إلى Trakt",
   "Open Voyages": "افتح الرحلات",
-  "Harbor Voyages": "رحلات Harbor",
+  "Lart Voyages": "رحلات Lart",
   "Set a course": "حدّد مسارًا",
   "Pick up where you left off.": "تابِع من حيث توقّفت.",
   "A short run of films you'll actually finish. You pick every stop.":
@@ -652,7 +652,7 @@ const appFill: Record<string, string> = {
   "View my profile": "عرض ملفي الشخصي",
   "Manage profiles": "إدارة الملفات الشخصية",
   Reload: "إعادة تحميل",
-  "Quit Harbor": "إنهاء Harbor",
+  "Quit Lart": "إنهاء Lart",
   View: "عرض",
   "Toggle Fullscreen": "تبديل ملء الشاشة",
   "Zoom In": "تكبير",
@@ -676,7 +676,7 @@ const appFill: Record<string, string> = {
   "More episodes": "حلقات أكثر",
   "Playback pauses when the timer runs out. Works for movies too: one movie counts as one episode.":
     "يتوقف التشغيل مؤقتًا عند انتهاء المؤقّت. يعمل مع الأفلام أيضًا: يُحتسب الفيلم الواحد كحلقة واحدة.",
-  "Close Harbor?": "إغلاق Harbor؟",
+  "Close Lart?": "إغلاق Lart؟",
   "Ask a grown-up before you close.": "اسأل أحد الكبار قبل الإغلاق.",
   Stay: "البقاء",
   "An error occurred": "حدث خطأ",
@@ -849,8 +849,8 @@ const appFill: Record<string, string> = {
   "Search by episode number or title": "ابحث برقم الحلقة أو العنوان",
   "Nothing found here": "لم يتم العثور على شيء هنا",
   "That does not look like a repository URL": "لا يبدو هذا كعنوان URL لمستودع",
-  "This server is too old to add repos from Harbor":
-    "هذا الخادم قديم جدًا لإضافة المستودعات عبر Harbor",
+  "This server is too old to add repos from Lart":
+    "هذا الخادم قديم جدًا لإضافة المستودعات عبر Lart",
   "The server could not load that repository": "تعذّر على الخادم تحميل ذلك المستودع",
   "Extension repositories": "مستودعات الإضافات",
   "Action failed": "فشل الإجراء",
@@ -876,8 +876,8 @@ const appFill: Record<string, string> = {
   "Add server": "إضافة خادم",
   authenticated: "تمت المصادقة",
   "Connect a Suwayomi server": "ربط خادم Suwayomi",
-  "Point Harbor at your self-hosted library to browse and install sources":
-    "وجّه Harbor إلى مكتبتك المستضافة ذاتيًا لتصفّح المصادر وتثبيتها",
+  "Point Lart at your self-hosted library to browse and install sources":
+    "وجّه Lart إلى مكتبتك المستضافة ذاتيًا لتصفّح المصادر وتثبيتها",
   Servers: "الخوادم",
   "{n} / {max} lists": "{n} / {max} قائمة",
   "Create your first list": "أنشئ قائمتك الأولى",
@@ -924,8 +924,8 @@ const appFill: Record<string, string> = {
   'Add titles with the search above, or hit "Add to list" on any movie or show\'s page.':
     'أضف عناوين باستخدام البحث أعلاه، أو انقر على "إضافة إلى القائمة" في صفحة أي فيلم أو مسلسل.',
   "Your folders": "مجلداتك",
-  "Folders Harbor imported your movies and shows from. Rescan to pick up new files.":
-    "المجلدات التي استورد منها Harbor أفلامك ومسلسلاتك. أعد الفحص لاكتشاف الملفات الجديدة.",
+  "Folders Lart imported your movies and shows from. Rescan to pick up new files.":
+    "المجلدات التي استورد منها Lart أفلامك ومسلسلاتك. أعد الفحص لاكتشاف الملفات الجديدة.",
   "1 file": "ملف واحد",
   "{n} files": "{n} ملف",
   "Remove folder": "إزالة المجلد",
@@ -988,8 +988,8 @@ const appFill: Record<string, string> = {
   "Season {n} has started": "بدأ الموسم {n}",
   "S{s} E{e} is out now": "الموسم {s} الحلقة {e} متاحة الآن",
   "{n} new episodes are out": "{n} حلقات جديدة متاحة",
-  "Harbor account": "حساب Harbor",
-  "Your handle across Harbor, and your verified status.": "معرّفك عبر Harbor، وحالة توثيقك.",
+  "Lart account": "حساب Lart",
+  "Your handle across Lart, and your verified status.": "معرّفك عبر Lart، وحالة توثيقك.",
   Titles: "العناوين",
   "No titles found in this collection.": "لم يتم العثور على عناوين في هذه المجموعة.",
   ID: "ID",
@@ -1002,8 +1002,8 @@ const appFill: Record<string, string> = {
   "Two columns": "عمودان",
   "Stremio didn't confirm the move. Your collection may be unchanged. Reload to see the current state.":
     "لم يؤكّد Stremio النقل. قد تكون مجموعتك دون تغيير. أعد التحميل لعرض الحالة الحالية.",
-  "Moved, but Harbor couldn't confirm the result. Reload to see the current state.":
-    "تم النقل، لكن تعذّر على Harbor تأكيد النتيجة. أعد التحميل لعرض الحالة الحالية.",
+  "Moved, but Lart couldn't confirm the result. Reload to see the current state.":
+    "تم النقل، لكن تعذّر على Lart تأكيد النتيجة. أعد التحميل لعرض الحالة الحالية.",
   "Everything here is already in your account.": "كل شيء هنا موجود بالفعل في حسابك.",
   "Moved 1 addon to your Stremio account. It now syncs everywhere you sign in.":
     "تم نقل إضافة واحدة إلى حساب Stremio الخاص بك. وهي تتزامن الآن أينما سجّلت الدخول.",
@@ -1028,28 +1028,28 @@ const appFill: Record<string, string> = {
   "No sources match your filter": "لا توجد مصادر تطابق عامل التصفية",
   "Install an extension above to get sources": "ثبّت إضافة أعلاه للحصول على المصادر",
   "Add a manga source": "إضافة مصدر مانغا",
-  "Harbor does not host any manga or any sources. Connect a self-hosted server you run, install a source plugin from a repository you trust, or open a folder you already have.":
-    "لا يستضيف Harbor أي مانغا أو أي مصادر. اتصل بخادم ذاتي الاستضافة تُشغّله بنفسك، أو ثبّت مكوّنًا إضافيًا للمصدر من مستودع تثق به، أو افتح مجلدًا تملكه بالفعل.",
+  "Lart does not host any manga or any sources. Connect a self-hosted server you run, install a source plugin from a repository you trust, or open a folder you already have.":
+    "لا يستضيف Lart أي مانغا أو أي مصادر. اتصل بخادم ذاتي الاستضافة تُشغّله بنفسك، أو ثبّت مكوّنًا إضافيًا للمصدر من مستودع تثق به، أو افتح مجلدًا تملكه بالفعل.",
   "Set up a source": "إعداد مصدر",
   "Browse manga": "تصفح المانغا",
-  "Read manga in Harbor": "اقرأ المانغا في Harbor",
-  "Harbor does not host any manga. Add a source plugin from a repository you trust, connect your own server, or open a local folder. You can turn this off anytime in Settings.":
-    "لا يستضيف Harbor أي مانغا. أضف مكوّنًا إضافيًا للمصدر من مستودع تثق به، أو اتصل بخادمك الخاص، أو افتح مجلدًا محليًا. يمكنك إيقاف هذا في أي وقت من الإعدادات.",
+  "Read manga in Lart": "اقرأ المانغا في Lart",
+  "Lart does not host any manga. Add a source plugin from a repository you trust, connect your own server, or open a local folder. You can turn this off anytime in Settings.":
+    "لا يستضيف Lart أي مانغا. أضف مكوّنًا إضافيًا للمصدر من مستودع تثق به، أو اتصل بخادمك الخاص، أو افتح مجلدًا محليًا. يمكنك إيقاف هذا في أي وقت من الإعدادات.",
   "Enable manga sources": "تفعيل مصادر المانغا",
   Directing: "الإخراج",
   Writing: "الكتابة",
   Producing: "الإنتاج",
   "Says “cached” but won’t play?": "يقول “مُخزّن مؤقتًا” لكنه لا يعمل؟",
-  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Harbor problem: pick another source, or give it a minute to finish caching and try again.":
-    "“مُخزّن مؤقتًا” تعني فقط أن الإضافة تعتقد أن هذا الملف محفوظ بالفعل على debrid لديك، وجاهز للتشغيل فورًا. هذه العلامة ليست صحيحة دائمًا: أحيانًا لا يكون الملف موجودًا فعليًا بعد. عندما يحدث ذلك لا يبدأ المصدر، أو يشغّل مقطعًا قصيرًا معطوبًا. هذه ليست مشكلة من Harbor: اختر مصدرًا آخر، أو امنحه دقيقة لإنهاء التخزين المؤقت ثم حاول مجددًا.",
+  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Lart problem: pick another source, or give it a minute to finish caching and try again.":
+    "“مُخزّن مؤقتًا” تعني فقط أن الإضافة تعتقد أن هذا الملف محفوظ بالفعل على debrid لديك، وجاهز للتشغيل فورًا. هذه العلامة ليست صحيحة دائمًا: أحيانًا لا يكون الملف موجودًا فعليًا بعد. عندما يحدث ذلك لا يبدأ المصدر، أو يشغّل مقطعًا قصيرًا معطوبًا. هذه ليست مشكلة من Lart: اختر مصدرًا آخر، أو امنحه دقيقة لإنهاء التخزين المؤقت ثم حاول مجددًا.",
   "On your disk": "على قرصك",
   "Choose subtitles": "اختيار الترجمة",
   "No subtitles": "بدون ترجمة",
   "Couldn't load subtitles. You can start anyway and add one later in the player.":
     "تعذّر تحميل الترجمة. يمكنك البدء على أي حال وإضافة واحدة لاحقًا في المشغّل.",
-  "No subtitles found. Start anyway, Harbor keeps looking while you watch.":
-    "لم يُعثر على ترجمة. ابدأ على أي حال، وسيواصل Harbor البحث أثناء المشاهدة.",
-  "Skip, let Harbor choose": "تخطّي، دع Harbor يختار",
+  "No subtitles found. Start anyway, Lart keeps looking while you watch.":
+    "لم يُعثر على ترجمة. ابدأ على أي حال، وسيواصل Lart البحث أثناء المشاهدة.",
+  "Skip, let Lart choose": "تخطّي، دع Lart يختار",
   "Start playback": "بدء التشغيل",
   "Best match": "أفضل تطابق",
   "Finding subtitles…": "جارٍ البحث عن الترجمة…",
@@ -1106,24 +1106,24 @@ const appFill: Record<string, string> = {
   Horizontal: "أفقي",
   "Chapter finished": "انتهى الفصل",
   "Hidden sections": "الأقسام المخفية",
-  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Harbor can't import them.":
-    "هذا مستودع Mangayomi، لكن مصادره تستخدم Dart أو ليست مانغا، لذا لا يستطيع Harbor استيرادها.",
-  "This is a Mangayomi repo. Harbor runs its JavaScript sources natively. Import them to add these sources to your manga library.":
-    "هذا مستودع Mangayomi. يشغّل Harbor مصادر JavaScript الخاصة به بشكل أصلي. استوردها لإضافة هذه المصادر إلى مكتبة المانغا لديك.",
+  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Lart can't import them.":
+    "هذا مستودع Mangayomi، لكن مصادره تستخدم Dart أو ليست مانغا، لذا لا يستطيع Lart استيرادها.",
+  "This is a Mangayomi repo. Lart runs its JavaScript sources natively. Import them to add these sources to your manga library.":
+    "هذا مستودع Mangayomi. يشغّل Lart مصادر JavaScript الخاصة به بشكل أصلي. استوردها لإضافة هذه المصادر إلى مكتبة المانغا لديك.",
   "Imported {n} sources, {f} could not load": "تم استيراد {n} مصدر، وتعذّر تحميل {f}",
   "Imported {n} sources": "تم استيراد {n} مصدر",
   "Import failed, try again": "فشل الاستيراد، حاول مرة أخرى",
   "Importing {done} of {total}": "جارٍ استيراد {done} من {total}",
   "Import {n} JavaScript sources": "استيراد {n} مصدر JavaScript",
   "Import JavaScript sources": "استيراد مصادر JavaScript",
-  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Harbor can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "هذا مستودع Tachiyomi / Mihon. هذه إضافات Android (APK)، لذا لا يستطيع Harbor تشغيلها مباشرةً. لاستخدام هذه المصادر على سطح المكتب، شغّل خادم Suwayomi واربط Harbor به من قسم الخوادم.",
-  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "هذا مستودع Mangayomi. الاستيراد الأصلي غير مدعوم بعد. للحصول على أكبر كتالوج متاح اليوم، شغّل خادم Suwayomi واربط Harbor به من قسم الخوادم.",
-  "This is a Paperback (iOS) repo, which Harbor can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
-    "هذا مستودع Paperback (iOS)، وهو ما لا يستطيع Harbor استخدامه. للحصول على مصادر لسطح المكتب، اربط خادم Suwayomi من قسم الخوادم.",
-  "This doesn't look like a Harbor plugin repo. Harbor expects a JSON file shaped { name, plugins: [ ... ] }.":
-    "لا يبدو أن هذا مستودع إضافات Harbor. يتوقّع Harbor ملف JSON بالشكل { name, plugins: [ ... ] }.",
+  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Lart can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "هذا مستودع Tachiyomi / Mihon. هذه إضافات Android (APK)، لذا لا يستطيع Lart تشغيلها مباشرةً. لاستخدام هذه المصادر على سطح المكتب، شغّل خادم Suwayomi واربط Lart به من قسم الخوادم.",
+  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "هذا مستودع Mangayomi. الاستيراد الأصلي غير مدعوم بعد. للحصول على أكبر كتالوج متاح اليوم، شغّل خادم Suwayomi واربط Lart به من قسم الخوادم.",
+  "This is a Paperback (iOS) repo, which Lart can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
+    "هذا مستودع Paperback (iOS)، وهو ما لا يستطيع Lart استخدامه. للحصول على مصادر لسطح المكتب، اربط خادم Suwayomi من قسم الخوادم.",
+  "This doesn't look like a Lart plugin repo. Lart expects a JSON file shaped { name, plugins: [ ... ] }.":
+    "لا يبدو أن هذا مستودع إضافات Lart. يتوقّع Lart ملف JSON بالشكل { name, plugins: [ ... ] }.",
   "Tap again to remove all {n} extensions": "انقر مرة أخرى لإزالة جميع الإضافات الـ {n}",
   "Remove all extensions ({n})": "إزالة جميع الإضافات ({n})",
   "https:// API or site URL": "https:// عنوان URL لـ API أو موقع",
@@ -1237,13 +1237,13 @@ const appFill: Record<string, string> = {
     "لا توجد ترجمات جديدة غير المدرجة بالفعل.",
   "{time} left": "متبقٍ {time}",
   "Loading your library…": "جارٍ تحميل مكتبتك…",
-  "Keep controlling Harbor in the background": "مواصلة التحكم في هاربر في الخلفية",
-  "Off by default, so your controller only drives Harbor while it is the focused window. Leave it off if you play games with the same controller.":
+  "Keep controlling Lart in the background": "مواصلة التحكم في هاربر في الخلفية",
+  "Off by default, so your controller only drives Lart while it is the focused window. Leave it off if you play games with the same controller.":
     "معطّل افتراضيًا، ليتحكم ذراع التحكم في هاربر فقط عندما تكون نافذته نشطة. اتركه معطّلًا إذا كنت تلعب بنفس ذراع التحكم.",
   "Use Cinemeta for title metadata": "استخدام Cinemeta لبيانات العناوين",
   "Turn this off to take Cinemeta out entirely and use only your own metadata addons, such as AIOMetadata or AIOStreams. Cinemeta can go stale and show already released episodes as TBA. Leave it on unless you have a metadata addon installed, or titles will have no details.":
     "عطّل هذا لإزالة Cinemeta تمامًا واستخدام إضافات البيانات الخاصة بك فقط، مثل AIOMetadata أو AIOStreams. قد تصبح بيانات Cinemeta قديمة وتعرض حلقات صدرت بالفعل على أنها قريبًا. اتركه مفعّلًا ما لم تكن لديك إضافة بيانات مثبتة، وإلا فلن تظهر تفاصيل العناوين.",
-  "Join Harbor": "انضم Harbor",
+  "Join Lart": "انضم Lart",
   "One free account for your handle, themes, and sync.":
     "حساب مجاني واحد لاسم المستخدم، والسمات، والمزامنة.",
   "Sign in to pick up where you left off.": "سجّل الدخول لاستكمال ما بدأته.",
@@ -1262,9 +1262,9 @@ const appFill: Record<string, string> = {
   "Recovery key": "مفتاح الاسترداد",
   Paste: "الصق",
   "Signed in as {username}": "تم تسجيل الدخول ك{username}",
-  "Signed in to your Harbor account": "تم تسجيل الدخول لحسابك في Harbor",
+  "Signed in to your Lart account": "تم تسجيل الدخول لحسابك في Lart",
   "Claim your @handle": "احجز @المعرّف",
-  "A name people can find you by across Harbor.": "اسم يمكن للآخرين العثور عليك به عبر Harbor.",
+  "A name people can find you by across Lart.": "اسم يمكن للآخرين العثور عليك به عبر Lart.",
   "Sync everywhere": "مزامنة في كل مكان",
   "Your themes, lists, and profile follow you to any device.":
     "تتم مزامنة السمات والقوائم وملفك الشخصي على جميع أجهزتك.",
@@ -1288,12 +1288,12 @@ const appFill: Record<string, string> = {
   "so pick one you'll keep.": "لذا اختر معرفًا ستحتفظ به.",
   "after you claim it.": "بعد حجزه.",
   Handle: "المعرّف",
-  "How people find you across Harbor.": "هكذا يعثر عليك الآخرون عبر Harbor.",
-  "Claim one so people can find you across Harbor.":
-    "احجز معرفًا ليتمكن الآخرون من العثور عليك عبر Harbor.",
+  "How people find you across Lart.": "هكذا يعثر عليك الآخرون عبر Lart.",
+  "Claim one so people can find you across Lart.":
+    "احجز معرفًا ليتمكن الآخرون من العثور عليك عبر Lart.",
   "Checking availability": "جارٍ التحقق من التوفر",
   "That handle is yours to claim.": "هذا المعرّف متاح للحجز.",
-  "Sign in to Harbor to check availability.": "سجل الدخول إلى Harbor للتحقق من توفر المعرّف.",
+  "Sign in to Lart to check availability.": "سجل الدخول إلى Lart للتحقق من توفر المعرّف.",
   "That handle is taken.": "هذا المعرّف مستخدم.",
   "That handle is reserved.": "هذا المعرّف محجوز.",
   "That handle is not valid.": "هذا المعرّف غير صالح.",
@@ -1305,11 +1305,11 @@ const appFill: Record<string, string> = {
   "Prove you own a real Stremio account.": "أثبت أنك تملك حساب Stremio حقيقيًا.",
   "Verifying...": "جارٍ التحقق...",
   "Verify with Stremio": "التحقق عبر Stremio",
-  "Open Harbor on desktop to verify ownership in your browser.":
-    "افتح Harbor على سطح المكتب للتحقق من الملكية عبر المتصفح.",
+  "Open Lart on desktop to verify ownership in your browser.":
+    "افتح Lart على سطح المكتب للتحقق من الملكية عبر المتصفح.",
   "Use a different Stremio account": "استخدام حساب Stremio آخر",
-  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Harbor never sees your password.":
-    "يفتح Stremio في متصفحك. يدعم تسجيل الدخول بالبريد الإلكتروني وFacebook وApple. لا يرى Harbor كلمة مرورك أبدًا.",
+  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Lart never sees your password.":
+    "يفتح Stremio في متصفحك. يدعم تسجيل الدخول بالبريد الإلكتروني وFacebook وApple. لا يرى Lart كلمة مرورك أبدًا.",
   "Subtitles already aligned": "الترجمة متزامنة بالفعل",
   "Not enough dialogue to sync": "لا يوجد حوار كافٍ للمزامنة",
   "Variable timing corrected": "تم تصحيح التوقيت المتغيّر",
@@ -1317,31 +1317,31 @@ const appFill: Record<string, string> = {
   "Timing rate": "معدل التوقيت",
   "No timing change was needed. This subtitle already matches the audio.":
     "لم يلزم تغيير التوقيت. هذه الترجمة متوافقة مع الصوت بالفعل.",
-  "Harbor couldn't analyze the audio for this source. Try again or adjust it manually.":
-    "تعذّر على Harbor تحليل صوت هذا المصدر. حاول مجددًا أو اضبطه يدويًا.",
+  "Lart couldn't analyze the audio for this source. Try again or adjust it manually.":
+    "تعذّر على Lart تحليل صوت هذا المصدر. حاول مجددًا أو اضبطه يدويًا.",
   "There isn't enough readable dialogue in this subtitle to measure its timing.":
     "لا يوجد حوار مقروء كافٍ في هذه الترجمة لقياس توقيتها.",
   "This subtitle appears to be for a different cut. Try another match.":
     "يبدو أن هذه الترجمة تخص نسخة مختلفة. جرّب تطابقًا آخر.",
-  "The timing checks disagreed, so Harbor left the subtitle unchanged.":
-    "اختلفت نتائج فحوص التوقيت، لذلك ترك Harbor الترجمة دون تغيير.",
+  "The timing checks disagreed, so Lart left the subtitle unchanged.":
+    "اختلفت نتائج فحوص التوقيت، لذلك ترك Lart الترجمة دون تغيير.",
   "The timing difference was too large to correct safely. Try another subtitle.":
     "كان فرق التوقيت كبيرًا جدًا لتصحيحه بأمان. جرّب ترجمة أخرى.",
   "There wasn't enough matching dialogue to make a safe correction.":
     "لم يوجد حوار متطابق كافٍ لإجراء تصحيح آمن.",
-  "Harbor couldn't find a reliable timing correction for this subtitle.":
-    "لم يتمكن Harbor من إيجاد تصحيح توقيت موثوق لهذه الترجمة.",
+  "Lart couldn't find a reliable timing correction for this subtitle.":
+    "لم يتمكن Lart من إيجاد تصحيح توقيت موثوق لهذه الترجمة.",
   "Sequels & Prequels": "الأجزاء اللاحقة والسابقة",
-  "This one also replaces Harbor's bundled players and tools, so it installs through Harbor Setup. Harbor closes, the installer finishes, then Harbor reopens.":
-    "يستبدل هذا التحديث أيضًا المشغّلات والأدوات المضمّنة في Harbor، لذلك يُثبّت عبر Harbor Setup. سيُغلق Harbor، ويُنهي المثبّت عمله، ثم يُفتح Harbor من جديد.",
-  "This one installs through Harbor Setup, but the update manifest carries no signature for it. Harbor will not run an installer it cannot verify. Download it and run it yourself.":
-    "يُثبّت هذا التحديث عبر Harbor Setup، لكن بيان التحديث لا يحمل توقيعًا له. لن يشغّل Harbor مثبّتًا لا يستطيع التحقق منه. نزّله وشغّله بنفسك.",
+  "This one also replaces Lart's bundled players and tools, so it installs through Lart Setup. Lart closes, the installer finishes, then Lart reopens.":
+    "يستبدل هذا التحديث أيضًا المشغّلات والأدوات المضمّنة في Lart، لذلك يُثبّت عبر Lart Setup. سيُغلق Lart، ويُنهي المثبّت عمله، ثم يُفتح Lart من جديد.",
+  "This one installs through Lart Setup, but the update manifest carries no signature for it. Lart will not run an installer it cannot verify. Download it and run it yourself.":
+    "يُثبّت هذا التحديث عبر Lart Setup، لكن بيان التحديث لا يحمل توقيعًا له. لن يشغّل Lart مثبّتًا لا يستطيع التحقق منه. نزّله وشغّله بنفسك.",
   "Download installer": "تنزيل المثبّت",
   "Install and reopen": "التثبيت وإعادة الفتح",
-  "Harbor is closing. Harbor Setup will finish and reopen it.":
-    "يجري إغلاق Harbor. سيُنهي Harbor Setup التثبيت ثم يعيد فتحه.",
-  "Harbor Setup did not finish updating Harbor. Nothing was changed.":
-    "لم يُكمل Harbor Setup تحديث Harbor. لم يتغيّر شيء.",
+  "Lart is closing. Lart Setup will finish and reopen it.":
+    "يجري إغلاق Lart. سيُنهي Lart Setup التثبيت ثم يعيد فتحه.",
+  "Lart Setup did not finish updating Lart. Nothing was changed.":
+    "لم يُكمل Lart Setup تحديث Lart. لم يتغيّر شيء.",
   "Dismiss": "تجاهل",
 };
 

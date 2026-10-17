@@ -4,18 +4,18 @@ const musicSpotifyLibrary: Record<string, string> = {
   "music.spotifyLibrary.connect": "Spotifyを接続",
   "music.spotifyLibrary.liked": "お気に入りの曲",
   "music.spotifyLibrary.playlists": "Spotifyのプレイリスト",
-  "music.spotifyLibrary.harbor": "Harborのプレイリスト",
+  "music.spotifyLibrary.harbor": "Lartのプレイリスト",
   "music.spotifyLibrary.back": "Spotifyライブラリに戻る",
-  "music.spotifyLibrary.import": "Harborにインポート",
+  "music.spotifyLibrary.import": "Lartにインポート",
   "music.spotifyLibrary.importBody":
-    "このリストのコピーをHarborに保存します。曲は引き続き元の音楽ソースから再生されます。",
+    "このリストのコピーをLartに保存します。曲は引き続き元の音楽ソースから再生されます。",
   "music.spotifyLibrary.importing": "{count}曲を読み込み中…",
   "music.spotifyLibrary.imported": "{name}に{count}曲をインポートしました。",
-  "music.spotifyLibrary.skipped": "Harborでインポートできない{count}件をスキップしました。",
+  "music.spotifyLibrary.skipped": "Lartでインポートできない{count}件をスキップしました。",
   "music.spotifyLibrary.loaded": "{total}件中{count}件",
   "music.spotifyLibrary.empty": "このSpotifyコレクションはまだ空です。",
   "music.spotifyLibrary.noImportable":
-    "このコレクションにはHarborでインポートできる曲がありません。",
+    "このコレクションにはLartでインポートできる曲がありません。",
   "music.spotifyLibrary.error":
     "Spotifyでリクエストを完了できませんでした。接続を確認してもう一度お試しください。",
   "music.spotifyLibrary.permission":

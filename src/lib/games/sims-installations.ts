@@ -19,7 +19,7 @@ function windowsFolder(value: string): string | undefined {
 
 export const simsInstallationKey = (path: string) => windowsFolder(path)?.toLowerCase();
 
-/** Reuse Harbor's existing scans; never scan drives or join games by title. */
+/** Reuse Lart's existing scans; never scan drives or join games by title. */
 export function simsInstallations(steam: SteamInstall[], launchers: LauncherGame[], custom: CustomGame[]): SimsInstallation[] {
   const entries = new Map<string, SimsInstallation>();
   const add = (value: string, source: SimsInstallation["sources"][number]) => {

@@ -77,7 +77,7 @@ export default {
   "games.league.metaScope": "OP.GG fournit ce classement avec son échantillon par défaut, sans préciser le patch, la région ni le rang. Les taux de victoire utilisent les victoires et parties publiées ; les taux de sélection sont arrondis par la source. Classements et builds utilisent des échantillons distincts.",
   "games.league.buildNote": "Chaque build a son propre échantillon. Les builds terminés favorisent les parties assez longues pour acheter les objets ; leur taux de victoire n’est pas celui du champion. Les matchups peuvent avoir peu de parties. Adaptez-vous à votre équipe et à l’adversaire. Les vidéos peuvent dater d’anciens patchs.",
   "games.league.patchDifference": "Statistiques du build : {patch} ; objets et compétences : {assets}.",
-  "games.league.attribution": "Harbor is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
+  "games.league.attribution": "Lart is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing Riot Games properties. Riot Games and all associated properties are trademarks or registered trademarks of Riot Games, Inc.",
   "games.league.tierList": "Classement",
   "games.league.tierScope": "Classé solo/duo · Émeraude+ · Monde",
   "games.league.patchFilter": "Choisir un patch",

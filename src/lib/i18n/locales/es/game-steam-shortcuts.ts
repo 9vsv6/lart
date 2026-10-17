@@ -5,7 +5,7 @@ export default {
 
   "games.shortcuts.activity.open": "Actividad",
   "games.shortcuts.activity.title": "Actividad de accesos directos",
-  "games.shortcuts.activity.note": "Análisis y lanzamientos recientes de este perfil de Harbor. Hasta 300 entradas.",
+  "games.shortcuts.activity.note": "Análisis y lanzamientos recientes de este perfil de Lart. Hasta 300 entradas.",
   "games.shortcuts.activity.remember": "Conservar entre sesiones",
   "games.shortcuts.activity.detailed": "Incluir detalles del análisis",
   "games.shortcuts.activity.storageError": "No se pudo acceder a la actividad guardada. Las entradas de esta sesión siguen visibles.",
@@ -47,7 +47,7 @@ export default {
   "games.shortcuts.tags": "Etiquetas",
   "games.shortcuts.storeError": "No se pudieron guardar los ajustes.",
   "games.shortcuts.shortcut_location": "Elige la carpeta de Steam o su carpeta userdata.",
-  "games.shortcuts.shortcut_account": "Abre Steam con la cuenta de este acceso directo y actualiza. Harbor debe usar la misma instalación de Steam.",
+  "games.shortcuts.shortcut_account": "Abre Steam con la cuenta de este acceso directo y actualiza. Lart debe usar la misma instalación de Steam.",
   "games.shortcuts.shortcut_missing": "Este acceso directo ya no existe. Actualiza la biblioteca.",
   "games.shortcuts.shortcut_executable": "Falta el ejecutable o su ruta absoluta no es compatible.",
   "games.shortcuts.shortcut_launch": "Steam no pudo abrir este acceso directo. Inténtalo de nuevo.",

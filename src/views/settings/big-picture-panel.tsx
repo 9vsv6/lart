@@ -24,7 +24,7 @@ export function BigPicturePanel() {
       <Section title={t("Launch")}>
         <ToggleRow
           label={t("Open in Big Picture")}
-          sub={t("Start Harbor in the couch-friendly Big Picture layout whenever the app opens.")}
+          sub={t("Start Lart in the couch-friendly Big Picture layout whenever the app opens.")}
           value={settings.bigPictureAutoStart}
           onChange={(v) => update({ bigPictureAutoStart: v })}
         />

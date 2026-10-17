@@ -9,7 +9,7 @@ const surfaces3: Record<string, string> = {
   "Syncs to your {services}": "Синхронизируется с вашими сервисами: {services}",
   "Play trailer": "Воспроизвести трейлер",
   "Open on computer": "Открыть на компьютере",
-  "Send this title to your Harbor app": "Отправить это название в приложение Harbor",
+  "Send this title to your Lart app": "Отправить это название в приложение Lart",
   "Saved to your favorites": "Сохранено в избранном",
   "Save to your favorites": "Сохранить в избранное",
   "Add to your watchlist": "Добавить в список к просмотру",
@@ -39,8 +39,8 @@ const surfaces3: Record<string, string> = {
   "Award pack": "Набор наград",
   "Reskin the quality chips (4K, HDR, Dolby Vision, Atmos and more) that ride each stream in the play picker. Click any slot to drop in your own PNG or animated GIF, or import a whole set at once. You do not have to fill every slot.":
     "Измените оформление меток качества (4K, HDR, Dolby Vision, Atmos и других), которые отображаются у каждого потока в меню выбора воспроизведения. Нажмите на любой слот, чтобы добавить собственный PNG или анимированный GIF, либо импортируйте сразу целый набор. Заполнять все слоты необязательно.",
-  "Reskin the award trophies shown across Harbor. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
-    "Измените оформление наград, отображаемых в Harbor. Нажмите на любую награду, чтобы добавить PNG или анимированный GIF, создайте собственные типы наград либо импортируйте сразу целый набор.",
+  "Reskin the award trophies shown across Lart. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
+    "Измените оформление наград, отображаемых в Lart. Нажмите на любую награду, чтобы добавить PNG или анимированный GIF, создайте собственные типы наград либо импортируйте сразу целый набор.",
   "Import a set": "Импортировать набор",
   "Drop many images, GIFs, or a .zip at once. Name each file after its slot ({example}) and we match them. Any size is fine, we resize big images and keep animated GIFs light.":
     "Перетащите сразу несколько изображений, GIF-файлов или архив .zip. Назовите каждый файл по соответствующему слоту ({example}), и мы сопоставим их. Размер может быть любым: большие изображения мы уменьшим, а анимированные GIF-файлы оптимизируем.",

@@ -140,7 +140,7 @@ const ITEM_HEIGHT = "h-[clamp(44px,5vh,58px)]";
 const TAB_TRACK =
   "flex w-full min-w-0 items-center gap-[clamp(8px,0.9vw,16px)] overflow-x-auto py-[24px] -my-[24px] px-[8px] -mx-[8px] [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden";
 
-// Harbor's nav icons are fixed 26px art with their own overflowing badges, so the
+// Lart's nav icons are fixed 26px art with their own overflowing badges, so the
 // box matches that size rather than restyling anything inside them.
 const ICON_BOX = "flex h-[26px] w-[26px] shrink-0 items-center justify-center";
 
@@ -325,14 +325,14 @@ export function BpTopBar({ active }: { active: BigPictureTabKind }) {
             className="hidden whitespace-nowrap text-[clamp(24px,3vh,40px)] font-medium leading-none tracking-tight text-ink [&_*]:text-inherit min-[1500px]:inline"
             style={{ fontFamily: '"Fraunces", "Iowan Old Style", "Georgia", serif' }}
           >
-            Harb
+            L
             <span
               className="inline-block"
               style={{ transform: "rotate(7deg)", transformOrigin: "50% 65%" }}
             >
-              o
+              a
             </span>
-            r
+            rt
           </span>
         )}
       </div>

@@ -30,8 +30,8 @@ const catalog02: Record<string, string> = {
   "Anime titles": "Tytuły anime",
   "Anime tweaks": "Ulepszenia anime",
   Anime4K: "Anime4K",
-  "Anime4K and smooth-motion run on the bundled mpv engine in the Harbor desktop app. They have no effect in the browser.":
-    "Anime4K i wygładzanie ruchu działają przy użyciu dołączonego silnika mpv w aplikacji komputerowej Harbor. Nie mają wpływu na odtwarzanie w przeglądarce.",
+  "Anime4K and smooth-motion run on the bundled mpv engine in the Lart desktop app. They have no effect in the browser.":
+    "Anime4K i wygładzanie ruchu działają przy użyciu dołączonego silnika mpv w aplikacji komputerowej Lart. Nie mają wpływu na odtwarzanie w przeglądarce.",
   "Anime4K is tuned for drawn animation. Leave this on to skip live action, or turn it off to run it on everything you watch.":
     "Anime4K jest dostrojone do animacji rysunkowej. Pozostaw tę opcję włączoną, aby pomijać materiały aktorskie, lub wyłącz ją, aby używać Anime4K do wszystkiego, co oglądasz.",
   "Anime4K isn't set up yet. Turn it on in Settings under Anime.":
@@ -49,8 +49,8 @@ const catalog02: Record<string, string> = {
   Announcement: "Ogłoszenie",
   Anonymous: "Anonim",
   "Another phone is already setting this TV up.": "Inny telefon już konfiguruje ten telewizor.",
-  "Another program already holds this port, usually a Stremio server that is running on this machine. Harbor tried its spare ports too. Stop that server, or leave it running and point Harbor at it in Remote streaming server below.":
-    "Inny program korzysta już z tego portu, zwykle jest to serwer Stremio uruchomiony na tym komputerze. Harbor wypróbował również porty zapasowe. Zatrzymaj ten serwer albo pozostaw go uruchomionego i wskaż go w Harbor w sekcji „Zdalny serwer strumieniowania” poniżej.",
+  "Another program already holds this port, usually a Stremio server that is running on this machine. Lart tried its spare ports too. Stop that server, or leave it running and point Lart at it in Remote streaming server below.":
+    "Inny program korzysta już z tego portu, zwykle jest to serwer Stremio uruchomiony na tym komputerze. Lart wypróbował również porty zapasowe. Zatrzymaj ten serwer albo pozostaw go uruchomionego i wskaż go w Lart w sekcji „Zdalny serwer strumieniowania” poniżej.",
   "Anti-War": "Kino antywojenne",
   Anticipated: "Oczekiwane",
   Any: "Dowolne",
@@ -82,15 +82,15 @@ const catalog02: Record<string, string> = {
     "Każdy może znaleźć grupę i dołączyć do niej przez wyszukiwarkę",
   "Anyone who opens this link gets the relay URL and room code set automatically. Works in the browser too: no install required for the joiner.":
     "U każdej osoby, która otworzy ten link, adres URL przekaźnika i kod pokoju zostaną ustawione automatycznie. Działa również w przeglądarce, osoba dołączająca nie musi niczego instalować.",
-  "Anyone with the link can open this collection once your Harbor server is live.":
-    "Gdy Twój serwer Harbor będzie działać, każda osoba mająca link będzie mogła otworzyć tę kolekcję.",
+  "Anyone with the link can open this collection once your Lart server is live.":
+    "Gdy Twój serwer Lart będzie działać, każda osoba mająca link będzie mogła otworzyć tę kolekcję.",
   "Anything matching your Custom calendar: tracked people, genres, providers, countries.":
     "Wszystko, co pasuje do Twojego kalendarza niestandardowego: obserwowane osoby, gatunki, dostawcy i kraje.",
   "Anything you install here saves to your Stremio account, so your addons are ready when you open Stremio on your phone.":
     "Wszystko, co tutaj zainstalujesz, zostanie zapisane na Twoim koncie Stremio, dzięki czemu dodatki będą gotowe po otwarciu Stremio na telefonie.",
-  "Anything you install in Harbor pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
-    "Wszystko, co zainstalujesz w Harbor, zostanie przesłane na Twoje konto Stremio, dzięki czemu pojawi się również na urządzeniach mobilnych. Zaloguj się za pomocą awatara w lewym dolnym rogu paska bocznego.",
-  "Anywhere in Harbor.": "W dowolnym miejscu w Harbor.",
+  "Anything you install in Lart pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
+    "Wszystko, co zainstalujesz w Lart, zostanie przesłane na Twoje konto Stremio, dzięki czemu pojawi się również na urządzeniach mobilnych. Zaloguj się za pomocą awatara w lewym dolnym rogu paska bocznego.",
+  "Anywhere in Lart.": "W dowolnym miejscu w Lart.",
   App: "Aplikacja",
   "App icon": "Ikona aplikacji",
   "App logo": "Logo aplikacji",
@@ -144,7 +144,7 @@ const catalog02: Record<string, string> = {
   "Ask if you're still watching": "Pytaj, czy nadal oglądasz",
   "Ask to resume or start over": "Pytaj, czy wznowić, czy zacząć od początku",
   "Asking AI…": "Pytanie do AI…",
-  "Asking that Harbor to show a code": "Prośba do tego urządzenia Harbor o wyświetlenie kodu",
+  "Asking that Lart to show a code": "Prośba do tego urządzenia Lart o wyświetlenie kodu",
   "Asks first: carry on, or start over.": "Najpierw pyta: kontynuować czy zacząć od początku.",
   Aspect: "Proporcje obrazu",
   "Aspect ratio": "Proporcje obrazu",
@@ -176,10 +176,10 @@ const catalog02: Record<string, string> = {
   Australia: "Australia",
   Author: "Autor",
   "Author account": "Konto autora",
-  "Authorize Harbor on AniList": "Autoryzuj Harbor w AniList",
-  "Authorize Harbor on MyAnimeList": "Autoryzuj Harbor w MyAnimeList",
-  "Authorize Harbor on Simkl": "Autoryzuj Harbor w Simkl",
-  "Authorize Harbor on Trakt": "Autoryzuj Harbor w Trakt",
+  "Authorize Lart on AniList": "Autoryzuj Lart w AniList",
+  "Authorize Lart on MyAnimeList": "Autoryzuj Lart w MyAnimeList",
+  "Authorize Lart on Simkl": "Autoryzuj Lart w Simkl",
+  "Authorize Lart on Trakt": "Autoryzuj Lart w Trakt",
   Authorized: "Autoryzowano",
   "Authorized on this device": "Autoryzowano na tym urządzeniu",
   "Authorized {when}": "Autoryzowano {when}",
@@ -198,7 +198,7 @@ const catalog02: Record<string, string> = {
   "Auto-apply audio-derived sync fixes":
     "Automatycznie stosuj korekty synchronizacji wyznaczone na podstawie dźwięku",
   "Auto-confirm peer-to-peer streaming": "Automatycznie potwierdzaj strumieniowanie peer-to-peer",
-  "Auto-deploy from Harbor": "Automatyczne wdrażanie z Harbor",
+  "Auto-deploy from Lart": "Automatyczne wdrażanie z Lart",
   "Auto-download": "Automatyczne pobieranie",
   "Auto-downloading new episodes": "Automatyczne pobieranie nowych odcinków",
   "Auto-hide the Skip button after": "Automatycznie ukryj przycisk Pomiń po",
@@ -267,8 +267,8 @@ const catalog02: Record<string, string> = {
   "Back on TMDB, click your avatar in the top right and choose Settings from the menu.":
     "Wróć do TMDB, kliknij swój awatar w prawym górnym rogu i wybierz z menu Settings.",
   "Back on display": "Wstecz na ekranie",
-  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Harbor. Harbor saves it on its own.":
-    "Na stronie API przewiń na sam dół. Skopiuj wartość w polu API Key i wklej ją do Harbor. Harbor zapisze ją automatycznie.",
+  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Lart. Lart saves it on its own.":
+    "Na stronie API przewiń na sam dół. Skopiuj wartość w polu API Key i wklej ją do Lart. Lart zapisze ją automatycznie.",
   "Back out mid-episode and the card keeps the exact frame you stopped on, with your progress, so it looks like a pause instead of a thumbnail.":
     "Jeśli wyjdziesz w trakcie odcinka, karta zachowa dokładną klatkę, na której odtwarzanie zostało przerwane, wraz z postępem, dzięki czemu wygląda jak pauza, a nie miniatura.",
   "Back to Discover": "Wróć do odkrywania",
@@ -281,7 +281,7 @@ const catalog02: Record<string, string> = {
   "Back to home": "Powrót do strony głównej",
   "Back to library": "Wróć do biblioteki",
   "Back to lists": "Wróć do list",
-  "Back to relay": "Wróć do Harbor Relay",
+  "Back to relay": "Wróć do Lart Relay",
   "Back to remote": "Wróć do pilota",
   "Back to results": "Wróć do wyników",
   "Back to sign in": "Wróć do logowania",
@@ -395,8 +395,8 @@ const catalog02: Record<string, string> = {
   "Between meetings": "Między spotkaniami",
   "Beyond Hollywood": "Poza Hollywood",
   "Beyond the kids' shelf": "Nie tylko dla dzieci",
-  "Big Picture closes. Harbor keeps running behind it.":
-    "Tryb Big Picture zostanie zamknięty. Harbor nadal będzie działać w tle.",
+  "Big Picture closes. Lart keeps running behind it.":
+    "Tryb Big Picture zostanie zamknięty. Lart nadal będzie działać w tle.",
   "Big Swings": "Odważne przedsięwzięcia",
   "Bigger buffer for slow connections": "Większy bufor przy wolnych połączeniach",
   Bingeing: "Oglądanie bez przerwy",
@@ -464,8 +464,8 @@ const catalog02: Record<string, string> = {
   "Both Sides of the Law": "Po obu stronach prawa",
   "Both devices need to be on the same Wi-Fi network, and some guest networks block devices from seeing each other.":
     "Oba urządzenia muszą być połączone z tą samą siecią Wi-Fi. Niektóre sieci dla gości uniemożliwiają urządzeniom wzajemne wykrywanie.",
-  "Both go in the boxes above. Harbor builds the URL for you.":
-    "Obie wartości wpisz w polach powyżej. Harbor utworzy adres URL za Ciebie.",
+  "Both go in the boxes above. Lart builds the URL for you.":
+    "Obie wartości wpisz w polach powyżej. Lart utworzy adres URL za Ciebie.",
   "Both serif and body text should stay legible at this dim.":
     "Zarówno tekst szeryfowy, jak i tekst główny powinny pozostać czytelne przy takim przyciemnieniu.",
   Bottom: "Dół",
@@ -496,10 +496,10 @@ const catalog02: Record<string, string> = {
   "Bring in your Stremio library": "Zaimportuj bibliotekę Stremio",
   "Bring in your library": "Zaimportuj swoją bibliotekę",
   "Bring the Tissues": "Przygotuj chusteczki",
-  "Bring trusted source packages aboard through Harbor’s isolated extension worker.":
-    "Dodawaj zaufane pakiety źródeł za pośrednictwem izolowanego procesu roboczego rozszerzeń Harbor.",
-  "Bring your Letterboxd watchlist, diary, liked films and lists into Harbor via the Stremboxd bridge.":
-    "Przenieś listę do obejrzenia, dziennik, polubione filmy i listy z Letterboxd do Harbor za pośrednictwem mostu Stremboxd.",
+  "Bring trusted source packages aboard through Lart’s isolated extension worker.":
+    "Dodawaj zaufane pakiety źródeł za pośrednictwem izolowanego procesu roboczego rozszerzeń Lart.",
+  "Bring your Letterboxd watchlist, diary, liked films and lists into Lart via the Stremboxd bridge.":
+    "Przenieś listę do obejrzenia, dziennik, polubione filmy i listy z Letterboxd do Lart za pośrednictwem mostu Stremboxd.",
   "Bring your lists with you": "Zabierz swoje listy ze sobą",
   "Bring your own": "Dodaj własne",
   "Bring your own avatars into the library.": "Dodaj własne awatary do biblioteki.",
@@ -583,7 +583,7 @@ const catalog02: Record<string, string> = {
   "Building tonight's queue…": "Tworzenie kolejki na dzisiejszy wieczór…",
   "Building your voyage": "Przygotowywanie rejsu",
   "Built for desktop resolutions": "Zaprojektowano dla rozdzielczości komputerowych",
-  "Built into Harbor": "Wbudowane w Harbor",
+  "Built into Lart": "Wbudowane w Lart",
   "Built on Stremio": "Oparte na Stremio",
   "Built-in peer-to-peer streaming, served from your own machine.":
     "Wbudowane strumieniowanie peer-to-peer obsługiwane z tego urządzenia.",
@@ -591,8 +591,8 @@ const catalog02: Record<string, string> = {
     "Przesyłanie zbiorcze nie jest jeszcze dostępne, wysyłana jest jedna ocena na sekundę.",
   "Bullet Ballet": "Balet kul",
   "Bumpers (LB / RB)": "Bumpery (LB / RB)",
-  "Bundled with Harbor. Plays anything you throw at it.":
-    "Dołączony do Harbor. Odtworzy wszystko, co mu podasz.",
+  "Bundled with Lart. Plays anything you throw at it.":
+    "Dołączony do Lart. Odtworzy wszystko, co mu podasz.",
   "Burn in subtitles": "Wtop napisy",
   Button: "Przycisk",
   "Button map": "Mapowanie przycisków",
@@ -625,8 +625,8 @@ const catalog02: Record<string, string> = {
   "Cached only ({n})": "Tylko w pamięci podręcznej ({n})",
   Caches: "Pamięci podręczne",
   Calendar: "Kalendarz",
-  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Harbor feature, so your chrome never goes stale when Harbor adds menu items.":
-    "Wywołuj je z procedur obsługi onclick lub kodu JS motywu. Są stabilne i bezpieczne: każda z nich steruje rzeczywistą funkcją Harbor, więc Twój interfejs pozostanie aktualny, gdy Harbor doda nowe elementy menu.",
+  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Lart feature, so your chrome never goes stale when Lart adds menu items.":
+    "Wywołuj je z procedur obsługi onclick lub kodu JS motywu. Są stabilne i bezpieczne: każda z nich steruje rzeczywistą funkcją Lart, więc Twój interfejs pozostanie aktualny, gdy Lart doda nowe elementy menu.",
   "Cam-quality picture with audio plugged into the projector or a separate recorder. Sound is clean, but the image is still a theater capture. Better than CAM, far below a real release.":
     "Obraz jakości CAM z dźwiękiem pozyskanym z projektora lub oddzielnego rejestratora. Dźwięk jest czysty, ale obraz nadal pochodzi z nagrania kinowego. Lepsza jakość niż CAM, lecz znacznie gorsza od oficjalnego wydania.",
   "Camcorder rip": "Rip z kamery",
@@ -649,8 +649,8 @@ const catalog02: Record<string, string> = {
   Cannes: "Cannes",
   "Canvas height": "Wysokość obszaru roboczego",
   "Canvas unavailable.": "Obszar roboczy jest niedostępny.",
-  "Cap how much disk the cache can use. When it goes over, Harbor deletes the oldest files first. Enforced on launch and as streams close.":
-    "Ogranicz ilość miejsca na dysku, jaką może zajmować pamięć podręczna. Po przekroczeniu limitu Harbor najpierw usuwa najstarsze pliki. Limit jest egzekwowany przy uruchomieniu i zamykaniu strumieni.",
+  "Cap how much disk the cache can use. When it goes over, Lart deletes the oldest files first. Enforced on launch and as streams close.":
+    "Ogranicz ilość miejsca na dysku, jaką może zajmować pamięć podręczna. Po przekroczeniu limitu Lart najpierw usuwa najstarsze pliki. Limit jest egzekwowany przy uruchomieniu i zamykaniu strumieni.",
   "Caps file size. Unknown sizes still pass.":
     "Ogranicza rozmiar pliku. Pliki o nieznanym rozmiarze nadal spełniają warunek.",
   "Captions in your language": "Napisy w wybranym języku",
@@ -681,7 +681,7 @@ const catalog02: Record<string, string> = {
   Catalogs: "Katalogi",
   "Catalogs & metadata": "Katalogi i metadane",
   "Catalogs to show": "Katalogi do wyświetlenia",
-  "Catch stremio:// install links inside Harbor": "Obsługuj łącza instalacyjne stremio:// w Harbor",
+  "Catch stremio:// install links inside Lart": "Obsługuj łącza instalacyjne stremio:// w Lart",
   Categories: "Kategorie",
   Cause: "Przyczyna",
   "Celebrated actors": "Nagradzani aktorzy",

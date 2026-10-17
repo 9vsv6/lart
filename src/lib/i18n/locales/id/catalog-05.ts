@@ -8,8 +8,8 @@ const catalog: Record<string, string> = {
   Inspector: "Inspektur",
   Install: "Instal",
   "Install Media Assistant": "Instal Asisten Media",
-  "Install SVP once (the free tier is enough). It bundles VapourSynth + svpflow; Harbor reuses them, no extra setup.":
-    "Instal SVP satu kali (versi gratis sudah cukup). SVP menyertakan VapourSynth + svpflow; Harbor akan menggunakannya kembali, tanpa penyiapan tambahan.",
+  "Install SVP once (the free tier is enough). It bundles VapourSynth + svpflow; Lart reuses them, no extra setup.":
+    "Instal SVP satu kali (versi gratis sudah cukup). SVP menyertakan VapourSynth + svpflow; Lart akan menggunakannya kembali, tanpa penyiapan tambahan.",
   "Install a Stremio addon and its catalogs show up here as poster rails, ready to browse.":
     "Instal addon Stremio dan katalognya akan muncul di sini sebagai deretan poster yang siap dijelajahi.",
   "Install a pack": "Instal paket",
@@ -33,10 +33,10 @@ const catalog: Record<string, string> = {
   "Install wrangler and authenticate:": "Instal wrangler dan lakukan autentikasi:",
   Installed: "Terinstal",
   "Installed addons": "Addon terinstal",
-  "Installed and detected. Harbor found its interpolation engine and will drive it directly.":
-    "Terinstal dan terdeteksi. Harbor menemukan mesin interpolasinya dan akan mengendalikannya secara langsung.",
-  "Installed and detected. Harbor found the native svpflow plugins and VapourSynth script library.":
-    "Terinstal dan terdeteksi. Harbor menemukan plugin svpflow native dan perpustakaan skrip VapourSynth.",
+  "Installed and detected. Lart found its interpolation engine and will drive it directly.":
+    "Terinstal dan terdeteksi. Lart menemukan mesin interpolasinya dan akan mengendalikannya secara langsung.",
+  "Installed and detected. Lart found the native svpflow plugins and VapourSynth script library.":
+    "Terinstal dan terdeteksi. Lart menemukan plugin svpflow native dan perpustakaan skrip VapourSynth.",
   "Installed locally": "Terinstal secara lokal",
   "Installed packs": "Paket terinstal",
   "Installed shaders": "Shader terinstal",
@@ -49,7 +49,7 @@ const catalog: Record<string, string> = {
     "Menginstal dan mengurutkan addon di TV. Daftar addon sudah ikut tersinkron dengan akun Anda, jadi instal di sini dan TV akan menerapkannya.",
   "Installing {name}": "Menginstal {name}",
   "Installing {title}": "Menginstal {title}",
-  "Installing. Harbor will restart.": "Sedang menginstal. Harbor akan dimulai ulang.",
+  "Installing. Lart will restart.": "Sedang menginstal. Lart akan dimulai ulang.",
   "Installing...": "Menginstal...",
   "Installing…": "Menginstal…",
   Instant: "Instan",
@@ -146,7 +146,7 @@ const catalog: Record<string, string> = {
   "Jina API key (optional)": "Kunci API Jina (opsional)",
   "Jina Reader": "Jina Reader",
   Join: "Bergabung",
-  "Join Harbor": "Bergabung dengan Harbor",
+  "Join Lart": "Bergabung dengan Lart",
   "Join group": "Bergabung dengan grup",
   "Join the same network your TV is on, not the guest one.":
     "Sambungkan ke jaringan yang sama dengan TV Anda, bukan jaringan tamu.",
@@ -192,14 +192,14 @@ const catalog: Record<string, string> = {
   "Keep Continue Watching private to each profile":
     "Jaga privasi Lanjutkan Menonton untuk setiap profil",
   "Keep Dolby Vision, HDR10, HLG. Drop SDR.": "Pertahankan Dolby Vision, HDR10, HLG. Hapus SDR.",
-  "Keep Harbor a click away. Close it to the system tray instead of quitting, and control it from the tray menu. These also mirror into the tray menu live.":
-    "Agar Harbor selalu mudah diakses, tutup ke baki sistem alih-alih keluar, lalu kontrol dari menu baki. Pengaturan ini juga langsung dicerminkan di menu baki.",
+  "Keep Lart a click away. Close it to the system tray instead of quitting, and control it from the tray menu. These also mirror into the tray menu live.":
+    "Agar Lart selalu mudah diakses, tutup ke baki sistem alih-alih keluar, lalu kontrol dari menu baki. Pengaturan ini juga langsung dicerminkan di menu baki.",
   "Keep Watching": "Lanjutkan Menonton",
   "Keep anime in the Anime room only": "Batasi anime hanya di ruang Anime",
   "Keep anyway": "Tetap pertahankan",
   "Keep at most": "Simpan paling banyak",
   "Keep cached files for": "Simpan file cache selama",
-  "Keep controlling Harbor in the background": "Tetap kontrol Harbor di latar belakang",
+  "Keep controlling Lart in the background": "Tetap kontrol Lart di latar belakang",
   "Keep downloading after you leave": "Lanjutkan mengunduh setelah Anda keluar",
   "Keep editing": "Lanjutkan mengedit",
   "Keep frames for": "Simpan frame selama",
@@ -213,8 +213,8 @@ const catalog: Record<string, string> = {
   "Keep picking": "Lanjutkan memilih",
   "Keep same source on next episode": "Gunakan sumber yang sama pada episode berikutnya",
   "Keep setting up": "Lanjutkan penyiapan",
-  "Keep the Harbor window above other windows.":
-    "Jaga agar jendela Harbor tetap di atas jendela lain.",
+  "Keep the Lart window above other windows.":
+    "Jaga agar jendela Lart tetap di atas jendela lain.",
   "Keep the Library Watchlist tab limited to titles you added in Stremio. Turn this off to also include anything Stremio auto-added when you pressed play.":
     "Batasi tab Daftar Tontonan di Perpustakaan hanya untuk judul yang Anda tambahkan di Stremio. Nonaktifkan ini agar judul yang otomatis ditambahkan Stremio saat Anda menekan putar juga disertakan.",
   "Keep the clock on screen when the player is not fullscreen.":
@@ -231,18 +231,18 @@ const catalog: Record<string, string> = {
   "Keep watching": "Lanjutkan menonton",
   "Keep your local time visible during fullscreen playback and choose how it looks.":
     "Tetap tampilkan waktu lokal Anda selama pemutaran layar penuh dan pilih tampilannya.",
-  "Keeping Harbor's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Harbor stays funded at the same time.":
-    "Menjaga backend Harbor tetap online membutuhkan biaya nyata, dan ElfHosted menanggungnya agar komunitas tidak perlu membayar. Menjadi pelanggan adalah cara terbaik untuk mendukung keberlanjutannya, dan ini bukan donasi. Anda mendapatkan infrastruktur yang layak untuk penyiapan sendiri, sekaligus membantu Harbor tetap didanai.",
-  "Keeps HDR inside Harbor with the controls floating above the video. Subtitles render on the video. If the control bar does not appear, press Esc or use separate window.":
-    "Mempertahankan HDR di dalam Harbor dengan kontrol mengambang di atas video. Subtitle dirender pada video. Jika bilah kontrol tidak muncul, tekan Esc atau gunakan jendela terpisah.",
-  "Keeps Harbor embedded but lifts the HDR video onto its own opaque plane with the controls floating above, so Windows shows true HDR without the brightness slider dimming it. Needs HDR-to-SDR tonemapping off.":
-    "Mempertahankan Harbor tetap tersemat, tetapi menempatkan video HDR pada bidang buram tersendiri dengan kontrol mengambang di atasnya, sehingga Windows menampilkan HDR asli tanpa diredupkan oleh penggeser kecerahan. Tonemapping HDR-ke-SDR harus dinonaktifkan.",
+  "Keeping Lart's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Lart stays funded at the same time.":
+    "Menjaga backend Lart tetap online membutuhkan biaya nyata, dan ElfHosted menanggungnya agar komunitas tidak perlu membayar. Menjadi pelanggan adalah cara terbaik untuk mendukung keberlanjutannya, dan ini bukan donasi. Anda mendapatkan infrastruktur yang layak untuk penyiapan sendiri, sekaligus membantu Lart tetap didanai.",
+  "Keeps HDR inside Lart with the controls floating above the video. Subtitles render on the video. If the control bar does not appear, press Esc or use separate window.":
+    "Mempertahankan HDR di dalam Lart dengan kontrol mengambang di atas video. Subtitle dirender pada video. Jika bilah kontrol tidak muncul, tekan Esc atau gunakan jendela terpisah.",
+  "Keeps Lart embedded but lifts the HDR video onto its own opaque plane with the controls floating above, so Windows shows true HDR without the brightness slider dimming it. Needs HDR-to-SDR tonemapping off.":
+    "Mempertahankan Lart tetap tersemat, tetapi menempatkan video HDR pada bidang buram tersendiri dengan kontrol mengambang di atasnya, sehingga Windows menampilkan HDR asli tanpa diredupkan oleh penggeser kecerahan. Tonemapping HDR-ke-SDR harus dinonaktifkan.",
   "Keeps fetching the full torrent in the background, even when paused, so you can pre-buffer big remuxes and scrub a finished file with no re-downloading. Uses more bandwidth and disk; cleaned up when you switch or close like normal.":
     "Terus mengambil torrent lengkap di latar belakang, bahkan saat dijeda, sehingga Anda dapat melakukan pra-buffer pada remux besar dan menelusuri file yang sudah selesai tanpa mengunduh ulang. Menggunakan lebih banyak bandwidth dan ruang disk; dibersihkan seperti biasa saat Anda beralih atau menutup.",
   "Keeps the malware/year/episode-mismatch checks but allows season packs and oversized files. Same as hitting Search wider in the picker.":
     "Tetap menjalankan pemeriksaan malware/tahun/ketidakcocokan episode, tetapi mengizinkan paket musim dan file berukuran sangat besar. Sama seperti menekan Cari lebih luas di pemilih.",
-  "Keeps the web's memory alive. Harbor would be poorer without it.":
-    "Menjaga ingatan web tetap hidup. Harbor akan lebih miskin tanpanya.",
+  "Keeps the web's memory alive. Lart would be poorer without it.":
+    "Menjaga ingatan web tetap hidup. Lart akan lebih miskin tanpanya.",
   "Keeps watching through playback and gently re-nudges the timing if the subtitle slips out of sync partway through.":
     "Terus memantau selama pemutaran dan menyesuaikan ulang waktu secara perlahan jika subtitle tidak sinkron di tengah jalan.",
   "Kept. Your TV gets your account when you continue.":
@@ -313,10 +313,10 @@ const catalog: Record<string, string> = {
   "Latest chapter": "Bab terbaru",
   "Latest chapters": "Bab terbaru",
   "Laugh Out Loud": "Tertawa Terbahak-bahak",
-  "Launch straight into Big Picture when Harbor starts":
-    "Langsung buka Big Picture saat Harbor dimulai",
-  "Launch straight into Big Picture when Harbor starts. Press Esc at any time to leave.":
-    "Langsung buka Big Picture saat Harbor dimulai. Tekan Esc kapan saja untuk keluar.",
+  "Launch straight into Big Picture when Lart starts":
+    "Langsung buka Big Picture saat Lart dimulai",
+  "Launch straight into Big Picture when Lart starts. Press Esc at any time to leave.":
+    "Langsung buka Big Picture saat Lart dimulai. Tekan Esc kapan saja untuk keluar.",
   Layout: "Tata letak",
   "Layout editor": "Editor tata letak",
   "Layout name": "Nama tata letak",
@@ -336,8 +336,8 @@ const catalog: Record<string, string> = {
   "Leave Big Picture": "Keluar dari Big Picture",
   "Leave Big Picture and open settings": "Keluar dari Big Picture dan buka Pengaturan",
   "Leave a comment. No links.": "Tulis komentar. Tanpa tautan.",
-  "Leave blank to use Harbor's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.":
-    "Kosongkan untuk menggunakan server komunitas Harbor. Masukkan URL untuk menggunakan server Anda sendiri. Mode privat di bawah akan menghentikan semua koneksi dalam kedua kasus.",
+  "Leave blank to use Lart's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.":
+    "Kosongkan untuk menggunakan server komunitas Lart. Masukkan URL untuk menggunakan server Anda sendiri. Mode privat di bawah akan menghentikan semua koneksi dalam kedua kasus.",
   "Leave empty to use your RPDB key above. Or paste":
     "Kosongkan untuk menggunakan kunci RPDB Anda di atas. Atau tempel",
   "Leave everything below it alone. Scroll down, click {b1}, then {b2}. Copy the long string it shows you (you only see it once) and bring it back here.":
@@ -350,15 +350,15 @@ const catalog: Record<string, string> = {
     "Biarkan episode yang sedang Anda tonton tetap jelas dan buramkan hanya episode setelahnya.",
   "Leave the show?": "Keluar dari acara?",
   "Leave the video": "Keluar dari video",
-  "Leave this blank to use Harbor's own community server, or enter the address of a server you run yourself.":
-    "Kosongkan untuk menggunakan server komunitas Harbor, atau masukkan alamat server yang Anda jalankan sendiri.",
+  "Leave this blank to use Lart's own community server, or enter the address of a server you run yourself.":
+    "Kosongkan untuk menggunakan server komunitas Lart, atau masukkan alamat server yang Anda jalankan sendiri.",
   "Leave what you're watching?": "Berhenti menonton?",
   "Leave without saving?": "Keluar tanpa menyimpan?",
   Left: "Kiri",
   "Left edge": "Tepi kiri",
   "Left to right": "Kiri ke kanan",
-  "Leftover installers from past updates, cached trailers, and casting scratch files. Harbor clears old ones on launch, keeping only the most recent installer.":
-    "Penginstal sisa pembaruan sebelumnya, trailer yang tersimpan di cache, dan file sementara casting. Harbor menghapus file lama saat dimulai dan hanya menyimpan penginstal terbaru.",
+  "Leftover installers from past updates, cached trailers, and casting scratch files. Lart clears old ones on launch, keeping only the most recent installer.":
+    "Penginstal sisa pembaruan sebelumnya, trailer yang tersimpan di cache, dan file sementara casting. Lart menghapus file lama saat dimulai dan hanya menyimpan penginstal terbaru.",
   Legal: "Hukum",
   "Legally enforce it": "Tegakkan secara hukum",
   Length: "Durasi",
@@ -369,8 +369,8 @@ const catalog: Record<string, string> = {
   "Let the TV keep its own theme": "Biarkan TV menggunakan temanya sendiri",
   "Let your Discord friends see what you are watching, with the show poster and a live progress bar.":
     "Biarkan teman Discord Anda melihat apa yang sedang Anda tonton, lengkap dengan poster tayangan dan bilah progres langsung.",
-  "Let your Discord friends see what you are watching, with the show poster and a live progress bar. Desktop only, and only your own Discord client is involved (nothing touches a Harbor server).":
-    "Biarkan teman Discord Anda melihat apa yang sedang Anda tonton, lengkap dengan poster tayangan dan bilah progres langsung. Khusus desktop, dan hanya melibatkan klien Discord Anda sendiri (tidak ada yang terhubung ke server Harbor).",
+  "Let your Discord friends see what you are watching, with the show poster and a live progress bar. Desktop only, and only your own Discord client is involved (nothing touches a Lart server).":
+    "Biarkan teman Discord Anda melihat apa yang sedang Anda tonton, lengkap dengan poster tayangan dan bilah progres langsung. Khusus desktop, dan hanya melibatkan klien Discord Anda sendiri (tidak ada yang terhubung ke server Lart).",
   "Let your full page background show without the top cover.":
     "Tampilkan latar belakang halaman penuh tanpa sampul atas.",
   "Let your graphics card do the heavy lifting of decoding video. It saves battery and keeps the CPU cool. Auto is right for almost everyone; only switch if playback looks wrong or won't start.":
@@ -430,7 +430,7 @@ const catalog: Record<string, string> = {
   "Link copied": "Tautan disalin",
   "Linked as {username}": "Ditautkan sebagai {username}",
   "Linked to a real Stremio account.": "Ditautkan ke akun Stremio asli.",
-  "Linked to your Harbor account.": "Ditautkan ke akun Harbor Anda.",
+  "Linked to your Lart account.": "Ditautkan ke akun Lart Anda.",
   "Links are not allowed in comments": "Tautan tidak diizinkan dalam komentar",
   "Links open in a new tab automatically.": "Tautan otomatis dibuka di tab baru.",
   "Liquid Glass": "Kaca Cair",
@@ -447,7 +447,7 @@ const catalog: Record<string, string> = {
     "Koleksi yang dicantumkan akan muncul di penelusuran komunitas saat fitur tersebut diluncurkan.",
   Listen: "Dengarkan",
   Listening: "Sedang mendengarkan",
-  "Listening for Harbors": "Mencari Harbor",
+  "Listening for Harbors": "Mencari Lart",
   "Listening…": "Mendengarkan…",
   Lists: "Daftar",
   Literary: "Sastra",
@@ -467,13 +467,13 @@ const catalog: Record<string, string> = {
   "Live action": "Aksi langsung",
   "Live channel": "Saluran langsung",
   "Live controller preview": "Pratinjau pengontrol langsung",
-  "Live face scanning loads on-device AI models and can significantly increase RAM, CPU, and GPU usage while playback is active. Turn it off if Harbor slows down or your device gets hot.":
-    "Pemindaian wajah langsung memuat model AI di perangkat dan dapat meningkatkan penggunaan RAM, CPU, dan GPU secara signifikan selama pemutaran aktif. Nonaktifkan jika Harbor melambat atau perangkat Anda menjadi panas.",
+  "Live face scanning loads on-device AI models and can significantly increase RAM, CPU, and GPU usage while playback is active. Turn it off if Lart slows down or your device gets hot.":
+    "Pemindaian wajah langsung memuat model AI di perangkat dan dapat meningkatkan penggunaan RAM, CPU, dan GPU secara signifikan selama pemutaran aktif. Nonaktifkan jika Lart melambat atau perangkat Anda menjadi panas.",
   "Live for everyone": "Tayang untuk semua orang",
   "Live preview": "Pratinjau langsung",
   "Live preview is on. Done and Save both keep what you've picked as your Custom theme. Reset reverts the editor to the saved palette.":
     "Pratinjau langsung aktif. Selesai dan Simpan sama-sama mempertahankan pilihan Anda sebagai tema Kustom. Atur ulang mengembalikan editor ke palet tersimpan.",
-  "Live state of Harbor's own P2P engine on this machine.": "Status langsung mesin P2P milik Harbor di perangkat ini.",
+  "Live state of Lart's own P2P engine on this machine.": "Status langsung mesin P2P milik Lart di perangkat ini.",
   "Live streams that actually work.": "Stream langsung yang benar-benar berfungsi.",
   "Live sync": "Sinkronisasi langsung",
   "Live web": "Web langsung",
@@ -607,8 +607,8 @@ const catalog: Record<string, string> = {
     "Lihat TV Anda. Kode baru sudah ditampilkan. Pindai kode tersebut.",
   "Look offline to others": "Tampil offline bagi orang lain",
   'Looking for "{q}"': 'Mencari "{q}"',
-  "Looking for Harbor in your browser, the phone remote, or the manga reader remote? They moved to the Remotes page.":
-    "Mencari Harbor di browser, remote ponsel, atau remote pembaca manga? Semuanya dipindahkan ke halaman Remote.",
+  "Looking for Lart in your browser, the phone remote, or the manga reader remote? They moved to the Remotes page.":
+    "Mencari Lart di browser, remote ponsel, atau remote pembaca manga? Semuanya dipindahkan ke halaman Remote.",
   "Looking for peers…": "Mencari peer…",
   "Looking for sources": "Mencari sumber",
   "Looking for sources…": "Mencari sumber…",
@@ -665,10 +665,10 @@ const catalog: Record<string, string> = {
   "Main Char": "Karakter utama",
   "Main subtitle line": "Baris subtitle utama",
   Maintenance: "Pemeliharaan",
-  "Make Harbor yours: swap the sidebar logo and the window/taskbar icon.":
-    "Jadikan Harbor milik Anda: ganti logo bilah samping serta ikon jendela/bilah tugas.",
-  "Make Harbor's interface larger.": "Perbesar antarmuka Harbor.",
-  "Make Harbor's interface smaller.": "Perkecil antarmuka Harbor.",
+  "Make Lart yours: swap the sidebar logo and the window/taskbar icon.":
+    "Jadikan Lart milik Anda: ganti logo bilah samping serta ikon jendela/bilah tugas.",
+  "Make Lart's interface larger.": "Perbesar antarmuka Lart.",
+  "Make Lart's interface smaller.": "Perkecil antarmuka Lart.",
   "Make an award pack": "Buat paket penghargaan",
   "Make decisions on their behalf": "Ambil keputusan atas nama mereka",
   "Make everything bigger and easier to read: sidebar, menus, popups, every page.":
@@ -694,8 +694,8 @@ const catalog: Record<string, string> = {
   "Manage addon": "Kelola addon",
   "Manage connection": "Kelola koneksi",
   "Manage eBook sources": "Kelola sumber eBook",
-  "Manage every place Harbor can read from, whether it lives on disk or across the web.":
-    "Kelola semua lokasi yang dapat dibaca Harbor, baik di disk maupun di web.",
+  "Manage every place Lart can read from, whether it lives on disk or across the web.":
+    "Kelola semua lokasi yang dapat dibaca Lart, baik di disk maupun di web.",
   "Manage members and posts": "Kelola anggota dan postingan",
   "Manage profiles": "Kelola profil",
   "Manage recording": "Kelola rekaman",
@@ -707,8 +707,8 @@ const catalog: Record<string, string> = {
   Manga: "Manga",
   "Manga adaptation": "Adaptasi manga",
   "Manga browse cache": "Cache penelusuran manga",
-  "Manga cannot be matched to a Harbor title yet, so {n} were left out.":
-    "Manga belum dapat dicocokkan dengan judul Harbor, jadi {n} tidak disertakan.",
+  "Manga cannot be matched to a Lart title yet, so {n} were left out.":
+    "Manga belum dapat dicocokkan dengan judul Lart, jadi {n} tidak disertakan.",
   "Manga reader remote": "Remote pembaca manga",
   "Manga sources": "Sumber manga",
   "Manic Heart": "Manic Heart",
@@ -756,7 +756,7 @@ const catalog: Record<string, string> = {
   Matched: "Cocok",
   "Matching moments": "Momen yang cocok",
   "Matching the details": "Mencocokkan detail",
-  "Matching titles to Harbor": "Mencocokkan judul dengan Harbor",
+  "Matching titles to Lart": "Mencocokkan judul dengan Lart",
   Max: "Maks",
   "Max badges per card": "Maks badge per kartu",
   "Max scores per card": "Maks skor per kartu",
@@ -893,8 +893,8 @@ const catalog: Record<string, string> = {
   "Motion smoothing": "Penghalusan gerakan",
   "Mouse tracker": "Pelacak mouse",
   Move: "Pindahkan",
-  "Move Harbor by dragging any empty space on a page, not just the top bar. Leave this off to keep clicks inside pages from nudging the window.":
-    "Pindahkan Harbor dengan menyeret area kosong mana pun di halaman, bukan hanya bilah atas. Nonaktifkan ini agar klik di dalam halaman tidak menggeser jendela.",
+  "Move Lart by dragging any empty space on a page, not just the top bar. Leave this off to keep clicks inside pages from nudging the window.":
+    "Pindahkan Lart dengan menyeret area kosong mana pun di halaman, bukan hanya bilah atas. Nonaktifkan ini agar klik di dalam halaman tidak menggeser jendela.",
   "Move Refresh next to Back": "Pindahkan Segarkan ke sebelah Kembali",
   "Move all to account": "Pindahkan semua ke akun",
   "Move down": "Pindahkan ke bawah",
@@ -914,8 +914,8 @@ const catalog: Record<string, string> = {
   "Moved {name} to position {n} of {total}": "{name} dipindahkan ke posisi {n} dari {total}",
   "Moved {n} addons to your Stremio account. They now sync everywhere you sign in.":
     "{n} addon dipindahkan ke akun Stremio Anda. Sekarang addon tersebut disinkronkan di semua tempat Anda masuk.",
-  "Moved, but Harbor couldn't confirm the result. Reload to see the current state.":
-    "Berhasil dipindahkan, tetapi Harbor tidak dapat mengonfirmasi hasilnya. Muat ulang untuk melihat status saat ini.",
+  "Moved, but Lart couldn't confirm the result. Reload to see the current state.":
+    "Berhasil dipindahkan, tetapi Lart tidak dapat mengonfirmasi hasilnya. Muat ulang untuk melihat status saat ini.",
   "Moves: {moves}": "Langkah: {moves}",
   Movie: "Film",
   "Movie Magic": "Keajaiban Film",

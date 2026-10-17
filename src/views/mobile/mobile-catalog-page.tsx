@@ -210,7 +210,7 @@ function ErrorState({ onRetry }: { onRetry: () => void }) {
           {t("Couldn't load this catalog")}
         </h2>
         <p className="max-w-xs text-[13.5px] leading-relaxed text-ink-muted">
-          {t("Harbor couldn't reach the catalog servers. Check your connection and try again.")}
+          {t("Lart couldn't reach the catalog servers. Check your connection and try again.")}
         </p>
       </div>
       <button

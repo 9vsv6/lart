@@ -37,7 +37,7 @@ export default {
   "games.recommend.retrySome": "Thử lại các liên kết chưa tải",
   "games.recommend.saveError": "Không thể lưu tùy chọn khám phá trên thiết bị này. Hãy thử lại.",
   "games.recommend.influences": "Yếu tố định hình gợi ý",
-  "games.recommend.influencesNote": "Chọn trò chơi Harbor dùng làm cơ sở. Thư viện của bạn không thay đổi.",
+  "games.recommend.influencesNote": "Chọn trò chơi Lart dùng làm cơ sở. Thư viện của bạn không thay đổi.",
   "games.recommend.exclude": "Ngừng dùng {name}",
   "games.recommend.excluded": "Cơ sở đã loại trừ ({count})",
   "games.recommend.useAgain": "Dùng lại {name}",

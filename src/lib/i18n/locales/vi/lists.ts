@@ -11,8 +11,8 @@ const lists: Record<string, string> = {
   "Keep typing, or paste the full list URL.": "Tiếp tục nhập hoặc dán URL đầy đủ của danh sách.",
   "Paste a Trakt, MDBList, TMDB, Letterboxd, IMDb, or MAL list URL":
     "Dán URL danh sách Trakt, MDBList, TMDB, Letterboxd, IMDb hoặc MAL",
-  "Paste a public list from Trakt, MDBList, TMDB, Letterboxd, IMDb, or MyAnimeList. Harbor pulls the titles in and keeps the artwork sharp.":
-    "Dán danh sách công khai từ Trakt, MDBList, TMDB, Letterboxd, IMDb hoặc MyAnimeList. Harbor sẽ nhập các tựa phim và giữ hình ảnh sắc nét.",
+  "Paste a public list from Trakt, MDBList, TMDB, Letterboxd, IMDb, or MyAnimeList. Lart pulls the titles in and keeps the artwork sharp.":
+    "Dán danh sách công khai từ Trakt, MDBList, TMDB, Letterboxd, IMDb hoặc MyAnimeList. Lart sẽ nhập các tựa phim và giữ hình ảnh sắc nét.",
   "Every saga in one place. Search anything: if it exists, it's here.":
     "Mọi loạt phim trong một nơi. Tìm bất cứ nội dung nào: nếu có, bạn sẽ thấy ở đây.",
   "Search every collection on TMDB...": "Tìm kiếm mọi bộ sưu tập trên TMDB...",

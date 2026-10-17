@@ -1,9 +1,9 @@
 export default {
   "Search shortcuts": "Lối tắt tìm kiếm",
   "Steam search shortcut": "Lối tắt tìm kiếm Steam",
-  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Harbor search for these queries.": "Nhập “st ” hoặc “st:” để tìm trong cửa hàng Steam. Tắt để dùng tìm kiếm Harbor thông thường cho các truy vấn này.",
+  "Type “st ” or “st:” to search the Steam store. Turn off to use normal Lart search for these queries.": "Nhập “st ” hoặc “st:” để tìm trong cửa hàng Steam. Tắt để dùng tìm kiếm Lart thông thường cho các truy vấn này.",
   "games.storeSearch.title": "Cửa hàng Steam",
-  "games.storeSearch.hint": "Dùng “st ” trong tìm kiếm Harbor để tìm trực tiếp trên Steam.",
+  "games.storeSearch.hint": "Dùng “st ” trong tìm kiếm Lart để tìm trực tiếp trên Steam.",
   "games.storeSearch.automatic": "Tự động",
   "games.storeSearch.region": "Khu vực cửa hàng",
   "games.storeSearch.showLibrary": "Đánh dấu trò chơi đã có trong thư viện",

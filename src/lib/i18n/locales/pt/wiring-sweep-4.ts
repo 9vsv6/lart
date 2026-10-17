@@ -15,10 +15,10 @@ const wiringSweep4: Record<string, string> = {
   "No PiP session. Closing.": "Nenhuma sessão PiP. Fechando.",
   "Failed to read session: {message}": "Falha ao ler a sessão: {message}",
   "Subtitle {number}": "Legenda {number}",
-  "Harbor Relay Documentation": "Documentação do Harbor Relay",
-  "Harbor Relay docs": "Documentação do Harbor Relay",
-  "Harbor test message ({service}). If you can read this, your webhook is wired up.":
-    "Mensagem de teste do Harbor ({service}). Se você consegue ler isto, seu webhook está configurado.",
+  "Lart Relay Documentation": "Documentação do Lart Relay",
+  "Lart Relay docs": "Documentação do Lart Relay",
+  "Lart test message ({service}). If you can read this, your webhook is wired up.":
+    "Mensagem de teste do Lart ({service}). Se você consegue ler isto, seu webhook está configurado.",
   "Use a TTF, OTF, WOFF or WOFF2 file.": "Use um arquivo TTF, OTF, WOFF ou WOFF2.",
   "That font is over 32 MB. Try a lighter file.":
     "Essa fonte tem mais de 32 MB. Tente usar um arquivo menor.",
@@ -28,7 +28,7 @@ const wiringSweep4: Record<string, string> = {
   "Browsing the theme library": "Navegando pela biblioteca de temas",
   "This theme is missing a color ({color}).": "Falta uma cor neste tema ({color}).",
   "This file isn't a readable theme.": "Este arquivo não contém um tema legível.",
-  "This file isn't a Harbor theme.": "Este arquivo não é um tema do Harbor.",
+  "This file isn't a Lart theme.": "Este arquivo não é um tema do Lart.",
   "Theme is missing a name.": "Falta um nome para o tema.",
   "This theme's preview colors look invalid.":
     "As cores de pré-visualização deste tema parecem inválidas.",
@@ -69,10 +69,10 @@ const wiringSweep4: Record<string, string> = {
   "+15s": "+15s",
   "Connecting to": "Conectando a",
   "Paused on": "Pausado em",
-  "Harbor queried 1 addon and got nothing back":
-    "O Harbor consultou 1 addon e não obteve nenhum resultado",
-  "Harbor queried {n} addons and got nothing back":
-    "O Harbor consultou {n} addons e não obteve nenhum resultado",
+  "Lart queried 1 addon and got nothing back":
+    "O Lart consultou 1 addon e não obteve nenhum resultado",
+  "Lart queried {n} addons and got nothing back":
+    "O Lart consultou {n} addons e não obteve nenhum resultado",
   "Tried IDs: {ids}": "IDs testados: {ids}",
   " · +{n} more": " · +{n} a mais",
   "sketchy files": "arquivos suspeitos",
@@ -90,10 +90,10 @@ const wiringSweep4: Record<string, string> = {
   "wrong movie": "filme incorreto",
   "1 source · 0 made it through": "1 fonte · 0 passou pelos filtros",
   "{n} sources · 0 made it through": "{n} fontes · 0 passaram pelos filtros",
-  "Harbor blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
-    "Por padrão, o Harbor bloqueia arquivos suspeitos e lançamentos incompatíveis. Para séries antigas e títulos incomuns, às vezes esse filtro é rigoroso demais.",
-  "No clean release has surfaced yet. This may be too new. Harbor's filters dropped everything that came back as wrong-movie noise.":
-    "Ainda não apareceu nenhum lançamento confiável. Talvez seja novo demais. Os filtros do Harbor descartaram todos os resultados por não corresponderem ao filme.",
+  "Lart blocks suspicious files and mismatched releases by default. For older shows and unusual titles this is sometimes too tight.":
+    "Por padrão, o Lart bloqueia arquivos suspeitos e lançamentos incompatíveis. Para séries antigas e títulos incomuns, às vezes esse filtro é rigoroso demais.",
+  "No clean release has surfaced yet. This may be too new. Lart's filters dropped everything that came back as wrong-movie noise.":
+    "Ainda não apareceu nenhum lançamento confiável. Talvez seja novo demais. Os filtros do Lart descartaram todos os resultados por não corresponderem ao filme.",
   "Create a custom filter": "Criar um filtro personalizado",
   Remux: "Remux",
   Debrid: "Debrid",
@@ -202,17 +202,17 @@ const wiringSweep4: Record<string, string> = {
     "{title} bloqueia a incorporação fora do próprio site.",
   "That's a normal security setting. Use the button below to open it in your browser instead.":
     "Isso é uma configuração de segurança normal. Use o botão abaixo para abrir no seu navegador.",
-  "You're leaving Harbor": "Você está saindo do Harbor",
-  "This link goes to an external site that Harbor does not control or vouch for. Triple-check the address before you continue, and never enter your Harbor password anywhere but Harbor.":
-    "Este link leva a um site externo que o Harbor não controla nem endossa. Confira o endereço três vezes antes de continuar e nunca digite sua senha do Harbor fora do Harbor.",
+  "You're leaving Lart": "Você está saindo do Lart",
+  "This link goes to an external site that Lart does not control or vouch for. Triple-check the address before you continue, and never enter your Lart password anywhere but Lart.":
+    "Este link leva a um site externo que o Lart não controla nem endossa. Confira o endereço três vezes antes de continuar e nunca digite sua senha do Lart fora do Lart.",
   Destination: "Destino",
   "Only continue if you fully trust this link": "Só continue se confiar plenamente neste link",
-  "Harbor can open only HTTP or HTTPS destinations.":
-    "O Harbor só pode abrir destinos HTTP ou HTTPS.",
-  "Harbor cannot open links that include embedded credentials.":
-    "O Harbor não pode abrir links com credenciais incorporadas.",
-  "Harbor could not verify this destination.": "O Harbor não conseguiu verificar este destino.",
-  "Harbor's temporary viewer requires HTTPS.": "O visualizador temporário do Harbor exige HTTPS.",
+  "Lart can open only HTTP or HTTPS destinations.":
+    "O Lart só pode abrir destinos HTTP ou HTTPS.",
+  "Lart cannot open links that include embedded credentials.":
+    "O Lart não pode abrir links com credenciais incorporadas.",
+  "Lart could not verify this destination.": "O Lart não conseguiu verificar este destino.",
+  "Lart's temporary viewer requires HTTPS.": "O visualizador temporário do Lart exige HTTPS.",
   "Source mode": "Modo de fonte",
   "Use debrid/addon sources and fall back to peer-to-peer":
     "Usar fontes de debrid/complementos e recorrer a P2P se necessário",
@@ -229,8 +229,8 @@ const wiringSweep4: Record<string, string> = {
     "Seu servidor remoto de streaming não está acessível. Verifique o endereço nas Configurações.",
   "No playable video file was found in this torrent.":
     "Nenhum arquivo de vídeo reproduzível foi encontrado neste torrent.",
-  "Direct torrent play needs the Harbor desktop app.":
-    "A reprodução direta de torrents exige o aplicativo Harbor para desktop.",
+  "Direct torrent play needs the Lart desktop app.":
+    "A reprodução direta de torrents exige o aplicativo Lart para desktop.",
   "The streaming engine is still starting up. Give it a moment and press Play again.":
     "O mecanismo de streaming ainda está iniciando. Aguarde um momento e pressione Reproduzir novamente.",
   "Could not find any peers for this torrent yet. It may be dead or very low on seeders.":
@@ -263,22 +263,22 @@ const wiringSweep4: Record<string, string> = {
   "A local folder": "Uma pasta local",
   "Advanced: build a plugin": "Avançado: criar um plugin",
   "Also Known As": "Também conhecido como",
-  "Back in Harbor: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
-    "De volta ao Harbor, acesse Mangá > Configurar uma fonte > Seu servidor e cole o endereço do servidor (por exemplo, {localUrl}, ou o IP da rede local se ele estiver em outro dispositivo, como {lanUrl}).",
+  "Back in Lart: Manga > Set up a source > Your server, and paste your server address (for example {localUrl}, or your LAN IP if it runs on another machine, e.g. {lanUrl}).":
+    "De volta ao Lart, acesse Mangá > Configurar uma fonte > Seu servidor e cole o endereço do servidor (por exemplo, {localUrl}, ou o IP da rede local se ele estiver em outro dispositivo, como {lanUrl}).",
   "Controller preview": "Pré-visualização do controle",
   "Couldn't save that font. It may be invalid, or storage is full.":
     "Não foi possível salvar essa fonte. Ela pode ser inválida ou o armazenamento pode estar cheio.",
   "Download and run Suwayomi Server:": "Baixe e execute o Suwayomi Server:",
-  "Every source you enable in Suwayomi then shows up in Harbor. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
-    "Todas as fontes ativadas no Suwayomi aparecem no Harbor. O Suwayomi mantém as extensões atualizadas quando um site muda, para que elas continuem funcionando.",
+  "Every source you enable in Suwayomi then shows up in Lart. Suwayomi keeps its extensions updated when a site changes, so they keep working.":
+    "Todas as fontes ativadas no Suwayomi aparecem no Lart. O Suwayomi mantém as extensões atualizadas quando um site muda, para que elas continuem funcionando.",
   "Everything else, through your own server (Suwayomi)":
     "Todo o resto, por meio do seu próprio servidor (Suwayomi)",
   "Expand {title} image": "Ampliar imagem de {title}",
-  "Getting manga sources into Harbor": "Como adicionar fontes de mangá ao Harbor",
-  "Harbor also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Harbor repository. Only install plugins from repositories you trust.":
-    "O Harbor também tem um ambiente experimental para plugins. Se quiser criar um plugin de fonte, consulte {path} no repositório do Harbor. Instale apenas plugins de repositórios confiáveis.",
-  "Harbor ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Harbor. There are two ways to add sources.":
-    "O Harbor não inclui mangás nem scrapers. Ele é um leitor. Você fornece as fontes, e o conteúdo delas pertence a quem as administra, não ao Harbor. Há duas formas de adicionar fontes.",
+  "Getting manga sources into Lart": "Como adicionar fontes de mangá ao Lart",
+  "Lart also has an experimental plugin runtime. If you want to write a source plugin, see {path} in the Lart repository. Only install plugins from repositories you trust.":
+    "O Lart também tem um ambiente experimental para plugins. Se quiser criar um plugin de fonte, consulte {path} no repositório do Lart. Instale apenas plugins de repositórios confiáveis.",
+  "Lart ships no manga and no scrapers. It is a reader. You bring the sources, and what those sources contain belongs to whoever runs them, not to Lart. There are two ways to add sources.":
+    "O Lart não inclui mangás nem scrapers. Ele é um leitor. Você fornece as fontes, e o conteúdo delas pertence a quem as administra, não ao Lart. Há duas formas de adicionar fontes.",
   "Import failed": "Falha na importação",
   "It serves a web UI at {url}": "Ele disponibiliza uma interface web em {url}",
   "Manga > Set up a source > Local folder, and choose a folder of manga you already own (CBZ files or folders of images).":
@@ -313,8 +313,8 @@ const wiringSweep4: Record<string, string> = {
   "Unhandled promise rejection.": "Rejeição de promessa não tratada.",
   "User-Agent: {agent}": "User-Agent: {agent}",
   "Version: {version}": "Versão: {version}",
-  "Open the signed-in user's own Harbor profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
-    "Abra imediatamente o perfil do próprio usuário conectado no Harbor quando o identificador dele estiver carregado. Retorna verdadeiro quando a navegação começa e falso caso contrário.",
+  "Open the signed-in user's own Lart profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.":
+    "Abra imediatamente o perfil do próprio usuário conectado no Lart quando o identificador dele estiver carregado. Retorna verdadeiro quando a navegação começa e falso caso contrário.",
   "AI search failed.": "Falha na busca por IA.",
   "Add a debrid provider in Settings first.":
     "Primeiro, adicione um provedor de debrid nas Configurações.",
@@ -327,9 +327,9 @@ const wiringSweep4: Record<string, string> = {
     "Não foi possível preparar esta fonte P2P. Talvez não haja peers acessíveis. Tente novamente ou escolha outra fonte.",
   "Direct torrent streaming is turned off. Turn it on in Settings > P2P & servers to stream torrents without a debrid.":
     "A transmissão direta de torrents está desativada. Ative-a em Configurações > P2P e servidores para transmitir torrents sem debrid.",
-  "Harbor could not open your browser.": "O Harbor não conseguiu abrir o navegador.",
-  "Harbor's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
-    "O mecanismo peer-to-peer do Harbor está iniciando. Isso se resolve sozinho em alguns segundos; depois, a reprodução funcionará.",
+  "Lart could not open your browser.": "O Lart não conseguiu abrir o navegador.",
+  "Lart's peer-to-peer engine is warming up. This clears on its own in a few seconds, then Play works.":
+    "O mecanismo peer-to-peer do Lart está iniciando. Isso se resolve sozinho em alguns segundos; depois, a reprodução funcionará.",
   Minus: "Menos",
   "None of your debrid services could deliver a working file. Pick another stream.":
     "Nenhum dos seus serviços de debrid conseguiu fornecer um arquivo válido. Escolha outro stream.",
@@ -357,8 +357,8 @@ const wiringSweep4: Record<string, string> = {
     "Este é um arquivo NZB bruto. Ele precisa ser baixado primeiro com o SABnzbd ou o NZBGet para depois ser reproduzido.",
   "This source isn't ready on your debrid yet. Try it again in a moment or pick another.":
     "Esta fonte ainda não está pronta no seu serviço de debrid. Tente novamente em instantes ou escolha outra.",
-  "This source only opens in an external browser, not in Harbor's player.":
-    "Esta fonte só pode ser aberta em um navegador externo, não no player do Harbor.",
+  "This source only opens in an external browser, not in Lart's player.":
+    "Esta fonte só pode ser aberta em um navegador externo, não no player do Lart.",
   "This stream has no playable source.": "Este stream não tem uma fonte reproduzível.",
   "This stream isn't cached on your debrid yet. Try a different one from the list.":
     "Este stream ainda não está em cache no seu serviço de debrid. Tente outro da lista.",
@@ -373,16 +373,16 @@ const wiringSweep4: Record<string, string> = {
     "A chave do seu serviço de debrid foi rejeitada. Verifique-a nas Configurações.",
   "Your debrid served a placeholder/error video instead of the real file. Pick another stream.":
     "Seu serviço de debrid forneceu um vídeo de espaço reservado ou de erro em vez do arquivo real. Escolha outro stream.",
-  "Your debrid service doesn't support queueing torrents from Harbor yet.":
-    "Seu serviço de debrid ainda não permite enfileirar torrents pelo Harbor.",
+  "Your debrid service doesn't support queueing torrents from Lart yet.":
+    "Seu serviço de debrid ainda não permite enfileirar torrents pelo Lart.",
   "Your debrid subscription has expired.": "A assinatura do seu serviço de debrid expirou.",
   "Your debrid took too long to respond. Hit Play again, or try another stream.":
     "Seu serviço de debrid demorou demais para responder. Pressione Reproduzir novamente ou tente outro stream.",
   "Your {name} subscription looks expired.": "Sua assinatura do {name} parece ter expirado.",
   "{name} is over its traffic or fair-use limit right now.":
     "O {name} atingiu o limite de tráfego ou de uso justo no momento.",
-  "{name} is rate-limiting Harbor right now.":
-    "O {name} está limitando a frequência das solicitações do Harbor no momento.",
+  "{name} is rate-limiting Lart right now.":
+    "O {name} está limitando a frequência das solicitações do Lart no momento.",
   "{name} is temporarily unavailable (server error).":
     "O {name} está temporariamente indisponível (erro do servidor).",
   "{name} rejected your API key.": "O {name} rejeitou sua chave de API.",
@@ -415,8 +415,8 @@ const wiringSweep4: Record<string, string> = {
   "Connect Jellyfin, Emby, or Plex in Streaming sources.":
     "Conecte o Jellyfin, Emby ou Plex em Fontes de streaming.",
   "Connect and sync": "Conectar e sincronizar",
-  "Connect books you own, reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "Conecte livros que você possui, fontes de leitura e serviços de metadados. O Harbor mantém a estante organizada, enquanto cada fonte continua sob seu controle.",
+  "Connect books you own, reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "Conecte livros que você possui, fontes de leitura e serviços de metadados. O Lart mantém a estante organizada, enquanto cada fonte continua sob seu controle.",
   "Connect home server": "Conectar servidor doméstico",
   "Connect now": "Conectar agora",
   "Connect server": "Conectar servidor",
@@ -428,18 +428,18 @@ const wiringSweep4: Record<string, string> = {
   Disable: "Desativar",
   "Download media": "Baixar mídia",
   "Download selected ({n})": "Baixar selecionados ({n})",
-  "Edge voices need the Harbor desktop app. Reading with the device voice.":
-    "As vozes do Edge exigem o aplicativo Harbor para desktop. Lendo com a voz do dispositivo.",
+  "Edge voices need the Lart desktop app. Reading with the device voice.":
+    "As vozes do Edge exigem o aplicativo Lart para desktop. Lendo com a voz do dispositivo.",
   "Edit home server": "Editar servidor doméstico",
   Enrichment: "Enriquecimento",
   "Every…": "A cada…",
   "Featured book": "Livro em destaque",
-  "Harbor does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Harbor open it.":
-    "O Harbor não hospeda livros. Abra uma pasta neste dispositivo, instale uma extensão de fonte ou conecte seu próprio servidor. Os metadados podem descrever um livro, mas é a fonte que permite ao Harbor abri-lo.",
-  "Harbor opens Plex in your browser. Your Plex password is never entered in Harbor.":
-    "O Harbor abre o Plex no navegador. Sua senha do Plex nunca é inserida no Harbor.",
-  "Harbor tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
-    "O Harbor tenta HTTP, HTTPS, proxies reversos e a porta padrão do provedor. As credenciais são armazenadas separadamente.",
+  "Lart does not host any books. Open a folder on this device, install a source extension, or connect your own server. Metadata can describe a book, but a source is what lets Lart open it.":
+    "O Lart não hospeda livros. Abra uma pasta neste dispositivo, instale uma extensão de fonte ou conecte seu próprio servidor. Os metadados podem descrever um livro, mas é a fonte que permite ao Lart abri-lo.",
+  "Lart opens Plex in your browser. Your Plex password is never entered in Lart.":
+    "O Lart abre o Plex no navegador. Sua senha do Plex nunca é inserida no Lart.",
+  "Lart tries HTTP, HTTPS, reverse proxies, and the provider’s default port. Credentials are stored separately.":
+    "O Lart tenta HTTP, HTTPS, proxies reversos e a porta padrão do provedor. As credenciais são armazenadas separadamente.",
   "Home server": "Servidor doméstico",
   "Home server quality": "Qualidade do servidor doméstico",
   "Home servers": "Servidores domésticos",
@@ -465,7 +465,7 @@ const wiringSweep4: Record<string, string> = {
   "Prefer this device": "Preferir este dispositivo",
   "Preferred home server": "Servidor doméstico preferido",
   "Preparing narration audio": "Preparando o áudio da narração",
-  "Read eBooks in Harbor": "Leia livros digitais no Harbor",
+  "Read eBooks in Lart": "Leia livros digitais no Lart",
   "Refresh interval in days": "Intervalo de atualização em dias",
   "Refresh policy": "Política de atualização",
   "Remove folder?": "Remover pasta?",

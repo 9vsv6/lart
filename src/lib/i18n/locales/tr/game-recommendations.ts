@@ -37,7 +37,7 @@ export default {
   "games.recommend.retrySome": "Eksik bağlantıları yeniden dene",
   "games.recommend.saveError": "Keşif tercihlerin bu cihaza kaydedilemedi. Yeniden dene.",
   "games.recommend.influences": "Önerilerini şekillendiren oyunlar",
-  "games.recommend.influencesNote": "Harbor'ın hangi oyunları kullanacağını seç. Kütüphanen değişmez.",
+  "games.recommend.influencesNote": "Lart'ın hangi oyunları kullanacağını seç. Kütüphanen değişmez.",
   "games.recommend.exclude": "{name} oyununu kullanmayı bırak",
   "games.recommend.excluded": "Hariç tutulan etkiler ({count})",
   "games.recommend.useAgain": "{name} oyununu yeniden kullan",

@@ -1,12 +1,12 @@
 const musicCast: Record<string, string> = {
   "music.cast.title": "Speaker jaringan",
-  "music.cast.body": "Pastikan speaker aktif dan berada di jaringan yang sama dengan Harbor.",
+  "music.cast.body": "Pastikan speaker aktif dan berada di jaringan yang sama dengan Lart.",
   "music.cast.discover": "Cari speaker",
   "music.cast.discovering": "Mencari speaker…",
   "music.cast.empty": "Tidak ditemukan speaker yang kompatibel. Periksa jaringan dan cari lagi.",
   "music.cast.compatibility":
-    "Dukungan Sonos dan Marantz bergantung pada model. Harbor menggunakan DLNA atau Chromecast; AirPlay 2 tidak didukung.",
-  "music.cast.airplay": "Audio AirPlay 2 tidak didukung di Harbor.",
+    "Dukungan Sonos dan Marantz bergantung pada model. Lart menggunakan DLNA atau Chromecast; AirPlay 2 tidak didukung.",
+  "music.cast.airplay": "Audio AirPlay 2 tidak didukung di Lart.",
   "music.cast.unsupportedDevice": "Protokol perangkat ini tidak didukung untuk Musik.",
   "music.cast.invalidDevice": "Detail perangkat tidak lengkap. Cari lagi.",
   "music.cast.noTrack": "Pilih lagu sebelum mengirimnya ke speaker.",
@@ -16,11 +16,11 @@ const musicCast: Record<string, string> = {
   "music.cast.discoveryFailed": "Pencarian speaker gagal. Periksa jaringan Anda dan coba lagi.",
   "music.cast.controlFailed":
     "Speaker tidak mengonfirmasi perintah. Periksa speaker dan coba lagi.",
-  "music.cast.desktop": "Gunakan aplikasi desktop Harbor untuk mencari speaker jaringan.",
+  "music.cast.desktop": "Gunakan aplikasi desktop Lart untuk mencari speaker jaringan.",
   "music.cast.spotify":
     "Audio Spotify yang dilindungi tidak dapat dikirim dengan cara ini. Gunakan Spotify Connect di Spotify.",
   "music.cast.local":
-    "Harbor belum dapat membagikan berkas lokal ke speaker. Pilih sumber audio daring.",
+    "Lart belum dapat membagikan berkas lokal ke speaker. Pilih sumber audio daring.",
   "music.cast.unsupportedStream":
     "Sumber ini tidak menyediakan aliran audio yang didukung. Pilih sumber lain.",
   "music.cast.disconnected":
@@ -29,7 +29,7 @@ const musicCast: Record<string, string> = {
   "music.cast.stop": "Hentikan casting",
   "music.cast.selected": "Dipilih",
   "music.cast.eqHelp":
-    "EQ dan gain Harbor hanya memengaruhi komputer ini. Atur volume pada speaker.",
+    "EQ dan gain Lart hanya memengaruhi komputer ini. Atur volume pada speaker.",
   "music.cast.loading": "Menghubungkan ke speaker…",
   "music.cast.playing": "Diputar di speaker",
   "music.cast.paused": "Dijeda di speaker",

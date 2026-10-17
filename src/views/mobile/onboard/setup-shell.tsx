@@ -18,7 +18,7 @@ export type SetupChrome = {
   idleHost?: boolean;
   stepIndex: number;
   stepCount: number;
-  /** Pieces of Harbor's mark this run has earned, 0 to BOAT_PARTS. */
+  /** Pieces of Lart's mark this run has earned, 0 to BOAT_PARTS. */
   built: number;
 };
 
@@ -53,7 +53,7 @@ export function SetupShell({
           <span className="flex min-w-0 items-center gap-2">
             <HarborMark className="h-[15px] w-[15px] shrink-0 text-ink" />
             <span className="truncate text-[15px] font-bold tracking-[-0.01em] text-ink">
-              {t("Set up Harbor")}
+              {t("Set up Lart")}
             </span>
           </span>
           {stepCount > 1 && (

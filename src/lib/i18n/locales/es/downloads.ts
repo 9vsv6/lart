@@ -27,8 +27,8 @@ const downloads: Record<string, string> = {
   "No video files found in that folder.": "No se encontraron archivos de video en esa carpeta.",
   "Open any movie or show, hover an episode, and click the download icon. Pick the exact source you want and it saves here for offline watching.":
     "Abre cualquier película o serie, coloca el cursor sobre un episodio y haz clic en el ícono de descarga. Elige la fuente exacta que quieras y se guardará aquí para verla sin conexión.",
-  "Point Harbor at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
-    "Indica una carpeta a Harbor. La analizamos para buscar películas y series, interpretamos los títulos a partir de los nombres de archivo y los enriquecemos con TMDB para que se vean como todo lo demás. Solo recordamos la ruta; no se copia ni mueve nada.",
+  "Point Lart at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
+    "Indica una carpeta a Lart. La analizamos para buscar películas y series, interpretamos los títulos a partir de los nombres de archivo y los enriquecemos con TMDB para que se vean como todo lo demás. Solo recordamos la ruta; no se copia ni mueve nada.",
   "Reset to default folder": "Restablecer carpeta predeterminada",
   "Retry download": "Reintentar descarga",
   "Saved movies and episodes for offline watching":

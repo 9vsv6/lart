@@ -257,7 +257,7 @@ export default {
   "games.gw2.partial": "Beberapa detail item tidak tersedia. Harga hadiah tetap disertakan.",
   "games.gw2.guide": "Panduan brankas",
   "games.gw2.checked": "Diperiksa {date}",
-  "games.gw2.scope": "Disimpan di profil Harbor ini. Setiap pilihan menghitung satu penawaran; saldo, batas pembelian, dan akses ekspansi Anda tidak diperiksa. Pastikan ketersediaannya lalu beli di dalam gim.",
+  "games.gw2.scope": "Disimpan di profil Lart ini. Setiap pilihan menghitung satu penawaran; saldo, batas pembelian, dan akses ekspansi Anda tidak diperiksa. Pastikan ketersediaannya lalu beli di dalam gim.",
   "games.gw2.total": "Total rencana",
   "games.gw2.currency": "Astral Acclaim",
   "games.gw2.selected": "{count} penawaran dipilih",

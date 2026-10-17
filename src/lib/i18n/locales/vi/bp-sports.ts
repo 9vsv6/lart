@@ -16,8 +16,8 @@ const bpSports: Record<string, string> = {
   "Following {name}": "Đang theo dõi {name}",
   "Game finished": "Trận đấu đã kết thúc",
   "Grand Prix weekend": "Cuối tuần Grand Prix",
-  "Harbor couldn't reach the sports servers. Check the connection and open the event again.":
-    "Harbor không kết nối được với máy chủ thể thao. Hãy kiểm tra kết nối rồi mở lại sự kiện.",
+  "Lart couldn't reach the sports servers. Check the connection and open the event again.":
+    "Lart không kết nối được với máy chủ thể thao. Hãy kiểm tra kết nối rồi mở lại sự kiện.",
   "Hide bench": "Ẩn dự bị",
   "Hot right now": "Đang nóng nhất",
   "If the broadcast asks you to sign in or confirm your age, open it in a browser.":
@@ -39,8 +39,8 @@ const bpSports: Record<string, string> = {
     "Chưa có tiện ích bổ sung nào đã cài đặt cung cấp danh mục thể thao.",
   "No matching addon listing yet. Browse every addon channel to look for the broadcast.":
     "Chưa có mục nào khớp từ tiện ích bổ sung. Hãy duyệt toàn bộ kênh của tiện ích bổ sung để tìm buổi phát.",
-  "No playlists yet. Add one in Live TV and Harbor will match its channels to fixtures.":
-    "Chưa có danh sách phát nào. Hãy thêm một danh sách trong TV trực tiếp, Harbor sẽ khớp các kênh trong đó với các trận đấu.",
+  "No playlists yet. Add one in Live TV and Lart will match its channels to fixtures.":
+    "Chưa có danh sách phát nào. Hãy thêm một danh sách trong TV trực tiếp, Lart sẽ khớp các kênh trong đó với các trận đấu.",
   "No venue page published": "Chưa có trang giới thiệu địa điểm",
   "None of your channels match this fixture. Search your channels and pin the one that carries it.":
     "Không có kênh nào của bạn khớp với trận đấu này. Hãy tìm trong các kênh và ghim kênh có phát trận này.",

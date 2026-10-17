@@ -23,16 +23,16 @@ const catalog01: Record<string, string> = {
     "빠른 커뮤니티 자막 색인입니다. 기본적으로 꺼져 있으며, 최신작이나 비주류 작품의 검색 범위를 넓히려면 켜세요.",
   "A favorite title or one of your themes will appear here":
     "즐겨찾는 작품이나 테마 중 하나가 여기에 표시됩니다",
-  "A filter applies everywhere Harbor picks a stream: the source picker, the instant pick, and Big Picture on TV.":
-    "필터는 소스 선택, 즉시 선택, TV의 Big Picture 등 Harbor가 스트림을 선택하는 모든 곳에 적용됩니다.",
+  "A filter applies everywhere Lart picks a stream: the source picker, the instant pick, and Big Picture on TV.":
+    "필터는 소스 선택, 즉시 선택, TV의 Big Picture 등 Lart가 스트림을 선택하는 모든 곳에 적용됩니다.",
   "A folder you already have": "기존 폴더",
   "A free Cloudflare account.": "무료 Cloudflare 계정.",
-  "A free TMDB key is highly recommended. It unlocks the full Harbor experience. The rest are optional, and Cinemeta works out of the box without any.":
-    "무료 TMDB 키 사용을 적극 권장합니다. Harbor의 모든 기능을 이용할 수 있습니다. 나머지는 선택 사항이며 Cinemeta는 별도 설정 없이 작동합니다.",
-  "A full screen, couch friendly Harbor for TVs, handhelds and big monitors.":
-    "TV, 휴대용 기기, 대형 모니터에 적합한 Harbor의 전체 화면 모드입니다.",
-  "A good correction only has to be found once. Harbor can share verified fixes so the next person with the same file and subtitle gets an instant result. Records are keyed by salted fingerprints, never your files or anything personal.":
-    "좋은 보정값은 한 번만 찾으면 됩니다. Harbor는 검증된 수정값을 공유하여 다음에 같은 파일과 자막을 쓰는 사용자가 즉시 결과를 얻도록 할 수 있습니다. 기록은 솔트 처리된 지문을 기준으로 하며, 파일이나 개인 정보는 절대 사용하지 않습니다.",
+  "A free TMDB key is highly recommended. It unlocks the full Lart experience. The rest are optional, and Cinemeta works out of the box without any.":
+    "무료 TMDB 키 사용을 적극 권장합니다. Lart의 모든 기능을 이용할 수 있습니다. 나머지는 선택 사항이며 Cinemeta는 별도 설정 없이 작동합니다.",
+  "A full screen, couch friendly Lart for TVs, handhelds and big monitors.":
+    "TV, 휴대용 기기, 대형 모니터에 적합한 Lart의 전체 화면 모드입니다.",
+  "A good correction only has to be found once. Lart can share verified fixes so the next person with the same file and subtitle gets an instant result. Records are keyed by salted fingerprints, never your files or anything personal.":
+    "좋은 보정값은 한 번만 찾으면 됩니다. Lart는 검증된 수정값을 공유하여 다음에 같은 파일과 자막을 쓰는 사용자가 즉시 결과를 얻도록 할 수 있습니다. 기록은 솔트 처리된 지문을 기준으로 하며, 파일이나 개인 정보는 절대 사용하지 않습니다.",
   "A grown-up can enter the parent PIN to keep watching.":
     "계속 시청하려면 보호자가 부모 PIN을 입력해야 합니다.",
   "A hero up top, then Top 10, Trending, In Theaters and your service rows.":
@@ -45,8 +45,8 @@ const catalog01: Record<string, string> = {
     "플레이어의 실시간 미리보기입니다. 편집기를 열어 컨트롤을 이동하거나 숨기거나 순서를 변경하세요.",
   "A living shelf for new worlds, beloved stories, and the books you have yet to meet.":
     "새로운 세계와 사랑하는 이야기, 아직 만나지 못한 책으로 채워지는 살아 있는 서재입니다.",
-  "A name people can find you by across Harbor.":
-    "Harbor 전체에서 다른 사람이 회원님을 찾을 때 사용할 이름입니다.",
+  "A name people can find you by across Lart.":
+    "Lart 전체에서 다른 사람이 회원님을 찾을 때 사용할 이름입니다.",
   "A name you keep watching": "계속 찾게 되는 이름",
   "A neural network that doubles luma resolution. The sharpest general-purpose upscaler, strong on both live action and anime. Pick one variant.":
     "휘도 해상도를 2배로 높이는 신경망입니다. 실사와 애니메이션 모두에 뛰어난 가장 선명한 범용 업스케일러입니다. 변형 하나를 선택하세요.",
@@ -69,14 +69,14 @@ const catalog01: Record<string, string> = {
   "A relay is a tiny Cloudflare Worker that passes play/pause/seek messages between you and your friends. No video data ever touches it. Deploy your own in one click (free tier is plenty), or paste a friend's invite link to use theirs.":
     "릴레이는 나와 친구 사이에서 재생, 일시 정지, 탐색 메시지를 전달하는 소형 Cloudflare Worker입니다. 동영상 데이터는 릴레이를 거치지 않습니다. 한 번의 클릭으로 직접 배포하거나(무료 요금제로 충분합니다) 친구의 초대 링크를 붙여 넣어 친구의 릴레이를 사용하세요.",
   "A relay we run. Nothing to set up, and it stays current on its own.":
-    "Harbor에서 운영하는 릴레이입니다. 별도 설정이 필요 없으며 자동으로 최신 상태를 유지합니다.",
+    "Lart에서 운영하는 릴레이입니다. 별도 설정이 필요 없으며 자동으로 최신 상태를 유지합니다.",
   "A remarkable book for your shelf": "서재에 어울리는 주목할 만한 책",
   "A richer glass treatment. May look better while using more graphics resources.":
     "더 풍부한 글래스 효과입니다. 그래픽 리소스를 더 사용하지만 더 보기 좋을 수 있습니다.",
   "A safe, simple space: kid-friendly titles, big art, one-tap play, and a watch-time limit.":
     "어린이에게 적합한 콘텐츠, 큰 이미지, 원터치 재생, 시청 시간 제한을 갖춘 안전하고 간편한 공간입니다.",
-  "A safety copy of your addon order. One is saved automatically before Harbor writes any change, and you can save one yourself any time. The five most recent are kept.":
-    "애드온 순서의 안전 백업본입니다. Harbor에서 변경 사항을 저장하기 전에 자동으로 하나가 생성되며, 언제든 직접 저장할 수도 있습니다. 최근 5개가 보관됩니다.",
+  "A safety copy of your addon order. One is saved automatically before Lart writes any change, and you can save one yourself any time. The five most recent are kept.":
+    "애드온 순서의 안전 백업본입니다. Lart에서 변경 사항을 저장하기 전에 자동으로 하나가 생성되며, 언제든 직접 저장할 수도 있습니다. 최근 5개가 보관됩니다.",
   "A second binding for the same action so muscle memory survives.":
     "익숙한 조작을 유지할 수 있도록 같은 동작에 두 번째 키를 지정합니다.",
   "A short line shown under the name.": "이름 아래에 표시되는 짧은 문구입니다.",
@@ -208,7 +208,7 @@ const catalog01: Record<string, string> = {
     "같이 보기 참여 중에는 방 링크가 연결된 참여 버튼을 추가합니다.",
   "Add a TMDB key above to unlock this.": "이 기능을 사용하려면 위에 TMDB 키를 추가하세요.",
   "Add a TMDB key above to unlock.": "잠금을 해제하려면 위에 TMDB 키를 추가하세요.",
-  "Add a TMDB key for the full Harbor": "Harbor 전체 기능을 이용하려면 TMDB 키를 추가하세요.",
+  "Add a TMDB key for the full Lart": "Lart 전체 기능을 이용하려면 TMDB 키를 추가하세요.",
   "Add a TMDB key in Library settings.": "라이브러리 설정에서 TMDB 키를 추가하세요.",
   "Add a TMDB key in Settings to browse collections.":
     "컬렉션을 둘러보려면 설정에서 TMDB 키를 추가하세요.",
@@ -260,8 +260,8 @@ const catalog01: Record<string, string> = {
     "다른 사람의 프로필을 추가하면 모두가 각자의 이어 보기, 시청 기록, 진행 상황을 유지할 수 있습니다.",
   "Add a repository": "저장소 추가",
   "Add a review": "리뷰 추가",
-  "Add a series above and Harbor will grab each new episode as it airs, on your terms.":
-    "위에서 시리즈를 추가하면 Harbor가 설정한 조건에 따라 새 에피소드가 방영될 때마다 자동으로 다운로드합니다.",
+  "Add a series above and Lart will grab each new episode as it airs, on your terms.":
+    "위에서 시리즈를 추가하면 Lart가 설정한 조건에 따라 새 에피소드가 방영될 때마다 자동으로 다운로드합니다.",
   "Add a series to auto-download": "자동 다운로드할 시리즈 추가",
   "Add a source": "소스 추가",
   "Add a tag": "태그 추가",
@@ -337,8 +337,8 @@ const catalog01: Record<string, string> = {
   "Add to watchlist": "관심 목록에 추가",
   "Add to your watchlist": "관심 목록에 추가",
   "Add to {name}": "{name}에 추가",
-  "Add trusted eBook sources from a Harbor-compatible repository.":
-    "Harbor 호환 저장소에서 신뢰할 수 있는 eBook 소스를 추가합니다.",
+  "Add trusted eBook sources from a Lart-compatible repository.":
+    "Lart 호환 저장소에서 신뢰할 수 있는 eBook 소스를 추가합니다.",
   "Add up to 6 screenshots so people can see your theme in action. Optional, but they sell it.":
     "스크린샷을 최대 6장 추가하여 테마가 적용된 모습을 보여 주세요. 선택 사항이지만 테마를 돋보이게 합니다.",
   "Add up to {max} profiles. Enter your handle only, not the full link.":
@@ -354,24 +354,24 @@ const catalog01: Record<string, string> = {
   "Add your social links": "소셜 링크 추가",
   "Add {label}": "{label} 추가",
   "Add {name}": "{name} 추가",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.":
-    "Harbor 관심 목록의 제목 {n}개를 Trakt에 추가할까요? Trakt에 이미 있는 제목은 건너뜁니다.",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#few":
-    "Harbor 관심 목록의 콘텐츠 {n}개를 Trakt에 추가할까요? Trakt에 이미 있는 콘텐츠는 건너뜁니다.#few",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#one":
-    "Harbor 관심 목록의 콘텐츠 {n}개를 Trakt에 추가할까요? Trakt에 이미 있는 콘텐츠는 건너뜁니다.#one",
-  "Add {n} titles from your Trakt watchlist to Harbor?":
-    "Trakt 관심 목록의 제목 {n}개를 Harbor에 추가할까요?",
-  "Add {n} titles from your Trakt watchlist to Harbor?#few":
-    "Trakt 관심 목록의 콘텐츠 {n}개를 Harbor에 추가할까요?#few",
-  "Add {n} titles from your Trakt watchlist to Harbor?#one":
-    "Trakt 관심 목록의 콘텐츠 {n}개를 Harbor에 추가할까요?#one",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.":
+    "Lart 관심 목록의 제목 {n}개를 Trakt에 추가할까요? Trakt에 이미 있는 제목은 건너뜁니다.",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#few":
+    "Lart 관심 목록의 콘텐츠 {n}개를 Trakt에 추가할까요? Trakt에 이미 있는 콘텐츠는 건너뜁니다.#few",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#one":
+    "Lart 관심 목록의 콘텐츠 {n}개를 Trakt에 추가할까요? Trakt에 이미 있는 콘텐츠는 건너뜁니다.#one",
+  "Add {n} titles from your Trakt watchlist to Lart?":
+    "Trakt 관심 목록의 제목 {n}개를 Lart에 추가할까요?",
+  "Add {n} titles from your Trakt watchlist to Lart?#few":
+    "Trakt 관심 목록의 콘텐츠 {n}개를 Lart에 추가할까요?#few",
+  "Add {n} titles from your Trakt watchlist to Lart?#one":
+    "Trakt 관심 목록의 콘텐츠 {n}개를 Lart에 추가할까요?#one",
   "Add {title} to AniList": "{title}을(를) AniList에 추가",
   "Add {title} to MyAnimeList": "{title}을(를) MyAnimeList에 추가",
   "Add {title} to Simkl": "{title}을(를) Simkl에 추가",
   Added: "추가됨",
   'Added to "{name}"': '"{name}"에 추가됨',
-  "Added to Harbor": "Harbor에 추가됨",
+  "Added to Lart": "Lart에 추가됨",
   "Added to My List": "내 리스트에 추가됨",
   "Added to Shelf": "서재에 추가됨",
   "Added to downloads": "다운로드에 추가됨",
@@ -380,7 +380,7 @@ const catalog01: Record<string, string> = {
   "Added to stremio-addons.net in the last 14 days": "최근 14일 이내 stremio-addons.net에 추가됨",
   "Added to {page}": "{page}에 추가됨",
   "Added {count} more subtitles.": "자막 {count}개를 더 추가했습니다.",
-  "Added {n} to your Harbor watchlist": "Harbor 관심 목록에 {n}개 추가됨",
+  "Added {n} to your Lart watchlist": "Lart 관심 목록에 {n}개 추가됨",
   Adding: "추가 중",
   Addon: "애드온",
   "Addon order": "애드온 순서",
@@ -396,8 +396,8 @@ const catalog01: Record<string, string> = {
   Addresses: "주소",
   "Adds Letterboxd and Trakt community ratings to detail pages, covering what OMDb misses.":
     "상세 페이지에 Letterboxd 및 Trakt 커뮤니티 평점을 추가하여 OMDb에서 누락된 항목을 보완합니다.",
-  "Adds a Big Picture button to Harbor's navigation. Turn this off to keep it out of the way.":
-    "Harbor 탐색 메뉴에 빅 픽처 버튼을 추가합니다. 방해되지 않게 하려면 끄세요.",
+  "Adds a Big Picture button to Lart's navigation. Turn this off to keep it out of the way.":
+    "Lart 탐색 메뉴에 빅 픽처 버튼을 추가합니다. 방해되지 않게 하려면 끄세요.",
   "Adds a Hide option when you right-click an episode. Hidden episodes disappear from the list and are skipped by Up Next. A Show hidden toggle on each show lets you bring them back.":
     "에피소드를 마우스 오른쪽 버튼으로 클릭하면 숨기기 옵션이 표시됩니다. 숨긴 에피소드는 목록에서 사라지고 다음 재생에서도 건너뜁니다. 각 프로그램의 숨긴 항목 표시 토글을 켜면 다시 볼 수 있습니다.",
   "Adds a Playlists item to the navigation for browsing movies and shows from your M3U or Xtream playlists (the same ones you add for Live TV). Off by default to keep the nav tidy.":
@@ -447,8 +447,8 @@ const catalog01: Record<string, string> = {
     "현재 시리즈의 에피소드가 끝나면 다음 항목이 대기열로 이어집니다. 끄면 다음/이전 항목이 현재 시리즈 내에서만 이동합니다.",
   "After the news": "뉴스가 끝난 뒤",
   "After the one playing ends": "현재 재생 중인 항목이 끝난 후",
-  "After you pick a source, show a subtitle picker so you can set the exact track and language before the video starts. Off by default, Harbor keeps picking one for you automatically.":
-    "소스를 선택한 후 자막 선택기를 표시하여 동영상 시작 전에 정확한 트랙과 언어를 설정할 수 있습니다. 기본적으로 꺼져 있으며, Harbor가 자동으로 자막을 선택합니다.",
+  "After you pick a source, show a subtitle picker so you can set the exact track and language before the video starts. Off by default, Lart keeps picking one for you automatically.":
+    "소스를 선택한 후 자막 선택기를 표시하여 동영상 시작 전에 정확한 트랙과 언어를 설정할 수 있습니다. 기본적으로 꺼져 있으며, Lart가 자동으로 자막을 선택합니다.",
   "After you stop watching, a stream file stays cached for this long so reopening resumes instead of re-downloading. Older files are cleaned up automatically. Off deletes the file as soon as you leave the player.":
     "시청을 중지한 후에도 스트림 파일이 이 기간 동안 캐시되어, 다시 열 때 재다운로드하지 않고 이어서 재생됩니다. 오래된 파일은 자동으로 정리됩니다. 끄면 플레이어를 종료하는 즉시 파일이 삭제됩니다.",
   "After {n} episodes": "{n}개 에피소드 후",
@@ -533,8 +533,8 @@ const catalog01: Record<string, string> = {
   "Already on the closest match for this release":
     "이미 이 릴리스와 가장 일치하는 자막을 사용 중입니다",
   "Also Nominated": "함께 후보에 오름",
-  "Linking your Discord account also joins you to Harbor's Discord server, so the bot can send your Backup keys privately.":
-    "Linking your Discord account also joins you to Harbor's Discord server, so the bot can send your Backup keys privately.",
+  "Linking your Discord account also joins you to Lart's Discord server, so the bot can send your Backup keys privately.":
+    "Linking your Discord account also joins you to Lart's Discord server, so the bot can send your Backup keys privately.",
   "Also known as": "다른 제목",
   "Also won": "추가 수상",
   Alternate: "대체",
@@ -559,8 +559,8 @@ const catalog01: Record<string, string> = {
   "An XMLTV address to add listings to channels you already have":
     "기존 채널에 편성표를 추가할 XMLTV 주소",
   "An actor you keep watching": "계속 찾게 되는 배우",
-  "An award pack is a single JSON file plus the images it points to. Host both anywhere public (your own server, a GitHub repo, etc.) and share the JSON URL. Harbor only stores the URLs you install, never the images.":
-    "어워드 팩은 단일 JSON 파일과 이 파일이 가리키는 이미지로 구성됩니다. 둘 다 공개된 곳(자체 서버, GitHub 저장소 등)에 호스팅하고 JSON URL을 공유하세요. Harbor는 설치한 URL만 저장하며 이미지는 절대 저장하지 않습니다.",
+  "An award pack is a single JSON file plus the images it points to. Host both anywhere public (your own server, a GitHub repo, etc.) and share the JSON URL. Lart only stores the URLs you install, never the images.":
+    "어워드 팩은 단일 JSON 파일과 이 파일이 가리키는 이미지로 구성됩니다. 둘 다 공개된 곳(자체 서버, GitHub 저장소 등)에 호스팅하고 JSON URL을 공유하세요. Lart는 설치한 URL만 저장하며 이미지는 절대 저장하지 않습니다.",
   "An empty selector before": "앞에 빈 선택자",
   "An error occurred": "오류가 발생했습니다.",
   "Anchor Selection": "앵커 선택",
@@ -614,8 +614,8 @@ const catalog01: Record<string, string> = {
   "Anime titles": "애니메이션 작품",
   "Anime tweaks": "애니메이션 조정",
   Anime4K: "Anime4K",
-  "Anime4K and smooth-motion run on the bundled mpv engine in the Harbor desktop app. They have no effect in the browser.":
-    "Anime4K와 부드러운 모션은 Harbor 데스크톱 앱에 포함된 mpv 엔진에서 실행됩니다. 브라우저에서는 적용되지 않습니다.",
+  "Anime4K and smooth-motion run on the bundled mpv engine in the Lart desktop app. They have no effect in the browser.":
+    "Anime4K와 부드러운 모션은 Lart 데스크톱 앱에 포함된 mpv 엔진에서 실행됩니다. 브라우저에서는 적용되지 않습니다.",
   "Anime4K is tuned for drawn animation. Leave this on to skip live action, or turn it off to run it on everything you watch.":
     "Anime4K는 그림 애니메이션에 맞게 조정되어 있습니다. 실사 콘텐츠를 건너뛰려면 이 옵션을 켜 두고, 모든 콘텐츠에 적용하려면 끄세요.",
   "Anime4K isn't set up yet. Turn it on in Settings under Anime.":
@@ -634,8 +634,8 @@ const catalog01: Record<string, string> = {
   Announcement: "공지",
   Anonymous: "익명",
   "Another phone is already setting this TV up.": "다른 휴대폰에서 이미 이 TV를 설정하고 있습니다.",
-  "Another program already holds this port, usually a Stremio server that is running on this machine. Harbor tried its spare ports too. Stop that server, or leave it running and point Harbor at it in Remote streaming server below.":
-    "이미 다른 프로그램이 이 포트를 사용 중입니다. 일반적으로 이 컴퓨터에서 실행 중인 Stremio 서버입니다. Harbor가 예비 포트도 시도했습니다. 해당 서버를 중지하거나 계속 실행한 채 아래의 원격 스트리밍 서버에서 Harbor가 그 서버를 사용하도록 설정하세요.",
+  "Another program already holds this port, usually a Stremio server that is running on this machine. Lart tried its spare ports too. Stop that server, or leave it running and point Lart at it in Remote streaming server below.":
+    "이미 다른 프로그램이 이 포트를 사용 중입니다. 일반적으로 이 컴퓨터에서 실행 중인 Stremio 서버입니다. Lart가 예비 포트도 시도했습니다. 해당 서버를 중지하거나 계속 실행한 채 아래의 원격 스트리밍 서버에서 Lart가 그 서버를 사용하도록 설정하세요.",
   "Anti-War": "반전 영화",
   Anticipated: "기대작",
   Any: "모두",
@@ -669,15 +669,15 @@ const catalog01: Record<string, string> = {
   "Anyone can find and join from search": "누구나 검색으로 찾아 가입할 수 있음",
   "Anyone who opens this link gets the relay URL and room code set automatically. Works in the browser too: no install required for the joiner.":
     "이 링크를 열면 릴레이 URL과 방 코드가 자동으로 설정됩니다. 브라우저에서도 작동하므로 참여자는 설치할 필요가 없습니다.",
-  "Anyone with the link can open this collection once your Harbor server is live.":
-    "Harbor 서버가 가동되면 링크가 있는 누구나 이 컬렉션을 열 수 있습니다.",
+  "Anyone with the link can open this collection once your Lart server is live.":
+    "Lart 서버가 가동되면 링크가 있는 누구나 이 컬렉션을 열 수 있습니다.",
   "Anything matching your Custom calendar: tracked people, genres, providers, countries.":
     "추적 중인 인물, 장르, 제공업체, 국가 등 사용자 지정 캘린더와 일치하는 모든 항목입니다.",
   "Anything you install here saves to your Stremio account, so your addons are ready when you open Stremio on your phone.":
     "여기에서 설치하는 모든 항목은 Stremio 계정에 저장되므로 휴대폰에서 Stremio를 열어도 애드온을 바로 사용할 수 있습니다.",
-  "Anything you install in Harbor pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
-    "Harbor에서 설치한 모든 항목은 Stremio 계정에도 반영되어 모바일에도 표시됩니다. 사이드바 왼쪽 아래의 아바타를 통해 로그인하세요.",
-  "Anywhere in Harbor.": "Harbor 어디서나 적용됩니다.",
+  "Anything you install in Lart pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
+    "Lart에서 설치한 모든 항목은 Stremio 계정에도 반영되어 모바일에도 표시됩니다. 사이드바 왼쪽 아래의 아바타를 통해 로그인하세요.",
+  "Anywhere in Lart.": "Lart 어디서나 적용됩니다.",
   App: "앱",
   "App icon": "앱 아이콘",
   "App logo": "앱 로고",
@@ -731,7 +731,7 @@ const catalog01: Record<string, string> = {
   "Ask if you're still watching": "계속 시청 중인지 확인",
   "Ask to resume or start over": "이어 보기 또는 처음부터 보기 확인",
   "Asking AI…": "AI에 묻는 중…",
-  "Asking that Harbor to show a code": "Harbor에 코드 표시 요청",
+  "Asking that Lart to show a code": "Lart에 코드 표시 요청",
   "Asks first: carry on, or start over.": "먼저 이어서 볼지 처음부터 볼지 묻습니다.",
   Aspect: "화면 비율",
   "Aspect ratio": "화면비",
@@ -762,10 +762,10 @@ const catalog01: Record<string, string> = {
   Australia: "호주",
   Author: "작성자",
   "Author account": "작성자 계정",
-  "Authorize Harbor on AniList": "AniList에서 Harbor 승인",
-  "Authorize Harbor on MyAnimeList": "MyAnimeList에서 Harbor 승인",
-  "Authorize Harbor on Simkl": "Simkl에서 Harbor 승인",
-  "Authorize Harbor on Trakt": "Trakt에서 Harbor 승인",
+  "Authorize Lart on AniList": "AniList에서 Lart 승인",
+  "Authorize Lart on MyAnimeList": "MyAnimeList에서 Lart 승인",
+  "Authorize Lart on Simkl": "Simkl에서 Lart 승인",
+  "Authorize Lart on Trakt": "Trakt에서 Lart 승인",
   Authorized: "인증됨",
   "Authorized on this device": "이 기기에서 인증됨",
   "Authorized {when}": "{when} 승인됨",
@@ -782,7 +782,7 @@ const catalog01: Record<string, string> = {
     "스타일이 지정된 (ASS) 자막의 색상, 글꼴, 표지판 위치는 유지하면서 파일마다 대사 크기가 같도록 자동 조정합니다.",
   "Auto-apply audio-derived sync fixes": "오디오 기반 동기화 보정 자동 적용",
   "Auto-confirm peer-to-peer streaming": "P2P 스트리밍 자동 확인",
-  "Auto-deploy from Harbor": "Harbor에서 자동 배포",
+  "Auto-deploy from Lart": "Lart에서 자동 배포",
   "Auto-download": "자동 다운로드",
   "Auto-download new episodes": "새 에피소드 자동 다운로드",
   "Auto-downloading": "자동 다운로드 중",
@@ -856,8 +856,8 @@ const catalog01: Record<string, string> = {
   "Back on TMDB, click your avatar in the top right and choose Settings from the menu.":
     "TMDB로 돌아가 오른쪽 상단의 아바타를 클릭한 다음 메뉴에서 설정을 선택하세요.",
   "Back on display": "디스플레이에서 뒤로",
-  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Harbor. Harbor saves it on its own.":
-    "API 페이지로 돌아가 맨 아래로 스크롤하세요. API Key 아래의 값을 복사해 Harbor에 붙여 넣으세요. Harbor가 자동으로 저장합니다.",
+  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Lart. Lart saves it on its own.":
+    "API 페이지로 돌아가 맨 아래로 스크롤하세요. API Key 아래의 값을 복사해 Lart에 붙여 넣으세요. Lart가 자동으로 저장합니다.",
   "Back out mid-episode and the card keeps the exact frame you stopped on, with your progress, so it looks like a pause instead of a thumbnail.":
     "에피소드 도중 나가면 카드에 진행률과 함께 중단한 정확한 프레임이 유지되어, 미리보기 이미지 대신 일시 정지된 화면처럼 보입니다.",
   "Back to Discover": "둘러보기로 돌아가기",

@@ -73,19 +73,19 @@ const catalog: Record<string, string> = {
   "Reminder updated": "Pengingat diperbarui",
   Reminders: "Pengingat",
   Remote: "Remote",
-  "Remote control is off on that Harbor, so it cannot be driven from here.":
-    "Kendali jarak jauh dinonaktifkan di Harbor tersebut, jadi Harbor itu tidak dapat dikendalikan dari sini.",
+  "Remote control is off on that Lart, so it cannot be driven from here.":
+    "Kendali jarak jauh dinonaktifkan di Lart tersebut, jadi Lart itu tidak dapat dikendalikan dari sini.",
   "Remote control is off, so other Harbors can see this one but cannot drive it.":
-    "Kendali jarak jauh dinonaktifkan, jadi Harbor lain dapat melihat Harbor ini, tetapi tidak dapat mengendalikannya.",
+    "Kendali jarak jauh dinonaktifkan, jadi Lart lain dapat melihat Lart ini, tetapi tidak dapat mengendalikannya.",
   "Remote control is on, so other Harbors on this network can drive this one.":
-    "Kendali jarak jauh diaktifkan, jadi Harbor lain di jaringan ini dapat mengendalikan Harbor ini.",
+    "Kendali jarak jauh diaktifkan, jadi Lart lain di jaringan ini dapat mengendalikan Lart ini.",
   "Remote off": "Remote nonaktif",
   "Remote server": "Server jarak jauh",
   "Remote streaming server": "Server streaming jarak jauh",
   "Remote style": "Gaya remote",
   Remotes: "Remote",
-  "Remotes are served by the desktop app. Open these settings on your computer's Harbor to get the links.":
-    "Remote disediakan oleh aplikasi desktop. Buka pengaturan ini di Harbor komputer Anda untuk mendapatkan tautannya.",
+  "Remotes are served by the desktop app. Open these settings on your computer's Lart to get the links.":
+    "Remote disediakan oleh aplikasi desktop. Buka pengaturan ini di Lart komputer Anda untuk mendapatkan tautannya.",
   Remove: "Hapus",
   "Remove all": "Hapus semua",
   "Remove all extensions ({n})": "Hapus semua ekstensi ({n})",
@@ -176,8 +176,8 @@ const catalog: Record<string, string> = {
   Renamed: "Nama diubah",
   "Render subtitles in a heavier weight. Turn off to use your font's normal weight.":
     "Tampilkan subtitle dengan ketebalan lebih tinggi. Nonaktifkan untuk menggunakan ketebalan normal font Anda.",
-  "Renders mpv inline so playback lives in Harbor itself. Disable to open it in a separate window instead.":
-    "Menampilkan mpv langsung di dalam Harbor agar pemutaran berlangsung di Harbor. Nonaktifkan untuk membukanya di jendela terpisah.",
+  "Renders mpv inline so playback lives in Lart itself. Disable to open it in a separate window instead.":
+    "Menampilkan mpv langsung di dalam Lart agar pemutaran berlangsung di Lart. Nonaktifkan untuk membukanya di jendela terpisah.",
   "Reopening a title within this window resumes instead of re-downloading.":
     "Membuka kembali judul dalam jangka waktu ini akan melanjutkan unduhan, bukan mengunduh ulang.",
   Reorder: "Ubah urutan",
@@ -267,8 +267,8 @@ const catalog: Record<string, string> = {
     "Ukuran {count} gambar diubah agar pas. Tidak ada yang dilewati karena ukuran.",
   "Resized {count} images to fit. Nothing was skipped for size.":
     "Ukuran {count} gambar diubah agar pas. Tidak ada yang dilewati karena ukuran.",
-  "Reskin the award trophies shown across Harbor. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
-    "Ubah tampilan trofi penghargaan yang ditampilkan di seluruh Harbor. Klik penghargaan mana pun untuk menambahkan PNG atau GIF animasi, tambahkan jenis penghargaan khusus Anda sendiri, atau impor satu set lengkap sekaligus.",
+  "Reskin the award trophies shown across Lart. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
+    "Ubah tampilan trofi penghargaan yang ditampilkan di seluruh Lart. Klik penghargaan mana pun untuk menambahkan PNG atau GIF animasi, tambahkan jenis penghargaan khusus Anda sendiri, atau impor satu set lengkap sekaligus.",
   "Reskin the quality chips (4K, HDR, Dolby Vision, Atmos and more) that ride each stream in the play picker. Click any slot to drop in your own PNG or animated GIF, or import a whole set at once. You do not have to fill every slot.":
     "Ubah tampilan label kualitas (4K, HDR, Dolby Vision, Atmos, dan lainnya) yang menyertai setiap stream di pemilih pemutaran. Klik slot mana pun untuk memasukkan PNG atau GIF animasi Anda sendiri, atau impor satu set lengkap sekaligus. Anda tidak harus mengisi setiap slot.",
   Resolution: "Resolusi",
@@ -284,9 +284,9 @@ const catalog: Record<string, string> = {
   "Rest the cursor on a poster to peek at the rating, story, and quick actions without opening it.":
     "Diamkan kursor di atas poster untuk melihat sekilas rating, cerita, dan tindakan cepat tanpa membukanya.",
   Restart: "Mulai ulang",
-  "Restart Harbor after the install completes.": "Mulai ulang Harbor setelah penginstalan selesai.",
-  "Restart Harbor's own streaming server, then reload the stream once it is back. Desktop only.":
-    "Mulai ulang server streaming milik Harbor, lalu muat ulang stream setelah server aktif kembali. Khusus desktop.",
+  "Restart Lart after the install completes.": "Mulai ulang Lart setelah penginstalan selesai.",
+  "Restart Lart's own streaming server, then reload the stream once it is back. Desktop only.":
+    "Mulai ulang server streaming milik Lart, lalu muat ulang stream setelah server aktif kembali. Khusus desktop.",
   "Restart engine": "Mulai ulang mesin",
   "Restart game": "Mulai ulang game",
   "Restart streaming server": "Mulai ulang server streaming",
@@ -296,7 +296,7 @@ const catalog: Record<string, string> = {
   Restore: "Pulihkan",
   "Restore + upscale. The best all-rounder for most anime.":
     "Pulihkan + tingkatkan resolusi. Pilihan serbaguna terbaik untuk sebagian besar anime.",
-  "Restore Harbor's interface scale to 100%.": "Pulihkan skala antarmuka Harbor ke 100%.",
+  "Restore Lart's interface scale to 100%.": "Pulihkan skala antarmuka Lart ke 100%.",
   "Restore and reload": "Pulihkan dan muat ulang",
   "Restore dismissed hints": "Pulihkan petunjuk yang ditutup",
   "Restore from a backup": "Pulihkan dari cadangan",
@@ -352,8 +352,8 @@ const catalog: Record<string, string> = {
   "Revisionist Westerns": "Western Revisionis",
   Rewatching: "Menonton ulang",
   Rewind: "Putar mundur",
-  "Rewrites every library item to match Stremio's exact schema. Run once if your Stremio app started crashing after Harbor synced playback.":
-    "Menulis ulang setiap item perpustakaan agar sama persis dengan skema Stremio. Jalankan sekali jika aplikasi Stremio Anda mulai mogok setelah Harbor menyinkronkan pemutaran.",
+  "Rewrites every library item to match Stremio's exact schema. Run once if your Stremio app started crashing after Lart synced playback.":
+    "Menulis ulang setiap item perpustakaan agar sama persis dengan skema Stremio. Jalankan sekali jika aplikasi Stremio Anda mulai mogok setelah Lart menyinkronkan pemutaran.",
   "Ribbon corner": "Sudut pita",
   "Rich season and order panel": "Panel musim dan urutan yang lengkap",
   "Richer, more vivid picture with a touch more contrast.":
@@ -364,8 +364,8 @@ const catalog: Record<string, string> = {
   "Right edge": "Tepi kanan",
   "Right to left": "Kanan ke kiri",
   "Right-click a text channel, pick": "Klik kanan kanal teks, pilih",
-  'Right-click any title in Harbor or hit "Add to Watchlist" on its detail page to save it here.':
-    'Klik kanan judul apa pun di Harbor atau tekan "Tambahkan ke Daftar Tontonan" di halaman detailnya untuk menyimpannya di sini.',
+  'Right-click any title in Lart or hit "Add to Watchlist" on its detail page to save it here.':
+    'Klik kanan judul apa pun di Lart atau tekan "Tambahkan ke Daftar Tontonan" di halaman detailnya untuk menyimpannya di sini.',
   "Rights and usage": "Hak dan penggunaan",
   Ring: "Cincin",
   Rising: "Sedang naik",
@@ -419,8 +419,8 @@ const catalog: Record<string, string> = {
   "Run again": "Jalankan uji mandiri",
   "Run self-test": "Jalankan uji kecepatan",
   "Run speed test": "Jalankan pengujian",
-  "Run test": "Jalankan Harbor Relay Anda sendiri",
-  "Run your own Harbor Relay": "Jalankan server Anda sendiri",
+  "Run test": "Jalankan Lart Relay Anda sendiri",
+  "Run your own Lart Relay": "Jalankan server Anda sendiri",
   "Run your own server": "Sedang berjalan",
   Running:
     "Untuk saat ini menggunakan Cinemeta. Tambahkan kunci TMDB dari Pengaturan kapan pun Anda siap.",
@@ -469,11 +469,11 @@ const catalog: Record<string, string> = {
   "SVP frame interpolation": "Interpolasi frame SVP",
   "SVP is already handling frame interpolation. Turn off SVP below to use this instead. Running both delays the audio.":
     "SVP sudah menangani interpolasi frame. Nonaktifkan SVP di bawah untuk menggunakan fitur ini sebagai gantinya. Menjalankan keduanya menyebabkan audio terlambat.",
-  "SVP is installed but Harbor couldn't find its engine files (svpflow + VapourSynth). Try repairing the SVP install, or reopen SVP once.":
-    "SVP sudah terinstal, tetapi Harbor tidak dapat menemukan file mesinnya (svpflow + VapourSynth). Coba perbaiki instalasi SVP, atau buka kembali SVP satu kali.",
-  "SVP is not supported by this Harbor package.": "SVP tidak didukung oleh paket Harbor ini.",
-  "SVP's files are here but its VapourSynth engine won't load ({err}). This usually means a stale VapourSynth entry or a missing Microsoft VC++ runtime. Reinstall SVP, or install the latest \"Visual C++ Redistributable (x64)\" from Microsoft, then reopen Harbor.":
-    'File SVP tersedia, tetapi mesin VapourSynth-nya tidak dapat dimuat ({err}). Ini biasanya disebabkan oleh entri VapourSynth yang sudah usang atau runtime Microsoft VC++ yang hilang. Instal ulang SVP, atau instal "Visual C++ Redistributable (x64)" terbaru dari Microsoft, lalu buka kembali Harbor.',
+  "SVP is installed but Lart couldn't find its engine files (svpflow + VapourSynth). Try repairing the SVP install, or reopen SVP once.":
+    "SVP sudah terinstal, tetapi Lart tidak dapat menemukan file mesinnya (svpflow + VapourSynth). Coba perbaiki instalasi SVP, atau buka kembali SVP satu kali.",
+  "SVP is not supported by this Lart package.": "SVP tidak didukung oleh paket Lart ini.",
+  "SVP's files are here but its VapourSynth engine won't load ({err}). This usually means a stale VapourSynth entry or a missing Microsoft VC++ runtime. Reinstall SVP, or install the latest \"Visual C++ Redistributable (x64)\" from Microsoft, then reopen Lart.":
+    'File SVP tersedia, tetapi mesin VapourSynth-nya tidak dapat dimuat ({err}). Ini biasanya disebabkan oleh entri VapourSynth yang sudah usang atau runtime Microsoft VC++ yang hilang. Instal ulang SVP, atau instal "Visual C++ Redistributable (x64)" terbaru dari Microsoft, lalu buka kembali Lart.',
   "SVP's files are here, but its VapourSynth engine won't load.":
     "File SVP tersedia, tetapi mesin VapourSynth-nya tidak dapat dimuat.",
   SYSTEM: "SISTEM",
@@ -535,14 +535,14 @@ const catalog: Record<string, string> = {
     "Simpan frame yang lebih tajam, bukan thumbnail ringan. Tampilannya lebih tajam di kartu, tetapi memerlukan lebih banyak ruang, sehingga lebih sedikit yang disimpan sebelum yang terlama dihapus.",
   "Save status": "Simpan status",
   "Save sync": "Simpan sinkronisasi",
-  "Save the current frame (video only, no subtitles) as a PNG to Pictures/Harbor.":
-    "Simpan frame saat ini (video saja, tanpa subtitle) sebagai PNG ke Pictures/Harbor.",
+  "Save the current frame (video only, no subtitles) as a PNG to Pictures/Lart.":
+    "Simpan frame saat ini (video saja, tanpa subtitle) sebagai PNG ke Pictures/Lart.",
   "Save the last 30 seconds": "Simpan 30 detik terakhir",
-  "Save the last 30 seconds as a video clip with audio, choosing subtitles on or off. Saves to Pictures/Harbor.":
-    "Simpan 30 detik terakhir sebagai klip video dengan audio, dengan pilihan subtitle aktif atau nonaktif. Disimpan ke Pictures/Harbor.",
+  "Save the last 30 seconds as a video clip with audio, choosing subtitles on or off. Saves to Pictures/Lart.":
+    "Simpan 30 detik terakhir sebagai klip video dengan audio, dengan pilihan subtitle aktif atau nonaktif. Disimpan ke Pictures/Lart.",
   "Save the worker source. Copy": "Simpan sumber worker. Salin",
-  "Save the worker source. Copy {code1} from the Harbor repo into a new directory as {code2}.":
-    "Simpan sumber worker. Salin {code1} dari repo Harbor ke direktori baru sebagai {code2}.",
+  "Save the worker source. Copy {code1} from the Lart repo into a new directory as {code2}.":
+    "Simpan sumber worker. Salin {code1} dari repo Lart ke direktori baru sebagai {code2}.",
   "Save theme": "Simpan tema",
   "Save this": "Simpan ini",
   "Save this look": "Simpan tampilan ini",
@@ -582,8 +582,8 @@ const catalog: Record<string, string> = {
   "Saved on that device. You can close this page, or use this phone as a remote.":
     "Disimpan di perangkat tersebut. Anda dapat menutup halaman ini, atau menggunakan ponsel ini sebagai remote.",
   "Saved on this device": "Disimpan di perangkat ini",
-  "Saved on this device. Another Harbor install starts fresh.":
-    "Disimpan di perangkat ini. Instalasi Harbor lain dimulai dari awal.",
+  "Saved on this device. Another Lart install starts fresh.":
+    "Disimpan di perangkat ini. Instalasi Lart lain dimulai dari awal.",
   "Saved on your device, but it couldn't be uploaded for others to see. Try again.":
     "Disimpan di perangkat Anda, tetapi tidak dapat diunggah agar dapat dilihat orang lain. Coba lagi.",
   "Saved on your server": "Disimpan di server Anda",
@@ -597,25 +597,25 @@ const catalog: Record<string, string> = {
   "Saved to your library.": "Tersimpan ke perpustakaan Anda.",
   "Saved to {folder} · open folder": "Tersimpan ke {folder} · buka folder",
   "Saved to {service} as {status}": "Tersimpan ke {service} sebagai {status}",
-  "Saved {d} from Harbor {a}.": "Menyimpan {d} dari Harbor {a}.",
+  "Saved {d} from Lart {a}.": "Menyimpan {d} dari Lart {a}.",
   "Saved {n} entries to {path}. Send us that file.":
     "Menyimpan {n} entri ke {path}. Kirimkan file tersebut kepada kami.",
   "Saved {n} entries to {path}. Send us that file.#few":
     "Menyimpan {n} entri ke {path}. Kirimkan file tersebut kepada kami.#few",
   "Saved {n} entries to {path}. Send us that file.#one":
     "Menyimpan {n} entri ke {path}. Kirimkan file tersebut kepada kami.#one",
-  "Saved {when} from Harbor {app}.": "Disimpan {when} dari Harbor {app}.",
-  "Saved {when} from Harbor {app}. Your Stremio sign-in stays as is.":
-    "Disimpan {when} dari Harbor {app}. Status masuk Stremio Anda tetap seperti semula.",
-  "Saved, but Harbor couldn't confirm the new order. Retry to re-check.":
-    "Tersimpan, tetapi Harbor tidak dapat mengonfirmasi urutan baru. Coba lagi untuk memeriksa ulang.",
+  "Saved {when} from Lart {app}.": "Disimpan {when} dari Lart {app}.",
+  "Saved {when} from Lart {app}. Your Stremio sign-in stays as is.":
+    "Disimpan {when} dari Lart {app}. Status masuk Stremio Anda tetap seperti semula.",
+  "Saved, but Lart couldn't confirm the new order. Retry to re-check.":
+    "Tersimpan, tetapi Lart tidak dapat mengonfirmasi urutan baru. Coba lagi untuk memeriksa ulang.",
   Saves: "Penyimpanan",
   "Saves a .txt of your watched anime + series entries so we can see the exact shape and finish the fix. Just titles, ids, and episode numbers.":
     "Menyimpan file .txt berisi entri anime + serial yang telah Anda tonton agar kami dapat melihat persis strukturnya dan menuntaskan perbaikan. Hanya judul, id, dan nomor episode.",
   "Saves the relay URL and your Cloudflare token to a file.":
     "Menyimpan URL relai dan token Cloudflare Anda ke file.",
-  "Saves your whole Harbor setup to one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
-    "Menyimpan seluruh konfigurasi Harbor Anda dalam satu file: tema, tata letak beranda, pengaturan, addon, profil, daftar tontonan, tata letak pemutar, progres tontonan, dan lainnya. Status masuk Stremio Anda sengaja tidak disertakan.",
+  "Saves your whole Lart setup to one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
+    "Menyimpan seluruh konfigurasi Lart Anda dalam satu file: tema, tata letak beranda, pengaturan, addon, profil, daftar tontonan, tata letak pemutar, progres tontonan, dan lainnya. Status masuk Stremio Anda sengaja tidak disertakan.",
   Saving: "Menyimpan",
   "Saving EPUB": "Menyimpan EPUB",
   "Saving GIF…": "Menyimpan GIF…",
@@ -640,8 +640,8 @@ const catalog: Record<string, string> = {
     "Mengubah skala seluruh antarmuka secara langsung saat Anda menggeser.",
   "Scan again": "Pindai lagi",
   "Scan for corruption": "Pindai kerusakan",
-  "Scan this with your phone camera to open the Harbor remote, then type straight into the search box.":
-    "Pindai ini dengan kamera ponsel untuk membuka remote Harbor, lalu ketik langsung di kotak pencarian.",
+  "Scan this with your phone camera to open the Lart remote, then type straight into the search box.":
+    "Pindai ini dengan kamera ponsel untuk membuka remote Lart, lalu ketik langsung di kotak pencarian.",
   "Scan who is on screen while playing": "Pindai siapa yang tampil di layar selama pemutaran",
   "Scan with your phone camera, or type the address above.":
     "Pindai dengan kamera ponsel, atau ketik alamat di atas.",
@@ -691,7 +691,7 @@ const catalog: Record<string, string> = {
   "Scroll to top": "Gulir ke atas",
   "Scroll up for the trailer": "Gulir ke atas untuk trailer",
   Search: "Cari",
-  "Search Harbor": "Cari di Harbor",
+  "Search Lart": "Cari di Lart",
   "Search TMDB…": "Cari di TMDB…",
   "Search a line by its words": "Cari dialog berdasarkan kata-katanya",
   "Search actors, directors…": "Cari aktor, sutradara…",
@@ -767,8 +767,8 @@ const catalog: Record<string, string> = {
   "Searching every source for more subtitles…": "Mencari lebih banyak subtitle di semua sumber…",
   "Searching sources…": "Mencari sumber…",
   "Searching titles…": "Mencari judul…",
-  "Searching works without a key. A key lets Harbor line subtitles up with the audio automatically.":
-    "Pencarian dapat digunakan tanpa kunci. Dengan kunci, Harbor dapat menyelaraskan subtitle dengan audio secara otomatis.",
+  "Searching works without a key. A key lets Lart line subtitles up with the audio automatically.":
+    "Pencarian dapat digunakan tanpa kunci. Dengan kunci, Lart dapat menyelaraskan subtitle dengan audio secara otomatis.",
   "Searching {count} sources…": "Mencari di {count} sumber…",
   "Searching {count} sources…#few": "Mencari di {count} sumber…#few",
   "Searching {count} sources…#one": "Mencari di {count} sumber…#one",
@@ -843,8 +843,8 @@ const catalog: Record<string, string> = {
   "Self-test is disabled while strict remote streaming is on. It downloads a small test file over peer-to-peer on this machine.": "Uji mandiri dinonaktifkan saat streaming jarak jauh ketat aktif. Tindakan ini mengunduh file uji kecil melalui peer-to-peer di komputer ini.",
   Send: "Kirim",
   "Send a bug report": "Kirim laporan bug",
-  "Send a bug report straight to the Harbor team. Screenshots and screen recordings welcome.":
-    "Kirim laporan bug langsung ke tim Harbor. Tangkapan layar dan rekaman layar dipersilakan.",
+  "Send a bug report straight to the Lart team. Screenshots and screen recordings welcome.":
+    "Kirim laporan bug langsung ke tim Lart. Tangkapan layar dan rekaman layar dipersilakan.",
   "Send audio to specific speakers, headphones or a receiver. System default follows Windows.":
     "Kirim audio ke speaker, headphone, atau receiver tertentu. Default sistem mengikuti Windows.",
   "Send code": "Kirim kode",
@@ -853,22 +853,22 @@ const catalog: Record<string, string> = {
   "Send test": "Kirim pengujian",
   "Send the theme you are looking at right now, exactly as it is here.":
     "Kirim tema yang sedang Anda lihat sekarang, persis seperti yang tampil di sini.",
-  "Send this title to your Harbor app": "Kirim judul ini ke aplikasi Harbor Anda",
-  "Send this to anyone you want to watch with. They paste it in their Settings → Harbor Relay. After that, share a 6-character room code from the people icon up top.":
-    "Kirim ini kepada siapa pun yang ingin menonton bersama Anda. Mereka menempelkannya di Pengaturan → Harbor Relay. Setelah itu, bagikan kode ruang 6 karakter dari ikon orang di bagian atas.",
+  "Send this title to your Lart app": "Kirim judul ini ke aplikasi Lart Anda",
+  "Send this to anyone you want to watch with. They paste it in their Settings → Lart Relay. After that, share a 6-character room code from the people icon up top.":
+    "Kirim ini kepada siapa pun yang ingin menonton bersama Anda. Mereka menempelkannya di Pengaturan → Lart Relay. Setelah itu, bagikan kode ruang 6 karakter dari ikon orang di bagian atas.",
   "Send to TV": "Kirim ke TV",
   "Send to TV now": "Kirim ke TV sekarang",
   Sending: "Mengirim",
   "Sending to Trakt…": "Mengirim ke Trakt…",
-  "Sending to that Harbor": "Mengirim ke Harbor tersebut",
+  "Sending to that Lart": "Mengirim ke Lart tersebut",
   "Sending to your TV": "Mengirim ke TV Anda",
   "Sending to {provider}": "Mengirim ke {provider}",
   "Sending...": "Mengirim...",
   "Sending…": "Mengirim…",
   "Sends only the chapter you open to DeepSeek. Volumes, chapters, and metadata stay unchanged.":
     "Hanya mengirim bab yang Anda buka ke DeepSeek. Volume, bab, dan metadata tetap tidak berubah.",
-  "Sends the context above straight to the Harbor team. No keys or library data.":
-    "Mengirim konteks di atas langsung ke tim Harbor. Tanpa kunci atau data perpustakaan.",
+  "Sends the context above straight to the Lart team. No keys or library data.":
+    "Mengirim konteks di atas langsung ke tim Lart. Tanpa kunci atau data perpustakaan.",
   Sent: "Terkirim",
   "Sent {n} to Trakt": "{n} dikirim ke Trakt",
   "Sent. Check your channel.": "Terkirim. Periksa kanal Anda.",
@@ -895,7 +895,7 @@ const catalog: Record<string, string> = {
   "Series · {n}": "Serial · {n}",
   "Series, Critically Acclaimed": "Serial, Dipuji Kritikus",
   Serif: "Serif",
-  "Serve Harbor on your network": "Sajikan Harbor di jaringan Anda",
+  "Serve Lart on your network": "Sajikan Lart di jaringan Anda",
   Server: "Server",
   "Server + login": "Server + login",
   "Server URL": "URL server",
@@ -905,14 +905,14 @@ const catalog: Record<string, string> = {
   "Server couldn't start:": "Server tidak dapat dimulai:",
   "Server did not respond": "Server tidak merespons",
   "Server reachable": "Server dapat dijangkau",
-  "Server reachable in {ms}ms. Harbor will use it for torrent streaming.":
-    "Server dapat dijangkau dalam {ms}ms. Harbor akan menggunakannya untuk streaming torrent.",
+  "Server reachable in {ms}ms. Lart will use it for torrent streaming.":
+    "Server dapat dijangkau dalam {ms}ms. Lart akan menggunakannya untuk streaming torrent.",
   "Server returned an empty response": "Server mengembalikan respons kosong",
   Servers: "Server",
-  "Serves this exact install of Harbor as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer.":
-    "Menyajikan instalasi Harbor ini persis seperti adanya sebagai aplikasi web di jaringan Anda. Buka di browser ponsel, laptop, atau TV, masuk di sana, lalu konten di-stream melalui komputer ini.",
-  "Serves this exact install of Harbor as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer. You can also use the phone remote to control playback and cast to another device on this machine.":
-    "Menyajikan instalasi Harbor ini persis seperti adanya sebagai aplikasi web di jaringan Anda. Buka di browser ponsel, laptop, atau TV, masuk di sana, lalu konten di-stream melalui komputer ini. Anda juga dapat menggunakan remote ponsel untuk mengontrol pemutaran dan mentransmisikannya ke perangkat lain di komputer ini.",
+  "Serves this exact install of Lart as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer.":
+    "Menyajikan instalasi Lart ini persis seperti adanya sebagai aplikasi web di jaringan Anda. Buka di browser ponsel, laptop, atau TV, masuk di sana, lalu konten di-stream melalui komputer ini.",
+  "Serves this exact install of Lart as a web app on your network. Open it on a phone, laptop, or TV browser, sign in there, and it streams through this computer. You can also use the phone remote to control playback and cast to another device on this machine.":
+    "Menyajikan instalasi Lart ini persis seperti adanya sebagai aplikasi web di jaringan Anda. Buka di browser ponsel, laptop, atau TV, masuk di sana, lalu konten di-stream melalui komputer ini. Anda juga dapat menggunakan remote ponsel untuk mengontrol pemutaran dan mentransmisikannya ke perangkat lain di komputer ini.",
   "Service status": "Status layanan",
   "Service-specific browsing needs a TMDB key. Pick All / Movies / Shows to browse via Cinemeta.":
     "Penjelajahan khusus layanan memerlukan kunci TMDB. Pilih Semua / Film / Acara untuk menjelajah melalui Cinemeta.",
@@ -922,7 +922,7 @@ const catalog: Record<string, string> = {
   "Session ID or v4 access token": "ID sesi atau token akses v4",
   "Set PIN": "Atur PIN",
   "Set a 4-digit PIN": "Atur PIN 4 digit",
-  "Set a Harbor profile picture first": "Atur foto profil Harbor terlebih dahulu",
+  "Set a Lart profile picture first": "Atur foto profil Lart terlebih dahulu",
   "Set a PIN": "Atur PIN",
   "Set a PIN for {name}": "Atur PIN untuk {name}",
   "Set a course": "Tentukan arah",

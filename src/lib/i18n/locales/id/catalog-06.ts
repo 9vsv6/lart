@@ -62,11 +62,11 @@ const catalog: Record<string, string> = {
   Name: "Nama",
   "Name (e.g. REMUX)": "Nama (mis. REMUX)",
   "Name (optional)": "Nama (opsional)",
-  "Name each file after its award ID. Harbor resizes them and skips anything it cannot match.":
-    "Namai setiap file berdasarkan ID penghargaannya. Harbor akan mengubah ukurannya dan melewati file yang tidak dapat dicocokkan.",
+  "Name each file after its award ID. Lart resizes them and skips anything it cannot match.":
+    "Namai setiap file berdasarkan ID penghargaannya. Lart akan mengubah ukurannya dan melewati file yang tidak dapat dicocokkan.",
   "Name each file after its slot": "Namai setiap file berdasarkan slotnya",
-  'Name each image file after its award ID and put them in a .zip, then use "Import a .zip pack" above. No JSON, no hosting needed. Harbor matches each file to its award, stores it locally, resizes it, and skips anything it doesn\'t recognize.':
-    'Namai setiap file gambar berdasarkan ID penghargaannya dan masukkan ke dalam file .zip, lalu gunakan "Impor paket .zip" di atas. Tidak perlu JSON atau hosting. Harbor mencocokkan setiap file dengan penghargaannya, menyimpannya secara lokal, mengubah ukurannya, dan melewati file yang tidak dikenali.',
+  'Name each image file after its award ID and put them in a .zip, then use "Import a .zip pack" above. No JSON, no hosting needed. Lart matches each file to its award, stores it locally, resizes it, and skips anything it doesn\'t recognize.':
+    'Namai setiap file gambar berdasarkan ID penghargaannya dan masukkan ke dalam file .zip, lalu gunakan "Impor paket .zip" di atas. Tidak perlu JSON atau hosting. Lart mencocokkan setiap file dengan penghargaannya, menyimpannya secara lokal, mengubah ukurannya, dan melewati file yang tidak dikenali.',
   "Name it, tick the resolutions, sources, codecs and audio you want, and leave the rest blank.":
     "Beri nama, centang resolusi, sumber, codec, dan audio yang Anda inginkan, lalu biarkan bagian lain kosong.",
   "Name this collection": "Beri nama koleksi ini",
@@ -76,11 +76,11 @@ const catalog: Record<string, string> = {
   "Name your theme": "Beri nama tema Anda",
   "Names behind the biggest productions": "Orang-orang di balik produksi terbesar",
   "Naming guide": "Panduan penamaan",
-  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Harbor's embedded player.":
-    "Gerakan asli 48/60fps melalui instalasi Linux SVP dan VapourSynth Anda, dirender di dalam pemutar bawaan Harbor.",
+  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Lart's embedded player.":
+    "Gerakan asli 48/60fps melalui instalasi Linux SVP dan VapourSynth Anda, dirender di dalam pemutar bawaan Lart.",
   "Native libmpv": "libmpv native",
-  "Native to Harbor. No RPDB or ratings addon needed.":
-    "Bawaan Harbor. Tidak memerlukan RPDB atau addon rating.",
+  "Native to Lart. No RPDB or ratings addon needed.":
+    "Bawaan Lart. Tidak memerlukan RPDB atau addon rating.",
   "Native webview playback. Smooth and integrated, but limited codec coverage.":
     "Pemutaran webview native. Lancar dan terintegrasi, tetapi dukungan codec terbatas.",
   "Native-style hybrid bar": "Bilah hibrida bergaya native",
@@ -108,8 +108,8 @@ const catalog: Record<string, string> = {
   "Network error": "Kesalahan jaringan",
   "Network's best": "Terbaik dari jaringan",
   Networks: "Jaringan",
-  "Neural upscalers, sharpeners, and HDR tone-mapping ported for mpv. Each is hosted by its author, not bundled with Harbor. Download the ones you want; Harbor chains them in the right order and applies them in the player.":
-    "Peningkat resolusi neural, penajam, dan pemetaan rona HDR yang di-porting untuk mpv. Masing-masing dihosting oleh pembuatnya, bukan disertakan dalam Harbor. Unduh yang Anda inginkan; Harbor akan merangkainya dalam urutan yang tepat dan menerapkannya di pemutar.",
+  "Neural upscalers, sharpeners, and HDR tone-mapping ported for mpv. Each is hosted by its author, not bundled with Lart. Download the ones you want; Lart chains them in the right order and applies them in the player.":
+    "Peningkat resolusi neural, penajam, dan pemetaan rona HDR yang di-porting untuk mpv. Masing-masing dihosting oleh pembuatnya, bukan disertakan dalam Lart. Unduh yang Anda inginkan; Lart akan merangkainya dalam urutan yang tepat dan menerapkannya di pemutar.",
   Never: "Tidak pernah",
   "Never auto-select tracks containing": "Jangan pernah pilih otomatis trek yang memuat",
   "Never contact the community server in either direction. Nothing is looked up and nothing is contributed from this device.":
@@ -208,7 +208,7 @@ const catalog: Record<string, string> = {
   "No EPG channels match. This playlist's EPG source may be empty.":
     "Tidak ada saluran EPG yang cocok. Sumber EPG playlist ini mungkin kosong.",
   "No Frills": "Sederhana",
-  "No Harbor account yet": "Belum punya akun Harbor",
+  "No Lart account yet": "Belum punya akun Lart",
   "No Integrations option? You need the Manage Webhooks permission. Ask whoever owns the server.":
     "Opsi Integrasi tidak ada? Anda memerlukan izin Kelola Webhook. Tanyakan kepada pemilik server.",
   "No JavaScript. Scripts, inline handlers, and javascript: URLs are removed.":
@@ -229,8 +229,8 @@ const catalog: Record<string, string> = {
   "No addons installed yet": "Belum ada addon yang diinstal",
   "No addons match these filters right now.":
     "Saat ini tidak ada addon yang cocok dengan filter ini.",
-  "No affiliation, no referral links, and Harbor gets nothing from these. They are just places where money goes further than it does here.":
-    "Tidak ada afiliasi, tidak ada tautan referral, dan Harbor tidak mendapat apa pun dari semua ini. Ini hanyalah tempat-tempat di mana uang lebih bermanfaat daripada di sini.",
+  "No affiliation, no referral links, and Lart gets nothing from these. They are just places where money goes further than it does here.":
+    "Tidak ada afiliasi, tidak ada tautan referral, dan Lart tidak mendapat apa pun dari semua ini. Ini hanyalah tempat-tempat di mana uang lebih bermanfaat daripada di sini.",
   "No approved themes yet": "Belum ada tema yang disetujui",
   "No art": "Tidak ada gambar",
   "No artists match that search": "Tidak ada artis yang cocok dengan pencarian itu",
@@ -268,8 +268,8 @@ const catalog: Record<string, string> = {
   "No chapters available in {lang} from this source.":
     "Tidak ada bab dalam {lang} dari sumber ini.",
   "No chapters match your search.": "Tidak ada bab yang cocok dengan pencarian Anda.",
-  "No clean release has surfaced yet. This may be too new. Harbor's filters dropped everything that came back as wrong-movie noise.":
-    "Belum ada rilis bersih yang ditemukan. Judul ini mungkin terlalu baru. Filter Harbor menyingkirkan semua hasil yang terdeteksi sebagai sampah dari film yang salah.",
+  "No clean release has surfaced yet. This may be too new. Lart's filters dropped everything that came back as wrong-movie noise.":
+    "Belum ada rilis bersih yang ditemukan. Judul ini mungkin terlalu baru. Filter Lart menyingkirkan semua hasil yang terdeteksi sebagai sampah dari film yang salah.",
   "No collections were found in the installed source catalog.":
     "Tidak ada koleksi yang ditemukan dalam katalog sumber yang terinstal.",
   "No collections yet. Add a collections addon to browse curated sets.":
@@ -378,8 +378,8 @@ const catalog: Record<string, string> = {
   "No matches. Try a different search.": "Tidak ada yang cocok. Coba pencarian lain.",
   "No matches. Try another title.": "Tidak ada yang cocok. Coba judul lain.",
   "No matching voices": "Tidak ada suara yang cocok",
-  "No metadata addon detected. Harbor is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
-    "Tidak ada addon metadata yang terdeteksi. Harbor beralih sementara ke Cinemeta agar judul tetap dimuat, tetapi aktifkan kembali opsi ini kecuali Anda sedang memasang addon metadata.",
+  "No metadata addon detected. Lart is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
+    "Tidak ada addon metadata yang terdeteksi. Lart beralih sementara ke Cinemeta agar judul tetap dimuat, tetapi aktifkan kembali opsi ini kecuali Anda sedang memasang addon metadata.",
   "No more films to add. Start with what you picked.":
     "Tidak ada film lain untuk ditambahkan. Mulai dengan pilihan Anda.",
   "No more found for this category.": "Tidak ditemukan lagi untuk kategori ini.",
@@ -396,9 +396,9 @@ const catalog: Record<string, string> = {
     "Belum ada notifikasi. Terbitkan tema dan lihat peringkatnya naik.",
   "No one found by that name.": "Tidak ada pengguna dengan nama tersebut.",
   "No one recognized on screen right now.": "Tidak ada orang yang dikenali di layar saat ini.",
-  "No other Harbor answered": "Tidak ada Harbor lain yang merespons",
-  "No other Harbor answered on this network. One shows up here a moment after it starts.":
-    "Tidak ada Harbor lain yang merespons di jaringan ini. Harbor akan muncul di sini sesaat setelah dimulai.",
+  "No other Lart answered": "Tidak ada Lart lain yang merespons",
+  "No other Lart answered on this network. One shows up here a moment after it starts.":
+    "Tidak ada Lart lain yang merespons di jaringan ini. Lart akan muncul di sini sesaat setelah dimulai.",
   "No peers found": "Tidak ada peer yang ditemukan",
   "No people found": "Tidak ada orang yang ditemukan",
   "No people match these filters": "Tidak ada orang yang cocok dengan filter ini",
@@ -467,8 +467,8 @@ const catalog: Record<string, string> = {
   "No subtitles found yet. Try the search at the bottom.":
     "Belum ada subtitle yang ditemukan. Coba pencarian di bagian bawah.",
   "No subtitles found.": "Subtitle tidak ditemukan.",
-  "No subtitles found. Start anyway, Harbor keeps looking while you watch.":
-    "Subtitle tidak ditemukan. Tetap mulai, Harbor akan terus mencari saat Anda menonton.",
+  "No subtitles found. Start anyway, Lart keeps looking while you watch.":
+    "Subtitle tidak ditemukan. Tetap mulai, Lart akan terus mencari saat Anda menonton.",
   "No subtitles found. Try another title above, or adjust the season and episode.":
     "Subtitle tidak ditemukan. Coba judul lain di atas, atau sesuaikan musim dan episode.",
   "No such captain": "Kapten tersebut tidak ada",
@@ -514,8 +514,8 @@ const catalog: Record<string, string> = {
     "Belum ada yang terinstal. Tambahkan addon subtitle Stremio di Sumber streaming.",
   "None of Trakt's most-anticipated upcoming releases land in this month. Try a different month.":
     "Tidak ada rilisan mendatang Trakt yang paling dinantikan pada bulan ini. Coba bulan lain.",
-  "None of your addons returned a downloadable package for {season}. Harbor can still fetch the episodes one at a time, or you can refresh the sources.":
-    "Tidak ada addon Anda yang menyediakan paket unduhan untuk {season}. Harbor masih dapat mengambil episode satu per satu, atau Anda dapat memuat ulang sumber.",
+  "None of your addons returned a downloadable package for {season}. Lart can still fetch the episodes one at a time, or you can refresh the sources.":
+    "Tidak ada addon Anda yang menyediakan paket unduhan untuk {season}. Lart masih dapat mengambil episode satu per satu, atau Anda dapat memuat ulang sumber.",
   "None of your addons returned a downloadable package for {season}. Refresh the sources or check your source settings.":
     "Tidak ada addon Anda yang menyediakan paket unduhan untuk {season}. Muat ulang sumber atau periksa pengaturan sumber Anda.",
   "None yet": "Belum ada",
@@ -573,8 +573,8 @@ const catalog: Record<string, string> = {
     "Tidak ada yang berubah sampai Anda menekan Simpan. Meninggalkan halaman ini akan membuang perubahan.",
   "Nothing connected yet. Scan a code with your phone.":
     "Belum ada yang terhubung. Pindai kode dengan ponsel Anda.",
-  "Nothing else answered. A Harbor shows up here a moment after it starts on this network.":
-    "Tidak ada yang lain yang merespons. Harbor akan muncul di sini sesaat setelah dimulai di jaringan ini.",
+  "Nothing else answered. A Lart shows up here a moment after it starts on this network.":
+    "Tidak ada yang lain yang merespons. Lart akan muncul di sini sesaat setelah dimulai di jaringan ini.",
   'Nothing found for "{q}"': 'Tidak ada hasil untuk "{q}"',
   'Nothing found for "{q}". {n} of your addons did not answer.':
     'Tidak ada hasil untuk "{q}". {n} addon Anda tidak merespons.',
@@ -596,8 +596,8 @@ const catalog: Record<string, string> = {
   "Nothing in this filter. Choose All to see everything that answered.":
     "Tidak ada apa pun dalam filter ini. Pilih Semua untuk melihat semua yang merespons.",
   "Nothing in {genre} right now.": "Belum ada apa pun dalam {genre} saat ini.",
-  "Nothing is uploaded and nothing ships with Harbor. Everything stays on this device and you are responsible for the images you add.":
-    "Tidak ada yang diunggah dan Harbor tidak menyertakan apa pun. Semuanya tetap berada di perangkat ini dan Anda bertanggung jawab atas gambar yang ditambahkan.",
+  "Nothing is uploaded and nothing ships with Lart. Everything stays on this device and you are responsible for the images you add.":
+    "Tidak ada yang diunggah dan Lart tidak menyertakan apa pun. Semuanya tetap berada di perangkat ini dan Anda bertanggung jawab atas gambar yang ditambahkan.",
   "Nothing left in today's picks": "Tidak ada lagi dalam pilihan hari ini",
   "Nothing left to confirm while P2P is disabled.": "Tidak ada lagi yang perlu dikonfirmasi saat P2P dinonaktifkan.",
   "Nothing left to post after removing links.":
@@ -617,8 +617,8 @@ const catalog: Record<string, string> = {
   "Nothing saved on Trakt yet.": "Belum ada yang disimpan di Trakt.",
   "Nothing saved yet. Add a title from any details page.":
     "Belum ada yang disimpan. Tambahkan judul dari halaman detail mana pun.",
-  "Nothing selected. Harbor will not load a subtitle on its own.":
-    "Tidak ada yang dipilih. Harbor tidak akan memuat subtitle secara otomatis.",
+  "Nothing selected. Lart will not load a subtitle on its own.":
+    "Tidak ada yang dipilih. Lart tidak akan memuat subtitle secara otomatis.",
   "Nothing sent yet. Change something and it goes up on its own.":
     "Belum ada yang dikirim. Ubah sesuatu dan perubahan akan terkirim otomatis.",
   "Nothing this month": "Tidak ada apa pun bulan ini",
@@ -643,14 +643,14 @@ const catalog: Record<string, string> = {
   "Nothing watched yet.": "Belum ada yang ditonton.",
   "Nothing watched yet. Press play on something.": "Belum ada yang ditonton. Putar sesuatu.",
   "Nothing yet": "Belum ada",
-  "Nothing you have already set is lost. Harbor picks this back up where you left it.":
-    "Semua yang sudah Anda atur tetap tersimpan. Harbor akan melanjutkannya dari posisi terakhir Anda.",
+  "Nothing you have already set is lost. Lart picks this back up where you left it.":
+    "Semua yang sudah Anda atur tetap tersimpan. Lart akan melanjutkannya dari posisi terakhir Anda.",
   Notification: "Notifikasi",
   Notifications: "Notifikasi",
   Now: "Sekarang",
   "Now Playing": "Sedang Diputar",
   "Now Playing card": "Kartu Sedang Diputar",
-  "Now on Harbor": "Kini di Harbor",
+  "Now on Lart": "Kini di Lart",
   "Now playing": "Sedang diputar",
   "Now playing touchpad. Swipe to move focus on the display, tap to select.":
     "Touchpad sedang diputar. Geser untuk memindahkan fokus di layar, ketuk untuk memilih.",
@@ -683,8 +683,8 @@ const catalog: Record<string, string> = {
   "OVA of the Year": "OVA Terbaik Tahun Ini",
   Off: "Nonaktif",
   "Off (use CPU)": "Nonaktif (gunakan CPU)",
-  "Off by default, so your controller only drives Harbor while it is the focused window. Leave it off if you play games with the same controller.":
-    "Nonaktif secara default, jadi pengontrol Anda hanya mengendalikan Harbor saat jendelanya sedang aktif. Biarkan nonaktif jika Anda bermain game dengan pengontrol yang sama.",
+  "Off by default, so your controller only drives Lart while it is the focused window. Leave it off if you play games with the same controller.":
+    "Nonaktif secara default, jadi pengontrol Anda hanya mengendalikan Lart saat jendelanya sedang aktif. Biarkan nonaktif jika Anda bermain game dengan pengontrol yang sama.",
   "Off by default. Let visitors see what you have been watching":
     "Nonaktif secara default. Izinkan pengunjung melihat apa yang telah Anda tonton",
   "Off by default. Show what you are watching right now, or your watch party, on your profile. Applies instantly":
@@ -741,8 +741,8 @@ const catalog: Record<string, string> = {
   "On the card": "Di kartu",
   "On the poster": "Di poster",
   "On the taskbar": "Di bilah tugas",
-  "On the web, Harbor can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
-    "Di web, Harbor hanya dapat mengakses addon yang mengizinkan akses browser (Torrentio, TorBox, Cinemeta). Untuk judul yang belum dirilis, biasanya belum ada sumber yang tersedia.",
+  "On the web, Lart can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
+    "Di web, Lart hanya dapat mengakses addon yang mengizinkan akses browser (Torrentio, TorBox, Cinemeta). Untuk judul yang belum dirilis, biasanya belum ada sumber yang tersedia.",
   "On themoviedb.org, open Settings.": "Di themoviedb.org, buka Pengaturan.",
   "On this computer": "Di komputer ini",
   "On this device": "Di perangkat ini",
@@ -765,9 +765,9 @@ const catalog: Record<string, string> = {
     "Setelah disimpan, setiap poster dirender ulang dengan cap IMDb, Rotten Tomatoes, dan Metacritic.",
   "Once you're in a room you can copy a link that joins anyone instantly: it sets the relay URL and the room code in one click.":
     "Setelah masuk ke ruang, Anda dapat menyalin tautan agar siapa pun bisa langsung bergabung: URL relay dan kode ruang akan diatur dengan sekali klik.",
-  "One @name that finds you across Harbor.":
-    "Satu @nama agar Anda mudah ditemukan di seluruh Harbor.",
-  "One Harbor, every screen.": "Satu Harbor, di setiap layar.",
+  "One @name that finds you across Lart.":
+    "Satu @nama agar Anda mudah ditemukan di seluruh Lart.",
+  "One Lart, every screen.": "Satu Lart, di setiap layar.",
   "One Piece, Naruto and more worlds": "One Piece, Naruto, dan dunia lainnya",
   "One choice that sets how hard your computer works to make video look its best. Pick the one that matches your machine. Takes effect on the next thing you play.":
     "Satu pilihan untuk menentukan seberapa keras komputer Anda bekerja agar video tampil sebaik mungkin. Pilih yang sesuai dengan komputer Anda. Berlaku pada tayangan berikutnya yang Anda putar.",
@@ -783,22 +783,22 @@ const catalog: Record<string, string> = {
   "One release": "Satu rilis",
   "One switch powers everything on this page: the web app, the phone remote, and the manga reader remote.":
     "Satu sakelar mengaktifkan semua yang ada di halaman ini: aplikasi web, remote ponsel, dan remote pembaca manga.",
-  "One switch serves Harbor on your network. Scan a code below with your phone, or open an address on any device on the same Wi-Fi.":
-    "Dengan satu sakelar, Harbor tersedia di jaringan Anda. Pindai kode di bawah dengan ponsel, atau buka alamatnya di perangkat mana pun pada Wi-Fi yang sama.",
-  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Harbor's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
-    "Paket komunitas sekali klik. Ruleset menyediakan set lencana lengkap dengan pencocokannya sendiri; pemetaan ulang gambar hanya mengganti gambar pada lencana bawaan Harbor. Semua yang dibagikan sebagai tautan badges.json di Discord atau Reddit Nuvio juga dapat diimpor di sini.",
+  "One switch serves Lart on your network. Scan a code below with your phone, or open an address on any device on the same Wi-Fi.":
+    "Dengan satu sakelar, Lart tersedia di jaringan Anda. Pindai kode di bawah dengan ponsel, atau buka alamatnya di perangkat mana pun pada Wi-Fi yang sama.",
+  "One-click community packs. Rulesets bring full badge sets with their own matching; art remaps only swap the pictures on Lart's built-in badges. Anything shared as a badges.json link on the Nuvio Discord or Reddit imports here too.":
+    "Paket komunitas sekali klik. Ruleset menyediakan set lencana lengkap dengan pencocokannya sendiri; pemetaan ulang gambar hanya mengganti gambar pada lencana bawaan Lart. Semua yang dibagikan sebagai tautan badges.json di Discord atau Reddit Nuvio juga dapat diimpor di sini.",
   "One-off donation": "Donasi satu kali",
   "One-tap looks": "Tampilan sekali ketuk",
-  "One-time setup downloads the shader pack (about 1 MB) into Harbor. No files to hunt down.":
-    "Penyiapan satu kali akan mengunduh paket shader (sekitar 1 MB) ke Harbor. Tak perlu mencari file.",
+  "One-time setup downloads the shader pack (about 1 MB) into Lart. No files to hunt down.":
+    "Penyiapan satu kali akan mengunduh paket shader (sekitar 1 MB) ke Lart. Tak perlu mencari file.",
   Oneshot: "One-shot",
   Ongoing: "Berlanjut",
   Online: "Online",
   "Online now": "Sedang online",
   "Only 1 source after filtering": "Hanya 1 sumber setelah difilter",
   "Only 2 sources after filtering": "Hanya 2 sumber setelah difilter",
-  "Only add repositories you trust. Harbor cannot vouch for third-party plugins.":
-    "Hanya tambahkan repositori yang Anda percayai. Harbor tidak dapat menjamin plugin pihak ketiga.",
+  "Only add repositories you trust. Lart cannot vouch for third-party plugins.":
+    "Hanya tambahkan repositori yang Anda percayai. Lart tidak dapat menjamin plugin pihak ketiga.",
   "Only addon/debrid sources, never peer-to-peer": "Hanya sumber addon/debrid, tanpa peer-to-peer",
   "Only continue if you fully trust this link":
     "Lanjutkan hanya jika Anda benar-benar memercayai tautan ini",
@@ -843,10 +843,10 @@ const catalog: Record<string, string> = {
   "Open Cloudflare Workers": "Buka Cloudflare Workers",
   "Open Cloudflare token page": "Buka halaman token Cloudflare",
   "Open Discord's webhook help": "Buka bantuan webhook Discord",
-  "Open Harbor on desktop to link Discord.": "Buka Harbor di desktop untuk menautkan Discord.",
-  "Open Harbor on desktop to verify ownership in your browser.":
-    "Buka Harbor di desktop untuk memverifikasi kepemilikan melalui browser Anda.",
-  "Open Harbor's settings outside playback.": "Buka Pengaturan Harbor di luar Pemutaran.",
+  "Open Lart on desktop to link Discord.": "Buka Lart di desktop untuk menautkan Discord.",
+  "Open Lart on desktop to verify ownership in your browser.":
+    "Buka Lart di desktop untuk memverifikasi kepemilikan melalui browser Anda.",
+  "Open Lart's settings outside playback.": "Buka Pengaturan Lart di luar Pemutaran.",
   "Open Languages": "Buka Bahasa",
   "Open Letterboxd profile": "Buka profil Letterboxd",
   "Open Library settings": "Buka Pengaturan perpustakaan",
@@ -855,7 +855,7 @@ const catalog: Record<string, string> = {
   "Open Range": "Buka Rentang",
   "Open SVP": "Buka SVP",
   "Open Settings": "Buka Pengaturan",
-  "Open Settings, then Harbor Relay.": "Buka Pengaturan, lalu Harbor Relay.",
+  "Open Settings, then Lart Relay.": "Buka Pengaturan, lalu Lart Relay.",
   "Open Settings, then System, then Advanced system settings.":
     "Buka Pengaturan, lalu Sistem, lalu Pengaturan sistem lanjutan.",
   "Open Setup": "Buka Penyiapan",
@@ -866,8 +866,8 @@ const catalog: Record<string, string> = {
   "Open Trakt profile": "Buka profil Trakt",
   "Open Voyages": "Buka Voyages",
   "Open a folder": "Buka folder",
-  "Open a manga on Harbor to control the reader from here.":
-    "Buka manga di Harbor untuk mengontrol pembaca dari sini.",
+  "Open a manga on Lart to control the reader from here.":
+    "Buka manga di Lart untuk mengontrol pembaca dari sini.",
   "Open a quick issue": "Buka laporan masalah singkat",
   "Open a terminal and run: brew install ffmpeg": "Buka terminal dan jalankan: brew install ffmpeg",
   "Open a terminal and run: winget install Gyan.FFmpeg":
@@ -966,8 +966,8 @@ const catalog: Record<string, string> = {
   "Opening…": "Membuka…",
   "Opens Stremio in your browser. Works with email, Facebook, and Apple accounts.":
     "Membuka Stremio di browser Anda. Mendukung akun email, Facebook, dan Apple.",
-  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Harbor never sees your password.":
-    "Membuka Stremio di browser Anda. Mendukung email, Facebook, dan Apple. Harbor tidak pernah melihat kata sandi Anda.",
+  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Lart never sees your password.":
+    "Membuka Stremio di browser Anda. Mendukung email, Facebook, dan Apple. Lart tidak pernah melihat kata sandi Anda.",
   "Opens the folder holding the DHT cache and active transfer data.": "Membuka folder yang menyimpan cache DHT dan data transfer aktif.",
   "Opens the free signup page": "Membuka halaman pendaftaran gratis",
   "Opens your API settings page": "Membuka halaman pengaturan API Anda",
@@ -984,8 +984,8 @@ const catalog: Record<string, string> = {
   "Optional. TheIntroDB answers without a key, but a key raises your rate limit so timing keeps arriving when you binge. Get one at":
     "Opsional. TheIntroDB tetap merespons tanpa kunci, tetapi kunci menaikkan batas permintaan Anda sehingga data waktu terus tersedia saat Anda menonton maraton. Dapatkan kunci di",
   Options: "Opsi",
-  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Harbor writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
-    "Opsi untuk tab Perpustakaan → Lokal: folder dari drive Anda sendiri yang akan dipindai. Saat mengekspor metadata, Harbor akan menulis file .nfo bergaya Kodi dan mengunduh gambar di samping setiap file dengan ukuran di bawah ini.",
+  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Lart writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
+    "Opsi untuk tab Perpustakaan → Lokal: folder dari drive Anda sendiri yang akan dipindai. Saat mengekspor metadata, Lart akan menulis file .nfo bergaya Kodi dan mengunduh gambar di samping setiap file dengan ukuran di bawah ini.",
   "Or browse curated packs and import a link": "Atau telusuri paket pilihan dan impor tautan",
   "Or just zip up images": "Atau cukup jadikan gambar sebagai file zip",
   "Or paste a stream URL": "Atau tempel URL stream",

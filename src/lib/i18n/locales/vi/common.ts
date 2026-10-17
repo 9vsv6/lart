@@ -72,13 +72,13 @@ const common: Record<string, string> = {
     "Chưa đúng. Hãy thử bộ câu hỏi mới sau giây lát.",
   "Chinese (Simplified)": "Tiếng Trung (Giản thể)",
   Indonesian: "Tiếng Indonesia",
-  "Finish updating Harbor": "Hoàn tất cập nhật Harbor",
+  "Finish updating Lart": "Hoàn tất cập nhật Lart",
   "Download and run the installer to finish updating. If it keeps failing, run it as administrator once.":
     "Tải xuống và chạy trình cài đặt để hoàn tất cập nhật. Nếu vẫn không thành công, hãy thử chạy một lần với quyền quản trị viên.",
   "Restart to update": "Khởi động lại để cập nhật",
   "Update ready": "Bản cập nhật đã sẵn sàng",
-  "Harbor {version} downloaded but did not install on its own.":
-    "Harbor {version} đã được tải xuống nhưng không tự cài đặt.",
+  "Lart {version} downloaded but did not install on its own.":
+    "Lart {version} đã được tải xuống nhưng không tự cài đặt.",
 };
 
 export default common;

@@ -102,7 +102,7 @@ const catalog: Record<string, string> = {
   "{n} options active": "{n} opsi aktif",
   "{n} options#few": "{n} opsi",
   "{n} options#one": "{n} opsi",
-  "{n} other Harbors": "{n} Harbor lainnya",
+  "{n} other Harbors": "{n} Lart lainnya",
   "{n} pages": "{n} halaman",
   "{n} pages#few": "{n} halaman",
   "{n} pages#one": "{n} halaman",
@@ -187,14 +187,14 @@ const catalog: Record<string, string> = {
   "{n} titles you like": "{n} judul yang Anda sukai",
   "{n} titles#few": "{n} judul",
   "{n} titles#one": "{n} judul",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.":
-    "{n} permintaan pelacak diblokir dalam sesi ini. Harbor sama sekali tidak mengirim telemetri.",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#few":
-    "{n} permintaan pelacak diblokir dalam sesi ini. Harbor sama sekali tidak mengirim telemetri.",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#one":
-    "{n} permintaan pelacak diblokir dalam sesi ini. Harbor sama sekali tidak mengirim telemetri.",
-  "{n} tracker requests blocked this session. Harbor itself sends zero telemetry.":
-    "{n} permintaan pelacak diblokir dalam sesi ini. Harbor sama sekali tidak mengirim telemetri.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.":
+    "{n} permintaan pelacak diblokir dalam sesi ini. Lart sama sekali tidak mengirim telemetri.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#few":
+    "{n} permintaan pelacak diblokir dalam sesi ini. Lart sama sekali tidak mengirim telemetri.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#one":
+    "{n} permintaan pelacak diblokir dalam sesi ini. Lart sama sekali tidak mengirim telemetri.",
+  "{n} tracker requests blocked this session. Lart itself sends zero telemetry.":
+    "{n} permintaan pelacak diblokir dalam sesi ini. Lart sama sekali tidak mengirim telemetri.",
   "{n} tracks": "{n} trek",
   "{n} uncached hidden": "{n} yang belum di-cache disembunyikan",
   "{n} versions": "{n} versi",
@@ -270,13 +270,13 @@ const catalog: Record<string, string> = {
   "{title} cover": "Sampul {title}",
   "{title} image viewer": "Penampil gambar {title}",
   "{title} internal cover": "Sampul internal {title}",
-  "{title} on Harbor": "{title} di Harbor",
+  "{title} on Lart": "{title} di Lart",
   "{title} overview": "Ringkasan {title}",
   "{title} poster": "Poster {title}",
   "{title} trailer": "Trailer {title}",
   "{title} will not come back in the Discovery Queue.":
     "{title} tidak akan muncul lagi di Antrean Penemuan.",
-  "{title} won't load inside Harbor.": "{title} tidak dapat dimuat di dalam Harbor.",
+  "{title} won't load inside Lart.": "{title} tidak dapat dimuat di dalam Lart.",
   "{title} · Episode {episode}": "{title} · Episode {episode}",
   "{total} found across 1 source": "{total} ditemukan dari 1 sumber",
   "{total} found across {n} sources": "{total} ditemukan dari {n} sumber",
@@ -316,8 +316,8 @@ const catalog: Record<string, string> = {
   "التنس (WTA)": "Tenis (WTA)",
   "بطولة PGA": "Tur PGA",
   "دوري MLS": "Liga MLS",
-  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Harbor problem: pick another source, or give it a minute to finish caching and try again.":
-    "“Dalam cache” hanya berarti addon Anda menganggap file tersebut sudah tersimpan di debrid Anda dan siap langsung diputar. Penanda itu tidak selalu benar: terkadang file tersebut sebenarnya belum tersedia. Jika itu terjadi, sumber tidak dapat dimulai atau hanya memutar klip pendek yang rusak. Ini bukan masalah Harbor: pilih sumber lain, atau tunggu sebentar hingga proses penyimpanan ke cache selesai lalu coba lagi.",
+  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Lart problem: pick another source, or give it a minute to finish caching and try again.":
+    "“Dalam cache” hanya berarti addon Anda menganggap file tersebut sudah tersimpan di debrid Anda dan siap langsung diputar. Penanda itu tidak selalu benar: terkadang file tersebut sebenarnya belum tersedia. Jika itu terjadi, sumber tidak dapat dimulai atau hanya memutar klip pendek yang rusak. Ini bukan masalah Lart: pilih sumber lain, atau tunggu sebentar hingga proses penyimpanan ke cache selesai lalu coba lagi.",
   "← folder or .cbz / .zip": "← folder atau .cbz / .zip",
   "← name it like the manga": "← beri nama seperti judul manga",
   "−15s": "−15 dtk",

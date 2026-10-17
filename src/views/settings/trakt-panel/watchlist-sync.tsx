@@ -50,7 +50,7 @@ export function WatchlistSync() {
   const { authKey } = useAuth();
   const [phase, setPhase] = useState<Phase>({ kind: "idle" });
 
-  const signIn = t("Sign in to Stremio first so Harbor knows which watchlist to sync.");
+  const signIn = t("Sign in to Stremio first so Lart knows which watchlist to sync.");
   const locked = !authKey;
   const busy = phase.kind !== "idle" && phase.kind !== "result";
 
@@ -119,7 +119,7 @@ export function WatchlistSync() {
       const r = await runImport(authKey, items, (done, total) =>
         setPhase({ kind: "running", label: t("Importing {done} / {total}", { done, total }) }),
       );
-      setPhase({ kind: "result", tone: "ok", message: t("Added {n} to your Harbor watchlist", { n: r.added }) });
+      setPhase({ kind: "result", tone: "ok", message: t("Added {n} to your Lart watchlist", { n: r.added }) });
     } catch (err) {
       console.error("[trakt] import failed", err);
       setPhase({ kind: "result", tone: "warn", message: traktErrorMessage(t, err) });
@@ -149,8 +149,8 @@ export function WatchlistSync() {
         <div className="flex min-w-0 flex-col gap-1.5">
           <p className={`max-w-[66ch] ${ROW_DESC}`}>
             {isExport
-              ? t("Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.", { n: count })
-              : t("Add {n} titles from your Trakt watchlist to Harbor?", { n: count })}
+              ? t("Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.", { n: count })
+              : t("Add {n} titles from your Trakt watchlist to Lart?", { n: count })}
           </p>
           {skipped > 0 && (
             <p className={`max-w-[66ch] ${ROW_DESC}`}>
@@ -207,7 +207,7 @@ export function WatchlistSync() {
     <>
       <SettingRow
         label={t("Export to Trakt")}
-        desc={t("Send every title in your Harbor watchlist up to Trakt. Safe to run again, Trakt skips anything it already has.")}
+        desc={t("Send every title in your Lart watchlist up to Trakt. Safe to run again, Trakt skips anything it already has.")}
         lockReason={locked ? signIn : undefined}
       >
         <button
@@ -227,7 +227,7 @@ export function WatchlistSync() {
 
       <SettingRow
         label={t("Import from Trakt")}
-        desc={t("Pull every title on your Trakt watchlist into Harbor. Anything already saved is left alone.")}
+        desc={t("Pull every title on your Trakt watchlist into Lart. Anything already saved is left alone.")}
         lockReason={locked ? signIn : undefined}
       >
         <button

@@ -62,8 +62,8 @@ const profileFill: Record<string, string> = {
   "Could not update banner.": "Banner konnte nicht aktualisiert werden.",
   "Could not update group photo.": "Gruppenfoto konnte nicht aktualisiert werden.",
   "Could not update photo.": "Foto konnte nicht aktualisiert werden.",
-  "Couldn't reach Harbor, check your connection":
-    "Harbor konnte nicht erreicht werden. Prüfe deine Verbindung",
+  "Couldn't reach Lart, check your connection":
+    "Lart konnte nicht erreicht werden. Prüfe deine Verbindung",
   "Create a group to watch and share together.":
     "Erstelle eine Gruppe, um gemeinsam Inhalte anzusehen und zu teilen.",
   "Create group": "Gruppe erstellen",
@@ -84,9 +84,9 @@ const profileFill: Record<string, string> = {
   Finished: "Beendet",
   "Game search needs an API key before it can run.":
     "Für die Spielesuche ist ein API-Schlüssel erforderlich.",
-  "Harbor is having trouble, try again in a moment":
-    "Harbor hat Probleme. Versuche es gleich noch einmal.",
-  "Harbor list": "Harbor-Liste",
+  "Lart is having trouble, try again in a moment":
+    "Lart hat Probleme. Versuche es gleich noch einmal.",
+  "Lart list": "Lart-Liste",
   "Hero stats": "Hero-Statistiken",
   "Hidden language": "Ausgeblendete Sprache",
   "In a watch party": "In einer Watchparty",
@@ -173,7 +173,7 @@ const profileFill: Record<string, string> = {
   Rated: "Bewertet",
   "Rating removed": "Bewertung entfernt",
   "Rating saved": "Bewertung gespeichert",
-  "Ratings need a Harbor account": "Für Bewertungen ist ein Harbor-Konto erforderlich",
+  "Ratings need a Lart account": "Für Bewertungen ist ein Lart-Konto erforderlich",
   "Recent activity": "Letzte Aktivitäten",
   "Remove friend": "Freund entfernen",
   "Remove rating": "Bewertung entfernen",
@@ -215,8 +215,8 @@ const profileFill: Record<string, string> = {
   "Slow down a moment before posting again": "Warte kurz, bevor du erneut postest",
   "Social links": "Social-Media-Links",
   "Something went wrong on the way there.": "Auf dem Weg dorthin ist etwas schiefgegangen.",
-  "Something went wrong reaching Harbor. Check your connection and try again.":
-    "Beim Verbinden mit Harbor ist ein Fehler aufgetreten. Prüfe deine Verbindung und versuche es erneut.",
+  "Something went wrong reaching Lart. Check your connection and try again.":
+    "Beim Verbinden mit Lart ist ein Fehler aufgetreten. Prüfe deine Verbindung und versuche es erneut.",
   "Start typing to find people.": "Tippe, um Personen zu finden.",
   "Stored as a small optimized webp.": "Als kleine, optimierte WebP-Datei gespeichert.",
   "Tap a star to change, then save": "Stern antippen, um die Bewertung zu ändern, dann speichern",
@@ -258,8 +258,8 @@ const profileFill: Record<string, string> = {
     "Du bewertest zu schnell. Versuche es gleich noch einmal.",
   "You have no lists yet": "Du hast noch keine Listen",
   "You have reached the {max} link limit": "Du hast das Limit von {max} Links erreicht",
-  "Your Harbor account is separate from your Stremio sign in. Create one free or sign in from Settings.":
-    "Dein Harbor-Konto ist von deiner Stremio-Anmeldung getrennt. Erstelle kostenlos ein Konto oder melde dich über die Einstellungen an.",
+  "Your Lart account is separate from your Stremio sign in. Create one free or sign in from Settings.":
+    "Dein Lart-Konto ist von deiner Stremio-Anmeldung getrennt. Erstelle kostenlos ein Konto oder melde dich über die Einstellungen an.",
   "Your links": "Deine Links",
   "Your rating": "Deine Bewertung",
   "Your rating {n}/10": "Deine Bewertung: {n}/10",
@@ -273,10 +273,10 @@ const profileFill: Record<string, string> = {
   "{count} of {total} showing": "{count} von {total} werden angezeigt",
   "{count}/{max} selected": "{count}/{max} ausgewählt",
   "{label} handle": "Benutzername bei {label}",
-  "{name} on Harbor": "{name} auf Harbor",
+  "{name} on Lart": "{name} auf Lart",
   "{name}'s ratings": "Bewertungen von {name}",
   "{selected}/{max} selected": "{selected}/{max} ausgewählt",
-  "{title} on Harbor": "{title} auf Harbor",
+  "{title} on Lart": "{title} auf Lart",
 };
 
 export default profileFill;

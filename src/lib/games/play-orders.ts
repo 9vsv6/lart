@@ -2,7 +2,7 @@ import {EXTRA_PLAY_ORDERS} from "./play-order-catalog.ts";
 import type { AtlasGame } from "./igdb-data";
 export type PlayOrderEntry = {name:string;year:number;releaseDate?:number;storyRank?:number;storyYear?:number;storyEndYear?:number;editions:{id:number;name:string}[]};
 export type PlayOrderBranch = {key:string;name:string;source:string;storyOrder?:boolean;entries:PlayOrderEntry[]};
-// Exact IGDB identities verified against Harbor's gateway, 2026-10-05.
+// Exact IGDB identities verified against Lart's gateway, 2026-10-05.
 // Release years are original release years, not the dates of ports or collections.
 export const MEGA_MAN_ORDERS: PlayOrderBranch[] = [
   {

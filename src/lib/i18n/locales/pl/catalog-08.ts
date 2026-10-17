@@ -5,8 +5,8 @@ const catalog08: Record<string, string> = {
   "Motion smoothing": "Wygładzanie ruchu",
   "Mouse tracker": "Wskaźnik myszy",
   Move: "Przenieś",
-  "Move Harbor by dragging any empty space on a page, not just the top bar. Leave this off to keep clicks inside pages from nudging the window.":
-    "Przenoś Harbor, przeciągając dowolne puste miejsce na stronie, a nie tylko górny pasek. Pozostaw tę opcję wyłączoną, aby kliknięcia na stronach nie przesuwały okna.",
+  "Move Lart by dragging any empty space on a page, not just the top bar. Leave this off to keep clicks inside pages from nudging the window.":
+    "Przenoś Lart, przeciągając dowolne puste miejsce na stronie, a nie tylko górny pasek. Pozostaw tę opcję wyłączoną, aby kliknięcia na stronach nie przesuwały okna.",
   "Move Refresh next to Back": "Przenieś Odśwież obok Wstecz",
   "Move all to account": "Przenieś wszystkie na konto",
   "Move down": "Przenieś niżej",
@@ -26,8 +26,8 @@ const catalog08: Record<string, string> = {
   "Moved {name} to position {n} of {total}": "Przeniesiono {name} na pozycję {n} z {total}",
   "Moved {n} addons to your Stremio account. They now sync everywhere you sign in.":
     "Przeniesiono {n} dodatków na Twoje konto Stremio. Są teraz synchronizowane wszędzie, gdzie się zalogujesz.",
-  "Moved, but Harbor couldn't confirm the result. Reload to see the current state.":
-    "Przeniesiono, ale Harbor nie mógł potwierdzić wyniku. Wczytaj ponownie, aby zobaczyć obecny stan.",
+  "Moved, but Lart couldn't confirm the result. Reload to see the current state.":
+    "Przeniesiono, ale Lart nie mógł potwierdzić wyniku. Wczytaj ponownie, aby zobaczyć obecny stan.",
   "Moves: {moves}": "Ruchy: {moves}",
   Movie: "Film",
   "Movie Magic": "Magia kina",
@@ -111,11 +111,11 @@ const catalog08: Record<string, string> = {
   Name: "Nazwa",
   "Name (e.g. REMUX)": "Nazwa (np. REMUX)",
   "Name (optional)": "Nazwa (opcjonalnie)",
-  "Name each file after its award ID. Harbor resizes them and skips anything it cannot match.":
-    "Nazwij każdy plik według identyfikatora nagrody. Harbor zmieni ich rozmiar i pominie wszystko, czego nie uda się dopasować.",
+  "Name each file after its award ID. Lart resizes them and skips anything it cannot match.":
+    "Nazwij każdy plik według identyfikatora nagrody. Lart zmieni ich rozmiar i pominie wszystko, czego nie uda się dopasować.",
   "Name each file after its slot": "Nazwij każdy plik zgodnie z jego miejscem",
-  'Name each image file after its award ID and put them in a .zip, then use "Import a .zip pack" above. No JSON, no hosting needed. Harbor matches each file to its award, stores it locally, resizes it, and skips anything it doesn\'t recognize.':
-    "Nazwij każdy plik obrazu zgodnie z identyfikatorem nagrody i umieść je w pliku .zip, a następnie wybierz powyżej „Importuj pakiet .zip”. Nie potrzeba pliku JSON ani hostingu. Harbor dopasuje każdy plik do nagrody, zapisze go lokalnie, zmieni jego rozmiar i pominie wszystko, czego nie rozpozna.",
+  'Name each image file after its award ID and put them in a .zip, then use "Import a .zip pack" above. No JSON, no hosting needed. Lart matches each file to its award, stores it locally, resizes it, and skips anything it doesn\'t recognize.':
+    "Nazwij każdy plik obrazu zgodnie z identyfikatorem nagrody i umieść je w pliku .zip, a następnie wybierz powyżej „Importuj pakiet .zip”. Nie potrzeba pliku JSON ani hostingu. Lart dopasuje każdy plik do nagrody, zapisze go lokalnie, zmieni jego rozmiar i pominie wszystko, czego nie rozpozna.",
   "Name it, tick the resolutions, sources, codecs and audio you want, and leave the rest blank.":
     "Nadaj nazwę, zaznacz żądane rozdzielczości, źródła, kodeki i formaty dźwięku, a pozostałe pola pozostaw puste.",
   "Name this collection": "Nazwij tę kolekcję",
@@ -125,11 +125,11 @@ const catalog08: Record<string, string> = {
   "Name your theme": "Nazwij swój motyw",
   "Names behind the biggest productions": "Twórcy stojący za największymi produkcjami",
   "Naming guide": "Zasady nazewnictwa",
-  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Harbor's embedded player.":
-    "Natywny ruch w 48/60 kl./s dzięki instalacji SVP i VapourSynth w systemie Linux, renderowany we wbudowanym odtwarzaczu Harbor.",
+  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Lart's embedded player.":
+    "Natywny ruch w 48/60 kl./s dzięki instalacji SVP i VapourSynth w systemie Linux, renderowany we wbudowanym odtwarzaczu Lart.",
   "Native libmpv": "Natywna biblioteka libmpv",
-  "Native to Harbor. No RPDB or ratings addon needed.":
-    "Funkcja natywna dla Harbor. Nie wymaga RPDB ani dodatku z ocenami.",
+  "Native to Lart. No RPDB or ratings addon needed.":
+    "Funkcja natywna dla Lart. Nie wymaga RPDB ani dodatku z ocenami.",
   "Native webview playback. Smooth and integrated, but limited codec coverage.":
     "Natywne odtwarzanie w widoku webview. Płynne i zintegrowane, ale z ograniczoną obsługą kodeków.",
   "Native-style hybrid bar": "Hybrydowy pasek w stylu natywnym",
@@ -156,8 +156,8 @@ const catalog08: Record<string, string> = {
   "Network error": "Błąd sieci",
   "Network's best": "Najlepsze z tej stacji",
   Networks: "Stacje",
-  "Neural upscalers, sharpeners, and HDR tone-mapping ported for mpv. Each is hosted by its author, not bundled with Harbor. Download the ones you want; Harbor chains them in the right order and applies them in the player.":
-    "Neuralne skalery obrazu, filtry wyostrzające i mapowanie tonów HDR przeniesione do mpv. Każdy z nich jest hostowany przez swojego autora i nie jest dołączony do Harbor. Pobierz wybrane shadery, a Harbor połączy je we właściwej kolejności i zastosuje w odtwarzaczu.",
+  "Neural upscalers, sharpeners, and HDR tone-mapping ported for mpv. Each is hosted by its author, not bundled with Lart. Download the ones you want; Lart chains them in the right order and applies them in the player.":
+    "Neuralne skalery obrazu, filtry wyostrzające i mapowanie tonów HDR przeniesione do mpv. Każdy z nich jest hostowany przez swojego autora i nie jest dołączony do Lart. Pobierz wybrane shadery, a Lart połączy je we właściwej kolejności i zastosuje w odtwarzaczu.",
   Never: "Nigdy",
   "Never auto-select tracks containing": "Nigdy nie wybieraj automatycznie ścieżek zawierających",
   "Never contact the community server in either direction. Nothing is looked up and nothing is contributed from this device.":
@@ -246,7 +246,7 @@ const catalog08: Record<string, string> = {
   "No EPG channels match. This playlist's EPG source may be empty.":
     "Żaden kanał EPG nie pasuje. Źródło EPG tej playlisty może być puste.",
   "No Frills": "Bez ozdobników",
-  "No Harbor account yet": "Nie masz jeszcze konta Harbor",
+  "No Lart account yet": "Nie masz jeszcze konta Lart",
   "No Integrations option? You need the Manage Webhooks permission. Ask whoever owns the server.":
     "Nie ma opcji Integracje? Potrzebujesz uprawnienia Zarządzanie webhookami. Poproś właściciela serwera.",
   "No JavaScript. Scripts, inline handlers, and javascript: URLs are removed.":
@@ -266,8 +266,8 @@ const catalog08: Record<string, string> = {
   "No addons are synced to this account yet.":
     "Z tym kontem nie zsynchronizowano jeszcze żadnych dodatków.",
   "No addons installed yet": "Nie zainstalowano jeszcze żadnych dodatków",
-  "No affiliation, no referral links, and Harbor gets nothing from these. They are just places where money goes further than it does here.":
-    "Brak powiązań i linków polecających, a Harbor niczego z tego nie otrzymuje. To po prostu miejsca, w których pieniądze mogą przynieść więcej pożytku niż tutaj.",
+  "No affiliation, no referral links, and Lart gets nothing from these. They are just places where money goes further than it does here.":
+    "Brak powiązań i linków polecających, a Lart niczego z tego nie otrzymuje. To po prostu miejsca, w których pieniądze mogą przynieść więcej pożytku niż tutaj.",
   "No approved themes yet": "Brak zatwierdzonych motywów",
   "No art": "Brak grafiki",
   "No artists match that search": "Żaden wykonawca nie pasuje do tego wyszukiwania",
@@ -302,8 +302,8 @@ const catalog08: Record<string, string> = {
   "No chapters available in {lang} from this source.":
     "W tym źródle nie ma rozdziałów w języku {lang}.",
   "No chapters match your search.": "Żadne rozdziały nie pasują do wyszukiwania.",
-  "No clean release has surfaced yet. This may be too new. Harbor's filters dropped everything that came back as wrong-movie noise.":
-    "Nie znaleziono jeszcze prawidłowego wydania. Ten tytuł może być zbyt nowy. Filtry Harbor odrzuciły wszystkie wyniki jako niedopasowane filmy.",
+  "No clean release has surfaced yet. This may be too new. Lart's filters dropped everything that came back as wrong-movie noise.":
+    "Nie znaleziono jeszcze prawidłowego wydania. Ten tytuł może być zbyt nowy. Filtry Lart odrzuciły wszystkie wyniki jako niedopasowane filmy.",
   "No collections were found in the installed source catalog.":
     "Nie znaleziono żadnych kolekcji w katalogu zainstalowanego źródła.",
   "No collections yet. Add a collections addon to browse curated sets.":
@@ -416,8 +416,8 @@ const catalog08: Record<string, string> = {
   "No matches. Try a different search.": "Brak wyników. Spróbuj wyszukać inaczej.",
   "No matches. Try another title.": "Brak wyników. Spróbuj wpisać inny tytuł.",
   "No matching voices": "Brak pasujących głosów",
-  "No metadata addon detected. Harbor is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
-    "Nie wykryto dodatku z metadanymi. Harbor używa awaryjnie Cinemeta, aby tytuły nadal się wczytywały, ale włącz tę opcję ponownie, chyba że instalujesz taki dodatek.",
+  "No metadata addon detected. Lart is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
+    "Nie wykryto dodatku z metadanymi. Lart używa awaryjnie Cinemeta, aby tytuły nadal się wczytywały, ale włącz tę opcję ponownie, chyba że instalujesz taki dodatek.",
   "No more films to add. Start with what you picked.":
     "Nie ma już filmów do dodania. Zacznij od wybranych.",
   "No more found for this category.": "Nie znaleziono więcej pozycji w tej kategorii.",
@@ -435,9 +435,9 @@ const catalog08: Record<string, string> = {
     "Nie ma jeszcze powiadomień. Opublikuj motyw i obserwuj, jak zyskuje popularność.",
   "No one found by that name.": "Nie znaleziono nikogo o tej nazwie.",
   "No one recognized on screen right now.": "Obecnie nie rozpoznano nikogo na ekranie.",
-  "No other Harbor answered": "Żaden inny Harbor nie odpowiedział",
-  "No other Harbor answered on this network. One shows up here a moment after it starts.":
-    "Żaden inny Harbor nie odpowiedział w tej sieci. Pojawi się tutaj chwilę po uruchomieniu.",
+  "No other Lart answered": "Żaden inny Lart nie odpowiedział",
+  "No other Lart answered on this network. One shows up here a moment after it starts.":
+    "Żaden inny Lart nie odpowiedział w tej sieci. Pojawi się tutaj chwilę po uruchomieniu.",
   "No peers found": "Nie znaleziono peerów",
   "No people found": "Nie znaleziono osób",
   "No picks loaded. TMDB might be unreachable.":
@@ -504,8 +504,8 @@ const catalog08: Record<string, string> = {
   "No subtitles found yet. Try the search at the bottom.":
     "Nie znaleziono jeszcze napisów. Spróbuj wyszukać je na dole.",
   "No subtitles found.": "Nie znaleziono napisów.",
-  "No subtitles found. Start anyway, Harbor keeps looking while you watch.":
-    "Nie znaleziono napisów. Rozpocznij mimo to, Harbor będzie ich szukać podczas oglądania.",
+  "No subtitles found. Start anyway, Lart keeps looking while you watch.":
+    "Nie znaleziono napisów. Rozpocznij mimo to, Lart będzie ich szukać podczas oglądania.",
   "No subtitles found. Try another title above, or adjust the season and episode.":
     "Nie znaleziono napisów. Spróbuj wybrać inny tytuł powyżej albo zmień sezon i odcinek.",
   "No such captain": "Nie ma takiego kapitana",
@@ -546,8 +546,8 @@ const catalog08: Record<string, string> = {
     "Nie zainstalowano jeszcze żadnych. Dodatki Stremio do napisów można dodać w sekcji Źródła strumieniowania.",
   "None of Trakt's most-anticipated upcoming releases land in this month. Try a different month.":
     "Żadna z najbardziej oczekiwanych nadchodzących premier w Trakt nie przypada na ten miesiąc. Wybierz inny miesiąc.",
-  "None of your addons returned a downloadable package for {season}. Harbor can still fetch the episodes one at a time, or you can refresh the sources.":
-    "Żaden z dodatków nie zwrócił pakietu do pobrania dla sezonu {season}. Harbor nadal może pobrać odcinki pojedynczo. Możesz też odświeżyć źródła.",
+  "None of your addons returned a downloadable package for {season}. Lart can still fetch the episodes one at a time, or you can refresh the sources.":
+    "Żaden z dodatków nie zwrócił pakietu do pobrania dla sezonu {season}. Lart nadal może pobrać odcinki pojedynczo. Możesz też odświeżyć źródła.",
   "None of your addons returned a downloadable package for {season}. Refresh the sources or check your source settings.":
     "Żaden z Twoich dodatków nie zwrócił pakietu do pobrania dla sezonu {season}. Odśwież źródła lub sprawdź ich ustawienia.",
   Nord: "Nord",
@@ -602,8 +602,8 @@ const catalog08: Record<string, string> = {
     "Nic się nie zmieni, dopóki nie naciśniesz Zapisz. Opuszczenie tej strony spowoduje odrzucenie zmian.",
   "Nothing connected yet. Scan a code with your phone.":
     "Nic jeszcze nie połączono. Zeskanuj kod telefonem.",
-  "Nothing else answered. A Harbor shows up here a moment after it starts on this network.":
-    "Nic innego nie odpowiedziało. Harbor pojawi się tutaj chwilę po uruchomieniu w tej sieci.",
+  "Nothing else answered. A Lart shows up here a moment after it starts on this network.":
+    "Nic innego nie odpowiedziało. Lart pojawi się tutaj chwilę po uruchomieniu w tej sieci.",
   'Nothing found for "{q}"': "Brak wyników dla „{q}”",
   'Nothing found for "{q}". {n} of your addons did not answer.':
     "Nie znaleziono niczego dla „{q}”. Brak odpowiedzi od {n} dodatków.",
@@ -625,8 +625,8 @@ const catalog08: Record<string, string> = {
   "Nothing in this filter. Choose All to see everything that answered.":
     "Brak wyników w tym filtrze. Wybierz „Wszystkie”, aby zobaczyć wszystkie dodatki, które odpowiedziały.",
   "Nothing in {genre} right now.": "Obecnie brak treści w gatunku {genre}.",
-  "Nothing is uploaded and nothing ships with Harbor. Everything stays on this device and you are responsible for the images you add.":
-    "Nic nie jest przesyłane, a Harbor nie zawiera żadnych obrazów. Wszystko pozostaje na tym urządzeniu i ponosisz odpowiedzialność za dodane obrazy.",
+  "Nothing is uploaded and nothing ships with Lart. Everything stays on this device and you are responsible for the images you add.":
+    "Nic nie jest przesyłane, a Lart nie zawiera żadnych obrazów. Wszystko pozostaje na tym urządzeniu i ponosisz odpowiedzialność za dodane obrazy.",
   "Nothing left in today's picks": "Brak kolejnych propozycji na dziś",
   "Nothing left to confirm while P2P is disabled.": "Nie ma już nic do potwierdzenia, gdy P2P jest wyłączone.",
   "Nothing left to post after removing links.":
@@ -646,8 +646,8 @@ const catalog08: Record<string, string> = {
   "Nothing saved on Trakt yet.": "Nie zapisano jeszcze niczego w Trakt.",
   "Nothing saved yet. Add a title from any details page.":
     "Nie zapisano jeszcze żadnych tytułów. Dodaj tytuł z dowolnej strony szczegółów.",
-  "Nothing selected. Harbor will not load a subtitle on its own.":
-    "Nie wybrano niczego. Harbor nie wczyta napisów automatycznie.",
+  "Nothing selected. Lart will not load a subtitle on its own.":
+    "Nie wybrano niczego. Lart nie wczyta napisów automatycznie.",
   "Nothing sent yet. Change something and it goes up on its own.":
     "Jeszcze nic nie wysłano. Zmień coś, a zostanie to automatycznie przesłane.",
   "Nothing this month": "Brak pozycji w tym miesiącu",
@@ -665,13 +665,13 @@ const catalog08: Record<string, string> = {
   "Nothing watched yet.": "Nie obejrzano jeszcze niczego.",
   "Nothing watched yet. Press play on something.": "Nic jeszcze nie obejrzano. Włącz coś.",
   "Nothing yet": "Jeszcze nic tu nie ma",
-  "Nothing you have already set is lost. Harbor picks this back up where you left it.":
-    "Żadne skonfigurowane wcześniej ustawienia nie zostaną utracone. Harbor wznowi konfigurację od miejsca, w którym ją przerwano.",
+  "Nothing you have already set is lost. Lart picks this back up where you left it.":
+    "Żadne skonfigurowane wcześniej ustawienia nie zostaną utracone. Lart wznowi konfigurację od miejsca, w którym ją przerwano.",
   Notification: "Powiadomienie",
   Now: "Teraz",
   "Now Playing": "Teraz odtwarzane",
   "Now Playing card": "Karta „Teraz odtwarzane”",
-  "Now on Harbor": "Teraz w Harbor",
+  "Now on Lart": "Teraz w Lart",
   "Now playing": "Teraz odtwarzane",
   "Now playing touchpad. Swipe to move focus on the display, tap to select.":
     "Panel dotykowy bieżącego odtwarzania. Przesuń palcem, aby zmienić aktywny element na ekranie, lub dotknij, aby wybrać.",
@@ -703,8 +703,8 @@ const catalog08: Record<string, string> = {
   "OVA of the Year": "OVA roku",
   Off: "Wył.",
   "Off (use CPU)": "Wyłączone (użyj procesora)",
-  "Off by default, so your controller only drives Harbor while it is the focused window. Leave it off if you play games with the same controller.":
-    "Opcja jest domyślnie wyłączona, więc kontroler steruje Harbor tylko wtedy, gdy okno aplikacji jest aktywne. Pozostaw ją wyłączoną, jeśli grasz w gry za pomocą tego samego kontrolera.",
+  "Off by default, so your controller only drives Lart while it is the focused window. Leave it off if you play games with the same controller.":
+    "Opcja jest domyślnie wyłączona, więc kontroler steruje Lart tylko wtedy, gdy okno aplikacji jest aktywne. Pozostaw ją wyłączoną, jeśli grasz w gry za pomocą tego samego kontrolera.",
   "Off by default. Let visitors see what you have been watching":
     "Domyślnie wyłączone. Pozwól odwiedzającym zobaczyć, co ostatnio oglądasz",
   "Off by default. Show what you are watching right now, or your watch party, on your profile. Applies instantly":

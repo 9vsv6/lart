@@ -21,8 +21,8 @@ const surfaces: Record<string, string> = {
   "Add a custom award type": "Benutzerdefinierten Auszeichnungstyp hinzufügen",
   "Add a display name first. It is the name shown on your profile.":
     "Füge zuerst einen Anzeigenamen hinzu. Dieser Name wird in deinem Profil angezeigt.",
-  "Add a series above and Harbor will grab each new episode as it airs, on your terms.":
-    "Füge oben eine Serie hinzu, und Harbor lädt jede neue Folge nach deinen Vorgaben herunter, sobald sie erscheint.",
+  "Add a series above and Lart will grab each new episode as it airs, on your terms.":
+    "Füge oben eine Serie hinzu, und Lart lädt jede neue Folge nach deinen Vorgaben herunter, sobald sie erscheint.",
   "Add a series to auto-download": "Serie zum automatischen Herunterladen hinzufügen",
   "Add art to at least one slot to continue.":
     "Füge mindestens einem Feld ein Bild hinzu, um fortzufahren.",
@@ -86,7 +86,7 @@ const surfaces: Record<string, string> = {
     "Bücher, die du deinem Regal hinzufügst, werden hier angezeigt.",
   "Books you save will appear here": "Bücher, die du speicherst, erscheinen hier",
   "Brand name": "Markenname",
-  "Bring trusted source packages aboard through Harbor’s isolated extension worker.":
+  "Bring trusted source packages aboard through Lart’s isolated extension worker.":
     "Hole vertrauenswürdige Quellpakete über Harbors isolierten Erweiterungs-Worker an Bord.",
   "Browse community": "Community durchsuchen",
   "Browse eBooks": "eBooks durchsuchen",
@@ -99,8 +99,8 @@ const surfaces: Record<string, string> = {
   "CSS {css} · HTML {html} · JS {js}": "CSS {css} · HTML {html} · JS {js}",
   "CSS, HTML and JS layered over the whole app. Optional for built-in layouts, required for custom chrome.":
     "CSS, HTML und JS über der gesamten App. Optional für integrierte Layouts, erforderlich für eine benutzerdefinierte Oberfläche.",
-  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Harbor feature, so your chrome never goes stale when Harbor adds menu items.":
-    "Rufe diese über onclick-Handler oder das JS deines Themes auf. Sie sind stabil und sicher: Jede Funktion steuert die echte Harbor-Funktion, sodass deine Oberfläche immer aktuell bleibt, wenn Harbor Menüpunkte hinzufügt.",
+  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Lart feature, so your chrome never goes stale when Lart adds menu items.":
+    "Rufe diese über onclick-Handler oder das JS deines Themes auf. Sie sind stabil und sicher: Jede Funktion steuert die echte Lart-Funktion, sodass deine Oberfläche immer aktuell bleibt, wenn Lart Menüpunkte hinzufügt.",
   "Cancel Edge TTS generation": "Edge-TTS-Erzeugung abbrechen",
   "Cancel audio generation": "Audiogenerierung abbrechen",
   "Celebrated works of literary fiction": "Gefeierte Werke der anspruchsvollen Literatur",
@@ -133,8 +133,8 @@ const surfaces: Record<string, string> = {
   "Complete-chapter generation progress":
     "Fortschritt bei der Erzeugung des vollständigen Kapitels",
   "Congrats! Tap to view your badges.": "Glückwunsch! Tippe, um deine Abzeichen anzusehen.",
-  "Connect books you own, trusted reading sources, and metadata services. Harbor keeps the shelf coherent while every source stays under your control.":
-    "Verbinde Bücher, die dir gehören, vertrauenswürdige Lesequellen und Metadatendienste. Harbor hält das Bücherregal übersichtlich, während jede Quelle unter deiner Kontrolle bleibt.",
+  "Connect books you own, trusted reading sources, and metadata services. Lart keeps the shelf coherent while every source stays under your control.":
+    "Verbinde Bücher, die dir gehören, vertrauenswürdige Lesequellen und Metadatendienste. Lart hält das Bücherregal übersichtlich, während jede Quelle unter deiner Kontrolle bleibt.",
   "Connect to your computer to manage your library.":
     "Verbinde dich mit deinem Computer, um deine Mediathek zu verwalten.",
   "Connecting...": "Verbindung wird hergestellt...",
@@ -188,7 +188,7 @@ const surfaces: Record<string, string> = {
   "Delete saved audio": "Gespeichertes Audio löschen",
   "Diacritic-insensitive · results ahead stay sealed":
     "Unabhängig von Diakritika · nachfolgende Ergebnisse bleiben verborgen",
-  "Dispatched on window. Listen from your theme JS to react to Harbor's lifecycle.":
+  "Dispatched on window. Listen from your theme JS to react to Lart's lifecycle.":
     "Wird auf window ausgelöst. Lausche im JS deines Themes auf das Ereignis, um auf Harbors Lebenszyklus zu reagieren.",
   "Distinguished fiction honored by the Pulitzer Prize":
     "Herausragende, mit dem Pulitzer-Preis ausgezeichnete Belletristik",
@@ -198,8 +198,8 @@ const surfaces: Record<string, string> = {
   "Download interrupted": "Download unterbrochen",
   "Download {file}": "{file} herunterladen",
   "Downloading shaders…": "Shader werden heruntergeladen…",
-  "Drop in art at any resolution. Harbor resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
-    "Füge eine Grafik in beliebiger Auflösung hinzu. Harbor verkleinert und komprimiert alles, was zu groß ist, sodass nichts allein wegen seiner Größe übersprungen wird. Quadratische PNGs mit transparentem Hintergrund sehen am besten aus.",
+  "Drop in art at any resolution. Lart resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
+    "Füge eine Grafik in beliebiger Auflösung hinzu. Lart verkleinert und komprimiert alles, was zu groß ist, sodass nichts allein wegen seiner Größe übersprungen wird. Quadratische PNGs mit transparentem Hintergrund sehen am besten aus.",
   "Drop many images, GIFs, or a .zip at once. Name each file after its slot ({example}) and we match them. Any size is fine, we resize big images and keep animated GIFs light.":
     "Lege mehrere Bilder, GIFs oder eine .zip-Datei auf einmal ab. Benenne jede Datei nach ihrem Platz ({example}), dann ordnen wir sie zu. Die Größe spielt keine Rolle: Wir verkleinern große Bilder und halten animierte GIFs kompakt.",
   "Drop the About and Custom labels so an embed fills the card cleanly.":
@@ -219,8 +219,8 @@ const surfaces: Record<string, string> = {
   "Even after auto-shrinking this image is still too big to store. Try one with a tighter crop.":
     "Selbst nach der automatischen Verkleinerung ist dieses Bild noch zu groß zum Speichern. Versuche es mit einem engeren Ausschnitt.",
   "Every slot name": "Alle Slotnamen",
-  "Every surface in Harbor maps to one of these 12 variables.":
-    "Jede Oberfläche in Harbor ist einer dieser 12 Variablen zugeordnet.",
+  "Every surface in Lart maps to one of these 12 variables.":
+    "Jede Oberfläche in Lart ist einer dieser 12 Variablen zugeordnet.",
   "Every theme is sandboxed, scanned, and reviewed before it reaches the library, so you can try any look without a second thought.":
     "Jedes Design läuft in einer Sandbox und wird gescannt sowie geprüft, bevor es in die Mediathek gelangt. So kannst du jedes Erscheinungsbild bedenkenlos ausprobieren.",
   "Extension dock": "Erweiterungsdock",
@@ -231,19 +231,19 @@ const surfaces: Record<string, string> = {
   "Featured pick": "Besondere Empfehlung",
   "Featured theme": "Hervorgehobenes Design",
   Fiction: "Belletristik",
-  "File is not a Harbor layout profile.": "Die Datei ist kein Harbor-Layoutprofil.",
+  "File is not a Lart layout profile.": "Die Datei ist kein Lart-Layoutprofil.",
   "Filter eBooks": "eBooks filtern",
   "Find a word or passage": "Wort oder Passage suchen",
   "Floating orbs over the canvas.": "Schwebende Kugeln über der Zeichenfläche.",
   Folder: "Ordner",
-  "Folder selection is available in the Harbor app":
-    "Ordnerauswahl ist in der Harbor-App verfügbar",
+  "Folder selection is available in the Lart app":
+    "Ordnerauswahl ist in der Lart-App verfügbar",
   "Follow them out?": "Willst du ihnen nach draußen folgen?",
   "Font tokens": "Schriftart-Tokens",
   "Fresh from the community": "Neu aus der Community",
   "From the Installed Source": "Aus der installierten Quelle",
-  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Harbor handles the shaders.":
-    "GPU-Shader, die beim Abspielen von Anime Linien schärfen und Verläufe glätten. Wähle einen Modus, Harbor kümmert sich um die Shader.",
+  "GPU shaders that sharpen lines and clean up gradients on anime as it plays. Pick a mode, Lart handles the shaders.":
+    "GPU-Shader, die beim Abspielen von Anime Linien schärfen und Verläufe glätten. Wähle einen Modus, Lart kümmert sich um die Shader.",
   "Get theme": "Design herunterladen",
   "Get your free TheTVDB key": "Hol dir deinen kostenlosen TheTVDB-Schlüssel",
   "Gilded Trophies": "Vergoldete Trophäen",
@@ -258,13 +258,13 @@ const surfaces: Record<string, string> = {
   "HEVC unsupported": "HEVC nicht unterstützt",
   "HTML and CSS are each capped at 16,384 characters.":
     "HTML und CSS sind jeweils auf 16.384 Zeichen begrenzt.",
-  "Harbor Reader": "Harbor Reader",
-  "Harbor Staff": "Harbor-Team",
-  "Harbor eBook": "Harbor-E-Book",
-  "Harbor never hosts your books.": "Harbor speichert deine Bücher nie auf eigenen Servern.",
-  "Harbor snippet": "Harbor-Codeausschnitt",
-  "Harbor theme": "Harbor-Design",
-  "Harbor, from a public domain frame": "Harbor, aus einem gemeinfreien Einzelbild",
+  "Lart Reader": "Lart Reader",
+  "Lart Staff": "Lart-Team",
+  "Lart eBook": "Lart-E-Book",
+  "Lart never hosts your books.": "Lart speichert deine Bücher nie auf eigenen Servern.",
+  "Lart snippet": "Lart-Codeausschnitt",
+  "Lart theme": "Lart-Design",
+  "Lart, from a public domain frame": "Lart, aus einem gemeinfreien Einzelbild",
   "Help & feedback": "Hilfe & Feedback",
   "Here for the late-night sci-fi": "Für Science-Fiction bis spät in die Nacht",
   "Hidden from visitors": "Für Besucher ausgeblendet",
@@ -344,8 +344,8 @@ const surfaces: Record<string, string> = {
   "Made a look you love? Share it with the community in a couple of clicks and watch the downloads roll in.":
     "Du hast ein Design erstellt, das dir richtig gut gefällt? Teile es mit wenigen Klicks mit der Community und sieh zu, wie die Downloadzahlen steigen.",
   "Manage eBook sources": "eBook-Quellen verwalten",
-  "Manage every place Harbor can read from, whether it lives on disk or across the web.":
-    "Verwalte alle Quellen, aus denen Harbor lesen kann, ob auf der Festplatte oder im Web.",
+  "Manage every place Lart can read from, whether it lives on disk or across the web.":
+    "Verwalte alle Quellen, aus denen Lart lesen kann, ob auf der Festplatte oder im Web.",
   "Manga adaptation": "Manga-Adaption",
   "Mark as Read": "Als gelesen markieren",
   "Marked as read": "Als gelesen markiert",
@@ -435,13 +435,13 @@ const surfaces: Record<string, string> = {
   "Offline Reading": "Offline lesen",
   "On Shelf": "Im Regal",
   "One line shown under the name.": "Eine Zeile wird unter dem Namen angezeigt.",
-  "One-time setup downloads the shader pack (about 1 MB) into Harbor. No files to hunt down.":
-    "Bei der einmaligen Einrichtung wird das Shader-Paket (ca. 1 MB) in Harbor heruntergeladen. Du musst keine Dateien suchen.",
+  "One-time setup downloads the shader pack (about 1 MB) into Lart. No files to hunt down.":
+    "Bei der einmaligen Einrichtung wird das Shader-Paket (ca. 1 MB) in Lart heruntergeladen. Du musst keine Dateien suchen.",
   "Only you can see your friends, badges, activity, and comments. Your name and avatar stay visible.":
     "Nur du kannst deine Freunde, Abzeichen, Aktivitäten und Kommentare sehen. Dein Name und dein Avatar bleiben sichtbar.",
   "Open TheTVDB": "TheTVDB öffnen",
-  "Open a manga on Harbor to control the reader from here.":
-    "Öffne einen Manga in Harbor, um die Leseansicht von hier aus zu steuern.",
+  "Open a manga on Lart to control the reader from here.":
+    "Öffne einen Manga in Lart, um die Leseansicht von hier aus zu steuern.",
   "Open a terminal and run: brew install ffmpeg":
     "Öffne ein Terminal und führe Folgendes aus: brew install ffmpeg",
   "Open a terminal and run: winget install Gyan.FFmpeg":
@@ -521,8 +521,8 @@ const surfaces: Record<string, string> = {
   "Rate this pack": "Dieses Paket bewerten",
   "Rate this theme": "Dieses Design bewerten",
   "Rate {count} stars": "Mit {count} Sternen bewerten",
-  "Re-sync from your Harbor profile picture":
-    "Erneut anhand deines Harbor-Profilbilds synchronisieren",
+  "Re-sync from your Lart profile picture":
+    "Erneut anhand deines Lart-Profilbilds synchronisieren",
   "Read chapter with Edge TTS": "Kapitel mit Edge TTS vorlesen",
   "Read eBook files you already have": "Bereits vorhandene eBook-Dateien lesen",
   "Read from": "Lesen ab",
@@ -579,8 +579,8 @@ const surfaces: Record<string, string> = {
     "{count} Bild passend skaliert. Nichts wurde wegen der Größe übersprungen.",
   "Resized {count} images to fit. Nothing was skipped for size.":
     "{count} Bilder passend skaliert. Nichts wurde wegen der Größe übersprungen.",
-  "Reskin the award trophies shown across Harbor. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
-    "Gestalte die in Harbor angezeigten Auszeichnungstrophäen neu. Klicke auf eine Auszeichnung, um ein PNG oder animiertes GIF hinzuzufügen, erstelle eigene Auszeichnungstypen oder importiere ein ganzes Set auf einmal.",
+  "Reskin the award trophies shown across Lart. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
+    "Gestalte die in Lart angezeigten Auszeichnungstrophäen neu. Klicke auf eine Auszeichnung, um ein PNG oder animiertes GIF hinzuzufügen, erstelle eigene Auszeichnungstypen oder importiere ein ganzes Set auf einmal.",
   "Reskin the quality chips (4K, HDR, Dolby Vision, Atmos and more) that ride each stream in the play picker. Click any slot to drop in your own PNG or animated GIF, or import a whole set at once. You do not have to fill every slot.":
     "Gestalte die Qualitätskennzeichen (4K, HDR, Dolby Vision, Atmos und mehr) neu, die bei jedem Stream in der Wiedergabeauswahl angezeigt werden. Klicke auf einen beliebigen Platz, um dein eigenes PNG oder animiertes GIF hinzuzufügen, oder importiere ein ganzes Set auf einmal. Du musst nicht jeden Platz belegen.",
   "Resume download": "Download fortsetzen",
@@ -620,18 +620,18 @@ const surfaces: Record<string, string> = {
   "Select a passage to add a highlight, note, or reference.":
     "Wähle eine Textstelle aus, um eine Markierung, Notiz oder Referenz hinzuzufügen.",
   "Select a volume to see its chapters.": "Wähle einen Band aus, um seine Kapitel anzusehen.",
-  "Send this title to your Harbor app": "Diesen Titel an deine Harbor-App senden",
+  "Send this title to your Lart app": "Diesen Titel an deine Lart-App senden",
   "Sends only the chapter you open to DeepSeek. Volumes, chapters, and metadata stay unchanged.":
     "Sendet nur das geöffnete Kapitel an DeepSeek. Bände, Kapitel und Metadaten bleiben unverändert.",
-  "Set a Harbor profile picture first": "Lege zuerst ein Harbor-Profilbild fest",
+  "Set a Lart profile picture first": "Lege zuerst ein Lart-Profilbild fest",
   "Set on <html>. Use them to scope styles to a specific layout/card/button choice.":
     "Wird auf <html> gesetzt. Verwende sie, um Stile auf eine bestimmte Layout-, Karten- oder Schaltflächenauswahl zu beschränken.",
   "Set on the root. Override any to swap typography.":
     "Auf Root-Ebene festlegen. Überschreibe einzelne Werte, um die Typografie zu ändern.",
   "Set your status": "Deinen Status festlegen",
   "Shaders installed": "Shader installiert",
-  "Shape the metadata and reading language Harbor uses without changing your original files.":
-    "Passe die von Harbor verwendeten Metadaten und die Lesesprache an, ohne deine Originaldateien zu verändern.",
+  "Shape the metadata and reading language Lart uses without changing your original files.":
+    "Passe die von Lart verwendeten Metadaten und die Lesesprache an, ohne deine Originaldateien zu verändern.",
   "Share a pack": "Paket teilen",
   "Share a theme": "Design teilen",
   "Share an icon pack": "Symbolpaket teilen",
@@ -655,8 +655,8 @@ const surfaces: Record<string, string> = {
   "Show them anyway": "Trotzdem anzeigen",
   "Show translation": "Übersetzung anzeigen",
   "Show up to 6 of your lists on your profile": "Bis zu 6 deiner Listen in deinem Profil anzeigen",
-  "Show your Harbor profile picture on the community":
-    "Dein Harbor-Profilbild in der Community anzeigen",
+  "Show your Lart profile picture on the community":
+    "Dein Lart-Profilbild in der Community anzeigen",
   "Shows as a bubble on your profile": "Wird als Blase in deinem Profil angezeigt",
   "Shows in the browser tab; defaults to your avatar":
     "Wird im Browser-Tab angezeigt; standardmäßig wird dein Avatar verwendet",
@@ -683,8 +683,8 @@ const surfaces: Record<string, string> = {
   "Stop auto-downloading {title}": "Automatisches Herunterladen von {title} beenden",
   "Stop sample": "Hörprobe stoppen",
   "Stop {voice} sample": "Stimmprobe von {voice} stoppen",
-  "Storage is full. Clear Harbor cache storage, then try saving again.":
-    "Der Speicher ist voll. Leere den Harbor-Cache und versuche dann erneut zu speichern.",
+  "Storage is full. Clear Lart cache storage, then try saving again.":
+    "Der Speicher ist voll. Leere den Lart-Cache und versuche dann erneut zu speichern.",
   "Stories you love": "Geschichten, die du liebst",
   Strong: "Stark",
   "Style {selector} and the posters on the right update live. Hit Insert starter for a head start.":
@@ -764,8 +764,8 @@ const surfaces: Record<string, string> = {
   "Unknown author": "Unbekannter Autor",
   "Unlock controls": "Bedienelemente entsperren",
   "Unlock player controls ({binding})": "Player-Steuerung entsperren ({binding})",
-  "Unsupported profile version ({version}). Update Harbor or use an older profile.":
-    "Nicht unterstützte Profilversion ({version}). Aktualisiere Harbor oder verwende ein älteres Profil.",
+  "Unsupported profile version ({version}). Update Lart or use an older profile.":
+    "Nicht unterstützte Profilversion ({version}). Aktualisiere Lart oder verwende ein älteres Profil.",
   "Update password": "Passwort aktualisieren",
   "Update photo": "Foto aktualisieren",
   "Update queued.": "Aktualisierung zur Warteschlange hinzugefügt.",
@@ -792,8 +792,8 @@ const surfaces: Record<string, string> = {
   "Volume {volume}": "Lautstärke {volume}",
   Volumes: "Bände",
   "Volumes not reported": "Bände nicht angegeben",
-  "Want a badge that moves? Drop in a GIF up to 8 MB. Harbor shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
-    "Möchtest du ein animiertes Abzeichen? Füge ein GIF mit bis zu 8 MB hinzu. Harbor verkleinert es und wandelt es in ein kompaktes animiertes Format um, damit es scharf bleibt und schnell lädt. Halte es klein und nutze eine Endlosschleife.",
+  "Want a badge that moves? Drop in a GIF up to 8 MB. Lart shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
+    "Möchtest du ein animiertes Abzeichen? Füge ein GIF mit bis zu 8 MB hinzu. Lart verkleinert es und wandelt es in ein kompaktes animiertes Format um, damit es scharf bleibt und schnell lädt. Halte es klein und nutze eine Endlosschleife.",
   "Watch Live TV?": "Live-TV ansehen?",
   Weak: "Schwach",
   "Webtoon strip": "Webtoon-Ansicht",
@@ -818,8 +818,8 @@ const surfaces: Record<string, string> = {
   "You're editing the chrome by hand, so the visual builder stays out of your way.":
     "Du bearbeitest die Oberfläche von Hand, daher hält sich der visuelle Editor zurück.",
   "YouTube, SoundCloud or Spotify link": "YouTube-, SoundCloud- oder Spotify-Link",
-  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Harbor. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
-    "Dein HTML und CSS werden in einem Sandbox-Frame dargestellt, vollständig vom restlichen Harbor isoliert. Schreibe den Code wie für eine kleine, eigenständige Seite. Schriftart und Seitenhintergrund sind separate Einstellungen oben und gelten für das gesamte Profil.",
+  "Your HTML and CSS render inside a sandboxed frame, fully isolated from the rest of Lart. Write it like a tiny self-contained page. Font and page background are separate controls above, applied to the whole profile.":
+    "Dein HTML und CSS werden in einem Sandbox-Frame dargestellt, vollständig vom restlichen Lart isoliert. Schreibe den Code wie für eine kleine, eigenständige Seite. Schriftart und Seitenhintergrund sind separate Einstellungen oben und gelten für das gesamte Profil.",
   "Your award pack": "Dein Auszeichnungspaket",
   "Your badge pack": "Dein Abzeichenpaket",
   "Your browser's storage is full. Remove custom icons or delete profiles to free up space, then try again.":
@@ -847,7 +847,7 @@ const surfaces: Record<string, string> = {
     "passte in keinen Slot (benenne es nach dem Slot um)",
   "download error": "Downloadfehler",
   "eBook actions": "eBook-Aktionen",
-  "eBook extensions use Harbor’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
+  "eBook extensions use Lart’s isolated worker, HTTP bridge, and HTML parser—the same sandbox used by Manga extensions. Only add repositories you trust.":
     "E-Book-Erweiterungen nutzen Harbors isolierten Worker, die HTTP-Bridge und den HTML-Parser, also dieselbe Sandbox wie Manga-Erweiterungen. Füge nur Repositorys hinzu, denen du vertraust.",
   "eBook source settings": "Einstellungen für eBook-Quellen",
   episodes: "Folgen",
@@ -942,8 +942,8 @@ const surfaces: Record<string, string> = {
   "{count}w": "{count} Wo.",
   "{count}w ago": "vor {count} Wo.",
   "{count}y ago": "vor {count} J.",
-  "{file} is empty. Start typing to restyle Harbor.":
-    "{file} ist leer. Beginne zu tippen, um Harbor neu zu gestalten.",
+  "{file} is empty. Start typing to restyle Lart.":
+    "{file} ist leer. Beginne zu tippen, um Lart neu zu gestalten.",
   "{first} and {second}": "{first} und {second}",
   "{format} added to Downloads": "{format} wurde den Downloads hinzugefügt",
   "{label} icon": "{label}-Symbol",

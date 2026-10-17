@@ -21,6 +21,6 @@ export default {
   "games.match.use": "Usar este jogo",
   "games.match.remove": "Remover associação",
   "games.match.source": "Imagens e detalhes do IGDB",
-  "games.match.note": "Escolha a edição correspondente ao arquivo. O Harbor mantém o arquivo e o nome originais.",
+  "games.match.note": "Escolha a edição correspondente ao arquivo. O Lart mantém o arquivo e o nome originais.",
   "games.match.empty": "Tente o título sem indicações de região ou revisão."
 };

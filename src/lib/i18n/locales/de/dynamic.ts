@@ -16,14 +16,14 @@ const dynamic: Record<string, string> = {
   Actor: "Schauspieler",
   "Add a channel": "Kanal hinzufügen",
   "Add to tile {n}": "Zu Kachel {n} hinzufügen",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#few":
-    "{n} Titel aus deiner Harbor-Merkliste zu Trakt hinzufügen? Titel, die bereits vorhanden sind, werden von Trakt übersprungen.",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#one":
-    "{n} Titel aus deiner Harbor-Merkliste zu Trakt hinzufügen? Titel, die bereits vorhanden sind, werden von Trakt übersprungen.",
-  "Add {n} titles from your Trakt watchlist to Harbor?#few":
-    "{n} Titel aus deiner Trakt-Merkliste zu Harbor hinzufügen?",
-  "Add {n} titles from your Trakt watchlist to Harbor?#one":
-    "{n} Titel aus deiner Trakt-Merkliste zu Harbor hinzufügen?",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#few":
+    "{n} Titel aus deiner Lart-Merkliste zu Trakt hinzufügen? Titel, die bereits vorhanden sind, werden von Trakt übersprungen.",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#one":
+    "{n} Titel aus deiner Lart-Merkliste zu Trakt hinzufügen? Titel, die bereits vorhanden sind, werden von Trakt übersprungen.",
+  "Add {n} titles from your Trakt watchlist to Lart?#few":
+    "{n} Titel aus deiner Trakt-Merkliste zu Lart hinzufügen?",
+  "Add {n} titles from your Trakt watchlist to Lart?#one":
+    "{n} Titel aus deiner Trakt-Merkliste zu Lart hinzufügen?",
   "After {n} episodes#few": "Nach {n} Folgen",
   "After {n} episodes#one": "Nach {n} Folge",
   "All playlists": "Alle Playlists",
@@ -42,15 +42,15 @@ const dynamic: Record<string, string> = {
   "Back on TMDB, click your avatar in the top right and choose Settings from the menu.":
     "Zurück auf TMDB klickst du oben rechts auf deinen Avatar und wählst im Menü „Einstellungen“.",
   "Back on display": "Wieder anzeigen",
-  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Harbor. Harbor saves it on its own.":
-    "Scrolle auf der API-Seite ganz nach unten. Kopiere den Wert unter „API Key“ und füge ihn in Harbor ein. Harbor speichert ihn automatisch.",
+  "Back on the API page, scroll to the bottom. Copy the value under API Key and paste it into Lart. Lart saves it on its own.":
+    "Scrolle auf der API-Seite ganz nach unten. Kopiere den Wert unter „API Key“ und füge ihn in Lart ein. Lart speichert ihn automatisch.",
   "Back to home": "Zur Startseite",
   "Back {n} seconds#few": "{n} Sekunden zurück",
   "Back {n} seconds#one": "{n} Sekunde zurück",
   "Bring your own keys": "Eigene Schlüssel verwenden",
   "Change channel": "Kanal wechseln",
-  "Changing the metadata language reloads Harbor so the new language takes effect. Apply when you're done with the options above.":
-    "Wenn du die Metadatensprache änderst, wird Harbor neu geladen, damit die neue Sprache wirksam wird. Wende die Änderung an, wenn du mit den obigen Optionen fertig bist.",
+  "Changing the metadata language reloads Lart so the new language takes effect. Apply when you're done with the options above.":
+    "Wenn du die Metadatensprache änderst, wird Lart neu geladen, damit die neue Sprache wirksam wird. Wende die Änderung an, wenn du mit den obigen Optionen fertig bist.",
   "Checking {n} items…#few": "{n} Elemente werden geprüft…",
   "Checking {n} items…#one": "{n} Element wird geprüft…",
   "Choose API in the sidebar": "API in der Seitenleiste auswählen",
@@ -61,8 +61,8 @@ const dynamic: Record<string, string> = {
     "Bestätige die persönliche Nutzung noch einmal und aktiviere das Kontrollkästchen, um den API-Bedingungen zuzustimmen.",
   "Copy your API Key": "API-Schlüssel kopieren",
   "Cursor speed": "Cursorgeschwindigkeit",
-  "Export your Harbor setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
-    "Exportiere deine Harbor-Einrichtung in eine einzelne Datei: Du bestimmst genau, was enthalten ist. Beim Wiederherstellen wird nur zurückgeholt, was die Datei enthält. Deine Stremio-Anmeldung wird immer ausgelassen.",
+  "Export your Lart setup to a single file — pick exactly what goes in. Restore brings back only what the file contains. Your Stremio sign-in is always left out.":
+    "Exportiere deine Lart-Einrichtung in eine einzelne Datei: Du bestimmst genau, was enthalten ist. Beim Wiederherstellen wird nur zurückgeholt, was die Datei enthält. Deine Stremio-Anmeldung wird immer ausgelassen.",
   "Fetching {n} items…#few": "{n} Elemente werden abgerufen…",
   "Fetching {n} items…#one": "{n} Element wird abgerufen…",
   "Fill in the details, then Subscribe": "Details ausfüllen, dann abonnieren",
@@ -73,19 +73,19 @@ const dynamic: Record<string, string> = {
   "Free forever for personal use. No payment, ever.":
     "Für die private Nutzung dauerhaft kostenlos. Du musst nie etwas bezahlen.",
   "Get your free TMDB key": "Kostenlosen TMDB-Schlüssel abrufen",
-  "Harbor dropped {n} suspicious or mismatched result.":
-    "Harbor hat {n} verdächtiges oder unpassendes Ergebnis verworfen.",
-  "Harbor dropped {n} suspicious or mismatched results.":
-    "Harbor hat {n} verdächtige oder unpassende Ergebnisse verworfen.",
-  "Harbor on the server display": "Harbor auf dem Serverbildschirm",
+  "Lart dropped {n} suspicious or mismatched result.":
+    "Lart hat {n} verdächtiges oder unpassendes Ergebnis verworfen.",
+  "Lart dropped {n} suspicious or mismatched results.":
+    "Lart hat {n} verdächtige oder unpassende Ergebnisse verworfen.",
+  "Lart on the server display": "Lart auf dem Serverbildschirm",
   "Health for {n} service#few": "Status von {n} Diensten",
   "Health for {n} service#one": "Status für {n} Dienst",
   "Health for {n} services below#few": "Status der folgenden {n} Dienste",
   "Health for {n} services below#one": "Status des folgenden {n} Dienstes",
   "Health for {n} services#few": "Status von {n} Diensten",
   "Health for {n} services#one": "Status für {n} Dienst",
-  "How quickly the Harbor cursor moves with the right stick.":
-    "Wie schnell sich der Harbor-Cursor mit dem rechten Stick bewegt.",
+  "How quickly the Lart cursor moves with the right stick.":
+    "Wie schnell sich der Lart-Cursor mit dem rechten Stick bewegt.",
   "If multiple streams are running, your IPTV provider may limit concurrent connections.":
     "Wenn mehrere Streams laufen, begrenzt dein IPTV-Anbieter möglicherweise die Anzahl gleichzeitiger Verbindungen.",
   "Import {n} JavaScript sources#few": "{n} JavaScript-Quellen importieren",
@@ -163,8 +163,8 @@ const dynamic: Record<string, string> = {
   "Seek back 10 seconds": "10 Sekunden zurückspringen",
   "Seek forward 10 seconds": "10 Sekunden vorspulen",
   "Select renderer": "Renderer auswählen",
-  "Sets streaming availability and the Now Playing release window. Pick a country and Harbor offers to match the interface, metadata, subtitle, and audio languages to it.":
-    "Legt die Streaming-Verfügbarkeit und das Veröffentlichungsfenster für „Läuft jetzt“ fest. Wähle ein Land aus, und Harbor bietet an, die bevorzugten Sprachen für Oberfläche, Metadaten, Untertitel und Tonspuren daran anzupassen.",
+  "Sets streaming availability and the Now Playing release window. Pick a country and Lart offers to match the interface, metadata, subtitle, and audio languages to it.":
+    "Legt die Streaming-Verfügbarkeit und das Veröffentlichungsfenster für „Läuft jetzt“ fest. Wähle ein Land aus, und Lart bietet an, die bevorzugten Sprachen für Oberfläche, Metadaten, Untertitel und Tonspuren daran anzupassen.",
   "Show a lock control in the player that blocks mouse, keyboard, remote, and media-key input until you unlock it.":
     "Zeige im Player eine Sperrschaltfläche an, die Eingaben per Maus, Tastatur, Fernbedienung und Medientasten blockiert, bis du sie entsperrst.",
   "Show {n} more addons#few": "{n} weitere Add-ons anzeigen",
@@ -356,10 +356,10 @@ const dynamic: Record<string, string> = {
   "{n} titles together#one": "{n} Titel zusammen",
   "{n} titles#few": "{n} Titel",
   "{n} titles#one": "{n} Titel",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#few":
-    "{n} Tracker-Anfragen wurden in dieser Sitzung blockiert. Harbor selbst sendet keinerlei Telemetriedaten.",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#one":
-    "{n} Tracker-Anfrage wurde in dieser Sitzung blockiert. Harbor selbst sendet keinerlei Telemetriedaten.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#few":
+    "{n} Tracker-Anfragen wurden in dieser Sitzung blockiert. Lart selbst sendet keinerlei Telemetriedaten.",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#one":
+    "{n} Tracker-Anfrage wurde in dieser Sitzung blockiert. Lart selbst sendet keinerlei Telemetriedaten.",
   "{n} votes#few": "{n} Stimmen",
   "{n} votes#one": "{n} Stimme",
   "{n} winner#few": "{n} Gewinner",

@@ -101,7 +101,7 @@ function PackStatus({ status, incompatible = false }: { status: "found" | "missi
 }
 export function SimsPackLaunchInfo({ report }: { report: SimsPackReport }) {
   const t = useT(), value = report.launch;
-  return <div className="games-sims-pack-launch" role="status">{value?.state === "checked" ? <><small>{t("games.sims.packsLaunchChecked", { source: value.source === "custom" ? "Harbor" : value.source === "ea" ? "EA app" : "Steam" })}</small><small>{value.disabled.length ? t("games.sims.packsLaunchDisabled", { packs: value.disabled.map(code => simsPackName(code) ?? code).join(", ") }) : t("games.sims.packsLaunchClear")}</small></> : <small>{t(value?.state === "conflicting" ? "games.sims.packsLaunchConflict" : "games.sims.packsLaunchUnknown")}</small>}</div>;
+  return <div className="games-sims-pack-launch" role="status">{value?.state === "checked" ? <><small>{t("games.sims.packsLaunchChecked", { source: value.source === "custom" ? "Lart" : value.source === "ea" ? "EA app" : "Steam" })}</small><small>{value.disabled.length ? t("games.sims.packsLaunchDisabled", { packs: value.disabled.map(code => simsPackName(code) ?? code).join(", ") }) : t("games.sims.packsLaunchClear")}</small></> : <small>{t(value?.state === "conflicting" ? "games.sims.packsLaunchConflict" : "games.sims.packsLaunchUnknown")}</small>}</div>;
 }
 export function GameSimsPacks() {
   const t = useT(), value = useContext(Context);

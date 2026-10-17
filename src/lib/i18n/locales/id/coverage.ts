@@ -24,8 +24,8 @@ const coverage: Record<string, string> = {
     '"{name}" beserta seluruh isinya akan dihapus. Tindakan ini tidak dapat dibatalkan.',
   "#{position} in {label} Today": "Peringkat #{position} di {label} Hari Ini",
   "${n} for {days} days": "${n} selama {days} hari",
-  "'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    " membuka halaman penyiapannya di browser bawaan Harbor. Pilih opsi yang Anda inginkan. Saat Anda mengeklik Instal di halaman tersebut, Harbor otomatis menangkap tautannya dan memperbarui addon.",
+  "'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    " membuka halaman penyiapannya di browser bawaan Lart. Pilih opsi yang Anda inginkan. Saat Anda mengeklik Instal di halaman tersebut, Lart otomatis menangkap tautannya dan memperbarui addon.",
   "'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     " membuka halaman penyiapannya. Pilih opsi yang Anda inginkan, lalu salin tautan instalasi yang diberikan dan tempel di bawah untuk memperbarui addon.",
   "), put that suffix here.": "), masukkan akhiran tersebut di sini.",
@@ -54,7 +54,7 @@ const coverage: Record<string, string> = {
   "1 month ago": "1 bulan yang lalu",
   "1 new episode since you last watched": "1 episode baru sejak terakhir kali Anda menonton",
   "1 option active": "1 opsi aktif",
-  "1 other Harbor": "1 Harbor lain",
+  "1 other Lart": "1 Lart lain",
   "1 selected": "1 dipilih",
   "1 title needs review — help us identify it.": "1 judul perlu ditinjau, bantu kami mengenalinya.",
   "1 week": "1 minggu",
@@ -157,7 +157,7 @@ const coverage: Record<string, string> = {
   "A / Cross": "A / Silang",
   "A Cloudflare Worker on your own account that hosts your Watch Together rooms.":
     "Cloudflare Worker di akun Anda sendiri yang menghosting ruang Nonton Bersama Anda.",
-  "A Harbor account": "Akun Harbor",
+  "A Lart account": "Akun Lart",
   "A Live TV program is about to start": "Program TV Langsung akan segera dimulai",
   "A TOP 10 corner ribbon on the Top 10 rail posters. The watchlist marker auto-moves to the opposite corner so nothing overlaps.":
     "Pita sudut TOP 10 pada poster di deretan Top 10. Penanda daftar tontonan otomatis berpindah ke sudut seberang agar tidak tumpang tindih.",
@@ -165,10 +165,10 @@ const coverage: Record<string, string> = {
     'Tagihan disiapkan melalui "debit langsung". Penagih dapat:',
   "A blend of the sources above by percentile. Degrades gracefully when one is missing.":
     "Gabungan sumber di atas berdasarkan persentil. Tetap berfungsi dengan baik jika salah satunya tidak tersedia.",
-  "A browser tab opened on AniList. Approve Harbor there, then copy the text it shows and paste it below.":
-    "Tab browser dibuka di AniList. Setujui Harbor di sana, lalu salin teks yang ditampilkan dan tempelkan di bawah.",
-  "A browser tab opened on MyAnimeList. Approve Harbor there, then copy the code or the page URL and paste it below.":
-    "Tab browser dibuka di MyAnimeList. Setujui Harbor di sana, lalu salin kode atau URL halaman dan tempelkan di bawah.",
+  "A browser tab opened on AniList. Approve Lart there, then copy the text it shows and paste it below.":
+    "Tab browser dibuka di AniList. Setujui Lart di sana, lalu salin teks yang ditampilkan dan tempelkan di bawah.",
+  "A browser tab opened on MyAnimeList. Approve Lart there, then copy the code or the page URL and paste it below.":
+    "Tab browser dibuka di MyAnimeList. Setujui Lart di sana, lalu salin kode atau URL halaman dan tempelkan di bawah.",
   'A charge on your bank app sits as "pending" for a day. The merchant is:':
     'Tagihan di aplikasi bank Anda berstatus "tertunda" selama sehari. Pedagang tersebut:',
   "A classic neural edge-directed luma doubler. Very high quality, heavy on the GPU. More neurons means sharper and slower.":
@@ -191,17 +191,17 @@ const coverage: Record<string, string> = {
     'Sebuah dokumen harus "disahkan notaris". Anda membawanya kepada seseorang yang akan:',
   "A fast community subtitle index. Off by default; turn it on for extra coverage on newer or niche releases.":
     "Indeks subtitle komunitas yang cepat. Nonaktif secara default; aktifkan untuk cakupan tambahan pada rilisan baru atau khusus.",
-  "A filter applies everywhere Harbor picks a stream: the source picker, the instant pick, and Big Picture on TV.":
-    "Filter berlaku di semua tempat Harbor memilih stream: pemilih sumber, pilihan instan, dan Big Picture di TV.",
+  "A filter applies everywhere Lart picks a stream: the source picker, the instant pick, and Big Picture on TV.":
+    "Filter berlaku di semua tempat Lart memilih stream: pemilih sumber, pilihan instan, dan Big Picture di TV.",
   "A fixed amount every month": "Jumlah tetap setiap bulan",
   "A folder you already have": "Folder yang sudah Anda miliki",
   "A free Cloudflare account.": "Akun Cloudflare gratis.",
-  "A free TMDB key is highly recommended. It unlocks the full Harbor experience. The rest are optional, and Cinemeta works out of the box without any.":
-    "Kunci TMDB gratis sangat disarankan. Kunci ini membuka pengalaman Harbor sepenuhnya. Yang lain bersifat opsional, dan Cinemeta langsung berfungsi tanpa kunci apa pun.",
-  "A full screen, couch friendly Harbor for TVs, handhelds and big monitors.":
-    "Harbor layar penuh yang nyaman digunakan dari sofa untuk TV, perangkat genggam, dan monitor besar.",
-  "A good correction only has to be found once. Harbor can share verified fixes so the next person with the same file and subtitle gets an instant result. Records are keyed by salted fingerprints, never your files or anything personal.":
-    "Koreksi yang tepat hanya perlu ditemukan sekali. Harbor dapat membagikan perbaikan terverifikasi agar pengguna berikutnya dengan file dan subtitle yang sama langsung mendapatkan hasil. Data diidentifikasi dengan sidik jari yang diberi salt, bukan file atau informasi pribadi Anda.",
+  "A free TMDB key is highly recommended. It unlocks the full Lart experience. The rest are optional, and Cinemeta works out of the box without any.":
+    "Kunci TMDB gratis sangat disarankan. Kunci ini membuka pengalaman Lart sepenuhnya. Yang lain bersifat opsional, dan Cinemeta langsung berfungsi tanpa kunci apa pun.",
+  "A full screen, couch friendly Lart for TVs, handhelds and big monitors.":
+    "Lart layar penuh yang nyaman digunakan dari sofa untuk TV, perangkat genggam, dan monitor besar.",
+  "A good correction only has to be found once. Lart can share verified fixes so the next person with the same file and subtitle gets an instant result. Records are keyed by salted fingerprints, never your files or anything personal.":
+    "Koreksi yang tepat hanya perlu ditemukan sekali. Lart dapat membagikan perbaikan terverifikasi agar pengguna berikutnya dengan file dan subtitle yang sama langsung mendapatkan hasil. Data diidentifikasi dengan sidik jari yang diberi salt, bukan file atau informasi pribadi Anda.",
   "A grown-up can enter the parent PIN to keep watching.":
     "Orang dewasa dapat memasukkan PIN orang tua untuk terus menonton.",
   "A hero up top, then Top 10, Trending, In Theaters and your service rows.":
@@ -220,8 +220,8 @@ const coverage: Record<string, string> = {
     "Pratinjau langsung pemutar Anda. Buka editor untuk memindahkan, menyembunyikan, atau mengurutkan ulang kontrol apa pun.",
   "A loan tied to the property": "Pinjaman dengan properti sebagai jaminan",
   "A mortgage is essentially:": "Hipotek pada dasarnya adalah:",
-  "A name people can find you by across Harbor.":
-    "Nama yang dapat digunakan orang untuk menemukan Anda di seluruh Harbor.",
+  "A name people can find you by across Lart.":
+    "Nama yang dapat digunakan orang untuk menemukan Anda di seluruh Lart.",
   "A name you keep watching": "Nama yang terus Anda tonton",
   "A neural network that doubles luma resolution. The sharpest general-purpose upscaler, strong on both live action and anime. Pick one variant.":
     "Jaringan neural yang menggandakan resolusi luma. Upscaler serbaguna paling tajam, cocok untuk film live action maupun anime. Pilih satu varian.",
@@ -254,8 +254,8 @@ const coverage: Record<string, string> = {
     "Tampilan kaca yang lebih kaya. Mungkin terlihat lebih baik, tetapi menggunakan lebih banyak sumber daya grafis.",
   "A safe, simple space: kid-friendly titles, big art, one-tap play, and a watch-time limit.":
     "Ruang aman dan sederhana: judul ramah anak, gambar besar, pemutaran sekali ketuk, dan batas waktu menonton.",
-  "A safety copy of your addon order. One is saved automatically before Harbor writes any change, and you can save one yourself any time. The five most recent are kept.":
-    "Salinan cadangan urutan addon Anda. Satu salinan disimpan otomatis sebelum Harbor menerapkan perubahan, dan Anda dapat menyimpannya sendiri kapan saja. Lima salinan terbaru akan disimpan.",
+  "A safety copy of your addon order. One is saved automatically before Lart writes any change, and you can save one yourself any time. The five most recent are kept.":
+    "Salinan cadangan urutan addon Anda. Satu salinan disimpan otomatis sebelum Lart menerapkan perubahan, dan Anda dapat menyimpannya sendiri kapan saja. Lima salinan terbaru akan disimpan.",
   "A second binding for the same action so muscle memory survives.":
     "Tombol alternatif untuk tindakan yang sama agar kebiasaan Anda tetap terjaga.",
   "A share matching your months worked": "Bagian yang sesuai dengan jumlah bulan masa kerja Anda",
@@ -383,7 +383,7 @@ const coverage: Record<string, string> = {
     "Tambahkan tombol Gabung dengan tautan ruang Anda saat berada dalam pesta nonton.",
   "Add a TMDB key above to unlock this.": "Tambahkan kunci TMDB di atas untuk membuka fitur ini.",
   "Add a TMDB key above to unlock.": "Tambahkan kunci TMDB di atas untuk membuka fitur.",
-  "Add a TMDB key for the full Harbor": "Tambahkan kunci TMDB untuk menikmati Harbor sepenuhnya",
+  "Add a TMDB key for the full Lart": "Tambahkan kunci TMDB untuk menikmati Lart sepenuhnya",
   "Add a TMDB key in Library settings.": "Tambahkan kunci TMDB di Pengaturan Perpustakaan.",
   "Add a TMDB key in Settings to browse collections.":
     "Tambahkan kunci TMDB di Pengaturan untuk menelusuri koleksi.",
@@ -504,18 +504,18 @@ const coverage: Record<string, string> = {
   "Add your social links": "Tambahkan tautan media sosial Anda",
   "Add {label}": "Tambahkan {label}",
   "Add {name}": "Tambahkan {name}",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.":
-    "Tambahkan {n} judul dari daftar tontonan Harbor Anda ke Trakt? Trakt akan melewati judul yang sudah ada.",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#few":
-    "Tambahkan {n} judul dari daftar tontonan Harbor Anda ke Trakt? Trakt akan melewati judul yang sudah ada.#few",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.#one":
-    "Tambahkan {n} judul dari daftar tontonan Harbor Anda ke Trakt? Trakt akan melewati judul yang sudah ada.#one",
-  "Add {n} titles from your Trakt watchlist to Harbor?":
-    "Tambahkan {n} judul dari daftar tontonan Trakt Anda ke Harbor?",
-  "Add {n} titles from your Trakt watchlist to Harbor?#few":
-    "Tambahkan {n} judul dari daftar tontonan Trakt Anda ke Harbor?#few",
-  "Add {n} titles from your Trakt watchlist to Harbor?#one":
-    "Tambahkan {n} judul dari daftar tontonan Trakt Anda ke Harbor?#one",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.":
+    "Tambahkan {n} judul dari daftar tontonan Lart Anda ke Trakt? Trakt akan melewati judul yang sudah ada.",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#few":
+    "Tambahkan {n} judul dari daftar tontonan Lart Anda ke Trakt? Trakt akan melewati judul yang sudah ada.#few",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.#one":
+    "Tambahkan {n} judul dari daftar tontonan Lart Anda ke Trakt? Trakt akan melewati judul yang sudah ada.#one",
+  "Add {n} titles from your Trakt watchlist to Lart?":
+    "Tambahkan {n} judul dari daftar tontonan Trakt Anda ke Lart?",
+  "Add {n} titles from your Trakt watchlist to Lart?#few":
+    "Tambahkan {n} judul dari daftar tontonan Trakt Anda ke Lart?#few",
+  "Add {n} titles from your Trakt watchlist to Lart?#one":
+    "Tambahkan {n} judul dari daftar tontonan Trakt Anda ke Lart?#one",
   "Add {title} to AniList": "Tambahkan {title} ke AniList",
   "Add {title} to MyAnimeList": "Tambahkan {title} ke MyAnimeList",
   "Add {title} to Simkl": "Tambahkan {title} ke Simkl",
@@ -527,7 +527,7 @@ const coverage: Record<string, string> = {
     "Ditambahkan ke stremio-addons.net dalam 14 hari terakhir",
   "Added to {page}": "Ditambahkan ke {page}",
   "Added {count} more subtitles.": "{count} subtitle lagi ditambahkan.",
-  "Added {n} to your Harbor watchlist": "{n} ditambahkan ke daftar tontonan Harbor Anda",
+  "Added {n} to your Lart watchlist": "{n} ditambahkan ke daftar tontonan Lart Anda",
   Adding: "Menambahkan",
   Addon: "Addon",
   "Addon not installed": "Addon belum terinstal",
@@ -541,8 +541,8 @@ const coverage: Record<string, string> = {
   "Addons only": "Hanya addon",
   "Addons you could install": "Addon yang dapat Anda instal",
   Addresses: "Alamat",
-  "Adds a Big Picture button to Harbor's navigation. Turn this off to keep it out of the way.":
-    "Menambahkan tombol Big Picture ke navigasi Harbor. Nonaktifkan agar tidak mengganggu.",
+  "Adds a Big Picture button to Lart's navigation. Turn this off to keep it out of the way.":
+    "Menambahkan tombol Big Picture ke navigasi Lart. Nonaktifkan agar tidak mengganggu.",
   "Adds a Hide option when you right-click an episode. Hidden episodes disappear from the list and are skipped by Up Next. A Show hidden toggle on each show lets you bring them back.":
     "Menambahkan opsi Sembunyikan saat Anda mengeklik kanan episode. Episode tersembunyi tidak akan muncul dalam daftar dan dilewati oleh Berikutnya. Tombol Tampilkan yang tersembunyi di setiap acara dapat digunakan untuk menampilkannya kembali.",
   "Adds a Playlists item to the navigation for browsing movies and shows from your M3U or Xtream playlists (the same ones you add for Live TV). Off by default to keep the nav tidy.":
@@ -591,8 +591,8 @@ const coverage: Record<string, string> = {
     "Setelah episode acara saat ini selesai, Berikutnya akan berlanjut ke antrean Anda. Jika dinonaktifkan, Berikutnya/Sebelumnya hanya akan berpindah dalam acara saat ini.",
   "After the news": "Setelah berita",
   "After the one playing ends": "Setelah yang sedang diputar selesai",
-  "After you pick a source, show a subtitle picker so you can set the exact track and language before the video starts. Off by default, Harbor keeps picking one for you automatically.":
-    "Setelah Anda memilih sumber, tampilkan pemilih subtitle agar Anda dapat menentukan trek dan bahasa sebelum video dimulai. Jika dinonaktifkan, Harbor akan tetap memilihkannya secara otomatis.",
+  "After you pick a source, show a subtitle picker so you can set the exact track and language before the video starts. Off by default, Lart keeps picking one for you automatically.":
+    "Setelah Anda memilih sumber, tampilkan pemilih subtitle agar Anda dapat menentukan trek dan bahasa sebelum video dimulai. Jika dinonaktifkan, Lart akan tetap memilihkannya secara otomatis.",
   "After you stop watching, a stream file stays cached for this long so reopening resumes instead of re-downloading. Older files are cleaned up automatically. Off deletes the file as soon as you leave the player.":
     "Setelah Anda berhenti menonton, file stream akan tetap disimpan dalam cache selama waktu ini agar saat dibuka kembali dapat dilanjutkan tanpa mengunduh ulang. File lama dibersihkan secara otomatis. Jika dinonaktifkan, file akan langsung dihapus saat Anda keluar dari pemutar.",
   "After {n} episodes": "Setelah {n} episode",
@@ -695,8 +695,8 @@ const coverage: Record<string, string> = {
     "Alamat XMLTV untuk menambahkan jadwal ke saluran yang sudah Anda miliki",
   "An actor you keep watching": "Aktor yang terus Anda tonton",
   "An agreement between landlord and tenant": "Perjanjian antara pemilik dan penyewa",
-  "An award pack is a single JSON file plus the images it points to. Host both anywhere public (your own server, a GitHub repo, etc.) and share the JSON URL. Harbor only stores the URLs you install, never the images.":
-    "Paket penghargaan adalah satu file JSON beserta gambar yang dirujuknya. Hosting keduanya di mana saja yang dapat diakses publik (server Anda sendiri, repo GitHub, dll.) lalu bagikan URL JSON. Harbor hanya menyimpan URL yang Anda instal, bukan gambarnya.",
+  "An award pack is a single JSON file plus the images it points to. Host both anywhere public (your own server, a GitHub repo, etc.) and share the JSON URL. Lart only stores the URLs you install, never the images.":
+    "Paket penghargaan adalah satu file JSON beserta gambar yang dirujuknya. Hosting keduanya di mana saja yang dapat diakses publik (server Anda sendiri, repo GitHub, dll.) lalu bagikan URL JSON. Lart hanya menyimpan URL yang Anda instal, bukan gambarnya.",
   "An empty selector before": "Pemilih kosong sebelumnya",
   "An error occurred": "Terjadi kesalahan",
   "An unexpected error occurred": "Terjadi kesalahan tak terduga",
@@ -738,16 +738,16 @@ const coverage: Record<string, string> = {
   "Direct/debrid only": "Hanya langsung/debrid",
   "Match subtitles across languages (experimental)":
     "Cocokkan subtitle lintas bahasa (eksperimental)",
-  "When the audio and subtitle use different languages, Harbor compares a release-matched subtitle in the audio language. It only offers a fix unless every safety check is measured.":
-    "Jika audio dan subtitle menggunakan bahasa berbeda, Harbor membandingkan subtitle yang cocok dengan rilis dalam bahasa audio. Harbor hanya menawarkan perbaikan kecuali semua pemeriksaan keamanan telah diukur.",
+  "When the audio and subtitle use different languages, Lart compares a release-matched subtitle in the audio language. It only offers a fix unless every safety check is measured.":
+    "Jika audio dan subtitle menggunakan bahasa berbeda, Lart membandingkan subtitle yang cocok dengan rilis dalam bahasa audio. Lart hanya menawarkan perbaikan kecuali semua pemeriksaan keamanan telah diukur.",
   "New York Times": "New York Times",
   "Bestseller lists in the eBook section.": "Daftar buku terlaris di bagian eBook.",
   "New York Times · bestseller lists": "New York Times · daftar buku terlaris",
   "NYT Books API key": "Kunci API NYT Books",
-  "Choose whether Harbor prefers direct and debrid sources, peer-to-peer torrents, or shows both.":
-    "Pilih apakah Harbor mengutamakan sumber langsung dan debrid, torrent peer-to-peer, atau menampilkan keduanya.",
-  "Linking your Discord account also joins you to Harbor's Discord server, so the bot can send your Backup keys privately.":
-    "Linking your Discord account also joins you to Harbor's Discord server, so the bot can send your Backup keys privately.",
+  "Choose whether Lart prefers direct and debrid sources, peer-to-peer torrents, or shows both.":
+    "Pilih apakah Lart mengutamakan sumber langsung dan debrid, torrent peer-to-peer, atau menampilkan keduanya.",
+  "Linking your Discord account also joins you to Lart's Discord server, so the bot can send your Backup keys privately.":
+    "Linking your Discord account also joins you to Lart's Discord server, so the bot can send your Backup keys privately.",
 };
 
 export default coverage;

@@ -5,7 +5,7 @@ import { useT } from "@/lib/i18n";
 import { openUrl } from "@/lib/window";
 import { GameArt } from "./game-art";
 
-/** Original Harbor stacked-card mark; quiet crossed state is distinct from unknown. */
+/** Original Lart stacked-card mark; quiet crossed state is distinct from unknown. */
 function SaleCardMark({ state }: { state: "included" | "none" | "unknown" }) {
   return <svg viewBox="0 0 28 28" fill="none" aria-hidden="true">
     <path d="M8 5.5 5.4 5A2 2 0 0 0 3 6.6L.8 19.2a2 2 0 0 0 1.6 2.3l3.1.6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>

@@ -9,8 +9,8 @@ export default {
   "Beta version": "Бета-версия",
   "Choose a tested beta": "Выберите проверенную бета-версию",
   "Beta {version}": "Бета {version}",
-  "Harbor saves a local recovery backup before installing. It can contain account details. Old backups are not restored automatically, and recovery files use extra disk space.":
-    "Перед установкой Harbor сохраняет локальную резервную копию. Она может содержать данные аккаунтов. Старые копии не восстанавливаются автоматически; файлы восстановления занимают дополнительное место.",
+  "Lart saves a local recovery backup before installing. It can contain account details. Old backups are not restored automatically, and recovery files use extra disk space.":
+    "Перед установкой Lart сохраняет локальную резервную копию. Она может содержать данные аккаунтов. Старые копии не восстанавливаются автоматически; файлы восстановления занимают дополнительное место.",
   "Install beta {version} and restart? This replaces the experimental app, not your current settings.":
     "Установить бета-версию {version} и перезапустить? Экспериментальное приложение будет заменено, текущие настройки сохранятся.",
   "Install beta {version} and restart": "Установить бета {version} и перезапустить",
@@ -29,22 +29,22 @@ export default {
   "Continue the return to beta in Experimental builds below.":
     "Продолжите возврат к бета-версии в разделе «Экспериментальные сборки» ниже.",
   "Experimental installation currently requires a managed Windows installation with a tested return to beta.":
-    "Для установки экспериментальных сборок пока требуется управляемая установщиком Harbor версия Windows с проверенным возвратом к бета-версии.",
+    "Для установки экспериментальных сборок пока требуется управляемая установщиком Lart версия Windows с проверенным возвратом к бета-версии.",
   "Experimental builds": "Экспериментальные сборки",
   Experimental: "Экспериментальный",
   Beta: "Бета",
   Stable: "Стабильный",
   "Test upcoming changes": "Тестируйте будущие изменения",
-  "Available to Harbor accounts with a Tester, Moderator, Admin, or Dev badge.":
-    "Доступно аккаунтам Harbor со значком Tester, Moderator, Admin или Dev.",
+  "Available to Lart accounts with a Tester, Moderator, Admin, or Dev badge.":
+    "Доступно аккаунтам Lart со значком Tester, Moderator, Admin или Dev.",
   "Return to a regular build": "Вернуться к обычной сборке",
-  "Experimental access requires a Harbor account with a Tester, Moderator, Admin, or Dev badge.":
-    "Для доступа к экспериментальным сборкам нужен аккаунт Harbor со значком Tester, Moderator, Admin или Dev.",
+  "Experimental access requires a Lart account with a Tester, Moderator, Admin, or Dev badge.":
+    "Для доступа к экспериментальным сборкам нужен аккаунт Lart со значком Tester, Moderator, Admin или Dev.",
   "Public test builds for anyone who wants to try upcoming fixes. No invitation or special account is needed.":
     "Публичные тестовые сборки для всех, кто хочет попробовать будущие исправления. Приглашение или специальный аккаунт не нужны.",
-  "These builds may crash or change your settings. Back up Harbor before installing. Downloads and installation still require your approval.":
-    "Эти сборки могут аварийно завершаться или менять настройки. Перед установкой создайте резервную копию Harbor. Загрузка и установка по-прежнему требуют вашего подтверждения.",
-  "Installed: Harbor {version}": "Установлен: Harbor {version}",
+  "These builds may crash or change your settings. Back up Lart before installing. Downloads and installation still require your approval.":
+    "Эти сборки могут аварийно завершаться или менять настройки. Перед установкой создайте резервную копию Lart. Загрузка и установка по-прежнему требуют вашего подтверждения.",
+  "Installed: Lart {version}": "Установлен: Lart {version}",
   "Update channel: {channel}": "Канал обновлений: {channel}",
   "Experimental in-app updates are available only in the Windows and macOS desktop apps.":
     "Экспериментальные обновления внутри приложения доступны только в настольных приложениях для Windows и macOS.",
@@ -77,8 +77,8 @@ export default {
     "Экспериментальная сборка изменилась во время проверки. Проверьте ещё раз перед загрузкой.",
   "Couldn't check experimental builds. Check your connection and try again.":
     "Не удалось проверить экспериментальные сборки. Проверьте подключение и повторите попытку.",
-  "Couldn't verify your Harbor account access. Check your connection and try again.":
-    "Не удалось проверить доступ аккаунта Harbor. Проверьте подключение и повторите попытку.",
-  "Harbor Setup did not finish updating Harbor. Check for updates to try again.":
-    "Установщик Harbor не завершил обновление. Проверьте обновления, чтобы повторить попытку.",
+  "Couldn't verify your Lart account access. Check your connection and try again.":
+    "Не удалось проверить доступ аккаунта Lart. Проверьте подключение и повторите попытку.",
+  "Lart Setup did not finish updating Lart. Check for updates to try again.":
+    "Установщик Lart не завершил обновление. Проверьте обновления, чтобы повторить попытку.",
 };

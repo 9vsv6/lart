@@ -124,8 +124,8 @@ const player: Record<string, string> = {
   "Frame rate": "Velocidad de fotogramas",
   "Go to live": "Ir a TV en vivo",
   "Got it": "Entendido",
-  "Harbor's streaming server only runs in the desktop app.":
-    "El servidor de streaming de Harbor solo funciona en la aplicación de escritorio.",
+  "Lart's streaming server only runs in the desktop app.":
+    "El servidor de streaming de Lart solo funciona en la aplicación de escritorio.",
   "HI/SDH": "HI/SDH",
   "Hidden by filter: {reason}": "Oculto por el filtro: {reason}",
   "Hide details": "Ocultar detalles",
@@ -167,8 +167,8 @@ const player: Record<string, string> = {
   "Movie's too new": "La película es demasiado reciente",
   "Movie's too new. Subtitles haven't been published yet.":
     "La película es demasiado reciente. Aún no se han publicado subtítulos.",
-  "mpv is required for recording. Install mpv and restart Harbor.":
-    "Se requiere mpv para grabar. Instala mpv y reinicia Harbor.",
+  "mpv is required for recording. Install mpv and restart Lart.":
+    "Se requiere mpv para grabar. Instala mpv y reinicia Lart.",
   "Mute · M": "Silenciar · M",
   "Name your first template": "Nombra tu primera plantilla",
   "Name your look": "Nombra tu estilo",

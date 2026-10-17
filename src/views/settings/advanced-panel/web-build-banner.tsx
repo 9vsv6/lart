@@ -39,7 +39,7 @@ export function WebBuildBanner() {
         </h2>
         <p className={`max-w-[66ch] ${ROW_DESC}`}>
           {t(
-            "Everything you save here stays in this browser. Your Stremio login, API keys, watch progress, picker cache, dismissed tips. Harbor servers never see any of it. Clearing your browser data wipes it.",
+            "Everything you save here stays in this browser. Your Stremio login, API keys, watch progress, picker cache, dismissed tips. Lart servers never see any of it. Clearing your browser data wipes it.",
           )}
         </p>
         <p className={`max-w-[66ch] ${ROW_DESC}`}>
@@ -54,7 +54,7 @@ export function WebBuildBanner() {
             className={`${BANNER_BTN} bg-ink text-canvas`}
           >
             <Download size={16} strokeWidth={2.4} />
-            {t("Get Harbor for desktop")}
+            {t("Get Lart for desktop")}
           </button>
           <button
             type="button"

@@ -84,7 +84,7 @@ function mediaKey(action: string): void {
   }
 }
 
-/** Without this the OS never learns Harbor is playing music, so the media keys go elsewhere. */
+/** Without this the OS never learns Lart is playing music, so the media keys go elsewhere. */
 function pushSession(): void {
   if (videoOwnsMediaKeys()) return;
   const state = getMusicState();

@@ -154,7 +154,7 @@ export function BigPictureShell() {
   useEffect(() => {
     bpAddonIngestRows(rows);
   }, [rows]);
-  // The splash is Harbor's front door. Flattening rows in order made it show
+  // The splash is Lart's front door. Flattening rows in order made it show
   // whichever catalog happened to sort first, so it draws one poster per row in
   // turn and keeps anime and user rows behind the broad catalogs.
   const introPool = useMemo(() => {

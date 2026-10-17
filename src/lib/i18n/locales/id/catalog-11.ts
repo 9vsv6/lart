@@ -12,8 +12,8 @@ const catalog: Record<string, string> = {
   "Trending on {site}": "Sedang tren di {site}",
   "Trending on {source}": "Sedang tren di {source}",
   "Trending shows": "Acara yang sedang tren",
-  "Trending tracks star growth across your Harbor visits. Open the addons page again tomorrow and the top risers will appear here.":
-    "Tren melacak pertumbuhan bintang selama kunjungan Anda ke Harbor. Buka lagi halaman addon besok dan yang paling melejit akan muncul di sini.",
+  "Trending tracks star growth across your Lart visits. Open the addons page again tomorrow and the top risers will appear here.":
+    "Tren melacak pertumbuhan bintang selama kunjungan Anda ke Lart. Buka lagi halaman addon besok dan yang paling melejit akan muncul di sini.",
   "Trending · Cinemeta": "Sedang tren · Cinemeta",
   "Trending, Popular, In Theaters, and the per service rails.":
     "Sedang tren, Populer, Sedang Tayang di Bioskop, dan deretan per layanan.",
@@ -49,12 +49,12 @@ const catalog: Record<string, string> = {
   "Try deploy again": "Coba deploy lagi",
   "Try it": "Coba",
   "Try it for ${n}": "Coba seharga ${n}",
-  "Try signing in to Stremio so Harbor can use your addon collection. Older or foreign titles often need Torrentio + a debrid addon to find anything.":
-    "Coba masuk ke Stremio agar Harbor dapat menggunakan koleksi addon Anda. Judul lama atau asing sering kali memerlukan Torrentio + addon debrid untuk menemukan hasil.",
+  "Try signing in to Stremio so Lart can use your addon collection. Older or foreign titles often need Torrentio + a debrid addon to find anything.":
+    "Coba masuk ke Stremio agar Lart dapat menggunakan koleksi addon Anda. Judul lama atau asing sering kali memerlukan Torrentio + addon debrid untuk menemukan hasil.",
   "Trying source {n}": "Mencoba sumber {n}",
   Tubi: "Tubi",
-  "Tuck clean, native-looking window buttons into the top corner, with hover labels. On macOS they become traffic-light dots. Blends into Harbor while feeling like your system's own title bar.":
-    "Tempatkan tombol jendela yang rapi dan tampak native di sudut atas, dengan label saat disorot. Di macOS, tombol ini menjadi titik lampu lalu lintas. Menyatu dengan Harbor sekaligus terasa seperti bilah judul bawaan sistem Anda.",
+  "Tuck clean, native-looking window buttons into the top corner, with hover labels. On macOS they become traffic-light dots. Blends into Lart while feeling like your system's own title bar.":
+    "Tempatkan tombol jendela yang rapi dan tampak native di sudut atas, dengan label saat disorot. Di macOS, tombol ini menjadi titik lampu lalu lintas. Menyatu dengan Lart sekaligus terasa seperti bilah judul bawaan sistem Anda.",
   Tue: "Sel",
   Tune: "Sesuaikan",
   "Tune anime": "Sesuaikan anime",
@@ -71,8 +71,8 @@ const catalog: Record<string, string> = {
   "Turn Anime4K upscaling on. Only active when shaders are available.":
     "Aktifkan peningkatan resolusi Anime4K. Hanya aktif saat shader tersedia.",
   "Turn It Up": "Keraskan Suaranya",
-  "Turn anime back on in Harbor's content settings to browse it here.":
-    "Aktifkan kembali anime di pengaturan konten Harbor untuk menjelajahinya di sini.",
+  "Turn anime back on in Lart's content settings to browse it here.":
+    "Aktifkan kembali anime di pengaturan konten Lart untuk menjelajahinya di sini.",
   "Turn it on in Player layout": "Aktifkan di Tata letak pemutar",
   "Turn off": "Nonaktifkan",
   "Turn off Auto Sync before changing subtitle FPS.":
@@ -82,8 +82,8 @@ const catalog: Record<string, string> = {
     "Nonaktifkan untuk kisi yang lebih bersih. Chip skor dikendalikan secara terpisah di bawah.",
   "Turn off mobile data so your phone uses Wi-Fi.":
     "Nonaktifkan data seluler agar ponsel Anda menggunakan Wi-Fi.",
-  "Turn off the native window title bar above to use Harbor's hybrid bar instead.":
-    "Nonaktifkan bilah judul jendela native di atas untuk menggunakan bilah hibrida Harbor sebagai gantinya.",
+  "Turn off the native window title bar above to use Lart's hybrid bar instead.":
+    "Nonaktifkan bilah judul jendela native di atas untuk menggunakan bilah hibrida Lart sebagai gantinya.",
   "Turn off to hide the sync badge during playback.":
     "Nonaktifkan untuk menyembunyikan lencana sinkronisasi selama pemutaran.",
   "Turn off what you do not have": "Nonaktifkan yang tidak Anda miliki",
@@ -112,15 +112,15 @@ const catalog: Record<string, string> = {
   Turnovers: "Pergantian pemain",
   "Turns off the fancy scaling and effects so video just plays. The lightest on your machine. Pick this if anything ever stutters or your fan screams.":
     "Menonaktifkan penskalaan dan efek canggih agar video langsung diputar. Ini paling ringan untuk perangkat Anda. Pilih ini jika terjadi patah-patah atau kipas Anda meraung.",
-  "Turns the season button into a full panel: order tabs (Aired, DVD, Absolute, and any the show has) plus a season table with air-date ranges and episode counts. On by default for anime through Harbor's TVDB service, no key needed. Add your own TVDB key to use it for regular shows too.":
-    "Mengubah tombol musim menjadi panel lengkap: tab urutan (Tayang, DVD, Absolut, dan urutan lain yang dimiliki acara) serta tabel musim dengan rentang tanggal tayang dan jumlah episode. Aktif secara default untuk anime melalui layanan TVDB Harbor, tanpa perlu kunci. Tambahkan kunci TVDB Anda sendiri untuk menggunakannya pada acara biasa juga.",
+  "Turns the season button into a full panel: order tabs (Aired, DVD, Absolute, and any the show has) plus a season table with air-date ranges and episode counts. On by default for anime through Lart's TVDB service, no key needed. Add your own TVDB key to use it for regular shows too.":
+    "Mengubah tombol musim menjadi panel lengkap: tab urutan (Tayang, DVD, Absolut, dan urutan lain yang dimiliki acara) serta tabel musim dengan rentang tanggal tayang dan jumlah episode. Aktif secara default untuk anime melalui layanan TVDB Lart, tanpa perlu kunci. Tambahkan kunci TVDB Anda sendiri untuk menggunakannya pada acara biasa juga.",
   "Turns your phone into a remote for this computer: play, pause, seek, volume, and casting, all from the couch. Open the Wi-Fi address on your phone's browser.":
     "Mengubah ponsel Anda menjadi remote untuk komputer ini: putar, jeda, lompat, volume, dan casting, semuanya dari sofa. Buka alamat Wi-Fi di browser ponsel Anda.",
   "Twist Endings": "Akhir Cerita Mengejutkan",
   "Two columns": "Dua kolom",
   "Two pages": "Dua halaman",
-  "Two paths: Harbor handles the deploy for you, or you do it yourself with wrangler.":
-    "Dua cara: Harbor menangani deploy untuk Anda, atau Anda melakukannya sendiri dengan wrangler.",
+  "Two paths: Lart handles the deploy for you, or you do it yourself with wrangler.":
+    "Dua cara: Lart menangani deploy untuk Anda, atau Anda melakukannya sendiri dengan wrangler.",
   "Two-factor authentication code": "Kode autentikasi dua faktor",
   Type: "Jenis",
   "Type a key on this TV": "Ketik kunci di TV ini",
@@ -131,7 +131,7 @@ const catalog: Record<string, string> = {
   "Type on your keyboard or tap the digits above.":
     "Ketik dengan keyboard atau ketuk angka di atas.",
   "Type on your phone": "Ketik di ponsel Anda",
-  "Type the code showing on that Harbor.": "Ketik kode yang ditampilkan di Harbor tersebut.",
+  "Type the code showing on that Lart.": "Ketik kode yang ditampilkan di Lart tersebut.",
   "Type the same 4-digit PIN again.": "Ketik lagi PIN 4 digit yang sama.",
   "Type the same PIN one more time.": "Ketik PIN yang sama sekali lagi.",
   "Type to search…": "Ketik untuk mencari…",
@@ -151,8 +151,8 @@ const catalog: Record<string, string> = {
   "URL + EPG saved": "URL + EPG disimpan",
   "URL cannot be empty": "URL tidak boleh kosong",
   "URL is saved and ready to share.": "URL telah disimpan dan siap dibagikan.",
-  "URL on r/Stremio or wherever your community lives. Other Harbor users paste it into Settings, Harbor Relay,":
-    "URL di r/Stremio atau di mana pun komunitas Anda berada. Pengguna Harbor lain menempelkannya ke Pengaturan, Harbor Relay,",
+  "URL on r/Stremio or wherever your community lives. Other Lart users paste it into Settings, Lart Relay,":
+    "URL di r/Stremio atau di mana pun komunitas Anda berada. Pengguna Lart lain menempelkannya ke Pengaturan, Lart Relay,",
   "URL or path": "URL atau jalur",
   "URL saved": "URL disimpan",
   "URLs can carry debrid keys or tokens; reveal when you need to copy":
@@ -207,10 +207,10 @@ const catalog: Record<string, string> = {
     "Perubahan pada tata letak, format waktu, dan gaya volume Anda belum disimpan.",
   'Unsupported font type ".{extension}". Use TTF, OTF, WOFF, or WOFF2.':
     'Jenis font ".{extension}" tidak didukung. Gunakan TTF, OTF, WOFF, atau WOFF2.',
-  "Unsupported profile version ({version}). Update Harbor or use an older profile.":
-    "Versi profil ({version}) tidak didukung. Perbarui Harbor atau gunakan profil lama.",
-  "Until you pair, that Harbor ignores anything this computer sends it.":
-    "Sebelum dipasangkan, Harbor tersebut akan mengabaikan semua yang dikirim komputer ini.",
+  "Unsupported profile version ({version}). Update Lart or use an older profile.":
+    "Versi profil ({version}) tidak didukung. Perbarui Lart atau gunakan profil lama.",
+  "Until you pair, that Lart ignores anything this computer sends it.":
+    "Sebelum dipasangkan, Lart tersebut akan mengabaikan semua yang dikirim komputer ini.",
   "Until {time} · {dur}": "Hingga {time} · {dur}",
   Untitled: "Tanpa judul",
   "Untitled addon": "Addon tanpa judul",
@@ -268,8 +268,8 @@ const catalog: Record<string, string> = {
   "Updates & backup": "Pembaruan & pencadangan",
   "Updates & rollback": "Pembaruan & pemulihan versi",
   Updating: "Memperbarui",
-  "Updating separated settings per profile, which may have reset your theme and keys. Harbor still has your old setup saved. Bring it back on this profile, then reload.":
-    "Memperbarui Pengaturan terpisah untuk setiap profil, yang mungkin telah mereset tema dan tombol Anda. Harbor masih menyimpan pengaturan lama Anda. Pulihkan di profil ini, lalu muat ulang.",
+  "Updating separated settings per profile, which may have reset your theme and keys. Lart still has your old setup saved. Bring it back on this profile, then reload.":
+    "Memperbarui Pengaturan terpisah untuk setiap profil, yang mungkin telah mereset tema dan tombol Anda. Lart masih menyimpan pengaturan lama Anda. Pulihkan di profil ini, lalu muat ulang.",
   "Updating {name}": "Memperbarui {name}",
   "Updating…": "Memperbarui…",
   "Upgrade subtitles when better ones load":
@@ -294,8 +294,8 @@ const catalog: Record<string, string> = {
   "Use AniList avatar": "Gunakan avatar AniList",
   "Use Cinemeta for title metadata": "Gunakan Cinemeta untuk metadata judul",
   "Use Cinemeta instead": "Gunakan Cinemeta saja",
-  "Use Harbor's built-in engine (beta)": "Gunakan mesin bawaan Harbor (beta)",
-  "Use Harbor's public relay": "Gunakan relay publik Harbor",
+  "Use Lart's built-in engine (beta)": "Gunakan mesin bawaan Lart (beta)",
+  "Use Lart's public relay": "Gunakan relay publik Lart",
   "Use MyAnimeList avatar": "Gunakan avatar MyAnimeList",
   "Use Simkl avatar": "Gunakan avatar Simkl",
   "Use Trakt avatar": "Gunakan avatar Trakt",
@@ -306,12 +306,12 @@ const catalog: Record<string, string> = {
   "Use a different Stremio account": "Gunakan akun Stremio lain",
   "Use a different URL": "Gunakan URL lain",
   "Use a different key": "Gunakan kunci lain",
-  "Use a game controller to browse Harbor and control playback. Tune the sticks and see the button map.":
-    "Gunakan pengontrol game untuk menjelajahi Harbor dan mengontrol pemutaran. Sesuaikan stik dan lihat pemetaan tombol.",
-  "Use a game controller to browse Harbor and control playback. Works with Xbox, PlayStation, and most USB or Bluetooth gamepads.":
-    "Gunakan pengontrol game untuk menjelajahi Harbor dan mengontrol pemutaran. Berfungsi dengan Xbox, PlayStation, dan sebagian besar gamepad USB atau Bluetooth.",
-  "Use a gamepad or remote to move around Harbor":
-    "Gunakan gamepad atau remote untuk menjelajahi Harbor",
+  "Use a game controller to browse Lart and control playback. Tune the sticks and see the button map.":
+    "Gunakan pengontrol game untuk menjelajahi Lart dan mengontrol pemutaran. Sesuaikan stik dan lihat pemetaan tombol.",
+  "Use a game controller to browse Lart and control playback. Works with Xbox, PlayStation, and most USB or Bluetooth gamepads.":
+    "Gunakan pengontrol game untuk menjelajahi Lart dan mengontrol pemutaran. Berfungsi dengan Xbox, PlayStation, dan sebagian besar gamepad USB atau Bluetooth.",
+  "Use a gamepad or remote to move around Lart":
+    "Gunakan gamepad atau remote untuk menjelajahi Lart",
   "Use a separate Stremio account": "Gunakan akun Stremio terpisah",
   "Use addon order": "Gunakan urutan addon",
   "Use an existing relay": "Gunakan relay yang sudah ada",
@@ -329,22 +329,22 @@ const catalog: Record<string, string> = {
   "Use in Nuvio": "Gunakan di Nuvio",
   "Use it": "Gunakan",
   "Use liquid glass": "Gunakan liquid glass",
-  "Use liquid glass for the search pill and row scroll arrows. The appearance settings below are shared by glass surfaces across Harbor.":
-    "Gunakan liquid glass untuk pil pencarian dan panah gulir baris. Pengaturan tampilan di bawah digunakan bersama oleh semua permukaan kaca di Harbor.",
+  "Use liquid glass for the search pill and row scroll arrows. The appearance settings below are shared by glass surfaces across Lart.":
+    "Gunakan liquid glass untuk pil pencarian dan panah gulir baris. Pengaturan tampilan di bawah digunakan bersama oleh semua permukaan kaca di Lart.",
   "Use live web context": "Gunakan konteks web langsung",
   "Use live web context (Jina Reader)": "Gunakan konteks web langsung (Jina Reader)",
   "Use model": "Gunakan model",
   "Use mpv engine": "Gunakan mesin mpv",
-  "Use my AniList avatar as my Harbor avatar":
-    "Gunakan avatar AniList saya sebagai avatar Harbor saya",
-  "Use my Simkl avatar as my Harbor avatar": "Gunakan avatar Simkl saya sebagai avatar Harbor saya",
-  "Use my Trakt avatar as my Harbor avatar": "Gunakan avatar Trakt saya sebagai avatar Harbor saya",
+  "Use my AniList avatar as my Lart avatar":
+    "Gunakan avatar AniList saya sebagai avatar Lart saya",
+  "Use my Simkl avatar as my Lart avatar": "Gunakan avatar Simkl saya sebagai avatar Lart saya",
+  "Use my Trakt avatar as my Lart avatar": "Gunakan avatar Trakt saya sebagai avatar Lart saya",
   "Use my own server": "Gunakan server saya sendiri",
   "Use my photo": "Gunakan foto saya",
   "Use my style": "Gunakan gaya saya",
   'Use the "personal" key, not the project one.': 'Gunakan kunci "personal", bukan kunci proyek.',
-  "Use the arrow keys and Enter to move focus through Harbor. Turn this off to keep arrow keys free and disable focus navigation everywhere.":
-    "Gunakan tombol panah dan Enter untuk memindahkan fokus di Harbor. Nonaktifkan ini agar tombol panah tetap bebas digunakan dan navigasi fokus dinonaktifkan di semua bagian.",
+  "Use the arrow keys and Enter to move focus through Lart. Turn this off to keep arrow keys free and disable focus navigation everywhere.":
+    "Gunakan tombol panah dan Enter untuk memindahkan fokus di Lart. Nonaktifkan ini agar tombol panah tetap bebas digunakan dan navigasi fokus dinonaktifkan di semua bagian.",
   "Use the button below. If you are not signed in yet TMDB says you do not have permission, which is normal. Click the link in that message to sign in.":
     "Gunakan tombol di bawah. Jika Anda belum masuk, TMDB akan menyatakan bahwa Anda tidak memiliki izin, dan itu normal. Klik tautan dalam pesan tersebut untuk masuk.",
   "Use the download arrow next to any chapter to save it for reading offline.":
@@ -360,20 +360,20 @@ const catalog: Record<string, string> = {
   "Use this icon for all states": "Gunakan ikon ini untuk semua status",
   "Use your API key to Translate Chapters to Your Language. Get a key from the":
     "Gunakan kunci API Anda untuk Menerjemahkan Bab ke Bahasa Anda. Dapatkan kunci dari",
-  "Use your Harbor color": "Gunakan warna Harbor Anda",
-  "Use your operating system's native title bar and window buttons instead of Harbor's built-in ones. Handy if the in-app buttons ever feel out of reach, like during playback.":
-    "Gunakan bilah judul dan tombol jendela bawaan sistem operasi Anda, bukan yang disediakan Harbor. Berguna jika tombol dalam aplikasi sulit dijangkau, misalnya saat pemutaran.",
+  "Use your Lart color": "Gunakan warna Lart Anda",
+  "Use your operating system's native title bar and window buttons instead of Lart's built-in ones. Handy if the in-app buttons ever feel out of reach, like during playback.":
+    "Gunakan bilah judul dan tombol jendela bawaan sistem operasi Anda, bukan yang disediakan Lart. Berguna jika tombol dalam aplikasi sulit dijangkau, misalnya saat pemutaran.",
   "Use your own image as the app icon": "Gunakan gambar Anda sendiri sebagai ikon aplikasi",
   "Use {color} for the line tracker": "Gunakan {color} untuk pelacak garis",
   "Use {color} ink": "Gunakan tinta {color}",
   "Used at 55% / 25% alpha.": "Digunakan pada alfa 55% / 25%.",
   "Used for streaming availability and the Now Playing release window.":
     "Digunakan untuk ketersediaan streaming dan rentang rilis Sedang Diputar.",
-  "Used for streaming availability and the Now Playing release window. Pick a country and Harbor can match the interface, metadata, and subtitle languages to it.":
-    "Digunakan untuk ketersediaan streaming dan rentang rilis Sedang Diputar. Pilih negara agar Harbor dapat menyesuaikan bahasa antarmuka, metadata, dan subtitle dengannya.",
+  "Used for streaming availability and the Now Playing release window. Pick a country and Lart can match the interface, metadata, and subtitle languages to it.":
+    "Digunakan untuk ketersediaan streaming dan rentang rilis Sedang Diputar. Pilih negara agar Lart dapat menyesuaikan bahasa antarmuka, metadata, dan subtitle dengannya.",
   "Used for your cursor in Watch Together, your draw color, and your name pill in chat.":
     "Digunakan untuk kursor Anda di Nonton Bersama, warna gambar, dan label nama Anda di obrolan.",
-  "Used to check cache and unrestrict links. Harbor never adds or removes anything on your account on its own.": "Digunakan untuk memeriksa cache dan membuka batasan tautan. Harbor tidak pernah menambahkan atau menghapus apa pun di akun Anda secara otomatis.",
+  "Used to check cache and unrestrict links. Lart never adds or removes anything on your account on its own.": "Digunakan untuk memeriksa cache dan membuka batasan tautan. Lart tidak pernah menambahkan atau menghapus apa pun di akun Anda secara otomatis.",
   "Used to lift Time's Up and to leave the kids space.":
     "Digunakan untuk menonaktifkan Waktu Habis dan keluar dari ruang anak.",
   Usenet: "Usenet",
@@ -387,8 +387,8 @@ const catalog: Record<string, string> = {
     "Menggunakan endpoint directdl, yang melewati antrean untuk semua yang sudah tersimpan dalam cache.",
   "Uses up to 150 MB": "Menggunakan hingga 150 MB",
   "Uses your theme's accent color.": "Menggunakan warna aksen tema Anda.",
-  "Using AIOStreams or another aggregator addon? Its own sorting and filtering happen inside the addon before Harbor ever sees the results, then Harbor applies the stream filter and result order above on top. If results look thinner than expected, keep one side permissive: either relax the addon's internal filters or set Harbor's stream filter to Balanced or Off.":
-    "Menggunakan AIOStreams atau addon agregator lain? Pengurutan dan pemfilterannya sendiri dilakukan di dalam addon sebelum hasilnya dilihat Harbor, lalu Harbor menerapkan filter stream dan urutan hasil di atas. Jika hasil lebih sedikit dari yang diharapkan, buat salah satu sisi lebih longgar: longgarkan filter internal addon atau atur filter stream Harbor ke Seimbang atau Nonaktif.",
+  "Using AIOStreams or another aggregator addon? Its own sorting and filtering happen inside the addon before Lart ever sees the results, then Lart applies the stream filter and result order above on top. If results look thinner than expected, keep one side permissive: either relax the addon's internal filters or set Lart's stream filter to Balanced or Off.":
+    "Menggunakan AIOStreams atau addon agregator lain? Pengurutan dan pemfilterannya sendiri dilakukan di dalam addon sebelum hasilnya dilihat Lart, lalu Lart menerapkan filter stream dan urutan hasil di atas. Jika hasil lebih sedikit dari yang diharapkan, buat salah satu sisi lebih longgar: longgarkan filter internal addon atau atur filter stream Lart ke Seimbang atau Nonaktif.",
   VA: "VA",
   "VHS-era classics": "Film klasik era VHS",
   VOLUME: "VOLUME",
@@ -400,7 +400,7 @@ const catalog: Record<string, string> = {
   "Venice Film Festival": "Festival Film Venesia",
   Venue: "Lokasi",
   Verified: "Terverifikasi",
-  "Verified Harbor Staff": "Staf Harbor Terverifikasi",
+  "Verified Lart Staff": "Staf Lart Terverifikasi",
   "Verified status": "Status terverifikasi",
   Verify: "Verifikasi",
   "Verify & connect": "Verifikasi & hubungkan",
@@ -477,8 +477,8 @@ const catalog: Record<string, string> = {
   "Wait before playing": "Tunggu sebelum memutar",
   "Wait for the upload to finish. The relay URL gets written to":
     "Tunggu hingga unggahan selesai. URL relay akan ditulis ke",
-  "Wait for the upload to finish. The relay URL gets written to {code} in Harbor settings.":
-    "Tunggu hingga unggahan selesai. URL relay akan ditulis ke {code} di pengaturan Harbor.",
+  "Wait for the upload to finish. The relay URL gets written to {code} in Lart settings.":
+    "Tunggu hingga unggahan selesai. URL relay akan ditulis ke {code} di pengaturan Lart.",
   "Wait {seconds}s": "Tunggu {seconds} dtk",
   "Waiting for": "Menunggu",
   "Waiting for Trakt…": "Menunggu Trakt…",
@@ -490,8 +490,8 @@ const catalog: Record<string, string> = {
     "Menunggu TV Anda menyerahkan data yang diperlukan. Ini butuh waktu sebentar.",
   "Waive any overtime claim": "Melepaskan segala klaim lembur",
   Walks: "Jalan kaki",
-  "Want a badge that moves? Drop in a GIF up to 8 MB. Harbor shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
-    "Ingin lencana yang bergerak? Masukkan GIF berukuran hingga 8 MB. Harbor akan mengecilkan dan mengonversinya ke format animasi ringan agar tetap tajam dan cepat dimuat. Buatlah kecil dan berulang.",
+  "Want a badge that moves? Drop in a GIF up to 8 MB. Lart shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
+    "Ingin lencana yang bergerak? Masukkan GIF berukuran hingga 8 MB. Lart akan mengecilkan dan mengonversinya ke format animasi ringan agar tetap tajam dan cepat dimuat. Buatlah kecil dan berulang.",
   "Want to change the ratio mid-playback? The live aspect button is hidden by default to keep the player tidy.":
     "Ingin mengubah rasio saat pemutaran berlangsung? Tombol aspek langsung disembunyikan secara default agar pemutar tetap rapi.",
   "Want to fix it yourself?": "Ingin memperbaikinya sendiri?",
@@ -510,8 +510,8 @@ const catalog: Record<string, string> = {
   "Watch Together needs a relay.": "Nonton Bersama memerlukan relay.",
   "Watch Together panel": "Panel Nonton Bersama",
   "Watch Together relay": "Relay Nonton Bersama",
-  "Watch Together rooms are routed through Harbor's hosted relay.":
-    "Ruang Nonton Bersama dirutekan melalui relay yang dihosting Harbor.",
+  "Watch Together rooms are routed through Lart's hosted relay.":
+    "Ruang Nonton Bersama dirutekan melalui relay yang dihosting Lart.",
   "Watch Together rooms drop after 6 hours": "Ruang Nonton Bersama ditutup setelah 6 jam",
   "Watch again": "Tonton lagi",
   "Watch from the beginning": "Tonton dari awal",
@@ -533,8 +533,8 @@ const catalog: Record<string, string> = {
   "Watched {ago}": "Ditonton {ago}",
   Watching: "Sedang menonton",
   "Watching 1 stream at once": "Menonton 1 stream sekaligus",
-  "Watching for ad, analytics, and tracking requests. Harbor itself sends zero telemetry.":
-    "Memantau permintaan iklan, analitik, dan pelacakan. Harbor sendiri tidak mengirim telemetri apa pun.",
+  "Watching for ad, analytics, and tracking requests. Lart itself sends zero telemetry.":
+    "Memantau permintaan iklan, analitik, dan pelacakan. Lart sendiri tidak mengirim telemetri apa pun.",
   "Watching right now": "Sedang menonton sekarang",
   "Watching {n} streams at once": "Menonton {n} stream sekaligus",
   Watchlist: "Daftar tontonan",
@@ -573,10 +573,10 @@ const catalog: Record<string, string> = {
   "We'll show a one-time recovery key right after you sign up. Save it: it's the only way back in if you forget your password.":
     "Kami akan menampilkan kunci pemulihan sekali pakai tepat setelah Anda mendaftar. Simpan kunci itu: inilah satu-satunya cara untuk masuk kembali jika Anda lupa kata sandi.",
   Weak: "Lemah",
-  "Wear your Simkl profile picture across Harbor instead of the default.":
-    "Gunakan foto profil Simkl Anda di seluruh Harbor sebagai pengganti foto bawaan.",
-  "Wear your Trakt profile picture across Harbor instead of the default.":
-    "Gunakan foto profil Trakt Anda di seluruh Harbor sebagai pengganti foto bawaan.",
+  "Wear your Simkl profile picture across Lart instead of the default.":
+    "Gunakan foto profil Simkl Anda di seluruh Lart sebagai pengganti foto bawaan.",
+  "Wear your Trakt profile picture across Lart instead of the default.":
+    "Gunakan foto profil Trakt Anda di seluruh Lart sebagai pengganti foto bawaan.",
   Web: "Web",
   "Web Release": "Rilis Web",
   "Web build": "Versi web",
@@ -605,8 +605,8 @@ const catalog: Record<string, string> = {
   "What everyone has been quietly binging this week.":
     "Yang diam-diam ditonton maraton oleh semua orang minggu ini.",
   "What everyone is reading": "Yang sedang dibaca semua orang",
-  "What fills the hero. Trending is a fresh top list from Harbor, refreshed through the day. Classic uses your own Home rows.":
-    "Yang mengisi bagian hero. Trending adalah daftar teratas terbaru dari Harbor, diperbarui sepanjang hari. Klasik menggunakan baris Beranda Anda sendiri.",
+  "What fills the hero. Trending is a fresh top list from Lart, refreshed through the day. Classic uses your own Home rows.":
+    "Yang mengisi bagian hero. Trending adalah daftar teratas terbaru dari Lart, diperbarui sepanjang hari. Klasik menggunakan baris Beranda Anda sendiri.",
   "What fullscreen does": "Fungsi layar penuh",
   "What gets blurred": "Yang diburamkan",
   "What gets sent": "Yang dikirim",
@@ -650,8 +650,8 @@ const catalog: Record<string, string> = {
   "Whatever's left at year-end": "Apa pun yang tersisa pada akhir tahun",
   'When Esc would close the player, show a quick confirm first. You can tick "Don\'t ask me again" in that prompt to always leave on Esc.':
     'Saat Esc akan menutup pemutar, tampilkan konfirmasi singkat terlebih dahulu. Anda dapat mencentang "Jangan tanya lagi" pada dialog tersebut agar Esc selalu langsung keluar.',
-  "When Harbor sits idle in the foreground, it drifts through cinematic backdrops with a clock and what's trending. Any movement or key brings you back. Off by default.":
-    "Saat Harbor menganggur di latar depan, tampilan akan beralih di antara latar sinematik dengan jam dan konten yang sedang trending. Gerakan atau tombol apa pun akan membawa Anda kembali. Nonaktif secara default.",
+  "When Lart sits idle in the foreground, it drifts through cinematic backdrops with a clock and what's trending. Any movement or key brings you back. Off by default.":
+    "Saat Lart menganggur di latar depan, tampilan akan beralih di antara latar sinematik dengan jam dan konten yang sedang trending. Gerakan atau tombol apa pun akan membawa Anda kembali. Nonaktif secara default.",
   "When a flagged ad plays, a Skip button slides in so you jump straight past it.":
     "Saat iklan yang ditandai diputar, tombol Lewati akan muncul agar Anda bisa langsung melewatinya.",
   "When a movie or episode starts, briefly show its Common Sense Media parental guide (violence, nudity, profanity, substances) with severity. Fades on its own.":
@@ -660,30 +660,30 @@ const catalog: Record<string, string> = {
     "Saat film atau episode dimulai, tampilkan sebentar panduan orang tua IMDb (kekerasan, kata-kata kasar, zat terlarang, adegan menakutkan, dan lainnya) beserta tingkat keparahannya. Menghilang otomatis.",
   "When a new episode airs": "Saat episode baru tayang",
   "When a new season premieres": "Saat musim baru tayang perdana",
-  "When a release ships multiple audio tracks, Harbor selects the first match from this list.":
-    "Jika suatu rilis memiliki beberapa trek audio, Harbor memilih kecocokan pertama dari daftar ini.",
-  "When a subtitle runs early or late, Harbor measures the speech and corrects the timing on its own.":
-    "Jika subtitle terlalu cepat atau terlambat, Harbor mengukur ucapan dan mengoreksi waktunya secara otomatis.",
-  "When a subtitle runs early or late, Harbor measures the speech and corrects the timing on its own. Off by default.":
-    "Jika subtitle terlalu cepat atau terlambat, Harbor mengukur ucapan dan mengoreksi waktunya secara otomatis. Nonaktif secara default.",
+  "When a release ships multiple audio tracks, Lart selects the first match from this list.":
+    "Jika suatu rilis memiliki beberapa trek audio, Lart memilih kecocokan pertama dari daftar ini.",
+  "When a subtitle runs early or late, Lart measures the speech and corrects the timing on its own.":
+    "Jika subtitle terlalu cepat atau terlambat, Lart mengukur ucapan dan mengoreksi waktunya secara otomatis.",
+  "When a subtitle runs early or late, Lart measures the speech and corrects the timing on its own. Off by default.":
+    "Jika subtitle terlalu cepat atau terlambat, Lart mengukur ucapan dan mengoreksi waktunya secara otomatis. Nonaktif secara default.",
   "When a title is in your local library": "Saat suatu judul ada di perpustakaan lokal Anda",
   "When an episode ends, automatically start the next one. Off lets the episode finish and stop.":
     "Saat episode berakhir, mulai episode berikutnya secara otomatis. Jika dinonaktifkan, episode akan selesai lalu berhenti.",
-  "When auto-playing the next episode, keep the same release/source you were just watching instead of Harbor's top-ranked stream. Falls back to the best stream if that source isn't available.":
-    "Saat memutar episode berikutnya secara otomatis, gunakan rilis/sumber yang sama dengan yang baru saja Anda tonton, bukan stream peringkat teratas Harbor. Jika sumber itu tidak tersedia, stream terbaik akan digunakan.",
+  "When auto-playing the next episode, keep the same release/source you were just watching instead of Lart's top-ranked stream. Falls back to the best stream if that source isn't available.":
+    "Saat memutar episode berikutnya secara otomatis, gunakan rilis/sumber yang sama dengan yang baru saja Anda tonton, bukan stream peringkat teratas Lart. Jika sumber itu tidak tersedia, stream terbaik akan digunakan.",
   "When in fullscreen, Esc leaves fullscreen instead of closing the player. Press Esc again to close. Turn off to make Esc always close.":
     "Saat dalam layar penuh, Esc keluar dari layar penuh, bukan menutup pemutar. Tekan Esc lagi untuk menutup. Nonaktifkan agar Esc selalu menutup.",
   "When off, a P2P transfer stops the moment you close or switch the stream, so nothing keeps downloading in the background. Turn on to let it keep going after you leave; manage or pause those from the Downloads tab.": "Jika dinonaktifkan, transfer P2P berhenti begitu Anda menutup atau mengganti stream, sehingga tidak ada yang terus diunduh di latar belakang. Aktifkan agar unduhan tetap berjalan setelah Anda keluar; kelola atau jeda dari tab Unduhan.",
-  "When on, a connected controller moves focus around Harbor and drives the player. Turn it off to ignore all controllers.":
-    "Jika diaktifkan, controller yang terhubung memindahkan fokus di Harbor dan mengendalikan pemutar. Nonaktifkan untuk mengabaikan semua controller.",
+  "When on, a connected controller moves focus around Lart and drives the player. Turn it off to ignore all controllers.":
+    "Jika diaktifkan, controller yang terhubung memindahkan fokus di Lart dan mengendalikan pemutar. Nonaktifkan untuk mengabaikan semua controller.",
   "When people share a collection it shows up here. Build one you love and share it, that is how it starts.":
     "Saat orang membagikan koleksi, koleksi tersebut muncul di sini. Buat koleksi yang Anda sukai dan bagikan, begitulah semuanya bermula.",
-  "When playback starts, Harbor automatically finds and loads a subtitle in one of these languages, so you never have to search by hand. The first available match wins, so put your main language first.":
-    "Saat pemutaran dimulai, Harbor otomatis mencari dan memuat subtitle dalam salah satu bahasa ini, sehingga Anda tidak perlu mencarinya secara manual. Kecocokan pertama yang tersedia akan digunakan, jadi tempatkan bahasa utama Anda paling awal.",
-  "When playback starts, Harbor finds and loads a subtitle in one of these languages automatically. The first available match wins, so put your main language first.":
-    "Saat pemutaran dimulai, Harbor otomatis mencari dan memuat subtitle dalam salah satu bahasa ini. Kecocokan pertama yang tersedia akan digunakan, jadi tempatkan bahasa utama Anda paling awal.",
-  "When playback starts, Harbor finds and loads a subtitle in one of these languages. The first available match wins, so put your main language first.":
-    "Saat pemutaran dimulai, Harbor mencari dan memuat subtitle dalam salah satu bahasa ini. Kecocokan pertama yang tersedia akan digunakan, jadi tempatkan bahasa utama Anda paling awal.",
+  "When playback starts, Lart automatically finds and loads a subtitle in one of these languages, so you never have to search by hand. The first available match wins, so put your main language first.":
+    "Saat pemutaran dimulai, Lart otomatis mencari dan memuat subtitle dalam salah satu bahasa ini, sehingga Anda tidak perlu mencarinya secara manual. Kecocokan pertama yang tersedia akan digunakan, jadi tempatkan bahasa utama Anda paling awal.",
+  "When playback starts, Lart finds and loads a subtitle in one of these languages automatically. The first available match wins, so put your main language first.":
+    "Saat pemutaran dimulai, Lart otomatis mencari dan memuat subtitle dalam salah satu bahasa ini. Kecocokan pertama yang tersedia akan digunakan, jadi tempatkan bahasa utama Anda paling awal.",
+  "When playback starts, Lart finds and loads a subtitle in one of these languages. The first available match wins, so put your main language first.":
+    "Saat pemutaran dimulai, Lart mencari dan memuat subtitle dalam salah satu bahasa ini. Kecocokan pertama yang tersedia akan digunakan, jadi tempatkan bahasa utama Anda paling awal.",
   "When the Up Next pill appears before an episode ends. Auto scales to the episode length, so short episodes stop prompting so early. Off hides it.":
     "Waktu munculnya label Berikutnya sebelum episode berakhir. Otomatis menyesuaikan dengan durasi episode agar episode pendek tidak memunculkannya terlalu dini. Nonaktif akan menyembunyikannya.",
   "When the audio already matches your subtitle language, pick a forced track (foreign dialogue and signs only) instead of full subtitles. If the file has no forced track, subtitles stay off.":
@@ -695,10 +695,10 @@ const catalog: Record<string, string> = {
     "Saat episode terbaru berakhir (Sembunyikan / Timer)",
   "When time's up, the ship sails away until a parent unlocks it.":
     "Saat waktunya habis, kapal akan berlayar hingga orang tua membukanya.",
-  "When you back out of a title, Harbor saves a frame so the Continue Watching card looks like the spot you left.":
-    "Saat Anda keluar dari suatu judul, Harbor menyimpan satu frame agar kartu Lanjutkan Menonton menampilkan bagian terakhir yang Anda tinggalkan.",
-  "When you back out of a title, Harbor saves a frame so the Continue Watching card looks like the spot you left. Tune how long they stick around, or wipe them all.":
-    "Saat Anda keluar dari suatu judul, Harbor menyimpan satu frame agar kartu Lanjutkan Menonton menampilkan bagian terakhir yang Anda tinggalkan. Atur berapa lama frame disimpan, atau hapus semuanya.",
+  "When you back out of a title, Lart saves a frame so the Continue Watching card looks like the spot you left.":
+    "Saat Anda keluar dari suatu judul, Lart menyimpan satu frame agar kartu Lanjutkan Menonton menampilkan bagian terakhir yang Anda tinggalkan.",
+  "When you back out of a title, Lart saves a frame so the Continue Watching card looks like the spot you left. Tune how long they stick around, or wipe them all.":
+    "Saat Anda keluar dari suatu judul, Lart menyimpan satu frame agar kartu Lanjutkan Menonton menampilkan bagian terakhir yang Anda tinggalkan. Atur berapa lama frame disimpan, atau hapus semuanya.",
   "When you exit fullscreen, return the window to exactly where it was. Turn off to center it on screen instead.":
     "Saat Anda keluar dari layar penuh, kembalikan jendela tepat ke posisi sebelumnya. Nonaktifkan agar jendela dipusatkan di layar.",
   "When you exit playback, keep the window fullscreen instead of dropping back to a window. Turn off to leave fullscreen automatically whenever the player closes.":
@@ -717,8 +717,8 @@ const catalog: Record<string, string> = {
     "Saat Anda membuka kembali acara yang sudah dijelajahi, langsung kembali ke posisi terakhir Anda (biasanya daftar episode), bukan mulai dari atas. Perpindahan terjadi sebelum halaman ditampilkan, jadi tidak ada kilatan.",
   "When you resume something you were watching, replay the exact stream you last used (same addon and source) instead of opening the picker again. Turn off to always choose fresh.":
     "Saat Anda melanjutkan sesuatu yang sedang ditonton, putar kembali stream persis seperti yang terakhir digunakan (addon dan sumber yang sama), bukan membuka pemilih lagi. Nonaktifkan agar selalu memilih yang baru.",
-  "Where Harbor saves videos when you hit Download in the player. Pick any folder, including one on a different drive.":
-    "Lokasi Harbor menyimpan video saat Anda menekan Unduh di pemutar. Pilih folder apa pun, termasuk di drive lain.",
+  "Where Lart saves videos when you hit Download in the player. Pick any folder, including one on a different drive.":
+    "Lokasi Lart menyimpan video saat Anda menekan Unduh di pemutar. Pilih folder apa pun, termasuk di drive lain.",
   "Where alerts go": "Tujuan peringatan",
   "Where do you want to start?": "Dari mana Anda ingin memulai?",
   "Where files live": "Lokasi file",
@@ -740,8 +740,8 @@ const catalog: Record<string, string> = {
   "Where you watch from": "Lokasi tempat Anda menonton",
   "Where your data lives": "Tempat data Anda disimpan",
   "Where your video comes from": "Sumber video Anda",
-  "Whether Harbor reports playback to Simkl while you watch.":
-    "Apakah Harbor melaporkan pemutaran ke Simkl saat Anda menonton.",
+  "Whether Lart reports playback to Simkl while you watch.":
+    "Apakah Lart melaporkan pemutaran ke Simkl saat Anda menonton.",
   "Whether finishing an episode updates your AniList progress.":
     "Apakah menyelesaikan satu episode memperbarui progres AniList Anda.",
   "Whether subtitles are showing the moment a video starts.":
@@ -761,20 +761,20 @@ const catalog: Record<string, string> = {
   "Which order": "Urutannya",
   "Which service names the track when you tap Identify song in the player.":
     "Layanan mana yang mengidentifikasi lagu saat Anda mengetuk Identifikasi lagu di pemutar.",
-  "Which subtitle Harbor lands on when more than one is available.":
-    "Subtitle mana yang dipilih Harbor saat tersedia lebih dari satu.",
+  "Which subtitle Lart lands on when more than one is available.":
+    "Subtitle mana yang dipilih Lart saat tersedia lebih dari satu.",
   "Which subtitle languages, in order?": "Bahasa subtitle, sesuai urutan?",
   "While auto-sync is on": "Saat sinkronisasi otomatis aktif",
-  "While beta updates are on, Harbor offers the newest build again on its next check. Turn beta updates off above to stay on an earlier one.":
-    "Saat pembaruan beta aktif, Harbor akan kembali menawarkan build terbaru pada pemeriksaan berikutnya. Nonaktifkan pembaruan beta di atas agar tetap menggunakan build sebelumnya.",
+  "While beta updates are on, Lart offers the newest build again on its next check. Turn beta updates off above to stay on an earlier one.":
+    "Saat pembaruan beta aktif, Lart akan kembali menawarkan build terbaru pada pemeriksaan berikutnya. Nonaktifkan pembaruan beta di atas agar tetap menggunakan build sebelumnya.",
   "While the world's asleep": "Saat dunia terlelap",
   "While you watch": "Saat Anda menonton",
   White: "Putih",
   "Who can join": "Siapa yang dapat bergabung",
   "Who is breaking out this week. Live, with weekly movement.":
     "Siapa yang sedang melejit minggu ini. Langsung, dengan perubahan mingguan.",
-  "Who keeps the lights on, what Harbor is built on, and where to put money if you want to.":
-    "Siapa yang menopang operasional, teknologi yang menjadi fondasi Harbor, dan tempat berdonasi jika Anda mau.",
+  "Who keeps the lights on, what Lart is built on, and where to put money if you want to.":
+    "Siapa yang menopang operasional, teknologi yang menjadi fondasi Lart, dan tempat berdonasi jika Anda mau.",
   "Who keeps this running": "Siapa yang menjaga layanan ini tetap berjalan",
   "Who pays for the servers": "Siapa yang membayar biaya server",
   "Who pays for the servers, and where to put money if you want to.":
@@ -905,13 +905,13 @@ const catalog: Record<string, string> = {
   "You are done.": "Anda sudah selesai.",
   "You are not a member yet. Accept to join and take part.":
     "Anda belum menjadi anggota. Terima untuk bergabung dan berpartisipasi.",
-  "You are not signed in to a Harbor account, so nothing here can reach the TV.":
-    "Anda belum masuk ke akun Harbor, jadi tidak ada apa pun di sini yang dapat menjangkau TV.",
+  "You are not signed in to a Lart account, so nothing here can reach the TV.":
+    "Anda belum masuk ke akun Lart, jadi tidak ada apa pun di sini yang dapat menjangkau TV.",
   "You are rating too fast, try again in a moment":
     "Anda memberi rating terlalu cepat, coba lagi sebentar lagi",
   "You are set up": "Penyiapan Anda selesai",
-  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Harbor bundles and endorses no sites; it only runs the config you supply.":
-    "Anda sepenuhnya bertanggung jawab atas apa yang Anda hubungkan serta kepatuhan terhadap hak cipta dan ketentuan setiap situs. Harbor tidak menyertakan atau mendukung situs apa pun; Harbor hanya menjalankan konfigurasi yang Anda berikan.",
+  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Lart bundles and endorses no sites; it only runs the config you supply.":
+    "Anda sepenuhnya bertanggung jawab atas apa yang Anda hubungkan serta kepatuhan terhadap hak cipta dan ketentuan setiap situs. Lart tidak menyertakan atau mendukung situs apa pun; Lart hanya menjalankan konfigurasi yang Anda berikan.",
   'You buy something "in installments". That means you:':
     'Anda membeli sesuatu "dengan cicilan". Artinya, Anda:',
   "You can always mute or stop a song from the card itself.":
@@ -949,8 +949,8 @@ const catalog: Record<string, string> = {
   "You make an insurance claim. Before the insurer pays out, you usually:":
     "Anda mengajukan klaim asuransi. Sebelum perusahaan asuransi membayar, biasanya Anda:",
   "You might like": "Mungkin Anda suka",
-  "You must install this addon in your Stremio account first so Harbor can fetch its works.":
-    "Anda harus menginstal addon ini terlebih dahulu di akun Stremio agar Harbor dapat mengambil karyanya.",
+  "You must install this addon in your Stremio account first so Lart can fetch its works.":
+    "Anda harus menginstal addon ini terlebih dahulu di akun Stremio agar Lart dapat mengambil karyanya.",
   "You only ever pay the minimum on a credit card each month. Over time you:":
     "Anda hanya membayar jumlah minimum kartu kredit setiap bulan. Seiring waktu, Anda:",
   "You own the content": "Anda memiliki konten ini",
@@ -985,9 +985,9 @@ const catalog: Record<string, string> = {
   'You\'re given "power of attorney" for a relative. You can:':
     'Anda diberi "surat kuasa" untuk seorang kerabat. Anda dapat:',
   "You're in": "Anda sudah bergabung",
-  "You're leaving Harbor": "Anda akan meninggalkan Harbor",
-  "You're modding your own client. Custom JS has full access to your Harbor session. Only paste code you wrote or fully trust.":
-    "Anda memodifikasi klien sendiri. JS kustom memiliki akses penuh ke sesi Harbor Anda. Hanya tempel kode yang Anda tulis sendiri atau percayai sepenuhnya.",
+  "You're leaving Lart": "Anda akan meninggalkan Lart",
+  "You're modding your own client. Custom JS has full access to your Lart session. Only paste code you wrote or fully trust.":
+    "Anda memodifikasi klien sendiri. JS kustom memiliki akses penuh ke sesi Lart Anda. Hanya tempel kode yang Anda tulis sendiri atau percayai sepenuhnya.",
   "You're offline": "Anda sedang offline",
   "You're offline. Your downloads still play.":
     "Anda sedang offline. Unduhan Anda tetap dapat diputar.",

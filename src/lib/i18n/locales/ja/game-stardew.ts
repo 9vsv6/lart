@@ -18,7 +18,7 @@ export default {
   "games.stardew.refresh": "Modを更新",
 
   "games.stardew.import": "MODのZIPを読み込む",
-  "games.stardew.manage": "Harborで管理",
+  "games.stardew.manage": "Lartで管理",
   "games.stardew.manageNote": "ダウンロードしたSMAPIのMODを読み込んで管理します。更新時は新しいZIPを読み込んでください。",
   "games.stardew.previous": "以前のバージョン",
   "games.stardew.review": "変更を確認",
@@ -31,7 +31,7 @@ export default {
   "games.stardew.running": "MODファイルを変更する前にStardew ValleyとSMAPIを終了してください。",
   "games.stardew.requirementsError": "必要なMODまたはSMAPIのバージョンが存在しないか、古すぎます。MODの要件を確認してください。",
   "games.stardew.dependentsError": "有効なMODがこのバージョンを必要としています。先にそのMODを無効にするか、互換性のあるバージョンを選んでください。",
-  "games.stardew.unmanagedError": "このMODはHarborの記録外にすでに存在します。既存のコピーを移動してから読み込んでください。",
+  "games.stardew.unmanagedError": "このMODはLartの記録外にすでに存在します。既存のコピーを移動してから読み込んでください。",
   "games.stardew.archiveError": "使用可能なMODフォルダーを1つ含むZIPを選んでください。上限は32 MB（展開後128 MB）です。ソースコードはインストールできるMODではありません。",
   "games.stardew.moreFiles": "ほか{count}ファイル",
   "games.stardew.partialError": "一部のMODを確認できませんでした。ファイル変更前に不完全なスキャンの問題を解決してください。",

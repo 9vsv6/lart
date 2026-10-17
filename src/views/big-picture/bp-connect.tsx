@@ -80,10 +80,10 @@ function BpConnectBody({ onBack }: { onBack?: () => void }) {
       <div className="grid flex-1 grid-cols-[minmax(0,1fr)_auto] items-start gap-[clamp(20px,2.4vw,52px)]">
         <div className="flex min-w-0 flex-col gap-[clamp(14px,2vh,26px)]">
           <div className="flex flex-col gap-[clamp(4px,0.7vh,9px)]">
-            <h2 className={TITLE}>{t("Finish setting up Harbor")}</h2>
+            <h2 className={TITLE}>{t("Finish setting up Lart")}</h2>
             {!hasKey && (
               <p className={`${BODY} max-w-[54ch] text-ink-subtle`}>
-                {t("Harbor needs a TMDB key for artwork, rows and collections. It is free.")}
+                {t("Lart needs a TMDB key for artwork, rows and collections. It is free.")}
               </p>
             )}
           </div>
@@ -104,7 +104,7 @@ function BpConnectBody({ onBack }: { onBack?: () => void }) {
               on={!!facts.stremioName}
             />
             <BpConnectStatus
-              label={t("Harbor account")}
+              label={t("Lart account")}
               value={
                 facts.harborName
                   ? t("Signed in as {name}", { name: facts.harborName })
@@ -244,7 +244,7 @@ function BpConnectAction({
 /**
  * Everything onboarding sets, reachable after onboarding. Someone who skipped a
  * step, or who only ever saw the TV, had no route back to it: the tabs that need
- * a TMDB key simply vanished, which reads as Harbor being broken rather than
+ * a TMDB key simply vanished, which reads as Lart being broken rather than
  * unconfigured. Owns its own handoff host, so the QR is live only while this is
  * on screen.
  */

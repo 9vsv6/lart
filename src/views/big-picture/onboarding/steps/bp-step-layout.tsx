@@ -27,7 +27,7 @@ export function BpStepLayout() {
 
   const copy: Record<Mode, { label: string; sub: string }> = {
     harbor: {
-      label: t("Harbor"),
+      label: t("Lart"),
       sub: t("A hero up top, then Top 10, Trending, In Theaters and your service rows."),
     },
     classic: {

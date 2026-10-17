@@ -366,8 +366,8 @@ const player: Record<string, string> = {
   default: "デフォルト",
   "loading more…": "さらに読み込み中…",
   min: "分",
-  "mpv is required for recording. Install mpv and restart Harbor.":
-    "録画にはmpvが必要です。mpvをインストールしてHarborを再起動してください。",
+  "mpv is required for recording. Install mpv and restart Lart.":
+    "録画にはmpvが必要です。mpvをインストールしてLartを再起動してください。",
   "to close": "で閉じる",
   "unsaved changes": "未保存の変更",
   "{count} dl": "{count} DL",
@@ -458,8 +458,8 @@ const player: Record<string, string> = {
   "Reloading the stream…": "ストリームを再読み込み中…",
   "Couldn't reload the stream. Try picking another source.":
     "ストリームを再読み込みできませんでした。別のソースを選んでみてください。",
-  "Harbor's streaming server only runs in the desktop app.":
-    "Harborのストリーミングサーバーはデスクトップアプリでのみ動作します。",
+  "Lart's streaming server only runs in the desktop app.":
+    "Lartのストリーミングサーバーはデスクトップアプリでのみ動作します。",
   "Restarting the streaming server…": "ストリーミングサーバーを再起動中…",
   "Couldn't restart the streaming server.": "ストリーミングサーバーを再起動できませんでした。",
   "The streaming server didn't come back up.": "ストリーミングサーバーが復帰しませんでした。",

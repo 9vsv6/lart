@@ -37,7 +37,7 @@ export default {
   "games.recommend.retrySome": "未取得の関連情報を再読み込み",
   "games.recommend.saveError": "このデバイスにおすすめ設定を保存できませんでした。もう一度お試しください。",
   "games.recommend.influences": "おすすめに使うゲーム",
-  "games.recommend.influencesNote": "Harborがおすすめの基準にするゲームを選べます。ライブラリは変更されません。",
+  "games.recommend.influencesNote": "Lartがおすすめの基準にするゲームを選べます。ライブラリは変更されません。",
   "games.recommend.exclude": "{name}を基準から外す",
   "games.recommend.excluded": "基準から外したゲーム（{count}）",
   "games.recommend.useAgain": "{name}を再び基準にする",

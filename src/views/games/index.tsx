@@ -181,7 +181,7 @@ function GamesViewContent({ harborNavigationOpen = false, onHarborNavigationChan
   const [exploreVisit, setExploreVisit] = useState(() => createExploreVisit(profileId));
   const previousActive = useRef(active);
   useLayoutEffect(() => {
-    // Detail/genre Back is the same visit. Returning from another Harbor section
+    // Detail/genre Back is the same visit. Returning from another Lart section
     // at Explore's root is a new one; linked-media Back keeps its saved position.
     if (exploreVisit.profile !== profileId || (active && !previousActive.current && homeActive && !mediaReturn.current)) setExploreVisit(createExploreVisit(profileId));
     previousActive.current = active;

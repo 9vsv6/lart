@@ -10,7 +10,7 @@ export function Signature() {
       <p className="flex items-center gap-1.5 text-center text-[15.5px] leading-[22px] text-ink-subtle">
         {t("Made with")}
         <HeartGlyph label={t("love")} />
-        {t("by Harbor contributors")}
+        {t("by Lart contributors")}
       </p>
       <button
         onClick={() => setOpen((v) => !v)}
@@ -27,9 +27,10 @@ export function Signature() {
           <p>
             {t(
               "{app} is a completely free and open source project. {app} is under the {license} and you can repurpose and reuse it as you wish. By all means profit from this, shape it to your wishes and needs, whatever your heart desires. It is truly open source.",
-              { app: "Harbor", license: "MIT License" },
+              { app: "Lart", license: "MIT License" },
             )}
           </p>
+          <p>Lart is based on Harbor (MIT License), copyright the Harbor contributors.</p>
           <p>
             {t(
               "We originally built this as our own personal client. We love {service} so much and wanted to put our own spin on a protocol we use almost daily. It started as a simple, clean player, and as our friends started using it too, it grew into something bigger: watch together, instant play, and a lot more.",

@@ -225,7 +225,7 @@ function AppIconPicker() {
 
       <SRow
         title={t("Or try one of ours")}
-        description={t("{n} Harbor icons", { n: APP_ICON_PRESETS.length })}
+        description={t("{n} Lart icons", { n: APP_ICON_PRESETS.length })}
         onClick={() => setOpen((o) => !o)}
         trailing={
           <ChevronDown
@@ -323,7 +323,7 @@ function AppIconPicker() {
       <ToggleRow
         label={t("Use the album art as the app icon while music plays")}
         sub={t(
-          "The taskbar button becomes the cover of the track you are listening to, and goes back to your Harbor icon when music stops. The thumbnail preview always shows the cover either way.",
+          "The taskbar button becomes the cover of the track you are listening to, and goes back to your Lart icon when music stops. The thumbnail preview always shows the cover either way.",
         )}
         value={settings.musicArtworkAppIcon}
         onChange={(v) => update({ musicArtworkAppIcon: v })}

@@ -101,8 +101,8 @@ const sweepA: Record<string, string> = {
   "{count} slot reskinned": "已更换 {count} 个槽位的外观",
   "{count} slots reskinned": "已更换 {count} 个槽位的外观",
   "{count} sources": "{count} 个书源",
-  "{count} tracker request blocked this session. Harbor itself sends zero telemetry.":
-    "本次会话已拦截 {count} 个跟踪器请求。Harbor 本身不会发送任何遥测数据。",
+  "{count} tracker request blocked this session. Lart itself sends zero telemetry.":
+    "本次会话已拦截 {count} 个跟踪器请求。Lart 本身不会发送任何遥测数据。",
   "{count} views": "{count} 次浏览",
   "{count} vols": "{count} 卷",
   "{count} volumes": "{count} 卷",
@@ -230,7 +230,7 @@ const sweepA: Record<string, string> = {
   "{n} genres": "{n} 个类型",
   "{n} genres#few": "{n} 个类型",
   "{n} genres#one": "{n} 个类型",
-  "{n} Harbor icons": "{n} 个 Harbor 图标",
+  "{n} Lart icons": "{n} 个 Lart 图标",
   "{n} hidden": "{n} 个已隐藏",
   "{n} hidden by trust filter": "信任过滤器已隐藏 {n} 项",
   "{n} hours": "{n} 小时",
@@ -282,7 +282,7 @@ const sweepA: Record<string, string> = {
   "{n} options active": "{n} 个选项生效",
   "{n} options#few": "{n} 个选项",
   "{n} options#one": "{n} 个选项",
-  "{n} other Harbors": "其他 {n} 个 Harbor",
+  "{n} other Harbors": "其他 {n} 个 Lart",
   "{n} pages": "{n} 页",
   "{n} pages#few": "{n} 页",
   "{n} pages#one": "{n} 页",
@@ -345,14 +345,14 @@ const sweepA: Record<string, string> = {
   "{n} titles you like": "你喜欢的 {n} 部作品",
   "{n} titles#few": "{n} 部作品#few",
   "{n} titles#one": "{n} 部作品#one",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.":
-    "本次会话已拦截 {n} 个跟踪请求。Harbor 本身不发送任何遥测数据。",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#few":
-    "本次会话已拦截 {n} 个跟踪器请求。Harbor 本身不发送任何遥测数据。#few",
-  "{n} tracker request blocked this session. Harbor itself sends zero telemetry.#one":
-    "本次会话已拦截 {n} 个跟踪器请求。Harbor 本身不发送任何遥测数据。#one",
-  "{n} tracker requests blocked this session. Harbor itself sends zero telemetry.":
-    "本次会话已拦截 {n} 个跟踪请求。Harbor 本身不发送任何遥测数据。",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.":
+    "本次会话已拦截 {n} 个跟踪请求。Lart 本身不发送任何遥测数据。",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#few":
+    "本次会话已拦截 {n} 个跟踪器请求。Lart 本身不发送任何遥测数据。#few",
+  "{n} tracker request blocked this session. Lart itself sends zero telemetry.#one":
+    "本次会话已拦截 {n} 个跟踪器请求。Lart 本身不发送任何遥测数据。#one",
+  "{n} tracker requests blocked this session. Lart itself sends zero telemetry.":
+    "本次会话已拦截 {n} 个跟踪请求。Lart 本身不发送任何遥测数据。",
   "{n} tracks": "{n} 条轨道",
   "{n} uncached hidden": "已隐藏 {n} 个未缓存项",
   "{n} versions": "{n} 个版本",
@@ -397,11 +397,11 @@ const sweepA: Record<string, string> = {
   "{name} is available": "{name} 可用",
   "{name} is taken": "{name} 已被占用",
   "{name} Minecraft skin": "{name} Minecraft 皮肤",
-  "{name} on Harbor": "{name} 的 Harbor 个人资料",
+  "{name} on Lart": "{name} 的 Lart 个人资料",
   "{name} reached {count} five-star ratings": "{name} 获得了 {count} 个五星评分",
   "{name} started watching": "{name} 开始观看",
-  "{name} will be removed from Harbor. Anything you've set to use it will fall back to Inter.":
-    "{name} 将从 Harbor 中移除。所有已设为使用它的内容都将回退到 Inter。",
+  "{name} will be removed from Lart. Anything you've set to use it will fall back to Inter.":
+    "{name} 将从 Lart 中移除。所有已设为使用它的内容都将回退到 Inter。",
   "{name}'s {sub}": "{name}的{sub}",
   "{name}'s ratings": "{name} 的评分",
   "{names} +{n} more": "{names}，另有 {n} 个",
@@ -486,7 +486,7 @@ const sweepA: Record<string, string> = {
   "1 month ago": "1 个月前",
   "1 new episode since you last watched": "自你上次观看后更新了 1 集",
   "1 option active": "1 个选项生效",
-  "1 other Harbor": "另外 1 个 Harbor",
+  "1 other Lart": "另外 1 个 Lart",
   "1 selected": "已选择 1 项",
   "1 week": "1 周",
   "1 year": "1 年",
@@ -586,10 +586,10 @@ const sweepA: Record<string, string> = {
   'A bill is set up via "direct debit". The biller can:': "账单设置了“自动扣款”。收款方可以：",
   "A blend of the sources above by percentile. Degrades gracefully when one is missing.":
     "按百分位数混合上述来源。缺少其中一个来源时也能平稳降级。",
-  "A browser tab opened on AniList. Approve Harbor there, then copy the text it shows and paste it below.":
-    "已在浏览器标签页中打开 AniList。请在那里授权 Harbor，然后复制显示的文本并粘贴到下方。",
-  "A browser tab opened on MyAnimeList. Approve Harbor there, then copy the code or the page URL and paste it below.":
-    "已在浏览器标签页中打开 MyAnimeList。请在那里授权 Harbor，然后复制代码或页面 URL 并粘贴到下方。",
+  "A browser tab opened on AniList. Approve Lart there, then copy the text it shows and paste it below.":
+    "已在浏览器标签页中打开 AniList。请在那里授权 Lart，然后复制显示的文本并粘贴到下方。",
+  "A browser tab opened on MyAnimeList. Approve Lart there, then copy the code or the page URL and paste it below.":
+    "已在浏览器标签页中打开 MyAnimeList。请在那里授权 Lart，然后复制代码或页面 URL 并粘贴到下方。",
   'A charge on your bank app sits as "pending" for a day. The merchant is:':
     "你银行 App 中的一笔扣款显示“待处理”一天。这表示商家正在：",
   "A client for the Stremio protocol. Two minutes to set up; most of it optional. You stay in control of every key.":
@@ -603,10 +603,10 @@ const sweepA: Record<string, string> = {
     "一份文件需要“公证”。你要把它交给会做以下事情的人：",
   "A fixed amount every month": "每月固定金额",
   "A folder you already have": "已有文件夹",
-  "A free TMDB key is highly recommended. It unlocks the full Harbor experience. The rest are optional, and Cinemeta works out of the box without any.":
-    "强烈建议使用免费的 TMDB 密钥，它能解锁完整的 Harbor 体验。其余密钥均为可选，Cinemeta 无需配置即可使用。",
-  "A full screen, couch friendly Harbor for TVs, handhelds and big monitors.":
-    "专为电视、掌机和大屏显示器打造的全屏 Harbor 模式，坐在沙发上也能轻松使用。",
+  "A free TMDB key is highly recommended. It unlocks the full Lart experience. The rest are optional, and Cinemeta works out of the box without any.":
+    "强烈建议使用免费的 TMDB 密钥，它能解锁完整的 Lart 体验。其余密钥均为可选，Cinemeta 无需配置即可使用。",
+  "A full screen, couch friendly Lart for TVs, handhelds and big monitors.":
+    "专为电视、掌机和大屏显示器打造的全屏 Lart 模式，坐在沙发上也能轻松使用。",
   "A grown-up can enter the parent PIN to keep watching.": "家长可以输入家长 PIN 以继续观看。",
   'A job offer\'s compensation is described as "competitive". That tells you:':
     "职位邀请中的薪酬被称为“有竞争力”。这表示：",
@@ -617,7 +617,7 @@ const sweepA: Record<string, string> = {
     "一方鲜活的书架，容纳崭新的世界、挚爱的故事，以及尚待相遇的好书。",
   "A loan tied to the property": "以房产为抵押的贷款",
   "A mortgage is essentially:": "住房抵押贷款本质上是：",
-  "A name people can find you by across Harbor.": "方便他人在 Harbor 各处找到你的名称。",
+  "A name people can find you by across Lart.": "方便他人在 Lart 各处找到你的名称。",
   "A name you keep watching": "让你不断追看的名字",
   "A new job's salary is \"pro-rated\" because you start mid-year. You'll receive:":
     "由于你年中入职，新工作的薪资会“按比例计算”。你将获得：",
@@ -723,13 +723,13 @@ const sweepA: Record<string, string> = {
     "添加几位好友后，他们的观看动态、评分和收藏就会显示在这里。",
   "Add a local folder": "添加本地文件夹",
   "Add a repository": "添加仓库",
-  "Add a series above and Harbor will grab each new episode as it airs, on your terms.":
-    "在上方添加剧集，Harbor 就会按照你的设置，在每集播出时自动下载。",
+  "Add a series above and Lart will grab each new episode as it airs, on your terms.":
+    "在上方添加剧集，Lart 就会按照你的设置，在每集播出时自动下载。",
   "Add a source": "添加来源",
   "Add a tag": "添加标签",
   "Add a TMDB key above to unlock this.": "在上方添加 TMDB 密钥以解锁此功能。",
   "Add a TMDB key above to unlock.": "在上方添加 TMDB 密钥即可解锁。",
-  "Add a TMDB key for the full Harbor": "添加 TMDB 密钥，解锁完整 Harbor 体验",
+  "Add a TMDB key for the full Lart": "添加 TMDB 密钥，解锁完整 Lart 体验",
   "Add a TMDB key to export metadata.": "添加 TMDB 密钥以导出元数据。",
   "Add a TMDB key to load rankings": "添加 TMDB 密钥以加载榜单",
   "Add an ad starting at the current time": "添加从当前时间开始的广告",
@@ -777,7 +777,7 @@ const sweepA: Record<string, string> = {
   'Added to "{name}"': "已添加到“{name}”",
   "Added to {page}": "已添加到 {page}",
   "Added to downloads": "已添加到下载列表",
-  "Added to Harbor": "已添加到 Harbor",
+  "Added to Lart": "已添加到 Lart",
   "Added to Shelf": "已添加到书架",
   "Added to stremio-addons.net in the last 14 days": "过去 14 天内添加到 stremio-addons.net",
   Adding: "正在添加",
@@ -983,7 +983,7 @@ const sweepA: Record<string, string> = {
   "Any size works, we optimize it": "任何尺寸都可以，我们会自动优化",
   "Any source": "任意来源",
   "Any streamer": "任意流媒体平台",
-  "Anywhere in Harbor.": "Harbor 中的任何位置。",
+  "Anywhere in Lart.": "Lart 中的任何位置。",
   App: "应用",
   "App icon": "应用图标",
   "App logo": "应用徽标",
@@ -1047,8 +1047,8 @@ const sweepA: Record<string, string> = {
   Australia: "澳大利亚",
   authenticated: "已通过身份验证",
   Author: "作者",
-  "Authorize Harbor on AniList": "在 AniList 上授权 Harbor",
-  "Authorize Harbor on MyAnimeList": "在 MyAnimeList 上授权 Harbor",
+  "Authorize Lart on AniList": "在 AniList 上授权 Lart",
+  "Authorize Lart on MyAnimeList": "在 MyAnimeList 上授权 Lart",
   Authorized: "已授权",
   "Authorized {when}": "已于 {when} 授权",
   "Authorized on this device": "已在此设备上授权",
@@ -1059,7 +1059,7 @@ const sweepA: Record<string, string> = {
   "Auto-adjusts styled (ASS) subtitles so dialogue stays the same size across files, while keeping their colors, fonts, and sign placement.":
     "自动调整带样式的（ASS）字幕，使不同文件中的对白字幕大小保持一致，同时保留其颜色、字体和标识位置。",
   "Auto-confirm peer-to-peer streaming": "自动确认 P2P 流式传输",
-  "Auto-deploy from Harbor": "从 Harbor 自动部署",
+  "Auto-deploy from Lart": "从 Lart 自动部署",
   "Auto-downloading": "自动下载中",
   "Auto-downloading new episodes": "正在自动下载新剧集",
   "Auto-hide the Skip button after": "自动隐藏“跳过”按钮的等待时间",

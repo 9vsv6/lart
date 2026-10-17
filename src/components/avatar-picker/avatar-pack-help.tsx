@@ -18,7 +18,7 @@ export function AvatarPackHelp({ onClose }: { onClose: () => void }) {
     { icon: FolderInput, title: t("Import a folder, keep your sets"), body: t("Label the subfolders inside the folder you pick, and each one becomes its own set (like Heroes or Cats). Loose images in the folder go to Uploads.") },
     { icon: FileJson, title: t("Import or export a .json pack"), body: t("A pack file lists your images with names and sets. Point items at files next to the JSON, at http links, or inline them as data URIs. Hover a set you imported and press Export to write one out.") },
     { icon: Images, title: t("Square looks best"), body: t("Avatars display as squares, so square images fill the tile cleanly. Others are center-cropped.") },
-    { icon: ShieldCheck, title: t("You own the content"), body: t("Nothing is uploaded and nothing ships with Harbor. Everything stays on this device and you are responsible for the images you add.") },
+    { icon: ShieldCheck, title: t("You own the content"), body: t("Nothing is uploaded and nothing ships with Lart. Everything stays on this device and you are responsible for the images you add.") },
   ];
 
   return createPortal(
@@ -59,7 +59,7 @@ export function AvatarPackHelp({ onClose }: { onClose: () => void }) {
         </div>
         <div className="border-t border-edge-soft px-6 py-3">
           <p className="text-[11.5px] leading-relaxed text-ink-subtle">
-            {t("Full pack format reference: docs/avatar-packs.md in the Harbor repository.")}
+            {t("Full pack format reference: docs/avatar-packs.md in the Lart repository.")}
           </p>
         </div>
       </div>

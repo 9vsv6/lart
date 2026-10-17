@@ -14,7 +14,7 @@ export default {
   "games.mods.backupNote": "Las versiones reemplazadas se guardan en una copia local. Usa Restaurar anterior en Tu configuración para volver; se comprobarán las dependencias.",
   "games.mods.currentVersion": "Instalada: {version}",
   "games.mods.current": "Instalada",
-  "games.mods.versionNote": "Elige una versión compatible. Harbor revisa los cambios y guarda la versión anterior localmente. Cierra Minecraft antes de aplicarlos.",
+  "games.mods.versionNote": "Elige una versión compatible. Lart revisa los cambios y guarda la versión anterior localmente. Cierra Minecraft antes de aplicarlos.",
   "games.mods.applyChanges": "Aplicar cambios",
   "games.mods.reviewChanges": "Revisar cambios",
   "games.mods.previousVersion": "Anterior: {version}",

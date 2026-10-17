@@ -485,7 +485,7 @@ export const COMMUNITY_PACKS: CommunityPack[] = [
     id: "minimal",
     kind: "nuvio",
     name: "Minimal",
-    author: "Harbor",
+    author: "Lart",
     description: "Clean minimal icons for common tags",
     count: "101 badges",
     previews: [
@@ -499,7 +499,7 @@ export const COMMUNITY_PACKS: CommunityPack[] = [
     id: "abstract",
     kind: "nuvio",
     name: "Abstract",
-    author: "Harbor",
+    author: "Lart",
     description: "Sleek abstract icons for common tags",
     count: "67 badges",
     previews: [
@@ -512,8 +512,8 @@ export const COMMUNITY_PACKS: CommunityPack[] = [
   {
     id: "harbor-light",
     kind: "nuvio",
-    name: "Harbor Light",
-    author: "Harbor",
+    name: "Lart Light",
+    author: "Lart",
     description:
       "Premium light set spanning resolutions, audio, HDR, release tiers, torrent groups, quality ranks and languages.",
     count: "206 badges",
@@ -527,8 +527,8 @@ export const COMMUNITY_PACKS: CommunityPack[] = [
   {
     id: "harbor-color",
     kind: "nuvio",
-    name: "Harbor Color",
-    author: "Harbor",
+    name: "Lart Color",
+    author: "Lart",
     description:
       "Full-color edition of the premium set: vivid resolution, audio, HDR, release tier and streaming marks.",
     count: "206 badges",
@@ -608,7 +608,7 @@ export const COMMUNITY_PACKS: CommunityPack[] = [
     name: "BetterFormatter Colored",
     author: "9mousaa",
     description:
-      "Swaps Harbor's built-in badge art for BetterFormatter's colored set. No rules, pure art remap.",
+      "Swaps Lart's built-in badge art for BetterFormatter's colored set. No rules, pure art remap.",
     count: "21 remaps",
     previews: [`${BF}/colored-remux.png`, `${BF}/4k.png`, `${BF}/vision.png`],
     art: {

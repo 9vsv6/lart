@@ -99,10 +99,10 @@ const sweepD: Record<string, string> = {
     "放大所有内容，让侧边栏、菜单、弹窗和每个页面都更易阅读。",
   "Make everything bigger and easier to read: sidebar, menus, popups, every page. The whole interface scales live as you drag, so you can see the change right here. Great on 4K and ultrawide monitors, or whenever the text feels small.":
     "放大所有内容以便阅读，包括侧边栏、菜单、弹窗和每个页面。拖动时整个界面会实时缩放，你可以在此直接查看变化。非常适合 4K 和超宽显示器，或文字显得较小时使用。",
-  "Make Harbor yours: swap the sidebar logo and the window/taskbar icon.":
-    "打造你的专属 Harbor：更换侧边栏徽标以及窗口/任务栏图标。",
-  "Make Harbor's interface larger.": "放大 Harbor 界面。",
-  "Make Harbor's interface smaller.": "缩小 Harbor 界面。",
+  "Make Lart yours: swap the sidebar logo and the window/taskbar icon.":
+    "打造你的专属 Lart：更换侧边栏徽标以及窗口/任务栏图标。",
+  "Make Lart's interface larger.": "放大 Lart 界面。",
+  "Make Lart's interface smaller.": "缩小 Lart 界面。",
   "Make it yours": "打造专属风格",
   "Make sure the Roku is powered on and on the same Wi-Fi as your computer.":
     "请确保 Roku 已开机，并与电脑连接到同一 Wi-Fi。",
@@ -114,8 +114,8 @@ const sweepD: Record<string, string> = {
   "MAL Score": "MAL 评分",
   Manage: "管理",
   "Manage addon": "管理插件",
-  "Manage every place Harbor can read from, whether it lives on disk or across the web.":
-    "管理 Harbor 可读取内容的所有位置，无论是在本地磁盘还是网络上。",
+  "Manage every place Lart can read from, whether it lives on disk or across the web.":
+    "管理 Lart 可读取内容的所有位置，无论是在本地磁盘还是网络上。",
   "Manage members and posts": "管理成员和帖子",
   "Manage profiles": "管理个人资料",
   "Manage recording": "管理录制",
@@ -159,7 +159,7 @@ const sweepD: Record<string, string> = {
   "matches every page image in order.": "按顺序匹配每一张页面图片。",
   "Matching moments": "正在匹配精彩片段",
   "Matching the details": "正在匹配细节",
-  "Matching titles to Harbor": "正在将作品与 Harbor 匹配",
+  "Matching titles to Lart": "正在将作品与 Lart 匹配",
   Max: "最大",
   "Max {n} GB": "最多 {n} GB",
   "Max badges per card": "每张卡片最多显示的徽章数",
@@ -278,8 +278,8 @@ const sweepD: Record<string, string> = {
   Move: "移动",
   "Move down": "下移",
   "Move focus": "移动焦点",
-  "Move Harbor by dragging any empty space on a page, not just the top bar. Leave this off to keep clicks inside pages from nudging the window.":
-    "拖动页面上的任意空白区域即可移动 Harbor，不限于顶部栏。保持关闭可避免页面内的点击误触移动窗口。",
+  "Move Lart by dragging any empty space on a page, not just the top bar. Leave this off to keep clicks inside pages from nudging the window.":
+    "拖动页面上的任意空白区域即可移动 Lart，不限于顶部栏。保持关闭可避免页面内的点击误触移动窗口。",
   "Move or hide your cards": "移动或隐藏你的卡片",
   "Move Refresh next to Back": "将“刷新”移到“返回”旁边",
   "Move to next slot": "移至下一个位置",
@@ -329,7 +329,7 @@ const sweepD: Record<string, string> = {
   Name: "名称",
   "Name (e.g. REMUX)": "名称（例如 REMUX）",
   "Name (optional)": "名称（可选）",
-  "name it Harbor, hit": "将其命名为 Harbor，然后点击",
+  "name it Lart, hit": "将其命名为 Lart，然后点击",
   "Name your files, drop them in, done.": "命名文件，拖入即可。",
   "Name your first template": "为第一个模板命名",
   "Name your look": "为外观命名",
@@ -337,7 +337,7 @@ const sweepD: Record<string, string> = {
   "Naming guide": "命名指南",
   NASCAR: "NASCAR",
   "Native libmpv": "原生 libmpv",
-  "Native to Harbor. No RPDB or ratings addon needed.": "Harbor 原生支持，无需 RPDB 或评分插件。",
+  "Native to Lart. No RPDB or ratings addon needed.": "Lart 原生支持，无需 RPDB 或评分插件。",
   "Native/Japanese": "原语言/日语",
   "natural-harmonia-gropius/hdr-toys": "natural-harmonia-gropius/hdr-toys",
   "Nature Films": "自然电影",
@@ -432,8 +432,8 @@ const sweepD: Record<string, string> = {
   "No adaptations found.": "未找到改编作品。",
   "No addons installed yet": "尚未安装插件",
   "No addons match these filters right now.": "目前没有符合这些筛选条件的插件。",
-  "No affiliation, no referral links, and Harbor gets nothing from these. They are just places where money goes further than it does here.":
-    "Harbor 与这些机构没有任何关联，这里也没有推荐链接，Harbor 不会从中获得任何收益。它们只是比这里更能让善款发挥作用的地方。",
+  "No affiliation, no referral links, and Lart gets nothing from these. They are just places where money goes further than it does here.":
+    "Lart 与这些机构没有任何关联，这里也没有推荐链接，Lart 不会从中获得任何收益。它们只是比这里更能让善款发挥作用的地方。",
   "No approved themes yet": "暂无获批主题",
   "No art": "无图片",
   "No automations yet. Hit New rule to wire one up.": "暂无自动化规则。点击“新建规则”即可创建。",
@@ -517,8 +517,8 @@ const sweepD: Record<string, string> = {
   "No matches for these filters.": "没有符合这些筛选条件的结果。",
   "No matches.": "无匹配结果。",
   "No matching voices": "没有匹配的语音",
-  "No metadata addon detected. Harbor is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
-    "未检测到元数据插件。Harbor 将改用 Cinemeta 作为后备，以确保影视内容仍能加载；除非你正在安装元数据插件，否则请重新开启此项。",
+  "No metadata addon detected. Lart is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
+    "未检测到元数据插件。Lart 将改用 Cinemeta 作为后备，以确保影视内容仍能加载；除非你正在安装元数据插件，否则请重新开启此项。",
   "No more films to add. Start with what you picked.": "没有更多电影可添加了。就从已选电影开始吧。",
   "No more found for this category.": "此类别没有更多结果。",
   "No movies here.": "这里没有电影。",
@@ -529,7 +529,7 @@ const sweepD: Record<string, string> = {
   "No notes were published for this build.": "此版本未发布更新说明。",
   "No one found by that name.": "未找到使用该姓名的用户。",
   "No one recognized on screen right now.": "当前画面中未识别到任何人。",
-  "No other Harbor answered": "未收到其他 Harbor 的响应",
+  "No other Lart answered": "未收到其他 Lart 的响应",
   "No peers found": "未找到对等节点",
   "No people found": "未找到人物",
   "No people match these filters": "没有符合这些筛选条件的影人",
@@ -572,8 +572,8 @@ const sweepD: Record<string, string> = {
   "No styling": "无样式",
   "No subtitles": "无字幕",
   "No subtitles found.": "未找到字幕。",
-  "No subtitles found. Start anyway, Harbor keeps looking while you watch.":
-    "未找到字幕。仍可开始播放，Harbor 会在你观看时继续查找。",
+  "No subtitles found. Start anyway, Lart keeps looking while you watch.":
+    "未找到字幕。仍可开始播放，Lart 会在你观看时继续查找。",
   "No such captain": "查无此船长",
   "no tab locks": "没有锁定的标签页",
   "No tabs selected": "未选择标签页",
@@ -604,8 +604,8 @@ const sweepD: Record<string, string> = {
   Nominee: "获提名者",
   "Non-fiction": "非虚构类",
   None: "无",
-  "None of your addons returned a downloadable package for {season}. Harbor can still fetch the episodes one at a time, or you can refresh the sources.":
-    "你的插件均未返回 {season} 的可下载整季包。Harbor 仍可逐集获取，或者你可以刷新来源。",
+  "None of your addons returned a downloadable package for {season}. Lart can still fetch the episodes one at a time, or you can refresh the sources.":
+    "你的插件均未返回 {season} 的可下载整季包。Lart 仍可逐集获取，或者你可以刷新来源。",
   "None yet": "暂无",
   Nord: "Nord",
   "Nord sidebar": "Nord 侧边栏",
@@ -660,8 +660,8 @@ const sweepD: Record<string, string> = {
   "Nothing in progress yet. Press Play on something.": "暂无正在观看的内容。请播放任意内容。",
   "Nothing in this filter. Choose All to see everything that answered.":
     "此筛选条件下无内容。选择“全部”可查看所有已返回的内容。",
-  "Nothing is uploaded and nothing ships with Harbor. Everything stays on this device and you are responsible for the images you add.":
-    "不会上传任何内容，Harbor 也不附带任何内容。所有内容都保留在此设备上，你需要为添加的图片负责。",
+  "Nothing is uploaded and nothing ships with Lart. Everything stays on this device and you are responsible for the images you add.":
+    "不会上传任何内容，Lart 也不附带任何内容。所有内容都保留在此设备上，你需要为添加的图片负责。",
   "Nothing left in today's picks": "今日推荐已全部看完",
   "Nothing left to confirm while P2P is disabled.": "P2P 已禁用，无需再确认任何内容。",
   "Nothing left to post after removing links.": "移除链接后没有可发布的内容。",
@@ -680,11 +680,11 @@ const sweepD: Record<string, string> = {
   "Nothing watched yet.": "尚无观看记录。",
   "Nothing watched yet. Press play on something.": "还没有观看记录。播放任意内容即可。",
   "Nothing yet": "暂无内容",
-  "Nothing you have already set is lost. Harbor picks this back up where you left it.":
-    "您已完成的设置不会丢失。Harbor 会从上次中断处继续。",
+  "Nothing you have already set is lost. Lart picks this back up where you left it.":
+    "您已完成的设置不会丢失。Lart 会从上次中断处继续。",
   Notifications: "通知",
   Now: "现在",
-  "Now on Harbor": "Harbor 热播中",
+  "Now on Lart": "Lart 热播中",
   "Now playing": "正在播放",
   "Now Playing": "正在播放",
   "Now Playing card": "“正在播放”卡片",
@@ -751,8 +751,8 @@ const sweepD: Record<string, string> = {
   "on the left, then": "左侧的选项，然后",
   "On the poster": "海报上",
   "On the taskbar": "在任务栏上",
-  "On the web, Harbor can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
-    "网页版 Harbor 只能访问允许浏览器访问的插件（Torrentio、TorBox、Cinemeta）。尚未发行的条目通常还没有可用来源。",
+  "On the web, Lart can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
+    "网页版 Lart 只能访问允许浏览器访问的插件（Torrentio、TorBox、Cinemeta）。尚未发行的条目通常还没有可用来源。",
   "On this computer": "在此计算机上",
   "On this device": "在此设备上",
   "On this device only": "仅限此设备",
@@ -767,8 +767,8 @@ const sweepD: Record<string, string> = {
   Onboarding: "新手引导",
   "Onboarding & hints": "新手引导与提示",
   "once every 14 days": "每 14 天一次",
-  "One @name that finds you across Harbor.": "一个 @名称，让别人能在 Harbor 各处找到您。",
-  "One Harbor, every screen.": "一个 Harbor，适用于每块屏幕。",
+  "One @name that finds you across Lart.": "一个 @名称，让别人能在 Lart 各处找到您。",
+  "One Lart, every screen.": "一个 Lart，适用于每块屏幕。",
   "One last thing on Cloudflare's side": "Cloudflare 端还需完成最后一步",
   "One line for the picker (optional)": "为选择器添加一句简介（可选）",
   "One line shown under the name.": "显示在名称下方的一行文字。",
@@ -815,9 +815,9 @@ const sweepD: Record<string, string> = {
   "Open Discord's webhook help": "打开 Discord Webhook 帮助",
   "Open folder": "打开文件夹",
   "Open full details": "打开完整详情",
-  "Open Harbor on desktop to link Discord.": "请在桌面设备上打开 Harbor 以关联 Discord。",
-  "Open Harbor on desktop to verify ownership in your browser.":
-    "请在桌面端打开 Harbor，并在浏览器中验证所有权。",
+  "Open Lart on desktop to link Discord.": "请在桌面设备上打开 Lart 以关联 Discord。",
+  "Open Lart on desktop to verify ownership in your browser.":
+    "请在桌面端打开 Lart，并在浏览器中验证所有权。",
   "Open here": "在此打开",
   "Open in {provider}": "在 {provider} 中打开",
   "Open in browser": "在浏览器中打开",
@@ -858,8 +858,8 @@ const sweepD: Record<string, string> = {
   "Opening…": "正在打开…",
   "Opens Stremio in your browser. Works with email, Facebook, and Apple accounts.":
     "在浏览器中打开 Stremio。支持使用电子邮件、Facebook 和 Apple 账户登录。",
-  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Harbor never sees your password.":
-    "将在浏览器中打开 Stremio。支持使用电子邮箱、Facebook 和 Apple 登录。Harbor 绝不会看到你的密码。",
+  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Lart never sees your password.":
+    "将在浏览器中打开 Stremio。支持使用电子邮箱、Facebook 和 Apple 登录。Lart 绝不会看到你的密码。",
   "Opens the free signup page": "打开免费注册页面",
   OpenSubtitles: "OpenSubtitles",
   optional: "可选",
@@ -925,8 +925,8 @@ const sweepD: Record<string, string> = {
   packs: "个图包",
   Packs: "包",
   "Packs & import": "包与导入",
-  "Packs stay hosted by their maker. Harbor keeps the link, not the artwork.":
-    "包仍由制作者托管。Harbor 只保留链接，不保存图稿。",
+  "Packs stay hosted by their maker. Lart keeps the link, not the artwork.":
+    "包仍由制作者托管。Lart 只保留链接，不保存图稿。",
   Page: "页面",
   "page {n}": "第 {n} 页",
   "Page {n}": "第 {n} 页",
@@ -942,9 +942,9 @@ const sweepD: Record<string, string> = {
   "Paid. Bakes scores into the poster image itself.": "付费。将评分直接嵌入海报图片。",
   "Painted Skies": "彩绘天际",
   Pair: "配对",
-  "Pair once from here and this Harbor will take commands.":
-    "在此配对一次，此 Harbor 即可接收控制指令。",
-  "Pair with this Harbor": "与此 Harbor 配对",
+  "Pair once from here and this Lart will take commands.":
+    "在此配对一次，此 Lart 即可接收控制指令。",
+  "Pair with this Lart": "与此 Lart 配对",
   Paired: "已配对",
   "Paired with {name}": "已与 {name} 配对",
   Palette: "调色板",
@@ -973,7 +973,7 @@ const sweepD: Record<string, string> = {
   Paste: "粘贴",
   "Paste a direct image link.": "粘贴图片直链。",
   "Paste an image URL (png, webp, svg)": "粘贴图片 URL（png、webp、svg）",
-  "Paste it into Harbor.": "将其粘贴到 Harbor 中。",
+  "Paste it into Lart.": "将其粘贴到 Lart 中。",
   "Paste JSON": "粘贴 JSON",
   "Paste the code or page URL": "粘贴代码或页面 URL",
   "Paste the text from AniList": "粘贴来自 AniList 的文本",
@@ -1049,8 +1049,8 @@ const sweepD: Record<string, string> = {
     "选择要显示的卡片。每张卡片都会预览实际效果。",
   "Pick up an episode": "接着看一集",
   "Pick up exactly where you left off.": "从上次停止的位置继续。",
-  "Pick up to five. It shapes what Harbor surfaces first.":
-    "最多选择五项。这会影响 Harbor 优先呈现的内容。",
+  "Pick up to five. It shapes what Lart surfaces first.":
+    "最多选择五项。这会影响 Lart 优先呈现的内容。",
   "Pick up where you left off": "从上次停下的位置继续",
   "Pick up where you left off.": "从上次中断处继续。",
   "Pick what you actually use": "选择你实际使用的服务",
@@ -1140,12 +1140,12 @@ const sweepD: Record<string, string> = {
     "PNG、JPEG、WebP 或 SVG（过大时自动缩小）。支持实时播放最大 2 MB 的动态 GIF。",
   "PNG, JPG, WebP, GIF, MP4, WebM, MOV. Up to 6 files, 100 MB each.":
     "PNG、JPG、WebP、GIF、MP4、WebM、MOV。最多 6 个文件，每个不超过 100 MB。",
-  "PNG, WEBP, SVG or GIF. Harbor shrinks it to 128px so it stays small on disk.":
-    "PNG、WEBP、SVG 或 GIF。Harbor 会将其缩小到 128px，以减少磁盘占用。",
-  "Point Harbor at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
-    "为 Harbor 指定一个文件夹。我们会扫描其中的电影和剧集，从文件名解析片名，并通过 TMDB 补充信息，让它们的显示效果与这里的其他内容一致。我们只会记住文件夹路径，不会复制或移动任何内容。",
-  "Point Harbor's built-in scraper at any HTML site with a config":
-    "通过配置，让 Harbor 的内置抓取器抓取任意 HTML 网站",
+  "PNG, WEBP, SVG or GIF. Lart shrinks it to 128px so it stays small on disk.":
+    "PNG、WEBP、SVG 或 GIF。Lart 会将其缩小到 128px，以减少磁盘占用。",
+  "Point Lart at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
+    "为 Lart 指定一个文件夹。我们会扫描其中的电影和剧集，从文件名解析片名，并通过 TMDB 补充信息，让它们的显示效果与这里的其他内容一致。我们只会记住文件夹路径，不会复制或移动任何内容。",
+  "Point Lart's built-in scraper at any HTML site with a config":
+    "通过配置，让 Lart 的内置抓取器抓取任意 HTML 网站",
   "Point Local folder at CBZ files or folders of images you already own.":
     "将“本地文件夹”指向您已有的 CBZ 文件或图片文件夹。",
   Pointer: "指针",

@@ -86,13 +86,13 @@ const used: Record<string, string> = {
     "Agrandit légèrement les affiches voisines lorsque vous parcourez une rangée d’affiches.",
   "German Cinema": "Cinéma allemand",
   "German Films": "Films allemands",
-  "Harbor could not find these": "Harbor n’a pas trouvé ces éléments",
-  "Harbor loads the native svpflow filter through VapourSynth and starts SVP Manager when available. Restart playback to apply.":
-    "Harbor charge le filtre svpflow natif via VapourSynth et lance SVP Manager lorsqu’il est disponible. Redémarrez la lecture pour appliquer les changements.",
-  "Harbor Rank scores a whole career, not a single hit. Four things move a rank: how good the work is on average, how much of it earned wide acclaim, the major awards it won, and how often the person carried the work as a lead. Each pillar is weighted, added up, then adjusted for the breadth and recency of the body of work. Every number that feeds a score is shown on the card, so you can always see why.":
-    "Le classement Harbor évalue toute une carrière, pas un seul succès. Quatre facteurs influent sur le classement : la qualité moyenne des œuvres, la part de celles qui ont été largement saluées, les grandes récompenses obtenues et la fréquence à laquelle la personne a tenu un rôle principal. Chaque pilier est pondéré et ajouté au total, puis le résultat est ajusté selon l’étendue et la récence de la filmographie. Tous les chiffres pris en compte sont affichés sur la carte, pour que vous puissiez toujours comprendre le classement.",
-  "Harbor's own menus and labels. Subtitle languages come later, and you can change both in Settings.":
-    "Les menus et libellés de Harbor. Les langues des sous-titres se règlent ensuite, et vous pouvez modifier les deux dans les Paramètres.",
+  "Lart could not find these": "Lart n’a pas trouvé ces éléments",
+  "Lart loads the native svpflow filter through VapourSynth and starts SVP Manager when available. Restart playback to apply.":
+    "Lart charge le filtre svpflow natif via VapourSynth et lance SVP Manager lorsqu’il est disponible. Redémarrez la lecture pour appliquer les changements.",
+  "Lart Rank scores a whole career, not a single hit. Four things move a rank: how good the work is on average, how much of it earned wide acclaim, the major awards it won, and how often the person carried the work as a lead. Each pillar is weighted, added up, then adjusted for the breadth and recency of the body of work. Every number that feeds a score is shown on the card, so you can always see why.":
+    "Le classement Lart évalue toute une carrière, pas un seul succès. Quatre facteurs influent sur le classement : la qualité moyenne des œuvres, la part de celles qui ont été largement saluées, les grandes récompenses obtenues et la fréquence à laquelle la personne a tenu un rôle principal. Chaque pilier est pondéré et ajouté au total, puis le résultat est ajusté selon l’étendue et la récence de la filmographie. Tous les chiffres pris en compte sont affichés sur la carte, pour que vous puissiez toujours comprendre le classement.",
+  "Lart's own menus and labels. Subtitle languages come later, and you can change both in Settings.":
+    "Les menus et libellés de Lart. Les langues des sous-titres se règlent ensuite, et vous pouvez modifier les deux dans les Paramètres.",
   "Hide breakdown": "Masquer le détail",
   "Hide card": "Masquer la vignette",
   "Hide curated packs": "Masquer les sélections thématiques",
@@ -103,9 +103,9 @@ const used: Record<string, string> = {
   "Hover a band to inspect a pillar": "Survolez une bande pour examiner un pilier",
   "How cards look across Home, Discover, and your library. The preview updates live.":
     "Apparence des cartes dans l’accueil, Découvrir et votre bibliothèque. L’aperçu se met à jour en direct.",
-  "How Harbor Rank works": "Fonctionnement du classement Harbor",
-  "How long Harbor waits for each addon to return streams. Aggregators that search many sources can need 45s or more. Results appear as each addon answers, so a longer wait never delays the fast ones.":
-    "Temps accordé par Harbor à chaque extension pour renvoyer des flux. Les agrégateurs qui interrogent de nombreuses sources peuvent nécessiter 45s ou plus. Les résultats apparaissent au fur et à mesure des réponses des extensions, donc un délai plus long ne retarde jamais les plus rapides.",
+  "How Lart Rank works": "Fonctionnement du classement Lart",
+  "How long Lart waits for each addon to return streams. Aggregators that search many sources can need 45s or more. Results appear as each addon answers, so a longer wait never delays the fast ones.":
+    "Temps accordé par Lart à chaque extension pour renvoyer des flux. Les agrégateurs qui interrogent de nombreuses sources peuvent nécessiter 45s ou plus. Les résultats apparaissent au fur et à mesure des réponses des extensions, donc un délai plus long ne retarde jamais les plus rapides.",
   "How the four pillars are weighted": "Pondération des quatre piliers",
   "How this is ranked": "Méthode de classement",
   "If you already rated a title, the imported score replaces it.":
@@ -122,8 +122,8 @@ const used: Record<string, string> = {
   Insert: "Insérer",
   "Install more shaders in Settings, Shaders to switch between them here.":
     "Installez d’autres shaders dans Paramètres, Shaders pour pouvoir les sélectionner ici.",
-  "Installed and detected. Harbor found the native svpflow plugins and VapourSynth script library.":
-    "Installé et détecté. Harbor a trouvé les plugins svpflow natifs et la bibliothèque de scripts VapourSynth.",
+  "Installed and detected. Lart found the native svpflow plugins and VapourSynth script library.":
+    "Installé et détecté. Lart a trouvé les plugins svpflow natifs et la bibliothèque de scripts VapourSynth.",
   "Installed packs": "Packs installés",
   "Installed shaders": "Shaders installés",
   "Invited by {name}": "Invitation de {name}",
@@ -136,19 +136,19 @@ const used: Record<string, string> = {
   "lead or co-lead of {n} acclaimed titles":
     "rôle principal ou co-principal dans {n} titres salués par la critique",
   "lead roles": "rôles principaux",
-  "Leftover installers from past updates, cached trailers, and casting scratch files. Harbor clears old ones on launch, keeping only the most recent installer.":
-    "Anciens programmes d’installation issus de mises à jour précédentes, bandes-annonces en cache et fichiers temporaires de diffusion. Harbor supprime les anciens au démarrage et ne conserve que le programme d’installation le plus récent.",
+  "Leftover installers from past updates, cached trailers, and casting scratch files. Lart clears old ones on launch, keeping only the most recent installer.":
+    "Anciens programmes d’installation issus de mises à jour précédentes, bandes-annonces en cache et fichiers temporaires de diffusion. Lart supprime les anciens au démarrage et ne conserve que le programme d’installation le plus récent.",
   "Local storage is full, these ratings live on your account only.":
     "Le stockage local est plein, ces notes sont enregistrées uniquement sur votre compte.",
   "major awards": "récompenses majeures",
-  "Manga cannot be matched to a Harbor title yet, so {n} were left out.":
-    "Les mangas ne peuvent pas encore être associés à un titre Harbor, {n} ont donc été omis.",
+  "Manga cannot be matched to a Lart title yet, so {n} were left out.":
+    "Les mangas ne peuvent pas encore être associés à un titre Lart, {n} ont donc été omis.",
   "Mark all read": "Tout marquer comme lu",
   Minecraft: "Minecraft",
   "Modern Russian Series": "Séries russes modernes",
   "Mute all profile songs": "Couper le son de toutes les musiques de profil",
-  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Harbor's embedded player.":
-    "Mouvements natifs à 48/60 i/s grâce à votre installation Linux de SVP et VapourSynth, avec rendu dans le lecteur intégré de Harbor.",
+  "Native 48/60fps motion through your Linux SVP and VapourSynth installation, rendered inside Lart's embedded player.":
+    "Mouvements natifs à 48/60 i/s grâce à votre installation Linux de SVP et VapourSynth, avec rendu dans le lecteur intégré de Lart.",
   "New this week": "Nouveautés de la semaine",
   "New to the chart": "Nouveau dans le classement",
   "New Year Classics": "Classiques du Nouvel An",
@@ -211,8 +211,8 @@ const used: Record<string, string> = {
   "Showing last synced ranking": "Affichage du dernier classement synchronisé",
   "Shows a small green dot on the player's subtitle button while a subtitle track is active. Turn it off if you would rather keep the controls clean.":
     "Affiche un petit point vert sur le bouton des sous-titres du lecteur lorsqu’une piste de sous-titres est active. Désactivez cette option si vous préférez une interface plus épurée.",
-  "Sign in to your Harbor account first. Imported ratings are saved to your profile.":
-    "Connectez-vous d’abord à votre compte Harbor. Les notes importées sont enregistrées dans votre profil.",
+  "Sign in to your Lart account first. Imported ratings are saved to your profile.":
+    "Connectez-vous d’abord à votre compte Lart. Les notes importées sont enregistrées dans votre profil.",
   "Skip ad": "Passer la pub",
   "Skipped, not rated or not supported": "Ignoré, non noté ou non pris en charge",
   "Something went wrong reaching the ranking feed.":
@@ -222,8 +222,8 @@ const used: Record<string, string> = {
   "Spanish-Language": "En espagnol",
   "Start import": "Lancer l’importation",
   "Subtitle indicator dot": "Point indicateur des sous-titres",
-  "SVP is not supported by this Harbor package.":
-    "SVP n’est pas pris en charge par ce paquet Harbor.",
+  "SVP is not supported by this Lart package.":
+    "SVP n’est pas pris en charge par ce paquet Lart.",
   "Swedish Cinema": "Cinéma suédois",
   "Swedish Films": "Films suédois",
   "Temporary files": "Fichiers temporaires",
@@ -267,7 +267,7 @@ const used: Record<string, string> = {
   "You earned the {name} badge": "Vous avez obtenu le badge {name}",
   "You were invited to {group}": "Vous avez été invité à rejoindre {group}",
   "You were mentioned": "Vous avez été mentionné",
-  "Your handle across Harbor.": "Votre identifiant dans Harbor.",
+  "Your handle across Lart.": "Votre identifiant dans Lart.",
   "Your Lists": "Vos listes",
   "Your MAL Lists": "Vos listes MAL",
   "{avg} avg · {n} rated": "{avg} de moy. · {n} notes",

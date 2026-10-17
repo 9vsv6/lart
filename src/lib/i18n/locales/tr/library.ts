@@ -129,14 +129,14 @@ const library: Record<string, string> = {
   "From {source}": "Kaynak: {source}",
   Go: "Git",
   "Go to show": "Diziye git",
-  "Harbor does not host any manga or any sources. Connect your own server or open a folder you already have, and mix as many as you like.":
-    "Harbor hiçbir manga veya kaynak barındırmaz. Kendi sunucunuzu bağlayın ya da elinizdeki bir klasörü açın; istediğiniz kadarını birlikte kullanın.",
-  "Harbor logs into nothing and bypasses no password, paywall, or access control, and must not be used to attempt it. Point it only at content you are legally allowed to read, and never at official or licensed publisher sites. You alone are responsible for what you connect and for following copyright and each site's terms. Harbor bundles and endorses no sites.":
-    "Harbor hiçbir yerde oturum açmaz; hiçbir parolayı, ödeme duvarını veya erişim denetimini aşmaz ve bunları aşmaya çalışmak için kullanılmamalıdır. Yalnızca yasal olarak okuma izniniz olan içeriklere yönlendirin; resmî veya lisanslı yayıncı sitelerine asla yönlendirmeyin. Bağladığınız içeriklerden, telif haklarına ve her sitenin koşullarına uymaktan yalnızca siz sorumlusunuz. Harbor hiçbir siteyi beraberinde sunmaz veya desteklemez.",
-  "Harbor ships no manga sources and hosts nothing. Extensions come from repositories other people maintain. Paste a repository URL below to browse its plugins, then install the ones you want. Every plugin runs sandboxed in an isolated worker with no access to your files, accounts, or the rest of the app.":
-    "Harbor hiçbir manga kaynağıyla birlikte gelmez ve hiçbir şey barındırmaz. Eklentiler, başkalarının yönettiği depolardan gelir. Eklentilerine göz atmak için aşağıya bir depo URL'si yapıştırın, ardından istediklerinizi yükleyin. Her eklenti; dosyalarınıza, hesaplarınıza veya uygulamanın geri kalanına erişimi olmayan, yalıtılmış bir işlemde korumalı alan içinde çalışır.",
-  "Harbor ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Harbor reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
-    "Harbor siteleri değil, altyapıyı sunar. Bir siteyi CSS seçicileriyle tanımlayan kısa bir JSON yapılandırması yazarsınız; Harbor da siteyi bunlarla okur. Hiçbir şey uygulamayla birlikte sunulmaz: yalnızca okuma hakkınız olan sitelere yönlendirin.",
+  "Lart does not host any manga or any sources. Connect your own server or open a folder you already have, and mix as many as you like.":
+    "Lart hiçbir manga veya kaynak barındırmaz. Kendi sunucunuzu bağlayın ya da elinizdeki bir klasörü açın; istediğiniz kadarını birlikte kullanın.",
+  "Lart logs into nothing and bypasses no password, paywall, or access control, and must not be used to attempt it. Point it only at content you are legally allowed to read, and never at official or licensed publisher sites. You alone are responsible for what you connect and for following copyright and each site's terms. Lart bundles and endorses no sites.":
+    "Lart hiçbir yerde oturum açmaz; hiçbir parolayı, ödeme duvarını veya erişim denetimini aşmaz ve bunları aşmaya çalışmak için kullanılmamalıdır. Yalnızca yasal olarak okuma izniniz olan içeriklere yönlendirin; resmî veya lisanslı yayıncı sitelerine asla yönlendirmeyin. Bağladığınız içeriklerden, telif haklarına ve her sitenin koşullarına uymaktan yalnızca siz sorumlusunuz. Lart hiçbir siteyi beraberinde sunmaz veya desteklemez.",
+  "Lart ships no manga sources and hosts nothing. Extensions come from repositories other people maintain. Paste a repository URL below to browse its plugins, then install the ones you want. Every plugin runs sandboxed in an isolated worker with no access to your files, accounts, or the rest of the app.":
+    "Lart hiçbir manga kaynağıyla birlikte gelmez ve hiçbir şey barındırmaz. Eklentiler, başkalarının yönettiği depolardan gelir. Eklentilerine göz atmak için aşağıya bir depo URL'si yapıştırın, ardından istediklerinizi yükleyin. Her eklenti; dosyalarınıza, hesaplarınıza veya uygulamanın geri kalanına erişimi olmayan, yalıtılmış bir işlemde korumalı alan içinde çalışır.",
+  "Lart ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Lart reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
+    "Lart siteleri değil, altyapıyı sunar. Bir siteyi CSS seçicileriyle tanımlayan kısa bir JSON yapılandırması yazarsınız; Lart da siteyi bunlarla okur. Hiçbir şey uygulamayla birlikte sunulmaz: yalnızca okuma hakkınız olan sitelere yönlendirin.",
   "Hide help": "Yardımı gizle",
   "Hide the top and bottom bars while reading. Arrows, page number, and bookmark stay; the bars return when your cursor reaches the screen edge.":
     "Okurken üst ve alt çubukları gizleyin. Oklar, sayfa numarası ve yer imi görünür kalır; imleciniz ekranın kenarına ulaştığında çubuklar geri gelir.",
@@ -223,8 +223,8 @@ const library: Record<string, string> = {
   "On Hold": "Beklemede",
   "One Piece, Naruto and more worlds": "One Piece, Naruto ve daha birçok dünya",
   Oneshot: "Tek bölümlük",
-  "Only add repositories you trust. Harbor cannot vouch for third-party plugins.":
-    "Yalnızca güvendiğiniz depoları ekleyin. Harbor, üçüncü taraf eklentiler için güvence veremez.",
+  "Only add repositories you trust. Lart cannot vouch for third-party plugins.":
+    "Yalnızca güvendiğiniz depoları ekleyin. Lart, üçüncü taraf eklentiler için güvence veremez.",
   "Only sites you have the right to read.": "Yalnızca okuma hakkınız olan siteleri kullanın.",
   "Open any movie or show, hover an episode, and click the download icon. Pick the exact source you want and it saves here for offline watching.":
     "Herhangi bir filmi veya diziyi açın, bir bölümün üzerine gelin ve indirme simgesine tıklayın. İstediğiniz kaynağı seçtiğinizde çevrimdışı izlemek üzere buraya kaydedilir.",
@@ -242,8 +242,8 @@ const library: Record<string, string> = {
   "Page {page} of {count}, tap to jump": "Sayfa {page}/{count}, atlamak için dokunun",
   "Paste a Trakt, MDBList, TMDB, Letterboxd, IMDb, or MAL list URL":
     "Trakt, MDBList, TMDB, Letterboxd, IMDb veya MAL liste URL'si yapıştırın",
-  "Paste a public list from Trakt, MDBList, TMDB, Letterboxd, IMDb, or MyAnimeList. Harbor pulls the titles in and keeps the artwork sharp.":
-    "Trakt, MDBList, TMDB, Letterboxd, IMDb veya MyAnimeList'ten herkese açık bir liste yapıştırın. Harbor listedeki yapımları içe aktarır ve görselleri yüksek kalitede tutar.",
+  "Paste a public list from Trakt, MDBList, TMDB, Letterboxd, IMDb, or MyAnimeList. Lart pulls the titles in and keeps the artwork sharp.":
+    "Trakt, MDBList, TMDB, Letterboxd, IMDb veya MyAnimeList'ten herkese açık bir liste yapıştırın. Lart listedeki yapımları içe aktarır ve görselleri yüksek kalitede tutar.",
   "Paste your repo.json URL into Extensions above, then install. That is how you bring any site's sources back.":
     "repo.json URL'nizi yukarıdaki Eklentiler bölümüne yapıştırıp yükleyin. Böylece istediğiniz sitenin kaynaklarını geri getirebilirsiniz.",
   "Paste your scraping config as JSON here, or grab the template above to start.":
@@ -256,16 +256,16 @@ const library: Record<string, string> = {
   "Pick what you want in your calendar. Mix and match: tracked people, genres, streamers, countries, Trakt lists.":
     "Takviminizde görmek istediklerinizi seçin. Takip edilen kişiler, türler, yayın platformları, ülkeler ve Trakt listelerini dilediğiniz gibi birleştirin.",
   "Plan to Watch": "İzlenecekler",
-  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Harbor. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
-    "Eklentiler; dosyalarınıza, hesaplarınıza veya Harbor'ın geri kalanına erişimi olmayan, yalıtılmış bir worker'da korumalı olarak çalışır. Bir eklentinin taradığı içerik, sizinle hedeflediği site arasındadır. Yalnızca güvendiğiniz depolardaki eklentileri yükleyin.",
-  "Point Harbor at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
-    "Harbor'da bir klasör seçin. Klasördeki film ve dizileri tarar, dosya adlarından başlıkları ayrıştırır ve buradaki diğer içeriklerle aynı görünmeleri için TMDB verileriyle zenginleştirir. Yalnızca klasör yolunu hatırlar; hiçbir şey kopyalanmaz veya taşınmaz.",
-  "Point Harbor's built-in scraper at any HTML site with a config":
-    "Harbor'ın yerleşik tarayıcısını bir yapılandırmayla istediğiniz HTML sitesine yönlendirin",
+  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Lart. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
+    "Eklentiler; dosyalarınıza, hesaplarınıza veya Lart'ın geri kalanına erişimi olmayan, yalıtılmış bir worker'da korumalı olarak çalışır. Bir eklentinin taradığı içerik, sizinle hedeflediği site arasındadır. Yalnızca güvendiğiniz depolardaki eklentileri yükleyin.",
+  "Point Lart at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
+    "Lart'da bir klasör seçin. Klasördeki film ve dizileri tarar, dosya adlarından başlıkları ayrıştırır ve buradaki diğer içeriklerle aynı görünmeleri için TMDB verileriyle zenginleştirir. Yalnızca klasör yolunu hatırlar; hiçbir şey kopyalanmaz veya taşınmaz.",
+  "Point Lart's built-in scraper at any HTML site with a config":
+    "Lart'ın yerleşik tarayıcısını bir yapılandırmayla istediğiniz HTML sitesine yönlendirin",
   "Point Local folder at CBZ files or folders of images you already own.":
     "Yerel klasörü, sahip olduğunuz CBZ dosyalarına veya görsel klasörlerine yönlendirin.",
-  "Prefer a server? Run every source through your own Suwayomi and point Harbor at it":
-    "Sunucu mu tercih ediyorsunuz? Tüm kaynakları kendi Suwayomi sunucunuz üzerinden çalıştırıp Harbor'ı bu sunucuya yönlendirin",
+  "Prefer a server? Run every source through your own Suwayomi and point Lart at it":
+    "Sunucu mu tercih ediyorsunuz? Tüm kaynakları kendi Suwayomi sunucunuz üzerinden çalıştırıp Lart'ı bu sunucuya yönlendirin",
   "Press play on something. It'll show up here once you start watching.":
     "Bir içerikte Oynat'a basın. İzlemeye başladığınızda burada görünür.",
   "Previous chapter": "Önceki bölüm",
@@ -301,8 +301,8 @@ const library: Record<string, string> = {
   "Retry download": "İndirmeyi yeniden dene",
   "Retry loading repository": "Depoyu yüklemeyi yeniden dene",
   "Right to left": "Sağdan sola",
-  'Right-click any title in Harbor or hit "Add to Watchlist" on its detail page to save it here.':
-    'Buraya kaydetmek için Harbor\'da herhangi bir içeriğe sağ tıklayın veya ayrıntı sayfasındaki "İzleme Listesine ekle"ye basın.',
+  'Right-click any title in Lart or hit "Add to Watchlist" on its detail page to save it here.':
+    'Buraya kaydetmek için Lart\'da herhangi bir içeriğe sağ tıklayın veya ayrıntı sayfasındaki "İzleme Listesine ekle"ye basın.',
   "Rules + limits": "Kurallar ve sınırlar",
   Run: "Çalıştır",
   "Run your own server": "Kendi sunucunuzu çalıştırın",
@@ -396,7 +396,7 @@ const library: Record<string, string> = {
   "Use default": "Varsayılanı kullan",
   "Use the download arrow next to any chapter to save it for reading offline.":
     "Bir bölümü çevrimdışı okumak üzere kaydetmek için yanındaki indirme okunu kullanın.",
-  "Use the harbor bridge": "Harbor Bridge'i kullan",
+  "Use the harbor bridge": "Lart Bridge'i kullan",
   "Watch the anime": "Animeyi izle",
   "Watched {ago}": "İzlendi: {ago}",
   "Watchlist is what you've saved for later. History is everything you've watched. Local is files on your computer.":
@@ -411,8 +411,8 @@ const library: Record<string, string> = {
   "Write a scraper for any site, host it, and install it like any other plugin":
     "Herhangi bir site için kazıyıcı yazın, barındırın ve diğer eklentiler gibi yükleyin",
   "Write one JavaScript file": "Tek bir JavaScript dosyası yazın",
-  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Harbor bundles and endorses no sites; it only runs the config you supply.":
-    "Bağladığınız kaynaklardan ve telif hakkı kurallarıyla her sitenin koşullarına uymaktan yalnızca siz sorumlusunuz. Harbor hiçbir siteyi paketine dahil etmez veya desteklemez; yalnızca sağladığınız yapılandırmayı çalıştırır.",
+  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Lart bundles and endorses no sites; it only runs the config you supply.":
+    "Bağladığınız kaynaklardan ve telif hakkı kurallarıyla her sitenin koşullarına uymaktan yalnızca siz sorumlusunuz. Lart hiçbir siteyi paketine dahil etmez veya desteklemez; yalnızca sağladığınız yapılandırmayı çalıştırır.",
   "You have reached the latest chapter available.": "Mevcut en son bölüme ulaştınız.",
   "You're offline": "Çevrimdışısınız",
   "You're offline. Your downloads still play.":
@@ -446,8 +446,8 @@ const library: Record<string, string> = {
   "is a page number. Add": "bir sayfa numarasıdır. Şunu ekleyin:",
   "is a regex for the part to change": "değiştirilecek kısmı belirleyen bir regex'tir",
   "is each chapter row": "her bir bölüm satırıdır",
-  "is how many items to skip, starting at 0. Harbor auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
-    "0'dan başlayarak atlanacak öğe sayısıdır. Harbor sitenin sayfa boyutunu otomatik olarak algılar ve sayfaları sizin için dolaşır; bu nedenle sayfa boyutu ayarlamanız gerekmez. URL öğeleri sayıyorsa bunu kullanın.",
+  "is how many items to skip, starting at 0. Lart auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
+    "0'dan başlayarak atlanacak öğe sayısıdır. Lart sitenin sayfa boyutunu otomatik olarak algılar ve sayfaları sizin için dolaşır; bu nedenle sayfa boyutu ayarlamanız gerekmez. URL öğeleri sayıyorsa bunu kullanın.",
   "is the box around one manga; inside it": "bir mangayı çevreleyen kutudur; bunun içinde",
   "is the manga URL": "manga URL'sidir",
   "is the search text (searchPath only).": "arama metnidir (yalnızca searchPath).",

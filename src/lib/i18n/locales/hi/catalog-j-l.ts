@@ -16,7 +16,7 @@ const catalogJL: Record<string, string> = {
   "Jina API key (optional)": "Jina API कुंजी (वैकल्पिक)",
   "Jina Reader": "Jina रीडर",
   Join: "जुड़ें",
-  "Join Harbor": "Harbor से जुड़ें",
+  "Join Lart": "Lart से जुड़ें",
   "Join group": "ग्रुप से जुड़ें",
   "Join the same network your TV is on, not the guest one.":
     "उसी नेटवर्क से जुड़ें जिससे आपका TV जुड़ा है, गेस्ट नेटवर्क से नहीं।",
@@ -61,14 +61,14 @@ const catalogJL: Record<string, string> = {
   Keep: "रखें",
   "Keep Continue Watching private to each profile": "देखना जारी रखें को हर प्रोफ़ाइल के लिए निजी रखें",
   "Keep Dolby Vision, HDR10, HLG. Drop SDR.": "Dolby Vision, HDR10, HLG रखें। SDR हटाएँ।",
-  "Keep Harbor a click away. Close it to the system tray instead of quitting, and control it from the tray menu. These also mirror into the tray menu live.":
-    "Harbor को एक क्लिक की दूरी पर रखें। पूरी तरह बंद करने के बजाय इसे सिस्टम ट्रे में भेजें और ट्रे मेन्यू से कंट्रोल करें। ये बदलाव ट्रे मेन्यू में भी तुरंत दिखाई देते हैं।",
+  "Keep Lart a click away. Close it to the system tray instead of quitting, and control it from the tray menu. These also mirror into the tray menu live.":
+    "Lart को एक क्लिक की दूरी पर रखें। पूरी तरह बंद करने के बजाय इसे सिस्टम ट्रे में भेजें और ट्रे मेन्यू से कंट्रोल करें। ये बदलाव ट्रे मेन्यू में भी तुरंत दिखाई देते हैं।",
   "Keep Watching": "देखते रहें",
   "Keep anime in the Anime room only": "ऐनिमे को केवल ऐनिमे रूम में रखें",
   "Keep anyway": "फिर भी रखें",
   "Keep at most": "अधिकतम इतना रखें",
   "Keep cached files for": "कैश की गई फ़ाइलें इतने समय तक रखें",
-  "Keep controlling Harbor in the background": "बैकग्राउंड में Harbor को नियंत्रित करते रहें",
+  "Keep controlling Lart in the background": "बैकग्राउंड में Lart को नियंत्रित करते रहें",
   "Keep downloading after you leave": "आपके जाने के बाद भी डाउनलोड जारी रखें",
   "Keep editing": "एडिट करना जारी रखें",
   "Keep frames for": "फ़्रेम इतने समय तक रखें",
@@ -82,7 +82,7 @@ const catalogJL: Record<string, string> = {
   "Keep picking": "चुनते रहें",
   "Keep same source on next episode": "अगले एपिसोड में भी वही स्रोत रखें",
   "Keep setting up": "सेटअप जारी रखें",
-  "Keep the Harbor window above other windows.": "Harbor विंडो को अन्य विंडो के ऊपर रखें।",
+  "Keep the Lart window above other windows.": "Lart विंडो को अन्य विंडो के ऊपर रखें।",
   "Keep the Library Watchlist tab limited to titles you added in Stremio. Turn this off to also include anything Stremio auto-added when you pressed play.":
     "लाइब्रेरी के वॉचलिस्ट टैब को केवल उन शीर्षकों तक सीमित रखें जिन्हें आपने Stremio में जोड़ा है। प्ले दबाने पर Stremio ने अपने आप जो कुछ जोड़ा था, उसे भी शामिल करने के लिए इसे बंद करें।",
   "Keep the clock on screen when the player is not fullscreen.":
@@ -98,18 +98,18 @@ const catalogJL: Record<string, string> = {
   "Keep watching": "देखते रहें",
   "Keep your local time visible during fullscreen playback and choose how it looks.":
     "फ़ुलस्क्रीन प्लेबैक के दौरान अपना स्थानीय समय दिखाते रहें और चुनें कि वह कैसा दिखे।",
-  "Keeping Harbor's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Harbor stays funded at the same time.":
-    "Harbor का बैकएंड ऑनलाइन रखने में सचमुच पैसे लगते हैं, और ElfHosted यह खर्च उठाता है ताकि समुदाय को न उठाना पड़े। इसे जारी रखने का सबसे अच्छा तरीका सब्सक्राइबर बनना है, और यह दान नहीं है। आपको अपने सेटअप के लिए उचित इंफ़्रास्ट्रक्चर मिलता है और साथ ही Harbor को फ़ंड मिलता रहता है।",
-  "Keeps HDR inside Harbor with the controls floating above the video. Subtitles render on the video. If the control bar does not appear, press Esc or use separate window.":
-    "HDR को Harbor के अंदर रखता है और कंट्रोल वीडियो के ऊपर तैरते रहते हैं। सबटाइटल वीडियो पर रेंडर होते हैं। अगर कंट्रोल बार दिखाई न दे, तो Esc दबाएँ या अलग विंडो का उपयोग करें।",
-  "Keeps Harbor embedded but lifts the HDR video onto its own opaque plane with the controls floating above, so Windows shows true HDR without the brightness slider dimming it. Needs HDR-to-SDR tonemapping off.":
-    "यह Harbor को एम्बेडेड रखता है, लेकिन HDR वीडियो को एक अलग अपारदर्शी लेयर पर दिखाता है और कंट्रोल उसके ऊपर रहते हैं। इससे Windows असली HDR दिखाता है और ब्राइटनेस स्लाइडर उसे धुंधला नहीं करता। इसके लिए HDR-to-SDR टोनमैपिंग बंद होनी चाहिए।",
+  "Keeping Lart's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Lart stays funded at the same time.":
+    "Lart का बैकएंड ऑनलाइन रखने में सचमुच पैसे लगते हैं, और ElfHosted यह खर्च उठाता है ताकि समुदाय को न उठाना पड़े। इसे जारी रखने का सबसे अच्छा तरीका सब्सक्राइबर बनना है, और यह दान नहीं है। आपको अपने सेटअप के लिए उचित इंफ़्रास्ट्रक्चर मिलता है और साथ ही Lart को फ़ंड मिलता रहता है।",
+  "Keeps HDR inside Lart with the controls floating above the video. Subtitles render on the video. If the control bar does not appear, press Esc or use separate window.":
+    "HDR को Lart के अंदर रखता है और कंट्रोल वीडियो के ऊपर तैरते रहते हैं। सबटाइटल वीडियो पर रेंडर होते हैं। अगर कंट्रोल बार दिखाई न दे, तो Esc दबाएँ या अलग विंडो का उपयोग करें।",
+  "Keeps Lart embedded but lifts the HDR video onto its own opaque plane with the controls floating above, so Windows shows true HDR without the brightness slider dimming it. Needs HDR-to-SDR tonemapping off.":
+    "यह Lart को एम्बेडेड रखता है, लेकिन HDR वीडियो को एक अलग अपारदर्शी लेयर पर दिखाता है और कंट्रोल उसके ऊपर रहते हैं। इससे Windows असली HDR दिखाता है और ब्राइटनेस स्लाइडर उसे धुंधला नहीं करता। इसके लिए HDR-to-SDR टोनमैपिंग बंद होनी चाहिए।",
   "Keeps fetching the full torrent in the background, even when paused, so you can pre-buffer big remuxes and scrub a finished file with no re-downloading. Uses more bandwidth and disk; cleaned up when you switch or close like normal.":
     "रुके होने पर भी पूरे टोरेंट को बैकग्राउंड में फ़ेच करता रहता है, ताकि आप बड़े रीमक्स पहले से बफ़र कर सकें और पूरी तरह डाउनलोड हो चुकी फ़ाइल में बिना दोबारा डाउनलोड किए आगे-पीछे जा सकें। यह ज़्यादा बैंडविड्थ और डिस्क स्पेस इस्तेमाल करता है; स्रोत बदलने या सामान्य रूप से बंद करने पर इसे हटा दिया जाता है।",
   "Keeps the malware/year/episode-mismatch checks but allows season packs and oversized files. Same as hitting Search wider in the picker.":
     "मैलवेयर/वर्ष/एपिसोड-बेमेल की जाँच जारी रखता है, लेकिन सीज़न पैक और बहुत बड़ी फ़ाइलों की अनुमति देता है। यह पिकर में विस्तृत खोज दबाने जैसा ही है।",
-  "Keeps the web's memory alive. Harbor would be poorer without it.":
-    "वेब की यादों को जीवित रखता है। इसके बिना Harbor बहुत कुछ खो देता।",
+  "Keeps the web's memory alive. Lart would be poorer without it.":
+    "वेब की यादों को जीवित रखता है। इसके बिना Lart बहुत कुछ खो देता।",
   "Keeps watching through playback and gently re-nudges the timing if the subtitle slips out of sync partway through.":
     "प्लेबैक के दौरान निगरानी जारी रखता है और अगर सबटाइटल बीच में सिंक से हट जाए, तो धीरे से उसकी टाइमिंग फिर ठीक करता है।",
   "Kept. Your TV gets your account when you continue.":
@@ -178,9 +178,9 @@ const catalogJL: Record<string, string> = {
   "Latest chapter": "नवीनतम अध्याय",
   "Latest chapters": "नवीनतम अध्याय",
   "Laugh Out Loud": "खुलकर हँसें",
-  "Launch straight into Big Picture when Harbor starts": "Harbor शुरू होते ही सीधे बिग पिक्चर खोलें",
-  "Launch straight into Big Picture when Harbor starts. Press Esc at any time to leave.":
-    "Harbor शुरू होते ही सीधे बिग पिक्चर खोलें। बाहर निकलने के लिए कभी भी Esc दबाएँ।",
+  "Launch straight into Big Picture when Lart starts": "Lart शुरू होते ही सीधे बिग पिक्चर खोलें",
+  "Launch straight into Big Picture when Lart starts. Press Esc at any time to leave.":
+    "Lart शुरू होते ही सीधे बिग पिक्चर खोलें। बाहर निकलने के लिए कभी भी Esc दबाएँ।",
   Layout: "लेआउट",
   "Layout editor": "लेआउट एडिटर",
   "Layout name": "लेआउट का नाम",
@@ -200,8 +200,8 @@ const catalogJL: Record<string, string> = {
   "Leave Big Picture": "बिग पिक्चर से बाहर निकलें",
   "Leave Big Picture and open settings": "बिग पिक्चर से बाहर निकलकर सेटिंग्स खोलें",
   "Leave a comment. No links.": "टिप्पणी लिखें। कोई लिंक नहीं।",
-  "Leave blank to use Harbor's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.":
-    "Harbor का अपना कम्युनिटी सर्वर इस्तेमाल करने के लिए इसे खाली छोड़ें। इसके बजाय अपना सर्वर इस्तेमाल करने के लिए उसका URL डालें। नीचे दिया गया प्राइवेट मोड दोनों ही स्थितियों में हर तरह का संपर्क रोक देता है।",
+  "Leave blank to use Lart's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.":
+    "Lart का अपना कम्युनिटी सर्वर इस्तेमाल करने के लिए इसे खाली छोड़ें। इसके बजाय अपना सर्वर इस्तेमाल करने के लिए उसका URL डालें। नीचे दिया गया प्राइवेट मोड दोनों ही स्थितियों में हर तरह का संपर्क रोक देता है।",
   "Leave empty to use your RPDB key above. Or paste":
     "ऊपर दी गई अपनी RPDB कुंजी इस्तेमाल करने के लिए खाली छोड़ें। या पेस्ट करें",
   "Leave everything below it alone. Scroll down, click {b1}, then {b2}. Copy the long string it shows you (you only see it once) and bring it back here.":
@@ -214,15 +214,15 @@ const catalogJL: Record<string, string> = {
     "जिस एपिसोड तक आप पहुँच चुके हैं, उसे धुँधला न करें और केवल उसके बाद वाले एपिसोड धुँधले करें।",
   "Leave the show?": "शो छोड़ना है?",
   "Leave the video": "वीडियो से बाहर निकलें",
-  "Leave this blank to use Harbor's own community server, or enter the address of a server you run yourself.":
-    "Harbor का अपना कम्युनिटी सर्वर इस्तेमाल करने के लिए इसे खाली छोड़ें, या अपने चलाए जा रहे सर्वर का पता डालें।",
+  "Leave this blank to use Lart's own community server, or enter the address of a server you run yourself.":
+    "Lart का अपना कम्युनिटी सर्वर इस्तेमाल करने के लिए इसे खाली छोड़ें, या अपने चलाए जा रहे सर्वर का पता डालें।",
   "Leave what you're watching?": "क्या आप जो देख रहे हैं उसे छोड़ना चाहते हैं?",
   "Leave without saving?": "बिना सेव किए छोड़ें?",
   Left: "बायाँ",
   "Left edge": "बायाँ किनारा",
   "Left to right": "बाएँ से दाएँ",
-  "Leftover installers from past updates, cached trailers, and casting scratch files. Harbor clears old ones on launch, keeping only the most recent installer.":
-    "पिछले अपडेट के बचे हुए इंस्टॉलर, कैश किए गए ट्रेलर और कास्टिंग की अस्थायी फ़ाइलें। Harbor शुरू होने पर पुरानी फ़ाइलें मिटा देता है और केवल सबसे नया इंस्टॉलर रखता है।",
+  "Leftover installers from past updates, cached trailers, and casting scratch files. Lart clears old ones on launch, keeping only the most recent installer.":
+    "पिछले अपडेट के बचे हुए इंस्टॉलर, कैश किए गए ट्रेलर और कास्टिंग की अस्थायी फ़ाइलें। Lart शुरू होने पर पुरानी फ़ाइलें मिटा देता है और केवल सबसे नया इंस्टॉलर रखता है।",
   Legal: "कानूनी",
   "Legally enforce it": "इसे कानूनी रूप से लागू करें",
   Length: "लंबाई",
@@ -233,8 +233,8 @@ const catalogJL: Record<string, string> = {
   "Let the TV keep its own theme": "TV की अपनी थीम ही रहने दें",
   "Let your Discord friends see what you are watching, with the show poster and a live progress bar.":
     "Discord पर अपने दोस्तों को शो के पोस्टर और लाइव प्रोग्रेस बार के साथ यह देखने दें कि आप क्या देख रहे हैं।",
-  "Let your Discord friends see what you are watching, with the show poster and a live progress bar. Desktop only, and only your own Discord client is involved (nothing touches a Harbor server).":
-    "Discord पर अपने दोस्तों को शो के पोस्टर और लाइव प्रोग्रेस बार के साथ यह देखने दें कि आप क्या देख रहे हैं। यह सुविधा केवल डेस्कटॉप पर काम करती है और इसमें सिर्फ़ आपका Discord क्लाइंट इस्तेमाल होता है (Harbor के किसी सर्वर से कोई संपर्क नहीं होता)।",
+  "Let your Discord friends see what you are watching, with the show poster and a live progress bar. Desktop only, and only your own Discord client is involved (nothing touches a Lart server).":
+    "Discord पर अपने दोस्तों को शो के पोस्टर और लाइव प्रोग्रेस बार के साथ यह देखने दें कि आप क्या देख रहे हैं। यह सुविधा केवल डेस्कटॉप पर काम करती है और इसमें सिर्फ़ आपका Discord क्लाइंट इस्तेमाल होता है (Lart के किसी सर्वर से कोई संपर्क नहीं होता)।",
   "Let your full page background show without the top cover.":
     "ऊपरी कवर के बिना पूरे पेज का बैकग्राउंड दिखाएँ।",
   "Let your graphics card do the heavy lifting of decoding video. It saves battery and keeps the CPU cool. Auto is right for almost everyone; only switch if playback looks wrong or won't start.":
@@ -293,7 +293,7 @@ const catalogJL: Record<string, string> = {
   "Link copied": "लिंक कॉपी हो गया",
   "Linked as {username}": "{username} के रूप में लिंक किया गया",
   "Linked to a real Stremio account.": "वास्तविक Stremio अकाउंट से लिंक है।",
-  "Linked to your Harbor account.": "आपके Harbor अकाउंट से लिंक है।",
+  "Linked to your Lart account.": "आपके Lart अकाउंट से लिंक है।",
   "Links are not allowed in comments": "टिप्पणियों में लिंक की अनुमति नहीं है",
   "Links open in a new tab automatically.": "लिंक अपने आप नए टैब में खुलते हैं।",
   "Liquid Glass": "लिक्विड ग्लास",
@@ -310,7 +310,7 @@ const catalogJL: Record<string, string> = {
     "सामुदायिक ब्राउज़ सुविधा जारी होने पर सूचीबद्ध संग्रह उसमें दिखाई देंगे।",
   Listen: "सुनें",
   Listening: "सुन रहा है",
-  "Listening for Harbors": "Harbor की तलाश जारी है",
+  "Listening for Harbors": "Lart की तलाश जारी है",
   "Listening…": "सुन रहा है…",
   Lists: "सूचियाँ",
   Literary: "साहित्यिक",
@@ -330,13 +330,13 @@ const catalogJL: Record<string, string> = {
   "Live action": "लाइव एक्शन",
   "Live channel": "लाइव चैनल",
   "Live controller preview": "लाइव कंट्रोलर प्रीव्यू",
-  "Live face scanning loads on-device AI models and can significantly increase RAM, CPU, and GPU usage while playback is active. Turn it off if Harbor slows down or your device gets hot.":
-    "लाइव फ़ेस स्कैनिंग से डिवाइस पर AI मॉडल लोड होते हैं और प्लेबैक के दौरान RAM, CPU और GPU का इस्तेमाल काफ़ी बढ़ सकता है। अगर Harbor धीमा हो जाए या आपका डिवाइस गर्म हो जाए, तो इसे बंद कर दें।",
+  "Live face scanning loads on-device AI models and can significantly increase RAM, CPU, and GPU usage while playback is active. Turn it off if Lart slows down or your device gets hot.":
+    "लाइव फ़ेस स्कैनिंग से डिवाइस पर AI मॉडल लोड होते हैं और प्लेबैक के दौरान RAM, CPU और GPU का इस्तेमाल काफ़ी बढ़ सकता है। अगर Lart धीमा हो जाए या आपका डिवाइस गर्म हो जाए, तो इसे बंद कर दें।",
   "Live for everyone": "सभी के लिए लाइव",
   "Live preview": "लाइव प्रीव्यू",
   "Live preview is on. Done and Save both keep what you've picked as your Custom theme. Reset reverts the editor to the saved palette.":
     "लाइव प्रीव्यू चालू है। ‘हो गया’ और ‘सेव’, दोनों आपके चुने हुए विकल्पों को आपकी कस्टम थीम के रूप में रखते हैं। रीसेट करने पर एडिटर सेव किए गए पैलेट पर लौट जाता है।",
-  "Live state of Harbor's own P2P engine on this machine.": "इस मशीन पर Harbor के अपने P2P इंजन की लाइव स्थिति।",
+  "Live state of Lart's own P2P engine on this machine.": "इस मशीन पर Lart के अपने P2P इंजन की लाइव स्थिति।",
   "Live streams that actually work.": "लाइव स्ट्रीम जो सच में काम करती हैं।",
   "Live sync": "लाइव सिंक",
   "Live web": "लाइव वेब",
@@ -469,8 +469,8 @@ const catalogJL: Record<string, string> = {
     "अपने TV को देखें। उस पर पहले से एक नया कोड दिख रहा है। उसे स्कैन करें।",
   "Look offline to others": "दूसरों को ऑफ़लाइन दिखें",
   'Looking for "{q}"': '"{q}" खोज रहे हैं',
-  "Looking for Harbor in your browser, the phone remote, or the manga reader remote? They moved to the Remotes page.":
-    "ब्राउज़र में Harbor, फ़ोन रिमोट या मंगा रीडर रिमोट खोज रहे हैं? इन्हें रिमोट्स पेज पर ले जाया गया है।",
+  "Looking for Lart in your browser, the phone remote, or the manga reader remote? They moved to the Remotes page.":
+    "ब्राउज़र में Lart, फ़ोन रिमोट या मंगा रीडर रिमोट खोज रहे हैं? इन्हें रिमोट्स पेज पर ले जाया गया है।",
   "Looking for peers…": "पीयर खोजे जा रहे हैं…",
   "Looking for sources": "स्रोत खोजे जा रहे हैं",
   "Looking for sources…": "स्रोत खोजे जा रहे हैं…",
@@ -509,8 +509,8 @@ const catalogJL: Record<string, string> = {
   "lead roles": "मुख्य भूमिकाएँ",
   left: "बाएँ",
   "letterboxd.com/username/list/slug": "letterboxd.com/username/list/slug",
-  "libmpv did not load, so playback falls back to HTML5 and formats like MKV may refuse to play. On Linux, install your distribution's libmpv package, then restart Harbor.":
-    "libmpv लोड नहीं हुआ, इसलिए प्लेबैक के लिए HTML5 का इस्तेमाल होगा और MKV जैसे फ़ॉर्मैट शायद न चलें। Linux पर अपने डिस्ट्रिब्यूशन का libmpv पैकेज इंस्टॉल करें, फिर Harbor को रीस्टार्ट करें।",
+  "libmpv did not load, so playback falls back to HTML5 and formats like MKV may refuse to play. On Linux, install your distribution's libmpv package, then restart Lart.":
+    "libmpv लोड नहीं हुआ, इसलिए प्लेबैक के लिए HTML5 का इस्तेमाल होगा और MKV जैसे फ़ॉर्मैट शायद न चलें। Linux पर अपने डिस्ट्रिब्यूशन का libmpv पैकेज इंस्टॉल करें, फिर Lart को रीस्टार्ट करें।",
   like: "पसंद करें",
   "limit reached": "सीमा पूरी हो गई",
   lineups: "लाइनअप",

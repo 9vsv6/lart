@@ -9,7 +9,7 @@ const RUNTIME_GONE = /java runtime|HARBOR_JAVA|extension runtime is missing|exte
 
 function runtimeMissingText(t: T): string {
   return t(
-    "Harbor could not start the runtime that Android extensions need. Reinstall Harbor, or install Java 17 or newer, then try again.",
+    "Lart could not start the runtime that Android extensions need. Reinstall Lart, or install Java 17 or newer, then try again.",
   );
 }
 
@@ -26,7 +26,7 @@ export function errorText(t: T, e: unknown): string {
     case "not-a-repo":
     case "ebook-repo":
       return t(
-        "This does not look like a plugin repository. Harbor reads its own plugin manifests, provider-script manifests and Android extension repositories.",
+        "This does not look like a plugin repository. Lart reads its own plugin manifests, provider-script manifests and Android extension repositories.",
       );
     case "manga-repo":
       return t("This is a manga repository. Add it from the Manga page.");
@@ -85,7 +85,7 @@ export function stateCopy(t: T, p: PluginView): StateCopy {
         desc: null,
         warn: null,
         lock: (p.error ?? "").startsWith("min:")
-          ? t("Needs Harbor {version} or newer.", { version: (p.error ?? "").slice(4) })
+          ? t("Needs Lart {version} or newer.", { version: (p.error ?? "").slice(4) })
           : t("This file is not a stream plugin."),
       };
     case "repo-disabled":
@@ -103,7 +103,7 @@ export function stateCopy(t: T, p: PluginView): StateCopy {
     case "auto-paused":
       return {
         desc: null,
-        // The plugin is still switched on: the pause is Harbor standing it down. The row offers the
+        // The plugin is still switched on: the pause is Lart standing it down. The row offers the
         // retry, so this says what happened and leaves the action to the button beside it.
         warn: t("Stopped after {n} failures.", { n: 3 }),
         lock: null,

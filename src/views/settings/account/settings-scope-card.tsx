@@ -6,7 +6,7 @@ import { Segmented } from "../shared";
 import { SettingRow } from "../kit";
 
 const SCOPE_DESC = {
-  shared: "One set of preferences everyone on this Harbor uses.",
+  shared: "One set of preferences everyone on this Lart uses.",
   independent: "This profile keeps its own preferences, separate from everyone else.",
 } as const;
 

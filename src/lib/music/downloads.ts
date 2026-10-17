@@ -70,7 +70,7 @@ export async function musicDownloadFolder(): Promise<string> {
   const chosen = musicDownloadDir();
   if (chosen) return chosen;
   try {
-    return await join(await audioDir(), "Harbor");
+    return await join(await audioDir(), "Lart");
   } catch {
     return join(await appDataDir(), "music-downloads");
   }

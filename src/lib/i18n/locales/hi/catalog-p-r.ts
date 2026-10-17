@@ -24,16 +24,16 @@ const catalogPR: Record<string, string> = {
     "PNG, JPG, WebP, GIF, MP4, WebM, MOV। अधिकतम 6 फ़ाइलें, प्रत्येक 100 MB तक।",
   "PNG, JPG, WebP, GIF, MP4, WebM, MOV. Up to {count} files, 100 MB each.":
     "PNG, JPG, WebP, GIF, MP4, WebM, MOV। अधिकतम {count} फ़ाइलें, प्रत्येक 100 MB तक।",
-  "PNG, WEBP, SVG or GIF. Harbor shrinks it to 128px so it stays small on disk.":
-    "PNG, WEBP, SVG या GIF। Harbor इसे घटाकर 128px कर देता है, ताकि यह डिस्क पर कम जगह ले।",
+  "PNG, WEBP, SVG or GIF. Lart shrinks it to 128px so it stays small on disk.":
+    "PNG, WEBP, SVG या GIF। Lart इसे घटाकर 128px कर देता है, ताकि यह डिस्क पर कम जगह ले।",
   PREVIEW: "प्रीव्यू",
   "Pack name": "पैक का नाम",
   "Pack removed, badges back to default": "पैक हटा दिया गया, बैज फिर से डिफ़ॉल्ट हो गए",
   Packaged: "पैकेज्ड",
   Packs: "पैक",
   "Packs & import": "पैक और इंपोर्ट",
-  "Packs stay hosted by their maker. Harbor keeps the link, not the artwork.":
-    "पैक उसके निर्माता के पास ही होस्ट रहता है। Harbor आर्टवर्क नहीं, केवल लिंक रखता है।",
+  "Packs stay hosted by their maker. Lart keeps the link, not the artwork.":
+    "पैक उसके निर्माता के पास ही होस्ट रहता है। Lart आर्टवर्क नहीं, केवल लिंक रखता है।",
   Page: "पेज",
   "Page background": "पेज का बैकग्राउंड",
   "Page background color": "पेज की पृष्ठभूमि का रंग",
@@ -50,9 +50,9 @@ const catalogPR: Record<string, string> = {
   "Paid. Bakes scores into the poster image itself.": "सशुल्क। स्कोर को पोस्टर इमेज में ही जोड़ देता है।",
   "Painted Skies": "रंगे हुए आसमान",
   Pair: "पेयर करें",
-  "Pair once from here and this Harbor will take commands.":
-    "यहाँ से एक बार पेयर करें और यह Harbor कमांड स्वीकार करेगा।",
-  "Pair with this Harbor": "इस Harbor से पेयर करें",
+  "Pair once from here and this Lart will take commands.":
+    "यहाँ से एक बार पेयर करें और यह Lart कमांड स्वीकार करेगा।",
+  "Pair with this Lart": "इस Lart से पेयर करें",
   Paired: "पेयर हो गया",
   "Paired with {name}": "{name} से पेयर हो गया",
   Palette: "पैलेट",
@@ -86,8 +86,8 @@ const catalogPR: Record<string, string> = {
     "Trakt, MDBList, TMDB, Letterboxd, IMDb या MAL सूची का URL पेस्ट करें",
   "Paste a direct image link.": "इमेज का सीधा लिंक पेस्ट करें।",
   "Paste a direct video file link.": "वीडियो फ़ाइल का सीधा लिंक पेस्ट करें।",
-  "Paste a public list from Trakt, MDBList, TMDB, Letterboxd, IMDb, or MyAnimeList. Harbor pulls the titles in and keeps the artwork sharp.":
-    "Trakt, MDBList, TMDB, Letterboxd, IMDb या MyAnimeList की सार्वजनिक सूची पेस्ट करें। Harbor उसके शीर्षक इंपोर्ट करता है और आर्टवर्क को साफ़ रखता है।",
+  "Paste a public list from Trakt, MDBList, TMDB, Letterboxd, IMDb, or MyAnimeList. Lart pulls the titles in and keeps the artwork sharp.":
+    "Trakt, MDBList, TMDB, Letterboxd, IMDb या MyAnimeList की सार्वजनिक सूची पेस्ट करें। Lart उसके शीर्षक इंपोर्ट करता है और आर्टवर्क को साफ़ रखता है।",
   "Paste a stremio:// link or an https://…/manifest.json URL.":
     "stremio:// लिंक या https://…/manifest.json URL पेस्ट करें।",
   "Paste a track, album or playlist link.": "ट्रैक, एल्बम या प्लेलिस्ट का लिंक पेस्ट करें।",
@@ -97,7 +97,7 @@ const catalogPR: Record<string, string> = {
   "Paste any YouTube link. Watch, share, shorts or embed all work.":
     "YouTube का कोई भी लिंक पेस्ट करें। वॉच, शेयर, शॉर्ट्स और एम्बेड लिंक, सभी काम करते हैं।",
   "Paste invite link": "आमंत्रण लिंक पेस्ट करें",
-  "Paste it into Harbor.": "इसे Harbor में पेस्ट करें।",
+  "Paste it into Lart.": "इसे Lart में पेस्ट करें।",
   "Paste manifest URL or stremio:// link": "मैनिफ़ेस्ट URL या stremio:// लिंक पेस्ट करें",
   "Paste the URL into the box above and send a test.": "ऊपर दिए बॉक्स में URL पेस्ट करें और एक टेस्ट भेजें।",
   "Paste the URL with": "इसके साथ URL पेस्ट करें",
@@ -106,7 +106,7 @@ const catalogPR: Record<string, string> = {
   "Paste the manifest URL, or click Install on the addon's configuration page above.":
     "मैनिफ़ेस्ट URL पेस्ट करें या ऊपर ऐडऑन के कॉन्फ़िगरेशन पेज पर Install पर क्लिक करें।",
   "Paste the text from AniList": "AniList से टेक्स्ट पेस्ट करें",
-  "Paste this code into Harbor to open the collection.": "कलेक्शन खोलने के लिए यह कोड Harbor में पेस्ट करें।",
+  "Paste this code into Lart to open the collection.": "कलेक्शन खोलने के लिए यह कोड Lart में पेस्ट करें।",
   "Paste your API token first.": "पहले अपना API टोकन पेस्ट करें।",
   "Paste your OpenSubtitles API key": "अपनी OpenSubtitles API की पेस्ट करें",
   "Paste your SUBDL API key": "अपनी SUBDL API की पेस्ट करें",
@@ -179,8 +179,8 @@ const catalogPR: Record<string, string> = {
   "Pick a World": "एक दुनिया चुनें",
   "Pick a direction. You steer from there, one film at a time.":
     "एक दिशा चुनें। फिर वहाँ से एक-एक फ़िल्म करके आगे बढ़ें।",
-  "Pick a display and body pairing, or upload your own font to use across Harbor.":
-    "डिस्प्ले और बॉडी फ़ॉन्ट की जोड़ी चुनें, या पूरे Harbor में इस्तेमाल करने के लिए अपना फ़ॉन्ट अपलोड करें।",
+  "Pick a display and body pairing, or upload your own font to use across Lart.":
+    "डिस्प्ले और बॉडी फ़ॉन्ट की जोड़ी चुनें, या पूरे Lart में इस्तेमाल करने के लिए अपना फ़ॉन्ट अपलोड करें।",
   "Pick a drive with room to spare. Files already cached stay where they are.":
     "पर्याप्त खाली जगह वाली ड्राइव चुनें। पहले से कैश की गई फ़ाइलें वहीं रहेंगी।",
   "Pick a few you love": "अपनी पसंद की कुछ चीज़ें चुनें",
@@ -200,10 +200,10 @@ const catalogPR: Record<string, string> = {
   "Pick a profile to continue.": "जारी रखने के लिए प्रोफ़ाइल चुनें।",
   "Pick a random title": "कोई रैंडम शीर्षक चुनें",
   "Pick a source": "स्रोत चुनें",
-  "Pick a source once and Harbor keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. For anime it locks the whole series to that release.":
-    "स्रोत एक बार चुनें और Harbor उस सीज़न के बाकी एपिसोड उसी रिलीज़ से चलाता रहेगा, दोबारा चुनने की ज़रूरत नहीं। debrid सीज़न पैक के साथ सबसे अच्छा काम करता है। ऐनिमे के लिए यह पूरी सीरीज़ को उसी रिलीज़ पर लॉक कर देता है।",
-  "Pick a source once and Harbor keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
-    "स्रोत एक बार चुनें और Harbor उस सीज़न के बाकी एपिसोड उसी रिलीज़ से चलाता रहेगा, दोबारा चुनने की ज़रूरत नहीं। debrid सीज़न पैक के साथ सबसे अच्छा काम करता है। ऐनिमे के लिए यह लागू नहीं होता।",
+  "Pick a source once and Lart keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. For anime it locks the whole series to that release.":
+    "स्रोत एक बार चुनें और Lart उस सीज़न के बाकी एपिसोड उसी रिलीज़ से चलाता रहेगा, दोबारा चुनने की ज़रूरत नहीं। debrid सीज़न पैक के साथ सबसे अच्छा काम करता है। ऐनिमे के लिए यह पूरी सीरीज़ को उसी रिलीज़ पर लॉक कर देता है।",
+  "Pick a source once and Lart keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
+    "स्रोत एक बार चुनें और Lart उस सीज़न के बाकी एपिसोड उसी रिलीज़ से चलाता रहेगा, दोबारा चुनने की ज़रूरत नहीं। debrid सीज़न पैक के साथ सबसे अच्छा काम करता है। ऐनिमे के लिए यह लागू नहीं होता।",
   "Pick a source to swap in place. Playback keeps running.":
     "मौजूदा स्रोत की जगह लगाने के लिए दूसरा स्रोत चुनें। प्लेबैक चलता रहेगा।",
   "Pick a star rating first": "पहले स्टार रेटिंग चुनें",
@@ -256,8 +256,8 @@ const catalogPR: Record<string, string> = {
     "अधूरे देखे एपिसोड और फ़िल्में सेव की गई जगह से शुरू करें। 80% से ज़्यादा देखी गई कोई भी चीज़ हमेशा शुरू से चलेगी। हमेशा शुरुआत से चलाने के लिए इसे बंद करें, जो शो दोबारा देखते समय उपयोगी है।",
   "Pick up the manga at {label}.": "मंगा को {label} से पढ़ना जारी रखें।",
   "Pick up the manga where the anime ends.": "मंगा को वहाँ से शुरू करें जहाँ ऐनिमे खत्म होता है।",
-  "Pick up to five. It shapes what Harbor surfaces first.":
-    "अधिकतम पाँच चुनें। इससे तय होता है कि Harbor पहले क्या दिखाएगा।",
+  "Pick up to five. It shapes what Lart surfaces first.":
+    "अधिकतम पाँच चुनें। इससे तय होता है कि Lart पहले क्या दिखाएगा।",
   "Pick up to {max} artists to show on your profile.":
     "अपनी प्रोफ़ाइल पर दिखाने के लिए अधिकतम {max} कलाकार चुनें।",
   "Pick up to {max} badges to show by your name. Tap in the order you want them to appear.":
@@ -277,8 +277,8 @@ const catalogPR: Record<string, string> = {
   "Pick what you actually use": "वही चुनें जिसका आप सच में इस्तेमाल करते हैं",
   "Pick what you want in your calendar. Mix and match: tracked people, genres, streamers, countries, Trakt lists.":
     "चुनें कि आपको अपने कैलेंडर में क्या चाहिए। मिलाकर चुनें: ट्रैक किए गए लोग, शैलियाँ, स्ट्रीमर, देश, Trakt सूचियाँ।",
-  "Pick which audio and subtitle languages Harbor reaches for first.":
-    "चुनें कि Harbor पहले किन ऑडियो और सबटाइटल भाषाओं को प्राथमिकता देगा।",
+  "Pick which audio and subtitle languages Lart reaches for first.":
+    "चुनें कि Lart पहले किन ऑडियो और सबटाइटल भाषाओं को प्राथमिकता देगा।",
   "Pick which calendars feed your alerts. Items are deduped across sources before sending.":
     "चुनें कि कौन-से कैलेंडर आपके अलर्ट को सामग्री देंगे। भेजने से पहले अलग-अलग स्रोतों के डुप्लिकेट आइटम हटा दिए जाते हैं।",
   "Pick which calendars feed your webhook. Items are deduped across sources before sending.":
@@ -306,8 +306,8 @@ const catalogPR: Record<string, string> = {
   "Picture quality": "चित्र गुणवत्ता",
   "Picture quality (weak PC / balanced / max)": "चित्र गुणवत्ता (कम क्षमता वाला PC / संतुलित / अधिकतम)",
   "Picture quality on the TV": "TV पर चित्र गुणवत्ता",
-  "Picture shaders run on the bundled mpv engine in the Harbor desktop app. They have no effect in the browser.":
-    "Harbor डेस्कटॉप ऐप में चित्र शेडर साथ दिए गए mpv इंजन पर चलते हैं। ब्राउज़र में इनका कोई असर नहीं होता।",
+  "Picture shaders run on the bundled mpv engine in the Lart desktop app. They have no effect in the browser.":
+    "Lart डेस्कटॉप ऐप में चित्र शेडर साथ दिए गए mpv इंजन पर चलते हैं। ब्राउज़र में इनका कोई असर नहीं होता।",
   "Picture-in-picture": "पिक्चर-इन-पिक्चर",
   "Pilots that pull you in and finales that earn the season.":
     "ऐसे पायलट एपिसोड जो आपको बाँध लें और ऐसे फ़िनाले जो सीज़न को सार्थक बनाएँ।",
@@ -404,7 +404,7 @@ const catalogPR: Record<string, string> = {
   "Playlist contained no channels": "प्लेलिस्ट में कोई चैनल नहीं था",
   "Playlist is too large": "प्लेलिस्ट बहुत बड़ी है",
   Playlists: "प्लेलिस्ट",
-  "Plays + ratings sync from Harbor to Trakt.tv.": "Harbor से Trakt.tv पर प्ले और रेटिंग सिंक होते हैं।",
+  "Plays + ratings sync from Lart to Trakt.tv.": "Lart से Trakt.tv पर प्ले और रेटिंग सिंक होते हैं।",
   "Plays HDR content in its own window so Windows treats it as true HDR (the SDR brightness slider stops dimming it). Turn off HDR-to-SDR tonemapping above to use this on an HDR display.":
     "HDR कंटेंट को एक अलग विंडो में चलाता है, ताकि Windows उसे असली HDR माने (SDR ब्राइटनेस स्लाइडर अब उसे मंद नहीं करता)। HDR डिस्प्ले पर इसका उपयोग करने के लिए ऊपर HDR-to-SDR टोनमैपिंग बंद करें।",
   "Plays HDR in its own window so Windows shows real HDR and the SDR brightness slider stops dimming it. The most reliable way to get true HDR.":
@@ -417,17 +417,17 @@ const catalogPR: Record<string, string> = {
   "Please add your TMDB API key in the Library & Metadata settings to view this folder.":
     "यह फ़ोल्डर देखने के लिए कृपया लाइब्रेरी और मेटाडेटा सेटिंग्स में अपनी TMDB API कुंजी जोड़ें।",
   "Please choose a PNG, SVG, JPG, or WebP image.": "कृपया PNG, SVG, JPG या WebP इमेज चुनें।",
-  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Harbor. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
-    "प्लगइन एक अलग-थलग वर्कर में सैंडबॉक्स होकर चलते हैं और उन्हें आपकी फ़ाइलों, अकाउंट या Harbor के बाकी हिस्से का एक्सेस नहीं होता। कोई प्लगइन क्या स्क्रैप करता है, यह आपके और उसकी लक्षित साइट के बीच का मामला है। केवल भरोसेमंद रिपॉज़िटरी से प्लगइन इंस्टॉल करें।",
+  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Lart. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
+    "प्लगइन एक अलग-थलग वर्कर में सैंडबॉक्स होकर चलते हैं और उन्हें आपकी फ़ाइलों, अकाउंट या Lart के बाकी हिस्से का एक्सेस नहीं होता। कोई प्लगइन क्या स्क्रैप करता है, यह आपके और उसकी लक्षित साइट के बीच का मामला है। केवल भरोसेमंद रिपॉज़िटरी से प्लगइन इंस्टॉल करें।",
   "Plus Jakarta Sans": "Plus Jakarta Sans",
   "Pluto TV": "Pluto TV",
-  "Point Harbor at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
-    "Harbor में कोई फ़ोल्डर चुनें। हम उसमें फ़िल्में और शो स्कैन करते हैं, फ़ाइल नामों से टाइटल पहचानते हैं और TMDB से उनकी जानकारी जोड़ते हैं, ताकि वे यहाँ बाकी कंटेंट जैसे दिखें। हम केवल पाथ याद रखते हैं; कुछ भी कॉपी या मूव नहीं किया जाता।",
-  "Point Harbor at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.": "Harbor को किसी दूसरी मशीन पर मौजूद स्ट्रीमिंग सर्वर से कनेक्ट करें, जैसे होम सर्वर पर Stremio सेवा। P2P स्ट्रीम इस मशीन के बजाय उस मशीन पर डाउनलोड और प्ले होती हैं।",
-  "Point Harbor at your self-hosted library to browse and install sources":
-    "स्रोत ब्राउज़ और इंस्टॉल करने के लिए Harbor को अपनी सेल्फ़-होस्टेड लाइब्रेरी से कनेक्ट करें",
-  "Point Harbor's built-in scraper at any HTML site with a config":
-    "कॉन्फ़िग की मदद से Harbor के बिल्ट-इन स्क्रैपर को किसी भी HTML साइट से कनेक्ट करें",
+  "Point Lart at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
+    "Lart में कोई फ़ोल्डर चुनें। हम उसमें फ़िल्में और शो स्कैन करते हैं, फ़ाइल नामों से टाइटल पहचानते हैं और TMDB से उनकी जानकारी जोड़ते हैं, ताकि वे यहाँ बाकी कंटेंट जैसे दिखें। हम केवल पाथ याद रखते हैं; कुछ भी कॉपी या मूव नहीं किया जाता।",
+  "Point Lart at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.": "Lart को किसी दूसरी मशीन पर मौजूद स्ट्रीमिंग सर्वर से कनेक्ट करें, जैसे होम सर्वर पर Stremio सेवा। P2P स्ट्रीम इस मशीन के बजाय उस मशीन पर डाउनलोड और प्ले होती हैं।",
+  "Point Lart at your self-hosted library to browse and install sources":
+    "स्रोत ब्राउज़ और इंस्टॉल करने के लिए Lart को अपनी सेल्फ़-होस्टेड लाइब्रेरी से कनेक्ट करें",
+  "Point Lart's built-in scraper at any HTML site with a config":
+    "कॉन्फ़िग की मदद से Lart के बिल्ट-इन स्क्रैपर को किसी भी HTML साइट से कनेक्ट करें",
   "Point Local folder at CBZ files or folders of images you already own.":
     "लोकल फ़ोल्डर को अपनी मौजूदा CBZ फ़ाइलों या इमेज फ़ोल्डरों पर सेट करें।",
   Pointer: "पॉइंटर",
@@ -486,8 +486,8 @@ const catalogPR: Record<string, string> = {
   "Posts are not available yet": "पोस्ट अभी उपलब्ध नहीं हैं",
   "Power tools": "पावर टूल्स",
   "Power tools & diagnostics": "पावर टूल्स और डायग्नोस्टिक्स",
-  "Power-user knob. Inject your own CSS, JS, and HTML into Harbor. Lives in your local settings; nothing leaves your machine.":
-    "पावर यूज़र के लिए सेटिंग। Harbor में अपना CSS, JS और HTML इंजेक्ट करें। यह आपकी लोकल सेटिंग्स में रहता है; आपकी मशीन से कुछ भी बाहर नहीं जाता।",
+  "Power-user knob. Inject your own CSS, JS, and HTML into Lart. Lives in your local settings; nothing leaves your machine.":
+    "पावर यूज़र के लिए सेटिंग। Lart में अपना CSS, JS और HTML इंजेक्ट करें। यह आपकी लोकल सेटिंग्स में रहता है; आपकी मशीन से कुछ भी बाहर नहीं जाता।",
   "Powers everything on this page: the web app, the phone remote, and the manga reader remote.":
     "इस पेज की हर चीज़ को चलाता है: वेब ऐप, फ़ोन रिमोट और मंगा रीडर रिमोट।",
   "Powers the Identify song button in the player.": "प्लेयर में गाना पहचानें बटन को सक्षम करता है।",
@@ -495,8 +495,8 @@ const catalogPR: Record<string, string> = {
     "प्लेयर के “गाना पहचानें” बटन को काम करने देता है। टोकन यहाँ पाएँ",
   "Practise law in court for them": "उनके लिए अदालत में वकालत करें",
   "Pre-paying the last month's rent": "अंतिम महीने का किराया पहले से चुकाना",
-  "Prefer a server? Run every source through your own Suwayomi and point Harbor at it":
-    "सर्वर पसंद है? हर स्रोत को अपने Suwayomi से चलाएँ और Harbor को उससे कनेक्ट करें",
+  "Prefer a server? Run every source through your own Suwayomi and point Lart at it":
+    "सर्वर पसंद है? हर स्रोत को अपने Suwayomi से चलाएँ और Lart को उससे कनेक्ट करें",
   "Prefer embedded subtitles": "एम्बेडेड सबटाइटल को प्राथमिकता दें",
   "Prefer my installed metadata addon": "मेरे इंस्टॉल किए गए मेटाडेटा ऐडऑन को प्राथमिकता दें",
   "Preferred language for anime titles displayed on poster cards.":
@@ -517,11 +517,11 @@ const catalogPR: Record<string, string> = {
   "Preparing…": "तैयारी हो रही है…",
   Preset: "प्रीसेट",
   Presets: "प्रीसेट",
-  "Press OK on a field to type, or use the Harbor remote on your phone.":
-    "टाइप करने के लिए किसी फ़ील्ड पर OK दबाएँ, या अपने फ़ोन पर Harbor रिमोट इस्तेमाल करें।",
+  "Press OK on a field to type, or use the Lart remote on your phone.":
+    "टाइप करने के लिए किसी फ़ील्ड पर OK दबाएँ, या अपने फ़ोन पर Lart रिमोट इस्तेमाल करें।",
   "Press Play": "प्ले दबाएँ",
-  "Press Play and Harbor picks the source itself instead of opening the list.":
-    "प्ले दबाएँ और सूची खोलने के बजाय Harbor खुद स्रोत चुन लेगा।",
+  "Press Play and Lart picks the source itself instead of opening the list.":
+    "प्ले दबाएँ और सूची खोलने के बजाय Lart खुद स्रोत चुन लेगा।",
   "Press T": "T दबाएँ",
   "Press a key…": "कोई कुंजी दबाएँ…",
   "Press buttons and move the sticks. This mirrors your controller in real time.":
@@ -682,8 +682,8 @@ const catalogPR: Record<string, string> = {
   Queued: "क्यू में जोड़ा गया",
   "Queued on {provider}": "{provider} पर कतार में",
   "Queued {queued} of {total} episodes.": "{total} में से {queued} एपिसोड क्यू में जोड़े गए।",
-  "Queued {queued} of {total} episodes. Harbor could not match every episode in this package.":
-    "{total} में से {queued} एपिसोड क्यू में जोड़े गए। Harbor इस पैकेज के हर एपिसोड का मिलान नहीं कर सका।",
+  "Queued {queued} of {total} episodes. Lart could not match every episode in this package.":
+    "{total} में से {queued} एपिसोड क्यू में जोड़े गए। Lart इस पैकेज के हर एपिसोड का मिलान नहीं कर सका।",
   "Quick Watches Under 90": "90 मिनट से कम में झटपट देखें",
   "Quick age check": "त्वरित आयु जाँच",
   "Quick panel": "क्विक पैनल",
@@ -695,7 +695,7 @@ const catalogPR: Record<string, string> = {
     "शांत ड्रामा, धारदार थ्रिलर और वे सीरीज़ जिन्हें आप सिर्फ़ अपने लिए सहेजते हैं।",
   "Quiet favorites": "सुकूनभरे पसंदीदा",
   "Quietly great, {decade}": "कम चर्चित, मगर शानदार, {decade}",
-  "Quit Harbor": "Harbor से बाहर निकलें",
+  "Quit Lart": "Lart से बाहर निकलें",
   "Quiz time!": "क्विज़ का समय!",
   Quote: "उद्धरण",
   "RAVU Lite": "RAVU Lite",
@@ -759,7 +759,7 @@ const catalogPR: Record<string, string> = {
   Ratings: "रेटिंग",
   "Ratings count from {movie}+ votes, {tv}+ for TV":
     "फ़िल्मों के लिए {movie}+ और TV के लिए {tv}+ वोट मिलने पर रेटिंग गिनी जाती है",
-  "Ratings need a Harbor account": "रेटिंग के लिए Harbor अकाउंट चाहिए",
+  "Ratings need a Lart account": "रेटिंग के लिए Lart अकाउंट चाहिए",
   "Raw Nerve": "दुखती रग",
   "Re-apply to the window and taskbar now": "अभी विंडो और टास्कबार पर फिर से लागू करें",
   "Re-authenticate": "फिर से प्रमाणित करें",
@@ -771,7 +771,7 @@ const catalogPR: Record<string, string> = {
   "Re-run deploy or paste the correct URL": "डिप्लॉय फिर से चलाएँ या सही URL पेस्ट करें",
   "Re-runs the welcome flow and clears every dismissed tip.":
     "स्वागत प्रक्रिया फिर से चलाता है और खारिज की गई हर टिप मिटा देता है।",
-  "Re-sync from your Harbor profile picture": "अपनी Harbor प्रोफ़ाइल फ़ोटो से फिर से सिंक करें",
+  "Re-sync from your Lart profile picture": "अपनी Lart प्रोफ़ाइल फ़ोटो से फिर से सिंक करें",
   "Re-test": "फिर से टेस्ट करें",
   Reach: "पहुँच",
   "Reach HTTP sources with harbor.http(url, opts), binary gRPC sources with harbor.grpc(url, protobufBytes, opts), and parse HTML with harbor.parseHtml(html). There is no fetch, DOM, or storage in the sandbox.":
@@ -791,7 +791,7 @@ const catalogPR: Record<string, string> = {
   "Read here": "यहाँ पढ़ें",
   "Read latest": "नवीनतम पढ़ें",
   "Read manga files you already have": "अपनी मौजूदा मांगा फ़ाइलें पढ़ें",
-  "Read manga in Harbor": "Harbor में मांगा पढ़ें",
+  "Read manga in Lart": "Lart में मांगा पढ़ें",
   "Read more": "और पढ़ें",
   "Read now": "अभी पढ़ें",
   "Read on": "इस पर पढ़ें",
@@ -833,8 +833,8 @@ const catalogPR: Record<string, string> = {
     "Real-Debrid, TorBox, AllDebrid और Premiumize में कभी-कभी थोड़ी देर के लिए सेवा बाधित होती है और वे लिंक देना बंद कर देते हैं। कुछ मिनट इंतज़ार करके फिर कोशिश करें या सेवा का स्टेटस पेज देखें।",
   "Real-Debrid, TorBox, AllDebrid, Premiumize, Debrid-Link. Cached streams play direct. Keys stay local.":
     "Real-Debrid, TorBox, AllDebrid, Premiumize, Debrid-Link। कैश की गई स्ट्रीम सीधे चलती हैं। कीज़ आपके डिवाइस पर ही रहती हैं।",
-  "Real-time GPU upscaling that sharpens lines and cleans up gradients on anime, built right into Harbor's player. The one-tap setup below grabs the shaders; nothing else to install.":
-    "रियल-टाइम GPU अपस्केलिंग, जो ऐनिमे में रेखाओं को अधिक स्पष्ट और ग्रेडिएंट को साफ़ करती है, सीधे Harbor के प्लेयर में मौजूद है। नीचे दिया गया वन-टैप सेटअप शेडर डाउनलोड करता है; और कुछ इंस्टॉल करने की ज़रूरत नहीं।",
+  "Real-time GPU upscaling that sharpens lines and cleans up gradients on anime, built right into Lart's player. The one-tap setup below grabs the shaders; nothing else to install.":
+    "रियल-टाइम GPU अपस्केलिंग, जो ऐनिमे में रेखाओं को अधिक स्पष्ट और ग्रेडिएंट को साफ़ करती है, सीधे Lart के प्लेयर में मौजूद है। नीचे दिया गया वन-टैप सेटअप शेडर डाउनलोड करता है; और कुछ इंस्टॉल करने की ज़रूरत नहीं।",
   "Real-time anime upscaling. GPU-intensive.": "रियल-टाइम ऐनिमे अपस्केलिंग। GPU का अधिक उपयोग करती है।",
   Reality: "रियलिटी",
   Rebounds: "रिबाउंड",
@@ -887,8 +887,8 @@ const catalogPR: Record<string, string> = {
   "Rede aberta": "खुला नेटवर्क",
   Redeploy: "फिर से डिप्लॉय करें",
   "Redeploy instructions": "फिर से डिप्लॉय करने के निर्देश",
-  "Redeploy it to get the latest Watch Together fixes. Harbor's public relay updates on its own.":
-    "Watch Together के नवीनतम सुधार पाने के लिए इसे फिर से डिप्लॉय करें। Harbor का सार्वजनिक रिले अपने-आप अपडेट होता है।",
+  "Redeploy it to get the latest Watch Together fixes. Lart's public relay updates on its own.":
+    "Watch Together के नवीनतम सुधार पाने के लिए इसे फिर से डिप्लॉय करें। Lart का सार्वजनिक रिले अपने-आप अपडेट होता है।",
   "Redeploy relay": "रिले फिर से डिप्लॉय करें",
   "Redeploy to pick up the latest Watch Together fixes. The in-app banner clears once the new version is live.":
     "Watch Together के नवीनतम सुधार पाने के लिए फिर से डिप्लॉय करें। नया वर्ज़न लाइव होते ही इन-ऐप बैनर हट जाएगा।",
@@ -965,19 +965,19 @@ const catalogPR: Record<string, string> = {
   "Reminder updated": "रिमाइंडर अपडेट किया गया",
   Reminders: "रिमाइंडर",
   Remote: "रिमोट",
-  "Remote control is off on that Harbor, so it cannot be driven from here.":
-    "उस Harbor पर रिमोट कंट्रोल बंद है, इसलिए उसे यहाँ से नियंत्रित नहीं किया जा सकता।",
+  "Remote control is off on that Lart, so it cannot be driven from here.":
+    "उस Lart पर रिमोट कंट्रोल बंद है, इसलिए उसे यहाँ से नियंत्रित नहीं किया जा सकता।",
   "Remote control is off, so other Harbors can see this one but cannot drive it.":
-    "रिमोट कंट्रोल बंद है, इसलिए अन्य Harbor इसे देख तो सकते हैं, लेकिन नियंत्रित नहीं कर सकते।",
+    "रिमोट कंट्रोल बंद है, इसलिए अन्य Lart इसे देख तो सकते हैं, लेकिन नियंत्रित नहीं कर सकते।",
   "Remote control is on, so other Harbors on this network can drive this one.":
-    "रिमोट कंट्रोल चालू है, इसलिए इस नेटवर्क के अन्य Harbor इसे नियंत्रित कर सकते हैं।",
+    "रिमोट कंट्रोल चालू है, इसलिए इस नेटवर्क के अन्य Lart इसे नियंत्रित कर सकते हैं।",
   "Remote off": "रिमोट बंद",
   "Remote server": "रिमोट सर्वर",
   "Remote streaming server": "रिमोट स्ट्रीमिंग सर्वर",
   "Remote style": "रिमोट स्टाइल",
   Remotes: "रिमोट",
-  "Remotes are served by the desktop app. Open these settings on your computer's Harbor to get the links.":
-    "रिमोट डेस्कटॉप ऐप से उपलब्ध कराए जाते हैं। लिंक पाने के लिए अपने कंप्यूटर के Harbor में ये सेटिंग्स खोलें।",
+  "Remotes are served by the desktop app. Open these settings on your computer's Lart to get the links.":
+    "रिमोट डेस्कटॉप ऐप से उपलब्ध कराए जाते हैं। लिंक पाने के लिए अपने कंप्यूटर के Lart में ये सेटिंग्स खोलें।",
   Remove: "हटाएँ",
   "Remove all": "सभी हटाएँ",
   "Remove all extensions ({n})": "सभी एक्सटेंशन हटाएँ ({n})",
@@ -1067,8 +1067,8 @@ const catalogPR: Record<string, string> = {
   Renamed: "नाम बदला गया",
   "Render subtitles in a heavier weight. Turn off to use your font's normal weight.":
     "सबटाइटल अधिक मोटे अक्षरों में दिखाएँ। अपने फ़ॉन्ट की सामान्य मोटाई इस्तेमाल करने के लिए इसे बंद करें।",
-  "Renders mpv inline so playback lives in Harbor itself. Disable to open it in a separate window instead.":
-    "mpv को इनलाइन रेंडर करता है, ताकि प्लेबैक Harbor में ही चले। इसे अलग विंडो में खोलने के लिए बंद करें।",
+  "Renders mpv inline so playback lives in Lart itself. Disable to open it in a separate window instead.":
+    "mpv को इनलाइन रेंडर करता है, ताकि प्लेबैक Lart में ही चले। इसे अलग विंडो में खोलने के लिए बंद करें।",
   "Reopening a title within this window resumes instead of re-downloading.":
     "इस विंडो में कोई शीर्षक दोबारा खोलने पर उसे फिर से डाउनलोड करने के बजाय वहीं से चलाया जाता है।",
   Reorder: "क्रम बदलें",
@@ -1158,8 +1158,8 @@ const catalogPR: Record<string, string> = {
     "फ़िट करने के लिए {count} इमेज का आकार बदला गया। आकार के कारण कुछ भी छोड़ा नहीं गया।",
   "Resized {count} images to fit. Nothing was skipped for size.":
     "फ़िट करने के लिए {count} इमेज का आकार बदला गया। आकार के कारण कुछ भी छोड़ा नहीं गया।",
-  "Reskin the award trophies shown across Harbor. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
-    "Harbor में दिखने वाली पुरस्कार ट्रॉफ़ियों का रूप बदलें। PNG या एनिमेटेड GIF जोड़ने के लिए किसी भी पुरस्कार पर क्लिक करें, अपनी कस्टम पुरस्कार श्रेणियाँ जोड़ें या एक बार में पूरा सेट इंपोर्ट करें।",
+  "Reskin the award trophies shown across Lart. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
+    "Lart में दिखने वाली पुरस्कार ट्रॉफ़ियों का रूप बदलें। PNG या एनिमेटेड GIF जोड़ने के लिए किसी भी पुरस्कार पर क्लिक करें, अपनी कस्टम पुरस्कार श्रेणियाँ जोड़ें या एक बार में पूरा सेट इंपोर्ट करें।",
   "Reskin the quality chips (4K, HDR, Dolby Vision, Atmos and more) that ride each stream in the play picker. Click any slot to drop in your own PNG or animated GIF, or import a whole set at once. You do not have to fill every slot.":
     "प्ले पिकर में हर स्ट्रीम के साथ दिखने वाले क्वालिटी चिप्स (4K, HDR, Dolby Vision, Atmos और अन्य) का रूप बदलें। अपना PNG या एनिमेटेड GIF डालने के लिए किसी भी स्लॉट पर क्लिक करें या एक बार में पूरा सेट इंपोर्ट करें। हर स्लॉट भरना ज़रूरी नहीं है।",
   Resolution: "रिज़ॉल्यूशन",
@@ -1175,9 +1175,9 @@ const catalogPR: Record<string, string> = {
   "Rest the cursor on a poster to peek at the rating, story, and quick actions without opening it.":
     "पोस्टर खोले बिना उसकी रेटिंग, कहानी और क्विक ऐक्शन की झलक देखने के लिए उस पर कर्सर रखें।",
   Restart: "रीस्टार्ट करें",
-  "Restart Harbor after the install completes.": "इंस्टॉल पूरा होने के बाद Harbor रीस्टार्ट करें।",
-  "Restart Harbor's own streaming server, then reload the stream once it is back. Desktop only.":
-    "Harbor का अपना स्ट्रीमिंग सर्वर रीस्टार्ट करें, फिर सर्वर वापस आते ही स्ट्रीम दोबारा लोड करें। केवल डेस्कटॉप।",
+  "Restart Lart after the install completes.": "इंस्टॉल पूरा होने के बाद Lart रीस्टार्ट करें।",
+  "Restart Lart's own streaming server, then reload the stream once it is back. Desktop only.":
+    "Lart का अपना स्ट्रीमिंग सर्वर रीस्टार्ट करें, फिर सर्वर वापस आते ही स्ट्रीम दोबारा लोड करें। केवल डेस्कटॉप।",
   "Restart engine": "इंजन रीस्टार्ट करें",
   "Restart game": "गेम रीस्टार्ट करें",
   "Restart streaming server": "स्ट्रीमिंग सर्वर रीस्टार्ट करें",
@@ -1187,7 +1187,7 @@ const catalogPR: Record<string, string> = {
   Restore: "बहाल करें",
   "Restore + upscale. The best all-rounder for most anime.":
     "रिस्टोर + अपस्केल करें। अधिकांश एनीमे के लिए सबसे अच्छा ऑल-राउंड विकल्प।",
-  "Restore Harbor's interface scale to 100%.": "Harbor के इंटरफ़ेस स्केल को फिर से 100% पर लाएँ।",
+  "Restore Lart's interface scale to 100%.": "Lart के इंटरफ़ेस स्केल को फिर से 100% पर लाएँ।",
   "Restore and reload": "बहाल करके फिर लोड करें",
   "Restore dismissed hints": "हटाए गए संकेत फिर दिखाएँ",
   "Restore from a backup": "बैकअप से बहाल करें",
@@ -1243,8 +1243,8 @@ const catalogPR: Record<string, string> = {
   "Revisionist Westerns": "पुनर्व्याख्यात्मक वेस्टर्न",
   Rewatching: "दोबारा देख रहे हैं",
   Rewind: "रिवाइंड",
-  "Rewrites every library item to match Stremio's exact schema. Run once if your Stremio app started crashing after Harbor synced playback.":
-    "हर लाइब्रेरी आइटम को Stremio के सटीक स्कीमा के अनुसार फिर से लिखता है। अगर Harbor से प्लेबैक सिंक होने के बाद आपका Stremio ऐप क्रैश होने लगा है, तो इसे एक बार चलाएँ।",
+  "Rewrites every library item to match Stremio's exact schema. Run once if your Stremio app started crashing after Lart synced playback.":
+    "हर लाइब्रेरी आइटम को Stremio के सटीक स्कीमा के अनुसार फिर से लिखता है। अगर Lart से प्लेबैक सिंक होने के बाद आपका Stremio ऐप क्रैश होने लगा है, तो इसे एक बार चलाएँ।",
   "Ribbon corner": "रिबन का कोना",
   "Rich season and order panel": "विस्तृत सीज़न और क्रम पैनल",
   "Richer, more vivid picture with a touch more contrast.":
@@ -1255,8 +1255,8 @@ const catalogPR: Record<string, string> = {
   "Right edge": "दायाँ किनारा",
   "Right to left": "दाएँ से बाएँ",
   "Right-click a text channel, pick": "किसी टेक्स्ट चैनल पर राइट-क्लिक करें, फिर चुनें",
-  'Right-click any title in Harbor or hit "Add to Watchlist" on its detail page to save it here.':
-    'किसी भी शीर्षक को यहाँ सेव करने के लिए Harbor में उस पर राइट-क्लिक करें या उसके विवरण पेज पर "वॉचलिस्ट में जोड़ें" दबाएँ।',
+  'Right-click any title in Lart or hit "Add to Watchlist" on its detail page to save it here.':
+    'किसी भी शीर्षक को यहाँ सेव करने के लिए Lart में उस पर राइट-क्लिक करें या उसके विवरण पेज पर "वॉचलिस्ट में जोड़ें" दबाएँ।',
   "Rights and usage": "अधिकार और उपयोग",
   Ring: "रिंग",
   Rising: "उभरता हुआ",
@@ -1312,7 +1312,7 @@ const catalogPR: Record<string, string> = {
   "Run self-test": "सेल्फ़-टेस्ट चलाएँ",
   "Run speed test": "स्पीड टेस्ट चलाएँ",
   "Run test": "टेस्ट चलाएँ",
-  "Run your own Harbor Relay": "अपना Harbor Relay चलाएँ",
+  "Run your own Lart Relay": "अपना Lart Relay चलाएँ",
   "Run your own server": "अपना सर्वर चलाएँ",
   Running: "चल रहा है",
   "Running on Cinemeta for now. Add a TMDB key from Settings whenever you're ready.":

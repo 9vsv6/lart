@@ -87,7 +87,7 @@ export function SimklPanel() {
         <>
           <Section
             title={t("Connected")}
-            subtitle={t("Harbor will mark what you finish as watched on Simkl and sync your plan-to-watch list.")}
+            subtitle={t("Lart will mark what you finish as watched on Simkl and sync your plan-to-watch list.")}
           >
             <TrackerIdentity
               service="Simkl"
@@ -101,8 +101,8 @@ export function SimklPanel() {
 
             {simklAvatar && (
               <ToggleRow
-                label={t("Use my Simkl avatar as my Harbor avatar")}
-                sub={t("Wear your Simkl profile picture across Harbor instead of the default.")}
+                label={t("Use my Simkl avatar as my Lart avatar")}
+                sub={t("Wear your Simkl profile picture across Lart instead of the default.")}
                 value={settings.useSimklAvatar}
                 onChange={toggleSimklAvatar}
                 leading={

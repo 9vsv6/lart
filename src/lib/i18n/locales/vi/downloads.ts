@@ -28,8 +28,8 @@ const downloads: Record<string, string> = {
   "Reset to default folder": "Đặt lại về thư mục mặc định",
   "{shown} of {total} file from your computer": "{shown}/{total} tệp từ máy tính",
   "{shown} of {total} files from your computer": "{shown}/{total} tệp từ máy tính",
-  "Point Harbor at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
-    "Chọn một thư mục cho Harbor. Chúng tôi sẽ quét phim và phim bộ trong đó, nhận diện tiêu đề từ tên tệp rồi bổ sung dữ liệu từ TMDB để chúng hiển thị giống các nội dung khác tại đây. Chúng tôi chỉ ghi nhớ đường dẫn; không sao chép hay di chuyển bất kỳ nội dung nào.",
+  "Point Lart at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
+    "Chọn một thư mục cho Lart. Chúng tôi sẽ quét phim và phim bộ trong đó, nhận diện tiêu đề từ tên tệp rồi bổ sung dữ liệu từ TMDB để chúng hiển thị giống các nội dung khác tại đây. Chúng tôi chỉ ghi nhớ đường dẫn; không sao chép hay di chuyển bất kỳ nội dung nào.",
   "No video files found in that folder.": "Không tìm thấy tệp video nào trong thư mục đó.",
   "Couldn't scan that folder.": "Không thể quét thư mục đó.",
   "You're offline": "Bạn đang ngoại tuyến",

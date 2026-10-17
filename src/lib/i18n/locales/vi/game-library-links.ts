@@ -2,7 +2,7 @@ export default {
   "games.links.title": "Liên kết",
   "games.links.sort": "Sắp xếp liên kết",
   "games.links.note": "Sắp xếp theo URL từ A–Z. Giữ nguyên tên và địa chỉ.",
-  "games.links.available": "Sử dụng liên kết đã có trong Harbor. Liên kết mới sẽ xuất hiện sau thứ tự đã lưu.",
+  "games.links.available": "Sử dụng liên kết đã có trong Lart. Liên kết mới sẽ xuất hiện sau thứ tự đã lưu.",
   "games.links.original": "Khôi phục thứ tự ban đầu",
   "games.links.applied": "Đã cập nhật liên kết cho {count} trò chơi.",
   "games.links.changes": "{count} trò chơi sẽ thay đổi.",

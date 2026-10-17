@@ -121,8 +121,8 @@ export default {
   Constructors: "कंस्ट्रक्टर",
   "Coverage varies by league. Streams depend on your available sources.":
     "कवरेज लीग के अनुसार बदलती है। स्ट्रीम आपके उपलब्ध स्रोतों पर निर्भर हैं।",
-  "Delivery failed. Retrying while Harbor is open.":
-    "भेजना विफल रहा। Harbor खुला रहने पर फिर कोशिश करेंगे।",
+  "Delivery failed. Retrying while Lart is open.":
+    "भेजना विफल रहा। Lart खुला रहने पर फिर कोशिश करेंगे।",
   Driver: "ड्राइवर",
   Drivers: "ड्राइवर",
   "Entrants and starting positions appear when the feed publishes them.":
@@ -156,7 +156,7 @@ export default {
   "From the biggest leagues to a new favorite sport.": "सबसे बड़ी लीग से नए पसंदीदा खेल तक।",
   "Inside the paddock": "पैडॉक के अंदर",
   "Jump to today": "आज पर जाएँ",
-  "Keep Harbor open to deliver reminders.": "रिमाइंडर भेजने के लिए Harbor खुला रखें।",
+  "Keep Lart open to deliver reminders.": "रिमाइंडर भेजने के लिए Lart खुला रखें।",
   "Last saved score": "आखिरी सहेजा गया स्कोर",
   "Last update": "आखिरी अपडेट",
   "Latest saved scores": "हाल के सहेजे गए स्कोर",
@@ -274,10 +274,10 @@ export default {
     "दूसरा खेल या तारीख आज़माएँ। स्रोत न मिलने पर सहेजे गए शेड्यूल यहाँ दिखेंगे।",
   "Up to date": "अप टू डेट",
   "Updating schedules…": "शेड्यूल अपडेट हो रहे हैं…",
-  "Use only sources you are authorized to access. Harbor does not bypass subscriptions or access restrictions.":
-    "केवल वे स्रोत इस्तेमाल करें जिनकी पहुँच की अनुमति आपके पास है। Harbor सदस्यता या पहुँच प्रतिबंधों को बायपास नहीं करता।",
-  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Harbor does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
-    "केवल अधिकृत स्ट्रीम, M3U प्लेलिस्ट और Xtream खाते इस्तेमाल करें। Harbor सदस्यता नहीं देता और पेवॉल, DRM या पहुँच प्रतिबंधों को बायपास नहीं करता।",
+  "Use only sources you are authorized to access. Lart does not bypass subscriptions or access restrictions.":
+    "केवल वे स्रोत इस्तेमाल करें जिनकी पहुँच की अनुमति आपके पास है। Lart सदस्यता या पहुँच प्रतिबंधों को बायपास नहीं करता।",
+  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Lart does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
+    "केवल अधिकृत स्ट्रीम, M3U प्लेलिस्ट और Xtream खाते इस्तेमाल करें। Lart सदस्यता नहीं देता और पेवॉल, DRM या पहुँच प्रतिबंधों को बायपास नहीं करता।",
   "View match statistics": "मैच के आँकड़े देखें",
   "Watch with your sources": "अपने स्रोतों से देखें",
   "Your authorized IPTV, M3U and Xtream channels, in one place.":

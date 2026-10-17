@@ -3,11 +3,11 @@ const plugins: Record<string, string> = {
   Repositories: "المستودعات",
   "Installed plugins": "المكوّنات الإضافية المثبّتة",
   "Plugin repositories": "مستودعات المكوّنات الإضافية",
-  "Plugins run in the desktop app. Open Harbor on your computer to add and manage them.":
-    "تعمل المكوّنات الإضافية في تطبيق سطح المكتب. افتح Harbor على حاسوبك لإضافتها وإدارتها.",
+  "Plugins run in the desktop app. Open Lart on your computer to add and manage them.":
+    "تعمل المكوّنات الإضافية في تطبيق سطح المكتب. افتح Lart على حاسوبك لإضافتها وإدارتها.",
   "Use plugins": "استخدام المكوّنات الإضافية",
-  "Plugins are small scripts that look for streams on sites Harbor does not know about. Everything here was installed by you, from repositories you chose.":
-    "المكوّنات الإضافية سكربتات صغيرة تبحث عن البثوث في مواقع لا يعرفها Harbor. كل ما هنا ثبّتّه أنت بنفسك من مستودعات اخترتها.",
+  "Plugins are small scripts that look for streams on sites Lart does not know about. Everything here was installed by you, from repositories you chose.":
+    "المكوّنات الإضافية سكربتات صغيرة تبحث عن البثوث في مواقع لا يعرفها Lart. كل ما هنا ثبّتّه أنت بنفسك من مستودعات اخترتها.",
   "Ask every enabled plugin for streams when you press Play. Turn this off to pause them all without removing anything.":
     "اطلب البثوث من كل مكوّن إضافي مفعّل عند الضغط على تشغيل. أوقف هذا الخيار لإيقاف الكل مؤقتًا دون إزالة أي شيء.",
   "Group by repository": "التجميع حسب المستودع",
@@ -40,7 +40,7 @@ const plugins: Record<string, string> = {
     "أُوقف مؤقتًا بعد {n} إخفاق. أعد تفعيله للمحاولة مجددًا.",
   "Paused after {n} failures. Turn it back on to try again.#few":
     "أُوقف مؤقتًا بعد {n} إخفاقات. أعد تفعيله للمحاولة مجددًا.",
-  "Needs Harbor {version} or newer.": "يتطلب Harbor {version} أو أحدث.",
+  "Needs Lart {version} or newer.": "يتطلب Lart {version} أو أحدث.",
   "This file is not a stream plugin.": "هذا الملف ليس مكوّنًا إضافيًا للبث.",
   "Turned off by its repository.": "أوقفه مستودعه.",
   "Plugin files changed on disk. Reinstall it from its repository.":
@@ -92,19 +92,19 @@ const plugins: Record<string, string> = {
   "Removed {name}.": "أُزيل {name}.",
   "Updated {name} to v{version}.": "حُدّث {name} إلى v{version}.",
   "Reverted {name} to v{version}.": "أُعيد {name} إلى v{version}.",
-  "Paste the manifest link of a repository you trust. Harbor reads its own plugin repositories and provider-script repositories as they are, and installs nothing until you choose to.":
-    "الصق رابط ملف manifest لمستودع تثق به. يقرأ Harbor مستودعات المكوّنات الإضافية الخاصة به ومستودعات سكربتات المزوّدين كما هي، ولا يثبّت شيئًا حتى تقرر ذلك.",
+  "Paste the manifest link of a repository you trust. Lart reads its own plugin repositories and provider-script repositories as they are, and installs nothing until you choose to.":
+    "الصق رابط ملف manifest لمستودع تثق به. يقرأ Lart مستودعات المكوّنات الإضافية الخاصة به ومستودعات سكربتات المزوّدين كما هي، ولا يثبّت شيئًا حتى تقرر ذلك.",
   "Repository link": "رابط المستودع",
-  "Any GitHub link works, raw or not. Harbor adds /manifest.json when it is missing. Paste several to add them all.":
-    "يعمل أي رابط GitHub، سواء كان raw أم لا. يضيف Harbor المسار /manifest.json عند غيابه. الصق عدة روابط لإضافتها كلها.",
+  "Any GitHub link works, raw or not. Lart adds /manifest.json when it is missing. Paste several to add them all.":
+    "يعمل أي رابط GitHub، سواء كان raw أم لا. يضيف Lart المسار /manifest.json عند غيابه. الصق عدة روابط لإضافتها كلها.",
   "Only https links are accepted.": "تُقبل روابط https فقط.",
   "That link did not answer.": "لم يستجب هذا الرابط.",
-  "This does not look like a plugin repository. Harbor expects { name, plugins } or a provider-script manifest with scrapers.":
-    "لا يبدو هذا مستودع مكوّنات إضافية. يتوقع Harbor بنية { name, plugins } أو ملف manifest لسكربتات المزوّدين يحتوي على scrapers.",
+  "This does not look like a plugin repository. Lart expects { name, plugins } or a provider-script manifest with scrapers.":
+    "لا يبدو هذا مستودع مكوّنات إضافية. يتوقع Lart بنية { name, plugins } أو ملف manifest لسكربتات المزوّدين يحتوي على scrapers.",
   "This is a manga repository. Add it from the Manga page.":
     "هذا مستودع مانغا. أضفه من صفحة المانغا.",
-  "These are compiled Android extensions (.cs3). Harbor runs script plugins only, so they cannot be installed here.":
-    "هذه إضافات أندرويد مُجمَّعة (.cs3). يشغّل Harbor إضافات نصية برمجية فقط، لذا لا يمكن تثبيتها هنا.",
+  "These are compiled Android extensions (.cs3). Lart runs script plugins only, so they cannot be installed here.":
+    "هذه إضافات أندرويد مُجمَّعة (.cs3). يشغّل Lart إضافات نصية برمجية فقط، لذا لا يمكن تثبيتها هنا.",
   "This is a Stremio addon manifest. Add it from the Addons page instead.":
     "هذا ملف تعريف إضافة Stremio. أضفها من صفحة الإضافات بدلاً من ذلك.",
   "Already added.": "مضاف مسبقًا.",
@@ -137,8 +137,8 @@ const plugins: Record<string, string> = {
   "Checksum did not match the manifest.": "المجموع الاختباري لا يطابق ملف manifest.",
   "Checking for updates": "التحقق من التحديثات",
   "Check repositories daily": "فحص المستودعات يوميًا",
-  "Once a day, look for newer versions and show an Update button here. Harbor never installs an update by itself.":
-    "مرة يوميًا، ابحث عن إصدارات أحدث واعرض زر تحديث هنا. لا يثبّت Harbor أي تحديث من تلقاء نفسه.",
+  "Once a day, look for newer versions and show an Update button here. Lart never installs an update by itself.":
+    "مرة يوميًا، ابحث عن إصدارات أحدث واعرض زر تحديث هنا. لا يثبّت Lart أي تحديث من تلقاء نفسه.",
   "Settings this plugin asked for. Stored on this computer only.":
     "إعدادات طلبها هذا المكوّن الإضافي. تُحفظ على هذا الحاسوب فقط.",
   "This plugin's settings form failed to load: {error}":
@@ -146,8 +146,8 @@ const plugins: Record<string, string> = {
   "{n} of {m} answered, {k} failed": "أجاب {n} من {m}، وأخفق {k}",
   "Install all": "تثبيت الكل",
   "Installing {done} of {total}": "جارٍ تثبيت {done} من {total}",
-  "Small scripts that find streams, manga and books on sites Harbor does not know about, installed from repositories you choose.":
-    "سكربتات صغيرة تعثر على البثوث والمانغا والكتب في مواقع لا يعرفها Harbor، تُثبَّت من مستودعات تختارها.",
+  "Small scripts that find streams, manga and books on sites Lart does not know about, installed from repositories you choose.":
+    "سكربتات صغيرة تعثر على البثوث والمانغا والكتب في مواقع لا يعرفها Lart، تُثبَّت من مستودعات تختارها.",
   "Remove all": "إزالة الكل",
 };
 

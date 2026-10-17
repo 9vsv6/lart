@@ -14,7 +14,7 @@ export default {
   "games.mods.backupNote": "Versi yang diganti disimpan dalam cadangan lokal. Gunakan Pulihkan sebelumnya di Pengaturan mod Anda untuk kembali; dependensi tetap diperiksa.",
   "games.mods.currentVersion": "Terpasang: {version}",
   "games.mods.current": "Terpasang",
-  "games.mods.versionNote": "Pilih versi yang kompatibel. Harbor memeriksa perubahan dan menyimpan versi sebelumnya secara lokal. Tutup Minecraft sebelum menerapkan perubahan.",
+  "games.mods.versionNote": "Pilih versi yang kompatibel. Lart memeriksa perubahan dan menyimpan versi sebelumnya secara lokal. Tutup Minecraft sebelum menerapkan perubahan.",
   "games.mods.applyChanges": "Terapkan perubahan",
   "games.mods.reviewChanges": "Tinjau perubahan",
   "games.mods.previousVersion": "Sebelumnya: {version}",

@@ -1,11 +1,11 @@
 [package]
-name = "harbor"
+name = "lart"
 version = "0.9.132"
-description = "A Stremio client built for adventure"
+description = "Lart, a Stremio client based on Harbor (MIT)"
 edition = "2021"
 
 [lib]
-name = "harbor_lib"
+name = "lart_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]

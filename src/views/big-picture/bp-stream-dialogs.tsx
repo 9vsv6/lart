@@ -94,7 +94,7 @@ export function BpP2pDialog({
       label={t("Stream this via peer-to-peer?")}
       title={t("Stream this via peer-to-peer?")}
       body={t(
-        "This source isn't cached on your debrid, so Harbor would pull it directly from peers. It can take a moment to start and may buffer on low-seed torrents.",
+        "This source isn't cached on your debrid, so Lart would pull it directly from peers. It can take a moment to start and may buffer on low-seed torrents.",
       )}
       extra={
         <div className="flex flex-col gap-[clamp(6px,0.8vh,12px)] rounded-[var(--bp-r-sm)] border border-[var(--bp-edge)] bg-[var(--bp-panel-2)] px-[clamp(16px,1.4vw,28px)] py-[clamp(12px,1.5vh,20px)]">
@@ -216,7 +216,7 @@ export function BpNoSourcesDialog({ title, onClose }: { title: string; onClose: 
       label={t("No streaming sources yet")}
       title={t("No streaming sources yet")}
       body={t(
-        "Harbor needs at least one streaming source before it can play {title}. Install a stream addon or add a debrid key in settings.",
+        "Lart needs at least one streaming source before it can play {title}. Install a stream addon or add a debrid key in settings.",
         { title },
       )}
     >
@@ -276,7 +276,7 @@ export function BpAutoExhaustedDialog({
       label={t("We could not find a working stream")}
       title={t("We could not find a working stream")}
       body={t(
-        "Harbor tried {n} sources for {title} and none of them played. Usually that means a debrid key has expired, no stream addon is installed yet, or nothing has this title cached.",
+        "Lart tried {n} sources for {title} and none of them played. Usually that means a debrid key has expired, no stream addon is installed yet, or nothing has this title cached.",
         { n: triedCount, title: label },
       )}
     >

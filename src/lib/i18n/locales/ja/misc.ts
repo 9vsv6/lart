@@ -34,37 +34,37 @@ const misc: Record<string, string> = {
   "Injected into a fixed-position layer above the app (pointer-events disabled by default). Wrap in a div with pointer-events:auto to make it interactive.":
     "アプリ上部の固定レイヤーに挿入されます（デフォルトではpointer-eventsは無効）。操作可能にするには、pointer-events:autoを指定したdivで囲んでください。",
   "Custom code": "カスタムコード",
-  "Power-user knob. Inject your own CSS, JS, and HTML into Harbor. Lives in your local settings; nothing leaves your machine.":
-    "上級者向けの機能です。独自のCSS、JS、HTMLをHarborに挿入できます。ローカル設定に保存され、端末外には送信されません。",
-  "You're modding your own client. Custom JS has full access to your Harbor session. Only paste code you wrote or fully trust.":
-    "自分のクライアントを改造する機能です。カスタムJSはHarborセッションに完全アクセスできます。自分で書いたコードか、完全に信頼できるコードだけを貼り付けてください。",
+  "Power-user knob. Inject your own CSS, JS, and HTML into Lart. Lives in your local settings; nothing leaves your machine.":
+    "上級者向けの機能です。独自のCSS、JS、HTMLをLartに挿入できます。ローカル設定に保存され、端末外には送信されません。",
+  "You're modding your own client. Custom JS has full access to your Lart session. Only paste code you wrote or fully trust.":
+    "自分のクライアントを改造する機能です。カスタムJSはLartセッションに完全アクセスできます。自分で書いたコードか、完全に信頼できるコードだけを貼り付けてください。",
   "Close to the system tray": "閉じたらシステムトレイに格納",
-  "Closing the window tucks Harbor into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
-    "ウィンドウを閉じてもHarborを終了せずトレイに格納するため、すぐに再表示できます。トレイアイコンを右クリックするとクイック操作ができ、終了を選ぶと完全に終了します。",
+  "Closing the window tucks Lart into the tray instead of quitting, so it reopens instantly. Right-click the tray icon for quick controls, or pick Quit to exit fully.":
+    "ウィンドウを閉じてもLartを終了せずトレイに格納するため、すぐに再表示できます。トレイアイコンを右クリックするとクイック操作ができ、終了を選ぶと完全に終了します。",
   "Always on top": "常に手前に表示",
-  "Keep the Harbor window above other windows.":
-    "Harborウィンドウをほかのウィンドウより手前に表示します。",
+  "Keep the Lart window above other windows.":
+    "Lartウィンドウをほかのウィンドウより手前に表示します。",
   "Pause when minimized": "最小化時に一時停止",
-  "Stop playback when you minimize Harbor or send it to the tray.":
-    "Harborを最小化するかトレイに格納したとき、再生を停止します。",
+  "Stop playback when you minimize Lart or send it to the tray.":
+    "Lartを最小化するかトレイに格納したとき、再生を停止します。",
   "Pause when unfocused": "フォーカス解除時に一時停止",
   "Stop playback whenever another window takes focus.":
     "別のウィンドウにフォーカスが移ると、再生を停止します。",
   "Block ads & trackers": "広告とトラッカーをブロック",
-  "Watching for ad, analytics, and tracking requests. Harbor itself sends zero telemetry.":
-    "広告、解析、トラッキングのリクエストを監視しています。Harbor自体はテレメトリを一切送信しません。",
+  "Watching for ad, analytics, and tracking requests. Lart itself sends zero telemetry.":
+    "広告、解析、トラッキングのリクエストを監視しています。Lart自体はテレメトリを一切送信しません。",
   "Export everything": "すべてエクスポート",
-  "Saves your whole Harbor setup to one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
-    "テーマ、ホーム画面のレイアウト、設定、アドオン、プロフィール、ウォッチリスト、プレイヤーレイアウト、視聴進捗など、Harborの設定一式を1つのファイルに保存します。Stremioのログイン情報は意図的に含まれません。",
+  "Saves your whole Lart setup to one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
+    "テーマ、ホーム画面のレイアウト、設定、アドオン、プロフィール、ウォッチリスト、プレイヤーレイアウト、視聴進捗など、Lartの設定一式を1つのファイルに保存します。Stremioのログイン情報は意図的に含まれません。",
   Export: "エクスポート",
   "Restore from a backup": "バックアップから復元",
   "Loads a backup file and replaces your current setup with it. Perfect for a new computer. Your Stremio sign-in on this device stays as is.":
     "バックアップファイルを読み込み、現在の設定一式を置き換えます。新しいパソコンへの移行に最適です。このデバイスのStremioログイン状態はそのまま維持されます。",
   "Restore this backup?": "このバックアップを復元しますか？",
-  "This replaces your current Harbor setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Harbor reloads when it finishes.":
-    "現在のHarbor設定（テーマ、ホーム画面のレイアウト、設定、アドオン、プロフィールなど）を、このファイルに保存された{n}件のデータで置き換えます。Stremioのログイン状態はそのまま維持されます。完了するとHarborが再読み込みされます。",
+  "This replaces your current Lart setup (theme, home layout, settings, addons, profiles, and more) with the {n} saved entries in this file. Your Stremio sign-in stays as is. Lart reloads when it finishes.":
+    "現在のLart設定（テーマ、ホーム画面のレイアウト、設定、アドオン、プロフィールなど）を、このファイルに保存された{n}件のデータで置き換えます。Stremioのログイン状態はそのまま維持されます。完了するとLartが再読み込みされます。",
   "an unknown date": "不明な日付",
-  "Saved {when} from Harbor {app}.": "{when}にHarbor {app}から保存。",
+  "Saved {when} from Lart {app}.": "{when}にLart {app}から保存。",
   "Restoring...": "復元中...",
   "Restore and reload": "復元して再読み込み",
   "Hide watched titles in catalogs": "カタログで視聴済み作品を非表示",
@@ -74,8 +74,8 @@ const misc: Record<string, string> = {
   "Grid view": "グリッド表示",
   "List view": "リスト表示",
   "How is this build treating you?": "このビルドはいかがですか？",
-  "Does Harbor {version} feel better or worse than the version you had before?":
-    "Harbor {version}は以前のバージョンより良くなりましたか、それとも悪くなりましたか？",
+  "Does Lart {version} feel better or worse than the version you had before?":
+    "Lart {version}は以前のバージョンより良くなりましたか、それとも悪くなりましたか？",
   "Much worse": "かなり悪い",
   "About the same": "ほぼ同じ",
   "Much better": "かなり良い",
@@ -170,9 +170,9 @@ const misc: Record<string, string> = {
   "Reveal comments": "コメントを表示",
   "Comments are hidden": "コメントは非表示です",
   "Hosted elsewhere": "外部ホスティング",
-  "A third party runs these plans. Harbor is not affiliated with them and receives nothing from a signup. Current pricing and terms are on their site.": "これらのプランは第三者が運営しています。Harbor は提携しておらず、登録から何も受け取りません。最新の料金と条件は先方のサイトでご確認ください。",
+  "A third party runs these plans. Lart is not affiliated with them and receives nothing from a signup. Current pricing and terms are on their site.": "これらのプランは第三者が運営しています。Lart は提携しておらず、登録から何も受け取りません。最新の料金と条件は先方のサイトでご確認ください。",
   "{name} can run on a hosted instance": "{name} はホスティング環境でも動きます",
-  "A third party operates this. Harbor is not affiliated with them, does not resell it, and receives nothing if you sign up. Whatever it costs and whatever it includes is on their site.": "これは第三者が運営しています。Harbor は提携も転売もしておらず、登録しても何も受け取りません。料金や内容は先方のサイトをご覧ください。",
+  "A third party operates this. Lart is not affiliated with them, does not resell it, and receives nothing if you sign up. Whatever it costs and whatever it includes is on their site.": "これは第三者が運営しています。Lart は提携も転売もしておらず、登録しても何も受け取りません。料金や内容は先方のサイトをご覧ください。",
   "Show comments": "コメントを表示",
   "Hide comments": "コメントを非表示",
   "You haven't commented yet": "まだコメントしていません",
@@ -329,8 +329,8 @@ const misc: Record<string, string> = {
     "オフライン保存するソースを選択してください。進行状況は「ダウンロード」ページで確認できます。",
   "Last source wasn't actually cached on your debrid yet. Pick another from the list.":
     "前回のソースは、まだデブリッドにキャッシュされていません。リストから別のソースを選択してください。",
-  "Harbor couldn't resolve a usable ID for this title. Add a TMDB key in Library settings or sign in to Stremio to broaden coverage.":
-    "Harbor はこの作品で使用可能な ID を特定できませんでした。「ライブラリ」設定で TMDB キーを追加するか、Stremio にログインして検索範囲を広げてください。",
+  "Lart couldn't resolve a usable ID for this title. Add a TMDB key in Library settings or sign in to Stremio to broaden coverage.":
+    "Lart はこの作品で使用可能な ID を特定できませんでした。「ライブラリ」設定で TMDB キーを追加するか、Stremio にログインして検索範囲を広げてください。",
   "No playable streams turned up, and no debrid is configured. Real-Debrid, TorBox, AllDebrid, Premiumize, or Debrid-Link will unlock raw torrent results. Some addons bake debrid in (Sootio, Comet/ElfHosted, MediaFusion/ElfHosted) and play without your own keys.":
     "再生可能なストリームが見つからず、デブリッドも設定されていません。Real-Debrid、TorBox、AllDebrid、Premiumize、Debrid-Link を設定すると、未処理のTorrent検索結果を利用できます。一部のアドオン（Sootio、Comet/ElfHosted、MediaFusion/ElfHosted）にはデブリッドが組み込まれているため、自分のキーがなくても再生できます。",
   "Set up a debrid": "デブリッドを設定",
@@ -344,10 +344,10 @@ const misc: Record<string, string> = {
   "No source returned a stream": "どのソースからもストリームが返されませんでした",
   "Anime sources are usually richer through Torrentio's anime config or AIOStreams. Make sure one is installed in Stremio.":
     "アニメのソースは通常、Torrentio のアニメ設定または AIOStreams を使うと充実します。いずれかが Stremio にインストールされていることを確認してください。",
-  "On the web, Harbor can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
-    "Web版の Harbor からアクセスできるのは、ブラウザアクセスを許可するアドオン（Torrentio、TorBox、Cinemeta）のみです。未公開作品には通常、まだソースがありません。",
-  "Try signing in to Stremio so Harbor can use your addon collection. Older or foreign titles often need Torrentio + a debrid addon to find anything.":
-    "Stremio にログインすると、Harbor でアドオンコレクションを利用できます。古い作品や海外作品を見つけるには、Torrentio とデブリッドアドオンが必要になることがよくあります。",
+  "On the web, Lart can only reach addons that allow browser access (Torrentio, TorBox, Cinemeta). For unreleased titles, no source typically exists yet.":
+    "Web版の Lart からアクセスできるのは、ブラウザアクセスを許可するアドオン（Torrentio、TorBox、Cinemeta）のみです。未公開作品には通常、まだソースがありません。",
+  "Try signing in to Stremio so Lart can use your addon collection. Older or foreign titles often need Torrentio + a debrid addon to find anything.":
+    "Stremio にログインすると、Lart でアドオンコレクションを利用できます。古い作品や海外作品を見つけるには、Torrentio とデブリッドアドオンが必要になることがよくあります。",
   "Strict filters dropped everything": "厳格なフィルターですべて除外されました",
   "Search wider": "検索範囲を広げる",
   "Wide search · still empty": "広範囲検索・結果なし",
@@ -413,14 +413,14 @@ const misc: Record<string, string> = {
   "Back to relay": "リレーに戻る",
   Documentation: "ドキュメント",
   "Self-host": "セルフホスト",
-  "Run your own Harbor Relay": "独自の Harbor Relay を運用する",
-  "Two paths: Harbor handles the deploy for you, or you do it yourself with wrangler.":
-    "方法は2つあります。Harbor にデプロイを任せるか、wrangler を使って自分でデプロイします。",
+  "Run your own Lart Relay": "独自の Lart Relay を運用する",
+  "Two paths: Lart handles the deploy for you, or you do it yourself with wrangler.":
+    "方法は2つあります。Lart にデプロイを任せるか、wrangler を使って自分でデプロイします。",
   Requirements: "要件",
   "A free Cloudflare account.": "無料の Cloudflare アカウント。",
   "About two minutes for the auto-deploy path.": "自動デプロイなら約2分。",
-  "Auto-deploy from Harbor": "Harbor から自動デプロイ",
-  "Open Settings, then Harbor Relay.": "「設定」を開き、「Harbor Relay」を選択します。",
+  "Auto-deploy from Lart": "Lart から自動デプロイ",
+  "Open Settings, then Lart Relay.": "「設定」を開き、「Lart Relay」を選択します。",
   "Pick the Cloudflare account to deploy under.":
     "デプロイ先の Cloudflare アカウントを選択します。",
   "Manual deploy with wrangler": "wrangler で手動デプロイ",
@@ -543,7 +543,7 @@ const misc: Record<string, string> = {
   "update.downloading": "アップデートをダウンロード中",
   "update.failed": "アップデートに失敗しました",
   "update.available": "アップデートがあります",
-  "update.harborVersion": "Harbor {version}",
+  "update.harborVersion": "Lart {version}",
   "update.downloadComplete": "ダウンロード完了",
   "update.fetching": "アップデートを取得中",
   "update.errorServer": "サーバーエラー",
@@ -724,8 +724,8 @@ const misc: Record<string, string> = {
   "Curated for popularity and reliability. No paid placements. Install anything else by URL on the Browse tab.":
     "人気と信頼性を基準に厳選しています。有料掲載はありません。その他のアドオンは「閲覧」タブでURLからインストールできます。",
   "Sign in to sync your addons across devices": "ログインしてアドオンをデバイス間で同期",
-  "Anything you install in Harbor pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
-    "HarborでインストールしたアドオンはStremioアカウントにも反映され、モバイルでも利用できます。サイドバー左下のアバターからログインしてください。",
+  "Anything you install in Lart pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
+    "LartでインストールしたアドオンはStremioアカウントにも反映され、モバイルでも利用できます。サイドバー左下のアバターからログインしてください。",
   Starters: "はじめに",
   "Common picks for a fresh setup.": "初期設定でよく選ばれるアドオンです。",
   Streaming: "ストリーミング",
@@ -741,8 +741,8 @@ const misc: Record<string, string> = {
   "OTA channels + IPTV": "地上波チャンネル + IPTV",
   New: "新着",
   "You've reached the end · {n} addons": "以上です・アドオン{n}件",
-  "Trending tracks star growth across your Harbor visits. Open the addons page again tomorrow and the top risers will appear here.":
-    "トレンドでは、Harborを訪れるたびにスター数の伸びを記録します。明日もう一度アドオンページを開くと、急上昇中のアドオンがここに表示されます。",
+  "Trending tracks star growth across your Lart visits. Open the addons page again tomorrow and the top risers will appear here.":
+    "トレンドでは、Lartを訪れるたびにスター数の伸びを記録します。明日もう一度アドオンページを開くと、急上昇中のアドオンがここに表示されます。",
   "Head to Discover. Cinemeta and OpenSubtitles cover the basics; Torrentio + a debrid key cover almost everything else.":
     "「見つける」を開いてみましょう。基本はCinemetaとOpenSubtitlesで、Torrentioとdebridキーがあれば、ほぼすべてをカバーできます。",
   "No installed addon matches that.": "一致するインストール済みアドオンはありません。",
@@ -792,8 +792,8 @@ const misc: Record<string, string> = {
   Cancel: "キャンセル",
   "'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "の設定ページを開きます。オプションを選び、表示されたインストールリンクをコピーして下に貼り付けると、アドオンが更新されます。",
-  "'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "の設定ページをHarborの内蔵ブラウザで開きます。オプションを選んでください。そのページで「インストール」をクリックすると、Harborがリンクを自動的に取得してアドオンを更新します。",
+  "'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "の設定ページをLartの内蔵ブラウザで開きます。オプションを選んでください。そのページで「インストール」をクリックすると、Lartがリンクを自動的に取得してアドオンを更新します。",
   "Saving to library": "ライブラリに保存中",
   "Syncing to Stremio": "Stremioと同期中",
   Done: "完了",
@@ -802,14 +802,14 @@ const misc: Record<string, string> = {
   "Top 10": "トップ10",
   "Add a TMDB key in Settings to load Arabic content.":
     "アラビア語コンテンツを読み込むには、設定でTMDBキーを追加してください。",
-  "Add a TMDB key for the full Harbor": "TMDBキーを追加してHarborをフル活用",
+  "Add a TMDB key for the full Lart": "TMDBキーを追加してLartをフル活用",
   "Free key unlocks Trending, In Theaters, and per-service catalogs. 60 seconds.":
     "無料キーで「トレンド」「劇場公開中」、サービス別カタログが利用できます。取得は60秒です。",
   "Built for desktop resolutions": "デスクトップ解像度向け",
-  "This instance of Harbor is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
-    "このHarborはデスクトップ向けです。iOSとAndroidの単体アプリも近日公開予定です。それぞれのプラットフォーム専用に設計した、モバイルファーストの体験を提供します。",
-  "For now, please open this site on a desktop, or build Harbor from source.":
-    "現時点では、このサイトをデスクトップで開くか、Harborをソースからビルドしてください。",
+  "This instance of Lart is made for desktop. Our standalone iOS and Android apps are coming soon, each with a bespoke, mobile-first experience built for its native platform.":
+    "このLartはデスクトップ向けです。iOSとAndroidの単体アプリも近日公開予定です。それぞれのプラットフォーム専用に設計した、モバイルファーストの体験を提供します。",
+  "For now, please open this site on a desktop, or build Lart from source.":
+    "現時点では、このサイトをデスクトップで開くか、Lartをソースからビルドしてください。",
   "Build from source": "ソースからビルド",
   "Wrong PIN": "PINが違います",
   "PINs didn't match. Start over.": "PINが一致しません。最初からやり直してください。",
@@ -845,7 +845,7 @@ const misc: Record<string, string> = {
   "Skip setup": "設定をスキップ",
   "Skip for now": "今はスキップ",
   "Get Started": "はじめる",
-  "Enter Harbor": "Harborをはじめる",
+  "Enter Lart": "Lartをはじめる",
   "A client for the Stremio protocol. Two minutes to set up; most of it optional. You stay in control of every key.":
     "Stremioプロトコル対応クライアント。設定は2分ほどで、ほとんどの項目は任意です。すべてのキーをご自身で管理できます。",
   "Trending, in theaters, what's on every streamer.":
@@ -854,12 +854,12 @@ const misc: Record<string, string> = {
     "Stremioのライブラリとアドオンをそのまま同期。",
   "No telemetry, no servers, no bundled keys.": "テレメトリなし、サーバーなし、組み込みキーなし。",
   "Built for Adventure!": "冒険のために！",
-  "Harbor curated": "Harborセレクト",
+  "Lart curated": "Lartセレクト",
   "Hero, Top 10, Trending, In Theaters, per-service rails. Your addons append underneath.":
     "ヒーロー、トップ10、トレンド、劇場公開中、配信サービス別レールを表示します。その下にアドオンのカタログが追加されます。",
   "Classic Stremio": "クラシックStremio",
-  "Continue Watching, then your addon catalogs in install order. No hero, no Harbor rails.":
-    "「視聴を続ける」の後に、アドオンのカタログをインストール順で表示します。ヒーローやHarborのレールはありません。",
+  "Continue Watching, then your addon catalogs in install order. No hero, no Lart rails.":
+    "「視聴を続ける」の後に、アドオンのカタログをインストール順で表示します。ヒーローやLartのレールはありません。",
   "Pick a home layout": "ホームのレイアウトを選択",
   "You can switch later in Settings under Library & metadata.":
     "後で「設定」の「ライブラリとメタデータ」から変更できます。",
@@ -868,8 +868,8 @@ const misc: Record<string, string> = {
     "無料で、登録は2分ほどです。トレンド、劇場公開中、高評価、配信サービス別のカタログ（Netflix、Disney+、Hulu、…）を利用できます。キーはこのデバイスにのみ保存されます。",
   "Get a free key at themoviedb.org": "themoviedb.orgで無料キーを取得",
   "v3 API key": "v3 APIキー",
-  "Skip if you'd rather just use Cinemeta. Harbor still works, you'll just see fewer rails.":
-    "Cinemetaだけを使う場合はスキップしてください。Harborは引き続き利用できますが、表示されるレールは少なくなります。",
+  "Skip if you'd rather just use Cinemeta. Lart still works, you'll just see fewer rails.":
+    "Cinemetaだけを使う場合はスキップしてください。Lartは引き続き利用できますが、表示されるレールは少なくなります。",
   "Sign-in failed": "ログインできませんでした",
   "Step 2 · Stremio": "ステップ2 · Stremio",
   "You're in": "ログインしました",
@@ -880,23 +880,23 @@ const misc: Record<string, string> = {
   "Don't have an account?": "アカウントをお持ちでない場合",
   "Create one": "作成する",
   "Bring in your library": "ライブラリを取り込む",
-  "Sign in to mirror your Continue Watching, watchlist, and any addons you've already curated. Optional; Harbor works fully signed-out.":
-    "ログインすると、「視聴を続ける」、ウォッチリスト、追加済みのアドオンを同期できます。任意のため、ログインしなくてもHarborのすべての機能を利用できます。",
+  "Sign in to mirror your Continue Watching, watchlist, and any addons you've already curated. Optional; Lart works fully signed-out.":
+    "ログインすると、「視聴を続ける」、ウォッチリスト、追加済みのアドオンを同期できます。任意のため、ログインしなくてもLartのすべての機能を利用できます。",
   "Sign in with": "ログイン方法",
   "Don't have an account? Create one →": "アカウントをお持ちでない場合は作成 →",
   "Step 3 · Streaming": "ステップ3 · ストリーミング",
   "Pick what you actually use": "実際に利用するサービスを選択",
-  "Harbor pulls the most popular titles each service has right now. Toggle off anything you don't subscribe to.":
-    "Harborが各サービスで現在最も人気のある作品を取得します。契約していないサービスはオフにしてください。",
+  "Lart pulls the most popular titles each service has right now. Toggle off anything you don't subscribe to.":
+    "Lartが各サービスで現在最も人気のある作品を取得します。契約していないサービスはオフにしてください。",
   "These rails activate once a TMDB key is set. You can come back to this anytime in Settings.":
     "TMDBキーを設定すると、これらのレールが有効になります。後からいつでも「設定」で変更できます。",
   "Step 4 · Subtitles": "ステップ4 · 字幕",
   "Pick your subtitle languages": "字幕の言語を選択",
-  "When playback starts, Harbor finds and loads a subtitle in one of these languages automatically. The first available match wins, so put your main language first.":
-    "再生を開始すると、Harborが選択した言語の字幕を自動で検索して読み込みます。最初に見つかった字幕が使われるため、メインの言語を先頭にしてください。",
+  "When playback starts, Lart finds and loads a subtitle in one of these languages automatically. The first available match wins, so put your main language first.":
+    "再生を開始すると、Lartが選択した言語の字幕を自動で検索して読み込みます。最初に見つかった字幕が使われるため、メインの言語を先頭にしてください。",
   "You're set.": "準備完了です。",
   "TMDB connected. {n} streaming {services} on. Welcome aboard.":
-    "TMDBに接続しました。ストリーミング{services}を{n}件有効にしました。Harborへようこそ。",
+    "TMDBに接続しました。ストリーミング{services}を{n}件有効にしました。Lartへようこそ。",
   "Running on Cinemeta for now. Add a TMDB key from Settings whenever you're ready.":
     "現在はCinemetaを使用しています。準備ができたら、いつでも「設定」からTMDBキーを追加できます。",
   "Your Discovery Queue": "あなたの発見キュー",
@@ -936,10 +936,10 @@ const misc: Record<string, string> = {
   Animation: "アニメーション",
   Music: "音楽",
   "Share collection": "コレクションを共有",
-  "Anyone with the link can open this collection once your Harbor server is live.":
-    "Harborサーバーが稼働すると、リンクを知っている人は誰でもこのコレクションを開けるようになります。",
-  "Paste this code into Harbor to open the collection.":
-    "このコードをHarborに貼り付けると、コレクションを開けます。",
+  "Anyone with the link can open this collection once your Lart server is live.":
+    "Lartサーバーが稼働すると、リンクを知っている人は誰でもこのコレクションを開けるようになります。",
+  "Paste this code into Lart to open the collection.":
+    "このコードをLartに貼り付けると、コレクションを開けます。",
   "Shared to the community": "コミュニティで公開中",
   "Share to the community": "コミュニティで公開",
   "Listed collections will appear in community browse when that rolls out.":

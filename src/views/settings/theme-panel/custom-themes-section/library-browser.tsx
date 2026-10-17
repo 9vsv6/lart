@@ -144,7 +144,7 @@ export function LibraryBrowser({
                 {featured.length > 0 && (
                   <BrowserSection
                     title="Featured"
-                    subtitle="Hand-picked reskins from the Harbor crew."
+                    subtitle="Hand-picked reskins from the Lart crew."
                   >
                     <BrowserGrid
                       entries={featured}
@@ -167,7 +167,7 @@ export function LibraryBrowser({
                   </BrowserSection>
                 )}
                 {builtIn.length > 0 && (
-                  <BrowserSection title="Built-in" subtitle="Ships with Harbor. Always available.">
+                  <BrowserSection title="Built-in" subtitle="Ships with Lart. Always available.">
                     <BrowserGrid
                       entries={builtIn}
                       activeId={activeId}

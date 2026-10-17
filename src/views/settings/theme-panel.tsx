@@ -189,7 +189,7 @@ function TypographyTab() {
   return (
     <Section title={t("Typography")} bare>
       <p className={`mb-3 max-w-[70ch] ${ROW_DESC}`}>
-        {t("Pick a display and body pairing, or upload your own font to use across Harbor.")}
+        {t("Pick a display and body pairing, or upload your own font to use across Lart.")}
       </p>
       <FontGrid
         pairValue={theme.fontPair}
@@ -209,12 +209,12 @@ function WindowTab() {
       {isTauri && (
         <Section
           title={t("Window title bar")}
-          subtitle={t("Choose whether your operating system draws the title bar, or Harbor draws its own.")}
+          subtitle={t("Choose whether your operating system draws the title bar, or Lart draws its own.")}
         >
           <SettingGroup>
             <NativeTitleBarRow />
           </SettingGroup>
-          <SettingGroup label={t("Harbor's own bar")}>
+          <SettingGroup label={t("Lart's own bar")}>
             <HybridBarRow />
             <TopbarAppearanceRow />
             {settings.topbarAppearance !== "transparent" && <TopbarScrollBlurRow />}
@@ -225,7 +225,7 @@ function WindowTab() {
       {isTauri && (
         <Section
           title={t("Moving the window")}
-          subtitle={t("Choose where you can grab Harbor to drag it around your screen.")}
+          subtitle={t("Choose where you can grab Lart to drag it around your screen.")}
         >
           <SettingGroup>
             <DragAnywhereRow />
@@ -247,7 +247,7 @@ function ThemeCommunityCta() {
     <MarketCta
       variant="browse"
       label={t("Browse community themes")}
-      sublabel={t("Fresh looks shared by the Harbor community")}
+      sublabel={t("Fresh looks shared by the Lart community")}
       preview={COMMUNITY_PREVIEW}
       onClick={() => requestThemeLibrary({ tab: "community" })}
     />
@@ -270,7 +270,7 @@ function NativeTitleBarRow() {
   return (
     <ToggleRow
       label={t("Use the native window title bar")}
-      sub={t("Show your operating system's own title bar with its minimize, maximize, and close buttons. They stay reachable everywhere, including while a video is playing. Turn this off to use Harbor's built-in window buttons.")}
+      sub={t("Show your operating system's own title bar with its minimize, maximize, and close buttons. They stay reachable everywhere, including while a video is playing. Turn this off to use Lart's built-in window buttons.")}
       value={on}
       onChange={(useNativeTitleBar) => update({ useNativeTitleBar })}
       leading={<AppWindow size={18} strokeWidth={2} />}
@@ -291,10 +291,10 @@ function HybridBarRow() {
   return (
     <ToggleRow
       label={t("Native-style hybrid bar")}
-      sub={t("Tuck clean, native-looking window buttons into the top corner, with hover labels. On macOS they become traffic-light dots. Blends into Harbor while feeling like your system's own title bar.")}
+      sub={t("Tuck clean, native-looking window buttons into the top corner, with hover labels. On macOS they become traffic-light dots. Blends into Lart while feeling like your system's own title bar.")}
       lockReason={
         nativeOn
-          ? t("Turn off the native window title bar above to use Harbor's hybrid bar instead.")
+          ? t("Turn off the native window title bar above to use Lart's hybrid bar instead.")
           : undefined
       }
       value={on}
@@ -329,7 +329,7 @@ function TopbarAppearanceRow() {
   const { settings, update } = useSettings();
   const nativeOn = settings.useNativeTitleBar;
   const lockedNote = nativeOn
-    ? t("The operating system draws native window controls, so Harbor cannot change their appearance.")
+    ? t("The operating system draws native window controls, so Lart cannot change their appearance.")
     : undefined;
   return (
     <SettingRow
@@ -369,7 +369,7 @@ function DragAnywhereRow() {
     <ToggleRow
       label={t("Drag the window from anywhere")}
       newId="theme:drag-anywhere"
-      sub={t("Move Harbor by dragging any empty space on a page, not just the top bar. Leave this off to keep clicks inside pages from nudging the window.")}
+      sub={t("Move Lart by dragging any empty space on a page, not just the top bar. Leave this off to keep clicks inside pages from nudging the window.")}
       value={on}
       onChange={(dragAnywhere) => update({ dragAnywhere })}
       leading={<Move size={18} strokeWidth={2} />}

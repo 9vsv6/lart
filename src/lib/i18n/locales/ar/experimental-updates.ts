@@ -9,8 +9,8 @@ export default {
   "Beta version": "إصدار بيتا",
   "Choose a tested beta": "اختر إصدار بيتا مختبَرًا",
   "Beta {version}": "بيتا {version}",
-  "Harbor saves a local recovery backup before installing. It can contain account details. Old backups are not restored automatically, and recovery files use extra disk space.":
-    "يحفظ Harbor نسخة استرداد محلية قبل التثبيت. قد تحتوي على بيانات حسابات. لا تُستعاد النسخ القديمة تلقائيًا، وتستهلك ملفات الاسترداد مساحة إضافية.",
+  "Lart saves a local recovery backup before installing. It can contain account details. Old backups are not restored automatically, and recovery files use extra disk space.":
+    "يحفظ Lart نسخة استرداد محلية قبل التثبيت. قد تحتوي على بيانات حسابات. لا تُستعاد النسخ القديمة تلقائيًا، وتستهلك ملفات الاسترداد مساحة إضافية.",
   "Install beta {version} and restart? This replaces the experimental app, not your current settings.":
     "هل تريد تثبيت بيتا {version} وإعادة التشغيل؟ سيُستبدل التطبيق التجريبي المبكر، وليس إعداداتك الحالية.",
   "Install beta {version} and restart": "تثبيت بيتا {version} وإعادة التشغيل",
@@ -28,22 +28,22 @@ export default {
   "Continue the return to beta in Experimental builds below.":
     "تابع العودة إلى بيتا في قسم الإصدارات التجريبية المبكرة أدناه.",
   "Experimental installation currently requires a managed Windows installation with a tested return to beta.":
-    "يتطلب التثبيت التجريبي المبكر حاليًا تثبيت Windows مُدارًا عبر مثبّت Harbor مع عودة مختبَرة إلى بيتا.",
+    "يتطلب التثبيت التجريبي المبكر حاليًا تثبيت Windows مُدارًا عبر مثبّت Lart مع عودة مختبَرة إلى بيتا.",
   "Experimental builds": "الإصدارات التجريبية المبكرة",
   Experimental: "تجريبي مبكر",
   Beta: "بيتا",
   Stable: "مستقر",
   "Test upcoming changes": "اختبر التغييرات القادمة",
-  "Available to Harbor accounts with a Tester, Moderator, Admin, or Dev badge.":
-    "متاح لحسابات Harbor التي تحمل شارة المختبِر أو المشرف أو المسؤول أو المطوّر.",
+  "Available to Lart accounts with a Tester, Moderator, Admin, or Dev badge.":
+    "متاح لحسابات Lart التي تحمل شارة المختبِر أو المشرف أو المسؤول أو المطوّر.",
   "Return to a regular build": "العودة إلى إصدار عادي",
-  "Experimental access requires a Harbor account with a Tester, Moderator, Admin, or Dev badge.":
-    "يتطلب الوصول إلى الإصدارات التجريبية حساب Harbor يحمل شارة المختبِر أو المشرف أو المسؤول أو المطوّر.",
+  "Experimental access requires a Lart account with a Tester, Moderator, Admin, or Dev badge.":
+    "يتطلب الوصول إلى الإصدارات التجريبية حساب Lart يحمل شارة المختبِر أو المشرف أو المسؤول أو المطوّر.",
   "Public test builds for anyone who wants to try upcoming fixes. No invitation or special account is needed.":
     "إصدارات اختبار عامة لكل من يريد تجربة الإصلاحات القادمة. لا تحتاج إلى دعوة أو حساب خاص.",
-  "These builds may crash or change your settings. Back up Harbor before installing. Downloads and installation still require your approval.":
-    "قد تتعطل هذه الإصدارات أو تغيّر إعداداتك. احفظ نسخة احتياطية من Harbor قبل التثبيت. لن يبدأ التنزيل أو التثبيت إلا بموافقتك.",
-  "Installed: Harbor {version}": "المثبّت: Harbor {version}",
+  "These builds may crash or change your settings. Back up Lart before installing. Downloads and installation still require your approval.":
+    "قد تتعطل هذه الإصدارات أو تغيّر إعداداتك. احفظ نسخة احتياطية من Lart قبل التثبيت. لن يبدأ التنزيل أو التثبيت إلا بموافقتك.",
+  "Installed: Lart {version}": "المثبّت: Lart {version}",
   "Update channel: {channel}": "قناة التحديث: {channel}",
   "Experimental in-app updates are available only in the Windows and macOS desktop apps.":
     "التحديثات التجريبية المبكرة داخل التطبيق متاحة فقط في تطبيقي Windows وmacOS لسطح المكتب.",
@@ -75,8 +75,8 @@ export default {
     "تغيّر الإصدار التجريبي المبكر أثناء التحقق. تحقّق مجددًا قبل التنزيل.",
   "Couldn't check experimental builds. Check your connection and try again.":
     "تعذّر التحقق من الإصدارات التجريبية المبكرة. تحقّق من اتصالك وحاول مجددًا.",
-  "Couldn't verify your Harbor account access. Check your connection and try again.":
-    "تعذّر التحقق من صلاحية حساب Harbor. تحقّق من اتصالك وحاول مجددًا.",
-  "Harbor Setup did not finish updating Harbor. Check for updates to try again.":
-    "لم يُكمل مثبّت Harbor التحديث. تحقّق من التحديثات للمحاولة مجددًا.",
+  "Couldn't verify your Lart account access. Check your connection and try again.":
+    "تعذّر التحقق من صلاحية حساب Lart. تحقّق من اتصالك وحاول مجددًا.",
+  "Lart Setup did not finish updating Lart. Check for updates to try again.":
+    "لم يُكمل مثبّت Lart التحديث. تحقّق من التحديثات للمحاولة مجددًا.",
 };

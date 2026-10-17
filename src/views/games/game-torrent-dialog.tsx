@@ -16,7 +16,7 @@ import { TorrentDestination } from "./game-torrent-destination";
 import "./game-torrent.css";
 
 // Step storyboard: content settles over 200ms; the shell finishes opening at
-// 320ms. Exit uses Harbor's shared modal timing. Reduced motion skips both.
+// 320ms. Exit uses Lart's shared modal timing. Reduced motion skips both.
 const STEP_MOTION={duration:320,easing:"cubic-bezier(.22,1,.36,1)"};
 
 export function GameTorrentDialog({ torrents, source: initialSource, onClose, onStarted }: { torrents: GameTorrents; source: string; onClose: () => void; onStarted?: (record:GameTorrent)=>void }) {

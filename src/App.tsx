@@ -885,7 +885,7 @@ function Shell({ onReady }: { onReady?: () => void }) {
       kidProfileActive: kid !== null,
     });
     if (!go) return;
-    // Move Harbor onto the chosen monitor before entering Big Picture, so the
+    // Move Lart onto the chosen monitor before entering Big Picture, so the
     // fullscreen that follows binds to that display. Automatic skips the move
     // and leaves the window where the window-state plugin restored it.
     const display = settings.bigPictureDisplay;

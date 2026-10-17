@@ -148,7 +148,7 @@ export function BpSportsWatchPicker({
               <p className="text-[calc(clamp(14px,1.9vh,23px)*var(--bp-up,1))] leading-[1.55] text-ink-muted">
                 {index.scanned === 0
                   ? t(
-                      "No playlists yet. Add one in Live TV and Harbor will match its channels to fixtures.",
+                      "No playlists yet. Add one in Live TV and Lart will match its channels to fixtures.",
                     )
                   : t(
                       "None of your channels match this fixture. Search your channels and pin the one that carries it.",

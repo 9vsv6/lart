@@ -46,8 +46,8 @@ const downloads: Record<string, string> = {
   "Same file": "Тот же файл",
   "{shown} of {total} file from your computer": "{shown} из {total} файла с компьютера",
   "{shown} of {total} files from your computer": "{shown} из {total} файлов с компьютера",
-  "Point Harbor at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
-    "Укажите Harbor папку. Мы найдём в ней фильмы и сериалы, определим названия по именам файлов и дополним данными TMDB, чтобы они выглядели так же, как всё остальное здесь. Мы просто запоминаем путь: ничего не копируется и не перемещается.",
+  "Point Lart at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
+    "Укажите Lart папку. Мы найдём в ней фильмы и сериалы, определим названия по именам файлов и дополним данными TMDB, чтобы они выглядели так же, как всё остальное здесь. Мы просто запоминаем путь: ничего не копируется и не перемещается.",
   "No video files found in that folder.": "В этой папке нет видеофайлов.",
   "Couldn't scan that folder.": "Не удалось просканировать папку.",
   "Couldn't open this file": "Не удалось открыть файл",

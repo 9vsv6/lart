@@ -66,7 +66,7 @@ const gameRoms: Record<string, string> = {
   "games.roms.era": "Erscheinungszeitraum",
   "games.roms.reset": "Filter zurücksetzen",
   "games.roms.empty": "Versuche einen anderen Titel oder erweitere die Filter für diese Konsole.",
-  "games.roms.source": "Spieldaten und Verknüpfungen stammen von IGDB. Importiere deine lokalen Dateien, um unterstützte Spiele in Harbor zu spielen.",
+  "games.roms.source": "Spieldaten und Verknüpfungen stammen von IGDB. Importiere deine lokalen Dateien, um unterstützte Spiele in Lart zu spielen.",
   "games.roms.playerScore": "IGDB-Spielerwertung · {count} Bewertungen",
   "games.roms.combinedScore": "Kombinierte IGDB-Wertung · {count} Bewertungen",
   "games.roms.sort.discussed": "Meiste Bewertungen",

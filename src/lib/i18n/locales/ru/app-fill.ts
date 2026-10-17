@@ -1,8 +1,8 @@
 const appFill: Record<string, string> = {
   "Only turn this off if you already have a metadata addon installed, such as AIOMetadata or AIOStreams. Without one, titles and collections can open completely blank. Cinemeta can go stale and show released episodes as TBA, which is the reason to replace it.":
     "\u041e\u0442\u043a\u043b\u044e\u0447\u0430\u0439\u0442\u0435 \u0442\u043e\u043b\u044c\u043a\u043e \u0435\u0441\u043b\u0438 \u0443 \u0432\u0430\u0441 \u0443\u0436\u0435 \u0443\u0441\u0442\u0430\u043d\u043e\u0432\u043b\u0435\u043d \u0430\u0434\u0434\u043e\u043d \u043c\u0435\u0442\u0430\u0434\u0430\u043d\u043d\u044b\u0445, \u043d\u0430\u043f\u0440\u0438\u043c\u0435\u0440 AIOMetadata \u0438\u043b\u0438 AIOStreams. \u0411\u0435\u0437 \u043d\u0435\u0433\u043e \u0440\u0430\u0437\u0434\u0435\u043b\u044b \u0438 \u043a\u043e\u043b\u043b\u0435\u043a\u0446\u0438\u0438 \u043c\u043e\u0433\u0443\u0442 \u043e\u0442\u043a\u0440\u044b\u0432\u0430\u0442\u044c\u0441\u044f \u043f\u043e\u043b\u043d\u043e\u0441\u0442\u044c\u044e \u043f\u0443\u0441\u0442\u044b\u043c\u0438. Cinemeta \u043c\u043e\u0436\u0435\u0442 \u0443\u0441\u0442\u0430\u0440\u0435\u0432\u0430\u0442\u044c \u0438 \u043f\u043e\u043a\u0430\u0437\u044b\u0432\u0430\u0442\u044c \u0432\u044b\u0448\u0435\u0434\u0448\u0438\u0435 \u0441\u0435\u0440\u0438\u0438 \u043a\u0430\u043a TBA, \u0440\u0430\u0434\u0438 \u044d\u0442\u043e\u0433\u043e \u0435\u0433\u043e \u0438 \u0437\u0430\u043c\u0435\u043d\u044f\u044e\u0442.",
-  "No metadata addon detected. Harbor is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
-    "\u0410\u0434\u0434\u043e\u043d \u043c\u0435\u0442\u0430\u0434\u0430\u043d\u043d\u044b\u0445 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d. Harbor \u0432\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0435\u0442\u0441\u044f \u043a Cinemeta, \u0447\u0442\u043e\u0431\u044b \u043a\u043e\u043d\u0442\u0435\u043d\u0442 \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u043b\u0441\u044f, \u043d\u043e \u0432\u043a\u043b\u044e\u0447\u0438\u0442\u0435 \u044d\u0442\u043e\u0442 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440 \u043e\u0431\u0440\u0430\u0442\u043d\u043e, \u0435\u0441\u043b\u0438 \u043d\u0435 \u0443\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0435\u0442\u0435 \u0430\u0434\u0434\u043e\u043d.",
+  "No metadata addon detected. Lart is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.":
+    "\u0410\u0434\u0434\u043e\u043d \u043c\u0435\u0442\u0430\u0434\u0430\u043d\u043d\u044b\u0445 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d. Lart \u0432\u043e\u0437\u0432\u0440\u0430\u0449\u0430\u0435\u0442\u0441\u044f \u043a Cinemeta, \u0447\u0442\u043e\u0431\u044b \u043a\u043e\u043d\u0442\u0435\u043d\u0442 \u0437\u0430\u0433\u0440\u0443\u0436\u0430\u043b\u0441\u044f, \u043d\u043e \u0432\u043a\u043b\u044e\u0447\u0438\u0442\u0435 \u044d\u0442\u043e\u0442 \u043f\u0430\u0440\u0430\u043c\u0435\u0442\u0440 \u043e\u0431\u0440\u0430\u0442\u043d\u043e, \u0435\u0441\u043b\u0438 \u043d\u0435 \u0443\u0441\u0442\u0430\u043d\u0430\u0432\u043b\u0438\u0432\u0430\u0435\u0442\u0435 \u0430\u0434\u0434\u043e\u043d.",
   "Checking sources and audio": "Проверка источников и звука",
   "Downloading speech model {pct}%": "Загрузка речевой модели {pct}%",
   "Downloading speech model": "Загрузка речевой модели",
@@ -22,20 +22,20 @@ const appFill: Record<string, string> = {
   "Timing rate": "Скорость тайминга",
   "No timing change was needed. This subtitle already matches the audio.":
     "Тайминг менять не потребовалось. Эти субтитры уже совпадают со звуком.",
-  "Harbor couldn't analyze the audio for this source. Try again or adjust it manually.":
-    "Harbor не смог проанализировать звук этого источника. Повторите попытку или настройте вручную.",
+  "Lart couldn't analyze the audio for this source. Try again or adjust it manually.":
+    "Lart не смог проанализировать звук этого источника. Повторите попытку или настройте вручную.",
   "There isn't enough readable dialogue in this subtitle to measure its timing.":
     "В субтитрах недостаточно читаемого диалога для измерения тайминга.",
   "This subtitle appears to be for a different cut. Try another match.":
     "Похоже, эти субтитры от другой версии. Попробуйте другое совпадение.",
-  "The timing checks disagreed, so Harbor left the subtitle unchanged.":
-    "Проверки тайминга дали разные результаты, поэтому Harbor не изменил субтитры.",
+  "The timing checks disagreed, so Lart left the subtitle unchanged.":
+    "Проверки тайминга дали разные результаты, поэтому Lart не изменил субтитры.",
   "The timing difference was too large to correct safely. Try another subtitle.":
     "Разница в тайминге слишком велика для безопасного исправления. Попробуйте другие субтитры.",
   "There wasn't enough matching dialogue to make a safe correction.":
     "Недостаточно совпадающего диалога для безопасного исправления.",
-  "Harbor couldn't find a reliable timing correction for this subtitle.":
-    "Harbor не смог найти надёжное исправление тайминга для этих субтитров.",
+  "Lart couldn't find a reliable timing correction for this subtitle.":
+    "Lart не смог найти надёжное исправление тайминга для этих субтитров.",
   "Looks right": "Всё верно",
   "Still off": "Всё ещё не так",
   "This subtitle looks like a different version of the video.":
@@ -109,12 +109,12 @@ const appFill: Record<string, string> = {
   "Copy magnet link": "Копировать magnet-ссылку",
   "Download this subtitle": "Скачать эти субтитры",
   "Open {title}": "Открыть {title}",
-  "The ship is sailing away. Thanks for watching with Harbor, it's time to listen to your grown-ups.":
-    "Корабль уходит в море. Спасибо за просмотр в Harbor, а теперь пора слушаться взрослых.",
-  "Use your Harbor color": "Использовать ваш цвет Harbor",
+  "The ship is sailing away. Thanks for watching with Lart, it's time to listen to your grown-ups.":
+    "Корабль уходит в море. Спасибо за просмотр в Lart, а теперь пора слушаться взрослых.",
+  "Use your Lart color": "Использовать ваш цвет Lart",
   "{n} in your library": "{n} в вашей библиотеке",
-  "These avatars are Harbor originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
-    "Эти аватары созданы для Harbor. Импортированные наборы хранятся только на этом устройстве: вы сами решаете, что в них попадёт, и отвечаете за это содержимое.",
+  "These avatars are Lart originals. Imported packs are stored only on this device: you choose what goes in them, and you are responsible for that content.":
+    "Эти аватары созданы для Lart. Импортированные наборы хранятся только на этом устройстве: вы сами решаете, что в них попадёт, и отвечаете за это содержимое.",
   "Import images": "Импорт изображений",
   "Pick one or many images. They collect in an Uploads set in your library. PNG, JPG, WebP, and GIF all work.":
     "Выберите одно или несколько изображений. Они попадут в набор «Загруженные» в вашей библиотеке. Подходят PNG, JPG, WebP и GIF.",
@@ -125,8 +125,8 @@ const appFill: Record<string, string> = {
   "Avatars display as squares, so square images fill the tile cleanly. Others are center-cropped.":
     "Аватары показываются квадратами, поэтому квадратные изображения заполняют плитку целиком. Остальные обрезаются по центру.",
   "You own the content": "Содержимое принадлежит вам",
-  "Nothing is uploaded and nothing ships with Harbor. Everything stays on this device and you are responsible for the images you add.":
-    "Ничего не выгружается и не поставляется вместе с Harbor. Всё остаётся на этом устройстве, и вы отвечаете за добавленные изображения.",
+  "Nothing is uploaded and nothing ships with Lart. Everything stays on this device and you are responsible for the images you add.":
+    "Ничего не выгружается и не поставляется вместе с Lart. Всё остаётся на этом устройстве, и вы отвечаете за добавленные изображения.",
   "About avatar packs": "О наборах аватаров",
   "Bring your own avatars into the library.": "Добавьте свои аватары в библиотеку.",
   "Preparing your images": "Подготовка изображений",
@@ -173,8 +173,8 @@ const appFill: Record<string, string> = {
   "Remind me about": "О чём напоминать",
   Tone: "Сигнал",
   "Set reminder": "Создать напоминание",
-  "Harbor checks a few times a day while it's open and lets you know here.":
-    "Harbor проверяет несколько раз в день, пока открыт, и сообщает здесь.",
+  "Lart checks a few times a day while it's open and lets you know here.":
+    "Lart проверяет несколько раз в день, пока открыт, и сообщает здесь.",
   "Reminder on": "Напоминание включено",
   "Remind me": "Напомнить",
   "Edit reminder": "Изменить напоминание",
@@ -211,8 +211,8 @@ const appFill: Record<string, string> = {
     "Достигнут предел: {max} списков. Удалите один, чтобы освободить место.",
   "Updated {when}": "Обновлено {when}",
   "Pick a few you love": "Выберите несколько любимых",
-  "Choose up to 5 movies or shows you already like. Harbor uses them to tune your featured picks and recommendations. Totally optional.":
-    "Выберите до 5 фильмов или сериалов, которые вам нравятся. Harbor учтёт их в подборках и рекомендациях. Это необязательно.",
+  "Choose up to 5 movies or shows you already like. Lart uses them to tune your featured picks and recommendations. Totally optional.":
+    "Выберите до 5 фильмов или сериалов, которые вам нравятся. Lart учтёт их в подборках и рекомендациях. Это необязательно.",
   "Remove from Home": "Убрать с Главной",
   "Add to Home Screen": "Добавить на главный экран",
   "Some copies of new releases have ads spliced into the video itself. This is experimental: the community marks where those ads are so others can skip them.":
@@ -220,7 +220,7 @@ const appFill: Record<string, string> = {
   "Your report is sent for review before it ever skips anything for anyone. Nothing about the video is uploaded, just the timestamps you mark. It is off by default and you can turn it off anytime in Settings.":
     "Отчёт проходит проверку, прежде чем что-то начнёт пропускаться у других. Само видео никуда не загружается, только отмеченные вами метки времени. По умолчанию функция выключена, отключить её можно в любой момент в Настройках.",
   "Open Voyages": "Открыть плавания",
-  "Harbor Voyages": "Плавания Harbor",
+  "Lart Voyages": "Плавания Lart",
   "Set a course": "Проложить курс",
   "Pick up where you left off.": "Продолжите с того места, где остановились.",
   "A short run of films you'll actually finish. You pick every stop.":
@@ -418,7 +418,7 @@ const appFill: Record<string, string> = {
   "View my profile": "Открыть мой профиль",
   "Manage profiles": "Управление профилями",
   Reload: "Перезагрузить",
-  "Quit Harbor": "Выйти из Harbor",
+  "Quit Lart": "Выйти из Lart",
   View: "Вид",
   "Toggle Fullscreen": "Полноэкранный режим",
   "Zoom In": "Увеличить",
@@ -515,8 +515,8 @@ const appFill: Record<string, string> = {
   "Schedule & options": "Расписание и параметры",
   "Nothing found here": "Здесь ничего не найдено",
   "That does not look like a repository URL": "Это не похоже на URL репозитория",
-  "This server is too old to add repos from Harbor":
-    "Сервер слишком старый для добавления репозиториев из Harbor",
+  "This server is too old to add repos from Lart":
+    "Сервер слишком старый для добавления репозиториев из Lart",
   "The server could not load that repository": "Серверу не удалось загрузить этот репозиторий",
   "Extension repositories": "Репозитории расширений",
   "Action failed": "Не удалось выполнить действие",
@@ -542,8 +542,8 @@ const appFill: Record<string, string> = {
   "Add server": "Добавить сервер",
   authenticated: "с авторизацией",
   "Connect a Suwayomi server": "Подключить сервер Suwayomi",
-  "Point Harbor at your self-hosted library to browse and install sources":
-    "Укажите Harbor адрес своей библиотеки, чтобы просматривать и устанавливать источники",
+  "Point Lart at your self-hosted library to browse and install sources":
+    "Укажите Lart адрес своей библиотеки, чтобы просматривать и устанавливать источники",
   Servers: "Серверы",
   "{n} / {max} lists": "{n} / {max} списков",
   "Create your first list": "Создайте первый список",
@@ -566,8 +566,8 @@ const appFill: Record<string, string> = {
   'Add titles with the search above, or hit "Add to list" on any movie or show\'s page.':
     'Добавляйте названия через поиск выше или нажмите "Добавить в список" на странице фильма или сериала.',
   "Your folders": "Ваши папки",
-  "Folders Harbor imported your movies and shows from. Rescan to pick up new files.":
-    "Папки, из которых Harbor импортировал ваши фильмы и сериалы. Пересканируйте, чтобы найти новые файлы.",
+  "Folders Lart imported your movies and shows from. Rescan to pick up new files.":
+    "Папки, из которых Lart импортировал ваши фильмы и сериалы. Пересканируйте, чтобы найти новые файлы.",
   "1 file": "1 файл",
   "{n} files": "{n} файлов",
   "Remove folder": "Удалить папку",
@@ -585,9 +585,9 @@ const appFill: Record<string, string> = {
   "Season {n} has started": "Сезон {n} начался",
   "S{s} E{e} is out now": "S{s} E{e} уже вышла",
   "{n} new episodes are out": "Вышло новых серий: {n}",
-  "Harbor account": "Аккаунт Harbor",
-  "Your handle across Harbor, and your verified status.":
-    "Ваш ник в Harbor и статус подтверждения.",
+  "Lart account": "Аккаунт Lart",
+  "Your handle across Lart, and your verified status.":
+    "Ваш ник в Lart и статус подтверждения.",
   Titles: "Названия",
   "No titles found in this collection.": "В этой коллекции нет названий.",
   ID: "ID",
@@ -596,8 +596,8 @@ const appFill: Record<string, string> = {
   "Two columns": "Две колонки",
   "Stremio didn't confirm the move. Your collection may be unchanged. Reload to see the current state.":
     "Stremio не подтвердил перенос. Возможно, коллекция не изменилась. Обновите, чтобы увидеть текущее состояние.",
-  "Moved, but Harbor couldn't confirm the result. Reload to see the current state.":
-    "Перенос выполнен, но Harbor не смог подтвердить результат. Обновите, чтобы увидеть текущее состояние.",
+  "Moved, but Lart couldn't confirm the result. Reload to see the current state.":
+    "Перенос выполнен, но Lart не смог подтвердить результат. Обновите, чтобы увидеть текущее состояние.",
   "Everything here is already in your account.": "Всё это уже есть в вашем аккаунте.",
   "Moved 1 addon to your Stremio account. It now syncs everywhere you sign in.":
     "1 дополнение перенесено в аккаунт Stremio. Теперь оно синхронизируется везде, где вы входите.",
@@ -620,24 +620,24 @@ const appFill: Record<string, string> = {
   "Install an extension above to get sources":
     "Установите расширение выше, чтобы получить источники",
   "Add a manga source": "Добавить источник манги",
-  "Harbor does not host any manga or any sources. Connect a self-hosted server you run, install a source plugin from a repository you trust, or open a folder you already have.":
-    "Harbor не размещает мангу и источники. Подключите свой сервер, установите плагин источника из репозитория, которому доверяете, или откройте уже имеющуюся папку.",
+  "Lart does not host any manga or any sources. Connect a self-hosted server you run, install a source plugin from a repository you trust, or open a folder you already have.":
+    "Lart не размещает мангу и источники. Подключите свой сервер, установите плагин источника из репозитория, которому доверяете, или откройте уже имеющуюся папку.",
   "Set up a source": "Настроить источник",
   "Browse manga": "Просмотр манги",
-  "Read manga in Harbor": "Чтение манги в Harbor",
-  "Harbor does not host any manga. Add a source plugin from a repository you trust, connect your own server, or open a local folder. You can turn this off anytime in Settings.":
-    "Harbor не размещает мангу. Добавьте плагин источника из репозитория, которому доверяете, подключите свой сервер или откройте локальную папку. Это можно отключить в любой момент в Настройках.",
+  "Read manga in Lart": "Чтение манги в Lart",
+  "Lart does not host any manga. Add a source plugin from a repository you trust, connect your own server, or open a local folder. You can turn this off anytime in Settings.":
+    "Lart не размещает мангу. Добавьте плагин источника из репозитория, которому доверяете, подключите свой сервер или откройте локальную папку. Это можно отключить в любой момент в Настройках.",
   "Enable manga sources": "Включить источники манги",
-  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Harbor problem: pick another source, or give it a minute to finish caching and try again.":
-    "«Кэшировано» означает лишь то, что дополнение считает файл уже сохранённым на вашем debrid и готовым к мгновенному воспроизведению. Эта отметка не всегда верна: иногда файла там ещё нет. Тогда источник не запускается или проигрывается короткий битый фрагмент. Это не проблема Harbor: выберите другой источник или подождите минуту, пока завершится кэширование, и попробуйте снова.",
+  "“Cached” just means your addon thinks that file is already saved on your debrid, ready to play instantly. That flag isn’t always right: sometimes the file isn’t actually there yet. When that happens the source won’t start, or it plays a short broken clip. It’s not a Lart problem: pick another source, or give it a minute to finish caching and try again.":
+    "«Кэшировано» означает лишь то, что дополнение считает файл уже сохранённым на вашем debrid и готовым к мгновенному воспроизведению. Эта отметка не всегда верна: иногда файла там ещё нет. Тогда источник не запускается или проигрывается короткий битый фрагмент. Это не проблема Lart: выберите другой источник или подождите минуту, пока завершится кэширование, и попробуйте снова.",
   "On your disk": "На вашем диске",
   "Choose subtitles": "Выбрать субтитры",
   "No subtitles": "Без субтитров",
   "Couldn't load subtitles. You can start anyway and add one later in the player.":
     "Не удалось загрузить субтитры. Можно начать без них и добавить позже в плеере.",
-  "No subtitles found. Start anyway, Harbor keeps looking while you watch.":
-    "Субтитры не найдены. Начните всё равно, Harbor продолжит поиск во время просмотра.",
-  "Skip, let Harbor choose": "Пропустить, Harbor выберет сам",
+  "No subtitles found. Start anyway, Lart keeps looking while you watch.":
+    "Субтитры не найдены. Начните всё равно, Lart продолжит поиск во время просмотра.",
+  "Skip, let Lart choose": "Пропустить, Lart выберет сам",
   "Start playback": "Начать воспроизведение",
   "Best match": "Лучшее совпадение",
   "Finding subtitles…": "Поиск субтитров…",
@@ -678,10 +678,10 @@ const appFill: Record<string, string> = {
   Horizontal: "Горизонтально",
   "Chapter finished": "Глава дочитана",
   "Hidden sections": "Скрытые разделы",
-  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Harbor can't import them.":
-    "Это репозиторий Mangayomi, но его источники используют Dart или не относятся к манге, поэтому Harbor не может их импортировать.",
-  "This is a Mangayomi repo. Harbor runs its JavaScript sources natively. Import them to add these sources to your manga library.":
-    "Это репозиторий Mangayomi. Harbor запускает его источники на JavaScript нативно. Импортируйте их, чтобы добавить эти источники в библиотеку манги.",
+  "This is a Mangayomi repo, but its sources use Dart or are not manga, so Lart can't import them.":
+    "Это репозиторий Mangayomi, но его источники используют Dart или не относятся к манге, поэтому Lart не может их импортировать.",
+  "This is a Mangayomi repo. Lart runs its JavaScript sources natively. Import them to add these sources to your manga library.":
+    "Это репозиторий Mangayomi. Lart запускает его источники на JavaScript нативно. Импортируйте их, чтобы добавить эти источники в библиотеку манги.",
   "Imported {n} sources, {f} could not load":
     "Импортировано источников: {n}, не удалось загрузить: {f}",
   "Imported {n} sources": "Импортировано источников: {n}",
@@ -689,14 +689,14 @@ const appFill: Record<string, string> = {
   "Importing {done} of {total}": "Импорт {done} из {total}",
   "Import {n} JavaScript sources": "Импортировать {n} источников JavaScript",
   "Import JavaScript sources": "Импортировать источники JavaScript",
-  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Harbor can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "Это репозиторий Tachiyomi / Mihon. Это расширения для Android (APK), поэтому Harbor не может запускать их напрямую. Чтобы использовать эти источники на компьютере, запустите сервер Suwayomi и подключите к нему Harbor в разделе «Серверы».",
-  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Harbor to it from the Servers section.":
-    "Это репозиторий Mangayomi. Нативный импорт пока не поддерживается. Для самого большого каталога сегодня запустите сервер Suwayomi и подключите к нему Harbor в разделе «Серверы».",
-  "This is a Paperback (iOS) repo, which Harbor can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
-    "Это репозиторий Paperback (iOS), который Harbor не может использовать. Для источников на компьютере подключите сервер Suwayomi в разделе «Серверы».",
-  "This doesn't look like a Harbor plugin repo. Harbor expects a JSON file shaped { name, plugins: [ ... ] }.":
-    "Это не похоже на репозиторий плагинов Harbor. Harbor ожидает JSON-файл вида { name, plugins: [ ... ] }.",
+  "This is a Tachiyomi / Mihon repo. Those are Android (APK) extensions, so Lart can't run them directly. To use these sources on desktop, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "Это репозиторий Tachiyomi / Mihon. Это расширения для Android (APK), поэтому Lart не может запускать их напрямую. Чтобы использовать эти источники на компьютере, запустите сервер Suwayomi и подключите к нему Lart в разделе «Серверы».",
+  "This is a Mangayomi repo. Native import isn't supported yet. For the largest catalog today, run a Suwayomi server and connect Lart to it from the Servers section.":
+    "Это репозиторий Mangayomi. Нативный импорт пока не поддерживается. Для самого большого каталога сегодня запустите сервер Suwayomi и подключите к нему Lart в разделе «Серверы».",
+  "This is a Paperback (iOS) repo, which Lart can't use. For desktop sources, connect a Suwayomi server from the Servers section.":
+    "Это репозиторий Paperback (iOS), который Lart не может использовать. Для источников на компьютере подключите сервер Suwayomi в разделе «Серверы».",
+  "This doesn't look like a Lart plugin repo. Lart expects a JSON file shaped { name, plugins: [ ... ] }.":
+    "Это не похоже на репозиторий плагинов Lart. Lart ожидает JSON-файл вида { name, plugins: [ ... ] }.",
   "Tap again to remove all {n} extensions": "Нажмите ещё раз, чтобы удалить все расширения ({n})",
   "Remove all extensions ({n})": "Удалить все расширения ({n})",
   "https:// API or site URL": "https:// URL API или сайта",
@@ -789,22 +789,22 @@ const appFill: Record<string, string> = {
     "Новых субтитров, кроме уже показанных, не найдено.",
   "{time} left": "Осталось {time}",
   "Loading your library…": "Загрузка библиотеки…",
-  "Keep controlling Harbor in the background": "Управлять Harbor в фоне",
-  "Off by default, so your controller only drives Harbor while it is the focused window. Leave it off if you play games with the same controller.":
-    "По умолчанию выключено: контроллер управляет Harbor, только когда его окно активно. Оставьте выключенным, если играете в игры тем же контроллером.",
+  "Keep controlling Lart in the background": "Управлять Lart в фоне",
+  "Off by default, so your controller only drives Lart while it is the focused window. Leave it off if you play games with the same controller.":
+    "По умолчанию выключено: контроллер управляет Lart, только когда его окно активно. Оставьте выключенным, если играете в игры тем же контроллером.",
   "Use Cinemeta for title metadata": "Использовать Cinemeta для метаданных названий",
   "Turn this off to take Cinemeta out entirely and use only your own metadata addons, such as AIOMetadata or AIOStreams. Cinemeta can go stale and show already released episodes as TBA. Leave it on unless you have a metadata addon installed, or titles will have no details.":
     "Выключите, чтобы полностью убрать Cinemeta и использовать только свои дополнения с метаданными, например AIOMetadata или AIOStreams. Данные Cinemeta устаревают, и уже вышедшие серии могут отображаться как TBA. Оставьте включённым, если у вас не установлено дополнение с метаданными, иначе у названий не будет подробностей.",
-  "This one also replaces Harbor's bundled players and tools, so it installs through Harbor Setup. Harbor closes, the installer finishes, then Harbor reopens.":
-    "Это обновление также заменяет встроенные в Harbor плееры и инструменты, поэтому оно устанавливается через Harbor Setup. Harbor закроется, установщик завершит работу, затем Harbor откроется снова.",
-  "This one installs through Harbor Setup, but the update manifest carries no signature for it. Harbor will not run an installer it cannot verify. Download it and run it yourself.":
-    "Это обновление устанавливается через Harbor Setup, но в манифесте обновления нет подписи для него. Harbor не запускает установщик, который не может проверить. Скачайте его и запустите сами.",
+  "This one also replaces Lart's bundled players and tools, so it installs through Lart Setup. Lart closes, the installer finishes, then Lart reopens.":
+    "Это обновление также заменяет встроенные в Lart плееры и инструменты, поэтому оно устанавливается через Lart Setup. Lart закроется, установщик завершит работу, затем Lart откроется снова.",
+  "This one installs through Lart Setup, but the update manifest carries no signature for it. Lart will not run an installer it cannot verify. Download it and run it yourself.":
+    "Это обновление устанавливается через Lart Setup, но в манифесте обновления нет подписи для него. Lart не запускает установщик, который не может проверить. Скачайте его и запустите сами.",
   "Download installer": "Скачать установщик",
   "Install and reopen": "Установить и открыть заново",
-  "Harbor is closing. Harbor Setup will finish and reopen it.":
-    "Harbor закрывается. Harbor Setup завершит установку и откроет его снова.",
-  "Harbor Setup did not finish updating Harbor. Nothing was changed.":
-    "Harbor Setup не завершил обновление Harbor. Ничего не изменилось.",
+  "Lart is closing. Lart Setup will finish and reopen it.":
+    "Lart закрывается. Lart Setup завершит установку и откроет его снова.",
+  "Lart Setup did not finish updating Lart. Nothing was changed.":
+    "Lart Setup не завершил обновление Lart. Ничего не изменилось.",
   "Dismiss": "Скрыть",
 };
 

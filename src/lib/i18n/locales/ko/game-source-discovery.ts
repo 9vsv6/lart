@@ -11,7 +11,7 @@ export default {
 
   "games.sources.batch.failedFile": "{file}을(를) 준비하지 못했습니다.",
 
-  "games.sources.batch.restart": "선택한 파일을 함께 다운로드하려면 업데이트 후 Harbor를 다시 시작하세요.",
+  "games.sources.batch.restart": "선택한 파일을 함께 다운로드하려면 업데이트 후 Lart를 다시 시작하세요.",
 
   "games.torrent.start": "파일 다운로드",
 
@@ -19,7 +19,7 @@ export default {
 
   "games.sources.verification.action": "소스 확인",
 
-  "games.sources.verification.waiting": "소스 창에서 인증을 완료하세요. 이후 Harbor가 카탈로그를 확인합니다.",
+  "games.sources.verification.waiting": "소스 창에서 인증을 완료하세요. 이후 Lart가 카탈로그를 확인합니다.",
 
   "games.sources.source_verify_busy": "다른 소스를 확인 중입니다. 먼저 해당 인증을 완료하거나 창을 닫으세요.",
 
@@ -27,31 +27,31 @@ export default {
 
   "games.sources.source_verify_timeout": "인증 시간이 초과되었습니다. 준비되면 다시 시도하세요.",
 
-  "games.sources.source_verify_unavailable": "이 소스를 확인하려면 Harbor를 업데이트하고 다시 시작하세요.",
+  "games.sources.source_verify_unavailable": "이 소스를 확인하려면 Lart를 업데이트하고 다시 시작하세요.",
 
   "games.sources.browser.direct": "직접 다운로드",
 
   "games.sources.site.title": "사이트 열기",
-  "games.sources.site.note": "어떤 사이트든 다운로드 페이지를 붙여 넣으세요. Harbor가 자체 창에서 열고, 거기서 파일을 고르면 Harbor로 내려받습니다.",
+  "games.sources.site.note": "어떤 사이트든 다운로드 페이지를 붙여 넣으세요. Lart가 자체 창에서 열고, 거기서 파일을 고르면 Lart로 내려받습니다.",
   "games.sources.site.url": "페이지 링크",
   "games.sources.site.open": "사이트 열기",
   "games.sources.site.invalid": "공개된 https 링크여야 합니다.",
-  "games.sources.browser.intro": "Debrid 계정이 필요하지 않습니다. {host}에서 파일을 선택한 다음 Harbor에서 저장 위치를 선택하세요.",
-  "games.sources.browser.fallback": "다운로드가 자동으로 시작되지 않으면 {host} 페이지에 표시된 대체 링크를 사용하세요. Harbor가 파일을 그대로 받아옵니다.",
+  "games.sources.browser.intro": "Debrid 계정이 필요하지 않습니다. {host}에서 파일을 선택한 다음 Lart에서 저장 위치를 선택하세요.",
+  "games.sources.browser.fallback": "다운로드가 자동으로 시작되지 않으면 {host} 페이지에 표시된 대체 링크를 사용하세요. Lart가 파일을 그대로 받아옵니다.",
 
   "games.sources.browser.choose": "{host}에서 파일 선택",
 
-  "games.sources.browser.waiting": "{host} 창에서 파일을 선택하세요. Harbor에서 저장 위치를 묻습니다.",
+  "games.sources.browser.waiting": "{host} 창에서 파일을 선택하세요. Lart에서 저장 위치를 묻습니다.",
 
-  "games.sources.browser.selected": "Harbor에서 다운로드할 준비 완료",
+  "games.sources.browser.selected": "Lart에서 다운로드할 준비 완료",
 
   "games.sources.browser.another": "다른 파일 선택",
 
-  "games.sources.browser.failed": "{host}에서 Harbor로 파일을 전달하지 못했습니다. 다시 시도하거나 {host}에서 여세요.",
+  "games.sources.browser.failed": "{host}에서 Lart로 파일을 전달하지 못했습니다. 다시 시도하거나 {host}에서 여세요.",
 
   "games.sources.browser.timeout": "파일 선택 시간이 초과되었습니다. {host}을 다시 열어 파일을 선택하세요.",
 
-  "games.sources.browser.restart": "{host} 직접 다운로드를 사용하려면 업데이트 후 Harbor를 다시 시작하세요.",
+  "games.sources.browser.restart": "{host} 직접 다운로드를 사용하려면 업데이트 후 Lart를 다시 시작하세요.",
 
   "games.sources.retrySavedCatalog": "저장된 카탈로그 다시 읽기",
 
@@ -99,13 +99,13 @@ export default {
 
   "games.sources.platform.other": "{platform} 버전 · {host}에서 기본 실행 불가",
 
-  "games.sources.platform.otherNote": "운영체제에 맞는 버전을 선택하세요. Harbor는 이 기기에서 이 패키지를 기본 방식으로 설치하거나 실행할 수 없습니다.",
+  "games.sources.platform.otherNote": "운영체제에 맞는 버전을 선택하세요. Lart는 이 기기에서 이 패키지를 기본 방식으로 설치하거나 실행할 수 없습니다.",
 
   "games.sources.platform.unknown": "플랫폼 미지정",
 
   "games.sources.platform.unknownNote": "소스에 패키지의 운영체제가 명시되지 않았습니다. 다운로드 전에 배급사 정보를 확인하세요.",
 
-  "games.sources.platform.browseNote": "로컬 게임 파일을 다운로드하고 관리하려면 Harbor 데스크톱을 사용하세요.",
+  "games.sources.platform.browseNote": "로컬 게임 파일을 다운로드하고 관리하려면 Lart 데스크톱을 사용하세요.",
 
   "games.sources.platform.browse": "{platform} 버전",
 
@@ -117,9 +117,9 @@ export default {
 
   "games.sources.art.torrent": "토렌트 다운로드",
 
-  "games.sources.art.engine": "Harbor 토렌트 엔진",
+  "games.sources.art.engine": "Lart 토렌트 엔진",
 
-  "games.sources.art.reviewTorrent": "Harbor에서 다운로드",
+  "games.sources.art.reviewTorrent": "Lart에서 다운로드",
 
 
 
@@ -167,7 +167,7 @@ export default {
 
   "games.sources.discovery.change": "링크 변경",
 
-  "games.sources.discovery.harbor": "Harbor 카탈로그",
+  "games.sources.discovery.harbor": "Lart 카탈로그",
 
   "games.sources.discovery.community": "Hydra 호환 카탈로그",
 
@@ -175,7 +175,7 @@ export default {
 
   "games.sources.discovery.reviewNote": "카탈로그 항목만 저장됩니다. 파일은 직접 선택할 때 다운로드됩니다.",
 
-  "games.sources.source_no_catalog": "이 웹사이트에는 Harbor가 읽을 수 있는 카탈로그 링크가 없습니다. JSON 카탈로그 링크를 붙여넣으세요.",
+  "games.sources.source_no_catalog": "이 웹사이트에는 Lart가 읽을 수 있는 카탈로그 링크가 없습니다. JSON 카탈로그 링크를 붙여넣으세요.",
 
   "games.sources.source_url": "웹사이트 주소, HTTP(S) 카탈로그 URL 또는 Hydra 설치 링크를 입력하세요.",
 
@@ -241,7 +241,7 @@ export default {
 
   "games.sources.links.destination": "저장 위치 선택",
 
-  "games.sources.links.desktop": "파일을 다운로드하려면 Harbor 데스크톱을 여세요.",
+  "games.sources.links.desktop": "파일을 다운로드하려면 Lart 데스크톱을 여세요.",
 
   "games.sources.web.web": "웹 다운로드",
 
@@ -267,7 +267,7 @@ export default {
 
   "games.sources.web.again": "다른 작업 시작",
 
-  "games.sources.web.storage": "Harbor가 작업을 저장하지 못했습니다. 자동으로 다시 전송하지 않습니다.",
+  "games.sources.web.storage": "Lart가 작업을 저장하지 못했습니다. 자동으로 다시 전송하지 않습니다.",
 
   "games.sources.web.preparing": "TorBox에서 준비 중",
 
@@ -353,7 +353,7 @@ export default {
 
   "games.sources.pm.select": "이 전송 사용",
 
-  "games.sources.pm.review": "제출한 전송을 선택하세요. Harbor는 출처를 자동으로 확인할 수 없습니다.",
+  "games.sources.pm.review": "제출한 전송을 선택하세요. Lart는 출처를 자동으로 확인할 수 없습니다.",
 
   "games.sources.pm.retry": "전송 재시도",
 

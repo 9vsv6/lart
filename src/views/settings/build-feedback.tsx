@@ -132,7 +132,7 @@ export function BuildFeedback() {
           {IS_BETA_BUILD && <span className={`${QUAL} bg-accent-soft text-accent`}>{t("Beta")}</span>}
         </span>
       }
-      desc={t("Does Harbor {version} feel better or worse than the version you had before?", {
+      desc={t("Does Lart {version} feel better or worse than the version you had before?", {
         version: APP_VERSION,
       })}
     >

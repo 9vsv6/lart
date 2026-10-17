@@ -55,7 +55,7 @@ export function PlayerEnginePanel() {
     {
       id: "mpv",
       label: "mpv",
-      sub: t("Harbor's full video engine. Plays anything you throw at it."),
+      sub: t("Lart's full video engine. Plays anything you throw at it."),
     },
   ];
 
@@ -74,9 +74,9 @@ export function PlayerEnginePanel() {
             />
           ))}
           <ToggleRow
-            label={t("Embed mpv inside Harbor window")}
+            label={t("Embed mpv inside Lart window")}
             sub={t(
-              "Renders mpv inline so playback lives in Harbor itself. Turn off to open it in a separate window instead.",
+              "Renders mpv inline so playback lives in Lart itself. Turn off to open it in a separate window instead.",
             )}
             value={settings.playerMpvEmbed}
             onChange={(v) => update({ playerMpvEmbed: v })}
@@ -93,7 +93,7 @@ export function PlayerEnginePanel() {
               <DisplayPickerRow
                 label={t("Separate window display")}
                 desc={t(
-                  "Which monitor the separate mpv window opens on. Harbor's own window stays where it is.",
+                  "Which monitor the separate mpv window opens on. Lart's own window stays where it is.",
                 )}
                 newId="player:separate-display"
                 value={settings.playerSeparateDisplay}
@@ -120,7 +120,7 @@ export function PlayerEnginePanel() {
               <span className="flex min-w-0 flex-1 flex-col gap-2">
                 <span className={`max-w-[66ch] ${ROW_DESC}`}>
                   {t(
-                    "libmpv did not load, so playback falls back to HTML5 and formats like MKV may refuse to play. On Linux, install your distribution's libmpv package, then restart Harbor.",
+                    "libmpv did not load, so playback falls back to HTML5 and formats like MKV may refuse to play. On Linux, install your distribution's libmpv package, then restart Lart.",
                   )}
                 </span>
                 {mpvProbe.error && (
@@ -160,7 +160,7 @@ export function PlayerEnginePanel() {
           <SettingRow
             label={t("Device compatibility")}
             desc={t(
-              "Harbor checks the receiving device and uses ffmpeg when the stream needs conversion.",
+              "Lart checks the receiving device and uses ffmpeg when the stream needs conversion.",
             )}
           >
             <span className="text-[15px] text-ink-muted">{t("Automatic")}</span>

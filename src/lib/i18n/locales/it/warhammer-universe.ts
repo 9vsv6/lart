@@ -18,7 +18,7 @@ export default {
   "games.warhammerUniverse.screenNote": "Animazioni originali e un lungometraggio dal 41° millennio.",
   "games.warhammerUniverse.free": "Gratis su Warhammer TV",
   "games.warhammerUniverse.subscription": "Potrebbe servire un abbonamento Warhammer+",
-  "games.warhammerUniverse.movieNote": "Il film animato del 2010. Apri la scheda Harbor per cast, trailer e fonti.",
+  "games.warhammerUniverse.movieNote": "Il film animato del 2010. Apri la scheda Lart per cast, trailer e fonti.",
   "games.warhammerUniverse.screenScope": "Selezione pubblica di Warhammer TV. Hammer and Bolter attraversa più ambientazioni; la disponibilità dipende dal fornitore.",
   "games.warhammerUniverse.lore": "Dentro la storia",
   "games.warhammerUniverse.loreNote": "Personaggi, fazioni ed eventi cruciali, illustrati dai creatori di questi mondi.",

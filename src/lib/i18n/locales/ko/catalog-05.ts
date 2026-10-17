@@ -1,15 +1,15 @@
 const catalog05: Record<string, string> = {
   "History Buff": "역사 애호가",
   Hit: "누르기:",
-  "Hit your daily quota? Use Harbor's public relay, or host your own.":
-    "일일 할당량을 모두 사용했나요? Harbor 공개 릴레이를 사용하거나 직접 호스팅하세요.",
+  "Hit your daily quota? Use Lart's public relay, or host your own.":
+    "일일 할당량을 모두 사용했나요? Lart 공개 릴레이를 사용하거나 직접 호스팅하세요.",
   Hits: "안타",
-  "Hitting Play jumps straight into playback with the best stream Harbor finds.":
-    "재생을 누르면 Harbor가 찾은 최적의 스트림으로 바로 재생합니다.",
+  "Hitting Play jumps straight into playback with the best stream Lart finds.":
+    "재생을 누르면 Lart가 찾은 최적의 스트림으로 바로 재생합니다.",
   "Hitting Play opens the source list so you can choose quality, debrid, and audio yourself.":
     "재생을 누르면 소스 목록이 열려 화질, 디브리드, 오디오를 직접 선택할 수 있습니다.",
-  "Hold Ctrl or Cmd and scroll to resize Harbor's interface smoothly.":
-    "Ctrl 또는 Cmd를 누른 채 스크롤하면 Harbor 인터페이스 크기를 부드럽게 조절할 수 있습니다.",
+  "Hold Ctrl or Cmd and scroll to resize Lart's interface smoothly.":
+    "Ctrl 또는 Cmd를 누른 채 스크롤하면 Lart 인터페이스 크기를 부드럽게 조절할 수 있습니다.",
   "Hold for more options": "길게 눌러 옵션 더 보기",
   "Hold or right-click for models": "길게 누르거나 마우스 오른쪽 버튼을 클릭하여 모델 보기",
   "Hold to continue": "길게 눌러 계속하기",
@@ -33,7 +33,7 @@ const catalog05: Record<string, string> = {
   "Home layout on the TV": "TV 홈 레이아웃",
   "Home rail categories (Movies, TV, Anime)": "홈 레일 카테고리(영화, TV, 애니메이션)",
   "Home style": "홈 스타일",
-  "Home style (Harbor curated / Classic Stremio)": "홈 스타일(Harbor 큐레이션 / 클래식 Stremio)",
+  "Home style (Lart curated / Classic Stremio)": "홈 스타일(Lart 큐레이션 / 클래식 Stremio)",
   "Home · Continue Watching": "홈 · 이어 보기",
   "Honored writers": "수상 작가",
   Hoopla: "Hoopla",
@@ -55,17 +55,17 @@ const catalog05: Record<string, string> = {
   "Hover the speaker to reveal a horizontal slider.":
     "스피커에 마우스를 올리면 가로 슬라이더가 표시됩니다.",
   "Hover to peek": "마우스를 올려 미리보기",
-  "How Harbor finds and resolves playable streams. Debrid keys and addon installs live here.":
-    "Harbor가 재생 가능한 스트림을 찾고 확인하는 방식입니다. 디브리드 키와 애드온 설치를 여기에서 관리합니다.",
-  "How Harbor squeezes HDR movies onto a normal screen. Auto is right for almost everyone; the curves below just change the look (punchy vs soft). Only matters on HDR sources.":
-    "Harbor가 일반 화면에 HDR 영화를 맞춰 표시하는 방식을 설정합니다. 대부분은 자동이 적합하며, 아래 곡선은 화면의 느낌만 강렬하거나 부드럽게 바꿉니다. HDR 소스에만 적용됩니다.",
+  "How Lart finds and resolves playable streams. Debrid keys and addon installs live here.":
+    "Lart가 재생 가능한 스트림을 찾고 확인하는 방식입니다. 디브리드 키와 애드온 설치를 여기에서 관리합니다.",
+  "How Lart squeezes HDR movies onto a normal screen. Auto is right for almost everyone; the curves below just change the look (punchy vs soft). Only matters on HDR sources.":
+    "Lart가 일반 화면에 HDR 영화를 맞춰 표시하는 방식을 설정합니다. 대부분은 자동이 적합하며, 아래 곡선은 화면의 느낌만 강렬하거나 부드럽게 바꿉니다. HDR 소스에만 적용됩니다.",
   "How Play works": "재생 작동 방식",
   "How Watch Together and the window buttons are drawn.":
     "함께 보기와 창 버튼이 표시되는 방식을 설정합니다.",
   "How a show or movie detail page behaves when you open it.":
     "프로그램이나 영화 상세 페이지를 열 때의 동작을 설정합니다.",
-  "How aggressively Harbor rejects shady or mismatched streams before showing them in the picker.":
-    "Harbor가 재생 선택기에 표시하기 전에 의심스럽거나 일치하지 않는 스트림을 얼마나 엄격하게 제외할지 설정합니다.",
+  "How aggressively Lart rejects shady or mismatched streams before showing them in the picker.":
+    "Lart가 재생 선택기에 표시하기 전에 의심스럽거나 일치하지 않는 스트림을 얼마나 엄격하게 제외할지 설정합니다.",
   "How award packs work": "어워드 팩 사용 방법",
   "How badge packs work": "배지 팩 사용 방법",
   "How big episode cards are in the strip and grid layouts. Bigger cards show larger artwork.":
@@ -78,8 +78,8 @@ const catalog05: Record<string, string> = {
     "프로그램과 애니메이션의 에피소드 그룹 방식을 설정합니다. 기본값은 TVDB이며, 키 없이도 애니메이션 팬이 선호하는 스토리 아크, DVD 및 절대 순서를 제공합니다. TMDB는 일반 방영 순서를 유지합니다. 어느 방식을 사용해도 모든 에피소드의 재생 및 시청 완료 처리는 동일합니다.",
   "How far you can boost past 100 percent on the volume bar. Higher settings can get very loud.":
     "음량 막대에서 100%를 넘어 얼마나 증폭할 수 있는지 설정합니다. 높게 설정하면 소리가 매우 커질 수 있습니다.",
-  "How far you push the stick before Harbor reacts. Raise it if the focus drifts on its own.":
-    "Harbor가 반응하기 시작하는 스틱 이동 거리입니다. 포커스가 저절로 움직이면 값을 높이세요.",
+  "How far you push the stick before Lart reacts. Raise it if the focus drifts on its own.":
+    "Lart가 반응하기 시작하는 스틱 이동 거리입니다. 포커스가 저절로 움직이면 값을 높이세요.",
   "How fast a held direction keeps moving the focus.":
     "방향을 길게 눌렀을 때 포커스가 계속 이동하는 속도입니다.",
   "How is this build treating you?": "이 빌드는 사용하기 어떤가요?",
@@ -88,10 +88,10 @@ const catalog05: Record<string, string> = {
   "How keys behave during playback.": "재생 중 키 작동 방식을 설정합니다.",
   "How large a backdrop image the TV fetches. It does not change video quality. Balanced is the safe choice on older hardware.":
     "TV에서 불러올 배경 이미지의 크기입니다. 동영상 화질에는 영향을 주지 않습니다. 구형 하드웨어에서는 균형을 선택하는 것이 안전합니다.",
-  "How long Harbor waits before drifting off.":
-    "Harbor가 유휴 상태로 전환되기 전까지 기다리는 시간입니다.",
-  "How long Harbor waits for each addon to return streams. Aggregators that search many sources can need 45s or more. Results appear as each addon answers, so a longer wait never delays the fast ones.":
-    "각 애드온이 스트림을 반환할 때까지 Harbor가 기다리는 시간입니다. 여러 소스를 검색하는 통합 애드온은 45초 이상 필요할 수 있습니다. 각 애드온이 응답하는 즉시 결과가 표시되므로 대기 시간을 늘려도 빠른 애드온의 결과는 늦어지지 않습니다.",
+  "How long Lart waits before drifting off.":
+    "Lart가 유휴 상태로 전환되기 전까지 기다리는 시간입니다.",
+  "How long Lart waits for each addon to return streams. Aggregators that search many sources can need 45s or more. Results appear as each addon answers, so a longer wait never delays the fast ones.":
+    "각 애드온이 스트림을 반환할 때까지 Lart가 기다리는 시간입니다. 여러 소스를 검색하는 통합 애드온은 45초 이상 필요할 수 있습니다. 각 애드온이 응답하는 즉시 결과가 표시되므로 대기 시간을 늘려도 빠른 애드온의 결과는 늦어지지 않습니다.",
   "How long a saved frame sticks around before the oldest roll off.":
     "저장된 프레임이 유지되다가 오래된 것부터 삭제되기까지의 시간입니다.",
   "How long files stay": "파일 보관 기간",
@@ -107,11 +107,11 @@ const catalog05: Record<string, string> = {
   "How often the profile screen appears when you have more than one profile.":
     "프로필이 두 개 이상일 때 프로필 화면을 표시하는 빈도입니다.",
   "How packs work": "팩 이용 방법",
-  "How people find you across Harbor.": "사람들이 Harbor 전체에서 나를 찾는 데 사용됩니다.",
+  "How people find you across Lart.": "사람들이 Lart 전체에서 나를 찾는 데 사용됩니다.",
   "How posters appear as they load. Blur up looks smoothest; Fade is lighter on older or low-power devices; Instant turns it off.":
     "포스터가 로드될 때 표시되는 방식을 설정합니다. 블러 업이 가장 부드럽고, 페이드는 오래되었거나 저사양인 기기에서 더 가벼우며, 즉시는 효과를 끕니다.",
-  "How quickly the Harbor cursor moves with the right stick.":
-    "오른쪽 스틱으로 Harbor 커서를 움직이는 속도입니다.",
+  "How quickly the Lart cursor moves with the right stick.":
+    "오른쪽 스틱으로 Lart 커서를 움직이는 속도입니다.",
   "How sharp the trailer is when you hit the preview button. Auto picks from your connection speed. 1080p and Best merge separate video and audio with the bundled ffmpeg, so they take a beat longer to start.":
     "미리 보기 버튼을 눌렀을 때 재생되는 예고편의 선명도를 설정합니다. 자동은 연결 속도에 맞춰 선택합니다. 1080p와 최고 화질은 내장된 ffmpeg로 별도의 영상과 오디오를 병합하므로 재생 시작이 조금 더 걸립니다.",
   "How sharp trailers play, and when they start on their own.":
@@ -202,16 +202,16 @@ const catalog05: Record<string, string> = {
     "서버에 연결할 수 없으면 로컬 스트리밍으로 대체하지 않고 재생에 실패합니다. VPN이 서버 기기에서 실행되고 토렌트 트래픽이 이 기기에서 절대 발생하면 안 되는 경우 사용하세요.",
   "If this account has Discord linked, we'll DM you a code to reset your password without the recovery key.":
     "이 계정에 Discord가 연결되어 있으면 복구 키 없이 비밀번호를 재설정할 수 있도록 코드를 DM으로 보내드립니다.",
-  "If video keeps pausing to buffer, or you're on spotty Wi-Fi or a far-away server, this gives Harbor a bigger head start so playback rides through the rough patches.":
-    "버퍼링으로 영상이 자주 멈추거나 Wi-Fi가 불안정하거나 서버가 멀리 있다면 Harbor가 더 많은 데이터를 미리 불러와 불안정한 구간에서도 원활하게 재생합니다.",
+  "If video keeps pausing to buffer, or you're on spotty Wi-Fi or a far-away server, this gives Lart a bigger head start so playback rides through the rough patches.":
+    "버퍼링으로 영상이 자주 멈추거나 Wi-Fi가 불안정하거나 서버가 멀리 있다면 Lart가 더 많은 데이터를 미리 불러와 불안정한 구간에서도 원활하게 재생합니다.",
   "If you already rated a title, the imported score replaces it.":
     "이미 평점을 매긴 작품은 가져온 점수로 대체됩니다.",
   "If you exceed free tier, the Workers Paid plan is $5 per month and bumps the request allowance to 10 million per day.":
     "무료 한도를 초과하면 월 $5의 Workers 유료 요금제로 일일 요청 한도를 1,000만 건까지 늘릴 수 있습니다.",
   "If you left a {service} username, you'll be tagged in the release notes when this lands.":
     "{service} 사용자 이름을 남겼다면 이 문제가 반영될 때 릴리스 노트에서 태그됩니다.",
-  "If you want to put money somewhere and you use Harbor, an ElfHosted subscription is the most useful place for it. You get a managed instance, and the servers Harbor depends on stay paid for.":
-    "Harbor를 사용하면서 비용을 보태고 싶다면 ElfHosted 구독이 가장 유용합니다. 관리형 인스턴스를 이용하는 동시에 Harbor가 의존하는 서버의 운영 비용도 지원할 수 있습니다.",
+  "If you want to put money somewhere and you use Lart, an ElfHosted subscription is the most useful place for it. You get a managed instance, and the servers Lart depends on stay paid for.":
+    "Lart를 사용하면서 비용을 보태고 싶다면 ElfHosted 구독이 가장 유용합니다. 관리형 인스턴스를 이용하는 동시에 Lart가 의존하는 서버의 운영 비용도 지원할 수 있습니다.",
   "If you were going to send something, send it to ElfHosted above so the servers stay paid for, or to one of the charities below. Both do more good with it.":
     "돈을 보내고 싶다면 위의 ElfHosted에 보내 서버 운영 비용을 지원하거나 아래 자선단체 중 한 곳에 기부해 주세요. 어느 쪽이든 더 좋은 곳에 쓰입니다.",
   "If you were going to send something, send it to ElfHosted or Stremio above, or to one of the charities below. They all do more good with it.":
@@ -272,9 +272,9 @@ const catalog05: Record<string, string> = {
   "Importing {done} / {total}": "가져오는 중 {done} / {total}",
   "Importing {done} of {total}": "{total}개 중 {done}개 가져오는 중",
   "In Cinema": "극장 상영 중",
-  "In Harbor: Settings, Harbor Relay, then": "Harbor에서 설정, Harbor 릴레이로 이동한 다음",
-  "In Harbor: Settings, Harbor Relay, then {kbd}. Paste the URL with {code1} as the scheme instead of {code2}.":
-    "Harbor에서 설정, Harbor Relay로 이동한 다음 {kbd}을(를) 선택합니다. URL의 스킴을 {code2} 대신 {code1}(으)로 바꿔 붙여 넣습니다.",
+  "In Lart: Settings, Lart Relay, then": "Lart에서 설정, Lart 릴레이로 이동한 다음",
+  "In Lart: Settings, Lart Relay, then {kbd}. Paste the URL with {code1} as the scheme instead of {code2}.":
+    "Lart에서 설정, Lart Relay로 이동한 다음 {kbd}을(를) 선택합니다. URL의 스킴을 {code2} 대신 {code1}(으)로 바꿔 붙여 넣습니다.",
   "In My List": "내 목록에 있음",
   "In Theaters": "극장 상영작",
   "In Theaters Now": "현재 극장 상영작",
@@ -330,8 +330,8 @@ const catalog05: Record<string, string> = {
   Inspector: "검사기",
   Install: "설치",
   "Install Media Assistant": "Media Assistant 설치",
-  "Install SVP once (the free tier is enough). It bundles VapourSynth + svpflow; Harbor reuses them, no extra setup.":
-    "SVP를 한 번 설치하세요. 무료 요금제로 충분합니다. VapourSynth + svpflow가 포함되며 Harbor가 이를 재사용하므로 추가 설정은 필요 없습니다.",
+  "Install SVP once (the free tier is enough). It bundles VapourSynth + svpflow; Lart reuses them, no extra setup.":
+    "SVP를 한 번 설치하세요. 무료 요금제로 충분합니다. VapourSynth + svpflow가 포함되며 Lart가 이를 재사용하므로 추가 설정은 필요 없습니다.",
   "Install a Stremio addon and its catalogs show up here as poster rails, ready to browse.":
     "Stremio 애드온을 설치하면 해당 카탈로그가 포스터 목록으로 여기에 표시되어 바로 둘러볼 수 있습니다.",
   "Install a pack": "팩 설치",
@@ -355,10 +355,10 @@ const catalog05: Record<string, string> = {
   "Install wrangler and authenticate:": "wrangler를 설치하고 인증합니다.",
   Installed: "설치됨",
   "Installed addons": "설치된 애드온",
-  "Installed and detected. Harbor found its interpolation engine and will drive it directly.":
-    "설치 및 감지가 완료되었습니다. Harbor가 보간 엔진을 찾아 직접 구동합니다.",
-  "Installed and detected. Harbor found the native svpflow plugins and VapourSynth script library.":
-    "설치 및 감지됨. Harbor가 네이티브 svpflow 플러그인과 VapourSynth 스크립트 라이브러리를 찾았습니다.",
+  "Installed and detected. Lart found its interpolation engine and will drive it directly.":
+    "설치 및 감지가 완료되었습니다. Lart가 보간 엔진을 찾아 직접 구동합니다.",
+  "Installed and detected. Lart found the native svpflow plugins and VapourSynth script library.":
+    "설치 및 감지됨. Lart가 네이티브 svpflow 플러그인과 VapourSynth 스크립트 라이브러리를 찾았습니다.",
   "Installed locally": "로컬에 설치됨",
   "Installed packs": "설치된 팩",
   "Installed shaders": "설치된 셰이더",
@@ -371,7 +371,7 @@ const catalog05: Record<string, string> = {
     "TV에서 애드온을 설치하고 순서를 정합니다. 애드온 목록은 이미 계정과 동기화되므로 여기에서 설치하면 TV에도 반영됩니다.",
   "Installing {name}": "{name} 설치 중",
   "Installing {title}": "{title} 설치 중",
-  "Installing. Harbor will restart.": "설치 중입니다. Harbor가 다시 시작됩니다.",
+  "Installing. Lart will restart.": "설치 중입니다. Lart가 다시 시작됩니다.",
   "Installing...": "설치 중...",
   "Installing…": "설치 중…",
   Instant: "즉시",
@@ -453,7 +453,7 @@ const catalog05: Record<string, string> = {
   "Jina API key (optional)": "Jina API 키(선택 사항)",
   "Jina Reader": "Jina Reader",
   Join: "참여",
-  "Join Harbor": "Harbor 가입",
+  "Join Lart": "Lart 가입",
   "Join group": "그룹 참여",
   "Join the same network your TV is on, not the guest one.":
     "게스트 네트워크가 아닌 TV와 동일한 네트워크에 연결하세요.",
@@ -497,14 +497,14 @@ const catalog05: Record<string, string> = {
   "Keep Continue Watching private to each profile": "프로필별로 이어보기를 비공개로 유지",
   "Keep Dolby Vision, HDR10, HLG. Drop SDR.":
     "Dolby Vision, HDR10, HLG는 유지하고 SDR은 제외합니다.",
-  "Keep Harbor a click away. Close it to the system tray instead of quitting, and control it from the tray menu. These also mirror into the tray menu live.":
-    "Harbor를 클릭 한 번으로 여세요. 종료하는 대신 시스템 트레이로 닫고 트레이 메뉴에서 제어할 수 있습니다. 이 설정도 트레이 메뉴에 실시간으로 반영됩니다.",
+  "Keep Lart a click away. Close it to the system tray instead of quitting, and control it from the tray menu. These also mirror into the tray menu live.":
+    "Lart를 클릭 한 번으로 여세요. 종료하는 대신 시스템 트레이로 닫고 트레이 메뉴에서 제어할 수 있습니다. 이 설정도 트레이 메뉴에 실시간으로 반영됩니다.",
   "Keep Watching": "이어서 시청",
   "Keep anime in the Anime room only": "애니메이션은 애니메이션 공간에만 표시",
   "Keep anyway": "그래도 유지",
   "Keep at most": "최대 보관량",
   "Keep cached files for": "캐시 파일 보관 기간",
-  "Keep controlling Harbor in the background": "백그라운드에서도 Harbor 계속 제어",
+  "Keep controlling Lart in the background": "백그라운드에서도 Lart 계속 제어",
   "Keep downloading after you leave": "나간 후에도 다운로드 계속",
   "Keep frames for": "프레임 보관 기간",
   "Keep going in the manga behind the anime you've been watching":
@@ -516,7 +516,7 @@ const catalog05: Record<string, string> = {
   "Keep picking": "계속 선택",
   "Keep same source on next episode": "다음 에피소드에서 같은 소스 유지",
   "Keep setting up": "설정 계속하기",
-  "Keep the Harbor window above other windows.": "Harbor 창을 다른 창 위에 유지합니다.",
+  "Keep the Lart window above other windows.": "Lart 창을 다른 창 위에 유지합니다.",
   "Keep the Library Watchlist tab limited to titles you added in Stremio. Turn this off to also include anything Stremio auto-added when you pressed play.":
     "라이브러리의 관심 목록 탭을 Stremio에서 직접 추가한 작품으로만 제한합니다. 이 옵션을 끄면 재생할 때 Stremio가 자동으로 추가한 항목도 포함됩니다.",
   "Keep the clock on screen when the player is not fullscreen.":
@@ -533,18 +533,18 @@ const catalog05: Record<string, string> = {
   "Keep watching": "이어서 시청",
   "Keep your local time visible during fullscreen playback and choose how it looks.":
     "전체 화면 재생 중에도 현지 시간을 표시하고 모양을 선택합니다.",
-  "Keeping Harbor's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Harbor stays funded at the same time.":
-    "Harbor의 백엔드를 온라인으로 유지하려면 실제 비용이 들며, 커뮤니티가 부담하지 않도록 ElfHosted에서 이를 지원합니다. 구독자가 되는 것이 이러한 지원을 이어가는 가장 좋은 방법이며, 이는 기부가 아닙니다. 자체 환경에 필요한 안정적인 인프라를 이용하면서 Harbor의 운영도 동시에 지원할 수 있습니다.",
-  "Keeps HDR inside Harbor with the controls floating above the video. Subtitles render on the video. If the control bar does not appear, press Esc or use separate window.":
-    "동영상 위에 컨트롤을 띄운 채 HDR을 Harbor 내에서 유지합니다. 자막은 동영상 위에 표시됩니다. 컨트롤 바가 나타나지 않으면 Esc를 누르거나 별도 창을 사용하세요.",
-  "Keeps Harbor embedded but lifts the HDR video onto its own opaque plane with the controls floating above, so Windows shows true HDR without the brightness slider dimming it. Needs HDR-to-SDR tonemapping off.":
-    "Harbor에 삽입된 상태를 유지하면서 HDR 영상을 별도의 불투명 레이어에 표시하고 컨트롤을 그 위에 띄웁니다. 따라서 Windows에서 밝기 슬라이더로 어두워지지 않는 실제 HDR을 표시합니다. HDR-SDR 톤 매핑을 꺼야 합니다.",
+  "Keeping Lart's backend online costs real money, and ElfHosted covers it so the community does not have to. Becoming a subscriber is the best way to keep that going, and it is not a donation. You get proper infrastructure for your own setup, and Lart stays funded at the same time.":
+    "Lart의 백엔드를 온라인으로 유지하려면 실제 비용이 들며, 커뮤니티가 부담하지 않도록 ElfHosted에서 이를 지원합니다. 구독자가 되는 것이 이러한 지원을 이어가는 가장 좋은 방법이며, 이는 기부가 아닙니다. 자체 환경에 필요한 안정적인 인프라를 이용하면서 Lart의 운영도 동시에 지원할 수 있습니다.",
+  "Keeps HDR inside Lart with the controls floating above the video. Subtitles render on the video. If the control bar does not appear, press Esc or use separate window.":
+    "동영상 위에 컨트롤을 띄운 채 HDR을 Lart 내에서 유지합니다. 자막은 동영상 위에 표시됩니다. 컨트롤 바가 나타나지 않으면 Esc를 누르거나 별도 창을 사용하세요.",
+  "Keeps Lart embedded but lifts the HDR video onto its own opaque plane with the controls floating above, so Windows shows true HDR without the brightness slider dimming it. Needs HDR-to-SDR tonemapping off.":
+    "Lart에 삽입된 상태를 유지하면서 HDR 영상을 별도의 불투명 레이어에 표시하고 컨트롤을 그 위에 띄웁니다. 따라서 Windows에서 밝기 슬라이더로 어두워지지 않는 실제 HDR을 표시합니다. HDR-SDR 톤 매핑을 꺼야 합니다.",
   "Keeps fetching the full torrent in the background, even when paused, so you can pre-buffer big remuxes and scrub a finished file with no re-downloading. Uses more bandwidth and disk; cleaned up when you switch or close like normal.":
     "일시 정지 중에도 백그라운드에서 전체 토렌트를 계속 받아 대용량 리먹스를 미리 버퍼링하고, 다운로드를 반복하지 않고 완료된 파일을 탐색할 수 있습니다. 대역폭과 디스크를 더 사용하며, 평소처럼 소스를 전환하거나 앱을 닫으면 정리됩니다.",
   "Keeps the malware/year/episode-mismatch checks but allows season packs and oversized files. Same as hitting Search wider in the picker.":
     "악성 코드/연도/에피소드 불일치 검사는 유지하지만 시즌 팩과 지나치게 큰 파일은 허용합니다. 재생 선택기에서 검색 범위 확대를 누른 것과 같습니다.",
-  "Keeps the web's memory alive. Harbor would be poorer without it.":
-    "웹의 기억을 보존합니다. 이곳이 없었다면 Harbor도 지금보다 빈약했을 것입니다.",
+  "Keeps the web's memory alive. Lart would be poorer without it.":
+    "웹의 기억을 보존합니다. 이곳이 없었다면 Lart도 지금보다 빈약했을 것입니다.",
   "Keeps watching through playback and gently re-nudges the timing if the subtitle slips out of sync partway through.":
     "재생 중 계속 모니터링하며 자막 싱크가 도중에 어긋나면 타이밍을 조금씩 다시 조정합니다.",
   "Kept. Your TV gets your account when you continue.":
@@ -612,9 +612,9 @@ const catalog05: Record<string, string> = {
   Latest: "최신",
   "Latest chapters": "최신 챕터",
   "Laugh Out Loud": "포복절도 코미디",
-  "Launch straight into Big Picture when Harbor starts": "Harbor 시작 시 빅 픽처로 바로 실행합니다",
-  "Launch straight into Big Picture when Harbor starts. Press Esc at any time to leave.":
-    "Harbor 시작 시 빅 픽처로 바로 실행합니다. 언제든 Esc를 누르면 종료됩니다.",
+  "Launch straight into Big Picture when Lart starts": "Lart 시작 시 빅 픽처로 바로 실행합니다",
+  "Launch straight into Big Picture when Lart starts. Press Esc at any time to leave.":
+    "Lart 시작 시 빅 픽처로 바로 실행합니다. 언제든 Esc를 누르면 종료됩니다.",
   Layout: "레이아웃",
   "Layout editor": "레이아웃 편집기",
   "Layout name": "레이아웃 이름",
@@ -633,8 +633,8 @@ const catalog05: Record<string, string> = {
   "Leave Big Picture": "빅 픽처 종료",
   "Leave Big Picture and open settings": "Big Picture를 종료하고 설정 열기",
   "Leave a comment. No links.": "댓글을 남겨 주세요. 링크는 입력할 수 없습니다.",
-  "Leave blank to use Harbor's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.":
-    "비워 두면 Harbor의 커뮤니티 서버를 사용합니다. 자체 서버를 사용하려면 URL을 입력하세요. 아래의 비공개 모드를 켜면 어느 쪽이든 모든 통신이 차단됩니다.",
+  "Leave blank to use Lart's own community server. Enter a URL to point at your own server instead. Private mode below stops all contact either way.":
+    "비워 두면 Lart의 커뮤니티 서버를 사용합니다. 자체 서버를 사용하려면 URL을 입력하세요. 아래의 비공개 모드를 켜면 어느 쪽이든 모든 통신이 차단됩니다.",
   "Leave empty to use your RPDB key above. Or paste":
     "위의 RPDB 키를 사용하려면 비워 두세요. 또는 다음을 붙여넣으세요",
   "Leave everything below it alone. Scroll down, click {b1}, then {b2}. Copy the long string it shows you (you only see it once) and bring it back here.":
@@ -647,14 +647,14 @@ const catalog05: Record<string, string> = {
     "현재 시청 중인 에피소드는 선명하게 유지하고 이후 에피소드만 흐리게 표시합니다.",
   "Leave the show?": "프로그램에서 나갈까요?",
   "Leave the video": "영상에서 나가기",
-  "Leave this blank to use Harbor's own community server, or enter the address of a server you run yourself.":
-    "Harbor 자체 커뮤니티 서버를 사용하려면 비워 두고, 직접 운영하는 서버를 사용하려면 주소를 입력하세요.",
+  "Leave this blank to use Lart's own community server, or enter the address of a server you run yourself.":
+    "Lart 자체 커뮤니티 서버를 사용하려면 비워 두고, 직접 운영하는 서버를 사용하려면 주소를 입력하세요.",
   "Leave what you're watching?": "시청을 종료할까요?",
   Left: "왼쪽",
   "Left edge": "왼쪽 가장자리",
   "Left to right": "왼쪽에서 오른쪽",
-  "Leftover installers from past updates, cached trailers, and casting scratch files. Harbor clears old ones on launch, keeping only the most recent installer.":
-    "이전 업데이트에서 남은 설치 파일, 캐시된 예고편, 캐스팅 임시 파일입니다. Harbor는 실행할 때 이전 파일을 정리하고 가장 최근 설치 파일만 보관합니다.",
+  "Leftover installers from past updates, cached trailers, and casting scratch files. Lart clears old ones on launch, keeping only the most recent installer.":
+    "이전 업데이트에서 남은 설치 파일, 캐시된 예고편, 캐스팅 임시 파일입니다. Lart는 실행할 때 이전 파일을 정리하고 가장 최근 설치 파일만 보관합니다.",
   Legal: "법적 고지",
   Length: "길이",
   "Leone, Corbucci, dust and dynamite": "Leone, Corbucci, 먼지와 다이너마이트",
@@ -664,8 +664,8 @@ const catalog05: Record<string, string> = {
   "Let the TV keep its own theme": "TV의 자체 테마 유지",
   "Let your Discord friends see what you are watching, with the show poster and a live progress bar.":
     "Discord 친구가 프로그램 포스터와 실시간 진행률 표시줄을 통해 내가 시청 중인 콘텐츠를 볼 수 있게 합니다.",
-  "Let your Discord friends see what you are watching, with the show poster and a live progress bar. Desktop only, and only your own Discord client is involved (nothing touches a Harbor server).":
-    "프로그램 포스터와 실시간 진행률 표시줄을 통해 Discord 친구에게 시청 중인 콘텐츠를 보여줍니다. 데스크톱 전용이며 본인의 Discord 클라이언트만 사용됩니다(Harbor 서버에는 아무 정보도 전송되지 않음).",
+  "Let your Discord friends see what you are watching, with the show poster and a live progress bar. Desktop only, and only your own Discord client is involved (nothing touches a Lart server).":
+    "프로그램 포스터와 실시간 진행률 표시줄을 통해 Discord 친구에게 시청 중인 콘텐츠를 보여줍니다. 데스크톱 전용이며 본인의 Discord 클라이언트만 사용됩니다(Lart 서버에는 아무 정보도 전송되지 않음).",
   "Let your full page background show without the top cover.":
     "상단 커버 없이 전체 페이지 배경이 보이게 합니다.",
   "Let your graphics card do the heavy lifting of decoding video. It saves battery and keeps the CPU cool. Auto is right for almost everyone; only switch if playback looks wrong or won't start.":
@@ -723,7 +723,7 @@ const catalog05: Record<string, string> = {
   "Link copied": "링크 복사됨",
   "Linked as {username}": "{username}(으)로 연결됨",
   "Linked to a real Stremio account.": "실제 Stremio 계정에 연결되었습니다.",
-  "Linked to your Harbor account.": "Harbor 계정에 연결되었습니다.",
+  "Linked to your Lart account.": "Lart 계정에 연결되었습니다.",
   "Links are not allowed in comments": "댓글에는 링크를 사용할 수 없습니다",
   "Links open in a new tab automatically.": "링크는 자동으로 새 탭에서 열립니다.",
   "Liquid Glass": "리퀴드 글래스",
@@ -740,7 +740,7 @@ const catalog05: Record<string, string> = {
     "공개된 컬렉션은 커뮤니티 탐색 기능이 출시되면 표시됩니다.",
   Listen: "듣기",
   Listening: "듣는 중",
-  "Listening for Harbors": "Harbor 검색 중",
+  "Listening for Harbors": "Lart 검색 중",
   "Listening…": "듣는 중…",
   Lists: "목록",
   Literary: "문학",
@@ -760,13 +760,13 @@ const catalog05: Record<string, string> = {
   "Live action": "실사",
   "Live channel": "라이브 채널",
   "Live controller preview": "컨트롤러 실시간 미리보기",
-  "Live face scanning loads on-device AI models and can significantly increase RAM, CPU, and GPU usage while playback is active. Turn it off if Harbor slows down or your device gets hot.":
-    "실시간 얼굴 스캔은 기기 내 AI 모델을 불러오므로 재생 중 RAM, CPU 및 GPU 사용량이 크게 늘어날 수 있습니다. Harbor가 느려지거나 기기가 뜨거워지면 이 기능을 끄세요.",
+  "Live face scanning loads on-device AI models and can significantly increase RAM, CPU, and GPU usage while playback is active. Turn it off if Lart slows down or your device gets hot.":
+    "실시간 얼굴 스캔은 기기 내 AI 모델을 불러오므로 재생 중 RAM, CPU 및 GPU 사용량이 크게 늘어날 수 있습니다. Lart가 느려지거나 기기가 뜨거워지면 이 기능을 끄세요.",
   "Live for everyone": "모두에게 공개",
   "Live preview": "실시간 미리보기",
   "Live preview is on. Done and Save both keep what you've picked as your Custom theme. Reset reverts the editor to the saved palette.":
     "실시간 미리보기가 켜져 있습니다. 완료와 저장 모두 선택한 내용을 사용자 지정 테마로 유지합니다. 초기화를 누르면 편집기가 저장된 팔레트로 되돌아갑니다.",
-  "Live state of Harbor's own P2P engine on this machine.": "이 기기에서 실행 중인 Harbor 자체 P2P 엔진의 실시간 상태입니다.",
+  "Live state of Lart's own P2P engine on this machine.": "이 기기에서 실행 중인 Lart 자체 P2P 엔진의 실시간 상태입니다.",
   "Live streams that actually work.": "실제로 작동하는 라이브 스트림입니다.",
   "Live sync": "실시간 동기화",
   "Live web": "실시간 웹",
@@ -893,8 +893,8 @@ const catalog05: Record<string, string> = {
     "TV를 확인하세요. 이미 새 코드가 표시되고 있습니다. 해당 코드를 스캔하세요.",
   "Look offline to others": "다른 사람에게 오프라인으로 표시",
   'Looking for "{q}"': '"{q}" 검색 중',
-  "Looking for Harbor in your browser, the phone remote, or the manga reader remote? They moved to the Remotes page.":
-    "브라우저용 Harbor, 휴대폰 리모컨 또는 만화 리더 리모컨을 찾고 계신가요? 이제 리모컨 페이지에서 이용할 수 있습니다.",
+  "Looking for Lart in your browser, the phone remote, or the manga reader remote? They moved to the Remotes page.":
+    "브라우저용 Lart, 휴대폰 리모컨 또는 만화 리더 리모컨을 찾고 계신가요? 이제 리모컨 페이지에서 이용할 수 있습니다.",
   "Looking for peers…": "피어 찾는 중…",
   "Looking for sources": "소스 찾는 중",
   "Looking for sources…": "소스 찾는 중…",
@@ -948,10 +948,10 @@ const catalog05: Record<string, string> = {
   "Main Char": "주요 캐릭터",
   "Main subtitle line": "기본 자막 줄",
   Maintenance: "유지 관리",
-  "Make Harbor yours: swap the sidebar logo and the window/taskbar icon.":
-    "Harbor를 원하는 모습으로 꾸미세요. 사이드바 로고와 창/작업 표시줄 아이콘을 바꿀 수 있습니다.",
-  "Make Harbor's interface larger.": "Harbor 인터페이스를 더 크게 표시합니다.",
-  "Make Harbor's interface smaller.": "Harbor 인터페이스를 더 작게 표시합니다.",
+  "Make Lart yours: swap the sidebar logo and the window/taskbar icon.":
+    "Lart를 원하는 모습으로 꾸미세요. 사이드바 로고와 창/작업 표시줄 아이콘을 바꿀 수 있습니다.",
+  "Make Lart's interface larger.": "Lart 인터페이스를 더 크게 표시합니다.",
+  "Make Lart's interface smaller.": "Lart 인터페이스를 더 작게 표시합니다.",
   "Make an award pack": "어워드 팩 만들기",
   "Make everything bigger and easier to read: sidebar, menus, popups, every page.":
     "사이드바, 메뉴, 팝업과 모든 페이지를 더 크고 읽기 쉽게 표시합니다.",
@@ -976,8 +976,8 @@ const catalog05: Record<string, string> = {
   "Manage addon": "애드온 관리",
   "Manage connection": "연결 관리",
   "Manage eBook sources": "eBook 소스 관리",
-  "Manage every place Harbor can read from, whether it lives on disk or across the web.":
-    "디스크나 웹 등 Harbor에서 읽을 수 있는 모든 위치를 관리하세요.",
+  "Manage every place Lart can read from, whether it lives on disk or across the web.":
+    "디스크나 웹 등 Lart에서 읽을 수 있는 모든 위치를 관리하세요.",
   "Manage members and posts": "멤버 및 게시물 관리",
   "Manage profiles": "프로필 관리",
 };

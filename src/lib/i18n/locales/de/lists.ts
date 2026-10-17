@@ -17,8 +17,8 @@ const lists: Record<string, string> = {
   "No lists yet": "Noch keine Listen",
   "Paste a Trakt, MDBList, TMDB, Letterboxd, IMDb, or MAL list URL":
     "URL einer Trakt-, MDBList-, TMDB-, Letterboxd-, IMDb- oder MAL-Liste einfügen",
-  "Paste a public list from Trakt, MDBList, TMDB, Letterboxd, IMDb, or MyAnimeList. Harbor pulls the titles in and keeps the artwork sharp.":
-    "Füge eine öffentliche Liste von Trakt, MDBList, TMDB, Letterboxd, IMDb oder MyAnimeList ein. Harbor übernimmt die Titel und sorgt für scharfes Artwork.",
+  "Paste a public list from Trakt, MDBList, TMDB, Letterboxd, IMDb, or MyAnimeList. Lart pulls the titles in and keeps the artwork sharp.":
+    "Füge eine öffentliche Liste von Trakt, MDBList, TMDB, Letterboxd, IMDb oder MyAnimeList ein. Lart übernimmt die Titel und sorgt für scharfes Artwork.",
   'Remove list "{name}"?': "Liste „{name}“ entfernen?",
   "Search every collection on TMDB...": "Alle Sammlungen auf TMDB durchsuchen...",
   "Series from {name}: current hits, classics, and the deep cuts.":

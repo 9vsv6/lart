@@ -148,8 +148,8 @@ function HandleHeader({ hasCustom }: { hasCustom: boolean }) {
       <span className={ROW_TITLE}>{t("Handle")}</span>
       <span className={ROW_DESC}>
         {hasCustom
-          ? t("How people find you across Harbor.")
-          : t("Claim one so people can find you across Harbor.")}
+          ? t("How people find you across Lart.")
+          : t("Claim one so people can find you across Lart.")}
       </span>
     </div>
   );
@@ -186,7 +186,7 @@ function StatusLine({ status, onPick }: { status: HandleStatus; onPick: (s: stri
   if (status.state === "error")
     return (
       <span className="text-[14px] leading-[21px] text-ink-muted">
-        {t("Sign in to Harbor to check availability.")}
+        {t("Sign in to Lart to check availability.")}
       </span>
     );
 

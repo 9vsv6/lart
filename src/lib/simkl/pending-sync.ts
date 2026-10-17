@@ -1,5 +1,5 @@
 const KEY = "harbor.simkl.pendingwatched.v1";
-// Tracker accounts belong to Harbor profiles; never replay an unowned legacy queue.
+// Tracker accounts belong to Lart profiles; never replay an unowned legacy queue.
 import { activeProfileId } from "@/lib/active-profile-id";
 
 let generation = 0;

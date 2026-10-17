@@ -119,7 +119,7 @@ export function MobileShows() {
           {t("Couldn't load shows")}
         </h2>
         <p className="max-w-xs text-[13.5px] leading-relaxed text-ink-muted">
-          {t("Harbor couldn't reach the catalog servers. Check your connection and try again.")}
+          {t("Lart couldn't reach the catalog servers. Check your connection and try again.")}
         </p>
         <button
           type="button"

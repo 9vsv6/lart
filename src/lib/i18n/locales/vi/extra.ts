@@ -3,8 +3,8 @@ const extra: Record<string, string> = {
   "{count} community ratings on stremio-addons.net":
     "{count} lượt xếp hạng từ cộng đồng trên stremio-addons.net",
   "{count} selected": "Đã chọn {count}",
-  "{count} tracker request blocked this session. Harbor itself sends zero telemetry.":
-    "Đã chặn {count} yêu cầu theo dõi trong phiên này. Bản thân Harbor không gửi dữ liệu đo từ xa.",
+  "{count} tracker request blocked this session. Lart itself sends zero telemetry.":
+    "Đã chặn {count} yêu cầu theo dõi trong phiên này. Bản thân Lart không gửi dữ liệu đo từ xa.",
   "{d}d ago": "{d} ngày trước",
   "{h}h ago": "{h} giờ trước",
   "{langs} only": "Chỉ {langs}",
@@ -54,10 +54,10 @@ const extra: Record<string, string> = {
   "24/7": "24/7",
   "4 digits": "4 chữ số",
   "5s": "5s",
-  "A browser tab opened on AniList. Approve Harbor there, then copy the text it shows and paste it below.":
-    "Một thẻ trình duyệt đã mở trên AniList. Hãy phê duyệt Harbor tại đó, rồi sao chép nội dung hiển thị và dán vào bên dưới.",
-  "A browser tab opened on MyAnimeList. Approve Harbor there, then copy the code or the page URL and paste it below.":
-    "Một thẻ trình duyệt đã mở trên MyAnimeList. Hãy phê duyệt Harbor tại đó, rồi sao chép mã hoặc URL của trang và dán vào bên dưới.",
+  "A browser tab opened on AniList. Approve Lart there, then copy the text it shows and paste it below.":
+    "Một thẻ trình duyệt đã mở trên AniList. Hãy phê duyệt Lart tại đó, rồi sao chép nội dung hiển thị và dán vào bên dưới.",
+  "A browser tab opened on MyAnimeList. Approve Lart there, then copy the code or the page URL and paste it below.":
+    "Một thẻ trình duyệt đã mở trên MyAnimeList. Hãy phê duyệt Lart tại đó, rồi sao chép mã hoặc URL của trang và dán vào bên dưới.",
   "A debrid service is connected. You'll get instant, high-quality streams.":
     "Đã kết nối dịch vụ debrid. Bạn sẽ có luồng phát chất lượng cao tức thì.",
   "A grown-up can enter the parent PIN to keep watching.":
@@ -71,10 +71,10 @@ const extra: Record<string, string> = {
   "Access denied": "Truy cập bị từ chối",
   "Ad {n}": "Quảng cáo {n}",
   Add: "Thêm",
-  "Add {n} titles from your Harbor watchlist to Trakt? Trakt skips any it already has.":
-    "Thêm {n} tựa phim từ danh sách xem Harbor vào Trakt? Trakt sẽ bỏ qua những tựa đã có.",
-  "Add {n} titles from your Trakt watchlist to Harbor?":
-    "Thêm {n} tựa phim từ danh sách xem Trakt vào Harbor?",
+  "Add {n} titles from your Lart watchlist to Trakt? Trakt skips any it already has.":
+    "Thêm {n} tựa phim từ danh sách xem Lart vào Trakt? Trakt sẽ bỏ qua những tựa đã có.",
+  "Add {n} titles from your Trakt watchlist to Lart?":
+    "Thêm {n} tựa phim từ danh sách xem Trakt vào Lart?",
   "Add {title} to MyAnimeList": "Thêm {title} vào MyAnimeList",
   "Add a profile for someone else and everyone keeps their own Continue Watching, watch history, and progress.":
     "Thêm hồ sơ cho người khác để mỗi người có riêng mục Xem tiếp, lịch sử xem và tiến độ.",
@@ -87,7 +87,7 @@ const extra: Record<string, string> = {
   "Add an MDBList API key to unlock this.": "Thêm khóa API MDBList để mở khóa tính năng này.",
   "Add to MAL": "Thêm vào MAL",
   "Add to watchlist": "Thêm vào danh sách xem",
-  "Added {n} to your Harbor watchlist": "Đã thêm {n} vào danh sách xem Harbor",
+  "Added {n} to your Lart watchlist": "Đã thêm {n} vào danh sách xem Lart",
   "Added to stremio-addons.net in the last 14 days":
     "Được thêm vào stremio-addons.net trong 14 ngày qua",
   "Adds a blurred glass effect behind the stream picker panel.":
@@ -140,10 +140,10 @@ const extra: Record<string, string> = {
   "Gemini · in-player song ID": "Gemini · nhận diện bài hát trong trình phát",
   "Gemini API key": "Khóa API Gemini",
   "AudD API token": "Token API AudD",
-  "Authorize Harbor on AniList": "Ủy quyền Harbor trên AniList",
-  "Authorize Harbor on MyAnimeList": "Ủy quyền Harbor trên MyAnimeList",
-  "Authorize Harbor on Simkl": "Ủy quyền Harbor trên Simkl",
-  "Authorize Harbor on Trakt": "Ủy quyền Harbor trên Trakt",
+  "Authorize Lart on AniList": "Ủy quyền Lart trên AniList",
+  "Authorize Lart on MyAnimeList": "Ủy quyền Lart trên MyAnimeList",
+  "Authorize Lart on Simkl": "Ủy quyền Lart trên Simkl",
+  "Authorize Lart on Trakt": "Ủy quyền Lart trên Trakt",
   "Authorized {when}": "Đã ủy quyền {when}",
   "Auto is best for most people. mpv handles the trickiest 4K, HDR, and audio formats.":
     "Tự động phù hợp nhất với hầu hết mọi người. mpv xử lý tốt các định dạng 4K, HDR và âm thanh phức tạp nhất.",
@@ -184,8 +184,8 @@ const extra: Record<string, string> = {
     "Tạo một bộ lọc có tên rồi áp dụng trong trình chọn nguồn để ẩn mọi nội dung không khớp. Mỗi bộ lọc kết hợp các tiêu chí bằng AND và bỏ qua tiêu chí để trống.",
   "Build your own palette": "Tạo bảng màu riêng",
   "Cache location": "Vị trí bộ nhớ đệm",
-  "Cap how much disk the cache can use. When it goes over, Harbor deletes the oldest files first. Enforced on launch and as streams close.":
-    "Giới hạn dung lượng ổ đĩa mà bộ nhớ đệm có thể dùng. Khi vượt giới hạn, Harbor sẽ xóa các tệp cũ nhất trước. Giới hạn được áp dụng khi khởi chạy và khi đóng luồng phát.",
+  "Cap how much disk the cache can use. When it goes over, Lart deletes the oldest files first. Enforced on launch and as streams close.":
+    "Giới hạn dung lượng ổ đĩa mà bộ nhớ đệm có thể dùng. Khi vượt giới hạn, Lart sẽ xóa các tệp cũ nhất trước. Giới hạn được áp dụng khi khởi chạy và khi đóng luồng phát.",
   "Change…": "Thay đổi…",
   "Changing the location restarts the engine. Clearing removes all cached stream files right away; anything you reopen will re-fetch.":
     "Thay đổi vị trí sẽ khởi động lại bộ máy. Xóa sẽ loại bỏ ngay tất cả tệp luồng phát đã lưu trong bộ nhớ đệm; mọi nội dung mở lại sẽ được tải lại.",
@@ -206,7 +206,7 @@ const extra: Record<string, string> = {
   "Click another": "Nhấp vào dòng khác",
   "Client ID": "ID máy khách",
   "Client secret": "Mã bí mật máy khách",
-  "Close Harbor?": "Đóng Harbor?",
+  "Close Lart?": "Đóng Lart?",
   "Close image viewer": "Đóng trình xem ảnh",
   "Close match to host": "Gần khớp với máy chủ",
   "Close overview": "Đóng phần tổng quan",
@@ -240,8 +240,8 @@ const extra: Record<string, string> = {
   "Continue in your browser...": "Tiếp tục trong trình duyệt...",
   "Copy diagnostics": "Sao chép thông tin chẩn đoán",
   "Copy diagnostics grabs the engine status and your P2P settings as JSON, handy to paste into a bug report. The engine folder holds the DHT cache (dht.json) and active transfer data.": "Sao chép thông tin chẩn đoán sẽ lấy trạng thái engine và cài đặt P2P dưới dạng JSON, tiện để dán vào báo cáo lỗi. Thư mục engine chứa bộ nhớ đệm DHT (dht.json) và dữ liệu truyền đang hoạt động.",
-  "Copy your Harbor watchlist over to Trakt, or pull your Trakt watchlist into Harbor. Safe to run again, Trakt skips anything it already has.":
-    "Sao chép danh sách xem Harbor sang Trakt hoặc nhập danh sách xem Trakt vào Harbor. Có thể chạy lại an toàn, Trakt sẽ bỏ qua mọi nội dung đã có.",
+  "Copy your Lart watchlist over to Trakt, or pull your Trakt watchlist into Lart. Safe to run again, Trakt skips anything it already has.":
+    "Sao chép danh sách xem Lart sang Trakt hoặc nhập danh sách xem Trakt vào Lart. Có thể chạy lại an toàn, Trakt sẽ bỏ qua mọi nội dung đã có.",
   "Corner radius": "Độ bo góc",
   "Could not identify this title on Trakt.": "Không thể xác định nội dung này trên Trakt.",
   "Could not send: {error}": "Không thể gửi: {error}",
@@ -320,8 +320,8 @@ const extra: Record<string, string> = {
   "Episode details": "Chi tiết tập",
   "Episode ordering": "Thứ tự tập",
   "Esc exits fullscreen first": "Esc thoát toàn màn hình trước",
-  "Everyone who uses this Harbor gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
-    "Mỗi người dùng Harbor này đều có lịch sử xem, ảnh đại diện, màu sắc và mã PIN tùy chọn riêng. Có thể chuyển đổi bất cứ lúc nào.",
+  "Everyone who uses this Lart gets their own watch history, avatar, color, and optional PIN. Switch anytime.":
+    "Mỗi người dùng Lart này đều có lịch sử xem, ảnh đại diện, màu sắc và mã PIN tùy chọn riêng. Có thể chuyển đổi bất cứ lúc nào.",
   "Exit sync mode": "Thoát chế độ đồng bộ",
   Experimental: "Thử nghiệm",
   Expiring: "Sắp hết hạn",
@@ -369,10 +369,10 @@ const extra: Record<string, string> = {
   Gradient: "Dải màu chuyển tiếp",
   "Group episodes by story arc": "Nhóm các tập theo mạch truyện",
   "Grown-ups only": "Chỉ dành cho người lớn",
-  "Harbor keeps your MyAnimeList watch progress in sync.":
-    "Harbor luôn đồng bộ tiến độ xem trên MyAnimeList của bạn.",
-  "Harbor ranking puts the best-scoring sources first. Addon order follows your addon priority (organize it in Addons, Installed tab, Reorder) and keeps each addon's results in the order it returned them, like the Stremio and Vidi apps.":
-    "Xếp hạng Harbor đưa các nguồn có điểm cao nhất lên đầu. Thứ tự tiện ích bổ sung tuân theo mức ưu tiên của bạn (sắp xếp trong Tiện ích bổ sung, thẻ Đã cài đặt, Sắp xếp lại) và giữ kết quả của từng tiện ích bổ sung theo đúng thứ tự mà tiện ích đó trả về, giống như các ứng dụng Stremio và Vidi.",
+  "Lart keeps your MyAnimeList watch progress in sync.":
+    "Lart luôn đồng bộ tiến độ xem trên MyAnimeList của bạn.",
+  "Lart ranking puts the best-scoring sources first. Addon order follows your addon priority (organize it in Addons, Installed tab, Reorder) and keeps each addon's results in the order it returned them, like the Stremio and Vidi apps.":
+    "Xếp hạng Lart đưa các nguồn có điểm cao nhất lên đầu. Thứ tự tiện ích bổ sung tuân theo mức ưu tiên của bạn (sắp xếp trong Tiện ích bổ sung, thẻ Đã cài đặt, Sắp xếp lại) và giữ kết quả của từng tiện ích bổ sung theo đúng thứ tự mà tiện ích đó trả về, giống như các ứng dụng Stremio và Vidi.",
   HDR: "HDR",
   "HDR to SDR: Off": "HDR sang SDR: Tắt",
   "HDR to SDR: On": "HDR sang SDR: Bật",
@@ -387,8 +387,8 @@ const extra: Record<string, string> = {
   "Hides the button on its own after a few seconds so a wrong one doesn't sit there the whole episode.":
     "Tự ẩn nút sau vài giây để nút không chính xác không hiện suốt cả tập.",
   "High-quality episode images": "Hình ảnh tập chất lượng cao",
-  "Hold Ctrl or Cmd and scroll to resize Harbor's interface smoothly.":
-    "Giữ Ctrl hoặc Cmd và cuộn để thay đổi kích thước giao diện Harbor một cách mượt mà.",
+  "Hold Ctrl or Cmd and scroll to resize Lart's interface smoothly.":
+    "Giữ Ctrl hoặc Cmd và cuộn để thay đổi kích thước giao diện Lart một cách mượt mà.",
   "Home hero shadow": "Bóng nền nội dung nổi bật trên Trang chủ",
   "Home languages": "Ngôn ngữ Trang chủ",
   "Home Rail Settings": "Cài đặt hàng nội dung Trang chủ",
@@ -437,8 +437,8 @@ const extra: Record<string, string> = {
   "Keep Watching": "Xem tiếp",
   "Keeps fetching the full torrent in the background, even when paused, so you can pre-buffer big remuxes and scrub a finished file with no re-downloading. Uses more bandwidth and disk; cleaned up when you switch or close like normal.":
     "Tiếp tục tải toàn bộ torrent trong nền ngay cả khi tạm dừng, để bạn có thể tải đệm trước các bản remux lớn và tua trong tệp đã tải xong mà không cần tải lại. Tốn thêm băng thông và dung lượng đĩa; được dọn dẹp như bình thường khi bạn chuyển nguồn hoặc đóng.",
-  "Keeps HDR inside Harbor with the controls floating above the video. Subtitles render on the video. If the control bar does not appear, press Esc or use separate window.":
-    "Giữ HDR trong Harbor với các nút điều khiển nổi trên video. Phụ đề hiển thị trực tiếp trên video. Nếu thanh điều khiển không xuất hiện, hãy nhấn Esc hoặc dùng cửa sổ riêng.",
+  "Keeps HDR inside Lart with the controls floating above the video. Subtitles render on the video. If the control bar does not appear, press Esc or use separate window.":
+    "Giữ HDR trong Lart với các nút điều khiển nổi trên video. Phụ đề hiển thị trực tiếp trên video. Nếu thanh điều khiển không xuất hiện, hãy nhấn Esc hoặc dùng cửa sổ riêng.",
   "Kids profile": "Hồ sơ trẻ em",
   "Last updated {ago}": "Cập nhật lần cuối {ago}",
   "Leave the show?": "Rời khỏi phim bộ?",
@@ -549,8 +549,8 @@ const extra: Record<string, string> = {
   "OpenRouter API key (sk-or-...)": "Khóa API OpenRouter (sk-or-...)",
   "Opens Stremio in your browser. Works with email, Facebook, and Apple accounts.":
     "Mở Stremio trong trình duyệt. Hỗ trợ tài khoản email, Facebook và Apple.",
-  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Harbor writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
-    "Tùy chọn cho tab Thư viện → Nội bộ: các thư mục được quét từ ổ đĩa của bạn. Khi xuất siêu dữ liệu, Harbor ghi tệp .nfo kiểu Kodi và tải hình ảnh về cạnh từng tệp theo các kích thước bên dưới.",
+  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Lart writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
+    "Tùy chọn cho tab Thư viện → Nội bộ: các thư mục được quét từ ổ đĩa của bạn. Khi xuất siêu dữ liệu, Lart ghi tệp .nfo kiểu Kodi và tải hình ảnh về cạnh từng tệp theo các kích thước bên dưới.",
   "or use email": "hoặc dùng email",
   "out of 5": "trên 5",
   "Output device": "Thiết bị đầu ra",
@@ -562,13 +562,13 @@ const extra: Record<string, string> = {
   "Paste the text from AniList": "Dán văn bản từ AniList",
   "Peers, speed and progress while a torrent streams. Sits clear of the exit button, top left.":
     "Hiển thị máy ngang hàng, tốc độ và tiến trình khi phát torrent. Nằm ở góc trên bên trái, không che nút thoát.",
-  "Pick a display and body pairing, or upload your own font to use across Harbor.":
-    "Chọn cặp phông chữ tiêu đề và nội dung, hoặc tải phông chữ riêng lên để dùng trong toàn bộ Harbor.",
+  "Pick a display and body pairing, or upload your own font to use across Lart.":
+    "Chọn cặp phông chữ tiêu đề và nội dung, hoặc tải phông chữ riêng lên để dùng trong toàn bộ Lart.",
   "Pick a list to view it.": "Chọn một danh sách để xem.",
   "Pick a look. Every color and surface updates instantly.":
     "Chọn giao diện. Mọi màu sắc và bề mặt sẽ cập nhật tức thì.",
-  "Pick a source once and Harbor keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
-    "Chọn nguồn một lần, Harbor sẽ tiếp tục phát các tập còn lại của mùa đó từ cùng bản phát hành mà không cần chọn lại. Hoạt động tốt nhất với gói trọn mùa debrid. Không áp dụng cho anime.",
+  "Pick a source once and Lart keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
+    "Chọn nguồn một lần, Lart sẽ tiếp tục phát các tập còn lại của mùa đó từ cùng bản phát hành mà không cần chọn lại. Hoạt động tốt nhất với gói trọn mùa debrid. Không áp dụng cho anime.",
   "Pick a video": "Chọn video",
   "Pick a World": "Chọn thế giới",
   "Pick an avatar": "Chọn ảnh đại diện",
@@ -576,8 +576,8 @@ const extra: Record<string, string> = {
     "Chọn OLED cho màn hình hiển thị màu đen tuyệt đối để thấy rõ chi tiết vùng tối trong HDR được ánh xạ tông màu.",
   "Pick up partly-watched episodes and movies at your saved spot. Anything watched past 80% always restarts. Turn this off to always start from the beginning, handy if you rewatch shows.":
     "Tiếp tục phát các tập và phim đang xem dở từ vị trí đã lưu. Nội dung đã xem quá 80% luôn phát lại từ đầu. Tắt tùy chọn này để luôn phát từ đầu, tiện khi xem lại phim bộ.",
-  "Pick which audio and subtitle languages Harbor reaches for first.":
-    "Chọn ngôn ngữ âm thanh và phụ đề mà Harbor ưu tiên tìm trước.",
+  "Pick which audio and subtitle languages Lart reaches for first.":
+    "Chọn ngôn ngữ âm thanh và phụ đề mà Lart ưu tiên tìm trước.",
   "Pick which score anime cards show. IMDb falls back to MAL when a title has no IMDb rating yet.":
     "Chọn điểm số hiển thị trên thẻ anime. IMDb sẽ dùng điểm MAL khi tựa phim chưa có điểm IMDb.",
   "Pick your source": "Chọn nguồn",
@@ -592,8 +592,8 @@ const extra: Record<string, string> = {
     "Phát, rồi nhấn vào câu bạn nghe thấy tại hai vị trí (một ở đầu, một ở cuối) để sửa độ lệch.",
   "Player log": "Nhật ký trình phát",
   "Playing now": "Đang phát",
-  "Plays + ratings sync from Harbor to Trakt.tv.":
-    "Lượt phát và điểm đánh giá được đồng bộ từ Harbor sang Trakt.tv.",
+  "Plays + ratings sync from Lart to Trakt.tv.":
+    "Lượt phát và điểm đánh giá được đồng bộ từ Lart sang Trakt.tv.",
   "Plays a muted trailer in the backdrop when you open a title. Click the speaker to unmute. Falls back to the image when no trailer is available.":
     "Phát trailer tắt tiếng trên hình nền khi bạn mở một tựa phim. Nhấp vào loa để bật tiếng. Nếu không có trailer, hệ thống sẽ dùng hình ảnh.",
   "Plays HDR in its own window so Windows shows real HDR and the SDR brightness slider stops dimming it. The most reliable way to get true HDR.":
@@ -717,8 +717,8 @@ const extra: Record<string, string> = {
   "Service-specific browsing needs a TMDB key. Pick All / Movies / Shows to browse via Cinemeta.":
     "Duyệt theo từng dịch vụ cần khóa TMDB. Chọn Tất cả / Phim / Phim bộ để duyệt qua Cinemeta.",
   "Set to where the video is right now": "Đặt tại vị trí hiện tại của video",
-  "Set your MyAnimeList profile picture as your Harbor avatar.":
-    "Đặt ảnh đại diện MyAnimeList làm ảnh đại diện Harbor.",
+  "Set your MyAnimeList profile picture as your Lart avatar.":
+    "Đặt ảnh đại diện MyAnimeList làm ảnh đại diện Lart.",
   Shadow: "Bóng đổ",
   Show: "Hiển thị",
   "Show {n} more reviews": "Hiển thị thêm {n} bài đánh giá",
@@ -728,8 +728,8 @@ const extra: Record<string, string> = {
     "Hiển thị nhanh lớp phủ âm lượng khi bạn thay đổi âm lượng trong lúc các nút điều khiển trình phát đang ẩn, để thay đổi bằng bàn phím và con lăn luôn hiển thị.",
   "Show a Skip button when a known injected ad plays, and a small report button on new releases so you can mark ads for review.":
     "Hiển thị nút Bỏ qua khi phát quảng cáo chèn đã nhận diện và nút báo cáo nhỏ trên nội dung mới phát hành để bạn đánh dấu quảng cáo cần xem xét.",
-  "Show a Skip Intro / Skip Credits button when Harbor detects one. Turn this off to never show it. You can also tap the X on the button to dismiss a wrong one for the rest of the episode.":
-    "Hiển thị nút Bỏ qua phần mở đầu / Bỏ qua phần giới thiệu cuối phim khi Harbor phát hiện. Tắt tùy chọn này để không bao giờ hiển thị. Bạn cũng có thể nhấn X trên nút để ẩn mục bị nhận diện sai trong phần còn lại của tập.",
+  "Show a Skip Intro / Skip Credits button when Lart detects one. Turn this off to never show it. You can also tap the X on the button to dismiss a wrong one for the rest of the episode.":
+    "Hiển thị nút Bỏ qua phần mở đầu / Bỏ qua phần giới thiệu cuối phim khi Lart phát hiện. Tắt tùy chọn này để không bao giờ hiển thị. Bạn cũng có thể nhấn X trên nút để ẩn mục bị nhận diện sai trong phần còn lại của tập.",
   "Show an “on disk” badge on cards": "Hiển thị nhãn “trên ổ đĩa” trên thẻ",
   "Show audience score on cards": "Hiển thị điểm khán giả trên thẻ",
   "Show comments on detail pages": "Hiển thị bình luận trên trang chi tiết",
@@ -767,8 +767,8 @@ const extra: Record<string, string> = {
   "Show Up Next on Simkl rail": "Hiển thị Xem tiếp trên hàng Simkl",
   "Show what you're actually watching, under the title in the player.":
     "Hiển thị nội dung bạn thực sự đang xem bên dưới tiêu đề trong trình phát.",
-  "Show your operating system's own title bar with its minimize, maximize, and close buttons. They stay reachable everywhere, including while a video is playing. Turn this off to use Harbor's built-in window buttons.":
-    "Hiển thị thanh tiêu đề riêng của hệ điều hành cùng các nút thu nhỏ, phóng to và đóng. Các nút này luôn có thể truy cập ở mọi nơi, kể cả khi đang phát video. Tắt để dùng các nút cửa sổ tích hợp của Harbor.",
+  "Show your operating system's own title bar with its minimize, maximize, and close buttons. They stay reachable everywhere, including while a video is playing. Turn this off to use Lart's built-in window buttons.":
+    "Hiển thị thanh tiêu đề riêng của hệ điều hành cùng các nút thu nhỏ, phóng to và đóng. Các nút này luôn có thể truy cập ở mọi nơi, kể cả khi đang phát video. Tắt để dùng các nút cửa sổ tích hợp của Lart.",
   "Showing {shown} of {total}.": "Đang hiển thị {shown} trên {total}.",
   "Shows each episode's rating. Add your free OMDb API key for real IMDb scores; without it, ratings fall back to TMDB.":
     "Hiển thị điểm đánh giá của từng tập. Thêm khóa OMDb API miễn phí để xem điểm IMDb thực; nếu không, điểm sẽ dùng TMDB thay thế.",
@@ -776,8 +776,8 @@ const extra: Record<string, string> = {
     "Hiển thị tóm tắt nội dung tập trên thẻ. Tắt để ẩn.",
   "Shows titles suitable up to age {age}.":
     "Hiển thị nội dung phù hợp với độ tuổi tối đa là {age}.",
-  "Sign in to Stremio first so Harbor knows which watchlist to sync.":
-    "Trước tiên, hãy đăng nhập Stremio để Harbor biết cần đồng bộ danh sách xem nào.",
+  "Sign in to Stremio first so Lart knows which watchlist to sync.":
+    "Trước tiên, hãy đăng nhập Stremio để Lart biết cần đồng bộ danh sách xem nào.",
   "Sign in to Stremio first. This reads the active profile's library.":
     "Trước tiên, hãy đăng nhập Stremio. Thao tác này sẽ đọc thư viện của hồ sơ đang hoạt động.",
   "Sign in to Stremio first. This scans the active profile's library.":
@@ -789,8 +789,8 @@ const extra: Record<string, string> = {
   "Skip injected ad?": "Bỏ qua quảng cáo được chèn?",
   "Skip injected ads automatically": "Tự động bỏ qua quảng cáo được chèn",
   "Skip intros & credits": "Bỏ qua đoạn mở đầu và phần danh đề",
-  "Skip the 'stream over peer-to-peer?' prompt and start uncached torrents immediately. Harbor remembers your choice after the first confirmation anyway.":
-    "Bỏ qua lời nhắc 'phát qua mạng ngang hàng?' và phát ngay các torrent chưa được lưu vào bộ nhớ đệm. Dù vậy, Harbor sẽ ghi nhớ lựa chọn sau lần xác nhận đầu tiên.",
+  "Skip the 'stream over peer-to-peer?' prompt and start uncached torrents immediately. Lart remembers your choice after the first confirmation anyway.":
+    "Bỏ qua lời nhắc 'phát qua mạng ngang hàng?' và phát ngay các torrent chưa được lưu vào bộ nhớ đệm. Dù vậy, Lart sẽ ghi nhớ lựa chọn sau lần xác nhận đầu tiên.",
   "Skip Who's watching and always start as this profile. PIN-locked profiles can't be a default.":
     "Bỏ qua màn hình Ai đang xem và luôn khởi động bằng hồ sơ này. Không thể đặt hồ sơ bị khóa bằng PIN làm mặc định.",
   "skipped {n} anime": "đã bỏ qua {n} anime",
@@ -816,8 +816,8 @@ const extra: Record<string, string> = {
   "Stream cache": "Bộ nhớ đệm luồng",
   "Stream descriptions": "Mô tả luồng",
   "Stream quality in player": "Chất lượng luồng phát trong trình phát",
-  "Stream torrents straight from Harbor's built-in engine when you have no debrid set up, or a torrent isn't cached. This connects to peers over your own connection. Turn off to only ever play debrid and direct links.":
-    "Phát torrent trực tiếp bằng công cụ tích hợp của Harbor khi bạn chưa thiết lập dịch vụ debrid hoặc torrent chưa được lưu vào bộ nhớ đệm. Tính năng này kết nối với các peer qua kết nối của bạn. Tắt để chỉ phát liên kết debrid và liên kết trực tiếp.",
+  "Stream torrents straight from Lart's built-in engine when you have no debrid set up, or a torrent isn't cached. This connects to peers over your own connection. Turn off to only ever play debrid and direct links.":
+    "Phát torrent trực tiếp bằng công cụ tích hợp của Lart khi bạn chưa thiết lập dịch vụ debrid hoặc torrent chưa được lưu vào bộ nhớ đệm. Tính năng này kết nối với các peer qua kết nối của bạn. Tắt để chỉ phát liên kết debrid và liên kết trực tiếp.",
   "Streaming quality": "Chất lượng phát trực tuyến",
   "Style name": "Tên kiểu",
   "Submit report": "Gửi báo cáo",
@@ -865,8 +865,8 @@ const extra: Record<string, string> = {
   "This list needs your {key} API key. Add it in Settings, then refresh.":
     "Danh sách này cần khóa API {key} của bạn. Thêm khóa trong Cài đặt, rồi làm mới.",
   "This trailer plays on YouTube.": "Trailer này phát trên YouTube.",
-  "This usually means antivirus removed the server file (stremio-server.exe). Add Harbor's install folder to your antivirus exclusions, then reinstall.":
-    "Điều này thường có nghĩa là phần mềm diệt virus đã xóa tệp máy chủ (stremio-server.exe). Thêm thư mục cài đặt Harbor vào danh sách loại trừ của phần mềm diệt virus, rồi cài đặt lại.",
+  "This usually means antivirus removed the server file (stremio-server.exe). Add Lart's install folder to your antivirus exclusions, then reinstall.":
+    "Điều này thường có nghĩa là phần mềm diệt virus đã xóa tệp máy chủ (stremio-server.exe). Thêm thư mục cài đặt Lart vào danh sách loại trừ của phần mềm diệt virus, rồi cài đặt lại.",
   "Time's up!": "Hết giờ!",
   "TMDB Rating": "Điểm TMDB",
   "To the side": "Sang bên cạnh",
@@ -878,8 +878,8 @@ const extra: Record<string, string> = {
   "Top left": "Trên cùng bên trái",
   "Top right": "Trên cùng bên phải",
   "Torrent name": "Tên torrent",
-  "Track everything you watch, see your watchlist, and get personalized recommendations on Harbor's home page. Free at trakt.tv.":
-    "Theo dõi mọi nội dung bạn xem, xem danh sách xem và nhận đề xuất dành riêng cho bạn trên trang chủ Harbor. Miễn phí tại trakt.tv.",
+  "Track everything you watch, see your watchlist, and get personalized recommendations on Lart's home page. Free at trakt.tv.":
+    "Theo dõi mọi nội dung bạn xem, xem danh sách xem và nhận đề xuất dành riêng cho bạn trên trang chủ Lart. Miễn phí tại trakt.tv.",
   "Track people": "Theo dõi người",
   Trakt: "Trakt",
   "Trakt account limit reached. Upgrade to Trakt VIP or trim your watchlist.":
@@ -960,8 +960,8 @@ const extra: Record<string, string> = {
   "When a movie or episode starts, briefly show its IMDb parental guide (violence, profanity, substances, frightening scenes and more) with severity. Fades on its own.":
     "Khi phim hoặc tập bắt đầu, hiển thị nhanh hướng dẫn dành cho phụ huynh của IMDb (bạo lực, ngôn từ thô tục, chất kích thích, cảnh đáng sợ và nội dung khác) kèm mức độ. Tự động mờ dần.",
   "When a title is in your local library": "Khi một tiêu đề có trong thư viện cục bộ",
-  "When auto-playing the next episode, keep the same release/source you were just watching instead of Harbor's top-ranked stream. Falls back to the best stream if that source isn't available.":
-    "Khi tự động phát tập tiếp theo, tiếp tục dùng cùng bản phát hành/nguồn bạn vừa xem thay vì luồng được Harbor xếp hạng cao nhất. Nếu nguồn đó không khả dụng, ứng dụng sẽ dùng luồng tốt nhất.",
+  "When auto-playing the next episode, keep the same release/source you were just watching instead of Lart's top-ranked stream. Falls back to the best stream if that source isn't available.":
+    "Khi tự động phát tập tiếp theo, tiếp tục dùng cùng bản phát hành/nguồn bạn vừa xem thay vì luồng được Lart xếp hạng cao nhất. Nếu nguồn đó không khả dụng, ứng dụng sẽ dùng luồng tốt nhất.",
   "When in fullscreen, Esc leaves fullscreen instead of closing the player. Press Esc again to close. Turn off to make Esc always close.":
     "Khi ở chế độ toàn màn hình, Esc sẽ thoát toàn màn hình thay vì đóng trình phát. Nhấn Esc lần nữa để đóng. Tắt tùy chọn này để Esc luôn đóng trình phát.",
   "When time's up, the ship sails away until a parent unlocks it.":

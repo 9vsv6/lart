@@ -1,12 +1,12 @@
 const addons: Record<string, string> = {
-  "A safety copy of your addon order. One is saved automatically before Harbor writes any change, and you can save one yourself any time. The five most recent are kept.":
-    "Eklenti sıralamanızın güvenlik kopyasıdır. Harbor herhangi bir değişiklik yapmadan önce otomatik olarak bir kopya kaydedilir. Ayrıca istediğiniz zaman kendiniz de kaydedebilirsiniz. En son beş kopya saklanır.",
+  "A safety copy of your addon order. One is saved automatically before Lart writes any change, and you can save one yourself any time. The five most recent are kept.":
+    "Eklenti sıralamanızın güvenlik kopyasıdır. Lart herhangi bir değişiklik yapmadan önce otomatik olarak bir kopya kaydedilir. Ayrıca istediğiniz zaman kendiniz de kaydedebilirsiniz. En son beş kopya saklanır.",
   "Add from URL": "URL'den ekle",
   "Addon order saved on this device": "Eklenti sırası bu cihaza kaydedildi",
   "Addon order synced to your Stremio account": "Eklenti sırası Stremio hesabınızla eşitlendi",
   "Anime done right": "Anime için doğru tercih",
-  "Anything you install in Harbor pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
-    "Harbor'da yüklediğiniz her şey Stremio hesabınıza da aktarılır ve mobilde de görünür. Kenar çubuğunun sol alt köşesindeki avatarı kullanarak oturum açın.",
+  "Anything you install in Lart pushes back to your Stremio account so it shows up on mobile too. Sign in via the avatar in the bottom-left of the sidebar.":
+    "Lart'da yüklediğiniz her şey Stremio hesabınıza da aktarılır ve mobilde de görünür. Kenar çubuğunun sol alt köşesindeki avatarı kullanarak oturum açın.",
   "Back to addons": "Eklentilere dön",
   "Back up current order": "Mevcut sıralamayı yedekle",
   "Backed up. The current account order is saved in the Backups panel.":
@@ -24,12 +24,12 @@ const addons: Record<string, string> = {
   "Change the order addons are tried in": "Eklentilerin denenme sırasını değiştirin",
   "Clear the search to see all {n} installed.":
     "Yüklü {n} eklentinin tümünü görmek için aramayı temizleyin.",
-  "Click below to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "{name} kurulum sayfasını Harbor'ın yerleşik tarayıcısında açmak için aşağıya tıklayın. Seçeneklerinizi belirleyin. Sayfalarındaki Yükle düğmesine tıkladığınızda Harbor bağlantıyı otomatik olarak yakalayıp eklentiyi günceller.",
+  "Click below to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "{name} kurulum sayfasını Lart'ın yerleşik tarayıcısında açmak için aşağıya tıklayın. Seçeneklerinizi belirleyin. Sayfalarındaki Yükle düğmesine tıkladığınızda Lart bağlantıyı otomatik olarak yakalayıp eklentiyi günceller.",
   "Click below to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "{name} kurulum sayfasını açmak için aşağıya tıklayın. Seçeneklerinizi belirleyin, ardından verilen yükleme bağlantısını kopyalayıp eklentiyi güncellemek için aşağıya yapıştırın.",
-  "Click to open {name}'s setup page in Harbor's built-in browser. Pick your options. When you click Install on their page, Harbor catches the link automatically and updates the addon.":
-    "{name} kurulum sayfasını Harbor'ın yerleşik tarayıcısında açmak için tıklayın. Seçeneklerinizi belirleyin. Sayfalarındaki Yükle düğmesine tıkladığınızda Harbor bağlantıyı otomatik olarak yakalayıp eklentiyi günceller.",
+  "Click to open {name}'s setup page in Lart's built-in browser. Pick your options. When you click Install on their page, Lart catches the link automatically and updates the addon.":
+    "{name} kurulum sayfasını Lart'ın yerleşik tarayıcısında açmak için tıklayın. Seçeneklerinizi belirleyin. Sayfalarındaki Yükle düğmesine tıkladığınızda Lart bağlantıyı otomatik olarak yakalayıp eklentiyi günceller.",
   "Click to open {name}'s setup page. Pick your options, then copy the install link it gives you and paste it below to update the addon.":
     "{name} kurulum sayfasını açmak için tıklayın. Seçeneklerinizi belirleyin, ardından verilen yükleme bağlantısını kopyalayıp eklentiyi güncellemek için aşağıya yapıştırın.",
   "Click to turn off": "Kapatmak için tıklayın",
@@ -57,8 +57,8 @@ const addons: Record<string, string> = {
   "Go back": "Geri dön",
   "Good to know": "Bilmenizde fayda var",
   "Hang tight, won't be a sec.": "Biraz bekleyin, hemen hazır.",
-  "Harbor double-checks with Stremio after saving, so a half-written order can't slip through.":
-    "Harbor, kaydettikten sonra Stremio ile tekrar kontrol eder; böylece eksik kaydedilmiş bir sıralama gözden kaçmaz.",
+  "Lart double-checks with Stremio after saving, so a half-written order can't slip through.":
+    "Lart, kaydettikten sonra Stremio ile tekrar kontrol eder; böylece eksik kaydedilmiş bir sıralama gözden kaçmaz.",
   "Head to Discover. Cinemeta and OpenSubtitles cover the basics; Torrentio + a debrid key cover almost everything else.":
     "Keşfet'e gidin. Cinemeta ve OpenSubtitles temel ihtiyaçları, Torrentio + debrid anahtarı ise neredeyse geri kalan her şeyi karşılar.",
   'Heads-up: a few addons (like AIOStatus) don\'t pre-fill from the URL. If the form loads blank, paste the existing manifest URL into their "Import from URL" field to restore your settings.':
@@ -133,8 +133,8 @@ const addons: Record<string, string> = {
   "Rising · +{n} star in 24h": "Yükselişte · 24 saatte +{n} yıldız",
   "Rising · +{n} stars in 24h": "Yükselişte · 24 saatte +{n} yıldız",
   "Save order": "Sıralamayı kaydet",
-  "Saved, but Harbor couldn't confirm the new order. Retry to re-check.":
-    "Kaydedildi ancak Harbor yeni sıralamayı doğrulayamadı. Yeniden kontrol etmek için tekrar deneyin.",
+  "Saved, but Lart couldn't confirm the new order. Retry to re-check.":
+    "Kaydedildi ancak Lart yeni sıralamayı doğrulayamadı. Yeniden kontrol etmek için tekrar deneyin.",
   "Saving to library": "Kütüphaneye kaydediliyor",
   "Search addons": "Eklenti ara",
   "See all ({n})": "Tümünü gör ({n})",
@@ -152,7 +152,7 @@ const addons: Record<string, string> = {
   "Sports & live TV": "Spor ve canlı TV",
   "Start here. The ones almost everyone has.":
     "Buradan başlayın. Neredeyse herkesin kullandığı eklentiler.",
-  "Stremio addon, packaged into Harbor's catalog.": "Harbor kataloğuna eklenmiş Stremio eklentisi.",
+  "Stremio addon, packaged into Lart's catalog.": "Lart kataloğuna eklenmiş Stremio eklentisi.",
   "Stremio didn't confirm the save. Your collection may be unchanged. Retry will re-check before writing again.":
     "Stremio kaydı doğrulamadı. Koleksiyonunuz değişmemiş olabilir. Tekrar denerseniz yeniden yazmadan önce kontrol edilir.",
   "Stremio link copied": "Stremio bağlantısı kopyalandı",
@@ -164,16 +164,16 @@ const addons: Record<string, string> = {
     "Üstteki Yedekler düğmesi son beş sıralamanızı saklar. Herhangi birini tek tıklamayla geri yükleyebilirsiniz.",
   "The order also decides which addon's rows win on your Home screen.":
     "Sıralama, Ana Sayfa'da hangi eklentinin satırlarının öncelikli olacağını da belirler.",
-  "These live in Harbor on this computer and never touch your account.":
-    "Bunlar bu bilgisayardaki Harbor'da tutulur ve hesabınıza hiçbir zaman aktarılmaz.",
+  "These live in Lart on this computer and never touch your account.":
+    "Bunlar bu bilgisayardaki Lart'da tutulur ve hesabınıza hiçbir zaman aktarılmaz.",
   "This order drives your catalog rows and the default stream order. A stream priority set in Settings overrides it for streams.":
     "Bu sıralama, katalog satırlarınızı ve varsayılan yayın sırasını belirler. Ayarlar'da belirlenen yayın önceliği, yayınlar için bu sıralamayı geçersiz kılar.",
   "This order syncs to every Stremio app signed into this account.":
     "Bu sıralama, bu hesapla oturum açılmış tüm Stremio uygulamalarında eşitlenir.",
   "Top rated": "En yüksek puanlı",
   "Top rising": "En hızlı yükselenler",
-  "Trending tracks star growth across your Harbor visits. Open the addons page again tomorrow and the top risers will appear here.":
-    "Trendler, Harbor ziyaretleriniz boyunca yıldız sayısındaki artışı takip eder. Eklentiler sayfasını yarın yeniden açtığınızda en hızlı yükselenler burada görünür.",
+  "Trending tracks star growth across your Lart visits. Open the addons page again tomorrow and the top risers will appear here.":
+    "Trendler, Lart ziyaretleriniz boyunca yıldız sayısındaki artışı takip eder. Eklentiler sayfasını yarın yeniden açtığınızda en hızlı yükselenler burada görünür.",
   "Turn {name} off": "{name} eklentisini kapat",
   "Turn {name} on": "{name} eklentisini aç",
   "URLs can carry debrid keys or tokens; reveal when you need to copy":

@@ -18,7 +18,7 @@ export default {
   "games.stardew.refresh": "Mods aktualisieren",
 
   "games.stardew.import": "Mod-ZIP importieren",
-  "games.stardew.manage": "Mit Harbor verwaltet",
+  "games.stardew.manage": "Mit Lart verwaltet",
   "games.stardew.manageNote": "Importiere einen heruntergeladenen SMAPI-Mod, um ihn hier zu verwalten. Zum Aktualisieren importierst du seine neuere ZIP-Datei.",
   "games.stardew.previous": "Vorherige Versionen",
   "games.stardew.review": "Änderungen prüfen",

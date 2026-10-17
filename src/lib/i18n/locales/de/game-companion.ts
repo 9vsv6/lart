@@ -257,7 +257,7 @@ export default {
   "games.gw2.partial": "Einige Gegenstandsdetails fehlen. Die Preise sind weiterhin enthalten.",
   "games.gw2.guide": "Gewölbe-Leitfaden",
   "games.gw2.checked": "Geprüft: {date}",
-  "games.gw2.scope": "In diesem Harbor-Profil gespeichert. Jede Auswahl zählt ein Angebot; dein Guthaben, Kauflimits und Erweiterungszugang werden nicht geprüft. Prüfe die Verfügbarkeit und kaufe im Spiel.",
+  "games.gw2.scope": "In diesem Lart-Profil gespeichert. Jede Auswahl zählt ein Angebot; dein Guthaben, Kauflimits und Erweiterungszugang werden nicht geprüft. Prüfe die Verfügbarkeit und kaufe im Spiel.",
   "games.gw2.total": "Geplante Gesamtkosten",
   "games.gw2.currency": "Astraler Ruhm",
   "games.gw2.selected": "{count} Angebote ausgewählt",

@@ -47,7 +47,7 @@ export function ProvidersTab(props: ProviderKeysArgs) {
       <Section
         title={t("Metadata providers")}
         subtitle={t(
-          "Add TMDB for more catalogs and artwork. Other providers add the features listed below. You can use Harbor with Cinemeta without adding a key.",
+          "Add TMDB for more catalogs and artwork. Other providers add the features listed below. You can use Lart with Cinemeta without adding a key.",
         )}
       >
         <SettingGroup>
@@ -77,7 +77,7 @@ export function ProvidersTab(props: ProviderKeysArgs) {
             warn={
               !settings.cinemetaEnabled && !hasMetaAddon
                 ? t(
-                    "No metadata addon detected. Harbor is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.",
+                    "No metadata addon detected. Lart is falling back to Cinemeta so titles still load, but turn this back on unless you are installing one.",
                   )
                 : undefined
             }

@@ -89,7 +89,7 @@ function socialToCenter(n: SocialNotif): CenterNotif {
       title:
         n.title ||
         t("{staff} requested your diagnostics", {
-          staff: staff.name || t("Harbor Staff"),
+          staff: staff.name || t("Lart Staff"),
         }),
       body: n.body || undefined,
       data: { ...(n.data || {}), requestId: n.entityId },

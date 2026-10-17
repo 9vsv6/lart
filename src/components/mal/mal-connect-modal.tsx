@@ -41,7 +41,7 @@ export function MalConnectModal({ onClose }: { onClose: () => void }) {
       ? t("Connected")
       : connectState.kind === "verifying"
         ? t("Verifying")
-        : t("Authorize Harbor on MyAnimeList");
+        : t("Authorize Lart on MyAnimeList");
 
   return (
     <ModalShell closing={closing} onDismiss={onCancel}>
@@ -73,7 +73,7 @@ export function MalConnectModal({ onClose }: { onClose: () => void }) {
           {connectState.kind === "needs-code" && (
             <>
               <p className="text-[13px] leading-relaxed text-ink-muted">
-                {t("A browser tab opened on MyAnimeList. Approve Harbor there, then copy the code or the page URL and paste it below.")}
+                {t("A browser tab opened on MyAnimeList. Approve Lart there, then copy the code or the page URL and paste it below.")}
               </p>
               <textarea
                 value={draftCode}

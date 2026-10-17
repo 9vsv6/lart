@@ -3,7 +3,7 @@ const catalog06: Record<string, string> = {
   "Open Range": "Apri Range",
   "Open SVP": "Apri SVP",
   "Open Settings": "Apri Impostazioni",
-  "Open Settings, then Harbor Relay.": "Apri Impostazioni, poi Harbor Relay.",
+  "Open Settings, then Lart Relay.": "Apri Impostazioni, poi Lart Relay.",
   "Open Settings, then System, then Advanced system settings.":
     "Apri Impostazioni, poi Sistema, quindi Impostazioni di sistema avanzate.",
   "Open Setup": "Apri Configurazione",
@@ -14,8 +14,8 @@ const catalog06: Record<string, string> = {
   "Open Trakt profile": "Apri il profilo Trakt",
   "Open Voyages": "Apri Voyages",
   "Open a folder": "Apri una cartella",
-  "Open a manga on Harbor to control the reader from here.":
-    "Apri un manga su Harbor per controllare da qui il lettore.",
+  "Open a manga on Lart to control the reader from here.":
+    "Apri un manga su Lart per controllare da qui il lettore.",
   "Open a quick issue": "Apri una segnalazione rapida",
   "Open a terminal and run: brew install ffmpeg":
     "Apri un terminale ed esegui: brew install ffmpeg",
@@ -109,8 +109,8 @@ const catalog06: Record<string, string> = {
   "Opening…": "Apertura…",
   "Opens Stremio in your browser. Works with email, Facebook, and Apple accounts.":
     "Apre Stremio nel browser. Funziona con account email, Facebook e Apple.",
-  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Harbor never sees your password.":
-    "Apre Stremio nel browser. Funziona con email, Facebook e Apple. Harbor non vede mai la tua password.",
+  "Opens Stremio in your browser. Works with email, Facebook, and Apple. Lart never sees your password.":
+    "Apre Stremio nel browser. Funziona con email, Facebook e Apple. Lart non vede mai la tua password.",
   "Opens the folder holding the DHT cache and active transfer data.": "Apre la cartella contenente la cache DHT e i dati dei trasferimenti attivi.",
   "Opens the free signup page": "Apre la pagina di registrazione gratuita",
   "Opens your API settings page": "Apre la pagina delle impostazioni API",
@@ -121,8 +121,8 @@ const catalog06: Record<string, string> = {
   "Optional. Add one to turn on automatic subtitle sync.":
     "Facoltativo. Aggiungine una per attivare la sincronizzazione automatica dei sottotitoli.",
   Options: "Opzioni",
-  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Harbor writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
-    "Opzioni per la scheda Libreria → Locale: cartelle del tuo disco da analizzare. Quando esporti i metadati, Harbor crea un file .nfo in stile Kodi e scarica le immagini accanto a ogni file nelle dimensioni indicate qui sotto.",
+  "Options for the Library → Local tab: folders you scan from your own drive. When you export metadata, Lart writes a Kodi-style .nfo and downloads artwork next to each file at the sizes below.":
+    "Opzioni per la scheda Libreria → Locale: cartelle del tuo disco da analizzare. Quando esporti i metadati, Lart crea un file .nfo in stile Kodi e scarica le immagini accanto a ogni file nelle dimensioni indicate qui sotto.",
   "Or browse curated packs and import a link":
     "Oppure sfoglia i pacchetti selezionati e importa un link",
   "Or just zip up images": "Oppure comprimi semplicemente le immagini in un file zip",
@@ -196,8 +196,8 @@ const catalog06: Record<string, string> = {
     "PNG, JPEG, WebP o SVG (ridimensionati automaticamente se molto grandi). Le GIF animate fino a 2 MB vengono riprodotte.",
   "PNG, JPG, WebP, GIF, MP4, WebM, MOV. Up to 6 files, 100 MB each.":
     "PNG, JPG, WebP, GIF, MP4, WebM, MOV. Fino a 6 file, 100 MB ciascuno.",
-  "PNG, WEBP, SVG or GIF. Harbor shrinks it to 128px so it stays small on disk.":
-    "PNG, WEBP, SVG o GIF. Harbor la riduce a 128px per occupare poco spazio su disco.",
+  "PNG, WEBP, SVG or GIF. Lart shrinks it to 128px so it stays small on disk.":
+    "PNG, WEBP, SVG o GIF. Lart la riduce a 128px per occupare poco spazio su disco.",
   PREVIEW: "ANTEPRIMA",
   "Pack name": "Nome del pacchetto",
   "Pack removed, badges back to default":
@@ -205,8 +205,8 @@ const catalog06: Record<string, string> = {
   Packaged: "Incluso",
   Packs: "Pacchetti",
   "Packs & import": "Pacchetti e importazione",
-  "Packs stay hosted by their maker. Harbor keeps the link, not the artwork.":
-    "I pacchetti restano ospitati da chi li crea. Harbor conserva il link, non le immagini.",
+  "Packs stay hosted by their maker. Lart keeps the link, not the artwork.":
+    "I pacchetti restano ospitati da chi li crea. Lart conserva il link, non le immagini.",
   Page: "Pagina",
   "Page background": "Sfondo della pagina",
   "Page background color": "Colore di sfondo della pagina",
@@ -223,9 +223,9 @@ const catalog06: Record<string, string> = {
     "A pagamento. Incorpora i punteggi direttamente nell'immagine della locandina.",
   "Painted Skies": "Cieli dipinti",
   Pair: "Abbina",
-  "Pair once from here and this Harbor will take commands.":
-    "Esegui l'abbinamento una volta da qui e questo Harbor riceverà i comandi.",
-  "Pair with this Harbor": "Abbina a questo Harbor",
+  "Pair once from here and this Lart will take commands.":
+    "Esegui l'abbinamento una volta da qui e questo Lart riceverà i comandi.",
+  "Pair with this Lart": "Abbina a questo Lart",
   Paired: "Abbinato",
   "Paired with {name}": "Abbinato a {name}",
   Palette: "Tavolozza",
@@ -258,8 +258,8 @@ const catalog06: Record<string, string> = {
     "Incolla l'URL di una Lista Trakt, MDBList, TMDB, Letterboxd, IMDb o MAL",
   "Paste a direct image link.": "Incolla un link diretto a un'immagine.",
   "Paste a direct video file link.": "Incolla un link diretto a un file video.",
-  "Paste a public list from Trakt, MDBList, TMDB, Letterboxd, IMDb, or MyAnimeList. Harbor pulls the titles in and keeps the artwork sharp.":
-    "Incolla una Lista pubblica da Trakt, MDBList, TMDB, Letterboxd, IMDb o MyAnimeList. Harbor importa i titoli e mantiene nitide le immagini.",
+  "Paste a public list from Trakt, MDBList, TMDB, Letterboxd, IMDb, or MyAnimeList. Lart pulls the titles in and keeps the artwork sharp.":
+    "Incolla una Lista pubblica da Trakt, MDBList, TMDB, Letterboxd, IMDb o MyAnimeList. Lart importa i titoli e mantiene nitide le immagini.",
   "Paste a stremio:// link or an https://…/manifest.json URL.":
     "Incolla un link stremio:// o un URL https://…/manifest.json.",
   "Paste a track, album or playlist link.": "Incolla il link di un brano, un album o una playlist.",
@@ -269,7 +269,7 @@ const catalog06: Record<string, string> = {
   "Paste any YouTube link. Watch, share, shorts or embed all work.":
     "Incolla un link YouTube qualsiasi. Sono supportati i link ai video, di condivisione, agli Shorts e di incorporamento.",
   "Paste invite link": "Incolla il link d'invito",
-  "Paste it into Harbor.": "Incollalo in Harbor.",
+  "Paste it into Lart.": "Incollalo in Lart.",
   "Paste manifest URL or stremio:// link": "Incolla l'URL del manifest o il link stremio://",
   "Paste the URL into the box above and send a test.":
     "Incolla l'URL nel campo qui sopra e invia un test.",
@@ -280,8 +280,8 @@ const catalog06: Record<string, string> = {
   "Paste the manifest URL, or click Install on the addon's configuration page above.":
     "Incolla l'URL del manifest oppure fai clic su Installa nella pagina di configurazione dell'Add-on qui sopra.",
   "Paste the text from AniList": "Incolla il testo da AniList",
-  "Paste this code into Harbor to open the collection.":
-    "Incolla questo codice in Harbor per aprire la raccolta.",
+  "Paste this code into Lart to open the collection.":
+    "Incolla questo codice in Lart per aprire la raccolta.",
   "Paste your API token first.": "Prima incolla il token API.",
   "Paste your OpenSubtitles API key": "Incolla la tua chiave API OpenSubtitles",
   "Paste your SUBDL API key": "Incolla la tua chiave API SUBDL",
@@ -352,8 +352,8 @@ const catalog06: Record<string, string> = {
   "Pick a World": "Scegli un mondo",
   "Pick a direction. You steer from there, one film at a time.":
     "Scegli una direzione. Da lì decidi tu, un Film alla volta.",
-  "Pick a display and body pairing, or upload your own font to use across Harbor.":
-    "Scegli una coppia di font per titoli e testo oppure carica il tuo font da usare in tutto Harbor.",
+  "Pick a display and body pairing, or upload your own font to use across Lart.":
+    "Scegli una coppia di font per titoli e testo oppure carica il tuo font da usare in tutto Lart.",
   "Pick a drive with room to spare. Files already cached stay where they are.":
     "Scegli un'unità con spazio libero. I file già memorizzati nella cache resteranno dove sono.",
   "Pick a few you love": "Scegline alcuni che ami",
@@ -373,10 +373,10 @@ const catalog06: Record<string, string> = {
   "Pick a profile to continue.": "Scegli un profilo per continuare.",
   "Pick a random title": "Scegli un titolo casuale",
   "Pick a source": "Scegli una fonte",
-  "Pick a source once and Harbor keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. For anime it locks the whole series to that release.":
-    "Scegli una fonte una sola volta e Harbor continuerà a riprodurre il resto della Stagione dalla stessa release, senza dover scegliere di nuovo. Funziona meglio con un pacchetto debrid della Stagione. Per gli anime, vincola l'intera Serie a quella release.",
-  "Pick a source once and Harbor keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
-    "Scegli una fonte una sola volta e Harbor continuerà a riprodurre il resto della Stagione dalla stessa release, senza dover scegliere di nuovo. Funziona meglio con un pacchetto debrid della Stagione. Non si applica agli anime.",
+  "Pick a source once and Lart keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. For anime it locks the whole series to that release.":
+    "Scegli una fonte una sola volta e Lart continuerà a riprodurre il resto della Stagione dalla stessa release, senza dover scegliere di nuovo. Funziona meglio con un pacchetto debrid della Stagione. Per gli anime, vincola l'intera Serie a quella release.",
+  "Pick a source once and Lart keeps playing the rest of that season from the same release, no re-picking. Works best with a debrid season pack. Skipped for anime.":
+    "Scegli una fonte una sola volta e Lart continuerà a riprodurre il resto della Stagione dalla stessa release, senza dover scegliere di nuovo. Funziona meglio con un pacchetto debrid della Stagione. Non si applica agli anime.",
   "Pick a source to swap in place. Playback keeps running.":
     "Scegli una fonte con cui sostituire quella attuale. La riproduzione continua.",
   "Pick a star rating first": "Prima scegli una valutazione in stelle",
@@ -432,8 +432,8 @@ const catalog06: Record<string, string> = {
     "Riprendi episodi e film parzialmente visti dal punto salvato. I contenuti visti oltre l'80% ripartono sempre dall'inizio. Disattiva questa opzione per iniziare sempre da capo, utile se riguardi le serie.",
   "Pick up the manga at {label}.": "Riprendi il manga da {label}.",
   "Pick up the manga where the anime ends.": "Riprendi il manga da dove finisce l'anime.",
-  "Pick up to five. It shapes what Harbor surfaces first.":
-    "Scegline fino a cinque. Determineranno cosa Harbor mostra per primo.",
+  "Pick up to five. It shapes what Lart surfaces first.":
+    "Scegline fino a cinque. Determineranno cosa Lart mostra per primo.",
   "Pick up to {max} artists to show on your profile.":
     "Scegli fino a {max} artisti da mostrare sul tuo profilo.",
   "Pick up to {max} badges to show by your name. Tap in the order you want them to appear.":
@@ -453,8 +453,8 @@ const catalog06: Record<string, string> = {
   "Pick what you actually use": "Scegli ciò che usi davvero",
   "Pick what you want in your calendar. Mix and match: tracked people, genres, streamers, countries, Trakt lists.":
     "Scegli cosa vuoi nel calendario. Combina liberamente persone seguite, generi, servizi di streaming, paesi e liste Trakt.",
-  "Pick which audio and subtitle languages Harbor reaches for first.":
-    "Scegli le lingue di audio e sottotitoli che Harbor deve cercare per prime.",
+  "Pick which audio and subtitle languages Lart reaches for first.":
+    "Scegli le lingue di audio e sottotitoli che Lart deve cercare per prime.",
   "Pick which calendars feed your alerts. Items are deduped across sources before sending.":
     "Scegli quali calendari alimentano gli avvisi. Prima dell'invio, i duplicati tra le fonti vengono rimossi.",
   "Pick which calendars feed your webhook. Items are deduped across sources before sending.":
@@ -484,8 +484,8 @@ const catalog06: Record<string, string> = {
   "Picture quality (weak PC / balanced / max)":
     "Qualità dell'immagine (PC poco potente / bilanciata / massima)",
   "Picture quality on the TV": "Qualità dell'immagine sulla TV",
-  "Picture shaders run on the bundled mpv engine in the Harbor desktop app. They have no effect in the browser.":
-    "Gli shader dell'immagine vengono eseguiti dal motore mpv incluso nell'app desktop Harbor. Non hanno effetto nel browser.",
+  "Picture shaders run on the bundled mpv engine in the Lart desktop app. They have no effect in the browser.":
+    "Gli shader dell'immagine vengono eseguiti dal motore mpv incluso nell'app desktop Lart. Non hanno effetto nel browser.",
   "Picture-in-picture": "Picture-in-picture",
   "Pilots that pull you in and finales that earn the season.":
     "Episodi pilota che conquistano e finali all'altezza della stagione.",
@@ -578,8 +578,8 @@ const catalog06: Record<string, string> = {
   "Playlist contained no channels": "La playlist non contiene canali",
   "Playlist is too large": "La playlist è troppo grande",
   Playlists: "Playlist",
-  "Plays + ratings sync from Harbor to Trakt.tv.":
-    "Le riproduzioni e le valutazioni vengono sincronizzate da Harbor a Trakt.tv.",
+  "Plays + ratings sync from Lart to Trakt.tv.":
+    "Le riproduzioni e le valutazioni vengono sincronizzate da Lart a Trakt.tv.",
   "Plays HDR content in its own window so Windows treats it as true HDR (the SDR brightness slider stops dimming it). Turn off HDR-to-SDR tonemapping above to use this on an HDR display.":
     "Riproduce i contenuti HDR in una finestra separata, così Windows li tratta come vero HDR e il cursore della luminosità SDR non li oscura più. Per usarlo su uno schermo HDR, disattiva qui sopra la mappatura tonale da HDR a SDR.",
   "Plays HDR in its own window so Windows shows real HDR and the SDR brightness slider stops dimming it. The most reliable way to get true HDR.":
@@ -592,17 +592,17 @@ const catalog06: Record<string, string> = {
   "Please add your TMDB API key in the Library & Metadata settings to view this folder.":
     "Aggiungi la tua chiave API TMDB nelle impostazioni Libreria e metadati per visualizzare questa cartella.",
   "Please choose a PNG, SVG, JPG, or WebP image.": "Scegli un'immagine PNG, SVG, JPG o WebP.",
-  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Harbor. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
-    "I plugin vengono eseguiti in una sandbox, all'interno di un worker isolato che non può accedere ai tuoi file, account o al resto di Harbor. I dati estratti da un plugin riguardano solo te e il sito a cui accede. Installa plugin esclusivamente da repository attendibili.",
+  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Lart. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
+    "I plugin vengono eseguiti in una sandbox, all'interno di un worker isolato che non può accedere ai tuoi file, account o al resto di Lart. I dati estratti da un plugin riguardano solo te e il sito a cui accede. Installa plugin esclusivamente da repository attendibili.",
   "Plus Jakarta Sans": "Plus Jakarta Sans",
   "Pluto TV": "Pluto TV",
-  "Point Harbor at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
-    "Indica a Harbor una cartella. Harbor la analizzerà per trovare film e serie, ricaverà i titoli dai nomi dei file e li arricchirà con TMDB, così avranno lo stesso aspetto di tutti gli altri contenuti. Viene memorizzato solo il percorso: nulla viene copiato o spostato.",
-  "Point Harbor at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.": "Collega Harbor a un server di streaming su un altro computer, ad esempio il servizio Stremio su un server domestico. Gli stream P2P vengono scaricati e riprodotti da quel computer anziché da questo.",
-  "Point Harbor at your self-hosted library to browse and install sources":
-    "Collega Harbor alla tua libreria self-hosted per sfogliare e installare fonti",
-  "Point Harbor's built-in scraper at any HTML site with a config":
-    "Indirizza lo scraper integrato di Harbor verso qualsiasi sito HTML tramite una configurazione",
+  "Point Lart at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
+    "Indica a Lart una cartella. Lart la analizzerà per trovare film e serie, ricaverà i titoli dai nomi dei file e li arricchirà con TMDB, così avranno lo stesso aspetto di tutti gli altri contenuti. Viene memorizzato solo il percorso: nulla viene copiato o spostato.",
+  "Point Lart at a streaming server on another machine, like the Stremio service on a home server. P2P streams download and play from that machine instead of this one.": "Collega Lart a un server di streaming su un altro computer, ad esempio il servizio Stremio su un server domestico. Gli stream P2P vengono scaricati e riprodotti da quel computer anziché da questo.",
+  "Point Lart at your self-hosted library to browse and install sources":
+    "Collega Lart alla tua libreria self-hosted per sfogliare e installare fonti",
+  "Point Lart's built-in scraper at any HTML site with a config":
+    "Indirizza lo scraper integrato di Lart verso qualsiasi sito HTML tramite una configurazione",
   "Point Local folder at CBZ files or folders of images you already own.":
     "In Cartella locale, seleziona file CBZ o cartelle di immagini che già possiedi.",
   Pointer: "Puntatore",
@@ -660,16 +660,16 @@ const catalog06: Record<string, string> = {
   "Posts are not available yet": "I post non sono ancora disponibili",
   "Power tools": "Strumenti avanzati",
   "Power tools & diagnostics": "Strumenti avanzati e diagnostica",
-  "Power-user knob. Inject your own CSS, JS, and HTML into Harbor. Lives in your local settings; nothing leaves your machine.":
-    "Opzione per utenti esperti. Inserisci CSS, JS e HTML personalizzati in Harbor. Restano nelle impostazioni locali, senza lasciare il dispositivo.",
+  "Power-user knob. Inject your own CSS, JS, and HTML into Lart. Lives in your local settings; nothing leaves your machine.":
+    "Opzione per utenti esperti. Inserisci CSS, JS e HTML personalizzati in Lart. Restano nelle impostazioni locali, senza lasciare il dispositivo.",
   "Powers everything on this page: the web app, the phone remote, and the manga reader remote.":
     "Gestisce tutto ciò che trovi in questa pagina: l'app web, il telecomando sul telefono e quello del lettore manga.",
   "Powers the Identify song button in the player.":
     "Abilita il pulsante Identifica brano nel player.",
   "Practise law in court for them": "Rappresentarlo in tribunale come avvocato",
   "Pre-paying the last month's rent": "A pagare in anticipo l'ultimo mese di affitto",
-  "Prefer a server? Run every source through your own Suwayomi and point Harbor at it":
-    "Preferisci un server? Fai passare tutte le fonti dal tuo Suwayomi e collegalo a Harbor",
+  "Prefer a server? Run every source through your own Suwayomi and point Lart at it":
+    "Preferisci un server? Fai passare tutte le fonti dal tuo Suwayomi e collegalo a Lart",
   "Prefer embedded subtitles": "Preferisci i sottotitoli incorporati",
   "Prefer my installed metadata addon": "Preferisci il mio Add-on di metadati installato",
   "Preferred language for anime titles displayed on poster cards.":
@@ -690,11 +690,11 @@ const catalog06: Record<string, string> = {
   "Preparing…": "Preparazione…",
   Preset: "Preimpostazione",
   Presets: "Preimpostazioni",
-  "Press OK on a field to type, or use the Harbor remote on your phone.":
-    "Premi OK su un campo per digitare oppure usa il telecomando Harbor sul telefono.",
+  "Press OK on a field to type, or use the Lart remote on your phone.":
+    "Premi OK su un campo per digitare oppure usa il telecomando Lart sul telefono.",
   "Press Play": "Premi Riproduci",
-  "Press Play and Harbor picks the source itself instead of opening the list.":
-    "Premi Riproduci e Harbor sceglie automaticamente la fonte invece di aprire l'elenco.",
+  "Press Play and Lart picks the source itself instead of opening the list.":
+    "Premi Riproduci e Lart sceglie automaticamente la fonte invece di aprire l'elenco.",
   "Press T": "Premi T",
   "Press a key…": "Premi un tasto…",
   "Press buttons and move the sticks. This mirrors your controller in real time.":
@@ -850,8 +850,8 @@ const catalog06: Record<string, string> = {
   "Queue drives Next/Previous": "La coda gestisce Successivo/Precedente",
   Queued: "In coda",
   "Queued {queued} of {total} episodes.": "{queued} episodi su {total} aggiunti alla coda.",
-  "Queued {queued} of {total} episodes. Harbor could not match every episode in this package.":
-    "{queued} episodi su {total} aggiunti alla coda. Harbor non è riuscito ad abbinare tutti gli episodi di questo pacchetto.",
+  "Queued {queued} of {total} episodes. Lart could not match every episode in this package.":
+    "{queued} episodi su {total} aggiunti alla coda. Lart non è riuscito ad abbinare tutti gli episodi di questo pacchetto.",
   "Quick Watches Under 90": "Visioni rapide sotto i 90",
   "Quick age check": "Verifica rapida dell'età",
   "Quick panel": "Pannello rapido",
@@ -862,7 +862,7 @@ const catalog06: Record<string, string> = {
   "Quiet dramas, sharp thrillers, and series you save for yourself.":
     "Drammi intimi, thriller taglienti e serie da tenere tutte per te.",
   "Quiet favorites": "Preferiti tranquilli",
-  "Quit Harbor": "Esci da Harbor",
+  "Quit Lart": "Esci da Lart",
   Quote: "Citazione",
   "RAVU Lite": "RAVU Lite",
   "RAVU Lite prescaler": "Prescaler RAVU Lite",
@@ -922,7 +922,7 @@ const catalog06: Record<string, string> = {
   Ratings: "Valutazioni",
   "Ratings count from {movie}+ votes, {tv}+ for TV":
     "Conteggio delle valutazioni da {movie}+ voti, {tv}+ per la TV",
-  "Ratings need a Harbor account": "Per le valutazioni serve un account Harbor",
+  "Ratings need a Lart account": "Per le valutazioni serve un account Lart",
   "Raw Nerve": "Nervo scoperto",
   "Re-apply to the window and taskbar now":
     "Riapplica ora alla finestra e alla barra delle applicazioni",
@@ -933,7 +933,7 @@ const catalog06: Record<string, string> = {
   "Re-run deploy or paste the correct URL": "Esegui di nuovo il deploy o incolla l'URL corretto",
   "Re-runs the welcome flow and clears every dismissed tip.":
     "Ripete la procedura di benvenuto e ripristina tutti i suggerimenti ignorati.",
-  "Re-sync from your Harbor profile picture": "Risincronizza dalla tua immagine del profilo Harbor",
+  "Re-sync from your Lart profile picture": "Risincronizza dalla tua immagine del profilo Lart",
   Reach: "Portata",
   "Reach the network with harbor.http(url, opts) and parse HTML with harbor.parseHtml(html). There is no fetch, DOM, or storage in the sandbox.":
     "Accedi alla rete con harbor.http(url, opts) e analizza l'HTML con harbor.parseHtml(html). Nella sandbox non sono disponibili fetch, DOM o archiviazione.",
@@ -950,7 +950,7 @@ const catalog06: Record<string, string> = {
   "Read here": "Leggi qui",
   "Read latest": "Leggi l'ultimo capitolo",
   "Read manga files you already have": "Leggi i file manga che hai già",
-  "Read manga in Harbor": "Leggi manga su Harbor",
+  "Read manga in Lart": "Leggi manga su Lart",
   "Read more": "Leggi altro",
   "Read now": "Leggi ora",
   "Read on": "Leggi su",
@@ -991,8 +991,8 @@ const catalog06: Record<string, string> = {
     "Real-Debrid, TorBox, AllDebrid e Premiumize possono avere brevi interruzioni durante le quali non restituiscono link. Attendi qualche minuto e riprova, oppure controlla la pagina di stato del servizio.",
   "Real-Debrid, TorBox, AllDebrid, Premiumize, Debrid-Link. Cached streams play direct. Keys stay local.":
     "Real-Debrid, TorBox, AllDebrid, Premiumize, Debrid-Link. Gli stream nella cache vengono riprodotti direttamente. Le chiavi restano in locale.",
-  "Real-time GPU upscaling that sharpens lines and cleans up gradients on anime, built right into Harbor's player. The one-tap setup below grabs the shaders; nothing else to install.":
-    "Upscaling GPU in tempo reale che rende più nitide le linee e uniforma le sfumature negli anime, integrato direttamente nel player di Harbor. La configurazione con un tocco qui sotto scarica gli shader; non c'è altro da installare.",
+  "Real-time GPU upscaling that sharpens lines and cleans up gradients on anime, built right into Lart's player. The one-tap setup below grabs the shaders; nothing else to install.":
+    "Upscaling GPU in tempo reale che rende più nitide le linee e uniforma le sfumature negli anime, integrato direttamente nel player di Lart. La configurazione con un tocco qui sotto scarica gli shader; non c'è altro da installare.",
   "Real-time anime upscaling. GPU-intensive.":
     "Upscaling degli anime in tempo reale. Uso intensivo della GPU.",
   Reality: "Reality",
@@ -1043,8 +1043,8 @@ const catalog06: Record<string, string> = {
   "Rede aberta": "Canali in chiaro",
   Redeploy: "Esegui di nuovo il deploy",
   "Redeploy instructions": "Istruzioni per il nuovo deploy",
-  "Redeploy it to get the latest Watch Together fixes. Harbor's public relay updates on its own.":
-    "Esegui di nuovo il deploy per ottenere le ultime correzioni di Watch Together. Il relay pubblico di Harbor si aggiorna automaticamente.",
+  "Redeploy it to get the latest Watch Together fixes. Lart's public relay updates on its own.":
+    "Esegui di nuovo il deploy per ottenere le ultime correzioni di Watch Together. Il relay pubblico di Lart si aggiorna automaticamente.",
   "Redeploy relay": "Esegui di nuovo il deploy del relay",
   "Redeploy to pick up the latest Watch Together fixes. The in-app banner clears once the new version is live.":
     "Esegui di nuovo il deploy per ottenere le ultime correzioni di Watch Together. Il banner nell'app scomparirà quando la nuova versione sarà online.",
@@ -1120,19 +1120,19 @@ const catalog06: Record<string, string> = {
   "Reminder updated": "Promemoria aggiornato",
   Reminders: "Promemoria",
   Remote: "Telecomando",
-  "Remote control is off on that Harbor, so it cannot be driven from here.":
-    "Il controllo remoto è disattivato su quell'Harbor, quindi non è possibile controllarlo da qui.",
+  "Remote control is off on that Lart, so it cannot be driven from here.":
+    "Il controllo remoto è disattivato su quell'Lart, quindi non è possibile controllarlo da qui.",
   "Remote control is off, so other Harbors can see this one but cannot drive it.":
-    "Il controllo remoto è disattivato, quindi gli altri Harbor possono vedere questo dispositivo ma non controllarlo.",
+    "Il controllo remoto è disattivato, quindi gli altri Lart possono vedere questo dispositivo ma non controllarlo.",
   "Remote control is on, so other Harbors on this network can drive this one.":
-    "Il controllo remoto è attivo, quindi gli altri Harbor sulla rete possono controllare questo dispositivo.",
+    "Il controllo remoto è attivo, quindi gli altri Lart sulla rete possono controllare questo dispositivo.",
   "Remote off": "Controllo remoto disattivato",
   "Remote server": "Server remoto",
   "Remote streaming server": "Server di streaming remoto",
   "Remote style": "Stile del telecomando",
   Remotes: "Dispositivi remoti",
-  "Remotes are served by the desktop app. Open these settings on your computer's Harbor to get the links.":
-    "I collegamenti per i dispositivi remoti vengono forniti dall'app desktop. Apri queste Impostazioni in Harbor sul computer per ottenerli.",
+  "Remotes are served by the desktop app. Open these settings on your computer's Lart to get the links.":
+    "I collegamenti per i dispositivi remoti vengono forniti dall'app desktop. Apri queste Impostazioni in Lart sul computer per ottenerli.",
   Remove: "Rimuovi",
   "Remove all": "Rimuovi tutto",
   "Remove all extensions ({n})": "Rimuovi tutti gli Add-on ({n})",

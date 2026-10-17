@@ -34,7 +34,7 @@ export const TOP_GROUPS: TopGroup[] = [
     id: "language",
     section: "LANGUAGE",
     label: "Languages & subtitles",
-    sub: "What language Harbor speaks, and how subtitles behave.",
+    sub: "What language Lart speaks, and how subtitles behave.",
     children: ["language", "subtitles"],
   },
   {
@@ -48,14 +48,14 @@ export const TOP_GROUPS: TopGroup[] = [
     id: "plugins",
     section: "PLUGINS",
     label: "Plugins",
-    sub: "Small scripts that find streams, manga and books on sites Harbor does not know about, installed from repositories you choose.",
+    sub: "Small scripts that find streams, manga and books on sites Lart does not know about, installed from repositories you choose.",
     children: ["plugins"],
   },
   {
     id: "look",
     section: "LOOK & FEEL",
     label: "Appearance",
-    sub: "Theme, the player's own layout, artwork, and what Harbor shows on a card.",
+    sub: "Theme, the player's own layout, artwork, and what Lart shows on a card.",
     children: ["theme", "playerLayout", "badges", "awardIcons"],
   },
   {

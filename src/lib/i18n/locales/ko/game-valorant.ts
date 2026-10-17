@@ -35,7 +35,7 @@ export default {
   "games.valorant.empty": "필터에 맞는 결과가 없습니다.",
   "games.valorant.checked": "확인: {date}",
   "games.valorant.metaScope": "선택한 패치의 OP.GG 경쟁전 데이터입니다. 선택률은 전체 요원 등장 중 차지하는 비율입니다. 모든 플레이어가 아닌 제공처의 표본을 나타냅니다.",
-  "games.valorant.referenceScope": "게임 이미지와 참고 정보는 Valorant-API를 통해 제공됩니다. 업데이트가 늦을 수 있습니다. Harbor는 Riot Games의 공식 승인을 받지 않았습니다.",
+  "games.valorant.referenceScope": "게임 이미지와 참고 정보는 Valorant-API를 통해 제공됩니다. 업데이트가 늦을 수 있습니다. Lart는 Riot Games의 공식 승인을 받지 않았습니다.",
   "games.valorant.samples": "등장 {count}회",
   "games.valorant.smallSample": "표본 부족",
   "games.valorant.abilities": "스킬",

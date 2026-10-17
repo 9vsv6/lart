@@ -27,6 +27,6 @@ export default {
   "games.notes.import": "Importar JSON",
   "games.notes.export": "Exportar copia",
   "games.notes.unsaved": "Cambios sin guardar",
-  "games.notes.local": "Guardado en este perfil de Harbor",
+  "games.notes.local": "Guardado en este perfil de Lart",
   "games.notes.importGuide": "Copiar a mis notas"
 };

@@ -181,7 +181,7 @@ export function BpSubtitleStep({
           <p className="px-[clamp(4px,0.4vw,8px)] text-[clamp(13px,1.8vh,20px)] font-medium text-ink-subtle">
             {error
               ? t("Couldn't load subtitles. You can start anyway and add one later in the player.")
-              : t("No subtitles found. Start anyway, Harbor keeps looking while you watch.")}
+              : t("No subtitles found. Start anyway, Lart keeps looking while you watch.")}
           </p>
         )}
         {visible.map((r) => (
@@ -231,7 +231,7 @@ export function BpSubtitleStep({
             }}
             className="h-[clamp(48px,5.6vh,66px)] shrink-0 rounded-[var(--bp-r-xs)] border border-[var(--bp-edge-2)] px-[clamp(18px,1.6vw,32px)] text-[clamp(14px,1.95vh,22px)] font-bold text-ink"
           >
-            {t("Skip, let Harbor choose")}
+            {t("Skip, let Lart choose")}
           </button>
           <button
             type="button"

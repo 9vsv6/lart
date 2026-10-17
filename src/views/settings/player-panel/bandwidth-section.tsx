@@ -20,7 +20,7 @@ export function BandwidthInput() {
         wide
         label={t("Internet speed")}
         desc={t(
-          "Pick the cap your connection can sustain. Streams that need more than this rank lower, so Harbor stops offering you files you cannot actually play.",
+          "Pick the cap your connection can sustain. Streams that need more than this rank lower, so Lart stops offering you files you cannot actually play.",
         )}
       >
         <div className="flex w-full flex-col gap-3">

@@ -32,7 +32,7 @@ const catalog11: Record<string, string> = {
   "Add preset": "Aggiungi preimpostazione",
   "Add to My List": "Aggiungi alla mia lista",
   "Add to tile {n}": "Aggiungi al riquadro {n}",
-  "Added to Harbor": "Aggiunto a Harbor",
+  "Added to Lart": "Aggiunto a Lart",
   "Added to downloads": "Aggiunto ai download",
   "Added to library": "Aggiunto alla raccolta",
   "Adds Letterboxd and Trakt community ratings to detail pages, covering what OMDb misses.":
@@ -87,7 +87,7 @@ const catalog11: Record<string, string> = {
   "Community index": "Indice della community",
   "Compressing…": "Compressione in corso…",
   "Configure URL above first": "Prima configura l'URL qui sopra",
-  "Continue in Harbor": "Continua in Harbor",
+  "Continue in Lart": "Continua in Lart",
   "Continue in browser": "Continua nel browser",
   "Copy to clipboard": "Copia negli appunti",
   "Could not send: {message}": "Invio non riuscito: {message}",
@@ -122,8 +122,8 @@ const catalog11: Record<string, string> = {
   "Episodes and spoilers": "Episodi e spoiler",
   "Every color token, stable selector, {api} call, live hook (bell, account menu, avatar, status dot, unread badge), and copy-paste recipe.":
     "Ogni token colore, selettore stabile, chiamata {api}, hook in tempo reale (campanella, menu dell'account, avatar, indicatore di stato, badge dei non letti) e procedura pronta da copiare e incollare.",
-  "Every theme you share gets a private owner token. On the device where you shared it, Harbor saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
-    "Ogni tema che condividi riceve un token privato del proprietario. Harbor lo salva automaticamente sul dispositivo da cui lo hai condiviso, così il tema compare qui e puoi riscattarlo con un tocco. Per riscattarne uno da un altro dispositivo, incolla il token qui sotto. Ora le nuove condivisioni vengono collegate direttamente al tuo account, quindi non dovrai più farlo.",
+  "Every theme you share gets a private owner token. On the device where you shared it, Lart saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
+    "Ogni tema che condividi riceve un token privato del proprietario. Lart lo salva automaticamente sul dispositivo da cui lo hai condiviso, così il tema compare qui e puoi riscattarlo con un tocco. Per riscattarne uno da un altro dispositivo, incolla il token qui sotto. Ora le nuove condivisioni vengono collegate direttamente al tuo account, quindi non dovrai più farlo.",
   "Experimental 1:1 ports of other apps. Rough edges expected.":
     "Versioni sperimentali 1:1 di altre app. Possibili imperfezioni.",
   "Explore, discover and earn stars": "Esplora, scopri e guadagna stelle",
@@ -139,21 +139,21 @@ const catalog11: Record<string, string> = {
   "Go to host": "Vai all'host",
   "Got one a friend shared? Drop it in.": "Ne hai uno condiviso da un amico? Inseriscilo qui.",
   HOME: "HOME",
-  "Harbor couldn't reach MyAnimeList or AniList. Check your connection and try again.":
-    "Harbor non riesce a raggiungere MyAnimeList o AniList. Controlla la connessione e riprova.",
-  "Harbor couldn't reach the catalog servers. Check your connection and try again.":
-    "Harbor non riesce a raggiungere i server dei cataloghi. Controlla la connessione e riprova.",
-  "Harbor dropped {n} suspicious or mismatched result.":
-    "Harbor ha escluso {n} risultato sospetto o non corrispondente.",
-  "Harbor dropped {n} suspicious or mismatched results.":
-    "Harbor ha escluso {n} risultati sospetti o non corrispondenti.",
-  "Harbor on the server display": "Harbor sullo schermo del server",
-  "Harbor opens 4 parallel requests to": "Harbor invia 4 richieste in parallelo a",
+  "Lart couldn't reach MyAnimeList or AniList. Check your connection and try again.":
+    "Lart non riesce a raggiungere MyAnimeList o AniList. Controlla la connessione e riprova.",
+  "Lart couldn't reach the catalog servers. Check your connection and try again.":
+    "Lart non riesce a raggiungere i server dei cataloghi. Controlla la connessione e riprova.",
+  "Lart dropped {n} suspicious or mismatched result.":
+    "Lart ha escluso {n} risultato sospetto o non corrispondente.",
+  "Lart dropped {n} suspicious or mismatched results.":
+    "Lart ha escluso {n} risultati sospetti o non corrispondenti.",
+  "Lart on the server display": "Lart sullo schermo del server",
+  "Lart opens 4 parallel requests to": "Lart invia 4 richieste in parallelo a",
   "Have a file?": "Hai un file?",
   "Have a token from another device?": "Hai un token da un altro dispositivo?",
   "Hidden card": "Scheda nascosta",
-  "Highly recommended. This is what gives you the full Harbor experience: Popular, Trending, In Theaters, and per-service rails. Free at":
-    "Fortemente consigliato. Offre l'esperienza Harbor completa: Popolari, Di tendenza, Al cinema e sezioni per ogni servizio. Gratis su",
+  "Highly recommended. This is what gives you the full Lart experience: Popular, Trending, In Theaters, and per-service rails. Free at":
+    "Fortemente consigliato. Offre l'esperienza Lart completa: Popolari, Di tendenza, Al cinema e sezioni per ogni servizio. Gratis su",
   "How this is measured": "Come viene misurato",
   "IPTV lists": "Liste IPTV",
   "Identifies the song with Google Gemini (free tier, no usage cap). Get a key at":
@@ -274,8 +274,8 @@ const catalog11: Record<string, string> = {
   "Seek back 10 seconds": "Torna indietro di 10 secondi",
   "Seek forward 10 seconds": "Vai avanti di 10 secondi",
   "Select renderer": "Seleziona il renderer",
-  "Sends the context above straight to the Harbor team. No keys or library data.":
-    "Invia il contesto qui sopra direttamente al team di Harbor. Nessuna chiave né dato della libreria.",
+  "Sends the context above straight to the Lart team. No keys or library data.":
+    "Invia il contesto qui sopra direttamente al team di Lart. Nessuna chiave né dato della libreria.",
   "Sent. Thanks for the help!": "Inviato. Grazie per l'aiuto!",
   "Services on the TV": "Servizi sulla TV",
   "Set as a backdrop": "Imposta come sfondo",
@@ -291,8 +291,8 @@ const catalog11: Record<string, string> = {
     "Lo slot è quasi pieno ({count}/{limit}). Potrebbe superare i limiti sugli schermi stretti.",
   "Something blew up while rendering. Reload to recover, or send us the technical detail.":
     "Si è verificato un errore durante il rendering. Ricarica per ripristinare il funzionamento oppure inviaci i dettagli tecnici.",
-  "Sorry, Harbor crashed the last time it was running. You can review the details and choose whether to send a report.":
-    "Spiacenti, Harbor si è arrestato in modo anomalo durante l'ultima esecuzione. Puoi esaminare i dettagli e scegliere se inviare una segnalazione.",
+  "Sorry, Lart crashed the last time it was running. You can review the details and choose whether to send a report.":
+    "Spiacenti, Lart si è arrestato in modo anomalo durante l'ultima esecuzione. Puoi esaminare i dettagli e scegliere se inviare una segnalazione.",
   "Starting a show": "Avvio di una serie",
   "Stream offline": "Stream non disponibile",
   "Submit update": "Invia l'aggiornamento",
@@ -316,7 +316,7 @@ const catalog11: Record<string, string> = {
   "Theme link or ID": "Link o ID del tema",
   "They email an activation link the first time. Click it, then come back and save.":
     "La prima volta inviano un link di attivazione via email. Aprilo, poi torna qui e salva.",
-  "This Harbor": "Questo Harbor",
+  "This Lart": "Questo Lart",
   "This PC": "Questo PC",
   "This playlist hasn't been loaded yet, or it has no channels.":
     "Questa playlist non è ancora stata caricata oppure non contiene canali.",
@@ -338,12 +338,12 @@ const catalog11: Record<string, string> = {
   'Use the "personal" key, not the project one.':
     'Usa la chiave "personal", non quella del progetto.',
   "Use the v3 key, not the read access token.": "Usa la chiave v3, non il read access token.",
-  "Used to check cache and unrestrict links. Harbor never adds or removes anything on your account on its own.": "Serve per controllare la cache e rimuovere le restrizioni dai link. Harbor non aggiunge né rimuove mai nulla dal tuo account autonomamente.",
+  "Used to check cache and unrestrict links. Lart never adds or removes anything on your account on its own.": "Serve per controllare la cache e rimuovere le restrizioni dai link. Lart non aggiunge né rimuove mai nulla dal tuo account autonomamente.",
   "Uses the directdl endpoint, which skips queueing for anything already cached.":
     "Usa l'endpoint directdl, che evita la coda per tutto ciò che è già nella cache.",
   "Uses up to 150 MB": "Utilizza fino a 150 MB",
   VS: "VS",
-  "Verified Harbor Staff": "Membro verificato dello staff di Harbor",
+  "Verified Lart Staff": "Membro verificato dello staff di Lart",
   Versions: "Versioni",
   "Versions ({count})": "Versioni ({count})",
   "View {title}": "Visualizza {title}",
@@ -367,8 +367,8 @@ const catalog11: Record<string, string> = {
   "Works without a key at low volume; add a key for higher quotas.":
     "Funziona senza chiave con un volume di richieste ridotto; aggiungi una chiave per limiti più elevati.",
   "You found them all!": "Li hai trovati tutti!",
-  "Your library lives on Harbor. Connect to your computer and it shows up here.":
-    "La tua raccolta si trova su Harbor. Collegati al tuo computer e apparirà qui.",
+  "Your library lives on Lart. Connect to your computer and it shows up here.":
+    "La tua raccolta si trova su Lart. Collegati al tuo computer e apparirà qui.",
   "Your new version is in for a quick review. The live listing keeps working until this one is approved.":
     "La nuova versione è in attesa di una rapida revisione. La versione attualmente pubblicata continuerà a funzionare finché questa non sarà approvata.",
   "a bare RPDB-compatible server (your RPDB key is still sent), or a full URL template using":

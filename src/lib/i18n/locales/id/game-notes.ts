@@ -27,6 +27,6 @@ export default {
   "games.notes.import": "Impor JSON",
   "games.notes.export": "Ekspor cadangan",
   "games.notes.unsaved": "Perubahan belum disimpan",
-  "games.notes.local": "Disimpan di profil Harbor ini",
+  "games.notes.local": "Disimpan di profil Lart ini",
   "games.notes.importGuide": "Salin ke catatan saya"
 };

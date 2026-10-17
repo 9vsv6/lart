@@ -87,14 +87,14 @@ const manga: Record<string, string> = {
     "Với liên kết hoặc hình ảnh, bạn thường cần một thuộc tính:",
   "For an AI agent": "Dành cho tác nhân AI",
   Go: "Đi",
-  "Harbor does not host any manga or any sources. Connect your own server or open a folder you already have, and mix as many as you like.":
-    "Harbor không lưu trữ manga hay bất kỳ nguồn nào. Hãy kết nối máy chủ riêng hoặc mở thư mục có sẵn và kết hợp bao nhiêu nguồn tùy thích.",
-  "Harbor logs into nothing and bypasses no password, paywall, or access control, and must not be used to attempt it. Point it only at content you are legally allowed to read, and never at official or licensed publisher sites. You alone are responsible for what you connect and for following copyright and each site's terms. Harbor bundles and endorses no sites.":
-    "Harbor không đăng nhập vào bất kỳ đâu, không vượt qua mật khẩu, tường phí hay biện pháp kiểm soát truy cập nào và không được dùng để thử làm những việc đó. Chỉ dùng Harbor với nội dung mà bạn được phép đọc hợp pháp và tuyệt đối không dùng với trang của nhà xuất bản chính thức hoặc được cấp phép. Bạn hoàn toàn chịu trách nhiệm về nội dung mình kết nối cũng như việc tuân thủ bản quyền và điều khoản của từng trang. Harbor không tích hợp hay xác nhận bất kỳ trang nào.",
-  "Harbor ships no manga sources and hosts nothing. Extensions come from repositories other people maintain. Paste a repository URL below to browse its plugins, then install the ones you want. Every plugin runs sandboxed in an isolated worker with no access to your files, accounts, or the rest of the app.":
-    "Harbor không đi kèm nguồn manga và không lưu trữ nội dung nào. Các tiện ích mở rộng đến từ kho mã do người khác duy trì. Dán URL kho mã bên dưới để duyệt plugin, rồi cài những plugin bạn muốn. Mỗi plugin chạy trong môi trường cách ly riêng, không thể truy cập tệp, tài khoản hay phần còn lại của ứng dụng.",
-  "Harbor ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Harbor reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
-    "Harbor cung cấp công cụ, không cung cấp trang web. Bạn viết một cấu hình JSON ngắn mô tả trang web bằng bộ chọn CSS, rồi Harbor dùng chúng để đọc trang. Không có gì được tích hợp sẵn: chỉ dùng với các trang mà bạn có quyền đọc.",
+  "Lart does not host any manga or any sources. Connect your own server or open a folder you already have, and mix as many as you like.":
+    "Lart không lưu trữ manga hay bất kỳ nguồn nào. Hãy kết nối máy chủ riêng hoặc mở thư mục có sẵn và kết hợp bao nhiêu nguồn tùy thích.",
+  "Lart logs into nothing and bypasses no password, paywall, or access control, and must not be used to attempt it. Point it only at content you are legally allowed to read, and never at official or licensed publisher sites. You alone are responsible for what you connect and for following copyright and each site's terms. Lart bundles and endorses no sites.":
+    "Lart không đăng nhập vào bất kỳ đâu, không vượt qua mật khẩu, tường phí hay biện pháp kiểm soát truy cập nào và không được dùng để thử làm những việc đó. Chỉ dùng Lart với nội dung mà bạn được phép đọc hợp pháp và tuyệt đối không dùng với trang của nhà xuất bản chính thức hoặc được cấp phép. Bạn hoàn toàn chịu trách nhiệm về nội dung mình kết nối cũng như việc tuân thủ bản quyền và điều khoản của từng trang. Lart không tích hợp hay xác nhận bất kỳ trang nào.",
+  "Lart ships no manga sources and hosts nothing. Extensions come from repositories other people maintain. Paste a repository URL below to browse its plugins, then install the ones you want. Every plugin runs sandboxed in an isolated worker with no access to your files, accounts, or the rest of the app.":
+    "Lart không đi kèm nguồn manga và không lưu trữ nội dung nào. Các tiện ích mở rộng đến từ kho mã do người khác duy trì. Dán URL kho mã bên dưới để duyệt plugin, rồi cài những plugin bạn muốn. Mỗi plugin chạy trong môi trường cách ly riêng, không thể truy cập tệp, tài khoản hay phần còn lại của ứng dụng.",
+  "Lart ships the engine, not the sites. You write a short JSON config that describes a site with CSS selectors, and Lart reads the site with them. Nothing is bundled: point it only at sites you have the right to read.":
+    "Lart cung cấp công cụ, không cung cấp trang web. Bạn viết một cấu hình JSON ngắn mô tả trang web bằng bộ chọn CSS, rồi Lart dùng chúng để đọc trang. Không có gì được tích hợp sẵn: chỉ dùng với các trang mà bạn có quyền đọc.",
   "Hide help": "Ẩn trợ giúp",
   "Host it with a repo.json": "Lưu trữ bằng repo.json",
   "How it works": "Cách hoạt động",
@@ -144,8 +144,8 @@ const manga: Record<string, string> = {
   "Oldest first": "Cũ nhất trước",
   "One Piece, Naruto and more worlds": "One Piece, Naruto và nhiều thế giới khác",
   Oneshot: "Truyện ngắn một chương",
-  "Only add repositories you trust. Harbor cannot vouch for third-party plugins.":
-    "Chỉ thêm các kho mã mà bạn tin cậy. Harbor không thể đảm bảo cho plugin của bên thứ ba.",
+  "Only add repositories you trust. Lart cannot vouch for third-party plugins.":
+    "Chỉ thêm các kho mã mà bạn tin cậy. Lart không thể đảm bảo cho plugin của bên thứ ba.",
   "Only sites you have the right to read.": "Chỉ những trang mà bạn có quyền đọc.",
   "Open manga details": "Mở thông tin manga",
   "Open the site in a browser. Right-click the thing you want (a cover, a title, a chapter link) and choose Inspect.":
@@ -165,14 +165,14 @@ const manga: Record<string, string> = {
     "Chọn một thư mục. Mỗi thư mục con bên trong là một manga, vì vậy hãy đặt tên chính xác như tiêu đề. Trong mỗi thư mục, thêm các thư mục chương chứa ảnh hoặc tệp .cbz / .zip. Tệp cover.jpg dùng làm ảnh bìa tùy chỉnh.",
   "Pick up the manga at {label}.": "Đọc tiếp manga từ {label}.",
   "Pick up the manga where the anime ends.": "Đọc tiếp manga từ đoạn anime kết thúc.",
-  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Harbor. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
-    "Plugin chạy trong môi trường cách ly, không thể truy cập tệp, tài khoản hoặc các phần khác của Harbor. Nội dung plugin thu thập là vấn đề giữa bạn và trang web đích. Chỉ cài đặt plugin từ kho lưu trữ mà bạn tin cậy.",
-  "Point Harbor's built-in scraper at any HTML site with a config":
-    "Dùng trình thu thập tích hợp của Harbor cho bất kỳ trang HTML nào bằng tệp cấu hình",
+  "Plugins run sandboxed in an isolated worker with no access to your files, accounts, or the rest of Lart. What a plugin scrapes is between you and the site it targets. Only install plugins from repositories you trust.":
+    "Plugin chạy trong môi trường cách ly, không thể truy cập tệp, tài khoản hoặc các phần khác của Lart. Nội dung plugin thu thập là vấn đề giữa bạn và trang web đích. Chỉ cài đặt plugin từ kho lưu trữ mà bạn tin cậy.",
+  "Point Lart's built-in scraper at any HTML site with a config":
+    "Dùng trình thu thập tích hợp của Lart cho bất kỳ trang HTML nào bằng tệp cấu hình",
   "Point Local folder at CBZ files or folders of images you already own.":
     "Trỏ Thư mục cục bộ đến các tệp CBZ hoặc thư mục ảnh bạn sở hữu.",
-  "Prefer a server? Run every source through your own Suwayomi and point Harbor at it":
-    "Muốn dùng máy chủ? Chạy mọi nguồn qua Suwayomi của riêng bạn rồi kết nối Harbor với máy chủ đó",
+  "Prefer a server? Run every source through your own Suwayomi and point Lart at it":
+    "Muốn dùng máy chủ? Chạy mọi nguồn qua Suwayomi của riêng bạn rồi kết nối Lart với máy chủ đó",
   "Previous chapter": "Chương trước",
   "Previous page": "Trang trước",
   "Publicly accessible pages only.": "Chỉ các trang có thể truy cập công khai.",
@@ -260,7 +260,7 @@ const manga: Record<string, string> = {
   "Use default": "Dùng mặc định",
   "Use the download arrow next to any chapter to save it for reading offline.":
     "Dùng mũi tên tải xuống bên cạnh chương bất kỳ để lưu và đọc khi không có mạng.",
-  "Use the harbor bridge": "Dùng cầu nối Harbor",
+  "Use the harbor bridge": "Dùng cầu nối Lart",
   "Watch the anime": "Xem anime",
   "We review every source. Yours will be reviewed and approved shortly if it checks out.":
     "Chúng tôi xem xét mọi nguồn. Nguồn của bạn sẽ sớm được xem xét và phê duyệt nếu đáp ứng yêu cầu.",
@@ -269,8 +269,8 @@ const manga: Record<string, string> = {
   "Write a scraper for any site, host it, and install it like any other plugin":
     "Viết trình thu thập dữ liệu cho trang web bất kỳ, lưu trữ rồi cài đặt như mọi plugin khác",
   "Write one JavaScript file": "Viết một tệp JavaScript",
-  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Harbor bundles and endorses no sites; it only runs the config you supply.":
-    "Bạn hoàn toàn chịu trách nhiệm về nội dung mình kết nối cũng như việc tuân thủ bản quyền và điều khoản của từng trang web. Harbor không tích hợp sẵn hay xác nhận bất kỳ trang web nào; Harbor chỉ chạy cấu hình bạn cung cấp.",
+  "You are solely responsible for what you connect and for complying with copyright and each site's terms. Lart bundles and endorses no sites; it only runs the config you supply.":
+    "Bạn hoàn toàn chịu trách nhiệm về nội dung mình kết nối cũng như việc tuân thủ bản quyền và điều khoản của từng trang web. Lart không tích hợp sẵn hay xác nhận bất kỳ trang web nào; Lart chỉ chạy cấu hình bạn cung cấp.",
   "You have reached the latest chapter available.": "Bạn đã đến chương mới nhất hiện có.",
   "Your AniList": "AniList của bạn",
   "Your config": "Cấu hình của bạn",
@@ -296,8 +296,8 @@ const manga: Record<string, string> = {
   "is a page number. Add": "là số trang. Thêm",
   "is a regex for the part to change": "là biểu thức chính quy cho phần cần thay đổi",
   "is each chapter row": "là từng hàng chương",
-  "is how many items to skip, starting at 0. Harbor auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
-    "là số mục cần bỏ qua, bắt đầu từ 0. Harbor tự động phát hiện kích thước trang của trang web và duyệt qua giúp bạn, nên bạn không cần đặt kích thước trang. Dùng tùy chọn này khi URL đếm theo số mục.",
+  "is how many items to skip, starting at 0. Lart auto-detects the site's page size and walks it for you, so you never set a page size. Use this when the URL counts items.":
+    "là số mục cần bỏ qua, bắt đầu từ 0. Lart tự động phát hiện kích thước trang của trang web và duyệt qua giúp bạn, nên bạn không cần đặt kích thước trang. Dùng tùy chọn này khi URL đếm theo số mục.",
   "is the box around one manga; inside it": "là khung bao quanh một manga; bên trong khung",
   "is the manga URL": "là URL của manga",
   "is the search text (searchPath only).": "là nội dung tìm kiếm (chỉ searchPath).",

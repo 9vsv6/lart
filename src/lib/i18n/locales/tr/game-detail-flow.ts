@@ -1,7 +1,7 @@
 export default {
   "games.details.broadcastPause": "Yayını duraklat",
   "games.details.broadcastResume": "Yayını oynat",
-  "games.details.broadcastPlay": "Harbor’da izle",
+  "games.details.broadcastPlay": "Lart’da izle",
   "games.details.watchRun": "Koşuyu izle",
   "games.details.viewRun": "Rekoru görüntüle",
   "games.details.runVideo": "Koşu videosu",

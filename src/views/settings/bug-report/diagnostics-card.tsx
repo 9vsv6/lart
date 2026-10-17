@@ -42,7 +42,7 @@ export function DiagnosticsCard({ diag }: { diag: Diagnostics | null }) {
       />
     );
   }
-  const compact = `Harbor ${diag.appVersion} · ${diag.os}${diag.osVersion ? ` ${diag.osVersion}` : ""} · ${diag.viewport} · ${diag.locale}`;
+  const compact = `Lart ${diag.appVersion} · ${diag.os}${diag.osVersion ? ` ${diag.osVersion}` : ""} · ${diag.viewport} · ${diag.locale}`;
   const mpv = diag.mpvProbe;
   const mpvLine = !mpv
     ? t("not probed")

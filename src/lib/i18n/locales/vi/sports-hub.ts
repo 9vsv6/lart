@@ -122,8 +122,8 @@ export default {
   Constructors: "Các đội đua",
   "Coverage varies by league. Streams depend on your available sources.":
     "Phạm vi dữ liệu tùy giải đấu. Luồng phát phụ thuộc vào nguồn bạn có.",
-  "Delivery failed. Retrying while Harbor is open.":
-    "Gửi không thành công. Thử lại khi Harbor vẫn mở.",
+  "Delivery failed. Retrying while Lart is open.":
+    "Gửi không thành công. Thử lại khi Lart vẫn mở.",
   Driver: "Tay đua",
   Drivers: "Các tay đua",
   "Entrants and starting positions appear when the feed publishes them.":
@@ -158,7 +158,7 @@ export default {
     "Từ những giải đấu lớn nhất đến môn thể thao yêu thích mới.",
   "Inside the paddock": "Bên trong paddock",
   "Jump to today": "Đến hôm nay",
-  "Keep Harbor open to deliver reminders.": "Giữ Harbor mở để gửi nhắc nhở.",
+  "Keep Lart open to deliver reminders.": "Giữ Lart mở để gửi nhắc nhở.",
   "Last saved score": "Tỷ số lưu gần nhất",
   "Last update": "Cập nhật lần cuối",
   "Latest saved scores": "Các tỷ số lưu gần nhất",
@@ -282,10 +282,10 @@ export default {
     "Thử môn thể thao hoặc ngày khác. Lịch đã lưu sẽ hiện ở đây khi nguồn không khả dụng.",
   "Up to date": "Đã cập nhật",
   "Updating schedules…": "Đang cập nhật lịch…",
-  "Use only sources you are authorized to access. Harbor does not bypass subscriptions or access restrictions.":
-    "Chỉ dùng nguồn bạn được phép truy cập. Harbor không vượt qua yêu cầu thuê bao hoặc hạn chế truy cập.",
-  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Harbor does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
-    "Dùng luồng phát, danh sách M3U và tài khoản Xtream bạn được phép truy cập. Harbor không cung cấp thuê bao hoặc vượt qua tường phí, DRM hay hạn chế truy cập.",
+  "Use only sources you are authorized to access. Lart does not bypass subscriptions or access restrictions.":
+    "Chỉ dùng nguồn bạn được phép truy cập. Lart không vượt qua yêu cầu thuê bao hoặc hạn chế truy cập.",
+  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Lart does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
+    "Dùng luồng phát, danh sách M3U và tài khoản Xtream bạn được phép truy cập. Lart không cung cấp thuê bao hoặc vượt qua tường phí, DRM hay hạn chế truy cập.",
   "View match statistics": "Xem thống kê trận đấu",
   "Watch with your sources": "Xem bằng nguồn của bạn",
   "Your authorized IPTV, M3U and Xtream channels, in one place.":

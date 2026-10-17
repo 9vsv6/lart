@@ -5,7 +5,7 @@ export default {
 
   "games.shortcuts.activity.open": "Активность",
   "games.shortcuts.activity.title": "Активность ярлыков",
-  "games.shortcuts.activity.note": "Недавние сканирования и запуски в этом профиле Harbor. До 300 записей.",
+  "games.shortcuts.activity.note": "Недавние сканирования и запуски в этом профиле Lart. До 300 записей.",
   "games.shortcuts.activity.remember": "Сохранять между сеансами",
   "games.shortcuts.activity.detailed": "Включать подробности сканирования",
   "games.shortcuts.activity.storageError": "Не удалось получить доступ к сохранённой активности. Записи этого сеанса по-прежнему видны.",
@@ -47,7 +47,7 @@ export default {
   "games.shortcuts.tags": "Метки",
   "games.shortcuts.storeError": "Не удалось сохранить настройки.",
   "games.shortcuts.shortcut_location": "Выберите папку Steam или её папку userdata.",
-  "games.shortcuts.shortcut_account": "Откройте Steam с аккаунтом этого ярлыка и обновите. Harbor должен использовать ту же установку Steam.",
+  "games.shortcuts.shortcut_account": "Откройте Steam с аккаунтом этого ярлыка и обновите. Lart должен использовать ту же установку Steam.",
   "games.shortcuts.shortcut_missing": "Этот ярлык больше не существует. Обновите библиотеку.",
   "games.shortcuts.shortcut_executable": "Исполняемый файл отсутствует или его абсолютный путь не поддерживается.",
   "games.shortcuts.shortcut_launch": "Steam не удалось открыть ярлык. Повторите попытку.",

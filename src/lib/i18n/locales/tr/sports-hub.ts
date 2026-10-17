@@ -122,8 +122,8 @@ export default {
   Constructors: "Takımlar",
   "Coverage varies by league. Streams depend on your available sources.":
     "Kapsam lige göre değişir. Yayınlar mevcut kaynaklarınıza bağlıdır.",
-  "Delivery failed. Retrying while Harbor is open.":
-    "Gönderilemedi. Harbor açıkken tekrar denenecek.",
+  "Delivery failed. Retrying while Lart is open.":
+    "Gönderilemedi. Lart açıkken tekrar denenecek.",
   Driver: "Pilot",
   Drivers: "Pilotlar",
   "Entrants and starting positions appear when the feed publishes them.":
@@ -157,7 +157,7 @@ export default {
   "From the biggest leagues to a new favorite sport.": "En büyük liglerden yeni favori sporunuza.",
   "Inside the paddock": "Padokta",
   "Jump to today": "Bugüne git",
-  "Keep Harbor open to deliver reminders.": "Hatırlatıcıları göndermek için Harbor’ı açık tutun.",
+  "Keep Lart open to deliver reminders.": "Hatırlatıcıları göndermek için Lart’ı açık tutun.",
   "Last saved score": "Son kaydedilen skor",
   "Last update": "Son güncelleme",
   "Latest saved scores": "Son kaydedilen skorlar",
@@ -279,10 +279,10 @@ export default {
     "Başka bir spor veya tarih deneyin. Kaynak kullanılamadığında kaydedilmiş takvimler burada görünür.",
   "Up to date": "Güncel",
   "Updating schedules…": "Takvimler güncelleniyor…",
-  "Use only sources you are authorized to access. Harbor does not bypass subscriptions or access restrictions.":
-    "Yalnızca erişim yetkiniz olan kaynakları kullanın. Harbor abonelikleri veya erişim kısıtlamalarını aşmaz.",
-  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Harbor does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
-    "Erişim yetkiniz olan yayınları, M3U listelerini ve Xtream hesaplarını kullanın. Harbor abonelik sağlamaz; ödeme duvarlarını, DRM’yi veya erişim kısıtlamalarını aşmaz.",
+  "Use only sources you are authorized to access. Lart does not bypass subscriptions or access restrictions.":
+    "Yalnızca erişim yetkiniz olan kaynakları kullanın. Lart abonelikleri veya erişim kısıtlamalarını aşmaz.",
+  "Use streams, M3U playlists and Xtream accounts you are authorized to access. Lart does not provide subscriptions or bypass paywalls, DRM or access restrictions.":
+    "Erişim yetkiniz olan yayınları, M3U listelerini ve Xtream hesaplarını kullanın. Lart abonelik sağlamaz; ödeme duvarlarını, DRM’yi veya erişim kısıtlamalarını aşmaz.",
   "View match statistics": "Maç istatistiklerini gör",
   "Watch with your sources": "Kendi kaynaklarınızla izleyin",
   "Your authorized IPTV, M3U and Xtream channels, in one place.":

@@ -18,7 +18,7 @@ export default {
   "games.warhammerUniverse.screenNote": "Phim hoạt hình nguyên bản và phim dài từ thiên niên kỷ 41.",
   "games.warhammerUniverse.free": "Miễn phí trên Warhammer TV",
   "games.warhammerUniverse.subscription": "Có thể cần đăng ký Warhammer+",
-  "games.warhammerUniverse.movieNote": "Phim hoạt hình năm 2010. Mở chi tiết Harbor để xem diễn viên, trailer và nguồn.",
+  "games.warhammerUniverse.movieNote": "Phim hoạt hình năm 2010. Mở chi tiết Lart để xem diễn viên, trailer và nguồn.",
   "games.warhammerUniverse.screenScope": "Tuyển tập công khai của Warhammer TV. Hammer and Bolter trải qua nhiều thế giới; nhà cung cấp quyết định khả năng xem.",
   "games.warhammerUniverse.lore": "Khám phá cốt truyện",
   "games.warhammerUniverse.loreNote": "Nhân vật, phe phái và sự kiện quan trọng qua minh họa của người tạo ra các thế giới này.",

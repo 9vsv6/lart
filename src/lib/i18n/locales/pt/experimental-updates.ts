@@ -9,8 +9,8 @@ export default {
   "Beta version": "Versão beta",
   "Choose a tested beta": "Escolher uma beta testada",
   "Beta {version}": "Beta {version}",
-  "Harbor saves a local recovery backup before installing. It can contain account details. Old backups are not restored automatically, and recovery files use extra disk space.":
-    "O Harbor salva um backup local de recuperação antes de instalar. Ele pode conter dados de contas. Backups antigos não são restaurados automaticamente, e os arquivos de recuperação ocupam espaço extra.",
+  "Lart saves a local recovery backup before installing. It can contain account details. Old backups are not restored automatically, and recovery files use extra disk space.":
+    "O Lart salva um backup local de recuperação antes de instalar. Ele pode conter dados de contas. Backups antigos não são restaurados automaticamente, e os arquivos de recuperação ocupam espaço extra.",
   "Install beta {version} and restart? This replaces the experimental app, not your current settings.":
     "Instalar beta {version} e reiniciar? Isso substitui o aplicativo experimental, não suas configurações atuais.",
   "Install beta {version} and restart": "Instalar beta {version} e reiniciar",
@@ -29,22 +29,22 @@ export default {
   "Continue the return to beta in Experimental builds below.":
     "Continue o retorno para beta em Versões experimentais abaixo.",
   "Experimental installation currently requires a managed Windows installation with a tested return to beta.":
-    "A instalação experimental exige uma instalação do Windows gerenciada pelo Harbor com retorno testado para beta.",
+    "A instalação experimental exige uma instalação do Windows gerenciada pelo Lart com retorno testado para beta.",
   "Experimental builds": "Versões experimentais",
   Experimental: "Experimental",
   Beta: "Beta",
   Stable: "Estável",
   "Test upcoming changes": "Teste as próximas mudanças",
-  "Available to Harbor accounts with a Tester, Moderator, Admin, or Dev badge.":
-    "Disponível para contas Harbor com o distintivo Tester, Moderator, Admin ou Dev.",
+  "Available to Lart accounts with a Tester, Moderator, Admin, or Dev badge.":
+    "Disponível para contas Lart com o distintivo Tester, Moderator, Admin ou Dev.",
   "Return to a regular build": "Voltar para uma versão regular",
-  "Experimental access requires a Harbor account with a Tester, Moderator, Admin, or Dev badge.":
-    "O acesso experimental exige uma conta Harbor com o distintivo Tester, Moderator, Admin ou Dev.",
+  "Experimental access requires a Lart account with a Tester, Moderator, Admin, or Dev badge.":
+    "O acesso experimental exige uma conta Lart com o distintivo Tester, Moderator, Admin ou Dev.",
   "Public test builds for anyone who wants to try upcoming fixes. No invitation or special account is needed.":
     "Versões de teste públicas para quem quiser experimentar as próximas correções. Não é necessário convite nem conta especial.",
-  "These builds may crash or change your settings. Back up Harbor before installing. Downloads and installation still require your approval.":
-    "Estas versões podem falhar ou alterar suas configurações. Faça um backup do Harbor antes de instalar. O download e a instalação ainda exigem sua aprovação.",
-  "Installed: Harbor {version}": "Instalado: Harbor {version}",
+  "These builds may crash or change your settings. Back up Lart before installing. Downloads and installation still require your approval.":
+    "Estas versões podem falhar ou alterar suas configurações. Faça um backup do Lart antes de instalar. O download e a instalação ainda exigem sua aprovação.",
+  "Installed: Lart {version}": "Instalado: Lart {version}",
   "Update channel: {channel}": "Canal de atualização: {channel}",
   "Experimental in-app updates are available only in the Windows and macOS desktop apps.":
     "As atualizações experimentais no aplicativo estão disponíveis apenas nos aplicativos para Windows e macOS.",
@@ -76,8 +76,8 @@ export default {
     "A versão experimental mudou durante a verificação. Verifique novamente antes de baixar.",
   "Couldn't check experimental builds. Check your connection and try again.":
     "Não foi possível buscar versões experimentais. Verifique sua conexão e tente novamente.",
-  "Couldn't verify your Harbor account access. Check your connection and try again.":
-    "Não foi possível verificar o acesso da sua conta Harbor. Verifique sua conexão e tente novamente.",
-  "Harbor Setup did not finish updating Harbor. Check for updates to try again.":
-    "O instalador do Harbor não concluiu a atualização. Verifique as atualizações para tentar novamente.",
+  "Couldn't verify your Lart account access. Check your connection and try again.":
+    "Não foi possível verificar o acesso da sua conta Lart. Verifique sua conexão e tente novamente.",
+  "Lart Setup did not finish updating Lart. Check for updates to try again.":
+    "O instalador do Lart não concluiu a atualização. Verifique as atualizações para tentar novamente.",
 };

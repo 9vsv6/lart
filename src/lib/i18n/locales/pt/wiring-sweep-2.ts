@@ -52,8 +52,8 @@ const wiringSweep2: Record<string, string> = {
     "As recomendações estão temporariamente indisponíveis.",
   "Same-genre picks from your installed sources": "Seleções do mesmo gênero nas fontes instaladas",
   "This chapter could not be loaded.": "Não foi possível carregar este capítulo.",
-  "Every surface in Harbor maps to one of these 12 variables.":
-    "Cada superfície do Harbor é vinculada a uma destas 12 variáveis.",
+  "Every surface in Lart maps to one of these 12 variables.":
+    "Cada superfície do Lart é vinculada a uma destas 12 variáveis.",
   "Font tokens": "Tokens de fonte",
   "Set on the root. Override any to swap typography.":
     "Defina-os na raiz. Sobrescreva qualquer um deles para trocar a tipografia.",
@@ -61,8 +61,8 @@ const wiringSweep2: Record<string, string> = {
   "Shared transition curves. Use anywhere you transition.":
     "Curvas de transição compartilhadas. Use-as em qualquer lugar onde houver uma transição.",
   "window.harbor API": "API window.harbor",
-  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Harbor feature, so your chrome never goes stale when Harbor adds menu items.":
-    "Chame-os em manipuladores onclick ou no JavaScript do seu tema. Eles são estáveis e seguros: cada um aciona o recurso real do Harbor, assim a sua interface nunca fica desatualizada quando o Harbor adiciona itens de menu.",
+  "Call these from onclick handlers or your theme JS. They are stable and safe: each one drives the real Lart feature, so your chrome never goes stale when Lart adds menu items.":
+    "Chame-os em manipuladores onclick ou no JavaScript do seu tema. Eles são estáveis e seguros: cada um aciona o recurso real do Lart, assim a sua interface nunca fica desatualizada quando o Lart adiciona itens de menu.",
   "Root data attributes": "Atributos de dados da raiz",
   "Set on <html>. Use them to scope styles to a specific layout/card/button choice.":
     "Defina-os em <html>. Use-os para restringir os estilos a uma opção específica de layout, cartão ou botão.",
@@ -75,8 +75,8 @@ const wiringSweep2: Record<string, string> = {
   "Pick a z-index for your overlays that sits where you want it.":
     "Escolha um z-index para posicionar suas sobreposições na camada desejada.",
   "Window events": "Eventos de window",
-  "Dispatched on window. Listen from your theme JS to react to Harbor's lifecycle.":
-    "Disparados em window. Monitore-os no JavaScript do seu tema para responder ao ciclo de vida do Harbor.",
+  "Dispatched on window. Listen from your theme JS to react to Lart's lifecycle.":
+    "Disparados em window. Monitore-os no JavaScript do seu tema para responder ao ciclo de vida do Lart.",
   "View identifiers": "Identificadores de visualização",
   "Use these strings if you wire a custom navbar that needs to navigate.":
     "Use estas strings ao configurar uma barra de navegação personalizada que precise navegar.",
@@ -177,8 +177,8 @@ const wiringSweep2: Record<string, string> = {
   "Award pack": "Pacote de prêmios",
   "Reskin the quality chips (4K, HDR, Dolby Vision, Atmos and more) that ride each stream in the play picker. Click any slot to drop in your own PNG or animated GIF, or import a whole set at once. You do not have to fill every slot.":
     "Personalize a aparência dos selos de qualidade (4K, HDR, Dolby Vision, Atmos e outros) que acompanham cada opção no seletor de reprodução. Clique em qualquer espaço para adicionar seu próprio PNG ou GIF animado, ou importe um conjunto inteiro de uma só vez. Você não precisa preencher todos os espaços.",
-  "Reskin the award trophies shown across Harbor. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
-    "Personalize a aparência dos troféus de prêmios exibidos em todo o Harbor. Clique em qualquer prêmio para adicionar um PNG ou GIF animado, adicione seus próprios tipos de prêmio personalizados ou importe um conjunto inteiro de uma só vez.",
+  "Reskin the award trophies shown across Lart. Click any award to add a PNG or animated GIF, add your own custom award types, or import a whole set at once.":
+    "Personalize a aparência dos troféus de prêmios exibidos em todo o Lart. Clique em qualquer prêmio para adicionar um PNG ou GIF animado, adicione seus próprios tipos de prêmio personalizados ou importe um conjunto inteiro de uma só vez.",
   "Import a set": "Importar um conjunto",
   "Drop many images, GIFs, or a .zip at once. Name each file after its slot ({example}) and we match them. Any size is fine, we resize big images and keep animated GIFs light.":
     "Solte várias imagens, GIFs ou um .zip de uma só vez. Dê a cada arquivo o nome do espaço correspondente ({example}) e faremos a associação. Qualquer tamanho serve: redimensionamos imagens grandes e mantemos os GIFs animados leves.",
@@ -208,11 +208,11 @@ const wiringSweep2: Record<string, string> = {
   "That is the whole trick. A file called {example} drops straight into the matching slot. The name before .png is all that matters, capitals and spaces are ignored.":
     "Esse é todo o segredo. Um arquivo chamado {example} vai direto para o espaço correspondente. Só importa o nome antes de .png; letras maiúsculas e espaços são ignorados.",
   "Any size works, we optimize it": "Qualquer tamanho serve, nós otimizamos",
-  "Drop in art at any resolution. Harbor resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
-    "Adicione arte em qualquer resolução. O Harbor redimensiona e compacta tudo o que for grande demais para você, assim nada é ignorado por ser muito grande. PNGs quadrados com fundo transparente oferecem o melhor resultado.",
+  "Drop in art at any resolution. Lart resizes and compresses anything oversized for you, so nothing gets skipped for being too big. Square PNGs with a transparent background look best.":
+    "Adicione arte em qualquer resolução. O Lart redimensiona e compacta tudo o que for grande demais para você, assim nada é ignorado por ser muito grande. PNGs quadrados com fundo transparente oferecem o melhor resultado.",
   "Animated GIFs are welcome": "GIFs animados são bem-vindos",
-  "Want a badge that moves? Drop in a GIF up to 8 MB. Harbor shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
-    "Quer um selo que se mova? Adicione um GIF de até 8 MB. O Harbor reduz o tamanho e o converte em um formato animado leve para manter a nitidez e carregar rapidamente. Mantenha-o pequeno e em repetição contínua.",
+  "Want a badge that moves? Drop in a GIF up to 8 MB. Lart shrinks it down and converts it to a lightweight animated format so it stays crisp and loads fast. Keep it small and looping.":
+    "Quer um selo que se mova? Adicione um GIF de até 8 MB. O Lart reduz o tamanho e o converte em um formato animado leve para manter a nitidez e carregar rapidamente. Mantenha-o pequeno e em repetição contínua.",
   "Three ways to add art": "Três maneiras de adicionar arte",
   "Click any single slot to pick one file, select many PNGs at once, or drop a whole .zip of them. Named files land in their slots automatically, the rest you can place by hand.":
     "Clique em um espaço para escolher um arquivo, selecione vários PNGs de uma só vez ou solte um .zip inteiro com eles. Os arquivos nomeados vão automaticamente para seus espaços; você pode posicionar os demais manualmente.",
@@ -255,7 +255,7 @@ const wiringSweep2: Record<string, string> = {
   "Syncs to your {services}": "Sincroniza com seus {services}",
   "Play trailer": "Reproduzir trailer",
   "Open on computer": "Abrir no computador",
-  "Send this title to your Harbor app": "Enviar este título para o app Harbor",
+  "Send this title to your Lart app": "Enviar este título para o app Lart",
   "Saved to your favorites": "Salvo nos seus favoritos",
   "Save to your favorites": "Salvar nos seus favoritos",
   "Add to your watchlist": "Adicionar à sua lista para assistir",
@@ -320,7 +320,7 @@ const wiringSweep2: Record<string, string> = {
   "Preparing book…": "Preparando o livro…",
   "{title} cover": "Capa de {title}",
   "{title} internal cover": "Capa interna de {title}",
-  "Harbor Reader": "Leitor Harbor",
+  "Lart Reader": "Leitor Lart",
   "Bookmark current passage": "Marcar o trecho atual",
   "Show translation": "Mostrar tradução",
   "Show original language": "Mostrar idioma original",
@@ -407,10 +407,10 @@ const wiringSweep2: Record<string, string> = {
   "New badge unlocked": "Novo emblema desbloqueado",
   "Congrats! Tap to view your badges.": "Parabéns! Toque para ver os seus emblemas.",
   "{staff} requested your diagnostics": "{staff} solicitou seus dados de diagnóstico",
-  "Harbor Staff": "Equipe da Harbor",
+  "Lart Staff": "Equipe da Lart",
   "New profile comment": "Novo comentário no perfil",
   "The eBook download was canceled.": "O download do eBook foi cancelado.",
-  "Harbor eBook": "eBook da Harbor",
+  "Lart eBook": "eBook da Lart",
   "This eBook is not connected to an installed source.":
     "Este eBook não está conectado a uma fonte instalada.",
   "Loading chapter list…": "Carregando lista de capítulos…",

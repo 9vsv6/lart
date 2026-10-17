@@ -191,7 +191,7 @@ export function AddStreamDialog({
       <div className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto p-6">
         <p className="rounded-lg bg-canvas/50 p-3.5 text-[12px] leading-relaxed text-ink-muted">
           {t(
-            "Harbor opens only the address you paste here and lists the media it finds in that page's own source. It does not search anywhere else.",
+            "Lart opens only the address you paste here and lists the media it finds in that page's own source. It does not search anywhere else.",
           )}
         </p>
 

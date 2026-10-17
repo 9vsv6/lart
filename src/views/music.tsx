@@ -334,7 +334,7 @@ function MusicViewContent({ active }: { active: boolean }) {
   const searchGeneration = useRef(0);
 
   useEffect(() => {
-    if (active) document.title = `${t("music.title")} | Harbor`;
+    if (active) document.title = `${t("music.title")} | Lart`;
   }, [active, t]);
 
   const runSearch = useCallback((query: string, connector: string | null) => {
@@ -747,12 +747,12 @@ function MusicViewContent({ active }: { active: boolean }) {
           typed,
           null,
           outcome.errors.length
-            ? t("Harbor could not reach your music sources while searching for {query}.", {
+            ? t("Lart could not reach your music sources while searching for {query}.", {
                 query: typed,
               })
             : alternatives
               ? t(
-                  "No connected music source has {query}. Harbor also searched {alternatives} and found nothing.",
+                  "No connected music source has {query}. Lart also searched {alternatives} and found nothing.",
                   { query: typed, alternatives },
                 )
               : t("No connected music source has {query}.", { query: typed }),

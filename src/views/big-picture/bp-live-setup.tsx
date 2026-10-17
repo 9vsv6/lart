@@ -81,7 +81,7 @@ function complete(form: PlaylistFormValue): boolean {
 }
 
 /**
- * Adding a playlist without ever having opened Harbor on a desktop. Rows are
+ * Adding a playlist without ever having opened Lart on a desktop. Rows are
  * numbered from 0 with no gaps because bpRailStep treats a missing index as the
  * end of the rail, so the kind picker, every field and the save button are one
  * contiguous run whatever kind is selected.
@@ -152,7 +152,7 @@ export function BpLiveSetup({
           {t("Set up Live TV")}
         </h2>
         <p className="max-w-[70ch] text-[clamp(17px,2.3vh,22px)] font-medium leading-snug text-ink-subtle">
-          {t("Harbor plays IPTV from your own provider. Add a playlist and the guide fills in.")}
+          {t("Lart plays IPTV from your own provider. Add a playlist and the guide fills in.")}
         </p>
       </div>
 
@@ -233,7 +233,7 @@ export function BpLiveSetup({
           {t("Add playlist")}
         </button>
         <span className="text-[clamp(15px,1.9vh,18px)] font-medium text-ink-subtle">
-          {t("Press OK on a field to type, or use the Harbor remote on your phone.")}
+          {t("Press OK on a field to type, or use the Lart remote on your phone.")}
         </span>
       </div>
     </div>

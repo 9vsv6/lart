@@ -322,7 +322,7 @@ const drawings: Record<number, string> = {
 };
 const bodies = Object.fromEntries(Object.entries(drawings).map(([id,svg]) => [id, svg.match(/<svg[^>]*>([\s\S]*?)<\/svg>/)?.[1] ?? ""]));
 
-/** Original genre drawings sharing Harbor's rounded instrument stroke. */
+/** Original genre drawings sharing Lart's rounded instrument stroke. */
 export function MusicDiscoveryIcon({ genreId, className }: { genreId?: number; className?: string }) {
   return <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" aria-hidden="true" className={className} dangerouslySetInnerHTML={{ __html: bodies[genreId ?? 0] ?? '<g stroke-width="2.3" stroke-linecap="round"><circle cx="24" cy="24" r="18"/><circle cx="24" cy="24" r="5"/><path d="M12 23a12 12 0 0 1 10-11m4 24a12 12 0 0 0 10-11"/></g>' }} />;
 }

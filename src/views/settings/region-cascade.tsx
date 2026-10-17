@@ -138,7 +138,7 @@ function LocaleConfirm({
       >
         <div className="flex shrink-0 items-start justify-between gap-4 px-6 pt-5">
           <h2 className="min-w-0 text-[19px] font-semibold leading-[26px] tracking-tight text-ink">
-            {t("Switch Harbor to {language}?", { language: label })}
+            {t("Switch Lart to {language}?", { language: label })}
           </h2>
           <button
             onClick={close}

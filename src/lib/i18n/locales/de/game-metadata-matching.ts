@@ -21,6 +21,6 @@ export default {
   "games.match.use": "Dieses Spiel verwenden",
   "games.match.remove": "Zuordnung entfernen",
   "games.match.source": "Bilder und Details von IGDB",
-  "games.match.note": "Wähle die Edition, die zu deiner Datei passt. Harbor behält die Originaldatei und ihren Namen.",
+  "games.match.note": "Wähle die Edition, die zu deiner Datei passt. Lart behält die Originaldatei und ihren Namen.",
   "games.match.empty": "Versuche den Spieltitel ohne Regions- oder Versionsangaben."
 };

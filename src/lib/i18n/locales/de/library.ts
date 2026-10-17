@@ -60,8 +60,8 @@ const library: Record<string, string> = {
   "Remove from favorites": "Aus Favoriten entfernen",
   "Remove from library": "Aus der Mediathek entfernen",
   Rewatching: "Erneut ansehen",
-  'Right-click any title in Harbor or hit "Add to Watchlist" on its detail page to save it here.':
-    "Klicke mit der rechten Maustaste auf einen beliebigen Titel in Harbor oder auf seiner Detailseite auf „Zur Merkliste hinzufügen“, um ihn hier zu speichern.",
+  'Right-click any title in Lart or hit "Add to Watchlist" on its detail page to save it here.':
+    "Klicke mit der rechten Maustaste auf einen beliebigen Titel in Lart oder auf seiner Detailseite auf „Zur Merkliste hinzufügen“, um ihn hier zu speichern.",
   Sat: "Sa.",
   "Simkl history": "Simkl-Verlauf",
   "Simkl plan to watch": "Simkl: „Möchte ich ansehen“",

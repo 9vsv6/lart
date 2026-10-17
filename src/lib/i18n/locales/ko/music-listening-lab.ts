@@ -36,7 +36,7 @@ const musicListeningLab: Record<string, string> = {
   "music.lab.crossfeed": "헤드폰 크로스피드",
   "music.lab.crossfeedHelp":
     "각 스테레오 채널의 일부를 필터링해 반대 채널에 섞어 헤드폰의 좌우 분리를 줄입니다. 0%는 꺼짐입니다.",
-  "music.lab.bypass": "Harbor DSP 우회",
+  "music.lab.bypass": "Lart DSP 우회",
   "music.lab.bypassHelp":
     "적용 후 EQ, 프리앰프, 크로스피드, 밸런스, ReplayGain을 우회합니다. 출력 설정과 재생 음량은 유지됩니다. 비트 퍼펙트 재생을 검증하지는 않습니다.",
   "music.lab.exclusive": "독점 출력 요청",

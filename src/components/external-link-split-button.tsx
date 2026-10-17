@@ -68,7 +68,7 @@ export function ExternalLinkSplitButton({
           hasAlternate ? "rounded-s-[12px]" : "rounded-[12px]"
         }`}
       >
-        <span>{main === "harbor" ? t("Continue in Harbor") : t("Continue in browser")}</span>
+        <span>{main === "harbor" ? t("Continue in Lart") : t("Continue in browser")}</span>
         <ActionIcon action={main} />
       </button>
       {hasAlternate && (
@@ -119,7 +119,7 @@ export function ExternalLinkSplitButton({
           >
             <ActionIcon action={alternate} />
             <span>
-              {alternate === "harbor" ? t("Continue in Harbor") : t("Continue in browser")}
+              {alternate === "harbor" ? t("Continue in Lart") : t("Continue in browser")}
             </span>
           </button>
         </div>

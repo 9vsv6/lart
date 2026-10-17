@@ -21,8 +21,8 @@ const downloads: Record<string, string> = {
   "No video files found in that folder.": "Aucun fichier vidéo trouvé dans ce dossier.",
   "Open any movie or show, hover an episode, and click the download icon. Pick the exact source you want and it saves here for offline watching.":
     "Ouvrez un film ou une série, survolez un épisode, puis cliquez sur l’icône de téléchargement. Choisissez la source exacte voulue, elle sera enregistrée ici pour être regardée hors ligne.",
-  "Point Harbor at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
-    "Indiquez un dossier à Harbor. Nous l’analysons pour y trouver des films et des séries, extrayons les titres des noms de fichiers et les enrichissons avec TMDB afin qu’ils s’affichent comme tout le reste ici. Nous mémorisons simplement le chemin, rien n’est copié ni déplacé.",
+  "Point Lart at a folder. We scan it for movies and shows, parse titles from filenames, and enrich them with TMDB so they look the same as everything else here. We just remember the path; nothing is copied or moved.":
+    "Indiquez un dossier à Lart. Nous l’analysons pour y trouver des films et des séries, extrayons les titres des noms de fichiers et les enrichissons avec TMDB afin qu’ils s’affichent comme tout le reste ici. Nous mémorisons simplement le chemin, rien n’est copié ni déplacé.",
   "Reset to default folder": "Rétablir le dossier par défaut",
   "Retry download": "Réessayer le téléchargement",
   "Saved movies and episodes for offline watching":

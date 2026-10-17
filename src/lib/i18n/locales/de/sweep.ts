@@ -3,7 +3,7 @@ const sweep: Record<string, string> = {
   "1 day": "1 Tag",
   "1 hour": "1 Stunde",
   "1 hr": "1 Std.",
-  "1 other Harbor": "1 weiteres Harbor",
+  "1 other Lart": "1 weiteres Lart",
   "10 GB": "10 GB",
   "100 GB": "100 GB",
   "10k+": "10k+",
@@ -42,7 +42,7 @@ const sweep: Record<string, string> = {
   "8 seconds": "8 Sekunden",
   "8-0-4-1. Half the passes, kinder to weaker cards.":
     "8-0-4-1. Halb so viele Durchläufe, schonender für schwächere Grafikkarten.",
-  "A Harbor account": "Ein Harbor-Konto",
+  "A Lart account": "Ein Lart-Konto",
   "A blend of the sources above by percentile. Degrades gracefully when one is missing.":
     "Eine Mischung der obigen Quellen nach Perzentil. Funktioniert auch dann zuverlässig, wenn eine Quelle fehlt.",
   "A classic neural edge-directed luma doubler. Very high quality, heavy on the GPU. More neurons means sharper and slower.":
@@ -51,8 +51,8 @@ const sweep: Record<string, string> = {
     "Eine nicht erreichbare Quelle wird verworfen und die nächste gestartet.",
   "A direct .m3u or .m3u8 address from your provider":
     "Eine direkte .m3u- oder .m3u8-Adresse deines Anbieters",
-  "A filter applies everywhere Harbor picks a stream: the source picker, the instant pick, and Big Picture on TV.":
-    "Ein Filter gilt überall, wo Harbor einen Stream auswählt: in der Quellenauswahl, bei der Sofortauswahl und in „Big Picture“ auf dem Fernseher.",
+  "A filter applies everywhere Lart picks a stream: the source picker, the instant pick, and Big Picture on TV.":
+    "Ein Filter gilt überall, wo Lart einen Stream auswählt: in der Quellenauswahl, bei der Sofortauswahl und in „Big Picture“ auf dem Fernseher.",
   "A hero up top, then Top 10, Trending, In Theaters and your service rows.":
     "Oben ein großes Titelbild, dann Top 10, Trending, Im Kino und die Reihen deiner Dienste.",
   "A high quality chroma upscaler. Fixes the color blur and bleeding of default chroma scaling, most visible on saturated edges and subtitles.":
@@ -124,8 +124,8 @@ const sweep: Record<string, string> = {
   "All times": "Alle Zeiten",
   "All video": "Alle Videos",
   "All-time bests": "Die Besten aller Zeiten",
-  "Linking your Discord account also joins you to Harbor's Discord server, so the bot can send your Backup keys privately.":
-    "Linking your Discord account also joins you to Harbor's Discord server, so the bot can send your Backup keys privately.",
+  "Linking your Discord account also joins you to Lart's Discord server, so the bot can send your Backup keys privately.":
+    "Linking your Discord account also joins you to Lart's Discord server, so the bot can send your Backup keys privately.",
   "Always re-encode when casting": "Beim Casten immer neu codieren",
   "Always stream P2P": "Immer über P2P streamen",
   Amber: "Bernstein",
@@ -165,8 +165,8 @@ const sweep: Record<string, string> = {
   "Artwork and rows": "Grafiken und Reihen",
   "Ask after": "Danach fragen",
   "Ask if you are still watching": "Fragen, ob du noch zusiehst",
-  "Asking that Harbor to show a code":
-    "Harbor auf dem anderen Gerät wird gebeten, einen Code anzuzeigen",
+  "Asking that Lart to show a code":
+    "Lart auf dem anderen Gerät wird gebeten, einen Code anzuzeigen",
   "Asks first: carry on, or start over.": "Fragt zuerst: weitermachen oder von vorn beginnen.",
   Aspect: "Seitenverhältnis",
   "At least 6 characters.": "Mindestens 6 Zeichen.",
@@ -225,8 +225,8 @@ const sweep: Record<string, string> = {
   "Best VA Performance": "Beste Sprechleistung",
   "Best {label}": "Beste: {label}",
   "Beyond Hollywood": "Jenseits von Hollywood",
-  "Big Picture closes. Harbor keeps running behind it.":
-    "Der Großbildmodus wird geschlossen. Harbor läuft im Hintergrund weiter.",
+  "Big Picture closes. Lart keeps running behind it.":
+    "Der Großbildmodus wird geschlossen. Lart läuft im Hintergrund weiter.",
   "Bigger buffer for slow connections": "Größerer Puffer für langsame Verbindungen",
   "Bingeing on the TV": "Serienmarathon auf dem Fernseher",
   Black: "Schwarz",
@@ -254,7 +254,7 @@ const sweep: Record<string, string> = {
   "Browse community themes": "Community-Designs durchsuchen",
   "Built from IMDb's public datasets. Career ratings volume.":
     "Erstellt aus den öffentlichen Datensätzen von IMDb. Anzahl der Bewertungen im Karriereverlauf.",
-  "Built into Harbor": "In Harbor integriert",
+  "Built into Lart": "In Lart integriert",
   "Buttons & sticks": "Tasten & Sticks",
   "By year": "Nach Jahr",
   CONTENT: "INHALT",
@@ -279,10 +279,10 @@ const sweep: Record<string, string> = {
   "Change server": "Server wechseln",
   "Change source, current source {name}": "Quelle wechseln, aktuelle Quelle: {name}",
   "Change the look": "Erscheinungsbild ändern",
-  "Changes not saved to your Harbor account yet":
-    "Änderungen wurden noch nicht in deinem Harbor-Konto gespeichert",
-  "Changes you make below will be saved on this computer, but they will not reach your TV. This is a fault in Harbor, not something you did.":
-    "Die unten vorgenommenen Änderungen werden auf diesem Computer gespeichert, aber nicht auf deinen Fernseher übertragen. Das ist ein Fehler in Harbor und liegt nicht an dir.",
+  "Changes not saved to your Lart account yet":
+    "Änderungen wurden noch nicht in deinem Lart-Konto gespeichert",
+  "Changes you make below will be saved on this computer, but they will not reach your TV. This is a fault in Lart, not something you did.":
+    "Die unten vorgenommenen Änderungen werden auf diesem Computer gespeichert, aber nicht auf deinen Fernseher übertragen. Das ist ein Fehler in Lart und liegt nicht an dir.",
   "Character of the Year": "Figur des Jahres",
   "Charities to give to instead":
     "Wohltätigkeitsorganisationen, an die du stattdessen spenden kannst",
@@ -302,10 +302,10 @@ const sweep: Record<string, string> = {
   Circle: "Kreis",
   "Claim a handle": "Benutzernamen sichern",
   "Classic Hollywood": "Klassisches Hollywood",
-  "Clears the URL from Harbor. The Worker keeps running on Cloudflare.":
-    "Entfernt die URL aus Harbor. Der Worker läuft auf Cloudflare weiter.",
-  "Clears the saved URL so you can point Harbor at another relay.":
-    "Löscht die gespeicherte URL, damit du Harbor auf ein anderes Relay verweisen kannst.",
+  "Clears the URL from Lart. The Worker keeps running on Cloudflare.":
+    "Entfernt die URL aus Lart. Der Worker läuft auf Cloudflare weiter.",
+  "Clears the saved URL so you can point Lart at another relay.":
+    "Löscht die gespeicherte URL, damit du Lart auf ein anderes Relay verweisen kannst.",
   "Close editor": "Editor schließen",
   Cloudflare: "Cloudflare",
   "Code expires in {left}": "Code läuft in {left} ab",
@@ -320,10 +320,10 @@ const sweep: Record<string, string> = {
   "Compare before and after": "Vorher und nachher vergleichen",
   "Comparison by {credit}": "Vergleich von {credit}",
   Configure: "Konfigurieren",
-  "Connect AniList in Harbor on your computer to see your lists here.":
-    "Verbinde AniList in Harbor auf deinem Computer, um deine Listen hier zu sehen.",
-  "Connect MyAnimeList in Harbor on your computer to see your lists here.":
-    "Verbinde MyAnimeList in Harbor auf deinem Computer, um deine Listen hier zu sehen.",
+  "Connect AniList in Lart on your computer to see your lists here.":
+    "Verbinde AniList in Lart auf deinem Computer, um deine Listen hier zu sehen.",
+  "Connect MyAnimeList in Lart on your computer to see your lists here.":
+    "Verbinde MyAnimeList in Lart auf deinem Computer, um deine Listen hier zu sehen.",
   "Connect TMDB": "TMDB verbinden",
   "Connected to your TV": "Mit deinem Fernseher verbunden",
   Consensus: "Konsens",
@@ -349,8 +349,8 @@ const sweep: Record<string, string> = {
     "Übertrage deine hier bereits angepassten Einstellungen in einem Schritt auf den Fernseher. Dabei werden die entsprechenden Einstellungen auf dem Fernseher überschrieben, alles andere bleibt unverändert.",
   'Copy the value labelled "API Key (v3 auth)".':
     "Kopiere den Wert mit der Bezeichnung „API Key (v3 auth)“.",
-  "Could not reach Harbor. Check your phone's connection and try again.":
-    "Harbor ist nicht erreichbar. Prüfe die Verbindung deines Smartphones und versuche es erneut.",
+  "Could not reach Lart. Check your phone's connection and try again.":
+    "Lart ist nicht erreichbar. Prüfe die Verbindung deines Smartphones und versuche es erneut.",
   "Could not reach Stremio. Check your phone's connection and try again.":
     "Stremio ist nicht erreichbar. Prüfe die Verbindung deines Smartphones und versuche es erneut.",
   "Could not reach TMDB from this TV. You can save the key without checking it.":
@@ -372,8 +372,8 @@ const sweep: Record<string, string> = {
   "Couldn't post right now, try again": "Posten gerade nicht möglich. Versuche es erneut.",
   "Couldn't reach AniList. Check the connection and reopen Big Picture.":
     "AniList ist nicht erreichbar. Prüfe die Verbindung und öffne den Großbildmodus erneut.",
-  "Couldn't reach Harbor. Showing this device only.":
-    "Harbor ist nicht erreichbar. Es wird nur dieses Gerät angezeigt.",
+  "Couldn't reach Lart. Showing this device only.":
+    "Lart ist nicht erreichbar. Es wird nur dieses Gerät angezeigt.",
   "Couldn't reach MyAnimeList. Check the connection and reopen Big Picture.":
     "MyAnimeList ist nicht erreichbar. Prüfe die Verbindung und öffne den Großbildmodus erneut.",
   "Couldn't reach TMDB for {genre} titles.": "TMDB konnte für {genre}-Titel nicht erreicht werden.",
@@ -381,7 +381,7 @@ const sweep: Record<string, string> = {
     "{name} ist nicht erreichbar. Versuche zu aktualisieren.",
   "Couldn't save the playlist. Free up storage space in Settings and try again.":
     "Die Wiedergabeliste konnte nicht gespeichert werden. Gib in den Einstellungen Speicherplatz frei und versuche es erneut.",
-  "Create a Harbor account": "Ein Harbor-Konto erstellen",
+  "Create a Lart account": "Ein Lart-Konto erstellen",
   "Create your account": "Konto erstellen",
   "Critics + audiences": "Kritiker + Publikum",
   "Crossfade when the backdrop changes. Turn it off if the TV stutters while browsing.":
@@ -453,16 +453,16 @@ const sweep: Record<string, string> = {
   Dracula: "Dracula",
   "Drag a dial and watch the still update. Each dial resets on its own.":
     "Ziehe an einem Drehregler und beobachte, wie sich das Standbild ändert. Jeder Regler lässt sich einzeln zurücksetzen.",
-  "Drift through cinematic backdrops while Harbor sits idle.":
-    "Lass dich durch filmische Kulissen treiben, während Harbor inaktiv ist.",
+  "Drift through cinematic backdrops while Lart sits idle.":
+    "Lass dich durch filmische Kulissen treiben, während Lart inaktiv ist.",
   "Drops anything already finished out of the browse rows.":
     "Entfernt bereits vollständig angesehene Titel aus den Entdeckungsreihen.",
   "DualSense connected": "DualSense verbunden",
   ED: "ED",
   "Each curve shows how much of the bright range it keeps before rolling off.":
     "Jede Kurve zeigt, wie viel vom hellen Bereich erhalten bleibt, bevor sie sanft abfällt.",
-  "Each shader is hosted by its author, not bundled with Harbor. Download the ones you want; Harbor chains them in the right order and applies them in the player.":
-    "Jeder Shader wird von seinem Autor bereitgestellt und ist nicht in Harbor enthalten. Lade die gewünschten Shader herunter. Harbor verkettet sie in der richtigen Reihenfolge und wendet sie im Player an.",
+  "Each shader is hosted by its author, not bundled with Lart. Download the ones you want; Lart chains them in the right order and applies them in the player.":
+    "Jeder Shader wird von seinem Autor bereitgestellt und ist nicht in Lart enthalten. Lade die gewünschten Shader herunter. Lart verkettet sie in der richtigen Reihenfolge und wendet sie im Player an.",
   "Each style keeps its own arrangement, icons and profiles, so switching back and forth never loses work.":
     "Jeder Stil behält seine eigene Anordnung, Symbole und Profile, sodass beim Wechseln nichts verloren geht.",
   "Edge colour": "Randfarbe",
@@ -499,23 +499,23 @@ const sweep: Record<string, string> = {
   Esportes: "Sport",
   "Every 15 min": "Alle 15 Min.",
   "Every 30 min": "Alle 30 Min.",
-  "Every Harbor that announces itself on this network appears here as it answers, with the theme it is wearing.":
-    "Jede Harbor-Instanz, die sich in diesem Netzwerk ankündigt, wird hier angezeigt, sobald sie antwortet, samt ihrem aktuellen Design.",
+  "Every Lart that announces itself on this network appears here as it answers, with the theme it is wearing.":
+    "Jede Lart-Instanz, die sich in diesem Netzwerk ankündigt, wird hier angezeigt, sobald sie antwortet, samt ihrem aktuellen Design.",
   "Every addon": "Jedes Add-on",
   "Every episode of the season uses that same release.":
     "Jede Episode der Staffel verwendet dasselbe Release.",
   "Every launch": "Bei jedem Start",
   "Every saga, in order": "Jede Saga in der richtigen Reihenfolge",
-  "Every source Harbor tried failed to start. Pick a different one, or try again in a moment.":
-    "Keine von Harbor getestete Quelle konnte gestartet werden. Wähle eine andere oder versuche es gleich noch einmal.",
-  "Every winner Harbor ships, browsable offline by year and category.":
-    "Alle von Harbor mitgelieferten Gewinner, offline nach Jahr und Kategorie durchsuchbar.",
+  "Every source Lart tried failed to start. Pick a different one, or try again in a moment.":
+    "Keine von Lart getestete Quelle konnte gestartet werden. Wähle eine andere oder versuche es gleich noch einmal.",
+  "Every winner Lart ships, browsable offline by year and category.":
+    "Alle von Lart mitgelieferten Gewinner, offline nach Jahr und Kategorie durchsuchbar.",
   "Everyone else": "Alle anderen",
-  "Everyone on this Harbor": "Alle, die diese Harbor-Instanz verwenden",
+  "Everyone on this Lart": "Alle, die diese Lart-Instanz verwenden",
   "Everything here took effect straight away, and it is saved on this device.":
     "Alle Änderungen hier wurden sofort übernommen und auf diesem Gerät gespeichert.",
-  "Everything on this page is written to your Harbor account. Your TV reads it on its next check-in, so you can set the whole thing up from here and never touch the remote.":
-    "Alles auf dieser Seite wird in deinem Harbor-Konto gespeichert. Dein Fernseher übernimmt es bei der nächsten Synchronisierung. So kannst du hier alles einrichten, ohne je die Fernbedienung anzufassen.",
+  "Everything on this page is written to your Lart account. Your TV reads it on its next check-in, so you can set the whole thing up from here and never touch the remote.":
+    "Alles auf dieser Seite wird in deinem Lart-Konto gespeichert. Dein Fernseher übernimmt es bei der nächsten Synchronisierung. So kannst du hier alles einrichten, ohne je die Fernbedienung anzufassen.",
   "Everything on this page of {genre} is hidden by your anime filter.":
     "Auf dieser Seite für {genre} wird durch deinen Anime-Filter alles ausgeblendet.",
   "Everything you pick is saved into one file. Restoring it later only touches what is in the file. Your Stremio sign-in is always left out.":
@@ -584,7 +584,7 @@ const sweep: Record<string, string> = {
     "Kostenlos, dauert zwei Minuten. Schaltet „Im Trend“, „Im Kino“, „Am besten bewertet“ und die Reihen aller Dienste frei.",
   "French cinema": "Französisches Kino",
   "Fresh from the studio": "Frisch aus dem Studio",
-  "Fresh looks shared by the Harbor community": "Neue Designs aus der Harbor-Community",
+  "Fresh looks shared by the Lart community": "Neue Designs aus der Lart-Community",
   "From Japan": "Aus Japan",
   "From Korea": "Aus Korea",
   "From a hosted link, your own images, or a .zip.":
@@ -593,8 +593,8 @@ const sweep: Record<string, string> = {
   "From your addons": "Aus deinen Add-ons",
   "From your own files": "Aus deinen eigenen Dateien",
   "Frosted glass": "Milchglas",
-  "Frosted, refractive surfaces on Harbor's floating controls.":
-    "Mattierte, lichtbrechende Oberflächen für die schwebenden Bedienelemente von Harbor.",
+  "Frosted, refractive surfaces on Lart's floating controls.":
+    "Mattierte, lichtbrechende Oberflächen für die schwebenden Bedienelemente von Lart.",
   Fubo: "Fubo",
   FuboTV: "FuboTV",
   "Full control of the group": "Volle Kontrolle über die Gruppe",
@@ -623,52 +623,52 @@ const sweep: Record<string, string> = {
   "Hall of Fame": "Hall of Fame",
   "Handles P2P playback and transcoding for this machine.":
     "Übernimmt die P2P-Wiedergabe und Transkodierung auf diesem Gerät.",
-  "Harbor Rank": "Harbor-Rang",
-  "Harbor accepted that but returned no session. Try again.":
-    "Harbor hat das akzeptiert, aber keine Sitzung zurückgegeben. Versuche es erneut.",
-  "Harbor account linked as {name}": "Harbor-Konto als {name} verknüpft",
-  "Harbor account signed in": "Beim Harbor-Konto angemeldet",
-  "Harbor asks your addons for titles and descriptions in this language. The TV menus stay in English.":
-    "Harbor fordert Titel und Beschreibungen von deinen Add-ons in dieser Sprache an. Die TV-Menüs bleiben auf Englisch.",
-  "Harbor cannot find this TV's network address, so the phone hand-off is unavailable here.":
-    "Harbor kann die Netzwerkadresse dieses Fernsehers nicht finden. Daher ist die Übergabe vom Smartphone hier nicht verfügbar.",
-  "Harbor could not open its web server. Try again, or set this up on the TV.":
-    "Harbor konnte seinen Webserver nicht öffnen. Versuche es erneut oder richte dies auf dem Fernseher ein.",
-  "Harbor couldn't play this source": "Harbor konnte diese Quelle nicht wiedergeben",
-  "Harbor couldn't reach MyAnimeList or AniList. Check the connection and reopen Big Picture.":
-    "Harbor konnte MyAnimeList oder AniList nicht erreichen. Prüfe die Verbindung und öffne Big Picture erneut.",
-  "Harbor couldn't reach the catalog servers.": "Harbor konnte die Katalogserver nicht erreichen.",
-  "Harbor couldn't start any source": "Harbor konnte keine Quelle starten",
-  "Harbor creates a Cloudflare Worker on your own free account and saves the URL.":
-    "Harbor erstellt einen Cloudflare-Worker in deinem eigenen kostenlosen Konto und speichert die URL.",
-  "Harbor default": "Harbor-Standard",
-  "Harbor identity (avatar / color)": "Harbor-Identität (Avatar / Farbe)",
-  "Harbor is an independent client. It is not affiliated with or endorsed by Stremio.":
-    "Harbor ist ein unabhängiger Client. Es ist weder mit Stremio verbunden noch wird es von Stremio unterstützt.",
-  "Harbor leads with one big title. Classic leads with rows.":
-    "Bei Harbor steht ein großer Titel im Mittelpunkt. Klassisch setzt auf Reihen.",
-  "Harbor needs at least one streaming source before it can play {title}. Install a stream addon or add a debrid key in settings.":
-    "Harbor benötigt mindestens eine Streamingquelle, bevor {title} abgespielt werden kann. Installiere ein Stream-Add-on oder füge in den Einstellungen einen Debrid-Schlüssel hinzu.",
-  "Harbor needs to be serving on your network before a phone can reach it.":
-    "Harbor muss in deinem Netzwerk erreichbar sein, bevor ein Smartphone darauf zugreifen kann.",
-  "Harbor on other devices (web app)": "Harbor auf anderen Geräten (Web-App)",
-  "Harbor pick": "Harbor-Empfehlung",
-  "Harbor reads the speech in the audio, then slides the subtitle track until the two line up.":
-    "Harbor erkennt den Sprachinhalt in der Tonspur und verschiebt dann die Untertitelspur, bis beide übereinstimmen.",
-  "Harbor signed you up but returned no session. Try signing in instead.":
-    "Harbor hat dich registriert, aber keine Sitzung zurückgegeben. Versuche stattdessen, dich anzumelden.",
-  "Harbor speaks this everywhere. You can change it later in Settings.":
-    "Harbor verwendet diese Sprache überall. Du kannst sie später in den Einstellungen ändern.",
-  "Harbor tried {n} sources for {title} and none of them played. Usually that means a debrid key has expired, no stream addon is installed yet, or nothing has this title cached.":
-    "Harbor hat {n} Quellen für {title} ausprobiert, aber keine davon ließ sich abspielen. Meist ist ein Debrid-Schlüssel abgelaufen, noch kein Stream-Add-on installiert oder dieser Titel nirgends zwischengespeichert.",
-  "Harbor was built in English. Multi-language support is partial, so your addons usually catch what Harbor's own filters miss. If you speak another language and want to help, the source is open.":
-    "Harbor wurde auf Englisch entwickelt. Die Unterstützung mehrerer Sprachen ist noch unvollständig, daher erfassen deine Add-ons meist, was Harbors eigene Filter übersehen. Wenn du eine andere Sprache sprichst und helfen möchtest, ist der Quellcode offen zugänglich.",
-  "Harbor's built-in HDR to SDR conversion is on. Turn it off in Video tuning to use this instead. Running both double-processes the picture.":
+  "Lart Rank": "Lart-Rang",
+  "Lart accepted that but returned no session. Try again.":
+    "Lart hat das akzeptiert, aber keine Sitzung zurückgegeben. Versuche es erneut.",
+  "Lart account linked as {name}": "Lart-Konto als {name} verknüpft",
+  "Lart account signed in": "Beim Lart-Konto angemeldet",
+  "Lart asks your addons for titles and descriptions in this language. The TV menus stay in English.":
+    "Lart fordert Titel und Beschreibungen von deinen Add-ons in dieser Sprache an. Die TV-Menüs bleiben auf Englisch.",
+  "Lart cannot find this TV's network address, so the phone hand-off is unavailable here.":
+    "Lart kann die Netzwerkadresse dieses Fernsehers nicht finden. Daher ist die Übergabe vom Smartphone hier nicht verfügbar.",
+  "Lart could not open its web server. Try again, or set this up on the TV.":
+    "Lart konnte seinen Webserver nicht öffnen. Versuche es erneut oder richte dies auf dem Fernseher ein.",
+  "Lart couldn't play this source": "Lart konnte diese Quelle nicht wiedergeben",
+  "Lart couldn't reach MyAnimeList or AniList. Check the connection and reopen Big Picture.":
+    "Lart konnte MyAnimeList oder AniList nicht erreichen. Prüfe die Verbindung und öffne Big Picture erneut.",
+  "Lart couldn't reach the catalog servers.": "Lart konnte die Katalogserver nicht erreichen.",
+  "Lart couldn't start any source": "Lart konnte keine Quelle starten",
+  "Lart creates a Cloudflare Worker on your own free account and saves the URL.":
+    "Lart erstellt einen Cloudflare-Worker in deinem eigenen kostenlosen Konto und speichert die URL.",
+  "Lart default": "Lart-Standard",
+  "Lart identity (avatar / color)": "Lart-Identität (Avatar / Farbe)",
+  "Lart is an independent client. It is not affiliated with or endorsed by Stremio.":
+    "Lart ist ein unabhängiger Client. Es ist weder mit Stremio verbunden noch wird es von Stremio unterstützt.",
+  "Lart leads with one big title. Classic leads with rows.":
+    "Bei Lart steht ein großer Titel im Mittelpunkt. Klassisch setzt auf Reihen.",
+  "Lart needs at least one streaming source before it can play {title}. Install a stream addon or add a debrid key in settings.":
+    "Lart benötigt mindestens eine Streamingquelle, bevor {title} abgespielt werden kann. Installiere ein Stream-Add-on oder füge in den Einstellungen einen Debrid-Schlüssel hinzu.",
+  "Lart needs to be serving on your network before a phone can reach it.":
+    "Lart muss in deinem Netzwerk erreichbar sein, bevor ein Smartphone darauf zugreifen kann.",
+  "Lart on other devices (web app)": "Lart auf anderen Geräten (Web-App)",
+  "Lart pick": "Lart-Empfehlung",
+  "Lart reads the speech in the audio, then slides the subtitle track until the two line up.":
+    "Lart erkennt den Sprachinhalt in der Tonspur und verschiebt dann die Untertitelspur, bis beide übereinstimmen.",
+  "Lart signed you up but returned no session. Try signing in instead.":
+    "Lart hat dich registriert, aber keine Sitzung zurückgegeben. Versuche stattdessen, dich anzumelden.",
+  "Lart speaks this everywhere. You can change it later in Settings.":
+    "Lart verwendet diese Sprache überall. Du kannst sie später in den Einstellungen ändern.",
+  "Lart tried {n} sources for {title} and none of them played. Usually that means a debrid key has expired, no stream addon is installed yet, or nothing has this title cached.":
+    "Lart hat {n} Quellen für {title} ausprobiert, aber keine davon ließ sich abspielen. Meist ist ein Debrid-Schlüssel abgelaufen, noch kein Stream-Add-on installiert oder dieser Titel nirgends zwischengespeichert.",
+  "Lart was built in English. Multi-language support is partial, so your addons usually catch what Lart's own filters miss. If you speak another language and want to help, the source is open.":
+    "Lart wurde auf Englisch entwickelt. Die Unterstützung mehrerer Sprachen ist noch unvollständig, daher erfassen deine Add-ons meist, was Harbors eigene Filter übersehen. Wenn du eine andere Sprache sprichst und helfen möchtest, ist der Quellcode offen zugänglich.",
+  "Lart's built-in HDR to SDR conversion is on. Turn it off in Video tuning to use this instead. Running both double-processes the picture.":
     "Harbors integrierte HDR-zu-SDR-Konvertierung ist aktiviert. Deaktiviere sie unter „Video-Feinabstimmung“, um stattdessen diese Option zu verwenden. Wenn beide aktiviert sind, wird das Bild doppelt verarbeitet.",
-  "Harbor's own bar": "Harbors eigene Leiste",
-  "Harbor's own community server": "Harbors eigener Community-Server",
-  "Harbor's public relay": "Öffentlicher Relay-Server von Harbor",
-  "Harbors on your network": "Harbor-Instanzen in deinem Netzwerk",
+  "Lart's own bar": "Harbors eigene Leiste",
+  "Lart's own community server": "Harbors eigener Community-Server",
+  "Lart's public relay": "Öffentlicher Relay-Server von Lart",
+  "Harbors on your network": "Lart-Instanzen in deinem Netzwerk",
   "Hard outline": "Harte Kontur",
   "Hardware acceleration (hwdec)": "Hardwarebeschleunigung (hwdec)",
   Head: "Kopf",
@@ -676,7 +676,7 @@ const sweep: Record<string, string> = {
   Health: "Status",
   Heavy: "Schwer",
   "Help & support": "Hilfe und Support",
-  "Help translate Harbor": "Beim Übersetzen von Harbor helfen",
+  "Help translate Lart": "Beim Übersetzen von Lart helfen",
   "Hero trailer preview": "Hero-Trailer-Vorschau",
   "Hero trailers": "Trailer im Hero-Bereich",
   "Hidden gems": "Verborgene Schätze",
@@ -704,8 +704,8 @@ const sweep: Record<string, string> = {
     "Darstellung von „Gemeinsam ansehen“ und den Fensterschaltflächen.",
   "How large a backdrop image the TV fetches. It does not change video quality. Balanced is the safe choice on older hardware.":
     "Legt fest, wie groß das vom Fernseher geladene Hintergrundbild ist. Dies ändert nicht die Videoqualität. „Ausgewogen“ ist die sichere Wahl für ältere Hardware.",
-  "How long Harbor waits before drifting off.":
-    "Wie lange Harbor wartet, bevor es in den Ruhezustand wechselt.",
+  "How long Lart waits before drifting off.":
+    "Wie lange Lart wartet, bevor es in den Ruhezustand wechselt.",
   "How long a saved frame sticks around before the oldest roll off.":
     "Wie lange ein gespeichertes Einzelbild erhalten bleibt, bevor das älteste gelöscht wird.",
   "How long files stay": "Speicherdauer von Dateien",
@@ -803,7 +803,7 @@ const sweep: Record<string, string> = {
   "Leave Big Picture and open settings": "Big Picture verlassen und Einstellungen öffnen",
   "Leave setup": "Einrichtung verlassen",
   "Leave setup?": "Einrichtung verlassen?",
-  "Leave this blank to use Harbor's own community server, or enter the address of a server you run yourself.":
+  "Leave this blank to use Lart's own community server, or enter the address of a server you run yourself.":
     "Lass dieses Feld leer, um Harbors eigenen Community-Server zu verwenden, oder gib die Adresse eines selbst betriebenen Servers ein.",
   "Let the TV keep its own theme": "Eigenes Design des Fernsehers beibehalten",
   "Letterboxd connection": "Letterboxd-Verbindung",
@@ -816,13 +816,13 @@ const sweep: Record<string, string> = {
   "Link Discord": "Discord verknüpfen",
   "Link a title": "Titel verknüpfen",
   "Linked as {username}": "Als {username} verknüpft",
-  "Linked to your Harbor account.": "Mit deinem Harbor-Konto verknüpft.",
-  "Listening for Harbors": "Auf Harbor-Instanzen warten",
+  "Linked to your Lart account.": "Mit deinem Lart-Konto verknüpft.",
+  "Listening for Harbors": "Auf Lart-Instanzen warten",
   "Live TV source": "Live-TV-Quelle",
   "Live TV sources": "Live-TV-Quellen",
   "Live action": "Realfilm",
-  "Live state of Harbor's own P2P engine on this machine.":
-    "Live-Status der Harbor-eigenen P2P-Engine auf diesem Gerät.",
+  "Live state of Lart's own P2P engine on this machine.":
+    "Live-Status der Lart-eigenen P2P-Engine auf diesem Gerät.",
   "Loading more collections...": "Weitere Sammlungen werden geladen...",
   "Loads a backup file and restores exactly what it contains, without touching the rest of your setup. Your Stremio sign-in on this device stays as is.":
     "Lädt eine Sicherungsdatei und stellt genau deren Inhalt wieder her, ohne den Rest deiner Einrichtung zu verändern. Deine Stremio-Anmeldung auf diesem Gerät bleibt unverändert.",
@@ -853,8 +853,8 @@ const sweep: Record<string, string> = {
   MUBI: "MUBI",
   "Main subtitle line": "Hauptuntertitelzeile",
   Maintenance: "Wartung",
-  "Make Harbor's interface larger.": "Harbor-Oberfläche vergrößern.",
-  "Make Harbor's interface smaller.": "Harbor-Oberfläche verkleinern.",
+  "Make Lart's interface larger.": "Lart-Oberfläche vergrößern.",
+  "Make Lart's interface smaller.": "Lart-Oberfläche verkleinern.",
   "Make an award pack": "Auszeichnungspaket erstellen",
   "Make everything bigger and easier to read: sidebar, menus, popups, every page.":
     "Alles größer und besser lesbar machen: Seitenleiste, Menüs, Pop-ups und jede Seite.",
@@ -863,7 +863,7 @@ const sweep: Record<string, string> = {
   Managers: "Manager",
   Marquee: "Laufschrift",
   "Match this computer": "An diesen Computer anpassen",
-  "Matching titles to Harbor": "Titel werden mit Harbor abgeglichen",
+  "Matching titles to Lart": "Titel werden mit Lart abgeglichen",
   Max: "Max.",
   "Max {n} GB": "Max. {n} GB",
   "Menu / Options": "Menü / Optionen",
@@ -900,8 +900,8 @@ const sweep: Record<string, string> = {
     "NVIDIA Image Scaling. Ein leichter räumlicher Hochskalierer und Schärfefilter, der als Alternative zu FSR auf jeder GPU gut läuft.",
   "NVIDIA NIS": "NVIDIA NIS",
   "NVIDIA NIS upscaler": "NVIDIA NIS-Upscaler",
-  "Name each file after its award ID. Harbor resizes them and skips anything it cannot match.":
-    "Benenne jede Datei nach ihrer Auszeichnungs-ID. Harbor passt ihre Größe an und überspringt alles, was nicht zugeordnet werden kann.",
+  "Name each file after its award ID. Lart resizes them and skips anything it cannot match.":
+    "Benenne jede Datei nach ihrer Auszeichnungs-ID. Lart passt ihre Größe an und überspringt alles, was nicht zugeordnet werden kann.",
   "Name it, tick the resolutions, sources, codecs and audio you want, and leave the rest blank.":
     "Gib einen Namen ein, markiere die gewünschten Auflösungen, Quellen, Codecs und Audiooptionen und lass den Rest leer.",
   "Needs an API key": "API-Schlüssel erforderlich",
@@ -921,7 +921,7 @@ const sweep: Record<string, string> = {
     "Für gespeicherte Themes sind neue Versionen verfügbar.",
   News: "Nachrichten",
   "Next episode prompt & auto-play": "Hinweis auf nächste Folge und automatische Wiedergabe",
-  "No Harbor account yet": "Noch kein Harbor-Konto",
+  "No Lart account yet": "Noch kein Lart-Konto",
   "No Label": "Keine Kennzeichnung",
   "No channels here": "Hier gibt es keine Sender",
   "No entries on your AniList lists yet.": "Noch keine Einträge in deinen AniList-Listen.",
@@ -934,9 +934,9 @@ const sweep: Record<string, string> = {
   "No language matches that search.": "Keine Sprache entspricht dieser Suche.",
   "No movies to show yet": "Noch keine Filme verfügbar",
   "No network address": "Keine Netzwerkadresse",
-  "No other Harbor answered": "Keine andere Harbor-Instanz hat geantwortet",
-  "No other Harbor answered on this network. One shows up here a moment after it starts.":
-    "Keine andere Harbor-Instanz hat in diesem Netzwerk geantwortet. Eine Instanz erscheint hier kurz nach ihrem Start.",
+  "No other Lart answered": "Keine andere Lart-Instanz hat geantwortet",
+  "No other Lart answered on this network. One shows up here a moment after it starts.":
+    "Keine andere Lart-Instanz hat in diesem Netzwerk geantwortet. Eine Instanz erscheint hier kurz nach ihrem Start.",
   "No quality label": "Keine Qualitätsangabe",
   "No series to show yet": "Noch keine Serien verfügbar",
   "No sources match your filter. Showing all sources.":
@@ -952,8 +952,8 @@ const sweep: Record<string, string> = {
   "Not set": "Nicht festgelegt",
   "Not signed in to Stremio. Your library stays local.":
     "Nicht bei Stremio angemeldet. Deine Mediathek bleibt lokal.",
-  "Nothing else answered. A Harbor shows up here a moment after it starts on this network.":
-    "Sonst hat nichts geantwortet. Eine Harbor-Instanz erscheint hier kurz nach ihrem Start in diesem Netzwerk.",
+  "Nothing else answered. A Lart shows up here a moment after it starts on this network.":
+    "Sonst hat nichts geantwortet. Eine Lart-Instanz erscheint hier kurz nach ihrem Start in diesem Netzwerk.",
   "Nothing has connected yet. Your phone may be on a guest network, or this TV may be on a different network from your phone.":
     "Es wurde noch keine Verbindung hergestellt. Dein Smartphone befindet sich möglicherweise in einem Gastnetzwerk oder dieser Fernseher ist mit einem anderen Netzwerk als dein Smartphone verbunden.",
   "Nothing here yet.": "Hier ist noch nichts.",
@@ -962,17 +962,17 @@ const sweep: Record<string, string> = {
     "Nichts mehr zu bestätigen, solange P2P deaktiviert ist.",
   "Nothing on your TV changes until you confirm you have saved this.":
     "Auf deinem TV ändert sich nichts, bis du bestätigst, dass du dies gespeichert hast.",
-  "Nothing selected. Harbor will not load a subtitle on its own.":
-    "Nichts ausgewählt. Harbor lädt nicht selbstständig einen Untertitel.",
+  "Nothing selected. Lart will not load a subtitle on its own.":
+    "Nichts ausgewählt. Lart lädt nicht selbstständig einen Untertitel.",
   "Nothing sent yet. Change something and it goes up on its own.":
     "Noch nichts gesendet. Sobald du etwas änderst, wird es automatisch hochgeladen.",
   "Nothing to set up": "Nichts einzurichten",
   "Nothing to show here yet.": "Hier gibt es noch nichts zu sehen.",
   "Nothing watched yet. Press play on something.": "Noch nichts angesehen. Spiele etwas ab.",
-  "Nothing you have already set is lost. Harbor picks this back up where you left it.":
-    "Nichts, was du bereits festgelegt hast, geht verloren. Harbor macht dort weiter, wo du aufgehört hast.",
+  "Nothing you have already set is lost. Lart picks this back up where you left it.":
+    "Nichts, was du bereits festgelegt hast, geht verloren. Lart macht dort weiter, wo du aufgehört hast.",
   "Now Playing card": "Karte „Aktuelle Wiedergabe“",
-  "Now on Harbor": "Jetzt auf Harbor",
+  "Now on Lart": "Jetzt auf Lart",
   "Nudge the daily Home rows toward your region and languages so local releases surface instead of the same worldwide list. Turn it off to see the unweighted picks.":
     "Stimme die täglichen Reihen auf der Startseite stärker auf deine Region und Sprachen ab, damit lokale Veröffentlichungen statt immer derselben weltweiten Liste erscheinen. Deaktiviere dies, um die ungewichtete Auswahl zu sehen.",
   OMDb: "OMDb",
@@ -986,9 +986,9 @@ const sweep: Record<string, string> = {
   "On the taskbar": "In der Taskleiste",
   "On themoviedb.org, open Settings.": "Öffne auf themoviedb.org die Einstellungen.",
   "Onboarding & hints": "Erste Schritte und Hinweise",
-  "One @name that finds you across Harbor.":
-    "Ein @name, unter dem man dich überall in Harbor findet.",
-  "One Harbor, every screen.": "Ein Harbor für jeden Bildschirm.",
+  "One @name that finds you across Lart.":
+    "Ein @name, unter dem man dich überall in Lart findet.",
+  "One Lart, every screen.": "Ein Lart für jeden Bildschirm.",
   "One release": "Eine Veröffentlichung",
   "One-tap looks": "Designs mit einem Fingertipp",
   "Only on anime": "Nur bei Anime",
@@ -997,8 +997,8 @@ const sweep: Record<string, string> = {
   "Only when I press play": "Nur wenn ich auf Wiedergabe drücke",
   "Open Account": "Konto öffnen",
   "Open AniList profile": "AniList-Profil öffnen",
-  "Open Harbor on desktop to link Discord.":
-    "Öffne Harbor auf dem Desktop, um Discord zu verknüpfen.",
+  "Open Lart on desktop to link Discord.":
+    "Öffne Lart auf dem Desktop, um Discord zu verknüpfen.",
   "Open MAL profile": "MAL-Profil öffnen",
   "Open Setup": "Einrichtung öffnen",
   "Open Trakt profile": "Trakt-Profil öffnen",
@@ -1025,15 +1025,15 @@ const sweep: Record<string, string> = {
   "P2P only": "Nur P2P",
   PBS: "PBS",
   Packs: "Pakete",
-  "Packs stay hosted by their maker. Harbor keeps the link, not the artwork.":
-    "Pakete bleiben bei ihren Erstellern gehostet. Harbor speichert nur den Link, nicht die Bilder.",
+  "Packs stay hosted by their maker. Lart keeps the link, not the artwork.":
+    "Pakete bleiben bei ihren Erstellern gehostet. Lart speichert nur den Link, nicht die Bilder.",
   "Page base.": "Seitenbasis.",
   "Paid. Bakes scores into the poster image itself.":
     "Kostenpflichtig. Integriert Bewertungen direkt in das Posterbild.",
   Pair: "Koppeln",
-  "Pair once from here and this Harbor will take commands.":
-    "Einmal hier koppeln, dann nimmt diese Harbor-Installation Befehle entgegen.",
-  "Pair with this Harbor": "Mit diesem Harbor koppeln",
+  "Pair once from here and this Lart will take commands.":
+    "Einmal hier koppeln, dann nimmt diese Lart-Installation Befehle entgegen.",
+  "Pair with this Lart": "Mit diesem Lart koppeln",
   Paired: "Gekoppelt",
   "Paired with {name}": "Mit {name} gekoppelt",
   "Panel and play": "Bedienfeld und Wiedergabe",
@@ -1072,8 +1072,8 @@ const sweep: Record<string, string> = {
   "Pick the palette Big Picture wears on the television. A theme this computer knows but the TV does not is sent whole, colors and all.":
     "Wähle die Farbpalette für Big Picture auf dem Fernseher. Ein Design, das dieser Computer kennt, der Fernseher aber nicht, wird vollständig übertragen, einschließlich aller Farben.",
   "Pick up exactly where you left off.": "Genau dort weitermachen, wo du aufgehört hast.",
-  "Pick up to five. It shapes what Harbor surfaces first.":
-    "Wähle bis zu fünf. Das bestimmt, was Harbor zuerst anzeigt.",
+  "Pick up to five. It shapes what Lart surfaces first.":
+    "Wähle bis zu fünf. Das bestimmt, was Lart zuerst anzeigt.",
   "Pick what to save, then everything you choose lands in one file: theme, home layout, settings, addons, profiles, watchlist, player layouts, watch progress, and more. Your Stremio sign-in is left out on purpose.":
     "Wähle aus, was gespeichert werden soll. Alles Ausgewählte landet anschließend in einer einzigen Datei: Design, Startseitenlayout, Einstellungen, Add-ons, Profile, Merkliste, Player-Layouts, Wiedergabefortschritt und mehr. Deine Stremio-Anmeldung wird absichtlich nicht einbezogen.",
   "Picked for you": "Für dich ausgewählt",
@@ -1121,8 +1121,8 @@ const sweep: Record<string, string> = {
   "Prepares up to two provider-confirmed cached debrid sources while the picker is open, so Play can start sooner. This may create or update transfers on your debrid account before you click Play. It never touches P2P or uncached sources, is rate-limited, and keeps prepared links in memory for two minutes only. Off by default.":
     "Bereitet bis zu zwei vom Anbieter bestätigte, zwischengespeicherte Debrid-Quellen vor, während die Auswahl geöffnet ist, damit die Wiedergabe schneller starten kann. Dadurch können Übertragungen in deinem Debrid-Konto erstellt oder aktualisiert werden, bevor du auf Abspielen klickst. P2P- oder nicht zwischengespeicherte Quellen werden nie verwendet, die Anfragen sind begrenzt und vorbereitete Links bleiben nur zwei Minuten lang im Arbeitsspeicher. Standardmäßig deaktiviert.",
   Presets: "Voreinstellungen",
-  "Press Play and Harbor picks the source itself instead of opening the list.":
-    "Drücke auf „Wiedergeben“, damit Harbor die Quelle selbst auswählt, statt die Liste zu öffnen.",
+  "Press Play and Lart picks the source itself instead of opening the list.":
+    "Drücke auf „Wiedergeben“, damit Lart die Quelle selbst auswählt, statt die Liste zu öffnen.",
   "Press the star on any channel to keep it at the top of the guide.":
     "Drücke bei einem beliebigen Sender auf den Stern, um ihn oben in der Programmübersicht zu halten.",
   "Preview style": "Vorschaustil",
@@ -1185,12 +1185,12 @@ const sweep: Record<string, string> = {
   Released: "Veröffentlicht",
   "Remap stream badges": "Stream-Badges neu zuordnen",
   "Remember your place on show pages": "Position auf Serienseiten merken",
-  "Remote control is off on that Harbor, so it cannot be driven from here.":
-    "Die Fernsteuerung ist auf dieser Harbor-Instanz deaktiviert, daher kann sie nicht von hier aus gesteuert werden.",
+  "Remote control is off on that Lart, so it cannot be driven from here.":
+    "Die Fernsteuerung ist auf dieser Lart-Instanz deaktiviert, daher kann sie nicht von hier aus gesteuert werden.",
   "Remote control is off, so other Harbors can see this one but cannot drive it.":
-    "Die Fernsteuerung ist deaktiviert. Andere Harbor-Instanzen können diese sehen, aber nicht steuern.",
+    "Die Fernsteuerung ist deaktiviert. Andere Lart-Instanzen können diese sehen, aber nicht steuern.",
   "Remote control is on, so other Harbors on this network can drive this one.":
-    "Die Fernsteuerung ist aktiviert, sodass andere Harbor-Installationen in diesem Netzwerk diese steuern können.",
+    "Die Fernsteuerung ist aktiviert, sodass andere Lart-Installationen in diesem Netzwerk diese steuern können.",
   "Remote off": "Fernsteuerung aus",
   Remotes: "Fernbedienungen",
   "Reopening a title within this window resumes instead of re-downloading.":
@@ -1204,8 +1204,8 @@ const sweep: Record<string, string> = {
   "Reset subtitle style to defaults": "Untertitelstil auf Standardwerte zurücksetzen",
   "Restore + upscale. The best all-rounder for most anime.":
     "Wiederherstellen + hochskalieren. Der beste Allrounder für die meisten Anime.",
-  "Restore Harbor's interface scale to 100%.":
-    "Die Oberflächenskalierung von Harbor auf 100 % zurücksetzen.",
+  "Restore Lart's interface scale to 100%.":
+    "Die Oberflächenskalierung von Lart auf 100 % zurücksetzen.",
   "Result order (ranking / addon order)": "Ergebnisreihenfolge (Rangfolge / Add-on-Reihenfolge)",
   Revert: "Zurücksetzen",
   "Rising Stars": "Aufstrebende Stars",
@@ -1244,31 +1244,31 @@ const sweep: Record<string, string> = {
   "Saturn Award": "Saturn Award",
   "Saturn Awards": "Saturn Awards",
   "Save it anyway": "Trotzdem speichern",
-  "Save the last 30 seconds as a video clip with audio, choosing subtitles on or off. Saves to Pictures/Harbor.":
-    "Speichere die letzten 30 Sekunden als Videoclip mit Ton und wähle, ob Untertitel ein- oder ausgeschaltet sein sollen. Der Clip wird unter Bilder/Harbor gespeichert.",
+  "Save the last 30 seconds as a video clip with audio, choosing subtitles on or off. Saves to Pictures/Lart.":
+    "Speichere die letzten 30 Sekunden als Videoclip mit Ton und wähle, ob Untertitel ein- oder ausgeschaltet sein sollen. Der Clip wird unter Bilder/Lart gespeichert.",
   "Save video clip": "Videoclip speichern",
   "Save your recovery code": "Wiederherstellungscode speichern",
   "Saved on that device. You can close this page, or use this phone as a remote.":
     "Auf diesem Gerät gespeichert. Du kannst diese Seite schließen oder dieses Smartphone als Fernbedienung verwenden.",
   "Saved on this device": "Auf diesem Gerät gespeichert",
-  "Saved on this device. Another Harbor install starts fresh.":
-    "Auf diesem Gerät gespeichert. Eine andere Harbor-Installation beginnt von vorn.",
-  "Saved {when} from Harbor {app}. Your Stremio sign-in stays as is.":
-    "{when} aus Harbor {app} gespeichert. Deine Stremio-Anmeldung bleibt unverändert.",
+  "Saved on this device. Another Lart install starts fresh.":
+    "Auf diesem Gerät gespeichert. Eine andere Lart-Installation beginnt von vorn.",
+  "Saved {when} from Lart {app}. Your Stremio sign-in stays as is.":
+    "{when} aus Lart {app} gespeichert. Deine Stremio-Anmeldung bleibt unverändert.",
   "Saves the relay URL and your Cloudflare token to a file.":
     "Speichert die Relay-URL und dein Cloudflare-Token in einer Datei.",
   "Saving to your profile": "Wird in deinem Profil gespeichert",
   "Scales the whole interface live as you drag.":
     "Skaliert beim Ziehen die gesamte Oberfläche in Echtzeit.",
-  "Scan this with your phone camera to open the Harbor remote, then type straight into the search box.":
-    "Scanne dies mit der Kamera deines Smartphones, um die Harbor-Fernbedienung zu öffnen, und tippe dann direkt in das Suchfeld.",
+  "Scan this with your phone camera to open the Lart remote, then type straight into the search box.":
+    "Scanne dies mit der Kamera deines Smartphones, um die Lart-Fernbedienung zu öffnen, und tippe dann direkt in das Suchfeld.",
   "Sci-fi, fantasy & horror": "Sci-Fi, Fantasy & Horror",
   "Search every source again": "Alle Quellen erneut durchsuchen",
   "Search languages (Tamil, Telugu, ...)": "Sprachen suchen (Tamil, Telugu, ...)",
   "Search title": "Titel suchen",
   "Search your library": "Deine Mediathek durchsuchen",
-  "Searching works without a key. A key lets Harbor line subtitles up with the audio automatically.":
-    "Die Suche funktioniert ohne Schlüssel. Mit einem Schlüssel kann Harbor Untertitel automatisch an der Tonspur ausrichten.",
+  "Searching works without a key. A key lets Lart line subtitles up with the audio automatically.":
+    "Die Suche funktioniert ohne Schlüssel. Mit einem Schlüssel kann Lart Untertitel automatisch an der Tonspur ausrichten.",
   "Second line": "Zweite Zeile",
   "Secondary copy.": "Sekundärtext.",
   "See every TVDB list": "Alle TVDB-Listen anzeigen",
@@ -1284,7 +1284,7 @@ const sweep: Record<string, string> = {
   "Send to TV": "An den Fernseher senden",
   "Send to TV now": "Jetzt an den Fernseher senden",
   Sending: "Wird gesendet",
-  "Sending to that Harbor": "Wird an diese Harbor-Instanz gesendet",
+  "Sending to that Lart": "Wird an diese Lart-Instanz gesendet",
   "Sending to your TV": "Wird an deinen Fernseher gesendet",
   Sent: "Gesendet",
   "Sentient + Switzer": "Sentient + Switzer",
@@ -1294,7 +1294,7 @@ const sweep: Record<string, string> = {
   "Services you have": "Deine Dienste",
   "Session ID or v4 access token": "Sitzungs-ID oder v4-Zugriffstoken",
   "Set up Anime4K": "Anime4K einrichten",
-  "Set up Harbor": "Harbor einrichten",
+  "Set up Lart": "Lart einrichten",
   "Set up my TV from this computer": "Meinen Fernseher von diesem Computer aus einrichten",
   "Set up your own Cloudflare Worker rather than borrowing this one.":
     "Richte deinen eigenen Cloudflare Worker ein, anstatt diesen mitzubenutzen.",
@@ -1344,8 +1344,8 @@ const sweep: Record<string, string> = {
   "Sign in with a server, username and password": "Mit Server, Benutzername und Passwort anmelden",
   "Signed in. Your library is on the TV.":
     "Angemeldet. Deine Mediathek ist jetzt auf dem Fernseher verfügbar.",
-  "Signing in to your Harbor account. Your profiles will appear in a moment.":
-    "Du wirst bei deinem Harbor-Konto angemeldet. Deine Profile werden gleich angezeigt.",
+  "Signing in to your Lart account. Your profiles will appear in a moment.":
+    "Du wirst bei deinem Lart-Konto angemeldet. Deine Profile werden gleich angezeigt.",
   "Signing the TV in to Stremio, Trakt, AniList and the metadata keys. Scan the code with your phone from the TV itself.":
     "Der Fernseher wird bei Stremio, Trakt und AniList angemeldet und mit den Metadatenschlüsseln verknüpft. Scanne den Code auf dem Fernseher mit deinem Smartphone.",
   "Silence notifications": "Benachrichtigungen stummschalten",
@@ -1357,10 +1357,10 @@ const sweep: Record<string, string> = {
   "Skip injected ad": "Eingefügte Werbung überspringen",
   "Skip intros and credits": "Intros und Abspann überspringen",
   "Skip these tracks": "Diese Spuren überspringen",
-  "Skip this and Harbor runs on Cinemeta. You just see fewer rows.":
-    "Überspringst du dies, verwendet Harbor Cinemeta. Du siehst dann weniger Reihen.",
-  "Skip this and Harbor still works. Your library just stays local.":
-    "Überspringst du dies, funktioniert Harbor trotzdem. Deine Mediathek bleibt dann nur lokal.",
+  "Skip this and Lart runs on Cinemeta. You just see fewer rows.":
+    "Überspringst du dies, verwendet Lart Cinemeta. Du siehst dann weniger Reihen.",
+  "Skip this and Lart still works. Your library just stays local.":
+    "Überspringst du dies, funktioniert Lart trotzdem. Deine Mediathek bleibt dann nur lokal.",
   "Skip, I can do this later": "Überspringen, das kann ich später erledigen",
   "Slightly lighter than background.": "Etwas heller als der Hintergrund.",
   "Slowly fade between a show's backdrop images while you read the page, instead of holding one still. Only runs when the show has more than one backdrop, and never when you have pinned one or asked for reduced motion.":
@@ -1465,8 +1465,8 @@ const sweep: Record<string, string> = {
   "TMDB is connected. Your TV has it.": "TMDB ist verbunden. Dein TV hat den Schlüssel.",
   "TV Settings": "TV-Einstellungen",
   "TV only": "Nur TV",
-  "TV only. Older sets crop the outer edge of the picture. Nudge Harbor inward until nothing is cut off.":
-    "Nur für Fernseher. Bei älteren Geräten wird der äußere Bildrand abgeschnitten. Rücke die Anzeige von Harbor so weit nach innen, bis nichts mehr abgeschnitten ist.",
+  "TV only. Older sets crop the outer edge of the picture. Nudge Lart inward until nothing is cut off.":
+    "Nur für Fernseher. Bei älteren Geräten wird der äußere Bildrand abgeschnitten. Rücke die Anzeige von Lart so weit nach innen, bis nichts mehr abgeschnitten ist.",
   "TVDB list": "TVDB-Liste",
   "TVDB lists are unavailable right now.": "TVDB-Listen sind derzeit nicht verfügbar.",
   Taiwanese: "Taiwanisch",
@@ -1481,8 +1481,8 @@ const sweep: Record<string, string> = {
   Text: "Text",
   "Text colour": "Textfarbe",
   "Text opacity": "Textdeckkraft",
-  "That Harbor is on the network but is not answering, so it cannot be driven.":
-    "Diese Harbor-Installation ist im Netzwerk, antwortet aber nicht und kann daher nicht ferngesteuert werden.",
+  "That Lart is on the network but is not answering, so it cannot be driven.":
+    "Diese Lart-Installation ist im Netzwerk, antwortet aber nicht und kann daher nicht ferngesteuert werden.",
   "That code has expired": "Dieser Code ist abgelaufen",
   "That code is no longer valid. Look at your TV for a new one.":
     "Dieser Code ist nicht mehr gültig. Auf deinem Fernseher findest du einen neuen.",
@@ -1491,8 +1491,8 @@ const sweep: Record<string, string> = {
   "That does not look like a YouTube link.": "Das sieht nicht nach einem YouTube-Link aus.",
   "That is five. Deselect one to swap it out.":
     "Damit sind es fünf. Wähle eines ab, um es auszutauschen.",
-  'That looks like the v4 Read Access Token. Harbor needs the shorter "API Key (v3 auth)" from the same page.':
-    "Das sieht nach dem v4 Read Access Token aus. Harbor benötigt den kürzeren „API Key (v3 auth)“ von derselben Seite.",
+  'That looks like the v4 Read Access Token. Lart needs the shorter "API Key (v3 auth)" from the same page.':
+    "Das sieht nach dem v4 Read Access Token aus. Lart benötigt den kürzeren „API Key (v3 auth)“ von derselben Seite.",
   "That's all of your collections.": "Das sind alle deine Sammlungen.",
   "That's every TVDB list we could find.": "Das sind alle TVDB-Listen, die wir finden konnten.",
   "That's every TVDB list we could reach. Some are unavailable right now.":
@@ -1531,8 +1531,8 @@ const sweep: Record<string, string> = {
     "Der Anbieter hat die Anfrage abgelehnt. Der Link ist wahrscheinlich abgelaufen, regional gesperrt oder das Kontingent ist aufgebraucht.",
   "The provider's server could not be reached. It may be offline, or you have no connection.":
     "Der Server des Anbieters konnte nicht erreicht werden. Er ist möglicherweise offline oder du hast keine Verbindung.",
-  "The provider's server returned an error. Nothing on Harbor's side can fix this. Pick another source.":
-    "Der Server des Anbieters hat einen Fehler zurückgegeben. Harbor kann daran nichts ändern. Wähle eine andere Quelle.",
+  "The provider's server returned an error. Nothing on Lart's side can fix this. Pick another source.":
+    "Der Server des Anbieters hat einen Fehler zurückgegeben. Lart kann daran nichts ändern. Wähle eine andere Quelle.",
   "The same camera pan on each setting. The lit lane is what you get right now.":
     "Bei jeder Einstellung dieselbe Kamerafahrt. Die beleuchtete Spur zeigt deine aktuelle Einstellung.",
   "The shape of the whole Home page. Everything below tunes the rows inside it.":
@@ -1562,8 +1562,8 @@ const sweep: Record<string, string> = {
   "They said the harbour would be quiet tonight.":
     "Sie sagten, der Hafen würde heute Nacht ruhig bleiben.",
   "Things you still do on the TV itself": "Dinge, die du weiterhin direkt am Fernseher erledigst",
-  "This Harbor takes commands from this computer. Forget it to take that back.":
-    "Diese Harbor-Installation nimmt Befehle von diesem Computer an. Entferne sie, um das rückgängig zu machen.",
+  "This Lart takes commands from this computer. Forget it to take that back.":
+    "Diese Lart-Installation nimmt Befehle von diesem Computer an. Entferne sie, um das rückgängig zu machen.",
   "This browser blocked the copy. Long-press the code above, or write it down.":
     "Dieser Browser hat das Kopieren blockiert. Halte den obigen Code gedrückt oder schreibe ihn auf.",
   "This build cannot carry TV settings to the account yet. Everything on this page saves on this computer and will go up the moment the sync section names are enabled.":
@@ -1577,8 +1577,8 @@ const sweep: Record<string, string> = {
   "This is how your subtitles will look.": "So werden deine Untertitel aussehen.",
   "This is the only way back into your account if you forget your password. It is shown once.":
     "Nur so kannst du wieder auf dein Konto zugreifen, wenn du dein Passwort vergisst. Der Schlüssel wird nur einmal angezeigt.",
-  "This opens Harbor to devices on your Wi-Fi. You can turn it off again in Settings.":
-    "Dadurch können Geräte in deinem WLAN auf Harbor zugreifen. Du kannst dies in den Einstellungen wieder ausschalten.",
+  "This opens Lart to devices on your Wi-Fi. You can turn it off again in Settings.":
+    "Dadurch können Geräte in deinem WLAN auf Lart zugreifen. Du kannst dies in den Einstellungen wieder ausschalten.",
   "This page cannot reach your TV": "Diese Seite kann deinen Fernseher nicht erreichen",
   "This page works while your TV is showing its setup screen. Go back to that screen on the TV, then try again.":
     "Diese Seite funktioniert, solange auf deinem Fernseher der Einrichtungsbildschirm angezeigt wird. Kehre auf dem Fernseher zu diesem Bildschirm zurück und versuche es erneut.",
@@ -1591,8 +1591,8 @@ const sweep: Record<string, string> = {
     "Das Token dieser Sitzung kann nicht aktualisiert werden. Melde dich ab und wieder an, sonst werden diese Änderungen auf dem Fernseher nie übernommen.",
   "This source didn't respond": "Diese Quelle hat nicht geantwortet",
   "This source is down": "Diese Quelle ist nicht verfügbar",
-  "This source isn't cached on your debrid, so Harbor would pull it directly from peers. It can take a moment to start and may buffer on low-seed torrents.":
-    "Diese Quelle ist bei deinem Debrid-Dienst nicht zwischengespeichert, daher würde Harbor sie direkt von Peers abrufen. Der Start kann einen Moment dauern, und bei Torrents mit wenigen Seedern kann es zu Pufferungen kommen.",
+  "This source isn't cached on your debrid, so Lart would pull it directly from peers. It can take a moment to start and may buffer on low-seed torrents.":
+    "Diese Quelle ist bei deinem Debrid-Dienst nicht zwischengespeichert, daher würde Lart sie direkt von Peers abrufen. Der Start kann einen Moment dauern, und bei Torrents mit wenigen Seedern kann es zu Pufferungen kommen.",
   "This source rejected the stream": "Diese Quelle hat den Stream abgelehnt",
   "This source stays quiet until you add a key.":
     "Diese Quelle bleibt inaktiv, bis du einen Schlüssel hinzufügst.",
@@ -1637,8 +1637,8 @@ const sweep: Record<string, string> = {
     "Anime4K-Hochskalierung einschalten (automatisch) oder ausschalten. Nur aktiv, wenn Shader verfügbar sind.",
   "Turn Anime4K upscaling on. Only active when shaders are available.":
     "Anime4K-Hochskalierung einschalten. Nur aktiv, wenn Shader verfügbar sind.",
-  "Turn anime back on in Harbor's content settings to browse it here.":
-    "Aktiviere Anime in den Inhaltseinstellungen von Harbor wieder, um hier danach zu suchen.",
+  "Turn anime back on in Lart's content settings to browse it here.":
+    "Aktiviere Anime in den Inhaltseinstellungen von Lart wieder, um hier danach zu suchen.",
   "Turn off mobile data so your phone uses Wi-Fi.":
     "Schalte mobile Daten aus, damit dein Smartphone WLAN verwendet.",
   "Turn off what you do not have": "Deaktiviere, was du nicht hast",
@@ -1648,7 +1648,7 @@ const sweep: Record<string, string> = {
   "Turn this on to arm the four rules below.":
     "Aktiviere dies, um die vier Regeln unten scharfzuschalten.",
   "Turning them on": "So aktivierst du sie",
-  "Type the code showing on that Harbor.": "Gib den dort in Harbor angezeigten Code ein.",
+  "Type the code showing on that Lart.": "Gib den dort in Lart angezeigten Code ein.",
   Typeface: "Schriftart",
   "Typography & custom fonts": "Typografie und eigene Schriftarten",
   "UFC / MMA": "UFC / MMA",
@@ -1660,8 +1660,8 @@ const sweep: Record<string, string> = {
   Unreachable: "Nicht erreichbar",
   "Unsaved changes to your layout, time format and volume style.":
     "Ungespeicherte Änderungen an Layout, Zeitformat und Lautstärkedarstellung.",
-  "Until you pair, that Harbor ignores anything this computer sends it.":
-    "Bis zur Kopplung ignoriert die betreffende Harbor-Instanz alles, was dieser Computer sendet.",
+  "Until you pair, that Lart ignores anything this computer sends it.":
+    "Bis zur Kopplung ignoriert die betreffende Lart-Instanz alles, was dieser Computer sendet.",
   Unverified: "Nicht verifiziert",
   "Upcoming episodes and movies from your Simkl watching and plan-to-watch lists":
     "Bevorstehende Folgen und Filme aus deinen Simkl-Listen „Wird angesehen“ und „Demnächst ansehen“",
@@ -1713,15 +1713,15 @@ const sweep: Record<string, string> = {
   "What your catalogs are showing right now.": "Was deine Kataloge gerade anzeigen.",
   "What's hot right now": "Was gerade angesagt ist",
   "What's new on the network": "Neuigkeiten im Netzwerk",
-  "When playback starts, Harbor finds and loads a subtitle in one of these languages. The first available match wins, so put your main language first.":
-    "Beim Wiedergabestart sucht und lädt Harbor einen Untertitel in einer dieser Sprachen. Der erste verfügbare Treffer wird verwendet. Setze daher deine Hauptsprache an die erste Stelle.",
+  "When playback starts, Lart finds and loads a subtitle in one of these languages. The first available match wins, so put your main language first.":
+    "Beim Wiedergabestart sucht und lädt Lart einen Untertitel in einer dieser Sprachen. Der erste verfügbare Treffer wird verwendet. Setze daher deine Hauptsprache an die erste Stelle.",
   "When you open a profile": "Beim Öffnen eines Profils",
   "When you press Play": "Wenn du auf „Abspielen“ drückst",
   "Where files live": "Wo Dateien gespeichert sind",
   "Where the bookmark sits on the poster.": "Wo das Lesezeichen auf dem Poster sitzt.",
   "Where to find the key": "Wo du den Schlüssel findest",
-  "Whether Harbor reports playback to Simkl while you watch.":
-    "Ob Harbor die Wiedergabe während des Ansehens an Simkl meldet.",
+  "Whether Lart reports playback to Simkl while you watch.":
+    "Ob Lart die Wiedergabe während des Ansehens an Simkl meldet.",
   "Whether finishing an episode updates your AniList progress.":
     "Ob das Abschließen einer Episode deinen Fortschritt bei AniList aktualisiert.",
   "Whether subtitles are showing the moment a video starts.":
@@ -1738,8 +1738,8 @@ const sweep: Record<string, string> = {
     "Welche Zeile wo steht, während beide eingeblendet sind.",
   "Which service names the track when you tap Identify song in the player.":
     "Welcher Dienst den Musiktitel ermittelt, wenn du im Player auf „Titel erkennen“ tippst.",
-  "Which subtitle Harbor lands on when more than one is available.":
-    "Welchen Untertitel Harbor auswählt, wenn mehrere verfügbar sind.",
+  "Which subtitle Lart lands on when more than one is available.":
+    "Welchen Untertitel Lart auswählt, wenn mehrere verfügbar sind.",
   "Which subtitle languages, in order?": "Welche Untertitelsprachen, in welcher Reihenfolge?",
   "While auto-sync is on": "Solange die automatische Synchronisierung aktiv ist",
   White: "Weiß",
@@ -1765,8 +1765,8 @@ const sweep: Record<string, string> = {
   Yesterday: "Gestern",
   "You are aboard.": "Du bist an Bord.",
   "You are done.": "Du bist fertig.",
-  "You are not signed in to a Harbor account, so nothing here can reach the TV.":
-    "Du bist nicht bei einem Harbor-Konto angemeldet, daher kann von hier nichts auf den Fernseher übertragen werden.",
+  "You are not signed in to a Lart account, so nothing here can reach the TV.":
+    "Du bist nicht bei einem Lart-Konto angemeldet, daher kann von hier nichts auf den Fernseher übertragen werden.",
   "You are set up": "Du bist startklar",
   "You have no lists yet.": "Du hast noch keine Listen.",
   "You have not made a collection yet.": "Du hast noch keine Sammlung erstellt.",
@@ -1775,9 +1775,9 @@ const sweep: Record<string, string> = {
     "Deine Weiterschauen-Liste, deine Merkliste und deine Add-ons auf diesem Fernseher.",
   "Your Continue Watching, your watchlist and your addons.":
     "Deine Weiterschauen-Liste, deine Merkliste und deine Add-ons.",
-  "Your Harbor account": "Dein Harbor-Konto",
-  "Your Harbor account is signed in on the TV.":
-    "Du bist auf dem Fernseher mit deinem Harbor-Konto angemeldet.",
+  "Your Lart account": "Dein Lart-Konto",
+  "Your Lart account is signed in on the TV.":
+    "Du bist auf dem Fernseher mit deinem Lart-Konto angemeldet.",
   "Your Stremio password": "Dein Stremio-Passwort",
   "Your TV could not use that. It may have been rejected on the TV's side.":
     "Dein Fernseher konnte das nicht verwenden. Möglicherweise wurde es dort abgelehnt.",
@@ -1794,7 +1794,7 @@ const sweep: Record<string, string> = {
     "Dein Debrid-Dienst kann dies derzeit nicht verarbeiten.",
   "Your handle": "Dein Benutzername",
   "Your handle, your themes, your settings. Signed in once, waiting on the next machine you open.":
-    "Dein Benutzername, deine Designs, deine Einstellungen. Nach einmaliger Anmeldung stehen sie auf dem nächsten Gerät bereit, auf dem du Harbor öffnest.",
+    "Dein Benutzername, deine Designs, deine Einstellungen. Nach einmaliger Anmeldung stehen sie auf dem nächsten Gerät bereit, auf dem du Lart öffnest.",
   "Your library": "Deine Mediathek",
   "Your library is aboard.": "Deine Mediathek ist an Bord.",
   "Your password stays on this phone. Only the sign-in token Stremio returns is sent to your TV.":
@@ -1840,7 +1840,7 @@ const sweep: Record<string, string> = {
   "{n} of {total} chosen": "{n} von {total} ausgewählt",
   "{n} of {total} connected": "{n} von {total} verbunden",
   "{n} on": "{n} an",
-  "{n} other Harbors": "{n} andere Harbor-Instanzen",
+  "{n} other Harbors": "{n} andere Lart-Instanzen",
   "{n} picks, refreshed daily": "{n} Tipps, täglich aktualisiert",
   "{n} recorded winners": "{n} erfasste Gewinner",
   "{n} seeders": "{n} Seeder",

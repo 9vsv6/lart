@@ -27,7 +27,7 @@ const residual: Record<string, string> = {
   "Add preset": "Hazır ayar ekle",
   "Add to My List": "Listeme Ekle",
   "Add to tile {n}": "{n}. kutucuğa ekle",
-  "Added to Harbor": "Harbor’a eklendi",
+  "Added to Lart": "Lart’a eklendi",
   "Added to downloads": "İndirilenlere eklendi",
   "Added to library": "Kütüphaneye eklendi",
   "Adds Letterboxd and Trakt community ratings to detail pages, covering what OMDb misses.":
@@ -80,7 +80,7 @@ const residual: Record<string, string> = {
   "Community index": "Topluluk endeksi",
   "Compressing…": "Sıkıştırılıyor…",
   "Configure URL above first": "Önce yukarıdaki URL'yi yapılandırın",
-  "Continue in Harbor": "Harbor’da devam et",
+  "Continue in Lart": "Lart’da devam et",
   "Continue in browser": "Tarayıcıda devam et",
   "Copy to clipboard": "Panoya kopyala",
   "Could not send: {message}": "Gönderilemedi: {message}",
@@ -114,8 +114,8 @@ const residual: Record<string, string> = {
     "Bölüm adlarını, alternatif adları, kanal bilgilerini ve hikâye yayı/DVD/mutlak sıralamalarını ekler. TMDB üzerine katman olarak eklenir, böylece her alanda daha iyi olan kaynak kullanılır. Kişisel kullanım için ücretsiz:",
   "Every color token, stable selector, {api} call, live hook (bell, account menu, avatar, status dot, unread badge), and copy-paste recipe.":
     "Tüm renk belirteçleri, kararlı seçiciler, {api} çağrıları, dinamik hook'lar (zil, hesap menüsü, avatar, durum noktası, okunmamış rozeti) ve kopyalayıp yapıştırabileceğiniz tarifler.",
-  "Every theme you share gets a private owner token. On the device where you shared it, Harbor saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
-    "Paylaştığınız her temaya özel bir sahiplik belirteci verilir. Harbor, temayı paylaştığınız cihazda bu belirteci otomatik olarak kaydettiğinden, bu temaları tek dokunuşla sahiplenebilmeniz için burada gösterir. Bir temayı farklı bir cihazdan sahiplenmek için belirteci aşağıya yapıştırın. Yeni paylaşımlar artık doğrudan hesabınıza bağlandığından bunu tekrar yapmanız gerekmez.",
+  "Every theme you share gets a private owner token. On the device where you shared it, Lart saved it automatically, so those themes show up right here to claim in one tap. To claim one from a different device, paste that token below. New shares now bind straight to your account, so you will not need this again.":
+    "Paylaştığınız her temaya özel bir sahiplik belirteci verilir. Lart, temayı paylaştığınız cihazda bu belirteci otomatik olarak kaydettiğinden, bu temaları tek dokunuşla sahiplenebilmeniz için burada gösterir. Bir temayı farklı bir cihazdan sahiplenmek için belirteci aşağıya yapıştırın. Yeni paylaşımlar artık doğrudan hesabınıza bağlandığından bunu tekrar yapmanız gerekmez.",
   "Experimental 1:1 ports of other apps. Rough edges expected.":
     "Diğer uygulamaların deneysel, bire bir uyarlamaları. Bazı pürüzler olabilir.",
   "Explore, discover and earn stars": "Keşfet, yeni şeyler bul ve yıldız kazan",
@@ -131,21 +131,21 @@ const residual: Record<string, string> = {
   "Got one a friend shared? Drop it in.":
     "Bir arkadaşınızın paylaştığı bir tema mı var? Buraya bırakın.",
   HOME: "EV SAHİBİ",
-  "Harbor couldn't reach MyAnimeList or AniList. Check your connection and try again.":
-    "Harbor, MyAnimeList veya AniList'e erişemedi. Bağlantınızı kontrol edip tekrar deneyin.",
-  "Harbor couldn't reach the catalog servers. Check your connection and try again.":
-    "Harbor katalog sunucularına erişemedi. Bağlantınızı kontrol edip tekrar deneyin.",
-  "Harbor dropped {n} suspicious or mismatched result.":
-    "Harbor, şüpheli veya eşleşmeyen {n} sonucu eledi.",
-  "Harbor dropped {n} suspicious or mismatched results.":
-    "Harbor, şüpheli veya eşleşmeyen {n} sonucu eledi.",
-  "Harbor on the server display": "Sunucu ekranındaki Harbor",
-  "Harbor opens 4 parallel requests to": "Harbor şuraya 4 paralel istek açar:",
+  "Lart couldn't reach MyAnimeList or AniList. Check your connection and try again.":
+    "Lart, MyAnimeList veya AniList'e erişemedi. Bağlantınızı kontrol edip tekrar deneyin.",
+  "Lart couldn't reach the catalog servers. Check your connection and try again.":
+    "Lart katalog sunucularına erişemedi. Bağlantınızı kontrol edip tekrar deneyin.",
+  "Lart dropped {n} suspicious or mismatched result.":
+    "Lart, şüpheli veya eşleşmeyen {n} sonucu eledi.",
+  "Lart dropped {n} suspicious or mismatched results.":
+    "Lart, şüpheli veya eşleşmeyen {n} sonucu eledi.",
+  "Lart on the server display": "Sunucu ekranındaki Lart",
+  "Lart opens 4 parallel requests to": "Lart şuraya 4 paralel istek açar:",
   "Have a file?": "Dosyanız mı var?",
   "Have a token from another device?": "Başka bir cihazdaki token sizde mi?",
   "Hidden card": "Kapalı kart",
-  "Highly recommended. This is what gives you the full Harbor experience: Popular, Trending, In Theaters, and per-service rails. Free at":
-    "Şiddetle önerilir. Eksiksiz Harbor deneyimini bununla yaşarsınız: Popüler, Trendler, Vizyondakiler ve hizmete özel satırlar. Ücretsiz edinebileceğiniz adres:",
+  "Highly recommended. This is what gives you the full Lart experience: Popular, Trending, In Theaters, and per-service rails. Free at":
+    "Şiddetle önerilir. Eksiksiz Lart deneyimini bununla yaşarsınız: Popüler, Trendler, Vizyondakiler ve hizmete özel satırlar. Ücretsiz edinebileceğiniz adres:",
   "How this is measured": "Bu nasıl ölçülür?",
   "IPTV lists": "IPTV listeleri",
   "Identifies the song with Google Gemini (free tier, no usage cap). Get a key at":
@@ -260,8 +260,8 @@ const residual: Record<string, string> = {
   "Seek back 10 seconds": "10 saniye geri sar",
   "Seek forward 10 seconds": "10 saniye ileri sar",
   "Select renderer": "Oynatma hedefini seçin",
-  "Sends the context above straight to the Harbor team. No keys or library data.":
-    "Yukarıdaki bağlamı doğrudan Harbor ekibine gönderir. Anahtarlar veya Kütüphane verileri gönderilmez.",
+  "Sends the context above straight to the Lart team. No keys or library data.":
+    "Yukarıdaki bağlamı doğrudan Lart ekibine gönderir. Anahtarlar veya Kütüphane verileri gönderilmez.",
   "Sent. Thanks for the help!": "Gönderildi. Yardımınız için teşekkürler!",
   "Set as a backdrop": "Arka plan olarak ayarla",
   "Share diagnostics": "Tanılama verilerini paylaş",
@@ -276,8 +276,8 @@ const residual: Record<string, string> = {
     "Alan dolmaya başlıyor ({count}/{limit}). Dar ekranlarda taşabilir.",
   "Something blew up while rendering. Reload to recover, or send us the technical detail.":
     "Görüntüleme sırasında bir şeyler ters gitti. Düzeltmek için yeniden yükleyin veya teknik ayrıntıları bize gönderin.",
-  "Sorry, Harbor crashed the last time it was running. You can review the details and choose whether to send a report.":
-    "Üzgünüz, Harbor son çalıştırıldığında çöktü. Ayrıntıları inceleyip rapor gönderip göndermeyeceğinizi seçebilirsiniz.",
+  "Sorry, Lart crashed the last time it was running. You can review the details and choose whether to send a report.":
+    "Üzgünüz, Lart son çalıştırıldığında çöktü. Ayrıntıları inceleyip rapor gönderip göndermeyeceğinizi seçebilirsiniz.",
   "Stream offline": "Yayın çevrimdışı",
   "Submit update": "Güncellemeyi gönder",
   "S{season} · E{episode}": "S{season} · B{episode}",
@@ -300,7 +300,7 @@ const residual: Record<string, string> = {
   "Theme link or ID": "Tema bağlantısı veya kimliği",
   "They email an activation link the first time. Click it, then come back and save.":
     "İlk seferde e-postayla bir etkinleştirme bağlantısı gönderirler. Bağlantıya tıklayın, ardından buraya dönüp kaydedin.",
-  "This Harbor": "Bu Harbor",
+  "This Lart": "Bu Lart",
   "This PC": "Bu bilgisayar",
   "This playlist hasn't been loaded yet, or it has no channels.":
     "Bu oynatma listesi henüz yüklenmedi veya hiç kanal içermiyor.",
@@ -323,12 +323,12 @@ const residual: Record<string, string> = {
     'Proje anahtarını değil, "personal" anahtarını kullanın.',
   "Use the v3 key, not the read access token.":
     "Okuma erişimi tokenını değil, v3 anahtarını kullanın.",
-  "Used to check cache and unrestrict links. Harbor never adds or removes anything on your account on its own.": "Önbelleği kontrol etmek ve bağlantı kısıtlamalarını kaldırmak için kullanılır. Harbor hesabınıza kendi kendine asla bir şey eklemez veya kaldırmaz.",
+  "Used to check cache and unrestrict links. Lart never adds or removes anything on your account on its own.": "Önbelleği kontrol etmek ve bağlantı kısıtlamalarını kaldırmak için kullanılır. Lart hesabınıza kendi kendine asla bir şey eklemez veya kaldırmaz.",
   "Uses the directdl endpoint, which skips queueing for anything already cached.":
     "Önbellekte bulunan içerikleri kuyruğa eklemeyi atlayan directdl uç noktasını kullanır.",
   "Uses up to 150 MB": "En fazla 150 MB kullanır",
   VS: "KARŞI",
-  "Verified Harbor Staff": "Doğrulanmış Harbor ekip üyesi",
+  "Verified Lart Staff": "Doğrulanmış Lart ekip üyesi",
   Versions: "Sürümler",
   "Versions ({count})": "Sürümler ({count})",
   "View {title}": "{title} içeriğini görüntüle",
@@ -353,8 +353,8 @@ const residual: Record<string, string> = {
   "Works without a key at low volume; add a key for higher quotas.":
     "Düşük kullanımda anahtarsız çalışır; daha yüksek kotalar için bir anahtar ekleyin.",
   "You found them all!": "Hepsini buldun!",
-  "Your library lives on Harbor. Connect to your computer and it shows up here.":
-    "Kütüphaneniz Harbor'da. Bilgisayarınıza bağlandığınızda burada görünür.",
+  "Your library lives on Lart. Connect to your computer and it shows up here.":
+    "Kütüphaneniz Lart'da. Bilgisayarınıza bağlandığınızda burada görünür.",
   "Your new version is in for a quick review. The live listing keeps working until this one is approved.":
     "Yeni sürümünüz kısa bir incelemeye gönderildi. Bu sürüm onaylanana kadar mevcut listeleme yayında kalır.",
   "a bare RPDB-compatible server (your RPDB key is still sent), or a full URL template using":

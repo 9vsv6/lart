@@ -99,7 +99,7 @@ export function PluginRow({
         : t("No streams came back.")
     : t("Runs this plugin on a real title and shows what came back.");
 
-  // Harbor is holding this one down rather than the user having switched it off, so the way back
+  // Lart is holding this one down rather than the user having switched it off, so the way back
   // belongs on the row itself. With every plugin paused there is nothing to try.
   const retryable = plugin.state === "auto-paused" && !masterOff;
   const note = error ?? (retryable && check ? checkText : copy.warn);

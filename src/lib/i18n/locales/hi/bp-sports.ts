@@ -15,8 +15,8 @@ const bpSports: Record<string, string> = {
   "Following {name}": "{name} को फ़ॉलो कर रहे हैं",
   "Game finished": "मैच समाप्त",
   "Grand Prix weekend": "Grand Prix सप्ताहांत",
-  "Harbor couldn't reach the sports servers. Check the connection and open the event again.":
-    "Harbor खेल सर्वर तक नहीं पहुँच सका। कनेक्शन जाँचें और इवेंट को फिर से खोलें।",
+  "Lart couldn't reach the sports servers. Check the connection and open the event again.":
+    "Lart खेल सर्वर तक नहीं पहुँच सका। कनेक्शन जाँचें और इवेंट को फिर से खोलें।",
   "Hide bench": "बेंच छिपाएँ",
   "Hot right now": "अभी सबसे चर्चित",
   "If the broadcast asks you to sign in or confirm your age, open it in a browser.":
@@ -37,8 +37,8 @@ const bpSports: Record<string, string> = {
     "अभी तक किसी भी इंस्टॉल किए गए ऐडऑन में खेलों का कैटलॉग नहीं है।",
   "No matching addon listing yet. Browse every addon channel to look for the broadcast.":
     "अभी कोई मिलती-जुलती ऐडऑन लिस्टिंग नहीं है। प्रसारण ढूँढने के लिए सभी ऐडऑन चैनल देखें।",
-  "No playlists yet. Add one in Live TV and Harbor will match its channels to fixtures.":
-    "अभी कोई प्लेलिस्ट नहीं है। लाइव TV में एक जोड़ें और Harbor उसके चैनलों को मैचों से जोड़ देगा।",
+  "No playlists yet. Add one in Live TV and Lart will match its channels to fixtures.":
+    "अभी कोई प्लेलिस्ट नहीं है। लाइव TV में एक जोड़ें और Lart उसके चैनलों को मैचों से जोड़ देगा।",
   "No venue page published": "मैदान का कोई पेज प्रकाशित नहीं है",
   "None of your channels match this fixture. Search your channels and pin the one that carries it.":
     "आपका कोई भी चैनल इस मैच से मेल नहीं खाता। अपने चैनल खोजें और जो इसे दिखाता हो उसे पिन करें।",

@@ -14,7 +14,7 @@ export default {
   "games.mods.backupNote": "Değiştirilen sürümler yerel yedekte tutulur. Geri dönmek için kurulumunuzda Öncekini geri yükle seçeneğini kullanın. Bağımlılıklar yeniden denetlenir.",
   "games.mods.currentVersion": "Yüklü: {version}",
   "games.mods.current": "Yüklü",
-  "games.mods.versionNote": "Uyumlu bir sürüm seçin. Harbor değişiklikleri denetler ve önceki sürümü yerel olarak saklar. Uygulamadan önce Minecraft’ı kapatın.",
+  "games.mods.versionNote": "Uyumlu bir sürüm seçin. Lart değişiklikleri denetler ve önceki sürümü yerel olarak saklar. Uygulamadan önce Minecraft’ı kapatın.",
   "games.mods.applyChanges": "Değişiklikleri uygula",
   "games.mods.reviewChanges": "Değişiklikleri incele",
   "games.mods.previousVersion": "Önceki: {version}",
