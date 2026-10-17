@@ -167,7 +167,9 @@ export function mpvBridgeHarness(prefs = { volume: 0.35, muted: false }, options
     createBridge: (next?: MpvOptions) => module.exports.createMpvBridge(next),
     commands,
     errors,
-    emitWindow(name: string) { windowEvents.dispatchEvent(new Event(name)); },
+    emitWindow(name: string) {
+      windowEvents.dispatchEvent(new Event(name));
+    },
     runFrame() {
       const callbacks = [...frames.values()];
       frames.clear();

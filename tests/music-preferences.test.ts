@@ -215,7 +215,10 @@ test("denied reads preserve SQLite data and allow playback with the default volu
   const { store, calls } = player(browser);
   assert.equal(store.getMusicState().volume, 0.82);
   await store.initializeMusic();
-  assert.deepEqual(calls[0], { command: "music_db_init", args: { migration: null, profile: null } });
+  assert.deepEqual(calls[0], {
+    command: "music_db_init",
+    args: { migration: null, profile: null },
+  });
   assert.deepEqual(store.getMusicState().likedIds, [track.id]);
   assert.deepEqual(store.getMusicState().recents, [track]);
   assert.deepEqual(store.getMusicState().queue, [track]);

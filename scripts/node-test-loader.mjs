@@ -47,7 +47,11 @@ export async function resolve(specifier, context, nextResolve) {
 
 export async function load(url, context, nextLoad) {
   if (assetPattern.test(url)) {
-    return { format: "module", source: `export default ${JSON.stringify(url)};`, shortCircuit: true };
+    return {
+      format: "module",
+      source: `export default ${JSON.stringify(url)};`,
+      shortCircuit: true,
+    };
   }
   if (url.endsWith(".tsx")) {
     const source = await readFile(fileURLToPath(url), "utf8");

@@ -26,19 +26,19 @@ Requests are answered concurrently, so answers can arrive out of order.
 
 ## Methods
 
-| Method | Params | Result |
-| --- | --- | --- |
-| `ping` | none | bridge status |
-| `install` | `path` | the installed extension |
-| `uninstall` | `id` | confirmation |
-| `extensions` | none | installed extensions |
-| `providers` | none | providers the extensions expose |
-| `catalogue` | `providerId` | the provider's catalogue rows |
-| `cataloguePage` | `providerId`, `row`, `page` (default 1) | one page of a row, addressed by row name |
-| `search` | `providerId`, `query`, `page` (default 1), `quick` (default false) | matching items |
-| `load` | `providerId`, `url` | the item's details |
-| `loadLinks` | `providerId`, `data`, `isCasting` (default false) | playable links |
-| `shutdown` | none | confirmation; the process exits |
+| Method          | Params                                                             | Result                                   |
+| --------------- | ------------------------------------------------------------------ | ---------------------------------------- |
+| `ping`          | none                                                               | bridge status                            |
+| `install`       | `path`                                                             | the installed extension                  |
+| `uninstall`     | `id`                                                               | confirmation                             |
+| `extensions`    | none                                                               | installed extensions                     |
+| `providers`     | none                                                               | providers the extensions expose          |
+| `catalogue`     | `providerId`                                                       | the provider's catalogue rows            |
+| `cataloguePage` | `providerId`, `row`, `page` (default 1)                            | one page of a row, addressed by row name |
+| `search`        | `providerId`, `query`, `page` (default 1), `quick` (default false) | matching items                           |
+| `load`          | `providerId`, `url`                                                | the item's details                       |
+| `loadLinks`     | `providerId`, `data`, `isCasting` (default false)                  | playable links                           |
+| `shutdown`      | none                                                               | confirmation; the process exits          |
 
 ## Error codes
 

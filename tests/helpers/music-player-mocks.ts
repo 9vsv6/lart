@@ -17,7 +17,10 @@ function musicPlayerDefaults(): Record<string, Record<string, unknown>> {
     "./queue-automation": queueAutomation,
     "./explicit-preference": explicitPreference,
     "./queue-source": queueSource,
-    "@/lib/active-profile-id": { activeProfileId: () => "test", activeProfileIsPrimary: () => true },
+    "@/lib/active-profile-id": {
+      activeProfileId: () => "test",
+      activeProfileIsPrimary: () => true,
+    },
     "@/lib/platform": { isWindowsDesktop: () => false },
     "./listening-affinity": { hydrateListeningAffinity: settled, observeMusicListening: noop },
     "./artist-blocks": {
@@ -59,8 +62,7 @@ export function withMusicPlayerDefaults(mocks: Record<string, unknown>): Record<
   const merged: Record<string, unknown> = { ...musicPlayerDefaults() };
   for (const [name, mock] of Object.entries(mocks)) {
     const fallback = merged[name];
-    merged[name] =
-      fallback && mock && typeof mock === "object" ? { ...fallback, ...mock } : mock;
+    merged[name] = fallback && mock && typeof mock === "object" ? { ...fallback, ...mock } : mock;
   }
   return merged;
 }

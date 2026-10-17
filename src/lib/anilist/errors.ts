@@ -15,7 +15,11 @@ export class AnilistApiError extends Error {
     try {
       const parsed = JSON.parse(this.body);
       messages = parsed.errors?.map((error: { message?: string }) => error.message ?? "") ?? [];
-    } catch { /* GraphQL errors may already be reduced to their message. */ }
-    return messages.some(message => /^(invalid token|token (?:has )?expired|unauthenticated)\.?$/i.test(message.trim()));
+    } catch {
+      /* GraphQL errors may already be reduced to their message. */
+    }
+    return messages.some((message) =>
+      /^(invalid token|token (?:has )?expired|unauthenticated)\.?$/i.test(message.trim()),
+    );
   }
 }

@@ -33,13 +33,13 @@ function load(profile: any, search: any, authority: any = {}) {
         ? { artistCreditParts }
         : id.includes("artist-credit")
           ? artistCredit
-        : id.includes("artist-authority")
-          ? identity
-          : id.includes("recording-profile")
-            ? { loadRecordingProfile: async () => profile }
-            : id.includes("/catalog")
-              ? { searchTyped: search }
-              : {},
+          : id.includes("artist-authority")
+            ? identity
+            : id.includes("recording-profile")
+              ? { loadRecordingProfile: async () => profile }
+              : id.includes("/catalog")
+                ? { searchTyped: search }
+                : {},
     module,
     module.exports,
   );

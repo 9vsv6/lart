@@ -45,7 +45,10 @@ test("resume is resolved before the first load so playback never starts at zero"
   const resumeAwait = bridgeLoad.indexOf("resolved = await resumePromise");
   const load = bridgeLoad.indexOf("await bridge.load({");
   assert.ok(resumeStart >= 0 && resumeAwait > resumeStart && load > resumeAwait);
-  assert.match(bridgeLoad, /startAtSec: !guestInRoom && !eligibleForPrompt && startSec > 5 \? startSec : undefined/);
+  assert.match(
+    bridgeLoad,
+    /startAtSec: !guestInRoom && !eligibleForPrompt && startSec > 5 \? startSec : undefined/,
+  );
 });
 
 test("Windows embedded mpv is retained across compatible VOD bitrate profiles", () => {
