@@ -4,6 +4,7 @@ import {
   type SaveResult,
 } from "./player-chrome-profiles";
 import { DEFAULT_PLAYER_ICONS } from "./default-player-icons";
+import { isPhoneApp } from "./platform";
 
 export type PlayerSlot =
   | "top-left"
@@ -337,12 +338,29 @@ export function resetPlayerChromeConfig(theme: ThemeId): PlayerChromeConfig {
   return baseline;
 }
 
+// Controls with nothing to do on a phone: no windows, no PiP window, no pen
+// or desktop tools, hardware volume keys, no LAN cast discovery in the mobile
+// build, and the player is always full screen there.
+const PHONE_HIDDEN = new Set([
+  "window-controls",
+  "pip",
+  "draw-toggle",
+  "song-id",
+  "download",
+  "screenshot",
+  "volume",
+  "cast",
+  "fullscreen",
+  "local-time",
+]);
+
 export function controlsInSlot(
   config: PlayerChromeConfig,
   slot: PlayerSlot,
 ): PlayerControlConfig[] {
+  const phone = isPhoneApp();
   return config.controls
-    .filter((c) => c.slot === slot && !c.hidden)
+    .filter((c) => c.slot === slot && !c.hidden && !(phone && PHONE_HIDDEN.has(c.id)))
     .slice()
     .sort((a, b) => a.order - b.order);
 }

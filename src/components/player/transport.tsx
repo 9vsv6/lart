@@ -1,4 +1,5 @@
 import { Settings2 } from "lucide-react";
+import { isPhoneApp } from "@/lib/platform";
 import { isLivePlaybackSrc } from "@/lib/player/live-src";
 import { Fragment, useEffect, useRef, useState } from "react";
 import type { PlayerCapabilities, PlayerSnapshot } from "@/lib/player/bridge";
@@ -166,8 +167,9 @@ export function Transport({
   const t = useT();
   const { settings } = useSettings();
   const kid = useActiveKid();
+  const phone = isPhoneApp();
   const isStremioLayout =
-    resolveChromeTheme(settings.theme, settings.playerChromeTheme) === "stremio";
+    !phone && resolveChromeTheme(settings.theme, settings.playerChromeTheme) === "stremio";
   const playing = snap.status === "playing";
   const showEpisodeNav = hasPrevEp || hasNextEp;
   const [audioMenuOpen, setAudioMenuOpen] = useState(false);
@@ -505,9 +507,10 @@ export function Transport({
             ))}
           </div>
           <div className="flex items-center gap-1.5">
-            {controlsInSlot(chromeConfig, "bottom-center").map((c) => (
-              <Fragment key={c.id}>{renderFadedControl(c.id)}</Fragment>
-            ))}
+            {!phone &&
+              controlsInSlot(chromeConfig, "bottom-center").map((c) => (
+                <Fragment key={c.id}>{renderFadedControl(c.id)}</Fragment>
+              ))}
           </div>
           <div className="flex items-center gap-1.5 justify-self-end">
             {controlsInSlot(chromeConfig, "bottom-right").map((c) => (
@@ -516,6 +519,20 @@ export function Transport({
           </div>
         </div>
       </div>
+
+      {phone &&
+        !isLiveChannel &&
+        !(audioMenuOpen || subtitleMenuOpen || speedMenuOpen || aspectMenuOpen) && (
+        // Phones: the transport sits in the middle of the picture, where a
+        // thumb reaches it, instead of in the crowded bottom row.
+        <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center">
+          <div className="pointer-events-auto flex scale-[1.35] items-center gap-8">
+            {controlsInSlot(chromeConfig, "bottom-center").map((c) => (
+              <Fragment key={c.id}>{renderFadedControl(c.id)}</Fragment>
+            ))}
+          </div>
+        </div>
+      )}
 
       {meta && !isLiveChannel && (
         <CastModal

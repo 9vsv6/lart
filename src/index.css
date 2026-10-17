@@ -7440,3 +7440,16 @@ button.hset-rail-me:hover,
     height: 55%;
   }
 }
+
+/* Phone app: player pop-ups (subtitles, audio, speed) are anchored 150px
+   above the bottom for desktop windows. A landscape phone is too short for
+   that, so they become full-height side panels that scroll inside. */
+[data-phone] .fixed.bottom-\[150px\] {
+  top: 8px !important;
+  bottom: 8px !important;
+  inset-inline-end: 8px !important;
+  height: auto !important;
+  max-height: none !important;
+  width: min(440px, calc(100vw - 16px)) !important;
+  max-width: none !important;
+}

@@ -30,8 +30,9 @@ export function PhonePlayback() {
     goHome: () => setView("home"),
     exitPlayer,
   });
-  if (!isPhoneApp()) return null;
   const playerActive = !!player && !player.sportsDocked && !player.pipDocked;
+  usePlayerWindowMode(playerActive);
+  if (!isPhoneApp()) return null;
   // Portaled to <body>: the shell sits in its own z-30 stacking context, and
   // the mobile detail sheet is a z-50 body portal that would otherwise cover
   // these layers no matter their z-index.
@@ -86,6 +87,21 @@ export function PhonePlayback() {
     </>,
     document.body,
   );
+}
+
+type LartAndroidBridge = { setPlayerMode(on: boolean): void };
+
+/** Landscape lock and hidden system bars while the player is open (MainActivity.kt). */
+function usePlayerWindowMode(active: boolean) {
+  useEffect(() => {
+    if (!isPhoneApp()) return;
+    const bridge = (window as unknown as { LartAndroid?: LartAndroidBridge }).LartAndroid;
+    if (!bridge) return;
+    bridge.setPlayerMode(active);
+    return () => {
+      if (active) bridge.setPlayerMode(false);
+    };
+  }, [active]);
 }
 
 type BackState = {

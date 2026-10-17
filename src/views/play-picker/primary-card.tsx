@@ -107,7 +107,11 @@ export function PrimaryCard({
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-ink/12 to-transparent" />
 
       <div
-        className={`grid gap-7 p-7 ${isLandscape ? "grid-cols-[320px_1fr] items-center" : "grid-cols-[224px_1fr]"}`}
+        className={`grid gap-4 p-4 sm:gap-7 sm:p-7 ${
+          isLandscape
+            ? "grid-cols-1 sm:grid-cols-[320px_1fr] sm:items-center"
+            : "grid-cols-[88px_1fr] sm:grid-cols-[224px_1fr]"
+        }`}
       >
         <div
           className={`relative overflow-hidden rounded-[16px] bg-canvas/50 ring-1 ring-edge-soft/60 ${

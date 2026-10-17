@@ -48,11 +48,11 @@ export function StremioRow({
       : t("Download");
   return (
     <div
-      className={`flex items-stretch gap-5 rounded-2xl bg-elevated/40 p-5 ring-1 transition-colors ${
+      className={`flex flex-wrap items-stretch gap-3 rounded-2xl bg-elevated/40 p-3 ring-1 transition-colors sm:flex-nowrap sm:gap-5 sm:p-5 ${
         failed ? "ring-danger/40 bg-danger/5" : "ring-edge-soft/50"
       }`}
     >
-      <div className="flex w-[68px] shrink-0 flex-col items-center justify-center">
+      <div className="flex w-[56px] shrink-0 flex-col items-center justify-center sm:w-[68px]">
         <AddonLogo
           addonId={stream.addonId}
           addonName={addonName}
@@ -60,7 +60,7 @@ export function StremioRow({
           size="tile"
         />
       </div>
-      <div className="flex min-w-0 flex-1 flex-col justify-center gap-1.5">
+      <div className="flex min-w-0 flex-1 basis-[calc(100%-68px)] flex-col justify-center gap-1.5 sm:basis-auto">
         <p className="whitespace-pre-line text-[16px] font-semibold leading-snug text-ink [overflow-wrap:anywhere]">
           {headline}
         </p>
@@ -84,7 +84,7 @@ export function StremioRow({
           <p className="text-[13px] font-medium text-danger">{t("Unavailable, try another.")}</p>
         )}
       </div>
-      <div className="flex shrink-0 items-center gap-2 self-center">
+      <div className="flex w-full shrink-0 items-center justify-end gap-2 self-center sm:w-auto">
         {link && <CopyLinkButton url={link} size={16} className="h-9 w-9" />}
         <button
           type="button"
@@ -100,7 +100,7 @@ export function StremioRow({
                     ? "border-accent/25 bg-accent-soft text-accent"
                     : "border-ink/[0.06] bg-ink/[0.04] text-ink hover:scale-[1.02] hover:bg-ink/[0.07] aria-disabled:hover:scale-100"
                 }`
-              : "flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-accent text-canvas shadow-[0_2px_6px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.18)] transition-[transform,box-shadow,background-color,color] duration-150 ease-out hover:shadow-[0_5px_14px_rgba(0,0,0,0.24),inset_0_1px_0_rgba(255,255,255,0.18)] active:scale-[0.96] active:duration-100"
+              : "flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-accent sm:h-16 sm:w-16 text-canvas shadow-[0_2px_6px_rgba(0,0,0,0.2),inset_0_1px_0_rgba(255,255,255,0.18)] transition-[transform,box-shadow,background-color,color] duration-150 ease-out hover:shadow-[0_5px_14px_rgba(0,0,0,0.24),inset_0_1px_0_rgba(255,255,255,0.18)] active:scale-[0.96] active:duration-100"
           }
         >
           {preparing ? (

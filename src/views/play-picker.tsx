@@ -939,7 +939,7 @@ export function PlayPicker({
         className="absolute start-0 end-6 top-0 z-10 h-20"
       />
 
-      <div className="relative mx-auto flex min-h-full w-full max-w-5xl flex-col gap-12 px-12 pb-32 pt-32">
+      <div className="relative mx-auto flex min-h-full w-full max-w-5xl flex-col gap-8 px-4 pb-24 pt-16 sm:gap-12 sm:px-12 sm:pb-32 sm:pt-32">
         <PickerNav onBack={backToDetail} onRefresh={refresh} refreshing={loading} />
         <PickerHeader
           meta={metaForDisplay}

@@ -30,6 +30,7 @@ export function osClass(): OsClass {
 export function applyOsDataset(): void {
   if (typeof document === "undefined") return;
   document.documentElement.dataset.os = osClass();
+  if (isPhoneApp()) document.documentElement.dataset.phone = "";
 }
 
 export function isLinuxDesktop(): boolean {
