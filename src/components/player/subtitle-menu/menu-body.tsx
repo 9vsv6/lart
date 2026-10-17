@@ -9,6 +9,7 @@ import {
   X,
 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+import { isAndroid } from "@/lib/platform";
 import { Flag } from "@/components/flag";
 import { hasImportedSubTitle, markImportedSub, useImportedSubs } from "@/lib/player/imported-subs";
 import { setSecondarySub } from "@/lib/player/secondary-sub";
@@ -132,14 +133,10 @@ export function MenuBody(props: SubtitleMenuProps & { onClose: () => void }) {
   const loadLocal = async () => {
     setLocalError(null);
     try {
-      const { open } = await import("@tauri-apps/plugin-dialog");
-      const path = await open({
-        multiple: false,
-        filters: [{ name: "Subtitles", extensions: ["srt", "ass", "ssa", "vtt", "sub"] }],
-      });
-      if (typeof path !== "string") return;
-      const name = path.split(/[\\/]/).pop() || tr("Local subtitle");
-      const ok = await props.onAddSubtitle(path, undefined, name);
+      const picked = isAndroid() ? await pickAndroidSubtitle() : await pickDesktopSubtitle();
+      if (!picked) return;
+      const name = picked.name || tr("Local subtitle");
+      const ok = await props.onAddSubtitle(picked.url, undefined, name);
       if (ok === false) {
         setLocalError(tr("Couldn't load that subtitle file. Try another."));
         return;
@@ -492,4 +489,39 @@ export function MenuBody(props: SubtitleMenuProps & { onClose: () => void }) {
       </div>
     </div>
   );
+}
+
+
+async function pickDesktopSubtitle(): Promise<{ url: string; name: string } | null> {
+  const { open } = await import("@tauri-apps/plugin-dialog");
+  const path = await open({
+    multiple: false,
+    filters: [{ name: "Subtitles", extensions: ["srt", "ass", "ssa", "vtt", "sub"] }],
+  });
+  if (typeof path !== "string") return null;
+  return { url: path, name: path.split(/[\\/]/).pop() ?? "" };
+}
+
+/**
+ * Android: the system picker filters by MIME type (subtitle files have none, so
+ * they show greyed out) and hands back content:// URIs the player cannot read.
+ * A plain file input offers every file, and the page reads it as a blob: URL.
+ */
+function pickAndroidSubtitle(): Promise<{ url: string; name: string } | null> {
+  return new Promise((resolve) => {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.style.display = "none";
+    input.addEventListener("change", () => {
+      const file = input.files?.[0];
+      input.remove();
+      resolve(file ? { url: URL.createObjectURL(file), name: file.name } : null);
+    });
+    input.addEventListener("cancel", () => {
+      input.remove();
+      resolve(null);
+    });
+    document.body.appendChild(input);
+    input.click();
+  });
 }

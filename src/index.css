@@ -6866,6 +6866,17 @@ button.hset-rail-me:hover,
     display: block;
   }
 
+  /* The page shares the rail's grid cell. Isolate it so z-indexed pieces
+     inside (avatar stacks, segmented buttons) cannot paint over the rail,
+     and hide it outright while the rail is open; it is inert then anyway. */
+  .hset-main {
+    isolation: isolate;
+  }
+
+  .hset-grid[data-browse-open] > .hset-main {
+    visibility: hidden;
+  }
+
   .hset-rail-me {
     margin-block: 10px 4px;
   }
@@ -7466,4 +7477,9 @@ html.lart-native-video body {
 html.lart-native-video [data-phone-player],
 html.lart-native-video [data-phone-player] .bg-black {
   background: transparent !important;
+}
+
+/* Phones: no window to drag, so no title-bar strip above Settings. */
+[data-phone] .hset-top-space {
+  display: none;
 }

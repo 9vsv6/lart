@@ -1,6 +1,7 @@
 import { useT } from "@/lib/i18n";
 import { ExperimentalChangelog } from "@/components/update/experimental-changelog";
-import { isLinuxDesktop } from "@/lib/platform";
+import { isAndroid, isLinuxDesktop } from "@/lib/platform";
+import { openUrl } from "@/lib/window";
 import { Section } from "./shared";
 import { BetaChannelRow, UpdatesRow } from "./advanced-panel";
 import { RollbackRow } from "./rollback-row";
@@ -12,10 +13,11 @@ import { readBetaReturnContext } from "@/lib/updater/beta-return";
 import { useExperimentalAccess } from "@/lib/updater/experimental-access";
 
 const isTauri = typeof window !== "undefined" && "__TAURI_INTERNALS__" in window;
+const RELEASES_URL = "https://github.com/9vsv6/lart/releases";
 
 export function UpdatesPanel() {
   const t = useT();
-  const supportsInAppUpdates = isTauri && !isLinuxDesktop();
+  const supportsInAppUpdates = isTauri && !isLinuxDesktop() && !isAndroid();
   const experimentalInstalled = readBetaReturnContext(__APP_VERSION__) !== null;
   const experimentalAccess = useExperimentalAccess();
 
@@ -33,6 +35,22 @@ export function UpdatesPanel() {
           <BetaChannelRow />
           {!experimentalInstalled && <RollbackRow />}
           <BuildFeedback />
+        </Section>
+      )}
+
+      {isAndroid() && (
+        // No in-app updater on Android: new APKs are published as releases.
+        <Section
+          title={t("Updates")}
+          subtitle={t("Lart for Android updates by installing the newest APK from the releases page.")}
+        >
+          <button
+            type="button"
+            onClick={() => openUrl(RELEASES_URL)}
+            className="self-start rounded-md bg-elevated px-4 py-2.5 text-[15px] font-medium text-ink"
+          >
+            {t("Open releases")}
+          </button>
         </Section>
       )}
 

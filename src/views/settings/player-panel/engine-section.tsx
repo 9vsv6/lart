@@ -1,6 +1,6 @@
 import { AlertTriangle } from "../icons";
 import { useEffect, useState } from "react";
-import { isMacDesktop, isWindowsDesktop } from "@/lib/platform";
+import { isMacDesktop, isPhoneApp, isWindowsDesktop } from "@/lib/platform";
 import { probeMpv, type MpvProbe } from "@/lib/player/mpv";
 import { useSettings } from "@/lib/settings";
 import { useT } from "@/lib/i18n";
@@ -19,7 +19,7 @@ export function PlayerEnginePanel() {
   const [mpvProbe, setMpvProbe] = useState<MpvProbe | null>(null);
 
   useEffect(() => {
-    if (!isTauri) return;
+    if (!isTauri || isPhoneApp()) return;
     let cancelled = false;
     void probeMpv().then((p) => {
       if (!cancelled) setMpvProbe(p);
@@ -28,6 +28,24 @@ export function PlayerEnginePanel() {
       cancelled = true;
     };
   }, []);
+
+  if (isPhoneApp()) {
+    // The Android app has one engine: Media3 behind the page (NativePlayer.kt).
+    return (
+      <div className="flex flex-col gap-5">
+        <SettingGroup label={t("Engine")}>
+          <div className="flex flex-col gap-1.5 py-3">
+            <span className="text-[15px] font-medium text-ink">{t("Android player")}</span>
+            <span className={ROW_DESC}>
+              {t(
+                "Lart plays video with Android's built-in player. It handles H.264 and HEVC video, and Dolby Digital, Dolby Digital Plus, DTS, TrueHD and 7.1 audio, so there is nothing to choose here.",
+              )}
+            </span>
+          </div>
+        </SettingGroup>
+      </div>
+    );
+  }
 
   const macEdrSub = t(
     "Sends HDR to the display through macOS EDR instead of mapping it down to SDR. Needs HDR-to-SDR tonemapping off, mpv embedded, and a display with HDR headroom. Takes effect on the next video. Experimental: color can look flat, and an SDR video after an HDR one may need a window resize.",

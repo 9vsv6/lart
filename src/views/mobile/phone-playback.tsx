@@ -1,5 +1,7 @@
 import { Suspense, lazy, useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
+import { ChevronLeft } from "lucide-react";
+import { useT } from "@/lib/i18n";
 import { isPhoneApp } from "@/lib/platform";
 import { useView } from "@/lib/view";
 
@@ -19,6 +21,7 @@ const AddonsView = lazy(() =>
  * screen, over the touch UI.
  */
 export function PhonePlayback() {
+  const t = useT();
   const { picker, player, topKind, canGoBack, goBack, setView, exitPlayback } = useView();
   const page = topKind === "settings" || topKind === "addons" ? topKind : null;
   usePhoneBackButton({
@@ -47,9 +50,21 @@ export function PhonePlayback() {
             paddingBottom: "env(safe-area-inset-bottom, 0px)",
           }}
         >
-          <Suspense fallback={null}>
-            {page === "settings" ? <Settings visible /> : <AddonsView active />}
-          </Suspense>
+          <div className="flex h-12 shrink-0 items-center px-2">
+            <button
+              type="button"
+              onClick={() => (canGoBack ? goBack() : setView("home"))}
+              className="flex h-10 items-center gap-1.5 rounded-full pe-4 ps-2 text-[15px] font-medium text-ink-muted transition-colors active:bg-elevated"
+            >
+              <ChevronLeft size={22} strokeWidth={2} />
+              {t("Back")}
+            </button>
+          </div>
+          <div className="relative min-h-0 flex-1">
+            <Suspense fallback={null}>
+              {page === "settings" ? <Settings visible /> : <AddonsView active />}
+            </Suspense>
+          </div>
         </div>
       )}
       {picker && !playerActive && (

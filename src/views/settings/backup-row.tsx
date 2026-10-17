@@ -1,4 +1,5 @@
 import { AlertTriangle, Check, Download, Info, Upload } from "./icons";
+import { isAndroid } from "@/lib/platform";
 import { useEffect, useRef, useState, type ChangeEvent } from "react";
 import {
   applyBackup,
@@ -121,7 +122,9 @@ export function BackupRow() {
       <input
         ref={fileRef}
         type="file"
-        accept=".harbx,application/json,.json"
+        // Android's picker filters by MIME type and has none for .harbx, so the
+        // backup shows greyed out; let it offer every file and validate after.
+        accept={isAndroid() ? undefined : ".harbx,application/json,.json"}
         onChange={onFile}
         className="hidden"
       />

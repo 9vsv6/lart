@@ -11,7 +11,12 @@
         "label": "main",
         "title": "Lart",
         "url": "index-tv.html",
-        "backgroundColor": [8, 9, 10, 255]
+        "backgroundColor": [
+          8,
+          9,
+          10,
+          255
+        ]
       }
     ]
   },
@@ -22,7 +27,8 @@
       "resources/capstan/": null
     },
     "android": {
-      "minSdkVersion": 26
+      "minSdkVersion": 26,
+      "versionCode": 9132005
     }
   },
   "plugins": {
