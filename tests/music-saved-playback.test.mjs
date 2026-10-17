@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
 import ts from "typescript";
+import { withMusicPlayerDefaults } from "./helpers/music-player-mocks.ts";
 
 function load(file, mocks) {
   const source = readFileSync(new URL(`../src/lib/music/${file}.ts`, import.meta.url), "utf8");
@@ -30,7 +31,7 @@ function fixture({ preferred = null, candidates = [] } = {}) {
     react,
     "./now-playing-key": load("now-playing-key", {}),
   });
-  const player = load("player", {
+  const player = load("player", withMusicPlayerDefaults({
     "@/lib/active-profile-id": { activeProfileId: () => "test", activeProfileIsPrimary: () => true },
     "./listening-affinity": { observeMusicListening: noop, hydrateListeningAffinity: async () => {} },
     "./artist-blocks": { filterBlockedTracks: tracks => tracks, hydrateArtistBlockStore: async () => {} },
@@ -80,7 +81,7 @@ function fixture({ preferred = null, candidates = [] } = {}) {
     "@/lib/cast-ownership": { stopCastOwner: async () => {} },
     "./casting": { getMusicSpeakerState: () => ({ active: false }), subscribeMusicSpeakerState: noop },
     "./hidden-recents": { unhideMusicRecent: noop },
-  });
+  }));
   const hook = load("use-collection-playback", {
     "./source-request": sourceRequest,
     "./player": player,

@@ -62,6 +62,9 @@ function harness(t, options = {}) {
   let cursor = 0;
   let pending = [];
   const react = {
+    // Lazy panes never resolve in these gesture tests; only the overlay shell renders.
+    lazy: () => () => null,
+    Suspense: ({ children }) => children,
     useRef(initial) {
       const index = cursor++;
       return (hooks[index] ??= { current: initial });
@@ -99,6 +102,7 @@ function harness(t, options = {}) {
     "@/lib/search-context": { useSearch: () => search },
     "@/lib/settings": { useSettings: () => ({ settings, update() {} }) },
     "@/lib/view": { useView: () => ({}) },
+    "@/lib/profiles": { useProfiles: () => ({ activeProfile: null }) },
     "@/lib/i18n": { useT: () => (value) => value },
     "@/lib/use-exit-presence": {
       useExitPresence: () => ({ mounted: search.open, closing: false }),

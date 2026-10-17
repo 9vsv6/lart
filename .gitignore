@@ -133,3 +133,7 @@ dev.log*
 # Built APKs and installers
 /releases/
 !/LART.md
+
+# Provenance for the bundled stream-blocker script.
+!src-tauri/resources/harbor-stream-blocker/README.md
+!android-extension-compat/docs/*.md

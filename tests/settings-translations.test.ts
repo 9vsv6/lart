@@ -20,7 +20,7 @@ test("settings translations load without missing text or interpolation variables
         assert.deepEqual(variables(result), variables(key), code + ": " + key);
         if (key.split(/\s+/).length >= 5) assert.notEqual(result, key, code + ": " + key);
       }
-      for (const key of ["App language", "Discovery languages", "Help & about", "Upload a picture of your own, or pick one from the Harbor catalog."]) {
+      for (const key of ["App language", "Discovery languages", "Help & about", "Upload a picture of your own, or pick one from the Lart catalog."]) {
         assert.notEqual(t(key), key, code + ": " + key);
       }
       const result = t("{key} is used for {action}. Press another key or cancel.", { key: "Ctrl+K", action: "Example action" });

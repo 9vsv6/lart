@@ -339,6 +339,7 @@ function playerEntries() {
     likedIdsFor: () => [], isMusicLiked: () => false, getMusicSpeakerState: () => ({ active: false }),
     skipUnavailableTrack: () => false,
     deckAdoption: { deck: () => 0 }, require: () => ({ unhideMusicRecent: () => {} }),
+    pinSourceFor: () => {}, unpinSourceFor: () => {}, peekPinnedSource: () => null,
   };
   new Function(...Object.keys(scope), "exports", code)(...Object.values(scope), module.exports);
   return { player: module.exports as Pick<typeof import("../src/lib/music/player"), "playMusic" | "setMusicQueue" | "enqueueMusic">, state, initialized, sourceReady };

@@ -1,4 +1,5 @@
 import { artistCreditParts } from "../src/lib/music/search-artists";
+import * as artistCredit from "../src/lib/music/artist-credit.ts";
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
@@ -30,6 +31,8 @@ function load(profile: any, search: any, authority: any = {}) {
     (id: string) =>
       id.includes("search-artists")
         ? { artistCreditParts }
+        : id.includes("artist-credit")
+          ? artistCredit
         : id.includes("artist-authority")
           ? identity
           : id.includes("recording-profile")

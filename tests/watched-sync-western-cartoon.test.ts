@@ -18,9 +18,13 @@ test("anime detection keys on the PRIMARY country, not any country in the list",
   assert.ok(!/const c = \(m\.country \?\? ""\)\.toLowerCase\(\)/.test(fn), "must not scan the whole country list");
 });
 
-test("the Kitsu fallback only runs when the show's origin is unknown", () => {
+test("the Kitsu fallback runs only for animation or an unknown origin, and needs an exact mapping", () => {
   assert.match(animeDetect, /const originUnknown = !m \|\| !primaryCountry\(m\)/);
-  assert.match(animeDetect, /if \(!anime && originUnknown &&/);
+  assert.match(
+    animeDetect,
+    /const needsMapping = !m \|\| hasAnimationGenre\(m\) \|\| \(originUnknown && \(m\.genres \?\? \[\]\)\.length === 0\)/,
+  );
+  assert.match(animeDetect, /if \(!anime && needsMapping\) \{\s*anime = \(await imdbToKitsu\(id\)\.catch\(\(\) => null\)\) != null;/);
 });
 
 test("the poisoned detected-anime set is purged via a storage version bump", () => {

@@ -5,6 +5,7 @@ import ts from "typescript";
 import { castOwnershipFixture } from "./helpers/cast-ownership.ts";
 import { queueTrackKey } from "../src/lib/music/queue-order.ts";
 import { dedupeMusicTracks, sameMusicTrack } from "../src/lib/music/track-identity.ts";
+import { withMusicPlayerDefaults } from "./helpers/music-player-mocks.ts";
 
 const track = {
   id: "youtube:one",
@@ -175,8 +176,9 @@ function fixture(respond?: (command: string, args?: any) => unknown, realCasting
     output,
   )(
     (name: string) => {
-      assert.ok(name in mocks, name);
-      return mocks[name];
+      const all = withMusicPlayerDefaults(mocks);
+      assert.ok(name in all, name);
+      return all[name];
     },
     module,
     module.exports,

@@ -103,6 +103,8 @@ test("a caller that can render more than a rail gets more than a rail, and the d
     ...video,
     sourceId: `FGBhQbmPw${index.toString().padStart(2, "0")}`,
     id: `youtube:${index}`,
+    // Distinct songs: repeat uploads of one song collapse to a single result.
+    title: `Song ${index}`,
   }));
   const api = load(async () => many);
   assert.equal((await api.searchMusicVideos("daft punk")).length, 12);
@@ -117,6 +119,8 @@ test("a shared in-flight request still answers each caller at its own size", asy
     ...video,
     sourceId: `AAAAAAAAA${index.toString().padStart(2, "0")}`,
     id: `youtube:${index}`,
+    // Distinct songs: repeat uploads of one song collapse to a single result.
+    title: `Song ${index}`,
   }));
   const api = load(
     () =>

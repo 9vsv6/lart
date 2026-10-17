@@ -27,7 +27,7 @@ test("open settings is a configurable Global Ctrl+S command", () => {
     scope: "Global",
     group: "Navigation",
     label: "Open settings",
-    description: "Open Harbor's settings outside playback.",
+    description: "Open Lart's settings outside playback.",
     defaultBinding: "ctrl+s",
   });
 });
@@ -53,7 +53,7 @@ test("open settings follows Global priority and effective binding rules", () => 
 });
 
 test("supported catalogs translate the open-settings description", () => {
-  const source = "Open Harbor's settings outside playback.";
+  const source = "Open Lart's settings outside playback.";
   for (const [locale, catalog] of [
     ["ar", arSettings],
     ["pt", ptSettings],

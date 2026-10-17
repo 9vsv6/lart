@@ -49,6 +49,7 @@ function fixture(failImmediately = false) {
     stopCastOwner: async () => {}, ensureNativeEvents: async () => {}, updateMediaSession: () => {},
     likedIdsFor: () => [], isMusicLiked: () => false, getMusicSpeakerState: () => ({ active: false }),
     deckAdoption: { deck: () => 0 }, require: () => ({ unhideMusicRecent: () => {} }),
+    pinSourceFor: () => {}, unpinSourceFor: () => {}, peekPinnedSource: () => null,
   };
   const exports: { playMusic?: typeof import("../src/lib/music/player").playMusic; failLater?: (message: string) => void } = {};
   new Function(...Object.keys(scope), "exports", output)(...Object.values(scope), exports);

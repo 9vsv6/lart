@@ -18,7 +18,7 @@ test("beta app and managed installer versions agree", () => {
     assert.equal(JSON.parse(read(path)).version, version, path);
   }
   for (const [path, name] of [
-    ["src-tauri", "harbor"],
+    ["src-tauri", "lart"],
     ["installer/src-tauri", "harbor-setup"],
   ]) {
     assert.ok(read(path + "/Cargo.toml").includes('version = "' + version + '"'));

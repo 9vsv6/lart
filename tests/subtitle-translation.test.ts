@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 // @ts-expect-error Node test types are outside the browser-only tsconfig.
 import test from "node:test";
 import { prepareSubtitle, SubtitlePreparationError } from "../src/lib/subtitles/prepare.ts";
-import { createSubtitleTranslationQueue, subtitleTranslationStatus, publishSubtitleTranslations } from "../src/lib/subtitles/translation-jobs.ts";
+import { clearTranslationJobs, completeTranslationJob, expiredTranslationJobs, registerTranslationJob, TRANSLATION_JOB_MAX_MS } from "../src/lib/subtitles/translation-jobs.ts";
 import { fetchSubtitlesIntoPlayer } from "../src/lib/subtitles/fetch-into-player.ts";
 import { rankSubtitleCandidates } from "../src/lib/subtitles/candidate-ranking.ts";
 import { prepareConsensusCandidate } from "../src/lib/subtitles/autosync/consensus.ts";
@@ -60,87 +60,25 @@ for (const deep of [false, true]) {
   });
 }
 
-test("translation polling is serialized and ends at ten minutes", async (t) => {
-  t.mock.timers.enable({ apis: ["setTimeout", "Date"], now: 0 });
-  const queue = createSubtitleTranslationQueue();
-  t.after(() => { queue.clear(); t.mock.timers.reset(); });
-  let calls = 0;
-  const slow = deferred<boolean>();
-  await queue.run(url, () => true, async () => { if (++calls === 1) throw pending(); return slow.promise; });
-  assert.equal(subtitleTranslationStatus(url), "pending");
-  t.mock.timers.tick(30_000);
-  await flushBridge();
-  t.mock.timers.tick(90_000);
-  await flushBridge();
-  assert.equal(calls, 2, "no overlapping request while a response is unresolved");
-  slow.reject(pending());
-  await flushBridge();
-  t.mock.timers.tick(10 * 60_000);
-  await flushBridge();
-  assert.equal(calls, 2);
-  assert.equal(subtitleTranslationStatus(url), "failed");
+test("a pending translation is tracked once per URL and gives up at ten minutes", (t) => {
+  t.mock.timers.enable({ apis: ["Date"], now: 0 });
+  t.after(() => { clearTranslationJobs(); t.mock.timers.reset(); });
+  registerTranslationJob({ url, lang: "hi", title: "Translation" });
+  t.mock.timers.tick(60_000);
+  registerTranslationJob({ url, lang: "hi", title: "Translation" });
+  assert.deepEqual(expiredTranslationJobs(TRANSLATION_JOB_MAX_MS - 1), []);
+  const expired = expiredTranslationJobs(TRANSLATION_JOB_MAX_MS);
+  assert.equal(expired.length, 1, "re-registering keeps the first start time");
+  assert.equal(expired[0].url, url);
+  completeTranslationJob(url);
+  assert.deepEqual(expiredTranslationJobs(TRANSLATION_JOB_MAX_MS), []);
 });
 
-test("cancelled in-flight work cannot republish a pending/failed state", async (t) => {
-  t.mock.timers.enable({ apis: ["setTimeout", "Date"], now: 0 });
-  const queue = createSubtitleTranslationQueue();
-  t.after(() => { queue.clear(); t.mock.timers.reset(); });
-  const response = deferred<boolean>();
-  const first = queue.run(url, () => true, () => response.promise);
-  queue.clear();
-  response.reject(pending());
-  assert.equal(await first, false);
-  t.mock.timers.tick(60_000);
-  assert.equal(subtitleTranslationStatus(url), null);
-});
-
-for (const action of ["off", "other-track", "next-media", "destroy", "detach"]) {
-  test(`mpv translation response cannot override ${action}`, async (t) => {
-    t.mock.timers.enable({ apis: ["setTimeout", "Date"], now: 0 });
-    const h = mpvBridgeHarness();
-    t.after(() => { h.bridge.destroy(); publishSubtitleTranslations([]); t.mock.timers.reset(); });
-    await h.bridge.load({ url: "first.mkv" });
-    h.emit("track-list", [{ id: 1, type: "sub", selected: true }, { id: 2, type: "sub" }]);
-    h.emit("sub-text", "Working subtitle");
-    let calls = 0;
-    let cleanups = 0;
-    const final = deferred<unknown>();
-    h.prepareWith(async () => { if (++calls === 1) throw pending(); return final.promise; });
-    assert.equal(await h.bridge.addSubtitle(url, "Make Hindi", "Translation", true, { translation: true }), false);
-    assert.equal(h.snapshot().subText, "Working subtitle");
-    assert.equal(h.commands.some((entry) => entry.command === "mpv_sub_remove"), false);
-    t.mock.timers.tick(30_000);
-    await flushBridge();
-    if (action === "off") h.bridge.setSubtitleTrack(null);
-    if (action === "other-track") h.bridge.setSubtitleTrack("2");
-    if (action === "next-media") await h.bridge.load({ url: "second.mkv" });
-    if (action === "destroy") h.bridge.destroy();
-    if (action === "detach") h.bridge.detach();
-    final.resolve(prepared(() => cleanups++));
-    await flushBridge();
-    assert.equal(h.commands.filter((entry) => entry.command === "mpv_sub_add").length, 0);
-    assert.equal(cleanups, 1);
-    assert.equal(subtitleTranslationStatus(url), null);
-  });
-}
-
-test("mpv adds one completed translation and preserves its original selection request", async (t) => {
-  t.mock.timers.enable({ apis: ["setTimeout", "Date"], now: 0 });
-  const h = mpvBridgeHarness();
-  t.after(() => { h.bridge.destroy(); t.mock.timers.reset(); });
-  await h.bridge.load({ url: "fixture.mkv" });
-  let calls = 0;
-  h.prepareWith(async () => { if (++calls === 1) throw pending(); return prepared(); });
-  assert.equal(await h.bridge.addSubtitle(url, "Make Hindi", "Translation", true, { translation: true }), false);
-  t.mock.timers.tick(30_000);
-  await flushBridge();
-  const additions = h.commands.filter((entry) => entry.command === "mpv_sub_add");
-  assert.equal(additions.length, 1);
-  assert.equal(additions[0].args.select, true);
-  assert.equal(additions[0].args.lang, "hi", "completed translations use a real language code");
-  assert.equal(subtitleTranslationStatus(url), null);
-  t.mock.timers.tick(60_000);
-  assert.equal(calls, 2);
+test("clearing translation jobs drops work for media that no longer applies", (t) => {
+  t.after(() => clearTranslationJobs());
+  registerTranslationJob({ url, lang: "hi" });
+  clearTranslationJobs();
+  assert.deepEqual(expiredTranslationJobs(Number.MAX_SAFE_INTEGER), []);
 });
 
 test("the bridge refuses to start a translation from automatic or preload calls", async () => {
