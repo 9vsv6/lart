@@ -19,3 +19,7 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+# window.LartAndroid: the page calls these by name through the WebView.
+-keepclassmembers class app.lart.MainActivity$LartBridge {
+    @android.webkit.JavascriptInterface public <methods>;
+}

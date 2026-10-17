@@ -7453,3 +7453,18 @@ button.hset-rail-me:hover,
   width: min(440px, calc(100vw - 16px)) !important;
   max-width: none !important;
 }
+
+/* Android phone app: native video (NativePlayer.kt) is drawn behind the
+   WebView, so while it plays the page must not paint over it. The regular app
+   under the player overlay is hidden; the player keeps its controls. */
+html.lart-native-video,
+html.lart-native-video body {
+  background: transparent !important;
+}
+html.lart-native-video #root {
+  visibility: hidden;
+}
+html.lart-native-video [data-phone-player],
+html.lart-native-video [data-phone-player] .bg-black {
+  background: transparent !important;
+}

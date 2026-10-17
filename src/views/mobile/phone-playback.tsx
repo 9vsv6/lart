@@ -75,7 +75,7 @@ export function PhonePlayback() {
         </div>
       )}
       {player && (
-        <div className="fixed inset-0 z-[80] bg-black">
+        <div data-phone-player className="fixed inset-0 z-[80] bg-black">
           <Suspense fallback={null}>
             <PlayerView
               key={player.meta.id.startsWith("iptv:") ? "player-live" : `player-${player.meta.id}`}

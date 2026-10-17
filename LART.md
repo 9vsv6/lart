@@ -46,6 +46,14 @@ keystore safe: Android only accepts updates signed with the same key.
 - Features that need Harbor's server are off until you run your own: Trakt,
   MyAnimeList and AniList sign-in token exchange, TVDB/IMDb proxies, watch
   party relay, bug reports, subtitle community sync and updates.
-- Android plays in the WebView: H.264, HEVC, VP9 and AAC work, but AC3, E-AC3
-  and DTS audio do not. A native player (Media3/ExoPlayer) is the fix.
 - The Android APK embeds the whole desktop frontend (about 170 MB).
+
+## Android playback and licensing
+
+On phones, video plays in Media3 ExoPlayer (Apache-2.0) drawn behind the
+transparent WebView (`NativePlayer.kt`, `src/lib/player/native-android.ts`).
+Audio the device cannot decode (AC3, E-AC3, DTS, TrueHD, 7.1) goes through
+Jellyfin's `media3-ffmpeg-decoder`, which is **GPL-3.0**. An APK that bundles
+it is GPL-3.0 as a whole when distributed: whoever receives the APK must be
+able to get the corresponding source. Lart's MIT code is compatible with that;
+publish the source (or this repository) alongside any APK you share.

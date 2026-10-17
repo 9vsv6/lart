@@ -1,4 +1,5 @@
 import { memo, type ComponentProps, type RefObject } from "react";
+import { isPhoneApp } from "@/lib/platform";
 import { DrawCanvas, StrokesLayer, type Stroke } from "@/components/player/draw-canvas";
 import { cropTransform } from "./hooks/use-video-fill";
 import { StreamSwitcher } from "@/components/player/stream-switcher";
@@ -28,6 +29,8 @@ import { Toaster } from "@/views/addons/toaster";
 import type { ToastInfo } from "@/views/addons/addons-types";
 import type { usePlayerCast } from "./hooks/use-player-cast";
 import type { useTextSync } from "./hooks/use-text-sync";
+
+const noop = () => {};
 
 type Room = ComponentProps<typeof RoomLayer>;
 type Shell = ComponentProps<typeof ShellLayer>;
@@ -249,8 +252,10 @@ export const PlayerOverlayLayers = memo(function PlayerOverlayLayers(p: PlayerOv
       <DragClickStage
         drawMode={p.drawMode}
         pipMode={p.pipMode}
-        onClick={p.playPauseToggle}
-        onDoubleClick={p.toggleFullscreen}
+        // Phones: a tap only reveals the controls (any touch does); play/pause
+        // is the big centered button, and the player is always full screen.
+        onClick={isPhoneApp() ? noop : p.playPauseToggle}
+        onDoubleClick={isPhoneApp() ? noop : p.toggleFullscreen}
         onWheelVolume={p.onVolumeWheel}
       />
 

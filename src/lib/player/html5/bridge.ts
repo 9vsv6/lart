@@ -1,4 +1,5 @@
 import Hls from "hls.js";
+import { createNativeVideo, type NativeVideoElement } from "../native-android";
 import mpegts from "mpegts.js";
 import {
   initialPlayerSnapshot,
@@ -28,7 +29,12 @@ import { isSafeProviderSubtitleUrl } from "@/lib/subtitles/provider-url";
 
 let DOCUMENT_PIP_KNOWN_BROKEN = false;
 
-export function createHtml5Bridge(): PlayerBridge {
+export type Html5BridgeOptions = {
+  /** Android phone app: play through the native player behind the WebView. */
+  native?: boolean;
+};
+
+export function createHtml5Bridge(options: Html5BridgeOptions = {}): PlayerBridge {
   let video: HTMLVideoElement | null = null;
   let host: HTMLElement | null = null;
   let snap: PlayerSnapshot = initialPlayerSnapshot();
@@ -474,13 +480,13 @@ export function createHtml5Bridge(): PlayerBridge {
   return {
     attach(h) {
       host = h;
-      const v = document.createElement("video");
+      const v = options.native ? createNativeVideo() : document.createElement("video");
       v.playsInline = true;
       v.preload = "auto";
       v.style.width = "100%";
       v.style.height = "100%";
       v.style.objectFit = "contain";
-      v.style.background = "black";
+      v.style.background = options.native ? "transparent" : "black";
       h.appendChild(v);
       video = v;
       bind();
@@ -547,7 +553,10 @@ export function createHtml5Bridge(): PlayerBridge {
       const isTs =
         bare.endsWith(".ts") ||
         (src.notWebReady === true && !isHls && !/\.(mp4|webm|mov|mkv|mpd)$/.test(bare));
-      if (isHls && Hls.isSupported()) {
+      if (options.native) {
+        // ExoPlayer handles HLS, DASH, MPEG-TS and every container itself.
+        (video as NativeVideoElement).lartLoad(src.url, src.headers);
+      } else if (isHls && Hls.isSupported()) {
         hls = new Hls(
           src.notWebReady === true || src.isLive === true
             ? {

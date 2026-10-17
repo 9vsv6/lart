@@ -85,6 +85,13 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.7.1")
     implementation("androidx.activity:activity-ktx:1.10.1")
     implementation("com.google.android.material:material:1.12.0")
+    // Native video (NativePlayer.kt). The Jellyfin FFmpeg decoder must match
+    // the Media3 version; it adds AC3, E-AC3, DTS and TrueHD audio.
+    implementation("androidx.media3:media3-exoplayer:1.9.0")
+    implementation("androidx.media3:media3-exoplayer-hls:1.9.0")
+    implementation("androidx.media3:media3-exoplayer-dash:1.9.0")
+    implementation("androidx.media3:media3-ui:1.9.0")
+    implementation("org.jellyfin.media3:media3-ffmpeg-decoder:1.9.0+1")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.4")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.0")

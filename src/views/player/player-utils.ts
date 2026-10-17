@@ -1,4 +1,5 @@
 import { createHtml5Bridge } from "@/lib/player/html5";
+import { nativeVideoAvailable } from "@/lib/player/native-android";
 import { createMpvBridge, probeMpv, type MpvRect } from "@/lib/player/mpv";
 import type { PlayerBridge } from "@/lib/player/bridge";
 import type { MonitorInfo } from "@/lib/monitors";
@@ -74,6 +75,9 @@ export async function pickBridge(
     getEmbedRect?: () => Promise<MpvRect | null> | MpvRect | null;
   },
 ): Promise<{ bridge: PlayerBridge; engine: "html5" | "mpv" }> {
+  // Android phones: native Media3 playback behind the page, for any engine
+  // setting, since there is no mpv and the WebView lacks AC3/E-AC3/DTS.
+  if (nativeVideoAvailable()) return { bridge: createHtml5Bridge({ native: true }), engine: "html5" };
   if (want === "html5") return { bridge: createHtml5Bridge(), engine: "html5" };
   if (want === "mpv") {
     const probe = await probeMpv();

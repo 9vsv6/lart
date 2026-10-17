@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
 import android.view.WindowManager
 import android.webkit.JavascriptInterface
 import android.webkit.WebView
@@ -18,6 +19,33 @@ import androidx.core.view.WindowInsetsControllerCompat
 class MainActivity : TauriActivity() {
   private var playerMode = false
   private lateinit var content: View
+  private var webView: WebView? = null
+  private var nativePlayer: NativePlayer? = null
+
+  private fun native(): NativePlayer {
+    nativePlayer?.let { return it }
+    val created = NativePlayer(this, content as ViewGroup) { json ->
+      webView?.evaluateJavascript("window.__lartNative&&window.__lartNative($json)", null)
+    }
+    nativePlayer = created
+    return created
+  }
+
+  /** The page draws the controls; make it see-through while native video plays under it. */
+  fun setNativeVideoVisible(on: Boolean) {
+    webView?.setBackgroundColor(if (on) Color.TRANSPARENT else Color.rgb(0x11, 0x12, 0x14))
+  }
+
+  override fun onPause() {
+    super.onPause()
+    nativePlayer?.onHostPause()
+  }
+
+  override fun onDestroy() {
+    nativePlayer?.release()
+    nativePlayer = null
+    super.onDestroy()
+  }
 
   override fun onCreate(savedInstanceState: Bundle?) {
     // Dark UI: light status and navigation bar icons on transparent bars.
@@ -54,15 +82,42 @@ class MainActivity : TauriActivity() {
 
   override fun onWebViewCreate(webView: WebView) {
     super.onWebViewCreate(webView)
+    this.webView = webView
     webView.addJavascriptInterface(LartBridge(), "LartAndroid")
   }
 
-  /** Called from the page (window.LartAndroid). Only touches window chrome. */
+  /** Called from the page (window.LartAndroid): window chrome and the native player. */
   inner class LartBridge {
     @JavascriptInterface
     fun setPlayerMode(on: Boolean) {
       runOnUiThread { applyPlayerMode(on) }
     }
+
+    @JavascriptInterface
+    fun nativeLoad(url: String, headersJson: String, startMs: Double) {
+      runOnUiThread { native().load(url, headersJson, startMs.toLong()) }
+    }
+
+    @JavascriptInterface
+    fun nativePlay() { runOnUiThread { nativePlayer?.play() } }
+
+    @JavascriptInterface
+    fun nativePause() { runOnUiThread { nativePlayer?.pause() } }
+
+    @JavascriptInterface
+    fun nativeSeek(ms: Double) { runOnUiThread { nativePlayer?.seek(ms.toLong()) } }
+
+    @JavascriptInterface
+    fun nativeSetVolume(v: Double) { runOnUiThread { nativePlayer?.setVolume(v.toFloat()) } }
+
+    @JavascriptInterface
+    fun nativeSetRate(r: Double) { runOnUiThread { nativePlayer?.setRate(r.toFloat()) } }
+
+    @JavascriptInterface
+    fun nativeSelectAudio(id: String) { runOnUiThread { nativePlayer?.selectAudio(id) } }
+
+    @JavascriptInterface
+    fun nativeStop() { runOnUiThread { nativePlayer?.stop() } }
   }
 
   private fun applyPlayerMode(on: Boolean) {
