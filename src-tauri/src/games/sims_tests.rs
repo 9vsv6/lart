@@ -1,3 +1,5 @@
+// Some fixtures serve only the tests gated to Windows, where the Sims and Stardew stores run.
+#![cfg_attr(not(windows), allow(dead_code, unused_imports))]
 use super::*;
 use std::io::{Cursor, Write};
 struct Fixture(PathBuf);
@@ -699,6 +701,7 @@ fn switch_action(set: &sets::ModSet) -> Action {
         backup_folder: None,
     }
 }
+#[cfg(windows)]
 #[test]
 fn named_sets_persist_per_profile_without_changing_mods_and_reject_stale_edits() {
     let empty = Fixture::new();
@@ -744,6 +747,7 @@ fn named_sets_persist_per_profile_without_changing_mods_and_reject_stale_edits()
     assert_eq!(snapshot(f.path()).unwrap().0, state);
     assert!(sets::list("", f.path()).is_err());
 }
+#[cfg(windows)]
 #[test]
 fn named_set_switches_as_one_batch_preserving_settings_and_later_imports() {
     let (f, _, set) = set_fixture();
@@ -809,6 +813,7 @@ fn named_set_switches_as_one_batch_preserving_settings_and_later_imports() {
         "sims_set_unchanged"
     );
 }
+#[cfg(windows)]
 #[test]
 fn set_review_rejects_removed_members_duplicates_external_edits_and_changed_selection() {
     let (f, state, set) = set_fixture();
@@ -900,6 +905,7 @@ fn set_review_rejects_removed_members_duplicates_external_edits_and_changed_sele
         1
     );
 }
+#[cfg(windows)]
 #[test]
 fn mod_set_checkpoint_copies_exact_saves_and_failure_or_cancel_never_switches_mods() {
     use super::super::{saves, sims_reviews, sims_saves};
@@ -1042,6 +1048,7 @@ fn interrupt_set(f: &Fixture, id: &str, phase: &str, recover: bool) {
     child.0.kill().unwrap();
     child.0.wait().unwrap();
 }
+#[cfg(windows)]
 #[test]
 fn terminated_mod_set_switch_and_recovery_return_the_exact_previous_setup() {
     for phase in [

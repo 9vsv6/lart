@@ -94,6 +94,7 @@ fn preview_image(path: &str, id: &str) -> DynamicImage {
     )
     .unwrap()
 }
+#[cfg(windows)]
 #[test]
 fn tray_cover_is_owned_sharp_and_stable_through_remove_restore() {
     let f = Fixture::new();

@@ -1,3 +1,5 @@
+// Some fixtures serve only the tests gated to Windows, where the Sims and Stardew stores run.
+#![cfg_attr(not(windows), allow(dead_code, unused_imports))]
 use super::*;
 
 const DATA: &str = "lot51_fashion_authority_data/slots/Slot_00000001.json";
@@ -21,6 +23,7 @@ fn apply(f: &Fixture, action: Action, incoming: Vec<Payload>) -> State {
     Store::connect(f.path()).unwrap().apply(plan).unwrap()
 }
 
+#[cfg(windows)]
 #[test]
 fn creator_data_folders_survive_update_toggle_version_restore_and_removed_restore() {
     let (f, group, live) = installed();
@@ -91,6 +94,7 @@ fn creator_data_folders_survive_update_toggle_version_restore_and_removed_restor
     );
 }
 
+#[cfg(windows)]
 #[test]
 fn changed_nested_data_or_unreviewed_nested_mods_block_the_old_plan() {
     let (f, group, live) = installed();
@@ -195,6 +199,7 @@ fn interruption_worker() {
     panic!("Requested checkpoint not reached");
 }
 
+#[cfg(windows)]
 #[test]
 fn interrupted_nested_preparation_and_publication_recover_the_original_data() {
     for phase in [
@@ -267,6 +272,7 @@ fn interrupted_nested_preparation_and_publication_recover_the_original_data() {
     }
 }
 
+#[cfg(windows)]
 #[test]
 fn cancel_during_nested_copy_keeps_live_data_and_removes_empty_stage_parents() {
     let (f, group, live) = installed();

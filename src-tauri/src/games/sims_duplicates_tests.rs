@@ -1,3 +1,5 @@
+// Some fixtures serve only the tests gated to Windows, where the Sims and Stardew stores run.
+#![cfg_attr(not(windows), allow(dead_code, unused_imports))]
 use super::*;
 use std::{cell::Cell, fs, path::PathBuf};
 
@@ -106,6 +108,7 @@ fn dbpf() -> Vec<u8> {
     b
 }
 
+#[cfg(windows)]
 #[test]
 fn managed_copy_uses_current_hash_and_reviewed_disable_removes_it_from_next_scan() {
     let f = Fixture::new();

@@ -1,3 +1,5 @@
+// Some fixtures serve only the tests gated to Windows, where the Sims and Stardew stores run.
+#![cfg_attr(not(windows), allow(dead_code, unused_imports))]
 use super::*;
 use std::{fs, io::Write, path::PathBuf};
 
@@ -194,6 +196,7 @@ impl Drop for Fixture {
     }
 }
 
+#[cfg(windows)]
 #[test]
 fn metadata_reads_loose_enabled_and_disabled_files_without_writing_or_claiming_source() {
     let f = Fixture::new();
@@ -311,6 +314,7 @@ fn actual_core_library_manifest_has_original_creator_name_and_version() {
     sims_reviews::discard("proof", &review.token);
 }
 
+#[cfg(windows)]
 #[test]
 fn import_metadata_describes_held_bytes_before_apply_and_update_cancel_keeps_installed_files() {
     let f = Fixture::new();
@@ -359,6 +363,7 @@ fn import_metadata_describes_held_bytes_before_apply_and_update_cancel_keeps_ins
     assert_eq!(fs::read(installed).unwrap(), original);
 }
 
+#[cfg(windows)]
 #[test]
 fn invalid_optional_metadata_does_not_block_a_supported_package_review_or_apply() {
     let f = Fixture::new();
@@ -390,6 +395,7 @@ fn invalid_optional_metadata_does_not_block_a_supported_package_review_or_apply(
     );
 }
 
+#[cfg(windows)]
 #[test]
 fn metadata_reports_bound_total_manifests_and_keep_cancellation_effective() {
     let texts: Vec<_> = (0..16).map(|_| XML.as_bytes()).collect();

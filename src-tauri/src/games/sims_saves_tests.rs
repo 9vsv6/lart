@@ -1,3 +1,5 @@
+// Some fixtures serve only the tests gated to Windows, where the Sims and Stardew stores run.
+#![cfg_attr(not(windows), allow(dead_code, unused_imports))]
 use super::*;
 use std::sync::atomic::{AtomicBool, Ordering};
 
@@ -78,6 +80,7 @@ impl Drop for Fixture {
     }
 }
 
+#[cfg(windows)]
 #[test]
 fn sims_saves_review_restore_and_undo_preserve_mods_and_tray() {
     let f = Fixture::new();
@@ -132,6 +135,7 @@ fn sims_saves_review_restore_and_undo_preserve_mods_and_tray() {
     );
 }
 
+#[cfg(windows)]
 #[test]
 fn sims_saves_reject_wrong_source_nested_vault_and_changed_patch() {
     let f = Fixture::new();
@@ -155,6 +159,7 @@ fn sims_saves_reject_wrong_source_nested_vault_and_changed_patch() {
     );
 }
 
+#[cfg(windows)]
 #[test]
 fn save_guards_are_retained_and_rechecked_after_copy_before_publication() {
     let f = Fixture::new();
@@ -298,6 +303,7 @@ fn interrupt(f: &Fixture, id: &str, phase: &str) {
     child.0.wait().unwrap();
 }
 
+#[cfg(windows)]
 #[test]
 fn killed_restore_process_is_recoverable_at_each_rename_boundary() {
     for phase in ["journal", "oldMoved", "newMoved", "recoveryMoved"] {
@@ -359,6 +365,7 @@ fn killed_restore_process_is_recoverable_at_each_rename_boundary() {
     }
 }
 
+#[cfg(windows)]
 #[test]
 fn interrupted_restore_does_not_replace_later_saves_and_rejects_wrong_profile() {
     let f = Fixture::new();
@@ -395,6 +402,7 @@ fn interrupted_restore_does_not_replace_later_saves_and_rejects_wrong_profile() 
     assert!(result.recovery_folder.is_some());
 }
 
+#[cfg(windows)]
 #[test]
 fn recovery_record_paths_and_external_changes_are_not_trusted() {
     let f = Fixture::new();

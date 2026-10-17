@@ -1,3 +1,5 @@
+// Some fixtures serve only the tests gated to Windows, where the Sims and Stardew stores run.
+#![cfg_attr(not(windows), allow(dead_code, unused_imports))]
 use super::super::super::sims_reviews;
 use super::*;
 fn prepared() -> (Fixture, Vec<String>) {
@@ -29,6 +31,7 @@ fn selection(f: &Fixture, sources: Vec<String>) -> Result<Plan> {
         sources,
     )
 }
+#[cfg(windows)]
 #[test]
 fn adoption_review_cancel_then_full_managed_lifecycle_preserves_settings_and_unrelated_files() {
     let (f, sources) = prepared();
@@ -121,6 +124,7 @@ fn adoption_review_cancel_then_full_managed_lifecycle_preserves_settings_and_unr
 fn plan_for(f: &Fixture, action: Action, incoming: Vec<Payload>) -> Plan {
     plan(f.path(), action, incoming, vec![]).unwrap()
 }
+#[cfg(windows)]
 #[test]
 fn adoption_rejects_changed_duplicate_outside_mixed_managed_and_root_config_selections() {
     let (f, sources) = prepared();
@@ -251,6 +255,7 @@ fn interrupt(f: &Fixture, phase: &str, recover: bool) {
     child.0.kill().unwrap();
     child.0.wait().unwrap();
 }
+#[cfg(windows)]
 #[test]
 fn terminated_adoption_and_rollback_restore_every_original_file_without_duplicates() {
     for phase in [
@@ -292,6 +297,7 @@ fn terminated_adoption_and_rollback_restore_every_original_file_without_duplicat
         );
     }
 }
+#[cfg(windows)]
 #[test]
 fn adoption_recovery_retains_later_external_files_and_rejects_forged_origins() {
     let (f, sources) = prepared();

@@ -1,3 +1,5 @@
+// Some fixtures serve only the tests gated to Windows, where the Sims and Stardew stores run.
+#![cfg_attr(not(windows), allow(dead_code, unused_imports))]
 use super::super::super::sims_catalog;
 use super::*;
 fn source(v: &str) -> CreatorSource {
@@ -10,6 +12,7 @@ fn source(v: &str) -> CreatorSource {
         archive_hash: "a".repeat(64),
     }
 }
+#[cfg(windows)]
 #[test]
 fn creator_identity_follows_version_recovery_and_clears_on_unattributed_file_updates() {
     let f = Fixture::new();
@@ -69,6 +72,7 @@ fn mccc(v: u8) -> Vec<Payload> {
         },
     ]
 }
+#[cfg(windows)]
 #[test]
 fn manual_creator_group_is_updated_only_after_explicit_selection_and_restores_unattributed_origin()
 {
@@ -120,6 +124,7 @@ fn manual_creator_group_is_updated_only_after_explicit_selection_and_restores_un
         b"keep preferences"
     );
 }
+#[cfg(windows)]
 #[test]
 fn creator_link_rejects_mixed_groups_partial_scans_unknown_targets_and_existing_loose_files() {
     let f = Fixture::new();
@@ -214,6 +219,7 @@ fn lot_install(f: &Fixture, name: &str, source: CreatorSource) -> State {
     p.source = Some(source);
     Store::connect(f.path()).unwrap().apply(p).unwrap()
 }
+#[cfg(windows)]
 #[test]
 fn required_core_cannot_be_disabled_removed_downgraded_or_silently_modified() {
     let f = Fixture::new();
@@ -284,6 +290,7 @@ fn required_core_cannot_be_disabled_removed_downgraded_or_silently_modified() {
     let state = Store::connect(f.path()).unwrap().apply(p).unwrap();
     assert!(state.groups.iter().all(|g| !g.enabled));
 }
+#[cfg(windows)]
 #[test]
 fn creator_dependency_missing_old_disabled_and_cross_provider_targets_are_rejected() {
     let f = Fixture::new();
@@ -331,6 +338,7 @@ fn creator_dependency_missing_old_disabled_and_cross_provider_targets_are_reject
     assert!(legacy.get("requiredCore").is_none());
 }
 
+#[cfg(windows)]
 #[test]
 fn dependency_guards_cover_version_restore_sets_and_guided_isolation() {
     let f = Fixture::new();

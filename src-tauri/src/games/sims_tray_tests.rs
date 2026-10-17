@@ -101,6 +101,7 @@ fn run(f: &Fixture, action: Action) {
     let p = tray::plan(f.path(), action, vec![]).unwrap();
     Store::connect(f.path()).unwrap().apply(p).unwrap();
 }
+#[cfg(windows)]
 #[test]
 fn tray_review_import_remove_restore_preserve_bundled_cc_and_unrelated_library_files() {
     let (f, paths) = prepared();
@@ -139,6 +140,7 @@ fn tray_review_import_remove_restore_preserve_bundled_cc_and_unrelated_library_f
     assert!(!snapshot(f.path()).unwrap().1);
     assert_eq!(snapshot(f.path()).unwrap().0.groups, vec![cc]);
 }
+#[cfg(windows)]
 #[test]
 fn tray_rejects_incomplete_sets_duplicate_destinations_and_external_edits() {
     let (f, paths) = prepared();
@@ -329,6 +331,7 @@ fn interrupt(f: &Fixture, phase: &str, action: &str) {
     child.0.kill().unwrap();
     child.0.wait().unwrap();
 }
+#[cfg(windows)]
 #[test]
 fn killed_tray_import_removal_restore_and_rollback_recover_exact_library_and_cc_states() {
     for mode in ["import", "remove", "restore"] {
@@ -428,6 +431,7 @@ fn tray_archives_reject_path_escapes_flattened_collisions_and_executable_payload
     }
 }
 
+#[cfg(windows)]
 #[test]
 fn tray_recovery_preserves_later_edits_and_rejects_ambiguous_or_forged_journals() {
     for mode in ["external-file", "two-journals", "forged-action"] {
