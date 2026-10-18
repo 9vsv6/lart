@@ -2,6 +2,7 @@ import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import { Pause, Play } from "lucide-react";
 import { isMangaReaderRoute, isPhoneApp } from "@/lib/platform";
 import { isSetupRoute } from "@/lib/platform";
+import { useView } from "@/lib/view";
 import { hasSetupToken } from "./onboard/setup-wire";
 import { HarborLoader } from "@/components/harbor-loader";
 import { MobileBrowse } from "./mobile-browse";
@@ -67,8 +68,15 @@ function ShellBody() {
   const [seen, setSeen] = useState<Set<MobileTab>>(() => new Set<MobileTab>(["home"]));
   const showNowPlaying = tab !== "remote" && !isPhoneApp();
   const rootRef = useRef<HTMLDivElement>(null);
+  const { openSettings } = useView();
 
   const selectTab = (next: MobileTab) => {
+    // The phone app has no separate profile page: the avatar opens Settings,
+    // which holds the account, profiles, addons, help and legal pages.
+    if (next === "profile" && isPhoneApp()) {
+      openSettings();
+      return;
+    }
     setTab(next);
     setSeen((prev) => (prev.has(next) ? prev : new Set(prev).add(next)));
   };

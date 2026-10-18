@@ -7,6 +7,8 @@ import { useAuth } from "@/lib/auth";
 import { useT } from "@/lib/i18n";
 import { useProfiles } from "@/lib/profiles";
 import { useSettings } from "@/lib/settings";
+import { isPhoneApp } from "@/lib/platform";
+import { useView } from "@/lib/view";
 import { TOP_GROUPS } from "./groups";
 import { SECTION_ICONS } from "./section-icons";
 import { SetIcon } from "./set-icon";
@@ -179,6 +181,30 @@ function RailAccount() {
   );
 }
 
+/* The phone app opens Settings from the avatar tab instead of a profile page, so
+   the two things that page held and Settings has no page for live here. */
+function PhoneShortcuts() {
+  const t = useT();
+  const { openPicker } = useProfiles();
+  const { setView } = useView();
+  return (
+    <div className="hset-rail-band">
+      <button type="button" className="hset-rail-category is-flat" onClick={() => openPicker()}>
+        <span className="hset-category-icon" aria-hidden>
+          <Glyph name="Users" size={20} />
+        </span>
+        <span className="hset-category-name">{t("Switch profile")}</span>
+      </button>
+      <button type="button" className="hset-rail-category is-flat" onClick={() => setView("addons")}>
+        <span className="hset-category-icon" aria-hidden>
+          <Glyph name="Package" size={20} />
+        </span>
+        <span className="hset-category-name">{t("Addons")}</span>
+      </button>
+    </div>
+  );
+}
+
 function SectionRow({
   id,
   label,
@@ -330,6 +356,7 @@ export function SettingsSidebar({
     >
       <RailAccount />
       <div className="hset-rail-nav" key="browse">
+        {isPhoneApp() && <PhoneShortcuts />}
         {bands().map((band) => {
           const flat = flatPage(band);
           if (flat) {

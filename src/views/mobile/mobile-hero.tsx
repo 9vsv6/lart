@@ -148,7 +148,7 @@ export function MobileHero({
   return (
     <section className="flex flex-col gap-3">
       <div className="px-4">
-        <div className="relative aspect-[16/13] w-full overflow-hidden rounded-3xl bg-surface ring-1 ring-edge-soft/50">
+        <div className="relative aspect-[16/13] max-h-[65svh] w-full overflow-hidden rounded-3xl bg-surface ring-1 ring-edge-soft/50">
           <button
             type="button"
             aria-label={t("Open {name}", { name: current.name })}
