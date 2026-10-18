@@ -11,9 +11,7 @@ const PlayPicker = lazy(() =>
 );
 const PlayerView = lazy(() => import("@/views/player").then((m) => ({ default: m.PlayerView })));
 const Settings = lazy(() => import("@/views/settings").then((m) => ({ default: m.Settings })));
-const AddonsView = lazy(() =>
-  import("@/views/addons").then((m) => ({ default: m.AddonsView })),
-);
+const AddonsView = lazy(() => import("@/views/addons").then((m) => ({ default: m.AddonsView })));
 
 /**
  * The standalone phone app plays streams on the phone itself. MobileShell has
@@ -194,8 +192,7 @@ function usePhoneBackButton(next: BackState) {
             window.setTimeout(() => {
               if (state.current.hasPlayer) state.current.exitPlayback();
             }, 400);
-          }
-          else if (s.hasPicker) s.goBack();
+          } else if (s.hasPicker) s.goBack();
           else if (s.hasPage) {
             if (runPhoneBackHandler()) return;
             if (s.canGoBack) s.goBack();

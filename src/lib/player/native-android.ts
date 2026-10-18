@@ -134,16 +134,20 @@ export function createNativeVideo(): NativeVideoElement {
 
   const applyVolume = () => native.nativeSetVolume(muted ? 0 : volume);
 
-  def("currentTime", () => seekingTo ?? st.pos, (t: number) => {
-    if (!Number.isFinite(t)) return;
-    if (!src) {
-      pendingStartMs = Math.max(0, t * 1000);
-      return;
-    }
-    seekingTo = Math.max(0, t);
-    fire("seeking");
-    native.nativeSeek(seekingTo * 1000);
-  });
+  def(
+    "currentTime",
+    () => seekingTo ?? st.pos,
+    (t: number) => {
+      if (!Number.isFinite(t)) return;
+      if (!src) {
+        pendingStartMs = Math.max(0, t * 1000);
+        return;
+      }
+      seekingTo = Math.max(0, t);
+      fire("seeking");
+      native.nativeSeek(seekingTo * 1000);
+    },
+  );
   def("duration", () => (st.dur > 0 ? st.dur : NaN));
   def("paused", () => !st.pwr);
   def("ended", () => st.state === "ended");
@@ -154,23 +158,41 @@ export function createNativeVideo(): NativeVideoElement {
   def("seekable", () => ranges(st.dur > 0 ? st.dur : 0));
   def("videoWidth", () => st.w);
   def("videoHeight", () => st.h);
-  def("error", () => (lastError ? { code: 4, message: lastError, MEDIA_ERR_SRC_NOT_SUPPORTED: 4 } : null));
-  def("volume", () => volume, (x: number) => {
-    volume = Math.min(1, Math.max(0, x));
-    applyVolume();
-    fire("volumechange");
-  });
-  def("muted", () => muted, (m: boolean) => {
-    muted = !!m;
-    applyVolume();
-    fire("volumechange");
-  });
-  def("playbackRate", () => st.rate, (r: number) => {
-    st.rate = r;
-    native.nativeSetRate(r);
-    fire("ratechange");
-  });
-  def("src", () => src, (url: string) => v.lartLoad(url));
+  def("error", () =>
+    lastError ? { code: 4, message: lastError, MEDIA_ERR_SRC_NOT_SUPPORTED: 4 } : null,
+  );
+  def(
+    "volume",
+    () => volume,
+    (x: number) => {
+      volume = Math.min(1, Math.max(0, x));
+      applyVolume();
+      fire("volumechange");
+    },
+  );
+  def(
+    "muted",
+    () => muted,
+    (m: boolean) => {
+      muted = !!m;
+      applyVolume();
+      fire("volumechange");
+    },
+  );
+  def(
+    "playbackRate",
+    () => st.rate,
+    (r: number) => {
+      st.rate = r;
+      native.nativeSetRate(r);
+      fire("ratechange");
+    },
+  );
+  def(
+    "src",
+    () => src,
+    (url: string) => v.lartLoad(url),
+  );
 
   // Audio tracks as an AudioTrackList-shaped object; setting `enabled` picks a track.
   const audioListeners = new Set<EventListenerOrEventListenerObject>();

@@ -195,7 +195,11 @@ function PhoneShortcuts() {
         </span>
         <span className="hset-category-name">{t("Switch profile")}</span>
       </button>
-      <button type="button" className="hset-rail-category is-flat" onClick={() => setView("addons")}>
+      <button
+        type="button"
+        className="hset-rail-category is-flat"
+        onClick={() => setView("addons")}
+      >
         <span className="hset-category-icon" aria-hidden>
           <Glyph name="Package" size={20} />
         </span>

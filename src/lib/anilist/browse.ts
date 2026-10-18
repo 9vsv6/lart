@@ -86,7 +86,10 @@ export async function anilistCoversByMalIds(malIds: number[]): Promise<Map<numbe
     try {
       const data = await anilistRequest<{
         Page: {
-          media: { idMal: number | null; coverImage: { extraLarge: string | null; large: string | null } | null }[];
+          media: {
+            idMal: number | null;
+            coverImage: { extraLarge: string | null; large: string | null } | null;
+          }[];
         } | null;
       }>(COVER_BY_MAL_QUERY, { ids: batch }, undefined, true);
       for (const m of data?.Page?.media ?? []) {
@@ -184,7 +187,7 @@ async function fetchAnilistBrowse(sort: string, count: number): Promise<Meta[]> 
       ).catch(() => null),
     ),
   );
-  if (responses.every(data => !data?.Page)) throw new Error("AniList discovery unavailable");
+  if (responses.every((data) => !data?.Page)) throw new Error("AniList discovery unavailable");
   const all: AnilistMedia[] = [];
   const seenId = new Set<number>();
   for (const data of responses) {
@@ -212,7 +215,10 @@ export async function anilistArtById(id: number): Promise<{ banner?: string; cov
   if (cached) return cached;
   try {
     const data = await anilistRequest<{
-      Media: { bannerImage: string | null; coverImage: { extraLarge: string | null } | null } | null;
+      Media: {
+        bannerImage: string | null;
+        coverImage: { extraLarge: string | null } | null;
+      } | null;
     }>(ART_BY_ID_QUERY, { id }, undefined, true);
     const art = {
       banner: data?.Media?.bannerImage ?? undefined,
@@ -298,7 +304,9 @@ export async function anilistRecommendations(anilistId: number): Promise<Meta[]>
   if (cached) return cached;
   try {
     const data = await anilistRequest<{
-      Media: { recommendations: { nodes: Array<{ mediaRecommendation: AnilistMedia | null }> } | null } | null;
+      Media: {
+        recommendations: { nodes: Array<{ mediaRecommendation: AnilistMedia | null }> } | null;
+      } | null;
     }>(RECS_QUERY, { id: anilistId }, undefined, true);
     const rawMedia: AnilistMedia[] = [];
     const seenId = new Set<number>();
