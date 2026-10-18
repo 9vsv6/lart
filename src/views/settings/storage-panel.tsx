@@ -90,7 +90,7 @@ function localStorageBreakdown(): {
 function friendlyKey(key: string): string {
   if (FAMILY_NAMES[key]) return FAMILY_NAMES[key];
   const known: Record<string, string> = {
-    "harbor.jikancatalog2": "Anime catalog cache",
+    "harbor.jikancatalog3": "Anime catalog cache",
     "harbor.awards.wikidata": "Awards cache",
     "harbor.heroPool": "Featured titles cache",
     "harbor.settings.shared": "Shared preferences",

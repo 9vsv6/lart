@@ -62,6 +62,48 @@ export async function anilistCountriesByMalIds(malIds: number[]): Promise<Map<nu
   return out;
 }
 
+const COVER_BY_MAL_QUERY = `query ($ids: [Int]) {
+  Page(perPage: 50) {
+    media(idMal_in: $ids, type: ANIME) { idMal coverImage { extraLarge large } }
+  }
+}`;
+
+const malCoverCache = new Map<number, string>();
+
+/** AniList covers keyed by MAL id. Some networks block cdn.myanimelist.net at DNS, which
+ *  leaves every Jikan poster blank, while AniList's CDN stays reachable. */
+export async function anilistCoversByMalIds(malIds: number[]): Promise<Map<number, string>> {
+  const out = new Map<number, string>();
+  const need: number[] = [];
+  for (const n of new Set(malIds)) {
+    if (!Number.isFinite(n)) continue;
+    const cached = malCoverCache.get(n);
+    if (cached) out.set(n, cached);
+    else need.push(n);
+  }
+  for (let i = 0; i < need.length; i += 50) {
+    const batch = need.slice(i, i + 50);
+    try {
+      const data = await anilistRequest<{
+        Page: {
+          media: { idMal: number | null; coverImage: { extraLarge: string | null; large: string | null } | null }[];
+        } | null;
+      }>(COVER_BY_MAL_QUERY, { ids: batch }, undefined, true);
+      for (const m of data?.Page?.media ?? []) {
+        const cover = m.coverImage?.extraLarge ?? m.coverImage?.large;
+        // idMal is not unique on AniList; the first entry is the main one.
+        if (m.idMal != null && cover && !out.has(m.idMal)) {
+          lruSet(malCoverCache, m.idMal, cover, 1000);
+          out.set(m.idMal, cover);
+        }
+      }
+    } catch {
+      /* MAL posters stay as they are */
+    }
+  }
+  return out;
+}
+
 const SEARCH_QUERY = `query ($q: String, $perPage: Int) {
   Page(perPage: $perPage) {
     media(search: $q, type: ANIME, sort: SEARCH_MATCH) {

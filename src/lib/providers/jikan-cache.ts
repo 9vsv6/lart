@@ -96,7 +96,9 @@ export const JIKAN_CACHE_TTL = 6 * 60 * 60 * 1000;
 
 type CatalogEntry = { metas: Meta[]; t: number };
 
-const CATALOG_KEY = "harbor.jikancatalog2";
+// v3: posters come from AniList where it has the title (MAL's CDN is blocked on some
+// networks), so rows cached with MAL-only posters are not reused.
+const CATALOG_KEY = "harbor.jikancatalog3";
 const CATALOG_MAX = 40;
 const PERSIST_DESC_MAX = 500;
 

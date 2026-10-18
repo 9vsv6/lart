@@ -147,10 +147,21 @@ async function metasFromJikan(items: JikanAnime[]): Promise<Meta[]> {
     if (anchor) ordered.push(anchor);
   }
 
-  const kitsuByMal = await armKitsuIds(ordered.map((a) => a.mal_id));
+  const malIds = ordered.map((a) => a.mal_id);
+  const [kitsuByMal, coverByMal] = await Promise.all([
+    armKitsuIds(malIds),
+    // Loaded on first use so this module's pure helpers stay importable without the AniList client.
+    import("@/lib/anilist/browse").then(
+      (m) => m.anilistCoversByMalIds(malIds),
+      () => new Map<number, string>(),
+    ),
+  ]);
   const mapped = ordered.map((a) => {
     const kitsu = kitsuByMal.get(a.mal_id);
-    return toMeta(a, kitsu ? `kitsu:${kitsu}` : `mal:${a.mal_id}`);
+    const meta = toMeta(a, kitsu ? `kitsu:${kitsu}` : `mal:${a.mal_id}`);
+    // cdn.myanimelist.net is DNS-blocked on some networks; AniList's CDN is not.
+    const cover = coverByMal.get(a.mal_id);
+    return cover ? { ...meta, poster: cover, background: cover } : meta;
   });
   const seenIds = new Set<string>();
   const seenNames = new Set<string>();
