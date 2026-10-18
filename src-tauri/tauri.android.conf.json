@@ -23,7 +23,7 @@
     },
     "android": {
       "minSdkVersion": 26,
-      "versionCode": 9132006
+      "versionCode": 9132007
     }
   },
   "plugins": {

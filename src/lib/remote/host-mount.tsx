@@ -60,7 +60,10 @@ function broadcast(msg: RemoteServerMessage) {
 }
 
 function pushSnapshot(force = false) {
-  const snapshot = { ...buildRemoteSnapshot(getPlaybackPosition()), manga: buildRemoteMangaState() };
+  const snapshot = {
+    ...buildRemoteSnapshot(getPlaybackPosition()),
+    manga: buildRemoteMangaState(),
+  };
   if (!force) {
     const { updatedAt: _ignored, ...rest } = snapshot;
     void _ignored;
@@ -367,7 +370,8 @@ function useRemoteMediaServers(
   return items;
 }
 
-function useHostLibrary(
+/** The library this Lart holds: the remote host serves it, and the phone app shows it itself. */
+export function useHostLibrary(
   enabled: boolean,
   bookmarkedOnly: boolean,
   tmdbKey: string,

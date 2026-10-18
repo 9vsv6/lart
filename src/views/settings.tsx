@@ -322,9 +322,9 @@ const SECTION_META: Record<SectionId, { label: string; sub: string }> = {
 };
 
 const CHROME_QUERY = 'header, [data-harbor-topchrome], [class~="fixed"]';
-// Single-column Settings: narrow windows, and touch screens held upright (portrait
-// tablets are wider than 900px but too narrow for rail + page). Mirrors index.css.
-const COMPACT_SETTINGS = "(max-width: 899px), (orientation: portrait) and (pointer: coarse)";
+// Single-column Settings: narrow windows, and any touch screen (phones and tablets
+// in either orientation get the page list with Back). Mirrors index.css.
+const COMPACT_SETTINGS = "(max-width: 899px), (pointer: coarse)";
 const CHROME_GAP = 4;
 const CHROME_FLOOR = 40;
 const CHROME_CEIL = 200;

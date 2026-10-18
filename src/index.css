@@ -4655,12 +4655,10 @@ html[data-theme-card="crunch"][dir="rtl"] .harbor-profile-dropdown {
   display: none;
 }
 
-/* Settings goes single-column below 900px and on any touch screen held upright
-   (a portrait tablet is wider than 900px but too narrow for rail + page). These
+/* Settings goes single-column below 900px and on any touch screen (phones and
+   tablets in either orientation use the page list and Back). These
    two queries are complements; keep them and COMPACT_SETTINGS in settings.tsx in step. */
-@media (min-width: 900px) and (orientation: landscape),
-  (min-width: 900px) and (pointer: fine),
-  (min-width: 900px) and (pointer: none) {
+@media (min-width: 900px) and (pointer: fine), (min-width: 900px) and (pointer: none) {
   .hset-top-space {
     display: none;
   }
@@ -4734,9 +4732,7 @@ html[data-theme-card="crunch"][dir="rtl"] .harbor-profile-dropdown {
   scroll-padding-block: 16px;
 }
 
-@media (min-width: 900px) and (orientation: landscape),
-  (min-width: 900px) and (pointer: fine),
-  (min-width: 900px) and (pointer: none) {
+@media (min-width: 900px) and (pointer: fine), (min-width: 900px) and (pointer: none) {
   .hset-grid > .hset-rail {
     grid-row: 3;
   }
@@ -5501,7 +5497,7 @@ textarea.hset-field {
   }
 }
 
-@media (max-width: 899px), (orientation: portrait) and (pointer: coarse) {
+@media (max-width: 899px), (pointer: coarse) {
   .harbor-settings-shell {
     --hset-toolbar-h: 56px;
   }
@@ -6858,7 +6854,7 @@ button.hset-rail-me:hover,
   border-color: var(--color-ink-muted);
 }
 
-@media (max-width: 899px), (orientation: portrait) and (pointer: coarse) {
+@media (max-width: 899px), (pointer: coarse) {
   .hset-rail {
     display: none;
     grid-column: 1;
@@ -6979,7 +6975,7 @@ button.hset-rail-me:hover,
   margin-block-start: 14px;
 }
 
-@media (max-width: 899px), (orientation: portrait) and (pointer: coarse) {
+@media (max-width: 899px), (pointer: coarse) {
   .hset-rail-nav {
     margin-block-start: 12px;
   }

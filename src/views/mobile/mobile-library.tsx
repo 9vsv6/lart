@@ -1,11 +1,13 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { Bookmark, Clock, FolderOpen, Server, Star, WifiOff } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import type { Meta } from "@/lib/cinemeta";
 import { Poster, usePosterChain } from "@/components/poster";
 import { useSettings } from "@/lib/settings";
 import { useT } from "@/lib/i18n";
-import type { RemoteLibraryItem } from "@/lib/remote/protocol";
+import { isPhoneApp } from "@/lib/platform";
+import { useHostLibrary } from "@/lib/remote/host-mount";
+import type { RemoteLibrary, RemoteLibraryItem } from "@/lib/remote/protocol";
 import { useMobileRemote } from "./mobile-remote";
 import { MobileDetail } from "./mobile-detail";
 
@@ -77,10 +79,33 @@ function readSavedTab(): SectionId {
   return "watchlist";
 }
 
+/* The phone app holds its own library (Stremio account, trackers, favorites, local
+   files, media servers); the remote-control web app shows the connected computer's. */
 export function MobileLibrary() {
+  return isPhoneApp() ? <PhoneLibrary /> : <ComputerLibrary />;
+}
+
+function PhoneLibrary() {
+  const { settings } = useSettings();
+  const localeKey = `${settings.tmdbLanguage}:${settings.tmdbImageLangs.join(",")}:${settings.translateTitles}:${settings.translateDescriptions}`;
+  const lib = useHostLibrary(true, settings.libraryBookmarkedOnly, settings.tmdbKey, localeKey);
+  return <LibraryView {...libraryState(true, lib)} />;
+}
+
+function ComputerLibrary() {
+  const { connected, snapshot } = useMobileRemote();
+  return <LibraryView {...libraryState(connected, snapshot.library)} />;
+}
+
+function LibraryView({
+  data,
+  connected,
+}: {
+  data: Record<SectionId, SectionState>;
+  connected: boolean;
+}) {
   const [tab, setTab] = useState<SectionId>(readSavedTab);
   const [detailMeta, setDetailMeta] = useState<Meta | null>(null);
-  const { data, connected } = useLibraryData();
 
   useEffect(() => {
     try {
@@ -161,7 +186,7 @@ function Section({
   if (state.loading && state.entries.length === 0) return <SkeletonGrid />;
   if (state.entries.length === 0) return <Empty kind={kind} />;
   return (
-    <div className="grid grid-cols-3 gap-x-3 gap-y-4">
+    <div className="grid grid-cols-3 gap-x-3 gap-y-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7">
       {state.entries.map((e) => (
         <GridTile key={e.meta.id} meta={e.meta} onOpenDetail={onOpenDetail} />
       ))}
@@ -204,7 +229,7 @@ function GridTile({ meta, onOpenDetail }: { meta: Meta; onOpenDetail: (m: Meta) 
 
 function SkeletonGrid() {
   return (
-    <div className="grid grid-cols-3 gap-x-3 gap-y-4">
+    <div className="grid grid-cols-3 gap-x-3 gap-y-4 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7">
       {Array.from({ length: 9 }).map((_, i) => (
         <div key={i} className="flex flex-col gap-1.5">
           <div
@@ -265,20 +290,19 @@ function toEntries(items?: RemoteLibraryItem[]): Entry[] {
   }));
 }
 
-function useLibraryData(): { data: Record<SectionId, SectionState>; connected: boolean } {
-  const { connected, snapshot } = useMobileRemote();
-  const lib = snapshot.library;
-  return useMemo(() => {
-    const loading = connected && !lib;
-    return {
-      connected,
-      data: {
-        watchlist: { entries: toEntries(lib?.watchlist), loading },
-        history: { entries: toEntries(lib?.history), loading },
-        favorites: { entries: toEntries(lib?.favorites), loading },
-        local: { entries: toEntries(lib?.local), loading },
-        mediaServers: { entries: toEntries(lib?.mediaServers), loading },
-      },
-    };
-  }, [connected, lib]);
+function libraryState(
+  connected: boolean,
+  lib: RemoteLibrary | null | undefined,
+): { data: Record<SectionId, SectionState>; connected: boolean } {
+  const loading = connected && !lib;
+  return {
+    connected,
+    data: {
+      watchlist: { entries: toEntries(lib?.watchlist), loading },
+      history: { entries: toEntries(lib?.history), loading },
+      favorites: { entries: toEntries(lib?.favorites), loading },
+      local: { entries: toEntries(lib?.local), loading },
+      mediaServers: { entries: toEntries(lib?.mediaServers), loading },
+    },
+  };
 }
