@@ -1,3 +1,5 @@
+// Some fixtures serve only the tests gated to Windows, where the Stardew store runs.
+#![cfg_attr(not(windows), allow(dead_code, unused_imports))]
 use super::*;
 use serde_json::json;
 use std::{
@@ -70,6 +72,7 @@ fn install(store: &Store, version: &str) -> State {
     apply(store, store.prepare(package(version), &|| Ok(())).unwrap())
 }
 
+#[cfg(windows)]
 #[test]
 fn full_local_lifecycle_preserves_latest_settings_and_generated_data() {
     let f = Fixture::new();
@@ -122,6 +125,7 @@ fn full_local_lifecycle_preserves_latest_settings_and_generated_data() {
     assert!(!store.pending().unwrap());
 }
 
+#[cfg(windows)]
 #[test]
 fn preview_is_bound_to_files_and_state_and_does_not_overwrite_unmanaged_mods() {
     let f = Fixture::new();
@@ -165,6 +169,7 @@ fn preview_is_bound_to_files_and_state_and_does_not_overwrite_unmanaged_mods() {
     );
 }
 
+#[cfg(windows)]
 #[test]
 fn update_refuses_new_release_files_colliding_with_generated_files() {
     let f = Fixture::new();
@@ -179,6 +184,7 @@ fn update_refuses_new_release_files_colliding_with_generated_files() {
     assert_eq!(f.value("Mods/Farm/mod.dll"), "1.0.0");
 }
 
+#[cfg(windows)]
 #[test]
 fn failures_before_commit_restore_previous_files_and_keep_prepared_data() {
     for at in ["staging", "moved"] {
@@ -220,6 +226,7 @@ fn failures_before_commit_restore_previous_files_and_keep_prepared_data() {
     assert!(!store.pending().unwrap());
 }
 
+#[cfg(windows)]
 #[test]
 fn cancellation_before_publication_changes_no_live_files() {
     let f = Fixture::new();
@@ -302,6 +309,7 @@ fn crash_worker() {
         .unwrap();
 }
 
+#[cfg(windows)]
 #[test]
 fn actual_process_termination_recovers_both_folder_boundaries_and_committed_state() {
     for at in ["staging", "moved1", "moved2", "committed"] {
@@ -313,7 +321,7 @@ fn actual_process_termination_recovers_both_folder_boundaries_and_committed_stat
         fs::write(f.0.join("Mods/Farm/config.json"), b"survives process death").unwrap();
         let mut child = Command::new(std::env::current_exe().unwrap())
             .args([
-                "stardew_store::tests::crash_worker",
+                crash_worker_test().as_str(),
                 "--ignored",
                 "--exact",
                 "--nocapture",
@@ -349,6 +357,7 @@ fn actual_process_termination_recovers_both_folder_boundaries_and_committed_stat
     }
 }
 
+#[cfg(windows)]
 #[test]
 fn required_framework_cannot_be_disabled_removed_or_downgraded() {
     let f = Fixture::new();
@@ -374,6 +383,7 @@ fn required_framework_cannot_be_disabled_removed_or_downgraded() {
     assert_eq!(f.value("Mods/Farm/mod.dll"), "2.0.0");
     assert!(!store.pending().unwrap());
 }
+#[cfg(windows)]
 #[test]
 fn interrupted_recovery_does_not_overwrite_later_edits() {
     let f = Fixture::new();
@@ -382,7 +392,7 @@ fn interrupted_recovery_does_not_overwrite_later_edits() {
         install(&store, "1.0.0");
     }
     let mut child = Command::new(std::env::current_exe().unwrap())
-        .args(["stardew_store::tests::crash_worker", "--ignored", "--exact"])
+        .args([crash_worker_test().as_str(), "--ignored", "--exact"])
         .env("HARBOR_STARDEW_CRASH_ROOT", &f.0)
         .env("HARBOR_STARDEW_CRASH_AT", "moved1")
         .stdout(Stdio::null())
@@ -406,4 +416,9 @@ fn interrupted_recovery_does_not_overwrite_later_edits() {
     assert_eq!(store.recover().unwrap_err(), "stardew_changed");
     assert_eq!(fs::read(&edited).unwrap(), b"edited after crash");
     assert!(store.pending().unwrap());
+}
+
+/// The crash worker's full test name, so the spawned binary runs exactly it.
+fn crash_worker_test() -> String {
+    format!("{}::crash_worker", module_path!().split_once("::").unwrap().1)
 }

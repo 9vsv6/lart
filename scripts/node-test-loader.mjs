@@ -5,6 +5,8 @@ import ts from "typescript";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const extensions = [".ts", ".tsx", ".js", ".mjs"];
+// Static assets resolve to their URL, as Vite's default asset import does.
+const assetPattern = /\.(png|jpe?g|gif|webp|avif|svg|ico|mp4|webm|mp3|ogg|wav|woff2?|ttf|otf)$/i;
 
 async function existingModuleUrl(basePath) {
   const candidates = [
@@ -36,12 +38,21 @@ export async function resolve(specifier, context, nextResolve) {
   if (sourcePath && !path.extname(sourcePath)) {
     const url = await existingModuleUrl(sourcePath);
     if (url) return { url, shortCircuit: true };
+  } else if (sourcePath && specifier.startsWith("@/") && assetPattern.test(sourcePath)) {
+    return { url: pathToFileURL(sourcePath).href, shortCircuit: true };
   }
 
   return nextResolve(specifier, context);
 }
 
 export async function load(url, context, nextLoad) {
+  if (assetPattern.test(url)) {
+    return {
+      format: "module",
+      source: `export default ${JSON.stringify(url)};`,
+      shortCircuit: true,
+    };
+  }
   if (url.endsWith(".tsx")) {
     const source = await readFile(fileURLToPath(url), "utf8");
     const output = ts.transpileModule(source, {

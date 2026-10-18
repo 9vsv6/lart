@@ -173,6 +173,7 @@ mod tests {
         assert!(release(&v).is_err());
     }
     #[test]
+    #[ignore = "requires a real creator release ZIP via HARBOR_TEST_STARDEW_ZIP"]
     fn stardew_creator_real_zip_identity_digest_and_version() {
         let path = std::env::var("HARBOR_TEST_STARDEW_ZIP").expect("real creator ZIP fixture");
         let bytes = std::fs::read(path).unwrap();

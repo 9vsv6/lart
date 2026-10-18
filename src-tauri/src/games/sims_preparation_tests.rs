@@ -1,3 +1,5 @@
+// Some fixtures serve only the tests gated to Windows, where the Sims and Stardew stores run.
+#![cfg_attr(not(windows), allow(dead_code, unused_imports))]
 use super::super::super::sims_reviews;
 use super::*;
 
@@ -149,6 +151,7 @@ fn interrupt(f: &Fixture, phase: &str, action: &str) {
     child.0.kill().unwrap();
     child.0.wait().unwrap();
 }
+#[cfg(windows)]
 #[test]
 fn killed_preparation_recovers_install_update_restore_and_tray_without_touching_live_content() {
     for mode in ["install", "update", "restore", "tray", "adopt"] {
@@ -191,6 +194,7 @@ fn killed_preparation_recovers_install_update_restore_and_tray_without_touching_
         }
     }
 }
+#[cfg(windows)]
 #[test]
 fn committed_preparation_cleanup_does_not_undo_a_completed_import() {
     for mode in ["install", "tray", "adopt"] {
@@ -218,6 +222,7 @@ fn committed_preparation_cleanup_does_not_undo_a_completed_import() {
         );
     }
 }
+#[cfg(windows)]
 #[test]
 fn recovery_itself_can_restart_after_preserving_partial_files() {
     for phase in ["simsPreparationKept", "simsPreparationClean"] {
@@ -241,6 +246,7 @@ fn recovery_itself_can_restart_after_preserving_partial_files() {
         );
     }
 }
+#[cfg(windows)]
 #[test]
 fn preparation_preserves_changed_and_unknown_files_and_rejects_forged_paths() {
     let f = Fixture::new();
@@ -294,6 +300,7 @@ fn preparation_preserves_changed_and_unknown_files_and_rejects_forged_paths() {
     assert!(preparation::folder(f.path(), "../../Mods").is_err());
 }
 
+#[cfg(windows)]
 #[test]
 fn preparation_removes_only_verified_copies_and_leaves_unrecorded_stages_alone() {
     let f = Fixture::new();

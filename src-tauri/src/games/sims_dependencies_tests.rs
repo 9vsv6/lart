@@ -217,6 +217,7 @@ const CORE: &str = "16064586554ed25187fcdb293e1df1bbc756523403de1a3ee0f33bf91f34
 const OLD_CORE: &str = "6ff53baf3e380c2e4a290cd8baf30b5bbbca7297b5b962a65737c10870db3ff8";
 
 #[test]
+#[ignore = "requires the original Lot51 Core archive via HARBOR_SIMS_LOT51_FIXTURES"]
 fn dependencies_real_core_content_and_declared_previous_versions_match_without_filename_identity() {
     let core = real_core();
     let (manifests, partial) =
@@ -467,6 +468,7 @@ impl Drop for Fixture {
 }
 
 #[test]
+#[ignore = "requires the original Lot51 Core archive via HARBOR_SIMS_LOT51_FIXTURES"]
 fn dependencies_changed_or_unverifiable_manifests_cannot_confirm_absence() {
     let f = Fixture::new();
     f.put(

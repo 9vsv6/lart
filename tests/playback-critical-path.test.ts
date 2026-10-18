@@ -40,13 +40,15 @@ test("unknown debrid links receive one short probe and transient failures are no
   assert.match(preflight, /if \(r\.ok \|\| r\.reason === "stub"\) memo\.set/);
 });
 
-test("warm resume lookup overlaps loading while uncached deep links remain gated", () => {
+test("resume is resolved before the first load so playback never starts at zero", () => {
   const resumeStart = bridgeLoad.indexOf("const resumePromise");
-  const mediaStart = bridgeLoad.indexOf("const loadMedia = () =>");
-  const join = bridgeLoad.indexOf("Promise.all([resumePromise, loadMedia()])");
-  assert.ok(resumeStart >= 0 && mediaStart > resumeStart && join > mediaStart);
-  assert.match(bridgeLoad, /!isResumeStartReady\(resumeIdentity\)/);
-  assert.match(bridgeLoad, /if \(waitBeforeLoad\)/);
+  const resumeAwait = bridgeLoad.indexOf("resolved = await resumePromise");
+  const load = bridgeLoad.indexOf("await bridge.load({");
+  assert.ok(resumeStart >= 0 && resumeAwait > resumeStart && load > resumeAwait);
+  assert.match(
+    bridgeLoad,
+    /startAtSec: !guestInRoom && !eligibleForPrompt && startSec > 5 \? startSec : undefined/,
+  );
 });
 
 test("Windows embedded mpv is retained across compatible VOD bitrate profiles", () => {

@@ -5,6 +5,7 @@ import ts from "typescript";
 import { queueTrackKey } from "../src/lib/music/queue-order.ts";
 import { dedupeMusicTracks, sameMusicTrack } from "../src/lib/music/track-identity.ts";
 import type { MusicTrack } from "../src/lib/music/types.ts";
+import { withMusicPlayerDefaults } from "./helpers/music-player-mocks.ts";
 
 type Player = typeof import("../src/lib/music/player.ts");
 
@@ -92,8 +93,9 @@ function player() {
     },
   };
   const require = (name: string) => {
-    assert.ok(Object.hasOwn(mocks, name), `Unexpected dependency: ${name}`);
-    return mocks[name];
+    const all = withMusicPlayerDefaults(mocks);
+    assert.ok(Object.hasOwn(all, name), `Unexpected dependency: ${name}`);
+    return all[name];
   };
   new Function("require", "module", "exports", "localStorage", "navigator", outputText)(
     require,

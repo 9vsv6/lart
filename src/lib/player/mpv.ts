@@ -144,6 +144,7 @@ export type MpvOptions = {
   fullDownload?: boolean;
   separateDisplay?: MonitorInfo | null;
   separateCoverTaskbar?: boolean;
+  cacheDir?: string;
   getEmbedRect?: () => Promise<MpvRect | null> | MpvRect | null;
 };
 
@@ -161,6 +162,7 @@ function mpvReuseConfigKey(options: MpvOptions | undefined, hdrToSdr: boolean): 
     forceYuv420p: options?.forceYuv420p === true,
     extraOptions: options?.extraOptions ?? "",
     fullDownload: options?.fullDownload === true,
+    cacheDir: options?.cacheDir?.trim() ?? "",
   });
 }
 
@@ -457,7 +459,10 @@ export function createMpvBridge(mpvOptions?: MpvOptions): PlayerBridge {
     };
     const tick = async () => {
       if (!active) return;
-      if (inFlight) { queued = true; return; }
+      if (inFlight) {
+        queued = true;
+        return;
+      }
       inFlight = true;
       queued = false;
       const forced = force;
@@ -465,7 +470,7 @@ export function createMpvBridge(mpvOptions?: MpvOptions): PlayerBridge {
       const move = pendingMove;
       pendingMove = null;
       try {
-        const r = move?.rect ?? await opts.getEmbedRect!();
+        const r = move?.rect ?? (await opts.getEmbedRect!());
         if (!active || !r) return;
         if (
           !forced &&
@@ -497,7 +502,9 @@ export function createMpvBridge(mpvOptions?: MpvOptions): PlayerBridge {
     // with one native write in flight and the latest bounds queued behind it.
     // Dock movement is already batched by useDockDrag. Send its new bounds in
     // that same frame instead of making native video trail the chrome by a frame.
-    geomKickHandler = () => { void tick(); };
+    geomKickHandler = () => {
+      void tick();
+    };
     moveEmbeddedSurface = (rect, commit) => {
       if (!active) return false;
       pendingMove = { rect, commit };
@@ -532,7 +539,11 @@ export function createMpvBridge(mpvOptions?: MpvOptions): PlayerBridge {
       const win = getCurrentWindow();
       const unResized = await win.onResized(() => geomForceHandler?.());
       const unMoved = await win.onMoved(() => geomForceHandler?.());
-      if (!active) { unResized(); unMoved(); return; }
+      if (!active) {
+        unResized();
+        unMoved();
+        return;
+      }
       geomTauriUnlisten.push(makeSafeTauriUnlisten(unResized), makeSafeTauriUnlisten(unMoved));
     } catch {
       /* noop */
@@ -987,6 +998,7 @@ export function createMpvBridge(mpvOptions?: MpvOptions): PlayerBridge {
             extraOptions: opts.extraOptions || undefined,
             separateDisplay: opts.embed === true ? null : (opts.separateDisplay ?? null),
             separateCoverTaskbar: opts.separateCoverTaskbar ?? true,
+            cacheDir: opts.cacheDir?.trim() || null,
           },
         });
         preparedSubtitleCleanups.clearBefore(activeLoadId);
@@ -1175,6 +1187,8 @@ export function createMpvBridge(mpvOptions?: MpvOptions): PlayerBridge {
       }
     },
     async addSubtitle(url, lang, title, select, metadata, origin = "manual"): Promise<boolean> {
+      // Loading a translation offer starts a translation job; only a manual pick may.
+      if (metadata?.translation && (select === false || origin !== "manual")) return false;
       const requestMediaRevision = mediaRevision;
       const requestLoadId = mediaLoadId;
       const wantsSelection = (select ?? true) && mainSubtitleSelection.claim(mediaRevision, origin);

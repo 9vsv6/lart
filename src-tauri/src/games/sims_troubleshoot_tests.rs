@@ -1,3 +1,5 @@
+// Some fixtures serve only the tests gated to Windows, where the Sims and Stardew stores run.
+#![cfg_attr(not(windows), allow(dead_code, unused_imports))]
 use super::super::super::{sims_reviews, sims_saves};
 use super::*;
 fn fixture() -> (Fixture, State, Vec<String>) {
@@ -47,6 +49,7 @@ fn apply(f: &Fixture, action: Action) -> State {
 fn view(state: &State) -> trouble::View {
     trouble::view(state, "1.120.123.1020").unwrap().unwrap()
 }
+#[cfg(windows)]
 #[test]
 fn guided_test_persists_narrows_from_observations_and_restores_the_initial_enabled_selection() {
     let (f, before, selected) = fixture();
@@ -130,6 +133,7 @@ fn guided_test_persists_narrows_from_observations_and_restores_the_initial_enabl
         dbpf(9)
     );
 }
+#[cfg(windows)]
 #[test]
 fn stale_answers_patch_changes_and_external_packages_block_steps_but_patch_change_allows_restore() {
     let (f, before, selected) = fixture();
@@ -190,6 +194,7 @@ fn stale_answers_patch_changes_and_external_packages_block_steps_but_patch_chang
         before.groups
     );
 }
+#[cfg(windows)]
 #[test]
 fn starting_review_cancels_without_changes_and_creates_a_real_save_checkpoint_only_on_apply() {
     let (f, before, selected) = fixture();
@@ -278,6 +283,7 @@ fn interrupt(f: &Fixture, action: &Action, phase: &str, recover: bool) {
     child.0.kill().unwrap();
     child.0.wait().unwrap();
 }
+#[cfg(windows)]
 #[test]
 fn killed_test_start_answer_finish_and_rollback_restore_both_session_and_file_state() {
     for step in ["start", "answer", "finish", "rollback"] {

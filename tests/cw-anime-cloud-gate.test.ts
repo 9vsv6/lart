@@ -99,7 +99,10 @@ test("every CW rail excludes cloud anime items", () => {
 
 test("anime room sources local CW entries", () => {
   assert.match(anime, /const localAnimeCw = useMemo<LibraryItem\[\]>/);
-  assert.match(anime, /listLocalCw\(hideSharedCw\)\s*\.filter\(\(e\) => ANIME_CLOUD_ID\.test\(e\.id\) \|\| e\.isAnime\)/);
+  assert.match(
+    anime,
+    /listLocalCw\(hideSharedCw\)\s*\.filter\(\(e\) => ANIME_CLOUD_ID\.test\(e\.id\) \|\| e\.isAnime\)/,
+  );
   assert.match(anime, /\[\s*\.\.\.localAnimeCw,\s*\.\.\.\(hideSharedCw \? \[\] : libItems\.filter/);
 });
 
@@ -165,7 +168,7 @@ test("resurface walks past watched adjacent episodes", () => {
 
 test("tracker sync cannot corrupt the wrong cour", () => {
   for (const src of [anilistSync, malSync]) {
-    assert.match(src, /if \(target > total \+ 1\) return;/);
+    assert.match(src, /if \(total > 0 && target > total\) return;/);
   }
   assert.match(anilistSync, /entry && total > 0 && entry\.progress >= total\) return;/);
   assert.match(

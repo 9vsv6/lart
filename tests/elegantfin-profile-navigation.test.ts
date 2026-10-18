@@ -179,7 +179,7 @@ test("Theme Studio documents the immediate boolean profile API", () => {
     WINDOW_HARBOR.find((entry) => entry.call === "window.harbor.tryViewMyProfile()"),
     {
       call: "window.harbor.tryViewMyProfile()",
-      desc: "Open the signed-in user's own Harbor profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.",
+      desc: "Open the signed-in user's own Lart profile immediately when its handle is loaded. Returns true when navigation starts and false otherwise.",
     },
   );
 });

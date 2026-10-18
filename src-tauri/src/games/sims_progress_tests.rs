@@ -51,6 +51,7 @@ fn cancel_during_a_large_staging_file_removes_only_its_unpublished_bytes() {
     assert!(!snapshot(f.path()).unwrap().1);
 }
 
+#[cfg(windows)]
 #[test]
 fn canceled_install_update_and_restore_keep_previous_mods_settings_and_records() {
     for action in ["install", "update", "restore"] {
@@ -124,6 +125,7 @@ fn canceled_install_update_and_restore_keep_previous_mods_settings_and_records()
     }
 }
 
+#[cfg(windows)]
 #[test]
 fn tray_cancel_cleans_partly_prepared_creation_and_keeps_other_library_files() {
     let f = Fixture::new();
@@ -175,6 +177,7 @@ fn tray_cancel_cleans_partly_prepared_creation_and_keeps_other_library_files() {
     );
 }
 
+#[cfg(windows)]
 #[test]
 fn update_progress_counts_preserved_settings_and_native_events_end_after_success() {
     use super::super::super::sims_reviews;
@@ -220,6 +223,7 @@ fn update_progress_counts_preserved_settings_and_native_events_end_after_success
         .any(|p| p.file.as_deref() == Some("creator.cfg")));
 }
 
+#[cfg(windows)]
 #[test]
 fn unified_cancel_stops_save_checkpoint_before_mod_set_publication() {
     use super::super::super::sims_reviews;

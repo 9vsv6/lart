@@ -469,10 +469,14 @@ fn cleanup_recovery_child() {
     panic!("checkpoint not reached");
 }
 fn kill_at(f: &Fixture, id: &str, point: &str, restore: bool) {
+    let child_test = format!(
+        "{}::cleanup_recovery_child",
+        module_path!().split_once("::").unwrap().1
+    );
     let mut command = Command::new(std::env::current_exe().unwrap());
     command
         .args([
-            "archive_cleanup_store::tests::cleanup_recovery_child",
+            child_test.as_str(),
             "--exact",
             "--ignored",
             "--nocapture",

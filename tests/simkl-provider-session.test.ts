@@ -42,6 +42,7 @@ function fixture() {
       },
       setSession: () => {},
     },
+    "@/lib/secret-store": { subscribeSecretsReady: () => () => {} },
     "./device-auth": {},
     "./ids": {},
     "./history": {},

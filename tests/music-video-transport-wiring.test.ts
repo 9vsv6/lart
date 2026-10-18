@@ -6,6 +6,7 @@ import test from "node:test";
 import { readFileSync } from "node:fs";
 import ts from "typescript";
 import { dedupeMusicTracks, sameMusicTrack } from "../src/lib/music/track-identity.ts";
+import { withMusicPlayerDefaults } from "./helpers/music-player-mocks.ts";
 
 function read(path: string): string {
   return readFileSync(new URL(`../src/${path}`, import.meta.url), "utf8");
@@ -33,7 +34,7 @@ function loadPlayer() {
   const source = ts.transpileModule(read("lib/music/player.ts"), {
     compilerOptions: { module: ts.ModuleKind.CommonJS, target: ts.ScriptTarget.ES2022 },
   }).outputText;
-  const resolve = (name: string): any => {
+  const own = (name: string): any => {
     if (name === "@tauri-apps/api/core")
       return {
         invoke: async (command: string, args: any) => {
@@ -102,7 +103,13 @@ function loadPlayer() {
         stopMusicSpeaker: async () => {},
         subscribeMusicSpeakerState: () => () => {},
       };
-    throw Error(name);
+    return undefined;
+  };
+  const resolve = (name: string): any => {
+    const mine = own(name);
+    const merged = withMusicPlayerDefaults(mine === undefined ? {} : { [name]: mine });
+    if (!(name in merged)) throw Error(name);
+    return merged[name];
   };
   const module = { exports: {} as any };
   new Function("require", "module", "exports", source)(resolve, module, module.exports);

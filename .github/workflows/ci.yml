@@ -17,7 +17,7 @@ jobs:
   quality:
     name: Frontend
     runs-on: ubuntu-24.04
-    timeout-minutes: 10
+    timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -93,7 +93,7 @@ jobs:
   native:
     name: Native
     runs-on: ubuntu-24.04
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -164,4 +164,10 @@ jobs:
         if: steps.native-changes.outputs.changed == 'true'
         env:
           TAURI_CONFIG: '{"bundle":{"externalBin":[],"resources":[]}}'
-        run: cargo test --manifest-path src-tauri/Cargo.toml
+          # Games tests create their fixtures under roots the caller owns.
+          HARBOR_GAME_TEST_ROOT: ${{ runner.temp }}/game-tests
+          HARBOR_BATTLENET_TEST_ROOT: ${{ runner.temp }}/battlenet-tests
+        # The archive tests share process-wide job state, so they run one at a time.
+        run: |
+          mkdir -p "$HARBOR_GAME_TEST_ROOT" "$HARBOR_BATTLENET_TEST_ROOT"
+          cargo test --manifest-path src-tauri/Cargo.toml -- --test-threads=1
