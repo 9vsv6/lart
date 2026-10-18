@@ -265,7 +265,7 @@ function AnimeHeroMobile({
         type="button"
         aria-label={t("Open {title}", { title: current.name })}
         onClick={() => onOpenDetail(current)}
-        className="relative block aspect-[4/5] w-full overflow-hidden bg-surface text-start"
+        className="relative block aspect-[4/5] max-h-[65svh] w-full overflow-hidden bg-surface text-start"
       >
         {shown.map((m, i) => (
           <div
@@ -424,7 +424,7 @@ function Shimmer() {
 function HeroSkeleton() {
   return (
     <section className="flex flex-col gap-3.5" aria-hidden>
-      <div className="relative aspect-[4/5] w-full overflow-hidden bg-surface">
+      <div className="relative aspect-[4/5] max-h-[65svh] w-full overflow-hidden bg-surface">
         <Shimmer />
         <div
           className="absolute inset-0"

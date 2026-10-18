@@ -10,10 +10,14 @@ import android.widget.FrameLayout
 import androidx.annotation.OptIn
 import androidx.media3.common.AudioAttributes
 import androidx.media3.common.C
+import androidx.media3.common.Format
 import androidx.media3.common.MediaItem
+import androidx.media3.common.MimeTypes
 import androidx.media3.common.PlaybackException
 import androidx.media3.common.Player
 import androidx.media3.common.TrackSelectionOverride
+import androidx.media3.common.Tracks
+import androidx.media3.common.text.CueGroup
 import androidx.media3.common.util.UnstableApi
 import androidx.media3.datasource.DefaultDataSource
 import androidx.media3.datasource.DefaultHttpDataSource
@@ -42,6 +46,7 @@ class NativePlayer(
   private var player: ExoPlayer? = null
   private var view: PlayerView? = null
   private var lastError: String? = null
+  private var cueText = ""
   private val handler = Handler(Looper.getMainLooper())
   private val ticker = object : Runnable {
     override fun run() {
@@ -63,13 +68,35 @@ class NativePlayer(
         .build(),
       true,
     )
-    // Subtitles stay in the page, which fetches, times and styles them.
+    // The page draws every subtitle. Subtitles embedded in the file stay off
+    // until the page picks one (selectText); their cue text is then sent up.
     p.trackSelectionParameters = p.trackSelectionParameters.buildUpon()
       .setTrackTypeDisabled(C.TRACK_TYPE_TEXT, true)
       .build()
     p.addListener(object : Player.Listener {
       override fun onPlayerError(error: PlaybackException) {
         lastError = "${error.errorCodeName}: ${error.message ?: ""}"
+        emitState()
+      }
+
+      override fun onCues(cueGroup: CueGroup) {
+        // ASS signs arrive as extra cues at the same time; keep each line once.
+        cueText = cueGroup.cues.mapNotNull { it.text?.toString()?.trim() }
+          .filter { it.isNotEmpty() }
+          .distinct()
+          .joinToString("\n")
+        emitState()
+      }
+
+      // With no decoder for the video track ExoPlayer raises no error: it plays
+      // the audio over a black picture. Video is hardware-only here (the FFmpeg
+      // extension decodes audio), so say which format the device cannot play.
+      override fun onTracksChanged(tracks: Tracks) {
+        val video = tracks.groups.filter { it.type == C.TRACK_TYPE_VIDEO }
+        if (video.isEmpty() || video.any { g -> (0 until g.length).any { g.isTrackSupported(it) } }) return
+        val f = video.first().getTrackFormat(0)
+        lastError = "VIDEO_UNSUPPORTED: This device cannot decode ${describeVideo(f)} video" +
+          (if (f.width > 0) " at ${f.width}x${f.height}" else "") + ". Pick another source."
         emitState()
       }
     })
@@ -81,6 +108,8 @@ class NativePlayer(
       keepScreenOn = true
       this.player = p
       visibility = View.GONE
+      // The page draws the cues; the view's own subtitle layer would double them.
+      subtitleView?.visibility = View.GONE
     }
     container.addView(
       v,
@@ -95,6 +124,11 @@ class NativePlayer(
   fun load(url: String, headersJson: String, startMs: Long) {
     val p = ensurePlayer()
     lastError = null
+    cueText = ""
+    p.trackSelectionParameters = p.trackSelectionParameters.buildUpon()
+      .setTrackTypeDisabled(C.TRACK_TYPE_TEXT, true)
+      .clearOverridesOfType(C.TRACK_TYPE_TEXT)
+      .build()
     val headers = mutableMapOf<String, String>()
     runCatching {
       val o = JSONObject(headersJson)
@@ -114,11 +148,24 @@ class NativePlayer(
     handler.post(ticker)
   }
 
-  fun play() { player?.play() }
+  fun play() {
+    val p = player ?: return
+    p.play()
+    // The ticker stops while the app is in the background; playing restarts it.
+    handler.removeCallbacks(ticker)
+    handler.post(ticker)
+  }
 
   fun pause() { player?.pause() }
 
-  fun seek(ms: Long) { player?.seekTo(ms.coerceAtLeast(0)) }
+  fun seek(ms: Long) {
+    val p = player ?: return
+    p.seekTo(ms.coerceAtLeast(0))
+    // A seek after returning from the background needs the state flowing again
+    // for the page to see it land.
+    handler.removeCallbacks(ticker)
+    handler.post(ticker)
+  }
 
   fun setVolume(v: Float) { player?.volume = v.coerceIn(0f, 1f) }
 
@@ -134,6 +181,24 @@ class NativePlayer(
       .build()
   }
 
+  /** Turns on the embedded subtitle track "group:track", or all of them off for "". */
+  fun selectText(id: String) {
+    val p = player ?: return
+    val builder = p.trackSelectionParameters.buildUpon().clearOverridesOfType(C.TRACK_TYPE_TEXT)
+    val parts = id.split(":").mapNotNull { it.toIntOrNull() }
+    val groups = p.currentTracks.groups
+    if (parts.size != 2 || parts[0] !in groups.indices || groups[parts[0]].type != C.TRACK_TYPE_TEXT) {
+      cueText = ""
+      p.trackSelectionParameters = builder.setTrackTypeDisabled(C.TRACK_TYPE_TEXT, true).build()
+      emitState()
+      return
+    }
+    p.trackSelectionParameters = builder
+      .setTrackTypeDisabled(C.TRACK_TYPE_TEXT, false)
+      .setOverrideForType(TrackSelectionOverride(groups[parts[0]].mediaTrackGroup, parts[1]))
+      .build()
+  }
+
   fun stop() {
     handler.removeCallbacks(ticker)
     player?.stop()
@@ -143,7 +208,14 @@ class NativePlayer(
     lastError = null
   }
 
-  fun onHostPause() { player?.pause() }
+  fun onHostPause() {
+    val p = player ?: return
+    p.pause()
+    // One last state so the page records the paused position, then no more
+    // JavaScript calls four times a second while nobody can see the app.
+    emitState()
+    handler.removeCallbacks(ticker)
+  }
 
   fun release() {
     handler.removeCallbacks(ticker)
@@ -202,6 +274,27 @@ class NativePlayer(
         )
       }
     }
+    val subs = JSONArray()
+    p.currentTracks.groups.forEachIndexed { g, group ->
+      if (group.type != C.TRACK_TYPE_TEXT) return@forEachIndexed
+      for (t in 0 until group.length) {
+        val f = group.getTrackFormat(t)
+        // Media3 parses subtitles while extracting; the original format moves to codecs.
+        val mime = (if (f.sampleMimeType == MimeTypes.APPLICATION_MEDIA3_CUES) f.codecs else f.sampleMimeType) ?: ""
+        // PGS, VobSub and DVB subtitles are pictures; the page can only draw text.
+        if (mime in IMAGE_SUBTITLES) continue
+        val lang = f.language?.takeUnless { it.equals("und", true) }
+        subs.put(
+          JSONObject()
+            .put("id", "$g:$t")
+            .put("label", listOfNotNull(f.label, lang?.uppercase()).filter { it.isNotBlank() }.distinct()
+              .joinToString(" · ").ifBlank { "Subtitle ${subs.length() + 1}" })
+            .put("lang", lang ?: "")
+            .put("forced", f.selectionFlags and C.SELECTION_FLAG_FORCED != 0)
+            .put("selected", group.isTrackSelected(t)),
+        )
+      }
+    }
     val size = p.videoSize
     val json = JSONObject()
       .put("pos", p.currentPosition / 1000.0)
@@ -215,11 +308,27 @@ class NativePlayer(
       .put("rate", p.playbackParameters.speed.toDouble())
       .put("vol", p.volume.toDouble())
       .put("audio", audio)
+      .put("subs", subs)
+      .put("cue", cueText)
     lastError?.let { json.put("error", it) }
     emit(json.toString())
   }
 
   private companion object {
     const val Format_NO_VALUE = -1
+    val IMAGE_SUBTITLES = setOf(MimeTypes.APPLICATION_PGS, MimeTypes.APPLICATION_VOBSUB, MimeTypes.APPLICATION_DVBSUBS)
+
+    fun describeVideo(f: Format): String {
+      val codecs = f.codecs ?: ""
+      return when (f.sampleMimeType) {
+        // avc1.6E.... is the High 10 profile, common in anime releases and
+        // decoded in hardware by almost no Android device.
+        MimeTypes.VIDEO_H264 -> if (codecs.startsWith("avc1.6E", true)) "10-bit H.264 (Hi10P)" else "H.264"
+        MimeTypes.VIDEO_H265 -> if (codecs.contains(".2.", true)) "10-bit HEVC" else "HEVC"
+        MimeTypes.VIDEO_AV1 -> "AV1"
+        MimeTypes.VIDEO_VP9 -> "VP9"
+        else -> f.sampleMimeType?.substringAfter("/")?.uppercase() ?: "this"
+      }
+    }
   }
 }

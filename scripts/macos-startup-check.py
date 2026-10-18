@@ -53,7 +53,7 @@ def main() -> int:
         parser.error("The packaged app startup check requires macOS")
     if not 1 <= args.seconds <= 120:
         parser.error("--seconds must be between 1 and 120")
-    binary = args.app.resolve() / "Contents/MacOS/harbor"
+    binary = args.app.resolve() / "Contents/MacOS/lart"
     if not binary.is_file():
         parser.error(f"Missing executable: {binary}")
     output = args.output.resolve()

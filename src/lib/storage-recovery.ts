@@ -27,6 +27,7 @@ const PRUNABLE_EXACT = new Set<string>([
   "harbor.anime_awards.metas.v2",
   "harbor.animefillercache.v2",
   "harbor.jikancatalog",
+  "harbor.jikancatalog3",
   "harbor.malscorecache",
   "harbor.anime.recs_by_mal.v1",
   "harbor.anime.toppicks.cache.v1",
@@ -208,7 +209,7 @@ export function persistCritical(key: string, value: string): boolean {
 const PROACTIVE_PER_KEY_THRESHOLD = 256 * 1024;
 const PROACTIVE_TOTAL_THRESHOLD = 3.5 * 1024 * 1024;
 
-const DEAD_CACHE_PREFIXES = ["harbor.picker-cache."];
+const DEAD_CACHE_PREFIXES = ["harbor.picker-cache.", "harbor.jikancatalog2"];
 const VERSIONED_CACHE_PREFIXES = ["harbor.awards.wikidata", "harbor.anime_awards.metas"];
 
 const LRU_PREFIX_CAPS: Array<{ prefix: string; keep: number }> = [

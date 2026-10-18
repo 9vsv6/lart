@@ -177,7 +177,7 @@ function HeroSkeleton() {
   return (
     <section className="flex flex-col gap-3">
       <div className="px-4">
-        <div className="relative aspect-[16/11] w-full overflow-hidden rounded-3xl bg-surface ring-1 ring-edge-soft/50">
+        <div className="relative aspect-[16/11] max-h-[65svh] w-full overflow-hidden rounded-3xl bg-surface ring-1 ring-edge-soft/50">
           <Shimmer />
           <div className="absolute inset-x-0 bottom-0 flex flex-col gap-3 p-5">
             <div className="h-5 w-28 rounded-md bg-elevated/50" />

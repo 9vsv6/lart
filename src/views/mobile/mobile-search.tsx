@@ -399,7 +399,7 @@ function Landing({
 
       <section className="flex flex-col gap-3.5">
         <SectionTitle>{t("Genres")}</SectionTitle>
-        <div className="grid grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-4">
           {CATEGORIES.map((c) => (
             <GenreTile key={c.label} category={c} onOpen={() => onGenre(c)} />
           ))}
@@ -744,7 +744,9 @@ function GenreCollage({ art, rpdbKey }: { art: Meta[]; rpdbKey: string }) {
             src={rpdbPoster(rpdbKey, m.id, m.background ?? m.poster)}
             seed={m.id}
             ratio="landscape"
-            className="absolute inset-0 rounded-none [transform:skewX(8deg)_scale(1.4)]"
+            // absolute! beats Poster's own `relative`, so the art fills the cell
+            // instead of stopping at its 16:9 spacer height.
+            className="absolute! inset-0 rounded-none [transform:skewX(8deg)_scale(1.4)]"
           />
         </span>
       ))}

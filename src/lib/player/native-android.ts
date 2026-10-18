@@ -16,6 +16,15 @@ type NativeAudio = {
   supported: boolean;
 };
 
+/** A text subtitle embedded in the media file (ASS, SRT, WebVTT inside MKV/MP4). */
+export type NativeSub = {
+  id: string;
+  label: string;
+  lang: string;
+  forced?: boolean;
+  selected: boolean;
+};
+
 type NativeState = {
   pos: number;
   dur: number;
@@ -28,6 +37,9 @@ type NativeState = {
   rate: number;
   vol: number;
   audio: NativeAudio[];
+  subs?: NativeSub[];
+  /** Text of the embedded subtitle on screen now, "" between lines. */
+  cue?: string;
   error?: string;
 };
 
@@ -39,6 +51,7 @@ type LartAndroid = {
   nativeSetVolume(v: number): void;
   nativeSetRate(r: number): void;
   nativeSelectAudio(id: string): void;
+  nativeSelectText?(id: string): void;
   nativeStop(): void;
 };
 
@@ -72,7 +85,17 @@ function ranges(end: number): TimeRanges {
 
 export type NativeVideoElement = HTMLVideoElement & {
   lartLoad(url: string, headers?: Record<string, string>): void;
+  /** Embedded text subtitles; "lartsubs" fires when the list changes. */
+  lartSubs(): NativeSub[];
+  /** Shows an embedded subtitle by its id, or none for null. */
+  lartSelectSub(id: string | null): void;
+  /** The embedded subtitle line on screen; "lartcue" fires when it changes. */
+  lartCue(): string;
 };
+
+export function isNativeVideo(v: HTMLVideoElement | null): v is NativeVideoElement {
+  return !!v && typeof (v as Partial<NativeVideoElement>).lartSubs === "function";
+}
 
 /**
  * A real, empty <video> element (so layout and listeners behave) whose media
@@ -111,16 +134,20 @@ export function createNativeVideo(): NativeVideoElement {
 
   const applyVolume = () => native.nativeSetVolume(muted ? 0 : volume);
 
-  def("currentTime", () => seekingTo ?? st.pos, (t: number) => {
-    if (!Number.isFinite(t)) return;
-    if (!src) {
-      pendingStartMs = Math.max(0, t * 1000);
-      return;
-    }
-    seekingTo = Math.max(0, t);
-    fire("seeking");
-    native.nativeSeek(seekingTo * 1000);
-  });
+  def(
+    "currentTime",
+    () => seekingTo ?? st.pos,
+    (t: number) => {
+      if (!Number.isFinite(t)) return;
+      if (!src) {
+        pendingStartMs = Math.max(0, t * 1000);
+        return;
+      }
+      seekingTo = Math.max(0, t);
+      fire("seeking");
+      native.nativeSeek(seekingTo * 1000);
+    },
+  );
   def("duration", () => (st.dur > 0 ? st.dur : NaN));
   def("paused", () => !st.pwr);
   def("ended", () => st.state === "ended");
@@ -131,23 +158,41 @@ export function createNativeVideo(): NativeVideoElement {
   def("seekable", () => ranges(st.dur > 0 ? st.dur : 0));
   def("videoWidth", () => st.w);
   def("videoHeight", () => st.h);
-  def("error", () => (lastError ? { code: 4, message: lastError, MEDIA_ERR_SRC_NOT_SUPPORTED: 4 } : null));
-  def("volume", () => volume, (x: number) => {
-    volume = Math.min(1, Math.max(0, x));
-    applyVolume();
-    fire("volumechange");
-  });
-  def("muted", () => muted, (m: boolean) => {
-    muted = !!m;
-    applyVolume();
-    fire("volumechange");
-  });
-  def("playbackRate", () => st.rate, (r: number) => {
-    st.rate = r;
-    native.nativeSetRate(r);
-    fire("ratechange");
-  });
-  def("src", () => src, (url: string) => v.lartLoad(url));
+  def("error", () =>
+    lastError ? { code: 4, message: lastError, MEDIA_ERR_SRC_NOT_SUPPORTED: 4 } : null,
+  );
+  def(
+    "volume",
+    () => volume,
+    (x: number) => {
+      volume = Math.min(1, Math.max(0, x));
+      applyVolume();
+      fire("volumechange");
+    },
+  );
+  def(
+    "muted",
+    () => muted,
+    (m: boolean) => {
+      muted = !!m;
+      applyVolume();
+      fire("volumechange");
+    },
+  );
+  def(
+    "playbackRate",
+    () => st.rate,
+    (r: number) => {
+      st.rate = r;
+      native.nativeSetRate(r);
+      fire("ratechange");
+    },
+  );
+  def(
+    "src",
+    () => src,
+    (url: string) => v.lartLoad(url),
+  );
 
   // Audio tracks as an AudioTrackList-shaped object; setting `enabled` picks a track.
   const audioListeners = new Set<EventListenerOrEventListenerObject>();
@@ -180,6 +225,10 @@ export function createNativeVideo(): NativeVideoElement {
   };
   def("audioTracks", () => audioTracks);
 
+  v.lartSubs = () => st.subs ?? [];
+  v.lartCue = () => st.cue ?? "";
+  v.lartSelectSub = (id: string | null) => native.nativeSelectText?.(id ?? "");
+
   v.play = () => {
     native.nativePlay();
     st.pwr = true;
@@ -211,7 +260,18 @@ export function createNativeVideo(): NativeVideoElement {
     metadataSent = false;
     lastError = undefined;
     seekingTo = null;
-    st = { ...st, pos: 0, dur: -1, buf: 0, pwr: false, playing: false, state: "idle", audio: [] };
+    st = {
+      ...st,
+      pos: 0,
+      dur: -1,
+      buf: 0,
+      pwr: false,
+      playing: false,
+      state: "idle",
+      audio: [],
+      subs: [],
+      cue: "",
+    };
     document.documentElement.classList.add(ROOT_CLASS);
     native.nativeLoad(url, JSON.stringify(headers ?? {}), pendingStartMs);
     pendingStartMs = 0;
@@ -236,6 +296,10 @@ export function createNativeVideo(): NativeVideoElement {
         else l.handleEvent(ev);
       }
     }
+    // After the audio sync: these listeners read the whole snapshot, audio
+    // tracks included, and must not see a length without its entries.
+    if (JSON.stringify(prev.subs ?? []) !== JSON.stringify(next.subs ?? [])) fire("lartsubs");
+    if ((prev.cue ?? "") !== (next.cue ?? "")) fire("lartcue");
     if (next.dur > 0 && !metadataSent) {
       metadataSent = true;
       fire("durationchange");

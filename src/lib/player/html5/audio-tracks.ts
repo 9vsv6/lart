@@ -23,6 +23,7 @@ export function readAudioTracks(v: HTMLVideoElement): TrackInfo[] {
   const out: TrackInfo[] = [];
   for (let i = 0; i < tracks.length; i++) {
     const t = tracks[i];
+    if (!t) continue;
     // The Android native player also reports title, codec and channels.
     const extra = t as { id?: string; title?: string; codec?: string; channels?: string };
     out.push({

@@ -3,6 +3,7 @@ import { createPortal } from "react-dom";
 import { ChevronLeft } from "lucide-react";
 import { useT } from "@/lib/i18n";
 import { isPhoneApp } from "@/lib/platform";
+import { runPhoneBackHandler } from "@/lib/phone-back";
 import { useView } from "@/lib/view";
 
 const PlayPicker = lazy(() =>
@@ -10,9 +11,7 @@ const PlayPicker = lazy(() =>
 );
 const PlayerView = lazy(() => import("@/views/player").then((m) => ({ default: m.PlayerView })));
 const Settings = lazy(() => import("@/views/settings").then((m) => ({ default: m.Settings })));
-const AddonsView = lazy(() =>
-  import("@/views/addons").then((m) => ({ default: m.AddonsView })),
-);
+const AddonsView = lazy(() => import("@/views/addons").then((m) => ({ default: m.AddonsView })));
 
 /**
  * The standalone phone app plays streams on the phone itself. MobileShell has
@@ -53,7 +52,11 @@ export function PhonePlayback() {
           <div className="flex h-12 shrink-0 items-center px-2">
             <button
               type="button"
-              onClick={() => (canGoBack ? goBack() : setView("home"))}
+              onClick={() => {
+                if (runPhoneBackHandler()) return;
+                if (canGoBack) goBack();
+                else setView("home");
+              }}
               className="flex h-10 items-center gap-1.5 rounded-full pe-4 ps-2 text-[15px] font-medium text-ink-muted transition-colors active:bg-elevated"
             >
               <ChevronLeft size={22} strokeWidth={2} />
@@ -189,9 +192,9 @@ function usePhoneBackButton(next: BackState) {
             window.setTimeout(() => {
               if (state.current.hasPlayer) state.current.exitPlayback();
             }, 400);
-          }
-          else if (s.hasPicker) s.goBack();
+          } else if (s.hasPicker) s.goBack();
           else if (s.hasPage) {
+            if (runPhoneBackHandler()) return;
             if (s.canGoBack) s.goBack();
             else s.goHome();
           } else if (canGoBack) window.history.back();

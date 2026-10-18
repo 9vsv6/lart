@@ -2,6 +2,7 @@ import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import { Pause, Play } from "lucide-react";
 import { isMangaReaderRoute, isPhoneApp } from "@/lib/platform";
 import { isSetupRoute } from "@/lib/platform";
+import { useView } from "@/lib/view";
 import { hasSetupToken } from "./onboard/setup-wire";
 import { HarborLoader } from "@/components/harbor-loader";
 import { MobileBrowse } from "./mobile-browse";
@@ -18,8 +19,12 @@ import { MangaNowBar } from "./manga-remote/manga-now-bar";
 import { PhonePlayback } from "./phone-playback";
 
 const RemoteApp = lazy(() => import("@/views/remote-app").then((m) => ({ default: m.RemoteApp })));
-const MangaRemote = lazy(() => import("./manga-remote/manga-remote").then((m) => ({ default: m.MangaRemote })));
-const MangaLocalReader = lazy(() => import("./manga-read/manga-local-reader").then((m) => ({ default: m.MangaLocalReader })));
+const MangaRemote = lazy(() =>
+  import("./manga-remote/manga-remote").then((m) => ({ default: m.MangaRemote })),
+);
+const MangaLocalReader = lazy(() =>
+  import("./manga-read/manga-local-reader").then((m) => ({ default: m.MangaLocalReader })),
+);
 const MobileOnboard = lazy(() => import("./onboard").then((m) => ({ default: m.MobileOnboard })));
 
 export function MobileShell() {
@@ -67,8 +72,15 @@ function ShellBody() {
   const [seen, setSeen] = useState<Set<MobileTab>>(() => new Set<MobileTab>(["home"]));
   const showNowPlaying = tab !== "remote" && !isPhoneApp();
   const rootRef = useRef<HTMLDivElement>(null);
+  const { openSettings } = useView();
 
   const selectTab = (next: MobileTab) => {
+    // The phone app has no separate profile page: the avatar opens Settings,
+    // which holds the account, profiles, addons, help and legal pages.
+    if (next === "profile" && isPhoneApp()) {
+      openSettings();
+      return;
+    }
     setTab(next);
     setSeen((prev) => (prev.has(next) ? prev : new Set(prev).add(next)));
   };
@@ -91,9 +103,7 @@ function ShellBody() {
     <div ref={rootRef} className="absolute inset-0 z-30 flex flex-col bg-canvas">
       <style>{TAB_TRANSITION_CSS}</style>
       <div className="relative flex min-h-0 flex-1 flex-col">
-        <TabLayer active={tab === "home"}>
-          {seen.has("home") && <MobileBrowse />}
-        </TabLayer>
+        <TabLayer active={tab === "home"}>{seen.has("home") && <MobileBrowse />}</TabLayer>
         <TabLayer active={tab === "search"}>
           {seen.has("search") && (
             <BrowseScroll>
@@ -257,7 +267,9 @@ function NowPlayingBar({ onExpand }: { onExpand: () => void }) {
       style={{ bottom: "calc(env(safe-area-inset-bottom, 0px) + 74px)" }}
     >
       <style>{NOW_PLAYING_CSS}</style>
-      <div className={`w-[min(440px,100%)] ${active ? "harbor-nowplaying-in" : "harbor-nowplaying-out"}`}>
+      <div
+        className={`w-[min(440px,100%)] ${active ? "harbor-nowplaying-in" : "harbor-nowplaying-out"}`}
+      >
         <button
           type="button"
           onClick={onExpand}
@@ -269,7 +281,9 @@ function NowPlayingBar({ onExpand }: { onExpand: () => void }) {
             )}
           </span>
           <span className="flex min-w-0 flex-1 flex-col">
-            <span className="truncate text-[13.5px] font-semibold text-ink">{snap.mediaTitle || "Now playing"}</span>
+            <span className="truncate text-[13.5px] font-semibold text-ink">
+              {snap.mediaTitle || "Now playing"}
+            </span>
             <span className="truncate text-[11.5px] text-ink-muted">
               {ep ? `${ep} · on your computer` : "on your computer"}
             </span>

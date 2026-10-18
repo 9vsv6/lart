@@ -16,7 +16,11 @@ import { requestTracker } from "./settings/tracker-request";
 import { SubTabsProvider, type SubTabReg } from "./settings/sub-tabs";
 import { SettingsSidebar } from "./settings/settings-sidebar";
 import { tabsFor } from "./settings/tab-registry";
-import { glideSettingsToTop, useSettingsAnchor, type SettingsAnchorRequest } from "./settings/anchor-navigation";
+import {
+  glideSettingsToTop,
+  useSettingsAnchor,
+  type SettingsAnchorRequest,
+} from "./settings/anchor-navigation";
 import { PageActionsProvider, type PageActionReg } from "./settings/page-actions";
 import { SettingsFooter } from "./settings/settings-footer";
 import { SettingsActiveContext, type SectionId } from "./settings/shared";
@@ -29,6 +33,8 @@ import { BackToTop } from "@/components/back-to-top";
 import { resetOmdbBudget } from "@/lib/providers/omdb";
 import { useSettings } from "@/lib/settings";
 import { useView } from "@/lib/view";
+import { isPhoneApp } from "@/lib/platform";
+import { setPhoneBackHandler } from "@/lib/phone-back";
 import { useT } from "@/lib/i18n";
 import { useMediaQuery } from "@/lib/use-media-query";
 import { isBackKey } from "@/lib/keyboard-navigation/geometry";
@@ -316,6 +322,9 @@ const SECTION_META: Record<SectionId, { label: string; sub: string }> = {
 };
 
 const CHROME_QUERY = 'header, [data-harbor-topchrome], [class~="fixed"]';
+// Single-column Settings: narrow windows, and touch screens held upright (portrait
+// tablets are wider than 900px but too narrow for rail + page). Mirrors index.css.
+const COMPACT_SETTINGS = "(max-width: 899px), (orientation: portrait) and (pointer: coarse)";
 const CHROME_GAP = 4;
 const CHROME_FLOOR = 40;
 const CHROME_CEIL = 200;
@@ -369,8 +378,12 @@ export function Settings({ visible = true }: { visible?: boolean }) {
   const [pendingAnchor, setPendingAnchor] = useState<SettingsAnchorRequest | null>(null);
   const [pendingPage, setPendingPage] = useState<{ section: SectionId; tab?: string } | null>(null);
   const [query, setQuery] = useState("");
-  const compact = useMediaQuery("(max-width: 899px)");
-  const [browseOpen, setBrowseOpen] = useState(false);
+  const compact = useMediaQuery(COMPACT_SETTINGS);
+  // The phone app opens Settings on its page list, like a phone's own settings;
+  // Back steps from a page to the list instead of a Browse/Close pages button.
+  const phone = isPhoneApp();
+  // A request for a specific page (a "sign in to Trakt" link, say) opens that page.
+  const [browseOpen, setBrowseOpen] = useState(phone && !settingsSectionRequest.section);
   const browseRef = useRef<HTMLButtonElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);
   const scrollRef = useRef<HTMLElement>(null);
@@ -381,7 +394,15 @@ export function Settings({ visible = true }: { visible?: boolean }) {
   }, [compact]);
 
   useEffect(() => {
-    if (!compact || !browseOpen) return;
+    if (!phone || !compact || browseOpen) return;
+    return setPhoneBackHandler(() => {
+      setBrowseOpen(true);
+      return true;
+    });
+  }, [phone, compact, browseOpen]);
+
+  useEffect(() => {
+    if (phone || !compact || !browseOpen) return;
     const dismiss = (event: KeyboardEvent) => {
       if (!isBackKey(event) || document.querySelector('[role="dialog"]')) return;
       event.preventDefault();
@@ -391,7 +412,7 @@ export function Settings({ visible = true }: { visible?: boolean }) {
     };
     window.addEventListener("keydown", dismiss, true);
     return () => window.removeEventListener("keydown", dismiss, true);
-  }, [compact, browseOpen]);
+  }, [phone, compact, browseOpen]);
 
   const closeBrowse = () => {
     if (!compact) return;
@@ -478,6 +499,7 @@ export function Settings({ visible = true }: { visible?: boolean }) {
   useEffect(() => {
     if (!settingsSectionRequest.section) return;
     setLanding(null);
+    setBrowseOpen(false);
     setActive(resolveSection(settingsSectionRequest.section));
   }, [settingsSectionRequest]);
 
@@ -613,19 +635,23 @@ export function Settings({ visible = true }: { visible?: boolean }) {
               <div className="hset-heading">
                 <div className="hset-content">
                   <h1 ref={titleRef} tabIndex={-1} className="hset-title">
-                    {t(landingGroup?.label ?? SECTION_META[active].label)}
+                    {phone && compact && browseOpen
+                      ? t("Settings")
+                      : t(landingGroup?.label ?? SECTION_META[active].label)}
                   </h1>
                 </div>
-                <button
-                  ref={browseRef}
-                  type="button"
-                  className="hset-browse-toggle"
-                  aria-expanded={browseOpen}
-                  aria-controls="hset-page-navigation"
-                  onClick={() => setBrowseOpen((open) => !open)}
-                >
-                  {browseOpen ? t("Close pages") : t("Browse pages")}
-                </button>
+                {!phone && (
+                  <button
+                    ref={browseRef}
+                    type="button"
+                    className="hset-browse-toggle"
+                    aria-expanded={browseOpen}
+                    aria-controls="hset-page-navigation"
+                    onClick={() => setBrowseOpen((open) => !open)}
+                  >
+                    {browseOpen ? t("Close pages") : t("Browse pages")}
+                  </button>
+                )}
               </div>
               <SettingsSidebar
                 active={active}
