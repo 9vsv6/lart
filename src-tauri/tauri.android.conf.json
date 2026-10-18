@@ -11,12 +11,7 @@
         "label": "main",
         "title": "Lart",
         "url": "index-tv.html",
-        "backgroundColor": [
-          8,
-          9,
-          10,
-          255
-        ]
+        "backgroundColor": [8, 9, 10, 255]
       }
     ]
   },
@@ -28,7 +23,7 @@
     },
     "android": {
       "minSdkVersion": 26,
-      "versionCode": 9132005
+      "versionCode": 9132006
     }
   },
   "plugins": {
