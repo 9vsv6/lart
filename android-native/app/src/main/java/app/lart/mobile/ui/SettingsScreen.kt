@@ -11,10 +11,19 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.layout.Row
 import androidx.compose.material3.Button
+import androidx.compose.material3.FilterChip
+import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.OutlinedTextField
+import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.platform.LocalUriHandler
+import app.lart.mobile.data.DebridAccount
+import app.lart.mobile.data.DebridService
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -114,13 +123,96 @@ fun SettingsScreen(repository: Repository) {
             }
         }
 
+        DebridCard(repository)
+
+        Card {
+            SectionTitle("Playback")
+            val autoPlay by repository.autoPlay.collectAsState()
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Column(Modifier.weight(1f)) {
+                    Text("Auto-play the best source", fontSize = 15.sp, color = LartColors.Ink)
+                    Text(
+                        "Skips the list of sources. Lart ranks them by quality, size and whether your debrid has them cached.",
+                        fontSize = 12.sp,
+                        color = LartColors.InkSubtle,
+                    )
+                }
+                Switch(checked = autoPlay, onCheckedChange = repository::setAutoPlay)
+            }
+        }
+
         Card {
             SectionTitle("About")
             Text(
-                "Lart native, phase 1 preview. It installs beside the regular Lart app while features are rebuilt natively.",
+                "Lart native, phase 2 preview. It installs beside the regular Lart app while features are rebuilt natively.",
                 color = LartColors.InkMuted,
                 fontSize = 13.sp,
             )
+        }
+    }
+}
+
+@Composable
+private fun DebridCard(repository: Repository) {
+    val debrid by repository.debrid.collectAsState()
+    val scope = rememberCoroutineScope()
+    val uriHandler = LocalUriHandler.current
+    var service by remember { mutableStateOf(DebridService.RealDebrid) }
+    var key by remember { mutableStateOf("") }
+    var busy by remember { mutableStateOf(false) }
+    var message by remember { mutableStateOf<String?>(null) }
+
+    Card {
+        SectionTitle("Debrid")
+        val current = debrid
+        if (current != null) {
+            Text("${current.service.label} is set up. Torrent sources play through it.", color = LartColors.InkMuted, fontSize = 14.sp)
+            message?.let { Text(it, color = LartColors.InkSubtle, fontSize = 13.sp) }
+            OutlinedButton(onClick = { scope.launch { repository.clearDebrid(); message = null } }) { Text("Remove") }
+        } else {
+            Text(
+                "Torrent sources need a debrid service. Paste your API key; it stays on this device.",
+                color = LartColors.InkMuted,
+                fontSize = 14.sp,
+            )
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                DebridService.entries.forEach { option ->
+                    FilterChip(
+                        selected = option == service,
+                        onClick = { service = option },
+                        label = { Text(option.label) },
+                        colors = FilterChipDefaults.filterChipColors(
+                            selectedContainerColor = androidx.compose.ui.graphics.Color.White,
+                            selectedLabelColor = androidx.compose.ui.graphics.Color.Black,
+                        ),
+                    )
+                }
+            }
+            OutlinedTextField(
+                value = key,
+                onValueChange = { key = it.trim() },
+                label = { Text("${service.label} API key") },
+                singleLine = true,
+                visualTransformation = PasswordVisualTransformation(),
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+                modifier = Modifier.fillMaxWidth(),
+            )
+            message?.let { Text(it, color = androidx.compose.ui.graphics.Color(0xFFE57373), fontSize = 13.sp) }
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Button(
+                    onClick = {
+                        scope.launch {
+                            busy = true
+                            message = runCatching { repository.setDebrid(DebridAccount(service, key)) }
+                                .fold(onSuccess = { "Signed in as $it" }, onFailure = { "That key didn't work: ${it.message}" })
+                            if (repository.debrid.value != null) key = ""
+                            busy = false
+                        }
+                    },
+                    enabled = !busy && key.isNotBlank(),
+                ) { Text(if (busy) "Checking…" else "Save") }
+                TextButton(onClick = { uriHandler.openUri(service.tokenPage) }) { Text("Get my key") }
+            }
         }
     }
 }

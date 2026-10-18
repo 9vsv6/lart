@@ -2,6 +2,7 @@ package app.lart.mobile.data
 
 import android.content.Context
 import androidx.datastore.preferences.core.Preferences
+import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.stringPreferencesKey
 import androidx.datastore.preferences.preferencesDataStore
@@ -43,6 +44,13 @@ class Repository(private val context: Context) {
     private val _library = MutableStateFlow<List<LibraryItem>>(emptyList())
     val library: StateFlow<List<LibraryItem>> = _library.asStateFlow()
 
+    private val _debrid = MutableStateFlow<DebridAccount?>(null)
+    val debrid: StateFlow<DebridAccount?> = _debrid.asStateFlow()
+
+    private val _autoPlay = MutableStateFlow(false)
+    /** Skip the streams list and play the best source straight away. */
+    val autoPlay: StateFlow<Boolean> = _autoPlay.asStateFlow()
+
     private val _ready = MutableStateFlow(false)
     val ready: StateFlow<Boolean> = _ready.asStateFlow()
 
@@ -54,6 +62,10 @@ class Repository(private val context: Context) {
             val prefs = context.store.data.first()
             val authKey = prefs[KEY_AUTH]
             if (authKey != null) _account.value = Account(authKey, prefs[KEY_EMAIL] ?: "")
+            val service = prefs[KEY_DEBRID_SERVICE]?.let { name -> DebridService.entries.firstOrNull { it.name == name } }
+            val key = prefs[KEY_DEBRID_KEY]
+            if (service != null && !key.isNullOrBlank()) _debrid.value = DebridAccount(service, key)
+            _autoPlay.value = prefs[KEY_AUTOPLAY] ?: false
             resume = prefs[KEY_RESUME]?.let { runCatching { Net.json.decodeFromString(resumeSerializer, it) }.getOrNull() } ?: emptyMap()
             refresh()
             _ready.value = true
@@ -94,6 +106,30 @@ class Repository(private val context: Context) {
         refresh()
     }
 
+    /** Checks the key with the service first, so a typo fails here and not at play time. */
+    suspend fun setDebrid(account: DebridAccount): String {
+        val name = Debrid.verify(account)
+        context.store.edit {
+            it[KEY_DEBRID_SERVICE] = account.service.name
+            it[KEY_DEBRID_KEY] = account.apiKey
+        }
+        _debrid.value = account
+        return name
+    }
+
+    suspend fun clearDebrid() {
+        context.store.edit {
+            it.remove(KEY_DEBRID_SERVICE)
+            it.remove(KEY_DEBRID_KEY)
+        }
+        _debrid.value = null
+    }
+
+    fun setAutoPlay(enabled: Boolean) {
+        _autoPlay.value = enabled
+        scope.launch { context.store.edit { it[KEY_AUTOPLAY] = enabled } }
+    }
+
     /** Where to resume `videoId`: this device's last position, else the Stremio library's. */
     fun resumeFor(videoId: String, metaId: String): Long {
         resume[videoId]?.let { return it.positionMs }
@@ -115,5 +151,8 @@ class Repository(private val context: Context) {
         val KEY_AUTH: Preferences.Key<String> = stringPreferencesKey("authKey")
         val KEY_EMAIL: Preferences.Key<String> = stringPreferencesKey("email")
         val KEY_RESUME: Preferences.Key<String> = stringPreferencesKey("resume")
+        val KEY_DEBRID_SERVICE: Preferences.Key<String> = stringPreferencesKey("debridService")
+        val KEY_DEBRID_KEY: Preferences.Key<String> = stringPreferencesKey("debridKey")
+        val KEY_AUTOPLAY: Preferences.Key<Boolean> = booleanPreferencesKey("autoPlay")
     }
 }

@@ -35,6 +35,17 @@ object Net {
         }
     }
 
+    /** Runs `request` with Lart's user agent; non-2xx responses throw with the body's message. */
+    suspend fun call(request: Request): String = withContext(Dispatchers.IO) {
+        client.newCall(request.newBuilder().header("User-Agent", USER_AGENT).build()).execute().use { response ->
+            val body = response.body?.string().orEmpty()
+            if (!response.isSuccessful) throw HttpError(response.code, body)
+            body
+        }
+    }
+
+    class HttpError(val code: Int, val body: String) : IOException("HTTP $code: ${body.take(200)}")
+
     suspend fun postJson(url: String, body: String): String = withContext(Dispatchers.IO) {
         val request = Request.Builder()
             .url(url)

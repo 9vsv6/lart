@@ -9,21 +9,26 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -32,9 +37,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import app.lart.mobile.data.AddonClient
+import app.lart.mobile.data.Playback
+import app.lart.mobile.data.RankedStream
+import app.lart.mobile.data.Ranking
+import app.lart.mobile.data.Ready
 import app.lart.mobile.data.Repository
 import app.lart.mobile.data.Stream
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
 
 @Composable
 fun StreamsScreen(
@@ -43,14 +53,44 @@ fun StreamsScreen(
     videoId: String,
     title: String,
     onBack: () -> Unit,
-    onPlay: (Stream) -> Unit,
+    onPlay: (Ready) -> Unit,
 ) {
     val addons by repository.addons.collectAsState()
-    var groups by remember { mutableStateOf<List<AddonClient.AddonStreams>?>(null) }
+    val debrid by repository.debrid.collectAsState()
+    val autoPlay by repository.autoPlay.collectAsState()
+    val scope = rememberCoroutineScope()
+    var ranked by remember { mutableStateOf<List<RankedStream>?>(null) }
+    var status by remember { mutableStateOf<String?>(null) }
+    var error by remember { mutableStateOf<String?>(null) }
+    var job by remember { mutableStateOf<Job?>(null) }
+    // Auto-play once per visit: coming back from the player shows the list instead.
+    var autoPlayed by rememberSaveable(videoId) { mutableStateOf(false) }
 
-    LaunchedEffect(addons, type, videoId) {
+    fun play(stream: Stream) {
+        job?.cancel()
+        error = null
+        status = if (stream.direct) null else "Getting the link from ${debrid?.service?.label ?: "debrid"}…"
+        job = scope.launch {
+            runCatching { Playback.resolve(stream, debrid) }
+                .onSuccess { onPlay(it) }
+                .onFailure { error = it.message }
+            status = null
+        }
+    }
+
+    LaunchedEffect(addons, type, videoId, debrid) {
         if (addons.isEmpty()) return@LaunchedEffect
-        groups = AddonClient.streams(addons, type, videoId)
+        val list = Playback.ranked(addons, type, videoId, debrid)
+        ranked = list
+        if (autoPlay && !autoPlayed) {
+            autoPlayed = true
+            status = "Playing the best source…"
+            job = scope.launch {
+                val best = Playback.best(list, debrid)
+                status = null
+                if (best != null) onPlay(best) else error = "None of the top sources would open. Pick one below."
+            }
+        }
     }
 
     Column(Modifier.fillMaxSize().background(LartColors.Canvas).statusBarsPadding()) {
@@ -58,29 +98,41 @@ fun StreamsScreen(
             IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Rounded.ArrowBack, contentDescription = "Back") }
             Text(title, fontSize = 18.sp, fontWeight = FontWeight.SemiBold, maxLines = 1, overflow = TextOverflow.Ellipsis)
         }
-        val current = groups
+        status?.let { message ->
+            Row(
+                Modifier.fillMaxWidth().padding(horizontal = 16.dp).background(LartColors.Elevated, RoundedCornerShape(12.dp))
+                    .padding(horizontal = 14.dp, vertical = 6.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+            ) {
+                CircularProgressIndicator(Modifier.size(18.dp), strokeWidth = 2.dp, color = LartColors.Accent)
+                Text(message, fontSize = 14.sp, color = LartColors.Ink, modifier = Modifier.weight(1f))
+                TextButton(onClick = { job?.cancel(); status = null }) { Text("Cancel") }
+            }
+        }
+        error?.let {
+            Text(
+                it,
+                fontSize = 13.sp,
+                color = androidx.compose.ui.graphics.Color(0xFFE57373),
+                modifier = Modifier.padding(horizontal = 20.dp, vertical = 8.dp),
+            )
+        }
+        val current = ranked
         when {
             current == null -> Loading()
-            current.all { it.streams.isEmpty() } -> EmptyState(
+            current.isEmpty() -> EmptyState(
                 "No streams found",
-                if (current.isEmpty()) "None of your addons offers streams for this. Add a stream addon in Settings."
-                else "Your stream addons found nothing for this title.",
+                if (addons.none { it.manifest.supports("stream", type, videoId) }) {
+                    "None of your addons offers streams for this. Add a stream addon in Stremio."
+                } else "Your stream addons found nothing for this title.",
             )
             else -> LazyColumn(
-                contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 32.dp),
+                contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 32.dp),
                 verticalArrangement = Arrangement.spacedBy(10.dp),
             ) {
-                current.filter { it.streams.isNotEmpty() }.forEach { group ->
-                    item(key = "h:" + group.addon.transportUrl) {
-                        Text(
-                            group.addon.manifest.name,
-                            modifier = Modifier.padding(top = 14.dp, bottom = 2.dp),
-                            fontSize = 13.sp,
-                            fontWeight = FontWeight.Bold,
-                            color = LartColors.InkSubtle,
-                        )
-                    }
-                    items(group.streams.sortedByDescending { it.playable }) { stream -> StreamRow(stream) { onPlay(stream) } }
+                itemsIndexed(current) { index, item ->
+                    StreamRow(item, best = index == 0, playable = item.stream.playable(debrid != null)) { play(item.stream) }
                 }
             }
         }
@@ -88,24 +140,40 @@ fun StreamsScreen(
 }
 
 @Composable
-private fun StreamRow(stream: Stream, onClick: () -> Unit) {
+private fun StreamRow(item: RankedStream, best: Boolean, playable: Boolean, onClick: () -> Unit) {
+    val stream = item.stream
     Column(
         modifier = Modifier
             .fillMaxWidth()
-            .alpha(if (stream.playable) 1f else 0.45f)
-            .background(LartColors.Surface, RoundedCornerShape(14.dp))
-            .clickable(enabled = stream.playable, onClick = onClick)
+            .alpha(if (playable) 1f else 0.45f)
+            .background(if (best && playable) LartColors.Elevated else LartColors.Surface, RoundedCornerShape(14.dp))
+            .clickable(enabled = playable, onClick = onClick)
             .padding(14.dp),
         verticalArrangement = Arrangement.spacedBy(4.dp),
     ) {
-        stream.name?.let { Text(it.replace('\n', ' '), fontSize = 14.sp, fontWeight = FontWeight.SemiBold, color = LartColors.Accent) }
-        Text(stream.text, fontSize = 13.sp, lineHeight = 18.sp, color = LartColors.Ink, maxLines = 4, overflow = TextOverflow.Ellipsis)
-        if (!stream.playable) {
+        Row(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
             Text(
-                if (stream.infoHash != null) "Torrent: needs a debrid service (coming in the next phase)" else "Not playable in Lart yet",
-                fontSize = 12.sp,
-                color = LartColors.InkSubtle,
+                (stream.name ?: item.addon.manifest.name).replace('\n', ' '),
+                fontSize = 14.sp,
+                fontWeight = FontWeight.SemiBold,
+                color = LartColors.Accent,
+                maxLines = 1,
+                overflow = TextOverflow.Ellipsis,
+                modifier = Modifier.weight(1f, fill = false),
             )
+            if (best && playable) Text("Best", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = LartColors.Ink)
         }
+        val badges = Ranking.badges(stream)
+        if (badges.isNotEmpty()) Text(badges.joinToString("  ·  "), fontSize = 12.sp, color = LartColors.InkMuted)
+        Text(stream.text, fontSize = 13.sp, lineHeight = 18.sp, color = LartColors.Ink, maxLines = 3, overflow = TextOverflow.Ellipsis)
+        Text(
+            when {
+                playable -> item.addon.manifest.name
+                stream.infoHash != null -> "Torrent: add a debrid account in Settings to play it"
+                else -> "Not playable in Lart yet"
+            },
+            fontSize = 12.sp,
+            color = LartColors.InkSubtle,
+        )
     }
 }

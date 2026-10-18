@@ -131,8 +131,8 @@ private fun LartRoot(repository: Repository) {
                     val metaId = args?.getString("metaId").orEmpty()
                     val videoId = args?.getString("videoId").orEmpty()
                     val title = args?.getString("title").orEmpty()
-                    StreamsScreen(repository, type, videoId, title, onBack = { nav.popBackStack() }) { stream ->
-                        context.startActivity(PlayerActivity.intent(context, stream, type, metaId, videoId, title))
+                    StreamsScreen(repository, type, videoId, title, onBack = { nav.popBackStack() }) { ready ->
+                        context.startActivity(PlayerActivity.intent(context, ready, type, metaId, videoId))
                     }
                 }
             }
