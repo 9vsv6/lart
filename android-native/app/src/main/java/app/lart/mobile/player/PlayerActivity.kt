@@ -4,7 +4,6 @@ import android.app.PictureInPictureParams
 import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
-import android.graphics.Color
 import android.media.AudioManager
 import android.os.Build
 import android.os.Bundle
@@ -15,34 +14,16 @@ import android.util.Rational
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.FrameLayout
-import androidx.fragment.app.FragmentActivity
-import androidx.annotation.OptIn
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.platform.ComposeView
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
+import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
-import androidx.media3.common.AudioAttributes
-import androidx.media3.common.C
-import androidx.media3.common.Format
-import androidx.media3.common.MediaItem
-import androidx.media3.common.MimeTypes
-import androidx.media3.common.PlaybackException
-import androidx.media3.common.Player
-import androidx.media3.common.TrackSelectionOverride
-import androidx.media3.common.Tracks
-import androidx.media3.common.VideoSize
-import androidx.media3.common.util.UnstableApi
-import androidx.media3.datasource.DefaultDataSource
-import androidx.media3.datasource.DefaultHttpDataSource
-import androidx.media3.exoplayer.DefaultRenderersFactory
-import androidx.media3.exoplayer.ExoPlayer
-import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
-import androidx.media3.ui.PlayerView
 import app.lart.mobile.LartApp
 import app.lart.mobile.data.AddonClient
 import app.lart.mobile.data.Meta
@@ -52,17 +33,18 @@ import app.lart.mobile.data.PlayerPrefs
 import app.lart.mobile.data.RankedStream
 import app.lart.mobile.data.Ready
 import app.lart.mobile.data.Scrobble
+import app.lart.mobile.data.SkipSegment
+import app.lart.mobile.data.SkipSegments
+import app.lart.mobile.data.Video
+import app.lart.mobile.ui.LartTheme
 import com.google.android.gms.cast.MediaSeekOptions
 import com.google.android.gms.cast.framework.CastButtonFactory
 import com.google.android.gms.cast.framework.CastContext
 import com.google.android.gms.cast.framework.CastSession
 import com.google.android.gms.cast.framework.SessionManagerListener
 import com.google.android.gms.cast.framework.media.RemoteMediaClient
-import app.lart.mobile.data.SkipSegment
-import app.lart.mobile.data.SkipSegments
-import app.lart.mobile.data.Video
-import app.lart.mobile.ui.LartTheme
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withTimeoutOrNull
 import kotlinx.serialization.builtins.MapSerializer
@@ -70,16 +52,13 @@ import kotlinx.serialization.builtins.serializer
 import java.util.Locale
 
 /**
- * Lart's player: Media3 underneath, Harbor's phone player on top. Gestures for
- * seeking, brightness and volume; menus for episodes, sources, subtitles (with
- * style and sync), audio, speed and a sleep timer; skip intro, up next,
- * "Still watching?" and picture-in-picture.
+ * Lart's player: mpv underneath (Media3 when mpv can't start), Harbor's phone player
+ * on top. Gestures for seeking, brightness and volume; menus for episodes, sources,
+ * subtitles (with style and sync), audio (with delay), speed, Anime4K and a sleep
+ * timer; skip intro, up next, "Still watching?", casting and picture-in-picture.
  */
-@OptIn(UnstableApi::class)
-class PlayerActivity : FragmentActivity(), PlayerActions {
-    private var player: ExoPlayer? = null
-    private lateinit var view: PlayerView
-    private lateinit var http: DefaultHttpDataSource.Factory
+class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
+    private lateinit var engine: Engine
     private val state = PlayerState()
     private val repository get() = (application as LartApp).repository
     private val prefs: PlayerPrefs get() = repository.playerPrefs.value
@@ -87,6 +66,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
     private var type = ""
     private var metaId = ""
     private var meta: Meta? = null
+    private var headers: Map<String, String> = emptyMap()
     private var subtitleFile: SubtitleFile? = null
     private var subtitleJob: Job? = null
     private var segments: List<SkipSegment> = emptyList()
@@ -102,9 +82,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
     private var audioChecked = false
     private var castContext: CastContext? = null
     private var remotePositionMs = 0L
-    private val cueStore = CueStore()
-    private val audioDelay = AudioDelay()
-    private val bitmaps = java.util.WeakHashMap<android.graphics.Bitmap, androidx.compose.ui.graphics.ImageBitmap>()
+    private var anime4kJob: Job? = null
     private val ticker = Handler(Looper.getMainLooper())
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -112,11 +90,12 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
         hideSystemBars()
 
-        view = PlayerView(this).apply {
-            useController = false
-            setShowBuffering(PlayerView.SHOW_BUFFERING_NEVER)
-            setBackgroundColor(Color.BLACK)
-        }
+        // mpv is the main engine; Media3 takes over only where libmpv can't start.
+        engine = MpvEngine.create(this, prefs.subLanguage) ?: ExoEngine(this, prefs.subLanguage)
+        engine.listener = this
+        state.engineName = engine.name
+        state.anime4kAvailable = engine.supportsShaders
+
         val overlay = ComposeView(this).apply {
             setContent {
                 val prefs by repository.playerPrefs.collectAsState()
@@ -125,34 +104,19 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
         }
         setContentView(
             FrameLayout(this).apply {
-                addView(view, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
+                setBackgroundColor(android.graphics.Color.BLACK)
+                addView(engine.view, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
                 addView(overlay, ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT))
             },
         )
 
-        val renderers = LartRenderersFactory(this, cueStore, audioDelay)
-        http = DefaultHttpDataSource.Factory().setAllowCrossProtocolRedirects(true)
-        val exo = ExoPlayer.Builder(this, renderers)
-            .setMediaSourceFactory(DefaultMediaSourceFactory(DefaultDataSource.Factory(this, http)))
-            .setSeekBackIncrementMs(10_000)
-            .setSeekForwardIncrementMs(10_000)
-            .build()
-        exo.setAudioAttributes(
-            AudioAttributes.Builder().setUsage(C.USAGE_MEDIA).setContentType(C.AUDIO_CONTENT_TYPE_MOVIE).build(),
-            true,
-        )
-        exo.trackSelectionParameters = exo.trackSelectionParameters.buildUpon()
-            .setPreferredAudioLanguage(Locale.getDefault().language)
-            .apply { prefs.subLanguage.takeIf { it.isNotEmpty() }?.let { setPreferredTextLanguage(it) } }
-            .build()
-        exo.addListener(listener)
-        exo.setPlaybackSpeed(prefs.speed)
+        engine.setSpeed(prefs.speed)
         state.speed = prefs.speed
-        view.player = exo
-        player = exo
-
-        // Lart draws every subtitle itself (see Renderers.kt), so Media3's view stays empty.
-        view.subtitleView?.visibility = android.view.View.GONE
+        // mpv draws subtitles itself: keep its style in step with the settings and the controls.
+        lifecycleScope.launch {
+            combine(repository.playerPrefs, snapshotFlow { state.controlsVisible && !state.inPip }) { p, lifted -> p to lifted }
+                .collect { (p, lifted) -> engine.applySubtitleStyle(p, lifted) }
+        }
         start(intent)
         ticker.post(tick)
         setUpCast()
@@ -161,7 +125,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         // Picked something else while this player was in picture-in-picture.
-        player?.let { saveResume(it) }
+        saveResume()
         setIntent(intent)
         start(intent)
     }
@@ -171,12 +135,11 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
         type = intent.getStringExtra(EXTRA_TYPE).orEmpty()
         metaId = intent.getStringExtra(EXTRA_META).orEmpty()
         val videoId = intent.getStringExtra(EXTRA_VIDEO) ?: metaId
-        val headers = intent.getStringExtra(EXTRA_HEADERS)
+        headers = intent.getStringExtra(EXTRA_HEADERS)
             ?.let { runCatching { Net.json.decodeFromString(headerSerializer, it) }.getOrNull() }
             .orEmpty()
         state.title = intent.getStringExtra(EXTRA_TITLE).orEmpty().substringBefore(" · ")
         autoAdvanced = 0
-        applyHeaders(headers)
         begin(videoId, url)
         lifecycleScope.launch {
             meta = AddonClient.meta(repository.metaAddons(), type, metaId)
@@ -186,7 +149,6 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
 
     /** Starts `videoId` from `url`, resuming where this device or Stremio left off. */
     private fun begin(videoId: String, url: String, startAt: Long? = null) {
-        val exo = player ?: return
         state.videoId = videoId
         state.currentUrl = url
         state.sources = null
@@ -198,7 +160,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
         autoSkipped.clear()
         autoSubDone = false
         clearAddonSubtitle()
-        state.subDelayMs = 0
+        setSubDelay(0)
         if (state.subChoice is SubChoice.Addon) state.subChoice = SubChoice.Off
 
         stopScrobble()
@@ -207,11 +169,12 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
         val resume = startAt ?: repository.resumeFor(videoId, metaId)
         state.resumedFromMs = if (startAt == null && resume > 30_000) resume else 0
         pendingFraction = if (startAt == null && resume == 0L) repository.traktFraction(videoId)?.takeIf { it in 0.02f..0.95f } else null
-        exo.setMediaItem(MediaItem.fromUri(url), resume)
-        exo.prepare()
-        exo.play()
+        state.buffering = true
+        engine.load(url, headers, resume)
+        engine.setAudioDelay(state.audioDelayMs)
         describe()
         loadAddonSubtitles(videoId)
+        applyAnime4K()
     }
 
     /** Title, episode line, the season list and what comes next, from the metadata. */
@@ -226,201 +189,157 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
         state.next = if (state.isSeries) nextAfter(videos, state.videoId) else null
     }
 
-    private fun applyHeaders(headers: Map<String, String>) {
-        // Data sources read the factory's properties when they open, so this also covers later items.
-        http.setUserAgent(headers["User-Agent"] ?: Net.USER_AGENT)
-        http.setDefaultRequestProperties(headers - "User-Agent")
-    }
-
     // ---- Progress, skip segments, sleep timer ----
 
     private val tick = object : Runnable {
         override fun run() {
-            player?.let { exo ->
-                val duration = exo.duration.takeIf { it != C.TIME_UNSET } ?: 0
-                val position = exo.currentPosition
-                state.positionMs = position
-                state.durationMs = duration
-                state.bufferedMs = exo.bufferedPosition
-                pendingFraction?.let { fraction ->
-                    if (duration > 0) {
-                        pendingFraction = null
-                        val target = (duration * fraction).toLong()
-                        exo.seekTo(target)
-                        state.resumedFromMs = target
-                    }
+            val duration = engine.durationMs
+            val position = engine.positionMs
+            state.positionMs = position
+            state.durationMs = duration
+            state.bufferedMs = engine.bufferedMs
+            pendingFraction?.let { fraction ->
+                if (duration > 0) {
+                    pendingFraction = null
+                    val target = (duration * fraction).toLong()
+                    engine.seekTo(target)
+                    state.resumedFromMs = target
                 }
-                // AniList: an anime episode counts as watched at 80%.
-                if (!animeMarked && duration > 0 && position >= duration * 0.8 && state.videoId.startsWith("kitsu:")) {
-                    animeMarked = true
-                    val parts = state.videoId.split(':')
-                    parts.lastOrNull()?.toIntOrNull()?.takeIf { parts.size >= 3 }?.let { repository.markAnimeWatched(parts[1], it) }
-                }
+            }
+            // AniList: an anime episode counts as watched at 80%.
+            if (!animeMarked && duration > 0 && position >= duration * 0.8 && state.videoId.startsWith("kitsu:")) {
+                animeMarked = true
+                val parts = state.videoId.split(':')
+                parts.lastOrNull()?.toIntOrNull()?.takeIf { parts.size >= 3 }?.let { repository.markAnimeWatched(parts[1], it) }
+            }
+            // With Media3, Lart draws the subtitles; mpv draws its own.
+            if (!engine.drawsSubtitles) {
                 val subtitleTime = position - state.subDelayMs
                 val cues = when (state.subChoice) {
                     is SubChoice.Addon -> subtitleFile?.textAt(subtitleTime)?.let { listOf(UiCue(text = it)) }.orEmpty()
-                    is SubChoice.Embedded -> cueStore.at(subtitleTime).mapNotNull { it.toUi() }
+                    is SubChoice.Embedded -> engine.cuesAt(subtitleTime)
                     SubChoice.Off -> emptyList()
                 }
                 if (cues != state.cues) state.cues = cues
+            }
 
-                if (duration > 0 && segmentsFor != state.videoId) {
-                    segmentsFor = state.videoId
-                    val forVideo = state.videoId
-                    lifecycleScope.launch {
-                        val found = SkipSegments.find(forVideo, duration)
-                        if (state.videoId == forVideo) segments = found
-                    }
+            if (duration > 0 && segmentsFor != state.videoId) {
+                segmentsFor = state.videoId
+                val forVideo = state.videoId
+                lifecycleScope.launch {
+                    val found = SkipSegments.find(forVideo, duration)
+                    if (state.videoId == forVideo) segments = found
                 }
-                val active = segments.firstOrNull { position >= it.startMs && position < it.endMs - 1_000 }
-                state.skip = active
-                if (active != null && prefs.autoSkipIntro && active.kind != SkipSegment.Kind.Outro && active !in autoSkipped) {
-                    autoSkipped += active
-                    exo.seekTo(active.endMs)
-                    state.hint = "Skipped ${active.kind.name.lowercase()}"
-                    state.hintIcon = 0
-                }
+            }
+            val active = segments.firstOrNull { position >= it.startMs && position < it.endMs - 1_000 }
+            state.skip = active
+            if (active != null && prefs.autoSkipIntro && active.kind != SkipSegment.Kind.Outro && active !in autoSkipped) {
+                autoSkipped += active
+                engine.seekTo(active.endMs)
+                state.hint = "Skipped ${active.kind.name.lowercase()}"
+                state.hintIcon = 0
+            }
 
-                val sleepAt = state.sleepAt
-                if (sleepAt != null && sleepAt > 0 && System.currentTimeMillis() >= sleepAt) {
-                    exo.pause()
-                    state.sleepAt = null
-                    state.controlsVisible = true
-                    state.hint = "Sleep timer: paused"
-                }
+            val sleepAt = state.sleepAt
+            if (sleepAt != null && sleepAt > 0 && System.currentTimeMillis() >= sleepAt) {
+                engine.pause()
+                state.sleepAt = null
+                state.controlsVisible = true
+                state.hint = "Sleep timer: paused"
             }
             ticker.postDelayed(this, 250)
         }
     }
 
-    private val listener = object : Player.Listener {
-        override fun onIsPlayingChanged(isPlaying: Boolean) {
-            state.playing = isPlaying
-            if (isPlaying) scrobble("start") else if (player?.playbackState != Player.STATE_ENDED) scrobble("pause")
-            updatePipParams()
-        }
+    // ---- EngineListener ----
 
-        override fun onPlaybackStateChanged(playbackState: Int) {
-            state.buffering = playbackState == Player.STATE_BUFFERING || playbackState == Player.STATE_IDLE
-            state.ended = playbackState == Player.STATE_ENDED
-            if (playbackState != Player.STATE_ENDED) return
-            stopScrobble()
-            state.controlsVisible = true
-            if (state.sleepAt == -1L) {
-                state.sleepAt = null
-                return
-            }
-            if (state.next == null) return
-            autoAdvanced++
-            val limit = prefs.stillWatchingAfter
-            if (limit > 0 && autoAdvanced >= limit) state.stillWatching = true else playNext()
-        }
+    override fun onPlayingChanged(playing: Boolean) {
+        state.playing = playing
+        // Playing means whatever error was showing no longer applies.
+        if (playing) state.error = null
+        if (playing) scrobble("start") else if (!engine.ended) scrobble("pause")
+        updatePipParams()
+    }
 
-        override fun onPlayerError(error: PlaybackException) {
-            state.error = when (error.errorCode) {
-                PlaybackException.ERROR_CODE_IO_BAD_HTTP_STATUS -> "The server refused the video (${error.cause?.message?.take(60) ?: "HTTP error"})."
-                PlaybackException.ERROR_CODE_IO_NETWORK_CONNECTION_FAILED,
-                PlaybackException.ERROR_CODE_IO_NETWORK_CONNECTION_TIMEOUT -> "The video server didn't answer. Check your connection."
-                PlaybackException.ERROR_CODE_DECODING_FORMAT_UNSUPPORTED,
-                PlaybackException.ERROR_CODE_DECODER_INIT_FAILED -> "This device can't decode this video."
-                else -> "Playback failed (${error.errorCodeName})."
-            }
-        }
+    override fun onBufferingChanged(buffering: Boolean) {
+        state.buffering = buffering
+    }
 
-        override fun onVideoSizeChanged(videoSize: VideoSize) = updatePipParams()
-
-        override fun onTracksChanged(tracks: Tracks) {
-            readTracks(tracks)
-            // With no decoder for the video track Media3 plays audio over black; say why instead.
-            val video = tracks.groups.filter { it.type == C.TRACK_TYPE_VIDEO }
-            if (video.isNotEmpty() && video.none { g -> (0 until g.length).any { g.isTrackSupported(it) } }) {
-                state.error = "This device can't decode ${describeVideo(video.first().getTrackFormat(0))} video."
-            }
+    override fun onEnded() {
+        state.ended = true
+        stopScrobble()
+        state.controlsVisible = true
+        if (state.sleepAt == -1L) {
+            state.sleepAt = null
+            return
         }
+        if (state.next == null) return
+        autoAdvanced++
+        val limit = prefs.stillWatchingAfter
+        if (limit > 0 && autoAdvanced >= limit) state.stillWatching = true else playNext()
+    }
+
+    override fun onError(message: String) {
+        state.error = message
+        state.buffering = false
+    }
+
+    override fun onVideoSizeChanged() = updatePipParams()
+
+    override fun onTracksChanged() {
+        val audio = engine.audioTracks()
+        val text = engine.textTracks()
+        state.audioTracks = if (audio.size > 1) audio.map { TrackOption(it.key, it.label, it.detail, it.selected) } else emptyList()
+        // Addon subtitles mpv loaded show under "From your addons", not "In the video".
+        state.embeddedSubs = text.filterNot { it.external }.map { TrackOption(it.key, it.label, it.detail, it.selected) }
+        avoidCommentary(audio)
+        if (state.subChoice !is SubChoice.Addon) {
+            state.subChoice = text.firstOrNull { it.selected && !it.external }?.let { SubChoice.Embedded(it.key) } ?: SubChoice.Off
+        }
+        maybeAutoSelectAddon(text)
     }
 
     // ---- Tracks ----
 
-    private fun readTracks(tracks: Tracks) {
-        val audio = ArrayList<TrackOption>()
-        val text = ArrayList<TrackOption>()
-        tracks.groups.forEachIndexed { g, group ->
-            for (i in 0 until group.length) {
-                if (!group.isTrackSupported(i, true)) continue
-                val format = group.getTrackFormat(i)
-                val key = "$g:$i"
-                when (group.type) {
-                    C.TRACK_TYPE_AUDIO -> audio += TrackOption(key, trackName(format, audio.size + 1), audioDetail(format), group.isTrackSelected(i))
-                    C.TRACK_TYPE_TEXT -> text += TrackOption(key, trackName(format, text.size + 1), textDetail(format), group.isTrackSelected(i))
-                }
-            }
-        }
-        state.audioTracks = if (audio.size > 1) audio else emptyList()
-        state.embeddedSubs = text
-        avoidCommentary(tracks)
-        if (state.subChoice !is SubChoice.Addon) {
-            state.subChoice = text.firstOrNull { it.selected }?.let { SubChoice.Embedded(it.key) } ?: SubChoice.Off
-        }
-        maybeAutoSelectAddon()
-    }
-
     /**
-     * Media3 can pick a commentary track when it is the only one tagged with the
+     * An engine can pick a commentary track when it is the only one tagged with the
      * device language. Once per video, swap it for the main track if there is one.
      */
-    private fun avoidCommentary(tracks: Tracks) {
-        if (audioChecked) return
-        val audio = tracks.groups.withIndex().filter { it.value.type == C.TRACK_TYPE_AUDIO }
-        if (audio.isEmpty()) return
+    private fun avoidCommentary(audio: List<EngineTrack>) {
+        if (audioChecked || audio.isEmpty()) return
         audioChecked = true
-        fun isCommentary(format: Format) = format.roleFlags and C.ROLE_FLAG_COMMENTARY != 0 ||
-            format.label?.contains("commentary", ignoreCase = true) == true
-        val selected = audio.flatMap { (g, group) -> (0 until group.length).filter { group.isTrackSelected(it) }.map { g to it } }.firstOrNull() ?: return
-        if (!isCommentary(tracks.groups[selected.first].getTrackFormat(selected.second))) return
-        val main = audio.flatMap { (g, group) -> (0 until group.length).filter { group.isTrackSupported(it) && !isCommentary(group.getTrackFormat(it)) }.map { g to it } }
-            .firstOrNull() ?: return
-        selectAudio("${main.first}:${main.second}")
-    }
-
-    private fun groupFor(key: String): Pair<Tracks.Group, Int>? {
-        val (g, i) = key.split(':').map { it.toInt() }
-        val group = player?.currentTracks?.groups?.getOrNull(g) ?: return null
-        return group to i
+        val selected = audio.firstOrNull { it.selected } ?: return
+        if (!selected.commentary) return
+        audio.firstOrNull { !it.commentary }?.let { selectAudio(it.key) }
     }
 
     override fun selectAudio(key: String) {
-        val exo = player ?: return
-        val (group, index) = groupFor(key) ?: return
-        exo.trackSelectionParameters = exo.trackSelectionParameters.buildUpon()
-            .setOverrideForType(TrackSelectionOverride(group.mediaTrackGroup, index))
-            .build()
+        engine.selectAudio(key)
         state.panel = null
     }
 
     override fun selectSubtitle(choice: SubChoice) {
-        val exo = player ?: return
-        val builder = exo.trackSelectionParameters.buildUpon()
         when (choice) {
             SubChoice.Off -> {
-                builder.setTrackTypeDisabled(C.TRACK_TYPE_TEXT, true)
+                engine.selectText(null)
                 clearAddonSubtitle()
                 repository.updatePlayerPrefs { it.copy(subLanguage = "") }
             }
             is SubChoice.Embedded -> {
-                val (group, index) = groupFor(choice.key) ?: return
-                builder.setTrackTypeDisabled(C.TRACK_TYPE_TEXT, false)
-                    .setOverrideForType(TrackSelectionOverride(group.mediaTrackGroup, index))
                 clearAddonSubtitle()
-                group.getTrackFormat(index).language?.let { lang -> repository.updatePlayerPrefs { it.copy(subLanguage = lang) } }
+                engine.selectText(choice.key)
+                engine.textTracks().firstOrNull { it.key == choice.key }?.language
+                    ?.let { lang -> repository.updatePlayerPrefs { it.copy(subLanguage = lang) } }
             }
             is SubChoice.Addon -> {
-                // Lart draws addon subtitles itself, so Media3's own text output is off.
-                builder.setTrackTypeDisabled(C.TRACK_TYPE_TEXT, true)
-                loadAddonSubtitle(choice)
+                if (!engine.addExternalSubtitle(choice.subtitle.url, choice.subtitle.lang, languageName(choice.subtitle.lang))) {
+                    // Media3: Lart loads and draws addon subtitles itself.
+                    engine.selectText(null)
+                    loadAddonSubtitle(choice)
+                }
                 repository.updatePlayerPrefs { it.copy(subLanguage = choice.subtitle.lang) }
             }
         }
-        exo.trackSelectionParameters = builder.build()
         state.subChoice = choice
         state.panel = null
     }
@@ -430,6 +349,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
         subtitleFile = null
         state.cues = emptyList()
         state.subLoading = false
+        if (engine.drawsSubtitles) engine.removeExternalSubtitles()
     }
 
     private fun loadAddonSubtitle(choice: SubChoice.Addon) {
@@ -452,25 +372,21 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
             val subs = withTimeoutOrNull(15_000) { AddonClient.subtitles(repository.addons.value, type, videoId) }.orEmpty()
             if (state.videoId != videoId) return@launch
             state.addonSubs = subs.distinctBy { it.url }
-            maybeAutoSelectAddon()
+            maybeAutoSelectAddon(engine.textTracks())
         }
     }
 
     /** Turns on a subtitle in the remembered language when the video has none in it. */
-    private fun maybeAutoSelectAddon() {
+    private fun maybeAutoSelectAddon(text: List<EngineTrack>) {
         if (autoSubDone) return
         val wanted = prefs.subLanguage.takeIf { it.isNotEmpty() } ?: return
-        if (state.embeddedSubs.any { it.selected }) {
+        if (text.any { it.selected }) {
             autoSubDone = true
             return
         }
-        val embedded = player?.currentTracks?.groups?.withIndex()?.firstNotNullOfOrNull { (g, group) ->
-            if (group.type != C.TRACK_TYPE_TEXT) null
-            else (0 until group.length).firstOrNull { sameLanguage(group.getTrackFormat(it).language, wanted) }?.let { "$g:$it" }
-        }
-        if (embedded != null) {
+        text.firstOrNull { !it.external && sameLanguage(it.language, wanted) }?.let {
             autoSubDone = true
-            selectSubtitle(SubChoice.Embedded(embedded))
+            selectSubtitle(SubChoice.Embedded(it.key))
             return
         }
         val addon = state.addonSubs ?: return
@@ -478,14 +394,35 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
         addon.firstOrNull { sameLanguage(it.lang, wanted) }?.let { selectSubtitle(SubChoice.Addon(it)) }
     }
 
-    /** Media3 cue to what the overlay draws: text, or an image for PGS/VobSub subtitles. */
-    private fun androidx.media3.common.text.Cue.toUi(): UiCue? {
-        val image = bitmap?.let { bmp -> bitmaps.getOrPut(bmp) { bmp.asImageBitmap() } }
-        val words = text?.toString()?.trim()?.takeIf { it.isNotEmpty() }
-        if (image == null && words == null) return null
-        // Events placed in the upper part of the picture (signs, top-positioned lines) stay there.
-        val top = line != androidx.media3.common.text.Cue.DIMEN_UNSET && lineType == androidx.media3.common.text.Cue.LINE_TYPE_FRACTION && line < 0.4f
-        return UiCue(text = words, image = image, top = top, width = if (size != androidx.media3.common.text.Cue.DIMEN_UNSET) size else 0f)
+    // ---- Anime4K (mpv) ----
+
+    private fun applyAnime4K() {
+        if (!engine.supportsShaders) return
+        val mode = Anime4K.Mode.entries.firstOrNull { it.name == prefs.anime4kMode }
+        anime4kJob?.cancel()
+        if (mode == null) {
+            engine.setShaders(emptyList())
+            state.anime4kLoading = false
+            return
+        }
+        state.anime4kLoading = true
+        anime4kJob = lifecycleScope.launch {
+            runCatching { Anime4K.shaders(this@PlayerActivity, mode, prefs.anime4kHq) }
+                .onSuccess { engine.setShaders(it) }
+                .onFailure {
+                    state.hint = "Anime4K didn't download: ${it.message?.take(60)}"
+                    state.hintIcon = 0
+                }
+            state.anime4kLoading = false
+        }
+    }
+
+    override fun setAnime4K(mode: String?, hq: Boolean) {
+        repository.updatePlayerPrefs { it.copy(anime4kMode = mode.orEmpty(), anime4kHq = hq) }
+        // updatePlayerPrefs sets the value at once, so the new choice is read back here.
+        applyAnime4K()
+        state.hint = if (mode == null) "Anime4K off" else "Anime4K ${Anime4K.Mode.valueOf(mode).label}"
+        state.hintIcon = 0
     }
 
     // ---- PlayerActions ----
@@ -493,25 +430,25 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
     override fun back() = finish()
 
     override fun togglePlay() {
-        val exo = player ?: return
         when {
-            exo.playbackState == Player.STATE_ENDED -> exo.seekTo(0).also { exo.play() }
-            exo.isPlaying -> exo.pause()
-            else -> exo.play()
+            engine.ended -> {
+                engine.seekTo(0)
+                engine.play()
+            }
+            engine.isPlaying -> engine.pause()
+            else -> engine.play()
         }
     }
 
-    override fun seekTo(positionMs: Long) {
-        player?.seekTo(positionMs.coerceAtLeast(0))
-    }
+    override fun seekTo(positionMs: Long) = engine.seekTo(positionMs.coerceAtLeast(0))
 
     override fun seekBy(deltaMs: Long) {
-        val exo = player ?: return
-        exo.seekTo((exo.currentPosition + deltaMs).coerceIn(0, exo.duration.takeIf { it != C.TIME_UNSET } ?: Long.MAX_VALUE))
+        val duration = engine.durationMs.takeIf { it > 0 } ?: Long.MAX_VALUE
+        engine.seekTo((engine.positionMs + deltaMs).coerceIn(0, duration))
     }
 
     override fun setSpeed(speed: Float) {
-        player?.setPlaybackSpeed(speed)
+        engine.setSpeed(speed)
         state.speed = speed
         state.panel = null
         repository.updatePlayerPrefs { it.copy(speed = speed) }
@@ -519,28 +456,26 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
 
     override fun setFit(fit: Fit) {
         state.fit = fit
-        view.resizeMode = fit.mode
+        engine.setFit(fit)
     }
 
     override fun setSubDelay(delayMs: Long) {
-        state.subDelayMs = delayMs.coerceIn(-30_000, 30_000)
+        val clamped = delayMs.coerceIn(-30_000, 30_000)
+        state.subDelayMs = clamped
+        engine.setSubDelay(clamped)
     }
 
     override fun setAudioDelay(delayMs: Long) {
         val clamped = delayMs.coerceIn(-5_000, 5_000)
         state.audioDelayMs = clamped
-        audioDelay.us = clamped * 1000
+        engine.setAudioDelay(clamped)
     }
 
     override fun updatePrefs(change: (PlayerPrefs) -> PlayerPrefs) = repository.updatePlayerPrefs(change)
 
     override fun skipSegment() {
         val segment = state.skip ?: return
-        if (segment.kind == SkipSegment.Kind.Outro && state.next != null) {
-            playNext()
-        } else {
-            player?.seekTo(segment.endMs)
-        }
+        if (segment.kind == SkipSegment.Kind.Outro && state.next != null) playNext() else engine.seekTo(segment.endMs)
     }
 
     override fun playNext() {
@@ -560,13 +495,13 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
                 state.hintIcon = 0
                 return@launch
             }
-            player?.let { saveResume(it) }
+            saveResume()
             switchTo(video.id, ready, startAt = null)
         }
     }
 
     private fun switchTo(videoId: String, ready: Ready, startAt: Long?) {
-        applyHeaders(ready.stream.behaviorHints?.proxyHeaders?.request.orEmpty())
+        headers = ready.stream.behaviorHints?.proxyHeaders?.request.orEmpty()
         begin(videoId, ready.url, startAt)
     }
 
@@ -582,8 +517,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
     }
 
     override fun playSource(source: RankedStream) {
-        val exo = player ?: return
-        val position = exo.currentPosition
+        val position = engine.positionMs
         state.panel = null
         state.hint = "Switching source…"
         state.hintIcon = 0
@@ -594,9 +528,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
                     switchTo(state.videoId, ready, startAt = position)
                     state.sources = sources
                 }
-                .onFailure {
-                    state.hint = it.message ?: "That source didn't open"
-                }
+                .onFailure { state.hint = it.message ?: "That source didn't open" }
         }
     }
 
@@ -627,9 +559,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
         if (state.ended) playNext()
     }
 
-    override fun startOver() {
-        player?.seekTo(0)
-    }
+    override fun startOver() = engine.seekTo(0)
 
     override fun changeBrightness(delta: Float): Float {
         val attrs = window.attributes
@@ -651,20 +581,18 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
     }
 
     override fun retry() {
-        val exo = player ?: return
-        val position = exo.currentPosition
+        val position = engine.positionMs
         state.error = null
-        exo.setMediaItem(MediaItem.fromUri(state.currentUrl), position)
-        exo.prepare()
-        exo.play()
+        state.buffering = true
+        engine.load(state.currentUrl, headers, position)
     }
 
     // ---- Picture-in-picture and lifecycle ----
 
     private fun pipParams(): PictureInPictureParams {
-        val size = player?.videoSize
-        val ratio = if (size != null && size.width > 0 && size.height > 0) {
-            Rational(size.width, size.height).let {
+        val size = engine.videoSize
+        val ratio = if (size != null) {
+            Rational(size.first, size.second).let {
                 // Android rejects ratios outside 1:2.39 .. 2.39:1.
                 when {
                     it.toFloat() > 2.39f -> Rational(239, 100)
@@ -699,10 +627,8 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
 
     override fun onStop() {
         super.onStop()
-        player?.let {
-            saveResume(it)
-            if (!isInPictureInPictureMode) it.pause()
-        }
+        saveResume()
+        if (!isInPictureInPictureMode && state.castingTo == null) engine.pause()
     }
 
     // ---- Chromecast ----
@@ -749,12 +675,11 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
     }
 
     private fun startCasting(session: CastSession) {
-        val exo = player ?: return
         val client = session.remoteMediaClient ?: return
-        remotePositionMs = exo.currentPosition
-        exo.pause()
+        remotePositionMs = engine.positionMs
+        engine.pause()
         // The Chromecast fetches the stream itself; addons that need special headers won't play there.
-        CastLoader.load(client, CastItem(state.currentUrl, state.title, state.episodeLine, meta?.poster, exo.currentPosition))
+        CastLoader.load(client, CastItem(state.currentUrl, state.title, state.episodeLine, meta?.poster, engine.positionMs))
         client.registerCallback(remoteCallback)
         client.addProgressListener({ progress, _ -> if (progress > 0) remotePositionMs = progress }, 1_000)
         state.castingTo = session.castDevice?.friendlyName ?: "your TV"
@@ -766,10 +691,8 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
         if (state.castingTo == null) return
         state.castingTo = null
         // Carry on here from where the TV got to.
-        player?.let {
-            it.seekTo(remotePositionMs)
-            it.play()
-        }
+        engine.seekTo(remotePositionMs)
+        engine.play()
     }
 
     override fun castTogglePlay() {
@@ -790,11 +713,9 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
         castContext?.sessionManager?.removeSessionManagerListener(castListener, CastSession::class.java)
         ticker.removeCallbacks(tick)
         stopScrobble()
-        player?.let {
-            saveResume(it)
-            it.release()
-        }
-        player = null
+        saveResume()
+        engine.listener = null
+        engine.release()
         super.onDestroy()
     }
 
@@ -810,9 +731,8 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
     }
 
     private fun progressPercent(): Double {
-        val exo = player ?: return 0.0
-        val duration = exo.duration.takeIf { it != C.TIME_UNSET && it > 0 } ?: return 0.0
-        return (exo.currentPosition * 100.0 / duration).coerceIn(0.0, 100.0)
+        val duration = engine.durationMs.takeIf { it > 0 } ?: return 0.0
+        return (engine.positionMs * 100.0 / duration).coerceIn(0.0, 100.0)
     }
 
     private fun scrobble(action: String) {
@@ -830,10 +750,10 @@ class PlayerActivity : FragmentActivity(), PlayerActions {
         scrobbleTarget()?.let { repository.scrobble("stop", it, progressPercent()) }
     }
 
-    private fun saveResume(exo: ExoPlayer) {
-        val duration = exo.duration.takeIf { it != C.TIME_UNSET } ?: return
+    private fun saveResume() {
+        val duration = engine.durationMs.takeIf { it > 0 } ?: return
         if (state.videoId.isNotEmpty()) {
-            repository.saveResume(state.videoId, exo.currentPosition, duration, meta, meta?.videos?.firstOrNull { it.id == state.videoId })
+            repository.saveResume(state.videoId, engine.positionMs, duration, meta, meta?.videos?.firstOrNull { it.id == state.videoId })
         }
     }
 
@@ -885,60 +805,4 @@ private fun sameLanguage(a: String?, b: String?): Boolean {
     val x = iso3(a).let { alias[it] ?: it }
     val y = iso3(b).let { alias[it] ?: it }
     return x == y
-}
-
-private fun trackName(format: Format, number: Int): String {
-    val language = format.language?.takeIf { it != "und" }?.let { languageName(it) }
-    val label = format.label?.takeIf { it.isNotBlank() }
-    return when {
-        language != null && label != null && !label.equals(language, true) -> "$language · $label"
-        language != null -> language
-        label != null -> label
-        else -> "Track $number"
-    }
-}
-
-private fun audioDetail(format: Format): String? {
-    val codec = when (format.sampleMimeType) {
-        MimeTypes.AUDIO_AC3 -> "Dolby Digital"
-        MimeTypes.AUDIO_E_AC3, MimeTypes.AUDIO_E_AC3_JOC -> "Dolby Digital Plus"
-        MimeTypes.AUDIO_TRUEHD -> "TrueHD"
-        MimeTypes.AUDIO_DTS, MimeTypes.AUDIO_DTS_HD, MimeTypes.AUDIO_DTS_EXPRESS -> "DTS"
-        MimeTypes.AUDIO_AAC -> "AAC"
-        MimeTypes.AUDIO_OPUS -> "Opus"
-        MimeTypes.AUDIO_FLAC -> "FLAC"
-        else -> format.sampleMimeType?.substringAfter('/')?.uppercase()
-    }
-    val channels = when (format.channelCount) {
-        Format.NO_VALUE -> null
-        1 -> "Mono"
-        2 -> "Stereo"
-        6 -> "5.1"
-        8 -> "7.1"
-        else -> "${format.channelCount} ch"
-    }
-    return listOfNotNull(codec, channels).joinToString(" · ").ifEmpty { null }
-}
-
-private fun textDetail(format: Format): String? = buildList {
-    // Subtitles parsed while reading the file report their original type in codecs.
-    val mime = if (format.sampleMimeType == MimeTypes.APPLICATION_MEDIA3_CUES) format.codecs else format.sampleMimeType
-    if (format.selectionFlags and C.SELECTION_FLAG_FORCED != 0) add("Forced")
-    when (mime) {
-        MimeTypes.TEXT_SSA -> add("Styled")
-        MimeTypes.APPLICATION_PGS, MimeTypes.APPLICATION_VOBSUB, MimeTypes.APPLICATION_DVBSUBS -> add("Image")
-    }
-    if (format.roleFlags and C.ROLE_FLAG_DESCRIBES_MUSIC_AND_SOUND != 0) add("SDH")
-}.joinToString(" · ").ifEmpty { null }
-
-private fun describeVideo(format: Format): String {
-    val codecs = format.codecs.orEmpty()
-    return when (format.sampleMimeType) {
-        // avc1.6E.... is the High 10 profile: common in anime, decoded in hardware almost nowhere.
-        MimeTypes.VIDEO_H264 -> if (codecs.startsWith("avc1.6E", true)) "10-bit H.264 (Hi10P)" else "H.264"
-        MimeTypes.VIDEO_H265 -> if (codecs.contains(".2.")) "10-bit HEVC" else "HEVC"
-        MimeTypes.VIDEO_AV1 -> "AV1"
-        MimeTypes.VIDEO_VP9 -> "VP9"
-        else -> format.sampleMimeType?.substringAfter('/')?.uppercase() ?: "this"
-    }
 }

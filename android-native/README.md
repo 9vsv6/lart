@@ -1,6 +1,7 @@
 # Lart native (Android)
 
-A fully native Android Lart: Kotlin, Jetpack Compose and Media3, with no WebView.
+A fully native Android Lart: Kotlin and Jetpack Compose, with mpv for playback (as
+in Harbor's desktop player) and Media3 as the fallback, and no WebView.
 The goal is everything the Tauri app does on Android, built in phases. Until it
 catches up, the Tauri APK keeps shipping and this app installs beside it
 (application id `app.lart.next`); at parity it takes over `app.lart` and the
@@ -27,8 +28,16 @@ release key, so it updates the Tauri app in place.
    - Chromecast through Google's default media receiver (`player/Cast.kt`).
    - Skip intro, recap and credits from IntroDB, TheIntroDB, SkipDB and AniSkip
      (`data/SkipSegments.kt`), with optional auto-skip.
-   - Still to do: `harbor-core` over JNI, subtitle search by release, an mpv
-     engine (Anime4K, libass), sending subtitles and headers to the Chromecast.
+   - mpv is the main engine (`player/MpvEngine.kt`, libmpv-android): libass
+     subtitles, MediaCodec decoding into GPU textures with software fallback, and
+     Anime4K (`player/Anime4K.kt`, Harbor's modes, shaders downloaded on first
+     use). `player/ExoEngine.kt` (Media3) takes over where libmpv can't start;
+     both sit behind `player/Engine.kt`, so the overlay is the same.
+   - Settings use Harbor's phone layout: profile header, Switch profile and
+     Addons shortcuts, then Account & setup, Playback, Languages, Sources &
+     library, and Help & about.
+   - Still to do: `harbor-core` over JNI, subtitle search by release, sending
+     subtitles and headers to the Chromecast.
 3. **Discovery** (started): Harbor's phone layout is in: floating tab bar
    (Search, Home, My Stuff, Profile), the Home/Movies/Shows/Anime switcher, hero
    carousel, Continue watching, Top 10, genre rows, See all grids, genre tiles

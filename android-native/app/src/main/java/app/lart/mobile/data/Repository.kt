@@ -82,6 +82,10 @@ data class PlayerPrefs(
     val speed: Float = 1f,
     /** Ask "Still watching?" after this many episodes in a row; 0 turns it off. */
     val stillWatchingAfter: Int = 3,
+    /** Anime4K mode name ("A", "B", …) for mpv; empty is off. */
+    val anime4kMode: String = "",
+    /** Anime4K's heavier VL networks instead of M. */
+    val anime4kHq: Boolean = false,
 )
 
 /**
@@ -250,6 +254,11 @@ class Repository(private val context: Context) {
         context.store.edit { it[KEY_ACTIVE_PROFILE] = id }
         loadProfile(context.store.data.first())
         _profileChosen.value = true
+    }
+
+    /** Shows "Who's watching?" again, as Harbor's Switch profile does. */
+    fun showProfilePicker() {
+        _profileChosen.value = false
     }
 
     suspend fun saveProfile(profile: Profile) {

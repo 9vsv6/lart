@@ -30,7 +30,7 @@ sealed interface SubChoice {
     data class Addon(val subtitle: Subtitle) : SubChoice
 }
 
-enum class Panel { Subtitles, SubStyle, Audio, Speed, Sources, Episodes, Sleep }
+enum class Panel { Subtitles, SubStyle, Audio, Speed, Sources, Episodes, Sleep, Anime4K }
 
 enum class Fit(val label: String, val mode: Int) {
     Fit("Fit", AspectRatioFrameLayout.RESIZE_MODE_FIT),
@@ -71,6 +71,11 @@ class PlayerState {
     /** The Chromecast's name while casting, else null. */
     var castingTo by mutableStateOf<String?>(null)
     var castPlaying by mutableStateOf(false)
+
+    /** "mpv" or "Media3" (the fallback). */
+    var engineName by mutableStateOf("")
+    var anime4kAvailable by mutableStateOf(false)
+    var anime4kLoading by mutableStateOf(false)
     var subLoading by mutableStateOf(false)
 
     var skip by mutableStateOf<SkipSegment?>(null)

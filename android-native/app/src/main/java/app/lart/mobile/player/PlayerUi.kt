@@ -40,6 +40,7 @@ import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.material.icons.automirrored.rounded.VolumeUp
 import androidx.compose.material.icons.rounded.AspectRatio
 import androidx.compose.material.icons.rounded.Audiotrack
+import androidx.compose.material.icons.rounded.AutoAwesome
 import androidx.compose.material.icons.rounded.Bedtime
 import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Forward10
@@ -108,6 +109,8 @@ interface PlayerActions {
     fun setSubDelay(delayMs: Long)
     /** Positive plays the sound later than the picture. */
     fun setAudioDelay(delayMs: Long)
+    /** mpv only: null turns Anime4K off. */
+    fun setAnime4K(mode: String?, hq: Boolean)
     fun castTogglePlay()
     fun castSeekBy(deltaMs: Long)
     fun stopCasting()
@@ -246,7 +249,7 @@ fun PlayerUi(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions, cas
             }
         } else {
             AnimatedVisibility(state.controlsVisible, enter = fadeIn(), exit = fadeOut()) {
-                Controls(state, actions, castButton) { touchedAt = System.currentTimeMillis() }
+                Controls(state, prefs, actions, castButton) { touchedAt = System.currentTimeMillis() }
             }
         }
 
@@ -270,7 +273,7 @@ fun PlayerUi(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions, cas
 }
 
 @Composable
-private fun Controls(state: PlayerState, actions: PlayerActions, castButton: (@Composable () -> Unit)?, onTouch: () -> Unit) {
+private fun Controls(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions, castButton: (@Composable () -> Unit)?, onTouch: () -> Unit) {
     Box(Modifier.fillMaxSize()) {
         Box(
             Modifier.fillMaxWidth().height(120.dp).align(Alignment.TopCenter)
@@ -351,6 +354,9 @@ private fun Controls(state: PlayerState, actions: PlayerActions, castButton: (@C
                 MenuButton(Icons.Rounded.Subtitles, "Subtitles") { state.panel = Panel.Subtitles }
                 MenuButton(Icons.Rounded.Audiotrack, "Audio") { state.panel = Panel.Audio }
                 MenuButton(Icons.Rounded.Speed, if (state.speed == 1f) "Speed" else speedLabel(state.speed)) { state.panel = Panel.Speed }
+                if (state.anime4kAvailable) {
+                    MenuButton(Icons.Rounded.AutoAwesome, if (prefs.anime4kMode.isNotEmpty()) "4K ${prefs.anime4kMode}" else "Anime4K") { state.panel = Panel.Anime4K }
+                }
                 MenuButton(Icons.Rounded.Bedtime, if (state.sleepAt != null) "Sleep on" else "Sleep") { state.panel = Panel.Sleep }
                 if (state.next != null) MenuButton(Icons.Rounded.SkipNext, "Next") { actions.playNext() }
             }
@@ -612,6 +618,7 @@ private fun SidePanel(state: PlayerState, prefs: PlayerPrefs, actions: PlayerAct
                 Panel.Sources -> "Sources"
                 Panel.Episodes -> "Episodes"
                 Panel.Sleep -> "Sleep timer"
+                Panel.Anime4K -> "Anime4K"
             },
             color = Color.White,
             fontSize = 19.sp,
@@ -647,6 +654,7 @@ private fun SidePanel(state: PlayerState, prefs: PlayerPrefs, actions: PlayerAct
                 }
             }
             Panel.Sources -> SourcesPanel(state, actions)
+            Panel.Anime4K -> Anime4KPanel(state, prefs, actions)
             Panel.Episodes -> EpisodesPanel(state, actions)
         }
     }
@@ -978,5 +986,32 @@ private fun CastingScreen(device: String, state: PlayerState, actions: PlayerAct
         IconButton(onClick = actions::back, modifier = Modifier.align(Alignment.TopStart).padding(20.dp)) {
             Icon(Icons.AutoMirrored.Rounded.ArrowBack, contentDescription = "Back", tint = Color.White)
         }
+    }
+}
+
+/** Harbor's Anime4K menu: the six modes, Fast or HQ networks, and Off (mpv only). */
+@Composable
+private fun Anime4KPanel(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions) {
+    LazyColumn(contentPadding = PaddingValues(bottom = 24.dp)) {
+        item {
+            Text(
+                "Real-time upscaling and line restoration for anime, run on the GPU. Shaders download once (about 1 MB).",
+                color = Color(0x99FFFFFF),
+                fontSize = 12.sp,
+                modifier = Modifier.padding(start = 8.dp, end = 8.dp, bottom = 8.dp),
+            )
+        }
+        item {
+            Row(Modifier.padding(start = 8.dp, bottom = 8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Pill("Fast", primary = !prefs.anime4kHq) { actions.setAnime4K(prefs.anime4kMode.ifEmpty { null }, false) }
+                Pill("HQ", primary = prefs.anime4kHq) { actions.setAnime4K(prefs.anime4kMode.ifEmpty { null }, true) }
+            }
+        }
+        if (state.anime4kLoading) item { Muted("Downloading shaders…") }
+        item { OptionRow("Off", null, prefs.anime4kMode.isEmpty()) { actions.setAnime4K(null, prefs.anime4kHq) } }
+        items(Anime4K.Mode.entries) { mode ->
+            OptionRow(mode.label, mode.sub, prefs.anime4kMode == mode.name) { actions.setAnime4K(mode.name, prefs.anime4kHq) }
+        }
+        item { Muted("HQ is for fast phones and tablets; Fast suits most phones.") }
     }
 }

@@ -23,8 +23,10 @@ android {
         applicationId = "app.lart.next"
         minSdk = 26
         targetSdk = 36
-        versionCode = 4
-        versionName = "0.4.0"
+        versionCode = 5
+        versionName = "0.5.0"
+        // Phones (arm64) and the x86_64 emulator; mpv adds about 25 MB per ABI.
+        ndk { abiFilters += listOf("arm64-v8a", "x86_64") }
     }
 
     signingConfigs {
@@ -51,14 +53,19 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
-    kotlinOptions {
-        jvmTarget = "17"
-    }
     buildFeatures {
         compose = true
     }
     packaging {
         resources.excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        // libmpv and the FFmpeg audio decoder both ship the C++ runtime.
+        jniLibs.pickFirsts += "**/libc++_shared.so"
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
     }
 }
 
@@ -89,6 +96,8 @@ dependencies {
     implementation("androidx.media3:media3-ui:1.9.0")
     // AC3, E-AC3, DTS, TrueHD and 7.1 audio the device cannot decode (GPL-3.0).
     implementation("org.jellyfin.media3:media3-ffmpeg-decoder:1.9.0+1")
+    // mpv, the main player engine (libmpv-android, MIT; mpv and FFmpeg inside are LGPL/GPL).
+    implementation("dev.jdtech.mpv:libmpv:1.0.0")
 
     // Chromecast: the Cast framework with Google's default media receiver.
     implementation("com.google.android.gms:play-services-cast-framework:22.0.0")
