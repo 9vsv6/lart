@@ -12,14 +12,26 @@ release key, so it updates the Tauri app in place.
    rows on Home, search, detail pages with seasons and episodes, the stream list,
    the Media3 player (FFmpeg audio fallback, embedded and addon subtitles, audio
    tracks), resume points, and the Stremio library.
-2. **Lart's picker and player** (in progress). Done: stream ranking
-   (`data/Ranking.kt`, a Kotlin stand-in for `harbor-core`'s ranker), Real-Debrid
-   and TorBox accounts for torrent sources, auto-play of the best source, and
-   next episode (button for the last 45 seconds, automatic at the end). Still to
-   do: `harbor-core` over JNI, skip intro, subtitle styling and search.
-3. **Discovery**: TMDB metadata and artwork, anime (Jikan and AniList), awards,
-   collections, services and genres, profiles, settings, backup/restore from the
-   Tauri app.
+2. **Lart's picker and player** (mostly done):
+   - Stream ranking (`data/Ranking.kt`, a Kotlin stand-in for `harbor-core`'s
+     ranker), Real-Debrid and TorBox for torrent sources, auto-play.
+   - Harbor's phone player (`player/PlayerUi.kt`): seek, brightness and volume
+     gestures, double-tap ±10 s, lock, fit/fill/stretch, picture-in-picture,
+     speed, sleep timer, "Still watching?", resume prompt, Up next and
+     automatic next episode, episode and source switching in the player.
+   - Subtitles: embedded and addon tracks, remembered language, Harbor's style
+     options (size, colour, outline/shadow/box, position) and sync for addon
+     subtitles.
+   - Skip intro, recap and credits from IntroDB, TheIntroDB, SkipDB and AniSkip
+     (`data/SkipSegments.kt`), with optional auto-skip.
+   - Still to do: `harbor-core` over JNI, subtitle search by release, audio
+     delay, casting.
+3. **Discovery** (started): Harbor's phone layout is in: floating tab bar
+   (Search, Home, My Stuff, Profile), the Home/Movies/Shows/Anime switcher, hero
+   carousel, Continue watching, Top 10, genre rows, See all grids, genre tiles
+   in Search, and My List on the device. Anime comes from the Kitsu addon.
+   Still to do: TMDB metadata and artwork, Jikan and AniList, awards,
+   collections, services, profiles, and backup/restore from the Tauri app.
 4. **Trackers and sync**: Trakt, Simkl, MyAnimeList, AniList, continue watching
    across devices.
 5. **The rest of Harbor**: Live TV, sports, manga and books, music, games,

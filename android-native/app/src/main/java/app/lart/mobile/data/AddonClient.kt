@@ -17,6 +17,16 @@ object AddonClient {
         "https://opensubtitles-v3.strem.io/manifest.json",
     )
 
+    /** Always on for details and browsing, whatever the account has installed. */
+    val builtins = listOf(
+        "https://v3-cinemeta.strem.io/manifest.json",
+        KITSU,
+    )
+
+    const val CINEMETA_ID = "com.linvo.cinemeta"
+    const val KITSU = "https://anime-kitsu.strem.fun/manifest.json"
+    const val KITSU_ID = "community.anime.kitsu"
+
     suspend fun manifest(transportUrl: String): Addon {
         val manifest = Net.json.decodeFromString(Manifest.serializer(), Net.get(transportUrl))
         return Addon(transportUrl, manifest)
@@ -27,7 +37,17 @@ object AddonClient {
         return "${addon.baseUrl}/$resource/$type/${Uri.encode(id)}$extras.json"
     }
 
-    private suspend fun fetch(url: String): JsonObject = Net.json.parseToJsonElement(Net.get(url)).jsonObject
+    /** One retry: the first request on a fresh connection sometimes fails on mobile networks. */
+    private suspend fun fetch(url: String): JsonObject {
+        val body = try {
+            Net.get(url)
+        } catch (e: java.io.IOException) {
+            if (e.message?.startsWith("HTTP 4") == true) throw e
+            kotlinx.coroutines.delay(400)
+            Net.get(url)
+        }
+        return Net.json.parseToJsonElement(body).jsonObject
+    }
 
     suspend fun catalog(addon: Addon, catalog: CatalogDef, extra: Map<String, String> = emptyMap()): List<Meta> {
         val body = fetch(path(addon, "catalog", catalog.type, catalog.id, extra))

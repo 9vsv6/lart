@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
@@ -19,6 +20,8 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
+import androidx.compose.material.icons.rounded.Add
+import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.PlayArrow
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -60,14 +63,16 @@ fun DetailScreen(
     onStreams: (videoId: String, title: String) -> Unit,
 ) {
     val addons by repository.addons.collectAsState()
+    val builtins by repository.builtins.collectAsState()
     var meta by remember { mutableStateOf<Meta?>(null) }
     var failed by remember { mutableStateOf(false) }
 
-    LaunchedEffect(addons, type, id) {
-        if (addons.isEmpty()) return@LaunchedEffect
-        val loaded = AddonClient.meta(addons, type, id)
+    LaunchedEffect(addons, builtins, type, id) {
+        if (addons.isEmpty() || meta != null) return@LaunchedEffect
+        val loaded = AddonClient.meta(repository.metaAddons(), type, id)
         meta = loaded
-        failed = loaded == null
+        // Built-ins load in the background; only give up once they have had their turn.
+        failed = loaded == null && builtins.isNotEmpty()
     }
 
     Box(Modifier.fillMaxSize().background(LartColors.Canvas)) {
@@ -99,6 +104,7 @@ private fun DetailBody(repository: Repository, meta: Meta, onStreams: (String, S
         item(key = "header") { Header(meta) }
         item(key = "actions") {
             Column(Modifier.padding(horizontal = 20.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
+                Row(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically) {
                 Button(
                     onClick = {
                         if (isSeries) {
@@ -108,10 +114,12 @@ private fun DetailBody(repository: Repository, meta: Meta, onStreams: (String, S
                     },
                     colors = ButtonDefaults.buttonColors(containerColor = Color.White, contentColor = Color.Black),
                     shape = RoundedCornerShape(50),
-                    modifier = Modifier.fillMaxWidth().heightIn(min = 52.dp),
+                    modifier = Modifier.weight(1f).heightIn(min = 52.dp),
                 ) {
                     Icon(Icons.Rounded.PlayArrow, contentDescription = null)
                     Text(if (isSeries) "Play next episode" else "Play", fontSize = 16.sp, fontWeight = FontWeight.SemiBold)
+                }
+                MyListButton(repository, meta)
                 }
                 meta.description?.let {
                     Text(it, fontSize = 14.5.sp, lineHeight = 21.sp, color = LartColors.InkMuted)
@@ -141,6 +149,22 @@ private fun DetailBody(repository: Repository, meta: Meta, onStreams: (String, S
                 EpisodeRow(video) { onStreams(video.id, "${meta.name} · ${episodeLabel(video)}") }
             }
         }
+    }
+}
+
+@Composable
+private fun MyListButton(repository: Repository, meta: Meta) {
+    val myList by repository.myList.collectAsState()
+    val listed = myList.any { it.id == meta.id }
+    IconButton(
+        onClick = { repository.toggleMyList(meta) },
+        modifier = Modifier.size(52.dp).background(LartColors.Elevated, RoundedCornerShape(50)),
+    ) {
+        Icon(
+            if (listed) Icons.Rounded.Check else Icons.Rounded.Add,
+            contentDescription = if (listed) "In My List" else "Add to My List",
+            tint = if (listed) LartColors.Accent else LartColors.Ink,
+        )
     }
 }
 

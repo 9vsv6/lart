@@ -78,7 +78,13 @@ data class Meta(
     val runtime: String? = null,
     val genres: List<String>? = null,
     val videos: List<Video>? = null,
-)
+) {
+    /** The title's logo, falling back to metahub's for IMDb titles, as Harbor's hero does. */
+    val logoUrl: String?
+        get() = logo ?: id.takeIf { it.startsWith("tt") }?.let { "https://images.metahub.space/logo/medium/${it.substringBefore(':')}/img" }
+
+    val year: String? get() = releaseInfo?.take(4)?.takeIf { it.all(Char::isDigit) }
+}
 
 @Serializable
 data class Video(
