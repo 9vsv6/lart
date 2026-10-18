@@ -117,6 +117,9 @@ class MainActivity : TauriActivity() {
     fun nativeSelectAudio(id: String) { runOnUiThread { nativePlayer?.selectAudio(id) } }
 
     @JavascriptInterface
+    fun nativeSelectText(id: String) { runOnUiThread { nativePlayer?.selectText(id) } }
+
+    @JavascriptInterface
     fun nativeStop() { runOnUiThread { nativePlayer?.stop() } }
   }
 

@@ -1,5 +1,5 @@
 import Hls from "hls.js";
-import { createNativeVideo, type NativeVideoElement } from "../native-android";
+import { createNativeVideo, isNativeVideo, type NativeVideoElement } from "../native-android";
 import mpegts from "mpegts.js";
 import {
   initialPlayerSnapshot,
@@ -28,6 +28,9 @@ import { PreparedSubtitleSeedBatch } from "@/lib/subtitles/seed-batch";
 import { isSafeProviderSubtitleUrl } from "@/lib/subtitles/provider-url";
 
 let DOCUMENT_PIP_KNOWN_BROKEN = false;
+
+const EMBEDDED_SUB_PREFIX = "native-text:";
+const isEmbeddedSub = (t: SubTrack) => t.url.startsWith(EMBEDDED_SUB_PREFIX);
 
 export type Html5BridgeOptions = {
   /** Android phone app: play through the native player behind the WebView. */
@@ -268,6 +271,8 @@ export function createHtml5Bridge(options: Html5BridgeOptions = {}): PlayerBridg
   };
 
   const ensureLoaded = (track: SubTrack): Promise<boolean> => {
+    // An embedded track has nothing to fetch; its lines arrive once it is selected.
+    if (isEmbeddedSub(track)) return Promise.resolve(true);
     if (track.cues) return Promise.resolve(track.cues.length > 0);
     if (track.loadingPromise) return track.loadingPromise;
     const requestMediaRevision = mediaRevision;
@@ -374,8 +379,61 @@ export function createHtml5Bridge(options: Html5BridgeOptions = {}): PlayerBridg
     refreshSnapshot();
   };
 
+  // Phone app: subtitles embedded in the file (most anime MKVs carry ASS ones)
+  // are decoded by ExoPlayer, which sends up the line on screen. Each becomes a
+  // subtitle track whose single cue is that line.
+  const onNativeSubs = () => {
+    if (!isNativeVideo(video)) return;
+    const list = video.lartSubs();
+    const wanted = new Set(list.map((s) => `embedded-${s.id}`));
+    for (let i = subTracks.length - 1; i >= 0; i--) {
+      const t = subTracks[i];
+      if (!isEmbeddedSub(t) || wanted.has(t.id)) continue;
+      if (activeSubId === t.id) activeSubId = null;
+      if (secondarySubId === t.id) secondarySubId = null;
+      subTracks.splice(i, 1);
+    }
+    for (const s of list) {
+      const id = `embedded-${s.id}`;
+      if (subTracks.some((t) => t.id === id)) continue;
+      subTracks.push({
+        id,
+        url: `${EMBEDDED_SUB_PREFIX}${s.id}`,
+        lang: s.lang || undefined,
+        title: s.label,
+        external: false,
+        cues: [],
+        loading: false,
+        metadata: { forced: s.forced === true } as SubTrack["metadata"],
+      });
+    }
+    refreshSnapshot();
+  };
+
+  const onNativeCue = () => {
+    if (!isNativeVideo(video)) return;
+    const track = subTracks.find((t) => t.id === activeSubId);
+    if (!track || !isEmbeddedSub(track)) return;
+    const text = video.lartCue();
+    track.cues = text ? [{ start: 0, end: Number.MAX_SAFE_INTEGER, text }] : [];
+    lastCueId = "";
+    tickCues();
+  };
+
+  /** Tells ExoPlayer which embedded subtitle, if any, to decode. */
+  const syncNativeSub = () => {
+    if (!isNativeVideo(video)) return;
+    const track = subTracks.find((t) => t.id === activeSubId);
+    for (const t of subTracks) if (isEmbeddedSub(t) && t !== track) t.cues = [];
+    video.lartSelectSub(
+      track && isEmbeddedSub(track) ? track.url.slice(EMBEDDED_SUB_PREFIX.length) : null,
+    );
+  };
+
   const bind = () => {
     if (!video) return;
+    video.addEventListener("lartsubs", onNativeSubs);
+    video.addEventListener("lartcue", onNativeCue);
     video.addEventListener("loadedmetadata", onLoaded);
     video.addEventListener("loadeddata", onAny);
     video.addEventListener("durationchange", onAny);
@@ -458,6 +516,8 @@ export function createHtml5Bridge(options: Html5BridgeOptions = {}): PlayerBridg
 
   const unbind = () => {
     if (!video) return;
+    video.removeEventListener("lartsubs", onNativeSubs);
+    video.removeEventListener("lartcue", onNativeCue);
     video.removeEventListener("loadedmetadata", onLoaded);
     video.removeEventListener("loadeddata", onAny);
     video.removeEventListener("durationchange", onAny);
@@ -764,6 +824,7 @@ export function createHtml5Bridge(options: Html5BridgeOptions = {}): PlayerBridg
       if (id == null) {
         mainSubtitleSelection.invalidate();
         activeSubId = null;
+        syncNativeSub();
         lastCueId = "";
         snap.subText = "";
         snap.subStartSec = 0;
@@ -783,6 +844,7 @@ export function createHtml5Bridge(options: Html5BridgeOptions = {}): PlayerBridg
         );
         if (!settlement.current) return;
         activeSubId = settlement.selectedId;
+        syncNativeSub();
         lastCueId = "";
         refreshSnapshot();
         tickCues();
