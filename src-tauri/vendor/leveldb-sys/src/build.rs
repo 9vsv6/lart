@@ -48,6 +48,10 @@ fn build_leveldb(snappy_prefix: Option<PathBuf>) {
         .define("CMAKE_POLICY_VERSION_MINIMUM", "3.10")
         .define("LEVELDB_BUILD_TESTS", "OFF")
         .define("LEVELDB_BUILD_BENCHMARKS", "OFF")
+        // The cmake crate compiles with -w, which makes LevelDB's probe for
+        // clang's -Wthread-safety pass under GCC; the real build then fails
+        // with "unrecognized command-line option". The flag only adds a lint.
+        .define("HAVE_CLANG_THREAD_SAFETY", "OFF")
         .define("CMAKE_INSTALL_LIBDIR", &libdir);
     if let Some(snappy_prefix) = snappy_prefix {
         #[cfg(target_env = "msvc")]

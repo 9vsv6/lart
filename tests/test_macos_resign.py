@@ -20,7 +20,7 @@ class ResignTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             app = root / "Harbor.app"
-            binary = app / "Contents/MacOS/harbor"
+            binary = app / "Contents/MacOS/lart"
             library = app / "Contents/Frameworks/libmpv.2.dylib"
             for path in (binary, library):
                 path.parent.mkdir(parents=True, exist_ok=True)

@@ -17,8 +17,11 @@ winget upgrade HarborStremio.Harbor
 | `HarborStremio.Harbor.locale.en-US.yaml` | Store listing metadata                  |
 
 These are the **bootstrap** manifests, used once to create the package. After that,
-[`.github/workflows/winget.yml`](../../.github/workflows/winget.yml) submits every new stable release
-automatically and these files are only a reference.
+Harbor's `winget.yml` workflow submitted every new stable release automatically and these files
+were only a reference.
+
+> **Lart:** these files and the rest of this page describe Harbor's package. Lart does not publish
+> to WinGet and its repository has no `winget.yml` workflow.
 
 ## Why `HarborStremio.Harbor` and not `site.harbor.Harbor`
 
