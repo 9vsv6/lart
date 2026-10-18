@@ -15,11 +15,11 @@ import android.util.Rational
 import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.FrameLayout
-import androidx.activity.ComponentActivity
+import androidx.fragment.app.FragmentActivity
 import androidx.annotation.OptIn
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.snapshotFlow
+import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.platform.ComposeView
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
@@ -42,9 +42,7 @@ import androidx.media3.datasource.DefaultHttpDataSource
 import androidx.media3.exoplayer.DefaultRenderersFactory
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
-import androidx.media3.ui.CaptionStyleCompat
 import androidx.media3.ui.PlayerView
-import androidx.media3.ui.SubtitleView
 import app.lart.mobile.LartApp
 import app.lart.mobile.data.AddonClient
 import app.lart.mobile.data.Meta
@@ -53,12 +51,18 @@ import app.lart.mobile.data.Playback
 import app.lart.mobile.data.PlayerPrefs
 import app.lart.mobile.data.RankedStream
 import app.lart.mobile.data.Ready
+import app.lart.mobile.data.Scrobble
+import com.google.android.gms.cast.MediaSeekOptions
+import com.google.android.gms.cast.framework.CastButtonFactory
+import com.google.android.gms.cast.framework.CastContext
+import com.google.android.gms.cast.framework.CastSession
+import com.google.android.gms.cast.framework.SessionManagerListener
+import com.google.android.gms.cast.framework.media.RemoteMediaClient
 import app.lart.mobile.data.SkipSegment
 import app.lart.mobile.data.SkipSegments
 import app.lart.mobile.data.Video
 import app.lart.mobile.ui.LartTheme
 import kotlinx.coroutines.Job
-import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withTimeoutOrNull
 import kotlinx.serialization.builtins.MapSerializer
@@ -72,7 +76,7 @@ import java.util.Locale
  * "Still watching?" and picture-in-picture.
  */
 @OptIn(UnstableApi::class)
-class PlayerActivity : ComponentActivity(), PlayerActions {
+class PlayerActivity : FragmentActivity(), PlayerActions {
     private var player: ExoPlayer? = null
     private lateinit var view: PlayerView
     private lateinit var http: DefaultHttpDataSource.Factory
@@ -91,6 +95,16 @@ class PlayerActivity : ComponentActivity(), PlayerActions {
     private var autoAdvanced = 0
     private var autoSubDone = false
     private var volumeLevel = -1f
+    /** Trakt's paused position for this video, applied once its length is known. */
+    private var pendingFraction: Float? = null
+    private var animeMarked = false
+    private var scrobbling = false
+    private var audioChecked = false
+    private var castContext: CastContext? = null
+    private var remotePositionMs = 0L
+    private val cueStore = CueStore()
+    private val audioDelay = AudioDelay()
+    private val bitmaps = java.util.WeakHashMap<android.graphics.Bitmap, androidx.compose.ui.graphics.ImageBitmap>()
     private val ticker = Handler(Looper.getMainLooper())
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -106,7 +120,7 @@ class PlayerActivity : ComponentActivity(), PlayerActions {
         val overlay = ComposeView(this).apply {
             setContent {
                 val prefs by repository.playerPrefs.collectAsState()
-                LartTheme { PlayerUi(state, prefs, this@PlayerActivity) }
+                LartTheme { PlayerUi(state, prefs, this@PlayerActivity, castButton.takeIf { castContext != null }) }
             }
         }
         setContentView(
@@ -116,9 +130,7 @@ class PlayerActivity : ComponentActivity(), PlayerActions {
             },
         )
 
-        val renderers = DefaultRenderersFactory(this)
-            .setExtensionRendererMode(DefaultRenderersFactory.EXTENSION_RENDERER_MODE_ON)
-            .setEnableDecoderFallback(true)
+        val renderers = LartRenderersFactory(this, cueStore, audioDelay)
         http = DefaultHttpDataSource.Factory().setAllowCrossProtocolRedirects(true)
         val exo = ExoPlayer.Builder(this, renderers)
             .setMediaSourceFactory(DefaultMediaSourceFactory(DefaultDataSource.Factory(this, http)))
@@ -139,13 +151,11 @@ class PlayerActivity : ComponentActivity(), PlayerActions {
         view.player = exo
         player = exo
 
-        lifecycleScope.launch {
-            // Subtitles in the video move up out of the way of the controls, like addon ones.
-            combine(repository.playerPrefs, snapshotFlow { state.controlsVisible && !state.inPip }) { p, lifted -> p to lifted }
-                .collect { (p, lifted) -> applySubtitleStyle(p, lifted) }
-        }
+        // Lart draws every subtitle itself (see Renderers.kt), so Media3's view stays empty.
+        view.subtitleView?.visibility = android.view.View.GONE
         start(intent)
         ticker.post(tick)
+        setUpCast()
     }
 
     override fun onNewIntent(intent: Intent) {
@@ -188,10 +198,15 @@ class PlayerActivity : ComponentActivity(), PlayerActions {
         autoSkipped.clear()
         autoSubDone = false
         clearAddonSubtitle()
+        state.subDelayMs = 0
         if (state.subChoice is SubChoice.Addon) state.subChoice = SubChoice.Off
 
+        stopScrobble()
+        animeMarked = false
+        audioChecked = false
         val resume = startAt ?: repository.resumeFor(videoId, metaId)
         state.resumedFromMs = if (startAt == null && resume > 30_000) resume else 0
+        pendingFraction = if (startAt == null && resume == 0L) repository.traktFraction(videoId)?.takeIf { it in 0.02f..0.95f } else null
         exo.setMediaItem(MediaItem.fromUri(url), resume)
         exo.prepare()
         exo.play()
@@ -227,7 +242,27 @@ class PlayerActivity : ComponentActivity(), PlayerActions {
                 state.positionMs = position
                 state.durationMs = duration
                 state.bufferedMs = exo.bufferedPosition
-                subtitleFile?.let { state.addonCue = it.textAt(position - state.subDelayMs) }
+                pendingFraction?.let { fraction ->
+                    if (duration > 0) {
+                        pendingFraction = null
+                        val target = (duration * fraction).toLong()
+                        exo.seekTo(target)
+                        state.resumedFromMs = target
+                    }
+                }
+                // AniList: an anime episode counts as watched at 80%.
+                if (!animeMarked && duration > 0 && position >= duration * 0.8 && state.videoId.startsWith("kitsu:")) {
+                    animeMarked = true
+                    val parts = state.videoId.split(':')
+                    parts.lastOrNull()?.toIntOrNull()?.takeIf { parts.size >= 3 }?.let { repository.markAnimeWatched(parts[1], it) }
+                }
+                val subtitleTime = position - state.subDelayMs
+                val cues = when (state.subChoice) {
+                    is SubChoice.Addon -> subtitleFile?.textAt(subtitleTime)?.let { listOf(UiCue(text = it)) }.orEmpty()
+                    is SubChoice.Embedded -> cueStore.at(subtitleTime).mapNotNull { it.toUi() }
+                    SubChoice.Off -> emptyList()
+                }
+                if (cues != state.cues) state.cues = cues
 
                 if (duration > 0 && segmentsFor != state.videoId) {
                     segmentsFor = state.videoId
@@ -261,6 +296,7 @@ class PlayerActivity : ComponentActivity(), PlayerActions {
     private val listener = object : Player.Listener {
         override fun onIsPlayingChanged(isPlaying: Boolean) {
             state.playing = isPlaying
+            if (isPlaying) scrobble("start") else if (player?.playbackState != Player.STATE_ENDED) scrobble("pause")
             updatePipParams()
         }
 
@@ -268,6 +304,7 @@ class PlayerActivity : ComponentActivity(), PlayerActions {
             state.buffering = playbackState == Player.STATE_BUFFERING || playbackState == Player.STATE_IDLE
             state.ended = playbackState == Player.STATE_ENDED
             if (playbackState != Player.STATE_ENDED) return
+            stopScrobble()
             state.controlsVisible = true
             if (state.sleepAt == -1L) {
                 state.sleepAt = null
@@ -320,10 +357,29 @@ class PlayerActivity : ComponentActivity(), PlayerActions {
         }
         state.audioTracks = if (audio.size > 1) audio else emptyList()
         state.embeddedSubs = text
+        avoidCommentary(tracks)
         if (state.subChoice !is SubChoice.Addon) {
             state.subChoice = text.firstOrNull { it.selected }?.let { SubChoice.Embedded(it.key) } ?: SubChoice.Off
         }
         maybeAutoSelectAddon()
+    }
+
+    /**
+     * Media3 can pick a commentary track when it is the only one tagged with the
+     * device language. Once per video, swap it for the main track if there is one.
+     */
+    private fun avoidCommentary(tracks: Tracks) {
+        if (audioChecked) return
+        val audio = tracks.groups.withIndex().filter { it.value.type == C.TRACK_TYPE_AUDIO }
+        if (audio.isEmpty()) return
+        audioChecked = true
+        fun isCommentary(format: Format) = format.roleFlags and C.ROLE_FLAG_COMMENTARY != 0 ||
+            format.label?.contains("commentary", ignoreCase = true) == true
+        val selected = audio.flatMap { (g, group) -> (0 until group.length).filter { group.isTrackSelected(it) }.map { g to it } }.firstOrNull() ?: return
+        if (!isCommentary(tracks.groups[selected.first].getTrackFormat(selected.second))) return
+        val main = audio.flatMap { (g, group) -> (0 until group.length).filter { group.isTrackSupported(it) && !isCommentary(group.getTrackFormat(it)) }.map { g to it } }
+            .firstOrNull() ?: return
+        selectAudio("${main.first}:${main.second}")
     }
 
     private fun groupFor(key: String): Pair<Tracks.Group, Int>? {
@@ -372,9 +428,8 @@ class PlayerActivity : ComponentActivity(), PlayerActions {
     private fun clearAddonSubtitle() {
         subtitleJob?.cancel()
         subtitleFile = null
-        state.addonCue = null
+        state.cues = emptyList()
         state.subLoading = false
-        state.subDelayMs = 0
     }
 
     private fun loadAddonSubtitle(choice: SubChoice.Addon) {
@@ -423,17 +478,14 @@ class PlayerActivity : ComponentActivity(), PlayerActions {
         addon.firstOrNull { sameLanguage(it.lang, wanted) }?.let { selectSubtitle(SubChoice.Addon(it)) }
     }
 
-    private fun applySubtitleStyle(prefs: PlayerPrefs, lifted: Boolean) {
-        val subtitleView: SubtitleView = view.subtitleView ?: return
-        val (background, edge) = when (prefs.subBackground) {
-            "box" -> 0xB3000000.toInt() to CaptionStyleCompat.EDGE_TYPE_NONE
-            "shadow" -> Color.TRANSPARENT to CaptionStyleCompat.EDGE_TYPE_DROP_SHADOW
-            else -> Color.TRANSPARENT to CaptionStyleCompat.EDGE_TYPE_OUTLINE
-        }
-        subtitleView.setStyle(CaptionStyleCompat(prefs.subColor.toInt(), background, Color.TRANSPARENT, edge, Color.BLACK, null))
-        subtitleView.setFractionalTextSize(SubtitleView.DEFAULT_TEXT_SIZE_FRACTION * prefs.subScale)
-        subtitleView.setBottomPaddingFraction(prefs.subBottom + if (lifted) CONTROLS_LIFT else 0f)
-        subtitleView.setApplyEmbeddedFontSizes(false)
+    /** Media3 cue to what the overlay draws: text, or an image for PGS/VobSub subtitles. */
+    private fun androidx.media3.common.text.Cue.toUi(): UiCue? {
+        val image = bitmap?.let { bmp -> bitmaps.getOrPut(bmp) { bmp.asImageBitmap() } }
+        val words = text?.toString()?.trim()?.takeIf { it.isNotEmpty() }
+        if (image == null && words == null) return null
+        // Events placed in the upper part of the picture (signs, top-positioned lines) stay there.
+        val top = line != androidx.media3.common.text.Cue.DIMEN_UNSET && lineType == androidx.media3.common.text.Cue.LINE_TYPE_FRACTION && line < 0.4f
+        return UiCue(text = words, image = image, top = top, width = if (size != androidx.media3.common.text.Cue.DIMEN_UNSET) size else 0f)
     }
 
     // ---- PlayerActions ----
@@ -471,7 +523,13 @@ class PlayerActivity : ComponentActivity(), PlayerActions {
     }
 
     override fun setSubDelay(delayMs: Long) {
-        state.subDelayMs = delayMs
+        state.subDelayMs = delayMs.coerceIn(-30_000, 30_000)
+    }
+
+    override fun setAudioDelay(delayMs: Long) {
+        val clamped = delayMs.coerceIn(-5_000, 5_000)
+        state.audioDelayMs = clamped
+        audioDelay.us = clamped * 1000
     }
 
     override fun updatePrefs(change: (PlayerPrefs) -> PlayerPrefs) = repository.updatePlayerPrefs(change)
@@ -647,14 +705,129 @@ class PlayerActivity : ComponentActivity(), PlayerActions {
         }
     }
 
+    // ---- Chromecast ----
+
+    /** The Cast button, themed so the route picker dialog can open from this activity. */
+    private val castButton: @androidx.compose.runtime.Composable () -> Unit = {
+        androidx.compose.ui.viewinterop.AndroidView(factory = { context ->
+            androidx.mediarouter.app.MediaRouteButton(android.view.ContextThemeWrapper(context, androidx.appcompat.R.style.Theme_AppCompat_NoActionBar)).also {
+                CastButtonFactory.setUpMediaRouteButton(applicationContext, it)
+            }
+        })
+    }
+
+    private val castListener = object : SessionManagerListener<CastSession> {
+        override fun onSessionStarted(session: CastSession, sessionId: String) = startCasting(session)
+        override fun onSessionResumed(session: CastSession, wasSuspended: Boolean) = startCasting(session)
+        override fun onSessionEnded(session: CastSession, error: Int) = endCasting()
+        override fun onSessionStarting(session: CastSession) {}
+        override fun onSessionStartFailed(session: CastSession, error: Int) {
+            state.hint = "Couldn't connect to the Chromecast"
+            state.hintIcon = 0
+        }
+        override fun onSessionEnding(session: CastSession) {
+            session.remoteMediaClient?.approximateStreamPosition?.takeIf { it > 0 }?.let { remotePositionMs = it }
+        }
+        override fun onSessionResuming(session: CastSession, sessionId: String) {}
+        override fun onSessionResumeFailed(session: CastSession, error: Int) {}
+        override fun onSessionSuspended(session: CastSession, reason: Int) {}
+    }
+
+    private val remoteCallback = object : RemoteMediaClient.Callback() {
+        override fun onStatusUpdated() {
+            val client = castContext?.sessionManager?.currentCastSession?.remoteMediaClient ?: return
+            state.castPlaying = client.isPlaying || client.isBuffering
+        }
+    }
+
+    private fun setUpCast() {
+        castContext = runCatching { CastContext.getSharedInstance(this) }.getOrNull() ?: return
+        val sessions = castContext!!.sessionManager
+        sessions.addSessionManagerListener(castListener, CastSession::class.java)
+        // Opened while already connected: send this video straight to the TV.
+        sessions.currentCastSession?.takeIf { it.isConnected }?.let { session -> ticker.post { startCasting(session) } }
+    }
+
+    private fun startCasting(session: CastSession) {
+        val exo = player ?: return
+        val client = session.remoteMediaClient ?: return
+        remotePositionMs = exo.currentPosition
+        exo.pause()
+        // The Chromecast fetches the stream itself; addons that need special headers won't play there.
+        CastLoader.load(client, CastItem(state.currentUrl, state.title, state.episodeLine, meta?.poster, exo.currentPosition))
+        client.registerCallback(remoteCallback)
+        client.addProgressListener({ progress, _ -> if (progress > 0) remotePositionMs = progress }, 1_000)
+        state.castingTo = session.castDevice?.friendlyName ?: "your TV"
+        state.castPlaying = true
+        state.panel = null
+    }
+
+    private fun endCasting() {
+        if (state.castingTo == null) return
+        state.castingTo = null
+        // Carry on here from where the TV got to.
+        player?.let {
+            it.seekTo(remotePositionMs)
+            it.play()
+        }
+    }
+
+    override fun castTogglePlay() {
+        castContext?.sessionManager?.currentCastSession?.remoteMediaClient?.togglePlayback()
+    }
+
+    override fun castSeekBy(deltaMs: Long) {
+        val client = castContext?.sessionManager?.currentCastSession?.remoteMediaClient ?: return
+        val target = (client.approximateStreamPosition + deltaMs).coerceAtLeast(0)
+        client.seek(MediaSeekOptions.Builder().setPosition(target).build())
+    }
+
+    override fun stopCasting() {
+        castContext?.sessionManager?.endCurrentSession(true)
+    }
+
     override fun onDestroy() {
+        castContext?.sessionManager?.removeSessionManagerListener(castListener, CastSession::class.java)
         ticker.removeCallbacks(tick)
+        stopScrobble()
         player?.let {
             saveResume(it)
             it.release()
         }
         player = null
         super.onDestroy()
+    }
+
+    // ---- Trackers (Trakt, Simkl) ----
+
+    private fun scrobbleTarget(): Scrobble? {
+        val imdb = metaId.substringBefore(':').takeIf { it.startsWith("tt") } ?: return null
+        val video = meta?.videos?.firstOrNull { it.id == state.videoId }
+        val parts = state.videoId.split(':')
+        val season = video?.season ?: parts.getOrNull(1)?.toIntOrNull()?.takeIf { parts.size >= 3 }
+        val episode = video?.episode ?: parts.getOrNull(2)?.toIntOrNull()
+        return Scrobble(imdb, null, type, season, episode)
+    }
+
+    private fun progressPercent(): Double {
+        val exo = player ?: return 0.0
+        val duration = exo.duration.takeIf { it != C.TIME_UNSET && it > 0 } ?: return 0.0
+        return (exo.currentPosition * 100.0 / duration).coerceIn(0.0, 100.0)
+    }
+
+    private fun scrobble(action: String) {
+        val target = scrobbleTarget() ?: return
+        // Trackers want a duration-based progress; skip until the length is known.
+        if (progressPercent() <= 0.0 && action != "start") return
+        scrobbling = action == "start"
+        repository.scrobble(action, target, progressPercent())
+    }
+
+    /** "stop" ends the session; at 80% or more Trakt and Simkl mark it watched. */
+    private fun stopScrobble() {
+        if (!scrobbling) return
+        scrobbling = false
+        scrobbleTarget()?.let { repository.scrobble("stop", it, progressPercent()) }
     }
 
     private fun saveResume(exo: ExoPlayer) {
@@ -748,8 +921,10 @@ private fun audioDetail(format: Format): String? {
 }
 
 private fun textDetail(format: Format): String? = buildList {
+    // Subtitles parsed while reading the file report their original type in codecs.
+    val mime = if (format.sampleMimeType == MimeTypes.APPLICATION_MEDIA3_CUES) format.codecs else format.sampleMimeType
     if (format.selectionFlags and C.SELECTION_FLAG_FORCED != 0) add("Forced")
-    when (format.sampleMimeType) {
+    when (mime) {
         MimeTypes.TEXT_SSA -> add("Styled")
         MimeTypes.APPLICATION_PGS, MimeTypes.APPLICATION_VOBSUB, MimeTypes.APPLICATION_DVBSUBS -> add("Image")
     }

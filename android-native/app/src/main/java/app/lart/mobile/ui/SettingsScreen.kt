@@ -57,6 +57,8 @@ fun SettingsScreen(repository: Repository) {
     ) {
         Text("Settings", fontSize = 28.sp, fontWeight = FontWeight.SemiBold)
 
+        ProfilesCard(repository)
+
         Card {
             SectionTitle("Stremio account")
             val current = account
@@ -124,6 +126,18 @@ fun SettingsScreen(repository: Repository) {
         }
 
         DebridCard(repository)
+
+        TrackersCard(repository)
+
+        KeyCard(
+            title = "TMDB",
+            body = "With your own TMDB API key, Home, Movies and Shows use TMDB's rows, artwork, logos and cast, in your language, as in Harbor.",
+            label = "TMDB API key or read token",
+            current = repository.tmdbKey.collectAsState().value,
+            linkLabel = "Get a key",
+            link = "https://www.themoviedb.org/settings/api",
+            onSave = { repository.setTmdbKey(it) },
+        )
 
         Card {
             SectionTitle("Playback")
@@ -223,4 +237,55 @@ private fun Card(content: @Composable () -> Unit) {
         Modifier.fillMaxWidth().background(LartColors.Surface, RoundedCornerShape(18.dp)).padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(12.dp),
     ) { content() }
+}
+
+/** A card for one pasted API key: checks it on save, and shows Remove once set. */
+@Composable
+fun KeyCard(
+    title: String,
+    body: String,
+    label: String,
+    current: String?,
+    linkLabel: String,
+    link: String,
+    onSave: suspend (String?) -> Unit,
+) {
+    val scope = rememberCoroutineScope()
+    val uriHandler = LocalUriHandler.current
+    var key by remember { mutableStateOf("") }
+    var busy by remember { mutableStateOf(false) }
+    var error by remember { mutableStateOf<String?>(null) }
+    Card {
+        SectionTitle(title)
+        Text(body, color = LartColors.InkMuted, fontSize = 13.sp)
+        if (current != null) {
+            Text("Key saved (ends …${current.takeLast(4)}).", color = LartColors.InkSubtle, fontSize = 13.sp)
+            OutlinedButton(onClick = { scope.launch { onSave(null) } }) { Text("Remove") }
+        } else {
+            OutlinedTextField(
+                value = key,
+                onValueChange = { key = it.trim() },
+                label = { Text(label) },
+                singleLine = true,
+                visualTransformation = PasswordVisualTransformation(),
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+                modifier = Modifier.fillMaxWidth(),
+            )
+            error?.let { Text(it, color = androidx.compose.ui.graphics.Color(0xFFE57373), fontSize = 13.sp) }
+            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                Button(
+                    onClick = {
+                        scope.launch {
+                            busy = true
+                            error = runCatching { onSave(key) }.exceptionOrNull()?.let { "That key didn't work: ${it.message?.take(120)}" }
+                            if (error == null) key = ""
+                            busy = false
+                        }
+                    },
+                    enabled = !busy && key.isNotBlank(),
+                ) { Text(if (busy) "Checking…" else "Save") }
+                TextButton(onClick = { uriHandler.openUri(link) }) { Text(linkLabel) }
+            }
+        }
+    }
 }

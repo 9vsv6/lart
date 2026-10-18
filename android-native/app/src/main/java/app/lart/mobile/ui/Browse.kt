@@ -360,11 +360,15 @@ fun ContinueWatchingRow(items: List<CwItem>, onOpen: (CwItem) -> Unit, onDismiss
 
 @Composable
 private fun CwCard(item: CwItem, onOpen: () -> Unit, onDismiss: () -> Unit) {
-    val progress = if (item.durationMs > 0) (item.positionMs.toFloat() / item.durationMs).coerceIn(0f, 1f) else 0f
+    val progress = item.fraction ?: if (item.durationMs > 0) (item.positionMs.toFloat() / item.durationMs).coerceIn(0f, 1f) else 0f
     val episode = if (item.season != null && item.episode != null) {
         if (item.meta.id.startsWith("kitsu:")) "Ep ${item.episode}" else "S${item.season} · E${item.episode}"
     } else null
-    val remaining = if (item.durationMs > 0) remainingLabel(item.durationMs - item.positionMs) else null
+    val remaining = when {
+        item.source != null -> "Paused on ${item.source}"
+        item.durationMs > 0 -> remainingLabel(item.durationMs - item.positionMs)
+        else -> null
+    }
     Column(Modifier.width(260.dp)) {
         Box(
             Modifier.fillMaxWidth().aspectRatio(16f / 9f).clip(RoundedCornerShape(16.dp)).background(LartColors.Surface)

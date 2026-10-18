@@ -106,6 +106,11 @@ interface PlayerActions {
     fun selectAudio(key: String)
     fun selectSubtitle(choice: SubChoice)
     fun setSubDelay(delayMs: Long)
+    /** Positive plays the sound later than the picture. */
+    fun setAudioDelay(delayMs: Long)
+    fun castTogglePlay()
+    fun castSeekBy(deltaMs: Long)
+    fun stopCasting()
     fun updatePrefs(change: (PlayerPrefs) -> PlayerPrefs)
     fun skipSegment()
     fun playNext()
@@ -130,7 +135,7 @@ const val CONTROLS_LIFT = 0.16f
 private val PanelColor = Color(0xF21A1C20)
 
 @Composable
-fun PlayerUi(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions) {
+fun PlayerUi(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions, castButton: (@Composable () -> Unit)? = null) {
     // Controls fade out after a few seconds of playback without touches.
     var touchedAt by remember { mutableStateOf(System.currentTimeMillis()) }
     LaunchedEffect(state.controlsVisible, state.playing, state.panel, touchedAt) {
@@ -146,7 +151,11 @@ fun PlayerUi(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions) {
         }
     }
     if (state.inPip) {
-        AddonCue(state, prefs)
+        SubtitleLayer(state, prefs)
+        return
+    }
+    state.castingTo?.let { device ->
+        CastingScreen(device, state, actions)
         return
     }
 
@@ -219,7 +228,7 @@ fun PlayerUi(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions) {
                 }
             },
     ) {
-        AddonCue(state, prefs)
+        SubtitleLayer(state, prefs)
 
         if (state.buffering && !state.ended && state.error == null) {
             CircularProgressIndicator(Modifier.align(Alignment.Center).size(56.dp), color = Color.White, strokeWidth = 3.dp)
@@ -237,12 +246,12 @@ fun PlayerUi(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions) {
             }
         } else {
             AnimatedVisibility(state.controlsVisible, enter = fadeIn(), exit = fadeOut()) {
-                Controls(state, actions) { touchedAt = System.currentTimeMillis() }
+                Controls(state, actions, castButton) { touchedAt = System.currentTimeMillis() }
             }
         }
 
         Hint(state)
-        BottomPills(state, prefs, actions, Modifier.align(Alignment.BottomEnd))
+        if (!state.stillWatching) BottomPills(state, prefs, actions, Modifier.align(Alignment.BottomEnd))
         ResumePill(state, actions, Modifier.align(Alignment.BottomStart))
 
         state.error?.let { ErrorCard(it, state, actions, Modifier.align(Alignment.Center)) }
@@ -261,7 +270,7 @@ fun PlayerUi(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions) {
 }
 
 @Composable
-private fun Controls(state: PlayerState, actions: PlayerActions, onTouch: () -> Unit) {
+private fun Controls(state: PlayerState, actions: PlayerActions, castButton: (@Composable () -> Unit)?, onTouch: () -> Unit) {
     Box(Modifier.fillMaxSize()) {
         Box(
             Modifier.fillMaxWidth().height(120.dp).align(Alignment.TopCenter)
@@ -284,6 +293,7 @@ private fun Controls(state: PlayerState, actions: PlayerActions, onTouch: () -> 
                 Text(state.title, color = Color.White, fontSize = 17.sp, fontWeight = FontWeight.SemiBold, maxLines = 1, overflow = TextOverflow.Ellipsis)
                 state.episodeLine?.let { Text(it, color = Color(0xCCFFFFFF), fontSize = 13.sp, maxLines = 1, overflow = TextOverflow.Ellipsis) }
             }
+            castButton?.let { Box(Modifier.size(48.dp), contentAlignment = Alignment.Center) { it() } }
             ToolButton(Icons.Rounded.AspectRatio, state.fit.label) {
                 onTouch()
                 actions.setFit(Fit.entries[(state.fit.ordinal + 1) % Fit.entries.size])
@@ -395,13 +405,39 @@ private fun SeekBar(state: PlayerState, actions: PlayerActions, onTouch: () -> U
     }
 }
 
+/** Every subtitle, from the video or an addon, drawn by Lart in the chosen style. */
 @Composable
-private fun AddonCue(state: PlayerState, prefs: PlayerPrefs) {
-    val text = state.addonCue ?: return
-    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.BottomCenter) {
+private fun SubtitleLayer(state: PlayerState, prefs: PlayerPrefs) {
+    val cues = state.cues
+    if (cues.isEmpty()) return
+    val (top, bottom) = cues.partition { it.top }
+    if (bottom.isNotEmpty()) {
         // Lifted above the controls while they show, as Harbor does.
         BoxWithFraction(prefs.subBottom + if (state.controlsVisible && !state.inPip) CONTROLS_LIFT else 0f) {
-            SubtitleText(text, prefs)
+            CueColumn(bottom, prefs)
+        }
+    }
+    if (top.isNotEmpty()) {
+        Box(Modifier.fillMaxSize().padding(top = 24.dp, start = 48.dp, end = 48.dp), contentAlignment = Alignment.TopCenter) {
+            CueColumn(top, prefs)
+        }
+    }
+}
+
+@Composable
+private fun CueColumn(cues: List<UiCue>, prefs: PlayerPrefs) {
+    Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(2.dp)) {
+        cues.forEach { cue ->
+            val image = cue.image
+            when {
+                image != null -> androidx.compose.foundation.Image(
+                    image,
+                    contentDescription = null,
+                    contentScale = ContentScale.Fit,
+                    modifier = if (cue.width > 0f) Modifier.fillMaxWidth(cue.width.coerceIn(0.1f, 1f)) else Modifier,
+                )
+                cue.text != null -> SubtitleText(cue.text, prefs)
+            }
         }
     }
 }
@@ -586,6 +622,9 @@ private fun SidePanel(state: PlayerState, prefs: PlayerPrefs, actions: PlayerAct
             Panel.Subtitles -> SubtitlesPanel(state, actions)
             Panel.SubStyle -> SubStylePanel(prefs, actions)
             Panel.Audio -> LazyColumn {
+                item {
+                    DelayRow("Delay", state.audioDelayMs, "Sound later", "Sound earlier", 50, 250) { actions.setAudioDelay(it) }
+                }
                 if (state.audioTracks.isEmpty()) item { Muted("This video has one audio track.") }
                 items(state.audioTracks, key = { it.key }) { track ->
                     OptionRow(track.label, track.detail, track.selected) { actions.selectAudio(track.key) }
@@ -620,17 +659,12 @@ private fun SubtitlesPanel(state: PlayerState, actions: PlayerActions) {
             Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(bottom = 6.dp)) {
                 Pill("Style", primary = false) { state.panel = Panel.SubStyle }
                 Spacer(Modifier.width(10.dp))
-                if (state.subChoice is SubChoice.Addon) {
-                    // Sync, like Harbor's sub-sync bar: shift the addon subtitle either way.
-                    SmallButton("-0.5s") { actions.setSubDelay(state.subDelayMs - 500) }
-                    Text(
-                        "%+.1fs".format(Locale.US, state.subDelayMs / 1000f),
-                        color = Color.White,
-                        fontSize = 14.sp,
-                        modifier = Modifier.padding(horizontal = 8.dp),
-                    )
-                    SmallButton("+0.5s") { actions.setSubDelay(state.subDelayMs + 500) }
-                }
+            }
+        }
+        if (state.subChoice != SubChoice.Off) {
+            item {
+                // Sync, like Harbor's sub-sync bar: works for subtitles in the video and from addons.
+                DelayRow("Sync", state.subDelayMs, "Later", "Earlier", 100, 500) { actions.setSubDelay(it) }
             }
         }
         item { OptionRow("Off", null, state.subChoice == SubChoice.Off) { actions.selectSubtitle(SubChoice.Off) } }
@@ -718,7 +752,7 @@ private fun SubStylePanel(prefs: PlayerPrefs, actions: PlayerActions) {
                 Switch(checked = prefs.autoSkipIntro, onCheckedChange = { v -> actions.updatePrefs { it.copy(autoSkipIntro = v) } })
             }
         }
-        item { Muted("Style applies to subtitles from your addons and to plain subtitles in the video. Styled (ASS) subtitles keep their own look.") }
+        item { Muted("Style applies to every text subtitle, in the video or from an addon. Image subtitles (PGS, VobSub) keep their own look.") }
     }
 }
 
@@ -801,6 +835,33 @@ private fun EpisodesPanel(state: PlayerState, actions: PlayerActions) {
 }
 
 // ---- Small pieces ----
+
+/** A nudge control: fine and coarse steps either way, the value, and a reset. */
+@Composable
+private fun DelayRow(label: String, valueMs: Long, plusHint: String, minusHint: String, fine: Long, coarse: Long, onChange: (Long) -> Unit) {
+    Column(Modifier.fillMaxWidth().padding(vertical = 6.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(label, color = Color.White, fontSize = 15.sp, fontWeight = FontWeight.SemiBold, modifier = Modifier.weight(1f))
+            Text(
+                if (valueMs == 0L) "In sync" else "%+.2fs".format(Locale.US, valueMs / 1000f),
+                color = if (valueMs == 0L) Color(0x99FFFFFF) else LartColors.Accent,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.SemiBold,
+            )
+            if (valueMs != 0L) {
+                Spacer(Modifier.width(8.dp))
+                SmallButton("Reset") { onChange(0) }
+            }
+        }
+        Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+            SmallButton("−${coarse / 1000f}s") { onChange(valueMs - coarse) }
+            SmallButton("−${fine / 1000f}s") { onChange(valueMs - fine) }
+            SmallButton("+${fine / 1000f}s") { onChange(valueMs + fine) }
+            SmallButton("+${coarse / 1000f}s") { onChange(valueMs + coarse) }
+        }
+        Text("+ $plusHint · − $minusHint", color = Color(0x80FFFFFF), fontSize = 11.sp)
+    }
+}
 
 @Composable
 private fun OptionRow(label: String, detail: String?, selected: Boolean, onClick: () -> Unit) {
@@ -887,4 +948,35 @@ fun languageName(lang: String): String {
     val locale = Locale.forLanguageTag(lang).takeIf { it.language.isNotEmpty() } ?: Locale(lang)
     return locale.getDisplayLanguage(Locale.getDefault()).takeIf { it.isNotBlank() && it != lang }?.replaceFirstChar { it.titlecase() }
         ?: lang.uppercase()
+}
+
+/** While casting: what's on the TV, with play/pause, ±10 s and Stop casting. */
+@Composable
+private fun CastingScreen(device: String, state: PlayerState, actions: PlayerActions) {
+    Box(Modifier.fillMaxSize().background(Color(0xF0101114)), contentAlignment = Alignment.Center) {
+        Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(18.dp)) {
+            Text("Casting to $device", color = LartColors.Accent, fontSize = 14.sp, fontWeight = FontWeight.SemiBold)
+            Text(state.title, color = Color.White, fontSize = 24.sp, fontWeight = FontWeight.SemiBold)
+            state.episodeLine?.let { Text(it, color = Color(0xCCFFFFFF), fontSize = 14.sp) }
+            Row(horizontalArrangement = Arrangement.spacedBy(36.dp), verticalAlignment = Alignment.CenterVertically) {
+                RoundIcon(Icons.Rounded.Replay10, "Back 10 seconds") { actions.castSeekBy(-10_000) }
+                Box(
+                    Modifier.size(76.dp).clip(CircleShape).background(Color(0x33FFFFFF)).clickable { actions.castTogglePlay() },
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Icon(
+                        if (state.castPlaying) Icons.Rounded.Pause else Icons.Rounded.PlayArrow,
+                        contentDescription = if (state.castPlaying) "Pause" else "Play",
+                        tint = Color.White,
+                        modifier = Modifier.size(46.dp),
+                    )
+                }
+                RoundIcon(Icons.Rounded.Forward10, "Forward 10 seconds") { actions.castSeekBy(10_000) }
+            }
+            Pill("Stop casting", primary = true) { actions.stopCasting() }
+        }
+        IconButton(onClick = actions::back, modifier = Modifier.align(Alignment.TopStart).padding(20.dp)) {
+            Icon(Icons.AutoMirrored.Rounded.ArrowBack, contentDescription = "Back", tint = Color.White)
+        }
+    }
 }

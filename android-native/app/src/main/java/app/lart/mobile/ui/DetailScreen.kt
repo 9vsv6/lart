@@ -49,6 +49,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.lart.mobile.data.AddonClient
+import app.lart.mobile.data.CastMember
+import app.lart.mobile.data.Tmdb
 import app.lart.mobile.data.Meta
 import app.lart.mobile.data.Repository
 import app.lart.mobile.data.Video
@@ -66,6 +68,8 @@ fun DetailScreen(
     val builtins by repository.builtins.collectAsState()
     var meta by remember { mutableStateOf<Meta?>(null) }
     var failed by remember { mutableStateOf(false) }
+    var cast by remember { mutableStateOf<List<CastMember>>(emptyList()) }
+    val tmdbKey by repository.tmdbKey.collectAsState()
 
     LaunchedEffect(addons, builtins, type, id) {
         if (addons.isEmpty() || meta != null) return@LaunchedEffect
@@ -75,10 +79,24 @@ fun DetailScreen(
         failed = loaded == null && builtins.isNotEmpty()
     }
 
+    // With a TMDB key: TMDB's backdrop and logo, the overview in the device language, and the cast.
+    LaunchedEffect(meta?.id, tmdbKey) {
+        val key = tmdbKey ?: return@LaunchedEffect
+        val current = meta ?: return@LaunchedEffect
+        val imdb = current.id.substringBefore(':').takeIf { it.startsWith("tt") } ?: return@LaunchedEffect
+        val extras = runCatching { Tmdb.extras(key, imdb, current.type) }.getOrNull() ?: return@LaunchedEffect
+        meta = current.copy(
+            background = extras.backdrop ?: current.background,
+            logo = extras.logo ?: current.logo,
+            description = extras.overview ?: current.description,
+        )
+        cast = extras.cast
+    }
+
     Box(Modifier.fillMaxSize().background(LartColors.Canvas)) {
         val current = meta
         when {
-            current != null -> DetailBody(repository, current, onStreams)
+            current != null -> DetailBody(repository, current, cast, onStreams)
             failed -> EmptyState("Couldn't load this title", "None of your addons has details for it.")
             else -> Loading(Modifier.padding(top = 160.dp))
         }
@@ -90,7 +108,7 @@ fun DetailScreen(
 }
 
 @Composable
-private fun DetailBody(repository: Repository, meta: Meta, onStreams: (String, String) -> Unit) {
+private fun DetailBody(repository: Repository, meta: Meta, cast: List<CastMember>, onStreams: (String, String) -> Unit) {
     val videos = meta.videos.orEmpty()
     val isSeries = meta.type != "movie" && videos.isNotEmpty()
     // Season 0 holds specials; start on the first real season.
@@ -125,6 +143,9 @@ private fun DetailBody(repository: Repository, meta: Meta, onStreams: (String, S
                     Text(it, fontSize = 14.5.sp, lineHeight = 21.sp, color = LartColors.InkMuted)
                 }
             }
+        }
+        if (cast.isNotEmpty()) {
+            item(key = "cast") { CastRow(cast) }
         }
         if (isSeries && seasons.isNotEmpty()) {
             item(key = "seasons") {
@@ -169,6 +190,28 @@ private fun MyListButton(repository: Repository, meta: Meta) {
 }
 
 @Composable
+private fun CastRow(cast: List<CastMember>) {
+    Column(Modifier.padding(top = 22.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        Text("Cast", fontSize = 18.sp, fontWeight = FontWeight.SemiBold, color = LartColors.Ink, modifier = Modifier.padding(horizontal = 20.dp))
+        LazyRow(contentPadding = PaddingValues(horizontal = 20.dp), horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+            items(cast) { person ->
+                Column(Modifier.width(84.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                    Box(Modifier.size(76.dp).clip(RoundedCornerShape(50)).background(LartColors.Elevated), contentAlignment = Alignment.Center) {
+                        if (person.photo != null) {
+                            AsyncImage(person.photo, person.name, contentScale = ContentScale.Crop, modifier = Modifier.fillMaxSize())
+                        } else {
+                            Text(person.name.take(1), color = LartColors.InkMuted, fontSize = 24.sp)
+                        }
+                    }
+                    Text(person.name, color = LartColors.Ink, fontSize = 12.sp, maxLines = 2, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(top = 6.dp))
+                    person.character?.let { Text(it, color = LartColors.InkSubtle, fontSize = 11.sp, maxLines = 1, overflow = TextOverflow.Ellipsis) }
+                }
+            }
+        }
+    }
+}
+
+@Composable
 private fun Header(meta: Meta) {
     Box(Modifier.fillMaxWidth().aspectRatio(16f / 10f)) {
         AsyncImage(
@@ -182,11 +225,7 @@ private fun Header(meta: Meta) {
             modifier = Modifier.align(Alignment.BottomStart).padding(20.dp),
             verticalArrangement = Arrangement.spacedBy(6.dp),
         ) {
-            if (meta.logo != null) {
-                AsyncImage(model = meta.logo, contentDescription = meta.name, modifier = Modifier.heightIn(max = 72.dp))
-            } else {
-                Text(meta.name, fontSize = 30.sp, fontWeight = FontWeight.SemiBold, color = Color.White)
-            }
+            TitleArt(meta, maxHeight = 72)
             val line = listOfNotNull(meta.releaseInfo, meta.runtime, meta.imdbRating?.let { "IMDb $it" })
             if (line.isNotEmpty()) Text(line.joinToString("  ·  "), fontSize = 13.sp, color = Color(0xCCFFFFFF))
             meta.genres?.takeIf { it.isNotEmpty() }?.let {

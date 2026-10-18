@@ -51,9 +51,21 @@ data class CwItem(
     val season: Int?,
     val episode: Int?,
     val updatedAt: Long,
+    /** Progress as a fraction when only that is known (Trakt). */
+    val fraction: Float? = null,
+    /** Where the card came from when it isn't this device or Stremio: "Trakt". */
+    val source: String? = null,
 )
 
 data class Account(val authKey: String, val email: String)
+
+@Serializable
+data class Profile(val id: String, val name: String, val color: Long)
+
+const val MAIN_PROFILE = "main"
+
+/** Harbor's profile colours. */
+val PROFILE_COLORS = listOf(0xFFF0A35E, 0xFF5E9CF0, 0xFF6CCB8A, 0xFFE0607E, 0xFFB38BF0, 0xFF4CC3C9, 0xFFE8C547, 0xFF9AA0A6)
 
 /** Player choices that persist between videos, like Harbor's subtitle style bar. */
 @Serializable
@@ -96,6 +108,10 @@ class Repository(private val context: Context) {
     private val _debrid = MutableStateFlow<DebridAccount?>(null)
     val debrid: StateFlow<DebridAccount?> = _debrid.asStateFlow()
 
+    private val _tmdbKey = MutableStateFlow<String?>(null)
+    /** The user's own TMDB key; with it, rows and artwork come from TMDB as in Harbor. */
+    val tmdbKey: StateFlow<String?> = _tmdbKey.asStateFlow()
+
     private val _autoPlay = MutableStateFlow(false)
     /** Skip the streams list and play the best source straight away. */
     val autoPlay: StateFlow<Boolean> = _autoPlay.asStateFlow()
@@ -110,13 +126,18 @@ class Repository(private val context: Context) {
     val ready: StateFlow<Boolean> = _ready.asStateFlow()
 
     private val _resume = MutableStateFlow<Map<String, Resume>>(emptyMap())
+    private val _traktCw = MutableStateFlow<List<CwItem>>(emptyList())
+
+    private val _trackers = MutableStateFlow(TrackerSettings())
+    /** This profile's tracker sign-ins. */
+    val trackers: StateFlow<TrackerSettings> = _trackers.asStateFlow()
     private val _dismissed = MutableStateFlow<Set<String>>(emptySet())
     private val resumeSerializer = MapSerializer(String.serializer(), Resume.serializer())
     private val metaListSerializer = ListSerializer(Meta.serializer())
     private val stringSet = SetSerializer(String.serializer())
 
     /** Newest first; one card per title. */
-    val continueWatching: StateFlow<List<CwItem>> = combine(_resume, _library, _dismissed) { resume, library, dismissed ->
+    val continueWatching: StateFlow<List<CwItem>> = combine(_resume, _library, _dismissed, _traktCw) { resume, library, dismissed, trakt ->
         val local = resume.mapNotNull { (videoId, r) ->
             val metaId = r.metaId ?: return@mapNotNull null
             CwItem(
@@ -137,30 +158,128 @@ class Repository(private val context: Context) {
                 parseTime(state.lastWatched ?: item.mtime),
             )
         }
-        (local + remote).sortedByDescending { it.updatedAt }
+        (local + remote + trakt).sortedByDescending { it.updatedAt }
             .distinctBy { it.meta.id }
             .filter { "${it.meta.id}@${it.videoId}" !in dismissed }
             .take(20)
     }.stateIn(scope, SharingStarted.Eagerly, emptyList())
 
-    init {
+    private fun loadProfile(prefs: Preferences) {
+        _autoPlay.value = prefs[keyAutoPlay] ?: false
+        _playerPrefs.value = prefs[keyPlayer]
+            ?.let { runCatching { Net.json.decodeFromString(PlayerPrefs.serializer(), it) }.getOrNull() }
+            ?: PlayerPrefs()
+        _resume.value = prefs[keyResume]?.let { runCatching { Net.json.decodeFromString(resumeSerializer, it) }.getOrNull() } ?: emptyMap()
+        _myList.value = prefs[keyMyList]?.let { runCatching { Net.json.decodeFromString(metaListSerializer, it) }.getOrNull() } ?: emptyList()
+        _dismissed.value = prefs[keyDismissed]?.let { runCatching { Net.json.decodeFromString(stringSet, it) }.getOrNull() } ?: emptySet()
+        _trackers.value = prefs[keyTrackers]?.let { runCatching { Net.json.decodeFromString(TrackerSettings.serializer(), it) }.getOrNull() } ?: TrackerSettings()
+        _traktCw.value = emptyList()
+        scope.launch { refreshTrackers() }
+        profileLoaded.forEach { it(prefs) }
+    }
+
+    // ---- Profiles, like Harbor's: each has its own lists, progress, player settings and trackers ----
+
+    private val _profiles = MutableStateFlow<List<Profile>>(emptyList())
+    val profiles: StateFlow<List<Profile>> = _profiles.asStateFlow()
+
+    private val _activeProfile = MutableStateFlow<Profile?>(null)
+    val activeProfile: StateFlow<Profile?> = _activeProfile.asStateFlow()
+
+    private val _profileChosen = MutableStateFlow(false)
+    /** False until someone picks a profile on "Who's watching?". */
+    val profileChosen: StateFlow<Boolean> = _profileChosen.asStateFlow()
+
+    private var profileId = MAIN_PROFILE
+    private val profileList = ListSerializer(Profile.serializer())
+
+    /** Other per-profile state (trackers) reloads through these when the profile changes. */
+    internal val profileLoaded = mutableListOf<(Preferences) -> Unit>()
+
+    /** A store key for the active profile. The first profile keeps the plain keys, so data from before profiles stays. */
+    internal fun profileKey(name: String): String = if (profileId == MAIN_PROFILE) name else "$name@$profileId"
+
+    private val keyResume get() = stringPreferencesKey(profileKey("resume"))
+    private val keyMyList get() = stringPreferencesKey(profileKey("myList"))
+    private val keyDismissed get() = stringPreferencesKey(profileKey("cwDismissed"))
+    private val keyPlayer get() = stringPreferencesKey(profileKey("player"))
+    private val keyAutoPlay get() = booleanPreferencesKey(profileKey("autoPlay"))
+    private val keyTrackers get() = stringPreferencesKey(profileKey("trackers"))
+
+    fun updateTrackers(change: (TrackerSettings) -> TrackerSettings) {
+        val next = change(_trackers.value)
+        _trackers.value = next
+        scope.launch { context.store.edit { it[keyTrackers] = Net.json.encodeToString(TrackerSettings.serializer(), next) } }
+        if (next.trakt?.accessToken == null) _traktCw.value = emptyList()
+    }
+
+    /** Trakt's paused titles join Continue watching; its token is refreshed when due. */
+    suspend fun refreshTrackers() {
+        val trakt = _trackers.value.trakt?.takeIf { it.accessToken != null } ?: return
+        val fresh = runCatching { Trakt.fresh(trakt) }.getOrDefault(trakt)
+        if (fresh != trakt) updateTrackers { it.copy(trakt = fresh) }
+        _traktCw.value = runCatching { Trakt.playback(fresh) }.getOrDefault(emptyList())
+    }
+
+    /** Where Trakt says `videoId` was paused, as a fraction, when this device has no position. */
+    fun traktFraction(videoId: String): Float? = _traktCw.value.firstOrNull { it.videoId == videoId }?.fraction
+
+    /** Tells signed-in trackers what's playing: "start", "pause" or "stop" (stop at 80%+ marks watched). */
+    fun scrobble(action: String, what: Scrobble, progressPercent: Double) {
+        val trackers = _trackers.value
         scope.launch {
-            val prefs = context.store.data.first()
-            val authKey = prefs[KEY_AUTH]
-            if (authKey != null) _account.value = Account(authKey, prefs[KEY_EMAIL] ?: "")
-            val service = prefs[KEY_DEBRID_SERVICE]?.let { name -> DebridService.entries.firstOrNull { it.name == name } }
-            val key = prefs[KEY_DEBRID_KEY]
-            if (service != null && !key.isNullOrBlank()) _debrid.value = DebridAccount(service, key)
-            _autoPlay.value = prefs[KEY_AUTOPLAY] ?: false
-            _playerPrefs.value = prefs[KEY_PLAYER]
-                ?.let { runCatching { Net.json.decodeFromString(PlayerPrefs.serializer(), it) }.getOrNull() }
-                ?: PlayerPrefs()
-            _resume.value = prefs[KEY_RESUME]?.let { runCatching { Net.json.decodeFromString(resumeSerializer, it) }.getOrNull() } ?: emptyMap()
-            _myList.value = prefs[KEY_MYLIST]?.let { runCatching { Net.json.decodeFromString(metaListSerializer, it) }.getOrNull() } ?: emptyList()
-            _dismissed.value = prefs[KEY_DISMISSED]?.let { runCatching { Net.json.decodeFromString(stringSet, it) }.getOrNull() } ?: emptySet()
-            launch { _builtins.value = loadManifests(AddonClient.builtins) }
-            refresh()
-            _ready.value = true
+            trackers.trakt?.takeIf { it.accessToken != null }?.let { auth -> runCatching { Trakt.scrobble(auth, action, what, progressPercent) } }
+            trackers.simkl?.takeIf { it.accessToken != null }?.let { auth -> runCatching { Simkl.scrobble(auth, action, what, progressPercent) } }
+        }
+    }
+
+    /** AniList progress for anime (Kitsu ids), once an episode is mostly watched. */
+    fun markAnimeWatched(kitsuId: String, episode: Int) {
+        val auth = _trackers.value.anilist?.takeIf { it.accessToken != null } ?: return
+        scope.launch { runCatching { AniList.markWatched(auth, kitsuId, episode) } }
+    }
+
+    internal suspend fun editStore(block: (androidx.datastore.preferences.core.MutablePreferences) -> Unit) {
+        context.store.edit { block(it) }
+    }
+
+    suspend fun switchProfile(id: String) {
+        val profile = _profiles.value.firstOrNull { it.id == id } ?: return
+        profileId = id
+        _activeProfile.value = profile
+        context.store.edit { it[KEY_ACTIVE_PROFILE] = id }
+        loadProfile(context.store.data.first())
+        _profileChosen.value = true
+    }
+
+    suspend fun saveProfile(profile: Profile) {
+        val current = _profiles.value
+        val next = if (current.any { it.id == profile.id }) current.map { if (it.id == profile.id) profile else it } else current + profile
+        _profiles.value = next
+        if (_activeProfile.value?.id == profile.id) _activeProfile.value = profile
+        context.store.edit { it[KEY_PROFILES] = Net.json.encodeToString(profileList, next) }
+    }
+
+    suspend fun newProfile(name: String): Profile {
+        val used = _profiles.value.map { it.color }.toSet()
+        val profile = Profile(
+            id = java.util.UUID.randomUUID().toString().take(8),
+            name = name.trim().ifEmpty { "Profile ${_profiles.value.size + 1}" },
+            color = PROFILE_COLORS.firstOrNull { it !in used } ?: PROFILE_COLORS.random(),
+        )
+        saveProfile(profile)
+        return profile
+    }
+
+    /** Deletes a profile and everything it kept. The first profile can't be deleted. */
+    suspend fun deleteProfile(id: String) {
+        if (id == MAIN_PROFILE) return
+        if (profileId == id) switchProfile(MAIN_PROFILE)
+        val next = _profiles.value.filterNot { it.id == id }
+        _profiles.value = next
+        context.store.edit { prefs ->
+            prefs[KEY_PROFILES] = Net.json.encodeToString(profileList, next)
+            prefs.asMap().keys.filter { it.name.endsWith("@$id") }.forEach { prefs.remove(it) }
         }
     }
 
@@ -222,15 +341,23 @@ class Repository(private val context: Context) {
         _debrid.value = null
     }
 
+    /** Checks the key with TMDB first. */
+    suspend fun setTmdbKey(key: String?) {
+        val clean = key?.trim()?.takeIf { it.isNotEmpty() }
+        if (clean != null) Tmdb.verify(clean)
+        context.store.edit { if (clean == null) it.remove(KEY_TMDB) else it[KEY_TMDB] = clean }
+        _tmdbKey.value = clean
+    }
+
     fun setAutoPlay(enabled: Boolean) {
         _autoPlay.value = enabled
-        scope.launch { context.store.edit { it[KEY_AUTOPLAY] = enabled } }
+        scope.launch { context.store.edit { it[keyAutoPlay] = enabled } }
     }
 
     fun updatePlayerPrefs(change: (PlayerPrefs) -> PlayerPrefs) {
         val next = change(_playerPrefs.value)
         _playerPrefs.value = next
-        scope.launch { context.store.edit { it[KEY_PLAYER] = Net.json.encodeToString(PlayerPrefs.serializer(), next) } }
+        scope.launch { context.store.edit { it[keyPlayer] = Net.json.encodeToString(PlayerPrefs.serializer(), next) } }
     }
 
     // ---- My List (Harbor's watchlist), kept on this device ----
@@ -242,7 +369,7 @@ class Repository(private val context: Context) {
         val next = if (current.any { it.id == meta.id }) current.filterNot { it.id == meta.id }
         else listOf(meta.copy(videos = null, description = null)) + current
         _myList.value = next
-        scope.launch { context.store.edit { it[KEY_MYLIST] = Net.json.encodeToString(metaListSerializer, next) } }
+        scope.launch { context.store.edit { it[keyMyList] = Net.json.encodeToString(metaListSerializer, next) } }
     }
 
     // ---- Resume points and Continue watching ----
@@ -276,25 +403,47 @@ class Repository(private val context: Context) {
         _resume.value = next
         // Watching it again brings a dismissed card back.
         meta?.let { m -> _dismissed.value = _dismissed.value.filterNot { it.startsWith(m.id + "@") }.toSet() }
-        scope.launch { context.store.edit { it[KEY_RESUME] = Net.json.encodeToString(resumeSerializer, next) } }
+        scope.launch { context.store.edit { it[keyResume] = Net.json.encodeToString(resumeSerializer, next) } }
     }
 
     fun dismissContinueWatching(item: CwItem) {
         val next = _dismissed.value + "${item.meta.id}@${item.videoId}"
         _dismissed.value = next
-        scope.launch { context.store.edit { it[KEY_DISMISSED] = Net.json.encodeToString(stringSet, next) } }
+        scope.launch { context.store.edit { it[keyDismissed] = Net.json.encodeToString(stringSet, next) } }
+    }
+
+    // Last, so every property above exists before the background load reads it.
+    init {
+        scope.launch {
+            val prefs = context.store.data.first()
+            val authKey = prefs[KEY_AUTH]
+            if (authKey != null) _account.value = Account(authKey, prefs[KEY_EMAIL] ?: "")
+            val service = prefs[KEY_DEBRID_SERVICE]?.let { name -> DebridService.entries.firstOrNull { it.name == name } }
+            val key = prefs[KEY_DEBRID_KEY]
+            if (service != null && !key.isNullOrBlank()) _debrid.value = DebridAccount(service, key)
+            _tmdbKey.value = prefs[KEY_TMDB]?.takeIf { it.isNotBlank() }
+            val profiles = prefs[KEY_PROFILES]?.let { runCatching { Net.json.decodeFromString(profileList, it) }.getOrNull() }
+                ?.takeIf { it.isNotEmpty() } ?: listOf(Profile(MAIN_PROFILE, "Me", PROFILE_COLORS.first()))
+            _profiles.value = profiles
+            profileId = prefs[KEY_ACTIVE_PROFILE]?.takeIf { id -> profiles.any { it.id == id } } ?: profiles.first().id
+            _activeProfile.value = profiles.first { it.id == profileId }
+            // One profile: nobody to ask. Several: Harbor asks "Who's watching?" on launch.
+            _profileChosen.value = profiles.size == 1
+            loadProfile(prefs)
+            launch { _builtins.value = loadManifests(AddonClient.builtins) }
+            refresh()
+            _ready.value = true
+        }
     }
 
     private companion object {
         val KEY_AUTH: Preferences.Key<String> = stringPreferencesKey("authKey")
         val KEY_EMAIL: Preferences.Key<String> = stringPreferencesKey("email")
-        val KEY_RESUME: Preferences.Key<String> = stringPreferencesKey("resume")
         val KEY_DEBRID_SERVICE: Preferences.Key<String> = stringPreferencesKey("debridService")
         val KEY_DEBRID_KEY: Preferences.Key<String> = stringPreferencesKey("debridKey")
-        val KEY_AUTOPLAY: Preferences.Key<Boolean> = booleanPreferencesKey("autoPlay")
-        val KEY_PLAYER: Preferences.Key<String> = stringPreferencesKey("player")
-        val KEY_MYLIST: Preferences.Key<String> = stringPreferencesKey("myList")
-        val KEY_DISMISSED: Preferences.Key<String> = stringPreferencesKey("cwDismissed")
+        val KEY_PROFILES: Preferences.Key<String> = stringPreferencesKey("profiles")
+        val KEY_TMDB: Preferences.Key<String> = stringPreferencesKey("tmdbKey")
+        val KEY_ACTIVE_PROFILE: Preferences.Key<String> = stringPreferencesKey("activeProfile")
 
         fun parseTime(value: String?): Long =
             value?.let { runCatching { java.time.Instant.parse(it).toEpochMilli() }.getOrNull() } ?: 0

@@ -35,6 +35,7 @@ import androidx.compose.ui.unit.sp
 import app.lart.mobile.data.AddonClient
 import app.lart.mobile.data.Meta
 import app.lart.mobile.data.Repository
+import app.lart.mobile.data.Tmdb
 
 /** "See all" for a row: the whole catalog as a grid, loading more pages as it scrolls. */
 @Composable
@@ -47,7 +48,12 @@ fun CatalogScreen(
     title: String,
     onBack: () -> Unit,
     onOpen: (Meta) -> Unit,
+    tmdb: Tmdb.RowSpec? = null,
 ) {
+    if (tmdb != null) {
+        TmdbCatalog(repository, tmdb, title, onBack, onOpen)
+        return
+    }
     val addons by repository.addons.collectAsState()
     val builtins by repository.builtins.collectAsState()
     val addon = remember(addons, builtins) { repository.metaAddons().firstOrNull { it.manifest.id == addonId } }
@@ -84,6 +90,52 @@ fun CatalogScreen(
             addon == null || catalog == null -> if (builtins.isEmpty()) Loading() else EmptyState("Catalog not found", "The addon for this row isn't installed any more.")
             metas.isEmpty() && loading -> Loading()
             metas.isEmpty() -> EmptyState("Nothing here", "This catalog came back empty.")
+            else -> LazyVerticalGrid(
+                state = grid,
+                columns = GridCells.Adaptive(minSize = 112.dp),
+                contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 32.dp),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                verticalArrangement = Arrangement.spacedBy(16.dp),
+            ) {
+                items(metas, key = { it.type + it.id }) { meta -> PosterTile(meta) { onOpen(meta) } }
+                if (loading) item(span = { GridItemSpan(maxLineSpan) }) { Loading() }
+            }
+        }
+    }
+}
+
+/** "See all" for a TMDB row: TMDB pages of 20, loaded as the grid scrolls. */
+@Composable
+private fun TmdbCatalog(repository: Repository, spec: Tmdb.RowSpec, title: String, onBack: () -> Unit, onOpen: (Meta) -> Unit) {
+    val key by repository.tmdbKey.collectAsState()
+    var metas by remember { mutableStateOf<List<Meta>>(emptyList()) }
+    var page by remember { mutableStateOf(0) }
+    var loading by remember { mutableStateOf(false) }
+    var done by remember { mutableStateOf(false) }
+    val grid = rememberLazyGridState()
+    val nearEnd by remember { derivedStateOf { (grid.layoutInfo.visibleItemsInfo.lastOrNull()?.index ?: 0) >= metas.size - 12 } }
+
+    LaunchedEffect(key, nearEnd) {
+        val k = key ?: return@LaunchedEffect
+        if (loading || done || (metas.isNotEmpty() && !nearEnd) || page >= 20) return@LaunchedEffect
+        loading = true
+        val next = runCatching { Tmdb.row(k, spec, page + 1) }.getOrDefault(emptyList())
+        val known = metas.map { it.id }.toSet()
+        val fresh = next.filter { it.id !in known }
+        if (fresh.isEmpty()) done = true
+        metas = metas + fresh
+        page++
+        loading = false
+    }
+
+    Column(Modifier.fillMaxSize().background(LartColors.Canvas).statusBarsPadding()) {
+        Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(8.dp)) {
+            IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Rounded.ArrowBack, contentDescription = "Back") }
+            Text(title, fontSize = 20.sp, fontWeight = FontWeight.SemiBold, maxLines = 1, overflow = TextOverflow.Ellipsis)
+        }
+        when {
+            metas.isEmpty() && (loading || key != null && !done) -> Loading()
+            metas.isEmpty() -> EmptyState("Nothing here", "TMDB returned nothing for this row.")
             else -> LazyVerticalGrid(
                 state = grid,
                 columns = GridCells.Adaptive(minSize = 112.dp),

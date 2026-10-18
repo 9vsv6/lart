@@ -23,8 +23,8 @@ android {
         applicationId = "app.lart.next"
         minSdk = 26
         targetSdk = 36
-        versionCode = 3
-        versionName = "0.3.0"
+        versionCode = 4
+        versionName = "0.4.0"
     }
 
     signingConfigs {
@@ -89,4 +89,10 @@ dependencies {
     implementation("androidx.media3:media3-ui:1.9.0")
     // AC3, E-AC3, DTS, TrueHD and 7.1 audio the device cannot decode (GPL-3.0).
     implementation("org.jellyfin.media3:media3-ffmpeg-decoder:1.9.0+1")
+
+    // Chromecast: the Cast framework with Google's default media receiver.
+    implementation("com.google.android.gms:play-services-cast-framework:22.0.0")
+    implementation("androidx.mediarouter:mediarouter:1.7.0")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("androidx.fragment:fragment-ktx:1.8.5")
 }

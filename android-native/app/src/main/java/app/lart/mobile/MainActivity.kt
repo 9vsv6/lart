@@ -49,7 +49,12 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import android.widget.Toast
+import androidx.compose.runtime.rememberCoroutineScope
 import app.lart.mobile.data.AddonClient
+import app.lart.mobile.data.Net
+import app.lart.mobile.data.Tmdb
+import kotlinx.coroutines.launch
 import app.lart.mobile.data.CwItem
 import app.lart.mobile.data.Meta
 import app.lart.mobile.data.Repository
@@ -65,13 +70,20 @@ import app.lart.mobile.ui.LibraryScreen
 import app.lart.mobile.ui.SearchScreen
 import app.lart.mobile.ui.SettingsScreen
 import app.lart.mobile.ui.StreamsScreen
+import app.lart.mobile.ui.ProfileAvatar
+import app.lart.mobile.ui.WhosWatching
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         enableEdgeToEdge()
         super.onCreate(savedInstanceState)
         val repository = (application as LartApp).repository
-        setContent { LartTheme { LartRoot(repository) } }
+        setContent {
+            LartTheme {
+                val chosen by repository.profileChosen.collectAsState()
+                if (chosen) LartRoot(repository) else WhosWatching(repository)
+            }
+        }
     }
 }
 
@@ -90,13 +102,27 @@ private fun LartRoot(repository: Repository) {
     val route = entry?.destination?.route
     val showBar = Tab.entries.any { it.route == route }
     val context = LocalContext.current
+    val scope = rememberCoroutineScope()
+
+    /** TMDB titles open under their IMDb id, which Cinemeta and stream addons use. */
+    fun resolve(meta: Meta, then: (Meta) -> Unit) {
+        if (!meta.id.startsWith("tmdb:")) return then(meta)
+        scope.launch {
+            val key = repository.tmdbKey.value
+            val imdb = key?.let { runCatching { Tmdb.imdbId(it, meta) }.getOrNull() }
+            if (imdb != null) then(meta.copy(id = imdb))
+            else Toast.makeText(context, "Couldn't find ${meta.name} in the stream addons' catalogue.", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    fun open(meta: Meta) = resolve(meta) { nav.openDetail(it) }
 
     val browse = object : BrowseNav {
-        override fun openMeta(meta: Meta) = nav.openDetail(meta)
+        override fun openMeta(meta: Meta) = open(meta)
 
         override fun playMeta(meta: Meta) {
-            if (meta.type == "movie") nav.openStreams(meta.type, meta.id, meta.id, meta.name)
-            else nav.openDetail(meta)
+            if (meta.type == "movie") resolve(meta) { nav.openStreams(it.type, it.id, it.id, it.name) }
+            else open(meta)
         }
 
         override fun resume(item: CwItem) {
@@ -104,8 +130,14 @@ private fun LartRoot(repository: Repository) {
             nav.openStreams(item.meta.type, item.meta.id, item.videoId, item.meta.name + episode)
         }
 
-        override fun openCatalog(row: CatalogRow) =
-            nav.openCatalog(row.addon.manifest.id, row.catalog.type, row.catalog.id, row.genre, row.title)
+        override fun openCatalog(row: CatalogRow) {
+            val tmdb = row.tmdb
+            when {
+                tmdb != null -> nav.navigate("tmdbrow?spec=${enc(Net.json.encodeToString(Tmdb.RowSpec.serializer(), tmdb))}&title=${enc(row.title)}")
+                row.addon != null && row.catalog != null ->
+                    nav.openCatalog(row.addon.manifest.id, row.catalog.type, row.catalog.id, row.genre, row.title)
+            }
+        }
     }
 
     Scaffold(
@@ -116,11 +148,11 @@ private fun LartRoot(repository: Repository) {
             NavHost(nav, startDestination = Tab.Home.route) {
                 composable(Tab.Home.route) { HomeScreen(repository, browse) }
                 composable(Tab.Search.route) {
-                    SearchScreen(repository, onOpen = { nav.openDetail(it) }) { type, genre ->
+                    SearchScreen(repository, onOpen = { open(it) }) { type, genre ->
                         nav.openCatalog(AddonClient.CINEMETA_ID, type, "top", genre, "$genre ${if (type == "movie") "Movies" else "Shows"}")
                     }
                 }
-                composable(Tab.MyStuff.route) { LibraryScreen(repository, onOpen = { nav.openDetail(it) }, onResume = browse::resume) }
+                composable(Tab.MyStuff.route) { LibraryScreen(repository, onOpen = { open(it) }, onResume = browse::resume) }
                 composable(Tab.Profile.route) { SettingsScreen(repository) }
                 composable(
                     "detail/{type}/{id}",
@@ -155,7 +187,24 @@ private fun LartRoot(repository: Repository) {
                         genre = args?.getString("genre")?.ifEmpty { null },
                         title = args?.getString("title").orEmpty(),
                         onBack = { nav.popBackStack() },
-                        onOpen = { nav.openDetail(it) },
+                        onOpen = { open(it) },
+                    )
+                }
+                composable(
+                    "tmdbrow?spec={spec}&title={title}",
+                    arguments = listOf(
+                        navArgument("spec") { type = NavType.StringType; defaultValue = "" },
+                        navArgument("title") { type = NavType.StringType; defaultValue = "" },
+                    ),
+                ) { back ->
+                    val spec = back.arguments?.getString("spec")
+                        ?.let { runCatching { Net.json.decodeFromString(Tmdb.RowSpec.serializer(), it) }.getOrNull() }
+                    CatalogScreen(
+                        repository, "", "", "", null,
+                        title = back.arguments?.getString("title").orEmpty(),
+                        onBack = { nav.popBackStack() },
+                        onOpen = { open(it) },
+                        tmdb = spec,
                     )
                 }
                 composable(
@@ -184,7 +233,7 @@ private fun LartRoot(repository: Repository) {
 /** Harbor's floating tab bar: icon-only, the active tab on a light chip. */
 @Composable
 private fun TabBar(route: String?, onSelect: (Tab) -> Unit) {
-    val account = (LocalContext.current.applicationContext as LartApp).repository.account.collectAsState().value
+    val profile = (LocalContext.current.applicationContext as LartApp).repository.activeProfile.collectAsState().value
     Box(
         Modifier.fillMaxWidth()
             .background(Brush.verticalGradient(listOf(Color.Transparent, LartColors.Canvas.copy(alpha = 0.92f), LartColors.Canvas)))
@@ -208,14 +257,9 @@ private fun TabBar(route: String?, onSelect: (Tab) -> Unit) {
                             .clickable { onSelect(tab) },
                         contentAlignment = Alignment.Center,
                     ) {
-                        if (tab == Tab.Profile && account != null) {
-                            // The account's initial, like Harbor's profile avatar.
-                            Box(
-                                Modifier.size(23.dp).clip(CircleShape).background(LartColors.Accent),
-                                contentAlignment = Alignment.Center,
-                            ) {
-                                Text(account.email.take(1).uppercase(), color = Color.White, fontSize = 10.sp, fontWeight = FontWeight.Bold)
-                            }
+                        if (tab == Tab.Profile && profile != null) {
+                            // The active profile's avatar, like Harbor's tab bar.
+                            ProfileAvatar(profile, 23.dp)
                         } else {
                             Icon(
                                 tab.icon,

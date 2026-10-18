@@ -12,6 +12,15 @@ import app.lart.mobile.data.SkipSegment
 import app.lart.mobile.data.Subtitle
 import app.lart.mobile.data.Video
 
+/** A subtitle event as the overlay draws it: text, or an image (PGS/VobSub). */
+data class UiCue(
+    val text: String? = null,
+    val image: androidx.compose.ui.graphics.ImageBitmap? = null,
+    val top: Boolean = false,
+    /** Width as a fraction of the picture, for images; 0 when unknown. */
+    val width: Float = 0f,
+)
+
 /** One audio or embedded subtitle track, as the menus show it. */
 data class TrackOption(val key: String, val label: String, val detail: String?, val selected: Boolean)
 
@@ -55,7 +64,13 @@ class PlayerState {
     var addonSubs by mutableStateOf<List<Subtitle>?>(null)
     var subChoice by mutableStateOf<SubChoice>(SubChoice.Off)
     var subDelayMs by mutableLongStateOf(0)
-    var addonCue by mutableStateOf<String?>(null)
+    /** Subtitle events showing now, already shifted by the sync offset. */
+    var cues by mutableStateOf<List<UiCue>>(emptyList())
+    var audioDelayMs by mutableLongStateOf(0)
+
+    /** The Chromecast's name while casting, else null. */
+    var castingTo by mutableStateOf<String?>(null)
+    var castPlaying by mutableStateOf(false)
     var subLoading by mutableStateOf(false)
 
     var skip by mutableStateOf<SkipSegment?>(null)

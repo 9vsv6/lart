@@ -40,6 +40,7 @@ import app.lart.mobile.data.CatalogDef
 import app.lart.mobile.data.CwItem
 import app.lart.mobile.data.Meta
 import app.lart.mobile.data.Repository
+import app.lart.mobile.data.Tmdb
 import kotlinx.coroutines.async
 import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
@@ -49,9 +50,12 @@ data class CatalogRow(
     val key: String,
     val title: String,
     val metas: List<Meta>,
-    val addon: Addon,
-    val catalog: CatalogDef,
+    val type: String,
+    val addon: Addon? = null,
+    val catalog: CatalogDef? = null,
     val genre: String? = null,
+    /** Set for TMDB rows, which "See all" pages through TMDB instead of an addon. */
+    val tmdb: Tmdb.RowSpec? = null,
 )
 
 /** Where a title or a row leads; the NavHost turns these into routes. */
@@ -70,13 +74,18 @@ fun HomeScreen(repository: Repository, nav: BrowseNav) {
     val addons by repository.addons.collectAsState()
     val builtins by repository.builtins.collectAsState()
     val cw by repository.continueWatching.collectAsState()
+    val tmdbKey by repository.tmdbKey.collectAsState()
     var view by rememberSaveable { mutableStateOf(BrowseView.Home) }
-    val rows = remember { mutableStateMapOf<BrowseView, List<CatalogRow>>() }
-    val failed = remember { mutableStateMapOf<BrowseView, Boolean>() }
+    // Rebuilt from scratch when the TMDB key changes.
+    val rows = remember(tmdbKey) { mutableStateMapOf<BrowseView, List<CatalogRow>>() }
+    val failed = remember(tmdbKey) { mutableStateMapOf<BrowseView, Boolean>() }
 
-    LaunchedEffect(view, addons, builtins) {
+    LaunchedEffect(view, addons, builtins, tmdbKey) {
         if (addons.isEmpty() || rows[view] != null) return@LaunchedEffect
-        val built = buildRows(view, addons, repository.metaAddons())
+        val key = tmdbKey
+        val built = if (key != null && view != BrowseView.Anime) {
+            tmdbRows(view, key).ifEmpty { buildRows(view, addons, repository.metaAddons()) }
+        } else buildRows(view, addons, repository.metaAddons())
         if (built.isNotEmpty() || builtins.isNotEmpty()) {
             rows[view] = built
             failed[view] = built.isEmpty()
@@ -162,8 +171,9 @@ private fun heroFor(view: BrowseView, rows: List<CatalogRow>): List<Meta> {
     val pool = when (view) {
         BrowseView.Home -> {
             // Alternate the first movie and series rows, like Harbor's mixed hero.
-            val movies = rows.firstOrNull { it.catalog.type == "movie" }?.metas.orEmpty()
-            val shows = rows.firstOrNull { it.catalog.type == "series" }?.metas.orEmpty()
+            if (rows.firstOrNull()?.tmdb != null) return rows.first().metas.filter { it.background != null }.take(8)
+            val movies = rows.firstOrNull { it.type == "movie" }?.metas.orEmpty()
+            val shows = rows.firstOrNull { it.type == "series" }?.metas.orEmpty()
             movies.zip(shows).flatMap { (a, b) -> listOf(a, b) }.ifEmpty { rows.firstOrNull()?.metas.orEmpty() }
         }
         else -> rows.firstOrNull()?.metas.orEmpty()
@@ -223,7 +233,27 @@ private suspend fun buildRows(view: BrowseView, addons: List<Addon>, metaAddons:
                 view == BrowseView.Anime -> catalog.name?.removePrefix("Kitsu ")?.let { "$it Anime" } ?: rowTitle(catalog)
                 else -> rowTitle(catalog, genre)
             }
-            CatalogRow("${addon.manifest.id}/${catalog.type}/${catalog.id}/${genre.orEmpty()}", title, metas, addon, catalog, genre)
+            CatalogRow("${addon.manifest.id}/${catalog.type}/${catalog.id}/${genre.orEmpty()}", title, metas, catalog.type, addon, catalog, genre)
+        }
+    }.awaitAll().filter { it.metas.isNotEmpty() }
+}
+
+/** Harbor's TMDB rows; the first row's hero titles get their logos. */
+private suspend fun tmdbRows(view: BrowseView, key: String): List<CatalogRow> = coroutineScope {
+    val specs = when (view) {
+        BrowseView.Movies -> Tmdb.movieRows()
+        BrowseView.Shows -> Tmdb.showRows()
+        else -> Tmdb.homeRows()
+    }
+    specs.mapIndexed { index, spec ->
+        async {
+            val metas = runCatching { Tmdb.row(key, spec) }.getOrDefault(emptyList())
+            val shown = if (index == 0) {
+                val hero = metas.filter { it.background != null }.take(8)
+                val withLogos = Tmdb.withLogos(key, hero).associateBy { it.id }
+                metas.map { withLogos[it.id] ?: it }
+            } else metas
+            CatalogRow("tmdb${spec.path}${spec.params}", spec.title, shown, spec.type ?: "movie", tmdb = spec)
         }
     }.awaitAll().filter { it.metas.isNotEmpty() }
 }

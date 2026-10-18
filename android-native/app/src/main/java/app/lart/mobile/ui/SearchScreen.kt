@@ -87,7 +87,11 @@ fun SearchScreen(repository: Repository, onOpen: (Meta) -> Unit, onGenre: (type:
         results = coroutineScope {
             sources.flatMap { addon -> addon.manifest.catalogs.filter { it.supportsSearch }.map { addon to it } }
                 .map { (addon, catalog) ->
-                    async { runCatching { AddonClient.catalog(addon, catalog, mapOf("search" to q)) }.getOrDefault(emptyList()) }
+                    async {
+                        runCatching { AddonClient.catalog(addon, catalog, mapOf("search" to q)) }
+                            .onFailure { android.util.Log.w("LartSearch", "${addon.manifest.name}/${catalog.id} failed", it) }
+                            .getOrDefault(emptyList())
+                    }
                 }.awaitAll()
                 // Interleave the addons' results so one addon's long list doesn't bury the others.
                 .let { lists -> (0 until (lists.maxOfOrNull { it.size } ?: 0)).flatMap { i -> lists.mapNotNull { it.getOrNull(i) } } }

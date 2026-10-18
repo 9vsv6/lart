@@ -20,20 +20,28 @@ release key, so it updates the Tauri app in place.
      speed, sleep timer, "Still watching?", resume prompt, Up next and
      automatic next episode, episode and source switching in the player.
    - Subtitles: embedded and addon tracks, remembered language, Harbor's style
-     options (size, colour, outline/shadow/box, position) and sync for addon
-     subtitles.
+     options (size, colour, outline/shadow/box, position) and sync either way for
+     every track. Lart draws all subtitles itself: `player/Renderers.kt` swaps
+     Media3's text renderer for one that keeps every cue Media3 parses ahead.
+   - Audio delay (an offset on the audio clock), commentary tracks avoided.
+   - Chromecast through Google's default media receiver (`player/Cast.kt`).
    - Skip intro, recap and credits from IntroDB, TheIntroDB, SkipDB and AniSkip
      (`data/SkipSegments.kt`), with optional auto-skip.
-   - Still to do: `harbor-core` over JNI, subtitle search by release, audio
-     delay, casting.
+   - Still to do: `harbor-core` over JNI, subtitle search by release, an mpv
+     engine (Anime4K, libass), sending subtitles and headers to the Chromecast.
 3. **Discovery** (started): Harbor's phone layout is in: floating tab bar
    (Search, Home, My Stuff, Profile), the Home/Movies/Shows/Anime switcher, hero
    carousel, Continue watching, Top 10, genre rows, See all grids, genre tiles
    in Search, and My List on the device. Anime comes from the Kitsu addon.
-   Still to do: TMDB metadata and artwork, Jikan and AniList, awards,
-   collections, services, profiles, and backup/restore from the Tauri app.
-4. **Trackers and sync**: Trakt, Simkl, MyAnimeList, AniList, continue watching
-   across devices.
+   With the user's TMDB key (`data/Tmdb.kt`): TMDB rows, backdrops, logos,
+   translated overviews and cast. Profiles with "Who's watching?", each with its
+   own lists, progress, player settings and trackers.
+   Still to do: Jikan and AniList browsing, awards, collections, services, and
+   backup/restore from the Tauri app.
+4. **Trackers and sync** (started, `data/Trackers.kt`): Trakt (device sign-in,
+   scrobbling, paused titles in Continue watching), Simkl (PIN sign-in,
+   scrobbling) and AniList (anime progress), each with the user's own API app.
+   Still to do: MyAnimeList, watch history import, Stremio library writes.
 5. **The rest of Harbor**: Live TV, sports, manga and books, music, games,
    watch-together, themes, Android TV layout.
 
