@@ -105,6 +105,63 @@ struct Store {
     records: Vec<Transfer>,
     #[serde(default)]
     bandwidth_limits: HashMap<String, u64>,
+    /// Record id -> seal over its browser-approved source (see `source_seal`).
+    #[serde(default, skip_serializing_if = "HashMap::is_empty")]
+    seals: HashMap<String, String>,
+}
+
+/// A browser download is only ever admitted for the page and file URL the source
+/// browser approved. Hosts rotate storage names, so the file URL cannot be checked
+/// against a list on reload; instead each such record is sealed with a per-install
+/// key when saved, and a record whose page, link or URL no longer matches its seal
+/// is refused when the store is read back.
+const SEAL_KEY_FILE: &str = "transfers.key";
+
+fn seal_key(root: &Path, create: bool) -> Result<Option<[u8; 32]>> {
+    let path = root.join(SEAL_KEY_FILE);
+    match fs::read(&path) {
+        Ok(bytes) => bytes.try_into().map(Some).map_err(|_| "transfer_store"),
+        Err(error) if error.kind() == std::io::ErrorKind::NotFound && create => {
+            let mut key = [0u8; 32];
+            key[..16].copy_from_slice(uuid::Uuid::new_v4().as_bytes());
+            key[16..].copy_from_slice(uuid::Uuid::new_v4().as_bytes());
+            fs::write(&path, key).map_err(|_| "transfer_store")?;
+            Ok(Some(key))
+        }
+        Err(error) if error.kind() == std::io::ErrorKind::NotFound => Ok(None),
+        Err(_) => Err("transfer_store"),
+    }
+}
+
+fn hmac_sha256(key: &[u8; 32], message: &[u8]) -> [u8; 32] {
+    use sha2::{Digest, Sha256};
+    let (mut inner, mut outer) = ([0x36u8; 64], [0x5cu8; 64]);
+    for (index, byte) in key.iter().enumerate() {
+        inner[index] ^= byte;
+        outer[index] ^= byte;
+    }
+    let digest = Sha256::new().chain_update(inner).chain_update(message).finalize();
+    Sha256::new().chain_update(outer).chain_update(digest).finalize().into()
+}
+
+fn source_seal(key: &[u8; 32], record: &Transfer) -> Option<String> {
+    let page = record.source_page.as_deref()?;
+    let message = [
+        record.profile.as_str(),
+        &record.id,
+        page,
+        record.source_link.as_deref().unwrap_or(""),
+        &record.url,
+    ]
+    .join("\0");
+    Some(hmac_sha256(key, message.as_bytes()).iter().map(|b| format!("{b:02x}")).collect())
+}
+
+fn seal_matches(expected: &str, stored: Option<&String>) -> bool {
+    stored.is_some_and(|stored| {
+        stored.len() == expected.len()
+            && stored.bytes().zip(expected.bytes()).fold(0u8, |acc, (a, b)| acc | (a ^ b)) == 0
+    })
 }
 struct State {
     records: Vec<Transfer>,
@@ -178,6 +235,16 @@ impl Transfers {
         } else {
             Store::default()
         };
+        // No key yet means this store predates seals: trust it once; the save below seals it.
+        if let Some(key) = seal_key(&root, false)? {
+            for item in &store.records {
+                if let Some(expected) = source_seal(&key, item) {
+                    if !seal_matches(&expected, store.seals.get(&item.id)) {
+                        return Err("transfer_store");
+                    }
+                }
+            }
+        }
         let mut records = store.records;
         for (index, item) in records.iter_mut().enumerate() {
             // Persisted vector order is authoritative, including stores predating this field.
@@ -251,10 +318,20 @@ impl Transfers {
         Ok(value)
     }
     fn persist(&self, state: &State) -> Result<()> {
+        // Always ensure the key: a store with no key is the one case treated as pre-seal.
+        let seals = match seal_key(&self.root, true)? {
+            Some(key) => state
+                .records
+                .iter()
+                .filter_map(|r| source_seal(&key, r).map(|seal| (r.id.clone(), seal)))
+                .collect(),
+            None => HashMap::new(),
+        };
         let bytes = serde_json::to_vec(&Store {
             version: 1,
             records: state.records.clone(),
             bandwidth_limits: state.bandwidth_limits.clone(),
+            seals,
         })
         .map_err(|_| "transfer_store")?;
         // Never accept metadata that makes the next startup unable to read its queue.

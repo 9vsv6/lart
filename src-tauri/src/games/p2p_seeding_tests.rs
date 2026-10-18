@@ -24,17 +24,23 @@ fn root() -> PathBuf {
 fn policy() -> SeedPolicy { SeedPolicy { ratio_milli: 1000, seconds: 60, upload_bps: 64*1024 } }
 async fn completed() -> (PathBuf, Arc<Torrents>, TorrentRecord, Vec<u8>, Vec<u8>) {
     let payload: Vec<u8> = (0..256*1024+97).map(|i| ((i*31+i/13)%251) as u8).collect();
-    let (root,manager,row,meta)=completed_files(&[("game.bin", &payload)], "game.bin").await;
+    let (root,manager,row,meta)=completed_files(&[("game.bin", &payload)], Some("game.bin")).await;
     (root,manager,row,meta,payload)
 }
-async fn completed_files(entries: &[(&str, &[u8])], selected_name: &str) -> (PathBuf, Arc<Torrents>, TorrentRecord, Vec<u8>) {
+/// `selected_name: None` selects the middle file in torrent order. create_torrent lists files
+/// in directory-read order, which is alphabetical on NTFS but hash order on ext4, so a name
+/// alone cannot promise the selected file has neighbours on both sides.
+async fn completed_files(entries: &[(&str, &[u8])], selected_name: Option<&str>) -> (PathBuf, Arc<Torrents>, TorrentRecord, Vec<u8>) {
     let root = root(); let source = root.join("original"); fs::create_dir(&source).unwrap();
     for (name,bytes) in entries { fs::write(source.join(name), bytes).unwrap(); }
     let meta = librqbit::create_torrent(&source, librqbit::CreateTorrentOptions { piece_length: Some(32*1024), ..Default::default() }).await.unwrap().as_bytes().unwrap().to_vec();
     let manager = Torrents::new(root.join("state"), Arc::new(|_|{})).unwrap();
     let held = manager.slots.clone().acquire_many_owned(2).await.unwrap();
     let plan = manager.prepare("one", meta.clone(), vec![]).unwrap();
-    let selected=plan.files.iter().find(|file| file.path==selected_name).unwrap().index;
+    let selected=match selected_name {
+        Some(name) => plan.files.iter().find(|file| file.path==name).unwrap().index,
+        None => { let real: Vec<_>=plan.files.iter().filter(|file| !file.padding).collect(); real[real.len()/2].index }
+    };
     let row = manager.start(StartTorrent { profile: "one".into(), token: plan.token, parent: root.to_string_lossy().into_owned(), name: "download".into(), game: None, selected: vec![selected], download_bps: 0, upload_bps: 64*1024 }).await.unwrap();
     manager.action("one".into(), row.id.clone(), "pause".into()).await.unwrap(); drop(held);
     for (name,bytes) in entries { fs::write(Path::new(&row.destination).join(name), bytes).unwrap(); }
@@ -142,8 +148,10 @@ async fn selected_file_shares_boundary_pieces_but_never_advertises_unselected_pi
     use tokio::io::{AsyncReadExt, AsyncWriteExt};
     let first=vec![13;96*1024+37]; let middle=vec![29;37*1024+5]; let last=vec![71;70*1024];
     let entries=[("a.bin",first.as_slice()),("b.bin",middle.as_slice()),("c.bin",last.as_slice())];
-    let (root,manager,row,meta)=completed_files(&entries,"b.bin").await;
+    let (root,manager,row,meta)=completed_files(&entries,None).await;
     let (metadata,items,_)=files::metadata(&meta).unwrap();
+    let chosen=&items.iter().find(|item| row.selected.contains(&item.index)).unwrap().path;
+    let expected=entries.iter().find(|(name,_)| *name==chosen.as_str()).unwrap().1;
     let mut offset=0; let mut wanted=Vec::new();
     for item in &items {
         if row.selected.contains(&item.index) {
@@ -180,7 +188,7 @@ async fn selected_file_shares_boundary_pieces_but_never_advertises_unselected_pi
     let peer=Session::new_with_opts(destination.clone(),SessionOptions {disable_dht:true,disable_dht_persistence:true,..Default::default()}).await.unwrap();
     let handle=peer.add_torrent(AddTorrent::from_bytes(meta),Some(AddTorrentOptions {output_folder:Some(destination.to_string_lossy().into_owned()),only_files:Some(row.selected.clone()),initial_peers:Some(vec![format!("127.0.0.1:{port}").parse().unwrap()]),disable_trackers:true,..Default::default()})).await.unwrap().into_handle().unwrap();
     tokio::time::timeout(Duration::from_secs(25),async {loop {if handle.stats().finished {break;} tokio::time::sleep(Duration::from_millis(50)).await;}}).await.unwrap();
-    assert_eq!(fs::read(destination.join("b.bin")).unwrap(),middle);
+    assert_eq!(fs::read(destination.join(chosen)).unwrap(),expected);
     manager.action("one".into(),row.id.clone(),"pause".into()).await.unwrap();
     let uploaded=manager.list("one").unwrap()[0].sharing.as_ref().unwrap().uploaded_bytes;
     assert!(uploaded>0);
