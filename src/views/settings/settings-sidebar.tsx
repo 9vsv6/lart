@@ -9,7 +9,7 @@ import { useProfiles } from "@/lib/profiles";
 import { useSettings } from "@/lib/settings";
 import { isPhoneApp } from "@/lib/platform";
 import { useView } from "@/lib/view";
-import { TOP_GROUPS } from "./groups";
+import { TOP_GROUPS, sectionAvailable } from "./groups";
 import { SECTION_ICONS } from "./section-icons";
 import { SetIcon } from "./set-icon";
 import { tabsFor, type TabEntry } from "./tab-registry";
@@ -107,12 +107,14 @@ function bands(): Band[] {
   const out: Band[] = [];
   const bySection = new Map<string, Band>();
   for (const group of TOP_GROUPS) {
+    const children = group.children.filter(sectionAvailable);
+    if (children.length === 0) continue;
     const seen = bySection.get(group.section);
     if (seen) {
-      seen.sections.push(...group.children);
+      seen.sections.push(...children);
       continue;
     }
-    const band: Band = { section: group.section, sections: [...group.children] };
+    const band: Band = { section: group.section, sections: [...children] };
     bySection.set(group.section, band);
     out.push(band);
   }

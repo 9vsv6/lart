@@ -9,7 +9,7 @@ import {
   setSettingsSearchVocabulary,
 } from "./search-match";
 import { settingsAnchor, type SectionId } from "./shared";
-import { TOP_GROUPS } from "./groups";
+import { TOP_GROUPS, sectionAvailable } from "./groups";
 import { markSectionSeen, useSettingsNew } from "./settings-new";
 import { useExperimentalAccess } from "@/lib/updater/experimental-access";
 import { useStreamPluginCount } from "@/lib/plugins";
@@ -3231,7 +3231,16 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     section: "theme",
     tab: "interface",
     anchorTitle: "games.dock.settingTitle",
-    keywords: ["games", "quick game library", "game tab", "edge tab", "game bar", "hover", "half moon", "hide games tab"],
+    keywords: [
+      "games",
+      "quick game library",
+      "game tab",
+      "edge tab",
+      "game bar",
+      "hover",
+      "half moon",
+      "hide games tab",
+    ],
   },
   {
     label: "Onboarding & hints",
@@ -3919,7 +3928,14 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     section: "library",
     tab: "ai",
     anchorTitle: "Search shortcuts",
-    keywords: ["steam store", "st prefix", "st:", "game search", "disable steam search", "normal search"],
+    keywords: [
+      "steam store",
+      "st prefix",
+      "st:",
+      "game search",
+      "disable steam search",
+      "normal search",
+    ],
   },
   {
     label: "AI Search · natural-language search",
@@ -9683,7 +9699,15 @@ const SETTINGS_OPTIONS: SettingsOption[] = [
     section: "theme",
     tab: "logo",
     anchorTitle: "artwork.title",
-    keywords: ["loading animation", "connecting", "boat", "lottie", "gif", "loader", "custom animation"],
+    keywords: [
+      "loading animation",
+      "connecting",
+      "boat",
+      "lottie",
+      "gif",
+      "loader",
+      "custom animation",
+    ],
   },
   {
     label: "artwork.launch",
@@ -11029,6 +11053,7 @@ export function useNavSearch(trimmed: string) {
     for (const group of NAV_GROUPS) {
       const groupHit = group.heading ? matchesSettingsSearch(trimmed, [group.heading], t) : false;
       for (const item of group.items) {
+        if (!sectionAvailable(item.id)) continue;
         const hit =
           groupHit || matchesSettingsSearch(trimmed, [item.label], t, item.keywords ?? []);
         if (hit) out.push(item);
@@ -11044,6 +11069,7 @@ export function useNavSearch(trimmed: string) {
     if (!trimmed) return null;
     return SETTINGS_OPTIONS.filter(
       (o) =>
+        sectionAvailable(o.section) &&
         (o.label !== "Experimental builds" || experimentalAccess) &&
         matchesSettingsSearch(
           trimmed,

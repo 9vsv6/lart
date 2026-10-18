@@ -1,3 +1,4 @@
+import { isPhoneApp } from "@/lib/platform";
 import type { SectionId } from "./shared";
 
 export type TopGroup = {
@@ -87,6 +88,15 @@ export const TOP_GROUPS: TopGroup[] = [
     children: ["updates"],
   },
 ];
+
+/* mpv settings, its GLSL shaders (Anime4K) and anime motion smoothing (SVP) run
+   inside mpv. The phone app plays through ExoPlayer and has no mpv, so those pages
+   could only show errors there. */
+const MPV_ONLY: ReadonlySet<SectionId> = new Set<SectionId>(["mpv", "shaders", "anime"]);
+
+export function sectionAvailable(id: SectionId): boolean {
+  return !(MPV_ONLY.has(id) && isPhoneApp());
+}
 
 export function groupForSection(id: SectionId): TopGroup | undefined {
   return TOP_GROUPS.find((g) => g.children.includes(id));

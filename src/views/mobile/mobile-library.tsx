@@ -88,7 +88,14 @@ export function MobileLibrary() {
 function PhoneLibrary() {
   const { settings } = useSettings();
   const localeKey = `${settings.tmdbLanguage}:${settings.tmdbImageLangs.join(",")}:${settings.translateTitles}:${settings.translateDescriptions}`;
-  const lib = useHostLibrary(true, settings.libraryBookmarkedOnly, settings.tmdbKey, localeKey);
+  // Stremio's Library lists everything you added, watched or not; the phone matches it.
+  const lib = useHostLibrary(
+    true,
+    settings.libraryBookmarkedOnly,
+    settings.tmdbKey,
+    localeKey,
+    true,
+  );
   return <LibraryView {...libraryState(true, lib)} />;
 }
 

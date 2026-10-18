@@ -370,12 +370,15 @@ function useRemoteMediaServers(
   return items;
 }
 
-/** The library this Lart holds: the remote host serves it, and the phone app shows it itself. */
+/** The library this Lart holds: the remote host serves it, and the phone app shows it itself.
+ *  `stremioLibrary` lists every title in the Stremio library as the watchlist, watched or not,
+ *  the way Stremio's own Library page does; otherwise only unstarted bookmarks are listed. */
 export function useHostLibrary(
   enabled: boolean,
   bookmarkedOnly: boolean,
   tmdbKey: string,
   localeKey: string,
+  stremioLibrary = false,
 ): RemoteLibrary | null {
   const stremio = useStremioLibrary(enabled);
   const trakt = useTraktData(enabled);
@@ -385,7 +388,9 @@ export function useHostLibrary(
   const mediaServers = useRemoteMediaServers(enabled, tmdbKey, localeKey);
   return useMemo(() => {
     if (!enabled) return null;
-    const bookmarks = stremio.filter((i) => isBookmark(i, bookmarkedOnly));
+    const bookmarks = stremioLibrary
+      ? stremio.filter((i) => !i.removed && !(bookmarkedOnly && i.temp))
+      : stremio.filter((i) => isBookmark(i, bookmarkedOnly));
     const watched = stremio.filter(isWatched);
     return {
       watchlist: mergeWatchlist(local, bookmarks, trakt.watchlist),
@@ -397,6 +402,7 @@ export function useHostLibrary(
   }, [
     enabled,
     bookmarkedOnly,
+    stremioLibrary,
     stremio,
     trakt.watchlist,
     trakt.history,
