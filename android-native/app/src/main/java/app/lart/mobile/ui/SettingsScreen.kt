@@ -1228,7 +1228,7 @@ private fun BackupSection(repository: Repository) {
     SettingsSection("Updates", "Lart native ${version ?: "?"}. New previews are posted on GitHub; install them over this one.") {
         HGhostButton(onClick = { uri.openUri("https://github.com/9vsv6/lart/releases") }) { Text("See releases") }
     }
-    SettingsSection("Backup & restore", "Saves your profiles, lists, progress, settings and sign-ins to a file. It holds your account keys, so keep it private. Restore also takes a backup from Harbor or Lart on the desktop: its keys, addons, watchlist and watch positions come over.") {
+    SettingsSection("Backup & restore", "Saves your profiles, lists, progress, settings and sign-ins to a file. It holds your account keys, so keep it private. Restore also takes a backup from Harbor or Lart on the desktop: every profile with its picture, settings, keys, addons, watchlist, watch positions and tracker sign-ins come over.") {
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
             HButton(onClick = { exporter.launch("lart-backup.json") }) { Text("Back up") }
             HGhostButton(onClick = { importer.launch(arrayOf("application/json", "*/*")) }) { Text("Restore") }

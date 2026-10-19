@@ -2,6 +2,7 @@ package app.lart.mobile.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -61,8 +62,18 @@ fun ProfileAvatar(profile: Profile?, size: Dp, modifier: Modifier = Modifier) {
             fontSize = (size.value * 0.42f).sp,
             fontWeight = FontWeight.Bold,
         )
+        // The profile's picture over the initial: one of Harbor's, a URL or an uploaded one.
+        profile?.avatar?.let { picture ->
+            coil.compose.AsyncImage(picture, profile.name, contentScale = androidx.compose.ui.layout.ContentScale.Crop, modifier = Modifier.matchParentSize())
+        }
     }
 }
+
+/** Harbor's bundled profile pictures (public/avatars), for the profile editor. */
+fun harborAvatars(context: android.content.Context): List<String> =
+    listOf("avatars", "kids/avatars").flatMap { dir ->
+        context.assets.list(dir).orEmpty().sorted().map { "file:///android_asset/$dir/$it" }
+    }
 
 /** Harbor's "Who's watching?" on launch when there is more than one profile. */
 @OptIn(ExperimentalLayoutApi::class)
@@ -198,6 +209,7 @@ private fun NameDialog(title: String, initial: String, onDone: (String?) -> Unit
 private fun EditProfileDialog(profile: Profile, onDismiss: () -> Unit, onSave: (Profile) -> Unit, onDelete: (() -> Unit)?) {
     var name by remember { mutableStateOf(profile.name) }
     var color by remember { mutableStateOf(profile.color) }
+    var avatar by remember { mutableStateOf(profile.avatar) }
     var confirmDelete by remember { mutableStateOf(false) }
     AlertDialog(
         onDismissRequest = onDismiss,
@@ -217,12 +229,41 @@ private fun EditProfileDialog(profile: Profile, onDismiss: () -> Unit, onSave: (
                             ) { if (option == color) Icon(Icons.Rounded.Check, "Selected", tint = Color.White) }
                         }
                     }
+                    // Harbor's profile pictures; "None" keeps the coloured initial.
+                    Text("Picture", color = LartColors.InkMuted, fontSize = 13.sp)
+                    val context = androidx.compose.ui.platform.LocalContext.current
+                    val pictures = remember { harborAvatars(context) }
+                    androidx.compose.foundation.lazy.grid.LazyVerticalGrid(
+                        columns = androidx.compose.foundation.lazy.grid.GridCells.Adaptive(52.dp),
+                        modifier = Modifier.height(220.dp),
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                        verticalArrangement = Arrangement.spacedBy(8.dp),
+                    ) {
+                        item {
+                            Box(
+                                Modifier.size(52.dp).clip(CircleShape).background(Color(color.toInt()))
+                                    .then(if (avatar == null) Modifier.border(2.dp, LartColors.Accent, CircleShape) else Modifier).clickable { avatar = null },
+                                contentAlignment = Alignment.Center,
+                            ) { Text(name.take(1).uppercase().ifEmpty { "?" }, color = Color.White, fontWeight = FontWeight.Bold) }
+                        }
+                        items(pictures.size) { i ->
+                            val picture = pictures[i]
+                            coil.compose.AsyncImage(
+                                picture,
+                                null,
+                                contentScale = androidx.compose.ui.layout.ContentScale.Crop,
+                                modifier = Modifier.size(52.dp).clip(CircleShape)
+                                    .then(if (avatar == picture) Modifier.border(2.dp, LartColors.Accent, CircleShape) else Modifier)
+                                    .clickable { avatar = picture },
+                            )
+                        }
+                    }
                 }
             }
         },
         confirmButton = {
             if (confirmDelete) TextButton(onClick = { onDelete?.invoke() }) { Text("Delete", color = Color(0xFFE57373)) }
-            else TextButton(onClick = { onSave(profile.copy(name = name.trim().ifEmpty { profile.name }, color = color)) }) { Text("Save") }
+            else TextButton(onClick = { onSave(profile.copy(name = name.trim().ifEmpty { profile.name }, color = color, avatar = avatar)) }) { Text("Save") }
         },
         dismissButton = {
             Row {
