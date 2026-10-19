@@ -1,5 +1,7 @@
 package app.lart.mobile.ui
 
+import app.lart.mobile.data.Jikan
+import app.lart.mobile.data.HarborRows
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -86,12 +88,32 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
     LaunchedEffect(view, addons, builtins, tmdbKey) {
         if (addons.isEmpty() || rows[view] != null) return@LaunchedEffect
         val key = tmdbKey
-        val built = if (key != null && view != BrowseView.Anime) {
-            tmdbRows(view, key).ifEmpty { buildRows(view, addons, repository.metaAddons()) }
-        } else buildRows(view, addons, repository.metaAddons())
-        if (built.isNotEmpty() || builtins.isNotEmpty()) {
+        // Harbor's rows: TMDB lists with a key (Cinemeta's on Home without one), MyAnimeList for anime.
+        val built = when {
+            view == BrowseView.Anime -> emptyList()
+            key != null -> tmdbRows(view, key).ifEmpty { buildRows(view, addons, repository.metaAddons()) }
+            view == BrowseView.Home -> cinemetaRows(repository.metaAddons()).ifEmpty { buildRows(view, addons, repository.metaAddons()) }
+            else -> buildRows(view, addons, repository.metaAddons())
+        }
+        if (view != BrowseView.Anime && (built.isNotEmpty() || builtins.isNotEmpty())) {
             rows[view] = built
             failed[view] = built.isEmpty()
+        }
+        // Anime rows arrive one at a time (the anime catalogs allow a few calls a second).
+        val anime = when {
+            view == BrowseView.Anime -> Jikan.animeRows()
+            view == BrowseView.Home && !LartDisplay.settings.hideAnime -> Jikan.homeRows()
+            else -> emptyList()
+        }
+        for (spec in anime) {
+            val metas = runCatching { Jikan.row(spec) }.getOrDefault(emptyList())
+            if (metas.size < 6) continue
+            rows[view] = rows[view].orEmpty() + CatalogRow("jikan${spec.path}${spec.params}", spec.title, metas, "series")
+        }
+        if (view == BrowseView.Anime && rows[view] == null) {
+            val fallback = buildRows(view, addons, repository.metaAddons())
+            rows[view] = fallback
+            failed[view] = fallback.isEmpty()
         }
     }
 
@@ -247,9 +269,9 @@ private suspend fun buildRows(view: BrowseView, addons: List<Addon>, metaAddons:
 /** Harbor's TMDB rows; the first row's hero titles get their logos. */
 private suspend fun tmdbRows(view: BrowseView, key: String): List<CatalogRow> = coroutineScope {
     val specs = when (view) {
-        BrowseView.Movies -> Tmdb.movieRows()
-        BrowseView.Shows -> Tmdb.showRows()
-        else -> Tmdb.homeRows()
+        BrowseView.Movies -> HarborRows.movies()
+        BrowseView.Shows -> HarborRows.shows()
+        else -> HarborRows.home()
     }
     specs.mapIndexed { index, spec ->
         async {
@@ -278,5 +300,51 @@ private fun tidyRows(rows: List<CatalogRow>, settings: app.lart.mobile.data.AppS
                 !unreleased && !anime
             },
         )
+    }.filter { it.metas.isNotEmpty() }
+}
+
+/** Harbor's Home without a TMDB key (buildCinemetaRows): Cinemeta's top lists, overall and by genre. */
+private suspend fun cinemetaRows(metaAddons: List<Addon>): List<CatalogRow> = coroutineScope {
+    val cinemeta = metaAddons.firstOrNull { it.manifest.id == AddonClient.CINEMETA_ID } ?: return@coroutineScope emptyList()
+    fun top(type: String) = cinemeta.manifest.catalogs.firstOrNull { it.type == type && it.id == "top" }
+    val specs = listOf(
+        "Top 10 on Stremio" to Triple("movie", null as String?, 0..9),
+        "Popular Movies" to Triple("movie", null, 10..39),
+        "Top 10 Drama" to Triple("movie", "Drama", 0..9),
+        "Trending Series" to Triple("series", null, 0..29),
+        "Top 10 Comedy" to Triple("movie", "Comedy", 0..9),
+        "Action Hits" to Triple("movie", "Action", 0..29),
+        "Sci-Fi & Fantasy" to Triple("movie", "Sci-Fi", 0..29),
+        "Thrillers" to Triple("movie", "Thriller", 0..29),
+        "Animated Movies" to Triple("movie", "Animation", 0..29),
+        "Horror" to Triple("movie", "Horror", 0..29),
+        "Romance" to Triple("movie", "Romance", 0..29),
+        "Adventure" to Triple("movie", "Adventure", 0..29),
+        "Documentaries" to Triple("movie", "Documentary", 0..29),
+        "Mystery" to Triple("movie", "Mystery", 0..29),
+        "Fantasy" to Triple("movie", "Fantasy", 0..29),
+        "Drama Series" to Triple("series", "Drama", 0..29),
+        "Comedy Series" to Triple("series", "Comedy", 0..29),
+        "Crime Series" to Triple("series", "Crime", 0..29),
+    )
+    val pages = mutableMapOf<Pair<String, String?>, kotlinx.coroutines.Deferred<List<Meta>>>()
+    specs.map { (title, spec) ->
+        val (type, genre, range) = spec
+        val catalog = top(type) ?: return@map null
+        val page = pages.getOrPut(type to genre) {
+            async {
+                val first = runCatching { AddonClient.catalog(cinemeta, catalog, genre?.let { mapOf("genre" to it) } ?: emptyMap()) }.getOrDefault(emptyList())
+                // "Popular Movies" reads past the first page of Cinemeta's list.
+                if (genre == null && type == "movie" && first.size < 40) {
+                    first + runCatching { AddonClient.catalog(cinemeta, catalog, mapOf("skip" to "${first.size}")) }.getOrDefault(emptyList())
+                } else first
+            }
+        }
+        Triple(title, type, Pair(range, page)) to Pair(catalog, genre)
+    }.filterNotNull().map { (row, source) ->
+        val (title, type, data) = row
+        val (range, page) = data
+        val metas = page.await().let { list -> list.subList(range.first.coerceAtMost(list.size), (range.last + 1).coerceAtMost(list.size)) }
+        CatalogRow("cinemeta/$title", title, metas, type, cinemeta, source.first, source.second)
     }.filter { it.metas.isNotEmpty() }
 }

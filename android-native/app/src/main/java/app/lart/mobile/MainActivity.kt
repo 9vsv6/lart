@@ -1,5 +1,7 @@
 package app.lart.mobile
 
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import app.lart.mobile.ui.BrowseView
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
@@ -172,7 +174,8 @@ private fun LartRoot(repository: Repository) {
     androidx.compose.foundation.layout.BoxWithConstraints(Modifier.fillMaxSize().background(LartColors.Canvas)) {
     val wide = maxWidth >= 720.dp
     Row(Modifier.fillMaxSize()) {
-    if (wide) SideRail(route, browseView, onSelect = { nav.selectTab(it) }, onView = { v ->
+    // Settings has its own sidebar (with Back), as Harbor's, so the app rail steps aside there.
+    if (wide && route != Tab.Profile.route) SideRail(route, browseView, onSelect = { nav.selectTab(it) }, onView = { v ->
         browseView = v
         if (route != Tab.Home.route) nav.selectTab(Tab.Home)
     })
@@ -190,7 +193,7 @@ private fun LartRoot(repository: Repository) {
                     }
                 }
                 composable(Tab.MyStuff.route) { LibraryScreen(repository, onOpen = { open(it) }, onResume = browse::resume) }
-                composable(Tab.Profile.route) { SettingsScreen(repository, onOpenAddons = { nav.navigate("addons") }) }
+                composable(Tab.Profile.route) { SettingsScreen(repository, onOpenAddons = { nav.navigate("addons") }, onExit = { nav.selectTab(Tab.Home) }) }
                 composable("addons") { AddonsScreen(repository, onBack = { nav.popBackStack() }) }
                 composable(
                     "detail/{type}/{id}",
@@ -337,21 +340,27 @@ private fun NavHostController.openCatalog(addonId: String, type: String, catalog
 private fun SideRail(route: String?, view: BrowseView, onSelect: (Tab) -> Unit, onView: (BrowseView) -> Unit) {
     val profile = (LocalContext.current.applicationContext as LartApp).repository.activeProfile.collectAsState().value
     androidx.compose.foundation.layout.Column(
-        Modifier.width(88.dp).fillMaxSize().background(Color(0xFF0E0F11)).statusBarsPadding().navigationBarsPadding().padding(vertical = 18.dp),
+        Modifier.width(88.dp).fillMaxSize().background(Color(0xFF0E0F11)).statusBarsPadding().navigationBarsPadding().padding(vertical = 12.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(14.dp),
     ) {
+        // The sections scroll if a screen is short; the profile always stays at the foot.
+        androidx.compose.foundation.layout.Column(
+            Modifier.weight(1f).verticalScroll(rememberScrollState()),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(6.dp),
+        ) {
         Box(Modifier.size(46.dp).clip(RoundedCornerShape(12.dp)).background(LartColors.Accent), contentAlignment = Alignment.Center) {
             Text("L", color = LartColors.Canvas, fontSize = 24.sp, fontWeight = FontWeight.Black)
         }
-        Box(Modifier.height(18.dp))
+        Box(Modifier.height(10.dp))
         // Search, then Home's views (Home, Movies, Shows, Anime), then My Stuff, as Harbor's sidebar.
         RailIcon(Tab.Search.icon, Tab.Search.label, route == Tab.Search.route) { onSelect(Tab.Search) }
         BrowseView.entries.filter { it != BrowseView.Anime || !app.lart.mobile.ui.LartDisplay.settings.hideAnime }.forEach { v ->
             RailIcon(v.icon, v.label, route == Tab.Home.route && view == v) { onView(v) }
         }
         RailIcon(Tab.MyStuff.icon, Tab.MyStuff.label, route == Tab.MyStuff.route) { onSelect(Tab.MyStuff) }
-        Box(Modifier.weight(1f))
+        }
+        Box(Modifier.height(8.dp))
         Box(
             Modifier.size(58.dp).clip(RoundedCornerShape(50)).then(
                 if (route == Tab.Profile.route) Modifier.border(2.dp, LartColors.Accent, RoundedCornerShape(50)) else Modifier,
@@ -364,8 +373,8 @@ private fun SideRail(route: String?, view: BrowseView, onSelect: (Tab) -> Unit, 
 @Composable
 private fun RailIcon(icon: ImageVector, label: String, on: Boolean, onClick: () -> Unit) {
     androidx.compose.foundation.layout.Column(
-        Modifier.width(76.dp).clip(RoundedCornerShape(16.dp)).background(if (on) LartColors.Elevated else Color.Transparent)
-            .clickable(onClick = onClick).padding(vertical = 10.dp),
+        Modifier.width(76.dp).clip(RoundedCornerShape(14.dp)).background(if (on) LartColors.Elevated else Color.Transparent)
+            .clickable(onClick = onClick).padding(vertical = 7.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(4.dp),
     ) {

@@ -1,5 +1,6 @@
 package app.lart.mobile.ui
 
+import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import android.widget.Toast
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -124,7 +125,7 @@ private fun groupOf(section: Section) = Group.entries.first { section in it.chil
 private val LANGUAGE_CODES = listOf("en", "es", "fr", "de", "it", "pt", "ar", "ja", "ko", "zh", "ru", "tr", "hi", "nl", "pl", "sv", "he", "id", "vi", "th")
 
 @Composable
-fun SettingsScreen(repository: Repository, onOpenAddons: () -> Unit) {
+fun SettingsScreen(repository: Repository, onOpenAddons: () -> Unit, onExit: () -> Unit = {}) {
     // The open group ("" is the home rail on phones), and a section to scroll to.
     var groupName by rememberSaveable { mutableStateOf("") }
     var query by rememberSaveable { mutableStateOf("") }
@@ -149,6 +150,15 @@ fun SettingsScreen(repository: Repository, onOpenAddons: () -> Unit) {
                     Modifier.width(320.dp).fillMaxHeight().background(LartColors.Surface)
                         .verticalScroll(rememberScrollState()).padding(start = 12.dp, end = 12.dp, top = 20.dp, bottom = 32.dp),
                 ) {
+                    // Harbor's "← Back" out of Settings; the app's own rail is hidden here.
+                    Row(
+                        Modifier.padding(bottom = 14.dp).clip(RoundedCornerShape(10.dp)).clickable(onClick = onExit).padding(horizontal = 10.dp, vertical = 8.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp),
+                    ) {
+                        Icon(androidx.compose.material.icons.Icons.AutoMirrored.Rounded.ArrowBack, "Back", tint = LartColors.InkMuted, modifier = Modifier.size(18.dp))
+                        Text("Back", color = LartColors.InkMuted, fontSize = 15.sp, fontWeight = FontWeight.Medium)
+                    }
                     SettingsSearchField(query) { query = it }
                     if (query.isNotBlank()) SearchResults(query) { open(groupOf(it), it) }
                     else SettingsRail(repository, onOpenAddons, selected = group, onOpen = { g, s -> open(g, s) })
