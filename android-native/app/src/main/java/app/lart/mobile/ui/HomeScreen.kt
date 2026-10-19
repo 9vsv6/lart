@@ -70,12 +70,15 @@ private val MOVIE_GENRES = listOf("Action", "Comedy", "Drama", "Sci-Fi", "Thrill
 private val SHOW_GENRES = listOf("Drama", "Comedy", "Crime", "Sci-Fi", "Animation", "Documentary", "Mystery", "Reality-TV", "Action", "Family")
 
 @Composable
-fun HomeScreen(repository: Repository, nav: BrowseNav) {
+/**
+ * `view` is Home, Movies, Shows or Anime; phones switch it from the pill at the top right,
+ * tablets from the side rail (Harbor's desktop sidebar), so it lives with the caller.
+ */
+fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView: (BrowseView) -> Unit, showSwitcher: Boolean = true) {
     val addons by repository.addons.collectAsState()
     val builtins by repository.builtins.collectAsState()
     val cw by repository.continueWatching.collectAsState()
     val tmdbKey by repository.tmdbKey.collectAsState()
-    var view by rememberSaveable { mutableStateOf(BrowseView.Home) }
     // Rebuilt from scratch when the TMDB key changes.
     val rows = remember(tmdbKey) { mutableStateMapOf<BrowseView, List<CatalogRow>>() }
     val failed = remember(tmdbKey) { mutableStateMapOf<BrowseView, Boolean>() }
@@ -93,7 +96,7 @@ fun HomeScreen(repository: Repository, nav: BrowseNav) {
     }
 
     val display = LartDisplay.settings
-    LaunchedEffect(display.hideAnime) { if (display.hideAnime && view == BrowseView.Anime) view = BrowseView.Home }
+    LaunchedEffect(display.hideAnime) { if (display.hideAnime && view == BrowseView.Anime) onView(BrowseView.Home) }
 
     Box(Modifier.fillMaxSize().background(LartColors.Canvas)) {
         val current = rows[view]?.let { tidyRows(it, display) }
@@ -159,7 +162,7 @@ fun HomeScreen(repository: Repository, nav: BrowseNav) {
         ) {
             Text("Lart", color = LartColors.Ink, fontSize = 26.sp, fontWeight = FontWeight.SemiBold, letterSpacing = (-0.5).sp)
             Spacer(Modifier.weight(1f))
-            ViewSwitcher(view) { view = it }
+            if (showSwitcher) ViewSwitcher(view, onView)
         }
     }
 }

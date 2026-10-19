@@ -1,5 +1,9 @@
 package app.lart.mobile
 
+import app.lart.mobile.ui.BrowseView
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.foundation.layout.statusBarsPadding
 import android.content.Intent
 import android.net.Uri
@@ -117,6 +121,8 @@ private fun LartRoot(repository: Repository) {
     val entry by nav.currentBackStackEntryAsState()
     val route = entry?.destination?.route
     val showBar = Tab.entries.any { it.route == route }
+    // Home's view (Home, Movies, Shows, Anime), shared by its switcher and the tablet rail.
+    var browseView by rememberSaveable { mutableStateOf(BrowseView.Home) }
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
 
@@ -166,7 +172,10 @@ private fun LartRoot(repository: Repository) {
     androidx.compose.foundation.layout.BoxWithConstraints(Modifier.fillMaxSize().background(LartColors.Canvas)) {
     val wide = maxWidth >= 720.dp
     Row(Modifier.fillMaxSize()) {
-    if (wide) SideRail(route) { nav.selectTab(it) }
+    if (wide) SideRail(route, browseView, onSelect = { nav.selectTab(it) }, onView = { v ->
+        browseView = v
+        if (route != Tab.Home.route) nav.selectTab(Tab.Home)
+    })
     Scaffold(
         modifier = Modifier.weight(1f),
         containerColor = LartColors.Canvas,
@@ -174,7 +183,7 @@ private fun LartRoot(repository: Repository) {
     ) { padding ->
         Box(Modifier.fillMaxSize().padding(bottom = padding.calculateBottomPadding())) {
             NavHost(nav, startDestination = Tab.Home.route) {
-                composable(Tab.Home.route) { HomeScreen(repository, browse) }
+                composable(Tab.Home.route) { HomeScreen(repository, browse, browseView, { browseView = it }, showSwitcher = !wide) }
                 composable(Tab.Search.route) {
                     SearchScreen(repository, onOpen = { open(it) }) { type, genre ->
                         nav.openCatalog(AddonClient.CINEMETA_ID, type, "top", genre, "$genre ${if (type == "movie") "Movies" else "Shows"}")
@@ -325,7 +334,7 @@ private fun NavHostController.openCatalog(addonId: String, type: String, catalog
 
 /** Harbor's desktop sidebar, for tablets: the mark, the sections, and the profile at the foot. */
 @Composable
-private fun SideRail(route: String?, onSelect: (Tab) -> Unit) {
+private fun SideRail(route: String?, view: BrowseView, onSelect: (Tab) -> Unit, onView: (BrowseView) -> Unit) {
     val profile = (LocalContext.current.applicationContext as LartApp).repository.activeProfile.collectAsState().value
     androidx.compose.foundation.layout.Column(
         Modifier.width(88.dp).fillMaxSize().background(Color(0xFF0E0F11)).statusBarsPadding().navigationBarsPadding().padding(vertical = 18.dp),
@@ -336,13 +345,12 @@ private fun SideRail(route: String?, onSelect: (Tab) -> Unit) {
             Text("L", color = LartColors.Canvas, fontSize = 24.sp, fontWeight = FontWeight.Black)
         }
         Box(Modifier.height(18.dp))
-        Tab.entries.filter { it != Tab.Profile }.forEach { tab ->
-            val on = route == tab.route
-            Box(
-                Modifier.size(56.dp).clip(RoundedCornerShape(16.dp)).background(if (on) LartColors.Elevated else Color.Transparent).clickable { onSelect(tab) },
-                contentAlignment = Alignment.Center,
-            ) { Icon(tab.icon, tab.label, tint = if (on) LartColors.Accent else LartColors.InkMuted, modifier = Modifier.size(28.dp)) }
+        // Search, then Home's views (Home, Movies, Shows, Anime), then My Stuff, as Harbor's sidebar.
+        RailIcon(Tab.Search.icon, Tab.Search.label, route == Tab.Search.route) { onSelect(Tab.Search) }
+        BrowseView.entries.filter { it != BrowseView.Anime || !app.lart.mobile.ui.LartDisplay.settings.hideAnime }.forEach { v ->
+            RailIcon(v.icon, v.label, route == Tab.Home.route && view == v) { onView(v) }
         }
+        RailIcon(Tab.MyStuff.icon, Tab.MyStuff.label, route == Tab.MyStuff.route) { onSelect(Tab.MyStuff) }
         Box(Modifier.weight(1f))
         Box(
             Modifier.size(58.dp).clip(RoundedCornerShape(50)).then(
@@ -350,5 +358,18 @@ private fun SideRail(route: String?, onSelect: (Tab) -> Unit) {
             ).clickable { onSelect(Tab.Profile) },
             contentAlignment = Alignment.Center,
         ) { ProfileAvatar(profile, 50.dp) }
+    }
+}
+
+@Composable
+private fun RailIcon(icon: ImageVector, label: String, on: Boolean, onClick: () -> Unit) {
+    androidx.compose.foundation.layout.Column(
+        Modifier.width(76.dp).clip(RoundedCornerShape(16.dp)).background(if (on) LartColors.Elevated else Color.Transparent)
+            .clickable(onClick = onClick).padding(vertical = 10.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(4.dp),
+    ) {
+        Icon(icon, label, tint = if (on) LartColors.Accent else LartColors.InkMuted, modifier = Modifier.size(26.dp))
+        Text(label, color = if (on) LartColors.Ink else LartColors.InkSubtle, fontSize = 11.sp, fontWeight = FontWeight.Medium, maxLines = 1)
     }
 }
