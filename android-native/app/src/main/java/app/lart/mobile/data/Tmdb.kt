@@ -45,6 +45,9 @@ data class TmdbDetails(
     val trailerYouTube: String?,
     val tmdbId: Int,
     val tvdbId: Int?,
+    /** TVMaze's airing schedule ("Sunday at 22:00") and the official site, for keyless pages. */
+    val schedule: String? = null,
+    val officialSite: String? = null,
     val countries: List<String>,
     val originalLanguage: String?,
     val voteAverage: Double?,

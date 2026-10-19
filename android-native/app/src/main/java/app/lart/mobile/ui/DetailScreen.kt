@@ -72,6 +72,7 @@ import app.lart.mobile.data.CastMember
 import app.lart.mobile.data.Meta
 import app.lart.mobile.data.Omdb
 import app.lart.mobile.data.Fanart
+import app.lart.mobile.data.Keyless
 import app.lart.mobile.data.Mdblist
 import app.lart.mobile.data.ProviderKey
 import app.lart.mobile.data.Tvdb
@@ -169,11 +170,13 @@ fun DetailScreen(
         failed = loaded == null && builtins.isNotEmpty()
     }
 
+    // TMDB with a key; without one (or when TMDB misses), Harbor's keyless sources.
     LaunchedEffect(meta?.id, tmdbKey) {
-        val key = tmdbKey ?: return@LaunchedEffect
         val current = meta ?: return@LaunchedEffect
         val imdb = current.id.substringBefore(':').takeIf { it.startsWith("tt") } ?: return@LaunchedEffect
-        details = runCatching { Tmdb.details(key, imdb, current.type) }.getOrNull()
+        val key = tmdbKey
+        details = (if (key != null) runCatching { Tmdb.details(key, imdb, current.type) }.getOrNull() else null)
+            ?: runCatching { Keyless.details(current) }.getOrNull()
     }
 
     Box(Modifier.fillMaxSize().background(LartColors.Canvas)) {
@@ -302,7 +305,7 @@ private fun DetailBody(
                         Column(Modifier.padding(top = 8.dp)) {
                             episodes.forEach { video ->
                                 val spoiler = LartDisplay.settings.hideSpoilers && (video.season ?: 0) > 0 && (video.season ?: 0) * 10_000 + (video.episode ?: 0) > upTo
-                                EpisodeRow(video, spoiler, side, wide, ratings[video.season ?: -1]?.get(video.episode ?: -1)) { onStreams(video.id, "${meta.name} · ${episodeLabel(video)}") }
+                                EpisodeRow(video, spoiler, side, wide, ratings[video.season ?: -1]?.get(video.episode ?: -1) ?: video.rating?.takeIf { it.isNotBlank() && it != "0" }) { onStreams(video.id, "${meta.name} · ${episodeLabel(video)}") }
                             }
                         }
                     }
@@ -619,18 +622,21 @@ private fun MediaGallery(details: TmdbDetails, side: Dp, wide: Boolean) {
 /** Harbor's Information block (info-block.tsx), in its order. */
 private fun infoOf(meta: Meta, details: TmdbDetails?): List<Pair<String, String>> = listOfNotNull(
     details?.status?.let { "Status" to it },
-    details?.seasons?.takeIf { meta.type != "movie" }?.let { "Seasons" to listOfNotNull("$it", details.episodes?.let { e -> "$e episodes" }).joinToString("  Â·  ") },
+    details?.seasons?.takeIf { meta.type != "movie" }?.let { "Seasons" to listOfNotNull("$it", details.episodes?.let { e -> "$e episodes" }).joinToString("  ·  ") },
     details?.firstAired?.let { (if (meta.type == "movie") "Released" else "First aired") to it },
     details?.lastAired?.takeIf { meta.type != "movie" }?.let { "Last aired" to it },
-    details?.networks?.takeIf { it.isNotEmpty() }?.let { "Networks" to it.joinToString("  Â·  ") },
-    details?.studios?.takeIf { it.isNotEmpty() }?.let { "Studio" to it.joinToString("  Â·  ") },
+    details?.schedule?.takeIf { details.lastAired == null }?.let { "Airs" to it },
+    details?.networks?.takeIf { it.isNotEmpty() }?.let { "Networks" to it.joinToString("  ·  ") },
+    details?.studios?.takeIf { it.isNotEmpty() }?.let { "Studio" to it.joinToString("  ·  ") },
     (details?.countries?.takeIf { it.isNotEmpty() }?.joinToString(", ") ?: meta.countryName)?.let { "Country" to it },
     details?.originalLanguage?.let { "Original language" to it.replaceFirstChar { c -> c.titlecase(Locale.getDefault()) } },
     details?.originalTitle?.let { "Original title" to it },
     details?.budget?.let { "Budget" to money(it) },
     details?.revenue?.let { "Revenue" to money(it) },
-    details?.voteAverage?.takeIf { details.voteCount > 0 }?.let { "Rating" to "%.1f  Â·  %,d votes".format(Locale.getDefault(), it, details.voteCount) },
+    details?.voteAverage?.takeIf { details.voteCount > 0 }?.let { "Rating" to "%.1f  ·  %,d votes".format(Locale.getDefault(), it, details.voteCount) },
     meta.releaseInfo?.takeIf { details == null }?.let { "Released" to it },
+    meta.awards?.takeIf { it.isNotBlank() }?.let { "Awards" to it },
+    details?.officialSite?.takeIf { it.isNotBlank() }?.let { "Official site" to it.removePrefix("https://").removePrefix("http://").removeSuffix("/") },
 )
 
 private fun money(amount: Long): String = java.text.NumberFormat.getCurrencyInstance(Locale.US).apply { maximumFractionDigits = 0 }.format(amount)

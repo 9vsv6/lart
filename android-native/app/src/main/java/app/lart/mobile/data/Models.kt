@@ -93,6 +93,10 @@ data class Meta(
     val writer: JsonElement? = null,
     val country: JsonElement? = null,
     val trailers: JsonElement? = null,
+    /** Cinemeta's awards line ("Won 16 Primetime Emmys. 172 wins & 269 nominations total"). */
+    val awards: String? = null,
+    val status: String? = null,
+    val released: String? = null,
     /** Harbor's "In cinema" badge: a movie TMDB lists as now playing. */
     val inTheaters: Boolean = false,
     /** Full release date ("2026-10-02"), for Harbor's re-run check. */
@@ -125,6 +129,8 @@ data class Video(
     val released: String? = null,
     val thumbnail: String? = null,
     val overview: String? = null,
+    /** Cinemeta's IMDb rating for the episode ("7.7"). */
+    val rating: String? = null,
 ) {
     val label: String get() = title ?: name ?: "Episode ${episode ?: ""}"
 }
