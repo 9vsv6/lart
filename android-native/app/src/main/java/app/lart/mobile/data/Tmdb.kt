@@ -6,6 +6,7 @@ import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.contentOrNull
 import kotlinx.serialization.json.intOrNull
 import kotlinx.serialization.json.jsonObject
 import kotlinx.serialization.json.jsonPrimitive
@@ -18,6 +19,39 @@ data class CastMember(val name: String, val character: String?, val photo: Strin
 /** What TMDB adds to a detail page: artwork, a translated overview, and the cast. */
 data class TmdbExtras(val backdrop: String?, val logo: String?, val overview: String?, val title: String?, val cast: List<CastMember>)
 
+/** A streaming service that carries the title, for "Watch on". */
+data class WatchProvider(val name: String, val logo: String?)
+
+/** Harbor's detail page from TMDB: artwork, facts, people, where to watch, related titles and media. */
+data class TmdbDetails(
+    val backdrop: String?,
+    val logo: String?,
+    val overview: String?,
+    val title: String?,
+    val tagline: String?,
+    val genres: List<String>,
+    val runtimeMinutes: Int?,
+    val status: String?,
+    val studios: List<String>,
+    val countries: List<String>,
+    val originalLanguage: String?,
+    val voteAverage: Double?,
+    val voteCount: Int,
+    val cast: List<CastMember>,
+    val directors: List<String>,
+    val writers: List<String>,
+    val producers: List<String>,
+    val cinematography: List<String>,
+    val music: List<String>,
+    val editors: List<String>,
+    val watchOn: List<WatchProvider>,
+    val recommendations: List<Meta>,
+    val similar: List<Meta>,
+    val backdrops: List<String>,
+    val posters: List<String>,
+    val logos: List<String>,
+)
+
 /**
  * TMDB, as Harbor uses it with a key: rows for Home, Movies and Shows, logos and
  * backdrops, translated titles and the cast. Titles from TMDB carry "tmdb:" ids and
@@ -27,7 +61,7 @@ object Tmdb {
     private const val API = "https://api.themoviedb.org/3"
     private const val IMAGES = "https://image.tmdb.org/t/p"
 
-    /** Settings â Languages â Details language; empty follows the device. */
+    /** Settings → Languages → Details language; empty follows the device. */
     @Volatile var languageOverride: String = ""
     private val language: String get() = languageOverride.ifEmpty { Locale.getDefault().toLanguageTag() }
 
@@ -133,6 +167,77 @@ object Tmdb {
     suspend fun imdbId(key: String, meta: Meta): String? {
         val path = tmdbPath(meta) ?: return null
         return get(key, "$path/external_ids").string("imdb_id")?.takeIf { it.startsWith("tt") }
+    }
+
+    /** Everything Harbor's detail page shows from TMDB, for an IMDb title. */
+    suspend fun details(key: String, imdbId: String, type: String): TmdbDetails? {
+        val found = get(key, "/find/$imdbId", mapOf("external_source" to "imdb_id"))
+        val (kind, result) = if (type == "movie") {
+            "movie" to (found["movie_results"] as? JsonArray)?.firstOrNull()
+        } else {
+            "tv" to (found["tv_results"] as? JsonArray)?.firstOrNull()
+        }
+        val id = result?.jsonObject?.get("id")?.jsonPrimitive?.intOrNull ?: return null
+        val lang = languageOverride.ifEmpty { Locale.getDefault().language }
+        val d = get(
+            key,
+            "/$kind/$id",
+            mapOf(
+                "append_to_response" to "credits,images,recommendations,similar,watch/providers",
+                "include_image_language" to "$lang,en,null",
+            ),
+        )
+        val images = d["images"]?.jsonObject
+        fun pictures(name: String, size: String) =
+            (images?.get(name) as? JsonArray).orEmpty().mapNotNull { it.jsonObject.string("file_path") }.distinct().take(30).map { "$IMAGES/$size$it" }
+        val logos = (images?.get("logos") as? JsonArray).orEmpty().map { it.jsonObject }
+        val logo = (logos.firstOrNull { it.string("iso_639_1") == lang } ?: logos.firstOrNull { it.string("iso_639_1") == "en" } ?: logos.firstOrNull())
+            ?.string("file_path")?.let { "$IMAGES/w500$it" }
+        val credits = d["credits"]?.jsonObject
+        val cast = (credits?.get("cast") as? JsonArray).orEmpty().take(40).map { it.jsonObject }.map {
+            CastMember(it.string("name").orEmpty(), it.string("character")?.takeIf { c -> c.isNotBlank() }, it.string("profile_path")?.let { p -> "$IMAGES/w342$p" })
+        }
+        val crew = (credits?.get("crew") as? JsonArray).orEmpty().map { it.jsonObject }
+        fun job(vararg jobs: String) = crew.filter { it.string("job") in jobs }.mapNotNull { it.string("name") }.distinct()
+        val creators = (d["created_by"] as? JsonArray).orEmpty().mapNotNull { it.jsonObject.string("name") }
+        val country = Locale.getDefault().country.ifEmpty { "US" }
+        val providers = d["watch/providers"]?.jsonObject?.get("results")?.jsonObject?.let { it[country] ?: it["US"] }?.jsonObject
+        val watchOn = listOf("flatrate", "free", "ads").flatMap { (providers?.get(it) as? JsonArray).orEmpty() }.map { it.jsonObject }
+            .distinctBy { it.string("provider_name") }
+            .mapNotNull { p -> p.string("provider_name")?.let { WatchProvider(it, p.string("logo_path")?.let { l -> "$IMAGES/w92$l" }) } }
+        val forced = if (kind == "movie") "movie" else "series"
+        fun rail(name: String) = (d[name]?.jsonObject?.get("results") as? JsonArray).orEmpty().mapNotNull { toMeta(it.jsonObject, forced) }
+        val runtime = d["runtime"]?.jsonPrimitive?.intOrNull ?: (d["episode_run_time"] as? JsonArray)?.firstOrNull()?.jsonPrimitive?.intOrNull
+        val originalLanguage = d.string("original_language")?.let { Locale(it).getDisplayLanguage(Locale.getDefault()).ifBlank { null } }
+        return TmdbDetails(
+            backdrop = d.string("backdrop_path")?.let { "$IMAGES/w1280$it" },
+            logo = logo,
+            overview = d.string("overview")?.takeIf { it.isNotBlank() },
+            title = d.string("title") ?: d.string("name"),
+            tagline = d.string("tagline")?.takeIf { it.isNotBlank() },
+            genres = (d["genres"] as? JsonArray).orEmpty().mapNotNull { it.jsonObject.string("name") },
+            runtimeMinutes = runtime,
+            status = d.string("status"),
+            studios = ((d["production_companies"] as? JsonArray).orEmpty() + (d["networks"] as? JsonArray).orEmpty())
+                .mapNotNull { it.jsonObject.string("name") }.distinct().take(3),
+            countries = (d["production_countries"] as? JsonArray).orEmpty().mapNotNull { it.jsonObject.string("name") },
+            originalLanguage = originalLanguage,
+            voteAverage = d["vote_average"]?.jsonPrimitive?.contentOrNull?.toDoubleOrNull(),
+            voteCount = d["vote_count"]?.jsonPrimitive?.intOrNull ?: 0,
+            cast = cast,
+            directors = job("Director").ifEmpty { creators },
+            writers = job("Screenplay", "Writer", "Story", "Novel", "Teleplay").take(4),
+            producers = job("Producer").take(4),
+            cinematography = job("Director of Photography"),
+            music = job("Original Music Composer", "Music"),
+            editors = job("Editor"),
+            watchOn = watchOn,
+            recommendations = rail("recommendations"),
+            similar = rail("similar"),
+            backdrops = pictures("backdrops", "w780"),
+            posters = pictures("posters", "w342"),
+            logos = pictures("logos", "w300"),
+        )
     }
 
     /** Artwork, translation and cast for an IMDb title. */

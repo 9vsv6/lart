@@ -210,19 +210,8 @@ internal fun HarborControls(
                     }
                     if (state.anime4kAvailable) Anime4KPill(prefs, state.panel == Panel.Anime4K) { onTouch(); toggle(state, Panel.Anime4K) }
                     ToolIcon(Icons.Outlined.Speed, "Speed", state.panel == Panel.Speed, dot = state.speed != 1f) { onTouch(); toggle(state, Panel.Speed) }
-                    ToolIcon(Icons.Rounded.Bedtime, "Sleep timer", state.panel == Panel.Sleep, dot = state.sleepAt != null) { onTouch(); toggle(state, Panel.Sleep) }
-                    if (state.settings.screenLock) ToolIcon(Icons.Rounded.LockOpen, "Lock", false) {
-                        state.locked = true
-                        state.controlsVisible = true
-                    }
                     ToolIcon(Icons.Outlined.PictureInPictureAlt, "Picture in picture", false) { actions.enterPip() }
                     castButton?.let { Box(Modifier.size(48.dp), contentAlignment = Alignment.Center) { it() } }
-                    ToolIcon(Icons.Rounded.AspectRatio, state.fit.label, false) {
-                        onTouch()
-                        actions.setFit(Fit.entries[(state.fit.ordinal + 1) % Fit.entries.size])
-                        state.hint = state.fit.label
-                        state.hintIcon = 0
-                    }
                 }
             }
         }

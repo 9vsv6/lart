@@ -137,9 +137,11 @@ fun HeroCarousel(
             if (System.currentTimeMillis() >= pausedUntil) index = (index + 1) % slides.size
         }
     }
+    // Phones get Harbor's mobile card (16:13); tablets a wide desktop-style hero.
+    val wide = androidx.compose.ui.platform.LocalConfiguration.current.screenWidthDp >= 720
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Box(
-            Modifier.padding(horizontal = 16.dp).fillMaxWidth().aspectRatio(16f / 13f).heightIn(max = 560.dp)
+            Modifier.padding(horizontal = 16.dp).fillMaxWidth().aspectRatio(if (wide) 21f / 9f else 16f / 13f)
                 .clip(RoundedCornerShape(24.dp)).background(LartColors.Surface)
                 .border(1.dp, LartColors.EdgeSoft, RoundedCornerShape(24.dp)),
         ) {

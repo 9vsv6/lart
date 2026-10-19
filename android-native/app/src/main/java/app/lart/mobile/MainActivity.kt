@@ -1,5 +1,6 @@
 package app.lart.mobile
 
+import androidx.compose.foundation.layout.statusBarsPadding
 import android.content.Intent
 import android.net.Uri
 import androidx.compose.runtime.LaunchedEffect
@@ -161,9 +162,15 @@ private fun LartRoot(repository: Repository) {
         }
     }
 
+    // Tablets get Harbor's desktop layout: a rail down the left instead of the floating tab bar.
+    androidx.compose.foundation.layout.BoxWithConstraints(Modifier.fillMaxSize().background(LartColors.Canvas)) {
+    val wide = maxWidth >= 720.dp
+    Row(Modifier.fillMaxSize()) {
+    if (wide) SideRail(route) { nav.selectTab(it) }
     Scaffold(
+        modifier = Modifier.weight(1f),
         containerColor = LartColors.Canvas,
-        bottomBar = { if (showBar) TabBar(route) { nav.selectTab(it) } },
+        bottomBar = { if (showBar && !wide) TabBar(route) { nav.selectTab(it) } },
     ) { padding ->
         Box(Modifier.fillMaxSize().padding(bottom = padding.calculateBottomPadding())) {
             NavHost(nav, startDestination = Tab.Home.route) {
@@ -188,6 +195,7 @@ private fun LartRoot(repository: Repository) {
                         id,
                         onBack = { nav.popBackStack() },
                         onStreams = { videoId, title -> nav.openStreams(type, id, videoId, title) },
+                        onOpen = { open(it) },
                     )
                 }
                 composable(
@@ -249,6 +257,8 @@ private fun LartRoot(repository: Repository) {
                 }
             }
         }
+    }
+    }
     }
 }
 
@@ -312,3 +322,33 @@ private fun NavHostController.openStreams(type: String, metaId: String, videoId:
 
 private fun NavHostController.openCatalog(addonId: String, type: String, catalogId: String, genre: String?, title: String) =
     navigate("catalog/${enc(addonId)}/${enc(type)}/${enc(catalogId)}?genre=${enc(genre.orEmpty())}&title=${enc(title)}")
+
+/** Harbor's desktop sidebar, for tablets: the mark, the sections, and the profile at the foot. */
+@Composable
+private fun SideRail(route: String?, onSelect: (Tab) -> Unit) {
+    val profile = (LocalContext.current.applicationContext as LartApp).repository.activeProfile.collectAsState().value
+    androidx.compose.foundation.layout.Column(
+        Modifier.width(88.dp).fillMaxSize().background(Color(0xFF0E0F11)).statusBarsPadding().navigationBarsPadding().padding(vertical = 18.dp),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(14.dp),
+    ) {
+        Box(Modifier.size(46.dp).clip(RoundedCornerShape(12.dp)).background(LartColors.Accent), contentAlignment = Alignment.Center) {
+            Text("L", color = LartColors.Canvas, fontSize = 24.sp, fontWeight = FontWeight.Black)
+        }
+        Box(Modifier.height(18.dp))
+        Tab.entries.filter { it != Tab.Profile }.forEach { tab ->
+            val on = route == tab.route
+            Box(
+                Modifier.size(56.dp).clip(RoundedCornerShape(16.dp)).background(if (on) LartColors.Elevated else Color.Transparent).clickable { onSelect(tab) },
+                contentAlignment = Alignment.Center,
+            ) { Icon(tab.icon, tab.label, tint = if (on) LartColors.Accent else LartColors.InkMuted, modifier = Modifier.size(28.dp)) }
+        }
+        Box(Modifier.weight(1f))
+        Box(
+            Modifier.size(58.dp).clip(RoundedCornerShape(50)).then(
+                if (route == Tab.Profile.route) Modifier.border(2.dp, LartColors.Accent, RoundedCornerShape(50)) else Modifier,
+            ).clickable { onSelect(Tab.Profile) },
+            contentAlignment = Alignment.Center,
+        ) { ProfileAvatar(profile, 50.dp) }
+    }
+}

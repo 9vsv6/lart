@@ -20,8 +20,12 @@ object Playback {
         settings: AppSettings = AppSettings(),
         media3: Boolean = settings.engine == "media3",
         prefer: Pair<String, String?>? = null,
+        /** Told which addons failed, as (addon name, reason). */
+        onFailures: ((List<Pair<String, String>>) -> Unit)? = null,
     ): List<RankedStream> {
-        val all = AddonClient.streams(addons, type, id).flatMap { group -> group.streams.map { RankedStream(group.addon, it) } }
+        val groups = AddonClient.streams(addons, type, id)
+        onFailures?.invoke(groups.filter { it.error != null }.map { it.addon.manifest.name to it.error!! })
+        val all = groups.flatMap { group -> group.streams.map { RankedStream(group.addon, it) } }
         val kept = all.filter { allowed(it.stream, settings) }
         val playable = { s: Stream -> s.playable(debrid != null) }
         val ordered = if (settings.streamSort == "addon") {

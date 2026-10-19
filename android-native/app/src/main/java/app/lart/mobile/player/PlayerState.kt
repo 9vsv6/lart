@@ -91,7 +91,7 @@ class PlayerState {
     var currentUrl by mutableStateOf("")
     /** The playing source's name line, to mark it in the switcher. */
     var currentStreamKey by mutableStateOf<String?>(null)
-    /** "4K", "1080p"â¦ from the source, beside the title. */
+    /** "4K", "1080p"… from the source, beside the title. */
     var quality by mutableStateOf<String?>(null)
     /** A movie's year, under the title when there's no episode line. */
     var year by mutableStateOf<String?>(null)

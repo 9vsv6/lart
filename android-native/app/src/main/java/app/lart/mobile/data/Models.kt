@@ -87,7 +87,23 @@ data class Meta(
     val runtime: String? = null,
     val genres: List<String>? = null,
     val videos: List<Video>? = null,
+    // Cinemeta's extras; loosely typed, since other addons send them in other shapes.
+    val cast: JsonElement? = null,
+    val director: JsonElement? = null,
+    val writer: JsonElement? = null,
+    val country: JsonElement? = null,
+    val trailers: JsonElement? = null,
 ) {
+    val castNames: List<String> get() = names(cast)
+    val directors: List<String> get() = names(director)
+    val writers: List<String> get() = names(writer)
+    val countryName: String? get() = names(country).joinToString(", ").ifBlank { null }
+
+    /** The first YouTube trailer, as Cinemeta lists them. */
+    val trailerYouTube: String?
+        get() = (trailers as? kotlinx.serialization.json.JsonArray)?.mapNotNull { it as? JsonObject }
+            ?.firstOrNull { it.string("type") == null || it.string("type") == "Trailer" }?.string("source")
+
     /** The title's logo, falling back to metahub's for IMDb titles, as Harbor's hero does. */
     val logoUrl: String?
         get() = logo ?: id.takeIf { it.startsWith("tt") }?.let { "https://images.metahub.space/logo/medium/${it.substringBefore(':')}/img" }
@@ -174,3 +190,11 @@ data class LibraryItem(
 internal fun JsonObject.string(key: String): String? = this[key]?.jsonPrimitive?.contentOrNull
 
 internal fun JsonElement.objectOrNull(): JsonObject? = this as? JsonObject ?: runCatching { jsonObject }.getOrNull()
+
+/** A string, or a list of strings, as names. */
+internal fun names(element: JsonElement?): List<String> = when (element) {
+    null -> emptyList()
+    is JsonPrimitive -> listOfNotNull(element.contentOrNull?.takeIf { it.isNotBlank() })
+    is kotlinx.serialization.json.JsonArray -> element.mapNotNull { (it as? JsonPrimitive)?.contentOrNull?.takeIf { s -> s.isNotBlank() } }
+    else -> emptyList()
+}
