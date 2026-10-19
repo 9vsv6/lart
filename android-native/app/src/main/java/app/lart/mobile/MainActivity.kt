@@ -178,15 +178,29 @@ private fun LartRoot(repository: Repository) {
     if (wide && route != Tab.Profile.route) SideRail(route, browseView, onSelect = { nav.selectTab(it) }, onView = { v ->
         browseView = v
         if (route != Tab.Home.route) nav.selectTab(Tab.Home)
-    })
+    }, onPage = { nav.navigate(it) { launchSingleTop = true } })
     Scaffold(
         modifier = Modifier.weight(1f),
         containerColor = LartColors.Canvas,
         bottomBar = { if (showBar && !wide) TabBar(route) { nav.selectTab(it) } },
     ) { padding ->
         Box(Modifier.fillMaxSize().padding(bottom = padding.calculateBottomPadding())) {
-            androidx.compose.runtime.CompositionLocalProvider(app.lart.mobile.ui.LocalOpenList provides { id: String -> nav.navigate("list/${enc(id)}") }) {
+            androidx.compose.runtime.CompositionLocalProvider(app.lart.mobile.ui.LocalOpenList provides { id: String -> nav.navigate("list/${enc(id)}") }, app.lart.mobile.ui.LocalOpenPage provides { route: String -> nav.navigate(route) { launchSingleTop = true } }) {
             NavHost(nav, startDestination = Tab.Home.route) {
+                composable("discover") {
+                    app.lart.mobile.ui.DiscoverScreen(
+                        repository,
+                        onBack = if (wide) null else ({ nav.popBackStack() }),
+                        onOpen = { open(it) },
+                        onTmdbRow = { spec, title -> nav.navigate("tmdbrow?spec=${enc(Net.json.encodeToString(Tmdb.RowSpec.serializer(), spec))}&title=${enc(title)}") },
+                        onGenre = { type, genre -> nav.openCatalog(AddonClient.CINEMETA_ID, type, "top", genre, "$genre Movies") },
+                    )
+                }
+                composable("calendar") { app.lart.mobile.ui.CalendarScreen(repository, onBack = if (wide) null else ({ nav.popBackStack() }), onOpen = { open(it) }) }
+                composable("collections") { app.lart.mobile.ui.CollectionsScreen(repository, onBack = { nav.popBackStack() }) }
+                composable("collection/{id}", arguments = listOf(navArgument("id") { type = NavType.IntType })) { back ->
+                    app.lart.mobile.ui.CollectionScreen(repository, back.arguments?.getInt("id") ?: 0, onBack = { nav.popBackStack() }, onOpen = { open(it) })
+                }
                 composable("list/{id}", arguments = listOf(navArgument("id") { type = NavType.StringType })) { back ->
                     app.lart.mobile.ui.CuratedListScreen(back.arguments?.getString("id").orEmpty(), onBack = { nav.popBackStack() }, onOpen = { open(it) })
                 }
@@ -342,7 +356,7 @@ private fun NavHostController.openCatalog(addonId: String, type: String, catalog
 
 /** Harbor's desktop sidebar, for tablets: the mark, the sections, and the profile at the foot. */
 @Composable
-private fun SideRail(route: String?, view: BrowseView, onSelect: (Tab) -> Unit, onView: (BrowseView) -> Unit) {
+private fun SideRail(route: String?, view: BrowseView, onSelect: (Tab) -> Unit, onView: (BrowseView) -> Unit, onPage: (String) -> Unit) {
     val profile = (LocalContext.current.applicationContext as LartApp).repository.activeProfile.collectAsState().value
     androidx.compose.foundation.layout.Column(
         Modifier.width(88.dp).fillMaxSize().background(Color(0xFF0E0F11)).statusBarsPadding().navigationBarsPadding().padding(vertical = 12.dp),
@@ -363,6 +377,8 @@ private fun SideRail(route: String?, view: BrowseView, onSelect: (Tab) -> Unit, 
         BrowseView.entries.filter { it != BrowseView.Anime || !app.lart.mobile.ui.LartDisplay.settings.hideAnime }.forEach { v ->
             RailIcon(v.icon, v.label, route == Tab.Home.route && view == v) { onView(v) }
         }
+        // Harbor's other pages: Discover, Calendar and Collections.
+        app.lart.mobile.ui.ExtraPage.entries.forEach { p -> RailIcon(p.icon, p.label, route == p.route) { onPage(p.route) } }
         RailIcon(Tab.MyStuff.icon, Tab.MyStuff.label, route == Tab.MyStuff.route) { onSelect(Tab.MyStuff) }
         }
         Box(Modifier.height(8.dp))

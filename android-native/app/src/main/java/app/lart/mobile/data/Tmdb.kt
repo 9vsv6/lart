@@ -129,6 +129,29 @@ object Tmdb {
     private val genreNames = (movieGenres + tvGenres + listOf(12 to "Adventure", 14 to "Fantasy", 36 to "History", 10402 to "Music", 10751 to "Family", 37 to "Western", 10752 to "War", 10762 to "Kids", 10764 to "Reality"))
         .toMap()
 
+    data class Collection(val id: Int, val name: String, val overview: String?, val poster: String?, val backdrop: String?, val parts: List<Meta>)
+
+    private val collections = mutableMapOf<Int, Collection?>()
+
+    /** A TMDB collection (a franchise's films), in release order, as Harbor's collection page. */
+    suspend fun collection(key: String, id: Int): Collection? {
+        if (id in collections) return collections[id]
+        val body = runCatching { get(key, "/collection/$id") }.getOrNull()
+        val result = body?.let { b ->
+            Collection(
+                id = id,
+                name = b.string("name") ?: return@let null,
+                overview = b.string("overview"),
+                poster = b.string("poster_path")?.let { "$IMAGES/w342$it" },
+                backdrop = b.string("backdrop_path")?.let { "$IMAGES/w1280$it" },
+                parts = (b["parts"] as? JsonArray).orEmpty().mapNotNull { toMeta(it.jsonObject, "movie") }
+                    .sortedBy { it.releaseDate ?: "9999" },
+            )
+        }
+        collections[id] = result
+        return result
+    }
+
     suspend fun row(key: String, spec: RowSpec, page: Int = 1): List<Meta> {
         val body = get(key, spec.path, spec.params + ("page" to "$page"))
         return (body["results"] as? JsonArray).orEmpty().mapNotNull { item -> toMeta(item.jsonObject, spec.type) }

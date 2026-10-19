@@ -112,6 +112,20 @@ fun ViewSwitcher(current: BrowseView, onSelect: (BrowseView) -> Unit) {
                     modifier = Modifier.width(186.dp),
                 )
             }
+            // Harbor's other pages, under the views.
+            val openPage = LocalOpenPage.current
+            androidx.compose.material3.HorizontalDivider(color = LartColors.EdgeSoft, modifier = Modifier.padding(vertical = 4.dp))
+            ExtraPage.entries.forEach { page ->
+                DropdownMenuItem(
+                    text = { Text(page.label, color = LartColors.InkMuted, fontSize = 15.sp, fontWeight = FontWeight.SemiBold) },
+                    leadingIcon = { Icon(page.icon, null, tint = LartColors.InkMuted) },
+                    onClick = {
+                        open = false
+                        openPage(page.route)
+                    },
+                    modifier = Modifier.width(186.dp),
+                )
+            }
         }
     }
 }
