@@ -255,7 +255,7 @@ fun PlayerUi(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions, cas
             }
         } else {
             AnimatedVisibility(state.controlsVisible, enter = fadeIn(), exit = fadeOut()) {
-                Controls(state, prefs, actions, castButton) { touchedAt = System.currentTimeMillis() }
+                HarborControls(state, prefs, actions, castButton) { touchedAt = System.currentTimeMillis() }
             }
         }
 
@@ -265,161 +265,12 @@ fun PlayerUi(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions, cas
 
         state.error?.let { ErrorCard(it, state, actions, Modifier.align(Alignment.Center)) }
 
-        AnimatedVisibility(
-            visible = state.panel != null,
-            enter = slideInHorizontally { it } + fadeIn(),
-            exit = slideOutHorizontally { it } + fadeOut(),
-            modifier = Modifier.align(Alignment.CenterEnd),
-        ) {
-            SidePanel(state, prefs, actions)
-        }
+        HarborPopovers(state, prefs, actions)
 
         if (state.stillWatching) StillWatching(state, actions)
     }
 }
 
-@Composable
-private fun Controls(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions, castButton: (@Composable () -> Unit)?, onTouch: () -> Unit) {
-    Box(Modifier.fillMaxSize()) {
-        Box(
-            Modifier.fillMaxWidth().height(120.dp).align(Alignment.TopCenter)
-                .background(Brush.verticalGradient(listOf(Scrim, Color.Transparent))),
-        )
-        Box(
-            Modifier.fillMaxWidth().height(170.dp).align(Alignment.BottomCenter)
-                .background(Brush.verticalGradient(listOf(Color.Transparent, Scrim))),
-        )
-
-        // Top: back, title, and the picture tools.
-        Row(
-            Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 14.dp).align(Alignment.TopStart),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            IconButton(onClick = actions::back) {
-                Icon(Icons.AutoMirrored.Rounded.ArrowBack, contentDescription = "Back", tint = Color.White)
-            }
-            Column(Modifier.weight(1f).padding(start = 6.dp)) {
-                Text(state.title, color = Color.White, fontSize = 17.sp, fontWeight = FontWeight.SemiBold, maxLines = 1, overflow = TextOverflow.Ellipsis)
-                state.episodeLine?.let { Text(it, color = Color(0xCCFFFFFF), fontSize = 13.sp, maxLines = 1, overflow = TextOverflow.Ellipsis) }
-            }
-            castButton?.let { Box(Modifier.size(48.dp), contentAlignment = Alignment.Center) { it() } }
-            ToolButton(Icons.Rounded.AspectRatio, state.fit.label) {
-                onTouch()
-                actions.setFit(Fit.entries[(state.fit.ordinal + 1) % Fit.entries.size])
-                state.hint = state.fit.label
-                state.hintIcon = 0
-            }
-            if (state.settings.screenLock) {
-                ToolButton(Icons.Rounded.LockOpen, "Lock") {
-                    state.locked = true
-                    state.controlsVisible = true
-                }
-            }
-            ToolButton(Icons.Rounded.PictureInPictureAlt, "Picture in picture") { actions.enterPip() }
-        }
-
-        // Centre: rewind, play/pause, forward.
-        Row(
-            Modifier.align(Alignment.Center),
-            horizontalArrangement = Arrangement.spacedBy(48.dp),
-            verticalAlignment = Alignment.CenterVertically,
-        ) {
-            val back = state.settings.seekBackSec
-            RoundIcon(replayIcon(back), "Back $back seconds") { onTouch(); actions.seekBy(-back * 1_000L) }
-            if (!state.buffering || state.ended) {
-                Box(
-                    Modifier.size(76.dp).clip(CircleShape).background(Color(0x33FFFFFF)).clickable { onTouch(); actions.togglePlay() },
-                    contentAlignment = Alignment.Center,
-                ) {
-                    Icon(
-                        if (state.playing) Icons.Rounded.Pause else Icons.Rounded.PlayArrow,
-                        contentDescription = if (state.playing) "Pause" else "Play",
-                        tint = Color.White,
-                        modifier = Modifier.size(46.dp),
-                    )
-                }
-            } else Spacer(Modifier.size(76.dp))
-            val forward = state.settings.seekForwardSec
-            RoundIcon(forwardIcon(forward), "Forward $forward seconds") { onTouch(); actions.seekBy(forward * 1_000L) }
-        }
-
-        // Bottom: seek bar and the menus.
-        Column(
-            Modifier.fillMaxWidth().align(Alignment.BottomCenter).padding(horizontal = 28.dp).padding(bottom = 10.dp),
-        ) {
-            SeekBar(state, actions, onTouch)
-            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-                Text(
-                    "${clock(state.positionMs)} / ${clock(state.durationMs)}",
-                    color = Color.White,
-                    fontSize = 13.sp,
-                    modifier = Modifier.padding(end = 8.dp),
-                )
-                Spacer(Modifier.weight(1f))
-                if (state.isSeries) MenuButton(Icons.Rounded.VideoLibrary, "Episodes") { state.panel = Panel.Episodes }
-                MenuButton(Icons.Rounded.SwapHoriz, "Sources") {
-                    state.panel = Panel.Sources
-                    actions.loadSources()
-                }
-                MenuButton(Icons.Rounded.Subtitles, "Subtitles") { state.panel = Panel.Subtitles }
-                MenuButton(Icons.Rounded.Audiotrack, "Audio") { state.panel = Panel.Audio }
-                MenuButton(Icons.Rounded.Speed, if (state.speed == 1f) "Speed" else speedLabel(state.speed)) { state.panel = Panel.Speed }
-                if (state.anime4kAvailable) {
-                    MenuButton(Icons.Rounded.AutoAwesome, if (prefs.anime4kMode.isNotEmpty()) "4K ${prefs.anime4kMode}" else "Anime4K") { state.panel = Panel.Anime4K }
-                }
-                MenuButton(Icons.Rounded.Bedtime, if (state.sleepAt != null) "Sleep on" else "Sleep") { state.panel = Panel.Sleep }
-                if (state.next != null) MenuButton(Icons.Rounded.SkipNext, "Next") { actions.playNext() }
-            }
-        }
-    }
-}
-
-@Composable
-private fun SeekBar(state: PlayerState, actions: PlayerActions, onTouch: () -> Unit) {
-    var dragging by remember { mutableStateOf(false) }
-    var dragValue by remember { mutableFloatStateOf(0f) }
-    val duration = state.durationMs.coerceAtLeast(1)
-    val value = (if (dragging) dragValue else state.positionMs.toFloat() / duration).coerceIn(0f, 1f)
-    val buffered = (state.bufferedMs.toFloat() / duration).coerceIn(0f, 1f)
-    // Harbor's thin seek bar: track, buffered range, played range and a round thumb.
-    Canvas(
-        Modifier.fillMaxWidth().height(36.dp)
-            .pointerInput(duration) {
-                detectTapGestures { offset ->
-                    onTouch()
-                    actions.seekTo(((offset.x / size.width).coerceIn(0f, 1f) * duration).toLong())
-                }
-            }
-            .pointerInput(duration) {
-                detectHorizontalDragGestures(
-                    onDragStart = { offset ->
-                        onTouch()
-                        dragging = true
-                        dragValue = (offset.x / size.width).coerceIn(0f, 1f)
-                    },
-                    onDragEnd = {
-                        actions.seekTo((dragValue * duration).toLong())
-                        dragging = false
-                    },
-                    onDragCancel = { dragging = false },
-                ) { change, _ ->
-                    change.consume()
-                    onTouch()
-                    dragValue = (change.position.x / size.width).coerceIn(0f, 1f)
-                }
-            },
-    ) {
-        val y = size.height / 2
-        val stroke = (if (dragging) 6.dp else 4.dp).toPx()
-        drawLine(Color(0x40FFFFFF), Offset(0f, y), Offset(size.width, y), stroke, StrokeCap.Round)
-        drawLine(Color(0x66FFFFFF), Offset(0f, y), Offset(size.width * buffered, y), stroke, StrokeCap.Round)
-        drawLine(LartColors.Accent, Offset(0f, y), Offset(size.width * value, y), stroke, StrokeCap.Round)
-        drawCircle(Color.White, (if (dragging) 9.dp else 7.dp).toPx(), Offset(size.width * value, y))
-    }
-    if (dragging) {
-        Text(clock((dragValue * duration).toLong()), color = Color.White, fontSize = 13.sp, fontWeight = FontWeight.SemiBold)
-    }
-}
 
 /** Every subtitle, from the video or an addon, drawn by Lart in the chosen style. */
 @Composable
@@ -631,114 +482,10 @@ private fun StillWatching(state: PlayerState, actions: PlayerActions) {
     }
 }
 
-// ---- Side panels ----
+// ---- Panel bodies, shown inside Harbor's popovers (HarborChrome.kt) ----
 
 @Composable
-private fun SidePanel(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions) {
-    val panel = state.panel ?: return
-    Column(
-        Modifier.fillMaxHeight().width(380.dp).background(PanelColor)
-            .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) {}
-            .padding(top = 20.dp, start = 20.dp, end = 20.dp),
-    ) {
-        Text(
-            when (panel) {
-                Panel.Subtitles -> "Subtitles"
-                Panel.SubStyle -> "Subtitle style"
-                Panel.Audio -> "Audio"
-                Panel.Speed -> "Playback speed"
-                Panel.Sources -> "Sources"
-                Panel.Episodes -> "Episodes"
-                Panel.Sleep -> "Sleep timer"
-                Panel.Anime4K -> "Anime4K"
-            },
-            color = Color.White,
-            fontSize = 19.sp,
-            fontWeight = FontWeight.SemiBold,
-            modifier = Modifier.padding(bottom = 10.dp),
-        )
-        when (panel) {
-            Panel.Subtitles -> SubtitlesPanel(state, actions)
-            Panel.SubStyle -> SubStylePanel(prefs, actions)
-            Panel.Audio -> LazyColumn {
-                item {
-                    DelayRow("Delay", state.audioDelayMs, "Sound later", "Sound earlier", 50, 250) { actions.setAudioDelay(it) }
-                }
-                if (state.audioTracks.isEmpty()) item { Muted("This video has one audio track.") }
-                items(state.audioTracks, key = { it.key }) { track ->
-                    OptionRow(track.label, track.detail, track.selected) { actions.selectAudio(track.key) }
-                }
-            }
-            Panel.Speed -> LazyColumn {
-                items((state.settings.playbackSpeeds + 1f + state.speed).distinct().sorted()) { speed ->
-                    OptionRow(if (speed == 1f) "Normal" else speedLabel(speed), null, state.speed == speed) { actions.setSpeed(speed) }
-                }
-            }
-            Panel.Sleep -> LazyColumn {
-                val at = state.sleepAt
-                if (at != null && at > 0) {
-                    item { Muted("Pauses at ${java.text.DateFormat.getTimeInstance(java.text.DateFormat.SHORT).format(at)}") }
-                }
-                item { OptionRow("Off", null, at == null) { actions.setSleep(null) } }
-                item { OptionRow("End of this episode", null, at == -1L) { actions.setSleep(0) } }
-                items(state.settings.sleepMinutes) { minutes ->
-                    OptionRow("$minutes minutes", null, false) { actions.setSleep(minutes) }
-                }
-            }
-            Panel.Sources -> SourcesPanel(state, actions)
-            Panel.Anime4K -> Anime4KPanel(state, prefs, actions)
-            Panel.Episodes -> EpisodesPanel(state, actions)
-        }
-    }
-}
-
-@Composable
-private fun SubtitlesPanel(state: PlayerState, actions: PlayerActions) {
-    LazyColumn(contentPadding = PaddingValues(bottom = 24.dp)) {
-        item {
-            Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(bottom = 6.dp)) {
-                Pill("Style", primary = false) { state.panel = Panel.SubStyle }
-                Spacer(Modifier.width(10.dp))
-            }
-        }
-        if (state.subChoice != SubChoice.Off) {
-            item {
-                // Sync, like Harbor's sub-sync bar: works for subtitles in the video and from addons.
-                DelayRow("Sync", state.subDelayMs, "Later", "Earlier", 100, 500) { actions.setSubDelay(it) }
-            }
-        }
-        item { OptionRow("Off", null, state.subChoice == SubChoice.Off) { actions.selectSubtitle(SubChoice.Off) } }
-        if (state.embeddedSubs.isNotEmpty()) {
-            item { GroupLabel("In the video") }
-            items(state.embeddedSubs, key = { "e" + it.key }) { track ->
-                OptionRow(track.label, track.detail, (state.subChoice as? SubChoice.Embedded)?.key == track.key) {
-                    actions.selectSubtitle(SubChoice.Embedded(track.key))
-                }
-            }
-        }
-        val addon = state.addonSubs
-        item { GroupLabel("From your addons") }
-        when {
-            addon == null -> item { Muted("Searching your subtitle addons…") }
-            addon.isEmpty() -> item { Muted("Your addons found no subtitles for this.") }
-            else -> {
-                // Grouped by language, the device language first.
-                val device = Locale.getDefault().language
-                val sorted = addon.sortedWith(compareBy({ languageCode(it.lang) != device }, { languageName(it.lang) }))
-                items(sorted, key = { "a" + it.url }) { sub ->
-                    val selected = (state.subChoice as? SubChoice.Addon)?.subtitle?.url == sub.url
-                    OptionRow(languageName(sub.lang), sub.id?.takeIf { it.length < 40 }, selected) {
-                        actions.selectSubtitle(SubChoice.Addon(sub))
-                    }
-                }
-            }
-        }
-        if (state.subLoading) item { Muted("Loading subtitle…") }
-    }
-}
-
-@Composable
-private fun SubStylePanel(prefs: PlayerPrefs, actions: PlayerActions) {
+internal fun SubStylePanel(prefs: PlayerPrefs, actions: PlayerActions) {
     LazyColumn(contentPadding = PaddingValues(bottom = 24.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
         item {
             Box(Modifier.fillMaxWidth().height(90.dp).clip(RoundedCornerShape(12.dp)).background(Color(0xFF3A4048)), contentAlignment = Alignment.Center) {
@@ -797,46 +544,7 @@ private fun SubStylePanel(prefs: PlayerPrefs, actions: PlayerActions) {
 }
 
 @Composable
-private fun SourcesPanel(state: PlayerState, actions: PlayerActions) {
-    val sources = state.sources
-    if (sources == null) {
-        Box(Modifier.fillMaxWidth().padding(32.dp), contentAlignment = Alignment.Center) { CircularProgressIndicator(color = LartColors.Accent) }
-        return
-    }
-    if (sources.isEmpty()) {
-        Muted("No other sources found.")
-        return
-    }
-    LazyColumn(contentPadding = PaddingValues(bottom = 24.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        items(sources) { source ->
-            val stream = source.stream
-            val current = stream.url != null && stream.url == state.currentUrl
-            Column(
-                Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp))
-                    .background(if (current) Color(0x33F0A35E) else Color(0x14FFFFFF))
-                    .clickable(enabled = !current) { actions.playSource(source) }.padding(12.dp),
-                verticalArrangement = Arrangement.spacedBy(3.dp),
-            ) {
-                Text(
-                    (stream.name ?: source.addon.manifest.name).replace('\n', ' '),
-                    color = LartColors.Accent,
-                    fontSize = 13.sp,
-                    fontWeight = FontWeight.SemiBold,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-                Ranking.badges(stream).takeIf { it.isNotEmpty() }?.let {
-                    Text(it.joinToString("  ·  "), color = Color(0xCCFFFFFF), fontSize = 12.sp)
-                }
-                Text(stream.text, color = Color(0x99FFFFFF), fontSize = 12.sp, maxLines = 2, overflow = TextOverflow.Ellipsis)
-                if (current) Text("Playing", color = Color.White, fontSize = 12.sp, fontWeight = FontWeight.Bold)
-            }
-        }
-    }
-}
-
-@Composable
-private fun EpisodesPanel(state: PlayerState, actions: PlayerActions) {
+internal fun EpisodesPanel(state: PlayerState, actions: PlayerActions) {
     val current = state.episodes.firstOrNull { it.id == state.videoId }
     var season by remember(current?.season) { mutableStateOf(current?.season) }
     val seasons = remember(state.episodes) { state.episodes.mapNotNull { it.season }.distinct().sortedWith(compareBy({ it == 0 }, { it })) }
@@ -1018,33 +726,6 @@ private fun CastingScreen(device: String, state: PlayerState, actions: PlayerAct
         IconButton(onClick = actions::back, modifier = Modifier.align(Alignment.TopStart).padding(20.dp)) {
             Icon(Icons.AutoMirrored.Rounded.ArrowBack, contentDescription = "Back", tint = Color.White)
         }
-    }
-}
-
-/** Harbor's Anime4K menu: the six modes, Fast or HQ networks, and Off (mpv only). */
-@Composable
-private fun Anime4KPanel(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions) {
-    LazyColumn(contentPadding = PaddingValues(bottom = 24.dp)) {
-        item {
-            Text(
-                "Real-time upscaling and line restoration for anime, run on the GPU. Shaders download once (about 1 MB).",
-                color = Color(0x99FFFFFF),
-                fontSize = 12.sp,
-                modifier = Modifier.padding(start = 8.dp, end = 8.dp, bottom = 8.dp),
-            )
-        }
-        item {
-            Row(Modifier.padding(start = 8.dp, bottom = 8.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                Pill("Fast", primary = !prefs.anime4kHq) { actions.setAnime4K(prefs.anime4kMode.ifEmpty { null }, false) }
-                Pill("HQ", primary = prefs.anime4kHq) { actions.setAnime4K(prefs.anime4kMode.ifEmpty { null }, true) }
-            }
-        }
-        if (state.anime4kLoading) item { Muted("Downloading shaders…") }
-        item { OptionRow("Off", null, prefs.anime4kMode.isEmpty()) { actions.setAnime4K(null, prefs.anime4kHq) } }
-        items(Anime4K.Mode.entries) { mode ->
-            OptionRow(mode.label, mode.sub, prefs.anime4kMode == mode.name) { actions.setAnime4K(mode.name, prefs.anime4kHq) }
-        }
-        item { Muted("HQ is for fast phones and tablets; Fast suits most phones.") }
     }
 }
 

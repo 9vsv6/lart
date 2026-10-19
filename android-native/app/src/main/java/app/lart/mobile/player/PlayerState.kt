@@ -22,7 +22,7 @@ data class UiCue(
 )
 
 /** One audio or embedded subtitle track, as the menus show it. */
-data class TrackOption(val key: String, val label: String, val detail: String?, val selected: Boolean)
+data class TrackOption(val key: String, val label: String, val detail: String?, val selected: Boolean, val language: String? = null)
 
 sealed interface SubChoice {
     data object Off : SubChoice
@@ -89,6 +89,12 @@ class PlayerState {
     var videoId by mutableStateOf("")
     var sources by mutableStateOf<List<RankedStream>?>(null)
     var currentUrl by mutableStateOf("")
+    /** The playing source's name line, to mark it in the switcher. */
+    var currentStreamKey by mutableStateOf<String?>(null)
+    /** "4K", "1080p"â¦ from the source, beside the title. */
+    var quality by mutableStateOf<String?>(null)
+    /** A movie's year, under the title when there's no episode line. */
+    var year by mutableStateOf<String?>(null)
 
     /** Wall-clock time the sleep timer pauses at, or -1 for "end of this episode". */
     var sleepAt by mutableStateOf<Long?>(null)

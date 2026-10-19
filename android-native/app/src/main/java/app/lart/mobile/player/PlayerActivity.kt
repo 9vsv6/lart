@@ -31,6 +31,7 @@ import app.lart.mobile.data.Net
 import app.lart.mobile.data.Playback
 import app.lart.mobile.data.PlayerPrefs
 import app.lart.mobile.data.RankedStream
+import app.lart.mobile.data.Ranking
 import app.lart.mobile.data.Ready
 import app.lart.mobile.data.Scrobble
 import app.lart.mobile.data.SkipSegment
@@ -162,6 +163,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
         state.title = intent.getStringExtra(EXTRA_TITLE).orEmpty().substringBefore(" · ")
         currentAddonId = intent.getStringExtra(EXTRA_ADDON)
         currentStreamKey = intent.getStringExtra(EXTRA_STREAM_KEY)
+        showSource()
         autoAdvanced = 0
         anime4kChosenHere = false
         meta = null
@@ -217,6 +219,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
         state.episodes = videos
         val current = videos.firstOrNull { it.id == state.videoId }
         state.episodeLine = current?.let { "${episodeCode(it)}  ·  ${it.label}" }
+        state.year = meta.year
         state.next = if (state.isSeries) nextAfter(videos, state.videoId) else null
     }
 
@@ -343,9 +346,9 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
     override fun onTracksChanged() {
         val audio = engine.audioTracks()
         val text = engine.textTracks()
-        state.audioTracks = if (audio.size > 1) audio.map { TrackOption(it.key, it.label, it.detail, it.selected) } else emptyList()
+        state.audioTracks = if (audio.size > 1) audio.map { TrackOption(it.key, it.label, it.detail, it.selected, it.language) } else emptyList()
         // Addon subtitles mpv loaded show under "From your addons", not "In the video".
-        state.embeddedSubs = text.filterNot { it.external }.map { TrackOption(it.key, it.label, it.detail, it.selected) }
+        state.embeddedSubs = text.filterNot { it.external }.map { TrackOption(it.key, it.label, it.detail, it.selected, it.language) }
         avoidCommentary(audio)
         pickSecondary(text)
         if (state.subChoice !is SubChoice.Addon) {
@@ -615,10 +618,19 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
         }
     }
 
+    /** The quality badge beside the title and the source the switcher marks as playing. */
+    private fun showSource() {
+        state.currentStreamKey = currentStreamKey
+        state.quality = currentStreamKey?.let { key ->
+            Ranking.badges(app.lart.mobile.data.Stream(name = key)).firstOrNull { it == "4K" || it.endsWith("p") }
+        }
+    }
+
     private fun switchTo(videoId: String, ready: Ready, startAt: Long?) {
         headers = ready.stream.behaviorHints?.proxyHeaders?.request.orEmpty()
         currentAddonId = ready.addonId ?: currentAddonId
         currentStreamKey = Playback.streamKey(ready.stream)
+        showSource()
         if (videoId != state.videoId) stalledKeys.clear()
         begin(videoId, ready.url, startAt)
     }
