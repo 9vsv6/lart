@@ -26,6 +26,7 @@ import kotlinx.serialization.builtins.MapSerializer
 import kotlinx.serialization.builtins.SetSerializer
 import kotlinx.serialization.builtins.serializer
 import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.buildJsonObject
 import kotlinx.serialization.json.put
 
@@ -624,10 +625,116 @@ class Repository(private val context: Context) {
         }.toString()
     }
 
-    /** Replaces everything with a backup from exportBackup, then reloads. */
-    suspend fun importBackup(json: String) {
-        val root = Net.json.parseToJsonElement(json) as? JsonObject ?: error("That file isn't a Lart backup")
-        if ((root["app"] as? kotlinx.serialization.json.JsonPrimitive)?.content != "lart-native") error("That file isn't a Lart native backup")
+    /**
+     * Restores a backup: this app's own (replacing everything), or one exported from Harbor
+     * or Lart on the desktop (merged in). Returns what was brought over, for the toast.
+     */
+    suspend fun importBackup(json: String): String {
+        val root = Net.json.parseToJsonElement(json) as? JsonObject ?: error("That file isn't a backup")
+        val format = (root["format"] as? kotlinx.serialization.json.JsonPrimitive)?.content
+        if (format == "harbor-backup") return importHarbor(root)
+        if ((root["app"] as? kotlinx.serialization.json.JsonPrimitive)?.content != "lart-native") error("That file isn't a Lart or Harbor backup")
+        importNative(root)
+        return "Backup restored"
+    }
+
+    /**
+     * Harbor's backup (src/lib/backup.ts): `{format: "harbor-backup", data: {localStorage key: value}}`.
+     * Brings over what this app has a place for: API keys, the debrid key, installed addons,
+     * the watchlist and recent watch positions. Harbor's tracker sign-ins use Harbor's own
+     * app, so they don't carry over; connect the trackers here again.
+     */
+    private suspend fun importHarbor(root: JsonObject): String {
+        val data = root["data"] as? JsonObject ?: error("The Harbor backup is empty")
+        fun raw(key: String) = (data[key] as? kotlinx.serialization.json.JsonPrimitive)?.content
+        fun parsed(key: String) = raw(key)?.let { runCatching { Net.json.parseToJsonElement(it) }.getOrNull() }
+        val done = mutableListOf<String>()
+
+        // Settings: the shared copy, else the legacy mirror, else the first profile's.
+        val settingsKey = listOf("harbor.settings.shared", "harbor.settings").firstOrNull { data.containsKey(it) }
+            ?: data.keys.firstOrNull { it.startsWith("harbor.settings.") && it != "harbor.settings.shared" }
+        val s = settingsKey?.let { parsed(it) as? JsonObject }
+        if (s != null) {
+            fun key(name: String) = s.string(name)?.trim()?.takeIf { it.isNotEmpty() }
+            var keys = 0
+            key("tmdbKey")?.let { runCatching { setTmdbKey(it) }.onSuccess { keys++ } }
+            key("omdbKey")?.let { runCatching { setOmdbKey(it) }.onSuccess { keys++ } }
+            key("rpdbKey")?.let { runCatching { setRpdbKey(it) }.onSuccess { keys++ } }
+            key("tvdbKey")?.let { setProviderKey(ProviderKey.TVDB, it); keys++ }
+            key("mdblistKey")?.let { setProviderKey(ProviderKey.MDBLIST, it); keys++ }
+            key("fanartKey")?.let { setProviderKey(ProviderKey.FANART, it); keys++ }
+            if (keys > 0) done += "$keys API keys"
+            val debrid = key("rdKey")?.let { DebridAccount(DebridService.RealDebrid, it) } ?: key("tbKey")?.let { DebridAccount(DebridService.TorBox, it) }
+            if (debrid != null && _debrid.value == null) runCatching { setDebrid(debrid) }.onSuccess { done += debrid.service.label }
+        }
+
+        // Installed addons, from every profile's list, by their manifest URL.
+        val urls = data.keys.filter { it == "harbor.installed-addons" || it.startsWith("harbor.installed-addons.") }
+            .flatMap { (parsed(it) as? kotlinx.serialization.json.JsonArray).orEmpty() }
+            .mapNotNull { (it as? JsonObject)?.string("transportUrl") }
+            .distinct()
+            .filterNot { isInstalled(null, it) }
+        var addons = 0
+        for (url in urls) runCatching { installAddon(url) }.onSuccess { addons++ }
+        if (addons > 0) done += "$addons addons"
+
+        // The watchlist: Harbor keeps it per profile, as a list or a map of entries.
+        val entries = data.keys.filter { it.startsWith("harbor.watchlist.v1") || it.startsWith("harbor.localwatchlist.") }
+            .flatMap { key ->
+                when (val e = parsed(key)) {
+                    // Entries, or bare ids from older versions.
+                    is kotlinx.serialization.json.JsonArray -> e.mapNotNull { el ->
+                        el as? JsonObject ?: (el as? kotlinx.serialization.json.JsonPrimitive)?.content?.let { id -> buildJsonObject { put("id", id) } }
+                    }
+                    is JsonObject -> (e["items"] as? kotlinx.serialization.json.JsonArray)?.mapNotNull { it as? JsonObject }
+                        ?: e.values.mapNotNull { it as? JsonObject }
+                    else -> emptyList()
+                }
+            }
+        var listed = 0
+        for (e in entries) {
+            val id = e.string("id") ?: continue
+            if (inMyList(id)) continue
+            var entry = Meta(id = id, type = e.string("type") ?: "movie", name = e.string("name").orEmpty(), poster = e.string("poster"))
+            // Bare ids from older Harbor versions: look the title up (Cinemeta knows its type too).
+            if (entry.name.isBlank()) {
+                val found = listOf(entry.type, if (entry.type == "movie") "series" else "movie").firstNotNullOfOrNull { t ->
+                    runCatching { AddonClient.meta(metaAddons(), t, id) }.getOrNull()
+                }
+                if (found != null) entry = entry.copy(type = found.type, name = found.name, poster = found.poster)
+            }
+            if (entry.poster == null && id.startsWith("tt")) entry = entry.copy(poster = "https://images.metahub.space/poster/small/$id/img")
+            toggleMyList(entry)
+            listed++
+        }
+        if (listed > 0) done += "$listed in your list"
+
+        // Watch positions ("id" or "id|s1e2" → {ms, pct, t}); the 30 most recent, with their titles.
+        val resume = (parsed("harbor.resume") as? JsonObject).orEmpty().mapNotNull { (key, value) ->
+            val e = value as? JsonObject ?: return@mapNotNull null
+            val ms = e["ms"]?.jsonPrimitive?.content?.toDoubleOrNull()?.toLong() ?: return@mapNotNull null
+            val pct = e["pct"]?.jsonPrimitive?.content?.toDoubleOrNull()?.takeIf { it > 0 } ?: return@mapNotNull null
+            val at = e["t"]?.jsonPrimitive?.content?.toDoubleOrNull()?.toLong() ?: 0L
+            Triple(key, ms to (ms * 100 / pct).toLong(), at)
+        }.sortedByDescending { it.third }.take(30)
+        var positions = 0
+        for ((key, pos, _) in resume) {
+            val id = key.substringBefore('|')
+            val episode = Regex("""\|s(\d+)e(\d+)""").find(key)?.groupValues
+            val type = if (episode != null) "series" else "movie"
+            val meta = runCatching { AddonClient.meta(metaAddons(), type, id) }.getOrNull() ?: continue
+            val video = episode?.let { (_, sn, ep) -> meta.videos?.firstOrNull { it.season == sn.toInt() && it.episode == ep.toInt() } }
+            val videoId = video?.id ?: if (episode != null) "$id:${episode[1]}:${episode[2]}" else id
+            if (resumeFor(videoId, id) > 0) continue
+            saveResume(videoId, pos.first, pos.second, meta.copy(videos = null), video)
+            positions++
+        }
+        if (positions > 0) done += "$positions watch positions"
+
+        return if (done.isEmpty()) "Nothing in that Harbor backup to bring over" else "From Harbor: " + done.joinToString(", ")
+    }
+
+    private suspend fun importNative(root: JsonObject) {
         val entries = root["prefs"] as? JsonObject ?: error("The backup is empty")
         context.store.edit { prefs ->
             prefs.clear()

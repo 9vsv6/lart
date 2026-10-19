@@ -24,6 +24,12 @@ class LartApp : Application() {
             }
         }
         main.launch { repository.rpdbKey.collect { LartDisplay.rpdbKey = it } }
+        main.launch { repository.myList.collect { list -> LartDisplay.myListIds = list.map { it.id }.toSet() } }
+        main.launch {
+            repository.library.collect { items ->
+                LartDisplay.watchedIds = items.filter { !it.removed && ((it.state?.timesWatched ?: 0) > 0 || (it.state?.flaggedWatched ?: 0) > 0) }.map { it.id }.toSet()
+            }
+        }
         main.launch { repository.providerKeys.collect { LartDisplay.customPosters = it[app.lart.mobile.data.ProviderKey.POSTERS] } }
     }
 }

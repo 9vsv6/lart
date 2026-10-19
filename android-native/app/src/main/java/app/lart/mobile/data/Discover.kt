@@ -259,7 +259,18 @@ object Discover {
         }.awaitAll().flatten()
     }
 
-    private const val AIRING = "query(\$s:Int,\$e:Int,\$p:Int){Page(page:\$p,perPage:50){pageInfo{hasNextPage} airingSchedules(airingAt_greater:\$s,airingAt_lesser:\$e,sort:TIME){airingAt episode media{id isAdult popularity format title{english romaji} coverImage{large} bannerImage}}}}"
+    /** Home's "New Episodes": the shows with an episode out in the last [days], newest first. */
+    suspend fun recentEpisodes(shows: List<Meta>, metaAddons: List<Addon>, days: Long = 14): List<CalendarItem> {
+        val today = LocalDate.now()
+        val from = today.minusDays(days)
+        val months = listOf(YearMonth.from(from), YearMonth.from(today)).distinct()
+        return months.flatMap { libraryCalendar(shows, metaAddons, it) }
+            .filter { it.date in from..today }
+            .sortedByDescending { it.date }
+            .distinctBy { it.meta.id }
+    }
+
+    private const val AIRING ="query(\$s:Int,\$e:Int,\$p:Int){Page(page:\$p,perPage:50){pageInfo{hasNextPage} airingSchedules(airingAt_greater:\$s,airingAt_lesser:\$e,sort:TIME){airingAt episode media{id isAdult popularity format title{english romaji} coverImage{large} bannerImage}}}}"
 
     /** Anime airing this month (AniList's schedule), opened through the Kitsu addon. */
     suspend fun animeCalendar(month: YearMonth): List<CalendarItem> {

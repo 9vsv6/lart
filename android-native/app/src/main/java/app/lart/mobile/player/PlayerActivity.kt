@@ -344,6 +344,11 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
     override fun onEnded() {
         state.ended = true
         stopScrobble()
+        // Harbor's "Delete after I finish watching", for a downloaded file.
+        if (state.settings.deleteAfterWatching && state.currentUrl.startsWith("file:")) {
+            val path = android.net.Uri.parse(state.currentUrl).path
+            app.lart.mobile.data.Downloads.saved(this).firstOrNull { it.file == path }?.let { app.lart.mobile.data.Downloads.remove(this, it) }
+        }
         state.controlsVisible = true
         if (state.sleepAt == -1L) {
             state.sleepAt = null

@@ -31,6 +31,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.KeyboardArrowRight
 import androidx.compose.material.icons.rounded.Add
 import androidx.compose.material.icons.rounded.Check
+import androidx.compose.material.icons.rounded.Bookmark
 import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material.icons.rounded.Home
 import androidx.compose.material.icons.rounded.Info
@@ -325,6 +326,21 @@ fun PosterTile(meta: Meta, modifier: Modifier = Modifier, onClick: () -> Unit) {
                 }
             }
             CardBadges(meta, Modifier.align(Alignment.TopStart).fillMaxWidth(0.74f))
+            // Harbor's watchlist bookmark (top right) and watched check (bottom left).
+            if (display.watchlistBookmark && meta.id in LartDisplay.myListIds) {
+                Icon(
+                    Icons.Rounded.Bookmark,
+                    "In your list",
+                    tint = LartColors.Accent,
+                    modifier = Modifier.align(Alignment.TopEnd).padding(5.dp).size(22.dp),
+                )
+            }
+            if (display.watchedBadge && meta.id in LartDisplay.watchedIds) {
+                Box(
+                    Modifier.align(Alignment.BottomStart).padding(7.dp).size(20.dp).background(Color(0xD9000000), CircleShape),
+                    contentAlignment = Alignment.Center,
+                ) { Icon(Icons.Rounded.Check, "Watched", tint = LartColors.Accent, modifier = Modifier.size(13.dp)) }
+            }
         }
         if (!display.hidePosterTitles) Text(
             meta.name,

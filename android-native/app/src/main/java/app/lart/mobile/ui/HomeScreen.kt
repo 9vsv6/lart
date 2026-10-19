@@ -85,6 +85,17 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
     val rows = remember(tmdbKey) { mutableStateMapOf<BrowseView, List<CatalogRow>>() }
     val failed = remember(tmdbKey) { mutableStateMapOf<BrowseView, Boolean>() }
 
+    // Harbor's "New Episodes" row: what came out lately for the shows you follow.
+    val library by repository.library.collectAsState()
+    val myList by repository.myList.collectAsState()
+    var newEpisodes by remember { mutableStateOf<List<app.lart.mobile.data.CalendarItem>>(emptyList()) }
+    LaunchedEffect(addons, library.size, myList.size, LartDisplay.settings.newEpisodesRow) {
+        if (addons.isEmpty() || !LartDisplay.settings.newEpisodesRow) { newEpisodes = emptyList(); return@LaunchedEffect }
+        val shows = library.filter { it.type == "series" && !it.removed && !it.temp }.map { it.toMeta() } + myList.filter { it.type == "series" }
+        if (shows.isEmpty()) return@LaunchedEffect
+        newEpisodes = runCatching { app.lart.mobile.data.Discover.recentEpisodes(shows, repository.metaAddons()) }.getOrDefault(emptyList())
+    }
+
     LaunchedEffect(view, addons, builtins, tmdbKey) {
         if (addons.isEmpty() || rows[view] != null) return@LaunchedEffect
         val key = tmdbKey
@@ -102,7 +113,7 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
         // Anime rows arrive one at a time (the anime catalogs allow a few calls a second).
         val anime = when {
             view == BrowseView.Anime -> Jikan.animeRows()
-            view == BrowseView.Home && !LartDisplay.settings.hideAnime -> Jikan.homeRows()
+            view == BrowseView.Home && !LartDisplay.settings.hideAnime && !LartDisplay.settings.animeRoomOnly -> Jikan.homeRows()
             else -> emptyList()
         }
         for (spec in anime) {
@@ -153,6 +164,9 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
                     }
                     if (view == BrowseView.Home && cw.isNotEmpty()) {
                         item(key = "cw") { ContinueWatchingRow(cw, nav::resume, repository::dismissContinueWatching) }
+                    }
+                    if (view == BrowseView.Home && newEpisodes.isNotEmpty()) {
+                        item(key = "new-episodes") { Rail("New Episodes", newEpisodes.map { it.meta }, nav::openMeta) }
                     }
                     current.firstOrNull()?.takeIf { display.showTop10 }?.let { first ->
                         item(key = "top10") {
@@ -305,14 +319,17 @@ private val CatalogDef.supportsSearchOnly: Boolean get() = id.contains("search",
 
 /** Settings → Library: drop unreleased titles and anime from the rows when asked. */
 private fun tidyRows(rows: List<CatalogRow>, settings: app.lart.mobile.data.AppSettings): List<CatalogRow> {
-    if (!settings.hideUnreleased && !settings.hideAnime) return rows
+    if (!settings.hideUnreleased && !settings.hideAnime && !settings.hideWatched && !settings.animeRoomOnly) return rows
     val year = java.util.Calendar.getInstance().get(java.util.Calendar.YEAR)
     return rows.map { row ->
         row.copy(
             metas = row.metas.filter { meta ->
                 val unreleased = settings.hideUnreleased && (meta.year?.toIntOrNull()?.let { it > year } ?: false)
-                val anime = settings.hideAnime && (meta.type == "anime" || meta.genres.orEmpty().any { it.equals("anime", true) })
-                !unreleased && !anime
+                val looksAnime = meta.type == "anime" || meta.genres.orEmpty().any { it.equals("anime", true) } || meta.id.substringBefore(':') in setOf("kitsu", "mal", "anilist")
+                val anime = (settings.hideAnime || (settings.animeRoomOnly && !row.key.startsWith("jikan"))) && looksAnime
+                // Harbor hides finished films; a show you have seen once may still have new seasons.
+                val watched = settings.hideWatched && meta.type == "movie" && meta.id in LartDisplay.watchedIds
+                !unreleased && !anime && !watched
             },
         )
     }.filter { it.metas.isNotEmpty() }

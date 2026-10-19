@@ -192,7 +192,7 @@ fun DetailScreen(
         val imdb = current.id.substringBefore(':').takeIf { it.startsWith("tt") } ?: return@LaunchedEffect
         val key = tmdbKey
         details = (if (key != null) runCatching { Tmdb.details(key, imdb, current.type) }.getOrNull() else null)
-            ?: runCatching { Keyless.details(current) }.getOrNull()
+            ?: if (LartDisplay.settings.keylessDetails) runCatching { Keyless.details(current) }.getOrNull() else null
     }
 
     Box(Modifier.fillMaxSize().background(LartColors.Canvas)) {
@@ -248,7 +248,12 @@ private fun DetailBody(
     val isSeries = meta.type != "movie" && videos.isNotEmpty()
     // Season 0 holds specials; start on the first real season.
     val seasons = remember(videos) { videos.mapNotNull { it.season }.distinct().sortedWith(compareBy({ it == 0 }, { it })) }
-    var season by rememberSaveable(meta.id) { mutableStateOf(seasons.firstOrNull()) }
+    // Harbor's "Remember your place on show pages": the season you last looked at.
+    val seasonPrefs = androidx.compose.ui.platform.LocalContext.current.getSharedPreferences("show-seasons", android.content.Context.MODE_PRIVATE)
+    var season by rememberSaveable(meta.id) {
+        val saved = if (LartDisplay.settings.rememberSeason) seasonPrefs.getInt(meta.id, -1).takeIf { it in seasons } else null
+        mutableStateOf(saved ?: seasons.firstOrNull())
+    }
     val episodes = remember(videos, season, LartDisplay.settings.episodesNewestFirst) {
         videos.filter { it.season == season }.sortedBy { it.episode ?: 0 }
             .let { if (LartDisplay.settings.episodesNewestFirst) it.reversed() else it }
@@ -326,7 +331,7 @@ private fun DetailBody(
                     Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                         Row(Modifier.padding(horizontal = side), verticalAlignment = Alignment.CenterVertically) {
                             Text("Episodes", color = LartColors.Ink, fontSize = 26.sp, fontWeight = FontWeight.SemiBold, letterSpacing = (-0.4).sp, modifier = Modifier.weight(1f))
-                            SeasonPicker(seasons, season, videos) { season = it }
+                            SeasonPicker(seasons, season, videos) { season = it; seasonPrefs.edit().putInt(meta.id, it).apply() }
                         }
                         val year = episodes.mapNotNull { it.released?.take(4) }.minOrNull()
                         Text(
@@ -545,7 +550,7 @@ private fun Eyebrow(text: String) {
 
 @Composable
 private fun Synopsis(text: String, tagline: String?, side: Dp) {
-    var expanded by remember { mutableStateOf(false) }
+    var expanded by remember { mutableStateOf(LartDisplay.settings.fullDescriptions) }
     Column(Modifier.padding(horizontal = side).widthIn(max = 820.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
         tagline?.let { Text(it, color = LartColors.Ink, fontSize = 16.sp, fontWeight = FontWeight.Medium, fontFamily = FontFamily.Serif) }
         Text(

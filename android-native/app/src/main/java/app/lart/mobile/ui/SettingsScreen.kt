@@ -128,7 +128,7 @@ private enum class Section(
     Stremio("Stremio", "Your Stremio sign-in: addons and library come from it.", Icons.Outlined.AccountBox, "stremio sign in email password", setOf("Stremio")),
     Trackers("Trackers", "Trakt, Simkl and AniList: scrobbling and progress.", Icons.Outlined.Sync, "trakt simkl anilist scrobble watched"),
     Play("Play", "The player engine, and what happens when you press Play.", Icons.Outlined.PlayCircle, "engine media3 mpv instant resume stall", setOf("Player engine", "When you press Play")),
-    OnScreen("On screen", "The player's controls: seek steps, speeds, sleep timer and lock.", Icons.Outlined.SmartScreen, "seek speed sleep lock aspect xray x-ray cast", setOf("On-screen controls")),
+    OnScreen("On screen", "The player's controls: seek steps, speeds, sleep timer and lock.", Icons.Outlined.SmartScreen, "seek speed sleep lock aspect xray x-ray cast quality badge stream quality title", setOf("On-screen controls")),
     Intros("Intros", "Skip intros, recaps and credits.", Icons.Outlined.FastForward, "skip intro recap credits", setOf("Intros & credits")),
     UpNext("Up next", "What happens between episodes.", Icons.Outlined.QueuePlayNext, "up next autoplay still watching", setOf("Up next")),
     Picture("Picture", "Decoding, picture quality and buffering (mpv).", Icons.Outlined.Image, "hwdec hardware decoding quality buffer", setOf("Video")),
@@ -142,12 +142,12 @@ private enum class Section(
     Services("Streaming services", "Your addons and debrid service.", Icons.Outlined.Inventory2, "addons debrid real-debrid torbox", setOf("Addons", "Debrid")),
     SourcePreferences("Source preferences", "Safety, order, languages and what shows in the list.", Icons.Outlined.Tune, "order sort safety cam torrents file names timeout languages", setOf("Safety & order")),
     StreamFilters("Stream filters", "Only show sources that match.", Icons.Outlined.FilterList, "filter resolution 4k 1080p remux bluray web hevc av1 hdr cached size"),
-    HomeRows("Home", "Rows and the hero on Home.", Icons.Outlined.Home, "home top 10 hero unreleased anime", setOf("Home")),
-    PosterCards("Poster cards", "What a poster card shows.", Icons.Outlined.GridView, "poster card badge corners size", setOf("Poster cards")),
-    DetailPages("Detail pages", "Spoilers, episode cards, comments and reviews.", Icons.Outlined.Article, "episodes spoilers order description card size trakt comments letterboxd reviews community", setOf("Spoilers", "Episode cards", "Community")),
+    HomeRows("Home", "Rows and the hero on Home.", Icons.Outlined.Home, "home top 10 hero unreleased anime room watched hide catalogs new episodes row", setOf("Home")),
+    PosterCards("Poster cards", "What a poster card shows.", Icons.Outlined.GridView, "poster card badge corners size watched check watchlist bookmark", setOf("Poster cards")),
+    DetailPages("Detail pages", "Spoilers, episode cards, comments and reviews.", Icons.Outlined.Article, "episodes spoilers order description card size trakt comments letterboxd reviews community show pages full descriptions remember season imdb keyless free data", setOf("Show pages", "Spoilers", "Episode cards", "Community")),
     Metadata("Metadata providers", "Where titles, artwork and scores come from.", Icons.Outlined.Storage, "tmdb omdb tvdb thetvdb mdblist fanart rpdb custom posters ratings keys metadata"),
     Theme("Theme", "Accent colour.", Icons.Outlined.Palette, "accent colour color theme", setOf("Accent colour")),
-    Storage("Storage", "Caches, watch positions on this device, and resetting settings.", Icons.Outlined.DeleteSweep, "cache images shaders watch positions reset"),
+    Storage("Storage", "Caches, watch positions on this device, and resetting settings.", Icons.Outlined.DeleteSweep, "cache images shaders watch positions reset downloads delete after watching"),
     Backup("Updates & backup", "Updates, and a copy of your setup.", Icons.Outlined.Backup, "backup restore export import file updates"),
     About("About", "This build, reporting a problem, and licences.", Icons.Outlined.Info, "version report bug github licences licenses"),
 }
@@ -555,6 +555,7 @@ private fun PlayerSection(repository: Repository, settings: AppSettings, set: ((
     Card("On-screen controls") {
         SettingsLabel("On-screen controls")
         SwitchRow("X-Ray", "An X-Ray button in the player: the cast with photos, the crew and the facts about what you're watching.", settings.xrayEnabled) { v -> set { it.copy(xrayEnabled = v) } }
+        SwitchRow("Show stream quality under the title", "The source's quality, such as 4K or 1080p, next to the title in the player.", settings.qualityInPlayer) { v -> set { it.copy(qualityInPlayer = v) } }
         Label("Rewind step")
         ChipRow(listOf(5, 10, 15, 30).map { it to "$it s" }, settings.seekBackSec) { v -> set { it.copy(seekBackSec = v) } }
         Label("Forward step")
@@ -786,8 +787,20 @@ private fun LibrarySection(repository: Repository, settings: AppSettings, set: (
         SwitchRow("Rotate the hero", "Moves to the next featured title every few seconds.", settings.heroAutoRotate) { v -> set { it.copy(heroAutoRotate = v) } }
         SwitchRow("Hide unreleased titles", null, settings.hideUnreleased) { v -> set { it.copy(hideUnreleased = v) } }
         SwitchRow("Hide anime", "Removes the Anime view and anime rows.", settings.hideAnime) { v -> set { it.copy(hideAnime = v) } }
+        SwitchRow("Keep anime in the anime room only", "Anime stays in the Anime view, out of Home, Movies and Shows.", settings.animeRoomOnly) { v -> set { it.copy(animeRoomOnly = v) } }
+        SwitchRow("Hide watched titles in catalogs", "Titles you have finished drop out of the rows.", settings.hideWatched) { v -> set { it.copy(hideWatched = v) } }
+        SwitchRow("New episodes row", "The last two weeks of episodes from the shows you follow, on Home.", settings.newEpisodesRow) { v -> set { it.copy(newEpisodesRow = v) } }
     }
     // Harbor's Detail pages tab: Spoilers, then Episode cards.
+    Part("Show pages") {
+        SettingsSection("Show pages", "How a show or movie page behaves when you open it.") {
+            Column {
+                ToggleRow("Show full descriptions", "Opens with the whole synopsis instead of the first lines.", settings.fullDescriptions) { v -> set { it.copy(fullDescriptions = v) } }
+                ToggleRow("Remember your place on show pages", "Reopens a show on the season you last looked at.", settings.rememberSeason) { v -> set { it.copy(rememberSeason = v) } }
+                ToggleRow("Use free IMDb data without a TMDB key", "Cast photos, networks and air dates from TVMaze and imdbapi.dev when there is no TMDB key.", settings.keylessDetails) { v -> set { it.copy(keylessDetails = v) } }
+            }
+        }
+    }
     Part("Spoilers") {
         SettingsSection("Spoilers", "Keep unwatched episode details hidden.") {
             Column {
@@ -943,6 +956,8 @@ private fun AppearanceSection(settings: AppSettings, set: ((AppSettings) -> AppS
         SwitchRow("Award labels", "The top award a title won, such as OSCAR or 4 EMMYS (from Wikidata).", settings.showAwardBadge) { v -> set { it.copy(showAwardBadge = v) } }
         SwitchRow("Dub badge", "Marks anime with an English dub airing now (from AniSchedule).", settings.showDubBadge) { v -> set { it.copy(showDubBadge = v) } }
         SwitchRow("Hide titles under posters", null, settings.hidePosterTitles) { v -> set { it.copy(hidePosterTitles = v) } }
+        SwitchRow("Watched badge", "A check on the posters of titles you have watched.", settings.watchedBadge) { v -> set { it.copy(watchedBadge = v) } }
+        SwitchRow("Watchlist bookmark", "A bookmark on the posters of titles in your list.", settings.watchlistBookmark) { v -> set { it.copy(watchlistBookmark = v) } }
         Label("Size")
         ChipRow(listOf(0.85f to "Small", 1f to "Normal", 1.15f to "Large"), settings.posterScale) { v -> set { it.copy(posterScale = v) } }
         Label("Corners")
@@ -971,6 +986,7 @@ private fun StorageSection(repository: Repository, set: ((AppSettings) -> AppSet
             repository.clearResumeHistory()
             say("Watch positions cleared")
         }
+        SwitchRow("Delete downloads after I finish watching", "Frees the space once a downloaded movie or episode is watched.", LartDisplay.settings.deleteAfterWatching) { v -> set { it.copy(deleteAfterWatching = v) } }
     }
     Card("Reset") {
         SettingsLabel("Reset")
@@ -1018,14 +1034,14 @@ private fun BackupSection(repository: Repository) {
             runCatching {
                 val json = withContext(Dispatchers.IO) { context.contentResolver.openInputStream(source)?.use { it.readBytes().decodeToString() } } ?: error("Couldn't read the file")
                 repository.importBackup(json)
-            }.onSuccess { say("Backup restored") }.onFailure { say(it.message ?: "Restore failed") }
+            }.onSuccess { say(it) }.onFailure { say(it.message ?: "Restore failed") }
         }
     }
 
     SettingsSection("Updates", "Lart native ${version ?: "?"}. New previews are posted on GitHub; install them over this one.") {
         HGhostButton(onClick = { uri.openUri("https://github.com/9vsv6/lart/releases") }) { Text("See releases") }
     }
-    SettingsSection("Backup & restore", "Saves your profiles, lists, progress, settings and sign-ins to a file. It holds your account keys, so keep it private.") {
+    SettingsSection("Backup & restore", "Saves your profiles, lists, progress, settings and sign-ins to a file. It holds your account keys, so keep it private. Restore also takes a backup from Harbor or Lart on the desktop: its keys, addons, watchlist and watch positions come over.") {
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
             HButton(onClick = { exporter.launch("lart-backup.json") }) { Text("Back up") }
             HGhostButton(onClick = { importer.launch(arrayOf("application/json", "*/*")) }) { Text("Restore") }

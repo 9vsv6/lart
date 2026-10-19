@@ -21,6 +21,9 @@ object LartDisplay {
     var rpdbKey by mutableStateOf<String?>(null)
     /** Harbor's custom poster service: a URL template, or the Better Posters / PostersPlus host. */
     var customPosters by mutableStateOf<String?>(null)
+    /** Ids in your list and ids you have watched, for the cards' bookmark and check. */
+    var myListIds by mutableStateOf<Set<String>>(emptySet())
+    var watchedIds by mutableStateOf<Set<String>>(emptySet())
 
     /** The poster as Harbor picks it: the custom service, else RPDB with a key, else the addon's. */
     fun posterFor(meta: Meta): String? = PosterService.poster(meta, rpdbKey, customPosters) ?: meta.poster

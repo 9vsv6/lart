@@ -127,6 +127,27 @@ data class AppSettings(
     val showLetterboxdDetail: Boolean = true,
     /** Harbor's X-Ray in the player: who's in it, the crew and the facts. */
     val xrayEnabled: Boolean = true,
+    // ---- More of Harbor's options ----
+    /** Keep anime out of Home, Movies and Shows; it stays in the Anime view. */
+    val animeRoomOnly: Boolean = false,
+    /** Drop titles you have watched from catalog rows. */
+    val hideWatched: Boolean = false,
+    /** A check on the posters of titles you have watched. */
+    val watchedBadge: Boolean = true,
+    /** A bookmark on the posters of titles in your list. */
+    val watchlistBookmark: Boolean = true,
+    /** Home's "New Episodes" row: the last two weeks of episodes from your shows. */
+    val newEpisodesRow: Boolean = true,
+    /** Title pages open with the whole synopsis, not four lines. */
+    val fullDescriptions: Boolean = false,
+    /** Without a TMDB key, fill title pages from TVMaze and imdbapi.dev (Harbor's keyless data). */
+    val keylessDetails: Boolean = true,
+    /** Show pages reopen on the season you last looked at. */
+    val rememberSeason: Boolean = true,
+    /** The stream's quality (4K, 1080p) next to the title in the player. */
+    val qualityInPlayer: Boolean = true,
+    /** Delete a downloaded file once you finish watching it. */
+    val deleteAfterWatching: Boolean = false,
     /** IMDb rating on each episode (OMDb with a key, else TMDB). */
     val showEpisodeRating: Boolean = true,
     val hidePosterTitles: Boolean = false,

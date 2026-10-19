@@ -155,7 +155,7 @@ internal fun HarborControls(
                         overflow = TextOverflow.Ellipsis,
                         modifier = Modifier.weight(1f, fill = false),
                     )
-                    state.quality?.let { quality ->
+                    state.quality?.takeIf { state.settings.qualityInPlayer }?.let { quality ->
                         Box(Modifier.padding(start = 10.dp, end = 6.dp).size(width = 2.dp, height = 13.dp).background(LartColors.Accent))
                         Text(quality, color = Color.White, fontSize = 12.sp, fontWeight = FontWeight.Bold)
                     }
