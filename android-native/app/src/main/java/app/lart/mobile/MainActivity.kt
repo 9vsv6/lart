@@ -197,6 +197,12 @@ private fun LartRoot(repository: Repository) {
                     )
                 }
                 composable("calendar") { app.lart.mobile.ui.CalendarScreen(repository, onBack = if (wide) null else ({ nav.popBackStack() }), onOpen = { open(it) }) }
+                composable("downloads") {
+                    app.lart.mobile.ui.DownloadsScreen(onBack = if (wide) null else ({ nav.popBackStack() })) { d ->
+                        val uri = android.net.Uri.fromFile(java.io.File(d.file)).toString()
+                        context.startActivity(PlayerActivity.intent(context, app.lart.mobile.data.Ready(app.lart.mobile.data.Stream(url = uri, name = "Downloaded"), uri), d.type, d.metaId, d.videoId, d.title))
+                    }
+                }
                 composable("collections") { app.lart.mobile.ui.CollectionsScreen(repository, onBack = { nav.popBackStack() }) }
                 composable("collection/{id}", arguments = listOf(navArgument("id") { type = NavType.IntType })) { back ->
                     app.lart.mobile.ui.CollectionScreen(repository, back.arguments?.getInt("id") ?: 0, onBack = { nav.popBackStack() }, onOpen = { open(it) })
@@ -385,6 +391,7 @@ private fun SideRail(route: String?, view: BrowseView, onSelect: (Tab) -> Unit, 
         }
         RailIcon(pages[2].glyph, pages[2].label, route == pages[2].route) { onPage(pages[2].route) }
         RailIcon(pages[1].glyph, pages[1].label, route == pages[1].route) { onPage(pages[1].route) }
+        RailIcon(pages[3].glyph, pages[3].label, route == pages[3].route) { onPage(pages[3].route) }
         }
         Box(Modifier.height(8.dp))
         Box(

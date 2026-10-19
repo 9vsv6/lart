@@ -84,6 +84,7 @@ enum class ExtraPage(val route: String, val label: String, val icon: androidx.co
     DiscoverPage("discover", "Discover", Icons.Rounded.Explore, app.lart.mobile.R.drawable.nav_explore),
     CalendarPage("calendar", "Calendar", Icons.Outlined.CalendarMonth, app.lart.mobile.R.drawable.nav_calendar),
     CollectionsPage("collections", "Collections", Icons.Outlined.CollectionsBookmark, app.lart.mobile.R.drawable.nav_collections),
+    DownloadsPage("downloads", "Downloads", Icons.Outlined.CollectionsBookmark, app.lart.mobile.R.drawable.nav_download),
 }
 
 @Composable

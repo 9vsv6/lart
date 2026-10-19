@@ -30,6 +30,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.KeyboardArrowLeft
 import androidx.compose.material.icons.rounded.ArrowUpward
 import androidx.compose.material.icons.rounded.Check
+import androidx.compose.material.icons.rounded.Download
 import androidx.compose.material.icons.rounded.ContentCopy
 import androidx.compose.material.icons.rounded.GridView
 import androidx.compose.material.icons.rounded.KeyboardArrowDown
@@ -134,6 +135,7 @@ fun StreamsScreen(
 ) {
     val addons by repository.addons.collectAsState()
     val debrid by repository.debrid.collectAsState()
+    val downloadContext = androidx.compose.ui.platform.LocalContext.current
     val autoPlay by repository.autoPlay.collectAsState()
     val settings by repository.settings.collectAsState()
     val remembered = remember(metaId) { repository.preferredSource(metaId) }
@@ -321,7 +323,11 @@ fun StreamsScreen(
                 else -> items(shown, key = { it.addon.manifest.id + "|" + (it.stream.url ?: it.stream.infoHash) + "|" + it.stream.name + "|" + it.stream.title }) { item ->
                     val last = remembered != null && item.addon.manifest.id == remembered.first &&
                         (remembered.second == null || Playback.streamKey(item.stream) == remembered.second) && item === shown.first()
-                    SourceCard(item, wide, last, settings.showFilename, item.stream.playable(debrid != null)) { play(item) }
+                    SourceCard(item, wide, last, settings.showFilename, item.stream.playable(debrid != null), onDownload = {
+                        val ctx = downloadContext
+                        app.lart.mobile.data.Downloads.enqueue(ctx, item.stream.url!!, metaId, type, videoId, title, null)
+                        android.widget.Toast.makeText(ctx, "Downloading. It's in Downloads.", android.widget.Toast.LENGTH_SHORT).show()
+                    }) { play(item) }
                 }
             }
         }
@@ -422,13 +428,28 @@ private fun FacetChip(facet: Facet, picked: Set<String>, onChange: (Set<String>)
 /** stremio-row.tsx: logo, the addon's own text, badges, copy link and the round Play button. */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun SourceCard(item: RankedStream, wide: Boolean, last: Boolean, showFilename: Boolean, playable: Boolean, onPlay: () -> Unit) {
+private fun SourceCard(item: RankedStream, wide: Boolean, last: Boolean, showFilename: Boolean, playable: Boolean, onDownload: (() -> Unit)? = null, onPlay: () -> Unit) {
     val stream = item.stream
     val clipboard = LocalClipboardManager.current
     var expanded by remember { mutableStateOf(false) }
+    var saving by remember { mutableStateOf(false) }
     val body = listOfNotNull(stream.title, stream.description).joinToString("\n").trim()
     val actions: @Composable () -> Unit = {
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+            // Harbor's download button: saves a direct source for offline play.
+            if (onDownload != null && app.lart.mobile.data.Downloads.canSave(stream)) {
+                Box(
+                    Modifier.size(38.dp).clip(RoundedCornerShape(10.dp)).clickable(enabled = !saving) { saving = true; onDownload() },
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Icon(
+                        if (saving) Icons.Rounded.Check else Icons.Rounded.Download,
+                        if (saving) "Downloading" else "Download",
+                        tint = if (saving) LartColors.Accent else LartColors.InkSubtle,
+                        modifier = Modifier.size(19.dp),
+                    )
+                }
+            }
             stream.url?.takeIf { stream.direct }?.let { url ->
                 Box(
                     Modifier.size(38.dp).clip(RoundedCornerShape(10.dp)).clickable { clipboard.setText(AnnotatedString(url)) },
