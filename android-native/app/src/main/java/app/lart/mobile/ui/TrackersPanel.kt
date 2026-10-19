@@ -57,7 +57,7 @@ import kotlinx.coroutines.launch
 
 /*
  * Settings → Account & setup → Trackers, as Harbor's (trackers-panel.tsx, tracker-connect.tsx,
- * tracker-identity.tsx): "N of 3 connected", a tab per tracker, then either the connect card
+ * tracker-identity.tsx): "N of 3 connected", then each tracker in turn: either the connect card
  * (logo tile, name, what it does, Connect / About) or "Your … account" with the identity row.
  * Harbor connects with its own registered apps; those ids are Harbor's, so here the first
  * connect asks for the user's own app id (kept per profile).
@@ -72,7 +72,6 @@ private enum class Tracker(val label: String, val logo: Int, val blurb: String, 
 @Composable
 fun TrackersPanel(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
     val trackers by repository.trackers.collectAsState()
-    var active by rememberSaveable { mutableStateOf(Tracker.Trakt) }
     fun authOf(t: Tracker) = when (t) {
         Tracker.Trakt -> trackers.trakt
         Tracker.Simkl -> trackers.simkl
@@ -81,96 +80,72 @@ fun TrackersPanel(repository: Repository, settings: AppSettings, set: ((AppSetti
     val connected = Tracker.entries.count { authOf(it)?.accessToken != null }
 
     if (connected > 0) StatusDot("$connected of ${Tracker.entries.size} connected")
-    TrackerTabs(active, { authOf(it)?.accessToken != null }) { active = it }
 
-    val auth = authOf(active)
-    if (auth?.accessToken != null) {
-        SettingsSection(
-            "Your ${active.label} account",
-            when (active) {
-                Tracker.Trakt -> "Lart scrobbles your playback to Trakt and marks episodes watched at 80%."
-                Tracker.Simkl -> "Lart scrobbles your playback to Simkl and marks episodes watched at 80%."
-                Tracker.AniList -> "Anime episodes update your AniList progress at 80%."
-            },
-        ) {
-            TrackerIdentity(
-                tracker = active,
-                handle = auth.user,
-                profileUrl = auth.user?.let {
-                    when (active) {
-                        Tracker.Trakt -> "https://trakt.tv/users/$it"
-                        Tracker.AniList -> "https://anilist.co/user/$it"
-                        Tracker.Simkl -> null
-                    }
+    // Every tracker on the page, one after another, as their own sections.
+    Tracker.entries.forEachIndexed { index, t -> Column(verticalArrangement = Arrangement.spacedBy(22.dp)) {
+        if (index > 0) RowRule()
+        val auth = authOf(t)
+        if (auth?.accessToken != null) {
+            SettingsSection(
+                "Your ${t.label} account",
+                when (t) {
+                    Tracker.Trakt -> "Lart scrobbles your playback to Trakt and marks episodes watched at 80%."
+                    Tracker.Simkl -> "Lart scrobbles your playback to Simkl and marks episodes watched at 80%."
+                    Tracker.AniList -> "Anime episodes update your AniList progress at 80%."
                 },
-                onDisconnect = {
-                    val signedOut = auth.copy(accessToken = null, refreshToken = null, user = null)
-                    repository.updateTrackers {
-                        when (active) {
-                            Tracker.Trakt -> it.copy(trakt = signedOut)
-                            Tracker.Simkl -> it.copy(simkl = signedOut)
-                            Tracker.AniList -> it.copy(anilist = signedOut)
+            ) {
+                TrackerIdentity(
+                    tracker = t,
+                    handle = auth.user,
+                    profileUrl = auth.user?.let {
+                        when (t) {
+                            Tracker.Trakt -> "https://trakt.tv/users/$it"
+                            Tracker.AniList -> "https://anilist.co/user/$it"
+                            Tracker.Simkl -> null
                         }
-                    }
-                },
-            )
-        }
-        if (active == Tracker.Trakt) {
-            SettingsSection("Continue watching", "What you paused on other devices, as Harbor's \"Paused on Trakt\".") {
-                ToggleRow("Show Trakt's paused titles", null, settings.traktInContinueWatching) { v -> set { it.copy(traktInContinueWatching = v) } }
+                    },
+                    onDisconnect = {
+                        val signedOut = auth.copy(accessToken = null, refreshToken = null, user = null)
+                        repository.updateTrackers {
+                            when (t) {
+                                Tracker.Trakt -> it.copy(trakt = signedOut)
+                                Tracker.Simkl -> it.copy(simkl = signedOut)
+                                Tracker.AniList -> it.copy(anilist = signedOut)
+                            }
+                        }
+                    },
+                )
             }
-        }
-    } else when (active) {
-        Tracker.Trakt -> DeviceConnect(
-            tracker = Tracker.Trakt,
-            auth = auth,
-            needsSecret = true,
-            registerUrl = "https://trakt.tv/oauth/applications/new",
-            start = { id, _ -> Trakt.deviceCode(id) },
-            await = { id, secret, code -> Trakt.awaitToken(id, secret.orEmpty(), code) },
-            onSave = { signed -> repository.updateTrackers { it.copy(trakt = signed) } },
-            after = { repository.refreshTrackers() },
-        )
-        Tracker.Simkl -> DeviceConnect(
-            tracker = Tracker.Simkl,
-            auth = auth,
-            needsSecret = false,
-            registerUrl = "https://simkl.com/settings/developer/new/",
-            start = { id, _ -> Simkl.pin(id) },
-            await = { id, _, code -> Simkl.awaitToken(id, code) },
-            onSave = { signed -> repository.updateTrackers { it.copy(simkl = signed) } },
-            after = {},
-        )
-        Tracker.AniList -> AniListConnect(repository, auth)
-    }
-    Text("Sign-ins belong to the current profile.", color = LartColors.InkSubtle, fontSize = 13.5.sp, modifier = Modifier.padding(top = 4.dp))
-}
-
-/** Harbor's sub-tab bar for trackers: logo, name, a green dot when connected, an ink underline. */
-@Composable
-private fun TrackerTabs(active: Tracker, isConnected: (Tracker) -> Boolean, onPick: (Tracker) -> Unit) {
-    Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()), horizontalArrangement = Arrangement.spacedBy(4.dp)) {
-        Tracker.entries.forEach { t ->
-            val on = t == active
-            Column(Modifier.width(IntrinsicSize.Max).clip(RoundedCornerShape(8.dp)).clickable { onPick(t) }) {
-                Row(
-                    Modifier.padding(horizontal = 12.dp, vertical = 10.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                ) {
-                    Image(painterResource(t.logo), null, Modifier.size(18.dp))
-                    Text(
-                        t.label,
-                        color = if (on) LartColors.Ink else LartColors.InkSubtle,
-                        fontSize = 15.5.sp,
-                        fontWeight = if (on) FontWeight.SemiBold else FontWeight.Medium,
-                    )
-                    if (isConnected(t)) Box(Modifier.size(6.dp).clip(CircleShape).background(Success))
+            if (t == Tracker.Trakt) {
+                SettingsSection("Continue watching", "What you paused on other devices, as Harbor's \"Paused on Trakt\".") {
+                    ToggleRow("Show Trakt's paused titles", null, settings.traktInContinueWatching) { v -> set { it.copy(traktInContinueWatching = v) } }
                 }
-                Box(Modifier.padding(horizontal = 10.dp).height(2.dp).fillMaxWidth().background(if (on) LartColors.Ink else Color.Transparent))
             }
+        } else when (t) {
+            Tracker.Trakt -> DeviceConnect(
+                tracker = Tracker.Trakt,
+                auth = auth,
+                needsSecret = true,
+                registerUrl = "https://trakt.tv/oauth/applications/new",
+                start = { id, _ -> Trakt.deviceCode(id) },
+                await = { id, secret, code -> Trakt.awaitToken(id, secret.orEmpty(), code) },
+                onSave = { signed -> repository.updateTrackers { it.copy(trakt = signed) } },
+                after = { repository.refreshTrackers() },
+            )
+            Tracker.Simkl -> DeviceConnect(
+                tracker = Tracker.Simkl,
+                auth = auth,
+                needsSecret = false,
+                registerUrl = "https://simkl.com/settings/developer/new/",
+                start = { id, _ -> Simkl.pin(id) },
+                await = { id, _, code -> Simkl.awaitToken(id, code) },
+                onSave = { signed -> repository.updateTrackers { it.copy(simkl = signed) } },
+                after = {},
+            )
+            Tracker.AniList -> AniListConnect(repository, auth)
         }
-    }
+    } }
+    Text("Sign-ins belong to the current profile.", color = LartColors.InkSubtle, fontSize = 13.5.sp, modifier = Modifier.padding(top = 4.dp))
 }
 
 /** tracker-connect.tsx: a 72 dp logo tile, the name, what it does, Connect and About. */

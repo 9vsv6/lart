@@ -9,6 +9,14 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
+import androidx.compose.foundation.layout.fillMaxHeight
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.ScrollState
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.mutableStateMapOf
+import androidx.compose.ui.layout.onGloballyPositioned
+import androidx.compose.ui.layout.positionInParent
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
@@ -117,78 +125,99 @@ private val LANGUAGE_CODES = listOf("en", "es", "fr", "de", "it", "pt", "ar", "j
 
 @Composable
 fun SettingsScreen(repository: Repository, onOpenAddons: () -> Unit) {
-    // "" is the home rail, "g:Name" a group landing, "s:Name" a section page.
-    var route by rememberSaveable { mutableStateOf("") }
+    // The open group ("" is the home rail on phones), and a section to scroll to.
+    var groupName by rememberSaveable { mutableStateOf("") }
     var query by rememberSaveable { mutableStateOf("") }
-    val group = route.removePrefix("g:").takeIf { route.startsWith("g:") }?.let { Group.valueOf(it) }
-    val section = route.removePrefix("s:").takeIf { route.startsWith("s:") }?.let { Section.valueOf(it) }
+    var target by remember { mutableStateOf<Section?>(null) }
 
-    fun openGroup(target: Group) {
-        query = ""
-        route = if (target.children.size == 1) "s:${target.children.single().name}" else "g:${target.name}"
-    }
-    fun openSection(target: Section) {
-        query = ""
-        route = "s:${target.name}"
-    }
-    fun back() {
-        query = ""
-        route = if (section != null && groupOf(section).children.size > 1) "g:${groupOf(section).name}" else ""
-    }
-    BackHandler(enabled = route.isNotEmpty() || query.isNotEmpty()) { if (query.isNotEmpty()) query = "" else back() }
+    BoxWithConstraints(Modifier.fillMaxSize().background(LartColors.Canvas).statusBarsPadding()) {
+        // Tablets get Harbor's desktop layout: the rail on the left, the open group beside it.
+        val wide = maxWidth >= 720.dp
+        val group = groupName.takeIf { it.isNotEmpty() }?.let { Group.valueOf(it) } ?: if (wide) Group.Account else null
+        fun open(g: Group, s: Section? = null) {
+            query = ""
+            groupName = g.name
+            target = s
+        }
+        BackHandler(enabled = query.isNotEmpty() || (!wide && group != null)) {
+            if (query.isNotEmpty()) query = "" else groupName = ""
+        }
 
-    val title = section?.label ?: group?.label ?: "Settings"
-    Column(Modifier.fillMaxSize().background(LartColors.Canvas).statusBarsPadding()) {
-        SettingsHeader(title, if (route.isEmpty()) null else ({ back() }), query) { query = it }
-        Column(
-            Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(start = 16.dp, end = 16.dp, top = 6.dp, bottom = 40.dp),
-            verticalArrangement = Arrangement.spacedBy(22.dp),
-        ) {
-            when {
-                query.isNotBlank() -> SearchResults(query) { openSection(it) }
-                section != null -> SectionPage(section, repository, onOpenAddons)
-                group != null -> GroupLanding(group) { openSection(it) }
-                else -> SettingsHome(repository, onOpenAddons) { openGroup(it) }
+        if (wide && group != null) {
+            Row(Modifier.fillMaxSize()) {
+                Column(
+                    Modifier.width(320.dp).fillMaxHeight().background(LartColors.Surface)
+                        .verticalScroll(rememberScrollState()).padding(start = 12.dp, end = 12.dp, top = 20.dp, bottom = 32.dp),
+                ) {
+                    SettingsSearchField(query) { query = it }
+                    if (query.isNotBlank()) SearchResults(query) { open(groupOf(it), it) }
+                    else SettingsRail(repository, onOpenAddons, selected = group, onOpen = { g, s -> open(g, s) })
+                }
+                Column(Modifier.weight(1f).fillMaxHeight()) {
+                    Text(
+                        group.label,
+                        color = LartColors.Ink,
+                        fontSize = 34.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        letterSpacing = (-0.6).sp,
+                        modifier = Modifier.padding(start = 40.dp, top = 28.dp, bottom = 8.dp),
+                    )
+                    GroupContent(group, repository, onOpenAddons, target, horizontal = 40.dp) { target = null }
+                }
+            }
+        } else if (group == null) {
+            Column(Modifier.fillMaxSize()) {
+                SettingsHeader("Settings", null, query) { query = it }
+                Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(start = 16.dp, end = 16.dp, top = 6.dp, bottom = 40.dp)) {
+                    if (query.isNotBlank()) SearchResults(query) { open(groupOf(it), it) }
+                    else SettingsRail(repository, onOpenAddons, selected = null, onOpen = { g, s -> open(g, s) })
+                }
+            }
+        } else {
+            Column(Modifier.fillMaxSize()) {
+                SettingsHeader(group.label, { query = ""; groupName = "" }, query) { query = it }
+                if (query.isNotBlank()) {
+                    Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal = 16.dp)) {
+                        SearchResults(query) { open(groupOf(it), it) }
+                    }
+                } else GroupContent(group, repository, onOpenAddons, target, horizontal = 16.dp) { target = null }
             }
         }
     }
 }
 
-/** Harbor's phone rail: who you are, Switch profile and Addons, then every group. */
+/**
+ * Harbor's rail: who you are, Switch profile and Addons, then every group. On tablets the
+ * open group is highlighted and lists its sections, as Harbor's desktop sidebar does.
+ */
 @Composable
-private fun SettingsHome(repository: Repository, onOpenAddons: () -> Unit, onOpen: (Group) -> Unit) {
+private fun SettingsRail(repository: Repository, onOpenAddons: () -> Unit, selected: Group?, onOpen: (Group, Section?) -> Unit) {
     val profile by repository.activeProfile.collectAsState()
     val account by repository.account.collectAsState()
     Column {
         Row(
-            Modifier.fillMaxWidth().padding(start = 2.dp, top = 6.dp, bottom = 14.dp),
+            Modifier.fillMaxWidth().padding(start = 2.dp, top = 14.dp, bottom = 14.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(16.dp),
         ) {
             ProfileAvatar(profile, 58.dp)
             Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
                 Text(profile?.name ?: "Me", color = LartColors.Ink, fontSize = 18.sp, fontWeight = FontWeight.Medium)
-                val signedIn = account
-                if (signedIn != null) {
-                    Text("Stremio · ${signedIn.email}", color = LartColors.InkMuted, fontSize = 16.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                if (account != null) {
+                    Text("Signed in to Stremio", color = LartColors.InkMuted, fontSize = 15.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
                 } else Row {
-                    Text("Sign in to ", color = LartColors.InkMuted, fontSize = 16.sp)
-                    Text("Stremio", color = LartColors.Ink, fontSize = 16.sp, modifier = Modifier.clickable { onOpen(Group.Account) })
+                    Text("Sign in to ", color = LartColors.InkMuted, fontSize = 15.sp)
+                    Text("Stremio", color = LartColors.Ink, fontSize = 15.sp, modifier = Modifier.clickable { onOpen(Group.Account, Section.Account) })
                 }
             }
         }
         NavRow(Icons.Outlined.Group, "Switch profile", chevron = false) { repository.showProfilePicker() }
         NavRow(Icons.Outlined.Inventory2, "Addons", chevron = false, onClick = onOpenAddons)
-        Group.entries.forEach { entry -> NavRow(entry.icon, entry.label, chevron = true) { onOpen(entry) } }
-    }
-}
-
-/** Harbor's GroupLanding: the group's uppercase label and a row per section. */
-@Composable
-private fun GroupLanding(group: Group, onOpen: (Section) -> Unit) {
-    Column {
-        SettingsLabel(group.section)
-        group.children.forEach { child -> LinkRow(child.label, child.sub) { onOpen(child) } }
+        Group.entries.forEach { entry ->
+            val on = entry == selected
+            NavRow(entry.icon, entry.label, chevron = true, selected = on, expanded = on && entry.children.size > 1) { onOpen(entry, null) }
+            if (on && entry.children.size > 1) entry.children.forEach { child -> NavChildRow(child.label) { onOpen(entry, child) } }
+        }
     }
 }
 
@@ -199,17 +228,63 @@ private fun SearchResults(query: String, onOpen: (Section) -> Unit) {
         val text = "${s.label} ${s.sub} ${s.keywords} ${groupOf(s).label}".lowercase()
         words.all { it in text }
     }
-    Column {
+    Column(Modifier.padding(top = 10.dp)) {
         SettingsLabel(if (matches.isEmpty()) "No matches" else "Results")
         matches.forEach { s -> LinkRow(s.label, "${groupOf(s).label} · ${s.sub}") { onOpen(s) } }
     }
 }
 
+/**
+ * Every section of a group on one page, each under its own heading, so nothing needs
+ * opening. `target` scrolls to a section (from search or the tablet rail).
+ */
 @Composable
-private fun SectionPage(section: Section, repository: Repository, onOpenAddons: () -> Unit) {
+private fun GroupContent(
+    group: Group,
+    repository: Repository,
+    onOpenAddons: () -> Unit,
+    target: Section?,
+    horizontal: androidx.compose.ui.unit.Dp,
+    onTargetShown: () -> Unit,
+) {
+    val scroll = remember(group) { ScrollState(0) }
+    val offsets = remember(group) { mutableStateMapOf<Section, Int>() }
     val settings by repository.settings.collectAsState()
     val set: ((AppSettings) -> AppSettings) -> Unit = repository::updateSettings
-    if (section != Section.Trackers) Text(section.sub, color = LartColors.InkMuted, fontSize = 15.5.sp, lineHeight = 22.sp)
+    LaunchedEffect(group, target, offsets[target]) {
+        val y = target?.let { offsets[it] } ?: return@LaunchedEffect
+        scroll.animateScrollTo(y)
+        onTargetShown()
+    }
+    Column(
+        Modifier.fillMaxSize().verticalScroll(scroll).padding(start = horizontal, end = horizontal, top = 6.dp, bottom = 48.dp),
+    ) {
+        group.children.forEachIndexed { index, section ->
+            Column(
+                Modifier.fillMaxWidth().onGloballyPositioned { offsets[section] = it.positionInParent().y.toInt() },
+                verticalArrangement = Arrangement.spacedBy(22.dp),
+            ) {
+                if (index > 0) Box(Modifier.padding(top = 30.dp).fillMaxWidth().height(1.dp).background(LartColors.EdgeSoft))
+                if (group.children.size > 1) {
+                    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                        Text(section.label, color = LartColors.Ink, fontSize = 24.sp, fontWeight = FontWeight.SemiBold, letterSpacing = (-0.4).sp)
+                        Text(section.sub, color = LartColors.InkMuted, fontSize = 15.5.sp, lineHeight = 22.sp)
+                    }
+                } else Text(section.sub, color = LartColors.InkMuted, fontSize = 15.5.sp, lineHeight = 22.sp)
+                SectionBody(section, repository, settings, set, onOpenAddons)
+            }
+        }
+    }
+}
+
+@Composable
+private fun SectionBody(
+    section: Section,
+    repository: Repository,
+    settings: AppSettings,
+    set: ((AppSettings) -> AppSettings) -> Unit,
+    onOpenAddons: () -> Unit,
+) {
     when (section) {
         Section.Account -> AccountSection(repository, settings, set)
         Section.Trackers -> TrackersPanel(repository, settings, set)

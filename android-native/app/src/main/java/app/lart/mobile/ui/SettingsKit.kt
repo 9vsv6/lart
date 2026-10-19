@@ -26,6 +26,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.KeyboardArrowLeft
 import androidx.compose.material.icons.automirrored.rounded.KeyboardArrowRight
 import androidx.compose.material.icons.rounded.Close
+import androidx.compose.material.icons.rounded.KeyboardArrowDown
 import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Switch
@@ -79,13 +80,13 @@ fun SettingsHeader(title: String, onBack: (() -> Unit)?, query: String, onQuery:
             overflow = TextOverflow.Ellipsis,
             modifier = Modifier.padding(start = 6.dp, top = 10.dp, bottom = 14.dp),
         )
-        SearchField(query, onQuery)
+        SettingsSearchField(query, onQuery)
         Spacer(Modifier.height(10.dp))
     }
 }
 
 @Composable
-private fun SearchField(query: String, onQuery: (String) -> Unit) {
+fun SettingsSearchField(query: String, onQuery: (String) -> Unit) {
     Row(
         Modifier.fillMaxWidth().height(44.dp).clip(RoundedCornerShape(10.dp)).background(LartColors.Elevated).padding(start = 12.dp),
         verticalAlignment = Alignment.CenterVertically,
@@ -113,16 +114,41 @@ private fun SearchField(query: String, onQuery: (String) -> Unit) {
 
 /** A rail row on the settings home: outline icon, label, and a chevron for groups. */
 @Composable
-fun NavRow(icon: ImageVector, label: String, chevron: Boolean, onClick: () -> Unit) {
+fun NavRow(
+    icon: ImageVector,
+    label: String,
+    chevron: Boolean,
+    selected: Boolean = false,
+    expanded: Boolean = false,
+    onClick: () -> Unit,
+) {
+    val ink = if (selected) LartColors.Ink else LartColors.InkMuted
     Row(
-        Modifier.fillMaxWidth().clip(RoundedCornerShape(10.dp)).clickable(onClick = onClick)
+        Modifier.fillMaxWidth().clip(RoundedCornerShape(10.dp)).background(if (selected) LartColors.Elevated else Color.Transparent).clickable(onClick = onClick)
             .heightIn(min = 54.dp).padding(start = 14.dp, end = 10.dp, top = 7.dp, bottom = 7.dp),
         verticalAlignment = Alignment.CenterVertically,
         horizontalArrangement = Arrangement.spacedBy(14.dp),
     ) {
-        Icon(icon, null, tint = LartColors.InkMuted, modifier = Modifier.size(22.dp))
-        Text(label, color = LartColors.InkMuted, fontSize = 17.sp, fontWeight = FontWeight.Medium, modifier = Modifier.weight(1f))
-        if (chevron) Icon(Icons.AutoMirrored.Rounded.KeyboardArrowRight, null, tint = LartColors.InkSubtle, modifier = Modifier.size(20.dp))
+        Icon(icon, null, tint = ink, modifier = Modifier.size(22.dp))
+        Text(label, color = ink, fontSize = 17.sp, fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Medium, modifier = Modifier.weight(1f))
+        if (chevron) Icon(
+            if (expanded) Icons.Rounded.KeyboardArrowDown else Icons.AutoMirrored.Rounded.KeyboardArrowRight,
+            null,
+            tint = LartColors.InkSubtle,
+            modifier = Modifier.size(20.dp),
+        )
+    }
+}
+
+/** A section under the open group in the tablet rail; tapping scrolls to it. */
+@Composable
+fun NavChildRow(label: String, onClick: () -> Unit) {
+    Row(
+        Modifier.fillMaxWidth().clip(RoundedCornerShape(10.dp)).clickable(onClick = onClick)
+            .heightIn(min = 44.dp).padding(start = 50.dp, end = 10.dp, top = 6.dp, bottom = 6.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(label, color = LartColors.InkSubtle, fontSize = 15.5.sp, fontWeight = FontWeight.Medium)
     }
 }
 
