@@ -185,7 +185,11 @@ private fun LartRoot(repository: Repository) {
         bottomBar = { if (showBar && !wide) TabBar(route) { nav.selectTab(it) } },
     ) { padding ->
         Box(Modifier.fillMaxSize().padding(bottom = padding.calculateBottomPadding())) {
+            androidx.compose.runtime.CompositionLocalProvider(app.lart.mobile.ui.LocalOpenList provides { id: String -> nav.navigate("list/${enc(id)}") }) {
             NavHost(nav, startDestination = Tab.Home.route) {
+                composable("list/{id}", arguments = listOf(navArgument("id") { type = NavType.StringType })) { back ->
+                    app.lart.mobile.ui.CuratedListScreen(back.arguments?.getString("id").orEmpty(), onBack = { nav.popBackStack() }, onOpen = { open(it) })
+                }
                 composable(Tab.Home.route) { HomeScreen(repository, browse, browseView, { browseView = it }, showSwitcher = !wide) }
                 composable(Tab.Search.route) {
                     SearchScreen(repository, onOpen = { open(it) }) { type, genre ->
@@ -267,6 +271,7 @@ private fun LartRoot(repository: Repository) {
                         context.startActivity(PlayerActivity.intent(context, ready, type, metaId, videoId, title))
                     }
                 }
+            }
             }
         }
     }

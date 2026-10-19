@@ -166,7 +166,22 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
                             )
                         }
                     }
-                    items(if (display.showTop10) current.drop(1) else current, key = { it.key }) { row ->
+                    val rest = if (display.showTop10) current.drop(1) else current
+                    items(rest.take(3), key = { it.key }) { row ->
+                        Rail(row.title, row.metas.distinctBy { it.id }.take(18), nav::openMeta) { nav.openCatalog(row) }
+                    }
+                    // Harbor's curated lists: the NYT's TV 100 for shows, the Registry's newest for films, and the shelf.
+                    val curated = when (view) {
+                        BrowseView.Home -> listOf("nyt-tv-100", "national-film-registry-latest")
+                        BrowseView.Shows -> listOf("nyt-tv-100")
+                        BrowseView.Movies -> listOf("national-film-registry-latest")
+                        else -> emptyList()
+                    }.mapNotNull { app.lart.mobile.data.Curated.list(it) }
+                    items(curated, key = { "curated-${it.id}" }) { list -> CuratedRow(list, nav::openMeta) }
+                    if (view == BrowseView.Home || view == BrowseView.Movies) {
+                        item(key = "lists") { CuratedShelf(app.lart.mobile.data.Curated.shelf()) }
+                    }
+                    items(rest.drop(3), key = { it.key }) { row ->
                         Rail(row.title, row.metas.distinctBy { it.id }.take(18), nav::openMeta) { nav.openCatalog(row) }
                     }
                 }

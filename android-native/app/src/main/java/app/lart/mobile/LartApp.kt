@@ -14,6 +14,7 @@ class LartApp : Application() {
     override fun onCreate() {
         super.onCreate()
         repository = Repository(this)
+        app.lart.mobile.data.Curated.init(this)
         // Look-and-feel settings reach every screen, the player's too, through LartDisplay.
         val main = MainScope()
         main.launch {

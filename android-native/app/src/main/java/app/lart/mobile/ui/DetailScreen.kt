@@ -361,6 +361,8 @@ private fun DetailBody(
                 item(key = "media") { MediaGallery(details, side, wide) }
             }
             if (awards.isNotEmpty()) item(key = "awards") { AwardsSection(awards, side) }
+            val canon = app.lart.mobile.data.Curated.canon(imdbId, meta.type != "movie")
+            if (canon.isNotEmpty()) item(key = "canon") { CanonSection(canon, side) }
             anime?.let { animeTitles(it, meta.name) }?.takeIf { it.isNotEmpty() }?.let { titles ->
                 item(key = "titles") { Titled("Titles", titles, if (wide) 3 else 2, side) }
             }
@@ -448,6 +450,7 @@ private fun Hero(
                 (details?.genres?.takeIf { it.isNotEmpty() } ?: meta.genres.orEmpty()).take(3).forEach { Fact(it) }
             }
 
+            AccoladePills(meta.id.substringBefore(':').takeIf { it.startsWith("tt") })
             if (!wide) HeroAwards(awards, Modifier)
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
                 Row(

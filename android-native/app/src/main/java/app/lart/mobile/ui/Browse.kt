@@ -309,7 +309,7 @@ fun PosterTile(meta: Meta, modifier: Modifier = Modifier, onClick: () -> Unit) {
                     Text(rating, color = Color.White, fontSize = 10.5.sp, fontWeight = FontWeight.Bold)
                 }
             }
-            CardBadges(meta, Modifier.align(Alignment.TopStart))
+            CardBadges(meta, Modifier.align(Alignment.TopStart).fillMaxWidth(0.74f))
         }
         if (!display.hidePosterTitles) Text(
             meta.name,
@@ -487,6 +487,6 @@ private fun BadgePill(text: String, glyph: String?) {
         horizontalArrangement = Arrangement.spacedBy(3.dp),
     ) {
         glyph?.let { Text(it, fontSize = 8.5.sp) }
-        Text(text.uppercase(), color = Color.White, fontSize = 8.5.sp, fontWeight = FontWeight.ExtraBold, letterSpacing = 0.8.sp, maxLines = 1)
+        Text(text.uppercase(), color = Color.White, fontSize = 8.5.sp, fontWeight = FontWeight.ExtraBold, letterSpacing = 0.8.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
     }
 }
