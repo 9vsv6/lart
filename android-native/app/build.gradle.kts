@@ -23,8 +23,8 @@ android {
         applicationId = "app.lart.next"
         minSdk = 26
         targetSdk = 36
-        versionCode = 6
-        versionName = "0.6.0"
+        versionCode = 7
+        versionName = "0.7.0"
         // Phones (arm64) and the x86_64 emulator; mpv adds about 25 MB per ABI.
         ndk { abiFilters += listOf("arm64-v8a", "x86_64") }
     }
