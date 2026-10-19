@@ -110,11 +110,11 @@ class MainActivity : ComponentActivity() {
 }
 
 /** Harbor's phone tabs, in its order. Profile opens Settings, as in the Tauri phone app. */
-private enum class Tab(val route: String, val label: String, val icon: ImageVector) {
-    Search("search", "Search", Icons.Rounded.Search),
-    Home("home", "Home", Icons.Rounded.Home),
-    MyStuff("mystuff", "My Stuff", Icons.Rounded.Bookmark),
-    Profile("profile", "Profile", Icons.Rounded.Person),
+private enum class Tab(val route: String, val label: String, val icon: ImageVector, val glyph: Int) {
+    Search("search", "Search", Icons.Rounded.Search, R.drawable.nav_search),
+    Home("home", "Home", Icons.Rounded.Home, R.drawable.nav_home),
+    MyStuff("mystuff", "My Stuff", Icons.Rounded.Bookmark, R.drawable.nav_library),
+    Profile("profile", "Profile", Icons.Rounded.Person, R.drawable.nav_settings),
 }
 
 @Composable
@@ -325,7 +325,7 @@ private fun TabBar(route: String?, onSelect: (Tab) -> Unit) {
                             ProfileAvatar(profile, 23.dp)
                         } else {
                             Icon(
-                                tab.icon,
+                                androidx.compose.ui.res.painterResource(tab.glyph),
                                 contentDescription = tab.label,
                                 tint = if (on) LartColors.Canvas else LartColors.InkSubtle,
                                 modifier = Modifier.size(22.dp),
@@ -372,14 +372,19 @@ private fun SideRail(route: String?, view: BrowseView, onSelect: (Tab) -> Unit, 
             Text("L", color = LartColors.Canvas, fontSize = 24.sp, fontWeight = FontWeight.Black)
         }
         Box(Modifier.height(10.dp))
-        // Search, then Home's views (Home, Movies, Shows, Anime), then My Stuff, as Harbor's sidebar.
-        RailIcon(Tab.Search.icon, Tab.Search.label, route == Tab.Search.route) { onSelect(Tab.Search) }
-        BrowseView.entries.filter { it != BrowseView.Anime || !app.lart.mobile.ui.LartDisplay.settings.hideAnime }.forEach { v ->
-            RailIcon(v.icon, v.label, route == Tab.Home.route && view == v) { onView(v) }
+        // Harbor's sidebar, in its order and with its own glyphs: Search, Home, Discover,
+        // Library, Movies, Shows, Anime, Collections, then Calendar.
+        val homeView = route == Tab.Home.route
+        val pages = app.lart.mobile.ui.ExtraPage.entries
+        RailIcon(Tab.Search.glyph, Tab.Search.label, route == Tab.Search.route) { onSelect(Tab.Search) }
+        RailIcon(BrowseView.Home.glyph, "Home", homeView && view == BrowseView.Home) { onView(BrowseView.Home) }
+        RailIcon(pages[0].glyph, pages[0].label, route == pages[0].route) { onPage(pages[0].route) }
+        RailIcon(Tab.MyStuff.glyph, "Library", route == Tab.MyStuff.route) { onSelect(Tab.MyStuff) }
+        BrowseView.entries.drop(1).filter { it != BrowseView.Anime || !app.lart.mobile.ui.LartDisplay.settings.hideAnime }.forEach { v ->
+            RailIcon(v.glyph, v.label, homeView && view == v) { onView(v) }
         }
-        // Harbor's other pages: Discover, Calendar and Collections.
-        app.lart.mobile.ui.ExtraPage.entries.forEach { p -> RailIcon(p.icon, p.label, route == p.route) { onPage(p.route) } }
-        RailIcon(Tab.MyStuff.icon, Tab.MyStuff.label, route == Tab.MyStuff.route) { onSelect(Tab.MyStuff) }
+        RailIcon(pages[2].glyph, pages[2].label, route == pages[2].route) { onPage(pages[2].route) }
+        RailIcon(pages[1].glyph, pages[1].label, route == pages[1].route) { onPage(pages[1].route) }
         }
         Box(Modifier.height(8.dp))
         Box(
@@ -392,14 +397,12 @@ private fun SideRail(route: String?, view: BrowseView, onSelect: (Tab) -> Unit, 
 }
 
 @Composable
-private fun RailIcon(icon: ImageVector, label: String, on: Boolean, onClick: () -> Unit) {
-    androidx.compose.foundation.layout.Column(
-        Modifier.width(76.dp).clip(RoundedCornerShape(14.dp)).background(if (on) LartColors.Elevated else Color.Transparent)
-            .clickable(onClick = onClick).padding(vertical = 7.dp),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.spacedBy(4.dp),
+private fun RailIcon(glyph: Int, label: String, on: Boolean, onClick: () -> Unit) {
+    // Harbor's rail: the glyph alone, accent when active, no pill or label.
+    Box(
+        Modifier.size(56.dp).clip(RoundedCornerShape(14.dp)).clickable(onClick = onClick),
+        contentAlignment = Alignment.Center,
     ) {
-        Icon(icon, label, tint = if (on) LartColors.Accent else LartColors.InkMuted, modifier = Modifier.size(26.dp))
-        Text(label, color = if (on) LartColors.Ink else LartColors.InkSubtle, fontSize = 11.sp, fontWeight = FontWeight.Medium, maxLines = 1)
+        Icon(androidx.compose.ui.res.painterResource(glyph), label, tint = if (on) LartColors.Accent else LartColors.Ink.copy(alpha = 0.82f), modifier = Modifier.size(24.dp))
     }
 }

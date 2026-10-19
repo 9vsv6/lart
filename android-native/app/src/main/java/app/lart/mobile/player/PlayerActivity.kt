@@ -171,6 +171,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
         lifecycleScope.launch {
             meta = AddonClient.meta(repository.metaAddons(), type, metaId)
             describe()
+            loadXray()
             // Anime-only Anime4K needs the genres.
             if (state.settings.anime4kAnimeOnly) applyAnime4K()
         }
@@ -211,6 +212,24 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
     }
 
     /** Title, episode line, the season list and what comes next, from the metadata. */
+    /** X-Ray: TMDB with a key, else Harbor's keyless sources; AniList's characters for anime. */
+    private fun loadXray() {
+        val current = meta ?: return
+        if (!state.settings.xrayEnabled || state.xray != null) return
+        state.xrayOverview = current.description
+        lifecycleScope.launch {
+            val imdb = metaId.substringBefore(':').takeIf { it.startsWith("tt") }
+            val key = repository.tmdbKey.value
+            state.xray = when {
+                imdb != null -> (key?.let { runCatching { app.lart.mobile.data.Tmdb.details(it, imdb, type) }.getOrNull() })
+                    ?: runCatching { app.lart.mobile.data.Keyless.details(current) }.getOrNull()
+                else -> app.lart.mobile.data.AnimeInfo.ids(metaId)?.anilist?.let { app.lart.mobile.data.AnimeInfo.extra(it) }?.let { extra ->
+                    app.lart.mobile.data.Keyless.characters(current, extra)
+                }
+            }
+        }
+    }
+
     private fun describe() {
         val meta = meta ?: return
         state.title = meta.name.ifBlank { state.title }

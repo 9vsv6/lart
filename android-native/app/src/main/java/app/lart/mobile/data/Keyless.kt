@@ -24,6 +24,14 @@ object Keyless {
         return result
     }
 
+    /** For anime: AniList's characters stand in for the cast, its studios for the crew. */
+    fun characters(meta: Meta, extra: AnimeExtra): TmdbDetails = base(meta).copy(
+        cast = extra.characters.map { CastMember(it.name, it.role, it.image) },
+        castCount = extra.characters.size,
+        studios = extra.studios,
+        originalTitle = extra.native,
+    )
+
     private fun base(meta: Meta) = TmdbDetails(
         backdrop = null,
         logo = null,

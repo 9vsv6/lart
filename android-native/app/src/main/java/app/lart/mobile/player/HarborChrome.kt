@@ -18,6 +18,8 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.material.icons.rounded.PersonSearch
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
@@ -161,6 +163,19 @@ internal fun HarborControls(
                 (state.episodeLine ?: state.year)?.let {
                     Text(it, color = Muted, fontSize = 13.5.sp, maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(top = 2.dp))
                 }
+            }
+        }
+
+        // Harbor's X-Ray button, faint under the title until touched.
+        if (state.settings.xrayEnabled) {
+            Row(
+                Modifier.align(Alignment.TopStart).padding(start = 26.dp, top = 84.dp).clip(RoundedCornerShape(50))
+                    .clickable { onTouch(); state.panel = Panel.XRay }.padding(horizontal = 8.dp, vertical = 5.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(6.dp),
+            ) {
+                Icon(Icons.Rounded.PersonSearch, null, tint = LartColors.Accent, modifier = Modifier.size(15.dp))
+                Text("X-Ray", color = Color.White.copy(alpha = 0.75f), fontSize = 12.5.sp, fontWeight = FontWeight.SemiBold)
             }
         }
 
@@ -351,7 +366,7 @@ internal fun HarborPopovers(state: PlayerState, prefs: PlayerPrefs, actions: Pla
         ) {
             val current = state.panel ?: Panel.Audio
             val width = when (current) {
-                Panel.Subtitles, Panel.Episodes -> minOf(640.dp, maxW - 36.dp)
+                Panel.Subtitles, Panel.Episodes, Panel.XRay -> minOf(640.dp, maxW - 36.dp)
                 Panel.Audio, Panel.SubStyle -> minOf(360.dp, maxW - 36.dp)
                 else -> minOf(300.dp, maxW - 36.dp)
             }
@@ -381,6 +396,7 @@ internal fun HarborPopovers(state: PlayerState, prefs: PlayerPrefs, actions: Pla
                     Panel.Episodes -> PopoverFrame("Episodes", state.episodes.size, onClose = { state.panel = null }) {
                         Box(Modifier.padding(horizontal = 12.dp)) { EpisodesPanel(state, actions) }
                     }
+                    Panel.XRay -> XrayPanel(state)
                     Panel.Sources -> {}
                 }
             }
@@ -867,5 +883,94 @@ private fun SourcesSwitcher(state: PlayerState, actions: PlayerActions, modifier
         Row(Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
             Text("Tap any source to swap in place", color = Subtle, fontSize = 12.5.sp, modifier = Modifier.weight(1f))
         }
+    }
+}
+
+// ---------------- X-Ray ----------------
+
+private enum class XrayTab(val label: String) { Cast("Cast"), Crew("Crew"), About("About") }
+
+/**
+ * Harbor's X-Ray browser (components/player/xray): the cast with their photos and characters,
+ * the crew, and the facts. Harbor also names who is on screen with a face model; that part
+ * stays on the desktop.
+ */
+@Composable
+private fun ColumnScope.XrayPanel(state: PlayerState) {
+    val details = state.xray
+    var tab by remember { mutableStateOf(XrayTab.Cast) }
+    PopoverFrame("X-Ray", details?.cast?.size?.takeIf { it > 0 }, onClose = { state.panel = null }) {
+        Row(Modifier.padding(horizontal = 12.dp, vertical = 8.dp), horizontalArrangement = Arrangement.spacedBy(6.dp)) {
+            XrayTab.entries.forEach { t ->
+                val on = t == tab
+                Text(
+                    t.label,
+                    color = if (on) Color(0xFF121316) else Color.White,
+                    fontSize = 12.5.sp,
+                    fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier.clip(RoundedCornerShape(50)).background(if (on) Color.White else PopRaised)
+                        .clickable { tab = t }.padding(horizontal = 12.dp, vertical = 6.dp),
+                )
+            }
+        }
+        if (details == null) {
+            Text("Reading the cast…", color = Muted, fontSize = 13.sp, modifier = Modifier.padding(16.dp))
+            return@PopoverFrame
+        }
+        LazyColumn(Modifier.fillMaxWidth().padding(horizontal = 12.dp), contentPadding = androidx.compose.foundation.layout.PaddingValues(bottom = 12.dp)) {
+            when (tab) {
+                XrayTab.Cast -> {
+                    if (details.cast.isEmpty()) item { Text("No cast information for this title.", color = Muted, fontSize = 13.sp, modifier = Modifier.padding(6.dp)) }
+                    items(details.cast.chunked(3)) { rowPeople ->
+                        Row(Modifier.padding(vertical = 6.dp), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                            rowPeople.forEach { person ->
+                                Column(Modifier.weight(1f)) {
+                                    Box(
+                                        Modifier.fillMaxWidth().aspectRatio(3f / 4f).clip(RoundedCornerShape(10.dp)).background(PopRaised),
+                                        contentAlignment = Alignment.Center,
+                                    ) {
+                                        if (person.photo != null) AsyncImage(person.photo, person.name, contentScale = androidx.compose.ui.layout.ContentScale.Crop, modifier = Modifier.fillMaxSize())
+                                        else Text(person.name.take(1), color = Muted, fontSize = 22.sp, fontWeight = FontWeight.SemiBold)
+                                    }
+                                    Text(person.name, color = Color.White, fontSize = 12.5.sp, fontWeight = FontWeight.SemiBold, maxLines = 1, overflow = TextOverflow.Ellipsis, modifier = Modifier.padding(top = 5.dp))
+                                    person.character?.let { Text(it, color = Subtle, fontSize = 11.5.sp, maxLines = 1, overflow = TextOverflow.Ellipsis) }
+                                }
+                            }
+                            repeat(3 - rowPeople.size) { Spacer(Modifier.weight(1f)) }
+                        }
+                    }
+                }
+                XrayTab.Crew -> {
+                    val crew = listOf(
+                        "Directed by" to details.directors, "Written by" to details.writers, "Produced by" to details.producers,
+                        "Cinematography" to details.cinematography, "Music" to details.music, "Editing" to details.editors,
+                        "Studio" to details.studios, "Network" to details.networks,
+                    ).filter { it.second.isNotEmpty() }
+                    if (crew.isEmpty()) item { Text("No crew information for this title.", color = Muted, fontSize = 13.sp, modifier = Modifier.padding(6.dp)) }
+                    items(crew) { (label, names) -> XrayFact(label, names.take(6).joinToString(", ")) }
+                }
+                XrayTab.About -> {
+                    (details.overview ?: state.xrayOverview)?.let { item { Text(it, color = Color.White, fontSize = 13.5.sp, lineHeight = 20.sp, modifier = Modifier.padding(vertical = 6.dp)) } }
+                    val facts = listOfNotNull(
+                        details.genres.takeIf { it.isNotEmpty() }?.let { "Genres" to it.joinToString(", ") },
+                        details.firstAired?.let { "Released" to it },
+                        details.runtimeMinutes?.let { "Runtime" to "$it min" },
+                        details.originalLanguage?.let { "Language" to it },
+                        details.countries.takeIf { it.isNotEmpty() }?.let { "Country" to it.joinToString(", ") },
+                        details.originalTitle?.let { "Original title" to it },
+                        details.voteAverage?.takeIf { details.voteCount > 0 }?.let { "Rating" to "%.1f".format(it) },
+                    )
+                    items(facts) { (label, value) -> XrayFact(label, value) }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun XrayFact(label: String, value: String) {
+    Column(Modifier.fillMaxWidth().padding(vertical = 7.dp)) {
+        Text(label.uppercase(), color = Subtle, fontSize = 10.5.sp, fontWeight = FontWeight.SemiBold, letterSpacing = 1.2.sp)
+        Text(value, color = Color.White, fontSize = 13.5.sp, modifier = Modifier.padding(top = 2.dp))
     }
 }

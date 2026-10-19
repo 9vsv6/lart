@@ -30,7 +30,7 @@ sealed interface SubChoice {
     data class Addon(val subtitle: Subtitle) : SubChoice
 }
 
-enum class Panel { Subtitles, SubStyle, Audio, Speed, Sources, Episodes, Sleep, Anime4K }
+enum class Panel { Subtitles, SubStyle, Audio, Speed, Sources, Episodes, Sleep, Anime4K, XRay }
 
 enum class Fit(val label: String, val mode: Int) {
     Fit("Fit", AspectRatioFrameLayout.RESIZE_MODE_FIT),
@@ -55,6 +55,9 @@ class PlayerState {
     var locked by mutableStateOf(false)
     var inPip by mutableStateOf(false)
     var panel by mutableStateOf<Panel?>(null)
+    /** X-Ray's cast, crew and facts for what's playing; null until loaded. */
+    var xray by mutableStateOf<app.lart.mobile.data.TmdbDetails?>(null)
+    var xrayOverview by mutableStateOf<String?>(null)
 
     var speed by mutableFloatStateOf(1f)
     var fit by mutableStateOf(Fit.Fit)

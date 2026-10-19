@@ -71,11 +71,12 @@ import coil.compose.AsyncImage
 import kotlinx.coroutines.delay
 
 /** The browse views Harbor's phone app switches between from the top-right pill. */
-enum class BrowseView(val label: String, val icon: ImageVector) {
-    Home("Home", Icons.Rounded.Home),
-    Movies("Movies", Icons.Rounded.Movie),
-    Shows("Shows", Icons.Rounded.Tv),
-    Anime("Anime", Icons.Rounded.AutoAwesome),
+enum class BrowseView(val label: String, val icon: ImageVector, val glyph: Int) {
+    // glyph: Harbor's own nav icons (res/drawable/nav_*).
+    Home("Home", Icons.Rounded.Home, app.lart.mobile.R.drawable.nav_home),
+    Movies("Movies", Icons.Rounded.Movie, app.lart.mobile.R.drawable.nav_movies),
+    Shows("Shows", Icons.Rounded.Tv, app.lart.mobile.R.drawable.nav_tv),
+    Anime("Anime", Icons.Rounded.AutoAwesome, app.lart.mobile.R.drawable.nav_anime),
 }
 
 @Composable
@@ -89,7 +90,7 @@ fun ViewSwitcher(current: BrowseView, onSelect: (BrowseView) -> Unit) {
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(8.dp),
         ) {
-            Icon(current.icon, contentDescription = null, tint = LartColors.Ink, modifier = Modifier.size(20.dp))
+            Icon(androidx.compose.ui.res.painterResource(current.glyph), contentDescription = null, tint = LartColors.Ink, modifier = Modifier.size(19.dp))
             Text(current.label, color = LartColors.Ink, fontSize = 13.5.sp, fontWeight = FontWeight.SemiBold)
         }
         DropdownMenu(
@@ -104,7 +105,7 @@ fun ViewSwitcher(current: BrowseView, onSelect: (BrowseView) -> Unit) {
                     text = {
                         Text(view.label, color = if (on) LartColors.Ink else LartColors.InkMuted, fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
                     },
-                    leadingIcon = { Icon(view.icon, null, tint = if (on) LartColors.Accent else LartColors.InkMuted) },
+                    leadingIcon = { Icon(androidx.compose.ui.res.painterResource(view.glyph), null, tint = if (on) LartColors.Accent else LartColors.InkMuted, modifier = Modifier.size(21.dp)) },
                     onClick = {
                         open = false
                         onSelect(view)
@@ -118,7 +119,7 @@ fun ViewSwitcher(current: BrowseView, onSelect: (BrowseView) -> Unit) {
             ExtraPage.entries.forEach { page ->
                 DropdownMenuItem(
                     text = { Text(page.label, color = LartColors.InkMuted, fontSize = 15.sp, fontWeight = FontWeight.SemiBold) },
-                    leadingIcon = { Icon(page.icon, null, tint = LartColors.InkMuted) },
+                    leadingIcon = { Icon(androidx.compose.ui.res.painterResource(page.glyph), null, tint = LartColors.InkMuted, modifier = Modifier.size(21.dp)) },
                     onClick = {
                         open = false
                         openPage(page.route)

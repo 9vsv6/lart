@@ -125,6 +125,8 @@ data class AppSettings(
     val showTraktComments: Boolean = false,
     /** Letterboxd's average and popular reviews on movie pages. */
     val showLetterboxdDetail: Boolean = true,
+    /** Harbor's X-Ray in the player: who's in it, the crew and the facts. */
+    val xrayEnabled: Boolean = true,
     /** IMDb rating on each episode (OMDb with a key, else TMDB). */
     val showEpisodeRating: Boolean = true,
     val hidePosterTitles: Boolean = false,

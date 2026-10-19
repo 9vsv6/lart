@@ -128,7 +128,7 @@ private enum class Section(
     Stremio("Stremio", "Your Stremio sign-in: addons and library come from it.", Icons.Outlined.AccountBox, "stremio sign in email password", setOf("Stremio")),
     Trackers("Trackers", "Trakt, Simkl and AniList: scrobbling and progress.", Icons.Outlined.Sync, "trakt simkl anilist scrobble watched"),
     Play("Play", "The player engine, and what happens when you press Play.", Icons.Outlined.PlayCircle, "engine media3 mpv instant resume stall", setOf("Player engine", "When you press Play")),
-    OnScreen("On screen", "The player's controls: seek steps, speeds, sleep timer and lock.", Icons.Outlined.SmartScreen, "seek speed sleep lock aspect", setOf("On-screen controls")),
+    OnScreen("On screen", "The player's controls: seek steps, speeds, sleep timer and lock.", Icons.Outlined.SmartScreen, "seek speed sleep lock aspect xray x-ray cast", setOf("On-screen controls")),
     Intros("Intros", "Skip intros, recaps and credits.", Icons.Outlined.FastForward, "skip intro recap credits", setOf("Intros & credits")),
     UpNext("Up next", "What happens between episodes.", Icons.Outlined.QueuePlayNext, "up next autoplay still watching", setOf("Up next")),
     Picture("Picture", "Decoding, picture quality and buffering (mpv).", Icons.Outlined.Image, "hwdec hardware decoding quality buffer", setOf("Video")),
@@ -554,6 +554,7 @@ private fun PlayerSection(repository: Repository, settings: AppSettings, set: ((
 
     Card("On-screen controls") {
         SettingsLabel("On-screen controls")
+        SwitchRow("X-Ray", "An X-Ray button in the player: the cast with photos, the crew and the facts about what you're watching.", settings.xrayEnabled) { v -> set { it.copy(xrayEnabled = v) } }
         Label("Rewind step")
         ChipRow(listOf(5, 10, 15, 30).map { it to "$it s" }, settings.seekBackSec) { v -> set { it.copy(seekBackSec = v) } }
         Label("Forward step")
