@@ -426,6 +426,17 @@ class Repository(private val context: Context) {
         _rpdbKey.value = clean
     }
 
+    private val _omdbKey = MutableStateFlow<String?>(null)
+    /** OMDb key: real IMDb, Rotten Tomatoes and Metacritic scores on title pages, as Harbor offers. */
+    val omdbKey: StateFlow<String?> = _omdbKey.asStateFlow()
+
+    suspend fun setOmdbKey(key: String?) {
+        val clean = key?.trim()?.takeIf { it.isNotEmpty() }
+        if (clean != null) Omdb.verify(clean)
+        context.store.edit { if (clean == null) it.remove(KEY_OMDB) else it[KEY_OMDB] = clean }
+        _omdbKey.value = clean
+    }
+
     /** The source you last played for each title: "addonId|stream name". */
     private val _lastStreams = MutableStateFlow<Map<String, String>>(emptyMap())
     val lastStreams: StateFlow<Map<String, String>> = _lastStreams.asStateFlow()
@@ -630,6 +641,7 @@ class Repository(private val context: Context) {
             if (service != null && !key.isNullOrBlank()) _debrid.value = DebridAccount(service, key)
             _tmdbKey.value = prefs[KEY_TMDB]?.takeIf { it.isNotBlank() }
             _rpdbKey.value = prefs[KEY_RPDB]?.takeIf { it.isNotBlank() }
+            _omdbKey.value = prefs[KEY_OMDB]?.takeIf { it.isNotBlank() }
             val profiles = prefs[KEY_PROFILES]?.let { runCatching { Net.json.decodeFromString(profileList, it) }.getOrNull() }
                 ?.takeIf { it.isNotEmpty() } ?: listOf(Profile(MAIN_PROFILE, "Me", PROFILE_COLORS.first()))
             _profiles.value = profiles
@@ -652,6 +664,7 @@ class Repository(private val context: Context) {
         val KEY_PROFILES: Preferences.Key<String> = stringPreferencesKey("profiles")
         val KEY_TMDB: Preferences.Key<String> = stringPreferencesKey("tmdbKey")
         val KEY_RPDB: Preferences.Key<String> = stringPreferencesKey("rpdbKey")
+        val KEY_OMDB: Preferences.Key<String> = stringPreferencesKey("omdbKey")
         val KEY_LOCAL_ADDONS: Preferences.Key<String> = stringPreferencesKey("localAddons")
         val KEY_ACTIVE_PROFILE: Preferences.Key<String> = stringPreferencesKey("activeProfile")
 

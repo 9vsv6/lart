@@ -1,5 +1,6 @@
 package app.lart.mobile.ui
 
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import android.widget.Toast
 import androidx.activity.compose.BackHandler
@@ -34,6 +35,25 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Info
+import androidx.compose.material.icons.outlined.DeleteSweep
+import androidx.compose.material.icons.outlined.Storage
+import androidx.compose.material.icons.outlined.Article
+import androidx.compose.material.icons.outlined.GridView
+import androidx.compose.material.icons.outlined.Home
+import androidx.compose.material.icons.outlined.FilterList
+import androidx.compose.material.icons.outlined.TextFields
+import androidx.compose.material.icons.outlined.Subtitles
+import androidx.compose.material.icons.outlined.Visibility
+import androidx.compose.material.icons.outlined.RecordVoiceOver
+import androidx.compose.material.icons.outlined.AutoAwesome
+import androidx.compose.material.icons.outlined.Code
+import androidx.compose.material.icons.outlined.VolumeUp
+import androidx.compose.material.icons.outlined.Image
+import androidx.compose.material.icons.outlined.QueuePlayNext
+import androidx.compose.material.icons.outlined.FastForward
+import androidx.compose.material.icons.outlined.SmartScreen
+import androidx.compose.material.icons.outlined.Sync
 import androidx.compose.material.icons.outlined.AccountBox
 import androidx.compose.material.icons.outlined.Backup
 import androidx.compose.material.icons.outlined.Group
@@ -92,32 +112,59 @@ import java.util.Locale
  * for yet (Plugins, Controls & devices, relay, webhooks…) are left out.
  */
 
-private enum class Section(val label: String, val sub: String, val keywords: String) {
-    Account("Account", "Your Stremio sign-in and the profiles on this device.", "stremio sign in email password profile who's watching"),
-    Trackers("Trackers", "Trakt, Simkl and AniList: scrobbling and progress.", "trakt simkl anilist scrobble watched"),
-    Player("Player", "What happens when you press Play, the controls, and between episodes.", "engine media3 resume seek speed sleep lock aspect up next skip intro recap credits stall"),
-    Mpv("mpv", "Decoding, picture quality, buffering and sound.", "hwdec hardware decoding quality buffer downmix stereo volume boost loudness sound profile options"),
-    Shaders("Anime4K", "Upscaling and line restoration for anime.", "anime4k shaders upscale"),
-    Language("Language", "Audio languages, and the language of titles and descriptions.", "audio language dub metadata tmdb"),
-    Subtitles("Subtitles", "Which subtitles turn on, and how they look.", "subtitles sdh secondary style size colour color bold position ass"),
-    Streaming("Streaming", "Addons, debrid, and which sources show and in what order.", "addons debrid real-debrid torbox order sort safety cam torrents file names timeout languages"),
-    StreamFilters("Stream filters", "Only show sources that match.", "filter resolution 4k 1080p remux bluray web hevc av1 hdr cached size"),
-    Library("Library & metadata", "TMDB and RPDB, Home rows, and episodes.", "tmdb rpdb posters ratings home top 10 hero unreleased anime episodes spoilers"),
-    Theme("Appearance", "Accent colour and what a poster card shows.", "accent colour color theme poster card badge corners size"),
-    Storage("Storage", "Caches, watch positions on this device, and resetting settings.", "cache images shaders watch positions reset"),
-    About("About", "This build, reporting a problem, and licences.", "version report bug github licences licenses"),
-    Backup("Backup", "Keep a copy of your setup, or restore one.", "backup restore export import file updates"),
+/**
+ * Harbor's settings sub-pages (src/views/settings/tab-registry.ts), the ones Lart native
+ * has: each shows one section of the app's settings, or some of its parts.
+ */
+private enum class Section(
+    val label: String,
+    val sub: String,
+    val icon: ImageVector,
+    val keywords: String,
+    val parts: Set<String>? = null,
+) {
+    Profiles("Profiles", "The profiles on this device, and who's watching.", Icons.Outlined.Group, "profile who's watching", setOf("Profiles")),
+    Stremio("Stremio", "Your Stremio sign-in: addons and library come from it.", Icons.Outlined.AccountBox, "stremio sign in email password", setOf("Stremio")),
+    Trackers("Trackers", "Trakt, Simkl and AniList: scrobbling and progress.", Icons.Outlined.Sync, "trakt simkl anilist scrobble watched"),
+    Play("Play", "The player engine, and what happens when you press Play.", Icons.Outlined.PlayCircle, "engine media3 mpv instant resume stall", setOf("Player engine", "When you press Play")),
+    OnScreen("On screen", "The player's controls: seek steps, speeds, sleep timer and lock.", Icons.Outlined.SmartScreen, "seek speed sleep lock aspect", setOf("On-screen controls")),
+    Intros("Intros", "Skip intros, recaps and credits.", Icons.Outlined.FastForward, "skip intro recap credits", setOf("Intros & credits")),
+    UpNext("Up next", "What happens between episodes.", Icons.Outlined.QueuePlayNext, "up next autoplay still watching", setOf("Up next")),
+    Picture("Picture", "Decoding, picture quality and buffering (mpv).", Icons.Outlined.Image, "hwdec hardware decoding quality buffer", setOf("Video")),
+    Audio("Audio", "Downmix, loudness, sound profiles and volume boost (mpv).", Icons.Outlined.VolumeUp, "downmix stereo volume boost loudness sound profile", setOf("Sound")),
+    MpvConf("mpv.conf", "Your own mpv options.", Icons.Outlined.Code, "mpv options advanced", setOf("Advanced")),
+    Shaders("Anime Shaders", "Anime4K upscaling and line restoration.", Icons.Outlined.AutoAwesome, "anime4k shaders upscale"),
+    AudioLanguage("Audio", "Audio languages, in order.", Icons.Outlined.RecordVoiceOver, "audio language dub", setOf("Audio")),
+    WhatYouSee("What you see", "The language of titles and descriptions.", Icons.Outlined.Visibility, "metadata language tmdb", setOf("Details")),
+    SubtitleLanguages("Languages", "Which subtitles turn on.", Icons.Outlined.Subtitles, "subtitles sdh secondary fallback", setOf("Which subtitles")),
+    SubtitleLook("Look", "How subtitles look.", Icons.Outlined.TextFields, "subtitle style size colour color bold position ass", setOf("Style")),
+    Services("Streaming services", "Your addons and debrid service.", Icons.Outlined.Inventory2, "addons debrid real-debrid torbox", setOf("Addons", "Debrid")),
+    SourcePreferences("Source preferences", "Safety, order, languages and what shows in the list.", Icons.Outlined.Tune, "order sort safety cam torrents file names timeout languages", setOf("Safety & order")),
+    StreamFilters("Stream filters", "Only show sources that match.", Icons.Outlined.FilterList, "filter resolution 4k 1080p remux bluray web hevc av1 hdr cached size"),
+    HomeRows("Home", "Rows and the hero on Home.", Icons.Outlined.Home, "home top 10 hero unreleased anime", setOf("Home")),
+    PosterCards("Poster cards", "What a poster card shows.", Icons.Outlined.GridView, "poster card badge corners size", setOf("Poster cards")),
+    DetailPages("Detail pages", "Spoilers and episode cards on title pages.", Icons.Outlined.Article, "episodes spoilers order description card size", setOf("Spoilers", "Episode cards")),
+    Metadata("Metadata providers", "Where titles, artwork and scores come from.", Icons.Outlined.Storage, "tmdb omdb rpdb posters ratings keys metadata"),
+    Theme("Theme", "Accent colour.", Icons.Outlined.Palette, "accent colour color theme", setOf("Accent colour")),
+    Storage("Storage", "Caches, watch positions on this device, and resetting settings.", Icons.Outlined.DeleteSweep, "cache images shaders watch positions reset"),
+    Backup("Updates & backup", "Updates, and a copy of your setup.", Icons.Outlined.Backup, "backup restore export import file updates"),
+    About("About", "This build, reporting a problem, and licences.", Icons.Outlined.Info, "version report bug github licences licenses"),
 }
 
 private enum class Group(val label: String, val section: String, val icon: ImageVector, val children: List<Section>) {
-    Account("Account & setup", "Setup", Icons.Outlined.AccountBox, listOf(Section.Account, Section.Trackers)),
-    Playback("Playback", "Watching", Icons.Outlined.PlayCircle, listOf(Section.Player, Section.Mpv, Section.Shaders)),
-    Languages("Languages", "Language", Icons.Outlined.Translate, listOf(Section.Language, Section.Subtitles)),
-    Sources("Sources & library", "Content", Icons.Outlined.LibraryBooks, listOf(Section.Streaming, Section.StreamFilters, Section.Library)),
+    Account("Account & setup", "Setup", Icons.Outlined.AccountBox, listOf(Section.Profiles, Section.Stremio, Section.Trackers)),
+    Playback(
+        "Playback", "Watching", Icons.Outlined.PlayCircle,
+        listOf(Section.Play, Section.OnScreen, Section.Intros, Section.UpNext, Section.Picture, Section.Audio, Section.MpvConf, Section.Shaders),
+    ),
+    Languages("Languages & subtitles", "Language", Icons.Outlined.Translate, listOf(Section.AudioLanguage, Section.WhatYouSee, Section.SubtitleLanguages, Section.SubtitleLook)),
+    Sources(
+        "Library & metadata", "Content", Icons.Outlined.LibraryBooks,
+        listOf(Section.Services, Section.SourcePreferences, Section.StreamFilters, Section.HomeRows, Section.PosterCards, Section.DetailPages, Section.Metadata),
+    ),
     Appearance("Appearance", "Look & feel", Icons.Outlined.Palette, listOf(Section.Theme)),
-    System("System", "System", Icons.Outlined.Tune, listOf(Section.Storage)),
+    System("System", "System", Icons.Outlined.Tune, listOf(Section.Storage, Section.Backup)),
     Help("Help & about", "Help", Icons.Outlined.Support, listOf(Section.About)),
-    Updates("Updates & backup", "Updates", Icons.Outlined.Backup, listOf(Section.Backup)),
 }
 
 private fun groupOf(section: Section) = Group.entries.first { section in it.children }
@@ -126,18 +173,21 @@ private val LANGUAGE_CODES = listOf("en", "es", "fr", "de", "it", "pt", "ar", "j
 
 @Composable
 fun SettingsScreen(repository: Repository, onOpenAddons: () -> Unit, onExit: () -> Unit = {}) {
-    // The open group ("" is the home rail on phones), and a section to scroll to.
+    // Phones: "" is the home rail, else an open group. Tablets: the open sub-page.
     var groupName by rememberSaveable { mutableStateOf("") }
+    var sectionName by rememberSaveable { mutableStateOf(Section.Profiles.name) }
     var query by rememberSaveable { mutableStateOf("") }
     var target by remember { mutableStateOf<Section?>(null) }
 
     BoxWithConstraints(Modifier.fillMaxSize().background(LartColors.Canvas).statusBarsPadding()) {
-        // Tablets get Harbor's desktop layout: the rail on the left, the open group beside it.
+        // Tablets get Harbor's desktop layout: the sidebar on the left, the open page beside it.
         val wide = maxWidth >= 720.dp
-        val group = groupName.takeIf { it.isNotEmpty() }?.let { Group.valueOf(it) } ?: if (wide) Group.Account else null
+        val section = Section.valueOf(sectionName)
+        val group = if (wide) groupOf(section) else groupName.takeIf { it.isNotEmpty() }?.let { Group.valueOf(it) }
         fun open(g: Group, s: Section? = null) {
             query = ""
             groupName = g.name
+            if (wide) sectionName = (s ?: g.children.first()).name
             target = s
         }
         BackHandler(enabled = query.isNotEmpty() || (!wide && group != null)) {
@@ -147,7 +197,7 @@ fun SettingsScreen(repository: Repository, onOpenAddons: () -> Unit, onExit: () 
         if (wide && group != null) {
             Row(Modifier.fillMaxSize()) {
                 Column(
-                    Modifier.width(320.dp).fillMaxHeight().background(LartColors.Surface)
+                    Modifier.width(340.dp).fillMaxHeight().background(LartColors.Surface)
                         .verticalScroll(rememberScrollState()).padding(start = 12.dp, end = 12.dp, top = 20.dp, bottom = 32.dp),
                 ) {
                     // Harbor's "← Back" out of Settings; the app's own rail is hidden here.
@@ -161,18 +211,17 @@ fun SettingsScreen(repository: Repository, onOpenAddons: () -> Unit, onExit: () 
                     }
                     SettingsSearchField(query) { query = it }
                     if (query.isNotBlank()) SearchResults(query) { open(groupOf(it), it) }
-                    else SettingsRail(repository, onOpenAddons, selected = group, onOpen = { g, s -> open(g, s) })
+                    else SettingsRail(repository, onOpenAddons, selected = group, selectedSection = section, onOpen = { g, s -> open(g, s) })
                 }
-                Column(Modifier.weight(1f).fillMaxHeight()) {
-                    Text(
-                        group.label,
-                        color = LartColors.Ink,
-                        fontSize = 34.sp,
-                        fontWeight = FontWeight.SemiBold,
-                        letterSpacing = (-0.6).sp,
-                        modifier = Modifier.padding(start = 40.dp, top = 28.dp, bottom = 8.dp),
-                    )
-                    GroupContent(group, repository, onOpenAddons, target, horizontal = 40.dp) { target = null }
+                // Harbor's page: the group's title, then the open sub-page, in a readable column.
+                Column(
+                    Modifier.weight(1f).fillMaxHeight().verticalScroll(rememberScrollState(), enabled = true)
+                        .padding(start = 56.dp, end = 40.dp, top = 28.dp, bottom = 48.dp),
+                ) {
+                    Column(Modifier.widthIn(max = 980.dp), verticalArrangement = Arrangement.spacedBy(22.dp)) {
+                        Text(group.label, color = LartColors.Ink, fontSize = 36.sp, fontWeight = FontWeight.SemiBold, letterSpacing = (-0.7).sp)
+                        SectionPage(section, repository, onOpenAddons)
+                    }
                 }
             }
         } else if (group == null) {
@@ -180,7 +229,7 @@ fun SettingsScreen(repository: Repository, onOpenAddons: () -> Unit, onExit: () 
                 SettingsHeader("Settings", null, query) { query = it }
                 Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(start = 16.dp, end = 16.dp, top = 6.dp, bottom = 40.dp)) {
                     if (query.isNotBlank()) SearchResults(query) { open(groupOf(it), it) }
-                    else SettingsRail(repository, onOpenAddons, selected = null, onOpen = { g, s -> open(g, s) })
+                    else SettingsRail(repository, onOpenAddons, selected = null, selectedSection = null, onOpen = { g, s -> open(g, s) })
                 }
             }
         } else {
@@ -198,10 +247,10 @@ fun SettingsScreen(repository: Repository, onOpenAddons: () -> Unit, onExit: () 
 
 /**
  * Harbor's rail: who you are, Switch profile and Addons, then every group. On tablets the
- * open group is highlighted and lists its sections, as Harbor's desktop sidebar does.
+ * open group lists its sub-pages with their icons, as Harbor's desktop sidebar does.
  */
 @Composable
-private fun SettingsRail(repository: Repository, onOpenAddons: () -> Unit, selected: Group?, onOpen: (Group, Section?) -> Unit) {
+private fun SettingsRail(repository: Repository, onOpenAddons: () -> Unit, selected: Group?, selectedSection: Section?, onOpen: (Group, Section?) -> Unit) {
     val profile by repository.activeProfile.collectAsState()
     val account by repository.account.collectAsState()
     Column {
@@ -217,7 +266,7 @@ private fun SettingsRail(repository: Repository, onOpenAddons: () -> Unit, selec
                     Text("Signed in to Stremio", color = LartColors.InkMuted, fontSize = 15.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
                 } else Row {
                     Text("Sign in to ", color = LartColors.InkMuted, fontSize = 15.sp)
-                    Text("Stremio", color = LartColors.Ink, fontSize = 15.sp, modifier = Modifier.clickable { onOpen(Group.Account, Section.Account) })
+                    Text("Stremio", color = LartColors.Ink, fontSize = 15.sp, modifier = Modifier.clickable { onOpen(Group.Account, Section.Stremio) })
                 }
             }
         }
@@ -225,8 +274,26 @@ private fun SettingsRail(repository: Repository, onOpenAddons: () -> Unit, selec
         NavRow(Icons.Outlined.Inventory2, "Addons", chevron = false, onClick = onOpenAddons)
         Group.entries.forEach { entry ->
             val on = entry == selected
-            NavRow(entry.icon, entry.label, chevron = true, selected = on, expanded = on && entry.children.size > 1) { onOpen(entry, null) }
-            if (on && entry.children.size > 1) entry.children.forEach { child -> NavChildRow(child.label) { onOpen(entry, child) } }
+            NavRow(entry.icon, entry.label, chevron = true, selected = on && selectedSection == null, expanded = on) { onOpen(entry, null) }
+            // Harbor's sub-page list: icon and label, the open one highlighted.
+            if (on && selectedSection != null) {
+                Column(
+                    Modifier.fillMaxWidth().padding(vertical = 4.dp).clip(RoundedCornerShape(14.dp)).background(LartColors.Elevated.copy(alpha = 0.5f)).padding(6.dp),
+                ) {
+                    entry.children.forEach { child ->
+                        val open = child == selectedSection
+                        Row(
+                            Modifier.fillMaxWidth().clip(RoundedCornerShape(10.dp)).background(if (open) LartColors.Raised else Color.Transparent)
+                                .clickable { onOpen(entry, child) }.padding(horizontal = 12.dp, vertical = 11.dp),
+                            verticalAlignment = Alignment.CenterVertically,
+                            horizontalArrangement = Arrangement.spacedBy(14.dp),
+                        ) {
+                            Icon(child.icon, null, tint = if (open) LartColors.Ink else LartColors.InkMuted, modifier = Modifier.size(20.dp))
+                            Text(child.label, color = if (open) LartColors.Ink else LartColors.InkMuted, fontSize = 15.5.sp, fontWeight = if (open) FontWeight.SemiBold else FontWeight.Medium)
+                        }
+                    }
+                }
+            }
         }
     }
 }
@@ -244,9 +311,21 @@ private fun SearchResults(query: String, onOpen: (Section) -> Unit) {
     }
 }
 
+/** A tablet sub-page: its title and what it is, then its settings. */
+@Composable
+private fun SectionPage(section: Section, repository: Repository, onOpenAddons: () -> Unit) {
+    val settings by repository.settings.collectAsState()
+    val set: ((AppSettings) -> AppSettings) -> Unit = repository::updateSettings
+    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        Text(section.label, color = LartColors.Ink, fontSize = 24.sp, fontWeight = FontWeight.SemiBold, letterSpacing = (-0.4).sp)
+        Text(section.sub, color = LartColors.InkMuted, fontSize = 15.5.sp, lineHeight = 22.sp)
+    }
+    SectionBody(section, repository, settings, set, onOpenAddons)
+}
+
 /**
- * Every section of a group on one page, each under its own heading, so nothing needs
- * opening. `target` scrolls to a section (from search or the tablet rail).
+ * Phones: every sub-page of a group on one page, each under its own heading, so nothing
+ * needs opening. `target` scrolls to one (from search).
  */
 @Composable
 private fun GroupContent(
@@ -275,12 +354,10 @@ private fun GroupContent(
                 verticalArrangement = Arrangement.spacedBy(22.dp),
             ) {
                 if (index > 0) Box(Modifier.padding(top = 30.dp).fillMaxWidth().height(1.dp).background(LartColors.EdgeSoft))
-                if (group.children.size > 1) {
-                    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                        Text(section.label, color = LartColors.Ink, fontSize = 24.sp, fontWeight = FontWeight.SemiBold, letterSpacing = (-0.4).sp)
-                        Text(section.sub, color = LartColors.InkMuted, fontSize = 15.5.sp, lineHeight = 22.sp)
-                    }
-                } else Text(section.sub, color = LartColors.InkMuted, fontSize = 15.5.sp, lineHeight = 22.sp)
+                Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                    Text(section.label, color = LartColors.Ink, fontSize = 24.sp, fontWeight = FontWeight.SemiBold, letterSpacing = (-0.4).sp)
+                    Text(section.sub, color = LartColors.InkMuted, fontSize = 15.5.sp, lineHeight = 22.sp)
+                }
                 SectionBody(section, repository, settings, set, onOpenAddons)
             }
         }
@@ -295,29 +372,42 @@ private fun SectionBody(
     set: ((AppSettings) -> AppSettings) -> Unit,
     onOpenAddons: () -> Unit,
 ) {
-    when (section) {
-        Section.Account -> AccountSection(repository, settings, set)
-        Section.Trackers -> TrackersPanel(repository, settings, set)
-        Section.Player -> PlayerSection(repository, settings, set)
-        Section.Mpv -> MpvSection(settings, set)
-        Section.Shaders -> ShadersSection(repository, settings, set)
-        Section.Language -> LanguageSection(settings, set)
-        Section.Subtitles -> SubtitlesSection(repository, settings, set)
-        Section.Streaming -> StreamingSection(repository, settings, set, onOpenAddons)
-        Section.StreamFilters -> StreamFiltersSection(settings, set)
-        Section.Library -> LibrarySection(repository, settings, set)
-        Section.Theme -> AppearanceSection(settings, set)
-        Section.Storage -> StorageSection(repository, set)
-        Section.About -> AboutSection()
-        Section.Backup -> BackupSection(repository)
+    androidx.compose.runtime.CompositionLocalProvider(LocalParts provides section.parts) {
+        when (section) {
+            Section.Profiles, Section.Stremio -> AccountSection(repository, settings, set)
+            Section.Trackers -> TrackersPanel(repository, settings, set)
+            Section.Play, Section.OnScreen, Section.Intros, Section.UpNext -> PlayerSection(repository, settings, set)
+            Section.Picture, Section.Audio, Section.MpvConf -> MpvSection(settings, set)
+            Section.Shaders -> ShadersSection(repository, settings, set)
+            Section.AudioLanguage, Section.WhatYouSee -> LanguageSection(settings, set)
+            Section.SubtitleLanguages, Section.SubtitleLook -> SubtitlesSection(repository, settings, set)
+            Section.Services, Section.SourcePreferences -> StreamingSection(repository, settings, set, onOpenAddons)
+            Section.StreamFilters -> StreamFiltersSection(settings, set)
+            Section.HomeRows, Section.DetailPages -> LibrarySection(repository, settings, set)
+            Section.PosterCards, Section.Theme -> AppearanceSection(settings, set)
+            Section.Metadata -> ProvidersSection(repository)
+            Section.Storage -> StorageSection(repository, set)
+            Section.Backup -> BackupSection(repository)
+            Section.About -> AboutSection()
+        }
     }
 }
 
 // ---------------- Building blocks ----------------
 
-/** A labelled group of rows: Harbor's SettingGroup. */
+/** Which parts of a section a sub-page shows; null shows them all (the phone's stacked page). */
+private val LocalParts = androidx.compose.runtime.compositionLocalOf<Set<String>?> { null }
+
+/** A part of a section, shown when the open sub-page includes it. */
 @Composable
-private fun Card(content: @Composable () -> Unit) = SettingsGroup(content)
+private fun Part(id: String, content: @Composable () -> Unit) {
+    val parts = LocalParts.current
+    if (parts == null || id in parts) content()
+}
+
+/** A labelled group of rows: Harbor's SettingGroup, one part of a section. */
+@Composable
+private fun Card(id: String = "", content: @Composable () -> Unit) = Part(id) { SettingsGroup(content) }
 
 @Composable
 private fun SwitchRow(title: String, body: String?, checked: Boolean, onChange: (Boolean) -> Unit) = ToggleRow(title, body, checked, onChange)
@@ -370,9 +460,9 @@ private fun languageOptions(extra: List<String> = emptyList()): List<Pair<String
 
 @Composable
 private fun AccountSection(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
-    StremioCard(repository)
-    ProfilesCard(repository)
-    Card {
+    Part("Stremio") { StremioCard(repository) }
+    Part("Profiles") { ProfilesCard(repository) }
+    Card("Profiles") {
         SwitchRow(
             "Ask \"Who's watching?\" when Lart opens",
             "With more than one profile. Off opens the last profile used.",
@@ -440,7 +530,7 @@ private fun PlayerSection(repository: Repository, settings: AppSettings, set: ((
     val autoPlay by repository.autoPlay.collectAsState()
     val prefs by repository.playerPrefs.collectAsState()
 
-    Card {
+    Card("Player engine") {
         SettingsLabel("Player engine")
         ChipRow(listOf("mpv" to "mpv", "media3" to "Android (Media3)"), settings.engine) { v -> set { it.copy(engine = v) } }
         Muted(
@@ -449,7 +539,7 @@ private fun PlayerSection(repository: Repository, settings: AppSettings, set: ((
         )
     }
 
-    Card {
+    Card("When you press Play") {
         SettingsLabel("When you press Play")
         SwitchRow("Instant play", "Skips the list of sources and plays the best one.", autoPlay, repository::setAutoPlay)
         SwitchRow("Remember the source you picked", "Marks it next time, and instant play prefers it.", settings.rememberLastStream) { v -> set { it.copy(rememberLastStream = v) } }
@@ -461,7 +551,7 @@ private fun PlayerSection(repository: Repository, settings: AppSettings, set: ((
         }
     }
 
-    Card {
+    Card("On-screen controls") {
         SettingsLabel("On-screen controls")
         Label("Rewind step")
         ChipRow(listOf(5, 10, 15, 30).map { it to "$it s" }, settings.seekBackSec) { v -> set { it.copy(seekBackSec = v) } }
@@ -482,7 +572,7 @@ private fun PlayerSection(repository: Repository, settings: AppSettings, set: ((
         SwitchRow("Screen lock button", "Locks the controls so a pocket or a child can't tap them.", settings.screenLock) { v -> set { it.copy(screenLock = v) } }
     }
 
-    Card {
+    Card("Up next") {
         SettingsLabel("Up next")
         SwitchRow("Auto-play next episode", "When an episode ends.", settings.autoPlayNextEpisode) { v -> set { it.copy(autoPlayNextEpisode = v) } }
         Label("Show Up next", "\"At the credits\" uses the intro databases' credit times when they have them.")
@@ -496,7 +586,7 @@ private fun PlayerSection(repository: Repository, settings: AppSettings, set: ((
         }
     }
 
-    Card {
+    Card("Intros & credits") {
         SettingsLabel("Intros & credits")
         Muted("From IntroDB, TheIntroDB, SkipDB and AniSkip, when they know the episode.")
         SwitchRow("Show the Skip button", null, settings.showSkipButton) { v -> set { it.copy(showSkipButton = v) } }
@@ -513,7 +603,7 @@ private fun PlayerSection(repository: Repository, settings: AppSettings, set: ((
 @Composable
 private fun MpvSection(settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
     if (settings.engine != "mpv") Muted("These apply when the player engine is mpv (Playback → Player).")
-    Card {
+    Card("Video") {
         SettingsLabel("Video")
         Label("Decoding")
         ChipRow(listOf("auto" to "Auto", "on" to "Hardware only", "off" to "Software"), settings.mpvHwdec) { v -> set { it.copy(mpvHwdec = v) } }
@@ -522,7 +612,7 @@ private fun MpvSection(settings: AppSettings, set: ((AppSettings) -> AppSettings
         Label("Buffer")
         ChipRow(listOf("small" to "Small", "auto" to "Normal", "large" to "Large"), settings.bufferSize) { v -> set { it.copy(bufferSize = v) } }
     }
-    Card {
+    Card("Sound") {
         SettingsLabel("Sound")
         SwitchRow("Mix surround sound down to stereo", "Clearer dialogue on phone speakers and headphones.", settings.downmixStereo) { v -> set { it.copy(downmixStereo = v) } }
         SwitchRow("Normalize loudness", "Evens out quiet dialogue and loud scenes.", settings.audioNormalize) { v -> set { it.copy(audioNormalize = v) } }
@@ -533,7 +623,7 @@ private fun MpvSection(settings: AppSettings, set: ((AppSettings) -> AppSettings
         Label("Maximum volume boost", "Swipe up past full volume on the right edge to go louder.")
         ChipRow(listOf(1 to "Off", 2 to "200%", 3 to "300%"), settings.volumeBoostMax) { v -> set { it.copy(volumeBoostMax = v) } }
     }
-    Card {
+    Card("Advanced") {
         SettingsLabel("Advanced")
         MpvOptionsField(settings.mpvExtraOptions) { v -> set { it.copy(mpvExtraOptions = v) } }
     }
@@ -543,7 +633,7 @@ private fun MpvSection(settings: AppSettings, set: ((AppSettings) -> AppSettings
 private fun ShadersSection(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
     val prefs by repository.playerPrefs.collectAsState()
     if (settings.engine != "mpv") Muted("Anime4K needs the mpv engine (Playback → Player).")
-    Card {
+    Card("Mode") {
         SettingsLabel("Mode")
         Muted("You can also change it from the player's Anime4K button.")
         ChipRow(listOf("" to "Off") + Anime4K.Mode.entries.map { it.name to it.label }, prefs.anime4kMode) { mode ->
@@ -570,12 +660,12 @@ private fun MpvOptionsField(saved: String, onSave: (String) -> Unit) {
 
 @Composable
 private fun LanguageSection(settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
-    Card {
+    Card("Audio") {
         SettingsLabel("Audio")
         Label("Audio languages", "In order: the first one a video has is picked. None picked follows the device.")
         MultiChipRow(languageOptions(), settings.audioLanguages) { v -> set { it.copy(audioLanguages = v) } }
     }
-    Card {
+    Card("Details") {
         SettingsLabel("Details")
         Label("Language of titles and descriptions", "From TMDB (needs a TMDB key in Sources & library → Library & metadata).")
         ChipRow(listOf("" to "Device") + languageOptions(), settings.metadataLanguage) { v -> set { it.copy(metadataLanguage = v) } }
@@ -585,7 +675,7 @@ private fun LanguageSection(settings: AppSettings, set: ((AppSettings) -> AppSet
 @Composable
 private fun SubtitlesSection(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
     val prefs by repository.playerPrefs.collectAsState()
-    Card {
+    Card("Which subtitles") {
         SettingsLabel("Which subtitles")
         SwitchRow("Subtitles off by default", "Turn them on yourself in the player.", settings.subtitlesOffByDefault) { v -> set { it.copy(subtitlesOffByDefault = v) } }
         if (!settings.subtitlesOffByDefault) {
@@ -602,7 +692,7 @@ private fun SubtitlesSection(repository: Repository, settings: AppSettings, set:
             ChipRow(listOf("" to "Off") + languageOptions(), settings.secondarySubLanguage) { v -> set { it.copy(secondarySubLanguage = v) } }
         }
     }
-    Card {
+    Card("Style") {
         SettingsLabel("Style")
         Box(Modifier.fillMaxWidth().height(96.dp).clip(RoundedCornerShape(12.dp)).background(Color(0xFF3A4048)), contentAlignment = Alignment.Center) {
             SubtitleText("The quick brown fox", prefs, settings)
@@ -638,11 +728,13 @@ private fun SubtitlesSection(repository: Repository, settings: AppSettings, set:
 @Composable
 private fun StreamingSection(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit, onOpenAddons: () -> Unit) {
     val addons by repository.addons.collectAsState()
-    SettingsSection("Addons", "${addons.size} installed: ${addons.joinToString(", ") { it.manifest.name }}") {
-        HButton(onClick = onOpenAddons) { Text("Manage addons") }
+    Part("Addons") {
+        SettingsSection("Addons", "${addons.size} installed: ${addons.joinToString(", ") { it.manifest.name }}") {
+            HButton(onClick = onOpenAddons) { Text("Manage addons") }
+        }
     }
-    DebridCard(repository)
-    Card {
+    Part("Debrid") { DebridCard(repository) }
+    Card("Safety & order") {
         SettingsLabel("Safety & order")
         Label("Stream safety filter", "Balanced hides CAM and telesync rips; Strict also hides tiny files, usually fakes.")
         ChipRow(listOf("off" to "Off", "balanced" to "Balanced", "strict" to "Strict"), settings.safetyFilter) { v -> set { it.copy(safetyFilter = v) } }
@@ -667,7 +759,7 @@ private fun StreamingSection(repository: Repository, settings: AppSettings, set:
 private fun StreamFiltersSection(settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
     val filter = settings.streamFilter
     fun update(change: (StreamFilter) -> StreamFilter) = set { it.copy(streamFilter = change(it.streamFilter)) }
-    Card {
+    Card("Quality") {
         SettingsLabel("Quality")
         Muted("Only sources that match show up. Nothing picked in a row means any.")
         Label("Resolution")
@@ -686,41 +778,112 @@ private fun StreamFiltersSection(settings: AppSettings, set: ((AppSettings) -> A
 
 @Composable
 private fun LibrarySection(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
-    KeyCard(
-        title = "TMDB",
-        body = "With your own TMDB API key, Home, Movies and Shows use TMDB's rows, artwork, logos and cast, in your language, as in Harbor.",
-        label = "TMDB API key or read token",
-        current = repository.tmdbKey.collectAsState().value,
-        linkLabel = "Get a key",
-        link = "https://www.themoviedb.org/settings/api",
-        onSave = { repository.setTmdbKey(it) },
-    )
-    KeyCard(
-        title = "RPDB posters",
-        body = "With a RatingPosterDB key, posters show IMDb and other ratings drawn on them.",
-        label = "RPDB API key",
-        current = repository.rpdbKey.collectAsState().value,
-        linkLabel = "Get a key",
-        link = "https://ratingposterdb.com",
-        onSave = { repository.setRpdbKey(it) },
-    )
-    Card {
+    Card("Home") {
         SettingsLabel("Home")
         SwitchRow("Top 10 row", null, settings.showTop10) { v -> set { it.copy(showTop10 = v) } }
         SwitchRow("Rotate the hero", "Moves to the next featured title every few seconds.", settings.heroAutoRotate) { v -> set { it.copy(heroAutoRotate = v) } }
         SwitchRow("Hide unreleased titles", null, settings.hideUnreleased) { v -> set { it.copy(hideUnreleased = v) } }
         SwitchRow("Hide anime", "Removes the Anime view and anime rows.", settings.hideAnime) { v -> set { it.copy(hideAnime = v) } }
     }
-    Card {
-        SettingsLabel("Episodes")
-        Label("Order")
-        ChipRow(listOf(false to "Oldest first", true to "Newest first"), settings.episodesNewestFirst) { v -> set { it.copy(episodesNewestFirst = v) } }
-        SwitchRow("Show episode descriptions", null, settings.showEpisodeDescription) { v -> set { it.copy(showEpisodeDescription = v) } }
-        SwitchRow("Hide spoilers", "For episodes after the one you're on.", settings.hideSpoilers) { v -> set { it.copy(hideSpoilers = v) } }
-        if (settings.hideSpoilers) {
-            SwitchRow("Blur thumbnails", null, settings.spoilerThumbnails) { v -> set { it.copy(spoilerThumbnails = v) } }
-            SwitchRow("Hide titles", null, settings.spoilerTitles) { v -> set { it.copy(spoilerTitles = v) } }
-            SwitchRow("Hide descriptions", null, settings.spoilerDescriptions) { v -> set { it.copy(spoilerDescriptions = v) } }
+    // Harbor's Detail pages tab: Spoilers, then Episode cards.
+    Part("Spoilers") {
+        SettingsSection("Spoilers", "Keep unwatched episode details hidden.") {
+            Column {
+                ToggleRow("Blur spoilers", "Hides spoiler-prone episode details in episode lists until you have watched them.", settings.hideSpoilers) { v -> set { it.copy(hideSpoilers = v) } }
+                if (settings.hideSpoilers) {
+                    ToggleRow("Blur thumbnails", null, settings.spoilerThumbnails) { v -> set { it.copy(spoilerThumbnails = v) } }
+                    ToggleRow("Hide titles", null, settings.spoilerTitles) { v -> set { it.copy(spoilerTitles = v) } }
+                    ToggleRow("Hide descriptions", null, settings.spoilerDescriptions) { v -> set { it.copy(spoilerDescriptions = v) } }
+                }
+            }
+        }
+    }
+    Part("Episode cards") {
+        SettingsSection("Episode cards", "What an episode shows on a title page.") {
+            Column {
+                SettingsLabel("On the card")
+                ToggleRow("Show episode description", "Shows the episode synopsis on the cards. Turn it off to hide it.", settings.showEpisodeDescription) { v -> set { it.copy(showEpisodeDescription = v) } }
+                Label("Order")
+                Box(Modifier.padding(top = 10.dp, bottom = 6.dp)) {
+                    ChipRow(listOf(false to "Oldest first", true to "Newest first"), settings.episodesNewestFirst) { v -> set { it.copy(episodesNewestFirst = v) } }
+                }
+                Label("Card size", "How big episode cards are. Bigger cards show larger artwork.")
+                Box(Modifier.padding(top = 10.dp)) {
+                    ChipRow(listOf(0 to "Default", 1 to "Large", 2 to "Extra large"), settings.episodeCardSize) { v -> set { it.copy(episodeCardSize = v) } }
+                }
+            }
+        }
+    }
+}
+
+/** A metadata source, as a row in Harbor's Metadata providers list. */
+private class Provider(
+    val name: String,
+    val badge: String?,
+    val body: String,
+    val current: String?,
+    val label: String,
+    val link: String,
+    val save: suspend (String?) -> Unit,
+)
+
+/**
+ * Harbor's Metadata providers (library-panel/providers-tab.tsx): each provider with what it
+ * adds, Saved or Not set, and Manage or Add key, which opens the key field under it.
+ */
+@Composable
+private fun ProvidersSection(repository: Repository) {
+    val providers = listOf(
+        Provider(
+            "TMDB", "Recommended", "Trending, Popular, In Theaters, the per service rails, cast, artwork and details.",
+            repository.tmdbKey.collectAsState().value, "TMDB API key or read token", "https://www.themoviedb.org/settings/api",
+        ) { repository.setTmdbKey(it) },
+        Provider(
+            "OMDb", null, "Real IMDb, Rotten Tomatoes and Metacritic scores on title pages.",
+            repository.omdbKey.collectAsState().value, "OMDb API key", "https://www.omdbapi.com/apikey.aspx",
+        ) { repository.setOmdbKey(it) },
+        Provider(
+            "RPDB", null, "Paid. Bakes scores into the poster image itself.",
+            repository.rpdbKey.collectAsState().value, "RPDB API key", "https://ratingposterdb.com",
+        ) { repository.setRpdbKey(it) },
+    )
+    var open by rememberSaveable { mutableStateOf<String?>(null) }
+    Text("Add TMDB for more catalogs and artwork. Other providers add the features listed below. You can use Lart with Cinemeta without adding a key.", color = LartColors.InkMuted, fontSize = 15.5.sp, lineHeight = 22.sp)
+    run {
+        Column {
+            providers.forEachIndexed { index, provider ->
+                if (index > 0) RowRule()
+                Row(Modifier.fillMaxWidth().padding(vertical = 14.dp), verticalAlignment = Alignment.CenterVertically) {
+                    Column(Modifier.weight(1f).padding(end = 12.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
+                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                            Text(provider.name, color = LartColors.Ink, fontSize = 17.sp, fontWeight = FontWeight.SemiBold)
+                            provider.badge?.let {
+                                Text(
+                                    it.uppercase(),
+                                    color = LartColors.Accent,
+                                    fontSize = 11.sp,
+                                    fontWeight = FontWeight.Bold,
+                                    letterSpacing = 1.sp,
+                                    modifier = Modifier.clip(RoundedCornerShape(5.dp)).background(LartColors.Accent.copy(alpha = 0.15f)).padding(horizontal = 7.dp, vertical = 2.dp),
+                                )
+                            }
+                        }
+                        Text(provider.body, color = LartColors.InkMuted, fontSize = 15.sp, lineHeight = 21.sp)
+                    }
+                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                        Box(Modifier.size(7.dp).clip(CircleShape).background(if (provider.current != null) Success else LartColors.Raised))
+                        Text(if (provider.current != null) "Saved" else "Not set", color = LartColors.InkMuted, fontSize = 14.sp)
+                        HGhostButton(onClick = { open = if (open == provider.name) null else provider.name }) {
+                            Text(if (provider.current != null) "Manage" else "Add key")
+                        }
+                    }
+                }
+                if (open == provider.name) {
+                    Box(Modifier.padding(bottom = 14.dp)) {
+                        KeyCard(provider.name, "Paste your ${provider.name} key; it stays on this device.", provider.label, provider.current, "Get a key", provider.link, provider.save)
+                    }
+                }
+            }
         }
     }
 }
@@ -732,7 +895,7 @@ private val ACCENTS = listOf(0xFFF0A35E, 0xFFE57373, 0xFFF06292, 0xFFBA68C8, 0xF
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun AppearanceSection(settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
-    Card {
+    Card("Accent colour") {
         SettingsLabel("Accent colour")
         FlowRow(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
             ACCENTS.forEach { argb ->
@@ -745,7 +908,7 @@ private fun AppearanceSection(settings: AppSettings, set: ((AppSettings) -> AppS
             }
         }
     }
-    Card {
+    Card("Poster cards") {
         SettingsLabel("Poster cards")
         SwitchRow("Rating badge", "IMDb rating in the corner of each poster.", settings.showRatingBadge) { v -> set { it.copy(showRatingBadge = v) } }
         SwitchRow("Hide titles under posters", null, settings.hidePosterTitles) { v -> set { it.copy(hidePosterTitles = v) } }
@@ -762,7 +925,7 @@ private fun AppearanceSection(settings: AppSettings, set: ((AppSettings) -> AppS
 private fun StorageSection(repository: Repository, set: ((AppSettings) -> AppSettings) -> Unit) {
     val context = LocalContext.current
     fun say(text: String) = Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
-    Card {
+    Card("Storage") {
         SettingsLabel("Storage")
         ActionRow("Image cache", "Posters and artwork. They download again as needed.", "Clear") {
             context.imageLoader.memoryCache?.clear()
@@ -778,7 +941,7 @@ private fun StorageSection(repository: Repository, set: ((AppSettings) -> AppSet
             say("Watch positions cleared")
         }
     }
-    Card {
+    Card("Reset") {
         SettingsLabel("Reset")
         ActionRow("Reset settings", "Puts this profile's settings back to how Lart starts. Sign-ins, lists and progress stay.", "Reset") {
             set { AppSettings() }

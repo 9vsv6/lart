@@ -129,6 +129,8 @@ data class AppSettings(
     val spoilerThumbnails: Boolean = true,
     val spoilerTitles: Boolean = true,
     val spoilerDescriptions: Boolean = true,
+    /** Episode card size on title pages: 0 default, 1 large, 2 extra large (Harbor's Card size). */
+    val episodeCardSize: Int = 0,
 
     // ---- Appearance and profiles ----
     val accent: Long = 0xFFF0A35E,

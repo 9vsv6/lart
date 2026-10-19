@@ -70,7 +70,9 @@ import app.lart.mobile.data.AwardType
 import app.lart.mobile.data.Awards
 import app.lart.mobile.data.CastMember
 import app.lart.mobile.data.Meta
+import app.lart.mobile.data.Omdb
 import app.lart.mobile.data.Repository
+import app.lart.mobile.data.Score
 import app.lart.mobile.data.Tmdb
 import app.lart.mobile.data.TmdbDetails
 import app.lart.mobile.data.Video
@@ -100,12 +102,21 @@ fun DetailScreen(
     var failed by remember { mutableStateOf(false) }
     var details by remember { mutableStateOf<TmdbDetails?>(null) }
     var awards by remember { mutableStateOf<List<AwardEntry>>(emptyList()) }
+    var scores by remember { mutableStateOf<List<Score>>(emptyList()) }
+    val omdbKey by repository.omdbKey.collectAsState()
     val tmdbKey by repository.tmdbKey.collectAsState()
 
     // Awards from Wikidata, as Harbor's hero badge and Awards list; no key needed.
     LaunchedEffect(meta?.id) {
         val imdb = meta?.id?.substringBefore(':')?.takeIf { it.startsWith("tt") } ?: return@LaunchedEffect
         awards = runCatching { Awards.forTitle(imdb) }.getOrDefault(emptyList())
+    }
+
+    // With an OMDb key: the real IMDb, Rotten Tomatoes and Metacritic scores, as Harbor's hero.
+    LaunchedEffect(meta?.id, omdbKey) {
+        val key = omdbKey ?: return@LaunchedEffect
+        val imdb = meta?.id?.substringBefore(':')?.takeIf { it.startsWith("tt") } ?: return@LaunchedEffect
+        scores = runCatching { Omdb.scores(key, imdb) }.getOrDefault(emptyList())
     }
     val listState = rememberLazyListState()
     val scrolled by remember { derivedStateOf { listState.firstVisibleItemIndex > 0 } }
@@ -128,7 +139,7 @@ fun DetailScreen(
     Box(Modifier.fillMaxSize().background(LartColors.Canvas)) {
         val current = meta
         when {
-            current != null -> DetailBody(repository, current, details, awards, listState, onStreams, onOpen)
+            current != null -> DetailBody(repository, current, details, awards, scores, listState, onStreams, onOpen)
             failed -> EmptyState("Couldn't load this title", "None of your addons has details for it.")
             else -> Loading(Modifier.padding(top = 160.dp))
         }
@@ -149,7 +160,7 @@ fun DetailScreen(
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun DetailBody(repository: Repository, meta: Meta, details: TmdbDetails?, awards: List<AwardEntry>, listState: LazyListState, onStreams: (String, String) -> Unit, onOpen: (Meta) -> Unit) {
+private fun DetailBody(repository: Repository, meta: Meta, details: TmdbDetails?, awards: List<AwardEntry>, scores: List<Score>, listState: LazyListState, onStreams: (String, String) -> Unit, onOpen: (Meta) -> Unit) {
     val videos = meta.videos.orEmpty()
     val isSeries = meta.type != "movie" && videos.isNotEmpty()
     // Season 0 holds specials; start on the first real season.
@@ -169,7 +180,7 @@ private fun DetailBody(repository: Repository, meta: Meta, details: TmdbDetails?
         val side = if (wide) 48.dp else 20.dp
         val heroHeight = if (wide) (maxHeight * 0.78f).coerceAtMost(680.dp) else (maxHeight * 0.68f).coerceIn(420.dp, 620.dp)
         LazyColumn(state = listState, contentPadding = PaddingValues(bottom = 110.dp), verticalArrangement = Arrangement.spacedBy(30.dp)) {
-            item(key = "hero") { Hero(repository, meta, details, awards, heroHeight, side, wide, isSeries, next, play) }
+            item(key = "hero") { Hero(repository, meta, details, awards, scores, heroHeight, side, wide, isSeries, next, play) }
             (details?.overview ?: meta.description)?.let { synopsis ->
                 item(key = "synopsis") { Synopsis(synopsis, details?.tagline, side) }
             }
@@ -244,6 +255,7 @@ private fun Hero(
     meta: Meta,
     details: TmdbDetails?,
     awards: List<AwardEntry>,
+    scores: List<Score>,
     height: Dp,
     side: Dp,
     wide: Boolean,
@@ -283,7 +295,7 @@ private fun Hero(
 
             FlowRow(horizontalArrangement = Arrangement.spacedBy(18.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 meta.year?.let { Fact(it) }
-                meta.imdbRating?.takeIf { it.isNotBlank() }?.let { rating ->
+                (scores.firstOrNull { it.source == "IMDb" }?.value ?: meta.imdbRating)?.takeIf { it.isNotBlank() }?.let { rating ->
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.align(Alignment.CenterVertically)) {
                         Box(Modifier.clip(RoundedCornerShape(3.dp)).background(Color(0xFFF5C518)).padding(horizontal = 4.dp, vertical = 1.dp)) {
                             Text("IMDb", color = Color.Black, fontSize = 10.sp, fontWeight = FontWeight.Black)
@@ -291,6 +303,7 @@ private fun Hero(
                         Text(rating, color = Color.White, fontSize = 15.sp, fontWeight = FontWeight.Bold)
                     }
                 }
+                scores.filter { it.source != "IMDb" }.forEach { score -> Fact(if (score.source == "Rotten Tomatoes") "🍅 ${score.value}" else "Metacritic ${score.value}") }
                 if (isSeries) meta.videos.orEmpty().mapNotNull { it.season }.filter { it > 0 }.distinct().size.takeIf { it > 0 }?.let { Fact(if (it == 1) "1 season" else "$it seasons") }
                 else (details?.runtimeMinutes?.let { "$it min" } ?: meta.runtime)?.let { Fact(it) }
                 (details?.genres?.takeIf { it.isNotEmpty() } ?: meta.genres.orEmpty()).take(3).forEach { Fact(it) }
@@ -594,7 +607,7 @@ private fun EpisodeRow(video: Video, spoiler: Boolean, side: Dp, wide: Boolean, 
         verticalAlignment = if (wide) Alignment.CenterVertically else Alignment.Top,
     ) {
         Box(
-            Modifier.width(if (wide) 250.dp else 150.dp).aspectRatio(16f / 9f).clip(RoundedCornerShape(16.dp)).background(LartColors.Elevated),
+            Modifier.width((if (wide) 250.dp else 150.dp) * (1f + 0.3f * display.episodeCardSize)).aspectRatio(16f / 9f).clip(RoundedCornerShape(16.dp)).background(LartColors.Elevated),
         ) {
             if (video.thumbnail != null) {
                 AsyncImage(
