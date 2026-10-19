@@ -33,6 +33,16 @@ data class TmdbDetails(
     val runtimeMinutes: Int?,
     val status: String?,
     val studios: List<String>,
+    val networks: List<String>,
+    val castCount: Int,
+    val seasons: Int?,
+    val episodes: Int?,
+    val firstAired: String?,
+    val lastAired: String?,
+    val originalTitle: String?,
+    val budget: Long?,
+    val revenue: Long?,
+    val trailerYouTube: String?,
     val countries: List<String>,
     val originalLanguage: String?,
     val voteAverage: Double?,
@@ -183,7 +193,7 @@ object Tmdb {
             key,
             "/$kind/$id",
             mapOf(
-                "append_to_response" to "credits,images,recommendations,similar,watch/providers",
+                "append_to_response" to "credits,aggregate_credits,images,recommendations,similar,videos,watch/providers",
                 "include_image_language" to "$lang,en,null",
             ),
         )
@@ -193,12 +203,20 @@ object Tmdb {
         val logos = (images?.get("logos") as? JsonArray).orEmpty().map { it.jsonObject }
         val logo = (logos.firstOrNull { it.string("iso_639_1") == lang } ?: logos.firstOrNull { it.string("iso_639_1") == "en" } ?: logos.firstOrNull())
             ?.string("file_path")?.let { "$IMAGES/w500$it" }
+        // Series use the whole run's cast and crew (aggregate_credits), as Harbor does.
         val credits = d["credits"]?.jsonObject
-        val cast = (credits?.get("cast") as? JsonArray).orEmpty().take(40).map { it.jsonObject }.map {
-            CastMember(it.string("name").orEmpty(), it.string("character")?.takeIf { c -> c.isNotBlank() }, it.string("profile_path")?.let { p -> "$IMAGES/w342$p" })
+        val aggregate = d["aggregate_credits"]?.jsonObject?.takeIf { kind == "tv" }
+        val castJson = ((aggregate ?: credits)?.get("cast") as? JsonArray).orEmpty().map { it.jsonObject }
+        val cast = castJson.take(60).map {
+            val role = it.string("character") ?: (it["roles"] as? JsonArray)?.firstOrNull()?.jsonObject?.string("character")
+            CastMember(it.string("name").orEmpty(), role?.takeIf { c -> c.isNotBlank() }, it.string("profile_path")?.let { p -> "$IMAGES/w342$p" })
         }
-        val crew = (credits?.get("crew") as? JsonArray).orEmpty().map { it.jsonObject }
-        fun job(vararg jobs: String) = crew.filter { it.string("job") in jobs }.mapNotNull { it.string("name") }.distinct()
+        val crew = ((credits?.get("crew") as? JsonArray).orEmpty() + (aggregate?.get("crew") as? JsonArray).orEmpty()).map { it.jsonObject }
+        fun jobsOf(person: JsonObject): List<String> = listOfNotNull(person.string("job")) +
+            (person["jobs"] as? JsonArray).orEmpty().mapNotNull { it.jsonObject.string("job") }
+        fun job(vararg jobs: String) = crew.filter { p -> jobsOf(p).any { it in jobs } }.mapNotNull { it.string("name") }.distinct()
+        val trailer = (d["videos"]?.jsonObject?.get("results") as? JsonArray).orEmpty().map { it.jsonObject }
+            .firstOrNull { it.string("site") == "YouTube" && it.string("type") == "Trailer" }?.string("key")
         val creators = (d["created_by"] as? JsonArray).orEmpty().mapNotNull { it.jsonObject.string("name") }
         val country = Locale.getDefault().country.ifEmpty { "US" }
         val providers = d["watch/providers"]?.jsonObject?.get("results")?.jsonObject?.let { it[country] ?: it["US"] }?.jsonObject
@@ -218,8 +236,17 @@ object Tmdb {
             genres = (d["genres"] as? JsonArray).orEmpty().mapNotNull { it.jsonObject.string("name") },
             runtimeMinutes = runtime,
             status = d.string("status"),
-            studios = ((d["production_companies"] as? JsonArray).orEmpty() + (d["networks"] as? JsonArray).orEmpty())
-                .mapNotNull { it.jsonObject.string("name") }.distinct().take(3),
+            studios = (d["production_companies"] as? JsonArray).orEmpty().mapNotNull { it.jsonObject.string("name") }.distinct().take(4),
+            networks = (d["networks"] as? JsonArray).orEmpty().mapNotNull { it.jsonObject.string("name") },
+            castCount = castJson.size,
+            seasons = d["number_of_seasons"]?.jsonPrimitive?.intOrNull,
+            episodes = d["number_of_episodes"]?.jsonPrimitive?.intOrNull,
+            firstAired = d.string("first_air_date") ?: d.string("release_date"),
+            lastAired = d.string("last_air_date"),
+            originalTitle = (d.string("original_title") ?: d.string("original_name"))?.takeIf { it != (d.string("title") ?: d.string("name")) },
+            budget = d["budget"]?.jsonPrimitive?.contentOrNull?.toLongOrNull()?.takeIf { it > 0 },
+            revenue = d["revenue"]?.jsonPrimitive?.contentOrNull?.toLongOrNull()?.takeIf { it > 0 },
+            trailerYouTube = trailer,
             countries = (d["production_countries"] as? JsonArray).orEmpty().mapNotNull { it.jsonObject.string("name") },
             originalLanguage = originalLanguage,
             voteAverage = d["vote_average"]?.jsonPrimitive?.contentOrNull?.toDoubleOrNull(),

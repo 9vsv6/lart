@@ -65,6 +65,9 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.lart.mobile.data.AddonClient
+import app.lart.mobile.data.AwardEntry
+import app.lart.mobile.data.AwardType
+import app.lart.mobile.data.Awards
 import app.lart.mobile.data.CastMember
 import app.lart.mobile.data.Meta
 import app.lart.mobile.data.Repository
@@ -96,7 +99,14 @@ fun DetailScreen(
     var meta by remember { mutableStateOf<Meta?>(null) }
     var failed by remember { mutableStateOf(false) }
     var details by remember { mutableStateOf<TmdbDetails?>(null) }
+    var awards by remember { mutableStateOf<List<AwardEntry>>(emptyList()) }
     val tmdbKey by repository.tmdbKey.collectAsState()
+
+    // Awards from Wikidata, as Harbor's hero badge and Awards list; no key needed.
+    LaunchedEffect(meta?.id) {
+        val imdb = meta?.id?.substringBefore(':')?.takeIf { it.startsWith("tt") } ?: return@LaunchedEffect
+        awards = runCatching { Awards.forTitle(imdb) }.getOrDefault(emptyList())
+    }
     val listState = rememberLazyListState()
     val scrolled by remember { derivedStateOf { listState.firstVisibleItemIndex > 0 } }
 
@@ -118,7 +128,7 @@ fun DetailScreen(
     Box(Modifier.fillMaxSize().background(LartColors.Canvas)) {
         val current = meta
         when {
-            current != null -> DetailBody(repository, current, details, listState, onStreams, onOpen)
+            current != null -> DetailBody(repository, current, details, awards, listState, onStreams, onOpen)
             failed -> EmptyState("Couldn't load this title", "None of your addons has details for it.")
             else -> Loading(Modifier.padding(top = 160.dp))
         }
@@ -139,7 +149,7 @@ fun DetailScreen(
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun DetailBody(repository: Repository, meta: Meta, details: TmdbDetails?, listState: LazyListState, onStreams: (String, String) -> Unit, onOpen: (Meta) -> Unit) {
+private fun DetailBody(repository: Repository, meta: Meta, details: TmdbDetails?, awards: List<AwardEntry>, listState: LazyListState, onStreams: (String, String) -> Unit, onOpen: (Meta) -> Unit) {
     val videos = meta.videos.orEmpty()
     val isSeries = meta.type != "movie" && videos.isNotEmpty()
     // Season 0 holds specials; start on the first real season.
@@ -159,7 +169,7 @@ private fun DetailBody(repository: Repository, meta: Meta, details: TmdbDetails?
         val side = if (wide) 48.dp else 20.dp
         val heroHeight = if (wide) (maxHeight * 0.78f).coerceAtMost(680.dp) else (maxHeight * 0.68f).coerceIn(420.dp, 620.dp)
         LazyColumn(state = listState, contentPadding = PaddingValues(bottom = 110.dp), verticalArrangement = Arrangement.spacedBy(30.dp)) {
-            item(key = "hero") { Hero(repository, meta, details, heroHeight, side, wide, isSeries, next, play) }
+            item(key = "hero") { Hero(repository, meta, details, awards, heroHeight, side, wide, isSeries, next, play) }
             (details?.overview ?: meta.description)?.let { synopsis ->
                 item(key = "synopsis") { Synopsis(synopsis, details?.tagline, side) }
             }
@@ -212,12 +222,13 @@ private fun DetailBody(repository: Repository, meta: Meta, details: TmdbDetails?
                 }
             }
             val cast = details?.cast?.takeIf { it.isNotEmpty() } ?: meta.castNames.map { CastMember(it, null, null) }
-            if (cast.isNotEmpty()) item(key = "cast") { CastRail(cast, side, wide) }
+            if (cast.isNotEmpty()) item(key = "cast") { CastRail(cast, details?.castCount?.takeIf { it > 0 } ?: cast.size, side, wide) }
             details?.recommendations?.takeIf { it.isNotEmpty() }?.let { item(key = "more") { Rail("More Like This", it, onOpen) } }
             details?.similar?.takeIf { it.isNotEmpty() }?.let { item(key = "also") { Rail("You Might Also Like", it, onOpen) } }
             if (details != null && (details.backdrops.isNotEmpty() || details.posters.isNotEmpty())) {
                 item(key = "media") { MediaGallery(details, side, wide) }
             }
+            if (awards.isNotEmpty()) item(key = "awards") { AwardsSection(awards, side) }
             val info = infoOf(meta, details)
             if (info.isNotEmpty()) item(key = "info") { Information(info, if (wide) 3 else 2, side) }
         }
@@ -232,6 +243,7 @@ private fun Hero(
     repository: Repository,
     meta: Meta,
     details: TmdbDetails?,
+    awards: List<AwardEntry>,
     height: Dp,
     side: Dp,
     wide: Boolean,
@@ -284,6 +296,7 @@ private fun Hero(
                 (details?.genres?.takeIf { it.isNotEmpty() } ?: meta.genres.orEmpty()).take(3).forEach { Fact(it) }
             }
 
+            if (!wide) HeroAwards(awards, Modifier)
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
                 Row(
                     Modifier.clip(RoundedCornerShape(50)).background(Color.White).clickable(onClick = play).padding(start = 22.dp, end = 26.dp, top = 14.dp, bottom = 14.dp),
@@ -304,7 +317,7 @@ private fun Hero(
                     )
                 }
                 WatchlistButton(repository, meta, compact = !wide)
-                meta.trailerYouTube?.let { yt ->
+                (meta.trailerYouTube ?: details?.trailerYouTube)?.let { yt ->
                     RoundAction(Icons.Outlined.Movie, "Trailer") { uri.openUri("https://www.youtube.com/watch?v=$yt") }
                 }
                 meta.id.substringBefore(':').takeIf { it.startsWith("tt") }?.let { imdb ->
@@ -312,6 +325,7 @@ private fun Hero(
                 }
             }
         }
+        if (wide) HeroAwards(awards, Modifier.align(Alignment.BottomEnd).padding(end = side, bottom = 120.dp))
     }
 }
 
@@ -430,7 +444,7 @@ private fun LabelGrid(cells: List<Pair<String, String>>, columns: Int, side: Dp)
 private fun CrewGrid(cells: List<Pair<String, String>>, columns: Int, side: Dp) = LabelGrid(cells, columns, side)
 
 @Composable
-private fun CastRail(cast: List<CastMember>, side: Dp, wide: Boolean) {
+private fun CastRail(cast: List<CastMember>, total: Int, side: Dp, wide: Boolean) {
     val width = if (wide) 150.dp else 118.dp
     Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
         Row(Modifier.padding(horizontal = side), verticalAlignment = Alignment.CenterVertically) {
@@ -507,14 +521,24 @@ private fun MediaGallery(details: TmdbDetails, side: Dp, wide: Boolean) {
     }
 }
 
+/** Harbor's Information block (info-block.tsx), in its order. */
 private fun infoOf(meta: Meta, details: TmdbDetails?): List<Pair<String, String>> = listOfNotNull(
     details?.status?.let { "Status" to it },
-    details?.studios?.takeIf { it.isNotEmpty() }?.let { "Studio" to it.joinToString("  ·  ") },
+    details?.seasons?.takeIf { meta.type != "movie" }?.let { "Seasons" to listOfNotNull("$it", details.episodes?.let { e -> "$e episodes" }).joinToString("  Â·  ") },
+    details?.firstAired?.let { (if (meta.type == "movie") "Released" else "First aired") to it },
+    details?.lastAired?.takeIf { meta.type != "movie" }?.let { "Last aired" to it },
+    details?.networks?.takeIf { it.isNotEmpty() }?.let { "Networks" to it.joinToString("  Â·  ") },
+    details?.studios?.takeIf { it.isNotEmpty() }?.let { "Studio" to it.joinToString("  Â·  ") },
     (details?.countries?.takeIf { it.isNotEmpty() }?.joinToString(", ") ?: meta.countryName)?.let { "Country" to it },
     details?.originalLanguage?.let { "Original language" to it.replaceFirstChar { c -> c.titlecase(Locale.getDefault()) } },
-    details?.voteAverage?.takeIf { details.voteCount > 0 }?.let { "Rating" to "%.1f  ·  %,d votes".format(Locale.getDefault(), it, details.voteCount) },
+    details?.originalTitle?.let { "Original title" to it },
+    details?.budget?.let { "Budget" to money(it) },
+    details?.revenue?.let { "Revenue" to money(it) },
+    details?.voteAverage?.takeIf { details.voteCount > 0 }?.let { "Rating" to "%.1f  Â·  %,d votes".format(Locale.getDefault(), it, details.voteCount) },
     meta.releaseInfo?.takeIf { details == null }?.let { "Released" to it },
 )
+
+private fun money(amount: Long): String = java.text.NumberFormat.getCurrencyInstance(Locale.US).apply { maximumFractionDigits = 0 }.format(amount)
 
 @Composable
 private fun Information(cells: List<Pair<String, String>>, columns: Int, side: Dp) {
@@ -627,5 +651,90 @@ private fun nextEpisode(repository: Repository, meta: Meta, videos: List<Video>)
         index < 0 -> ordered.firstOrNull()
         repository.resumeFor(ordered[index].id, meta.id) > 0 -> ordered[index]
         else -> ordered.getOrNull(index + 1) ?: ordered[index]
+    }
+}
+
+// ---------------- Awards (hero-awards.tsx and the Awards section) ----------------
+
+private val AWARD_PRIORITY = listOf(
+    AwardType.Oscar, AwardType.Emmy, AwardType.GoldenGlobe, AwardType.Bafta, AwardType.BaftaTv, AwardType.Cannes,
+    AwardType.Venice, AwardType.Berlin, AwardType.Sag, AwardType.CriticsChoice, AwardType.Spirit, AwardType.Annie,
+    AwardType.Cesar, AwardType.Goya, AwardType.BlueDragon, AwardType.Baeksang, AwardType.Bifa, AwardType.Saturn,
+)
+
+/** Harbor's hero laurel: "PRIMETIME EMMY WINNER", then "15 Emmys · 25 nominations" per big award. */
+@Composable
+private fun HeroAwards(awards: List<AwardEntry>, modifier: Modifier) {
+    val byType = awards.groupBy { it.type }
+    val ranked = AWARD_PRIORITY.filter { byType.containsKey(it) }
+    if (ranked.isEmpty()) return
+    val top = ranked.firstOrNull { t -> byType[t].orEmpty().any { it.won } } ?: ranked.first()
+    val topWon = byType[top].orEmpty().any { it.won }
+    Row(modifier, verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+        Text("🏆", fontSize = 30.sp)
+        Column(verticalArrangement = Arrangement.spacedBy(3.dp)) {
+            Text(
+                "${top.title} ${if (topWon) "winner" else "nominee"}".uppercase(),
+                color = Color(0xD9FFFFFF),
+                fontSize = 11.sp,
+                fontWeight = FontWeight.Bold,
+                letterSpacing = 2.sp,
+            )
+            ranked.take(2).forEach { type ->
+                val list = byType[type].orEmpty()
+                val wins = list.count { it.won }
+                val total = list.size
+                val line = if (wins > 0) {
+                    "$wins ${if (wins == 1) type.single else type.plural}  ·  $total ${if (total == 1) "nomination" else "nominations"}"
+                } else "$total ${type.single} ${if (total == 1) "nomination" else "nominations"}"
+                Text(line, color = Color.White, fontSize = 14.5.sp, fontWeight = FontWeight.SemiBold)
+            }
+        }
+    }
+}
+
+/** Every award, newest first: the year (accent when won), the category, the award and who. */
+@Composable
+private fun AwardsSection(awards: List<AwardEntry>, side: Dp) {
+    var all by rememberSaveable { mutableStateOf(false) }
+    val wins = awards.count { it.won }
+    Column(Modifier.padding(horizontal = side), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text("Awards", color = LartColors.Ink, fontSize = 22.sp, fontWeight = FontWeight.SemiBold)
+            Text("  ·  $wins wins  ·  ${awards.size} total", color = LartColors.InkMuted, fontSize = 15.sp)
+        }
+        (if (all) awards else awards.take(10)).forEach { award ->
+            Column {
+                RowRule()
+                Row(Modifier.fillMaxWidth().padding(vertical = 12.dp), horizontalArrangement = Arrangement.spacedBy(18.dp)) {
+                    Text(
+                        award.year?.toString() ?: "—",
+                        color = if (award.won) LartColors.Accent else LartColors.InkSubtle,
+                        fontSize = 14.sp,
+                        fontWeight = FontWeight.SemiBold,
+                        modifier = Modifier.width(44.dp),
+                    )
+                    Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(3.dp)) {
+                        Text(award.category ?: award.awardName, color = LartColors.Ink, fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
+                        Text(
+                            listOfNotNull(if (award.type != AwardType.Other) award.type.title else award.awardName.takeIf { it != award.category }, award.recipient, if (award.won) "Won" else "Nominated").joinToString("  ·  "),
+                            color = LartColors.InkMuted,
+                            fontSize = 13.sp,
+                            maxLines = 2,
+                            overflow = TextOverflow.Ellipsis,
+                        )
+                    }
+                }
+            }
+        }
+        if (awards.size > 10) {
+            Text(
+                if (all) "Show fewer" else "Show all ${awards.size}",
+                color = LartColors.Accent,
+                fontSize = 14.sp,
+                fontWeight = FontWeight.SemiBold,
+                modifier = Modifier.clickable { all = !all }.padding(vertical = 8.dp),
+            )
+        }
     }
 }
