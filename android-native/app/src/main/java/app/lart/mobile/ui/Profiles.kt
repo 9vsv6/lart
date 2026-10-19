@@ -126,36 +126,30 @@ fun ProfilesCard(repository: Repository) {
     var editing by remember { mutableStateOf<Profile?>(null) }
     var adding by remember { mutableStateOf(false) }
 
-    Column(
-        Modifier.fillMaxWidth().background(LartColors.Surface, RoundedCornerShape(18.dp)).padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp),
-    ) {
-        SectionTitle("Profiles")
-        Text(
-            "Each profile has its own My List, Continue watching, player settings and tracker accounts.",
-            color = LartColors.InkMuted,
-            fontSize = 13.sp,
-        )
-        profiles.forEach { profile ->
-            val current = profile.id == active?.id
-            Row(
-                Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp))
-                    .background(if (current) LartColors.Elevated else Color.Transparent)
-                    .clickable { scope.launch { repository.switchProfile(profile.id) } }
-                    .padding(10.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
-            ) {
-                ProfileAvatar(profile, 40.dp)
-                Column(Modifier.weight(1f)) {
-                    Text(profile.name, color = LartColors.Ink, fontSize = 15.sp, fontWeight = FontWeight.Medium)
-                    if (current) Text("Watching now", color = LartColors.Accent, fontSize = 12.sp)
+    SettingsSection("Profiles", "Each profile has its own My List, Continue watching, player settings and tracker accounts.") {
+        Column {
+            profiles.forEach { profile ->
+                val current = profile.id == active?.id
+                RowRule()
+                Row(
+                    Modifier.fillMaxWidth().clip(RoundedCornerShape(10.dp))
+                        .background(if (current) LartColors.Elevated else Color.Transparent)
+                        .clickable { scope.launch { repository.switchProfile(profile.id) } }
+                        .padding(horizontal = 10.dp, vertical = 10.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(14.dp),
+                ) {
+                    ProfileAvatar(profile, 42.dp)
+                    Column(Modifier.weight(1f)) {
+                        Text(profile.name, color = LartColors.Ink, fontSize = 16.5.sp, fontWeight = FontWeight.Medium)
+                        if (current) Text("Watching now", color = LartColors.InkMuted, fontSize = 14.sp)
+                    }
+                    HLinkButton(onClick = { editing = profile }) { Text("Edit") }
                 }
-                TextButton(onClick = { editing = profile }) { Text("Edit") }
             }
         }
-        TextButton(onClick = { adding = true }) {
-            Icon(Icons.Rounded.Add, null)
+        HGhostButton(onClick = { adding = true }) {
+            Icon(Icons.Rounded.Add, null, Modifier.size(18.dp))
             Text("Add profile")
         }
     }

@@ -25,30 +25,21 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.rounded.ArrowBack
-import androidx.compose.material.icons.automirrored.rounded.HelpOutline
-import androidx.compose.material.icons.automirrored.rounded.KeyboardArrowRight
+import androidx.compose.material.icons.outlined.AccountBox
+import androidx.compose.material.icons.outlined.Backup
+import androidx.compose.material.icons.outlined.Group
+import androidx.compose.material.icons.outlined.Inventory2
+import androidx.compose.material.icons.outlined.LibraryBooks
+import androidx.compose.material.icons.outlined.Palette
+import androidx.compose.material.icons.outlined.PlayCircle
+import androidx.compose.material.icons.outlined.Support
+import androidx.compose.material.icons.outlined.Translate
+import androidx.compose.material.icons.outlined.Tune
 import androidx.compose.material.icons.rounded.Check
-import androidx.compose.material.icons.rounded.Extension
-import androidx.compose.material.icons.rounded.Group
-import androidx.compose.material.icons.rounded.ManageAccounts
-import androidx.compose.material.icons.rounded.Palette
-import androidx.compose.material.icons.rounded.PlayCircle
-import androidx.compose.material.icons.rounded.Storage
-import androidx.compose.material.icons.rounded.Translate
-import androidx.compose.material.icons.rounded.Tune
-import androidx.compose.material.icons.rounded.VideoLibrary
-import androidx.compose.material3.Button
-import androidx.compose.material3.FilterChip
-import androidx.compose.material3.FilterChipDefaults
 import androidx.compose.material3.Icon
-import androidx.compose.material3.IconButton
-import androidx.compose.material3.OutlinedButton
-import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Slider
-import androidx.compose.material3.Switch
+import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
@@ -85,162 +76,203 @@ import kotlinx.coroutines.withContext
 import java.io.File
 import java.util.Locale
 
-/** Harbor's settings groups (`src/views/settings/groups.ts`), the ones Lart native has. */
-private enum class SettingsPage(val label: String, val sub: String, val icon: ImageVector) {
-    Account("Account & setup", "Your Stremio sign-in, profiles, and the trackers that follow what you watch.", Icons.Rounded.ManageAccounts),
-    Playback("Playback", "How video plays, what happens between episodes, mpv and Anime4K.", Icons.Rounded.PlayCircle),
-    Languages("Languages & subtitles", "Audio and subtitle languages, how subtitles look, and the language of details.", Icons.Rounded.Translate),
-    Sources("Sources", "Addons, debrid for torrents, and which sources show up and in what order.", Icons.Rounded.Tune),
-    Library("Library & metadata", "TMDB and RPDB, Home rows, and episodes.", Icons.Rounded.VideoLibrary),
-    Appearance("Appearance", "Accent colour and poster cards.", Icons.Rounded.Palette),
-    System("System", "Storage, backup and restore, and resetting settings.", Icons.Rounded.Storage),
-    Help("Help & about", "This build, reporting a problem, and licences.", Icons.AutoMirrored.Rounded.HelpOutline),
+/*
+ * Settings, laid out as Harbor's phone settings (src/views/settings/groups.ts and nav.tsx):
+ * a home rail of groups, a landing per group listing its sections, and flat section pages
+ * with Harbor's header (Back, title, search). Groups and sections Lart native has nothing
+ * for yet (Plugins, Controls & devices, relay, webhooks…) are left out.
+ */
+
+private enum class Section(val label: String, val sub: String, val keywords: String) {
+    Account("Account", "Your Stremio sign-in and the profiles on this device.", "stremio sign in email password profile who's watching"),
+    Trackers("Trackers", "Trakt, Simkl and AniList: scrobbling and progress.", "trakt simkl anilist scrobble watched"),
+    Player("Player", "What happens when you press Play, the controls, and between episodes.", "engine media3 resume seek speed sleep lock aspect up next skip intro recap credits stall"),
+    Mpv("mpv", "Decoding, picture quality, buffering and sound.", "hwdec hardware decoding quality buffer downmix stereo volume boost loudness sound profile options"),
+    Shaders("Anime4K", "Upscaling and line restoration for anime.", "anime4k shaders upscale"),
+    Language("Language", "Audio languages, and the language of titles and descriptions.", "audio language dub metadata tmdb"),
+    Subtitles("Subtitles", "Which subtitles turn on, and how they look.", "subtitles sdh secondary style size colour color bold position ass"),
+    Streaming("Streaming", "Addons, debrid, and which sources show and in what order.", "addons debrid real-debrid torbox order sort safety cam torrents file names timeout languages"),
+    StreamFilters("Stream filters", "Only show sources that match.", "filter resolution 4k 1080p remux bluray web hevc av1 hdr cached size"),
+    Library("Library & metadata", "TMDB and RPDB, Home rows, and episodes.", "tmdb rpdb posters ratings home top 10 hero unreleased anime episodes spoilers"),
+    Theme("Appearance", "Accent colour and what a poster card shows.", "accent colour color theme poster card badge corners size"),
+    Storage("Storage", "Caches, watch positions on this device, and resetting settings.", "cache images shaders watch positions reset"),
+    About("About", "This build, reporting a problem, and licences.", "version report bug github licences licenses"),
+    Backup("Backup", "Keep a copy of your setup, or restore one.", "backup restore export import file updates"),
 }
+
+private enum class Group(val label: String, val section: String, val icon: ImageVector, val children: List<Section>) {
+    Account("Account & setup", "Setup", Icons.Outlined.AccountBox, listOf(Section.Account, Section.Trackers)),
+    Playback("Playback", "Watching", Icons.Outlined.PlayCircle, listOf(Section.Player, Section.Mpv, Section.Shaders)),
+    Languages("Languages", "Language", Icons.Outlined.Translate, listOf(Section.Language, Section.Subtitles)),
+    Sources("Sources & library", "Content", Icons.Outlined.LibraryBooks, listOf(Section.Streaming, Section.StreamFilters, Section.Library)),
+    Appearance("Appearance", "Look & feel", Icons.Outlined.Palette, listOf(Section.Theme)),
+    System("System", "System", Icons.Outlined.Tune, listOf(Section.Storage)),
+    Help("Help & about", "Help", Icons.Outlined.Support, listOf(Section.About)),
+    Updates("Updates & backup", "Updates", Icons.Outlined.Backup, listOf(Section.Backup)),
+}
+
+private fun groupOf(section: Section) = Group.entries.first { section in it.children }
 
 private val LANGUAGE_CODES = listOf("en", "es", "fr", "de", "it", "pt", "ar", "ja", "ko", "zh", "ru", "tr", "hi", "nl", "pl", "sv", "he", "id", "vi", "th")
 
 @Composable
 fun SettingsScreen(repository: Repository, onOpenAddons: () -> Unit) {
-    var page by rememberSaveable { mutableStateOf<SettingsPage?>(null) }
-    BackHandler(enabled = page != null) { page = null }
+    // "" is the home rail, "g:Name" a group landing, "s:Name" a section page.
+    var route by rememberSaveable { mutableStateOf("") }
+    var query by rememberSaveable { mutableStateOf("") }
+    val group = route.removePrefix("g:").takeIf { route.startsWith("g:") }?.let { Group.valueOf(it) }
+    val section = route.removePrefix("s:").takeIf { route.startsWith("s:") }?.let { Section.valueOf(it) }
 
+    fun openGroup(target: Group) {
+        query = ""
+        route = if (target.children.size == 1) "s:${target.children.single().name}" else "g:${target.name}"
+    }
+    fun openSection(target: Section) {
+        query = ""
+        route = "s:${target.name}"
+    }
+    fun back() {
+        query = ""
+        route = if (section != null && groupOf(section).children.size > 1) "g:${groupOf(section).name}" else ""
+    }
+    BackHandler(enabled = route.isNotEmpty() || query.isNotEmpty()) { if (query.isNotEmpty()) query = "" else back() }
+
+    val title = section?.label ?: group?.label ?: "Settings"
     Column(Modifier.fillMaxSize().background(LartColors.Canvas).statusBarsPadding()) {
-        val current = page
-        if (current == null) {
-            SettingsHome(repository, onOpenAddons) { page = it }
-        } else {
-            Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(8.dp)) {
-                IconButton(onClick = { page = null }) { Icon(Icons.AutoMirrored.Rounded.ArrowBack, contentDescription = "Back") }
-                Text(current.label, fontSize = 20.sp, fontWeight = FontWeight.SemiBold)
+        SettingsHeader(title, if (route.isEmpty()) null else ({ back() }), query) { query = it }
+        Column(
+            Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(start = 16.dp, end = 16.dp, top = 6.dp, bottom = 40.dp),
+            verticalArrangement = Arrangement.spacedBy(22.dp),
+        ) {
+            when {
+                query.isNotBlank() -> SearchResults(query) { openSection(it) }
+                section != null -> SectionPage(section, repository, onOpenAddons)
+                group != null -> GroupLanding(group) { openSection(it) }
+                else -> SettingsHome(repository, onOpenAddons) { openGroup(it) }
             }
-            Column(
-                Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(start = 16.dp, end = 16.dp, bottom = 32.dp),
-                verticalArrangement = Arrangement.spacedBy(16.dp),
-            ) {
-                Text(current.sub, color = LartColors.InkMuted, fontSize = 13.sp)
-                val settings by repository.settings.collectAsState()
-                val set: ((AppSettings) -> AppSettings) -> Unit = repository::updateSettings
-                when (current) {
-                    SettingsPage.Account -> AccountPage(repository, settings, set)
-                    SettingsPage.Playback -> PlaybackPage(repository, settings, set)
-                    SettingsPage.Languages -> LanguagesPage(repository, settings, set)
-                    SettingsPage.Sources -> SourcesPage(repository, settings, set, onOpenAddons)
-                    SettingsPage.Library -> LibraryPage(repository, settings, set)
-                    SettingsPage.Appearance -> AppearancePage(settings, set)
-                    SettingsPage.System -> SystemPage(repository, set)
-                    SettingsPage.Help -> AboutCard()
+        }
+    }
+}
+
+/** Harbor's phone rail: who you are, Switch profile and Addons, then every group. */
+@Composable
+private fun SettingsHome(repository: Repository, onOpenAddons: () -> Unit, onOpen: (Group) -> Unit) {
+    val profile by repository.activeProfile.collectAsState()
+    val account by repository.account.collectAsState()
+    Column {
+        Row(
+            Modifier.fillMaxWidth().padding(start = 2.dp, top = 6.dp, bottom = 14.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(16.dp),
+        ) {
+            ProfileAvatar(profile, 58.dp)
+            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                Text(profile?.name ?: "Me", color = LartColors.Ink, fontSize = 18.sp, fontWeight = FontWeight.Medium)
+                val signedIn = account
+                if (signedIn != null) {
+                    Text("Stremio · ${signedIn.email}", color = LartColors.InkMuted, fontSize = 16.sp, maxLines = 1, overflow = TextOverflow.Ellipsis)
+                } else Row {
+                    Text("Sign in to ", color = LartColors.InkMuted, fontSize = 16.sp)
+                    Text("Stremio", color = LartColors.Ink, fontSize = 16.sp, modifier = Modifier.clickable { onOpen(Group.Account) })
                 }
             }
         }
+        NavRow(Icons.Outlined.Group, "Switch profile", chevron = false) { repository.showProfilePicker() }
+        NavRow(Icons.Outlined.Inventory2, "Addons", chevron = false, onClick = onOpenAddons)
+        Group.entries.forEach { entry -> NavRow(entry.icon, entry.label, chevron = true) { onOpen(entry) } }
     }
 }
 
-/** The rail Harbor shows on phones: who you are, two shortcuts, then the groups. */
+/** Harbor's GroupLanding: the group's uppercase label and a row per section. */
 @Composable
-private fun SettingsHome(repository: Repository, onOpenAddons: () -> Unit, onOpen: (SettingsPage) -> Unit) {
-    val profile by repository.activeProfile.collectAsState()
-    val account by repository.account.collectAsState()
-    Column(
-        Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(start = 16.dp, end = 16.dp, top = 16.dp, bottom = 32.dp),
-        verticalArrangement = Arrangement.spacedBy(14.dp),
-    ) {
-        Text("Settings", fontSize = 28.sp, fontWeight = FontWeight.SemiBold, color = LartColors.Ink)
-        Row(
-            Modifier.fillMaxWidth().background(LartColors.Surface, RoundedCornerShape(18.dp)).padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(14.dp),
-        ) {
-            ProfileAvatar(profile, 56.dp)
-            Column(Modifier.weight(1f)) {
-                Text(profile?.name ?: "Me", color = LartColors.Ink, fontSize = 18.sp, fontWeight = FontWeight.SemiBold)
-                Text(
-                    account?.let { "Stremio · ${it.email}" } ?: "Not signed in to Stremio",
-                    color = LartColors.InkMuted,
-                    fontSize = 13.sp,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis,
-                )
-            }
-        }
-        Column(Modifier.fillMaxWidth().background(LartColors.Surface, RoundedCornerShape(18.dp)).padding(vertical = 4.dp)) {
-            RailRow(Icons.Rounded.Group, "Switch profile", null) { repository.showProfilePicker() }
-            RailRow(Icons.Rounded.Extension, "Addons", null, onOpenAddons)
-        }
-        Column(Modifier.fillMaxWidth().background(LartColors.Surface, RoundedCornerShape(18.dp)).padding(vertical = 4.dp)) {
-            SettingsPage.entries.forEach { entry -> RailRow(entry.icon, entry.label, entry.sub) { onOpen(entry) } }
-        }
+private fun GroupLanding(group: Group, onOpen: (Section) -> Unit) {
+    Column {
+        SettingsLabel(group.section)
+        group.children.forEach { child -> LinkRow(child.label, child.sub) { onOpen(child) } }
     }
 }
 
 @Composable
-private fun RailRow(icon: ImageVector, label: String, sub: String?, onClick: () -> Unit) {
-    Row(
-        Modifier.fillMaxWidth().clickable(onClick = onClick).padding(horizontal = 14.dp, vertical = 12.dp),
-        verticalAlignment = Alignment.CenterVertically,
-        horizontalArrangement = Arrangement.spacedBy(14.dp),
-    ) {
-        Box(Modifier.size(38.dp).clip(RoundedCornerShape(11.dp)).background(LartColors.Elevated), contentAlignment = Alignment.Center) {
-            Icon(icon, contentDescription = null, tint = LartColors.Ink, modifier = Modifier.size(20.dp))
-        }
-        Column(Modifier.weight(1f)) {
-            Text(label, color = LartColors.Ink, fontSize = 15.sp, fontWeight = FontWeight.Medium)
-            sub?.let { Text(it, color = LartColors.InkSubtle, fontSize = 12.sp, maxLines = 2, overflow = TextOverflow.Ellipsis) }
-        }
-        Icon(Icons.AutoMirrored.Rounded.KeyboardArrowRight, contentDescription = null, tint = LartColors.InkSubtle)
+private fun SearchResults(query: String, onOpen: (Section) -> Unit) {
+    val words = query.lowercase().split(' ').filter { it.isNotBlank() }
+    val matches = Section.entries.filter { s ->
+        val text = "${s.label} ${s.sub} ${s.keywords} ${groupOf(s).label}".lowercase()
+        words.all { it in text }
+    }
+    Column {
+        SettingsLabel(if (matches.isEmpty()) "No matches" else "Results")
+        matches.forEach { s -> LinkRow(s.label, "${groupOf(s).label} · ${s.sub}") { onOpen(s) } }
+    }
+}
+
+@Composable
+private fun SectionPage(section: Section, repository: Repository, onOpenAddons: () -> Unit) {
+    val settings by repository.settings.collectAsState()
+    val set: ((AppSettings) -> AppSettings) -> Unit = repository::updateSettings
+    if (section != Section.Trackers) Text(section.sub, color = LartColors.InkMuted, fontSize = 15.5.sp, lineHeight = 22.sp)
+    when (section) {
+        Section.Account -> AccountSection(repository, settings, set)
+        Section.Trackers -> TrackersPanel(repository, settings, set)
+        Section.Player -> PlayerSection(repository, settings, set)
+        Section.Mpv -> MpvSection(settings, set)
+        Section.Shaders -> ShadersSection(repository, settings, set)
+        Section.Language -> LanguageSection(settings, set)
+        Section.Subtitles -> SubtitlesSection(repository, settings, set)
+        Section.Streaming -> StreamingSection(repository, settings, set, onOpenAddons)
+        Section.StreamFilters -> StreamFiltersSection(settings, set)
+        Section.Library -> LibrarySection(repository, settings, set)
+        Section.Theme -> AppearanceSection(settings, set)
+        Section.Storage -> StorageSection(repository, set)
+        Section.About -> AboutSection()
+        Section.Backup -> BackupSection(repository)
     }
 }
 
 // ---------------- Building blocks ----------------
 
+/** A labelled group of rows: Harbor's SettingGroup. */
 @Composable
-private fun SwitchRow(title: String, body: String?, checked: Boolean, onChange: (Boolean) -> Unit) {
-    Row(Modifier.fillMaxWidth().clickable { onChange(!checked) }, verticalAlignment = Alignment.CenterVertically) {
-        Column(Modifier.weight(1f).padding(end = 12.dp)) {
-            Text(title, fontSize = 15.sp, color = LartColors.Ink)
-            body?.let { Text(it, fontSize = 12.sp, color = LartColors.InkSubtle) }
-        }
-        Switch(checked = checked, onCheckedChange = onChange)
-    }
-}
+private fun Card(content: @Composable () -> Unit) = SettingsGroup(content)
 
+@Composable
+private fun SwitchRow(title: String, body: String?, checked: Boolean, onChange: (Boolean) -> Unit) = ToggleRow(title, body, checked, onChange)
+
+/** A row whose control sits under its text (Harbor's wide rows). */
 @Composable
 private fun Label(title: String, body: String? = null) {
     Column {
-        Text(title, fontSize = 15.sp, color = LartColors.Ink)
-        body?.let { Text(it, fontSize = 12.sp, color = LartColors.InkSubtle) }
+        RowRule()
+        RowText(title, body, Modifier.padding(top = 12.dp))
     }
 }
 
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun <T> ChipRow(options: List<Pair<T, String>>, selected: T, onPick: (T) -> Unit) {
-    FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        options.forEach { (value, label) -> Chip(label, value == selected) { onPick(value) } }
-    }
-}
+private fun <T> ChipRow(options: List<Pair<T, String>>, selected: T, onPick: (T) -> Unit) =
+    OptionScale(options, { it == selected }, onPick)
 
 /** Several can be on at once; `selected` keeps the order they were picked in. */
-@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun <T> MultiChipRow(options: List<Pair<T, String>>, selected: Collection<T>, onChange: (List<T>) -> Unit) {
-    FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        options.forEach { (value, label) ->
-            val on = value in selected
+    val ordered = selected is List<*> && selected.size > 1
+    OptionScale(
+        options.map { (value, label) ->
             val position = selected.indexOf(value)
-            Chip(if (on && selected.size > 1 && selected is List<*>) "${position + 1}. $label" else label, on) {
-                onChange(if (on) selected.filter { it != value } else selected.toList() + value)
-            }
-        }
-    }
+            value to if (ordered && position >= 0) "${position + 1}. $label" else label
+        },
+        { it in selected },
+    ) { value -> onChange(if (value in selected) selected.filter { it != value } else selected.toList() + value) }
 }
 
 @Composable
-private fun Chip(label: String, selected: Boolean, onClick: () -> Unit) {
-    FilterChip(
-        selected = selected,
-        onClick = onClick,
-        label = { Text(label) },
-        colors = FilterChipDefaults.filterChipColors(selectedContainerColor = Color.White, selectedLabelColor = Color.Black),
+private fun Muted(text: String) = Text(text, color = LartColors.InkMuted, fontSize = 15.sp, lineHeight = 21.sp)
+
+@Composable
+private fun HSlider(value: Float, range: ClosedFloatingPointRange<Float>, onChange: (Float) -> Unit) {
+    Slider(
+        value = value,
+        onValueChange = onChange,
+        valueRange = range,
+        colors = SliderDefaults.colors(thumbColor = LartColors.Ink, activeTrackColor = LartColors.Ink, inactiveTrackColor = LartColors.Raised),
     )
 }
 
@@ -252,7 +284,7 @@ private fun languageOptions(extra: List<String> = emptyList()): List<Pair<String
 // ---------------- Account & setup ----------------
 
 @Composable
-private fun AccountPage(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
+private fun AccountSection(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
     StremioCard(repository)
     ProfilesCard(repository)
     Card {
@@ -261,14 +293,6 @@ private fun AccountPage(repository: Repository, settings: AppSettings, set: ((Ap
             "With more than one profile. Off opens the last profile used.",
             settings.askProfileOnLaunch,
         ) { v -> set { it.copy(askProfileOnLaunch = v) } }
-    }
-    TrackersCard(repository)
-    Card {
-        SwitchRow(
-            "Trakt's paused titles in Continue watching",
-            "Shows what you paused on other devices, as Harbor's \"Paused on Trakt\".",
-            settings.traktInContinueWatching,
-        ) { v -> set { it.copy(traktInContinueWatching = v) } }
     }
 }
 
@@ -280,17 +304,18 @@ private fun StremioCard(repository: Repository) {
     var password by remember { mutableStateOf("") }
     var busy by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
-    Card {
-        SectionTitle("Stremio account")
-        val current = account
+    val current = account
+    SettingsSection(
+        if (current != null) "Your Stremio account" else "Sign in to Stremio",
+        if (current != null) "Your addons and library come from this account." else "Sign in to use your Stremio addons and library.",
+    ) {
         if (current != null) {
-            Text("Signed in as ${current.email}", color = LartColors.InkMuted, fontSize = 14.sp)
-            OutlinedButton(onClick = { scope.launch { busy = true; repository.signOut(); busy = false } }, enabled = !busy) {
-                Text("Sign out")
+            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(16.dp)) {
+                Text(current.email, color = LartColors.Ink, fontSize = 17.sp, fontWeight = FontWeight.SemiBold, modifier = Modifier.weight(1f), maxLines = 1, overflow = TextOverflow.Ellipsis)
+                HGhostButton(onClick = { scope.launch { busy = true; repository.signOut(); busy = false } }, enabled = !busy) { Text("Sign out") }
             }
         } else {
-            Text("Sign in to use your Stremio addons and library.", color = LartColors.InkMuted, fontSize = 14.sp)
-            OutlinedTextField(
+            HTextField(
                 value = email,
                 onValueChange = { email = it },
                 label = { Text("Email") },
@@ -298,7 +323,7 @@ private fun StremioCard(repository: Repository) {
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email),
                 modifier = Modifier.fillMaxWidth(),
             )
-            OutlinedTextField(
+            HTextField(
                 value = password,
                 onValueChange = { password = it },
                 label = { Text("Password") },
@@ -307,8 +332,8 @@ private fun StremioCard(repository: Repository) {
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                 modifier = Modifier.fillMaxWidth(),
             )
-            error?.let { Text(it, color = Color(0xFFE57373), fontSize = 13.sp) }
-            Button(
+            error?.let { Text(it, color = Color(0xFFE57373), fontSize = 14.sp) }
+            HButton(
                 onClick = {
                     scope.launch {
                         busy = true
@@ -326,23 +351,21 @@ private fun StremioCard(repository: Repository) {
 // ---------------- Playback ----------------
 
 @Composable
-private fun PlaybackPage(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
+private fun PlayerSection(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
     val autoPlay by repository.autoPlay.collectAsState()
     val prefs by repository.playerPrefs.collectAsState()
 
     Card {
-        SectionTitle("Player engine")
+        SettingsLabel("Player engine")
         ChipRow(listOf("mpv" to "mpv", "media3" to "Android (Media3)"), settings.engine) { v -> set { it.copy(engine = v) } }
-        Text(
+        Muted(
             if (settings.engine == "mpv") "Harbor's player: styled subtitles, software decoding when the phone can't, Anime4K. If mpv can't start, Lart uses Media3."
             else "Android's own player: lightest on battery. No Anime4K; Lart draws the subtitles.",
-            color = LartColors.InkSubtle,
-            fontSize = 12.sp,
         )
     }
 
     Card {
-        SectionTitle("When you press Play")
+        SettingsLabel("When you press Play")
         SwitchRow("Instant play", "Skips the list of sources and plays the best one.", autoPlay, repository::setAutoPlay)
         SwitchRow("Remember the source you picked", "Marks it next time, and instant play prefers it.", settings.rememberLastStream) { v -> set { it.copy(rememberLastStream = v) } }
         SwitchRow("Resume where you left off", "Off starts every video from the beginning.", settings.resumePlayback) { v -> set { it.copy(resumePlayback = v) } }
@@ -354,7 +377,7 @@ private fun PlaybackPage(repository: Repository, settings: AppSettings, set: ((A
     }
 
     Card {
-        SectionTitle("On-screen controls")
+        SettingsLabel("On-screen controls")
         Label("Rewind step")
         ChipRow(listOf(5, 10, 15, 30).map { it to "$it s" }, settings.seekBackSec) { v -> set { it.copy(seekBackSec = v) } }
         Label("Forward step")
@@ -375,22 +398,22 @@ private fun PlaybackPage(repository: Repository, settings: AppSettings, set: ((A
     }
 
     Card {
-        SectionTitle("Up next")
+        SettingsLabel("Up next")
         SwitchRow("Auto-play next episode", "When an episode ends.", settings.autoPlayNextEpisode) { v -> set { it.copy(autoPlayNextEpisode = v) } }
         Label("Show Up next", "\"At the credits\" uses the intro databases' credit times when they have them.")
-        ChipRow(listOf(0 to "At the credits", 30 to "30 s before", 45 to "45 s before", 60 to "1 min before", 90 to "90 s before"), settings.nextEpisodeLeadSec) { v ->
+        ChipRow(listOf(0 to "At the credits", 30 to "30 s", 45 to "45 s", 60 to "1 min", 90 to "90 s"), settings.nextEpisodeLeadSec) { v ->
             set { it.copy(nextEpisodeLeadSec = v) }
         }
         SwitchRow("Keep the same source for the next episode", "Prefers the addon the current episode came from.", settings.keepSourceNextEpisode) { v -> set { it.copy(keepSourceNextEpisode = v) } }
         Label("Ask if you're still watching after")
-        ChipRow(listOf(0 to "Never", 2 to "2 episodes", 3 to "3 episodes", 5 to "5 episodes"), prefs.stillWatchingAfter) { n ->
+        ChipRow(listOf(0 to "Never", 2 to "2 episodes", 3 to "3", 5 to "5"), prefs.stillWatchingAfter) { n ->
             repository.updatePlayerPrefs { it.copy(stillWatchingAfter = n) }
         }
     }
 
     Card {
-        SectionTitle("Intros & credits")
-        Text("From IntroDB, TheIntroDB, SkipDB and AniSkip, when they know the episode.", color = LartColors.InkSubtle, fontSize = 12.sp)
+        SettingsLabel("Intros & credits")
+        Muted("From IntroDB, TheIntroDB, SkipDB and AniSkip, when they know the episode.")
         SwitchRow("Show the Skip button", null, settings.showSkipButton) { v -> set { it.copy(showSkipButton = v) } }
         if (settings.showSkipButton) {
             Label("Auto-hide the Skip button after")
@@ -400,36 +423,51 @@ private fun PlaybackPage(repository: Repository, settings: AppSettings, set: ((A
         SwitchRow("Auto-skip recaps", null, settings.autoSkipRecap) { v -> set { it.copy(autoSkipRecap = v) } }
         SwitchRow("Auto-skip credit outros", "Goes straight to the next episode, or to the end of a movie.", settings.autoSkipOutro) { v -> set { it.copy(autoSkipOutro = v) } }
     }
+}
 
-    if (settings.engine == "mpv") {
-        Card {
-            SectionTitle("mpv")
-            Label("Decoding")
-            ChipRow(listOf("auto" to "Auto", "on" to "Hardware only", "off" to "Software"), settings.mpvHwdec) { v -> set { it.copy(mpvHwdec = v) } }
-            Label("Playback quality", "Quality uses sharper scaling and debanding; Performance saves battery.")
-            ChipRow(listOf("performance" to "Performance", "balanced" to "Balanced", "quality" to "Quality"), settings.mpvQuality) { v -> set { it.copy(mpvQuality = v) } }
-            Label("Buffer")
-            ChipRow(listOf("small" to "Small", "auto" to "Normal", "large" to "Large"), settings.bufferSize) { v -> set { it.copy(bufferSize = v) } }
-            SwitchRow("Mix surround sound down to stereo", "Clearer dialogue on phone speakers and headphones.", settings.downmixStereo) { v -> set { it.copy(downmixStereo = v) } }
-            SwitchRow("Normalize loudness", "Evens out quiet dialogue and loud scenes.", settings.audioNormalize) { v -> set { it.copy(audioNormalize = v) } }
-            Label("Sound profile")
-            ChipRow(listOf("off" to "Off", "bass" to "Bass boost", "voice" to "Voice", "bass-reduce" to "Less bass", "night" to "Night"), settings.audioProfile) { v ->
-                set { it.copy(audioProfile = v) }
-            }
-            Label("Maximum volume boost", "Swipe up past full volume on the right edge to go louder.")
-            ChipRow(listOf(1 to "Off", 2 to "200%", 3 to "300%"), settings.volumeBoostMax) { v -> set { it.copy(volumeBoostMax = v) } }
-            MpvOptionsField(settings.mpvExtraOptions) { v -> set { it.copy(mpvExtraOptions = v) } }
+@Composable
+private fun MpvSection(settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
+    if (settings.engine != "mpv") Muted("These apply when the player engine is mpv (Playback → Player).")
+    Card {
+        SettingsLabel("Video")
+        Label("Decoding")
+        ChipRow(listOf("auto" to "Auto", "on" to "Hardware only", "off" to "Software"), settings.mpvHwdec) { v -> set { it.copy(mpvHwdec = v) } }
+        Label("Playback quality", "Quality uses sharper scaling and debanding; Performance saves battery.")
+        ChipRow(listOf("performance" to "Performance", "balanced" to "Balanced", "quality" to "Quality"), settings.mpvQuality) { v -> set { it.copy(mpvQuality = v) } }
+        Label("Buffer")
+        ChipRow(listOf("small" to "Small", "auto" to "Normal", "large" to "Large"), settings.bufferSize) { v -> set { it.copy(bufferSize = v) } }
+    }
+    Card {
+        SettingsLabel("Sound")
+        SwitchRow("Mix surround sound down to stereo", "Clearer dialogue on phone speakers and headphones.", settings.downmixStereo) { v -> set { it.copy(downmixStereo = v) } }
+        SwitchRow("Normalize loudness", "Evens out quiet dialogue and loud scenes.", settings.audioNormalize) { v -> set { it.copy(audioNormalize = v) } }
+        Label("Sound profile")
+        ChipRow(listOf("off" to "Off", "bass" to "Bass boost", "voice" to "Voice", "bass-reduce" to "Less bass", "night" to "Night"), settings.audioProfile) { v ->
+            set { it.copy(audioProfile = v) }
         }
-        Card {
-            SectionTitle("Anime4K")
-            Text("Upscaling and line restoration for anime. You can also change it in the player.", color = LartColors.InkMuted, fontSize = 13.sp)
-            ChipRow(listOf("" to "Off") + Anime4K.Mode.entries.map { it.name to it.label }, prefs.anime4kMode) { mode ->
-                repository.updatePlayerPrefs { it.copy(anime4kMode = mode) }
-            }
-            ChipRow(listOf(false to "Fast", true to "HQ"), prefs.anime4kHq) { hq -> repository.updatePlayerPrefs { it.copy(anime4kHq = hq) } }
-            SwitchRow("Anime only", "Leaves live-action films and series untouched.", settings.anime4kAnimeOnly) { v -> set { it.copy(anime4kAnimeOnly = v) } }
-            SwitchRow("Show an Anime4K badge while playing", null, settings.anime4kIndicator) { v -> set { it.copy(anime4kIndicator = v) } }
+        Label("Maximum volume boost", "Swipe up past full volume on the right edge to go louder.")
+        ChipRow(listOf(1 to "Off", 2 to "200%", 3 to "300%"), settings.volumeBoostMax) { v -> set { it.copy(volumeBoostMax = v) } }
+    }
+    Card {
+        SettingsLabel("Advanced")
+        MpvOptionsField(settings.mpvExtraOptions) { v -> set { it.copy(mpvExtraOptions = v) } }
+    }
+}
+
+@Composable
+private fun ShadersSection(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
+    val prefs by repository.playerPrefs.collectAsState()
+    if (settings.engine != "mpv") Muted("Anime4K needs the mpv engine (Playback → Player).")
+    Card {
+        SettingsLabel("Mode")
+        Muted("You can also change it from the player's Anime4K button.")
+        ChipRow(listOf("" to "Off") + Anime4K.Mode.entries.map { it.name to it.label }, prefs.anime4kMode) { mode ->
+            repository.updatePlayerPrefs { it.copy(anime4kMode = mode) }
         }
+        Label("Quality")
+        ChipRow(listOf(false to "Fast", true to "HQ"), prefs.anime4kHq) { hq -> repository.updatePlayerPrefs { it.copy(anime4kHq = hq) } }
+        SwitchRow("Anime only", "Leaves live-action films and series untouched.", settings.anime4kAnimeOnly) { v -> set { it.copy(anime4kAnimeOnly = v) } }
+        SwitchRow("Show an Anime4K badge while playing", null, settings.anime4kIndicator) { v -> set { it.copy(anime4kIndicator = v) } }
     }
 }
 
@@ -439,22 +477,31 @@ private fun speedLabel(speed: Float) = speed.toString().removeSuffix(".0") + "×
 private fun MpvOptionsField(saved: String, onSave: (String) -> Unit) {
     var text by remember(saved) { mutableStateOf(saved) }
     Label("Extra mpv options", "One per line, as key=value (for example deband=yes). Applied when a video starts.")
-    OutlinedTextField(value = text, onValueChange = { text = it }, modifier = Modifier.fillMaxWidth(), minLines = 3)
-    if (text != saved) TextButton(onClick = { onSave(text.trim()) }) { Text("Save options") }
+    HTextField(value = text, onValueChange = { text = it }, modifier = Modifier.fillMaxWidth(), minLines = 3, label = { Text("deband=yes") })
+    if (text != saved) HButton(onClick = { onSave(text.trim()) }) { Text("Save options") }
 }
 
-// ---------------- Languages & subtitles ----------------
+// ---------------- Languages ----------------
 
 @Composable
-private fun LanguagesPage(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
-    val prefs by repository.playerPrefs.collectAsState()
+private fun LanguageSection(settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
     Card {
-        SectionTitle("Audio")
+        SettingsLabel("Audio")
         Label("Audio languages", "In order: the first one a video has is picked. None picked follows the device.")
         MultiChipRow(languageOptions(), settings.audioLanguages) { v -> set { it.copy(audioLanguages = v) } }
     }
     Card {
-        SectionTitle("Subtitles")
+        SettingsLabel("Details")
+        Label("Language of titles and descriptions", "From TMDB (needs a TMDB key in Sources & library → Library & metadata).")
+        ChipRow(listOf("" to "Device") + languageOptions(), settings.metadataLanguage) { v -> set { it.copy(metadataLanguage = v) } }
+    }
+}
+
+@Composable
+private fun SubtitlesSection(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
+    val prefs by repository.playerPrefs.collectAsState()
+    Card {
+        SettingsLabel("Which subtitles")
         SwitchRow("Subtitles off by default", "Turn them on yourself in the player.", settings.subtitlesOffByDefault) { v -> set { it.copy(subtitlesOffByDefault = v) } }
         if (!settings.subtitlesOffByDefault) {
             Label("Subtitle language", "Turns subtitles on in this language. Picking one in the player changes it too.")
@@ -471,12 +518,12 @@ private fun LanguagesPage(repository: Repository, settings: AppSettings, set: ((
         }
     }
     Card {
-        SectionTitle("Subtitle style")
-        Box(Modifier.fillMaxWidth().height(90.dp).clip(RoundedCornerShape(12.dp)).background(Color(0xFF3A4048)), contentAlignment = Alignment.Center) {
+        SettingsLabel("Style")
+        Box(Modifier.fillMaxWidth().height(96.dp).clip(RoundedCornerShape(12.dp)).background(Color(0xFF3A4048)), contentAlignment = Alignment.Center) {
             SubtitleText("The quick brown fox", prefs, settings)
         }
         Label("Size")
-        Slider(value = prefs.subScale, onValueChange = { v -> repository.updatePlayerPrefs { it.copy(subScale = v) } }, valueRange = 0.6f..1.8f)
+        HSlider(prefs.subScale, 0.6f..1.8f) { v -> repository.updatePlayerPrefs { it.copy(subScale = v) } }
         Label("Colour")
         ChipRow(listOf(0xFFFFFFFF to "White", 0xFFFFE66D to "Yellow", 0xFF8BE9FD to "Cyan", 0xFFB8F5A0 to "Green"), prefs.subColor) { c ->
             repository.updatePlayerPrefs { it.copy(subColor = c) }
@@ -485,13 +532,13 @@ private fun LanguagesPage(repository: Repository, settings: AppSettings, set: ((
         ChipRow(listOf("outline" to "Outline", "shadow" to "Shadow", "box" to "Box"), prefs.subBackground) { b -> repository.updatePlayerPrefs { it.copy(subBackground = b) } }
         if (prefs.subBackground == "box") {
             Label("Box opacity")
-            Slider(value = settings.subBoxOpacity, onValueChange = { v -> set { it.copy(subBoxOpacity = v) } }, valueRange = 0.2f..1f)
+            HSlider(settings.subBoxOpacity, 0.2f..1f) { v -> set { it.copy(subBoxOpacity = v) } }
         }
         SwitchRow("Bold", null, settings.subBold) { v -> set { it.copy(subBold = v) } }
         Label("Alignment")
         ChipRow(listOf("left" to "Left", "center" to "Centre", "right" to "Right"), settings.subAlignX) { v -> set { it.copy(subAlignX = v) } }
         Label("Position")
-        Slider(value = prefs.subBottom, onValueChange = { v -> repository.updatePlayerPrefs { it.copy(subBottom = v) } }, valueRange = 0.02f..0.4f)
+        HSlider(prefs.subBottom, 0.02f..0.4f) { v -> repository.updatePlayerPrefs { it.copy(subBottom = v) } }
         if (settings.engine == "mpv") {
             Label("Styled (ASS) subtitles", "Anime subtitles often carry their own fonts and colours.")
             ChipRow(listOf("no" to "Keep their style", "scale" to "Keep style, my size", "force" to "Use my style"), settings.assOverride) { v ->
@@ -499,43 +546,19 @@ private fun LanguagesPage(repository: Repository, settings: AppSettings, set: ((
             }
         }
     }
-    Card {
-        SectionTitle("Details language")
-        Text("For titles and descriptions from TMDB (needs a TMDB key in Library & metadata).", color = LartColors.InkSubtle, fontSize = 12.sp)
-        ChipRow(listOf("" to "Device") + languageOptions(), settings.metadataLanguage) { v -> set { it.copy(metadataLanguage = v) } }
-    }
 }
 
-// ---------------- Sources ----------------
+// ---------------- Sources & library ----------------
 
 @Composable
-private fun SourcesPage(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit, onOpenAddons: () -> Unit) {
+private fun StreamingSection(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit, onOpenAddons: () -> Unit) {
     val addons by repository.addons.collectAsState()
-    Card {
-        SectionTitle("Addons")
-        Text("${addons.size} installed: ${addons.joinToString(", ") { it.manifest.name }}", color = LartColors.InkMuted, fontSize = 13.sp, maxLines = 3, overflow = TextOverflow.Ellipsis)
-        Button(onClick = onOpenAddons) { Text("Manage addons") }
+    SettingsSection("Addons", "${addons.size} installed: ${addons.joinToString(", ") { it.manifest.name }}") {
+        HButton(onClick = onOpenAddons) { Text("Manage addons") }
     }
     DebridCard(repository)
     Card {
-        SectionTitle("Source filter")
-        Text("Only sources that match show up. Empty rows mean any.", color = LartColors.InkSubtle, fontSize = 12.sp)
-        val filter = settings.streamFilter
-        fun update(change: (StreamFilter) -> StreamFilter) = set { it.copy(streamFilter = change(it.streamFilter)) }
-        Label("Resolution")
-        MultiChipRow(listOf(2160 to "4K", 1080 to "1080p", 720 to "720p", 480 to "SD"), filter.resolutions) { v -> update { it.copy(resolutions = v.toSet()) } }
-        Label("Release")
-        MultiChipRow(listOf("remux" to "Remux", "bluray" to "Blu-ray", "web" to "WEB"), filter.sources) { v -> update { it.copy(sources = v.toSet()) } }
-        Label("Video codec")
-        MultiChipRow(listOf("hevc" to "HEVC", "av1" to "AV1", "h264" to "H.264"), filter.codecs) { v -> update { it.copy(codecs = v.toSet()) } }
-        SwitchRow("HDR only", null, filter.requireHdr) { v -> update { it.copy(requireHdr = v) } }
-        SwitchRow("Cached on debrid only", "Hides torrents your debrid service doesn't already have.", filter.cachedOnly) { v -> update { it.copy(cachedOnly = v) } }
-        Label("Largest file")
-        ChipRow(listOf(0 to "Any", 2 to "2 GB", 5 to "5 GB", 10 to "10 GB", 20 to "20 GB", 40 to "40 GB"), filter.maxSizeGb) { v -> update { it.copy(maxSizeGb = v) } }
-        if (filter.active) TextButton(onClick = { update { StreamFilter() } }) { Text("Clear the filter") }
-    }
-    Card {
-        SectionTitle("Safety & order")
+        SettingsLabel("Safety & order")
         Label("Stream safety filter", "Balanced hides CAM and telesync rips; Strict also hides tiny files, usually fakes.")
         ChipRow(listOf("off" to "Off", "balanced" to "Balanced", "strict" to "Strict"), settings.safetyFilter) { v -> set { it.copy(safetyFilter = v) } }
         Label("Order")
@@ -555,10 +578,29 @@ private fun SourcesPage(repository: Repository, settings: AppSettings, set: ((Ap
     }
 }
 
-// ---------------- Library & metadata ----------------
+@Composable
+private fun StreamFiltersSection(settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
+    val filter = settings.streamFilter
+    fun update(change: (StreamFilter) -> StreamFilter) = set { it.copy(streamFilter = change(it.streamFilter)) }
+    Card {
+        SettingsLabel("Quality")
+        Muted("Only sources that match show up. Nothing picked in a row means any.")
+        Label("Resolution")
+        MultiChipRow(listOf(2160 to "4K", 1080 to "1080p", 720 to "720p", 480 to "SD"), filter.resolutions) { v -> update { it.copy(resolutions = v.toSet()) } }
+        Label("Release")
+        MultiChipRow(listOf("remux" to "Remux", "bluray" to "Blu-ray", "web" to "WEB"), filter.sources) { v -> update { it.copy(sources = v.toSet()) } }
+        Label("Video codec")
+        MultiChipRow(listOf("hevc" to "HEVC", "av1" to "AV1", "h264" to "H.264"), filter.codecs) { v -> update { it.copy(codecs = v.toSet()) } }
+        SwitchRow("HDR only", null, filter.requireHdr) { v -> update { it.copy(requireHdr = v) } }
+        SwitchRow("Cached on debrid only", "Hides torrents your debrid service doesn't already have.", filter.cachedOnly) { v -> update { it.copy(cachedOnly = v) } }
+        Label("Largest file")
+        ChipRow(listOf(0 to "Any", 2 to "2 GB", 5 to "5 GB", 10 to "10 GB", 20 to "20 GB", 40 to "40 GB"), filter.maxSizeGb) { v -> update { it.copy(maxSizeGb = v) } }
+        if (filter.active) HGhostButton(onClick = { update { StreamFilter() } }) { Text("Clear the filter") }
+    }
+}
 
 @Composable
-private fun LibraryPage(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
+private fun LibrarySection(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
     KeyCard(
         title = "TMDB",
         body = "With your own TMDB API key, Home, Movies and Shows use TMDB's rows, artwork, logos and cast, in your language, as in Harbor.",
@@ -578,14 +620,14 @@ private fun LibraryPage(repository: Repository, settings: AppSettings, set: ((Ap
         onSave = { repository.setRpdbKey(it) },
     )
     Card {
-        SectionTitle("Home")
+        SettingsLabel("Home")
         SwitchRow("Top 10 row", null, settings.showTop10) { v -> set { it.copy(showTop10 = v) } }
         SwitchRow("Rotate the hero", "Moves to the next featured title every few seconds.", settings.heroAutoRotate) { v -> set { it.copy(heroAutoRotate = v) } }
         SwitchRow("Hide unreleased titles", null, settings.hideUnreleased) { v -> set { it.copy(hideUnreleased = v) } }
         SwitchRow("Hide anime", "Removes the Anime view and anime rows.", settings.hideAnime) { v -> set { it.copy(hideAnime = v) } }
     }
     Card {
-        SectionTitle("Episodes")
+        SettingsLabel("Episodes")
         Label("Order")
         ChipRow(listOf(false to "Oldest first", true to "Newest first"), settings.episodesNewestFirst) { v -> set { it.copy(episodesNewestFirst = v) } }
         SwitchRow("Show episode descriptions", null, settings.showEpisodeDescription) { v -> set { it.copy(showEpisodeDescription = v) } }
@@ -604,13 +646,13 @@ private val ACCENTS = listOf(0xFFF0A35E, 0xFFE57373, 0xFFF06292, 0xFFBA68C8, 0xF
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun AppearancePage(settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
+private fun AppearanceSection(settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
     Card {
-        SectionTitle("Accent colour")
+        SettingsLabel("Accent colour")
         FlowRow(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
             ACCENTS.forEach { argb ->
                 Box(
-                    Modifier.size(40.dp).clip(CircleShape).background(Color(argb.toInt()))
+                    Modifier.size(42.dp).clip(CircleShape).background(Color(argb.toInt()))
                         .border(if (settings.accent == argb) 3.dp else 0.dp, Color.White, CircleShape)
                         .clickable { set { it.copy(accent = argb) } },
                     contentAlignment = Alignment.Center,
@@ -619,7 +661,7 @@ private fun AppearancePage(settings: AppSettings, set: ((AppSettings) -> AppSett
         }
     }
     Card {
-        SectionTitle("Poster cards")
+        SettingsLabel("Poster cards")
         SwitchRow("Rating badge", "IMDb rating in the corner of each poster.", settings.showRatingBadge) { v -> set { it.copy(showRatingBadge = v) } }
         SwitchRow("Hide titles under posters", null, settings.hidePosterTitles) { v -> set { it.copy(hidePosterTitles = v) } }
         Label("Size")
@@ -632,102 +674,107 @@ private fun AppearancePage(settings: AppSettings, set: ((AppSettings) -> AppSett
 // ---------------- System ----------------
 
 @Composable
-private fun SystemPage(repository: Repository, set: ((AppSettings) -> AppSettings) -> Unit) {
+private fun StorageSection(repository: Repository, set: ((AppSettings) -> AppSettings) -> Unit) {
+    val context = LocalContext.current
+    fun say(text: String) = Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
+    Card {
+        SettingsLabel("Storage")
+        ActionRow("Image cache", "Posters and artwork. They download again as needed.", "Clear") {
+            context.imageLoader.memoryCache?.clear()
+            context.imageLoader.diskCache?.clear()
+            say("Image cache cleared")
+        }
+        ActionRow("Anime4K shaders", "They download again the next time Anime4K is on.", "Remove") {
+            File(context.filesDir, "anime4k").deleteRecursively()
+            say("Anime4K shaders removed")
+        }
+        ActionRow("Watch positions on this device", "For this profile. Stremio's and Trakt's stay.", "Clear") {
+            repository.clearResumeHistory()
+            say("Watch positions cleared")
+        }
+    }
+    Card {
+        SettingsLabel("Reset")
+        ActionRow("Reset settings", "Puts this profile's settings back to how Lart starts. Sign-ins, lists and progress stay.", "Reset") {
+            set { AppSettings() }
+            say("Settings reset")
+        }
+    }
+}
+
+/** A row with a ghost button on the right, as Harbor's storage rows. */
+@Composable
+private fun ActionRow(title: String, body: String, action: String, onClick: () -> Unit) {
+    Column {
+        RowRule()
+        Row(Modifier.fillMaxWidth().padding(vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
+            RowText(title, body, Modifier.weight(1f).padding(end = 16.dp))
+            HGhostButton(onClick = onClick) { Text(action) }
+        }
+    }
+}
+
+// ---------------- Updates & backup ----------------
+
+@Composable
+private fun BackupSection(repository: Repository) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
+    val uri = LocalUriHandler.current
     fun say(text: String) = Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
+    val version = remember { runCatching { context.packageManager.getPackageInfo(context.packageName, 0).versionName }.getOrNull() }
 
-    val exporter = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { uri ->
-        if (uri == null) return@rememberLauncherForActivityResult
+    val exporter = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("application/json")) { target ->
+        if (target == null) return@rememberLauncherForActivityResult
         scope.launch {
             runCatching {
                 val json = repository.exportBackup()
-                withContext(Dispatchers.IO) { context.contentResolver.openOutputStream(uri)?.use { it.write(json.toByteArray()) } }
+                withContext(Dispatchers.IO) { context.contentResolver.openOutputStream(target)?.use { it.write(json.toByteArray()) } }
             }.onSuccess { say("Backup saved") }.onFailure { say("Backup failed: ${it.message}") }
         }
     }
-    val importer = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
-        if (uri == null) return@rememberLauncherForActivityResult
+    val importer = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { source ->
+        if (source == null) return@rememberLauncherForActivityResult
         scope.launch {
             runCatching {
-                val json = withContext(Dispatchers.IO) { context.contentResolver.openInputStream(uri)?.use { it.readBytes().decodeToString() } } ?: error("Couldn't read the file")
+                val json = withContext(Dispatchers.IO) { context.contentResolver.openInputStream(source)?.use { it.readBytes().decodeToString() } } ?: error("Couldn't read the file")
                 repository.importBackup(json)
             }.onSuccess { say("Backup restored") }.onFailure { say(it.message ?: "Restore failed") }
         }
     }
 
-    Card {
-        SectionTitle("Backup & restore")
-        Text(
-            "Saves your profiles, lists, progress, settings and sign-ins to a file. It holds your account keys, so keep it private.",
-            color = LartColors.InkMuted,
-            fontSize = 13.sp,
-        )
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            Button(onClick = { exporter.launch("lart-backup.json") }) { Text("Back up") }
-            OutlinedButton(onClick = { importer.launch(arrayOf("application/json", "*/*")) }) { Text("Restore") }
-        }
+    SettingsSection("Updates", "Lart native ${version ?: "?"}. New previews are posted on GitHub; install them over this one.") {
+        HGhostButton(onClick = { uri.openUri("https://github.com/9vsv6/lart/releases") }) { Text("See releases") }
     }
-    Card {
-        SectionTitle("Storage")
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Label("Image cache", "Posters and artwork. They download again as needed.")
+    SettingsSection("Backup & restore", "Saves your profiles, lists, progress, settings and sign-ins to a file. It holds your account keys, so keep it private.") {
+        Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+            HButton(onClick = { exporter.launch("lart-backup.json") }) { Text("Back up") }
+            HGhostButton(onClick = { importer.launch(arrayOf("application/json", "*/*")) }) { Text("Restore") }
         }
-        OutlinedButton(onClick = {
-            context.imageLoader.memoryCache?.clear()
-            context.imageLoader.diskCache?.clear()
-            say("Image cache cleared")
-        }) { Text("Clear image cache") }
-        Label("Anime4K shaders", "They download again the next time Anime4K is on.")
-        OutlinedButton(onClick = {
-            File(context.filesDir, "anime4k").deleteRecursively()
-            say("Anime4K shaders removed")
-        }) { Text("Remove shaders") }
-        Label("Watch positions on this device", "For this profile. Stremio's and Trakt's stay.")
-        OutlinedButton(onClick = {
-            repository.clearResumeHistory()
-            say("Watch positions cleared")
-        }) { Text("Clear watch positions") }
-    }
-    Card {
-        SectionTitle("Reset")
-        Text("Puts this profile's settings back to how Lart starts. Sign-ins, lists and progress stay.", color = LartColors.InkMuted, fontSize = 13.sp)
-        OutlinedButton(onClick = {
-            set { AppSettings() }
-            say("Settings reset")
-        }) { Text("Reset settings") }
     }
 }
 
 // ---------------- Help & about ----------------
 
 @Composable
-private fun AboutCard() {
+private fun AboutSection() {
     val context = LocalContext.current
     val uriHandler = LocalUriHandler.current
     val version = remember { runCatching { context.packageManager.getPackageInfo(context.packageName, 0).versionName }.getOrNull() }
-    Card {
-        SectionTitle("Lart native")
-        Text(
-            "Version ${version ?: "?"}. A native rebuild of Lart (a Harbor fork) for Android, installed beside the regular Lart app while features are rebuilt.",
-            color = LartColors.InkMuted,
-            fontSize = 13.sp,
-        )
-        Row {
-            TextButton(onClick = { uriHandler.openUri("https://github.com/9vsv6/lart/issues/new") }) { Text("Report a problem") }
-            TextButton(onClick = { uriHandler.openUri("https://github.com/9vsv6/lart") }) { Text("Source code") }
+    SettingsSection("Lart native", "Version ${version ?: "?"}. A native rebuild of Lart (a Harbor fork) for Android, installed beside the regular Lart app while features are rebuilt.") {
+        Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+            HButton(onClick = { uriHandler.openUri("https://github.com/9vsv6/lart/issues/new") }) { Text("Report a problem") }
+            HGhostButton(onClick = { uriHandler.openUri("https://github.com/9vsv6/lart") }) { Text("Source code") }
         }
     }
-    Card {
-        SectionTitle("Licences")
-        Text(
-            "Lart includes mpv (libmpv-android, MIT; mpv LGPL), FFmpeg (LGPL/GPL), Jellyfin's Media3 FFmpeg decoder (GPL-3.0) and downloads Anime4K shaders (MIT) on first use. " +
-                "Because of the GPL parts, anyone you share this APK with is entitled to Lart's source code.",
-            color = LartColors.InkMuted,
-            fontSize = 13.sp,
-        )
-    }
+    SettingsSection(
+        "Licences",
+        "Lart includes mpv (libmpv-android, MIT; mpv LGPL), FFmpeg (LGPL/GPL), Jellyfin's Media3 FFmpeg decoder (GPL-3.0) and downloads Anime4K shaders (MIT) on first use. " +
+            "Because of the GPL parts, anyone you share this APK with is entitled to Lart's source code.",
+    ) {}
 }
+
+// ---------------- Debrid and API keys ----------------
 
 @Composable
 private fun DebridCard(repository: Repository) {
@@ -739,33 +786,18 @@ private fun DebridCard(repository: Repository) {
     var busy by remember { mutableStateOf(false) }
     var message by remember { mutableStateOf<String?>(null) }
 
-    Card {
-        SectionTitle("Debrid")
-        val current = debrid
+    val current = debrid
+    SettingsSection(
+        "Debrid",
+        if (current != null) "${current.service.label} is set up. Torrent sources play through it."
+        else "Torrent sources need a debrid service. Paste your API key; it stays on this device.",
+    ) {
         if (current != null) {
-            Text("${current.service.label} is set up. Torrent sources play through it.", color = LartColors.InkMuted, fontSize = 14.sp)
-            message?.let { Text(it, color = LartColors.InkSubtle, fontSize = 13.sp) }
-            OutlinedButton(onClick = { scope.launch { repository.clearDebrid(); message = null } }) { Text("Remove") }
+            message?.let { Muted(it) }
+            HGhostButton(onClick = { scope.launch { repository.clearDebrid(); message = null } }) { Text("Remove") }
         } else {
-            Text(
-                "Torrent sources need a debrid service. Paste your API key; it stays on this device.",
-                color = LartColors.InkMuted,
-                fontSize = 14.sp,
-            )
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                DebridService.entries.forEach { option ->
-                    FilterChip(
-                        selected = option == service,
-                        onClick = { service = option },
-                        label = { Text(option.label) },
-                        colors = FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = androidx.compose.ui.graphics.Color.White,
-                            selectedLabelColor = androidx.compose.ui.graphics.Color.Black,
-                        ),
-                    )
-                }
-            }
-            OutlinedTextField(
+            OptionScale(DebridService.entries.map { it to it.label }, { it == service }) { service = it }
+            HTextField(
                 value = key,
                 onValueChange = { key = it.trim() },
                 label = { Text("${service.label} API key") },
@@ -774,9 +806,9 @@ private fun DebridCard(repository: Repository) {
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                 modifier = Modifier.fillMaxWidth(),
             )
-            message?.let { Text(it, color = androidx.compose.ui.graphics.Color(0xFFE57373), fontSize = 13.sp) }
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                Button(
+            message?.let { Text(it, color = Color(0xFFE57373), fontSize = 14.sp) }
+            Row(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically) {
+                HButton(
                     onClick = {
                         scope.launch {
                             busy = true
@@ -788,21 +820,13 @@ private fun DebridCard(repository: Repository) {
                     },
                     enabled = !busy && key.isNotBlank(),
                 ) { Text(if (busy) "Checking…" else "Save") }
-                TextButton(onClick = { uriHandler.openUri(service.tokenPage) }) { Text("Get my key") }
+                HLinkButton(onClick = { uriHandler.openUri(service.tokenPage) }) { Text("Get my key") }
             }
         }
     }
 }
 
-@Composable
-private fun Card(content: @Composable () -> Unit) {
-    Column(
-        Modifier.fillMaxWidth().background(LartColors.Surface, RoundedCornerShape(18.dp)).padding(16.dp),
-        verticalArrangement = Arrangement.spacedBy(12.dp),
-    ) { content() }
-}
-
-/** A card for one pasted API key: checks it on save, and shows Remove once set. */
+/** One pasted API key: checks it on save, and shows Remove once set. */
 @Composable
 fun KeyCard(
     title: String,
@@ -818,14 +842,14 @@ fun KeyCard(
     var key by remember { mutableStateOf("") }
     var busy by remember { mutableStateOf(false) }
     var error by remember { mutableStateOf<String?>(null) }
-    Card {
-        SectionTitle(title)
-        Text(body, color = LartColors.InkMuted, fontSize = 13.sp)
+    SettingsSection(title, body) {
         if (current != null) {
-            Text("Key saved (ends …${current.takeLast(4)}).", color = LartColors.InkSubtle, fontSize = 13.sp)
-            OutlinedButton(onClick = { scope.launch { onSave(null) } }) { Text("Remove") }
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text("Key saved (ends …${current.takeLast(4)})", color = LartColors.InkMuted, fontSize = 15.sp, modifier = Modifier.weight(1f))
+                HGhostButton(onClick = { scope.launch { onSave(null) } }) { Text("Remove") }
+            }
         } else {
-            OutlinedTextField(
+            HTextField(
                 value = key,
                 onValueChange = { key = it.trim() },
                 label = { Text(label) },
@@ -834,9 +858,9 @@ fun KeyCard(
                 keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
                 modifier = Modifier.fillMaxWidth(),
             )
-            error?.let { Text(it, color = androidx.compose.ui.graphics.Color(0xFFE57373), fontSize = 13.sp) }
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                Button(
+            error?.let { Text(it, color = Color(0xFFE57373), fontSize = 14.sp) }
+            Row(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically) {
+                HButton(
                     onClick = {
                         scope.launch {
                             busy = true
@@ -847,7 +871,7 @@ fun KeyCard(
                     },
                     enabled = !busy && key.isNotBlank(),
                 ) { Text(if (busy) "Checking…" else "Save") }
-                TextButton(onClick = { uriHandler.openUri(link) }) { Text(linkLabel) }
+                HLinkButton(onClick = { uriHandler.openUri(link) }) { Text(linkLabel) }
             }
         }
     }
