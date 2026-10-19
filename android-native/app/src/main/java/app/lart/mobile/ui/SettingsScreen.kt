@@ -90,6 +90,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import app.lart.mobile.data.ProviderKey
 import app.lart.mobile.data.AppSettings
 import app.lart.mobile.data.DebridAccount
 import app.lart.mobile.data.DebridService
@@ -144,7 +145,7 @@ private enum class Section(
     HomeRows("Home", "Rows and the hero on Home.", Icons.Outlined.Home, "home top 10 hero unreleased anime", setOf("Home")),
     PosterCards("Poster cards", "What a poster card shows.", Icons.Outlined.GridView, "poster card badge corners size", setOf("Poster cards")),
     DetailPages("Detail pages", "Spoilers and episode cards on title pages.", Icons.Outlined.Article, "episodes spoilers order description card size", setOf("Spoilers", "Episode cards")),
-    Metadata("Metadata providers", "Where titles, artwork and scores come from.", Icons.Outlined.Storage, "tmdb omdb rpdb posters ratings keys metadata"),
+    Metadata("Metadata providers", "Where titles, artwork and scores come from.", Icons.Outlined.Storage, "tmdb omdb tvdb thetvdb mdblist fanart rpdb custom posters ratings keys metadata"),
     Theme("Theme", "Accent colour.", Icons.Outlined.Palette, "accent colour color theme", setOf("Accent colour")),
     Storage("Storage", "Caches, watch positions on this device, and resetting settings.", Icons.Outlined.DeleteSweep, "cache images shaders watch positions reset"),
     Backup("Updates & backup", "Updates, and a copy of your setup.", Icons.Outlined.Backup, "backup restore export import file updates"),
@@ -802,6 +803,7 @@ private fun LibrarySection(repository: Repository, settings: AppSettings, set: (
         SettingsSection("Episode cards", "What an episode shows on a title page.") {
             Column {
                 SettingsLabel("On the card")
+                ToggleRow("Show IMDb rating on episodes", "Shows each episode's rating. Add your free OMDb API key for real IMDb scores; without it, ratings fall back to TMDB.", settings.showEpisodeRating) { v -> set { it.copy(showEpisodeRating = v) } }
                 ToggleRow("Show episode description", "Shows the episode synopsis on the cards. Turn it off to hide it.", settings.showEpisodeDescription) { v -> set { it.copy(showEpisodeDescription = v) } }
                 Label("Order")
                 Box(Modifier.padding(top = 10.dp, bottom = 6.dp)) {
@@ -833,6 +835,7 @@ private class Provider(
  */
 @Composable
 private fun ProvidersSection(repository: Repository) {
+    val keys by repository.providerKeys.collectAsState()
     val providers = listOf(
         Provider(
             "TMDB", "Recommended", "Trending, Popular, In Theaters, the per service rails, cast, artwork and details.",
@@ -843,9 +846,25 @@ private fun ProvidersSection(repository: Repository) {
             repository.omdbKey.collectAsState().value, "OMDb API key", "https://www.omdbapi.com/apikey.aspx",
         ) { repository.setOmdbKey(it) },
         Provider(
+            "TheTVDB", null, "Episode titles, stills and descriptions in your language, and network info.",
+            keys[ProviderKey.TVDB], "TheTVDB API key", "https://thetvdb.com/api-information",
+        ) { repository.setProviderKey(ProviderKey.TVDB, it) },
+        Provider(
+            "MDBList", null, "Letterboxd, Trakt, Metacritic and audience scores.",
+            keys[ProviderKey.MDBLIST], "MDBList API key", "https://mdblist.com/preferences/",
+        ) { repository.setProviderKey(ProviderKey.MDBLIST, it) },
+        Provider(
+            "Fanart.tv", null, "Logos and backdrops where TMDB comes up empty.",
+            keys[ProviderKey.FANART], "Fanart.tv API key", "https://fanart.tv/get-an-api-key/",
+        ) { repository.setProviderKey(ProviderKey.FANART, it) },
+        Provider(
             "RPDB", null, "Paid. Bakes scores into the poster image itself.",
             repository.rpdbKey.collectAsState().value, "RPDB API key", "https://ratingposterdb.com",
         ) { repository.setRpdbKey(it) },
+        Provider(
+            "Custom poster service", null, "Swap in Better Posters, PostersPlus, or your own URL template with {imdbId}, {tmdbId} or {type}.",
+            keys[ProviderKey.POSTERS], "Poster URL or template", "https://btttr.cc",
+        ) { repository.setProviderKey(ProviderKey.POSTERS, it) },
     )
     var open by rememberSaveable { mutableStateOf<String?>(null) }
     Text("Add TMDB for more catalogs and artwork. Other providers add the features listed below. You can use Lart with Cinemeta without adding a key.", color = LartColors.InkMuted, fontSize = 15.5.sp, lineHeight = 22.sp)
@@ -911,6 +930,8 @@ private fun AppearanceSection(settings: AppSettings, set: ((AppSettings) -> AppS
     Card("Poster cards") {
         SettingsLabel("Poster cards")
         SwitchRow("Rating badge", "IMDb rating in the corner of each poster.", settings.showRatingBadge) { v -> set { it.copy(showRatingBadge = v) } }
+        SwitchRow("In cinema and New badges", "Marks movies now in theaters, and titles from this year.", settings.showCardBadges) { v -> set { it.copy(showCardBadges = v) } }
+        SwitchRow("Award labels", "The top award a title won, such as OSCAR or 4 EMMYS (from Wikidata).", settings.showAwardBadge) { v -> set { it.copy(showAwardBadge = v) } }
         SwitchRow("Hide titles under posters", null, settings.hidePosterTitles) { v -> set { it.copy(hidePosterTitles = v) } }
         Label("Size")
         ChipRow(listOf(0.85f to "Small", 1f to "Normal", 1.15f to "Large"), settings.posterScale) { v -> set { it.copy(posterScale = v) } }

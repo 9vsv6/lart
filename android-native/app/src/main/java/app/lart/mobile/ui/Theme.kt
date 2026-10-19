@@ -10,6 +10,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.graphics.Color
 import app.lart.mobile.data.AppSettings
 import app.lart.mobile.data.Meta
+import app.lart.mobile.data.PosterService
 
 /**
  * The active profile's look-and-feel settings, read by every screen as Compose state
@@ -18,13 +19,11 @@ import app.lart.mobile.data.Meta
 object LartDisplay {
     var settings by mutableStateOf(AppSettings())
     var rpdbKey by mutableStateOf<String?>(null)
+    /** Harbor's custom poster service: a URL template, or the Better Posters / PostersPlus host. */
+    var customPosters by mutableStateOf<String?>(null)
 
-    /** RPDB's poster with ratings drawn on, for IMDb titles when a key is set. */
-    fun posterFor(meta: Meta): String? {
-        val key = rpdbKey ?: return meta.poster
-        val imdb = meta.id.substringBefore(':').takeIf { it.startsWith("tt") } ?: return meta.poster
-        return "https://api.ratingposterdb.com/$key/imdb/poster-default/$imdb.jpg"
-    }
+    /** The poster as Harbor picks it: the custom service, else RPDB with a key, else the addon's. */
+    fun posterFor(meta: Meta): String? = PosterService.poster(meta, rpdbKey, customPosters) ?: meta.poster
 }
 
 /** Harbor's dark palette (`src/index.css` tokens, converted from OKLCH to sRGB). */

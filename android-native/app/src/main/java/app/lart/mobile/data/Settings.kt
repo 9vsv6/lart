@@ -115,6 +115,12 @@ data class AppSettings(
 
     // ---- Library and cards ----
     val showRatingBadge: Boolean = true,
+    /** Harbor's card badges: "In cinema" and "New" at the top left. */
+    val showCardBadges: Boolean = true,
+    /** Harbor's award tab on cards: the top award a title won. */
+    val showAwardBadge: Boolean = true,
+    /** IMDb rating on each episode (OMDb with a key, else TMDB). */
+    val showEpisodeRating: Boolean = true,
     val hidePosterTitles: Boolean = false,
     val posterRadius: Int = 8,
     val posterScale: Float = 1f,

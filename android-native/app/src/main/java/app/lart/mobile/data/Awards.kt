@@ -3,6 +3,7 @@ package app.lart.mobile.data
 import android.net.Uri
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.sync.withPermit
 import kotlinx.serialization.json.JsonArray
 import kotlinx.serialization.json.JsonObject
 import kotlinx.serialization.json.contentOrNull
@@ -48,6 +49,21 @@ enum class AwardType(val single: String, val plural: String, val title: String) 
  */
 object Awards {
     private const val ENDPOINT = "https://query.wikidata.org/sparql"
+    private val priority = listOf(
+        AwardType.Oscar, AwardType.Emmy, AwardType.GoldenGlobe, AwardType.Bafta, AwardType.BaftaTv, AwardType.Cannes,
+        AwardType.Venice, AwardType.Berlin, AwardType.Sag, AwardType.CriticsChoice, AwardType.Spirit, AwardType.Annie,
+        AwardType.Cesar, AwardType.Goya, AwardType.BlueDragon, AwardType.Baeksang, AwardType.Bifa, AwardType.Saturn,
+    )
+
+    /** Harbor's card award tab: the top award won, "OSCAR" or "4 OSCARS"; null when none. */
+    suspend fun cardLabel(imdbId: String): String? {
+        val wins = forTitle(imdbId).filter { it.won }.groupBy { it.type }
+        val top = priority.firstOrNull { wins.containsKey(it) } ?: return null
+        val count = wins.getValue(top).size
+        val name = if (count == 1) top.single else top.plural
+        return (if (count > 1) "$count $name" else name).uppercase()
+    }
+
     private val cache = mutableMapOf<String, List<AwardEntry>>()
 
     private fun query(property: String, imdbId: String) = """
@@ -141,6 +157,13 @@ object Awards {
     /** Wins first, then nominations that weren't won; newest first. */
     suspend fun forTitle(imdbId: String): List<AwardEntry> {
         cache[imdbId]?.let { return it }
+        // Cards ask too, one per poster on screen: two Wikidata queries at a time.
+        return gate.withPermit { cache[imdbId] ?: load(imdbId) }
+    }
+
+    private val gate = kotlinx.coroutines.sync.Semaphore(2)
+
+    private suspend fun load(imdbId: String): List<AwardEntry> {
         val result = coroutineScope {
             val wins = async { parse(run(query("P166", imdbId)), won = true) }
             val noms = async { parse(run(query("P1411", imdbId)), won = false) }

@@ -295,17 +295,21 @@ fun PosterTile(meta: Meta, modifier: Modifier = Modifier, onClick: () -> Unit) {
             } else {
                 Text(meta.name, color = LartColors.InkMuted, fontSize = 12.sp, modifier = Modifier.align(Alignment.Center).padding(8.dp))
             }
+            // Harbor's IMDb tag at the bottom right (RPDB posters carry their own scores).
             meta.imdbRating?.takeIf { it.isNotBlank() && display.showRatingBadge && poster == meta.poster }?.let { rating ->
                 Row(
-                    Modifier.align(Alignment.BottomEnd).padding(6.dp).background(Color(0xB3000000), RoundedCornerShape(6.dp))
-                        .padding(horizontal = 5.dp, vertical = 2.dp),
+                    Modifier.align(Alignment.BottomEnd).padding(7.dp).background(Color(0xD9000000), RoundedCornerShape(50))
+                        .padding(start = 4.dp, end = 7.dp, top = 3.dp, bottom = 3.dp),
                     verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(2.dp),
+                    horizontalArrangement = Arrangement.spacedBy(4.dp),
                 ) {
-                    Icon(Icons.Rounded.Star, null, tint = Color(0xFFF5C518), modifier = Modifier.size(10.dp))
+                    Box(Modifier.background(Color(0xFFF5C518), RoundedCornerShape(3.dp)).padding(horizontal = 3.dp)) {
+                        Text("IMDb", color = Color.Black, fontSize = 7.5.sp, fontWeight = FontWeight.Black)
+                    }
                     Text(rating, color = Color.White, fontSize = 10.5.sp, fontWeight = FontWeight.Bold)
                 }
             }
+            CardBadges(meta, Modifier.align(Alignment.TopStart))
         }
         if (!display.hidePosterTitles) Text(
             meta.name,
@@ -442,4 +446,42 @@ private fun remainingLabel(ms: Long): String {
     val hours = minutes / 60
     val rest = minutes % 60
     return if (rest == 0L) "${hours}h left" else "${hours}h ${rest}m left"
+}
+
+/**
+ * Harbor's card badges (pick-card.tsx): "In cinema" for a movie now playing (unless it is
+ * a re-run more than nine months old), "New" for this year's titles, and the top award won.
+ */
+@Composable
+private fun CardBadges(meta: Meta, modifier: Modifier) {
+    val display = LartDisplay.settings
+    val imdb = meta.id.substringBefore(':').takeIf { it.startsWith("tt") }
+    var award by remember(meta.id) { mutableStateOf<String?>(null) }
+    if (display.showAwardBadge && imdb != null) {
+        LaunchedEffect(imdb) { award = runCatching { app.lart.mobile.data.Awards.cardLabel(imdb) }.getOrNull() }
+    }
+    val rerun = meta.releaseDate?.let { runCatching { java.time.LocalDate.parse(it.take(10)) }.getOrNull() }
+        ?.let { java.time.temporal.ChronoUnit.DAYS.between(it, java.time.LocalDate.now()) > 274 } ?: false
+    val label = when {
+        !display.showCardBadges -> null
+        meta.type == "movie" && meta.inTheaters && !rerun -> "In cinema"
+        meta.year == java.time.Year.now().value.toString() -> "New"
+        else -> null
+    }
+    Column(modifier.padding(7.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
+        label?.let { BadgePill(it, if (it == "In cinema") "🎟" else null) }
+        award?.let { BadgePill(it, "🏆") }
+    }
+}
+
+@Composable
+private fun BadgePill(text: String, glyph: String?) {
+    Row(
+        Modifier.background(Color(0xD9000000), RoundedCornerShape(50)).padding(horizontal = 7.dp, vertical = 3.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(3.dp),
+    ) {
+        glyph?.let { Text(it, fontSize = 8.5.sp) }
+        Text(text.uppercase(), color = Color.White, fontSize = 8.5.sp, fontWeight = FontWeight.ExtraBold, letterSpacing = 0.8.sp, maxLines = 1)
+    }
 }

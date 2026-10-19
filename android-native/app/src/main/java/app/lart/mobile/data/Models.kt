@@ -93,6 +93,10 @@ data class Meta(
     val writer: JsonElement? = null,
     val country: JsonElement? = null,
     val trailers: JsonElement? = null,
+    /** Harbor's "In cinema" badge: a movie TMDB lists as now playing. */
+    val inTheaters: Boolean = false,
+    /** Full release date ("2026-10-02"), for Harbor's re-run check. */
+    val releaseDate: String? = null,
 ) {
     val castNames: List<String> get() = names(cast)
     val directors: List<String> get() = names(director)

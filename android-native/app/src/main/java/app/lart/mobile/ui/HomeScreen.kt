@@ -275,7 +275,7 @@ private suspend fun tmdbRows(view: BrowseView, key: String): List<CatalogRow> = 
     }
     specs.mapIndexed { index, spec ->
         async {
-            val metas = runCatching { Tmdb.row(key, spec) }.getOrDefault(emptyList())
+            val metas = runCatching { Tmdb.row(key, spec) }.getOrDefault(emptyList()).let { list -> if (spec.path == "/movie/now_playing") list.map { it.copy(inTheaters = true) } else list }
             val shown = if (index == 0) {
                 val hero = metas.filter { it.background != null }.take(8)
                 val withLogos = Tmdb.withLogos(key, hero).associateBy { it.id }

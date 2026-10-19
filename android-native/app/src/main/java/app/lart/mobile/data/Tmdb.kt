@@ -43,6 +43,8 @@ data class TmdbDetails(
     val budget: Long?,
     val revenue: Long?,
     val trailerYouTube: String?,
+    val tmdbId: Int,
+    val tvdbId: Int?,
     val countries: List<String>,
     val originalLanguage: String?,
     val voteAverage: Double?,
@@ -147,6 +149,7 @@ object Tmdb {
             background = item.string("backdrop_path")?.let { "$IMAGES/w1280$it" },
             description = item.string("overview"),
             releaseInfo = date?.take(4),
+            releaseDate = date,
             genres = (item["genre_ids"] as? JsonArray)?.mapNotNull { genreNames[it.jsonPrimitive.intOrNull] },
         )
     }
@@ -193,7 +196,7 @@ object Tmdb {
             key,
             "/$kind/$id",
             mapOf(
-                "append_to_response" to "credits,aggregate_credits,images,recommendations,similar,videos,watch/providers",
+                "append_to_response" to "credits,aggregate_credits,images,recommendations,similar,videos,watch/providers,external_ids",
                 "include_image_language" to "$lang,en,null",
             ),
         )
@@ -247,6 +250,8 @@ object Tmdb {
             budget = d["budget"]?.jsonPrimitive?.contentOrNull?.toLongOrNull()?.takeIf { it > 0 },
             revenue = d["revenue"]?.jsonPrimitive?.contentOrNull?.toLongOrNull()?.takeIf { it > 0 },
             trailerYouTube = trailer,
+            tmdbId = id,
+            tvdbId = d["external_ids"]?.jsonObject?.get("tvdb_id")?.jsonPrimitive?.intOrNull,
             countries = (d["production_countries"] as? JsonArray).orEmpty().mapNotNull { it.jsonObject.string("name") },
             originalLanguage = originalLanguage,
             voteAverage = d["vote_average"]?.jsonPrimitive?.contentOrNull?.toDoubleOrNull(),
@@ -265,6 +270,17 @@ object Tmdb {
             posters = pictures("posters", "w342"),
             logos = pictures("logos", "w300"),
         )
+    }
+
+    /** TMDB's episode scores for a season, by episode number (the fallback for episode ratings). */
+    suspend fun seasonRatings(key: String, tvId: Int, season: Int): Map<Int, String> {
+        val body = runCatching { get(key, "/tv/$tvId/season/$season") }.getOrNull() ?: return emptyMap()
+        return (body["episodes"] as? JsonArray).orEmpty().mapNotNull { e ->
+            val o = e.jsonObject
+            val n = o["episode_number"]?.jsonPrimitive?.intOrNull ?: return@mapNotNull null
+            val v = o["vote_average"]?.jsonPrimitive?.contentOrNull?.toDoubleOrNull()?.takeIf { it > 0 } ?: return@mapNotNull null
+            n to "%.1f".format(java.util.Locale.US, v)
+        }.toMap()
     }
 
     /** Artwork, translation and cast for an IMDb title. */

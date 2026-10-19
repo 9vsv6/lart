@@ -23,5 +23,6 @@ class LartApp : Application() {
             }
         }
         main.launch { repository.rpdbKey.collect { LartDisplay.rpdbKey = it } }
+        main.launch { repository.providerKeys.collect { LartDisplay.customPosters = it[app.lart.mobile.data.ProviderKey.POSTERS] } }
     }
 }

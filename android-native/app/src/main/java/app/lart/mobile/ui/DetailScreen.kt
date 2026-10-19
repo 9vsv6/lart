@@ -71,6 +71,10 @@ import app.lart.mobile.data.Awards
 import app.lart.mobile.data.CastMember
 import app.lart.mobile.data.Meta
 import app.lart.mobile.data.Omdb
+import app.lart.mobile.data.Fanart
+import app.lart.mobile.data.Mdblist
+import app.lart.mobile.data.ProviderKey
+import app.lart.mobile.data.Tvdb
 import app.lart.mobile.data.Repository
 import app.lart.mobile.data.Score
 import app.lart.mobile.data.Tmdb
@@ -104,6 +108,10 @@ fun DetailScreen(
     var awards by remember { mutableStateOf<List<AwardEntry>>(emptyList()) }
     var scores by remember { mutableStateOf<List<Score>>(emptyList()) }
     val omdbKey by repository.omdbKey.collectAsState()
+    val providerKeys by repository.providerKeys.collectAsState()
+    var mdblist by remember { mutableStateOf<Mdblist.Scores?>(null) }
+    var network by remember { mutableStateOf<String?>(null) }
+    var art by remember { mutableStateOf<Fanart.Art?>(null) }
     val tmdbKey by repository.tmdbKey.collectAsState()
 
     // Awards from Wikidata, as Harbor's hero badge and Awards list; no key needed.
@@ -117,6 +125,38 @@ fun DetailScreen(
         val key = omdbKey ?: return@LaunchedEffect
         val imdb = meta?.id?.substringBefore(':')?.takeIf { it.startsWith("tt") } ?: return@LaunchedEffect
         scores = runCatching { Omdb.scores(key, imdb) }.getOrDefault(emptyList())
+    }
+    // Harbor's other providers, each with the user's own key.
+    LaunchedEffect(meta?.id, details?.tvdbId, providerKeys) {
+        val current = meta ?: return@LaunchedEffect
+        val imdb = current.id.substringBefore(':').takeIf { it.startsWith("tt") } ?: return@LaunchedEffect
+        val series = current.type != "movie"
+        providerKeys[ProviderKey.MDBLIST]?.let { key -> mdblist = runCatching { Mdblist.scores(key, imdb, current.type) }.getOrNull() }
+        val tvdbKey = providerKeys[ProviderKey.TVDB]
+        val tvdbId = if (series && tvdbKey != null) runCatching { Tvdb.seriesId(tvdbKey, imdb) }.getOrNull() else null
+        // TheTVDB: the network, and episode titles, descriptions and stills in your language.
+        if (tvdbKey != null && tvdbId != null) {
+            network = runCatching { Tvdb.network(tvdbKey, tvdbId) }.getOrNull()
+            val lang = LartDisplay.settings.metadataLanguage.ifEmpty { java.util.Locale.getDefault().language }
+            val episodes = runCatching { Tvdb.episodes(tvdbKey, tvdbId, Tvdb.language(lang)) }.getOrDefault(emptyList())
+                .associateBy { it.season to it.number }
+            if (episodes.isNotEmpty()) {
+                meta = current.copy(videos = current.videos?.map { v ->
+                    val e = episodes[(v.season ?: -1) to (v.episode ?: -1)] ?: return@map v
+                    v.copy(
+                        title = e.name?.takeIf { it.isNotBlank() } ?: v.title,
+                        overview = e.overview?.takeIf { it.isNotBlank() } ?: v.overview,
+                        thumbnail = v.thumbnail ?: e.image,
+                    )
+                })
+            }
+        }
+        // Fanart.tv: a logo and backdrop where TMDB has none.
+        providerKeys[ProviderKey.FANART]?.let { key ->
+            art = runCatching {
+                if (series) (details?.tvdbId ?: tvdbId)?.let { Fanart.tv(key, it) } else Fanart.movie(key, imdb)
+            }.getOrNull()
+        }
     }
     val listState = rememberLazyListState()
     val scrolled by remember { derivedStateOf { listState.firstVisibleItemIndex > 0 } }
@@ -139,7 +179,17 @@ fun DetailScreen(
     Box(Modifier.fillMaxSize().background(LartColors.Canvas)) {
         val current = meta
         when {
-            current != null -> DetailBody(repository, current, details, awards, scores, listState, onStreams, onOpen)
+            current != null -> DetailBody(
+                repository,
+                current.copy(logo = current.logo ?: art?.logo, background = current.background ?: art?.backdrop),
+                details?.let { d -> d.copy(logo = d.logo ?: art?.logo, backdrop = d.backdrop ?: art?.backdrop, networks = d.networks.ifEmpty { listOfNotNull(network) }) },
+                awards,
+                scores + mdblistScores(mdblist),
+                listState,
+                onStreams,
+                onOpen,
+                network,
+            )
             failed -> EmptyState("Couldn't load this title", "None of your addons has details for it.")
             else -> Loading(Modifier.padding(top = 160.dp))
         }
@@ -160,7 +210,17 @@ fun DetailScreen(
 
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun DetailBody(repository: Repository, meta: Meta, details: TmdbDetails?, awards: List<AwardEntry>, scores: List<Score>, listState: LazyListState, onStreams: (String, String) -> Unit, onOpen: (Meta) -> Unit) {
+private fun DetailBody(
+    repository: Repository,
+    meta: Meta,
+    details: TmdbDetails?,
+    awards: List<AwardEntry>,
+    scores: List<Score>,
+    listState: LazyListState,
+    onStreams: (String, String) -> Unit,
+    onOpen: (Meta) -> Unit,
+    network: String? = null,
+) {
     val videos = meta.videos.orEmpty()
     val isSeries = meta.type != "movie" && videos.isNotEmpty()
     // Season 0 holds specials; start on the first real season.
@@ -171,6 +231,22 @@ private fun DetailBody(repository: Repository, meta: Meta, details: TmdbDetails?
             .let { if (LartDisplay.settings.episodesNewestFirst) it.reversed() else it }
     }
     val next = remember(meta.id, videos) { if (isSeries) nextEpisode(repository, meta, videos) else null }
+    // Harbor's episode ratings: OMDb's real IMDb scores with a key, else TMDB's; one call per season.
+    val omdbKey by repository.omdbKey.collectAsState()
+    val tmdbKey by repository.tmdbKey.collectAsState()
+    val ratings = remember(meta.id) { androidx.compose.runtime.mutableStateMapOf<Int, Map<Int, String>>() }
+    LaunchedEffect(meta.id, season, omdbKey, tmdbKey, details?.tmdbId) {
+        val s = season ?: return@LaunchedEffect
+        if (!isSeries || !LartDisplay.settings.showEpisodeRating || ratings.containsKey(s)) return@LaunchedEffect
+        val imdb = meta.id.substringBefore(':').takeIf { it.startsWith("tt") }
+        val fromOmdb = if (omdbKey != null && imdb != null) runCatching { Omdb.seasonRatings(omdbKey!!, imdb, s) }.getOrDefault(emptyMap()) else emptyMap()
+        val found = fromOmdb.ifEmpty {
+            val key = tmdbKey
+            val tv = details?.tmdbId
+            if (key != null && tv != null) runCatching { Tmdb.seasonRatings(key, tv, s) }.getOrDefault(emptyMap()) else emptyMap()
+        }
+        if (found.isNotEmpty()) ratings[s] = found
+    }
     val play: () -> Unit = {
         if (isSeries) next?.let { onStreams(it.id, "${meta.name} · ${episodeLabel(it)}") } else onStreams(meta.id, meta.name)
     }
@@ -226,7 +302,7 @@ private fun DetailBody(repository: Repository, meta: Meta, details: TmdbDetails?
                         Column(Modifier.padding(top = 8.dp)) {
                             episodes.forEach { video ->
                                 val spoiler = LartDisplay.settings.hideSpoilers && (video.season ?: 0) > 0 && (video.season ?: 0) * 10_000 + (video.episode ?: 0) > upTo
-                                EpisodeRow(video, spoiler, side, wide) { onStreams(video.id, "${meta.name} · ${episodeLabel(video)}") }
+                                EpisodeRow(video, spoiler, side, wide, ratings[video.season ?: -1]?.get(video.episode ?: -1)) { onStreams(video.id, "${meta.name} · ${episodeLabel(video)}") }
                             }
                         }
                     }
@@ -303,7 +379,13 @@ private fun Hero(
                         Text(rating, color = Color.White, fontSize = 15.sp, fontWeight = FontWeight.Bold)
                     }
                 }
-                scores.filter { it.source != "IMDb" }.forEach { score -> Fact(if (score.source == "Rotten Tomatoes") "🍅 ${score.value}" else "Metacritic ${score.value}") }
+                scores.filter { it.source != "IMDb" }.forEach { score -> Fact(
+                    when (score.source) {
+                        "Rotten Tomatoes" -> "🍅 ${score.value}"
+                        "Audience" -> "🍿 ${score.value}"
+                        else -> "${score.source} ${score.value}"
+                    },
+                ) }
                 if (isSeries) meta.videos.orEmpty().mapNotNull { it.season }.filter { it > 0 }.distinct().size.takeIf { it > 0 }?.let { Fact(if (it == 1) "1 season" else "$it seasons") }
                 else (details?.runtimeMinutes?.let { "$it min" } ?: meta.runtime)?.let { Fact(it) }
                 (details?.genres?.takeIf { it.isNotEmpty() } ?: meta.genres.orEmpty()).take(3).forEach { Fact(it) }
@@ -599,7 +681,7 @@ private fun SeasonPicker(seasons: List<Int>, selected: Int?, videos: List<Video>
 
 /** Harbor's episode row: a numbered thumbnail, the title, "S1 E1 · date", and the description. */
 @Composable
-private fun EpisodeRow(video: Video, spoiler: Boolean, side: Dp, wide: Boolean, onClick: () -> Unit) {
+private fun EpisodeRow(video: Video, spoiler: Boolean, side: Dp, wide: Boolean, rating: String?, onClick: () -> Unit) {
     val display = LartDisplay.settings
     Row(
         modifier = Modifier.fillMaxWidth().clickable(onClick = onClick).padding(horizontal = side, vertical = 12.dp),
@@ -616,6 +698,17 @@ private fun EpisodeRow(video: Video, spoiler: Boolean, side: Dp, wide: Boolean, 
                     contentScale = ContentScale.Crop,
                     modifier = Modifier.fillMaxSize().then(if (spoiler && display.spoilerThumbnails) Modifier.blur(18.dp) else Modifier),
                 )
+            }
+            // Harbor's "★ 8.5" at the bottom left of the still.
+            rating?.takeIf { LartDisplay.settings.showEpisodeRating }?.let {
+                Row(
+                    Modifier.align(Alignment.BottomStart).padding(8.dp).clip(RoundedCornerShape(50)).background(Color(0xD9000000)).padding(horizontal = 8.dp, vertical = 3.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(4.dp),
+                ) {
+                    Text("★", color = Color(0xFFF5C518), fontSize = 11.sp)
+                    Text(it, color = Color.White, fontSize = 12.sp, fontWeight = FontWeight.Bold)
+                }
             }
             video.episode?.let { number ->
                 Box(
@@ -750,4 +843,16 @@ private fun AwardsSection(awards: List<AwardEntry>, side: Dp) {
             )
         }
     }
+}
+
+/** MDBList's scores as hero facts, after OMDb's: Letterboxd, Trakt, RT audience, MDBList's own. */
+private fun mdblistScores(m: Mdblist.Scores?): List<Score> {
+    m ?: return emptyList()
+    fun f(v: Double) = if (v % 1.0 == 0.0) v.toInt().toString() else "%.1f".format(Locale.US, v)
+    return listOfNotNull(
+        m.letterboxd?.let { Score("Letterboxd", f(it)) },
+        m.trakt?.let { Score("Trakt", "${f(it)}%") },
+        m.rtAudience?.let { Score("Audience", "${f(it)}%") },
+        m.score?.let { Score("MDBList", f(it)) },
+    )
 }

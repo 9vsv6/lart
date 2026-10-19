@@ -426,6 +426,19 @@ class Repository(private val context: Context) {
         _rpdbKey.value = clean
     }
 
+    /** Keys for the other metadata providers (TheTVDB, MDBList, Fanart.tv) and the custom poster URL, by name. */
+    private val _providerKeys = MutableStateFlow<Map<String, String>>(emptyMap())
+    val providerKeys: StateFlow<Map<String, String>> = _providerKeys.asStateFlow()
+    private val providerKeysPref = stringPreferencesKey("providerKeys")
+
+    suspend fun setProviderKey(name: String, key: String?) {
+        val clean = key?.trim()?.takeIf { it.isNotEmpty() }
+        if (clean != null) Providers.verify(name, clean)
+        val next = if (clean == null) _providerKeys.value - name else _providerKeys.value + (name to clean)
+        context.store.edit { it[providerKeysPref] = Net.json.encodeToString(stringMap, next) }
+        _providerKeys.value = next
+    }
+
     private val _omdbKey = MutableStateFlow<String?>(null)
     /** OMDb key: real IMDb, Rotten Tomatoes and Metacritic scores on title pages, as Harbor offers. */
     val omdbKey: StateFlow<String?> = _omdbKey.asStateFlow()
@@ -642,6 +655,7 @@ class Repository(private val context: Context) {
             _tmdbKey.value = prefs[KEY_TMDB]?.takeIf { it.isNotBlank() }
             _rpdbKey.value = prefs[KEY_RPDB]?.takeIf { it.isNotBlank() }
             _omdbKey.value = prefs[KEY_OMDB]?.takeIf { it.isNotBlank() }
+            _providerKeys.value = prefs[providerKeysPref]?.let { runCatching { Net.json.decodeFromString(stringMap, it) }.getOrNull() } ?: emptyMap()
             val profiles = prefs[KEY_PROFILES]?.let { runCatching { Net.json.decodeFromString(profileList, it) }.getOrNull() }
                 ?.takeIf { it.isNotEmpty() } ?: listOf(Profile(MAIN_PROFILE, "Me", PROFILE_COLORS.first()))
             _profiles.value = profiles
