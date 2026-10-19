@@ -148,6 +148,9 @@ object Jikan {
     }
 
     /** MAL → Kitsu, many at once (relations.yuna.moe takes a list), remembered for the session. */
+    /** The MAL id behind a Kitsu id a row already mapped; no network. */
+    fun malFor(kitsu: Int): Int? = kitsuByMal.entries.firstOrNull { it.value == kitsu }?.key
+
     private suspend fun kitsuIds(malIds: List<Int>): Map<Int, Int> {
         val missing = malIds.filter { it !in kitsuByMal }
         if (missing.isNotEmpty()) {

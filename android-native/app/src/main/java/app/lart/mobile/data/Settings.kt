@@ -119,6 +119,8 @@ data class AppSettings(
     val showCardBadges: Boolean = true,
     /** Harbor's award tab on cards: the top award a title won. */
     val showAwardBadge: Boolean = true,
+    /** Harbor's DUB tab on anime cards with an English dub airing (AniSchedule). */
+    val showDubBadge: Boolean = true,
     /** IMDb rating on each episode (OMDb with a key, else TMDB). */
     val showEpisodeRating: Boolean = true,
     val hidePosterTitles: Boolean = false,

@@ -932,6 +932,7 @@ private fun AppearanceSection(settings: AppSettings, set: ((AppSettings) -> AppS
         SwitchRow("Rating badge", "IMDb rating in the corner of each poster.", settings.showRatingBadge) { v -> set { it.copy(showRatingBadge = v) } }
         SwitchRow("In cinema and New badges", "Marks movies now in theaters, and titles from this year.", settings.showCardBadges) { v -> set { it.copy(showCardBadges = v) } }
         SwitchRow("Award labels", "The top award a title won, such as OSCAR or 4 EMMYS (from Wikidata).", settings.showAwardBadge) { v -> set { it.copy(showAwardBadge = v) } }
+        SwitchRow("Dub badge", "Marks anime with an English dub airing now (from AniSchedule).", settings.showDubBadge) { v -> set { it.copy(showDubBadge = v) } }
         SwitchRow("Hide titles under posters", null, settings.hidePosterTitles) { v -> set { it.copy(hidePosterTitles = v) } }
         Label("Size")
         ChipRow(listOf(0.85f to "Small", 1f to "Normal", 1.15f to "Large"), settings.posterScale) { v -> set { it.copy(posterScale = v) } }

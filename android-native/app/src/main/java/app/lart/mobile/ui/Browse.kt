@@ -460,6 +460,10 @@ private fun CardBadges(meta: Meta, modifier: Modifier) {
     if (display.showAwardBadge && imdb != null) {
         LaunchedEffect(imdb) { award = runCatching { app.lart.mobile.data.Awards.cardLabel(imdb) }.getOrNull() }
     }
+    var dub by remember(meta.id) { mutableStateOf(false) }
+    if (display.showDubBadge && meta.id.substringBefore(':') in setOf("kitsu", "mal", "anilist")) {
+        LaunchedEffect(meta.id) { dub = runCatching { app.lart.mobile.data.AnimeInfo.hasDub(meta.id, lookup = false) }.getOrDefault(false) }
+    }
     val rerun = meta.releaseDate?.let { runCatching { java.time.LocalDate.parse(it.take(10)) }.getOrNull() }
         ?.let { java.time.temporal.ChronoUnit.DAYS.between(it, java.time.LocalDate.now()) > 274 } ?: false
     val label = when {
@@ -469,6 +473,7 @@ private fun CardBadges(meta: Meta, modifier: Modifier) {
         else -> null
     }
     Column(modifier.padding(7.dp), verticalArrangement = Arrangement.spacedBy(5.dp)) {
+        if (dub) Text("DUB", color = LartColors.Canvas, fontSize = 9.sp, fontWeight = FontWeight.ExtraBold, letterSpacing = 1.2.sp, modifier = Modifier.background(LartColors.Accent.copy(alpha = 0.92f), RoundedCornerShape(6.dp)).padding(horizontal = 6.dp, vertical = 2.dp))
         label?.let { BadgePill(it, if (it == "In cinema") "🎟" else null) }
         award?.let { BadgePill(it, "🏆") }
     }

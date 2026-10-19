@@ -65,6 +65,8 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.lart.mobile.data.AddonClient
+import app.lart.mobile.data.AnimeInfo
+import app.lart.mobile.data.AnimeExtra
 import app.lart.mobile.data.AwardEntry
 import app.lart.mobile.data.AwardType
 import app.lart.mobile.data.Awards
@@ -114,6 +116,20 @@ fun DetailScreen(
     var network by remember { mutableStateOf<String?>(null) }
     var art by remember { mutableStateOf<Fanart.Art?>(null) }
     val tmdbKey by repository.tmdbKey.collectAsState()
+    var anime by remember { mutableStateOf<AnimeExtra?>(null) }
+    var relatedKitsu by remember { mutableStateOf<Map<Int, Int>>(emptyMap()) }
+
+    // Harbor's anime extras from AniList: characters, related anime, other titles, stats, next episode.
+    LaunchedEffect(meta?.id) {
+        val current = meta ?: return@LaunchedEffect
+        if (current.id.substringBefore(':') !in setOf("kitsu", "mal", "anilist")) return@LaunchedEffect
+        val ids = AnimeInfo.ids(current.id) ?: return@LaunchedEffect
+        // The IMDb id behind the anime gives it Wikidata's awards too.
+        ids.imdb?.takeIf { awards.isEmpty() }?.let { imdb -> awards = runCatching { Awards.forTitle(imdb) }.getOrDefault(emptyList()) }
+        val extra = ids.anilist?.let { AnimeInfo.extra(it) } ?: return@LaunchedEffect
+        anime = extra
+        relatedKitsu = AnimeInfo.kitsuFor(extra.related.map { it.anilistId })
+    }
 
     // Awards from Wikidata, as Harbor's hero badge and Awards list; no key needed.
     LaunchedEffect(meta?.id) {
@@ -192,6 +208,8 @@ fun DetailScreen(
                 onStreams,
                 onOpen,
                 network,
+                anime,
+                relatedKitsu,
             )
             failed -> EmptyState("Couldn't load this title", "None of your addons has details for it.")
             else -> Loading(Modifier.padding(top = 160.dp))
@@ -223,6 +241,8 @@ private fun DetailBody(
     onStreams: (String, String) -> Unit,
     onOpen: (Meta) -> Unit,
     network: String? = null,
+    anime: AnimeExtra? = null,
+    relatedKitsu: Map<Int, Int> = emptyMap(),
 ) {
     val videos = meta.videos.orEmpty()
     val isSeries = meta.type != "movie" && videos.isNotEmpty()
@@ -263,6 +283,7 @@ private fun DetailBody(
             (details?.overview ?: meta.description)?.let { synopsis ->
                 item(key = "synopsis") { Synopsis(synopsis, details?.tagline, side) }
             }
+            anime?.nextAiring?.let { (at, ep) -> item(key = "airing") { AnimeAiringBanner(at, ep, side) } }
             details?.watchOn?.takeIf { it.isNotEmpty() }?.let { providers ->
                 item(key = "watch") {
                     Column(Modifier.padding(horizontal = side), verticalArrangement = Arrangement.spacedBy(14.dp)) {
@@ -313,14 +334,26 @@ private fun DetailBody(
             }
             val cast = details?.cast?.takeIf { it.isNotEmpty() } ?: meta.castNames.map { CastMember(it, null, null) }
             if (cast.isNotEmpty()) item(key = "cast") { CastRail(cast, details?.castCount?.takeIf { it > 0 } ?: cast.size, side, wide) }
+            anime?.characters?.takeIf { it.isNotEmpty() }?.let { item(key = "characters") { AnimeCharactersRail(it, side, wide) } }
             details?.recommendations?.takeIf { it.isNotEmpty() }?.let { item(key = "more") { Rail("More Like This", it, onOpen) } }
             details?.similar?.takeIf { it.isNotEmpty() }?.let { item(key = "also") { Rail("You Might Also Like", it, onOpen) } }
+            anime?.related?.takeIf { it.isNotEmpty() }?.let { nodes ->
+                item(key = "related") {
+                    AnimeRelatedRail(nodes, relatedKitsu, side) { node, kitsu ->
+                        onOpen(Meta(id = "kitsu:$kitsu", type = if (node.format == "Movie") "movie" else "series", name = node.title, poster = node.poster))
+                    }
+                }
+            }
             if (details != null && (details.backdrops.isNotEmpty() || details.posters.isNotEmpty())) {
                 item(key = "media") { MediaGallery(details, side, wide) }
             }
             if (awards.isNotEmpty()) item(key = "awards") { AwardsSection(awards, side) }
-            val info = infoOf(meta, details)
+            anime?.let { animeTitles(it, meta.name) }?.takeIf { it.isNotEmpty() }?.let { titles ->
+                item(key = "titles") { Titled("Titles", titles, if (wide) 3 else 2, side) }
+            }
+            val info = infoOf(meta, details) + animeInfo(anime, details)
             if (info.isNotEmpty()) item(key = "info") { Information(info, if (wide) 3 else 2, side) }
+            anime?.statusDistribution?.takeIf { it.isNotEmpty() }?.let { item(key = "stats") { AnimeStats(it, side) } }
         }
     }
 }
@@ -641,10 +674,24 @@ private fun infoOf(meta: Meta, details: TmdbDetails?): List<Pair<String, String>
 
 private fun money(amount: Long): String = java.text.NumberFormat.getCurrencyInstance(Locale.US).apply { maximumFractionDigits = 0 }.format(amount)
 
+/** AniList's facts for anime, where TMDB gave none. */
+private fun animeInfo(anime: AnimeExtra?, details: TmdbDetails?): List<Pair<String, String>> {
+    anime ?: return emptyList()
+    return listOfNotNull(
+        anime.studios.takeIf { it.isNotEmpty() && details?.studios.isNullOrEmpty() }?.let { "Studio" to it.take(3).joinToString(", ") },
+        anime.source?.let { "Source" to it },
+        anime.tags.takeIf { it.isNotEmpty() }?.let { "Tags" to it.take(6).joinToString(", ") },
+        anime.favourites?.let { "Favourites" to "%,d on AniList".format(Locale.getDefault(), it) },
+    )
+}
+
 @Composable
-private fun Information(cells: List<Pair<String, String>>, columns: Int, side: Dp) {
+private fun Information(cells: List<Pair<String, String>>, columns: Int, side: Dp) = Titled("Information", cells, columns, side)
+
+@Composable
+private fun Titled(title: String, cells: List<Pair<String, String>>, columns: Int, side: Dp) {
     Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
-        Text("Information", color = LartColors.Ink, fontSize = 24.sp, fontWeight = FontWeight.SemiBold, modifier = Modifier.padding(horizontal = side))
+        Text(title,color = LartColors.Ink, fontSize = 24.sp, fontWeight = FontWeight.SemiBold, modifier = Modifier.padding(horizontal = side))
         LabelGrid(cells, columns, side)
     }
 }
