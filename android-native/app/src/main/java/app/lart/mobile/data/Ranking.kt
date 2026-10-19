@@ -65,7 +65,7 @@ object Ranking {
     }
 
     /** Higher is better. Playability on this device outweighs everything else. */
-    fun score(stream: Stream, playableNow: Boolean): Double {
+    fun score(stream: Stream, playableNow: Boolean, hi10pPenalty: Double = 500.0, languages: List<String> = emptyList()): Double {
         val t = traits(stream)
         var score = if (playableNow) 10_000.0 else 0.0
         score += when (t.resolution) {
@@ -83,7 +83,8 @@ object Ranking {
         if (t.dolbyVision) score += 10
         if (t.hevc) score += 15
         if (t.av1) score -= 20 // Hardware AV1 decode is still rare on Android.
-        if (t.tenBitH264) score -= 500 // Hi10P: almost no Android device can decode it.
+        if (t.tenBitH264) score -= hi10pPenalty // Hi10P: almost no Android device decodes it in hardware.
+        if (languages.isNotEmpty() && mentionsLanguage(stream, languages)) score += 90
         if (t.cam) score -= 800
         if (t.cached) score += 120
         if (t.uncached) score -= 300
@@ -99,6 +100,31 @@ object Ranking {
         }
         return score
     }
+
+    /** Whether the source names one of `languages` ("English", "Multi") or their usual tags. */
+    fun mentionsLanguage(stream: Stream, languages: List<String>): Boolean {
+        val text = listOfNotNull(stream.name, stream.title, stream.description, stream.behaviorHints?.filename).joinToString(" ")
+        return languages.any { lang ->
+            val tags = languageTags[lang].orEmpty() + lang
+            tags.any { Regex("""(?<![A-Za-z])""" + Regex.escape(it) + """(?![A-Za-z])""", RegexOption.IGNORE_CASE).containsMatchIn(text) }
+        }
+    }
+
+    private val languageTags = mapOf(
+        "English" to listOf("eng", "🇬🇧", "🇺🇸"),
+        "Spanish" to listOf("spa", "esp", "castellano", "latino", "🇪🇸", "🇲🇽"),
+        "French" to listOf("fre", "fra", "vff", "vf", "truefrench", "🇫🇷"),
+        "German" to listOf("ger", "deu", "🇩🇪"),
+        "Italian" to listOf("ita", "🇮🇹"),
+        "Portuguese" to listOf("por", "dublado", "🇵🇹", "🇧🇷"),
+        "Hindi" to listOf("hin", "🇮🇳"),
+        "Japanese" to listOf("jpn", "🇯🇵"),
+        "Korean" to listOf("kor", "🇰🇷"),
+        "Russian" to listOf("rus", "🇷🇺"),
+        "Arabic" to listOf("ara", "🇸🇦"),
+        "Turkish" to listOf("tur", "🇹🇷"),
+        "Multi" to listOf("multi", "dual audio", "dual-audio"),
+    )
 
     fun rank(streams: List<Stream>, playableNow: (Stream) -> Boolean): List<Stream> =
         streams.sortedByDescending { score(it, playableNow(it)) }

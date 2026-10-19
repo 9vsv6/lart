@@ -40,6 +40,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.blur
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
@@ -114,8 +115,9 @@ private fun DetailBody(repository: Repository, meta: Meta, cast: List<CastMember
     // Season 0 holds specials; start on the first real season.
     val seasons = remember(videos) { videos.mapNotNull { it.season }.distinct().sortedWith(compareBy({ it == 0 }, { it })) }
     var season by rememberSaveable(meta.id) { mutableStateOf(seasons.firstOrNull()) }
-    val episodes = remember(videos, season) {
+    val episodes = remember(videos, season, LartDisplay.settings.episodesNewestFirst) {
         videos.filter { it.season == season }.sortedBy { it.episode ?: 0 }
+            .let { if (LartDisplay.settings.episodesNewestFirst) it.reversed() else it }
     }
 
     LazyColumn(contentPadding = PaddingValues(bottom = 96.dp)) {
@@ -166,8 +168,10 @@ private fun DetailBody(repository: Repository, meta: Meta, cast: List<CastMember
                     }
                 }
             }
+            val upTo = nextEpisode(repository, meta, videos)?.let { (it.season ?: 0) * 10_000 + (it.episode ?: 0) } ?: 0
             items(episodes, key = { it.id }) { video ->
-                EpisodeRow(video) { onStreams(video.id, "${meta.name} · ${episodeLabel(video)}") }
+                val spoiler = LartDisplay.settings.hideSpoilers && (video.season ?: 0) > 0 && (video.season ?: 0) * 10_000 + (video.episode ?: 0) > upTo
+                EpisodeRow(video, spoiler) { onStreams(video.id, "${meta.name} · ${episodeLabel(video)}") }
             }
         }
     }
@@ -236,7 +240,8 @@ private fun Header(meta: Meta) {
 }
 
 @Composable
-private fun EpisodeRow(video: Video, onClick: () -> Unit) {
+private fun EpisodeRow(video: Video, spoiler: Boolean, onClick: () -> Unit) {
+    val display = LartDisplay.settings
     Row(
         modifier = Modifier.fillMaxWidth().clickable(onClick = onClick).padding(horizontal = 20.dp, vertical = 10.dp),
         horizontalArrangement = Arrangement.spacedBy(14.dp),
@@ -246,12 +251,26 @@ private fun EpisodeRow(video: Video, onClick: () -> Unit) {
             Modifier.width(140.dp).aspectRatio(16f / 9f).clip(RoundedCornerShape(10.dp)).background(LartColors.Elevated),
         ) {
             if (video.thumbnail != null) {
-                AsyncImage(video.thumbnail, contentDescription = null, contentScale = ContentScale.Crop, modifier = Modifier.fillMaxSize())
+                AsyncImage(
+                    video.thumbnail,
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.fillMaxSize().then(if (spoiler && display.spoilerThumbnails) Modifier.blur(18.dp) else Modifier),
+                )
             }
         }
         Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(4.dp)) {
             Text(episodeLabel(video), fontSize = 12.sp, color = LartColors.Accent, fontWeight = FontWeight.SemiBold)
-            Text(video.label, fontSize = 15.sp, color = LartColors.Ink, maxLines = 2, overflow = TextOverflow.Ellipsis)
+            Text(
+                if (spoiler && display.spoilerTitles) "Episode ${video.episode ?: ""}" else video.label,
+                fontSize = 15.sp,
+                color = LartColors.Ink,
+                maxLines = 2,
+                overflow = TextOverflow.Ellipsis,
+            )
+            video.overview?.takeIf { display.showEpisodeDescription && it.isNotBlank() && !(spoiler && display.spoilerDescriptions) }?.let {
+                Text(it, fontSize = 12.sp, lineHeight = 16.sp, color = LartColors.InkMuted, maxLines = 3, overflow = TextOverflow.Ellipsis)
+            }
             video.released?.take(10)?.let { Text(it, fontSize = 12.sp, color = LartColors.InkSubtle) }
         }
     }

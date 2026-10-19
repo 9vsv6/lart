@@ -17,6 +17,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import kotlinx.serialization.Serializable
@@ -24,6 +25,9 @@ import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.builtins.MapSerializer
 import kotlinx.serialization.builtins.SetSerializer
 import kotlinx.serialization.builtins.serializer
+import kotlinx.serialization.json.JsonObject
+import kotlinx.serialization.json.buildJsonObject
+import kotlinx.serialization.json.put
 
 private val Context.store by preferencesDataStore(name = "lart")
 
@@ -178,6 +182,8 @@ class Repository(private val context: Context) {
         _dismissed.value = prefs[keyDismissed]?.let { runCatching { Net.json.decodeFromString(stringSet, it) }.getOrNull() } ?: emptySet()
         _trackers.value = prefs[keyTrackers]?.let { runCatching { Net.json.decodeFromString(TrackerSettings.serializer(), it) }.getOrNull() } ?: TrackerSettings()
         _traktCw.value = emptyList()
+        _settings.value = prefs[keySettings]?.let { runCatching { Net.json.decodeFromString(AppSettings.serializer(), it) }.getOrNull() } ?: AppSettings()
+        _lastStreams.value = prefs[keyLastStreams]?.let { runCatching { Net.json.decodeFromString(stringMap, it) }.getOrNull() } ?: emptyMap()
         scope.launch { refreshTrackers() }
         profileLoaded.forEach { it(prefs) }
     }
@@ -222,7 +228,7 @@ class Repository(private val context: Context) {
         val trakt = _trackers.value.trakt?.takeIf { it.accessToken != null } ?: return
         val fresh = runCatching { Trakt.fresh(trakt) }.getOrDefault(trakt)
         if (fresh != trakt) updateTrackers { it.copy(trakt = fresh) }
-        _traktCw.value = runCatching { Trakt.playback(fresh) }.getOrDefault(emptyList())
+        _traktCw.value = if (_settings.value.traktInContinueWatching) runCatching { Trakt.playback(fresh) }.getOrDefault(emptyList()) else emptyList()
     }
 
     /** Where Trakt says `videoId` was paused, as a fraction, when this device has no position. */
@@ -295,9 +301,155 @@ class Repository(private val context: Context) {
     /** Reloads the addon collection and the library for the current account. */
     suspend fun refresh() {
         val account = _account.value
-        val remote = account?.let { runCatching { StremioApi.addons(it.authKey) }.getOrNull() }.orEmpty()
-        _addons.value = remote.ifEmpty { loadManifests(AddonClient.defaults) }
+        val remote = account?.let { runCatching { StremioApi.addonsRaw(it.authKey) }.getOrNull() }
+        rawCollection = when {
+            !remote.isNullOrEmpty() -> remote
+            account == null -> localCollection() ?: defaultCollection()
+            else -> defaultCollection()
+        }
+        _addons.value = decodeCollection(rawCollection)
         _library.value = account?.let { runCatching { StremioApi.library(it.authKey) }.getOrNull() }.orEmpty()
+    }
+
+    // ---- Addon collection, managed like Harbor's Addons page ----
+
+    /** The collection as stored (Stremio's raw entries, or this device's when signed out). */
+    private var rawCollection: List<JsonObject> = emptyList()
+    private val _addonUndo = MutableStateFlow<List<JsonObject>?>(null)
+    /** True right after a change, until it's undone or another change replaces it. */
+    val canUndoAddons: StateFlow<Boolean> = _addonUndo.map { it != null }.stateIn(scope, SharingStarted.Eagerly, false)
+
+    private fun decodeCollection(raw: List<JsonObject>): List<Addon> =
+        raw.mapNotNull { runCatching { Net.json.decodeFromJsonElement(Addon.serializer(), it) }.getOrNull() }
+
+    private fun entry(transportUrl: String, manifest: JsonObject, flags: JsonObject? = null): JsonObject = buildJsonObject {
+        put("transportUrl", transportUrl)
+        put("transportName", "")
+        put("manifest", manifest)
+        put("flags", flags ?: buildJsonObject { put("official", false); put("protected", false) })
+    }
+
+    private suspend fun defaultCollection(): List<JsonObject> = kotlinx.coroutines.coroutineScope {
+        AddonClient.defaults.map { url -> async { runCatching { entry(url, AddonClient.manifestJson(url)) }.getOrNull() } }
+            .awaitAll().filterNotNull()
+    }
+
+    private suspend fun localCollection(): List<JsonObject>? =
+        context.store.data.first()[KEY_LOCAL_ADDONS]
+            ?.let { runCatching { Net.json.parseToJsonElement(it) as? kotlinx.serialization.json.JsonArray }.getOrNull() }
+            ?.mapNotNull { it as? JsonObject }?.takeIf { it.isNotEmpty() }
+
+    /** Saves to the Stremio account when signed in (so Stremio sees it too), else on this device. */
+    private suspend fun saveCollection(next: List<JsonObject>) {
+        require(next.isNotEmpty()) { "Keep at least one addon" }
+        val previous = rawCollection
+        val account = _account.value
+        if (account != null) StremioApi.setAddonsRaw(account.authKey, next)
+        else context.store.edit { it[KEY_LOCAL_ADDONS] = kotlinx.serialization.json.JsonArray(next).toString() }
+        rawCollection = next
+        _addons.value = decodeCollection(next)
+        _addonUndo.value = previous
+    }
+
+    fun isProtected(addon: Addon): Boolean =
+        rawCollection.firstOrNull { it.string("transportUrl") == addon.transportUrl }
+            ?.get("flags")?.let { (it as? JsonObject)?.get("protected") }
+            ?.let { (it as? kotlinx.serialization.json.JsonPrimitive)?.content == "true" } == true
+
+    /** Installs from a manifest URL; an addon already installed (same id) is updated in place. */
+    suspend fun installAddon(transportUrl: String): Addon {
+        val url = transportUrl.trim().replace(Regex("^stremio://"), "https://")
+        val manifest = AddonClient.manifestJson(url)
+        val id = manifest.string("id") ?: error("That URL isn't a Stremio addon manifest")
+        val current = rawCollection
+        val existing = current.indexOfFirst { (it["manifest"] as? JsonObject)?.string("id") == id || it.string("transportUrl") == url }
+        val next = if (existing >= 0) {
+            current.toMutableList().also { it[existing] = entry(url, manifest, current[existing]["flags"] as? JsonObject) }
+        } else current + entry(url, manifest)
+        saveCollection(next)
+        return decodeCollection(listOf(entry(url, manifest))).first()
+    }
+
+    suspend fun removeAddon(addon: Addon) {
+        if (isProtected(addon)) error("${addon.manifest.name} is a protected Stremio addon and can't be removed")
+        saveCollection(rawCollection.filterNot { it.string("transportUrl") == addon.transportUrl })
+    }
+
+    /** Moves an addon up (-1) or down (+1); addons earlier in the list answer first, as in Stremio. */
+    suspend fun moveAddon(addon: Addon, delta: Int) {
+        val list = rawCollection.toMutableList()
+        val from = list.indexOfFirst { it.string("transportUrl") == addon.transportUrl }
+        val to = (from + delta).coerceIn(0, list.lastIndex)
+        if (from < 0 || from == to) return
+        list.add(to, list.removeAt(from))
+        saveCollection(list)
+    }
+
+    suspend fun undoAddons() {
+        val previous = _addonUndo.value ?: return
+        saveCollection(previous)
+        _addonUndo.value = null
+    }
+
+    /** A manifest URL waiting to be installed: from a stremio:// link an addon's configure page opened. */
+    val pendingInstall = MutableStateFlow<String?>(null)
+
+    fun isInstalled(manifestId: String?, transportUrl: String?): Boolean =
+        _addons.value.any { (manifestId != null && it.manifest.id == manifestId) || it.transportUrl == transportUrl }
+
+    // ---- Settings (per profile), and shared keys ----
+
+    private val _settings = MutableStateFlow(AppSettings())
+    /** Harbor's settings that Lart native acts on, for the active profile. */
+    val settings: StateFlow<AppSettings> = _settings.asStateFlow()
+    private val keySettings get() = stringPreferencesKey(profileKey("settings"))
+
+    fun updateSettings(change: (AppSettings) -> AppSettings) {
+        val before = _settings.value
+        val next = change(before)
+        _settings.value = next
+        if (before.traktInContinueWatching != next.traktInContinueWatching) scope.launch { refreshTrackers() }
+        scope.launch { context.store.edit { it[keySettings] = Net.json.encodeToString(AppSettings.serializer(), next) } }
+    }
+
+    private val _rpdbKey = MutableStateFlow<String?>(null)
+    /** RatingPosterDB key: posters with ratings drawn on them, as Harbor offers. */
+    val rpdbKey: StateFlow<String?> = _rpdbKey.asStateFlow()
+
+    suspend fun setRpdbKey(key: String?) {
+        val clean = key?.trim()?.takeIf { it.isNotEmpty() }
+        if (clean != null) {
+            // A real key returns a poster for a well-known title.
+            Net.call(okhttp3.Request.Builder().url("https://api.ratingposterdb.com/$clean/imdb/poster-default/tt0111161.jpg").head().build())
+        }
+        context.store.edit { if (clean == null) it.remove(KEY_RPDB) else it[KEY_RPDB] = clean }
+        _rpdbKey.value = clean
+    }
+
+    /** The source you last played for each title: "addonId|stream name". */
+    private val _lastStreams = MutableStateFlow<Map<String, String>>(emptyMap())
+    val lastStreams: StateFlow<Map<String, String>> = _lastStreams.asStateFlow()
+    private val keyLastStreams get() = stringPreferencesKey(profileKey("lastStreams"))
+    private val stringMap = MapSerializer(String.serializer(), String.serializer())
+
+    /** The remembered source for `metaId` as (addon id, stream name), when that setting is on. */
+    fun preferredSource(metaId: String): Pair<String, String?>? {
+        if (!_settings.value.rememberLastStream) return null
+        val saved = _lastStreams.value[metaId] ?: return null
+        return saved.substringBefore("|") to saved.substringAfter("|", "").ifEmpty { null }
+    }
+
+    fun rememberStream(metaId: String, addonId: String, streamName: String) {
+        if (!_settings.value.rememberLastStream) return
+        val next = (_lastStreams.value + (metaId to "$addonId|$streamName")).entries.toList().takeLast(500).associate { it.key to it.value }
+        _lastStreams.value = next
+        scope.launch { context.store.edit { it[keyLastStreams] = Net.json.encodeToString(stringMap, next) } }
+    }
+
+    /** Forgets this device's watch positions for the profile (Settings → System). */
+    fun clearResumeHistory() {
+        _resume.value = emptyMap()
+        scope.launch { context.store.edit { it.remove(keyResume) } }
     }
 
     private suspend fun loadManifests(urls: List<String>): List<Addon> = kotlinx.coroutines.coroutineScope {
@@ -423,7 +575,53 @@ class Repository(private val context: Context) {
 
     // Last, so every property above exists before the background load reads it.
     init {
-        scope.launch {
+        scope.launch { loadAll() }
+        scope.launch { settings.collect { AddonClient.streamTimeoutMs = it.addonTimeoutSec * 1_000L } }
+    }
+
+    /**
+     * Everything Lart keeps (settings, profiles, lists, progress, sign-ins) as JSON, for
+     * Harbor-style Backup & restore. It holds account keys, so the file is private to you.
+     */
+    suspend fun exportBackup(): String {
+        val prefs = context.store.data.first().asMap()
+        val entries = buildJsonObject {
+            for ((key, value) in prefs) {
+                when (value) {
+                    is String -> put(key.name, buildJsonObject { put("t", "s"); put("v", value) })
+                    is Boolean -> put(key.name, buildJsonObject { put("t", "b"); put("v", value) })
+                }
+            }
+        }
+        return buildJsonObject {
+            put("app", "lart-native")
+            put("version", 1)
+            put("prefs", entries)
+        }.toString()
+    }
+
+    /** Replaces everything with a backup from exportBackup, then reloads. */
+    suspend fun importBackup(json: String) {
+        val root = Net.json.parseToJsonElement(json) as? JsonObject ?: error("That file isn't a Lart backup")
+        if ((root["app"] as? kotlinx.serialization.json.JsonPrimitive)?.content != "lart-native") error("That file isn't a Lart native backup")
+        val entries = root["prefs"] as? JsonObject ?: error("The backup is empty")
+        context.store.edit { prefs ->
+            prefs.clear()
+            for ((name, element) in entries) {
+                val obj = element as? JsonObject ?: continue
+                val value = (obj["v"] as? kotlinx.serialization.json.JsonPrimitive) ?: continue
+                when ((obj["t"] as? kotlinx.serialization.json.JsonPrimitive)?.content) {
+                    "s" -> prefs[stringPreferencesKey(name)] = value.content
+                    "b" -> prefs[booleanPreferencesKey(name)] = value.content == "true"
+                }
+            }
+        }
+        loadAll()
+    }
+
+    /** Reads everything from the store: at start, and again after restoring a backup. */
+    private suspend fun loadAll() {
+        run {
             val prefs = context.store.data.first()
             val authKey = prefs[KEY_AUTH]
             if (authKey != null) _account.value = Account(authKey, prefs[KEY_EMAIL] ?: "")
@@ -431,15 +629,16 @@ class Repository(private val context: Context) {
             val key = prefs[KEY_DEBRID_KEY]
             if (service != null && !key.isNullOrBlank()) _debrid.value = DebridAccount(service, key)
             _tmdbKey.value = prefs[KEY_TMDB]?.takeIf { it.isNotBlank() }
+            _rpdbKey.value = prefs[KEY_RPDB]?.takeIf { it.isNotBlank() }
             val profiles = prefs[KEY_PROFILES]?.let { runCatching { Net.json.decodeFromString(profileList, it) }.getOrNull() }
                 ?.takeIf { it.isNotEmpty() } ?: listOf(Profile(MAIN_PROFILE, "Me", PROFILE_COLORS.first()))
             _profiles.value = profiles
             profileId = prefs[KEY_ACTIVE_PROFILE]?.takeIf { id -> profiles.any { it.id == id } } ?: profiles.first().id
             _activeProfile.value = profiles.first { it.id == profileId }
-            // One profile: nobody to ask. Several: Harbor asks "Who's watching?" on launch.
-            _profileChosen.value = profiles.size == 1
             loadProfile(prefs)
-            launch { _builtins.value = loadManifests(AddonClient.builtins) }
+            // One profile: nobody to ask. Several: Harbor asks "Who's watching?" on launch, unless turned off.
+            _profileChosen.value = profiles.size == 1 || !_settings.value.askProfileOnLaunch
+            scope.launch { _builtins.value = loadManifests(AddonClient.builtins) }
             refresh()
             _ready.value = true
         }
@@ -452,6 +651,8 @@ class Repository(private val context: Context) {
         val KEY_DEBRID_KEY: Preferences.Key<String> = stringPreferencesKey("debridKey")
         val KEY_PROFILES: Preferences.Key<String> = stringPreferencesKey("profiles")
         val KEY_TMDB: Preferences.Key<String> = stringPreferencesKey("tmdbKey")
+        val KEY_RPDB: Preferences.Key<String> = stringPreferencesKey("rpdbKey")
+        val KEY_LOCAL_ADDONS: Preferences.Key<String> = stringPreferencesKey("localAddons")
         val KEY_ACTIVE_PROFILE: Preferences.Key<String> = stringPreferencesKey("activeProfile")
 
         fun parseTime(value: String?): Long =

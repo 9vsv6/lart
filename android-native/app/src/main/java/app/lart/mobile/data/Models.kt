@@ -19,12 +19,21 @@ data class Manifest(
     val version: String = "",
     val description: String? = null,
     val logo: String? = null,
+    val background: String? = null,
     val types: List<String> = emptyList(),
     val catalogs: List<CatalogDef> = emptyList(),
     /** Each entry is a resource name, or an object with its own types and idPrefixes. */
     val resources: List<JsonElement> = emptyList(),
     val idPrefixes: List<String>? = null,
+    val behaviorHints: JsonObject? = null,
 ) {
+    /** "stream", "catalog", "meta", "subtitles"… */
+    val resourceNames: List<String>
+        get() = resources.mapNotNull { (it as? JsonPrimitive)?.contentOrNull ?: (it as? JsonObject)?.get("name")?.jsonPrimitive?.contentOrNull }.distinct()
+
+    val configurable: Boolean get() = behaviorHints?.get("configurable")?.jsonPrimitive?.contentOrNull == "true"
+    val configurationRequired: Boolean get() = behaviorHints?.get("configurationRequired")?.jsonPrimitive?.contentOrNull == "true"
+
     /** Whether this addon answers `resource` requests for an item of `type` with `id`. */
     fun supports(resource: String, type: String, id: String? = null): Boolean = resources.any { entry ->
         when (entry) {

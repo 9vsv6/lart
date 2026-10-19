@@ -50,6 +50,7 @@ import kotlinx.coroutines.launch
 fun StreamsScreen(
     repository: Repository,
     type: String,
+    metaId: String,
     videoId: String,
     title: String,
     onBack: () -> Unit,
@@ -58,6 +59,8 @@ fun StreamsScreen(
     val addons by repository.addons.collectAsState()
     val debrid by repository.debrid.collectAsState()
     val autoPlay by repository.autoPlay.collectAsState()
+    val settings by repository.settings.collectAsState()
+    val remembered = remember(metaId) { repository.preferredSource(metaId) }
     val scope = rememberCoroutineScope()
     var ranked by remember { mutableStateOf<List<RankedStream>?>(null) }
     var status by remember { mutableStateOf<String?>(null) }
@@ -66,7 +69,9 @@ fun StreamsScreen(
     // Auto-play once per visit: coming back from the player shows the list instead.
     var autoPlayed by rememberSaveable(videoId) { mutableStateOf(false) }
 
-    fun play(stream: Stream) {
+    fun play(item: RankedStream) {
+        val stream = item.stream
+        repository.rememberStream(metaId, item.addon.manifest.id, Playback.streamKey(stream))
         job?.cancel()
         error = null
         status = if (stream.direct) null else "Getting the link from ${debrid?.service?.label ?: "debrid"}…"
@@ -78,9 +83,9 @@ fun StreamsScreen(
         }
     }
 
-    LaunchedEffect(addons, type, videoId, debrid) {
+    LaunchedEffect(addons, type, videoId, debrid, settings.streamFilter, settings.streamSort, settings.safetyFilter, settings.streamLanguages, settings.torrentsDisabled, settings.requireStreamLanguage) {
         if (addons.isEmpty()) return@LaunchedEffect
-        val list = Playback.ranked(addons, type, videoId, debrid)
+        val list = Playback.ranked(addons, type, videoId, debrid, settings, prefer = remembered)
         ranked = list
         if (autoPlay && !autoPlayed) {
             autoPlayed = true
@@ -132,7 +137,9 @@ fun StreamsScreen(
                 verticalArrangement = Arrangement.spacedBy(10.dp),
             ) {
                 itemsIndexed(current) { index, item ->
-                    StreamRow(item, best = index == 0, playable = item.stream.playable(debrid != null)) { play(item.stream) }
+                    val last = remembered != null && index == 0 && item.addon.manifest.id == remembered.first &&
+                        (remembered.second == null || Playback.streamKey(item.stream) == remembered.second)
+                    StreamRow(item, best = index == 0, last = last, showFilename = settings.showFilename, playable = item.stream.playable(debrid != null)) { play(item) }
                 }
             }
         }
@@ -140,7 +147,7 @@ fun StreamsScreen(
 }
 
 @Composable
-private fun StreamRow(item: RankedStream, best: Boolean, playable: Boolean, onClick: () -> Unit) {
+private fun StreamRow(item: RankedStream, best: Boolean, last: Boolean, showFilename: Boolean, playable: Boolean, onClick: () -> Unit) {
     val stream = item.stream
     Column(
         modifier = Modifier
@@ -161,11 +168,12 @@ private fun StreamRow(item: RankedStream, best: Boolean, playable: Boolean, onCl
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier.weight(1f, fill = false),
             )
-            if (best && playable) Text("Best", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = LartColors.Ink)
+            if (best && playable) Text(if (last) "Last played" else "Best", fontSize = 12.sp, fontWeight = FontWeight.Bold, color = LartColors.Ink)
         }
         val badges = Ranking.badges(stream)
         if (badges.isNotEmpty()) Text(badges.joinToString("  ·  "), fontSize = 12.sp, color = LartColors.InkMuted)
         Text(stream.text, fontSize = 13.sp, lineHeight = 18.sp, color = LartColors.Ink, maxLines = 3, overflow = TextOverflow.Ellipsis)
+        if (showFilename) stream.behaviorHints?.filename?.let { Text(it, fontSize = 11.sp, color = LartColors.InkSubtle, maxLines = 2, overflow = TextOverflow.Ellipsis) }
         Text(
             when {
                 playable -> item.addon.manifest.name

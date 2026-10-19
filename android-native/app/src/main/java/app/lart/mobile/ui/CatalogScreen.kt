@@ -92,7 +92,7 @@ fun CatalogScreen(
             metas.isEmpty() -> EmptyState("Nothing here", "This catalog came back empty.")
             else -> LazyVerticalGrid(
                 state = grid,
-                columns = GridCells.Adaptive(minSize = 112.dp),
+                columns = GridCells.Adaptive(minSize = 112.dp * LartDisplay.settings.posterScale),
                 contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 32.dp),
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp),
@@ -138,7 +138,7 @@ private fun TmdbCatalog(repository: Repository, spec: Tmdb.RowSpec, title: Strin
             metas.isEmpty() -> EmptyState("Nothing here", "TMDB returned nothing for this row.")
             else -> LazyVerticalGrid(
                 state = grid,
-                columns = GridCells.Adaptive(minSize = 112.dp),
+                columns = GridCells.Adaptive(minSize = 112.dp * LartDisplay.settings.posterScale),
                 contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 32.dp),
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp),

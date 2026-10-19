@@ -143,7 +143,7 @@ fun SearchScreen(repository: Repository, onOpen: (Meta) -> Unit, onGenre: (type:
             }
             current.isEmpty() -> EmptyState("No results", "None of your addons found \"${query.trim()}\".")
             else -> LazyVerticalGrid(
-                columns = GridCells.Adaptive(minSize = 112.dp),
+                columns = GridCells.Adaptive(minSize = 112.dp * LartDisplay.settings.posterScale),
                 contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 32.dp),
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp),

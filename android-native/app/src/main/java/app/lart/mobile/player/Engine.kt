@@ -1,6 +1,7 @@
 package app.lart.mobile.player
 
 import android.view.View
+import app.lart.mobile.data.AppSettings
 import app.lart.mobile.data.PlayerPrefs
 
 /** A track as an engine reports it; the activity turns these into menu rows. */
@@ -14,6 +15,12 @@ data class EngineTrack(
     /** Added from an addon (mpv loads those as its own tracks). */
     val external: Boolean = false,
 )
+
+/**
+ * What an engine needs from the settings when it starts: audio and subtitle languages in
+ * order of preference (no subtitle languages means subtitles start off), and the rest.
+ */
+data class EngineSetup(val audioLanguages: List<String>, val subtitleLanguages: List<String>, val settings: AppSettings)
 
 interface EngineListener {
     fun onPlayingChanged(playing: Boolean)
@@ -60,13 +67,19 @@ interface Engine {
     /** Loads an addon subtitle as the engine's own track. Engines that can't return false. */
     fun addExternalSubtitle(url: String, language: String, title: String): Boolean
     fun removeExternalSubtitles()
-    fun applySubtitleStyle(prefs: PlayerPrefs, lifted: Boolean)
+    fun applySubtitleStyle(prefs: PlayerPrefs, style: AppSettings, lifted: Boolean)
     /** Subtitle events for Lart to draw at `positionMs` (engines that don't draw them). */
     fun cuesAt(positionMs: Long): List<UiCue>
 
     /** GLSL shaders (Anime4K); false when the engine has no shader support. */
     val supportsShaders: Boolean
     fun setShaders(paths: List<String>)
+
+    /** A second subtitle shown at the top at the same time; null hides it. Engines that can't ignore it. */
+    fun selectSecondaryText(key: String?) {}
+    /** Loudest the engine may go, as a multiple of full volume (mpv can boost past 100%). */
+    val maxVolume: Float get() = 1f
+    fun setVolume(level: Float) {}
 
     fun release()
 }

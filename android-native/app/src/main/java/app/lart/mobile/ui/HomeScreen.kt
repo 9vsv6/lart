@@ -92,8 +92,11 @@ fun HomeScreen(repository: Repository, nav: BrowseNav) {
         }
     }
 
+    val display = LartDisplay.settings
+    LaunchedEffect(display.hideAnime) { if (display.hideAnime && view == BrowseView.Anime) view = BrowseView.Home }
+
     Box(Modifier.fillMaxSize().background(LartColors.Canvas)) {
-        val current = rows[view]
+        val current = rows[view]?.let { tidyRows(it, display) }
         val listState = rememberLazyListState()
         LaunchedEffect(view) { listState.scrollToItem(0) }
         val top = WindowInsets.statusBars.asPaddingValues().calculateTopPadding() + 68.dp
@@ -126,7 +129,7 @@ fun HomeScreen(repository: Repository, nav: BrowseNav) {
                     if (view == BrowseView.Home && cw.isNotEmpty()) {
                         item(key = "cw") { ContinueWatchingRow(cw, nav::resume, repository::dismissContinueWatching) }
                     }
-                    current.firstOrNull()?.let { first ->
+                    current.firstOrNull()?.takeIf { display.showTop10 }?.let { first ->
                         item(key = "top10") {
                             RankRail(
                                 when (view) {
@@ -138,7 +141,7 @@ fun HomeScreen(repository: Repository, nav: BrowseNav) {
                             )
                         }
                     }
-                    items(current.drop(1), key = { it.key }) { row ->
+                    items(if (display.showTop10) current.drop(1) else current, key = { it.key }) { row ->
                         Rail(row.title, row.metas.distinctBy { it.id }.take(18), nav::openMeta) { nav.openCatalog(row) }
                     }
                 }
@@ -259,3 +262,18 @@ private suspend fun tmdbRows(view: BrowseView, key: String): List<CatalogRow> = 
 }
 
 private val CatalogDef.supportsSearchOnly: Boolean get() = id.contains("search", ignoreCase = true)
+
+/** Settings → Library: drop unreleased titles and anime from the rows when asked. */
+private fun tidyRows(rows: List<CatalogRow>, settings: app.lart.mobile.data.AppSettings): List<CatalogRow> {
+    if (!settings.hideUnreleased && !settings.hideAnime) return rows
+    val year = java.util.Calendar.getInstance().get(java.util.Calendar.YEAR)
+    return rows.map { row ->
+        row.copy(
+            metas = row.metas.filter { meta ->
+                val unreleased = settings.hideUnreleased && (meta.year?.toIntOrNull()?.let { it > year } ?: false)
+                val anime = settings.hideAnime && (meta.type == "anime" || meta.genres.orEmpty().any { it.equals("anime", true) })
+                !unreleased && !anime
+            },
+        )
+    }.filter { it.metas.isNotEmpty() }
+}

@@ -100,7 +100,7 @@ fun LibraryScreen(repository: Repository, onOpen: (Meta) -> Unit, onResume: (CwI
             Shelf.Watching -> {
                 if (cw.isEmpty()) EmptyState("Nothing in progress", "Titles you start watching show up here.")
                 else LazyVerticalGrid(
-                    columns = GridCells.Adaptive(minSize = 112.dp),
+                    columns = GridCells.Adaptive(minSize = 112.dp * LartDisplay.settings.posterScale),
                     contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 32.dp),
                     horizontalArrangement = Arrangement.spacedBy(12.dp),
                     verticalArrangement = Arrangement.spacedBy(16.dp),
@@ -126,7 +126,7 @@ fun LibraryScreen(repository: Repository, onOpen: (Meta) -> Unit, onResume: (CwI
 @Composable
 private fun PosterGrid(metas: List<Meta>, onOpen: (Meta) -> Unit) {
     LazyVerticalGrid(
-        columns = GridCells.Adaptive(minSize = 112.dp),
+        columns = GridCells.Adaptive(minSize = 112.dp * LartDisplay.settings.posterScale),
         contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 32.dp),
         horizontalArrangement = Arrangement.spacedBy(12.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),

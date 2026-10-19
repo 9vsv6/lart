@@ -98,7 +98,7 @@ fun ViewSwitcher(current: BrowseView, onSelect: (BrowseView) -> Unit) {
             shape = RoundedCornerShape(18.dp),
             containerColor = LartColors.Elevated,
         ) {
-            BrowseView.entries.forEach { view ->
+            BrowseView.entries.filter { it != BrowseView.Anime || !LartDisplay.settings.hideAnime }.forEach { view ->
                 val on = view == current
                 DropdownMenuItem(
                     text = {
@@ -130,8 +130,9 @@ fun HeroCarousel(
     var index by remember(slides) { mutableIntStateOf(0) }
     var pausedUntil by remember { mutableLongStateOf(0L) }
     var listVersion by remember { mutableIntStateOf(0) }
-    LaunchedEffect(slides) {
-        while (slides.size > 1) {
+    val rotate = LartDisplay.settings.heroAutoRotate
+    LaunchedEffect(slides, rotate) {
+        while (rotate && slides.size > 1) {
             delay(8_000)
             if (System.currentTimeMillis() >= pausedUntil) index = (index + 1) % slides.size
         }
@@ -267,21 +268,32 @@ fun Rail(title: String, metas: List<Meta>, onOpen: (Meta) -> Unit, onSeeAll: (()
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         RailHeader(title, onSeeAll)
         LazyRow(contentPadding = PaddingValues(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            items(metas, key = { it.type + it.id }) { meta -> PosterTile(meta, Modifier.width(124.dp)) { onOpen(meta) } }
+            items(metas, key = { it.type + it.id }) { meta -> PosterTile(meta, Modifier.width(124.dp * LartDisplay.settings.posterScale)) { onOpen(meta) } }
         }
     }
 }
 
 @Composable
 fun PosterTile(meta: Meta, modifier: Modifier = Modifier, onClick: () -> Unit) {
+    val display = LartDisplay.settings
+    val rpdb = LartDisplay.posterFor(meta)
+    // RPDB has no poster for some titles: fall back to the addon's.
+    var rpdbFailed by remember(rpdb) { mutableStateOf(false) }
+    val poster = if (rpdbFailed) meta.poster else rpdb
     Column(modifier.clickable(onClick = onClick)) {
-        Box(Modifier.fillMaxWidth().aspectRatio(2f / 3f).clip(RoundedCornerShape(8.dp)).background(LartColors.Elevated)) {
-            if (meta.poster != null) {
-                AsyncImage(meta.poster, meta.name, contentScale = ContentScale.Crop, modifier = Modifier.fillMaxSize())
+        Box(Modifier.fillMaxWidth().aspectRatio(2f / 3f).clip(RoundedCornerShape(display.posterRadius.dp)).background(LartColors.Elevated)) {
+            if (poster != null) {
+                AsyncImage(
+                    poster,
+                    meta.name,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.fillMaxSize(),
+                    onError = { if (poster != meta.poster) rpdbFailed = true },
+                )
             } else {
                 Text(meta.name, color = LartColors.InkMuted, fontSize = 12.sp, modifier = Modifier.align(Alignment.Center).padding(8.dp))
             }
-            meta.imdbRating?.takeIf { it.isNotBlank() }?.let { rating ->
+            meta.imdbRating?.takeIf { it.isNotBlank() && display.showRatingBadge && poster == meta.poster }?.let { rating ->
                 Row(
                     Modifier.align(Alignment.BottomEnd).padding(6.dp).background(Color(0xB3000000), RoundedCornerShape(6.dp))
                         .padding(horizontal = 5.dp, vertical = 2.dp),
@@ -293,7 +305,7 @@ fun PosterTile(meta: Meta, modifier: Modifier = Modifier, onClick: () -> Unit) {
                 }
             }
         }
-        Text(
+        if (!display.hidePosterTitles) Text(
             meta.name,
             color = LartColors.InkMuted,
             fontSize = 12.5.sp,

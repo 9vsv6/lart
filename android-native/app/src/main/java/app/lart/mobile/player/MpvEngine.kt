@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.view.View
+import app.lart.mobile.data.AppSettings
 import app.lart.mobile.data.Net
 import app.lart.mobile.data.PlayerPrefs
 import dev.jdtech.mpv.MPVLib
@@ -28,7 +29,7 @@ import java.util.Locale
  * hardware can't (10-bit H.264), mpv's own audio and subtitle delay, and GLSL
  * shaders for Anime4K. Video goes to a SurfaceView through mpv's GPU output.
  */
-class MpvEngine private constructor(context: Context, private val mpv: MPVLib) : Engine, MPVLib.EventObserver, SurfaceHolder.Callback {
+class MpvEngine private constructor(context: Context, private val mpv: MPVLib, private val settings: AppSettings) : Engine, MPVLib.EventObserver, SurfaceHolder.Callback {
     override val name = "mpv"
     private val main = Handler(Looper.getMainLooper())
     private val surface = SurfaceView(context).also { it.holder.addCallback(this) }
@@ -62,40 +63,86 @@ class MpvEngine private constructor(context: Context, private val mpv: MPVLib) :
         private const val TAG = "LartMpv"
 
         /** Null when libmpv can't start here; the player then falls back to Media3. */
-        fun create(context: Context, preferredText: String?): MpvEngine? = runCatching {
+        fun create(context: Context, setup: EngineSetup): MpvEngine? = runCatching {
             val mpv = MPVLib.create(context.applicationContext) ?: error("libmpv didn't start")
-            configure(context, mpv, preferredText)
+            configure(context, mpv, setup)
             mpv.init()
             // Applied after init, as mpv-android does: no window until there is a surface.
             mpv.setOptionString("force-window", "no")
-            MpvEngine(context, mpv)
+            MpvEngine(context, mpv, setup.settings)
         }.onFailure { Log.w(TAG, "mpv unavailable, using Media3", it) }.getOrNull()
 
-        private fun configure(context: Context, mpv: MPVLib, preferredText: String?) {
+        private fun configure(context: Context, mpv: MPVLib, setup: EngineSetup) {
+            val s = setup.settings
             fun opt(name: String, value: String) = mpv.setOptionString(name, value)
             opt("config", "no")
             opt("vo", "null")
             opt("gpu-context", "android")
             opt("opengl-es", "yes")
-            // Hardware decoding straight into GPU textures (AImageReader), so shaders and subtitles
-            // still apply; the copy-back path next, then software.
-            opt("hwdec", "mediacodec,mediacodec-copy")
+            // Auto: hardware decoding straight into GPU textures (AImageReader), so shaders and
+            // subtitles still apply; the copy-back path next, then software.
+            opt("hwdec", when (s.mpvHwdec) {
+                "off" -> "no"
+                "on" -> "mediacodec"
+                else -> "mediacodec,mediacodec-copy"
+            })
             opt("hwdec-codecs", "h264,hevc,mpeg4,mpeg2video,vp8,vp9,av1")
+            when (s.mpvQuality) {
+                "performance" -> {
+                    opt("scale", "bilinear")
+                    opt("dscale", "bilinear")
+                    opt("cscale", "bilinear")
+                    opt("deband", "no")
+                }
+                "quality" -> {
+                    opt("scale", "ewa_lanczossharp")
+                    opt("cscale", "ewa_lanczossharp")
+                    opt("dscale", "mitchell")
+                    opt("deband", "yes")
+                }
+            }
             opt("ao", "audiotrack,opensles")
+            if (s.downmixStereo) opt("audio-channels", "stereo")
+            opt("volume-max", "${(s.volumeBoostMax * 100).coerceIn(100, 300)}")
+            audioFilters(s).takeIf { it.isNotEmpty() }?.let { opt("af", it) }
             opt("tls-verify", "yes")
             caBundle(context)?.let { opt("tls-ca-file", it.absolutePath) }
             opt("cache", "yes")
-            opt("demuxer-max-bytes", "${64 * 1024 * 1024}")
-            opt("demuxer-max-back-bytes", "${32 * 1024 * 1024}")
+            val bufferMb = when (s.bufferSize) {
+                "small" -> 32
+                "large" -> 160
+                else -> 64
+            }
+            opt("demuxer-max-bytes", "${bufferMb * 1024 * 1024}")
+            opt("demuxer-max-back-bytes", "${bufferMb / 2 * 1024 * 1024}")
             opt("keep-open", "yes")
             opt("idle", "yes")
             opt("input-default-bindings", "no")
             opt("save-position-on-quit", "no")
-            opt("alang", "${Locale.getDefault().language},eng,en")
-            preferredText?.takeIf { it.isNotEmpty() }?.let { opt("slang", it) }
+            opt("alang", (setup.audioLanguages + "eng" + "en").distinct().joinToString(","))
+            if (setup.subtitleLanguages.isEmpty()) opt("sid", "no") else opt("slang", setup.subtitleLanguages.joinToString(","))
+            opt("sub-ass-override", s.assOverride)
+            if (s.hideSdh) opt("sub-filter-sdh", "yes")
             opt("sub-auto", "no")
             opt("user-agent", Net.USER_AGENT)
+            // Your own options last, so they win. A bad one is skipped, not fatal.
+            s.mpvExtraOptions.lines().map { it.trim() }.filter { it.isNotEmpty() && !it.startsWith("#") }.forEach { line ->
+                val name = line.substringBefore('=').trim().removePrefix("--")
+                val value = line.substringAfter('=', "yes").trim()
+                if (name.isNotEmpty() && runCatching { mpv.setOptionString(name, value) }.getOrDefault(-1) < 0) Log.w(TAG, "mpv rejected option $line")
+            }
         }
+
+        /** Harbor's loudness and sound profiles, as ffmpeg filters. */
+        private fun audioFilters(s: AppSettings): String = buildList {
+            if (s.audioNormalize) add("lavfi=[dynaudnorm=f=250:g=15]")
+            when (s.audioProfile) {
+                "bass" -> add("lavfi=[bass=g=6]")
+                "bass-reduce" -> add("lavfi=[bass=g=-6]")
+                "voice" -> add("lavfi=[highpass=f=100,equalizer=f=2500:t=q:w=1:g=5]")
+                "night" -> add("lavfi=[acompressor=threshold=0.05:ratio=4:makeup=4]")
+            }
+        }.joinToString(",")
 
         /** mpv's TLS needs a CA file: written once from the phone's own trusted certificates. */
         private fun caBundle(context: Context): File? = runCatching {
@@ -346,15 +393,19 @@ class MpvEngine private constructor(context: Context, private val mpv: MPVLib) :
     }
 
     /** Harbor's subtitle style on mpv's text subtitles; styled (ASS) ones keep their look, scaled. */
-    override fun applySubtitleStyle(prefs: PlayerPrefs, lifted: Boolean) {
+    override fun applySubtitleStyle(prefs: PlayerPrefs, style: AppSettings, lifted: Boolean) {
         val color = "#%08X".format(prefs.subColor.toInt())
         mpv.setPropertyDouble("sub-scale", prefs.subScale.toDouble())
         mpv.setPropertyString("sub-color", color)
+        mpv.setPropertyBoolean("sub-bold", style.subBold)
+        mpv.setPropertyString("sub-align-x", style.subAlignX)
+        mpv.setPropertyString("sub-justify", style.subAlignX)
         when (prefs.subBackground) {
             "box" -> {
+                val box = "#%02X000000".format((style.subBoxOpacity * 255).toInt().coerceIn(0, 255))
                 mpv.setPropertyString("sub-border-style", "opaque-box")
-                mpv.setPropertyString("sub-outline-color", "#B3000000")
-                mpv.setPropertyString("sub-back-color", "#B3000000")
+                mpv.setPropertyString("sub-outline-color", box)
+                mpv.setPropertyString("sub-back-color", box)
                 mpv.setPropertyDouble("sub-shadow-offset", 0.0)
             }
             "shadow" -> {
@@ -376,6 +427,13 @@ class MpvEngine private constructor(context: Context, private val mpv: MPVLib) :
     }
 
     override fun cuesAt(positionMs: Long): List<UiCue> = emptyList()
+
+    override fun selectSecondaryText(key: String?) = mpv.setPropertyString("secondary-sid", key?.substringAfter(':') ?: "no")
+
+    override val maxVolume get() = settings.volumeBoostMax.coerceIn(1, 3).toFloat()
+
+    /** 0..maxVolume of mpv's own volume, on top of the phone's. */
+    override fun setVolume(level: Float) = mpv.setPropertyDouble("volume", (level * 100.0).coerceIn(0.0, maxVolume * 100.0))
 
     override val supportsShaders = true
 

@@ -22,6 +22,7 @@ import androidx.media3.datasource.DefaultHttpDataSource
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.exoplayer.source.DefaultMediaSourceFactory
 import androidx.media3.ui.PlayerView
+import app.lart.mobile.data.AppSettings
 import app.lart.mobile.data.Net
 import app.lart.mobile.data.PlayerPrefs
 import java.util.Locale
@@ -31,7 +32,7 @@ import java.util.Locale
  * subtitle collector (Renderers.kt) so Lart can draw and shift every subtitle.
  */
 @OptIn(UnstableApi::class)
-class ExoEngine(context: Context, preferredText: String?) : Engine {
+class ExoEngine(context: Context, setup: EngineSetup) : Engine {
     override val name = "Media3"
     private val cueStore = CueStore()
     private val audioDelay = AudioDelay()
@@ -57,8 +58,10 @@ class ExoEngine(context: Context, preferredText: String?) : Engine {
             true,
         )
         player.trackSelectionParameters = player.trackSelectionParameters.buildUpon()
-            .setPreferredAudioLanguage(Locale.getDefault().language)
-            .apply { preferredText?.takeIf { it.isNotEmpty() }?.let { setPreferredTextLanguage(it) } }
+            .setPreferredAudioLanguages(*setup.audioLanguages.toTypedArray())
+            .setPreferredTextLanguages(*setup.subtitleLanguages.toTypedArray())
+            // Subtitles off by default: don't turn on tracks just because the file flags them as default.
+            .apply { if (setup.subtitleLanguages.isEmpty()) setIgnoredTextSelectionFlags(C.SELECTION_FLAG_DEFAULT) }
             .build()
         player.addListener(object : Player.Listener {
             override fun onIsPlayingChanged(isPlaying: Boolean) {
@@ -175,7 +178,7 @@ class ExoEngine(context: Context, preferredText: String?) : Engine {
     override val drawsSubtitles = false
     override fun addExternalSubtitle(url: String, language: String, title: String) = false
     override fun removeExternalSubtitles() {}
-    override fun applySubtitleStyle(prefs: PlayerPrefs, lifted: Boolean) {}
+    override fun applySubtitleStyle(prefs: PlayerPrefs, style: AppSettings, lifted: Boolean) {}
 
     override fun cuesAt(positionMs: Long): List<UiCue> = cueStore.at(positionMs).mapNotNull { it.toUi() }
 

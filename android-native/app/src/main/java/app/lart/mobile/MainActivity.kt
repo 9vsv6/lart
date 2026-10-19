@@ -1,6 +1,9 @@
 package app.lart.mobile
 
+import android.content.Intent
 import android.net.Uri
+import androidx.compose.runtime.LaunchedEffect
+import app.lart.mobile.ui.AddonsScreen
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -84,6 +87,18 @@ class MainActivity : ComponentActivity() {
                 if (chosen) LartRoot(repository) else WhosWatching(repository)
             }
         }
+        handleLink(intent)
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        handleLink(intent)
+    }
+
+    /** stremio://…/manifest.json from an addon's configure page: open the Addons page to install it. */
+    private fun handleLink(intent: Intent?) {
+        val link = intent?.data?.takeIf { it.scheme == "stremio" } ?: return
+        (application as LartApp).repository.pendingInstall.value = link.toString()
     }
 }
 
@@ -116,6 +131,12 @@ private fun LartRoot(repository: Repository) {
     }
 
     fun open(meta: Meta) = resolve(meta) { nav.openDetail(it) }
+
+    // A stremio:// install link opens the Addons page, which shows the install sheet.
+    val pendingInstall by repository.pendingInstall.collectAsState()
+    LaunchedEffect(pendingInstall) {
+        if (pendingInstall != null && entry?.destination?.route != "addons") nav.navigate("addons")
+    }
 
     val browse = object : BrowseNav {
         override fun openMeta(meta: Meta) = open(meta)
@@ -153,7 +174,8 @@ private fun LartRoot(repository: Repository) {
                     }
                 }
                 composable(Tab.MyStuff.route) { LibraryScreen(repository, onOpen = { open(it) }, onResume = browse::resume) }
-                composable(Tab.Profile.route) { SettingsScreen(repository) }
+                composable(Tab.Profile.route) { SettingsScreen(repository, onOpenAddons = { nav.navigate("addons") }) }
+                composable("addons") { AddonsScreen(repository, onBack = { nav.popBackStack() }) }
                 composable(
                     "detail/{type}/{id}",
                     arguments = listOf(navArgument("type") { type = NavType.StringType }, navArgument("id") { type = NavType.StringType }),
@@ -221,7 +243,7 @@ private fun LartRoot(repository: Repository) {
                     val metaId = args?.getString("metaId").orEmpty()
                     val videoId = args?.getString("videoId").orEmpty()
                     val title = args?.getString("title").orEmpty()
-                    StreamsScreen(repository, type, videoId, title, onBack = { nav.popBackStack() }) { ready ->
+                    StreamsScreen(repository, type, metaId, videoId, title, onBack = { nav.popBackStack() }) { ready ->
                         context.startActivity(PlayerActivity.intent(context, ready, type, metaId, videoId, title))
                     }
                 }

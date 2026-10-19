@@ -27,7 +27,9 @@ object Tmdb {
     private const val API = "https://api.themoviedb.org/3"
     private const val IMAGES = "https://image.tmdb.org/t/p"
 
-    private val language: String get() = Locale.getDefault().toLanguageTag()
+    /** Settings â Languages â Details language; empty follows the device. */
+    @Volatile var languageOverride: String = ""
+    private val language: String get() = languageOverride.ifEmpty { Locale.getDefault().toLanguageTag() }
 
     private suspend fun get(key: String, path: String, params: Map<String, String> = emptyMap()): JsonObject {
         // v4 read tokens are long JWTs sent as a bearer token; v3 keys go in the query.
@@ -114,7 +116,7 @@ object Tmdb {
     /** The title's logo in the device language, else English, else any. */
     suspend fun logo(key: String, meta: Meta): String? {
         val path = tmdbPath(meta) ?: return null
-        val lang = Locale.getDefault().language
+        val lang = languageOverride.ifEmpty { Locale.getDefault().language }
         val images = get(key, "$path/images", mapOf("include_image_language" to "$lang,en,null"))
         val logos = (images["logos"] as? JsonArray).orEmpty().map { it.jsonObject }
         val best = logos.firstOrNull { it.string("iso_639_1") == lang } ?: logos.firstOrNull { it.string("iso_639_1") == "en" } ?: logos.firstOrNull()
@@ -142,7 +144,7 @@ object Tmdb {
             "tv" to (found["tv_results"] as? JsonArray)?.firstOrNull()
         }
         val id = result?.jsonObject?.get("id")?.jsonPrimitive?.intOrNull ?: return null
-        val lang = Locale.getDefault().language
+        val lang = languageOverride.ifEmpty { Locale.getDefault().language }
         val details = get(
             key,
             "/$kind/$id",

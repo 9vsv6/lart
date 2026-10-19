@@ -43,14 +43,20 @@ import androidx.compose.material.icons.rounded.Audiotrack
 import androidx.compose.material.icons.rounded.AutoAwesome
 import androidx.compose.material.icons.rounded.Bedtime
 import androidx.compose.material.icons.rounded.Check
+import androidx.compose.material.icons.rounded.FastForward
 import androidx.compose.material.icons.rounded.Forward10
+import androidx.compose.material.icons.rounded.Forward30
+import androidx.compose.material.icons.rounded.Forward5
 import androidx.compose.material.icons.rounded.LightMode
 import androidx.compose.material.icons.rounded.Lock
 import androidx.compose.material.icons.rounded.LockOpen
 import androidx.compose.material.icons.rounded.Pause
 import androidx.compose.material.icons.rounded.PictureInPictureAlt
 import androidx.compose.material.icons.rounded.PlayArrow
+import androidx.compose.material.icons.rounded.Replay
 import androidx.compose.material.icons.rounded.Replay10
+import androidx.compose.material.icons.rounded.Replay30
+import androidx.compose.material.icons.rounded.Replay5
 import androidx.compose.material.icons.rounded.SkipNext
 import androidx.compose.material.icons.rounded.Speed
 import androidx.compose.material.icons.rounded.Subtitles
@@ -177,12 +183,12 @@ fun PlayerUi(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions, cas
                         val third = size.width / 3f
                         when {
                             offset.x < third -> {
-                                actions.seekBy(-10_000)
-                                state.hint = "-10s"
+                                actions.seekBy(-state.settings.seekBackSec * 1_000L)
+                                state.hint = "-${state.settings.seekBackSec}s"
                             }
                             offset.x > third * 2 -> {
-                                actions.seekBy(10_000)
-                                state.hint = "+10s"
+                                actions.seekBy(state.settings.seekForwardSec * 1_000L)
+                                state.hint = "+${state.settings.seekForwardSec}s"
                             }
                             else -> actions.togglePlay()
                         }
@@ -303,9 +309,11 @@ private fun Controls(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActi
                 state.hint = state.fit.label
                 state.hintIcon = 0
             }
-            ToolButton(Icons.Rounded.LockOpen, "Lock") {
-                state.locked = true
-                state.controlsVisible = true
+            if (state.settings.screenLock) {
+                ToolButton(Icons.Rounded.LockOpen, "Lock") {
+                    state.locked = true
+                    state.controlsVisible = true
+                }
             }
             ToolButton(Icons.Rounded.PictureInPictureAlt, "Picture in picture") { actions.enterPip() }
         }
@@ -316,7 +324,8 @@ private fun Controls(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActi
             horizontalArrangement = Arrangement.spacedBy(48.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            RoundIcon(Icons.Rounded.Replay10, "Back 10 seconds") { onTouch(); actions.seekBy(-10_000) }
+            val back = state.settings.seekBackSec
+            RoundIcon(replayIcon(back), "Back $back seconds") { onTouch(); actions.seekBy(-back * 1_000L) }
             if (!state.buffering || state.ended) {
                 Box(
                     Modifier.size(76.dp).clip(CircleShape).background(Color(0x33FFFFFF)).clickable { onTouch(); actions.togglePlay() },
@@ -330,7 +339,8 @@ private fun Controls(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActi
                     )
                 }
             } else Spacer(Modifier.size(76.dp))
-            RoundIcon(Icons.Rounded.Forward10, "Forward 10 seconds") { onTouch(); actions.seekBy(10_000) }
+            val forward = state.settings.seekForwardSec
+            RoundIcon(forwardIcon(forward), "Forward $forward seconds") { onTouch(); actions.seekBy(forward * 1_000L) }
         }
 
         // Bottom: seek bar and the menus.
@@ -420,19 +430,24 @@ private fun SubtitleLayer(state: PlayerState, prefs: PlayerPrefs) {
     if (bottom.isNotEmpty()) {
         // Lifted above the controls while they show, as Harbor does.
         BoxWithFraction(prefs.subBottom + if (state.controlsVisible && !state.inPip) CONTROLS_LIFT else 0f) {
-            CueColumn(bottom, prefs)
+            CueColumn(bottom, prefs, state.settings)
         }
     }
     if (top.isNotEmpty()) {
         Box(Modifier.fillMaxSize().padding(top = 24.dp, start = 48.dp, end = 48.dp), contentAlignment = Alignment.TopCenter) {
-            CueColumn(top, prefs)
+            CueColumn(top, prefs, state.settings)
         }
     }
 }
 
 @Composable
-private fun CueColumn(cues: List<UiCue>, prefs: PlayerPrefs) {
-    Column(horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(2.dp)) {
+private fun CueColumn(cues: List<UiCue>, prefs: PlayerPrefs, style: app.lart.mobile.data.AppSettings) {
+    val align = when (style.subAlignX) {
+        "left" -> Alignment.Start
+        "right" -> Alignment.End
+        else -> Alignment.CenterHorizontally
+    }
+    Column(Modifier.fillMaxWidth(), horizontalAlignment = align, verticalArrangement = Arrangement.spacedBy(2.dp)) {
         cues.forEach { cue ->
             val image = cue.image
             when {
@@ -442,7 +457,7 @@ private fun CueColumn(cues: List<UiCue>, prefs: PlayerPrefs) {
                     contentScale = ContentScale.Fit,
                     modifier = if (cue.width > 0f) Modifier.fillMaxWidth(cue.width.coerceIn(0.1f, 1f)) else Modifier,
                 )
-                cue.text != null -> SubtitleText(cue.text, prefs)
+                cue.text != null -> SubtitleText(cue.text, prefs, style)
             }
         }
     }
@@ -459,19 +474,23 @@ private fun BoxWithFraction(bottom: Float, content: @Composable () -> Unit) {
 }
 
 @Composable
-fun SubtitleText(text: String, prefs: PlayerPrefs, modifier: Modifier = Modifier) {
+fun SubtitleText(text: String, prefs: PlayerPrefs, style: app.lart.mobile.data.AppSettings = app.lart.mobile.data.AppSettings(), modifier: Modifier = Modifier) {
     val base = TextStyle(
         color = Color(prefs.subColor.toInt()),
         fontSize = (22 * prefs.subScale).sp,
         lineHeight = (28 * prefs.subScale).sp,
-        fontWeight = FontWeight.Medium,
-        textAlign = TextAlign.Center,
+        fontWeight = if (style.subBold) FontWeight.Bold else FontWeight.Medium,
+        textAlign = when (style.subAlignX) {
+            "left" -> TextAlign.Start
+            "right" -> TextAlign.End
+            else -> TextAlign.Center
+        },
     )
     when (prefs.subBackground) {
         "box" -> Text(
             text,
             style = base,
-            modifier = modifier.background(Color(0xB3000000), RoundedCornerShape(4.dp)).padding(horizontal = 8.dp, vertical = 2.dp),
+            modifier = modifier.background(Color.Black.copy(alpha = style.subBoxOpacity.coerceIn(0f, 1f)), RoundedCornerShape(4.dp)).padding(horizontal = 8.dp, vertical = 2.dp),
         )
         "shadow" -> Text(text, style = base.copy(shadow = Shadow(Color.Black, Offset(2f, 2f), 6f)), modifier = modifier)
         else -> Box(modifier) {
@@ -509,12 +528,25 @@ private fun BottomPills(state: PlayerState, prefs: PlayerPrefs, actions: PlayerA
     val bottom = if (state.controlsVisible) 120.dp else 36.dp
     Column(modifier.padding(end = 32.dp, bottom = bottom), horizontalAlignment = Alignment.End, verticalArrangement = Arrangement.spacedBy(10.dp)) {
         val skip = state.skip
-        if (skip != null && !prefs.autoSkipIntro) {
+        val s = state.settings
+        val autoSkips = skip != null && when (skip.kind) {
+            app.lart.mobile.data.SkipSegment.Kind.Intro -> prefs.autoSkipIntro
+            app.lart.mobile.data.SkipSegment.Kind.Recap -> s.autoSkipRecap
+            app.lart.mobile.data.SkipSegment.Kind.Outro -> s.autoSkipOutro
+        }
+        // Harbor's auto-hide: gone after a while, back whenever the controls show.
+        val timedOut = skip != null && s.skipButtonHideSec > 0 && !state.controlsVisible && state.positionMs - skip.startMs > s.skipButtonHideSec * 1_000L
+        if (skip != null && s.showSkipButton && !autoSkips && !timedOut) {
             Pill(skip.kind.label, primary = false) { actions.skipSegment() }
         }
         val next = state.next
         val remaining = state.durationMs - state.positionMs
-        if (next != null && state.durationMs > 0 && (remaining <= 45_000 || state.ended) && skip == null) {
+        val leadMs = when {
+            s.nextEpisodeLeadSec > 0 -> s.nextEpisodeLeadSec * 1_000L
+            state.creditsAtMs > 0 -> state.durationMs - state.creditsAtMs
+            else -> 45_000L
+        }
+        if (next != null && state.durationMs > 0 && (remaining <= leadMs || state.ended) && (skip == null || !s.showSkipButton)) {
             UpNext(next, state, actions)
         }
     }
@@ -638,7 +670,7 @@ private fun SidePanel(state: PlayerState, prefs: PlayerPrefs, actions: PlayerAct
                 }
             }
             Panel.Speed -> LazyColumn {
-                items(listOf(0.5f, 0.75f, 1f, 1.25f, 1.5f, 1.75f, 2f)) { speed ->
+                items((state.settings.playbackSpeeds + 1f + state.speed).distinct().sorted()) { speed ->
                     OptionRow(if (speed == 1f) "Normal" else speedLabel(speed), null, state.speed == speed) { actions.setSpeed(speed) }
                 }
             }
@@ -649,7 +681,7 @@ private fun SidePanel(state: PlayerState, prefs: PlayerPrefs, actions: PlayerAct
                 }
                 item { OptionRow("Off", null, at == null) { actions.setSleep(null) } }
                 item { OptionRow("End of this episode", null, at == -1L) { actions.setSleep(0) } }
-                items(listOf(15, 30, 45, 60, 90)) { minutes ->
+                items(state.settings.sleepMinutes) { minutes ->
                     OptionRow("$minutes minutes", null, false) { actions.setSleep(minutes) }
                 }
             }
@@ -1014,4 +1046,18 @@ private fun Anime4KPanel(state: PlayerState, prefs: PlayerPrefs, actions: Player
         }
         item { Muted("HQ is for fast phones and tablets; Fast suits most phones.") }
     }
+}
+
+private fun replayIcon(seconds: Int) = when (seconds) {
+    5 -> Icons.Rounded.Replay5
+    10 -> Icons.Rounded.Replay10
+    30 -> Icons.Rounded.Replay30
+    else -> Icons.Rounded.Replay
+}
+
+private fun forwardIcon(seconds: Int) = when (seconds) {
+    5 -> Icons.Rounded.Forward5
+    10 -> Icons.Rounded.Forward10
+    30 -> Icons.Rounded.Forward30
+    else -> Icons.Rounded.FastForward
 }

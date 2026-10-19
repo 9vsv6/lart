@@ -27,6 +27,13 @@ object AddonClient {
     const val KITSU = "https://anime-kitsu.strem.fun/manifest.json"
     const val KITSU_ID = "community.anime.kitsu"
 
+    /** How long a stream addon may take before it's skipped (Settings → Sources → Addon timeout). */
+    @Volatile var streamTimeoutMs = 20_000L
+
+    /** The manifest exactly as the addon serves it, for saving into the collection. */
+    suspend fun manifestJson(transportUrl: String): JsonObject =
+        Net.json.parseToJsonElement(Net.get(transportUrl.trim())).jsonObject
+
     suspend fun manifest(transportUrl: String): Addon {
         val manifest = Net.json.decodeFromString(Manifest.serializer(), Net.get(transportUrl))
         return Addon(transportUrl, manifest)
@@ -73,7 +80,7 @@ object AddonClient {
     suspend fun streams(addons: List<Addon>, type: String, id: String): List<AddonStreams> = coroutineScope {
         addons.filter { it.manifest.supports("stream", type, id) }.map { addon ->
             async {
-                val result = withTimeoutOrNull(20_000) {
+                val result = withTimeoutOrNull(streamTimeoutMs) {
                     runCatching {
                         fetch(path(addon, "stream", type, id))["streams"]?.jsonArray?.mapNotNull {
                             runCatching { Net.json.decodeFromJsonElement(Stream.serializer(), it) }.getOrNull()

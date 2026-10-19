@@ -61,6 +61,33 @@ object StremioApi {
         return list.jsonArray.mapNotNull { runCatching { Net.json.decodeFromJsonElement(Addon.serializer(), it) }.getOrNull() }
     }
 
+    /** The collection exactly as Stremio stores it, so a write sends every field back untouched. */
+    suspend fun addonsRaw(authKey: String): List<JsonObject>? {
+        val result = call(
+            "addonCollectionGet",
+            buildJsonObject {
+                put("authKey", authKey)
+                put("type", "user")
+                put("update", false)
+            },
+        )
+        return ((result as? JsonObject)?.get("addons") as? JsonArray)?.mapNotNull { it as? JsonObject }
+    }
+
+    /** Replaces the account's addon collection, as Stremio and Harbor do when you install or remove one. */
+    suspend fun setAddonsRaw(authKey: String, addons: List<JsonObject>) {
+        // An empty collection would leave the account with no addons at all; never send one.
+        require(addons.isNotEmpty()) { "Refusing to save an empty addon collection" }
+        call(
+            "addonCollectionSet",
+            buildJsonObject {
+                put("authKey", authKey)
+                put("type", "user")
+                put("addons", JsonArray(addons))
+            },
+        )
+    }
+
     suspend fun library(authKey: String): List<LibraryItem> {
         val meta = call(
             "datastoreMeta",

@@ -79,6 +79,10 @@ class PlayerState {
     var subLoading by mutableStateOf(false)
 
     var skip by mutableStateOf<SkipSegment?>(null)
+    /** Where the credits start, when the skip databases know; 0 when not. */
+    var creditsAtMs by mutableLongStateOf(0)
+    /** The active profile's settings, kept current by the activity. */
+    var settings by mutableStateOf(app.lart.mobile.data.AppSettings())
     var next by mutableStateOf<Video?>(null)
     var nextLoading by mutableStateOf(false)
     var episodes by mutableStateOf<List<Video>>(emptyList())
