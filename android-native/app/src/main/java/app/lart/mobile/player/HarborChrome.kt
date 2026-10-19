@@ -219,7 +219,7 @@ internal fun HarborControls(
                         actions.loadSources()
                     }
                     ToolIcon(Icons.Outlined.Translate, "Audio tracks", state.panel == Panel.Audio) { onTouch(); toggle(state, Panel.Audio) }
-                    ToolIcon(Icons.Outlined.ClosedCaption, "Subtitles", state.panel == Panel.Subtitles || state.panel == Panel.SubStyle, dot = state.subChoice != SubChoice.Off) {
+                    ToolIcon(Icons.Outlined.ClosedCaption, "Subtitles", state.panel == Panel.Subtitles || state.panel == Panel.SubStyle, dot = state.settings.subIndicatorDot && state.subChoice != SubChoice.Off) {
                         onTouch()
                         toggle(state, Panel.Subtitles)
                     }

@@ -45,6 +45,13 @@ import androidx.compose.material.icons.outlined.FilterList
 import androidx.compose.material.icons.outlined.TextFields
 import androidx.compose.material.icons.outlined.Subtitles
 import androidx.compose.material.icons.outlined.Visibility
+import androidx.compose.material.icons.outlined.GraphicEq
+import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.material.icons.outlined.Download
+import androidx.compose.material.icons.outlined.Timer
+import androidx.compose.material.icons.outlined.Block
+import androidx.compose.material.icons.outlined.Language
+import androidx.compose.material.icons.outlined.FormatSize
 import androidx.compose.material.icons.outlined.RecordVoiceOver
 import androidx.compose.material.icons.outlined.AutoAwesome
 import androidx.compose.material.icons.outlined.Code
@@ -91,6 +98,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import app.lart.mobile.data.ProviderKey
+import app.lart.mobile.data.Languages
+import app.lart.mobile.data.Lang
 import app.lart.mobile.data.AppSettings
 import app.lart.mobile.data.DebridAccount
 import app.lart.mobile.data.DebridService
@@ -135,10 +144,13 @@ private enum class Section(
     Audio("Audio", "Downmix, loudness, sound profiles and volume boost (mpv).", Icons.Outlined.VolumeUp, "downmix stereo volume boost loudness sound profile", setOf("Sound")),
     MpvConf("mpv.conf", "Your own mpv options.", Icons.Outlined.Code, "mpv options advanced", setOf("Advanced")),
     Shaders("Anime Shaders", "Anime4K upscaling and line restoration.", Icons.Outlined.AutoAwesome, "anime4k shaders upscale"),
-    AudioLanguage("Audio", "Audio languages, in order.", Icons.Outlined.RecordVoiceOver, "audio language dub", setOf("Audio")),
-    WhatYouSee("What you see", "The language of titles and descriptions.", Icons.Outlined.Visibility, "metadata language tmdb", setOf("Details")),
-    SubtitleLanguages("Languages", "Which subtitles turn on.", Icons.Outlined.Subtitles, "subtitles sdh secondary fallback", setOf("Which subtitles")),
-    SubtitleLook("Look", "How subtitles look.", Icons.Outlined.TextFields, "subtitle style size colour color bold position ass", setOf("Style")),
+    AppLanguage("App language", "Metadata language, region and translation.", Icons.Outlined.Translate, "display language metadata region translate titles overviews image languages logos", setOf("App language")),
+    AudioLanguage("Audio languages", "Which audio track plays, and the tracks never to pick.", Icons.Outlined.GraphicEq, "audio language dub commentary skip tracks", setOf("Audio languages")),
+    WhatYouSee("Discovery languages", "Home rows by language, your region, and stream languages.", Icons.Outlined.Visibility, "home catalogs languages region favour stream ranking only show streams", setOf("Discovery languages")),
+    SubtitleLanguages("Subtitle languages", "Which subtitles turn on, dual subtitles and choosing a track.", Icons.Outlined.Subtitles, "subtitles languages dual second forced embedded sdh start off choose upgrade indicator", setOf("Subtitle languages")),
+    SubtitleSources("Subtitle sources", "SubDL, Subsource, Wyzie, OpenSubtitles and your addons.", Icons.Outlined.Download, "subdl subsource wyzie opensubtitles api key addons sources", setOf("Subtitle sources")),
+    SubtitleTiming("Subtitle timing", "The sync indicator and nudging subtitle timing.", Icons.Outlined.Timer, "sync timing delay offset indicator", setOf("Subtitle timing")),
+    SubtitleLook("Subtitle style", "Background, outline, colours, font, position and size.", Icons.Outlined.TextFields, "subtitle style size colour color bold position ass font outline background opacity pip", setOf("Subtitle style")),
     Services("Streaming services", "Your addons and debrid service.", Icons.Outlined.Inventory2, "addons debrid real-debrid torbox", setOf("Addons", "Debrid")),
     SourcePreferences("Source preferences", "Safety, order, languages and what shows in the list.", Icons.Outlined.Tune, "order sort safety cam torrents file names timeout languages", setOf("Safety & order")),
     StreamFilters("Stream filters", "Only show sources that match.", Icons.Outlined.FilterList, "filter resolution 4k 1080p remux bluray web hevc av1 hdr cached size"),
@@ -158,7 +170,7 @@ private enum class Group(val label: String, val section: String, val icon: Image
         "Playback", "Watching", Icons.Outlined.PlayCircle,
         listOf(Section.Play, Section.OnScreen, Section.Intros, Section.UpNext, Section.Picture, Section.Audio, Section.MpvConf, Section.Shaders),
     ),
-    Languages("Languages & subtitles", "Language", Icons.Outlined.Translate, listOf(Section.AudioLanguage, Section.WhatYouSee, Section.SubtitleLanguages, Section.SubtitleLook)),
+    Languages("Languages & subtitles", "Language", Icons.Outlined.Translate, listOf(Section.AppLanguage, Section.AudioLanguage, Section.WhatYouSee, Section.SubtitleLanguages, Section.SubtitleSources, Section.SubtitleTiming, Section.SubtitleLook)),
     Sources(
         "Library & metadata", "Content", Icons.Outlined.LibraryBooks,
         listOf(Section.Services, Section.SourcePreferences, Section.StreamFilters, Section.HomeRows, Section.PosterCards, Section.DetailPages, Section.Metadata),
@@ -220,7 +232,7 @@ fun SettingsScreen(repository: Repository, onOpenAddons: () -> Unit, onExit: () 
                         .padding(start = 56.dp, end = 40.dp, top = 28.dp, bottom = 48.dp),
                 ) {
                     Column(Modifier.widthIn(max = 980.dp), verticalArrangement = Arrangement.spacedBy(22.dp)) {
-                        Text(group.label, color = LartColors.Ink, fontSize = 36.sp, fontWeight = FontWeight.SemiBold, letterSpacing = (-0.7).sp)
+                        Text(group.label, color = LartColors.Ink, fontSize = 36.sp, fontWeight = FontWeight.SemiBold, letterSpacing = (-0.7).sp, lineHeight = 42.sp)
                         SectionPage(section, repository, onOpenAddons)
                     }
                 }
@@ -313,11 +325,17 @@ private fun SearchResults(query: String, onOpen: (Section) -> Unit) {
 }
 
 /** A tablet sub-page: its title and what it is, then its settings. */
+/** Pages ported whole from Harbor: they open with their own headings, as Harbor's do. */
+private val SELF_TITLED = setOf(
+    Section.AppLanguage, Section.AudioLanguage, Section.WhatYouSee, Section.SubtitleLanguages,
+    Section.SubtitleSources, Section.SubtitleTiming, Section.SubtitleLook,
+)
+
 @Composable
 private fun SectionPage(section: Section, repository: Repository, onOpenAddons: () -> Unit) {
     val settings by repository.settings.collectAsState()
     val set: ((AppSettings) -> AppSettings) -> Unit = repository::updateSettings
-    Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+    if (section !in SELF_TITLED) Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
         Text(section.label, color = LartColors.Ink, fontSize = 24.sp, fontWeight = FontWeight.SemiBold, letterSpacing = (-0.4).sp)
         Text(section.sub, color = LartColors.InkMuted, fontSize = 15.5.sp, lineHeight = 22.sp)
     }
@@ -355,7 +373,7 @@ private fun GroupContent(
                 verticalArrangement = Arrangement.spacedBy(22.dp),
             ) {
                 if (index > 0) Box(Modifier.padding(top = 30.dp).fillMaxWidth().height(1.dp).background(LartColors.EdgeSoft))
-                Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                if (section !in SELF_TITLED) Column(verticalArrangement = Arrangement.spacedBy(6.dp)) {
                     Text(section.label, color = LartColors.Ink, fontSize = 24.sp, fontWeight = FontWeight.SemiBold, letterSpacing = (-0.4).sp)
                     Text(section.sub, color = LartColors.InkMuted, fontSize = 15.5.sp, lineHeight = 22.sp)
                 }
@@ -380,8 +398,8 @@ private fun SectionBody(
             Section.Play, Section.OnScreen, Section.Intros, Section.UpNext -> PlayerSection(repository, settings, set)
             Section.Picture, Section.Audio, Section.MpvConf -> MpvSection(settings, set)
             Section.Shaders -> ShadersSection(repository, settings, set)
-            Section.AudioLanguage, Section.WhatYouSee -> LanguageSection(settings, set)
-            Section.SubtitleLanguages, Section.SubtitleLook -> SubtitlesSection(repository, settings, set)
+            Section.AppLanguage, Section.AudioLanguage, Section.WhatYouSee -> LanguageSection(repository, settings, set)
+            Section.SubtitleLanguages, Section.SubtitleSources, Section.SubtitleTiming, Section.SubtitleLook -> SubtitlesSection(repository, settings, set)
             Section.Services, Section.SourcePreferences -> StreamingSection(repository, settings, set, onOpenAddons)
             Section.StreamFilters -> StreamFiltersSection(settings, set)
             Section.HomeRows, Section.DetailPages -> LibrarySection(repository, settings, set)
@@ -662,66 +680,243 @@ private fun MpvOptionsField(saved: String, onSave: (String) -> Unit) {
 // ---------------- Languages ----------------
 
 @Composable
-private fun LanguageSection(settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
-    Card("Audio") {
-        SettingsLabel("Audio")
-        Label("Audio languages", "In order: the first one a video has is picked. None picked follows the device.")
-        MultiChipRow(languageOptions(), settings.audioLanguages) { v -> set { it.copy(audioLanguages = v) } }
+private fun LanguageSection(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
+    // ---- App language ----
+    Part("App language") {
+        HarborHeading("Display language", "Lart's own words are in English for now.")
+        HarborSelect(listOf("en" to "🇺🇸  English"), "en") {}
+        HarborHeading("Metadata language", "Titles, descriptions and episode names from TMDB, in this language (needs a TMDB key).")
+        HarborSelect(listOf("" to "Same as the device") + Languages.all.map { it.code to "${it.flag}  ${it.name}" }, settings.metadataLanguage) { v -> set { it.copy(metadataLanguage = v) } }
+        ToggleRow("Translate titles", "Show titles in the metadata language. Off keeps them as the addon has them.", settings.translateTitles) { v -> set { it.copy(translateTitles = v) } }
+        ToggleRow("Translate overviews", "Show descriptions in the metadata language. Off shows them in English.", settings.translateOverviews) { v -> set { it.copy(translateOverviews = v) } }
+        HarborHeading("Image languages", "Which language logos and posters come in. Same as metadata follows the setting above.")
+        HarborSelect(listOf("" to "Same as metadata", "null" to "No text (textless)") + Languages.all.map { it.code to "${it.flag}  ${it.name}" }, settings.imageLanguage) { v -> set { it.copy(imageLanguage = v) } }
+        HarborHeading("Region & language", "Your country, for what's in cinemas, release dates and where to watch.")
+        HarborSelect(
+            listOf("" to "Same as the device") + java.util.Locale.getISOCountries().map { c -> c to "${Lang("", "", "", c).flag}  ${java.util.Locale("", c).displayCountry}" }.sortedBy { it.second.drop(4) },
+            settings.region,
+        ) { v -> set { it.copy(region = v) } }
     }
-    Card("Details") {
-        SettingsLabel("Details")
-        Label("Language of titles and descriptions", "From TMDB (needs a TMDB key in Sources & library → Library & metadata).")
-        ChipRow(listOf("" to "Device") + languageOptions(), settings.metadataLanguage) { v -> set { it.copy(metadataLanguage = v) } }
+    // ---- Audio languages ----
+    Part("Audio languages") {
+        HarborHeading("Audio languages", "When a release ships multiple audio tracks, Lart selects the first match from this list.")
+        LanguageOrder(settings.audioLanguages) { v -> set { it.copy(audioLanguages = v) } }
+        HarborHeading("Skip these tracks", "Applies to both audio and subtitle tracks. You can still pick a skipped track by hand in the player.")
+        IconHeading(Icons.Outlined.Block, "Never auto-select tracks containing", "Tracks whose name contains one of these words are skipped.")
+        WordList(settings.skipTrackWords, "Type a word and press Enter") { v -> set { it.copy(skipTrackWords = v) } }
+    }
+    // ---- Discovery languages ----
+    Part("Discovery languages") {
+        HarborHeading("Home catalogs", "Only show titles in these original languages on the Home rows. Leave all off to show everything.")
+        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(12.dp), modifier = Modifier.padding(vertical = 6.dp)) {
+            Icon(Icons.Outlined.Language, null, tint = LartColors.InkSubtle, modifier = Modifier.size(20.dp))
+            Text(
+                if (settings.homeLanguages.isEmpty()) "No filter. Home shows every language."
+                else "Home shows ${settings.homeLanguages.joinToString(", ") { Languages.of(it).name }}.",
+                color = LartColors.InkMuted,
+                fontSize = 15.5.sp,
+            )
+        }
+        LanguageTiles(Languages.home, settings.homeLanguages.toSet()) { code ->
+            set { s -> s.copy(homeLanguages = if (code in s.homeLanguages) s.homeLanguages - code else s.homeLanguages + code) }
+        }
+        ToggleRow(
+            "Favour titles from where you are",
+            "Nudge the Home rows toward your region and languages so local releases surface instead of the same worldwide list. Turn it off to see the unweighted picks.",
+            settings.favourRegion,
+        ) { v -> set { it.copy(favourRegion = v) } }
+        HarborHeading("Stream ranking", "Sources in these languages sort to the top of the picker.")
+        LanguageOrder(settings.streamLanguages.mapNotNull { Languages.byName(it)?.code }) { codes -> set { it.copy(streamLanguages = codes.map { c -> Languages.of(c).name }) } }
+        ToggleRow("Only show streams in my languages", "Hide sources that name a language and none of yours. Sources that name no language stay.", settings.requireStreamLanguage) { v -> set { it.copy(requireStreamLanguage = v) } }
     }
 }
 
 @Composable
 private fun SubtitlesSection(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
     val prefs by repository.playerPrefs.collectAsState()
-    Card("Which subtitles") {
-        SettingsLabel("Which subtitles")
-        SwitchRow("Subtitles off by default", "Turn them on yourself in the player.", settings.subtitlesOffByDefault) { v -> set { it.copy(subtitlesOffByDefault = v) } }
-        if (!settings.subtitlesOffByDefault) {
-            Label("Subtitle language", "Turns subtitles on in this language. Picking one in the player changes it too.")
-            ChipRow(listOf("" to "None") + languageOptions(), prefs.subLanguage) { lang -> repository.updatePlayerPrefs { it.copy(subLanguage = lang) } }
-            Label("If that isn't available, try")
-            MultiChipRow(languageOptions(), settings.subtitleFallbacks) { v -> set { it.copy(subtitleFallbacks = v) } }
+    val keys by repository.providerKeys.collectAsState()
+    val uri = LocalUriHandler.current
+    val scope = rememberCoroutineScope()
+    // ---- Subtitle languages ----
+    Part("Subtitle languages") {
+        HarborHeading("Subtitle languages", "Lart looks for subtitles in this order. Put your preferred language first.")
+        val order = (listOf(prefs.subLanguage) + settings.subtitleFallbacks).filter { it.isNotEmpty() }.distinct()
+        LanguageOrder(order) { v ->
+            repository.updatePlayerPrefs { it.copy(subLanguage = v.firstOrNull().orEmpty()) }
+            set { it.copy(subtitleFallbacks = v.drop(1)) }
         }
-        SwitchRow("Prefer subtitles inside the video", "They're timed for that exact file; addon ones may need syncing.", settings.preferEmbeddedSubs) { v -> set { it.copy(preferEmbeddedSubs = v) } }
-        SwitchRow("Skip hearing-impaired (SDH) subtitles", "When picking automatically.", settings.hideSdh) { v -> set { it.copy(hideSdh = v) } }
-        SwitchRow("Use subtitle addons", "OpenSubtitles and others you've installed.", settings.subtitleAddons) { v -> set { it.copy(subtitleAddons = v) } }
-        if (settings.engine == "mpv") {
-            Label("Second subtitle", "Shown at the top at the same time, for learning a language (mpv).")
-            ChipRow(listOf("" to "Off") + languageOptions(), settings.secondarySubLanguage) { v -> set { it.copy(secondarySubLanguage = v) } }
+        HarborHeading("Dual subtitles", "Show two subtitle languages at once. Useful for learning a language or watching together.")
+        IconHeading(Icons.Outlined.Translate, "Second subtitle language", "Shown at the same time as your main subtitle (mpv).")
+        HarborSelect(listOf("" to "Off") + Languages.all.map { it.code to "${it.flag}  ${it.name}" }, settings.secondarySubLanguage) { v -> set { it.copy(secondarySubLanguage = v) } }
+        if (settings.secondarySubLanguage.isNotEmpty()) {
+            IconHeading(Icons.Outlined.FormatSize, "Second line size", "How big the second subtitle is next to the first.")
+            TickSlider(settings.secondSubScale, listOf(0.6f, 0.7f, 0.8f, 0.85f, 0.9f, 1f), { "${(it * 100).toInt()}%" }, 0.85f) { v -> set { it.copy(secondSubScale = v) } }
+        }
+        HarborHeading("Choosing a track", "Which subtitle Lart lands on when more than one is available.")
+        ToggleRow("Prefer embedded subtitles", "Keep the subtitle track included in the video file instead of switching to a downloaded one.", settings.preferEmbeddedSubs) { v -> set { it.copy(preferEmbeddedSubs = v) } }
+        ToggleRow(
+            "Forced subs with native audio",
+            "When the audio already matches your subtitle language, pick a forced track (foreign dialogue and signs only) instead of full subtitles. If the file has no forced track, subtitles stay off.",
+            settings.forcedSubsNativeAudio,
+        ) { v -> set { it.copy(forcedSubsNativeAudio = v) } }
+        ToggleRow("Start with subtitles off", "Whether subtitles are showing the moment a video starts. Turn them on yourself in the player.", settings.subtitlesOffByDefault) { v -> set { it.copy(subtitlesOffByDefault = v) } }
+        ToggleRow("Choose subtitles before playback", "Opens the subtitle menu when a video starts, so you pick before watching.", settings.chooseSubsBeforePlayback) { v -> set { it.copy(chooseSubsBeforePlayback = v) } }
+        ToggleRow("Upgrade subtitles when better ones load", "If no subtitle matched at first, switch to one in your language when the sources answer.", settings.upgradeSubtitles) { v -> set { it.copy(upgradeSubtitles = v) } }
+        ToggleRow("Hide sound effects and speaker names", "Skip hearing-impaired (SDH) tracks when picking automatically.", settings.hideSdh) { v -> set { it.copy(hideSdh = v) } }
+        ToggleRow("Subtitle indicator dot", "A dot on the subtitles button while subtitles are on.", settings.subIndicatorDot) { v -> set { it.copy(subIndicatorDot = v) } }
+    }
+    // ---- Subtitle sources ----
+    Part("Subtitle sources") {
+        HarborHeading("Subtitle sources", "Where Lart looks for subtitles besides the video itself. Each one searches in your subtitle languages.")
+        ToggleRow("Subtitle addons", "OpenSubtitles v3 and any other subtitle addon you've installed.", settings.subtitleAddons) { v -> set { it.copy(subtitleAddons = v) } }
+        fun saveKey(name: String, value: String?) { scope.launch { repository.setProviderKey(name, value) } }
+        ProviderKeyBlock(
+            "S", Color(0xFFF5C518), "SUBDL", "Search SUBDL for subtitles in multiple languages. Requires an API key.",
+            settings.subdlEnabled, { v -> set { it.copy(subdlEnabled = v) } },
+            "SUBDL API key", keys[ProviderKey.SUBDL], { saveKey(ProviderKey.SUBDL, it) },
+            "SUBDL returns nothing until a key is saved here.", "Get a free key at subdl.com",
+        ) { uri.openUri("https://subdl.com/panel/api") }
+        ProviderKeyBlock(
+            "≡", Color(0xFF8BD5D0), "Subsource", "Search the Subsource community database. Requires an API key.",
+            settings.subsourceEnabled, { v -> set { it.copy(subsourceEnabled = v) } },
+            "Subsource API key", keys[ProviderKey.SUBSOURCE], { saveKey(ProviderKey.SUBSOURCE, it) },
+            "Subsource returns nothing until a key is saved here.", "Get your key at subsource.net",
+        ) { uri.openUri("https://subsource.net/api-docs") }
+        ProviderKeyBlock(
+            "W", Color(0xFFB794F4), "Wyzie", "Searches many subtitle sites at once. Needs a free key.",
+            settings.wyzieEnabled, { v -> set { it.copy(wyzieEnabled = v) } },
+            "Wyzie key", keys[ProviderKey.WYZIE], { saveKey(ProviderKey.WYZIE, it) },
+            "Wyzie answers only with a key.", "Claim a free key at wyzie.io",
+        ) { uri.openUri("https://store.wyzie.io/redeem") }
+        ProviderKeyBlock(
+            "O", Color(0xFF7CC0F0), "OpenSubtitles", "The OpenSubtitles.com API, with your own key (downloads count against its daily limit).",
+            settings.openSubtitlesEnabled, { v -> set { it.copy(openSubtitlesEnabled = v) } },
+            "OpenSubtitles API key", keys[ProviderKey.OPENSUBTITLES], { saveKey(ProviderKey.OPENSUBTITLES, it) },
+            "Create a consumer on OpenSubtitles.com to get one.", "opensubtitles.com/consumers",
+        ) { uri.openUri("https://www.opensubtitles.com/en/consumers") }
+        HarborHeading("Preferred languages", "All subtitle sources use the same preferred language order.")
+        val order = (listOf(prefs.subLanguage) + settings.subtitleFallbacks).filter { it.isNotEmpty() }.distinct()
+        Text(
+            if (order.isEmpty()) "No subtitle language yet. Add one under Subtitle languages."
+            else order.joinToString("  ·  ") { "${Languages.of(it).flag} ${Languages.of(it).name}" },
+            color = LartColors.InkMuted,
+            fontSize = 15.5.sp,
+        )
+    }
+    // ---- Subtitle timing ----
+    Part("Subtitle timing") {
+        HarborHeading("Subtitle timing", "Nudge a subtitle earlier or later from the player's subtitle menu (Sync Offset).")
+        ToggleRow("Show subtitle sync indicator", "Puts the current offset on screen while you nudge subtitle timing, so you can see how far you have shifted them.", settings.subSyncIndicator) { v -> set { it.copy(subSyncIndicator = v) } }
+        Text(
+            "Harbor's audio-based auto-sync and its community corrections run on the desktop; they aren't in the Android app.",
+            color = LartColors.InkSubtle,
+            fontSize = 14.sp,
+            modifier = Modifier.padding(top = 6.dp),
+        )
+    }
+    // ---- Subtitle style ----
+    Part("Subtitle style") {
+        HarborHeading("Subtitle style", "Adjust the text and background. The preview shows your changes as you make them.")
+        SubtitlePreview(prefs, settings)
+        SettingsLabel("Background")
+        CheckList(
+            listOf(
+                Triple("shadow", "Drop shadow", "Soft halo around the text. Cleanest on most content."),
+                Triple("outline", "Outline", "Hard stroke around each letter. High contrast."),
+                Triple("box", "Black bar", "Rounded background panel behind the text. Most readable."),
+            ),
+            prefs.subBackground,
+        ) { v -> repository.updatePlayerPrefs { it.copy(subBackground = v) } }
+        when (prefs.subBackground) {
+            "outline" -> {
+                RowText("Outline thickness", "How heavy the stroke around each letter is.")
+                TickSlider(settings.subOutlineSize, (0..10).map { it.toFloat() }, { "${it.toInt()}px" }, 2f) { v -> set { it.copy(subOutlineSize = v) } }
+            }
+            "box" -> {
+                RowText("Box color", "The panel behind the text.")
+                ColorSwatches(SWATCHES, settings.subBoxColor, 0xFF000000) { c -> set { it.copy(subBoxColor = c) } }
+                RowText("Background opacity", "How solid the panel is.")
+                TickSlider(settings.subBoxOpacity, listOf(0.2f, 0.3f, 0.4f, 0.5f, 0.6f, 0.7f, 0.8f, 0.9f, 1f), { "${(it * 100).toInt()}%" }, 0.6f) { v -> set { it.copy(subBoxOpacity = v) } }
+            }
+        }
+        SettingsLabel("Text")
+        RowText("Size", "How large subtitles are drawn on the video, at any screen size.")
+        TickSlider(prefs.subScale, listOf(0.6f, 0.7f, 0.8f, 0.9f, 1f, 1.1f, 1.2f, 1.35f, 1.5f, 1.65f, 1.8f), { "${(it * 100).toInt()}%" }, 1f) { v -> repository.updatePlayerPrefs { it.copy(subScale = v) } }
+        ToggleRow("Bold text", "Thicker letters, easier to read on busy pictures.", settings.subBold) { v -> set { it.copy(subBold = v) } }
+        RowText("Text color", "The colour of the letters.")
+        ColorSwatches(SWATCHES, prefs.subColor, 0xFFFFFFFF) { c -> repository.updatePlayerPrefs { it.copy(subColor = c) } }
+        RowText("Opacity", "How see-through the letters are.")
+        TickSlider(settings.subOpacity, listOf(0.4f, 0.5f, 0.6f, 0.7f, 0.8f, 0.9f, 1f), { "${(it * 100).toInt()}%" }, 1f) { v -> set { it.copy(subOpacity = v) } }
+        RowText("Outline color", "The stroke or halo drawn behind the letters.")
+        ColorSwatches(SWATCHES, settings.subOutlineColor, 0xFF000000) { c -> set { it.copy(subOutlineColor = c) } }
+        SettingsLabel("Font")
+        Text("The typeface subtitles are drawn in.", color = LartColors.InkMuted, fontSize = 15.sp)
+        TileChoices(
+            listOf("inter" to "Inter", "system" to "System", "condensed" to "Condensed", "serif" to "Serif", "mono" to "Mono", "arabic" to "Arabic"),
+            settings.subFont,
+            fontFor = { app.lart.mobile.player.subFontFamily(it) },
+        ) { v -> set { it.copy(subFont = v) } }
+        SettingsLabel("Styled (ASS) subtitles")
+        CheckList(
+            listOf(
+                Triple("no", "Keep original", "Styled (ASS) subs keep their own font, colour and size. Truest to the release, but the size can vary a lot between files."),
+                Triple("scale", "Normalize embedded subtitle size", "Keep their style, at your size."),
+                Triple("force", "Use my style", "Draw styled subtitles in your style, like any other."),
+            ),
+            settings.assOverride,
+        ) { v -> set { it.copy(assOverride = v) } }
+        SettingsLabel("Sync indicator")
+        ToggleRow("Subtitle sync indicator", "Puts the current offset on screen while you nudge subtitle timing.", settings.subSyncIndicator) { v -> set { it.copy(subSyncIndicator = v) } }
+        SettingsLabel("Position")
+        PositionGrid(settings.subPosition) { v -> set { it.copy(subPosition = v, subAlignX = "center") } }
+        if (settings.subPosition.startsWith("bottom")) {
+            RowText("Distance from bottom", "How far above the bottom edge subtitles sit.")
+            TickSlider(prefs.subBottom, listOf(0.02f, 0.04f, 0.06f, 0.08f, 0.1f, 0.12f, 0.15f, 0.2f, 0.25f, 0.3f), { "${(it * 100).toInt()}%" }, 0.08f) { v ->
+                repository.updatePlayerPrefs { it.copy(subBottom = v) }
+            }
+        }
+        SettingsLabel("Size")
+        PillChoice(listOf(0.85f to "Smaller", 1f to "Default", 1.2f to "Larger"), listOf(0.85f, 1f, 1.2f).minByOrNull { kotlin.math.abs(it - prefs.subScale) } ?: 1f) { v ->
+            repository.updatePlayerPrefs { it.copy(subScale = v) }
+        }
+        ToggleRow("Show subtitles in Picture-in-Picture", "Keep subtitles on while the video plays in a small window.", settings.subsInPip) { v -> set { it.copy(subsInPip = v) } }
+        Row(Modifier.padding(top = 14.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+            HGhostButton(onClick = {
+                repository.updatePlayerPrefs { it.copy(subScale = 1f, subColor = 0xFFFFFFFF, subBackground = "outline", subBottom = 0.08f) }
+                set {
+                    it.copy(
+                        subBold = false, subBoxOpacity = 0.6f, subAlignX = "center", assOverride = "scale", subOutlineColor = 0xFF000000,
+                        subOutlineSize = 2f, subFont = "inter", subPosition = "bottom", subOpacity = 1f, subBoxColor = 0xFF000000,
+                    )
+                }
+            }) { Text("Reset subtitle style") }
+            Text("Puts every subtitle option back to the Harbor default.", color = LartColors.InkSubtle, fontSize = 14.sp)
         }
     }
-    Card("Style") {
-        SettingsLabel("Style")
-        Box(Modifier.fillMaxWidth().height(96.dp).clip(RoundedCornerShape(12.dp)).background(Color(0xFF3A4048)), contentAlignment = Alignment.Center) {
-            SubtitleText("The quick brown fox", prefs, settings)
+}
+
+private val SWATCHES = listOf(0xFFFFFFFF, 0xFF000000, 0xFFFF3B30, 0xFFFF9500, 0xFFFFCC00, 0xFF34C759, 0xFF5AC8FA, 0xFF007AFF, 0xFFAF52DE, 0xFFFF2D92)
+
+/** Harbor's subtitle preview: a film still with the sample line in your style. */
+@Composable
+private fun SubtitlePreview(prefs: app.lart.mobile.data.PlayerPrefs, settings: AppSettings) {
+    Box(
+        Modifier.fillMaxWidth().widthIn(max = 640.dp).aspectRatio(16f / 9f).clip(RoundedCornerShape(14.dp))
+            .background(androidx.compose.ui.graphics.Brush.linearGradient(listOf(Color(0xFF3B2F2A), Color(0xFF1B1A1E), Color(0xFF4A3426)))),
+    ) {
+        coil.compose.AsyncImage(
+            "https://images.metahub.space/background/medium/tt0068646/img",
+            null,
+            contentScale = androidx.compose.ui.layout.ContentScale.Crop,
+            modifier = Modifier.fillMaxSize(),
+        )
+        val align = when {
+            settings.subPosition.startsWith("top") -> Alignment.TopCenter
+            settings.subPosition in setOf("left", "center", "right") -> Alignment.Center
+            else -> Alignment.BottomCenter
         }
-        Label("Size")
-        HSlider(prefs.subScale, 0.6f..1.8f) { v -> repository.updatePlayerPrefs { it.copy(subScale = v) } }
-        Label("Colour")
-        ChipRow(listOf(0xFFFFFFFF to "White", 0xFFFFE66D to "Yellow", 0xFF8BE9FD to "Cyan", 0xFFB8F5A0 to "Green"), prefs.subColor) { c ->
-            repository.updatePlayerPrefs { it.copy(subColor = c) }
-        }
-        Label("Background")
-        ChipRow(listOf("outline" to "Outline", "shadow" to "Shadow", "box" to "Box"), prefs.subBackground) { b -> repository.updatePlayerPrefs { it.copy(subBackground = b) } }
-        if (prefs.subBackground == "box") {
-            Label("Box opacity")
-            HSlider(settings.subBoxOpacity, 0.2f..1f) { v -> set { it.copy(subBoxOpacity = v) } }
-        }
-        SwitchRow("Bold", null, settings.subBold) { v -> set { it.copy(subBold = v) } }
-        Label("Alignment")
-        ChipRow(listOf("left" to "Left", "center" to "Centre", "right" to "Right"), settings.subAlignX) { v -> set { it.copy(subAlignX = v) } }
-        Label("Position")
-        HSlider(prefs.subBottom, 0.02f..0.4f) { v -> repository.updatePlayerPrefs { it.copy(subBottom = v) } }
-        if (settings.engine == "mpv") {
-            Label("Styled (ASS) subtitles", "Anime subtitles often carry their own fonts and colours.")
-            ChipRow(listOf("no" to "Keep their style", "scale" to "Keep style, my size", "force" to "Use my style"), settings.assOverride) { v ->
-                set { it.copy(assOverride = v) }
-            }
+        Box(Modifier.align(align).fillMaxWidth().padding(horizontal = 18.dp, vertical = 16.dp)) {
+            app.lart.mobile.player.SubtitleText("This is how your\nsubtitles will look.", prefs, settings, Modifier.align(Alignment.Center))
         }
     }
 }
@@ -743,14 +938,6 @@ private fun StreamingSection(repository: Repository, settings: AppSettings, set:
         ChipRow(listOf("off" to "Off", "balanced" to "Balanced", "strict" to "Strict"), settings.safetyFilter) { v -> set { it.copy(safetyFilter = v) } }
         Label("Order")
         ChipRow(listOf("lart" to "Best first", "addon" to "As the addons list them"), settings.streamSort) { v -> set { it.copy(streamSort = v) } }
-        Label("Preferred languages", "Sources that mention these languages rank higher.")
-        MultiChipRow(
-            listOf("English", "Spanish", "French", "German", "Italian", "Portuguese", "Hindi", "Japanese", "Korean", "Russian", "Arabic", "Turkish", "Multi").map { it to it },
-            settings.streamLanguages,
-        ) { v -> set { it.copy(streamLanguages = v) } }
-        if (settings.streamLanguages.isNotEmpty()) {
-            SwitchRow("Only show those languages", null, settings.requireStreamLanguage) { v -> set { it.copy(requireStreamLanguage = v) } }
-        }
         SwitchRow("No torrents", "Hide torrent sources, even with debrid.", settings.torrentsDisabled) { v -> set { it.copy(torrentsDisabled = v) } }
         SwitchRow("Show file names", "Under each source in the list.", settings.showFilename) { v -> set { it.copy(showFilename = v) } }
         Label("Addon timeout", "How long to wait for a slow addon before showing the rest.")

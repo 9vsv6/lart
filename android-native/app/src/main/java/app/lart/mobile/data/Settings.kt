@@ -148,6 +148,46 @@ data class AppSettings(
     val qualityInPlayer: Boolean = true,
     /** Delete a downloaded file once you finish watching it. */
     val deleteAfterWatching: Boolean = false,
+    // ---- Harbor's Languages & subtitles ----
+    /** Audio and subtitle tracks whose name has one of these words are never picked on their own. */
+    val skipTrackWords: List<String> = listOf("commentary"),
+    /** Home rows only show titles first made in these languages; empty shows all. */
+    val homeLanguages: List<String> = emptyList(),
+    /** Nudge Home's rows toward your region (TMDB's region and release dates). */
+    val favourRegion: Boolean = true,
+    /** Your region for TMDB (two letters); empty follows the device. */
+    val region: String = "",
+    /** Titles and descriptions in the metadata language (TMDB), each on its own switch. */
+    val translateTitles: Boolean = true,
+    val translateOverviews: Boolean = true,
+    /** Logo and poster language on TMDB; empty follows the metadata language. */
+    val imageLanguage: String = "",
+    /** With audio already in your subtitle language, pick a forced track (signs only), else none. */
+    val forcedSubsNativeAudio: Boolean = false,
+    /** Open the subtitle menu when a video starts, to choose before watching. */
+    val chooseSubsBeforePlayback: Boolean = false,
+    /** Switch to a better match when addon subtitles arrive after one was picked. */
+    val upgradeSubtitles: Boolean = true,
+    /** A dot on the subtitles button while subtitles are on. */
+    val subIndicatorDot: Boolean = true,
+    /** The second subtitle's size, against the first. */
+    val secondSubScale: Float = 0.85f,
+    val subOutlineColor: Long = 0xFF000000,
+    /** Outline thickness, in px at 1080p (Harbor's scale: 0â10). */
+    val subOutlineSize: Float = 2f,
+    val subFont: String = "inter",
+    /** Where subtitles sit: Harbor's nine places ("bottom", "top-left", "center"â¦). */
+    val subPosition: String = "bottom",
+    val subOpacity: Float = 1f,
+    val subBoxColor: Long = 0xFF000000,
+    /** Show the offset on screen while nudging subtitle timing. */
+    val subSyncIndicator: Boolean = true,
+    val subsInPip: Boolean = true,
+    /** Native subtitle sources, as Harbor's (their keys live with the other provider keys). */
+    val subdlEnabled: Boolean = false,
+    val subsourceEnabled: Boolean = false,
+    val wyzieEnabled: Boolean = true,
+    val openSubtitlesEnabled: Boolean = false,
     /** IMDb rating on each episode (OMDb with a key, else TMDB). */
     val showEpisodeRating: Boolean = true,
     val hidePosterTitles: Boolean = false,

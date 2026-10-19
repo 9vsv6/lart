@@ -21,6 +21,11 @@ class LartApp : Application() {
             repository.settings.collect {
                 LartDisplay.settings = it
                 Tmdb.languageOverride = it.metadataLanguage
+                Tmdb.imageLanguage = it.imageLanguage
+                Tmdb.region = it.region
+                Tmdb.favourRegion = it.favourRegion
+                Tmdb.translateTitles = it.translateTitles
+                Tmdb.translateOverviews = it.translateOverviews
             }
         }
         main.launch { repository.rpdbKey.collect { LartDisplay.rpdbKey = it } }

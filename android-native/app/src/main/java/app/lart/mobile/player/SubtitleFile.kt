@@ -48,6 +48,8 @@ class SubtitleFile(private val cues: List<Cue>) {
         private val tags = Regex("""<[^>]+>|\{\\[^}]*\}""")
 
         suspend fun load(url: String): SubtitleFile = withContext(Dispatchers.IO) {
+            // Harbor's subtitle sources hand over local files.
+            if (url.startsWith("file:")) return@withContext parse(decode(java.io.File(java.net.URI(url)).readBytes()))
             val request = Request.Builder().url(url).header("User-Agent", Net.USER_AGENT).build()
             val bytes = Net.client.newCall(request).execute().use { response ->
                 if (!response.isSuccessful) throw IOException("HTTP ${response.code}")

@@ -277,11 +277,21 @@ fun PlayerUi(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions, cas
 private fun SubtitleLayer(state: PlayerState, prefs: PlayerPrefs) {
     val cues = state.cues
     if (cues.isEmpty()) return
+    if (state.inPip && !state.settings.subsInPip) return
     val (top, bottom) = cues.partition { it.top }
     if (bottom.isNotEmpty()) {
-        // Lifted above the controls while they show, as Harbor does.
-        BoxWithFraction(prefs.subBottom + if (state.controlsVisible && !state.inPip) CONTROLS_LIFT else 0f) {
-            CueColumn(bottom, prefs, state.settings)
+        // Harbor's nine places; bottom ones lift above the controls while they show.
+        val place = state.settings.subPosition
+        when {
+            place.startsWith("top") -> Box(Modifier.fillMaxSize().padding(top = 32.dp, start = 48.dp, end = 48.dp), contentAlignment = Alignment.TopCenter) {
+                CueColumn(bottom, prefs, state.settings)
+            }
+            place in setOf("left", "center", "right") -> Box(Modifier.fillMaxSize().padding(horizontal = 48.dp), contentAlignment = Alignment.Center) {
+                CueColumn(bottom, prefs, state.settings)
+            }
+            else -> BoxWithFraction(prefs.subBottom + if (state.controlsVisible && !state.inPip) CONTROLS_LIFT else 0f) {
+                CueColumn(bottom, prefs, state.settings)
+            }
         }
     }
     if (top.isNotEmpty()) {
@@ -293,7 +303,7 @@ private fun SubtitleLayer(state: PlayerState, prefs: PlayerPrefs) {
 
 @Composable
 private fun CueColumn(cues: List<UiCue>, prefs: PlayerPrefs, style: app.lart.mobile.data.AppSettings) {
-    val align = when (style.subAlignX) {
+    val align = when (subHorizontal(style)) {
         "left" -> Alignment.Start
         "right" -> Alignment.End
         else -> Alignment.CenterHorizontally
@@ -327,32 +337,52 @@ private fun BoxWithFraction(bottom: Float, content: @Composable () -> Unit) {
 @Composable
 fun SubtitleText(text: String, prefs: PlayerPrefs, style: app.lart.mobile.data.AppSettings = app.lart.mobile.data.AppSettings(), modifier: Modifier = Modifier) {
     val base = TextStyle(
-        color = Color(prefs.subColor.toInt()),
+        color = Color(prefs.subColor.toInt()).copy(alpha = style.subOpacity.coerceIn(0.2f, 1f)),
         fontSize = (22 * prefs.subScale).sp,
         lineHeight = (28 * prefs.subScale).sp,
         fontWeight = if (style.subBold) FontWeight.Bold else FontWeight.Medium,
-        textAlign = when (style.subAlignX) {
+        fontFamily = subFontFamily(style.subFont),
+        textAlign = when (subHorizontal(style)) {
             "left" -> TextAlign.Start
             "right" -> TextAlign.End
             else -> TextAlign.Center
         },
     )
+    val edge = Color(style.subOutlineColor.toInt())
     when (prefs.subBackground) {
         "box" -> Text(
             text,
             style = base,
-            modifier = modifier.background(Color.Black.copy(alpha = style.subBoxOpacity.coerceIn(0f, 1f)), RoundedCornerShape(4.dp)).padding(horizontal = 8.dp, vertical = 2.dp),
+            modifier = modifier.background(Color(style.subBoxColor.toInt()).copy(alpha = style.subBoxOpacity.coerceIn(0f, 1f)), RoundedCornerShape(6.dp)).padding(horizontal = 10.dp, vertical = 3.dp),
         )
-        "shadow" -> Text(text, style = base.copy(shadow = Shadow(Color.Black, Offset(2f, 2f), 6f)), modifier = modifier)
+        "shadow" -> Text(text, style = base.copy(shadow = Shadow(edge.copy(alpha = 0.85f), Offset(2f, 2f), 8f)), modifier = modifier)
         else -> Box(modifier) {
-            // A drawn outline: the text in black, nudged around, under the coloured text.
-            val outline = base.copy(color = Color.Black)
-            for ((dx, dy) in listOf(-1.5f to 0f, 1.5f to 0f, 0f to -1.5f, 0f to 1.5f, -1f to -1f, 1f to 1f, -1f to 1f, 1f to -1f)) {
-                Text(text, style = outline, modifier = Modifier.offset(x = dx.dp, y = dy.dp))
+            // Harbor's outline: the text in the outline colour, nudged around by the thickness.
+            val outline = base.copy(color = edge)
+            val w = (style.subOutlineSize.coerceIn(0f, 10f) * 0.75f).coerceAtLeast(0f)
+            if (w > 0f) for ((dx, dy) in listOf(-1f to 0f, 1f to 0f, 0f to -1f, 0f to 1f, -0.7f to -0.7f, 0.7f to 0.7f, -0.7f to 0.7f, 0.7f to -0.7f)) {
+                Text(text, style = outline, modifier = Modifier.offset(x = (dx * w).dp, y = (dy * w).dp))
             }
             Text(text, style = base)
         }
     }
+}
+
+/** Harbor's subtitle fonts, on what Android ships. */
+fun subFontFamily(name: String): androidx.compose.ui.text.font.FontFamily = when (name) {
+    "serif" -> androidx.compose.ui.text.font.FontFamily.Serif
+    "mono" -> androidx.compose.ui.text.font.FontFamily.Monospace
+    "condensed" -> androidx.compose.ui.text.font.FontFamily(android.graphics.Typeface.create("sans-serif-condensed", android.graphics.Typeface.NORMAL))
+    "system" -> androidx.compose.ui.text.font.FontFamily.Default
+    else -> androidx.compose.ui.text.font.FontFamily.SansSerif
+}
+
+/** left / center / right, from Harbor's nine places (or the older alignment setting). */
+fun subHorizontal(style: app.lart.mobile.data.AppSettings): String = when {
+    style.subPosition.endsWith("left") -> "left"
+    style.subPosition.endsWith("right") -> "right"
+    style.subPosition == "bottom" -> style.subAlignX
+    else -> "center"
 }
 
 @Composable

@@ -82,8 +82,9 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
     val cw by repository.continueWatching.collectAsState()
     val tmdbKey by repository.tmdbKey.collectAsState()
     // Rebuilt from scratch when the TMDB key changes.
-    val rows = remember(tmdbKey) { mutableStateMapOf<BrowseView, List<CatalogRow>>() }
-    val failed = remember(tmdbKey) { mutableStateMapOf<BrowseView, Boolean>() }
+    val homeLanguages = LartDisplay.settings.homeLanguages
+    val rows = remember(tmdbKey, homeLanguages) { mutableStateMapOf<BrowseView, List<CatalogRow>>() }
+    val failed = remember(tmdbKey, homeLanguages) { mutableStateMapOf<BrowseView, Boolean>() }
 
     // Harbor's "New Episodes" row: what came out lately for the shows you follow.
     val library by repository.library.collectAsState()
@@ -96,7 +97,7 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
         newEpisodes = runCatching { app.lart.mobile.data.Discover.recentEpisodes(shows, repository.metaAddons()) }.getOrDefault(emptyList())
     }
 
-    LaunchedEffect(view, addons, builtins, tmdbKey) {
+    LaunchedEffect(view, addons, builtins, tmdbKey, homeLanguages) {
         if (addons.isEmpty() || rows[view] != null) return@LaunchedEffect
         val key = tmdbKey
         // Harbor's rows: TMDB lists with a key (Cinemeta's on Home without one), MyAnimeList for anime.
@@ -304,7 +305,7 @@ private suspend fun tmdbRows(view: BrowseView, key: String): List<CatalogRow> = 
     }
     specs.mapIndexed { index, spec ->
         async {
-            val metas = runCatching { Tmdb.row(key, spec) }.getOrDefault(emptyList()).let { list -> if (spec.path == "/movie/now_playing") list.map { it.copy(inTheaters = true) } else list }
+            val metas = runCatching { Tmdb.row(key, spec, languages = LartDisplay.settings.homeLanguages) }.getOrDefault(emptyList()).let { list -> if (spec.path == "/movie/now_playing") list.map { it.copy(inTheaters = true) } else list }
             val shown = if (index == 0) {
                 val hero = metas.filter { it.background != null }.take(8)
                 val withLogos = Tmdb.withLogos(key, hero).associateBy { it.id }

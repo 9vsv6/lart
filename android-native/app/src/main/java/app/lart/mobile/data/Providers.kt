@@ -20,6 +20,11 @@ object ProviderKey {
     const val MDBLIST = "mdblist"
     const val FANART = "fanart"
     const val POSTERS = "posters"
+    // Harbor's subtitle sources.
+    const val SUBDL = "subdl"
+    const val SUBSOURCE = "subsource"
+    const val WYZIE = "wyzie"
+    const val OPENSUBTITLES = "opensubtitles"
 }
 
 /** Harbor's other metadata providers (src/lib/providers): TheTVDB, MDBList and Fanart.tv. */

@@ -394,15 +394,27 @@ class MpvEngine private constructor(context: Context, private val mpv: MPVLib, p
 
     /** Harbor's subtitle style on mpv's text subtitles; styled (ASS) ones keep their look, scaled. */
     override fun applySubtitleStyle(prefs: PlayerPrefs, style: AppSettings, lifted: Boolean) {
-        val color = "#%08X".format(prefs.subColor.toInt())
+        // mpv takes #AARRGGBB.
+        fun argb(c: Long, alpha: Float = 1f) = "#%02X%06X".format((alpha * 255).toInt().coerceIn(0, 255), c and 0xFFFFFF)
+        val color = argb(prefs.subColor, style.subOpacity.coerceIn(0.2f, 1f))
         mpv.setPropertyDouble("sub-scale", prefs.subScale.toDouble())
         mpv.setPropertyString("sub-color", color)
         mpv.setPropertyBoolean("sub-bold", style.subBold)
-        mpv.setPropertyString("sub-align-x", style.subAlignX)
-        mpv.setPropertyString("sub-justify", style.subAlignX)
+        val horizontal = subHorizontal(style)
+        mpv.setPropertyString("sub-align-x", horizontal)
+        mpv.setPropertyString("sub-justify", horizontal)
+        mpv.setPropertyString(
+            "sub-align-y",
+            when {
+                style.subPosition.startsWith("top") -> "top"
+                style.subPosition in setOf("left", "center", "right") -> "center"
+                else -> "bottom"
+            },
+        )
+        mpv.setPropertyString("sub-font", when (style.subFont) { "serif" -> "serif"; "mono" -> "monospace"; "condensed" -> "sans-serif-condensed"; else -> "sans-serif" })
         when (prefs.subBackground) {
             "box" -> {
-                val box = "#%02X000000".format((style.subBoxOpacity * 255).toInt().coerceIn(0, 255))
+                val box = argb(style.subBoxColor, style.subBoxOpacity)
                 mpv.setPropertyString("sub-border-style", "opaque-box")
                 mpv.setPropertyString("sub-outline-color", box)
                 mpv.setPropertyString("sub-back-color", box)
@@ -412,12 +424,12 @@ class MpvEngine private constructor(context: Context, private val mpv: MPVLib, p
                 mpv.setPropertyString("sub-border-style", "outline-and-shadow")
                 mpv.setPropertyDouble("sub-outline-size", 0.0)
                 mpv.setPropertyDouble("sub-shadow-offset", 2.5)
-                mpv.setPropertyString("sub-shadow-color", "#C0000000")
+                mpv.setPropertyString("sub-shadow-color", argb(style.subOutlineColor, 0.75f))
             }
             else -> {
                 mpv.setPropertyString("sub-border-style", "outline-and-shadow")
-                mpv.setPropertyString("sub-outline-color", "#FF000000")
-                mpv.setPropertyDouble("sub-outline-size", 3.0)
+                mpv.setPropertyString("sub-outline-color", argb(style.subOutlineColor))
+                mpv.setPropertyDouble("sub-outline-size", (style.subOutlineSize * 1.5f).toDouble())
                 mpv.setPropertyDouble("sub-shadow-offset", 0.0)
             }
         }

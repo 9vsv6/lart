@@ -190,6 +190,12 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
         autoSkipped.clear()
         autoSubDone = false
         clearAddonSubtitle()
+        // Harbor's "Choose subtitles before playback": the menu opens, nothing turns on by itself.
+        if (state.settings.chooseSubsBeforePlayback) {
+            autoSubDone = true
+            state.panel = Panel.Subtitles
+            state.controlsVisible = true
+        }
         setSubDelay(0)
         if (state.subChoice is SubChoice.Addon) state.subChoice = SubChoice.Off
 
@@ -391,8 +397,12 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
         if (audioChecked || audio.isEmpty()) return
         audioChecked = true
         val selected = audio.firstOrNull { it.selected } ?: return
-        if (!selected.commentary) return
-        audio.firstOrNull { !it.commentary }?.let { selectAudio(it.key) }
+        if (!selected.commentary && !skipped(selected.label, selected.detail)) return
+        // The first allowed track in a wanted language, else any allowed one.
+        val allowed = audio.filter { !it.commentary && !skipped(it.label, it.detail) }
+        val wanted = state.settings.audioLanguages.ifEmpty { listOf(Locale.getDefault().language) }
+        (wanted.firstNotNullOfOrNull { lang -> allowed.firstOrNull { sameLanguage(it.language, lang) } } ?: allowed.firstOrNull())
+            ?.let { engine.selectAudio(it.key) }
     }
 
     override fun selectAudio(key: String) {
@@ -459,7 +469,34 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
             if (state.videoId != videoId) return@launch
             state.addonSubs = subs.distinctBy { it.url }
             maybeAutoSelectAddon(engine.textTracks())
+            // Harbor's own sources (SubDL, Subsource, Wyzie, OpenSubtitles) join in as they arrive.
+            val native = withTimeoutOrNull(25_000) { nativeSubtitles(videoId) }.orEmpty()
+            if (state.videoId != videoId || native.isEmpty()) return@launch
+            state.addonSubs = (state.addonSubs.orEmpty() + native).distinctBy { it.url }
+            if (state.settings.upgradeSubtitles && state.subChoice is SubChoice.Off) autoSubDone = false
+            maybeAutoSelectAddon(engine.textTracks())
         }
+    }
+
+    private suspend fun nativeSubtitles(videoId: String): List<app.lart.mobile.data.Subtitle> {
+        val settings = state.settings
+        if (!settings.subdlEnabled && !settings.subsourceEnabled && !settings.wyzieEnabled && !settings.openSubtitlesEnabled) return emptyList()
+        val parts = videoId.split(':')
+        val imdb = parts.first().takeIf { it.startsWith("tt") } ?: return emptyList()
+        val query = app.lart.mobile.data.SubtitleSources.Query(
+            imdb = imdb,
+            series = type != "movie",
+            season = parts.getOrNull(1)?.toIntOrNull(),
+            episode = parts.getOrNull(2)?.toIntOrNull(),
+            languages = (listOf(prefs.subLanguage) + settings.subtitleFallbacks + settings.secondarySubLanguage).filter { it.isNotEmpty() },
+        )
+        return app.lart.mobile.data.SubtitleSources.search(cacheDir, query, settings, repository.providerKeys.value)
+    }
+
+    /** Harbor's "Never auto-select tracks containing": a track whose name has one of these words. */
+    private fun skipped(label: String?, detail: String?): Boolean {
+        val text = "${label.orEmpty()} ${detail.orEmpty()}".lowercase()
+        return state.settings.skipTrackWords.any { it.isNotBlank() && it.lowercase() in text }
     }
 
     /**
@@ -475,7 +512,18 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
         }
         val wanted = (listOf(prefs.subLanguage) + settings.subtitleFallbacks).filter { it.isNotEmpty() }.distinct()
         if (wanted.isEmpty()) return
-        val embedded = text.filter { !it.external && !(settings.hideSdh && isSdh(it.label, it.detail)) }
+        val embedded = text.filter { !it.external && !(settings.hideSdh && isSdh(it.label, it.detail)) && !skipped(it.label, it.detail) }
+        // Harbor's "Forced subs with native audio": the audio is already in the subtitle
+        // language, so only a forced track (signs, foreign lines) turns on, else none.
+        if (settings.forcedSubsNativeAudio) {
+            val audioLang = engine.audioTracks().firstOrNull { it.selected }?.language
+            if (audioLang != null && sameLanguage(audioLang, wanted.first())) {
+                autoSubDone = true
+                embedded.firstOrNull { sameLanguage(it.language, wanted.first()) && "${it.label} ${it.detail}".contains("forced", true) }
+                    ?.let { selectSubtitle(SubChoice.Embedded(it.key)) } ?: selectSubtitle(SubChoice.Off)
+                return
+            }
+        }
         val selected = text.firstOrNull { it.selected }
         // An engine's own pick in a wanted language stands; addons can still beat it when preferred.
         if (selected != null && (settings.preferEmbeddedSubs || !settings.subtitleAddons)) {
@@ -601,6 +649,11 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
         val clamped = delayMs.coerceIn(-30_000, 30_000)
         state.subDelayMs = clamped
         engine.setSubDelay(clamped)
+        // Harbor's subtitle sync indicator: the offset on screen while nudging.
+        if (state.settings.subSyncIndicator && clamped != 0L) {
+            state.hint = "Subtitle sync  |  " + (if (clamped > 0) "+" else "") + "$clamped ms"
+            state.hintIcon = 0
+        }
     }
 
     override fun setAudioDelay(delayMs: Long) {

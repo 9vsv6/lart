@@ -78,7 +78,16 @@ object Tmdb {
 
     /** Settings → Languages → Details language; empty follows the device. */
     @Volatile var languageOverride: String = ""
-    private val language: String get() = languageOverride.ifEmpty { Locale.getDefault().toLanguageTag() }
+    /** Harbor's App language page: image language, region, and whether to translate. */
+    @Volatile var imageLanguage: String = ""
+    @Volatile var region: String = ""
+    @Volatile var favourRegion: Boolean = true
+    @Volatile var translateTitles: Boolean = true
+    @Volatile var translateOverviews: Boolean = true
+    // Untranslated descriptions are TMDB's English ones.
+    private val language: String get() = if (!translateOverviews) "en-US" else languageOverride.ifEmpty { Locale.getDefault().toLanguageTag() }
+    private fun imageLanguages(lang: String) = when (imageLanguage) { "" -> "$lang,en,null"; "null" -> "null,en"; else -> "$imageLanguage,en,null" }
+    private fun regionCode() = region.ifEmpty { Locale.getDefault().country }.uppercase().takeIf { it.length == 2 }
 
     private suspend fun get(key: String, path: String, params: Map<String, String> = emptyMap()): JsonObject {
         // v4 read tokens are long JWTs sent as a bearer token; v3 keys go in the query.
@@ -152,9 +161,26 @@ object Tmdb {
         return result
     }
 
-    suspend fun row(key: String, spec: RowSpec, page: Int = 1): List<Meta> {
-        val body = get(key, spec.path, spec.params + ("page" to "$page"))
-        return (body["results"] as? JsonArray).orEmpty().mapNotNull { item -> toMeta(item.jsonObject, spec.type) }
+    /**
+     * A row's page. With [languages] (Harbor's Home catalogs), only titles first made in
+     * those languages; discover rows ask TMDB for them, the rest are filtered here.
+     */
+    suspend fun row(key: String, spec: RowSpec, page: Int = 1, languages: List<String> = emptyList()): List<Meta> {
+        val extra = buildMap {
+            put("page", "$page")
+            val discover = spec.path.startsWith("/discover/")
+            if (languages.isNotEmpty() && discover && "with_original_language" !in spec.params) {
+                put("with_original_language", languages.joinToString("|") { it.substringBefore('-') })
+            }
+            // "Favour titles from where you are": TMDB's region for what's showing and coming.
+            val regional = spec.path in setOf("/movie/now_playing", "/movie/upcoming", "/movie/popular", "/movie/top_rated") || (discover && spec.type == "movie")
+            if (favourRegion && regional && "region" !in spec.params) regionCode()?.let { put("region", it) }
+        }
+        val body = get(key, spec.path, spec.params + extra)
+        val wanted = languages.map { it.substringBefore('-') }.toSet()
+        return (body["results"] as? JsonArray).orEmpty().map { it.jsonObject }
+            .filter { wanted.isEmpty() || it.string("original_language") in wanted }
+            .mapNotNull { item -> toMeta(item, spec.type) }
     }
 
     private fun toMeta(item: JsonObject, forcedType: String?): Meta? {
@@ -165,7 +191,9 @@ object Tmdb {
             else -> return null // People in "trending/all".
         }
         val id = item["id"]?.jsonPrimitive?.intOrNull ?: return null
-        val name = item.string("title") ?: item.string("name") ?: return null
+        // "Translate titles" off: the title as it was first released.
+        val translated = item.string("title") ?: item.string("name")
+        val name = (if (translateTitles) translated else item.string("original_title") ?: item.string("original_name") ?: translated) ?: return null
         val date = item.string("release_date") ?: item.string("first_air_date")
         return Meta(
             id = "tmdb:$type:$id",
@@ -190,7 +218,7 @@ object Tmdb {
     suspend fun logo(key: String, meta: Meta): String? {
         val path = tmdbPath(meta) ?: return null
         val lang = languageOverride.ifEmpty { Locale.getDefault().language }
-        val images = get(key, "$path/images", mapOf("include_image_language" to "$lang,en,null"))
+        val images = get(key, "$path/images", mapOf("include_image_language" to imageLanguages(lang)))
         val logos = (images["logos"] as? JsonArray).orEmpty().map { it.jsonObject }
         val best = logos.firstOrNull { it.string("iso_639_1") == lang } ?: logos.firstOrNull { it.string("iso_639_1") == "en" } ?: logos.firstOrNull()
         return best?.string("file_path")?.let { "$IMAGES/w500$it" }
@@ -223,7 +251,7 @@ object Tmdb {
             "/$kind/$id",
             mapOf(
                 "append_to_response" to "credits,aggregate_credits,images,recommendations,similar,videos,watch/providers,external_ids",
-                "include_image_language" to "$lang,en,null",
+                "include_image_language" to imageLanguages(lang),
             ),
         )
         val images = d["images"]?.jsonObject
@@ -322,7 +350,7 @@ object Tmdb {
         val details = get(
             key,
             "/$kind/$id",
-            mapOf("append_to_response" to "credits,images", "include_image_language" to "$lang,en,null"),
+            mapOf("append_to_response" to "credits,images", "include_image_language" to imageLanguages(lang)),
         )
         val logos = (details["images"]?.jsonObject?.get("logos") as? JsonArray).orEmpty().map { it.jsonObject }
         val logo = (logos.firstOrNull { it.string("iso_639_1") == lang } ?: logos.firstOrNull { it.string("iso_639_1") == "en" } ?: logos.firstOrNull())
