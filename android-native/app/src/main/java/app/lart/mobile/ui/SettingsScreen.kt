@@ -144,7 +144,7 @@ private enum class Section(
     StreamFilters("Stream filters", "Only show sources that match.", Icons.Outlined.FilterList, "filter resolution 4k 1080p remux bluray web hevc av1 hdr cached size"),
     HomeRows("Home", "Rows and the hero on Home.", Icons.Outlined.Home, "home top 10 hero unreleased anime", setOf("Home")),
     PosterCards("Poster cards", "What a poster card shows.", Icons.Outlined.GridView, "poster card badge corners size", setOf("Poster cards")),
-    DetailPages("Detail pages", "Spoilers and episode cards on title pages.", Icons.Outlined.Article, "episodes spoilers order description card size", setOf("Spoilers", "Episode cards")),
+    DetailPages("Detail pages", "Spoilers, episode cards, comments and reviews.", Icons.Outlined.Article, "episodes spoilers order description card size trakt comments letterboxd reviews community", setOf("Spoilers", "Episode cards", "Community")),
     Metadata("Metadata providers", "Where titles, artwork and scores come from.", Icons.Outlined.Storage, "tmdb omdb tvdb thetvdb mdblist fanart rpdb custom posters ratings keys metadata"),
     Theme("Theme", "Accent colour.", Icons.Outlined.Palette, "accent colour color theme", setOf("Accent colour")),
     Storage("Storage", "Caches, watch positions on this device, and resetting settings.", Icons.Outlined.DeleteSweep, "cache images shaders watch positions reset"),
@@ -813,6 +813,14 @@ private fun LibrarySection(repository: Repository, settings: AppSettings, set: (
                 Box(Modifier.padding(top = 10.dp)) {
                     ChipRow(listOf(0 to "Default", 1 to "Large", 2 to "Extra large"), settings.episodeCardSize) { v -> set { it.copy(episodeCardSize = v) } }
                 }
+            }
+        }
+    }
+    Part("Community") {
+        SettingsSection("Community", "What other people say about a title.") {
+            Column {
+                ToggleRow("Trakt comments", "Shows Trakt comments and reviews on title pages.", settings.showTraktComments) { v -> set { it.copy(showTraktComments = v) } }
+                ToggleRow("Letterboxd reviews", "Shows Letterboxd's average and popular reviews on movie pages.", settings.showLetterboxdDetail) { v -> set { it.copy(showLetterboxdDetail = v) } }
             }
         }
     }

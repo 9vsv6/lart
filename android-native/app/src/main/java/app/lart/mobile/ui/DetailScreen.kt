@@ -270,6 +270,19 @@ private fun DetailBody(
         }
         if (found.isNotEmpty()) ratings[s] = found
     }
+    // Harbor's community sections: Trakt comments (opt-in) and Letterboxd for films.
+    val trackers by repository.trackers.collectAsState()
+    var comments by remember(meta.id) { mutableStateOf<List<app.lart.mobile.data.TraktComment>>(emptyList()) }
+    var letterboxd by remember(meta.id) { mutableStateOf<app.lart.mobile.data.LetterboxdFilm?>(null) }
+    val imdbId = meta.id.substringBefore(':').takeIf { it.startsWith("tt") }
+    LaunchedEffect(meta.id, LartDisplay.settings.showTraktComments) {
+        val imdb = imdbId ?: return@LaunchedEffect
+        if (LartDisplay.settings.showTraktComments) comments = app.lart.mobile.data.Reviews.trakt(imdb, meta.type == "movie", trackers.trakt?.clientId)
+    }
+    LaunchedEffect(meta.id, LartDisplay.settings.showLetterboxdDetail) {
+        val imdb = imdbId ?: return@LaunchedEffect
+        if (LartDisplay.settings.showLetterboxdDetail && meta.type == "movie") letterboxd = app.lart.mobile.data.Reviews.letterboxd(imdb)
+    }
     val play: () -> Unit = {
         if (isSeries) next?.let { onStreams(it.id, "${meta.name} · ${episodeLabel(it)}") } else onStreams(meta.id, meta.name)
     }
@@ -354,6 +367,14 @@ private fun DetailBody(
             val info = infoOf(meta, details) + animeInfo(anime, details)
             if (info.isNotEmpty()) item(key = "info") { Information(info, if (wide) 3 else 2, side) }
             anime?.statusDistribution?.takeIf { it.isNotEmpty() }?.let { item(key = "stats") { AnimeStats(it, side) } }
+            if (LartDisplay.settings.showTraktComments && comments.isNotEmpty()) {
+                item(key = "trakt") {
+                    TraktCommentsSection(comments, "https://trakt.tv/${if (meta.type == "movie") "movies" else "shows"}/$imdbId", side)
+                }
+            }
+            letterboxd?.takeIf { LartDisplay.settings.showLetterboxdDetail && (it.reviews.isNotEmpty() || it.average != null) }?.let { film ->
+                item(key = "letterboxd") { LetterboxdSection(film, side) }
+            }
         }
     }
 }

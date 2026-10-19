@@ -121,6 +121,10 @@ data class AppSettings(
     val showAwardBadge: Boolean = true,
     /** Harbor's DUB tab on anime cards with an English dub airing (AniSchedule). */
     val showDubBadge: Boolean = true,
+    /** Harbor's Trakt comments on title pages (off by default, as Harbor). */
+    val showTraktComments: Boolean = false,
+    /** Letterboxd's average and popular reviews on movie pages. */
+    val showLetterboxdDetail: Boolean = true,
     /** IMDb rating on each episode (OMDb with a key, else TMDB). */
     val showEpisodeRating: Boolean = true,
     val hidePosterTitles: Boolean = false,
