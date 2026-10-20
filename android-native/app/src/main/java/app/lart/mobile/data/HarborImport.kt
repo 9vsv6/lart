@@ -138,6 +138,40 @@ class HarborImport(private val repository: Repository, private val context: Cont
                 region = s.str("region") ?: a.region,
                 homeLanguages = s.strList("homeLanguages") ?: a.homeLanguages,
                 favourRegion = s.bool("feedLocaleBias") ?: a.favourRegion,
+                blurComments = s.bool("blurComments") ?: a.blurComments,
+                useTraktAvatar = s.bool("useTraktAvatar") ?: a.useTraktAvatar,
+                useSimklAvatar = s.bool("useSimklAvatar") ?: a.useSimklAvatar,
+                useAnilistAvatar = s.bool("useAnilistAvatar") ?: a.useAnilistAvatar,
+                useMalAvatar = s.bool("useMalAvatar") ?: a.useMalAvatar,
+                simklScrobble = s.bool("simklScrobbleEnabled") ?: a.simklScrobble,
+                showSimklBadge = s.bool("showSimklBadge") ?: a.showSimklBadge,
+                simklHomeRails = s.bool("simklHomeRailsEnabled") ?: a.simklHomeRails,
+                simklTrendingRail = s.bool("simklTrendingRailEnabled") ?: a.simklTrendingRail,
+                simklMoviesPlan = (s["simklGranularFilters"] as? JsonObject)?.let { (it["movies"] as? JsonObject)?.bool("plantowatch") } ?: a.simklMoviesPlan,
+                simklShowsWatching = (s["simklGranularFilters"] as? JsonObject)?.let { (it["shows"] as? JsonObject)?.bool("watching") } ?: a.simklShowsWatching,
+                simklShowsPlan = (s["simklGranularFilters"] as? JsonObject)?.let { (it["shows"] as? JsonObject)?.bool("plantowatch") } ?: a.simklShowsPlan,
+                simklAnimeWatching = (s["simklGranularFilters"] as? JsonObject)?.let { (it["anime"] as? JsonObject)?.bool("watching") } ?: a.simklAnimeWatching,
+                simklAnimePlan = (s["simklGranularFilters"] as? JsonObject)?.let { (it["anime"] as? JsonObject)?.bool("plantowatch") } ?: a.simklAnimePlan,
+                anilistAutoSync = s.bool("anilistAutoSync") ?: a.anilistAutoSync,
+                showAnilistComments = s.bool("showAnilistComments") ?: a.showAnilistComments,
+                anilistBlurComments = s.bool("anilistBlurComments") ?: a.anilistBlurComments,
+                malAutoSync = s.bool("malAutoSync") ?: a.malAutoSync,
+                syncIndicator = s.bool("syncIndicator") ?: a.syncIndicator,
+                syncIndicatorPosition = s.str("syncIndicatorPosition") ?: a.syncIndicatorPosition,
+                letterboxd = (s["letterboxd"] as? JsonObject)?.let { l ->
+                    LetterboxdSettings(
+                        enabled = l.bool("enabled") ?: false,
+                        mode = l.str("mode") ?: "public",
+                        username = l.str("username").orEmpty(),
+                        selectedCatalogs = l.strList("selectedCatalogs") ?: a.letterboxd.selectedCatalogs,
+                        hiddenCatalogs = l.strList("hiddenCatalogs").orEmpty(),
+                        showRatingsOnPosters = l.bool("showRatingsOnPosters") ?: true,
+                        listRefs = (l["listRefs"] as? kotlinx.serialization.json.JsonArray).orEmpty().mapNotNull { e ->
+                            val r = e as? JsonObject ?: return@mapNotNull null
+                            LetterboxdList(r.str("id") ?: return@mapNotNull null, r.str("name") ?: "Letterboxd list", r.str("owner"), r.num("filmCount")?.toInt())
+                        },
+                    )
+                } ?: a.letterboxd,
                 streamLanguages = s.strList("preferredLanguages")?.map { Languages.of(it).name } ?: a.streamLanguages,
                 requireStreamLanguage = s.bool("requirePreferredLanguage") ?: a.requireStreamLanguage,
                 autoPlayNextEpisode = s.bool("autoPlayNextEpisode") ?: a.autoPlayNextEpisode,
@@ -268,6 +302,18 @@ class HarborImport(private val repository: Repository, private val context: Cont
             repository.updateTrackers { it.copy(anilist = TrackerAuth(HARBOR_ANILIST, null, token, null, t.num("expiresAt")?.toLong() ?: 0, t.str("userName"))) }
             connected++
         }
+        // MyAnimeList's token works until it expires (about a month); renewing it needs Harbor's server.
+        session("harbor.mal.session.v1")?.let { t ->
+            val token = t.str("accessToken") ?: return@let
+            repository.updateTrackers { it.copy(mal = TrackerAuth(HARBOR_MAL, null, token, t.str("refreshToken"), t.num("expiresAt")?.toLong() ?: 0, t.str("userName"))) }
+            connected++
+        }
+        session("harbor.letterboxd.session.v1")?.let { t ->
+            val token = t.str("userToken") ?: return@let
+            val user = t.str("userId") ?: return@let
+            repository.updateTrackers { it.copy(letterboxd = LetterboxdSession(token, user, t.str("username").orEmpty(), t.str("displayName"), t.num("loginAt")?.toLong() ?: 0)) }
+            connected++
+        }
         count("tracker sign-ins", connected)
     }
 
@@ -301,6 +347,7 @@ class HarborImport(private val repository: Repository, private val context: Cont
         const val HARBOR_TRAKT = "71ef7ea86333eab031c8830f8200df1f2f16ef9a3335a67470be4950ac80b925"
         const val HARBOR_SIMKL = "9609ef0a6051b6fdcf3290fd962fd65e0f8e969c942555410cffd37afca91997"
         const val HARBOR_ANILIST = "42941"
+        const val HARBOR_MAL = "879be1ac300dc70611e5c828fec7bc18"
     }
 }
 

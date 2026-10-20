@@ -7,7 +7,16 @@ import app.lart.mobile.ui.LartDisplay
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.launch
 
-class LartApp : Application() {
+class LartApp : Application(), coil.ImageLoaderFactory {
+    // Posters and backdrops stay on disk between launches: art at a given address never changes,
+    // so the cache is used as is instead of asking each server whether it still may.
+    override fun newImageLoader(): coil.ImageLoader = coil.ImageLoader.Builder(this)
+        .okHttpClient(app.lart.mobile.data.Net.client)
+        .memoryCache { coil.memory.MemoryCache.Builder(this).maxSizePercent(0.25).build() }
+        .diskCache { coil.disk.DiskCache.Builder().directory(cacheDir.resolve("image_cache")).maxSizeBytes(768L * 1024 * 1024).build() }
+        .respectCacheHeaders(false)
+        .build()
+
     lateinit var repository: Repository
         private set
 
@@ -23,6 +32,7 @@ class LartApp : Application() {
                 LartDisplay.settings = it
                 Tmdb.languageOverride = it.metadataLanguage
                 Tmdb.imageLanguage = it.imageLanguage
+                Tmdb.titleLanguage = it.titleLanguage
                 Tmdb.region = it.region
                 Tmdb.favourRegion = it.favourRegion
                 Tmdb.translateTitles = it.translateTitles

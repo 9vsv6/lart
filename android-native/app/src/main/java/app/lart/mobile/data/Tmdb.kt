@@ -84,16 +84,33 @@ object Tmdb {
     @Volatile var favourRegion: Boolean = true
     @Volatile var translateTitles: Boolean = true
     @Volatile var translateOverviews: Boolean = true
-    // Untranslated descriptions are TMDB's English ones.
-    private val language: String get() = if (!translateOverviews) "en-US" else languageOverride.ifEmpty { Locale.getDefault().toLanguageTag() }
-    private fun imageLanguages(lang: String) = when (imageLanguage) { "" -> "$lang,en,null"; "null" -> "null,en"; else -> "$imageLanguage,en,null" }
+    /** Settings → Languages → Title language: empty follows the device, "original" keeps the release title. */
+    @Volatile var titleLanguage: String = ""
+
+    // Descriptions, titles and posters each have their own language; TMDB is asked once per
+    // language that differs, and the parts are put back together by id.
+    private fun device() = Locale.getDefault().toLanguageTag()
+    private fun base(tag: String) = tag.substringBefore('-').lowercase()
+    /** Descriptions (and the rest of TMDB's text). Untranslated descriptions are TMDB's English ones. */
+    private val language: String get() = if (!translateOverviews && languageOverride.isEmpty()) "en-US" else languageOverride.ifEmpty { device() }
+    /** Titles; null keeps the original release title. */
+    private val titleLang: String? get() = when {
+        titleLanguage == "original" -> null
+        titleLanguage.isEmpty() && !translateTitles -> null
+        else -> titleLanguage.ifEmpty { device() }
+    }
+    /** Posters, backdrops and logos. */
+    private val posterLang: String get() = imageLanguage.takeIf { it.isNotEmpty() && it != "null" } ?: device()
+    private val posterBase: String get() = base(posterLang)
+    private fun imageLanguages(@Suppress("UNUSED_PARAMETER") ignored: String = "") =
+        if (imageLanguage == "null") "null,en" else "$posterBase,en,null"
     private fun regionCode() = region.ifEmpty { Locale.getDefault().country }.uppercase().takeIf { it.length == 2 }
 
-    private suspend fun get(key: String, path: String, params: Map<String, String> = emptyMap()): JsonObject {
+    private suspend fun get(key: String, path: String, params: Map<String, String> = emptyMap(), lang: String = language): JsonObject {
         // v4 read tokens are long JWTs sent as a bearer token; v3 keys go in the query.
         val bearer = key.length > 60
         val query = buildString {
-            append("language=").append(Uri.encode(language))
+            append("language=").append(Uri.encode(lang))
             params.forEach { (k, v) -> append('&').append(k).append('=').append(Uri.encode(v)) }
             if (!bearer) append("&api_key=").append(Uri.encode(key))
         }
@@ -176,14 +193,38 @@ object Tmdb {
             val regional = spec.path in setOf("/movie/now_playing", "/movie/upcoming", "/movie/popular", "/movie/top_rated") || (discover && spec.type == "movie")
             if (favourRegion && regional && "region" !in spec.params) regionCode()?.let { put("region", it) }
         }
-        val body = get(key, spec.path, spec.params + extra)
+        val params = spec.params + extra
+        val body = get(key, spec.path, params)
         val wanted = languages.map { it.substringBefore('-') }.toSet()
-        return (body["results"] as? JsonArray).orEmpty().map { it.jsonObject }
+        val items = (body["results"] as? JsonArray).orEmpty().map { it.jsonObject }
             .filter { wanted.isEmpty() || it.string("original_language") in wanted }
-            .mapNotNull { item -> toMeta(item, spec.type) }
+        // Titles and posters in their own languages: the same page asked again in each.
+        val other = listOfNotNull(titleLang, posterLang).filter { base(it) != base(language) }.distinctBy { base(it) }
+        val pages = coroutineScope {
+            other.map { lang ->
+                async {
+                    base(lang) to runCatching { get(key, spec.path, params, lang) }.getOrNull()
+                        ?.let { (it["results"] as? JsonArray).orEmpty().map { e -> e.jsonObject } }.orEmpty()
+                        .associateBy { it["id"]?.jsonPrimitive?.intOrNull }
+                }
+            }.awaitAll().toMap()
+        }
+        return items.mapNotNull { item ->
+            val id = item["id"]?.jsonPrimitive?.intOrNull
+            toMeta(
+                item,
+                spec.type,
+                titleFrom = titleLang?.let { pages[base(it)]?.get(id) },
+                artFrom = pages[base(posterLang)]?.get(id),
+            )
+        }
     }
 
-    private fun toMeta(item: JsonObject, forcedType: String?): Meta? {
+    /**
+     * A TMDB list item as a title. [titleFrom] and [artFrom] are the same item asked in the
+     * title and poster languages, when those differ from the description language.
+     */
+    private fun toMeta(item: JsonObject, forcedType: String?, titleFrom: JsonObject? = null, artFrom: JsonObject? = null): Meta? {
         val mediaType = item.string("media_type")
         val type = forcedType ?: when (mediaType) {
             "movie" -> "movie"
@@ -191,16 +232,18 @@ object Tmdb {
             else -> return null // People in "trending/all".
         }
         val id = item["id"]?.jsonPrimitive?.intOrNull ?: return null
-        // "Translate titles" off: the title as it was first released.
-        val translated = item.string("title") ?: item.string("name")
-        val name = (if (translateTitles) translated else item.string("original_title") ?: item.string("original_name") ?: translated) ?: return null
+        val original = item.string("original_title") ?: item.string("original_name")
+        val translated = (titleFrom ?: item).let { it.string("title") ?: it.string("name") }
+        // Title language "Original": the title as it was first released.
+        val name = (if (titleLang == null) original ?: translated else translated ?: original) ?: return null
+        val art = artFrom ?: item
         val date = item.string("release_date") ?: item.string("first_air_date")
         return Meta(
             id = "tmdb:$type:$id",
             type = type,
             name = name,
-            poster = item.string("poster_path")?.let { "$IMAGES/w342$it" },
-            background = item.string("backdrop_path")?.let { "$IMAGES/w1280$it" },
+            poster = (art.string("poster_path") ?: item.string("poster_path"))?.let { "$IMAGES/w342$it" },
+            background = (art.string("backdrop_path") ?: item.string("backdrop_path"))?.let { "$IMAGES/w1280$it" },
             description = item.string("overview"),
             releaseInfo = date?.take(4),
             releaseDate = date,
@@ -217,7 +260,7 @@ object Tmdb {
     /** The title's logo in the device language, else English, else any. */
     suspend fun logo(key: String, meta: Meta): String? {
         val path = tmdbPath(meta) ?: return null
-        val lang = languageOverride.ifEmpty { Locale.getDefault().language }
+        val lang = posterBase
         val images = get(key, "$path/images", mapOf("include_image_language" to imageLanguages(lang)))
         val logos = (images["logos"] as? JsonArray).orEmpty().map { it.jsonObject }
         val best = logos.firstOrNull { it.string("iso_639_1") == lang } ?: logos.firstOrNull { it.string("iso_639_1") == "en" } ?: logos.firstOrNull()
@@ -259,12 +302,12 @@ object Tmdb {
             "tv" to (found["tv_results"] as? JsonArray)?.firstOrNull()
         }
         val id = result?.jsonObject?.get("id")?.jsonPrimitive?.intOrNull ?: return null
-        val lang = languageOverride.ifEmpty { Locale.getDefault().language }
+        val lang = posterBase
         val d = get(
             key,
             "/$kind/$id",
             mapOf(
-                "append_to_response" to "credits,aggregate_credits,images,recommendations,similar,videos,watch/providers,external_ids",
+                "append_to_response" to "credits,aggregate_credits,images,recommendations,similar,videos,watch/providers,external_ids,translations",
                 "include_image_language" to imageLanguages(lang),
             ),
         )
@@ -299,10 +342,10 @@ object Tmdb {
         val runtime = d["runtime"]?.jsonPrimitive?.intOrNull ?: (d["episode_run_time"] as? JsonArray)?.firstOrNull()?.jsonPrimitive?.intOrNull
         val originalLanguage = d.string("original_language")?.let { Locale(it).getDisplayLanguage(Locale.getDefault()).ifBlank { null } }
         return TmdbDetails(
-            backdrop = d.string("backdrop_path")?.let { "$IMAGES/w1280$it" },
+            backdrop = backdropIn(images, lang) ?: d.string("backdrop_path")?.let { "$IMAGES/w1280$it" },
             logo = logo,
             overview = d.string("overview")?.takeIf { it.isNotBlank() },
-            title = d.string("title") ?: d.string("name"),
+            title = titleIn(d),
             tagline = d.string("tagline")?.takeIf { it.isNotBlank() },
             genres = (d["genres"] as? JsonArray).orEmpty().mapNotNull { it.jsonObject.string("name") },
             runtimeMinutes = runtime,
@@ -314,7 +357,7 @@ object Tmdb {
             episodes = d["number_of_episodes"]?.jsonPrimitive?.intOrNull,
             firstAired = d.string("first_air_date") ?: d.string("release_date"),
             lastAired = d.string("last_air_date"),
-            originalTitle = (d.string("original_title") ?: d.string("original_name"))?.takeIf { it != (d.string("title") ?: d.string("name")) },
+            originalTitle = (d.string("original_title") ?: d.string("original_name"))?.takeIf { it != titleIn(d) },
             budget = d["budget"]?.jsonPrimitive?.contentOrNull?.toLongOrNull()?.takeIf { it > 0 },
             revenue = d["revenue"]?.jsonPrimitive?.contentOrNull?.toLongOrNull()?.takeIf { it > 0 },
             trailerYouTube = trailer,
@@ -340,6 +383,30 @@ object Tmdb {
         )
     }
 
+    /** The title in the title language, from TMDB's translations; the release title for "Original". */
+    private fun titleIn(d: JsonObject): String? {
+        val original = d.string("original_title") ?: d.string("original_name")
+        val main = d.string("title") ?: d.string("name")
+        val lang = titleLang ?: return original ?: main
+        if (base(lang) == base(language)) return main ?: original
+        val country = lang.substringAfter('-', "").uppercase()
+        val translations = (d["translations"]?.jsonObject?.get("translations") as? JsonArray).orEmpty().map { it.jsonObject }
+            .filter { it.string("iso_639_1") == base(lang) }
+        val pick = translations.firstOrNull { country.isNotEmpty() && it.string("iso_3166_1") == country } ?: translations.firstOrNull()
+        val translated = pick?.get("data")?.jsonObject?.let { it.string("title") ?: it.string("name") }?.takeIf { it.isNotBlank() }
+        // TMDB leaves a translation's title empty when it's the same as the original.
+        return translated ?: if (base(lang) == d.string("original_language")) original else main ?: original
+    }
+
+    /** A backdrop in the poster language when it differs from the description language. */
+    private fun backdropIn(images: JsonObject?, lang: String): String? {
+        if (base(posterLang) == base(language) && imageLanguage != "null") return null
+        val backdrops = (images?.get("backdrops") as? JsonArray).orEmpty().map { it.jsonObject }
+        val want = if (imageLanguage == "null") null else lang
+        return (backdrops.firstOrNull { it.string("iso_639_1") == want } ?: backdrops.firstOrNull { it.string("iso_639_1") == null })
+            ?.string("file_path")?.let { "$IMAGES/w1280$it" }
+    }
+
     /** TMDB's episode scores for a season, by episode number (the fallback for episode ratings). */
     suspend fun seasonRatings(key: String, tvId: Int, season: Int): Map<Int, String> {
         val body = runCatching { get(key, "/tv/$tvId/season/$season") }.getOrNull() ?: return emptyMap()
@@ -360,7 +427,7 @@ object Tmdb {
             "tv" to (found["tv_results"] as? JsonArray)?.firstOrNull()
         }
         val id = result?.jsonObject?.get("id")?.jsonPrimitive?.intOrNull ?: return null
-        val lang = languageOverride.ifEmpty { Locale.getDefault().language }
+        val lang = posterBase
         val details = get(
             key,
             "/$kind/$id",

@@ -104,6 +104,7 @@ class MainActivity : ComponentActivity() {
 
     /** stremio://…/manifest.json from an addon's configure page: open the Addons page to install it. */
     private fun handleLink(intent: Intent?) {
+        intent?.data?.takeIf { it.scheme == "lartnext" && it.host == "mal" }?.let { app.lart.mobile.data.Mal.incoming.value = it.toString(); return }
         val link = intent?.data?.takeIf { it.scheme == "stremio" } ?: return
         (application as LartApp).repository.pendingInstall.value = link.toString()
     }

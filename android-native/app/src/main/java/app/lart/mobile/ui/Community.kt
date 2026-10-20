@@ -64,6 +64,7 @@ fun TraktCommentsSection(comments: List<TraktComment>, link: String, side: Dp) {
                 likes = c.likes,
                 replies = c.replies,
                 date = c.date,
+                blurred = LartDisplay.settings.blurComments,
             )
         }
         MoreToggle(comments.size, 4, showAll) { showAll = !showAll }
@@ -89,6 +90,7 @@ fun LetterboxdSection(film: LetterboxdFilm, side: Dp) {
                 replies = null,
                 date = r.date,
                 onOpen = { uri.openUri(r.url) },
+                blurred = LartDisplay.settings.blurComments,
             )
         }
         MoreToggle(film.reviews.size, 4, showAll) { showAll = !showAll }
@@ -114,7 +116,7 @@ private fun SectionTitle(title: String, extra: String?, dot: Color, site: String
 }
 
 @Composable
-private fun ReviewCard(
+internal fun ReviewCard(
     name: String,
     avatar: String?,
     badge: String?,
@@ -125,10 +127,13 @@ private fun ReviewCard(
     replies: Int?,
     date: String?,
     onOpen: (() -> Unit)? = null,
+    /** "Blur comments and reviews by default": every card waits for a tap, spoiler or not. */
+    blurred: Boolean = false,
+    openLabel: String = "Read on Letterboxd",
 ) {
     var revealed by remember { mutableStateOf(false) }
     var expanded by remember { mutableStateOf(false) }
-    val hidden = spoiler && !revealed
+    val hidden = (spoiler || blurred) && !revealed
     Column(
         Modifier.fillMaxWidth().clip(RoundedCornerShape(18.dp)).background(LartColors.Surface).animateContentSize().padding(18.dp),
         verticalArrangement = Arrangement.spacedBy(10.dp),
@@ -162,7 +167,7 @@ private fun ReviewCard(
             )
             if (hidden) {
                 Text(
-                    "Spoiler — tap to show",
+                    if (spoiler) "Spoiler — tap to show" else "Tap to show",
                     color = LartColors.Ink,
                     fontSize = 13.sp,
                     fontWeight = FontWeight.SemiBold,
@@ -181,7 +186,7 @@ private fun ReviewCard(
                     Text("$it", color = LartColors.InkSubtle, fontSize = 12.5.sp)
                 }
             }
-            onOpen?.let { Text("Read on Letterboxd", color = LartColors.Accent, fontSize = 12.5.sp, fontWeight = FontWeight.SemiBold, modifier = Modifier.clickable(onClick = it)) }
+            onOpen?.let { Text(openLabel, color = LartColors.Accent, fontSize = 12.5.sp, fontWeight = FontWeight.SemiBold, modifier = Modifier.clickable(onClick = it)) }
         }
     }
 }

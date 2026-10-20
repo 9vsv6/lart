@@ -119,7 +119,10 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
         val overlay = ComposeView(this).apply {
             setContent {
                 val prefs by repository.playerPrefs.collectAsState()
-                LartTheme { PlayerUi(state, prefs, this@PlayerActivity, castButton.takeIf { castContext != null }) }
+                LartTheme {
+                    PlayerUi(state, prefs, this@PlayerActivity, castButton.takeIf { castContext != null })
+                    TrackerSyncBadge(repository.syncEvents, state.settings)
+                }
             }
         }
         setContentView(

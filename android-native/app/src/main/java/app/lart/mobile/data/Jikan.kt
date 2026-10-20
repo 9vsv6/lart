@@ -151,7 +151,7 @@ object Jikan {
     /** The MAL id behind a Kitsu id a row already mapped; no network. */
     fun malFor(kitsu: Int): Int? = kitsuByMal.entries.firstOrNull { it.value == kitsu }?.key
 
-    private suspend fun kitsuIds(malIds: List<Int>): Map<Int, Int> {
+    suspend fun kitsuIds(malIds: List<Int>): Map<Int, Int> {
         val missing = malIds.filter { it !in kitsuByMal }
         if (missing.isNotEmpty()) {
             val payload = buildJsonArray { missing.forEach { add(buildJsonObject { put("myanimelist", it) }) } }.toString()

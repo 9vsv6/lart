@@ -145,7 +145,7 @@ private enum class Section(
 ) {
     Profiles("Profiles", "The profiles on this device, and who's watching.", Icons.Outlined.Group, "profile who's watching", setOf("Profiles")),
     Stremio("Stremio", "Your Stremio sign-in: addons and library come from it.", Icons.Outlined.AccountBox, "stremio sign in email password", setOf("Stremio")),
-    Trackers("Trackers", "Trakt, Simkl and AniList: scrobbling and progress.", Icons.Outlined.Sync, "trakt simkl anilist scrobble watched"),
+    Trackers("Trackers", "Trakt, Simkl, AniList, MyAnimeList and Letterboxd.", Icons.Outlined.Sync, "trakt simkl anilist myanimelist mal letterboxd stremboxd scrobble watched comments reviews avatar"),
     Play("Play", "What Play does, resuming, and which source plays.", Icons.Outlined.PlayCircle, "play button instant manual picker resume start over remember source stalled", setOf("Play")),
     Engine("Engine", "mpv or Android's player.", Icons.Outlined.Memory, "engine mpv media3 player", setOf("Engine")),
     Aspect("Aspect", "How the picture fills the screen.", Icons.Outlined.AspectRatio, "aspect ratio fit fill stretch zoom", setOf("Aspect")),
@@ -801,12 +801,20 @@ private fun LanguageSection(repository: Repository, settings: AppSettings, set: 
     Part("App language") {
         HarborHeading("Display language", "Lart's own words are in English for now.")
         HarborSelect(listOf("en" to "🇺🇸  English"), "en") {}
-        HarborHeading("Metadata language", "Titles, descriptions and episode names from TMDB, in this language (needs a TMDB key).")
-        HarborSelect(listOf("" to "Same as the device") + Languages.all.map { it.code to "${it.flag}  ${it.name}" }, settings.metadataLanguage) { v -> set { it.copy(metadataLanguage = v) } }
-        ToggleRow("Translate titles", "Show titles in the metadata language. Off keeps them as the addon has them.", settings.translateTitles) { v -> set { it.copy(translateTitles = v) } }
-        ToggleRow("Translate overviews", "Show descriptions in the metadata language. Off shows them in English.", settings.translateOverviews) { v -> set { it.copy(translateOverviews = v) } }
-        HarborHeading("Image languages", "Which language logos and posters come in. Same as metadata follows the setting above.")
-        HarborSelect(listOf("" to "Same as metadata", "null" to "No text (textless)") + Languages.all.map { it.code to "${it.flag}  ${it.name}" }, settings.imageLanguage) { v -> set { it.copy(imageLanguage = v) } }
+        // Each of these is its own choice: changing one leaves the others as they are.
+        val languages = Languages.all.map { it.code to "${it.flag}  ${it.name}" }
+        HarborHeading("Description language", "Story descriptions and episode synopses from TMDB, in this language. Titles and posters keep their own settings below (needs a TMDB key).")
+        HarborSelect(
+            listOf("" to if (settings.translateOverviews) "Same as the device" else "English (untranslated)") + languages,
+            settings.metadataLanguage,
+        ) { v -> set { it.copy(metadataLanguage = v, translateOverviews = true) } }
+        HarborHeading("Title language", "The name shown for each title. Original title keeps the name it was first released under.")
+        HarborSelect(
+            listOf("" to "Same as the device", "original" to "Original title") + languages,
+            if (settings.titleLanguage.isEmpty() && !settings.translateTitles) "original" else settings.titleLanguage,
+        ) { v -> set { it.copy(titleLanguage = v, translateTitles = true) } }
+        HarborHeading("Poster & logo language", "Which language the text on posters, backdrops and title logos is in.")
+        HarborSelect(listOf("" to "Same as the device", "null" to "No text (textless)") + languages, settings.imageLanguage) { v -> set { it.copy(imageLanguage = v) } }
         HarborHeading("Region & language", "Your country, for what's in cinemas, release dates and where to watch.")
         HarborSelect(
             listOf("" to "Same as the device") + java.util.Locale.getISOCountries().map { c -> c to "${Lang("", "", "", c).flag}  ${java.util.Locale("", c).displayCountry}" }.sortedBy { it.second.drop(4) },

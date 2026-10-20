@@ -48,6 +48,7 @@ import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
 
 /** A catalog row and what "See all" opens. */
+@kotlinx.serialization.Serializable
 data class CatalogRow(
     val key: String,
     val title: String,
@@ -83,8 +84,10 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
     val tmdbKey by repository.tmdbKey.collectAsState()
     // Rebuilt from scratch when the TMDB key changes.
     val homeLanguages = LartDisplay.settings.homeLanguages
-    val rows = remember(tmdbKey, homeLanguages) { mutableStateMapOf<BrowseView, List<CatalogRow>>() }
-    val failed = remember(tmdbKey, homeLanguages) { mutableStateMapOf<BrowseView, Boolean>() }
+    // Rows are fetched again when the title, description or poster language changes.
+    val textLanguages = LartDisplay.settings.let { "${it.metadataLanguage}|${it.titleLanguage}|${it.imageLanguage}|${it.translateTitles}|${it.translateOverviews}" }
+    val rows = remember(tmdbKey, homeLanguages, textLanguages) { mutableStateMapOf<BrowseView, List<CatalogRow>>() }
+    val failed = remember(tmdbKey, homeLanguages, textLanguages) { mutableStateMapOf<BrowseView, Boolean>() }
 
     // Harbor's "New Episodes" row: what came out lately for the shows you follow.
     val library by repository.library.collectAsState()
@@ -97,8 +100,17 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
         newEpisodes = runCatching { app.lart.mobile.data.Discover.recentEpisodes(shows, repository.metaAddons()) }.getOrDefault(emptyList())
     }
 
-    LaunchedEffect(view, addons, builtins, tmdbKey, homeLanguages) {
-        if (addons.isEmpty() || rows[view] != null) return@LaunchedEffect
+    val context = androidx.compose.ui.platform.LocalContext.current
+    val cacheKey = HomeCache.key(view, tmdbKey != null, homeLanguages, textLanguages)
+    // Last launch's rows show at once; fresh ones replace them when they're ready.
+    if (rows[view] == null) HomeCache.read(context, cacheKey)?.let { rows[view] = it }
+    val refreshed = remember(tmdbKey, homeLanguages, textLanguages) { mutableSetOf<BrowseView>() }
+    LaunchedEffect(view, addons, builtins, tmdbKey, homeLanguages, textLanguages) {
+        if (addons.isEmpty() || view in refreshed) return@LaunchedEffect
+        // With cached rows on screen, the fresh set is gathered aside and swapped in whole.
+        val cached = rows[view] != null
+        var fresh: List<CatalogRow>? = null
+        fun show(list: List<CatalogRow>) { fresh = list; if (!cached) rows[view] = list }
         val key = tmdbKey
         // Harbor's rows: TMDB lists with a key (Cinemeta's on Home without one), MyAnimeList for anime.
         val built = when {
@@ -108,8 +120,8 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
             else -> buildRows(view, addons, repository.metaAddons())
         }
         if (view != BrowseView.Anime && (built.isNotEmpty() || builtins.isNotEmpty())) {
-            rows[view] = built
-            failed[view] = built.isEmpty()
+            show(built)
+            failed[view] = built.isEmpty() && !cached
         }
         // Anime rows arrive one at a time (the anime catalogs allow a few calls a second).
         val anime = when {
@@ -120,13 +132,31 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
         for (spec in anime) {
             val metas = runCatching { Jikan.row(spec) }.getOrDefault(emptyList())
             if (metas.size < 6) continue
-            rows[view] = rows[view].orEmpty() + CatalogRow("jikan${spec.path}${spec.params}", spec.title, metas, "series")
+            show(fresh.orEmpty() + CatalogRow("jikan${spec.path}${spec.params}", spec.title, metas, "series"))
         }
-        if (view == BrowseView.Anime && rows[view] == null) {
+        if (view == BrowseView.Anime && fresh == null) {
             val fallback = buildRows(view, addons, repository.metaAddons())
-            rows[view] = fallback
-            failed[view] = fallback.isEmpty()
+            show(fallback)
+            failed[view] = fallback.isEmpty() && !cached
         }
+        refreshed += view
+        fresh?.takeIf { it.isNotEmpty() }?.let {
+            rows[view] = it
+            HomeCache.write(context, cacheKey, it)
+        }
+    }
+
+    // Letterboxd, Simkl and MyAnimeList rows, loaded beside the catalogs.
+    val trackers by repository.trackers.collectAsState()
+    val trackerKey = TrackerRows.key(view, LartDisplay.settings, trackers)
+    val trackerFile = "trackers-${trackerKey.hashCode()}"
+    var trackerRows by remember(trackerKey) { mutableStateOf(TrackerRows.cached(trackerKey) ?: HomeCache.read(context, trackerFile).orEmpty()) }
+    LaunchedEffect(trackerKey) {
+        if (TrackerRows.cached(trackerKey) != null) return@LaunchedEffect
+        val fresh = TrackerRows.load(trackerKey, view, LartDisplay.settings, trackers)
+        // An empty answer only replaces saved rows when no tracker has rows to give.
+        val active = LartDisplay.settings.let { s -> s.letterboxd.enabled || s.simklTrendingRail || (s.simklHomeRails && trackers.simkl?.accessToken != null) } || trackers.mal?.accessToken != null
+        if (fresh.isNotEmpty() || !active) { trackerRows = fresh; HomeCache.write(context, trackerFile, fresh) }
     }
 
     val display = LartDisplay.settings
@@ -185,6 +215,7 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
                     items(rest.take(3), key = { it.key }) { row ->
                         Rail(row.title, row.metas.distinctBy { it.id }.take(18), nav::openMeta) { nav.openCatalog(row) }
                     }
+                    items(trackerRows, key = { it.key }) { row -> Rail(row.title, row.metas.distinctBy { it.id }, nav::openMeta) }
                     // Harbor's curated lists: the NYT's TV 100 for shows, the Registry's newest for films, and the shelf.
                     val curated = when (view) {
                         BrowseView.Home -> listOf("nyt-tv-100", "national-film-registry-latest")
@@ -380,4 +411,26 @@ private suspend fun cinemetaRows(metaAddons: List<Addon>): List<CatalogRow> = co
         val metas = page.await().let { list -> list.subList(range.first.coerceAtMost(list.size), (range.last + 1).coerceAtMost(list.size)) }
         CatalogRow("cinemeta/$title", title, metas, type, cinemeta, source.first, source.second)
     }.filter { it.metas.isNotEmpty() }
+}
+
+/** Home rows as last loaded, kept on disk so the next launch shows them straight away. */
+object HomeCache {
+    private val memory = mutableMapOf<String, List<CatalogRow>>()
+    private val serializer = kotlinx.serialization.builtins.ListSerializer(CatalogRow.serializer())
+
+    fun key(view: BrowseView, tmdb: Boolean, languages: List<String>, language: String?) =
+        "${view.name}-${if (tmdb) "tmdb" else "free"}-${(languages.joinToString(",") + "|" + language.orEmpty()).hashCode()}"
+
+    private fun file(context: android.content.Context, key: String) = java.io.File(java.io.File(context.filesDir, "home-rows").apply { mkdirs() }, "$key.json")
+
+    fun read(context: android.content.Context, key: String): List<CatalogRow>? = memory[key] ?: runCatching {
+        app.lart.mobile.data.Net.json.decodeFromString(serializer, file(context, key).readText())
+    }.getOrNull()?.takeIf { it.isNotEmpty() }?.also { memory[key] = it }
+
+    suspend fun write(context: android.content.Context, key: String, rows: List<CatalogRow>) {
+        memory[key] = rows
+        kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+            runCatching { file(context, key).writeText(app.lart.mobile.data.Net.json.encodeToString(serializer, rows)) }
+        }
+    }
 }

@@ -226,10 +226,29 @@ class Repository(private val context: Context) {
 
     /** Trakt's paused titles join Continue watching; its token is refreshed when due. */
     suspend fun refreshTrackers() {
+        _trackers.value.mal?.takeIf { it.accessToken != null }?.let { mal ->
+            val fresh = runCatching { Mal.fresh(mal) }.getOrDefault(mal)
+            if (fresh != mal) updateTrackers { it.copy(mal = fresh) }
+        }
         val trakt = _trackers.value.trakt?.takeIf { it.accessToken != null } ?: return
         val fresh = runCatching { Trakt.fresh(trakt) }.getOrDefault(trakt)
         if (fresh != trakt) updateTrackers { it.copy(trakt = fresh) }
         _traktCw.value = if (_settings.value.traktInContinueWatching) runCatching { Trakt.playback(fresh) }.getOrDefault(emptyList()) else emptyList()
+    }
+
+    /** "AniList · Episode 5 synced", for the player's sync indicator (sync-indicator-setting.tsx). */
+    val syncEvents = kotlinx.coroutines.flow.MutableSharedFlow<String>(extraBufferCapacity = 4)
+
+    /**
+     * "Use my … avatar as my Lart avatar": the tracker's picture becomes this profile's.
+     * Turning it off puts back no picture, as Harbor does, if the tracker's is still in use.
+     */
+    suspend fun useTrackerAvatar(picture: String?, on: Boolean, previous: String?) {
+        val profile = _activeProfile.value ?: return
+        when {
+            on && picture != null -> saveProfile(profile.copy(avatar = picture))
+            !on && profile.avatar != null && profile.avatar == previous -> saveProfile(profile.copy(avatar = null))
+        }
     }
 
     /** Where Trakt says `videoId` was paused, as a fraction, when this device has no position. */
@@ -239,15 +258,28 @@ class Repository(private val context: Context) {
     fun scrobble(action: String, what: Scrobble, progressPercent: Double) {
         val trackers = _trackers.value
         scope.launch {
-            trackers.trakt?.takeIf { it.accessToken != null }?.let { auth -> runCatching { Trakt.scrobble(auth, action, what, progressPercent) } }
-            trackers.simkl?.takeIf { it.accessToken != null }?.let { auth -> runCatching { Simkl.scrobble(auth, action, what, progressPercent) } }
+            // A stop past 80% marks it watched, which the player's sync indicator shows.
+            val label = if (what.season != null && what.episode != null) "Episode ${what.episode}" else "Movie"
+            fun done(service: String) { if (action == "stop" && progressPercent >= 80) syncEvents.tryEmit("$service · $label") }
+            trackers.trakt?.takeIf { it.accessToken != null }?.let { auth -> runCatching { Trakt.scrobble(auth, action, what, progressPercent) }.onSuccess { done("Trakt") } }
+            if (_settings.value.simklScrobble) trackers.simkl?.takeIf { it.accessToken != null }?.let { auth -> runCatching { Simkl.scrobble(auth, action, what, progressPercent) }.onSuccess { done("Simkl") } }
         }
     }
 
-    /** AniList progress for anime (Kitsu ids), once an episode is mostly watched. */
+    /** AniList and MyAnimeList progress for anime (Kitsu ids), once an episode is mostly watched. */
     fun markAnimeWatched(kitsuId: String, episode: Int) {
-        val auth = _trackers.value.anilist?.takeIf { it.accessToken != null } ?: return
-        scope.launch { runCatching { AniList.markWatched(auth, kitsuId, episode) } }
+        val trackers = _trackers.value
+        val settings = _settings.value
+        if (settings.anilistAutoSync) trackers.anilist?.takeIf { it.accessToken != null }?.let { auth ->
+            scope.launch { if (runCatching { AniList.markWatched(auth, kitsuId, episode) }.getOrDefault(false)) syncEvents.tryEmit("AniList · Episode $episode") }
+        }
+        if (settings.malAutoSync) trackers.mal?.takeIf { it.accessToken != null }?.let { auth ->
+            scope.launch {
+                val fresh = runCatching { Mal.fresh(auth) }.getOrDefault(auth)
+                if (fresh != auth) updateTrackers { it.copy(mal = fresh) }
+                if (runCatching { Mal.markWatched(fresh, "kitsu:$kitsuId", episode) }.getOrDefault(false)) syncEvents.tryEmit("MyAnimeList · Episode $episode")
+            }
+        }
     }
 
     internal suspend fun editStore(block: (androidx.datastore.preferences.core.MutablePreferences) -> Unit) {
@@ -303,11 +335,17 @@ class Repository(private val context: Context) {
     suspend fun refresh() {
         val account = _account.value
         val remote = account?.let { runCatching { StremioApi.addonsRaw(it.authKey) }.getOrNull() }
-        rawCollection = when {
+        val fetched = when {
             !remote.isNullOrEmpty() -> remote
             account == null -> localCollection() ?: defaultCollection()
             else -> defaultCollection()
         }
+        // Offline, the last collection that loaded stands in, so titles and search still work.
+        val cache = java.io.File(context.filesDir, "addons-cache.json")
+        rawCollection = fetched.ifEmpty {
+            runCatching { (Net.json.parseToJsonElement(cache.readText()) as kotlinx.serialization.json.JsonArray).mapNotNull { it as? JsonObject } }.getOrDefault(emptyList())
+        }
+        if (fetched.isNotEmpty()) runCatching { cache.writeText(kotlinx.serialization.json.JsonArray(fetched).toString()) }
         _addons.value = decodeCollection(rawCollection)
         _library.value = account?.let { runCatching { StremioApi.library(it.authKey) }.getOrNull() }.orEmpty()
     }
@@ -475,6 +513,30 @@ class Repository(private val context: Context) {
     fun clearResumeHistory() {
         _resume.value = emptyMap()
         scope.launch { context.store.edit { it.remove(keyResume) } }
+    }
+
+    /** Cinemeta and Kitsu, from the network or, offline, as they were last time. */
+    private suspend fun loadBuiltins() {
+        val cache = java.io.File(context.filesDir, "builtins-cache.json")
+        val serializer = kotlinx.serialization.builtins.ListSerializer(Addon.serializer())
+        val loaded = loadManifests(AddonClient.builtins)
+        if (loaded.size == AddonClient.builtins.size) runCatching { cache.writeText(Net.json.encodeToString(serializer, loaded)) }
+        _builtins.value = loaded.ifEmpty { runCatching { Net.json.decodeFromString(serializer, cache.readText()) }.getOrDefault(emptyList()) }
+    }
+
+    /** When the connection comes back after an offline start, loads what couldn't load then. */
+    private fun watchConnection() {
+        val connectivity = context.getSystemService(android.net.ConnectivityManager::class.java) ?: return
+        runCatching {
+            connectivity.registerDefaultNetworkCallback(object : android.net.ConnectivityManager.NetworkCallback() {
+                override fun onAvailable(network: android.net.Network) {
+                    scope.launch {
+                        if (_builtins.value.size < AddonClient.builtins.size) loadBuiltins()
+                        if (_addons.value.isEmpty()) refresh()
+                    }
+                }
+            })
+        }
     }
 
     private suspend fun loadManifests(urls: List<String>): List<Addon> = kotlinx.coroutines.coroutineScope {
@@ -683,9 +745,10 @@ class Repository(private val context: Context) {
             loadProfile(prefs)
             // One profile: nobody to ask. Several: Harbor asks "Who's watching?" on launch, unless turned off.
             _profileChosen.value = profiles.size == 1 || !_settings.value.askProfileOnLaunch
-            scope.launch { _builtins.value = loadManifests(AddonClient.builtins) }
+            scope.launch { loadBuiltins() }
             refresh()
             _ready.value = true
+            watchConnection()
         }
     }
 

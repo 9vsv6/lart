@@ -99,6 +99,8 @@ data class AppSettings(
     val subtitleAddons: Boolean = true,
     /** TMDB's language for titles and descriptions; empty follows the device. */
     val metadataLanguage: String = "",
+    /** Titles in their own language: empty follows the device, "original" keeps the release title. */
+    val titleLanguage: String = "",
 
     // ---- Sources ----
     /** "lart" (ranked best first) or "addon" (each addon's own order, addons in your order). */
@@ -125,6 +127,32 @@ data class AppSettings(
     val showTraktComments: Boolean = false,
     /** Letterboxd's average and popular reviews on movie pages. */
     val showLetterboxdDetail: Boolean = true,
+    // ---- Trackers (Harbor's trakt/simkl/anilist/mal/letterboxd panels), with Harbor's defaults ----
+    /** Comments and reviews stay blurred until tapped (Trakt and Letterboxd). */
+    val blurComments: Boolean = false,
+    val useTraktAvatar: Boolean = false,
+    val useSimklAvatar: Boolean = false,
+    val useAnilistAvatar: Boolean = false,
+    val useMalAvatar: Boolean = false,
+    val simklScrobble: Boolean = true,
+    /** Simkl's community score on title pages. */
+    val showSimklBadge: Boolean = true,
+    val simklHomeRails: Boolean = false,
+    val simklTrendingRail: Boolean = false,
+    val simklMoviesPlan: Boolean = true,
+    val simklShowsWatching: Boolean = true,
+    val simklShowsPlan: Boolean = true,
+    val simklAnimeWatching: Boolean = true,
+    val simklAnimePlan: Boolean = true,
+    val anilistAutoSync: Boolean = true,
+    val showAnilistComments: Boolean = false,
+    val anilistBlurComments: Boolean = false,
+    val malAutoSync: Boolean = true,
+    /** The badge over the player when an episode syncs to a tracker. */
+    val syncIndicator: Boolean = true,
+    /** "top-left", "top-right", "bottom-left", "bottom-right", "bottom-center". */
+    val syncIndicatorPosition: String = "top-right",
+    val letterboxd: LetterboxdSettings = LetterboxdSettings(),
     /** Harbor's X-Ray in the player: who's in it, the crew and the facts. */
     val xrayEnabled: Boolean = false,
     // ---- More of Harbor's options ----

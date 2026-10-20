@@ -119,6 +119,15 @@ fun DetailScreen(
     var anime by remember { mutableStateOf<AnimeExtra?>(null) }
     var relatedKitsu by remember { mutableStateOf<Map<Int, Int>>(emptyMap()) }
 
+    // Simkl's community score, as Harbor's details badge ("Display Simkl Community Ratings").
+    var simklScore by remember { mutableStateOf<Score?>(null) }
+    LaunchedEffect(meta?.id, LartDisplay.settings.showSimklBadge) {
+        val imdb = meta?.id?.substringBefore(':')?.takeIf { it.startsWith("tt") }
+        simklScore = if (imdb != null && LartDisplay.settings.showSimklBadge) {
+            app.lart.mobile.data.Simkl.communityRating(imdb)?.let { (rating, _) -> Score("Simkl", "%.1f".format(Locale.US, rating)) }
+        } else null
+    }
+
     // Harbor's anime extras from AniList: characters, related anime, other titles, stats, next episode.
     LaunchedEffect(meta?.id) {
         val current = meta ?: return@LaunchedEffect
@@ -203,7 +212,7 @@ fun DetailScreen(
                 current.copy(logo = current.logo ?: art?.logo, background = current.background ?: art?.backdrop),
                 details?.let { d -> d.copy(logo = d.logo ?: art?.logo, backdrop = d.backdrop ?: art?.backdrop, networks = d.networks.ifEmpty { listOfNotNull(network) }) },
                 awards,
-                scores + mdblistScores(mdblist),
+                scores + mdblistScores(mdblist) + listOfNotNull(simklScore),
                 listState,
                 onStreams,
                 onOpen,
@@ -288,6 +297,14 @@ private fun DetailBody(
         val imdb = imdbId ?: return@LaunchedEffect
         if (LartDisplay.settings.showLetterboxdDetail && meta.type == "movie") letterboxd = app.lart.mobile.data.Reviews.letterboxd(imdb)
     }
+    // AniList's forum threads on anime pages, when "Show AniList comments" is on.
+    var anilistThreads by remember(meta.id) { mutableStateOf<List<app.lart.mobile.data.AniList.Thread>>(emptyList()) }
+    LaunchedEffect(meta.id, anime?.anilistId, LartDisplay.settings.showAnilistComments) {
+        val id = anime?.anilistId ?: return@LaunchedEffect
+        if (LartDisplay.settings.showAnilistComments) anilistThreads = runCatching { app.lart.mobile.data.AniList.threads(id) }.getOrDefault(emptyList())
+    }
+    // Letterboxd Full mode: your rating and Watched / Liked / Watchlist for films.
+    val letterboxdSession = trackers.letterboxd?.takeIf { LartDisplay.settings.letterboxd.enabled && LartDisplay.settings.letterboxd.mode == "full" }
     val play: () -> Unit = {
         if (isSeries) next?.let { onStreams(it.id, "${meta.name} · ${episodeLabel(it)}") } else onStreams(meta.id, meta.name)
     }
@@ -379,8 +396,14 @@ private fun DetailBody(
                     TraktCommentsSection(comments, "https://trakt.tv/${if (meta.type == "movie") "movies" else "shows"}/$imdbId", side)
                 }
             }
+            if (letterboxdSession != null && imdbId != null && meta.type == "movie") {
+                item(key = "letterboxd-account") { LetterboxdAccountPanel(letterboxdSession, imdbId, side) }
+            }
             letterboxd?.takeIf { LartDisplay.settings.showLetterboxdDetail && (it.reviews.isNotEmpty() || it.average != null) }?.let { film ->
                 item(key = "letterboxd") { LetterboxdSection(film, side) }
+            }
+            if (LartDisplay.settings.showAnilistComments && anilistThreads.isNotEmpty()) {
+                item(key = "anilist-comments") { AniListThreadsSection(anilistThreads, "https://anilist.co/anime/${anime?.anilistId}/discussions", side) }
             }
         }
     }
