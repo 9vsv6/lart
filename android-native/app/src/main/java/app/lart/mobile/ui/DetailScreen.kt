@@ -412,7 +412,7 @@ private fun Hero(
             modifier = Modifier.fillMaxSize(),
         )
         // Harbor's detail trailer: plays over the backdrop after a moment.
-        HeroTrailer(meta, LartDisplay.settings.detailTrailerAutoplay, youtubeId = meta.trailerYouTube ?: details?.trailerYouTube)
+        HeroTrailer(meta, LartDisplay.settings.detailTrailerAutoplay, youtubeId = meta.trailerYouTube ?: details?.trailerYouTube, underStatusBar = true)
         // Harbor's scrims: down into the page, and from the left behind the text.
         Box(Modifier.matchParentSize().background(Brush.verticalGradient(0f to Color(0x33000000), 0.45f to Color.Transparent, 1f to LartColors.Canvas)))
         Box(Modifier.matchParentSize().background(Brush.horizontalGradient(0f to Color(0xCC121316), if (wide) 0.55f to Color.Transparent else 0.9f to Color(0x33121316))))
@@ -498,7 +498,7 @@ private fun HeroTitle(name: String, wide: Boolean) {
         color = Color.White,
         fontSize = if (wide) 64.sp else 40.sp,
         lineHeight = if (wide) 66.sp else 44.sp,
-        fontFamily = FontFamily.Serif,
+        fontFamily = LartFonts.display(LartDisplay.settings.fontPair).takeIf { LartDisplay.settings.fontPair != "inter" } ?: FontFamily.Serif,
         fontWeight = FontWeight.Medium,
         letterSpacing = if (wide) 10.sp else 5.sp,
     )
@@ -554,7 +554,7 @@ private fun Eyebrow(text: String) {
 private fun Synopsis(text: String, tagline: String?, side: Dp) {
     var expanded by remember { mutableStateOf(LartDisplay.settings.fullDescriptions) }
     Column(Modifier.padding(horizontal = side).widthIn(max = 820.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        tagline?.let { Text(it, color = LartColors.Ink, fontSize = 16.sp, fontWeight = FontWeight.Medium, fontFamily = FontFamily.Serif) }
+        tagline?.let { Text(it, color = LartColors.Ink, fontSize = 16.sp, fontWeight = FontWeight.Medium, fontFamily = LartFonts.display(LartDisplay.settings.fontPair).takeIf { LartDisplay.settings.fontPair != "inter" } ?: FontFamily.Serif) }
         Text(
             text,
             color = LartColors.InkMuted,

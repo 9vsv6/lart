@@ -127,7 +127,7 @@ private fun ListMark(list: CuratedList, size: Dp) {
         Modifier.size(size).clip(RoundedCornerShape(14.dp)).background(Brush.linearGradient(listOf(Color(0xFF2A2B30), Color(0xFF1C1D21)))),
         contentAlignment = Alignment.Center,
     ) {
-        if (list.nyt) Text("T", color = LartColors.Ink, fontSize = (size.value * 0.62f).sp, fontFamily = FontFamily.Serif, fontWeight = FontWeight.Bold)
+        if (list.nyt) Text("T", color = LartColors.Ink, fontSize = (size.value * 0.62f).sp, fontFamily = LartFonts.display(LartDisplay.settings.fontPair).takeIf { LartDisplay.settings.fontPair != "inter" } ?: FontFamily.Serif, fontWeight = FontWeight.Bold)
         else {
             val initials = list.curator.split(' ').filter { it.firstOrNull()?.isUpperCase() == true }.take(3).joinToString("") { it.take(1) }
             Text(initials.ifEmpty { "★" }, color = LartColors.Accent, fontSize = (size.value * 0.3f).sp, fontWeight = FontWeight.Bold)
@@ -222,7 +222,7 @@ fun CuratedListScreen(id: String, onBack: () -> Unit, onOpen: (Meta) -> Unit) {
                         ListMark(list, 44.dp)
                         Text(list.curator.uppercase(), color = LartColors.InkSubtle, fontSize = 12.sp, fontWeight = FontWeight.SemiBold, letterSpacing = 2.sp)
                     }
-                    Text(list.title, color = LartColors.Ink, fontSize = 30.sp, lineHeight = 36.sp, fontFamily = FontFamily.Serif, fontWeight = FontWeight.SemiBold)
+                    Text(list.title, color = LartColors.Ink, fontSize = 30.sp, lineHeight = 36.sp, fontFamily = LartFonts.display(LartDisplay.settings.fontPair).takeIf { LartDisplay.settings.fontPair != "inter" } ?: FontFamily.Serif, fontWeight = FontWeight.SemiBold)
                     Text(list.blurb, color = LartColors.InkMuted, fontSize = 15.sp, lineHeight = 22.sp)
                     Text(
                         listOfNotNull("${list.count} titles", list.year?.toString(), when (list.ordering) {

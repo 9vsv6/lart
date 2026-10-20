@@ -207,6 +207,14 @@ data class AppSettings(
     val trailerAudio: Boolean = false,
     /** auto, 360p, 720p or 1080p. */
     val trailerQuality: String = "auto",
+    /** Harbor's AI search: the provider (openrouter or groq), the model, and live web context. */
+    val aiProvider: String = "openrouter",
+    val aiModel: String = "google/gemma-4-26b-a4b-it:free",
+    val aiWebContext: Boolean = false,
+    /** Harbor's typography: a font pair id, or "file:<path>" for a font you uploaded. */
+    val fontPair: String = "inter",
+    /** Fonts you uploaded (paths in the app's storage), for the app and subtitles. */
+    val customFonts: List<String> = emptyList(),
     /** IMDb rating on each episode (OMDb with a key, else TMDB). */
     val showEpisodeRating: Boolean = true,
     val hidePosterTitles: Boolean = false,

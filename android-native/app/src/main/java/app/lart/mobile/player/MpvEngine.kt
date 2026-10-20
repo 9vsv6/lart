@@ -128,6 +128,8 @@ class MpvEngine private constructor(context: Context, private val mpv: MPVLib, p
             opt("alang", (setup.audioLanguages + "eng" + "en").distinct().joinToString(","))
             if (setup.subtitleLanguages.isEmpty()) opt("sid", "no") else opt("slang", setup.subtitleLanguages.joinToString(","))
             opt("sub-ass-override", s.assOverride)
+            // Fonts you uploaded, for subtitles drawn by libass.
+            java.io.File(context.filesDir, "fonts").takeIf { it.isDirectory }?.let { opt("sub-fonts-dir", it.absolutePath) }
             if (s.hideSdh) opt("sub-filter-sdh", "yes")
             opt("sub-auto", "no")
             opt("user-agent", Net.USER_AGENT)
@@ -335,6 +337,8 @@ class MpvEngine private constructor(context: Context, private val mpv: MPVLib, p
     override fun setAudioDelay(delayMs: Long) = mpv.setPropertyDouble("audio-delay", delayMs / 1000.0)
     override fun setSubDelay(delayMs: Long) = mpv.setPropertyDouble("sub-delay", delayMs / 1000.0)
 
+    override fun setSubSpeed(speed: Double) { runCatching { mpv.setPropertyDouble("sub-speed", speed) } }
+
     override val videoSize get() = if (width > 0 && height > 0) width.toInt() to height.toInt() else null
 
     // ---- Tracks ----
@@ -417,7 +421,9 @@ class MpvEngine private constructor(context: Context, private val mpv: MPVLib, p
                 else -> "bottom"
             },
         )
-        mpv.setPropertyString("sub-font", when (style.subFont) { "serif" -> "serif"; "mono" -> "monospace"; "condensed" -> "sans-serif-condensed"; else -> "sans-serif" })
+        // An uploaded font: libass finds it in the app's fonts folder (sub-fonts-dir, set at start) by its family name.
+        val uploaded = style.subFont.removePrefix("file:").takeIf { style.subFont.startsWith("file:") }?.let { app.lart.mobile.ui.fontFamilyName(java.io.File(it)) }
+        mpv.setPropertyString("sub-font", uploaded ?: when (style.subFont) { "serif" -> "serif"; "mono" -> "monospace"; "condensed" -> "sans-serif-condensed"; else -> "sans-serif" })
         when (prefs.subBackground) {
             "box" -> {
                 val box = argb(style.subBoxColor, style.subBoxOpacity)

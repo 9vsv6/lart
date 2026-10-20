@@ -19,6 +19,9 @@ class SubtitleFile(private val cues: List<Cue>) {
 
     val isEmpty get() = cues.isEmpty()
 
+    /** The next cue starting after `positionMs` (Harbor's guided live sync asks you to tap on it). */
+    fun nextAfter(positionMs: Long): Cue? = cues.firstOrNull { it.startMs > positionMs && it.text.isNotBlank() }
+
     /** The text showing at `positionMs`, joined when cues overlap. */
     fun textAt(positionMs: Long): String? {
         // Cues are sorted by start; find the last one starting at or before the position.

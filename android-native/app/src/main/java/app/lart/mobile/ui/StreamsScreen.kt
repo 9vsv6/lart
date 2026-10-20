@@ -237,7 +237,7 @@ fun StreamsScreen(
                         color = LartColors.Ink,
                         fontSize = if (wide) 60.sp else 42.sp,
                         lineHeight = if (wide) 60.sp else 44.sp,
-                        fontFamily = FontFamily.Serif,
+                        fontFamily = LartFonts.display(LartDisplay.settings.fontPair).takeIf { LartDisplay.settings.fontPair != "inter" } ?: FontFamily.Serif,
                         fontWeight = FontWeight.Medium,
                         letterSpacing = (-0.5).sp,
                     )

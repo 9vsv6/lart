@@ -113,6 +113,10 @@ interface PlayerActions {
     fun selectAudio(key: String)
     fun selectSubtitle(choice: SubChoice)
     fun setSubDelay(delayMs: Long)
+    /** Guided live sync: shows the next line to tap on; [liveSyncNow] sets the offset from the tap. */
+    fun startLiveSync()
+    fun liveSyncNow()
+    fun setSubTimeScale(scale: Double)
     /** Positive plays the sound later than the picture. */
     fun setAudioDelay(delayMs: Long)
     /** mpv only: null turns Anime4K off. */
@@ -270,6 +274,8 @@ fun PlayerUi(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions, cas
         state.error?.let { ErrorCard(it, state, actions, Modifier.align(Alignment.Center)) }
 
         HarborPopovers(state, prefs, actions)
+        SubSyncBar(state, actions)
+        LiveSyncPrompt(state, actions)
 
         if (state.stillWatching) StillWatching(state, actions)
     }
@@ -373,7 +379,7 @@ fun SubtitleText(text: String, prefs: PlayerPrefs, style: app.lart.mobile.data.A
 }
 
 /** Harbor's subtitle fonts, on what Android ships. */
-fun subFontFamily(name: String): androidx.compose.ui.text.font.FontFamily = when (name) {
+fun subFontFamily(name: String): androidx.compose.ui.text.font.FontFamily = if (name.startsWith("file:")) app.lart.mobile.ui.LartFonts.file(name.removePrefix("file:")) else when (name) {
     "serif" -> androidx.compose.ui.text.font.FontFamily.Serif
     "mono" -> androidx.compose.ui.text.font.FontFamily.Monospace
     "condensed" -> androidx.compose.ui.text.font.FontFamily(android.graphics.Typeface.create("sans-serif-condensed", android.graphics.Typeface.NORMAL))

@@ -54,6 +54,9 @@ interface Engine {
     fun setFit(fit: Fit)
     fun setAudioDelay(delayMs: Long)
     fun setSubDelay(delayMs: Long)
+
+    /** Subtitle timing speed (a frame-rate fix) for subtitles the engine draws itself. */
+    fun setSubSpeed(speed: Double) {}
     val videoSize: Pair<Int, Int>?
 
     fun audioTracks(): List<EngineTrack>

@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.material.icons.rounded.Add
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -175,6 +176,7 @@ private enum class Section(
     PosterCards("Cards", "What a poster card shows.", Icons.Outlined.GridView, "poster card badge rating award dub watched check watchlist bookmark titles", setOf("Cards")),
     DetailPages("Detail pages", "Show pages, spoilers, episode cards and community.", Icons.Outlined.Article, "episodes spoilers order description card size trakt comments letterboxd reviews community show pages full descriptions remember season imdb keyless free data", setOf("Detail pages")),
     Metadata("Metadata", "Where titles, artwork and scores come from.", Icons.Outlined.Storage, "tmdb omdb tvdb thetvdb mdblist fanart rpdb custom posters ratings keys metadata providers"),
+    AiSearchPage("Search", "AI search: describe what you want to watch.", Icons.Outlined.AutoAwesome, "ai search openrouter groq model jina natural language", setOf("Search")),
     LibraryContent("Library", "Content filters and downloads.", Icons.Outlined.VideoLibrary, "library content filters hide anime downloads delete", setOf("Library")),
     Theme("Theme & appearance", "Accent colour, poster size and corners.", Icons.Outlined.Palette, "accent colour color theme poster size corner radius", null),
     Storage("Storage", "Caches, watch positions on this device, and resetting settings.", Icons.Outlined.DeleteSweep, "cache images shaders watch positions reset downloads delete after watching"),
@@ -191,7 +193,7 @@ private enum class Group(val label: String, val section: String, val icon: Image
     Languages("Languages & subtitles", "Language", Icons.Outlined.Translate, listOf(Section.AppLanguage, Section.AudioLanguage, Section.WhatYouSee, Section.SubtitleLanguages, Section.SubtitleSources, Section.SubtitleTiming, Section.SubtitleLook)),
     Sources(
         "Sources & library", "Content", Icons.Outlined.LibraryBooks,
-        listOf(Section.Services, Section.SourcePreferences, Section.Sorting, Section.Picker, Section.StreamFilters, Section.HomeRows, Section.PosterCards, Section.DetailPages, Section.Metadata, Section.LibraryContent),
+        listOf(Section.Services, Section.SourcePreferences, Section.Sorting, Section.Picker, Section.StreamFilters, Section.HomeRows, Section.PosterCards, Section.DetailPages, Section.Metadata, Section.AiSearchPage, Section.LibraryContent),
     ),
     Appearance("Appearance", "Look & feel", Icons.Outlined.Palette, listOf(Section.Theme)),
     System("System", "System", Icons.Outlined.Tune, listOf(Section.Storage)),
@@ -347,7 +349,7 @@ private fun SearchResults(query: String, onOpen: (Section) -> Unit) {
 /** Pages ported whole from Harbor: they open with their own headings, as Harbor's do. */
 private val SELF_TITLED = setOf(
     Section.Services, Section.SourcePreferences, Section.Sorting, Section.Picker, Section.StreamFilters,
-    Section.HomeRows, Section.PosterCards, Section.DetailPages, Section.LibraryContent, Section.Theme,
+    Section.HomeRows, Section.PosterCards, Section.DetailPages, Section.LibraryContent, Section.AiSearchPage, Section.Theme,
     Section.Play, Section.Engine, Section.Aspect, Section.Audio, Section.OnScreen, Section.XRay, Section.Intros, Section.UpNext, Section.Trailers,
     Section.Quality, Section.Picture, Section.Network, Section.MpvConf, Section.Shaders,
     Section.AppLanguage, Section.AudioLanguage, Section.WhatYouSee, Section.SubtitleLanguages,
@@ -424,7 +426,7 @@ private fun SectionBody(
             Section.SubtitleLanguages, Section.SubtitleSources, Section.SubtitleTiming, Section.SubtitleLook -> SubtitlesSection(repository, settings, set)
             Section.Services, Section.SourcePreferences, Section.Sorting, Section.Picker -> StreamingSection(repository, settings, set, onOpenAddons)
             Section.StreamFilters -> StreamFiltersSection(settings, set)
-            Section.HomeRows, Section.DetailPages, Section.PosterCards, Section.LibraryContent -> LibrarySection(repository, settings, set)
+            Section.HomeRows, Section.DetailPages, Section.PosterCards, Section.AiSearchPage, Section.LibraryContent -> LibrarySection(repository, settings, set)
             Section.Theme -> AppearanceSection(settings, set)
             Section.Metadata -> ProvidersSection(repository)
             Section.Storage -> StorageSection(repository, set)
@@ -966,10 +968,12 @@ private fun SubtitlesSection(repository: Repository, settings: AppSettings, set:
         SettingsLabel("Font")
         Text("The typeface subtitles are drawn in.", color = LartColors.InkMuted, fontSize = 15.sp)
         TileChoices(
-            listOf("inter" to "Inter", "system" to "System", "condensed" to "Condensed", "serif" to "Serif", "mono" to "Mono", "arabic" to "Arabic"),
+            listOf("inter" to "Inter", "system" to "System", "condensed" to "Condensed", "serif" to "Serif", "mono" to "Mono", "arabic" to "Arabic") +
+                settings.customFonts.map { "file:$it" to java.io.File(it).nameWithoutExtension },
             settings.subFont,
             fontFor = { app.lart.mobile.player.subFontFamily(it) },
         ) { v -> set { it.copy(subFont = v) } }
+        FontUploadButton { path -> set { it.copy(customFonts = (it.customFonts + path).distinct(), subFont = "file:$path") } }
         SettingsLabel("Styled (ASS) subtitles")
         CheckList(
             listOf(
@@ -1152,6 +1156,38 @@ private fun LibrarySection(repository: Repository, settings: AppSettings, set: (
         ToggleRow("Trakt comments", "Shows Trakt comments and reviews on title pages.", settings.showTraktComments) { v -> set { it.copy(showTraktComments = v) } }
         ToggleRow("Letterboxd reviews", "Shows Letterboxd's average and popular reviews on movie pages.", settings.showLetterboxdDetail) { v -> set { it.copy(showLetterboxdDetail = v) } }
     }
+    // ---- Search (AI) ----
+    Part("Search") {
+        val keys by repository.providerKeys.collectAsState()
+        val uri = LocalUriHandler.current
+        val scope = rememberCoroutineScope()
+        HarborHeading("AI Search", "Describe what you want to watch in your own words; a language model names the titles. Tap ✦ AI in Search.")
+        RowText("AI search provider", null)
+        PillChoice(listOf("openrouter" to "OpenRouter", "groq" to "Groq"), settings.aiProvider) { v ->
+            set { it.copy(aiProvider = v, aiModel = (if (v == "groq") app.lart.mobile.data.AiSearch.groqModels else app.lart.mobile.data.AiSearch.openRouterModels).first().id) }
+        }
+        val groq = settings.aiProvider == "groq"
+        ProviderKeyBlock(
+            if (groq) "G" else "O", if (groq) Color(0xFFF55036) else Color(0xFF8B9CF7), if (groq) "Groq" else "OpenRouter",
+            if (groq) "Fast open models, free with a Groq account." else "Hundreds of models; the ones marked free cost nothing.",
+            true, {},
+            if (groq) "Groq API key" else "OpenRouter API key",
+            keys[if (groq) ProviderKey.GROQ else ProviderKey.OPENROUTER],
+            { v -> scope.launch { repository.setProviderKey(if (groq) ProviderKey.GROQ else ProviderKey.OPENROUTER, v) } },
+            "AI search needs your own key.", if (groq) "Get a key at console.groq.com" else "Get a key at openrouter.ai",
+        ) { uri.openUri(if (groq) "https://console.groq.com/keys" else "https://openrouter.ai/keys") }
+        RowText("Model", null)
+        HarborSelect(
+            (if (groq) app.lart.mobile.data.AiSearch.groqModels else app.lart.mobile.data.AiSearch.openRouterModels).map { it.id to (it.label + if (it.free) "  ·  free" else "") },
+            settings.aiModel,
+        ) { v -> set { it.copy(aiModel = v) } }
+        ToggleRow("Use live web context (Jina Reader)", "Looks the question up on the web first, for recent titles and people's filmographies.", settings.aiWebContext) { v -> set { it.copy(aiWebContext = v) } }
+        if (settings.aiWebContext) ProviderKeyBlock(
+            "J", Color(0xFFE0E0E0), "Jina", "Optional: a key raises Jina Reader's rate limit.",
+            true, {}, "Jina API key", keys[ProviderKey.JINA], { v -> scope.launch { repository.setProviderKey(ProviderKey.JINA, v) } },
+            "Works without a key at a lower limit.", "jina.ai",
+        ) { uri.openUri("https://jina.ai/reader") }
+    }
     // ---- Library ----
     Part("Library") {
         HarborHeading("Content filters", "What Lart shows at all.")
@@ -1259,6 +1295,9 @@ private val ACCENTS = listOf(0xFFF0A35E, 0xFFE57373, 0xFFF06292, 0xFFBA68C8, 0xF
 private fun AppearanceSection(settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
     HarborHeading("Theme", "The accent colour used for highlights, progress and focus.")
     ColorSwatches(ACCENTS, settings.accent, 0xFFF0A35E) { c -> set { it.copy(accent = c) } }
+    HarborHeading("Typography", "The typeface Lart is drawn in. Upload your own TTF or OTF if none of these suit.")
+    FontPairGrid(settings.fontPair, settings.customFonts) { v -> set { it.copy(fontPair = v) } }
+    FontUploadButton { path -> set { it.copy(customFonts = (it.customFonts + path).distinct(), fontPair = "file:$path") } }
     HarborHeading("Poster size", "How big poster cards are in rows and grids.")
     TickSlider(settings.posterScale, listOf(0.8f, 0.85f, 0.9f, 1f, 1.1f, 1.15f, 1.25f), { "${(it * 100).toInt()}%" }, 1f) { v -> set { it.copy(posterScale = v) } }
     HarborHeading("Corner radius", "How round poster cards are.")
@@ -1470,5 +1509,52 @@ fun KeyCard(
                 HLinkButton(onClick = { uriHandler.openUri(link) }) { Text(linkLabel) }
             }
         }
+    }
+}
+
+/** Harbor's font grid: each pair's name, a heading sample in its display face and a line in its body face. */
+@Composable
+private fun FontPairGrid(selected: String, custom: List<String>, onPick: (String) -> Unit) {
+    val options = LartFonts.pairs.map { Triple(it.id, it.name, it.id) } + custom.map { Triple("file:$it", java.io.File(it).nameWithoutExtension, "file:$it") }
+    BoxWithConstraints(Modifier.fillMaxWidth()) {
+        val columns = if (maxWidth >= 760.dp) 3 else if (maxWidth >= 480.dp) 2 else 1
+        Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            options.chunked(columns).forEach { row ->
+                Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                    row.forEach { (id, name, faceId) ->
+                        val on = id == selected
+                        Column(
+                            Modifier.weight(1f).clip(RoundedCornerShape(10.dp)).background(LartColors.Elevated)
+                                .border(1.dp, if (on) LartColors.Ink else LartColors.EdgeSoft, RoundedCornerShape(10.dp))
+                                .clickable { onPick(id) }.padding(18.dp),
+                            verticalArrangement = Arrangement.spacedBy(10.dp),
+                        ) {
+                            Row(verticalAlignment = Alignment.CenterVertically) {
+                                Text(name, color = LartColors.Ink, fontSize = 16.5.sp, fontWeight = FontWeight.SemiBold, modifier = Modifier.weight(1f), maxLines = 1)
+                                if (on) Icon(Icons.Rounded.Check, null, tint = LartColors.Accent, modifier = Modifier.size(18.dp))
+                            }
+                            Text("The Godfather", color = LartColors.Ink, fontSize = 26.sp, fontFamily = LartFonts.display(faceId), fontWeight = FontWeight.SemiBold)
+                            Text("A chronicle of the fictional Corleone family.", color = LartColors.InkMuted, fontSize = 15.5.sp, fontFamily = LartFonts.sans(faceId))
+                        }
+                    }
+                    repeat(columns - row.size) { Box(Modifier.weight(1f)) }
+                }
+            }
+        }
+    }
+}
+
+/** "Upload a font": picks a TTF or OTF and copies it into the app. */
+@Composable
+private fun FontUploadButton(onAdded: (String) -> Unit) {
+    val context = LocalContext.current
+    val picker = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
+        if (uri == null) return@rememberLauncherForActivityResult
+        val path = importFont(context, uri)
+        if (path == null) Toast.makeText(context, "That isn't a TTF or OTF font", Toast.LENGTH_SHORT).show() else onAdded(path)
+    }
+    HGhostButton(onClick = { picker.launch(arrayOf("font/ttf", "font/otf", "application/x-font-ttf", "application/x-font-otf", "application/octet-stream", "*/*")) }) {
+        Icon(Icons.Rounded.Add, null, modifier = Modifier.size(18.dp))
+        Text("Upload a font")
     }
 }

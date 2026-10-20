@@ -18,6 +18,10 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
+import androidx.compose.material.icons.rounded.KeyboardArrowUp
+import androidx.compose.material.icons.rounded.KeyboardArrowDown
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.foundation.layout.widthIn
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.material.icons.rounded.PersonSearch
 import androidx.compose.foundation.layout.Row
@@ -599,6 +603,7 @@ private fun ColumnScope.SubtitlesPopover(state: PlayerState, actions: PlayerActi
         total.takeIf { it > 0 },
         onClose = { state.panel = null },
         actions = {
+            if (state.subChoice != SubChoice.Off) SyncMenu(state, actions)
             Box(Modifier.size(32.dp).clip(CircleShape).clickable { state.panel = Panel.SubStyle }, contentAlignment = Alignment.Center) {
                 Icon(Icons.Rounded.TextFields, "Subtitle style", tint = Muted, modifier = Modifier.size(17.dp))
             }
@@ -972,5 +977,114 @@ private fun XrayFact(label: String, value: String) {
     Column(Modifier.fillMaxWidth().padding(vertical = 7.dp)) {
         Text(label.uppercase(), color = Subtle, fontSize = 10.5.sp, fontWeight = FontWeight.SemiBold, letterSpacing = 1.2.sp)
         Text(value, color = Color.White, fontSize = 13.5.sp, modifier = Modifier.padding(top = 2.dp))
+    }
+}
+
+// ---------------- Subtitle sync (Harbor's subtitle-menu/sync-control.tsx, sub-sync-bar.tsx) ----------------
+
+/** The "Sync ▾" button in the subtitle menu: live sync, the manual offset bar, and a frame-rate fix. */
+@Composable
+private fun SyncMenu(state: PlayerState, actions: PlayerActions) {
+    var open by remember { mutableStateOf(false) }
+    val offset = state.subDelayMs
+    Box {
+        Row(
+            Modifier.height(32.dp).clip(RoundedCornerShape(6.dp)).clickable { open = !open }.padding(horizontal = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(4.dp),
+        ) {
+            Text("Sync", color = if (open) Color.White else Muted, fontSize = 12.5.sp, fontWeight = FontWeight.SemiBold)
+            Icon(if (open) Icons.Rounded.KeyboardArrowUp else Icons.Rounded.KeyboardArrowDown, null, tint = Muted, modifier = Modifier.size(15.dp))
+            if (offset != 0L || state.subTimeScale != 1.0) Box(Modifier.size(6.dp).clip(CircleShape).background(LartColors.Accent))
+        }
+        androidx.compose.material3.DropdownMenu(open, onDismissRequest = { open = false }, containerColor = PopRaised, modifier = Modifier.width(240.dp)) {
+            SyncItem("Live sync", "Guided") { open = false; actions.startLiveSync() }
+            SyncItem("Manual offset", if (offset != 0L) "%+.1f".format(Locale.US, offset / 1000f) else null) {
+                open = false
+                state.panel = null
+                state.syncBarOpen = true
+            }
+            Box(Modifier.fillMaxWidth().height(1.dp).background(Color(0x14FFFFFF)))
+            Text("FRAME RATE", color = Subtle, fontSize = 10.5.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.2.sp, modifier = Modifier.padding(start = 14.dp, top = 8.dp, bottom = 4.dp))
+            listOf(1.0 to "As made", 25.0 / 23.976 to "23.976 → 25", 23.976 / 25.0 to "25 → 23.976", 25.0 / 24.0 to "24 → 25", 24.0 / 25.0 to "25 → 24").forEach { (scale, label) ->
+                SyncItem(label, if (kotlin.math.abs(state.subTimeScale - scale) < 0.0001) "✓" else null) { open = false; actions.setSubTimeScale(scale) }
+            }
+            Text("Auto sync by audio runs on the desktop.", color = Subtle, fontSize = 11.sp, modifier = Modifier.padding(horizontal = 14.dp, vertical = 8.dp))
+        }
+    }
+}
+
+@Composable
+private fun SyncItem(label: String, trailing: String?, onClick: () -> Unit) {
+    Row(Modifier.fillMaxWidth().clickable(onClick = onClick).padding(horizontal = 14.dp, vertical = 10.dp), verticalAlignment = Alignment.CenterVertically) {
+        Text(label, color = Color.White, fontSize = 13.5.sp, modifier = Modifier.weight(1f))
+        trailing?.let { Text(it, color = if (it == "Guided") Subtle else LartColors.Accent, fontSize = 11.5.sp, fontFamily = FontFamily.Monospace) }
+    }
+}
+
+/**
+ * Harbor's SubSyncBar: drops from the top while you watch, so you nudge the subtitles
+ * and see the result at once; closes itself after 12 idle seconds.
+ */
+@Composable
+internal fun SubSyncBar(state: PlayerState, actions: PlayerActions) {
+    if (!state.syncBarOpen) return
+    var touched by remember { mutableStateOf(System.currentTimeMillis()) }
+    LaunchedEffect(touched) { kotlinx.coroutines.delay(12_000); state.syncBarOpen = false }
+    val offset = state.subDelayMs
+    fun nudge(ms: Long) { touched = System.currentTimeMillis(); actions.setSubDelay(offset + ms) }
+    Box(Modifier.fillMaxWidth().padding(top = 18.dp), contentAlignment = Alignment.TopCenter) {
+        Row(
+            Modifier.clip(RoundedCornerShape(14.dp)).background(Pop).border(1.dp, Color(0x14FFFFFF), RoundedCornerShape(14.dp)).padding(horizontal = 10.dp, vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(6.dp),
+        ) {
+            Icon(Icons.Outlined.ClosedCaption, null, tint = Muted, modifier = Modifier.size(18.dp))
+            listOf(-1000L to "−1s", -100L to "−0.1").forEach { (ms, label) -> SyncChip(label) { nudge(ms) } }
+            Column(Modifier.width(92.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                Text("%+.2fs".format(Locale.US, offset / 1000f), color = if (offset != 0L) LartColors.Accent else Color.White, fontSize = 16.sp, fontWeight = FontWeight.Bold, fontFamily = FontFamily.Monospace)
+                Text(if (offset > 0) "later" else if (offset < 0) "earlier" else "in sync", color = Subtle, fontSize = 10.5.sp)
+            }
+            listOf(100L to "+0.1", 1000L to "+1s").forEach { (ms, label) -> SyncChip(label) { nudge(ms) } }
+            if (offset != 0L) SyncChip("Reset") { touched = System.currentTimeMillis(); actions.setSubDelay(0) }
+            SyncChip("Done") { state.syncBarOpen = false }
+        }
+    }
+}
+
+@Composable
+private fun SyncChip(label: String, onClick: () -> Unit) {
+    Text(
+        label,
+        color = Color.White,
+        fontSize = 13.sp,
+        fontWeight = FontWeight.SemiBold,
+        modifier = Modifier.clip(RoundedCornerShape(8.dp)).background(PopRaised).clickable(onClick = onClick).padding(horizontal = 12.dp, vertical = 9.dp),
+    )
+}
+
+/** Harbor's guided live sync: the next line, and a button to tap the moment you hear it. */
+@Composable
+internal fun LiveSyncPrompt(state: PlayerState, actions: PlayerActions) {
+    val line = state.liveSyncLine ?: return
+    Box(Modifier.fillMaxWidth().padding(top = 18.dp, start = 24.dp, end = 24.dp), contentAlignment = Alignment.TopCenter) {
+        Column(
+            Modifier.widthIn(max = 560.dp).clip(RoundedCornerShape(14.dp)).background(Pop).border(1.dp, Color(0x14FFFFFF), RoundedCornerShape(14.dp)).padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(10.dp),
+        ) {
+            Text("TAP WHEN YOU HEAR", color = Subtle, fontSize = 11.sp, fontWeight = FontWeight.Bold, letterSpacing = 1.4.sp)
+            Text(line, color = Color.White, fontSize = 17.sp, fontWeight = FontWeight.SemiBold, textAlign = androidx.compose.ui.text.style.TextAlign.Center)
+            Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                Text(
+                    "Now",
+                    color = Color(0xFF121316),
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.clip(RoundedCornerShape(50)).background(LartColors.Accent).clickable { actions.liveSyncNow() }.padding(horizontal = 34.dp, vertical = 11.dp),
+                )
+                Text("Cancel", color = Muted, fontSize = 14.sp, modifier = Modifier.clip(RoundedCornerShape(50)).clickable { state.liveSyncLine = null }.padding(horizontal = 16.dp, vertical = 11.dp))
+            }
+        }
     }
 }

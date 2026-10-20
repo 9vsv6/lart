@@ -75,10 +75,39 @@ fun SearchScreen(repository: Repository, onOpen: (Meta) -> Unit, onGenre: (type:
     var loading by remember { mutableStateOf(false) }
     val keyboard = LocalSoftwareKeyboardController.current
 
-    LaunchedEffect(query, addons, builtins) {
+    // Harbor's AI search: on, a question goes to your model on Search (not on every keystroke).
+    val settings by repository.settings.collectAsState()
+    val keys by repository.providerKeys.collectAsState()
+    var aiMode by rememberSaveable { mutableStateOf(false) }
+    var aiAsk by remember { mutableStateOf(0) }
+    var aiResults by remember { mutableStateOf<List<app.lart.mobile.data.AiSearch.Result>?>(null) }
+    var aiError by remember { mutableStateOf<String?>(null) }
+    val groq = settings.aiProvider == "groq"
+    val aiKey = keys[if (groq) app.lart.mobile.data.ProviderKey.GROQ else app.lart.mobile.data.ProviderKey.OPENROUTER]
+    LaunchedEffect(aiAsk) {
+        if (aiAsk == 0) return@LaunchedEffect
         val q = query.trim()
-        if (q.length < 2) {
+        val key = aiKey ?: run { aiError = "Add an OpenRouter or Groq key in Settings › Sources & library › Search."; return@LaunchedEffect }
+        loading = true
+        aiError = null
+        aiResults = null
+        val outcome = runCatching {
+            val context = if (settings.aiWebContext) app.lart.mobile.data.AiSearch.webContext(q, keys[app.lart.mobile.data.ProviderKey.JINA]) else null
+            val suggestions = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+                app.lart.mobile.data.AiSearch.suggest(key, settings.aiModel, groq, q, context)
+            }
+            app.lart.mobile.data.AiSearch.resolve(suggestions, repository.metaAddons())
+        }
+        aiResults = outcome.getOrNull()
+        aiError = outcome.exceptionOrNull()?.message
+        loading = false
+    }
+
+    LaunchedEffect(query, addons, builtins, aiMode) {
+        val q = query.trim()
+        if (q.length < 2 || aiMode) {
             results = null
+            if (q.length < 2) aiResults = null
             return@LaunchedEffect
         }
         delay(350) // Wait for typing to pause.
@@ -105,12 +134,24 @@ fun SearchScreen(repository: Repository, onOpen: (Meta) -> Unit, onGenre: (type:
             value = query,
             onValueChange = { query = it },
             modifier = Modifier.fillMaxWidth().padding(16.dp),
-            placeholder = { Text("Movies, shows, anime") },
+            placeholder = { Text(if (aiMode) "Describe what you want to watch" else "Movies, shows, anime") },
             leadingIcon = { Icon(Icons.Rounded.Search, contentDescription = null) },
+            // Harbor's AI button: a sparkle pill that switches the field to AI search.
+            trailingIcon = {
+                Text(
+                    "✦ AI",
+                    color = if (aiMode) LartColors.Canvas else LartColors.InkMuted,
+                    fontSize = 13.sp,
+                    fontWeight = FontWeight.Bold,
+                    modifier = Modifier.padding(end = 8.dp).clip(RoundedCornerShape(50))
+                        .background(if (aiMode) LartColors.Accent else LartColors.Elevated)
+                        .clickable { aiMode = !aiMode; aiResults = null; aiError = null }.padding(horizontal = 12.dp, vertical = 6.dp),
+                )
+            },
             singleLine = true,
             shape = RoundedCornerShape(16.dp),
             keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-            keyboardActions = KeyboardActions(onSearch = { keyboard?.hide() }),
+            keyboardActions = KeyboardActions(onSearch = { keyboard?.hide(); if (aiMode && query.trim().length >= 3) aiAsk++ }),
             colors = OutlinedTextFieldDefaults.colors(
                 focusedBorderColor = LartColors.Accent,
                 unfocusedBorderColor = LartColors.Elevated,
@@ -119,7 +160,38 @@ fun SearchScreen(repository: Repository, onOpen: (Meta) -> Unit, onGenre: (type:
             ),
         )
         val current = results
+        val ai = aiResults
         when {
+            aiMode && loading -> Loading()
+            aiMode && aiError != null -> EmptyState("AI search didn't work", aiError.orEmpty())
+            aiMode && ai != null && ai.isEmpty() -> EmptyState("Nothing matched", "Try describing it another way, or pick another model in Settings.")
+            aiMode && ai != null -> LazyVerticalGrid(
+                columns = GridCells.Adaptive(minSize = 112.dp * LartDisplay.settings.posterScale),
+                contentPadding = PaddingValues(start = 16.dp, end = 16.dp, bottom = 32.dp),
+                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                verticalArrangement = Arrangement.spacedBy(16.dp),
+            ) {
+                items(ai, key = { it.meta.type + it.meta.id }) { r ->
+                    Column {
+                        PosterTile(r.meta) { onOpen(r.meta) }
+                        // The episode it pointed at, as Harbor's AI results.
+                        if (r.season != null && r.episode != null) {
+                            Text(
+                                "S${r.season} · E${r.episode}" + (r.episodeTitle?.let { " · $it" } ?: ""),
+                                color = LartColors.Accent,
+                                fontSize = 12.sp,
+                                fontWeight = FontWeight.SemiBold,
+                                maxLines = 2,
+                            )
+                        }
+                    }
+                }
+            }
+            aiMode -> EmptyState(
+                "Ask for anything",
+                "\"A cozy mystery set in Japan\", \"the Seinfeld one about the puffy shirt\", \"films like Arrival\". Press search to ask " +
+                    (if (groq) "Groq" else "OpenRouter") + ".",
+            )
             loading && current == null -> Loading()
             current == null -> LazyVerticalGrid(
                 columns = GridCells.Adaptive(minSize = 160.dp),

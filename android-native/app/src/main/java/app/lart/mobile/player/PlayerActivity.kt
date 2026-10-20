@@ -273,7 +273,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
             }
             // With Media3, Lart draws the subtitles; mpv draws its own.
             if (!engine.drawsSubtitles) {
-                val subtitleTime = position - state.subDelayMs
+                val subtitleTime = ((position - state.subDelayMs) * state.subTimeScale).toLong()
                 val cues = when (state.subChoice) {
                     is SubChoice.Addon -> subtitleFile?.textAt(subtitleTime)?.let { listOf(UiCue(text = it)) }.orEmpty()
                     is SubChoice.Embedded -> engine.cuesAt(subtitleTime)
@@ -654,6 +654,33 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
             state.hint = "Subtitle sync  |  " + (if (clamped > 0) "+" else "") + "$clamped ms"
             state.hintIcon = 0
         }
+    }
+
+    private var liveSyncCue: SubtitleFile.Cue? = null
+
+    override fun startLiveSync() {
+        val file = subtitleFile ?: run { state.hint = "Live sync works with subtitles from your sources"; state.hintIcon = 0; return }
+        // The next line after where the subtitles currently are; you tap when you hear it.
+        val now = ((engine.positionMs - state.subDelayMs) * state.subTimeScale).toLong()
+        val cue = file.nextAfter(now + 1_500) ?: return
+        liveSyncCue = cue
+        state.liveSyncLine = cue.text
+        state.panel = null
+        if (!state.playing) engine.play()
+    }
+
+    override fun liveSyncNow() {
+        val cue = liveSyncCue ?: return
+        // The line was meant for now: shift subtitles so its start lands here.
+        val heardAt = engine.positionMs
+        setSubDelay(heardAt - (cue.startMs / state.subTimeScale).toLong())
+        liveSyncCue = null
+        state.liveSyncLine = null
+    }
+
+    override fun setSubTimeScale(scale: Double) {
+        state.subTimeScale = scale
+        engine.setSubSpeed(1.0 / scale)
     }
 
     override fun setAudioDelay(delayMs: Long) {

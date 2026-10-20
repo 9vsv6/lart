@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.BoxScope
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.VolumeOff
@@ -46,7 +47,7 @@ import kotlinx.coroutines.delay
  * is on, cropped to fill. A speaker button toggles sound. Nothing shows if YouTube won't say.
  */
 @Composable
-fun BoxScope.HeroTrailer(meta: Meta, enabled: Boolean, startDelayMs: Long = 2_500, showMute: Boolean = true, youtubeId: String? = null, loop: Boolean = true, onPlaying: (Boolean) -> Unit = {}) {
+fun BoxScope.HeroTrailer(meta: Meta, enabled: Boolean, startDelayMs: Long = 2_500, showMute: Boolean = true, youtubeId: String? = null, loop: Boolean = true, underStatusBar: Boolean = false, onPlaying: (Boolean) -> Unit = {}) {
     if (!enabled) return
     val context = LocalContext.current
     val repository = (context.applicationContext as LartApp).repository
@@ -106,7 +107,7 @@ fun BoxScope.HeroTrailer(meta: Meta, enabled: Boolean, startDelayMs: Long = 2_50
     )
     if (showMute && playing) {
         Box(
-            Modifier.align(Alignment.TopEnd).padding(14.dp).size(38.dp).clip(CircleShape).background(Color(0x66000000)).clickable { muted = !muted },
+            Modifier.align(Alignment.TopEnd).then(if (underStatusBar) Modifier.statusBarsPadding() else Modifier).padding(14.dp).size(38.dp).clip(CircleShape).background(Color(0x66000000)).clickable { muted = !muted },
             contentAlignment = Alignment.Center,
         ) {
             Icon(if (muted) Icons.AutoMirrored.Rounded.VolumeOff else Icons.AutoMirrored.Rounded.VolumeUp, if (muted) "Sound on" else "Sound off", tint = Color.White, modifier = Modifier.size(20.dp))

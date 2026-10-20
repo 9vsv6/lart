@@ -26,6 +26,10 @@ object ProviderKey {
     const val WYZIE = "wyzie"
     const val OPENSUBTITLES = "opensubtitles"
     const val THEINTRODB = "theintrodb"
+    // AI search.
+    const val OPENROUTER = "openrouter"
+    const val GROQ = "groq"
+    const val JINA = "jina"
 }
 
 /** Harbor's other metadata providers (src/lib/providers): TheTVDB, MDBList and Fanart.tv. */

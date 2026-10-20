@@ -71,7 +71,6 @@ object Trailers {
             if (tmdbKey != null) Tmdb.trailerKey(tmdbKey, meta)?.let { return@runCatching it }
             if (meta.id.startsWith("tt")) AddonClient.meta(metaAddons, meta.type, meta.id)?.trailerYouTube else null
         }.getOrNull()
-        android.util.Log.i("LartTrailer", "${meta.id} trailer $found")
         idCache[meta.id] = found
         return found
     }
@@ -87,7 +86,6 @@ object Trailers {
             info.videoStreams.filter { !it.isVideoOnly && it.content.isNotEmpty() }
                 .minByOrNull { kotlin.math.abs((it.height.takeIf { h -> h > 0 } ?: 360) - height) }?.content
         }.onFailure { android.util.Log.w("LartTrailer", "$youtubeId failed", it) }.getOrNull()
-        android.util.Log.i("LartTrailer", "$youtubeId -> ${url?.take(60)}")
         cache[key] = url
         url
     }

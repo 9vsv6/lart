@@ -63,5 +63,19 @@ private fun scheme(accent: Color) = darkColorScheme(
 fun LartTheme(content: @Composable () -> Unit) {
     val accent = LartColors.Accent
     val colors = remember(accent) { scheme(accent) }
-    MaterialTheme(colorScheme = colors, content = content)
+    // Harbor's typography: the chosen body face for all text.
+    val sans = LartFonts.sans(LartDisplay.settings.fontPair)
+    val base = androidx.compose.material3.Typography()
+    val typography = remember(sans) {
+        base.copy(
+            displayLarge = base.displayLarge.copy(fontFamily = sans), displayMedium = base.displayMedium.copy(fontFamily = sans), displaySmall = base.displaySmall.copy(fontFamily = sans),
+            headlineLarge = base.headlineLarge.copy(fontFamily = sans), headlineMedium = base.headlineMedium.copy(fontFamily = sans), headlineSmall = base.headlineSmall.copy(fontFamily = sans),
+            titleLarge = base.titleLarge.copy(fontFamily = sans), titleMedium = base.titleMedium.copy(fontFamily = sans), titleSmall = base.titleSmall.copy(fontFamily = sans),
+            bodyLarge = base.bodyLarge.copy(fontFamily = sans), bodyMedium = base.bodyMedium.copy(fontFamily = sans), bodySmall = base.bodySmall.copy(fontFamily = sans),
+            labelLarge = base.labelLarge.copy(fontFamily = sans), labelMedium = base.labelMedium.copy(fontFamily = sans), labelSmall = base.labelSmall.copy(fontFamily = sans),
+        )
+    }
+    MaterialTheme(colorScheme = colors, typography = typography) {
+        androidx.compose.runtime.CompositionLocalProvider(androidx.compose.material3.LocalTextStyle provides androidx.compose.ui.text.TextStyle(fontFamily = sans), content = content)
+    }
 }
