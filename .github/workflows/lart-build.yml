@@ -289,9 +289,14 @@ jobs:
         if: contains(matrix.platform.runner, 'macos')
         run: pnpm tauri build --target ${{ matrix.platform.target }} --bundles app,dmg ${{ steps.macos-libraries.outputs.config }}
 
+      # linuxdeploy's strip step chokes on newer system libraries (.relr.dyn sections) and
+      # only says "failed to run linuxdeploy"; skip it, and log verbosely so a failure shows why.
       - name: Build Linux packages
         if: contains(matrix.platform.runner, 'ubuntu')
-        run: pnpm tauri:build:linux-system --target ${{ matrix.platform.target }} --bundles deb,appimage
+        env:
+          NO_STRIP: "true"
+          APPIMAGE_EXTRACT_AND_RUN: "1"
+        run: pnpm tauri:build:linux-system --target ${{ matrix.platform.target }} --bundles deb,appimage --verbose
 
       - name: Verify macOS app
         if: contains(matrix.platform.runner, 'macos')
