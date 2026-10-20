@@ -25,6 +25,12 @@ class LartApp : Application(), coil.ImageLoaderFactory {
         repository = Repository(this)
         app.lart.mobile.ui.LartFonts.assets = assets
         app.lart.mobile.data.Curated.init(this)
+        // The curated lists and last launch's Home rows are parsed now, off the main thread,
+        // so the first Home frame doesn't wait on them.
+        Thread({
+            app.lart.mobile.ui.HomeCache.preload(this)
+            app.lart.mobile.data.Curated.lists()
+        }, "lart-warmup").apply { priority = Thread.NORM_PRIORITY - 1 }.start()
         // Look-and-feel settings reach every screen, the player's too, through LartDisplay.
         val main = MainScope()
         main.launch {

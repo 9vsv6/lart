@@ -105,7 +105,10 @@ fun DetailScreen(
 ) {
     val addons by repository.addons.collectAsState()
     val builtins by repository.builtins.collectAsState()
-    var meta by remember { mutableStateOf<Meta?>(null) }
+    // What the poster already knew shows at once, as Harbor's detail page does; the addon's
+    // full entry (episodes, cast, links) replaces it when it arrives.
+    var meta by remember { mutableStateOf(MetaPreview.get(id)) }
+    var full by remember { mutableStateOf(false) }
     var failed by remember { mutableStateOf(false) }
     var details by remember { mutableStateOf<TmdbDetails?>(null) }
     var awards by remember { mutableStateOf<List<AwardEntry>>(emptyList()) }
@@ -153,8 +156,8 @@ fun DetailScreen(
         scores = runCatching { Omdb.scores(key, imdb) }.getOrDefault(emptyList())
     }
     // Harbor's other providers, each with the user's own key.
-    LaunchedEffect(meta?.id, details?.tvdbId, providerKeys) {
-        val current = meta ?: return@LaunchedEffect
+    LaunchedEffect(meta?.id, details?.tvdbId, providerKeys, full) {
+        val current = meta?.takeIf { full } ?: return@LaunchedEffect
         val imdb = current.id.substringBefore(':').takeIf { it.startsWith("tt") } ?: return@LaunchedEffect
         val series = current.type != "movie"
         providerKeys[ProviderKey.MDBLIST]?.let { key -> mdblist = runCatching { Mdblist.scores(key, imdb, current.type) }.getOrNull() }
@@ -188,11 +191,16 @@ fun DetailScreen(
     val scrolled by remember { derivedStateOf { listState.firstVisibleItemIndex > 0 } }
 
     LaunchedEffect(addons, builtins, type, id) {
-        if (addons.isEmpty() || meta != null) return@LaunchedEffect
+        if (addons.isEmpty() || full) return@LaunchedEffect
         val loaded = AddonClient.meta(repository.metaAddons(), type, id)
-        meta = loaded
+        if (loaded != null) {
+            // Keep the preview's art where the addon has none.
+            val preview = meta
+            meta = loaded.copy(poster = loaded.poster ?: preview?.poster, background = loaded.background ?: preview?.background)
+            full = true
+        }
         // Built-ins load in the background; only give up once they have had their turn.
-        failed = loaded == null && builtins.isNotEmpty()
+        failed = loaded == null && meta == null && builtins.isNotEmpty()
     }
 
     // TMDB with a key; without one (or when TMDB misses), Harbor's keyless sources.
@@ -962,4 +970,15 @@ private fun mdblistScores(m: Mdblist.Scores?): List<Score> {
         m.rtAudience?.let { Score("Audience", "${f(it)}%") },
         m.score?.let { Score("MDBList", f(it)) },
     )
+}
+
+/** What a poster knew about a title, so its page can open on that before the addon answers. */
+object MetaPreview {
+    private val recent = object : LinkedHashMap<String, Meta>(32, 0.75f, true) {
+        override fun removeEldestEntry(eldest: MutableMap.MutableEntry<String, Meta>?) = size > 48
+    }
+
+    fun put(meta: Meta) = synchronized(recent) { recent[meta.id] = meta }
+
+    fun get(id: String): Meta? = synchronized(recent) { recent[id] }
 }

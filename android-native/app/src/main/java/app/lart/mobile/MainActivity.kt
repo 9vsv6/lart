@@ -353,7 +353,7 @@ private fun NavHostController.selectTab(tab: Tab) = navigate(tab.route) {
     restoreState = true
 }
 
-private fun NavHostController.openDetail(meta: Meta) = navigate("detail/${enc(meta.type)}/${enc(meta.id)}")
+private fun NavHostController.openDetail(meta: Meta) = app.lart.mobile.ui.MetaPreview.put(meta).let { navigate("detail/${enc(meta.type)}/${enc(meta.id)}") }
 
 private fun NavHostController.openStreams(type: String, metaId: String, videoId: String, title: String) =
     navigate("streams/${enc(type)}/${enc(metaId)}/${enc(videoId)}?title=${enc(title)}")

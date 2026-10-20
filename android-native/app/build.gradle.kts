@@ -5,6 +5,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
     id("org.jetbrains.kotlin.plugin.serialization")
+    id("androidx.baselineprofile")
 }
 
 // Release signing uses the same key.properties format as the Tauri app
@@ -13,6 +14,9 @@ val keyProperties = Properties().apply {
     val file = rootProject.file("key.properties")
     if (file.exists()) file.inputStream().use { load(it) }
 }
+
+val abis = listOf("arm64-v8a", "x86_64")
+val splitAbis = gradle.startParameter.taskNames.any { it.contains("Release", ignoreCase = true) }
 
 android {
     namespace = "app.lart.mobile"
@@ -26,7 +30,18 @@ android {
         versionCode = 10
         versionName = "1.0.0"
         // Phones (arm64) and the x86_64 emulator; mpv adds about 25 MB per ABI.
-        ndk { abiFilters += listOf("arm64-v8a", "x86_64") }
+        if (!splitAbis) ndk { abiFilters += abis }
+    }
+
+    // Release builds come as one APK per ABI, so a phone downloads only arm64's
+    // libraries (about half the size); debug builds keep both in one APK.
+    splits {
+        abi {
+            isEnable = splitAbis
+            reset()
+            include(*abis.toTypedArray())
+            isUniversalApk = false
+        }
     }
 
     signingConfigs {
@@ -71,6 +86,9 @@ kotlin {
 
 dependencies {
     val composeBom = platform("androidx.compose:compose-bom:2024.12.01")
+    // Installs the baseline profile (baselineprofile/) so the first launch is already compiled.
+    implementation("androidx.profileinstaller:profileinstaller:1.4.1")
+    baselineProfile(project(":baselineprofile"))
     implementation(composeBom)
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-tooling-preview")

@@ -18,3 +18,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "lart-native"
 include(":app")
+// Generates the app's baseline profile (what to compile ahead of time) on a device.
+include(":baselineprofile")

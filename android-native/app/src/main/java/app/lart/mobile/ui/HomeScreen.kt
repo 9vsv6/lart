@@ -422,8 +422,17 @@ private suspend fun cinemetaRows(metaAddons: List<Addon>): List<CatalogRow> = co
 
 /** Home rows as last loaded, kept on disk so the next launch shows them straight away. */
 object HomeCache {
-    private val memory = mutableMapOf<String, List<CatalogRow>>()
+    private val memory = java.util.concurrent.ConcurrentHashMap<String, List<CatalogRow>>()
     private val serializer = kotlinx.serialization.builtins.ListSerializer(CatalogRow.serializer())
+
+    /** Reads every saved row set ahead of time, off the main thread, so Home only finds them in memory. */
+    fun preload(context: android.content.Context) {
+        java.io.File(context.filesDir, "home-rows").listFiles()?.forEach { f ->
+            val key = f.name.removeSuffix(".json")
+            if (!memory.containsKey(key)) runCatching { app.lart.mobile.data.Net.json.decodeFromString(serializer, f.readText()) }.getOrNull()
+                ?.takeIf { it.isNotEmpty() }?.let { memory.putIfAbsent(key, it) }
+        }
+    }
 
     fun key(view: BrowseView, tmdb: Boolean, languages: List<String>, language: String?) =
         "${view.name}-${if (tmdb) "tmdb" else "free"}-${(languages.joinToString(",") + "|" + language.orEmpty()).hashCode()}"

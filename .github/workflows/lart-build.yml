@@ -102,31 +102,32 @@ jobs:
         if: steps.sign.outputs.signed != 'true'
         run: |
           set -euo pipefail
-          apk="$(find android-native/app/build/outputs/apk/release -name '*-unsigned.apk' -print -quit)"
-          test -n "$apk"
           keystore="$RUNNER_TEMP/throwaway.jks"
           keytool -genkeypair -keystore "$keystore" -storepass lartci -keypass lartci \
             -alias lart -keyalg RSA -keysize 2048 -validity 3650 -dname "CN=Lart CI"
           buildtools="$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)"
-          "$buildtools/apksigner" sign --ks "$keystore" \
-            --ks-pass pass:lartci --key-pass pass:lartci \
-            --out "${apk%-unsigned.apk}.apk" "$apk"
-          rm "$apk"
+          for apk in android-native/app/build/outputs/apk/release/*-unsigned.apk; do
+            "$buildtools/apksigner" sign --ks "$keystore" \
+              --ks-pass pass:lartci --key-pass pass:lartci \
+              --out "${apk%-unsigned.apk}.apk" "$apk"
+            rm "$apk"
+          done
 
-      - name: Name the APK
+      # Release builds are split per ABI: arm64 for phones and tablets, x86_64 for
+      # emulators and x86 Chromebooks.
+      - name: Name the APKs
         env:
           RELEASE_TAG: ${{ inputs.release_tag }}
         run: |
           set -euo pipefail
           version="$(sed -n 's/.*versionName = "\(.*\)".*/\1/p' android-native/app/build.gradle.kts)"
-          apk="$(find android-native/app/build/outputs/apk/release -name '*.apk' ! -name '*-unsigned.apk' -print -quit)"
-          test -n "$apk"
+          if [ -n "${RELEASE_TAG:-}" ]; then base="Lart-${RELEASE_TAG#v}"; else base="Lart_${version}"; fi
+          out=android-native/app/build/outputs/apk/release
+          test -f "$out/app-arm64-v8a-release.apk"
+          test -f "$out/app-x86_64-release.apk"
           mkdir -p dist-android
-          if [ -n "${RELEASE_TAG:-}" ]; then
-            cp "$apk" "dist-android/Lart-${RELEASE_TAG#v}-android.apk"
-          else
-            cp "$apk" "dist-android/Lart_${version}_android.apk"
-          fi
+          cp "$out/app-arm64-v8a-release.apk" "dist-android/${base}_android.apk"
+          cp "$out/app-x86_64-release.apk" "dist-android/${base}_android-x86_64.apk"
           sha256sum dist-android/*.apk
 
       - name: Upload APK
