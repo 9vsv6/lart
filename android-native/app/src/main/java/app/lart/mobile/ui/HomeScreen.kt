@@ -80,7 +80,14 @@ private val SHOW_GENRES = listOf("Drama", "Comedy", "Crime", "Sci-Fi", "Animatio
 fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView: (BrowseView) -> Unit, showSwitcher: Boolean = true) {
     val addons by repository.addons.collectAsState()
     val builtins by repository.builtins.collectAsState()
-    val cw by repository.continueWatching.collectAsState()
+    val allCw by repository.continueWatching.collectAsState()
+    // Harbor's Anime page has its own Continue Watching, anime only; with "anime only in the
+    // Anime room" (or anime hidden) Home leaves anime out of its row.
+    val cw = when {
+        view == BrowseView.Anime -> allCw.filter { isAnimeCw(it) }
+        LartDisplay.settings.animeRoomOnly || LartDisplay.settings.hideAnime -> allCw.filterNot { isAnimeCw(it) }
+        else -> allCw
+    }
     val tmdbKey by repository.tmdbKey.collectAsState()
     // Rebuilt from scratch when the TMDB key changes.
     val homeLanguages = LartDisplay.settings.homeLanguages
@@ -175,7 +182,7 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
         ) {
             when {
                 current == null -> item { Loading(Modifier.padding(top = 120.dp)) }
-                current.isEmpty() && (view != BrowseView.Home || cw.isEmpty()) -> item {
+                current.isEmpty() && ((view != BrowseView.Home && view != BrowseView.Anime) || cw.isEmpty()) -> item {
                     EmptyState(
                         if (failed[view] == true) "Couldn't load ${view.label.lowercase()}" else "Nothing here yet",
                         "Lart couldn't reach the catalog servers. Check your connection and try again.",
@@ -193,7 +200,7 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
                             onOpen = nav::openMeta,
                         )
                     }
-                    if (view == BrowseView.Home && cw.isNotEmpty()) {
+                    if ((view == BrowseView.Home || view == BrowseView.Anime) && cw.isNotEmpty()) {
                         item(key = "cw") { ContinueWatchingRow(cw, nav::resume, repository::dismissContinueWatching) }
                     }
                     if (view == BrowseView.Home && newEpisodes.isNotEmpty()) {
@@ -434,3 +441,6 @@ object HomeCache {
         }
     }
 }
+
+/** An anime in Continue watching: opened through the anime addons' Kitsu, MAL or AniList ids. */
+private fun isAnimeCw(item: CwItem) = item.meta.id.substringBefore(':') in setOf("kitsu", "mal", "anilist")
