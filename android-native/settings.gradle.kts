@@ -11,6 +11,8 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        // NewPipeExtractor (YouTube trailers, as Harbor's yt-dlp).
+        maven("https://jitpack.io")
     }
 }
 

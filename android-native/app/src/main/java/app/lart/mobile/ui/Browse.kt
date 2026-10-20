@@ -146,11 +146,12 @@ fun HeroCarousel(
     var index by remember(slides) { mutableIntStateOf(0) }
     var pausedUntil by remember { mutableLongStateOf(0L) }
     var listVersion by remember { mutableIntStateOf(0) }
+    var trailerOn by remember { mutableStateOf(false) }
     val rotate = LartDisplay.settings.heroAutoRotate
     LaunchedEffect(slides, rotate) {
         while (rotate && slides.size > 1) {
             delay(8_000)
-            if (System.currentTimeMillis() >= pausedUntil) index = (index + 1) % slides.size
+            if (System.currentTimeMillis() >= pausedUntil && !trailerOn) index = (index + 1) % slides.size
         }
     }
     // Phones get Harbor's mobile card (16:13); tablets a wide desktop-style hero.
@@ -165,6 +166,8 @@ fun HeroCarousel(
                 val meta = slides[i.coerceIn(0, slides.lastIndex)]
                 Box(Modifier.fillMaxSize().clickable { onOpen(meta) }) {
                     AsyncImage(meta.background ?: meta.poster, null, contentScale = ContentScale.Crop, modifier = Modifier.fillMaxSize())
+                    // Harbor's hero trailer: the slide holds still while it plays.
+                    HeroTrailer(meta, LartDisplay.settings.heroTrailers, startDelayMs = 1_500, loop = false) { on -> trailerOn = on }
                     Box(
                         Modifier.fillMaxSize().background(
                             Brush.verticalGradient(0f to Color(0x0D000000), 0.5f to Color(0x73000000), 1f to Color(0xF2000000)),

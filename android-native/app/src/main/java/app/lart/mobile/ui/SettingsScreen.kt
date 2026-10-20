@@ -46,6 +46,7 @@ import androidx.compose.material.icons.outlined.TextFields
 import androidx.compose.material.icons.outlined.Subtitles
 import androidx.compose.material.icons.outlined.Visibility
 import androidx.compose.material.icons.outlined.GraphicEq
+import androidx.compose.material.icons.outlined.Movie
 import androidx.compose.material.icons.outlined.Sort
 import androidx.compose.material.icons.outlined.TouchApp
 import androidx.compose.material.icons.outlined.VideoLibrary
@@ -152,6 +153,7 @@ private enum class Section(
     XRay("X-Ray", "The cast, crew and facts from the player.", Icons.Outlined.PersonSearch, "xray x-ray cast crew", setOf("X-Ray")),
     Intros("Intros", "Skip intros, recaps and credits.", Icons.Outlined.FastForward, "skip intro recap credits theintrodb", setOf("Intros")),
     UpNext("Up next", "What happens between episodes.", Icons.Outlined.QueuePlayNext, "up next autoplay still watching next episode", setOf("Up next")),
+    Trailers("Trailers", "Trailers in the Home hero and on title pages.", Icons.Outlined.Movie, "trailers hero autoplay audio quality youtube", setOf("Trailers")),
     Quality("Quality", "Picture quality and hardware decoding (mpv).", Icons.Outlined.Speed, "quality hwdec hardware acceleration decoding", setOf("Quality")),
     Picture("Picture", "Brightness, contrast, colour and HDR (mpv).", Icons.Outlined.Image, "picture brightness contrast saturation gamma hdr tone mapping", setOf("Picture")),
     Network("Network", "Buffering for slow connections (mpv).", Icons.Outlined.Wifi, "buffer network slow connection cache", setOf("Network")),
@@ -184,7 +186,7 @@ private enum class Group(val label: String, val section: String, val icon: Image
     Account("Account & sync", "Setup", Icons.Outlined.AccountBox, listOf(Section.Profiles, Section.Stremio, Section.Trackers)),
     Playback(
         "Playback", "Watching", Icons.Outlined.PlayCircle,
-        listOf(Section.Play, Section.Engine, Section.Aspect, Section.Audio, Section.OnScreen, Section.XRay, Section.Intros, Section.UpNext, Section.Quality, Section.Picture, Section.Network, Section.MpvConf, Section.Shaders),
+        listOf(Section.Play, Section.Engine, Section.Aspect, Section.Audio, Section.OnScreen, Section.XRay, Section.Intros, Section.UpNext, Section.Trailers, Section.Quality, Section.Picture, Section.Network, Section.MpvConf, Section.Shaders),
     ),
     Languages("Languages & subtitles", "Language", Icons.Outlined.Translate, listOf(Section.AppLanguage, Section.AudioLanguage, Section.WhatYouSee, Section.SubtitleLanguages, Section.SubtitleSources, Section.SubtitleTiming, Section.SubtitleLook)),
     Sources(
@@ -346,7 +348,7 @@ private fun SearchResults(query: String, onOpen: (Section) -> Unit) {
 private val SELF_TITLED = setOf(
     Section.Services, Section.SourcePreferences, Section.Sorting, Section.Picker, Section.StreamFilters,
     Section.HomeRows, Section.PosterCards, Section.DetailPages, Section.LibraryContent, Section.Theme,
-    Section.Play, Section.Engine, Section.Aspect, Section.Audio, Section.OnScreen, Section.XRay, Section.Intros, Section.UpNext,
+    Section.Play, Section.Engine, Section.Aspect, Section.Audio, Section.OnScreen, Section.XRay, Section.Intros, Section.UpNext, Section.Trailers,
     Section.Quality, Section.Picture, Section.Network, Section.MpvConf, Section.Shaders,
     Section.AppLanguage, Section.AudioLanguage, Section.WhatYouSee, Section.SubtitleLanguages,
     Section.SubtitleSources, Section.SubtitleTiming, Section.SubtitleLook,
@@ -416,7 +418,7 @@ private fun SectionBody(
         when (section) {
             Section.Profiles, Section.Stremio -> AccountSection(repository, settings, set)
             Section.Trackers -> TrackersPanel(repository, settings, set)
-            Section.Play, Section.Engine, Section.Aspect, Section.Audio, Section.OnScreen, Section.XRay, Section.Intros, Section.UpNext,
+            Section.Play, Section.Engine, Section.Aspect, Section.Audio, Section.OnScreen, Section.XRay, Section.Intros, Section.UpNext, Section.Trailers,
             Section.Quality, Section.Picture, Section.Network, Section.MpvConf, Section.Shaders -> PlayerSection(repository, settings, set)
             Section.AppLanguage, Section.AudioLanguage, Section.WhatYouSee -> LanguageSection(repository, settings, set)
             Section.SubtitleLanguages, Section.SubtitleSources, Section.SubtitleTiming, Section.SubtitleLook -> SubtitlesSection(repository, settings, set)
@@ -688,6 +690,15 @@ private fun PlayerSection(repository: Repository, settings: AppSettings, set: ((
         PillChoice(listOf(0 to "At the credits", 30 to "30 s", 45 to "45 s", 60 to "1 min", 90 to "90 s"), settings.nextEpisodeLeadSec) { v -> set { it.copy(nextEpisodeLeadSec = v) } }
         RowText("Ask if you're still watching", "After this many episodes in a row.")
         PillChoice(listOf(0 to "Never", 2 to "2", 3 to "3", 5 to "5"), prefs.stillWatchingAfter) { n -> repository.updatePlayerPrefs { it.copy(stillWatchingAfter = n) } }
+    }
+    // ---- Trailers ----
+    Part("Trailers") {
+        HarborHeading("Trailers", "How sharp trailers play, and when they start on their own.")
+        ToggleRow("Play trailers in the hero", "The featured title's trailer plays in the Home banner, then the banner moves on.", settings.heroTrailers) { v -> set { it.copy(heroTrailers = v) } }
+        ToggleRow("Auto-play trailer on detail pages", "The trailer plays over the backdrop on a title page.", settings.detailTrailerAutoplay) { v -> set { it.copy(detailTrailerAutoplay = v) } }
+        ToggleRow("Start trailers with audio", "Off starts them muted; tap the speaker to hear them.", settings.trailerAudio) { v -> set { it.copy(trailerAudio = v) } }
+        RowText("Trailer quality", "Auto is 720p.")
+        PillChoice(listOf("auto" to "Auto", "360p" to "360p", "720p" to "720p", "1080p" to "1080p"), settings.trailerQuality) { v -> set { it.copy(trailerQuality = v) } }
     }
     // ---- Quality (mpv) ----
     Part("Quality") {

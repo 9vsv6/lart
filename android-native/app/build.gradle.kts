@@ -89,6 +89,8 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("io.coil-kt:coil-compose:2.7.0")
+    // Trailer streams from YouTube, as Harbor gets them with yt-dlp (GPL-3, like the rest).
+    implementation("com.github.TeamNewPipe:NewPipeExtractor:v0.26.5")
 
     implementation("androidx.media3:media3-exoplayer:1.9.0")
     implementation("androidx.media3:media3-exoplayer-hls:1.9.0")

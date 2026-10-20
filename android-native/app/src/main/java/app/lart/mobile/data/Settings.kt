@@ -201,6 +201,12 @@ data class AppSettings(
     /** The source picker: which kind of source it opens on, and whether source text starts in full. */
     val defaultSourceMode: String = "Both",
     val pickerFullDescription: Boolean = false,
+    /** Harbor's Trailers tab: trailers in the Home hero and on title pages, their sound and quality. */
+    val heroTrailers: Boolean = true,
+    val detailTrailerAutoplay: Boolean = true,
+    val trailerAudio: Boolean = false,
+    /** auto, 360p, 720p or 1080p. */
+    val trailerQuality: String = "auto",
     /** IMDb rating on each episode (OMDb with a key, else TMDB). */
     val showEpisodeRating: Boolean = true,
     val hidePosterTitles: Boolean = false,

@@ -411,6 +411,8 @@ private fun Hero(
             contentScale = ContentScale.Crop,
             modifier = Modifier.fillMaxSize(),
         )
+        // Harbor's detail trailer: plays over the backdrop after a moment.
+        HeroTrailer(meta, LartDisplay.settings.detailTrailerAutoplay, youtubeId = meta.trailerYouTube ?: details?.trailerYouTube)
         // Harbor's scrims: down into the page, and from the left behind the text.
         Box(Modifier.matchParentSize().background(Brush.verticalGradient(0f to Color(0x33000000), 0.45f to Color.Transparent, 1f to LartColors.Canvas)))
         Box(Modifier.matchParentSize().background(Brush.horizontalGradient(0f to Color(0xCC121316), if (wide) 0.55f to Color.Transparent else 0.9f to Color(0x33121316))))
