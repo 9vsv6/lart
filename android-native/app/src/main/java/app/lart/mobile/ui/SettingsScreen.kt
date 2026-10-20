@@ -1404,7 +1404,7 @@ private fun AboutSection() {
     }
     SettingsSection(
         "Licences",
-        "Lart includes mpv (libmpv-android, MIT; mpv LGPL), FFmpeg (LGPL/GPL), Jellyfin's Media3 FFmpeg decoder (GPL-3.0) and downloads Anime4K shaders (MIT) on first use. " +
+        "Lart includes mpv (libmpv-android, MIT; mpv LGPL), FFmpeg (LGPL/GPL), Jellyfin's Media3 FFmpeg decoder (GPL-3.0), NewPipeExtractor for trailers (GPL-3.0), the Inter, Fraunces, IBM Plex Sans and Plus Jakarta Sans fonts (SIL OFL 1.1) and Harbor's profile pictures, and downloads Anime4K shaders (MIT) on first use. " +
             "Because of the GPL parts, anyone you share this APK with is entitled to Lart's source code.",
     ) {}
 }
