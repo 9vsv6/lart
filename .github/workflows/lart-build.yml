@@ -337,5 +337,6 @@ jobs:
           tag_name: ${{ inputs.release_tag || github.ref_name }}
           target_commitish: ${{ github.sha }}
           prerelease: ${{ inputs.release_tag != '' || contains(github.ref_name, 'alpha') || contains(github.ref_name, 'beta') }}
-          files: packages/*
+          # Desktop installers sit in bundle subfolders (nsis/, dmg/, deb/, appimage/).
+          files: packages/**/*
           fail_on_unmatched_files: true
