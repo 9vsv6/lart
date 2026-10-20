@@ -100,6 +100,8 @@ object Keyless {
             overview = show.string("summary")?.replace(Regex("<[^>]+>"), "")?.trim()?.takeIf { it.isNotEmpty() }?.takeIf { meta.description.isNullOrBlank() },
             status = show.string("status") ?: meta.status,
             networks = listOfNotNull(network),
+            // A streaming service's own show (TVMaze's web channel), where it can be watched.
+            watchOn = listOfNotNull((show["webChannel"] as? JsonObject)?.let { c -> c.string("name")?.let { WatchProvider(it, null, c.string("officialSite")) } }),
             firstAired = show.string("premiered") ?: meta.released?.take(10),
             lastAired = show.string("ended"),
             originalLanguage = show.string("language"),

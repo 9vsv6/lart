@@ -403,3 +403,36 @@ object AniList {
 }
 
 private fun JsonArray?.orEmpty(): List<kotlinx.serialization.json.JsonElement> = this ?: emptyList()
+
+/** `{"movies": [{"ids": {"imdb": …}, "rating": n}]}`, the body Trakt's and Simkl's sync endpoints share. */
+private fun syncBody(imdb: String, type: String, rating: Int? = null) = buildJsonObject {
+    put(if (type == "movie") "movies" else "shows", JsonArray(listOf(buildJsonObject {
+        putJsonObject("ids") { put("imdb", imdb) }
+        rating?.let { put("rating", it) }
+    })))
+}.toString().toRequestBody(jsonType)
+
+/** Rates a title out of 10 on Trakt, or removes the rating. */
+suspend fun Trakt.rate(auth: TrackerAuth, imdb: String, type: String, rating: Int?) =
+    Net.call(traktRequest(auth, if (rating == null) "/sync/ratings/remove" else "/sync/ratings").post(syncBody(imdb, type, rating)).build())
+
+/** Adds a title to (or removes it from) Trakt's watch history. */
+suspend fun Trakt.history(auth: TrackerAuth, imdb: String, type: String, watched: Boolean) =
+    Net.call(traktRequest(auth, if (watched) "/sync/history" else "/sync/history/remove").post(syncBody(imdb, type)).build())
+
+suspend fun Simkl.rate(auth: TrackerAuth, imdb: String, type: String, rating: Int?) =
+    Net.call(simklRequest(auth, if (rating == null) "/sync/ratings/remove" else "/sync/ratings").post(syncBody(imdb, type, rating)).build())
+
+suspend fun Simkl.history(auth: TrackerAuth, imdb: String, type: String, watched: Boolean) =
+    Net.call(simklRequest(auth, if (watched) "/sync/history" else "/sync/history/remove").post(syncBody(imdb, type)).build())
+
+private fun traktRequest(auth: TrackerAuth, path: String) = Request.Builder().url("https://api.trakt.tv$path")
+    .header("trakt-api-version", "2")
+    .header("trakt-api-key", auth.clientId)
+    .header("Content-Type", "application/json")
+    .header("Authorization", "Bearer ${auth.accessToken}")
+
+private fun simklRequest(auth: TrackerAuth, path: String) = Request.Builder().url("https://api.simkl.com$path")
+    .header("simkl-api-key", auth.clientId)
+    .header("Content-Type", "application/json")
+    .header("Authorization", "Bearer ${auth.accessToken}")

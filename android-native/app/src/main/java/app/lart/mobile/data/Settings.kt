@@ -254,6 +254,8 @@ data class AppSettings(
     val hideAnime: Boolean = false,
     val traktInContinueWatching: Boolean = true,
     val episodesNewestFirst: Boolean = false,
+    /** Harbor's episode views: "list", "strip" (one sideways row) or "grid". */
+    val episodeLayout: String = "list",
     val showEpisodeDescription: Boolean = true,
     val hideSpoilers: Boolean = false,
     val spoilerThumbnails: Boolean = true,

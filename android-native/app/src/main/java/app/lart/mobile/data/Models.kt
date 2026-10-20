@@ -208,3 +208,16 @@ internal fun names(element: JsonElement?): List<String> = when (element) {
     is kotlinx.serialization.json.JsonArray -> element.mapNotNull { (it as? JsonPrimitive)?.contentOrNull?.takeIf { s -> s.isNotBlank() } }
     else -> emptyList()
 }
+
+/** A list of your own (Harbor's "Add to list"). */
+@Serializable
+data class UserList(val id: String, val name: String, val items: List<Meta> = emptyList())
+
+/** Harbor's hero actions, per profile: favourites, your lists, ratings out of 10 and films marked watched. */
+@Serializable
+data class Shelves(
+    val favorites: List<Meta> = emptyList(),
+    val lists: List<UserList> = emptyList(),
+    val ratings: Map<String, Int> = emptyMap(),
+    val watched: Set<String> = emptySet(),
+)

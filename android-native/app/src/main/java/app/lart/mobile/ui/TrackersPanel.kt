@@ -559,6 +559,7 @@ private fun LetterboxdPage(repository: Repository, settings: AppSettings, set: (
     }
 
     SettingsSection("On screen", null) {
+        ToggleRow("Show Letterboxd reviews on movie pages", "Letterboxd's average and its popular reviews, under the film's details.", settings.showLetterboxdDetail) { v -> set { it.copy(showLetterboxdDetail = v) } }
         ToggleRow("Show my rating on movie posters", "Puts the score you gave a film in the corner of its poster, wherever Letterboxd has one for you.", lb.showRatingsOnPosters) { v -> update { it.copy(showRatingsOnPosters = v) } }
         ToggleRow(
             "Blur comments and reviews by default",

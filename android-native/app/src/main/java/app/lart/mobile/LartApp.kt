@@ -48,9 +48,10 @@ class LartApp : Application(), coil.ImageLoaderFactory {
         main.launch { repository.rpdbKey.collect { LartDisplay.rpdbKey = it } }
         main.launch { repository.myList.collect { list -> LartDisplay.myListIds = list.map { it.id }.toSet() } }
         main.launch {
-            repository.library.collect { items ->
-                LartDisplay.watchedIds = items.filter { !it.removed && ((it.state?.timesWatched ?: 0) > 0 || (it.state?.flaggedWatched ?: 0) > 0) }.map { it.id }.toSet()
-            }
+            // Watched: the Stremio library's, plus films marked watched on their page.
+            kotlinx.coroutines.flow.combine(repository.library, repository.shelves) { items, shelves ->
+                items.filter { !it.removed && ((it.state?.timesWatched ?: 0) > 0 || (it.state?.flaggedWatched ?: 0) > 0) }.map { it.id }.toSet() + shelves.watched
+            }.collect { LartDisplay.watchedIds = it }
         }
         main.launch { repository.providerKeys.collect { app.lart.mobile.data.SkipSegments.theIntroDbKey = it[app.lart.mobile.data.ProviderKey.THEINTRODB] } }
         main.launch { repository.providerKeys.collect { LartDisplay.customPosters = it[app.lart.mobile.data.ProviderKey.POSTERS] } }

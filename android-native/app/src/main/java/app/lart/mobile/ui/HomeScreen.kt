@@ -81,6 +81,11 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
     val addons by repository.addons.collectAsState()
     val builtins by repository.builtins.collectAsState()
     val allCw by repository.continueWatching.collectAsState()
+    // Stremio's anime often carries IMDb ids; those are checked once (Harbor's anime-detect).
+    val detectedAnime by app.lart.mobile.data.AnimeDetect.detected.collectAsState()
+    val detectContext = androidx.compose.ui.platform.LocalContext.current
+    LaunchedEffect(allCw.map { it.meta.id }) { app.lart.mobile.data.AnimeDetect.check(detectContext, allCw.map { it.meta }, repository.metaAddons()) }
+    fun isAnimeCw(item: CwItem) = detectedAnime.let { app.lart.mobile.data.AnimeDetect.isAnime(item.meta) }
     // Harbor's Anime page has its own Continue Watching, anime only; with "anime only in the
     // Anime room" (or anime hidden) Home leaves anime out of its row.
     val cw = when {
@@ -450,6 +455,3 @@ object HomeCache {
         }
     }
 }
-
-/** An anime in Continue watching: opened through the anime addons' Kitsu, MAL or AniList ids. */
-private fun isAnimeCw(item: CwItem) = item.meta.id.substringBefore(':') in setOf("kitsu", "mal", "anilist")

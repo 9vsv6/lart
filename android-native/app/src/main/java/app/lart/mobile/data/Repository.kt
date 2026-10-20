@@ -131,6 +131,10 @@ class Repository(private val context: Context) {
     private val _myList = MutableStateFlow<List<Meta>>(emptyList())
     val myList: StateFlow<List<Meta>> = _myList.asStateFlow()
 
+    /** Harbor's title-page actions: favourites, your own lists, ratings and "watched" marks. */
+    private val _shelves = MutableStateFlow(Shelves())
+    val shelves: StateFlow<Shelves> = _shelves.asStateFlow()
+
     private val _ready = MutableStateFlow(false)
     val ready: StateFlow<Boolean> = _ready.asStateFlow()
 
@@ -154,7 +158,9 @@ class Repository(private val context: Context) {
                 videoId, r.positionMs, r.durationMs, r.season, r.episode, r.updatedAt,
             )
         }
-        val remote = library.filter { !it.removed && !it.temp && (it.state?.timeOffset ?: 0) > 0 }.map { item ->
+        // As Stremio's own Continue Watching: titles played without adding them to the library
+        // are "temp" items, and count too.
+        val remote = library.filter { (!it.removed || it.temp) && (it.state?.timeOffset ?: 0) > 0 }.map { item ->
             val state = item.state!!
             val parts = state.videoId?.split(':').orEmpty()
             CwItem(
@@ -170,7 +176,7 @@ class Repository(private val context: Context) {
         (local + remote + trakt).sortedByDescending { it.updatedAt }
             .distinctBy { it.meta.id }
             .filter { "${it.meta.id}@${it.videoId}" !in dismissed }
-            .take(20)
+            .take(60)
     }.stateIn(scope, SharingStarted.Eagerly, emptyList())
 
     private fun loadProfile(prefs: Preferences) {
@@ -180,6 +186,7 @@ class Repository(private val context: Context) {
             ?: PlayerPrefs()
         _resume.value = prefs[keyResume]?.let { runCatching { Net.json.decodeFromString(resumeSerializer, it) }.getOrNull() } ?: emptyMap()
         _myList.value = prefs[keyMyList]?.let { runCatching { Net.json.decodeFromString(metaListSerializer, it) }.getOrNull() } ?: emptyList()
+        _shelves.value = prefs[keyShelves]?.let { runCatching { Net.json.decodeFromString(Shelves.serializer(), it) }.getOrNull() } ?: Shelves()
         _dismissed.value = prefs[keyDismissed]?.let { runCatching { Net.json.decodeFromString(stringSet, it) }.getOrNull() } ?: emptySet()
         _trackers.value = prefs[keyTrackers]?.let { runCatching { Net.json.decodeFromString(TrackerSettings.serializer(), it) }.getOrNull() } ?: TrackerSettings()
         _traktCw.value = emptyList()
@@ -212,6 +219,7 @@ class Repository(private val context: Context) {
 
     private val keyResume get() = stringPreferencesKey(profileKey("resume"))
     private val keyMyList get() = stringPreferencesKey(profileKey("myList"))
+    private val keyShelves get() = stringPreferencesKey(profileKey("shelves"))
     private val keyDismissed get() = stringPreferencesKey(profileKey("cwDismissed"))
     private val keyPlayer get() = stringPreferencesKey(profileKey("player"))
     private val keyAutoPlay get() = booleanPreferencesKey(profileKey("autoPlay"))
@@ -611,6 +619,61 @@ class Repository(private val context: Context) {
     // ---- My List (Harbor's watchlist), kept on this device ----
 
     fun inMyList(id: String): Boolean = _myList.value.any { it.id == id }
+
+    // ---- Favourites, lists, ratings and watched marks (Harbor's hero actions) ----
+
+    private fun editShelves(change: (Shelves) -> Shelves) {
+        val next = change(_shelves.value)
+        _shelves.value = next
+        scope.launch { context.store.edit { it[keyShelves] = Net.json.encodeToString(Shelves.serializer(), next) } }
+    }
+
+    private fun slim(meta: Meta) = meta.copy(videos = null, description = null, cast = null, director = null, writer = null, trailers = null)
+
+    fun toggleFavorite(meta: Meta) = editShelves { s ->
+        s.copy(favorites = if (s.favorites.any { it.id == meta.id }) s.favorites.filterNot { it.id == meta.id } else listOf(slim(meta)) + s.favorites)
+    }
+
+    fun newList(name: String): String {
+        val id = java.util.UUID.randomUUID().toString()
+        editShelves { it.copy(lists = it.lists + UserList(id, name.trim().ifEmpty { "My list" })) }
+        return id
+    }
+
+    fun deleteList(id: String) = editShelves { s -> s.copy(lists = s.lists.filterNot { it.id == id }) }
+
+    fun toggleInList(listId: String, meta: Meta) = editShelves { s ->
+        s.copy(lists = s.lists.map { l ->
+            if (l.id != listId) l
+            else l.copy(items = if (l.items.any { it.id == meta.id }) l.items.filterNot { it.id == meta.id } else listOf(slim(meta)) + l.items)
+        })
+    }
+
+    /** Your rating out of 10 (null removes it), sent to Trakt and Simkl when they're connected. */
+    fun rate(meta: Meta, rating: Int?) {
+        editShelves { s -> s.copy(ratings = if (rating == null) s.ratings - meta.id else s.ratings + (meta.id to rating)) }
+        val imdb = meta.id.substringBefore(':').takeIf { it.startsWith("tt") } ?: return
+        val trackers = _trackers.value
+        scope.launch {
+            trackers.trakt?.takeIf { it.accessToken != null }?.let { runCatching { Trakt.rate(it, imdb, meta.type, rating) } }
+            trackers.simkl?.takeIf { it.accessToken != null }?.let { runCatching { Simkl.rate(it, imdb, meta.type, rating) } }
+        }
+    }
+
+    /** Marks episodes (by video id) watched or not: "Mark season as watched". */
+    fun setWatched(ids: List<String>, on: Boolean) = editShelves { s -> s.copy(watched = if (on) s.watched + ids else s.watched - ids.toSet()) }
+
+    /** "Mark watched" on a film: kept here and added to Trakt's and Simkl's history when connected. */
+    fun toggleWatched(meta: Meta) {
+        val on = meta.id !in _shelves.value.watched
+        editShelves { s -> s.copy(watched = if (on) s.watched + meta.id else s.watched - meta.id) }
+        val imdb = meta.id.substringBefore(':').takeIf { it.startsWith("tt") } ?: return
+        val trackers = _trackers.value
+        scope.launch {
+            trackers.trakt?.takeIf { it.accessToken != null }?.let { runCatching { Trakt.history(it, imdb, meta.type, on) } }
+            trackers.simkl?.takeIf { it.accessToken != null }?.let { runCatching { Simkl.history(it, imdb, meta.type, on) } }
+        }
+    }
 
     fun toggleMyList(meta: Meta) {
         val current = _myList.value

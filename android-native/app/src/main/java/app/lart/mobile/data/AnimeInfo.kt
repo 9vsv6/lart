@@ -229,3 +229,22 @@ object AnimeInfo {
 }
 
 private fun JsonArray?.list(): List<JsonObject> = this?.mapNotNull { it as? JsonObject }.orEmpty()
+
+/** Kitsu's streaming links for an anime (Harbor's KitsuStreamer): Crunchyroll, Netflix and the like. */
+object AnimeStreamers {
+    private val cache = mutableMapOf<String, List<WatchProvider>>()
+
+    suspend fun forKitsu(kitsuId: String): List<WatchProvider> = cache[kitsuId] ?: runCatching {
+        val json = Net.json.parseToJsonElement(Net.get("https://kitsu.io/api/edge/anime/$kitsuId/streaming-links?include=streamer")).jsonObject
+        val names = (json["included"] as? kotlinx.serialization.json.JsonArray).orEmpty()
+            .associate { it.jsonObject.string("id") to it.jsonObject["attributes"]?.jsonObject?.string("siteName") }
+        (json["data"] as? kotlinx.serialization.json.JsonArray).orEmpty().mapNotNull { e ->
+            val o = e.jsonObject
+            val url = o["attributes"]?.jsonObject?.string("url")?.let { if (it.startsWith("http")) it else "https://$it" }
+            val streamer = o["relationships"]?.jsonObject?.get("streamer")?.jsonObject?.get("data")?.jsonObject?.string("id")
+            names[streamer]?.let { WatchProvider(it, null, url) }
+        }.distinctBy { it.name }
+    }.getOrDefault(emptyList()).also { cache[kitsuId] = it }
+
+    private fun kotlinx.serialization.json.JsonArray?.orEmpty(): List<kotlinx.serialization.json.JsonElement> = this ?: emptyList()
+}

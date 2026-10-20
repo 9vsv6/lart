@@ -179,7 +179,7 @@ private fun LartRoot(repository: Repository) {
     if (wide && route != Tab.Profile.route) SideRail(route, browseView, onSelect = { nav.selectTab(it) }, onView = { v ->
         browseView = v
         if (route != Tab.Home.route) nav.selectTab(Tab.Home)
-    }, onPage = { nav.navigate(it) { launchSingleTop = true } })
+    }, onPage = { nav.navigate(it) { popUpTo(Tab.Home.route); launchSingleTop = true } })
     Scaffold(
         modifier = Modifier.weight(1f),
         containerColor = LartColors.Canvas,
@@ -347,10 +347,11 @@ private fun TabBar(route: String?, onSelect: (Tab) -> Unit) {
 
 private fun enc(value: String): String = Uri.encode(value)
 
+// A section always opens at its top page, as Harbor's sidebar does: restoring a tab's saved
+// pages brought back the title page you were leaving, so the tap seemed to do nothing.
 private fun NavHostController.selectTab(tab: Tab) = navigate(tab.route) {
-    popUpTo(Tab.Home.route) { saveState = true }
+    popUpTo(Tab.Home.route)
     launchSingleTop = true
-    restoreState = true
 }
 
 private fun NavHostController.openDetail(meta: Meta) = app.lart.mobile.ui.MetaPreview.put(meta).let { navigate("detail/${enc(meta.type)}/${enc(meta.id)}") }

@@ -1160,9 +1160,6 @@ private fun LibrarySection(repository: Repository, settings: AppSettings, set: (
         PillChoice(listOf(false to "Oldest first", true to "Newest first"), settings.episodesNewestFirst) { v -> set { it.copy(episodesNewestFirst = v) } }
         RowText("Episode card size", "Bigger cards show larger artwork.")
         PillChoice(listOf(0 to "Default", 1 to "Large", 2 to "Extra large"), settings.episodeCardSize) { v -> set { it.copy(episodeCardSize = v) } }
-        HarborHeading("Community", "What other people say about a title.")
-        ToggleRow("Trakt comments", "Shows Trakt comments and reviews on title pages.", settings.showTraktComments) { v -> set { it.copy(showTraktComments = v) } }
-        ToggleRow("Letterboxd reviews", "Shows Letterboxd's average and popular reviews on movie pages.", settings.showLetterboxdDetail) { v -> set { it.copy(showLetterboxdDetail = v) } }
     }
     // ---- Search (AI) ----
     Part("Search") {

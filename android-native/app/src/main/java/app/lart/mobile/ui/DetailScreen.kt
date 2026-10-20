@@ -173,7 +173,8 @@ fun DetailScreen(
                 meta = current.copy(videos = current.videos?.map { v ->
                     val e = episodes[(v.season ?: -1) to (v.episode ?: -1)] ?: return@map v
                     v.copy(
-                        title = e.name?.takeIf { it.isNotBlank() } ?: v.title,
+                        // The description language is for stories: episode names stay as the addon has them.
+                        title = (if (LartDisplay.settings.metadataLanguage.isEmpty()) e.name?.takeIf { it.isNotBlank() } else null) ?: v.title,
                         overview = e.overview?.takeIf { it.isNotBlank() } ?: v.overview,
                         thumbnail = v.thumbnail ?: e.image,
                     )
@@ -271,6 +272,10 @@ private fun DetailBody(
         val saved = if (LartDisplay.settings.rememberSeason) seasonPrefs.getInt(meta.id, -1).takeIf { it in seasons } else null
         mutableStateOf(saved ?: seasons.firstOrNull())
     }
+    // The page can open on the poster's preview, before the episodes arrive: pick a season once they do.
+    LaunchedEffect(seasons) {
+        if (season !in seasons) season = (if (LartDisplay.settings.rememberSeason) seasonPrefs.getInt(meta.id, -1).takeIf { it in seasons } else null) ?: seasons.firstOrNull()
+    }
     val episodes = remember(videos, season, LartDisplay.settings.episodesNewestFirst) {
         videos.filter { it.season == season }.sortedBy { it.episode ?: 0 }
             .let { if (LartDisplay.settings.episodesNewestFirst) it.reversed() else it }
@@ -294,6 +299,14 @@ private fun DetailBody(
     }
     // Harbor's community sections: Trakt comments (opt-in) and Letterboxd for films.
     val trackers by repository.trackers.collectAsState()
+    // Where an anime streams, from Kitsu (Harbor's streamers); TMDB's providers cover the rest.
+    var animeStreamers by remember(meta.id) { mutableStateOf<List<app.lart.mobile.data.WatchProvider>>(emptyList()) }
+    LaunchedEffect(meta.id) {
+        meta.id.takeIf { it.startsWith("kitsu:") }?.split(':')?.getOrNull(1)?.let { animeStreamers = app.lart.mobile.data.AnimeStreamers.forKitsu(it) }
+    }
+    val uri = androidx.compose.ui.platform.LocalUriHandler.current
+    // Letterboxd's reviews come with the Letterboxd tracker, as Harbor's: only once it's connected.
+    val letterboxdOn = LartDisplay.settings.letterboxd.let { lb -> lb.enabled && (if (lb.mode == "full") trackers.letterboxd != null else lb.username.isNotBlank()) } && LartDisplay.settings.showLetterboxdDetail
     var comments by remember(meta.id) { mutableStateOf<List<app.lart.mobile.data.TraktComment>>(emptyList()) }
     var letterboxd by remember(meta.id) { mutableStateOf<app.lart.mobile.data.LetterboxdFilm?>(null) }
     val imdbId = meta.id.substringBefore(':').takeIf { it.startsWith("tt") }
@@ -301,9 +314,9 @@ private fun DetailBody(
         val imdb = imdbId ?: return@LaunchedEffect
         if (LartDisplay.settings.showTraktComments) comments = app.lart.mobile.data.Reviews.trakt(imdb, meta.type == "movie", trackers.trakt?.clientId)
     }
-    LaunchedEffect(meta.id, LartDisplay.settings.showLetterboxdDetail) {
+    LaunchedEffect(meta.id, letterboxdOn) {
         val imdb = imdbId ?: return@LaunchedEffect
-        if (LartDisplay.settings.showLetterboxdDetail && meta.type == "movie") letterboxd = app.lart.mobile.data.Reviews.letterboxd(imdb)
+        if (letterboxdOn && meta.type == "movie") letterboxd = app.lart.mobile.data.Reviews.letterboxd(imdb)
     }
     // AniList's forum threads on anime pages, when "Show AniList comments" is on.
     var anilistThreads by remember(meta.id) { mutableStateOf<List<app.lart.mobile.data.AniList.Thread>>(emptyList()) }
@@ -322,24 +335,28 @@ private fun DetailBody(
         val side = if (wide) 48.dp else 20.dp
         val heroHeight = if (wide) (maxHeight * 0.78f).coerceAtMost(680.dp) else (maxHeight * 0.68f).coerceIn(420.dp, 620.dp)
         LazyColumn(state = listState, contentPadding = PaddingValues(bottom = 110.dp), verticalArrangement = Arrangement.spacedBy(30.dp)) {
-            item(key = "hero") { Hero(repository, meta, details, awards, scores, heroHeight, side, wide, isSeries, next, play) }
+            item(key = "hero") { Hero(repository, meta, details, awards, scores, heroHeight, side, wide, isSeries, next, play) { onStreams(meta.id, meta.name) } }
             (details?.overview ?: meta.description)?.let { synopsis ->
                 item(key = "synopsis") { Synopsis(synopsis, details?.tagline, side) }
             }
             anime?.nextAiring?.let { (at, ep) -> item(key = "airing") { AnimeAiringBanner(at, ep, side) } }
-            details?.watchOn?.takeIf { it.isNotEmpty() }?.let { providers ->
+            // Watch on: TMDB's providers for your region; for anime, Kitsu's streaming links.
+            details?.watchOn.orEmpty().ifEmpty { animeStreamers }.takeIf { it.isNotEmpty() }?.let { providers ->
                 item(key = "watch") {
                     Column(Modifier.padding(horizontal = side), verticalArrangement = Arrangement.spacedBy(14.dp)) {
                         Eyebrow("Watch on")
                         FlowRow(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                             providers.take(8).forEach { provider ->
                                 Row(
-                                    Modifier.clip(RoundedCornerShape(50)).background(LartColors.Surface).padding(start = 6.dp, end = 16.dp, top = 6.dp, bottom = 6.dp),
+                                    Modifier.clip(RoundedCornerShape(50)).background(LartColors.Surface)
+                                        .then(if (provider.url != null) Modifier.clickable { uri.openUri(provider.url) } else Modifier)
+                                        .padding(start = 6.dp, end = 16.dp, top = 6.dp, bottom = 6.dp),
                                     verticalAlignment = Alignment.CenterVertically,
                                     horizontalArrangement = Arrangement.spacedBy(10.dp),
                                 ) {
-                                    Box(Modifier.size(34.dp).clip(CircleShape).background(LartColors.Elevated)) {
+                                    Box(Modifier.size(34.dp).clip(CircleShape).background(LartColors.Elevated), contentAlignment = Alignment.Center) {
                                         provider.logo?.let { AsyncImage(it, null, contentScale = ContentScale.Crop, modifier = Modifier.fillMaxSize()) }
+                                            ?: Text(provider.name.take(1), color = LartColors.Ink, fontSize = 15.sp, fontWeight = FontWeight.Bold)
                                     }
                                     Text(provider.name, color = LartColors.Ink, fontSize = 14.5.sp, fontWeight = FontWeight.SemiBold)
                                 }
@@ -352,27 +369,17 @@ private fun DetailBody(
             if (crew.isNotEmpty()) item(key = "crew") { CrewGrid(crew, if (wide) 3 else 2, side) }
             if (isSeries && seasons.isNotEmpty()) {
                 item(key = "seasons") {
-                    // Harbor's episode list: the title and a season picker, the season's size, then the rows.
-                    Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                        Row(Modifier.padding(horizontal = side), verticalAlignment = Alignment.CenterVertically) {
-                            Text("Episodes", color = LartColors.Ink, fontSize = 26.sp, fontWeight = FontWeight.SemiBold, letterSpacing = (-0.4).sp, modifier = Modifier.weight(1f))
-                            SeasonPicker(seasons, season, videos) { season = it; seasonPrefs.edit().putInt(meta.id, it).apply() }
-                        }
-                        val year = episodes.mapNotNull { it.released?.take(4) }.minOrNull()
-                        Text(
-                            listOfNotNull("${episodes.size} episodes", year).joinToString("  ·  "),
-                            color = LartColors.InkSubtle,
-                            fontSize = 14.sp,
-                            modifier = Modifier.padding(horizontal = side),
-                        )
-                        val upTo = next?.let { (it.season ?: 0) * 10_000 + (it.episode ?: 0) } ?: 0
-                        Column(Modifier.padding(top = 8.dp)) {
-                            episodes.forEach { video ->
-                                val spoiler = LartDisplay.settings.hideSpoilers && (video.season ?: 0) > 0 && (video.season ?: 0) * 10_000 + (video.episode ?: 0) > upTo
-                                EpisodeRow(video, spoiler, side, wide, ratings[video.season ?: -1]?.get(video.episode ?: -1) ?: video.rating?.takeIf { it.isNotBlank() && it != "0" }) { onStreams(video.id, "${meta.name} · ${episodeLabel(video)}") }
-                            }
-                        }
-                    }
+                    // Harbor's episode section: the season's tools and its episodes.
+                    EpisodesSection(
+                        repository, meta, videos, seasons, season,
+                        onSeason = { season = it; seasonPrefs.edit().putInt(meta.id, it).apply() },
+                        side = side,
+                        wide = wide,
+                        next = next,
+                        rating = { video -> ratings[video.season ?: -1]?.get(video.episode ?: -1) ?: video.rating?.takeIf { it.isNotBlank() && it != "0" } },
+                        onPlay = { video -> onStreams(video.id, "${meta.name} · ${episodeLabel(video)}") },
+                        set = repository::updateSettings,
+                    )
                 }
             }
             val cast = details?.cast?.takeIf { it.isNotEmpty() } ?: meta.castNames.map { CastMember(it, null, null) }
@@ -407,7 +414,7 @@ private fun DetailBody(
             if (letterboxdSession != null && imdbId != null && meta.type == "movie") {
                 item(key = "letterboxd-account") { LetterboxdAccountPanel(letterboxdSession, imdbId, side) }
             }
-            letterboxd?.takeIf { LartDisplay.settings.showLetterboxdDetail && (it.reviews.isNotEmpty() || it.average != null) }?.let { film ->
+            letterboxd?.takeIf { letterboxdOn && (it.reviews.isNotEmpty() || it.average != null) }?.let { film ->
                 item(key = "letterboxd") { LetterboxdSection(film, side) }
             }
             if (LartDisplay.settings.showAnilistComments && anilistThreads.isNotEmpty()) {
@@ -433,6 +440,8 @@ private fun Hero(
     isSeries: Boolean,
     next: Video?,
     play: () -> Unit,
+    /** Opens the sources, whose cards download (Harbor's download button on films). */
+    download: () -> Unit,
 ) {
     val uri = LocalUriHandler.current
     Box(Modifier.fillMaxWidth().height(height)) {
@@ -490,33 +499,18 @@ private fun Hero(
 
             AccoladePills(meta.id.substringBefore(':').takeIf { it.startsWith("tt") })
             if (!wide) HeroAwards(awards, Modifier)
-            Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
-                Row(
-                    Modifier.clip(RoundedCornerShape(50)).background(Color.White).clickable(onClick = play).padding(start = 22.dp, end = 26.dp, top = 14.dp, bottom = 14.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                ) {
-                    Icon(Icons.Rounded.PlayArrow, null, tint = Color.Black, modifier = Modifier.size(24.dp))
-                    Text(
-                        when {
-                            isSeries && next != null && repository.resumeFor(next.id, meta.id) > 0 -> "Resume S${next.season}:E${next.episode}"
-                            isSeries && next != null -> "Play S${next.season}:E${next.episode}"
-                            repository.resumeFor(meta.id, meta.id) > 0 -> "Resume"
-                            else -> "Play"
-                        },
-                        color = Color.Black,
-                        fontSize = 17.sp,
-                        fontWeight = FontWeight.SemiBold,
-                    )
-                }
-                WatchlistButton(repository, meta, compact = !wide)
-                (meta.trailerYouTube ?: details?.trailerYouTube)?.let { yt ->
-                    RoundAction(Icons.Outlined.Movie, "Trailer") { uri.openUri("https://www.youtube.com/watch?v=$yt") }
-                }
-                meta.id.substringBefore(':').takeIf { it.startsWith("tt") }?.let { imdb ->
-                    RoundAction(Icons.Rounded.Language, "IMDb") { uri.openUri("https://www.imdb.com/title/$imdb/") }
-                }
-            }
+            HeroActions(
+                repository, meta, details, isSeries, wide,
+                playLabel = when {
+                    isSeries && next != null && repository.resumeFor(next.id, meta.id) > 0 -> "Resume S${next.season}:E${next.episode}"
+                    isSeries && next != null -> "Play S${next.season}:E${next.episode}"
+                    repository.resumeFor(meta.id, meta.id) > 0 -> "Resume"
+                    else -> "Play"
+                },
+                play = play,
+                trailer = (meta.trailerYouTube ?: details?.trailerYouTube)?.let { yt -> { uri.openUri("https://www.youtube.com/watch?v=$yt") } },
+                download = download,
+            )
         }
         if (wide) HeroAwards(awards, Modifier.align(Alignment.BottomEnd).padding(end = side, bottom = 120.dp))
     }
@@ -544,34 +538,6 @@ private fun Fact(text: String) {
         fontWeight = FontWeight.Medium,
         modifier = Modifier.clip(RoundedCornerShape(50)).background(Color(0x1FFFFFFF)).padding(horizontal = 14.dp, vertical = 7.dp),
     )
-}
-
-@Composable
-private fun WatchlistButton(repository: Repository, meta: Meta, compact: Boolean) {
-    val myList by repository.myList.collectAsState()
-    val listed = myList.any { it.id == meta.id }
-    if (compact) {
-        RoundAction(if (listed) Icons.Rounded.Check else Icons.Rounded.Add, if (listed) "In Watchlist" else "Add to Watchlist", tint = if (listed) LartColors.Accent else Color.White) {
-            repository.toggleMyList(meta)
-        }
-    } else {
-        Row(
-            Modifier.clip(RoundedCornerShape(50)).clickable { repository.toggleMyList(meta) }.padding(horizontal = 10.dp, vertical = 12.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
-            Icon(if (listed) Icons.Rounded.Check else Icons.Rounded.Add, null, tint = if (listed) LartColors.Accent else Color.White, modifier = Modifier.size(22.dp))
-            Text(if (listed) "In Watchlist" else "Add to Watchlist", color = Color.White, fontSize = 17.sp, fontWeight = FontWeight.SemiBold)
-        }
-    }
-}
-
-@Composable
-private fun RoundAction(icon: androidx.compose.ui.graphics.vector.ImageVector, description: String, tint: Color = Color.White, onClick: () -> Unit) {
-    Box(
-        Modifier.size(52.dp).clip(CircleShape).background(Color(0x33FFFFFF)).clickable(onClick = onClick),
-        contentAlignment = Alignment.Center,
-    ) { Icon(icon, description, tint = tint, modifier = Modifier.size(23.dp)) }
 }
 
 // ---------------- Sections ----------------
@@ -755,101 +721,6 @@ private fun Titled(title: String, cells: List<Pair<String, String>>, columns: In
     Column(verticalArrangement = Arrangement.spacedBy(20.dp)) {
         Text(title,color = LartColors.Ink, fontSize = 24.sp, fontWeight = FontWeight.SemiBold, modifier = Modifier.padding(horizontal = side))
         LabelGrid(cells, columns, side)
-    }
-}
-
-/** Harbor's season picker: "Season 1 ▾", opening "Season N · X episodes · year" rows. */
-@Composable
-private fun SeasonPicker(seasons: List<Int>, selected: Int?, videos: List<Video>, onPick: (Int) -> Unit) {
-    var open by remember { mutableStateOf(false) }
-    fun name(s: Int?) = if (s == 0) "Specials" else "Season ${s ?: 1}"
-    Box {
-        Row(
-            Modifier.clip(RoundedCornerShape(50)).background(LartColors.Elevated).clickable { open = true }.padding(start = 18.dp, end = 12.dp, top = 11.dp, bottom = 11.dp),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(6.dp),
-        ) {
-            Text(name(selected), color = LartColors.Ink, fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
-            Icon(if (open) Icons.Rounded.KeyboardArrowUp else Icons.Rounded.KeyboardArrowDown, null, tint = LartColors.InkMuted, modifier = Modifier.size(20.dp))
-        }
-        DropdownMenu(open, onDismissRequest = { open = false }, containerColor = LartColors.Elevated, shape = RoundedCornerShape(16.dp)) {
-            seasons.forEach { s ->
-                val inSeason = videos.filter { it.season == s }
-                val year = inSeason.mapNotNull { it.released?.take(4) }.minOrNull()
-                DropdownMenuItem(
-                    text = {
-                        Column(Modifier.padding(vertical = 4.dp)) {
-                            Text(name(s), color = LartColors.Ink, fontSize = 15.sp, fontWeight = if (s == selected) FontWeight.Bold else FontWeight.SemiBold)
-                            Text(listOfNotNull("${inSeason.size} episodes", year).joinToString("  ·  "), color = LartColors.InkSubtle, fontSize = 12.5.sp)
-                        }
-                    },
-                    onClick = {
-                        onPick(s)
-                        open = false
-                    },
-                    modifier = Modifier.widthIn(min = 230.dp).background(if (s == selected) LartColors.Raised else Color.Transparent),
-                )
-            }
-        }
-    }
-}
-
-/** Harbor's episode row: a numbered thumbnail, the title, "S1 E1 · date", and the description. */
-@Composable
-private fun EpisodeRow(video: Video, spoiler: Boolean, side: Dp, wide: Boolean, rating: String?, onClick: () -> Unit) {
-    val display = LartDisplay.settings
-    Row(
-        modifier = Modifier.fillMaxWidth().clickable(onClick = onClick).padding(horizontal = side, vertical = 12.dp),
-        horizontalArrangement = Arrangement.spacedBy(if (wide) 30.dp else 14.dp),
-        verticalAlignment = if (wide) Alignment.CenterVertically else Alignment.Top,
-    ) {
-        Box(
-            Modifier.width((if (wide) 250.dp else 150.dp) * (1f + 0.3f * display.episodeCardSize)).aspectRatio(16f / 9f).clip(RoundedCornerShape(16.dp)).background(LartColors.Elevated),
-        ) {
-            if (video.thumbnail != null) {
-                AsyncImage(
-                    video.thumbnail,
-                    contentDescription = null,
-                    contentScale = ContentScale.Crop,
-                    modifier = Modifier.fillMaxSize().then(if (spoiler && display.spoilerThumbnails) Modifier.blur(18.dp) else Modifier),
-                )
-            }
-            // Harbor's "★ 8.5" at the bottom left of the still.
-            rating?.takeIf { LartDisplay.settings.showEpisodeRating }?.let {
-                Row(
-                    Modifier.align(Alignment.BottomStart).padding(8.dp).clip(RoundedCornerShape(50)).background(Color(0xD9000000)).padding(horizontal = 8.dp, vertical = 3.dp),
-                    verticalAlignment = Alignment.CenterVertically,
-                    horizontalArrangement = Arrangement.spacedBy(4.dp),
-                ) {
-                    Text("★", color = Color(0xFFF5C518), fontSize = 11.sp)
-                    Text(it, color = Color.White, fontSize = 12.sp, fontWeight = FontWeight.Bold)
-                }
-            }
-            video.episode?.let { number ->
-                Box(
-                    Modifier.padding(8.dp).size(26.dp).clip(CircleShape).background(Color(0xCC000000)),
-                    contentAlignment = Alignment.Center,
-                ) { Text("$number", color = Color.White, fontSize = 12.sp, fontWeight = FontWeight.Bold) }
-            }
-        }
-        Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(5.dp)) {
-            Text(
-                if (spoiler && display.spoilerTitles) "Episode ${video.episode ?: ""}" else video.label,
-                fontSize = if (wide) 19.sp else 16.sp,
-                color = LartColors.Ink,
-                fontWeight = FontWeight.SemiBold,
-                maxLines = 2,
-                overflow = TextOverflow.Ellipsis,
-            )
-            val date = video.released?.take(10)?.let { formatDate(it) }
-            val code = if (video.season != null && video.episode != null) "S${video.season} E${video.episode}" else null
-            listOfNotNull(code, date).takeIf { it.isNotEmpty() }?.let {
-                Text(it.joinToString("  ·  "), fontSize = 13.sp, color = LartColors.InkSubtle)
-            }
-            video.overview?.takeIf { display.showEpisodeDescription && it.isNotBlank() && !(spoiler && display.spoilerDescriptions) }?.let {
-                Text(it, fontSize = if (wide) 15.sp else 13.5.sp, lineHeight = if (wide) 22.sp else 19.sp, color = LartColors.InkMuted, maxLines = if (wide) 2 else 3, overflow = TextOverflow.Ellipsis)
-            }
-        }
     }
 }
 

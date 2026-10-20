@@ -33,7 +33,7 @@ import app.lart.mobile.data.CwItem
 import app.lart.mobile.data.Meta
 import app.lart.mobile.data.Repository
 
-private enum class Shelf(val label: String) { MyList("My List"), Watching("Continue watching"), Stremio("Stremio library") }
+private enum class Shelf(val label: String) { MyList("My List"), Favorites("Favorites"), Lists("Lists"), Watching("Continue watching"), Stremio("Stremio library") }
 
 private enum class Kind(val label: String) { All("All"), Movies("Movies"), Shows("Shows") }
 
@@ -44,6 +44,8 @@ fun LibraryScreen(repository: Repository, onOpen: (Meta) -> Unit, onResume: (CwI
     val library by repository.library.collectAsState()
     val myList by repository.myList.collectAsState()
     val cw by repository.continueWatching.collectAsState()
+    val shelves by repository.shelves.collectAsState()
+    var openList by rememberSaveable { mutableStateOf<String?>(null) }
     var shelf by rememberSaveable { mutableStateOf(Shelf.MyList) }
     var kind by rememberSaveable { mutableStateOf(Kind.All) }
 
@@ -96,6 +98,30 @@ fun LibraryScreen(repository: Repository, onOpen: (Meta) -> Unit, onResume: (CwI
                 val shown = myList.filter { it.matches() }
                 if (shown.isEmpty()) EmptyState("Your list is empty", "Tap + on any title to keep it here. My List stays on this device.")
                 else PosterGrid(shown, onOpen)
+            }
+            Shelf.Favorites -> {
+                val shown = shelves.favorites.filter { it.matches() }
+                if (shown.isEmpty()) EmptyState("No favorites yet", "Tap the heart on a title's page to keep it here.")
+                else PosterGrid(shown, onOpen)
+            }
+            Shelf.Lists -> {
+                if (shelves.lists.isEmpty()) EmptyState("No lists yet", "Use Add to list on a title's page to start one.")
+                else {
+                    val current = shelves.lists.firstOrNull { it.id == openList } ?: shelves.lists.first()
+                    LazyRow(contentPadding = PaddingValues(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                        rowItems(shelves.lists) { l ->
+                            FilterChip(
+                                selected = l.id == current.id,
+                                onClick = { openList = l.id },
+                                label = { Text("${l.name} · ${l.items.size}", fontSize = 12.sp) },
+                                colors = FilterChipDefaults.filterChipColors(selectedContainerColor = LartColors.Raised, selectedLabelColor = LartColors.Ink),
+                            )
+                        }
+                    }
+                    val shown = current.items.filter { it.matches() }
+                    if (shown.isEmpty()) EmptyState("This list is empty", "Add titles to it from their pages.")
+                    else PosterGrid(shown, onOpen)
+                }
             }
             Shelf.Watching -> {
                 if (cw.isEmpty()) EmptyState("Nothing in progress", "Titles you start watching show up here.")
