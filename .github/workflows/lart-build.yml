@@ -1,6 +1,6 @@
 name: Lart build
 
-# Builds every Lart package: the Android APK and the Windows, macOS and Linux
+# Builds every Lart package: the Android APK (the native app) and the Windows, macOS and Linux
 # installers. It runs on pull requests and by hand from the Actions tab; a pushed
 # v* tag also publishes the packages to a GitHub release for that tag. A manual
 # run can build the APK alone and publish it to a pre-release (release_tag).
@@ -47,10 +47,12 @@ concurrency:
 
 jobs:
   android:
-    name: Android (arm64 APK)
+    name: Android (native app APK)
     runs-on: ubuntu-24.04
-    timeout-minutes: 120
+    timeout-minutes: 60
 
+    # The Android app is the native one in android-native/ (Kotlin and Compose);
+    # its APK carries arm64 phones and the x86_64 emulator.
     steps:
       - name: Checkout
         uses: actions/checkout@v6
@@ -61,43 +63,13 @@ jobs:
           distribution: temurin
           java-version: "21"
 
-      # The runner image ships the Android SDK and its command-line tools.
-      - name: Install Android platform and NDK
-        run: |
-          set -euo pipefail
-          sdkmanager="$(ls -d "$ANDROID_HOME"/cmdline-tools/*/bin | sort -V | tail -1)/sdkmanager"
-          yes | "$sdkmanager" --licenses > /dev/null || true
-          "$sdkmanager" --install "platforms;android-36" "build-tools;36.0.0" "ndk;27.2.12479018"
-          echo "NDK_HOME=$ANDROID_HOME/ndk/27.2.12479018" >> "$GITHUB_ENV"
-
-      - name: Setup Rust
-        uses: dtolnay/rust-toolchain@stable
+      - name: Cache Gradle
+        uses: actions/cache@v4
         with:
-          targets: aarch64-linux-android
-
-      - name: Cache Rust build
-        uses: Swatinem/rust-cache@v2
-        with:
-          workspaces: src-tauri
-          key: android
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v5
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
-        with:
-          node-version: 24
-          cache: pnpm
-
-      - name: Install JavaScript dependencies
-        run: pnpm install --frozen-lockfile
-
-      # The Pokémon engine is a desktop .NET binary that cannot run on Android.
-      # tauri.conf.json still names its directory, and the bundler accepts an
-      # empty one but not a missing one.
-      - name: Prepare resources
-        run: mkdir -p src-tauri/resources/pokemon-engine
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: gradle-${{ hashFiles('android-native/**/*.gradle.kts', 'android-native/gradle/wrapper/gradle-wrapper.properties') }}
 
       - name: Configure release signing
         id: sign
@@ -120,22 +92,23 @@ jobs:
             echo "storePassword=$ANDROID_KEYSTORE_PASSWORD"
             echo "keyAlias=$ANDROID_KEY_ALIAS"
             echo "keyPassword=$ANDROID_KEY_PASSWORD"
-          } > src-tauri/gen/android/key.properties
+          } > android-native/key.properties
           echo "signed=true" >> "$GITHUB_OUTPUT"
 
       - name: Build APK
-        run: pnpm tauri android build --apk --target aarch64
+        run: bash android-native/gradlew -p android-native assembleRelease --no-daemon
 
       - name: Sign with a throwaway key
         if: steps.sign.outputs.signed != 'true'
         run: |
           set -euo pipefail
-          apk="$(find src-tauri/gen/android/app/build/outputs/apk -name '*-release-unsigned.apk' -print -quit)"
+          apk="$(find android-native/app/build/outputs/apk/release -name '*-unsigned.apk' -print -quit)"
           test -n "$apk"
           keystore="$RUNNER_TEMP/throwaway.jks"
           keytool -genkeypair -keystore "$keystore" -storepass lartci -keypass lartci \
             -alias lart -keyalg RSA -keysize 2048 -validity 3650 -dname "CN=Lart CI"
-          "$ANDROID_HOME/build-tools/36.0.0/apksigner" sign --ks "$keystore" \
+          buildtools="$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)"
+          "$buildtools/apksigner" sign --ks "$keystore" \
             --ks-pass pass:lartci --key-pass pass:lartci \
             --out "${apk%-unsigned.apk}.apk" "$apk"
           rm "$apk"
@@ -145,15 +118,16 @@ jobs:
           RELEASE_TAG: ${{ inputs.release_tag }}
         run: |
           set -euo pipefail
-          version="$(node -p "JSON.parse(require('fs').readFileSync('src-tauri/tauri.conf.json')).version")"
-          apk="$(find src-tauri/gen/android/app/build/outputs/apk -name '*-release.apk' -print -quit)"
+          version="$(sed -n 's/.*versionName = "\(.*\)".*/\1/p' android-native/app/build.gradle.kts)"
+          apk="$(find android-native/app/build/outputs/apk/release -name '*.apk' ! -name '*-unsigned.apk' -print -quit)"
           test -n "$apk"
           mkdir -p dist-android
           if [ -n "${RELEASE_TAG:-}" ]; then
-            cp "$apk" "dist-android/Lart-${RELEASE_TAG#v}-arm64.apk"
+            cp "$apk" "dist-android/Lart-${RELEASE_TAG#v}-android.apk"
           else
-            cp "$apk" "dist-android/Lart_${version}_arm64.apk"
+            cp "$apk" "dist-android/Lart_${version}_android.apk"
           fi
+          sha256sum dist-android/*.apk
 
       - name: Upload APK
         uses: actions/upload-artifact@v4

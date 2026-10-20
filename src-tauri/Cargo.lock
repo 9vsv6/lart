@@ -3425,7 +3425,7 @@ dependencies = [
 
 [[package]]
 name = "lart"
-version = "0.9.132"
+version = "1.0.0"
 dependencies = [
  "anyhow",
  "async-trait",

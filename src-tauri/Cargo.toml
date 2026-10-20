@@ -1,6 +1,6 @@
 [package]
 name = "lart"
-version = "0.9.132"
+version = "1.0.0"
 description = "Lart, a Stremio client based on Harbor (MIT)"
 edition = "2021"
 
