@@ -35,20 +35,20 @@ data class AppSettings(
     /** Start where you left off; off starts every video from the beginning. */
     val resumePlayback: Boolean = true,
     /** Show "Resumed at 12:34 · Start over" when resuming. */
-    val resumeNotice: Boolean = true,
+    val resumeNotice: Boolean = false,
     val seekBackSec: Int = 10,
     val seekForwardSec: Int = 10,
     val playbackSpeeds: List<Float> = listOf(0.5f, 0.75f, 1f, 1.25f, 1.5f, 1.75f, 2f),
     val sleepMinutes: List<Int> = listOf(15, 30, 45, 60, 90),
     /** Harbor hides the lock by default on desktop; on a phone it's the screen-lock button. */
-    val screenLock: Boolean = true,
+    val screenLock: Boolean = false,
     /** "Fit", "Fill" or "Stretch". */
     val defaultFit: String = "Fit",
 
     // ---- Playback: between episodes ----
     val autoPlayNextEpisode: Boolean = true,
     /** When Up Next shows: seconds before the end; 0 means at the credits (when known), else 45 s. */
-    val nextEpisodeLeadSec: Int = 45,
+    val nextEpisodeLeadSec: Int = 0,
     val autoSkipRecap: Boolean = false,
     val autoSkipOutro: Boolean = false,
     val showSkipButton: Boolean = true,
@@ -86,12 +86,12 @@ data class AppSettings(
     val subtitleFallbacks: List<String> = emptyList(),
     val subtitlesOffByDefault: Boolean = false,
     /** Harbor's default is off; inside-the-video subtitles are in sync with the file, so Lart prefers them. */
-    val preferEmbeddedSubs: Boolean = true,
+    val preferEmbeddedSubs: Boolean = false,
     val hideSdh: Boolean = false,
     /** A second subtitle shown at the same time (mpv); empty is off. */
     val secondarySubLanguage: String = "",
     /** mpv sub-ass-override: "no", "scale", "force". */
-    val assOverride: String = "scale",
+    val assOverride: String = "no",
     val subBold: Boolean = false,
     val subBoxOpacity: Float = 0.6f,
     /** "left", "center", "right". */
@@ -102,7 +102,7 @@ data class AppSettings(
 
     // ---- Sources ----
     /** "lart" (ranked best first) or "addon" (each addon's own order, addons in your order). */
-    val streamSort: String = "lart",
+    val streamSort: String = "addon",
     val streamFilter: StreamFilter = StreamFilter(),
     /** "off", "balanced" (hide CAM and fakes) or "strict" (also tiny files). */
     val safetyFilter: String = "balanced",
@@ -111,14 +111,14 @@ data class AppSettings(
     val requireStreamLanguage: Boolean = false,
     val torrentsDisabled: Boolean = false,
     val showFilename: Boolean = false,
-    val addonTimeoutSec: Int = 20,
+    val addonTimeoutSec: Int = 30,
 
     // ---- Library and cards ----
     val showRatingBadge: Boolean = true,
     /** Harbor's card badges: "In cinema" and "New" at the top left. */
     val showCardBadges: Boolean = true,
     /** Harbor's award tab on cards: the top award a title won. */
-    val showAwardBadge: Boolean = true,
+    val showAwardBadge: Boolean = false,
     /** Harbor's DUB tab on anime cards with an English dub airing (AniSchedule). */
     val showDubBadge: Boolean = true,
     /** Harbor's Trakt comments on title pages (off by default, as Harbor). */
@@ -126,10 +126,10 @@ data class AppSettings(
     /** Letterboxd's average and popular reviews on movie pages. */
     val showLetterboxdDetail: Boolean = true,
     /** Harbor's X-Ray in the player: who's in it, the crew and the facts. */
-    val xrayEnabled: Boolean = true,
+    val xrayEnabled: Boolean = false,
     // ---- More of Harbor's options ----
     /** Keep anime out of Home, Movies and Shows; it stays in the Anime view. */
-    val animeRoomOnly: Boolean = false,
+    val animeRoomOnly: Boolean = true,
     /** Drop titles you have watched from catalog rows. */
     val hideWatched: Boolean = false,
     /** A check on the posters of titles you have watched. */
@@ -137,7 +137,7 @@ data class AppSettings(
     /** A bookmark on the posters of titles in your list. */
     val watchlistBookmark: Boolean = true,
     /** Home's "New Episodes" row: the last two weeks of episodes from your shows. */
-    val newEpisodesRow: Boolean = true,
+    val newEpisodesRow: Boolean = false,
     /** Title pages open with the whole synopsis, not four lines. */
     val fullDescriptions: Boolean = false,
     /** Without a TMDB key, fill title pages from TVMaze and imdbapi.dev (Harbor's keyless data). */
@@ -145,7 +145,7 @@ data class AppSettings(
     /** Show pages reopen on the season you last looked at. */
     val rememberSeason: Boolean = true,
     /** The stream's quality (4K, 1080p) next to the title in the player. */
-    val qualityInPlayer: Boolean = true,
+    val qualityInPlayer: Boolean = false,
     /** Delete a downloaded file once you finish watching it. */
     val deleteAfterWatching: Boolean = false,
     // ---- Harbor's Languages & subtitles ----
@@ -167,7 +167,7 @@ data class AppSettings(
     /** Open the subtitle menu when a video starts, to choose before watching. */
     val chooseSubsBeforePlayback: Boolean = false,
     /** Switch to a better match when addon subtitles arrive after one was picked. */
-    val upgradeSubtitles: Boolean = true,
+    val upgradeSubtitles: Boolean = false,
     /** A dot on the subtitles button while subtitles are on. */
     val subIndicatorDot: Boolean = true,
     /** The second subtitle's size, against the first. */
@@ -200,10 +200,10 @@ data class AppSettings(
     val volumePopup: Boolean = true,
     /** The source picker: which kind of source it opens on, and whether source text starts in full. */
     val defaultSourceMode: String = "Both",
-    val pickerFullDescription: Boolean = false,
+    val pickerFullDescription: Boolean = true,
     /** Harbor's Trailers tab: trailers in the Home hero and on title pages, their sound and quality. */
-    val heroTrailers: Boolean = true,
-    val detailTrailerAutoplay: Boolean = true,
+    val heroTrailers: Boolean = false,
+    val detailTrailerAutoplay: Boolean = false,
     val trailerAudio: Boolean = false,
     /** auto, 360p, 720p or 1080p. */
     val trailerQuality: String = "auto",
@@ -218,9 +218,9 @@ data class AppSettings(
     /** IMDb rating on each episode (OMDb with a key, else TMDB). */
     val showEpisodeRating: Boolean = true,
     val hidePosterTitles: Boolean = false,
-    val posterRadius: Int = 8,
+    val posterRadius: Int = 12,
     val posterScale: Float = 1f,
-    val showTop10: Boolean = true,
+    val showTop10: Boolean = false,
     val heroAutoRotate: Boolean = true,
     val hideUnreleased: Boolean = false,
     val hideAnime: Boolean = false,

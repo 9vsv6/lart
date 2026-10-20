@@ -1000,10 +1000,10 @@ private fun SubtitlesSection(repository: Repository, settings: AppSettings, set:
         ToggleRow("Show subtitles in Picture-in-Picture", "Keep subtitles on while the video plays in a small window.", settings.subsInPip) { v -> set { it.copy(subsInPip = v) } }
         Row(Modifier.padding(top = 14.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {
             HGhostButton(onClick = {
-                repository.updatePlayerPrefs { it.copy(subScale = 1f, subColor = 0xFFFFFFFF, subBackground = "outline", subBottom = 0.08f) }
+                repository.updatePlayerPrefs { it.copy(subScale = 1f, subColor = 0xFFFFFFFF, subBackground = "shadow", subBottom = 0.08f) }
                 set {
                     it.copy(
-                        subBold = false, subBoxOpacity = 0.6f, subAlignX = "center", assOverride = "scale", subOutlineColor = 0xFF000000,
+                        subBold = false, subBoxOpacity = 0.6f, subAlignX = "center", assOverride = "no", subOutlineColor = 0xFF000000,
                         subOutlineSize = 2f, subFont = "inter", subPosition = "bottom", subOpacity = 1f, subBoxColor = 0xFF000000,
                     )
                 }

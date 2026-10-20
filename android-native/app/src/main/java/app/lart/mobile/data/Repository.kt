@@ -80,13 +80,13 @@ data class PlayerPrefs(
     val subScale: Float = 1f,
     val subColor: Long = 0xFFFFFFFF,
     /** "outline", "shadow" or "box". */
-    val subBackground: String = "outline",
+    val subBackground: String = "shadow",
     /** Distance from the bottom of the picture, as a fraction of its height. */
     val subBottom: Float = 0.08f,
     val autoSkipIntro: Boolean = false,
     val speed: Float = 1f,
     /** Ask "Still watching?" after this many episodes in a row; 0 turns it off. */
-    val stillWatchingAfter: Int = 3,
+    val stillWatchingAfter: Int = 0,
     /** Anime4K mode name ("A", "B", …) for mpv; empty is off. */
     val anime4kMode: String = "",
     /** Anime4K's heavier VL networks instead of M. */
@@ -121,7 +121,7 @@ class Repository(private val context: Context) {
     /** The user's own TMDB key; with it, rows and artwork come from TMDB as in Harbor. */
     val tmdbKey: StateFlow<String?> = _tmdbKey.asStateFlow()
 
-    private val _autoPlay = MutableStateFlow(false)
+    private val _autoPlay = MutableStateFlow(true)
     /** Skip the streams list and play the best source straight away. */
     val autoPlay: StateFlow<Boolean> = _autoPlay.asStateFlow()
 
@@ -174,7 +174,7 @@ class Repository(private val context: Context) {
     }.stateIn(scope, SharingStarted.Eagerly, emptyList())
 
     private fun loadProfile(prefs: Preferences) {
-        _autoPlay.value = prefs[keyAutoPlay] ?: false
+        _autoPlay.value = prefs[keyAutoPlay] ?: true // Harbor plays the best source straight away (instantPlay).
         _playerPrefs.value = prefs[keyPlayer]
             ?.let { runCatching { Net.json.decodeFromString(PlayerPrefs.serializer(), it) }.getOrNull() }
             ?: PlayerPrefs()
