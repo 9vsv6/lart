@@ -248,3 +248,29 @@ object AnimeStreamers {
 
     private fun kotlinx.serialization.json.JsonArray?.orEmpty(): List<kotlinx.serialization.json.JsonElement> = this ?: emptyList()
 }
+
+/**
+ * Harbor's streaming-service marks (public/services, anime-streamer.ts): a logo and the
+ * brand colour for a service named by Kitsu, TVMaze or TMDB.
+ */
+object ServiceLogos {
+    private val known = listOf(
+        "crunchyroll" to ("crunchyroll.svg" to 0xFFF47521), "netflix" to ("netflix.svg" to 0xFFE50914),
+        "hulu" to ("hulu.svg" to 0xFF1CE783), "hidive" to ("hidive.png" to 0xFF00AEEF),
+        "prime" to ("prime.svg" to 0xFF00A8E1), "amazon" to ("prime.svg" to 0xFF00A8E1),
+        "disney" to ("disney.svg" to 0xFF0E47A1), "youtube" to ("youtube.png" to 0xFFFF0000),
+        "apple" to ("apple.svg" to 0xFFFFFFFF), "hbo" to ("max.svg" to 0xFF9B6CFF), "max" to ("max.svg" to 0xFF9B6CFF),
+        "paramount" to ("paramount.svg" to 0xFF0064FF), "peacock" to ("peacock.svg" to 0xFFFF7112),
+        "tubi" to ("tubi.svg" to 0xFFFA382F), "hoopla" to ("hoopla.svg" to 0xFF005DAA), "kanopy" to ("kanopy.png" to 0xFFFFFFFF),
+        "pluto" to ("plutotv.svg" to 0xFFFFFFFF), "roku" to ("roku.svg" to 0xFF6F1AB1), "starz" to ("starz.svg" to 0xFFFFFFFF),
+        "shudder" to ("shudder.svg" to 0xFFE51B23), "mubi" to ("mubi.svg" to 0xFFFFFFFF), "britbox" to ("britbox.svg" to 0xFFFFFFFF),
+        "acorn" to ("acorntv.svg" to 0xFFFFFFFF), "amc" to ("amcplus.svg" to 0xFFFFFFFF), "mgm" to ("mgmplus.svg" to 0xFFFFFFFF),
+        "curiosity" to ("curiositystream.svg" to 0xFFFFFFFF), "fubo" to ("fubo.svg" to 0xFFFFFFFF), "philo" to ("philo.svg" to 0xFFFFFFFF),
+        "pbs" to ("pbs.svg" to 0xFFFFFFFF), "the cw" to ("cw.svg" to 0xFFFFFFFF),
+    )
+
+    /** The bundled logo for a service, as an image address Coil can load. */
+    fun logo(name: String): String? = known.firstOrNull { name.lowercase().contains(it.first) }?.second?.first?.let { "file:///android_asset/services/$it" }
+
+    fun brand(name: String): Long = known.firstOrNull { name.lowercase().contains(it.first) }?.second?.second ?: 0xFFA4906A
+}

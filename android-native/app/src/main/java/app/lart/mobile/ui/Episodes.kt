@@ -114,13 +114,7 @@ fun EpisodesSection(
     val allWatched = inSeason.isNotEmpty() && inSeason.all { watched(it) }
 
     Column(verticalArrangement = Arrangement.spacedBy(14.dp)) {
-        Text("Episodes", color = LartColors.Ink, fontSize = 26.sp, fontWeight = FontWeight.SemiBold, letterSpacing = (-0.4).sp, modifier = Modifier.padding(horizontal = side))
-        // The tools, in Harbor's order; they scroll sideways on a phone.
-        Row(
-            Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()).padding(horizontal = side),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-        ) {
+        val tools: @Composable androidx.compose.foundation.layout.RowScope.() -> Unit = {
             Text("${inSeason.size} episodes", color = LartColors.InkSubtle, fontSize = 14.sp, modifier = Modifier.padding(end = 4.dp))
             if (meta.type != "movie") ToolButton(Icons.Rounded.Download, "Download season") {
                 Toast.makeText(context, "Downloading ${inSeason.size} episodes…", Toast.LENGTH_SHORT).show()
@@ -134,6 +128,25 @@ fun EpisodesSection(
             }
             ToolButton(Icons.Rounded.Search, "Search by episode number or title", active = query != null) { query = if (query == null) "" else null }
             SeasonMenu(seasons, season, videos, onSeason)
+        }
+        val title: @Composable () -> Unit = {
+            Text("Episodes", color = LartColors.Ink, fontSize = 26.sp, fontWeight = FontWeight.SemiBold, letterSpacing = (-0.4).sp)
+        }
+        if (wide) {
+            // Harbor's desktop row: the title on the left, the tools on the right.
+            Row(Modifier.fillMaxWidth().padding(horizontal = side), verticalAlignment = Alignment.CenterVertically) {
+                Box(Modifier.weight(1f)) { title() }
+                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp), content = tools)
+            }
+        } else {
+            Box(Modifier.padding(horizontal = side)) { title() }
+            // On a phone the tools get their own row, scrolling sideways.
+            Row(
+                Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()).padding(horizontal = side),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.spacedBy(8.dp),
+                content = tools,
+            )
         }
         query?.let { q ->
             Row(Modifier.padding(horizontal = side), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {

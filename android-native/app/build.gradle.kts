@@ -107,6 +107,8 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("io.coil-kt:coil-compose:2.7.0")
+    // Harbor's streaming-service logos are SVGs (assets/services).
+    implementation("io.coil-kt:coil-svg:2.7.0")
     // Trailer streams from YouTube, as Harbor gets them with yt-dlp (GPL-3, like the rest).
     implementation("com.github.TeamNewPipe:NewPipeExtractor:v0.26.5")
 

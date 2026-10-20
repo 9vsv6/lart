@@ -347,6 +347,22 @@ private fun DetailBody(
                         Eyebrow("Watch on")
                         FlowRow(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
                             providers.take(8).forEach { provider ->
+                                val mark = app.lart.mobile.data.ServiceLogos.logo(provider.name)
+                                if (mark != null || provider.logo == null) {
+                                    // Harbor's streaming-links chip: the service's own mark, else its name in brand colour.
+                                    val brand = Color(app.lart.mobile.data.ServiceLogos.brand(provider.name))
+                                    Box(
+                                        Modifier.height(44.dp).clip(RoundedCornerShape(12.dp)).background(Color(0x0FFFFFFF))
+                                            .border(1.dp, brand.copy(alpha = 0.13f), RoundedCornerShape(12.dp))
+                                            .then(if (provider.url != null) Modifier.clickable { uri.openUri(provider.url) } else Modifier)
+                                            .padding(horizontal = 16.dp),
+                                        contentAlignment = Alignment.Center,
+                                    ) {
+                                        if (mark != null) AsyncImage(mark, provider.name, contentScale = ContentScale.Fit, modifier = Modifier.height(18.dp).widthIn(max = 110.dp))
+                                        else Text(provider.name, color = brand, fontSize = 13.5.sp, fontWeight = FontWeight.SemiBold)
+                                    }
+                                    return@forEach
+                                }
                                 Row(
                                     Modifier.clip(RoundedCornerShape(50)).background(LartColors.Surface)
                                         .then(if (provider.url != null) Modifier.clickable { uri.openUri(provider.url) } else Modifier)

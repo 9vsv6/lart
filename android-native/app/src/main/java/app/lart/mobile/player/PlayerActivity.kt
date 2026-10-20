@@ -113,7 +113,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
         engine = (if (settings.engine == "media3") null else MpvEngine.create(this, setup)) ?: ExoEngine(this, setup)
         engine.listener = this
         state.engineName = engine.name
-        state.anime4kAvailable = engine.supportsShaders
+        state.anime4kAvailable = false // Set once the title is known to be anime (updateAnime4KButton).
         lifecycleScope.launch { repository.settings.collect { state.settings = it } }
 
         val overlay = ComposeView(this).apply {
@@ -170,11 +170,13 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
         autoAdvanced = 0
         anime4kChosenHere = false
         meta = null
+        updateAnime4KButton()
         begin(videoId, url)
         lifecycleScope.launch {
             meta = AddonClient.meta(repository.metaAddons(), type, metaId)
             describe()
             loadXray()
+            updateAnime4KButton()
             // Anime-only Anime4K needs the genres.
             if (state.settings.anime4kAnimeOnly) applyAnime4K()
         }
@@ -573,9 +575,18 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
     // ---- Anime4K (mpv) ----
 
     /** Anime: a Kitsu/MAL/AniList id, or an "Anime" genre in the metadata. */
+    // Anime: an anime addon's id, an IMDb title already found to be anime (AnimeDetect),
+    // or metadata that says Japanese animation.
     private fun isAnime(): Boolean =
         listOf("kitsu:", "mal:", "anilist:").any { state.videoId.startsWith(it) || metaId.startsWith(it) } ||
-            meta?.genres.orEmpty().any { it.equals("anime", ignoreCase = true) }
+            metaId in app.lart.mobile.data.AnimeDetect.detected.value ||
+            meta?.genres.orEmpty().any { it.equals("anime", ignoreCase = true) } ||
+            (meta?.genres.orEmpty().any { it.equals("animation", ignoreCase = true) } && meta?.countryName.orEmpty().contains("japan", ignoreCase = true))
+
+    /** The Anime4K button shows for anime only, as Harbor's. */
+    private fun updateAnime4KButton() {
+        state.anime4kAvailable = engine.supportsShaders && (isAnime() || anime4kChosenHere)
+    }
 
     private fun applyAnime4K() {
         if (!engine.supportsShaders) return

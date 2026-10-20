@@ -479,10 +479,15 @@ private fun TrackRow(title: String, meta: String?, language: String?, selected: 
     }
 }
 
-/** Stands in for Harbor's flags: the language's two-letter code on a small tile. */
+/** Harbor's flag for a language (components/flag.tsx); the two-letter code where there is none. */
 @Composable
 private fun LangTag(language: String) {
     val code = iso2(language)
+    val lang = app.lart.mobile.data.Languages.of(code.take(2))
+    if (lang.country.length == 2 && lang.country != "un") {
+        Text(lang.flag, fontSize = 15.sp, modifier = Modifier.size(width = 24.dp, height = 17.dp))
+        return
+    }
     Box(
         Modifier.size(width = 24.dp, height = 17.dp).clip(RoundedCornerShape(3.dp)).background(PopRaised),
         contentAlignment = Alignment.Center,

@@ -15,6 +15,7 @@ class LartApp : Application(), coil.ImageLoaderFactory {
         .memoryCache { coil.memory.MemoryCache.Builder(this).maxSizePercent(0.25).build() }
         .diskCache { coil.disk.DiskCache.Builder().directory(cacheDir.resolve("image_cache")).maxSizeBytes(768L * 1024 * 1024).build() }
         .respectCacheHeaders(false)
+        .components { add(coil.decode.SvgDecoder.Factory()) }
         .build()
 
     lateinit var repository: Repository

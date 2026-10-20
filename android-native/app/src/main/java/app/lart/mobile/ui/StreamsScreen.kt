@@ -415,6 +415,8 @@ private fun FacetChip(facet: Facet, picked: Set<String>, onChange: (Set<String>)
             facet.values.forEach { value ->
                 val on = value in picked
                 DropdownMenuItem(
+                    // Harbor's format badge before each option (facet-menu-row.tsx).
+                    leadingIcon = facetBadge(facet, value)?.let { badge -> { androidx.compose.foundation.Image(androidx.compose.ui.res.painterResource(badge), value, modifier = Modifier.height(18.dp).widthIn(max = 72.dp), contentScale = androidx.compose.ui.layout.ContentScale.Fit) } },
                     text = { Text(value) },
                     trailingIcon = { if (on) Icon(Icons.Rounded.Check, null, tint = LartColors.Accent) },
                     onClick = { onChange(if (on) picked - value else picked + value) },
@@ -535,4 +537,13 @@ private fun Badges(stream: Stream) {
             Text(it, color = Color(0xCCFFFFFF), fontSize = 12.5.sp, fontWeight = FontWeight.ExtraBold, modifier = Modifier.align(Alignment.CenterVertically).widthIn(max = 160.dp))
         }
     }
+}
+
+/** filter-builder/badge-maps.ts: the badge picture for a facet value, where Harbor has one. */
+private fun facetBadge(facet: Facet, value: String): Int? = when (facet) {
+    Facet.Resolution -> mapOf("4K" to app.lart.mobile.R.drawable.badge_4k_uhd, "1080p" to app.lart.mobile.R.drawable.badge_1080p_fhd, "720p" to app.lart.mobile.R.drawable.badge_720p_hd, "SD" to app.lart.mobile.R.drawable.badge_sd)[value]
+    Facet.Source -> mapOf("Remux" to app.lart.mobile.R.drawable.badge_remux, "Blu-ray" to app.lart.mobile.R.drawable.badge_bluray, "WEB" to app.lart.mobile.R.drawable.badge_webdl)[value]
+    Facet.Codec -> mapOf("HEVC" to app.lart.mobile.R.drawable.badge_hevc, "AV1" to app.lart.mobile.R.drawable.badge_av1)[value]
+    Facet.Hdr -> mapOf("Dolby Vision" to app.lart.mobile.R.drawable.badge_dv, "HDR" to app.lart.mobile.R.drawable.badge_hdr, "SDR" to app.lart.mobile.R.drawable.badge_sdr)[value]
+    Facet.Audio -> mapOf("Atmos" to app.lart.mobile.R.drawable.badge_atmos, "TrueHD" to app.lart.mobile.R.drawable.badge_truehd, "DTS" to app.lart.mobile.R.drawable.badge_dts, "DD+" to app.lart.mobile.R.drawable.badge_ddplus, "5.1" to app.lart.mobile.R.drawable.badge_5_1)[value]
 }
