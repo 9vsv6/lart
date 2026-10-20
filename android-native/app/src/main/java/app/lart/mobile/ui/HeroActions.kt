@@ -48,7 +48,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.ui.graphics.vector.rememberVectorPainter
+import androidx.compose.ui.res.painterResource
+import app.lart.mobile.R
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -61,7 +64,9 @@ import coil.compose.AsyncImage
 
 // Harbor's hero buttons (views/detail.tsx): bg-canvas/80 at rest, bg-ink/15 when on,
 // bg-accent/20 with accent ink for favourites and watched.
-private val Scrim = Color(0xCC121316)
+// Over the page (below the backdrop on a phone) bg-canvas/80 vanishes, so the at-rest fill is
+// the elevated surface, still translucent over the art.
+private val Scrim = Color(0xE625262A)
 private val InkOn = Color(0x26F4F5F7)
 
 /**
@@ -97,7 +102,7 @@ fun HeroActions(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(10.dp),
         ) {
-            Icon(Icons.Rounded.PlayArrow, null, tint = LartColors.Canvas, modifier = Modifier.size(22.dp))
+            Icon(painterResource(R.drawable.ui_play_filled), null, tint = LartColors.Canvas, modifier = Modifier.size(18.dp))
             Text(playLabel, color = LartColors.Canvas, fontSize = 15.sp, fontWeight = FontWeight.SemiBold)
         }
         Row(
@@ -114,19 +119,19 @@ fun HeroActions(
             contentAlignment = Alignment.Center,
         ) {
             if (rating != null) Text("$rating", color = LartColors.Ink, fontSize = 16.sp, fontWeight = FontWeight.Bold)
-            else Icon(Icons.Rounded.Star, "Rate this", tint = LartColors.Ink, modifier = Modifier.size(20.dp))
+            else Icon(painterResource(R.drawable.ui_rate), "Rate this", tint = LartColors.Ink, modifier = Modifier.size(20.dp))
         }
-        RoundButton(if (favourite) Icons.Rounded.Favorite else Icons.Rounded.FavoriteBorder, if (favourite) "Remove from favorites" else "Add to favorites", favourite) {
+        RoundButton(painterResource(if (favourite) R.drawable.ui_unfavorite else R.drawable.ui_favorite), if (favourite) "Remove from favorites" else "Add to favorites", favourite) {
             repository.toggleFavorite(meta)
         }
-        RoundButton(Icons.AutoMirrored.Rounded.PlaylistAdd, "Add to list", false) { listOpen = true }
+        RoundButton(painterResource(R.drawable.ui_list), "Add to list", false) { listOpen = true }
         if (!isSeries) {
-            RoundButton(if (watched) Icons.Rounded.VisibilityOff else Icons.Rounded.Visibility, if (watched) "Marked watched" else "Mark watched", watched) {
+            RoundButton(painterResource(if (watched) R.drawable.ui_mark_unwatched else R.drawable.ui_mark_watched), if (watched) "Marked watched" else "Mark watched", watched) {
                 repository.toggleWatched(meta)
             }
         }
-        trailer?.let { RoundButton(Icons.Outlined.Movie, "Watch trailer", false, it) }
-        if (!isSeries) RoundButton(Icons.Rounded.Download, "Download", false, download)
+        trailer?.let { RoundButton(painterResource(R.drawable.ui_trailer), "Watch trailer", false, it) }
+        if (!isSeries) RoundButton(rememberVectorPainter(Icons.Rounded.Download), "Download", false, download)
     }
 
     if (rateOpen) RatingDialog(meta.name, poster, rating, onClose = { rateOpen = false }) { value ->
@@ -137,7 +142,7 @@ fun HeroActions(
 }
 
 @Composable
-private fun RoundButton(icon: ImageVector, description: String, active: Boolean, onClick: () -> Unit) {
+private fun RoundButton(icon: Painter, description: String, active: Boolean, onClick: () -> Unit) {
     Box(
         Modifier.size(48.dp).clip(CircleShape).background(if (active) LartColors.Accent.copy(alpha = 0.2f) else Scrim).clickable(onClick = onClick),
         contentAlignment = Alignment.Center,

@@ -50,27 +50,15 @@ import kotlinx.coroutines.awaitAll
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 
-/** Genre tiles shown before a search, each with its own colour pair. */
-private val GENRES = listOf(
-    Triple("Action", "movie", 0xFFB23A48 to 0xFF5C1A2B),
-    Triple("Comedy", "movie", 0xFFE0A030 to 0xFF8A4B12),
-    Triple("Drama", "series", 0xFF4F6DB8 to 0xFF243566),
-    Triple("Sci-Fi", "movie", 0xFF2E9C9C to 0xFF13474F),
-    Triple("Crime", "series", 0xFF5E5E6E to 0xFF26262E),
-    Triple("Horror", "movie", 0xFF7A1F1F to 0xFF2A0A0A),
-    Triple("Animation", "movie", 0xFF8E5BD8 to 0xFF3E2470),
-    Triple("Documentary", "series", 0xFF3E8E5A to 0xFF173B25),
-    Triple("Romance", "movie", 0xFFD0587A to 0xFF6A1F38),
-    Triple("Thriller", "movie", 0xFF3B4A5C to 0xFF141B24),
-    Triple("Mystery", "series", 0xFF6B4E9B to 0xFF2A1E40),
-    Triple("Family", "movie", 0xFF4AA3D8 to 0xFF1D4A6A),
-)
-
 @Composable
 fun SearchScreen(repository: Repository, onOpen: (Meta) -> Unit, onGenre: (type: String, genre: String) -> Unit) {
     val addons by repository.addons.collectAsState()
     val builtins by repository.builtins.collectAsState()
     var query by rememberSaveable { mutableStateOf("") }
+    // A search started from the top bar's panel (tablets) lands here.
+    val pending by SearchBridge.pending.collectAsState()
+    LaunchedEffect(pending) { pending?.let { query = it; SearchBridge.pending.value = null } }
+    val searchContext = androidx.compose.ui.platform.LocalContext.current
     var results by remember { mutableStateOf<List<Meta>?>(null) }
     var loading by remember { mutableStateOf(false) }
     val keyboard = LocalSoftwareKeyboardController.current
@@ -151,7 +139,7 @@ fun SearchScreen(repository: Repository, onOpen: (Meta) -> Unit, onGenre: (type:
             singleLine = true,
             shape = RoundedCornerShape(16.dp),
             keyboardOptions = KeyboardOptions(imeAction = ImeAction.Search),
-            keyboardActions = KeyboardActions(onSearch = { keyboard?.hide(); if (aiMode && query.trim().length >= 3) aiAsk++ }),
+            keyboardActions = KeyboardActions(onSearch = { keyboard?.hide(); SearchBridge.remember(searchContext, query); if (aiMode && query.trim().length >= 3) aiAsk++ }),
             colors = OutlinedTextFieldDefaults.colors(
                 focusedBorderColor = LartColors.Accent,
                 unfocusedBorderColor = LartColors.Elevated,
@@ -200,18 +188,9 @@ fun SearchScreen(repository: Repository, onOpen: (Meta) -> Unit, onGenre: (type:
                 verticalArrangement = Arrangement.spacedBy(12.dp),
             ) {
                 item(span = { GridItemSpan(maxLineSpan) }) {
-                    Text("Browse by genre", color = LartColors.Ink, fontSize = 18.sp, fontWeight = FontWeight.SemiBold)
+                    Text("Browse by Genre", color = LartColors.Ink, fontSize = 18.sp, fontWeight = FontWeight.SemiBold)
                 }
-                items(GENRES, key = { it.first }) { (genre, type, colors) ->
-                    Box(
-                        Modifier.fillMaxWidth().aspectRatio(16f / 9f).clip(RoundedCornerShape(14.dp))
-                            .background(Brush.linearGradient(listOf(Color(colors.first.toInt()), Color(colors.second.toInt()))))
-                            .clickable { onGenre(type, genre) }.padding(14.dp),
-                        contentAlignment = Alignment.BottomStart,
-                    ) {
-                        Text(genre, color = Color.White, fontSize = 17.sp, fontWeight = FontWeight.Bold)
-                    }
-                }
+                items(GENRE_TILES, key = { it }) { genre -> GenreTile(genre, Modifier.fillMaxWidth()) { onGenre("movie", genre) } }
             }
             current.isEmpty() -> EmptyState("No results", "None of your addons found \"${query.trim()}\".")
             else -> LazyVerticalGrid(
@@ -220,7 +199,7 @@ fun SearchScreen(repository: Repository, onOpen: (Meta) -> Unit, onGenre: (type:
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
                 verticalArrangement = Arrangement.spacedBy(16.dp),
             ) {
-                items(current, key = { it.type + it.id }) { meta -> PosterTile(meta) { onOpen(meta) } }
+                items(current, key = { it.type + it.id }) { meta -> PosterTile(meta) { SearchBridge.remember(searchContext, query); onOpen(meta) } }
             }
         }
     }

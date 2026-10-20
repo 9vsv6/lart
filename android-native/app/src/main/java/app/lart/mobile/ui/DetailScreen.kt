@@ -475,14 +475,14 @@ private fun Hero(
                 } else HeroTitle(meta.name, wide)
             } else HeroTitle(details?.title ?: meta.name, wide)
 
-            FlowRow(horizontalArrangement = Arrangement.spacedBy(18.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            FlowRow(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 meta.year?.let { Fact(it) }
                 (scores.firstOrNull { it.source == "IMDb" }?.value ?: meta.imdbRating)?.takeIf { it.isNotBlank() }?.let { rating ->
-                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.align(Alignment.CenterVertically)) {
+                    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp), modifier = Modifier.align(Alignment.CenterVertically).clip(RoundedCornerShape(50)).background(Color(0xD9121316)).padding(horizontal = 12.dp, vertical = 6.dp)) {
                         Box(Modifier.clip(RoundedCornerShape(3.dp)).background(Color(0xFFF5C518)).padding(horizontal = 4.dp, vertical = 1.dp)) {
                             Text("IMDb", color = Color.Black, fontSize = 10.sp, fontWeight = FontWeight.Black)
                         }
-                        Text(rating, color = Color.White, fontSize = 15.sp, fontWeight = FontWeight.Bold)
+                        Text(rating, color = LartColors.Ink, fontSize = 14.sp, fontWeight = FontWeight.Bold)
                     }
                 }
                 scores.filter { it.source != "IMDb" }.forEach { score -> Fact(
@@ -533,10 +533,11 @@ private fun HeroTitle(name: String, wide: Boolean) {
 private fun Fact(text: String) {
     Text(
         text,
-        color = Color(0xD9FFFFFF),
-        fontSize = 14.5.sp,
+        color = LartColors.Ink,
+        fontSize = 14.sp,
         fontWeight = FontWeight.Medium,
-        modifier = Modifier.clip(RoundedCornerShape(50)).background(Color(0x1FFFFFFF)).padding(horizontal = 14.dp, vertical = 7.dp),
+        // Harbor's Pill: bg-canvas/85, px-3 py-1.
+        modifier = Modifier.clip(RoundedCornerShape(50)).background(Color(0xD9121316)).padding(horizontal = 12.dp, vertical = 6.dp),
     )
 }
 

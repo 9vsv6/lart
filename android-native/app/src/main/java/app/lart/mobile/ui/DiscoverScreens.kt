@@ -185,24 +185,12 @@ private fun ShelfRail(shelf: Shelf, metas: List<Meta>?, onOpen: (Meta) -> Unit) 
     }
 }
 
-private val genreTiles = listOf(
-    "Action" to Color(0xFFB8384A), "Comedy" to Color(0xFFD9962B), "Drama" to Color(0xFF4A62A8), "Sci-Fi" to Color(0xFF268F8F),
-    "Crime" to Color(0xFF55545E), "Horror" to Color(0xFF6E1A1A), "Animation" to Color(0xFF7A4CC2), "Documentary" to Color(0xFF2F7D4B),
-    "Thriller" to Color(0xFF3B3F7A), "Romance" to Color(0xFFB0476F), "Fantasy" to Color(0xFF5A3C8C), "Mystery" to Color(0xFF2E4A5C),
-)
-
 @Composable
 private fun GenreTiles(onGenre: (String, String) -> Unit) {
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text("Browse by Genre", color = LartColors.Ink, fontSize = 18.sp, fontWeight = FontWeight.SemiBold, modifier = Modifier.padding(horizontal = 16.dp))
         LazyRow(contentPadding = PaddingValues(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-            items(genreTiles, key = { it.first }) { (genre, color) ->
-                Box(
-                    Modifier.width(150.dp).height(84.dp).clip(RoundedCornerShape(16.dp))
-                        .background(Brush.linearGradient(listOf(color, color.copy(alpha = 0.55f)))).clickable { onGenre("movie", genre) }.padding(14.dp),
-                    contentAlignment = Alignment.BottomStart,
-                ) { Text(genre, color = Color.White, fontSize = 17.sp, fontWeight = FontWeight.Bold) }
-            }
+            items(GENRE_TILES, key = { it }) { genre -> GenreTile(genre, Modifier.width(210.dp)) { onGenre("movie", genre) } }
         }
     }
 }

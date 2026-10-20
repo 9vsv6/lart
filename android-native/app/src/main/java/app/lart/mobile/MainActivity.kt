@@ -126,6 +126,7 @@ private fun LartRoot(repository: Repository) {
     val showBar = Tab.entries.any { it.route == route }
     // Home's view (Home, Movies, Shows, Anime), shared by its switcher and the tablet rail.
     var browseView by rememberSaveable { mutableStateOf(BrowseView.Home) }
+    var searchOpen by rememberSaveable { mutableStateOf(false) }
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
 
@@ -294,6 +295,32 @@ private fun LartRoot(repository: Repository) {
                 }
             }
             }
+            // Tablets: Harbor's search bar at the top of every page, opening its search panel.
+            if (wide && route != Tab.Profile.route && route != Tab.Search.route && route?.startsWith("streams") != true) {
+                app.lart.mobile.ui.TopSearchBar(Modifier.align(Alignment.TopCenter)) { searchOpen = true }
+            }
+            if (searchOpen) {
+                fun view(v: BrowseView) = { browseView = v; nav.selectTab(Tab.Home) }
+                fun page(route: String) = { nav.navigate(route) { popUpTo(Tab.Home.route); launchSingleTop = true } }
+                val G = app.lart.mobile.ui.JumpGlyphs
+                app.lart.mobile.ui.SearchOverlay(
+                    jumps = listOfNotNull(
+                        app.lart.mobile.ui.JumpTo("Home", G.home, view(BrowseView.Home)),
+                        app.lart.mobile.ui.JumpTo("Discover", G.discover, page("discover")),
+                        app.lart.mobile.ui.JumpTo("Movies", G.movies, view(BrowseView.Movies)),
+                        app.lart.mobile.ui.JumpTo("Shows", G.shows, view(BrowseView.Shows)),
+                        app.lart.mobile.ui.JumpTo("Anime", G.anime, view(BrowseView.Anime)).takeIf { !app.lart.mobile.ui.LartDisplay.settings.hideAnime },
+                        app.lart.mobile.ui.JumpTo("Calendar", G.calendar, page("calendar")),
+                        app.lart.mobile.ui.JumpTo("My Library", G.library) { nav.selectTab(Tab.MyStuff) },
+                        app.lart.mobile.ui.JumpTo("Collections", G.collections, page("collections")),
+                        app.lart.mobile.ui.JumpTo("Downloads", G.downloads, page("downloads")),
+                    ),
+                    onSearch = { q -> app.lart.mobile.ui.SearchBridge.pending.value = q; nav.selectTab(Tab.Search) },
+                    onGenre = { g -> nav.openCatalog(AddonClient.CINEMETA_ID, "movie", "top", g, "$g Movies") },
+                    onOpen = { open(it) },
+                    onClose = { searchOpen = false },
+                )
+            }
         }
     }
     }
@@ -380,11 +407,10 @@ private fun SideRail(route: String?, view: BrowseView, onSelect: (Tab) -> Unit, 
             Text("L", color = LartColors.Canvas, fontSize = 24.sp, fontWeight = FontWeight.Black)
         }
         Box(Modifier.height(10.dp))
-        // Harbor's sidebar, in its order and with its own glyphs: Search, Home, Discover,
+        // Harbor's sidebar, in its order and with its own glyphs (search lives in the top bar): Home, Discover,
         // Library, Movies, Shows, Anime, Collections, then Calendar.
         val homeView = route == Tab.Home.route
         val pages = app.lart.mobile.ui.ExtraPage.entries
-        RailIcon(Tab.Search.glyph, Tab.Search.label, route == Tab.Search.route) { onSelect(Tab.Search) }
         RailIcon(BrowseView.Home.glyph, "Home", homeView && view == BrowseView.Home) { onView(BrowseView.Home) }
         RailIcon(pages[0].glyph, pages[0].label, route == pages[0].route) { onPage(pages[0].route) }
         RailIcon(Tab.MyStuff.glyph, "Library", route == Tab.MyStuff.route) { onSelect(Tab.MyStuff) }
