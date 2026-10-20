@@ -101,6 +101,12 @@ class MpvEngine private constructor(context: Context, private val mpv: MPVLib, p
                     opt("deband", "yes")
                 }
             }
+            // Harbor's Picture tab.
+            if (s.picBrightness != 0) opt("brightness", "${s.picBrightness}")
+            if (s.picContrast != 0) opt("contrast", "${s.picContrast}")
+            if (s.picSaturation != 0) opt("saturation", "${s.picSaturation}")
+            if (s.picGamma != 0) opt("gamma", "${s.picGamma}")
+            if (s.toneMapping != "auto") opt("tone-mapping", s.toneMapping)
             opt("ao", "audiotrack,opensles")
             if (s.downmixStereo) opt("audio-channels", "stereo")
             opt("volume-max", "${(s.volumeBoostMax * 100).coerceIn(100, 300)}")

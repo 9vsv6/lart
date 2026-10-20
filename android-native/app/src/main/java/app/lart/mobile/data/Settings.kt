@@ -188,6 +188,19 @@ data class AppSettings(
     val subsourceEnabled: Boolean = false,
     val wyzieEnabled: Boolean = true,
     val openSubtitlesEnabled: Boolean = false,
+    // ---- Harbor's Playback pages ----
+    /** mpv picture adjustments, -100..100 (Harbor's Picture tab). */
+    val picBrightness: Int = 0,
+    val picContrast: Int = 0,
+    val picSaturation: Int = 0,
+    val picGamma: Int = 0,
+    /** HDR tone-mapping curve for mpv: auto, bt.2390, hable, mobius, reinhard, clip. */
+    val toneMapping: String = "auto",
+    /** The volume and brightness level on screen while swiping the edges. */
+    val volumePopup: Boolean = true,
+    /** The source picker: which kind of source it opens on, and whether source text starts in full. */
+    val defaultSourceMode: String = "Both",
+    val pickerFullDescription: Boolean = false,
     /** IMDb rating on each episode (OMDb with a key, else TMDB). */
     val showEpisodeRating: Boolean = true,
     val hidePosterTitles: Boolean = false,

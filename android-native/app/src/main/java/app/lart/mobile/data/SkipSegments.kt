@@ -23,6 +23,9 @@ data class SkipSegment(val kind: Kind, val startMs: Long, val endMs: Long) {
  * for anime (Kitsu ids, mapped to MyAnimeList through Kitsu).
  */
 object SkipSegments {
+    /** Your TheIntroDB key (Harbor's Intros tab); sent with each lookup when set. */
+    @Volatile var theIntroDbKey: String? = null
+
     private val cache = mutableMapOf<String, List<SkipSegment>>()
 
     /** `videoId` is a Stremio id: "tt0903747:1:2", "tt0111161" or "kitsu:1376:5". */
@@ -76,7 +79,9 @@ object SkipSegments {
     }
 
     private suspend fun theIntroDb(query: String, durationMs: Long): List<SkipSegment> {
-        val json = getJson("https://api.theintrodb.org/v2/media?$query") ?: return emptyList()
+        val request = okhttp3.Request.Builder().url("https://api.theintrodb.org/v2/media?$query")
+            .apply { theIntroDbKey?.let { header("X-API-Key", it) } }.build()
+        val json = runCatching { Net.json.parseToJsonElement(Net.call(request)).jsonObject }.getOrNull() ?: return emptyList()
         fun all(key: String, kind: SkipSegment.Kind) =
             (json[key] as? JsonArray).orEmpty().mapNotNull { span(it, kind, durationMs) }
         return (all("intro", SkipSegment.Kind.Intro) + all("recap", SkipSegment.Kind.Recap) +

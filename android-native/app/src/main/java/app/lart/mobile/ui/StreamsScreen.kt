@@ -147,7 +147,7 @@ fun StreamsScreen(
     var error by remember { mutableStateOf<String?>(null) }
     var job by remember { mutableStateOf<Job?>(null) }
     var refreshKey by remember { mutableIntStateOf(0) }
-    var mode by rememberSaveable { mutableStateOf(SourceMode.Both) }
+    var mode by rememberSaveable { mutableStateOf(SourceMode.entries.firstOrNull { it.name == settings.defaultSourceMode } ?: SourceMode.Both) }
     var addonFilter by rememberSaveable { mutableStateOf<String?>(null) }
     var facets by remember { mutableStateOf<Map<Facet, Set<String>>>(emptyMap()) }
     // Auto-play once per visit: coming back from the player shows the list instead.
@@ -431,7 +431,7 @@ private fun FacetChip(facet: Facet, picked: Set<String>, onChange: (Set<String>)
 private fun SourceCard(item: RankedStream, wide: Boolean, last: Boolean, showFilename: Boolean, playable: Boolean, onDownload: (() -> Unit)? = null, onPlay: () -> Unit) {
     val stream = item.stream
     val clipboard = LocalClipboardManager.current
-    var expanded by remember { mutableStateOf(false) }
+    var expanded by remember { mutableStateOf(LartDisplay.settings.pickerFullDescription) }
     var saving by remember { mutableStateOf(false) }
     val body = listOfNotNull(stream.title, stream.description).joinToString("\n").trim()
     val actions: @Composable () -> Unit = {

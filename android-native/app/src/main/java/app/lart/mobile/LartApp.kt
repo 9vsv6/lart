@@ -35,6 +35,7 @@ class LartApp : Application() {
                 LartDisplay.watchedIds = items.filter { !it.removed && ((it.state?.timesWatched ?: 0) > 0 || (it.state?.flaggedWatched ?: 0) > 0) }.map { it.id }.toSet()
             }
         }
+        main.launch { repository.providerKeys.collect { app.lart.mobile.data.SkipSegments.theIntroDbKey = it[app.lart.mobile.data.ProviderKey.THEINTRODB] } }
         main.launch { repository.providerKeys.collect { LartDisplay.customPosters = it[app.lart.mobile.data.ProviderKey.POSTERS] } }
     }
 }

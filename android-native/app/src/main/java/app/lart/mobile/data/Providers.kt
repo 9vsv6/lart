@@ -25,6 +25,7 @@ object ProviderKey {
     const val SUBSOURCE = "subsource"
     const val WYZIE = "wyzie"
     const val OPENSUBTITLES = "opensubtitles"
+    const val THEINTRODB = "theintrodb"
 }
 
 /** Harbor's other metadata providers (src/lib/providers): TheTVDB, MDBList and Fanart.tv. */

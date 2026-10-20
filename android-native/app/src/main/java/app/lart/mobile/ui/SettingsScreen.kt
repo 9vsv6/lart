@@ -46,6 +46,14 @@ import androidx.compose.material.icons.outlined.TextFields
 import androidx.compose.material.icons.outlined.Subtitles
 import androidx.compose.material.icons.outlined.Visibility
 import androidx.compose.material.icons.outlined.GraphicEq
+import androidx.compose.material.icons.outlined.Sort
+import androidx.compose.material.icons.outlined.TouchApp
+import androidx.compose.material.icons.outlined.VideoLibrary
+import androidx.compose.material.icons.outlined.Memory
+import androidx.compose.material.icons.outlined.AspectRatio
+import androidx.compose.material.icons.outlined.PersonSearch
+import androidx.compose.material.icons.outlined.Speed
+import androidx.compose.material.icons.outlined.Wifi
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.material.icons.outlined.Download
 import androidx.compose.material.icons.outlined.Timer
@@ -136,14 +144,19 @@ private enum class Section(
     Profiles("Profiles", "The profiles on this device, and who's watching.", Icons.Outlined.Group, "profile who's watching", setOf("Profiles")),
     Stremio("Stremio", "Your Stremio sign-in: addons and library come from it.", Icons.Outlined.AccountBox, "stremio sign in email password", setOf("Stremio")),
     Trackers("Trackers", "Trakt, Simkl and AniList: scrobbling and progress.", Icons.Outlined.Sync, "trakt simkl anilist scrobble watched"),
-    Play("Play", "The player engine, and what happens when you press Play.", Icons.Outlined.PlayCircle, "engine media3 mpv instant resume stall", setOf("Player engine", "When you press Play")),
-    OnScreen("On screen", "The player's controls: seek steps, speeds, sleep timer and lock.", Icons.Outlined.SmartScreen, "seek speed sleep lock aspect xray x-ray cast quality badge stream quality title", setOf("On-screen controls")),
-    Intros("Intros", "Skip intros, recaps and credits.", Icons.Outlined.FastForward, "skip intro recap credits", setOf("Intros & credits")),
-    UpNext("Up next", "What happens between episodes.", Icons.Outlined.QueuePlayNext, "up next autoplay still watching", setOf("Up next")),
-    Picture("Picture", "Decoding, picture quality and buffering (mpv).", Icons.Outlined.Image, "hwdec hardware decoding quality buffer", setOf("Video")),
-    Audio("Audio", "Downmix, loudness, sound profiles and volume boost (mpv).", Icons.Outlined.VolumeUp, "downmix stereo volume boost loudness sound profile", setOf("Sound")),
-    MpvConf("mpv.conf", "Your own mpv options.", Icons.Outlined.Code, "mpv options advanced", setOf("Advanced")),
-    Shaders("Anime Shaders", "Anime4K upscaling and line restoration.", Icons.Outlined.AutoAwesome, "anime4k shaders upscale"),
+    Play("Play", "What Play does, resuming, and which source plays.", Icons.Outlined.PlayCircle, "play button instant manual picker resume start over remember source stalled", setOf("Play")),
+    Engine("Engine", "mpv or Android's player.", Icons.Outlined.Memory, "engine mpv media3 player", setOf("Engine")),
+    Aspect("Aspect", "How the picture fills the screen.", Icons.Outlined.AspectRatio, "aspect ratio fit fill stretch zoom", setOf("Aspect")),
+    Audio("Audio", "Downmix, loudness, sound profiles and volume boost.", Icons.Outlined.VolumeUp, "downmix stereo volume boost loudness sound profile bass night vocal", setOf("Player audio")),
+    OnScreen("On screen", "The player's controls: quality, seek steps, speeds and sleep timer.", Icons.Outlined.SmartScreen, "seek speed sleep lock quality badge volume pop-up", setOf("On screen")),
+    XRay("X-Ray", "The cast, crew and facts from the player.", Icons.Outlined.PersonSearch, "xray x-ray cast crew", setOf("X-Ray")),
+    Intros("Intros", "Skip intros, recaps and credits.", Icons.Outlined.FastForward, "skip intro recap credits theintrodb", setOf("Intros")),
+    UpNext("Up next", "What happens between episodes.", Icons.Outlined.QueuePlayNext, "up next autoplay still watching next episode", setOf("Up next")),
+    Quality("Quality", "Picture quality and hardware decoding (mpv).", Icons.Outlined.Speed, "quality hwdec hardware acceleration decoding", setOf("Quality")),
+    Picture("Picture", "Brightness, contrast, colour and HDR (mpv).", Icons.Outlined.Image, "picture brightness contrast saturation gamma hdr tone mapping", setOf("Picture")),
+    Network("Network", "Buffering for slow connections (mpv).", Icons.Outlined.Wifi, "buffer network slow connection cache", setOf("Network")),
+    MpvConf("mpv.conf", "Your own mpv options.", Icons.Outlined.Code, "mpv options advanced conf", setOf("mpv.conf")),
+    Shaders("Anime Shaders", "Anime4K upscaling.", Icons.Outlined.AutoAwesome, "anime4k shaders upscale", setOf("Anime Shaders")),
     AppLanguage("App language", "Metadata language, region and translation.", Icons.Outlined.Translate, "display language metadata region translate titles overviews image languages logos", setOf("App language")),
     AudioLanguage("Audio languages", "Which audio track plays, and the tracks never to pick.", Icons.Outlined.GraphicEq, "audio language dub commentary skip tracks", setOf("Audio languages")),
     WhatYouSee("Discovery languages", "Home rows by language, your region, and stream languages.", Icons.Outlined.Visibility, "home catalogs languages region favour stream ranking only show streams", setOf("Discovery languages")),
@@ -151,33 +164,37 @@ private enum class Section(
     SubtitleSources("Subtitle sources", "SubDL, Subsource, Wyzie, OpenSubtitles and your addons.", Icons.Outlined.Download, "subdl subsource wyzie opensubtitles api key addons sources", setOf("Subtitle sources")),
     SubtitleTiming("Subtitle timing", "The sync indicator and nudging subtitle timing.", Icons.Outlined.Timer, "sync timing delay offset indicator", setOf("Subtitle timing")),
     SubtitleLook("Subtitle style", "Background, outline, colours, font, position and size.", Icons.Outlined.TextFields, "subtitle style size colour color bold position ass font outline background opacity pip", setOf("Subtitle style")),
-    Services("Streaming services", "Your addons and debrid service.", Icons.Outlined.Inventory2, "addons debrid real-debrid torbox", setOf("Addons", "Debrid")),
-    SourcePreferences("Source preferences", "Safety, order, languages and what shows in the list.", Icons.Outlined.Tune, "order sort safety cam torrents file names timeout languages", setOf("Safety & order")),
+    Services("Services", "Your addons and debrid service.", Icons.Outlined.Inventory2, "addons debrid real-debrid torbox services", setOf("Services")),
+    SourcePreferences("Filters", "The safety filter, P2P and how long to wait for addons.", Icons.Outlined.Tune, "safety cam filter torrents p2p timeout wait", setOf("Filters")),
+    Sorting("Sorting", "The order sources come in.", Icons.Outlined.Sort, "order sort ranking addon order", setOf("Sorting")),
+    Picker("Picker", "Source mode and what each source shows.", Icons.Outlined.TouchApp, "picker source mode direct p2p descriptions release name file names", setOf("Picker")),
     StreamFilters("Stream filters", "Only show sources that match.", Icons.Outlined.FilterList, "filter resolution 4k 1080p remux bluray web hevc av1 hdr cached size"),
-    HomeRows("Home", "Rows and the hero on Home.", Icons.Outlined.Home, "home top 10 hero unreleased anime room watched hide catalogs new episodes row", setOf("Home")),
-    PosterCards("Poster cards", "What a poster card shows.", Icons.Outlined.GridView, "poster card badge corners size watched check watchlist bookmark", setOf("Poster cards")),
-    DetailPages("Detail pages", "Spoilers, episode cards, comments and reviews.", Icons.Outlined.Article, "episodes spoilers order description card size trakt comments letterboxd reviews community show pages full descriptions remember season imdb keyless free data", setOf("Show pages", "Spoilers", "Episode cards", "Community")),
-    Metadata("Metadata providers", "Where titles, artwork and scores come from.", Icons.Outlined.Storage, "tmdb omdb tvdb thetvdb mdblist fanart rpdb custom posters ratings keys metadata"),
-    Theme("Theme", "Accent colour.", Icons.Outlined.Palette, "accent colour color theme", setOf("Accent colour")),
+    HomeRows("Home", "The hero and rows on Home.", Icons.Outlined.Home, "home top 10 hero unreleased anime room watched hide catalogs new episodes row continue watching trakt", setOf("Home")),
+    PosterCards("Cards", "What a poster card shows.", Icons.Outlined.GridView, "poster card badge rating award dub watched check watchlist bookmark titles", setOf("Cards")),
+    DetailPages("Detail pages", "Show pages, spoilers, episode cards and community.", Icons.Outlined.Article, "episodes spoilers order description card size trakt comments letterboxd reviews community show pages full descriptions remember season imdb keyless free data", setOf("Detail pages")),
+    Metadata("Metadata", "Where titles, artwork and scores come from.", Icons.Outlined.Storage, "tmdb omdb tvdb thetvdb mdblist fanart rpdb custom posters ratings keys metadata providers"),
+    LibraryContent("Library", "Content filters and downloads.", Icons.Outlined.VideoLibrary, "library content filters hide anime downloads delete", setOf("Library")),
+    Theme("Theme & appearance", "Accent colour, poster size and corners.", Icons.Outlined.Palette, "accent colour color theme poster size corner radius", null),
     Storage("Storage", "Caches, watch positions on this device, and resetting settings.", Icons.Outlined.DeleteSweep, "cache images shaders watch positions reset downloads delete after watching"),
     Backup("Updates & backup", "Updates, and a copy of your setup.", Icons.Outlined.Backup, "backup restore export import file updates"),
     About("About", "This build, reporting a problem, and licences.", Icons.Outlined.Info, "version report bug github licences licenses"),
 }
 
 private enum class Group(val label: String, val section: String, val icon: ImageVector, val children: List<Section>) {
-    Account("Account & setup", "Setup", Icons.Outlined.AccountBox, listOf(Section.Profiles, Section.Stremio, Section.Trackers)),
+    Account("Account & sync", "Setup", Icons.Outlined.AccountBox, listOf(Section.Profiles, Section.Stremio, Section.Trackers)),
     Playback(
         "Playback", "Watching", Icons.Outlined.PlayCircle,
-        listOf(Section.Play, Section.OnScreen, Section.Intros, Section.UpNext, Section.Picture, Section.Audio, Section.MpvConf, Section.Shaders),
+        listOf(Section.Play, Section.Engine, Section.Aspect, Section.Audio, Section.OnScreen, Section.XRay, Section.Intros, Section.UpNext, Section.Quality, Section.Picture, Section.Network, Section.MpvConf, Section.Shaders),
     ),
     Languages("Languages & subtitles", "Language", Icons.Outlined.Translate, listOf(Section.AppLanguage, Section.AudioLanguage, Section.WhatYouSee, Section.SubtitleLanguages, Section.SubtitleSources, Section.SubtitleTiming, Section.SubtitleLook)),
     Sources(
-        "Library & metadata", "Content", Icons.Outlined.LibraryBooks,
-        listOf(Section.Services, Section.SourcePreferences, Section.StreamFilters, Section.HomeRows, Section.PosterCards, Section.DetailPages, Section.Metadata),
+        "Sources & library", "Content", Icons.Outlined.LibraryBooks,
+        listOf(Section.Services, Section.SourcePreferences, Section.Sorting, Section.Picker, Section.StreamFilters, Section.HomeRows, Section.PosterCards, Section.DetailPages, Section.Metadata, Section.LibraryContent),
     ),
     Appearance("Appearance", "Look & feel", Icons.Outlined.Palette, listOf(Section.Theme)),
-    System("System", "System", Icons.Outlined.Tune, listOf(Section.Storage, Section.Backup)),
-    Help("Help & about", "Help", Icons.Outlined.Support, listOf(Section.About)),
+    System("System", "System", Icons.Outlined.Tune, listOf(Section.Storage)),
+    Updates("Updates & backup", "Updates", Icons.Outlined.Backup, listOf(Section.Backup)),
+    Help("Help & support", "Help", Icons.Outlined.Support, listOf(Section.About)),
 }
 
 private fun groupOf(section: Section) = Group.entries.first { section in it.children }
@@ -327,6 +344,10 @@ private fun SearchResults(query: String, onOpen: (Section) -> Unit) {
 /** A tablet sub-page: its title and what it is, then its settings. */
 /** Pages ported whole from Harbor: they open with their own headings, as Harbor's do. */
 private val SELF_TITLED = setOf(
+    Section.Services, Section.SourcePreferences, Section.Sorting, Section.Picker, Section.StreamFilters,
+    Section.HomeRows, Section.PosterCards, Section.DetailPages, Section.LibraryContent, Section.Theme,
+    Section.Play, Section.Engine, Section.Aspect, Section.Audio, Section.OnScreen, Section.XRay, Section.Intros, Section.UpNext,
+    Section.Quality, Section.Picture, Section.Network, Section.MpvConf, Section.Shaders,
     Section.AppLanguage, Section.AudioLanguage, Section.WhatYouSee, Section.SubtitleLanguages,
     Section.SubtitleSources, Section.SubtitleTiming, Section.SubtitleLook,
 )
@@ -395,15 +416,14 @@ private fun SectionBody(
         when (section) {
             Section.Profiles, Section.Stremio -> AccountSection(repository, settings, set)
             Section.Trackers -> TrackersPanel(repository, settings, set)
-            Section.Play, Section.OnScreen, Section.Intros, Section.UpNext -> PlayerSection(repository, settings, set)
-            Section.Picture, Section.Audio, Section.MpvConf -> MpvSection(settings, set)
-            Section.Shaders -> ShadersSection(repository, settings, set)
+            Section.Play, Section.Engine, Section.Aspect, Section.Audio, Section.OnScreen, Section.XRay, Section.Intros, Section.UpNext,
+            Section.Quality, Section.Picture, Section.Network, Section.MpvConf, Section.Shaders -> PlayerSection(repository, settings, set)
             Section.AppLanguage, Section.AudioLanguage, Section.WhatYouSee -> LanguageSection(repository, settings, set)
             Section.SubtitleLanguages, Section.SubtitleSources, Section.SubtitleTiming, Section.SubtitleLook -> SubtitlesSection(repository, settings, set)
-            Section.Services, Section.SourcePreferences -> StreamingSection(repository, settings, set, onOpenAddons)
+            Section.Services, Section.SourcePreferences, Section.Sorting, Section.Picker -> StreamingSection(repository, settings, set, onOpenAddons)
             Section.StreamFilters -> StreamFiltersSection(settings, set)
-            Section.HomeRows, Section.DetailPages -> LibrarySection(repository, settings, set)
-            Section.PosterCards, Section.Theme -> AppearanceSection(settings, set)
+            Section.HomeRows, Section.DetailPages, Section.PosterCards, Section.LibraryContent -> LibrarySection(repository, settings, set)
+            Section.Theme -> AppearanceSection(settings, set)
             Section.Metadata -> ProvidersSection(repository)
             Section.Storage -> StorageSection(repository, set)
             Section.Backup -> BackupSection(repository)
@@ -544,126 +564,210 @@ private fun StremioCard(repository: Repository) {
 
 // ---------------- Playback ----------------
 
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 private fun PlayerSection(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
     val autoPlay by repository.autoPlay.collectAsState()
     val prefs by repository.playerPrefs.collectAsState()
+    val keys by repository.providerKeys.collectAsState()
+    val uri = LocalUriHandler.current
+    val scope = rememberCoroutineScope()
 
-    Card("Player engine") {
-        SettingsLabel("Player engine")
-        ChipRow(listOf("mpv" to "mpv", "media3" to "Android (Media3)"), settings.engine) { v -> set { it.copy(engine = v) } }
-        Muted(
-            if (settings.engine == "mpv") "Harbor's player: styled subtitles, software decoding when the phone can't, Anime4K. If mpv can't start, Lart uses Media3."
-            else "Android's own player: lightest on battery. No Anime4K; Lart draws the subtitles.",
-        )
-    }
-
-    Card("When you press Play") {
-        SettingsLabel("When you press Play")
-        SwitchRow("Instant play", "Skips the list of sources and plays the best one.", autoPlay, repository::setAutoPlay)
-        SwitchRow("Remember the source you picked", "Marks it next time, and instant play prefers it.", settings.rememberLastStream) { v -> set { it.copy(rememberLastStream = v) } }
-        SwitchRow("Resume where you left off", "Off starts every video from the beginning.", settings.resumePlayback) { v -> set { it.copy(resumePlayback = v) } }
-        SwitchRow("Show \"Resumed at\" with Start over", null, settings.resumeNotice) { v -> set { it.copy(resumeNotice = v) } }
-        SwitchRow("Switch source when a stream stalls", "Moves to the next source after it buffers this long.", settings.autoNextStreamOnStall) { v -> set { it.copy(autoNextStreamOnStall = v) } }
+    // ---- Play ----
+    Part("Play") {
+        HarborHeading("Play button behavior", "What happens when you press Play on a title.")
+        CheckList(
+            listOf(
+                Triple(true, "Instant", "Plays the best source straight away. Long-press Play to choose one yourself."),
+                Triple(false, "Manual picker", "Opens the list of sources so you pick one."),
+            ),
+            autoPlay,
+        ) { repository.setAutoPlay(it) }
+        HarborHeading("Resume", "Where a video starts when you've watched part of it.")
+        ToggleRow("Resume where you left off", "Off starts every video from the beginning.", settings.resumePlayback) { v -> set { it.copy(resumePlayback = v) } }
+        ToggleRow("Ask to resume or start over", "Shows \"Resumed at\" with a Start over button when a video picks up where you left it.", settings.resumeNotice) { v -> set { it.copy(resumeNotice = v) } }
+        HarborHeading("Sources", "Which source plays, and what happens when it struggles.")
+        ToggleRow("Remember last stream", "Marks the source you picked and plays it first next time.", settings.rememberLastStream) { v -> set { it.copy(rememberLastStream = v) } }
+        ToggleRow("Keep same source on next episode", "Stay on one source for a season: the next episode prefers the addon this one came from.", settings.keepSourceNextEpisode) { v -> set { it.copy(keepSourceNextEpisode = v) } }
+        ToggleRow("Auto-skip stalled streams", "Moves to the next source when a stream keeps buffering.", settings.autoNextStreamOnStall) { v -> set { it.copy(autoNextStreamOnStall = v) } }
         if (settings.autoNextStreamOnStall) {
-            ChipRow(listOf(5, 10, 15, 30).map { it to "$it s" }, settings.stallSec) { v -> set { it.copy(stallSec = v) } }
+            RowText("How long to wait first", "How long a stream may buffer before Lart tries the next one.")
+            PillChoice(listOf(5 to "5 s", 10 to "10 s", 15 to "15 s", 30 to "30 s"), settings.stallSec) { v -> set { it.copy(stallSec = v) } }
         }
     }
-
-    Card("On-screen controls") {
-        SettingsLabel("On-screen controls")
-        SwitchRow("X-Ray", "An X-Ray button in the player: the cast with photos, the crew and the facts about what you're watching.", settings.xrayEnabled) { v -> set { it.copy(xrayEnabled = v) } }
-        SwitchRow("Show stream quality under the title", "The source's quality, such as 4K or 1080p, next to the title in the player.", settings.qualityInPlayer) { v -> set { it.copy(qualityInPlayer = v) } }
-        Label("Rewind step")
-        ChipRow(listOf(5, 10, 15, 30).map { it to "$it s" }, settings.seekBackSec) { v -> set { it.copy(seekBackSec = v) } }
-        Label("Forward step")
-        ChipRow(listOf(5, 10, 15, 30, 60).map { it to "$it s" }, settings.seekForwardSec) { v -> set { it.copy(seekForwardSec = v) } }
-        Label("Aspect ratio", "How the picture fills the screen when a video starts.")
-        ChipRow(listOf("Fit" to "Fit", "Fill" to "Fill", "Stretch" to "Stretch"), settings.defaultFit) { v -> set { it.copy(defaultFit = v) } }
-        Label("Default speed")
-        ChipRow(settings.playbackSpeeds.sorted().map { it to speedLabel(it) }, prefs.speed) { v -> repository.updatePlayerPrefs { it.copy(speed = v) } }
-        Label("Speeds in the menu")
+    // ---- Engine ----
+    Part("Engine") {
+        HarborHeading("Player engine", "What plays the video.")
+        CheckList(
+            listOf(
+                Triple("mpv", "mpv", "Harbor's player: styled subtitles, every format, Anime4K and shaders. If mpv can't start, Lart uses Media3."),
+                Triple("media3", "Android (Media3)", "Android's own player: lightest on battery. No Anime4K; Lart draws the subtitles."),
+            ),
+            settings.engine,
+        ) { v -> set { it.copy(engine = v) } }
+    }
+    // ---- Aspect ----
+    Part("Aspect") {
+        HarborHeading("Aspect ratio", "How the picture fills the screen when a video starts. Change it while watching with a pinch.")
+        CheckList(
+            listOf(
+                Triple("Fit", "Fit", "The whole picture, with bars where the shapes differ."),
+                Triple("Fill", "Fill", "Fills the screen, trimming the edges."),
+                Triple("Stretch", "Stretch", "Fills the screen by stretching the picture."),
+            ),
+            settings.defaultFit,
+        ) { v -> set { it.copy(defaultFit = v) } }
+    }
+    // ---- Audio ----
+    Part("Player audio") {
+        HarborHeading("Player audio", "How the sound is mixed (mpv).")
+        ToggleRow("Mix surround sound down to stereo", "Clearer dialogue on phone speakers and headphones.", settings.downmixStereo) { v -> set { it.copy(downmixStereo = v) } }
+        ToggleRow("Normalize loudness", "Evens out quiet dialogue and loud scenes.", settings.audioNormalize) { v -> set { it.copy(audioNormalize = v) } }
+        HarborHeading("Sound profile", null)
+        CheckList(
+            listOf(
+                Triple("off", "Flat", "The mix as it was made."),
+                Triple("bass", "Bass boost", "More low end."),
+                Triple("voice", "Vocal clarity", "Lifts voices over music and effects."),
+                Triple("bass-reduce", "Less bass", "Softer low end, for thin speakers or late hours."),
+                Triple("night", "Night mode", "Quiet parts louder, loud parts quieter."),
+            ),
+            settings.audioProfile,
+        ) { v -> set { it.copy(audioProfile = v) } }
+        HarborHeading("Maximum volume boost", "Swipe up past full volume on the right edge to go louder.")
+        PillChoice(listOf(1 to "Off", 2 to "200%", 3 to "300%"), settings.volumeBoostMax) { v -> set { it.copy(volumeBoostMax = v) } }
+    }
+    // ---- On screen ----
+    Part("On screen") {
+        HarborHeading("Stream quality in player", null)
+        ToggleRow("Show stream quality under the title", "The source's quality, such as 4K or 1080p, next to the title.", settings.qualityInPlayer) { v -> set { it.copy(qualityInPlayer = v) } }
+        ToggleRow("Volume pop-up while watching", "Shows the volume and brightness level while you swipe the edges.", settings.volumePopup) { v -> set { it.copy(volumePopup = v) } }
+        ToggleRow("Screen lock button", "Locks the controls so a pocket or a child can't tap them.", settings.screenLock) { v -> set { it.copy(screenLock = v) } }
+        HarborHeading("Seek steps", "How far the back and forward buttons and double-taps jump.")
+        RowText("Back", null)
+        PillChoice(listOf(5 to "5 s", 10 to "10 s", 15 to "15 s", 30 to "30 s"), settings.seekBackSec) { v -> set { it.copy(seekBackSec = v) } }
+        RowText("Forward", null)
+        PillChoice(listOf(5 to "5 s", 10 to "10 s", 15 to "15 s", 30 to "30 s", 60 to "60 s"), settings.seekForwardSec) { v -> set { it.copy(seekForwardSec = v) } }
+        HarborHeading("Playback speed", "The speed a video starts at, and the speeds in the player's menu.")
+        HarborSelect(settings.playbackSpeeds.sorted().map { it to speedLabel(it) }, prefs.speed) { v -> repository.updatePlayerPrefs { it.copy(speed = v) } }
         MultiChipRow(listOf(0.25f, 0.5f, 0.75f, 1f, 1.25f, 1.5f, 1.75f, 2f, 2.5f, 3f).map { it to speedLabel(it) }, settings.playbackSpeeds.toSet()) { v ->
             set { it.copy(playbackSpeeds = (v + 1f).distinct().sorted()) }
         }
-        Label("Sleep timer choices")
-        MultiChipRow(listOf(10, 15, 20, 30, 45, 60, 90, 120).map { it to "$it min" }, settings.sleepMinutes.toSet()) { v ->
-            set { it.copy(sleepMinutes = v.sorted()) }
-        }
-        SwitchRow("Screen lock button", "Locks the controls so a pocket or a child can't tap them.", settings.screenLock) { v -> set { it.copy(screenLock = v) } }
+        HarborHeading("Sleep timer", "The choices in the player's sleep timer.")
+        MultiChipRow(listOf(10, 15, 20, 30, 45, 60, 90, 120).map { it to "$it min" }, settings.sleepMinutes.toSet()) { v -> set { it.copy(sleepMinutes = v.sorted()) } }
     }
-
-    Card("Up next") {
-        SettingsLabel("Up next")
-        SwitchRow("Auto-play next episode", "When an episode ends.", settings.autoPlayNextEpisode) { v -> set { it.copy(autoPlayNextEpisode = v) } }
-        Label("Show Up next", "\"At the credits\" uses the intro databases' credit times when they have them.")
-        ChipRow(listOf(0 to "At the credits", 30 to "30 s", 45 to "45 s", 60 to "1 min", 90 to "90 s"), settings.nextEpisodeLeadSec) { v ->
-            set { it.copy(nextEpisodeLeadSec = v) }
-        }
-        SwitchRow("Keep the same source for the next episode", "Prefers the addon the current episode came from.", settings.keepSourceNextEpisode) { v -> set { it.copy(keepSourceNextEpisode = v) } }
-        Label("Ask if you're still watching after")
-        ChipRow(listOf(0 to "Never", 2 to "2 episodes", 3 to "3", 5 to "5"), prefs.stillWatchingAfter) { n ->
-            repository.updatePlayerPrefs { it.copy(stillWatchingAfter = n) }
-        }
+    // ---- X-Ray ----
+    Part("X-Ray") {
+        HarborHeading("X-Ray", "Who's in what you're watching, the crew and the facts, from a button in the player.")
+        ToggleRow("Enable X-Ray", "Adds the X-Ray button under the title in the player.", settings.xrayEnabled) { v -> set { it.copy(xrayEnabled = v) } }
+        Muted("Harbor's on-screen face matching runs on the desktop only.")
     }
-
-    Card("Intros & credits") {
-        SettingsLabel("Intros & credits")
-        Muted("From IntroDB, TheIntroDB, SkipDB and AniSkip, when they know the episode.")
-        SwitchRow("Show the Skip button", null, settings.showSkipButton) { v -> set { it.copy(showSkipButton = v) } }
+    // ---- Intros ----
+    Part("Intros") {
+        HarborHeading("Skip intros", "From IntroDB, TheIntroDB, SkipDB and AniSkip, when they know the episode.")
+        ToggleRow("Show the Skip button", null, settings.showSkipButton) { v -> set { it.copy(showSkipButton = v) } }
         if (settings.showSkipButton) {
-            Label("Auto-hide the Skip button after")
-            ChipRow(listOf(0 to "Never", 5 to "5 s", 10 to "10 s", 15 to "15 s"), settings.skipButtonHideSec) { v -> set { it.copy(skipButtonHideSec = v) } }
+            RowText("Auto-hide the Skip button after", null)
+            PillChoice(listOf(0 to "Never", 5 to "5 s", 10 to "10 s", 15 to "15 s"), settings.skipButtonHideSec) { v -> set { it.copy(skipButtonHideSec = v) } }
         }
-        SwitchRow("Auto-skip intros", null, prefs.autoSkipIntro) { v -> repository.updatePlayerPrefs { it.copy(autoSkipIntro = v) } }
-        SwitchRow("Auto-skip recaps", null, settings.autoSkipRecap) { v -> set { it.copy(autoSkipRecap = v) } }
-        SwitchRow("Auto-skip credit outros", "Goes straight to the next episode, or to the end of a movie.", settings.autoSkipOutro) { v -> set { it.copy(autoSkipOutro = v) } }
+        ToggleRow("Auto-skip intros", null, prefs.autoSkipIntro) { v -> repository.updatePlayerPrefs { it.copy(autoSkipIntro = v) } }
+        ToggleRow("Auto-skip recaps", null, settings.autoSkipRecap) { v -> set { it.copy(autoSkipRecap = v) } }
+        ToggleRow("Auto-skip credit outros", "Goes straight to the next episode, or to the end of a movie.", settings.autoSkipOutro) { v -> set { it.copy(autoSkipOutro = v) } }
+        ProviderKeyBlock(
+            "T", Color(0xFFF0A35E), "TheIntroDB", "Community intro and credit times. A key raises your request limit.",
+            true, {},
+            "TheIntroDB API key", keys[ProviderKey.THEINTRODB], { v -> scope.launch { repository.setProviderKey(ProviderKey.THEINTRODB, v) } },
+            "Works without a key at a lower limit.", "Get a key at theintrodb.org",
+        ) { uri.openUri("https://theintrodb.org") }
     }
-}
-
-@Composable
-private fun MpvSection(settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
-    if (settings.engine != "mpv") Muted("These apply when the player engine is mpv (Playback → Player).")
-    Card("Video") {
-        SettingsLabel("Video")
-        Label("Decoding")
-        ChipRow(listOf("auto" to "Auto", "on" to "Hardware only", "off" to "Software"), settings.mpvHwdec) { v -> set { it.copy(mpvHwdec = v) } }
-        Label("Playback quality", "Quality uses sharper scaling and debanding; Performance saves battery.")
-        ChipRow(listOf("performance" to "Performance", "balanced" to "Balanced", "quality" to "Quality"), settings.mpvQuality) { v -> set { it.copy(mpvQuality = v) } }
-        Label("Buffer")
-        ChipRow(listOf("small" to "Small", "auto" to "Normal", "large" to "Large"), settings.bufferSize) { v -> set { it.copy(bufferSize = v) } }
+    // ---- Up next ----
+    Part("Up next") {
+        HarborHeading("Next episode prompt & auto-play", "What happens when an episode ends.")
+        ToggleRow("Auto-play next episode", null, settings.autoPlayNextEpisode) { v -> set { it.copy(autoPlayNextEpisode = v) } }
+        RowText("Next episode prompt", "When Up next appears. \"At the credits\" uses the intro databases' credit times.")
+        PillChoice(listOf(0 to "At the credits", 30 to "30 s", 45 to "45 s", 60 to "1 min", 90 to "90 s"), settings.nextEpisodeLeadSec) { v -> set { it.copy(nextEpisodeLeadSec = v) } }
+        RowText("Ask if you're still watching", "After this many episodes in a row.")
+        PillChoice(listOf(0 to "Never", 2 to "2", 3 to "3", 5 to "5"), prefs.stillWatchingAfter) { n -> repository.updatePlayerPrefs { it.copy(stillWatchingAfter = n) } }
     }
-    Card("Sound") {
-        SettingsLabel("Sound")
-        SwitchRow("Mix surround sound down to stereo", "Clearer dialogue on phone speakers and headphones.", settings.downmixStereo) { v -> set { it.copy(downmixStereo = v) } }
-        SwitchRow("Normalize loudness", "Evens out quiet dialogue and loud scenes.", settings.audioNormalize) { v -> set { it.copy(audioNormalize = v) } }
-        Label("Sound profile")
-        ChipRow(listOf("off" to "Off", "bass" to "Bass boost", "voice" to "Voice", "bass-reduce" to "Less bass", "night" to "Night"), settings.audioProfile) { v ->
-            set { it.copy(audioProfile = v) }
+    // ---- Quality (mpv) ----
+    Part("Quality") {
+        if (settings.engine != "mpv") Muted("These apply when the player engine is mpv.")
+        HarborHeading("Picture quality", "How hard mpv works on the picture.")
+        CheckList(
+            listOf(
+                Triple("performance", "Smooth on weak phones", "Simple scaling, no debanding. Saves battery."),
+                Triple("balanced", "Balanced", "Good scaling at a modest cost."),
+                Triple("quality", "Maximum quality", "Sharper scaling and debanding. Uses more power."),
+            ),
+            settings.mpvQuality,
+        ) { v -> set { it.copy(mpvQuality = v) } }
+        HarborHeading("Hardware acceleration", "Decoding on the phone's video chip, or in software.")
+        CheckList(
+            listOf(
+                Triple("auto", "Auto", "The video chip when it can, software when it can't."),
+                Triple("on", "Hardware only", "Always the video chip. Fastest; some files may fail."),
+                Triple("off", "Software", "Always software. Most compatible; uses more battery."),
+            ),
+            settings.mpvHwdec,
+        ) { v -> set { it.copy(mpvHwdec = v) } }
+    }
+    // ---- Picture (mpv) ----
+    Part("Picture") {
+        HarborHeading("Picture adjustments", "Brightness, contrast and colour on every video (mpv).")
+        FlowRow(horizontalArrangement = Arrangement.spacedBy(8.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            listOf(
+                "Brighten dark movies" to listOf(8, 6, 0, 10),
+                "Punchier color" to listOf(0, 8, 20, 0),
+                "Easy on the eyes" to listOf(-6, -6, -10, 0),
+                "Crisp (anime)" to listOf(0, 10, 10, -4),
+            ).forEach { (label, v) ->
+                HGhostButton(onClick = { set { it.copy(picBrightness = v[0], picContrast = v[1], picSaturation = v[2], picGamma = v[3]) } }) { Text(label, fontSize = 13.sp) }
+            }
         }
-        Label("Maximum volume boost", "Swipe up past full volume on the right edge to go louder.")
-        ChipRow(listOf(1 to "Off", 2 to "200%", 3 to "300%"), settings.volumeBoostMax) { v -> set { it.copy(volumeBoostMax = v) } }
+        val steps = (-30..30 step 5).map { it.toFloat() }
+        RowText("Brightness", null)
+        TickSlider(settings.picBrightness.toFloat(), steps, { "${it.toInt()}" }, 0f) { v -> set { it.copy(picBrightness = v.toInt()) } }
+        RowText("Contrast", null)
+        TickSlider(settings.picContrast.toFloat(), steps, { "${it.toInt()}" }, 0f) { v -> set { it.copy(picContrast = v.toInt()) } }
+        RowText("Saturation", null)
+        TickSlider(settings.picSaturation.toFloat(), steps, { "${it.toInt()}" }, 0f) { v -> set { it.copy(picSaturation = v.toInt()) } }
+        RowText("Gamma (midtones)", null)
+        TickSlider(settings.picGamma.toFloat(), steps, { "${it.toInt()}" }, 0f) { v -> set { it.copy(picGamma = v.toInt()) } }
+        HGhostButton(onClick = { set { it.copy(picBrightness = 0, picContrast = 0, picSaturation = 0, picGamma = 0) } }) { Text("Reset picture") }
+        HarborHeading("Color & HDR", "How HDR video is fitted to a screen that can't show it all.")
+        HarborSelect(
+            listOf("auto" to "Auto", "bt.2390" to "BT.2390 (balanced)", "hable" to "Hable (filmic)", "mobius" to "Mobius (keeps highlights)", "reinhard" to "Reinhard (soft)", "clip" to "Clip (none)"),
+            settings.toneMapping,
+        ) { v -> set { it.copy(toneMapping = v) } }
     }
-    Card("Advanced") {
-        SettingsLabel("Advanced")
+    // ---- Network (mpv) ----
+    Part("Network") {
+        HarborHeading("Slow or unstable connection", "How much video mpv keeps ready ahead of where you are.")
+        CheckList(
+            listOf(
+                Triple("small", "Small buffer", "Starts fastest; uses the least memory."),
+                Triple("auto", "Normal", "Right for most connections."),
+                Triple("large", "Build a bigger buffer", "Rides out a slow or unstable connection; uses more memory."),
+            ),
+            settings.bufferSize,
+        ) { v -> set { it.copy(bufferSize = v) } }
+    }
+    // ---- mpv.conf ----
+    Part("mpv.conf") {
+        HarborHeading("Advanced mpv options (mpv.conf)", "One per line, as key=value. Applied when a video starts, after Lart's own.")
         MpvOptionsField(settings.mpvExtraOptions) { v -> set { it.copy(mpvExtraOptions = v) } }
     }
-}
-
-@Composable
-private fun ShadersSection(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
-    val prefs by repository.playerPrefs.collectAsState()
-    if (settings.engine != "mpv") Muted("Anime4K needs the mpv engine (Playback → Player).")
-    Card("Mode") {
-        SettingsLabel("Mode")
-        Muted("You can also change it from the player's Anime4K button.")
-        ChipRow(listOf("" to "Off") + Anime4K.Mode.entries.map { it.name to it.label }, prefs.anime4kMode) { mode ->
+    // ---- Anime Shaders ----
+    Part("Anime Shaders") {
+        if (settings.engine != "mpv") Muted("Anime4K needs the mpv engine.")
+        HarborHeading("Anime4K upscaling", "Sharper lines and cleaner upscaling for anime. You can also switch it from the player's Anime4K button.")
+        CheckList(listOf(Triple("", "Off", null)) + Anime4K.Mode.entries.map { Triple(it.name, it.label, null) }, prefs.anime4kMode) { mode ->
             repository.updatePlayerPrefs { it.copy(anime4kMode = mode) }
         }
-        Label("Quality")
-        ChipRow(listOf(false to "Fast", true to "HQ"), prefs.anime4kHq) { hq -> repository.updatePlayerPrefs { it.copy(anime4kHq = hq) } }
-        SwitchRow("Anime only", "Leaves live-action films and series untouched.", settings.anime4kAnimeOnly) { v -> set { it.copy(anime4kAnimeOnly = v) } }
-        SwitchRow("Show an Anime4K badge while playing", null, settings.anime4kIndicator) { v -> set { it.copy(anime4kIndicator = v) } }
+        RowText("Quality", "HQ uses the heavier networks; Fast suits most phones.")
+        PillChoice(listOf(false to "Fast", true to "HQ"), prefs.anime4kHq) { hq -> repository.updatePlayerPrefs { it.copy(anime4kHq = hq) } }
+        ToggleRow("Run Anime4K on everything, not just anime", null, !settings.anime4kAnimeOnly) { v -> set { it.copy(anime4kAnimeOnly = !v) } }
+        ToggleRow("Show Anime4K indicator", "A badge while it's on.", settings.anime4kIndicator) { v -> set { it.copy(anime4kIndicator = v) } }
     }
 }
 
@@ -672,8 +776,7 @@ private fun speedLabel(speed: Float) = speed.toString().removeSuffix(".0") + "×
 @Composable
 private fun MpvOptionsField(saved: String, onSave: (String) -> Unit) {
     var text by remember(saved) { mutableStateOf(saved) }
-    Label("Extra mpv options", "One per line, as key=value (for example deband=yes). Applied when a video starts.")
-    HTextField(value = text, onValueChange = { text = it }, modifier = Modifier.fillMaxWidth(), minLines = 3, label = { Text("deband=yes") })
+    HTextField(value = text, onValueChange = { text = it }, modifier = Modifier.fillMaxWidth(), minLines = 4, label = { Text("deband=yes") })
     if (text != saved) HButton(onClick = { onSave(text.trim()) }) { Text("Save options") }
 }
 
@@ -926,22 +1029,47 @@ private fun SubtitlePreview(prefs: app.lart.mobile.data.PlayerPrefs, settings: A
 @Composable
 private fun StreamingSection(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit, onOpenAddons: () -> Unit) {
     val addons by repository.addons.collectAsState()
-    Part("Addons") {
-        SettingsSection("Addons", "${addons.size} installed: ${addons.joinToString(", ") { it.manifest.name }}") {
-            HButton(onClick = onOpenAddons) { Text("Manage addons") }
-        }
+    // ---- Services ----
+    Part("Services") {
+        HarborHeading("Addons", "${addons.size} installed: ${addons.joinToString(", ") { it.manifest.name }}")
+        HButton(onClick = onOpenAddons) { Text("Manage addons") }
+        DebridCard(repository)
+        Muted("Harbor's home servers (Jellyfin, Emby, Plex) and Easynews aren't in the Android app yet.")
     }
-    Part("Debrid") { DebridCard(repository) }
-    Card("Safety & order") {
-        SettingsLabel("Safety & order")
-        Label("Stream safety filter", "Balanced hides CAM and telesync rips; Strict also hides tiny files, usually fakes.")
-        ChipRow(listOf("off" to "Off", "balanced" to "Balanced", "strict" to "Strict"), settings.safetyFilter) { v -> set { it.copy(safetyFilter = v) } }
-        Label("Order")
-        ChipRow(listOf("lart" to "Best first", "addon" to "As the addons list them"), settings.streamSort) { v -> set { it.copy(streamSort = v) } }
-        SwitchRow("No torrents", "Hide torrent sources, even with debrid.", settings.torrentsDisabled) { v -> set { it.copy(torrentsDisabled = v) } }
-        SwitchRow("Show file names", "Under each source in the list.", settings.showFilename) { v -> set { it.copy(showFilename = v) } }
-        Label("Addon timeout", "How long to wait for a slow addon before showing the rest.")
-        ChipRow(listOf(10 to "10 s", 20 to "20 s", 30 to "30 s", 60 to "60 s"), settings.addonTimeoutSec) { v -> set { it.copy(addonTimeoutSec = v) } }
+    // ---- Filters ----
+    Part("Filters") {
+        HarborHeading("Stream safety filter", "Hides fake and low-quality sources before you see them.")
+        CheckList(
+            listOf(
+                Triple("off", "Off", "Every source your addons return."),
+                Triple("balanced", "Balanced", "Hides CAM and telesync rips."),
+                Triple("strict", "Strict", "Also hides tiny files, which are usually fakes."),
+            ),
+            settings.safetyFilter,
+        ) { v -> set { it.copy(safetyFilter = v) } }
+        ToggleRow("Disable P2P entirely", "Hide torrent sources, even with debrid.", settings.torrentsDisabled) { v -> set { it.copy(torrentsDisabled = v) } }
+        HarborHeading("Addon wait time", "How long to wait for a slow addon before showing the rest.")
+        PillChoice(listOf(10 to "10 s", 20 to "20 s", 30 to "30 s", 60 to "60 s"), settings.addonTimeoutSec) { v -> set { it.copy(addonTimeoutSec = v) } }
+    }
+    // ---- Sorting ----
+    Part("Sorting") {
+        HarborHeading("Result order", "How sources are ordered in the picker.")
+        CheckList(
+            listOf(
+                Triple("lart", "Ranking", "Best first: quality, cached on debrid, your languages, then size."),
+                Triple("addon", "Addon order", "As your addons list them, addon by addon."),
+            ),
+            settings.streamSort,
+        ) { v -> set { it.copy(streamSort = v) } }
+        Muted("Stream languages that rank higher are set under Languages & subtitles › Discovery languages.")
+    }
+    // ---- Picker ----
+    Part("Picker") {
+        HarborHeading("Source mode", "Which sources the picker opens on.")
+        PillChoice(listOf("Both" to "Both", "Direct" to "Direct/debrid", "P2P" to "P2P"), settings.defaultSourceMode) { v -> set { it.copy(defaultSourceMode = v) } }
+        HarborHeading("Picker details", "What each source shows.")
+        ToggleRow("Show full descriptions", "Each source's whole text, instead of the first lines.", settings.pickerFullDescription) { v -> set { it.copy(pickerFullDescription = v) } }
+        ToggleRow("Show release name", "The file name under each source.", settings.showFilename) { v -> set { it.copy(showFilename = v) } }
     }
 }
 
@@ -949,81 +1077,76 @@ private fun StreamingSection(repository: Repository, settings: AppSettings, set:
 private fun StreamFiltersSection(settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
     val filter = settings.streamFilter
     fun update(change: (StreamFilter) -> StreamFilter) = set { it.copy(streamFilter = change(it.streamFilter)) }
-    Card("Quality") {
-        SettingsLabel("Quality")
-        Muted("Only sources that match show up. Nothing picked in a row means any.")
-        Label("Resolution")
-        MultiChipRow(listOf(2160 to "4K", 1080 to "1080p", 720 to "720p", 480 to "SD"), filter.resolutions) { v -> update { it.copy(resolutions = v.toSet()) } }
-        Label("Release")
-        MultiChipRow(listOf("remux" to "Remux", "bluray" to "Blu-ray", "web" to "WEB"), filter.sources) { v -> update { it.copy(sources = v.toSet()) } }
-        Label("Video codec")
-        MultiChipRow(listOf("hevc" to "HEVC", "av1" to "AV1", "h264" to "H.264"), filter.codecs) { v -> update { it.copy(codecs = v.toSet()) } }
-        SwitchRow("HDR only", null, filter.requireHdr) { v -> update { it.copy(requireHdr = v) } }
-        SwitchRow("Cached on debrid only", "Hides torrents your debrid service doesn't already have.", filter.cachedOnly) { v -> update { it.copy(cachedOnly = v) } }
-        Label("Largest file")
-        ChipRow(listOf(0 to "Any", 2 to "2 GB", 5 to "5 GB", 10 to "10 GB", 20 to "20 GB", 40 to "40 GB"), filter.maxSizeGb) { v -> update { it.copy(maxSizeGb = v) } }
-        if (filter.active) HGhostButton(onClick = { update { StreamFilter() } }) { Text("Clear the filter") }
-    }
+    HarborHeading("Stream filter", "Only sources that match show up. Nothing picked in a row means any.")
+    RowText("Resolution filter", null)
+    MultiChipRow(listOf(2160 to "4K", 1080 to "1080p", 720 to "720p", 480 to "SD"), filter.resolutions) { v -> update { it.copy(resolutions = v.toSet()) } }
+    RowText("Source filter", null)
+    MultiChipRow(listOf("remux" to "Remux", "bluray" to "Blu-ray", "web" to "WEB"), filter.sources) { v -> update { it.copy(sources = v.toSet()) } }
+    RowText("Codec filter", null)
+    MultiChipRow(listOf("hevc" to "HEVC", "av1" to "AV1", "h264" to "H.264"), filter.codecs) { v -> update { it.copy(codecs = v.toSet()) } }
+    ToggleRow("HDR only", null, filter.requireHdr) { v -> update { it.copy(requireHdr = v) } }
+    ToggleRow("Cached only", "Hides torrents your debrid service doesn't already have.", filter.cachedOnly) { v -> update { it.copy(cachedOnly = v) } }
+    RowText("Max size (GB)", null)
+    PillChoice(listOf(0 to "Any", 2 to "2", 5 to "5", 10 to "10", 20 to "20", 40 to "40"), filter.maxSizeGb) { v -> update { it.copy(maxSizeGb = v) } }
+    if (filter.active) HGhostButton(onClick = { update { StreamFilter() } }) { Text("Use no stream filter") }
 }
 
 @Composable
 private fun LibrarySection(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
-    Card("Home") {
-        SettingsLabel("Home")
-        SwitchRow("Top 10 row", null, settings.showTop10) { v -> set { it.copy(showTop10 = v) } }
-        SwitchRow("Rotate the hero", "Moves to the next featured title every few seconds.", settings.heroAutoRotate) { v -> set { it.copy(heroAutoRotate = v) } }
-        SwitchRow("Hide unreleased titles", null, settings.hideUnreleased) { v -> set { it.copy(hideUnreleased = v) } }
-        SwitchRow("Hide anime", "Removes the Anime view and anime rows.", settings.hideAnime) { v -> set { it.copy(hideAnime = v) } }
-        SwitchRow("Keep anime in the anime room only", "Anime stays in the Anime view, out of Home, Movies and Shows.", settings.animeRoomOnly) { v -> set { it.copy(animeRoomOnly = v) } }
-        SwitchRow("Hide watched titles in catalogs", "Titles you have finished drop out of the rows.", settings.hideWatched) { v -> set { it.copy(hideWatched = v) } }
-        SwitchRow("New episodes row", "The last two weeks of episodes from the shows you follow, on Home.", settings.newEpisodesRow) { v -> set { it.copy(newEpisodesRow = v) } }
+    // ---- Home ----
+    Part("Home") {
+        HarborHeading("Home hero", "The featured banner at the top of Home.")
+        ToggleRow("Cycle the hero", "Moves to the next featured title every few seconds.", settings.heroAutoRotate) { v -> set { it.copy(heroAutoRotate = v) } }
+        HarborHeading("Rows", "What Home's rows show.")
+        ToggleRow("Top 10 ribbon", "The Top 10 Today row with big numbers.", settings.showTop10) { v -> set { it.copy(showTop10 = v) } }
+        ToggleRow("New Episodes row", "The last two weeks of episodes from the shows you follow.", settings.newEpisodesRow) { v -> set { it.copy(newEpisodesRow = v) } }
+        ToggleRow("Hide unreleased titles", null, settings.hideUnreleased) { v -> set { it.copy(hideUnreleased = v) } }
+        ToggleRow("Hide watched titles in catalogs", "Films you have finished drop out of the rows.", settings.hideWatched) { v -> set { it.copy(hideWatched = v) } }
+        ToggleRow("Keep anime in the Anime room only", "Anime stays in the Anime view, out of Home, Movies and Shows.", settings.animeRoomOnly) { v -> set { it.copy(animeRoomOnly = v) } }
+        HarborHeading("Continue Watching", null)
+        ToggleRow("Trakt in Continue Watching", "Adds what you're watching elsewhere, from Trakt.", settings.traktInContinueWatching) { v -> set { it.copy(traktInContinueWatching = v) } }
     }
-    // Harbor's Detail pages tab: Spoilers, then Episode cards.
-    Part("Show pages") {
-        SettingsSection("Show pages", "How a show or movie page behaves when you open it.") {
-            Column {
-                ToggleRow("Show full descriptions", "Opens with the whole synopsis instead of the first lines.", settings.fullDescriptions) { v -> set { it.copy(fullDescriptions = v) } }
-                ToggleRow("Remember your place on show pages", "Reopens a show on the season you last looked at.", settings.rememberSeason) { v -> set { it.copy(rememberSeason = v) } }
-                ToggleRow("Use free IMDb data without a TMDB key", "Cast photos, networks and air dates from TVMaze and imdbapi.dev when there is no TMDB key.", settings.keylessDetails) { v -> set { it.copy(keylessDetails = v) } }
-            }
-        }
+    // ---- Cards ----
+    Part("Cards") {
+        HarborHeading("On the poster", "What a poster card shows.")
+        ToggleRow("IMDb rating", "The rating in the corner of each poster.", settings.showRatingBadge) { v -> set { it.copy(showRatingBadge = v) } }
+        ToggleRow("In cinema and New badges", "Marks movies now in theaters, and titles from this year.", settings.showCardBadges) { v -> set { it.copy(showCardBadges = v) } }
+        ToggleRow("Award tab on cards", "The top award a title won, such as OSCAR or 4 EMMYS (from Wikidata).", settings.showAwardBadge) { v -> set { it.copy(showAwardBadge = v) } }
+        ToggleRow("Show DUB badge on anime cards", "Anime with an English dub airing now (from AniSchedule).", settings.showDubBadge) { v -> set { it.copy(showDubBadge = v) } }
+        ToggleRow("Watched badge", "A check on the posters of titles you have watched.", settings.watchedBadge) { v -> set { it.copy(watchedBadge = v) } }
+        ToggleRow("Watchlist bookmark", "A bookmark on the posters of titles in your list.", settings.watchlistBookmark) { v -> set { it.copy(watchlistBookmark = v) } }
+        ToggleRow("Hide titles under posters", null, settings.hidePosterTitles) { v -> set { it.copy(hidePosterTitles = v) } }
     }
-    Part("Spoilers") {
-        SettingsSection("Spoilers", "Keep unwatched episode details hidden.") {
-            Column {
-                ToggleRow("Blur spoilers", "Hides spoiler-prone episode details in episode lists until you have watched them.", settings.hideSpoilers) { v -> set { it.copy(hideSpoilers = v) } }
-                if (settings.hideSpoilers) {
-                    ToggleRow("Blur thumbnails", null, settings.spoilerThumbnails) { v -> set { it.copy(spoilerThumbnails = v) } }
-                    ToggleRow("Hide titles", null, settings.spoilerTitles) { v -> set { it.copy(spoilerTitles = v) } }
-                    ToggleRow("Hide descriptions", null, settings.spoilerDescriptions) { v -> set { it.copy(spoilerDescriptions = v) } }
-                }
-            }
+    // ---- Detail pages ----
+    Part("Detail pages") {
+        HarborHeading("Show pages", "How a show or movie page behaves when you open it.")
+        ToggleRow("Show full descriptions", "Opens with the whole synopsis instead of the first lines.", settings.fullDescriptions) { v -> set { it.copy(fullDescriptions = v) } }
+        ToggleRow("Remember your place on show pages", "Reopens a show on the season you last looked at.", settings.rememberSeason) { v -> set { it.copy(rememberSeason = v) } }
+        ToggleRow("Use free IMDb data without a TMDB key", "Cast photos, networks and air dates from TVMaze and imdbapi.dev when there is no TMDB key.", settings.keylessDetails) { v -> set { it.copy(keylessDetails = v) } }
+        HarborHeading("Spoilers (blur)", "Keep unwatched episode details hidden.")
+        ToggleRow("Blur spoilers", "Hides spoiler-prone episode details until you have watched them.", settings.hideSpoilers) { v -> set { it.copy(hideSpoilers = v) } }
+        if (settings.hideSpoilers) {
+            ToggleRow("Blur thumbnails", null, settings.spoilerThumbnails) { v -> set { it.copy(spoilerThumbnails = v) } }
+            ToggleRow("Blur titles", null, settings.spoilerTitles) { v -> set { it.copy(spoilerTitles = v) } }
+            ToggleRow("Blur descriptions", null, settings.spoilerDescriptions) { v -> set { it.copy(spoilerDescriptions = v) } }
         }
+        HarborHeading("Episode cards", "What an episode shows on a title page.")
+        ToggleRow("Show IMDb rating on episodes", "Add your free OMDb key for real IMDb scores; without it, ratings come from TMDB or Cinemeta.", settings.showEpisodeRating) { v -> set { it.copy(showEpisodeRating = v) } }
+        ToggleRow("Show episode description", null, settings.showEpisodeDescription) { v -> set { it.copy(showEpisodeDescription = v) } }
+        RowText("Episode order", null)
+        PillChoice(listOf(false to "Oldest first", true to "Newest first"), settings.episodesNewestFirst) { v -> set { it.copy(episodesNewestFirst = v) } }
+        RowText("Episode card size", "Bigger cards show larger artwork.")
+        PillChoice(listOf(0 to "Default", 1 to "Large", 2 to "Extra large"), settings.episodeCardSize) { v -> set { it.copy(episodeCardSize = v) } }
+        HarborHeading("Community", "What other people say about a title.")
+        ToggleRow("Trakt comments", "Shows Trakt comments and reviews on title pages.", settings.showTraktComments) { v -> set { it.copy(showTraktComments = v) } }
+        ToggleRow("Letterboxd reviews", "Shows Letterboxd's average and popular reviews on movie pages.", settings.showLetterboxdDetail) { v -> set { it.copy(showLetterboxdDetail = v) } }
     }
-    Part("Episode cards") {
-        SettingsSection("Episode cards", "What an episode shows on a title page.") {
-            Column {
-                SettingsLabel("On the card")
-                ToggleRow("Show IMDb rating on episodes", "Shows each episode's rating. Add your free OMDb API key for real IMDb scores; without it, ratings fall back to TMDB.", settings.showEpisodeRating) { v -> set { it.copy(showEpisodeRating = v) } }
-                ToggleRow("Show episode description", "Shows the episode synopsis on the cards. Turn it off to hide it.", settings.showEpisodeDescription) { v -> set { it.copy(showEpisodeDescription = v) } }
-                Label("Order")
-                Box(Modifier.padding(top = 10.dp, bottom = 6.dp)) {
-                    ChipRow(listOf(false to "Oldest first", true to "Newest first"), settings.episodesNewestFirst) { v -> set { it.copy(episodesNewestFirst = v) } }
-                }
-                Label("Card size", "How big episode cards are. Bigger cards show larger artwork.")
-                Box(Modifier.padding(top = 10.dp)) {
-                    ChipRow(listOf(0 to "Default", 1 to "Large", 2 to "Extra large"), settings.episodeCardSize) { v -> set { it.copy(episodeCardSize = v) } }
-                }
-            }
-        }
-    }
-    Part("Community") {
-        SettingsSection("Community", "What other people say about a title.") {
-            Column {
-                ToggleRow("Trakt comments", "Shows Trakt comments and reviews on title pages.", settings.showTraktComments) { v -> set { it.copy(showTraktComments = v) } }
-                ToggleRow("Letterboxd reviews", "Shows Letterboxd's average and popular reviews on movie pages.", settings.showLetterboxdDetail) { v -> set { it.copy(showLetterboxdDetail = v) } }
-            }
-        }
+    // ---- Library ----
+    Part("Library") {
+        HarborHeading("Content filters", "What Lart shows at all.")
+        ToggleRow("Hide anime", "Removes the Anime view and anime rows.", settings.hideAnime) { v -> set { it.copy(hideAnime = v) } }
+        HarborHeading("Downloads", "Files you saved for offline play.")
+        ToggleRow("Delete after I finish watching", "Frees the space once a downloaded movie or episode is watched.", settings.deleteAfterWatching) { v -> set { it.copy(deleteAfterWatching = v) } }
     }
 }
 
@@ -1120,36 +1243,16 @@ private fun ProvidersSection(repository: Repository) {
 
 private val ACCENTS = listOf(0xFFF0A35E, 0xFFE57373, 0xFFF06292, 0xFFBA68C8, 0xFF7986CB, 0xFF4FC3F7, 0xFF4DB6AC, 0xFF81C784, 0xFFDCE775, 0xFFFFD54F)
 
-@OptIn(ExperimentalLayoutApi::class)
+/** Harbor's Theme & appearance: the accent, then poster size and corners, as its Theme tab. */
 @Composable
 private fun AppearanceSection(settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
-    Card("Accent colour") {
-        SettingsLabel("Accent colour")
-        FlowRow(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-            ACCENTS.forEach { argb ->
-                Box(
-                    Modifier.size(42.dp).clip(CircleShape).background(Color(argb.toInt()))
-                        .border(if (settings.accent == argb) 3.dp else 0.dp, Color.White, CircleShape)
-                        .clickable { set { it.copy(accent = argb) } },
-                    contentAlignment = Alignment.Center,
-                ) { if (settings.accent == argb) Icon(Icons.Rounded.Check, "Selected", tint = Color.Black) }
-            }
-        }
-    }
-    Card("Poster cards") {
-        SettingsLabel("Poster cards")
-        SwitchRow("Rating badge", "IMDb rating in the corner of each poster.", settings.showRatingBadge) { v -> set { it.copy(showRatingBadge = v) } }
-        SwitchRow("In cinema and New badges", "Marks movies now in theaters, and titles from this year.", settings.showCardBadges) { v -> set { it.copy(showCardBadges = v) } }
-        SwitchRow("Award labels", "The top award a title won, such as OSCAR or 4 EMMYS (from Wikidata).", settings.showAwardBadge) { v -> set { it.copy(showAwardBadge = v) } }
-        SwitchRow("Dub badge", "Marks anime with an English dub airing now (from AniSchedule).", settings.showDubBadge) { v -> set { it.copy(showDubBadge = v) } }
-        SwitchRow("Hide titles under posters", null, settings.hidePosterTitles) { v -> set { it.copy(hidePosterTitles = v) } }
-        SwitchRow("Watched badge", "A check on the posters of titles you have watched.", settings.watchedBadge) { v -> set { it.copy(watchedBadge = v) } }
-        SwitchRow("Watchlist bookmark", "A bookmark on the posters of titles in your list.", settings.watchlistBookmark) { v -> set { it.copy(watchlistBookmark = v) } }
-        Label("Size")
-        ChipRow(listOf(0.85f to "Small", 1f to "Normal", 1.15f to "Large"), settings.posterScale) { v -> set { it.copy(posterScale = v) } }
-        Label("Corners")
-        ChipRow(listOf(0 to "Square", 4 to "Slight", 8 to "Round", 14 to "Rounder"), settings.posterRadius) { v -> set { it.copy(posterRadius = v) } }
-    }
+    HarborHeading("Theme", "The accent colour used for highlights, progress and focus.")
+    ColorSwatches(ACCENTS, settings.accent, 0xFFF0A35E) { c -> set { it.copy(accent = c) } }
+    HarborHeading("Poster size", "How big poster cards are in rows and grids.")
+    TickSlider(settings.posterScale, listOf(0.8f, 0.85f, 0.9f, 1f, 1.1f, 1.15f, 1.25f), { "${(it * 100).toInt()}%" }, 1f) { v -> set { it.copy(posterScale = v) } }
+    HarborHeading("Corner radius", "How round poster cards are.")
+    TickSlider(settings.posterRadius.toFloat(), listOf(0f, 2f, 4f, 6f, 8f, 10f, 12f, 14f, 18f), { "${it.toInt()}px" }, 8f) { v -> set { it.copy(posterRadius = v.toInt()) } }
+    Muted("Harbor's custom themes, wallpapers, fonts, liquid glass and window options are desktop-only.")
 }
 
 // ---------------- System ----------------
@@ -1158,8 +1261,8 @@ private fun AppearanceSection(settings: AppSettings, set: ((AppSettings) -> AppS
 private fun StorageSection(repository: Repository, set: ((AppSettings) -> AppSettings) -> Unit) {
     val context = LocalContext.current
     fun say(text: String) = Toast.makeText(context, text, Toast.LENGTH_SHORT).show()
-    Card("Storage") {
-        SettingsLabel("Storage")
+    HarborHeading("Caches", "What Lart keeps on this phone. Clearing frees space; it all comes back as needed.")
+    run {
         ActionRow("Image cache", "Posters and artwork. They download again as needed.", "Clear") {
             context.imageLoader.memoryCache?.clear()
             context.imageLoader.diskCache?.clear()
@@ -1173,10 +1276,9 @@ private fun StorageSection(repository: Repository, set: ((AppSettings) -> AppSet
             repository.clearResumeHistory()
             say("Watch positions cleared")
         }
-        SwitchRow("Delete downloads after I finish watching", "Frees the space once a downloaded movie or episode is watched.", LartDisplay.settings.deleteAfterWatching) { v -> set { it.copy(deleteAfterWatching = v) } }
     }
-    Card("Reset") {
-        SettingsLabel("Reset")
+    HarborHeading("Repair", "When something looks wrong.")
+    run {
         ActionRow("Reset settings", "Puts this profile's settings back to how Lart starts. Sign-ins, lists and progress stay.", "Reset") {
             set { AppSettings() }
             say("Settings reset")
@@ -1243,6 +1345,7 @@ private fun AboutSection() {
     val context = LocalContext.current
     val uriHandler = LocalUriHandler.current
     val version = remember { runCatching { context.packageManager.getPackageInfo(context.packageName, 0).versionName }.getOrNull() }
+    HarborHeading("Report a bug", "Something broken? Open an issue on GitHub with what you did and what happened.")
     SettingsSection("Lart native", "Version ${version ?: "?"}. A native rebuild of Lart (a Harbor fork) for Android, installed beside the regular Lart app while features are rebuilt.") {
         Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
             HButton(onClick = { uriHandler.openUri("https://github.com/9vsv6/lart/issues/new") }) { Text("Report a problem") }

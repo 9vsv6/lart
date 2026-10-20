@@ -226,12 +226,16 @@ fun PlayerUi(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions, cas
                         val delta = -drag.y / size.height
                         if (left) {
                             val level = actions.changeBrightness(delta)
-                            state.hint = "Brightness ${(level * 100).toInt()}%"
-                            state.hintIcon = 1
+                            if (state.settings.volumePopup) {
+                                state.hint = "Brightness ${(level * 100).toInt()}%"
+                                state.hintIcon = 1
+                            }
                         } else {
                             val level = actions.changeVolume(delta)
-                            state.hint = "Volume ${(level * 100).toInt()}%"
-                            state.hintIcon = 2
+                            if (state.settings.volumePopup) {
+                                state.hint = "Volume ${(level * 100).toInt()}%"
+                                state.hintIcon = 2
+                            }
                         }
                     }
                 }
