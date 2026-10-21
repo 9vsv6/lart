@@ -172,7 +172,7 @@ private enum class Section(
     Services("Streaming services", "Your addons and debrid service.", R.drawable.set_tv, "addons debrid real-debrid torbox services", setOf("Services")),
     SourcePreferences("Source preferences", "The safety filter, P2P and how long to wait for addons.", R.drawable.set_source_preferences, "safety cam filter torrents p2p timeout wait", setOf("Filters")),
     Sorting("Stream sorting", "The order sources come in.", R.drawable.set_arrow_down_up, "order sort ranking addon order", setOf("Sorting")),
-    Picker("Source picker", "Source mode and what each source shows.", R.drawable.set_mouse_pointer_click, "picker source mode direct p2p descriptions release name file names", setOf("Picker")),
+    Picker("Source picker", "The picker's layout, source mode and what each source shows.", R.drawable.set_mouse_pointer_click, "picker layout condensed stremio source mode direct p2p descriptions release name file names refresh back", setOf("Picker")),
     StreamFilters("Stream filters", "Only show sources that match.", R.drawable.set_filter, "filter resolution 4k 1080p remux bluray web hevc av1 hdr cached size"),
     HomeRows("Home", "The hero and rows on Home.", R.drawable.set_house, "home top 10 hero unreleased anime room watched hide catalogs new episodes row continue watching trakt", setOf("Home")),
     PosterCards("Poster cards", "What a poster card shows.", R.drawable.set_layout_grid, "poster card badge rating award dub watched check watchlist bookmark titles", setOf("Cards")),
@@ -181,6 +181,7 @@ private enum class Section(
     AiSearchPage("Search", "AI search: describe what you want to watch.", R.drawable.set_discovery_search, "ai search openrouter groq model jina natural language", setOf("Search")),
     LibraryContent("Library", "Content filters and downloads.", R.drawable.set_saved_library, "library content filters hide anime downloads delete", setOf("Library")),
     Theme("Theme & appearance", "Accent colour, poster size and corners.", R.drawable.set_theme_swatches, "accent colour color theme poster size corner radius", null),
+    StreamBadges("Stream badges", "The format chips on stream rows, and which badges show.", R.drawable.set_badge_check, "badges format chips 4k hdr dolby vision codec audio atmos hide badge art"),
     Storage("Storage", "Caches, watch positions on this device, and resetting settings.", R.drawable.set_hard_drive, "cache images shaders watch positions reset downloads delete after watching"),
     Backup("Updates & backup", "Updates, and a copy of your setup.", R.drawable.set_arrow_up_circle, "backup restore export import file updates"),
     About("About", "This build, reporting a problem, and licences.", R.drawable.set_info, "version report bug github licences licenses"),
@@ -197,7 +198,7 @@ private enum class Group(val label: String, val section: String, @androidx.annot
         "Sources & library", "Content", R.drawable.set_library,
         listOf(Section.Services, Section.SourcePreferences, Section.Sorting, Section.Picker, Section.StreamFilters, Section.HomeRows, Section.PosterCards, Section.DetailPages, Section.Metadata, Section.AiSearchPage, Section.LibraryContent),
     ),
-    Appearance("Appearance", "Look & feel", R.drawable.set_palette, listOf(Section.Theme)),
+    Appearance("Appearance", "Look & feel", R.drawable.set_palette, listOf(Section.Theme, Section.StreamBadges)),
     System("System", "System", R.drawable.set_sliders_horizontal, listOf(Section.Storage)),
     Updates("Updates & backup", "Updates", R.drawable.set_arrow_up_circle, listOf(Section.Backup)),
     Help("Help & support", "Help", R.drawable.set_help_about, listOf(Section.About)),
@@ -351,7 +352,7 @@ private fun SearchResults(query: String, onOpen: (Section) -> Unit) {
 /** Pages ported whole from Harbor: they open with their own headings, as Harbor's do. */
 private val SELF_TITLED = setOf(
     Section.Services, Section.SourcePreferences, Section.Sorting, Section.Picker, Section.StreamFilters,
-    Section.HomeRows, Section.PosterCards, Section.DetailPages, Section.LibraryContent, Section.AiSearchPage, Section.Theme,
+    Section.HomeRows, Section.PosterCards, Section.DetailPages, Section.LibraryContent, Section.AiSearchPage, Section.Theme, Section.StreamBadges,
     Section.Play, Section.Engine, Section.Aspect, Section.Audio, Section.OnScreen, Section.XRay, Section.Intros, Section.UpNext, Section.Trailers,
     Section.Quality, Section.Picture, Section.Network, Section.MpvConf, Section.Shaders,
     Section.AppLanguage, Section.AudioLanguage, Section.WhatYouSee, Section.SubtitleLanguages,
@@ -430,6 +431,7 @@ private fun SectionBody(
             Section.StreamFilters -> StreamFiltersSection(settings, set)
             Section.HomeRows, Section.DetailPages, Section.PosterCards, Section.AiSearchPage, Section.LibraryContent -> LibrarySection(repository, settings, set)
             Section.Theme -> AppearanceSection(settings, set)
+            Section.StreamBadges -> StreamBadgesPage(settings, set)
             Section.Metadata -> ProvidersSection(repository)
             Section.Storage -> StorageSection(repository, set)
             Section.Backup -> BackupSection(repository)
@@ -1103,15 +1105,22 @@ private fun StreamingSection(repository: Repository, settings: AppSettings, set:
     }
     // ---- Picker ----
     Part("Picker") {
+        HarborHeading("Picker layout", "Condensed shows a top pick, quality tiles, and a drawer. Stremio is a flat list grouped by addon, no scoring.")
+        PickerLayoutSetting(settings.pickerLayout) { v -> set { it.copy(pickerLayout = v) } }
         HarborHeading("Source mode", null)
         RowText(
             "Prefer these sources",
             "Both shows direct, debrid, and peer-to-peer results together. Direct/debrid keeps P2P results out of the way unless nothing else is available. P2P puts them first.",
         )
         PillChoice(listOf("Both" to "Both", "Direct" to "Direct/debrid", "P2P" to "P2P"), settings.defaultSourceMode) { v -> set { it.copy(defaultSourceMode = v) } }
-        HarborHeading("Picker details", "What each source shows.")
-        ToggleRow("Show full descriptions", "Each source's whole text, instead of the first lines.", settings.pickerFullDescription) { v -> set { it.copy(pickerFullDescription = v) } }
-        ToggleRow("Show release name", "The file name under each source.", settings.showFilename) { v -> set { it.copy(showFilename = v) } }
+        HarborHeading("Picker details", null)
+        ToggleRow(
+            "Move Refresh next to Back",
+            "Groups Refresh beside Back at the start of the picker header. Off keeps it at the far end, across from Back.",
+            settings.pickerRefreshNextToBack,
+        ) { v -> set { it.copy(pickerRefreshNextToBack = v) } }
+        ToggleRow("Show release name", "Show release filenames in the picker.", settings.showFilename) { v -> set { it.copy(showFilename = v) } }
+        ToggleRow("Show full descriptions", "Show complete addon descriptions in the Stremio picker.", settings.pickerFullDescription) { v -> set { it.copy(pickerFullDescription = v) } }
     }
 }
 

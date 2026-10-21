@@ -262,6 +262,13 @@ data class AppSettings(
     /** The source picker: which kind of source it opens on, and whether source text starts in full. */
     val defaultSourceMode: String = "Both",
     val pickerFullDescription: Boolean = true,
+    /** Harbor's Picker layout: "stremio" (a flat list, by addon) or "condensed" (a top pick, quality tiles and a drawer). */
+    val pickerLayout: String = "stremio",
+    /** Refresh beside Back in the picker header, instead of at the far end. */
+    val pickerRefreshNextToBack: Boolean = false,
+    /** Harbor's Stream badges: the format chips on stream rows, and the badge kinds you hid. */
+    val showQualityBadge: Boolean = true,
+    val hiddenBadges: Set<String> = emptySet(),
     /** Harbor's Trailers tab: trailers in the Home hero and on title pages, their sound and quality. */
     val heroTrailers: Boolean = false,
     val detailTrailerAutoplay: Boolean = false,

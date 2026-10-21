@@ -188,7 +188,7 @@ fun StreamsScreen(
     }
 
     val all = ranked
-    val shown = remember(all, mode, addonFilter, facets, debrid) {
+    val shown = remember(all, mode, addonFilter, facets, debrid, settings.pickerLayout) {
         all.orEmpty().filter { item ->
             val torrent = item.stream.infoHash != null && !item.stream.direct
             val modeOk = when (mode) {
@@ -196,7 +196,8 @@ fun StreamsScreen(
                 SourceMode.Direct -> item.stream.direct || (torrent && debrid != null)
                 SourceMode.P2P -> torrent
             }
-            val addonOk = addonFilter == null || item.addon.manifest.id == addonFilter
+            // The Condensed drawer has its own addon pills.
+            val addonOk = addonFilter == null || settings.pickerLayout == "condensed" || item.addon.manifest.id == addonFilter
             val values = facetValues(item.stream)
             modeOk && addonOk && facets.all { (facet, picked) -> picked.isEmpty() || values[facet].orEmpty().any { it in picked } }
         }
@@ -217,7 +218,8 @@ fun StreamsScreen(
             item(key = "head") {
                 Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                     HeaderPill(Icons.AutoMirrored.Rounded.KeyboardArrowLeft, "Back", spin = false, onClick = onBack)
-                    Spacer(Modifier.weight(1f))
+                    // Harbor's "Move Refresh next to Back"; off keeps it at the far end.
+                    if (!settings.pickerRefreshNextToBack) Spacer(Modifier.weight(1f))
                     HeaderPill(Icons.Rounded.Refresh, "Refresh", spin = all == null) {
                         refreshKey++
                         failures = emptyList()
@@ -300,7 +302,8 @@ fun StreamsScreen(
                     }
                 }
             }
-            item(key = "addon") { AddonPicker(all.orEmpty(), addonFilter) { addonFilter = it } }
+            val condensed = settings.pickerLayout == "condensed"
+            if (!condensed) item(key = "addon") { AddonPicker(all.orEmpty(), addonFilter) { addonFilter = it } }
             item(key = "facets") {
                 LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                     items(Facet.entries) { facet ->
@@ -320,10 +323,13 @@ fun StreamsScreen(
                         },
                     )
                 }
+                condensed -> item(key = "condensed") {
+                    CondensedPicker(shown, meta, title.substringBefore(" · "), settings, debrid != null, wide) { play(it) }
+                }
                 else -> items(shown, key = { it.addon.manifest.id + "|" + (it.stream.url ?: it.stream.infoHash) + "|" + it.stream.name + "|" + it.stream.title }) { item ->
                     val last = remembered != null && item.addon.manifest.id == remembered.first &&
                         (remembered.second == null || Playback.streamKey(item.stream) == remembered.second) && item === shown.first()
-                    SourceCard(item, wide, last, settings.showFilename, item.stream.playable(debrid != null), onDownload = {
+                    SourceCard(item, wide, last, settings, item.stream.playable(debrid != null), onDownload = {
                         val ctx = downloadContext
                         app.lart.mobile.data.Downloads.enqueue(ctx, item.stream.url!!, metaId, type, videoId, title, null)
                         android.widget.Toast.makeText(ctx, "Downloading. It's in Downloads.", android.widget.Toast.LENGTH_SHORT).show()
@@ -430,7 +436,7 @@ private fun FacetChip(facet: Facet, picked: Set<String>, onChange: (Set<String>)
 /** stremio-row.tsx: logo, the addon's own text, badges, copy link and the round Play button. */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun SourceCard(item: RankedStream, wide: Boolean, last: Boolean, showFilename: Boolean, playable: Boolean, onDownload: (() -> Unit)? = null, onPlay: () -> Unit) {
+private fun SourceCard(item: RankedStream, wide: Boolean, last: Boolean, settings: app.lart.mobile.data.AppSettings, playable: Boolean, onDownload: (() -> Unit)? = null, onPlay: () -> Unit) {
     val stream = item.stream
     val clipboard = LocalClipboardManager.current
     var expanded by remember { mutableStateOf(LartDisplay.settings.pickerFullDescription) }
@@ -499,8 +505,8 @@ private fun SourceCard(item: RankedStream, wide: Boolean, last: Boolean, showFil
                         }
                     }
                 }
-                if (showFilename) stream.behaviorHints?.filename?.let { Text(it, fontSize = 12.sp, color = LartColors.InkSubtle, maxLines = 2, overflow = TextOverflow.Ellipsis) }
-                Badges(stream)
+                if (settings.showFilename) stream.behaviorHints?.filename?.let { Text(it, fontSize = 12.sp, color = LartColors.InkSubtle, maxLines = 2, overflow = TextOverflow.Ellipsis) }
+                Badges(stream, settings)
                 if (!playable) {
                     Text(
                         if (stream.infoHash != null) "Torrent: add a debrid account in Settings to play it" else "Not playable in Lart yet",
@@ -515,27 +521,14 @@ private fun SourceCard(item: RankedStream, wide: Boolean, last: Boolean, showFil
     }
 }
 
-/** Harbor's badge strip: the resolution large, then source, codec and audio. */
+/** stremio-row.tsx's format chips: Harbor's badge art, as set on the Stream badges page. */
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
-private fun Badges(stream: Stream) {
-    val values = facetValues(stream)
-    val resolution = values[Facet.Resolution].orEmpty().firstOrNull { it.isNotEmpty() }
-    val rest = listOfNotNull(
-        values[Facet.Source].orEmpty().firstOrNull(),
-        values[Facet.Codec].orEmpty().firstOrNull()?.let { if (it == "HEVC") "H.265" else it },
-        values[Facet.Hdr].orEmpty().firstOrNull { it != "SDR" },
-        values[Facet.Audio].orEmpty().firstOrNull { it == "Atmos" || it == "DD+" || it == "TrueHD" || it == "DTS" }?.let { if (it == "DD+") "Dolby Digital+" else if (it == "Atmos") "Dolby Atmos" else it },
-        Ranking.badges(stream).firstOrNull { it.endsWith("GB") },
-    )
-    if (resolution == null && rest.isEmpty()) return
-    FlowRow(horizontalArrangement = Arrangement.spacedBy(12.dp), verticalArrangement = Arrangement.spacedBy(4.dp), modifier = Modifier.padding(top = 2.dp)) {
-        resolution?.let {
-            Text(it, color = Color(0xE6FFFFFF), fontSize = 22.sp, fontWeight = FontWeight.Black, fontStyle = FontStyle.Italic, modifier = Modifier.align(Alignment.CenterVertically))
-        }
-        rest.forEach {
-            Text(it, color = Color(0xCCFFFFFF), fontSize = 12.5.sp, fontWeight = FontWeight.ExtraBold, modifier = Modifier.align(Alignment.CenterVertically).widthIn(max = 160.dp))
-        }
+private fun Badges(stream: Stream, settings: app.lart.mobile.data.AppSettings) {
+    val kinds = shownBadges(stream, settings)
+    if (kinds.isEmpty()) return
+    FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalArrangement = Arrangement.spacedBy(4.dp), modifier = Modifier.padding(top = 2.dp)) {
+        kinds.forEach { FormatBadge(it, 24.dp, Modifier.align(Alignment.CenterVertically)) }
     }
 }
 
