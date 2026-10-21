@@ -657,6 +657,10 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
     override fun setFit(fit: Fit) {
         state.fit = fit
         engine.setFit(fit)
+        state.hint = fit.label
+        state.hintIcon = 0
+        // Harbor keeps the crop mode for the next video too.
+        repository.updateSettings { it.copy(defaultFit = fit.name) }
     }
 
     override fun setSubDelay(delayMs: Long) {
@@ -704,6 +708,8 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
     }
 
     override fun updatePrefs(change: (PlayerPrefs) -> PlayerPrefs) = repository.updatePlayerPrefs(change)
+
+    override fun updateSettings(change: (app.lart.mobile.data.AppSettings) -> app.lart.mobile.data.AppSettings) = repository.updateSettings(change)
 
     override fun skipSegment() {
         val segment = state.skip ?: return
@@ -1042,6 +1048,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
             systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            // The theme (Theme.Lart.Player) already draws under the camera cutout; this keeps older paths in step.
             window.attributes.layoutInDisplayCutoutMode = WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
         }
     }

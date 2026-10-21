@@ -185,12 +185,20 @@ class MpvEngine private constructor(context: Context, private val mpv: MPVLib, p
 
     // ---- Surface ----
 
+    /** Once mpv has had a surface; before that, loading a video waits (see load). */
+    private var surfaceSeen = false
+
+    /** A video asked for before the surface existed; it starts once there is one. */
+    private var pendingLoad: (() -> Unit)? = null
+
     override fun surfaceCreated(holder: SurfaceHolder) {
         mpv.attachSurface(holder.surface)
         // Paused video gets no new frame on its own; redraw so the cover can lift.
         if (loaded) main.postDelayed({ cover.visibility = View.GONE }, 300)
         mpv.setOptionString("force-window", "yes")
         mpv.setPropertyString("vo", "gpu")
+        surfaceSeen = true
+        pendingLoad?.let { pendingLoad = null; it() }
     }
 
     override fun surfaceChanged(holder: SurfaceHolder, format: Int, width: Int, height: Int) {
@@ -294,8 +302,13 @@ class MpvEngine private constructor(context: Context, private val mpv: MPVLib, p
         // mpv takes extra headers as a comma-separated list.
         mpv.setPropertyString("http-header-fields", (headers - "User-Agent").entries.joinToString(",") { (k, v) -> "$k: ${v.replace(",", "\\,")}" })
         mpv.setPropertyString("start", if (startMs > 0) "%.3f".format(Locale.US, startMs / 1000.0) else "none")
-        mpv.command(arrayOf("loadfile", url, "replace"))
-        mpv.setPropertyBoolean("pause", false)
+        val start = {
+            mpv.command(arrayOf("loadfile", url, "replace"))
+            mpv.setPropertyBoolean("pause", false)
+        }
+        // Hardware decoding into a missing surface stalls mpv (and the app with it), so a video
+        // asked for before the first surface waits for it. Later (audio in the background) it plays at once.
+        if (surfaceSeen) start() else pendingLoad = start
     }
 
     override fun play() {
@@ -317,20 +330,9 @@ class MpvEngine private constructor(context: Context, private val mpv: MPVLib, p
     override fun setSpeed(speed: Float) = mpv.setPropertyDouble("speed", speed.toDouble())
 
     override fun setFit(fit: Fit) {
-        when (fit) {
-            Fit.Fit -> {
-                mpv.setPropertyString("keepaspect", "yes")
-                mpv.setPropertyDouble("panscan", 0.0)
-            }
-            Fit.Fill -> {
-                mpv.setPropertyString("keepaspect", "yes")
-                mpv.setPropertyDouble("panscan", 1.0)
-            }
-            Fit.Stretch -> {
-                mpv.setPropertyString("keepaspect", "no")
-                mpv.setPropertyDouble("panscan", 0.0)
-            }
-        }
+        mpv.setPropertyString("keepaspect", if (fit == Fit.Stretch) "no" else "yes")
+        mpv.setPropertyDouble("panscan", if (fit == Fit.Fill) 1.0 else 0.0)
+        runCatching { mpv.setPropertyString("video-aspect-override", fit.aspect ?: "-1") }
     }
 
     // mpv: positive audio-delay plays the sound later; positive sub-delay shows subtitles later.

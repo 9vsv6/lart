@@ -30,12 +30,18 @@ sealed interface SubChoice {
     data class Addon(val subtitle: Subtitle) : SubChoice
 }
 
-enum class Panel { Subtitles, SubStyle, Audio, Speed, Sources, Episodes, Sleep, Anime4K, XRay }
+enum class Panel { Subtitles, SubStyle, Audio, Speed, Sources, Episodes, Sleep, Anime4K, XRay, Picture }
 
-enum class Fit(val label: String, val mode: Int) {
+/** Harbor's crop modes (use-video-fill.ts); the fixed shapes are mpv's aspect override. */
+enum class Fit(val label: String, val mode: Int, val aspect: String? = null) {
     Fit("Fit", AspectRatioFrameLayout.RESIZE_MODE_FIT),
     Fill("Fill", AspectRatioFrameLayout.RESIZE_MODE_ZOOM),
     Stretch("Stretch", AspectRatioFrameLayout.RESIZE_MODE_FILL),
+    Wide("16:9", AspectRatioFrameLayout.RESIZE_MODE_FIT, "16:9"),
+    Classic("4:3", AspectRatioFrameLayout.RESIZE_MODE_FIT, "4:3"),
+    Ultrawide("21:9", AspectRatioFrameLayout.RESIZE_MODE_FIT, "21:9"),
+    Flat("1.85:1", AspectRatioFrameLayout.RESIZE_MODE_FIT, "1.85:1"),
+    Scope("2.39:1", AspectRatioFrameLayout.RESIZE_MODE_FIT, "2.39:1"),
 }
 
 /** Everything the player overlay draws; the activity updates it from ExoPlayer. */

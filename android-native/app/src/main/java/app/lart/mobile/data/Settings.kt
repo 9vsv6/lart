@@ -24,6 +24,39 @@ data class StreamFilter(
 }
 
 /**
+ * A saved subtitle look, as Harbor's style-bar presets (src/lib/player/sub-presets.ts).
+ * Size is Harbor's font px (32 is the default); bottom is a fraction of the height.
+ */
+@Serializable
+data class SubLook(
+    val id: String,
+    val name: String,
+    val background: String = "shadow",
+    val font: String = "inter",
+    val size: Int = 32,
+    val bold: Boolean = false,
+    val color: Long = 0xFFFFFFFF,
+    val outlineColor: Long = 0xFF000000,
+    val outlineSize: Float = 2f,
+    val bottom: Float = 0.08f,
+    val assOverride: String = "no",
+    val boxOpacity: Float = 0.6f,
+    val boxColor: Long = 0xFF000000,
+    val opacity: Float = 1f,
+) {
+    /** The same look, whatever it is called. */
+    fun sameAs(other: SubLook) = copy(id = "", name = "") == other.copy(id = "", name = "")
+
+    companion object {
+        val SEED = listOf(
+            SubLook("english", "English", background = "shadow", size = 28, outlineSize = 0f, bottom = 0.06f, assOverride = "scale"),
+            SubLook("foreign", "Foreign", background = "outline", size = 40, outlineSize = 2f, bottom = 0.08f, assOverride = "scale"),
+            SubLook("arabic", "Arabic", background = "outline", font = "arabic", size = 40, outlineSize = 2f, bottom = 0.08f, assOverride = "force"),
+        )
+    }
+}
+
+/**
  * The settings Harbor has that Lart native can act on, kept per profile like Harbor's.
  * Defaults follow Harbor's (`src/lib/settings/defaults.ts`) unless a comment says why not.
  */
@@ -243,6 +276,8 @@ data class AppSettings(
     val fontPair: String = "inter",
     /** Fonts you uploaded (paths in the app's storage), for the app and subtitles. */
     val customFonts: List<String> = emptyList(),
+    /** Harbor's saved subtitle looks, picked from the style bar in the player. */
+    val subLooks: List<SubLook> = SubLook.SEED,
     /** IMDb rating on each episode (OMDb with a key, else TMDB). */
     val showEpisodeRating: Boolean = true,
     val hidePosterTitles: Boolean = false,

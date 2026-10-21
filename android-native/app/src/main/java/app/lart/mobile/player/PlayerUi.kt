@@ -9,6 +9,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.gestures.awaitEachGesture
+import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.detectDragGestures
 import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.foundation.gestures.detectTapGestures
@@ -125,6 +127,7 @@ interface PlayerActions {
     fun castSeekBy(deltaMs: Long)
     fun stopCasting()
     fun updatePrefs(change: (PlayerPrefs) -> PlayerPrefs)
+    fun updateSettings(change: (app.lart.mobile.data.AppSettings) -> app.lart.mobile.data.AppSettings)
     fun skipSegment()
     fun playNext()
     fun playEpisode(video: Video)
@@ -201,6 +204,29 @@ fun PlayerUi(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions, cas
             }
             .pointerInput(state.locked) {
                 if (state.locked) return@pointerInput
+                // Pinch out to fill the screen (no black bars), pinch in to see the whole picture.
+                awaitEachGesture {
+                    awaitFirstDown(requireUnconsumed = false)
+                    var start = 0f
+                    do {
+                        val event = awaitPointerEvent(androidx.compose.ui.input.pointer.PointerEventPass.Initial)
+                        val pressed = event.changes.filter { it.pressed }
+                        if (pressed.size >= 2) {
+                            val distance = (pressed[0].position - pressed[1].position).getDistance()
+                            if (start == 0f) start = distance
+                            else if (start > 0f) {
+                                val ratio = distance / start
+                                if (ratio > 1.2f && state.fit != Fit.Fill) { actions.setFit(Fit.Fill); start = -1f }
+                                else if (ratio < 0.83f && state.fit != Fit.Fit) { actions.setFit(Fit.Fit); start = -1f }
+                            }
+                            // Two fingers aren't a seek, volume or brightness drag.
+                            event.changes.forEach { it.consume() }
+                        }
+                    } while (event.changes.any { it.pressed })
+                }
+            }
+            .pointerInput(state.locked) {
+                if (state.locked) return@pointerInput
                 // Harbor's phone gestures: left edge brightness, right edge volume, sideways to seek.
                 var axis = 0 // 0 undecided, 1 horizontal, 2 vertical
                 var left = false
@@ -274,6 +300,7 @@ fun PlayerUi(state: PlayerState, prefs: PlayerPrefs, actions: PlayerActions, cas
         state.error?.let { ErrorCard(it, state, actions, Modifier.align(Alignment.Center)) }
 
         HarborPopovers(state, prefs, actions)
+        if (state.panel == Panel.SubStyle) SubStyleBar(state, prefs, actions)
         SubSyncBar(state, actions)
         LiveSyncPrompt(state, actions)
 
@@ -523,65 +550,6 @@ private fun StillWatching(state: PlayerState, actions: PlayerActions) {
 }
 
 // ---- Panel bodies, shown inside Harbor's popovers (HarborChrome.kt) ----
-
-@Composable
-internal fun SubStylePanel(prefs: PlayerPrefs, actions: PlayerActions) {
-    LazyColumn(contentPadding = PaddingValues(bottom = 24.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
-        item {
-            Box(Modifier.fillMaxWidth().height(90.dp).clip(RoundedCornerShape(12.dp)).background(Color(0xFF3A4048)), contentAlignment = Alignment.Center) {
-                SubtitleText("The quick brown fox", prefs)
-            }
-        }
-        item {
-            GroupLabel("Size")
-            Slider(
-                value = prefs.subScale,
-                onValueChange = { v -> actions.updatePrefs { it.copy(subScale = v) } },
-                valueRange = 0.6f..1.8f,
-                colors = SliderDefaults.colors(thumbColor = Color.White, activeTrackColor = LartColors.Accent),
-            )
-        }
-        item {
-            GroupLabel("Colour")
-            Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                listOf(0xFFFFFFFF, 0xFFFFE66D, 0xFF8BE9FD, 0xFFB8F5A0).forEach { argb ->
-                    Box(
-                        Modifier.size(36.dp).clip(CircleShape).background(Color(argb.toInt()))
-                            .border(if (prefs.subColor == argb) 3.dp else 0.dp, LartColors.Accent, CircleShape)
-                            .clickable { actions.updatePrefs { it.copy(subColor = argb) } },
-                    )
-                }
-            }
-        }
-        item {
-            GroupLabel("Background")
-            Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                listOf("outline" to "Outline", "shadow" to "Shadow", "box" to "Box").forEach { (key, label) ->
-                    Pill(label, primary = prefs.subBackground == key) { actions.updatePrefs { it.copy(subBackground = key) } }
-                }
-            }
-        }
-        item {
-            GroupLabel("Position")
-            Slider(
-                value = prefs.subBottom,
-                onValueChange = { v -> actions.updatePrefs { it.copy(subBottom = v) } },
-                valueRange = 0.02f..0.4f,
-                colors = SliderDefaults.colors(thumbColor = Color.White, activeTrackColor = LartColors.Accent),
-            )
-        }
-        item {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Column(Modifier.weight(1f)) {
-                    Text("Skip intros automatically", color = Color.White, fontSize = 15.sp)
-                    Text("When an intro database knows the episode.", color = Color(0x99FFFFFF), fontSize = 12.sp)
-                }
-                Switch(checked = prefs.autoSkipIntro, onCheckedChange = { v -> actions.updatePrefs { it.copy(autoSkipIntro = v) } })
-            }
-        }
-        item { Muted("Style applies to every text subtitle, in the video or from an addon. Image subtitles (PGS, VobSub) keep their own look.") }
-    }
-}
 
 @Composable
 internal fun EpisodesPanel(state: PlayerState, actions: PlayerActions) {

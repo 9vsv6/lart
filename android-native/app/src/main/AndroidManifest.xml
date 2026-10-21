@@ -43,6 +43,7 @@
         </activity>
         <activity
             android:name=".player.PlayerActivity"
+            android:theme="@style/Theme.Lart.Player"
             android:exported="false"
             android:screenOrientation="sensorLandscape"
             android:supportsPictureInPicture="true"

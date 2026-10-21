@@ -6,4 +6,6 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
+    <!-- The player: drawn under the camera cutout too (values-v28), so no black bar beside the picture. -->
+    <style name="Theme.Lart.Player" parent="Theme.Lart" />
 </resources>

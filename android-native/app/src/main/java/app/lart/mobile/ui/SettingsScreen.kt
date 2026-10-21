@@ -612,13 +612,13 @@ private fun PlayerSection(repository: Repository, settings: AppSettings, set: ((
     }
     // ---- Aspect ----
     Part("Aspect") {
-        HarborHeading("Aspect ratio", "How the picture fills the screen when a video starts. Change it while watching with a pinch.")
+        HarborHeading("Aspect ratio", "How the picture fills the screen. Change it while watching from Picture, or with a pinch.")
         CheckList(
             listOf(
                 Triple("Fit", "Fit", "The whole picture, with bars where the shapes differ."),
-                Triple("Fill", "Fill", "Fills the screen, trimming the edges."),
+                Triple("Fill", "Fill", "Fills the screen with no black bars, trimming the edges."),
                 Triple("Stretch", "Stretch", "Fills the screen by stretching the picture."),
-            ),
+            ) + app.lart.mobile.player.Fit.entries.filter { it.aspect != null }.map { Triple(it.name, it.label, "Shows the picture as ${it.label} (mpv).") },
             settings.defaultFit,
         ) { v -> set { it.copy(defaultFit = v) } }
     }
@@ -965,8 +965,14 @@ private fun SubtitlesSection(repository: Repository, settings: AppSettings, set:
         }
         SettingsLabel("Text")
         RowText("Size", "How large subtitles are drawn on the video, at any screen size.")
-        TickSlider(prefs.subScale, listOf(0.6f, 0.7f, 0.8f, 0.9f, 1f, 1.1f, 1.2f, 1.35f, 1.5f, 1.65f, 1.8f), { "${(it * 100).toInt()}%" }, 1f) { v -> repository.updatePlayerPrefs { it.copy(subScale = v) } }
-        ToggleRow("Bold text", "Thicker letters, easier to read on busy pictures.", settings.subBold) { v -> set { it.copy(subBold = v) } }
+        // Harbor's size is the font's px (32 is the default), the same number the player's style bar shows.
+        TickSlider(
+            prefs.subScale,
+            listOf(16, 20, 24, 28, 32, 36, 40, 44, 48, 56, 64, 72, 80, 96, 120).map { it / 32f },
+            { "${kotlin.math.round(it * 32).toInt()}px" },
+            1f,
+        ) { v -> repository.updatePlayerPrefs { it.copy(subScale = v) } }
+        ToggleRow("Bold text", "Renders subtitles in a heavier weight. Turn off to use your font's normal weight.", settings.subBold) { v -> set { it.copy(subBold = v) } }
         RowText("Text color", "The colour of the letters.")
         ColorSwatches(SWATCHES, prefs.subColor, 0xFFFFFFFF) { c -> repository.updatePlayerPrefs { it.copy(subColor = c) } }
         RowText("Opacity", "How see-through the letters are.")
@@ -1000,10 +1006,6 @@ private fun SubtitlesSection(repository: Repository, settings: AppSettings, set:
             TickSlider(prefs.subBottom, listOf(0.02f, 0.04f, 0.06f, 0.08f, 0.1f, 0.12f, 0.15f, 0.2f, 0.25f, 0.3f), { "${(it * 100).toInt()}%" }, 0.08f) { v ->
                 repository.updatePlayerPrefs { it.copy(subBottom = v) }
             }
-        }
-        SettingsLabel("Size")
-        PillChoice(listOf(0.85f to "Smaller", 1f to "Default", 1.2f to "Larger"), listOf(0.85f, 1f, 1.2f).minByOrNull { kotlin.math.abs(it - prefs.subScale) } ?: 1f) { v ->
-            repository.updatePlayerPrefs { it.copy(subScale = v) }
         }
         ToggleRow("Show subtitles in Picture-in-Picture", "Keep subtitles on while the video plays in a small window.", settings.subsInPip) { v -> set { it.copy(subsInPip = v) } }
         Row(Modifier.padding(top = 14.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp)) {

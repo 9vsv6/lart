@@ -44,6 +44,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.rounded.KeyboardArrowLeft
+import androidx.compose.material.icons.outlined.AspectRatio
 import androidx.compose.material.icons.outlined.ClosedCaption
 import androidx.compose.material.icons.outlined.PictureInPictureAlt
 import androidx.compose.material.icons.outlined.Speed
@@ -229,6 +230,8 @@ internal fun HarborControls(
                     }
                     if (state.anime4kAvailable) Anime4KPill(prefs, state.panel == Panel.Anime4K) { onTouch(); toggle(state, Panel.Anime4K) }
                     ToolIcon(Icons.Outlined.Speed, "Speed", state.panel == Panel.Speed, dot = state.speed != 1f) { onTouch(); toggle(state, Panel.Speed) }
+                    // Harbor's Picture menu: Fit, Fill (no bars), Stretch and fixed shapes.
+                    ToolIcon(Icons.Outlined.AspectRatio, "Picture", state.panel == Panel.Picture, dot = state.fit != Fit.Fit) { onTouch(); toggle(state, Panel.Picture) }
                     ToolIcon(Icons.Outlined.PictureInPictureAlt, "Picture in picture", false) { actions.enterPip() }
                     castButton?.let { Box(Modifier.size(48.dp), contentAlignment = Alignment.Center) { it() } }
                 }
@@ -356,14 +359,15 @@ internal fun HarborPopovers(state: PlayerState, prefs: PlayerPrefs, actions: Pla
     BoxWithConstraints(Modifier.fillMaxSize()) {
         val maxH = maxHeight
         val maxW = maxWidth
-        if (panel != null) {
+        // The subtitle style bar (SubStyleBar) sits at the top and leaves the video live.
+        if (panel != null && panel != Panel.SubStyle) {
             Box(
                 Modifier.fillMaxSize().background(if (panel == Panel.Sources) Color(0x99000000) else Color.Transparent)
                     .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) { state.panel = null },
             )
         }
         AnimatedVisibility(
-            visible = panel != null && panel != Panel.Sources,
+            visible = panel != null && panel != Panel.Sources && panel != Panel.SubStyle,
             enter = fadeIn() + scaleIn(initialScale = 0.96f),
             exit = fadeOut() + scaleOut(targetScale = 0.96f),
             modifier = Modifier.align(Alignment.BottomEnd).padding(end = 18.dp, bottom = 96.dp),
@@ -382,9 +386,17 @@ internal fun HarborPopovers(state: PlayerState, prefs: PlayerPrefs, actions: Pla
                 when (current) {
                     Panel.Audio -> AudioPopover(state, actions)
                     Panel.Subtitles -> SubtitlesPopover(state, actions)
-                    Panel.SubStyle -> PopoverFrame("Subtitle style", null, onBack = { state.panel = Panel.Subtitles }, onClose = { state.panel = null }) {
-                        Box(Modifier.padding(horizontal = 14.dp)) { SubStylePanel(prefs, actions) }
-                    }
+                    Panel.SubStyle -> {}
+                    Panel.Picture -> ChoiceMenu(
+                        "Aspect ratio",
+                        if (state.settings.engine == "exo") "Fixed shapes need the mpv engine. Pinch the video to fill or fit." else "Pinch the video to fill or fit. Lart keeps your choice.",
+                        Fit.entries.map { fit ->
+                            MenuChoice(fit.label, state.fit == fit, when (fit) { Fit.Fit -> "Whole picture"; Fit.Fill -> "No black bars"; Fit.Stretch -> "Fills by stretching"; else -> null }) {
+                                actions.setFit(fit)
+                                state.panel = null
+                            }
+                        },
+                    )
                     Panel.Anime4K -> Anime4KMenu(state, prefs, actions)
                     Panel.Speed -> ChoiceMenu("Speed", "How fast the video plays.", (state.settings.playbackSpeeds + 1f + state.speed).distinct().sorted().map { speed ->
                         MenuChoice(if (speed == 1f) "Normal" else speed.toString().removeSuffix(".0") + "×", state.speed == speed, if (speed == 1f) "Default" else null) { actions.setSpeed(speed) }
