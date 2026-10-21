@@ -127,3 +127,44 @@ object Mal {
     private fun kotlinx.serialization.json.JsonPrimitive.contentOrNullSafe() = if (this is kotlinx.serialization.json.JsonNull) null else content
     private fun JsonArray?.orEmpty(): List<kotlinx.serialization.json.JsonElement> = this ?: emptyList()
 }
+
+/** mal-tab.tsx: your whole MyAnimeList list, and editing it from the Library. */
+object MalLibrary {
+    val statuses = listOf("watching" to "Watching", "plan_to_watch" to "Plan to Watch", "completed" to "Completed", "on_hold" to "On Hold", "dropped" to "Dropped")
+
+    suspend fun entries(auth: TrackerAuth): List<ListEntry> {
+        val out = mutableListOf<kotlinx.serialization.json.JsonObject>()
+        var next: String? = "https://api.myanimelist.net/v2/users/@me/animelist?fields=list_status,num_episodes,media_type,start_season&limit=500&nsfw=true"
+        var guard = 0
+        while (next != null && guard++ < 6) {
+            val json = Net.json.parseToJsonElement(Net.call(okhttp3.Request.Builder().url(next).header("Authorization", "Bearer ${auth.accessToken}").build())).jsonObject
+            (json["data"] as? kotlinx.serialization.json.JsonArray)?.forEach { out += it.jsonObject }
+            next = json["paging"]?.jsonObject?.string("next")
+        }
+        val kitsu = Jikan.kitsuIds(out.mapNotNull { it["node"]?.jsonObject?.get("id")?.jsonPrimitive?.intOrNull })
+        return out.mapNotNull { e ->
+            val n = e["node"]?.jsonObject ?: return@mapNotNull null
+            val id = n["id"]?.jsonPrimitive?.intOrNull ?: return@mapNotNull null
+            val s = e["list_status"]?.jsonObject
+            ListEntry(
+                Meta(
+                    id = kitsu[id]?.let { "kitsu:$it" } ?: "mal:$id",
+                    type = if (n.string("media_type") == "movie") "movie" else "series",
+                    name = n.string("title").orEmpty(),
+                    poster = n["main_picture"]?.jsonObject?.let { it.string("large") ?: it.string("medium") },
+                    releaseInfo = n["start_season"]?.jsonObject?.get("year")?.jsonPrimitive?.intOrNull?.toString(),
+                ),
+                id, s?.string("status") ?: "watching", s?.get("num_episodes_watched")?.jsonPrimitive?.intOrNull ?: 0,
+                n["num_episodes"]?.jsonPrimitive?.intOrNull?.takeIf { it > 0 },
+            )
+        }
+    }
+
+    suspend fun save(auth: TrackerAuth, malId: Int, status: String? = null, progress: Int? = null) {
+        val form = okhttp3.FormBody.Builder().apply {
+            status?.let { add("status", it) }
+            progress?.let { add("num_watched_episodes", "$it") }
+        }.build()
+        Net.call(okhttp3.Request.Builder().url("https://api.myanimelist.net/v2/anime/$malId/my_list_status").header("Authorization", "Bearer ${auth.accessToken}").patch(form).build())
+    }
+}

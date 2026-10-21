@@ -436,3 +436,15 @@ private fun simklRequest(auth: TrackerAuth, path: String) = Request.Builder().ur
     .header("simkl-api-key", auth.clientId)
     .header("Content-Type", "application/json")
     .header("Authorization", "Bearer ${auth.accessToken}")
+
+/** trakt-tab.tsx: what you've watched on Trakt, most recent first. */
+suspend fun Trakt.watched(auth: TrackerAuth): List<Meta> = listOf("movies" to "movie", "shows" to "show").flatMap { (kind, key) ->
+    runCatching {
+        (Net.json.parseToJsonElement(Net.call(traktRequest(auth, "/sync/watched/$kind").build())) as? JsonArray).orEmpty().mapNotNull { e ->
+            val o = e.jsonObject
+            val entry = o[key]?.jsonObject ?: return@mapNotNull null
+            val imdb = entry["ids"]?.jsonObject?.string("imdb") ?: return@mapNotNull null
+            (o.string("last_watched_at") ?: "") to metahubMeta(imdb, if (kind == "movies") "movie" else "series", entry.string("title").orEmpty()).copy(releaseInfo = entry["year"]?.jsonPrimitive?.intOrNull?.toString())
+        }
+    }.getOrDefault(emptyList())
+}.sortedByDescending { it.first }.map { it.second }

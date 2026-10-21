@@ -141,11 +141,22 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
             view == BrowseView.Home && !LartDisplay.settings.hideAnime && !LartDisplay.settings.animeRoomOnly -> Jikan.homeRows()
             else -> emptyList()
         }
+        // The Anime page's AniList rows come in alongside MyAnimeList's (anime.tsx).
+        val watchedAnime = allCw.map { it.meta }.filter { app.lart.mobile.data.AnimeDetect.isAnime(it) }
+        val anilistAuth = repository.trackers.value.anilist?.takeIf { it.accessToken != null }
+        val extras = if (view == BrowseView.Anime) async {
+            val trending = async { app.lart.mobile.data.AnimeRows.trending() }
+            val top = async { app.lart.mobile.data.AnimeRows.top100() }
+            val yours = async { anilistAuth?.let { runCatching { app.lart.mobile.data.AnimeRows.yourLists(it) }.getOrDefault(emptyList()) }.orEmpty() }
+            val recs = async { runCatching { app.lart.mobile.data.AnimeRows.recommended(watchedAnime) }.getOrDefault(emptyList()) }
+            AnimeExtras(trending.await(), top.await(), yours.await(), recs.await())
+        } else null
         for (spec in anime) {
             val metas = runCatching { Jikan.row(spec) }.getOrDefault(emptyList())
             if (metas.size < 6) continue
             show(fresh.orEmpty() + CatalogRow("jikan${spec.path}${spec.params}", spec.title, metas, "series"))
         }
+        extras?.await()?.let { x -> show(animePage(context, fresh.orEmpty(), x, watchedAnime.map { it.id }.toSet())) }
         if (view == BrowseView.Anime && fresh == null) {
             val fallback = buildRows(view, addons, repository.metaAddons())
             show(fallback)
@@ -194,11 +205,13 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
                     )
                 }
                 else -> {
+                    // Harbor's Shows page opens with its time-of-day heading (shows.tsx PageMast).
+                    if (view == BrowseView.Shows) item(key = "mast") { ShowsMast() }
                     val heroSlides = heroFor(view, current)
                     item(key = "hero") {
                         HeroCarousel(
                             slides = heroSlides,
-                            badge = { i, meta -> "#${i + 1} in ${typeLabel(meta.type, view)} Today" },
+                            badge = { i, meta -> if (view == BrowseView.Anime && current.any { it.key == "anilist:trending" }) "Trending on AniList" else "#${i + 1} in ${typeLabel(meta.type, view)} Today" },
                             inMyList = { repository.inMyList(it.id) },
                             onPlay = nav::playMeta,
                             onToggleList = repository::toggleMyList,
@@ -208,14 +221,21 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
                     if ((view == BrowseView.Home || view == BrowseView.Anime) && cw.isNotEmpty()) {
                         item(key = "cw") { ContinueWatchingRow(cw, nav::resume, repository::dismissContinueWatching) }
                     }
+                    // Shows: your series in progress, as Harbor's "Pick up where you left off".
+                    val showsCw = if (view == BrowseView.Shows) allCw.filter { it.meta.type == "series" && !app.lart.mobile.data.AnimeDetect.isAnime(it.meta) } else emptyList()
+                    if (showsCw.isNotEmpty()) item(key = "cw") { ContinueWatchingRow(showsCw, nav::resume, repository::dismissContinueWatching, "Pick up where you left off") }
                     if (view == BrowseView.Home && newEpisodes.isNotEmpty()) {
                         item(key = "new-episodes") { Rail("New Episodes", newEpisodes.map { it.meta }, nav::openMeta) }
                     }
-                    current.firstOrNull()?.takeIf { display.showTop10 }?.let { first ->
+                    // Shows and Movies always lead with Top 10 from Trending (Harbor's rank row); Home when asked.
+                    val rankFirst = display.showTop10 || ((view == BrowseView.Shows || view == BrowseView.Movies) && (current.firstOrNull()?.metas?.size ?: 0) >= 10)
+                    current.firstOrNull()?.takeIf { rankFirst }?.let { first ->
                         item(key = "top10") {
                             RankRail(
                                 when (view) {
                                     BrowseView.Home -> "Top 10 Today"
+                                    BrowseView.Shows -> "Top 10 Series Today"
+                                    BrowseView.Movies -> "Top 10 Movies Today"
                                     else -> "Top 10 ${view.label} Today"
                                 },
                                 first.metas.distinctBy { it.id },
@@ -223,8 +243,10 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
                             )
                         }
                     }
-                    val rest = if (display.showTop10) current.drop(1) else current
-                    items(rest.take(3), key = { it.key }) { row ->
+                    val rest = if (rankFirst) current.drop(1) else current
+                    // Anime: Top Picks and Recommended lead, then your lists (Harbor's order); elsewhere three rows lead.
+                    val lead = if (view == BrowseView.Anime) rest.takeWhile { it.key.startsWith("lead:") } else rest.take(3)
+                    items(lead, key = { it.key }) { row ->
                         Rail(row.title, row.metas.distinctBy { it.id }.take(18), nav::openMeta) { nav.openCatalog(row) }
                     }
                     items(trackerRows, key = { it.key }) { row -> Rail(row.title, row.metas.distinctBy { it.id }, nav::openMeta) }
@@ -239,7 +261,7 @@ fun HomeScreen(repository: Repository, nav: BrowseNav, view: BrowseView, onView:
                     if (view == BrowseView.Home || view == BrowseView.Movies) {
                         item(key = "lists") { CuratedShelf(app.lart.mobile.data.Curated.shelf()) }
                     }
-                    items(rest.drop(3), key = { it.key }) { row ->
+                    items(rest.drop(lead.size), key = { it.key }) { row ->
                         Rail(row.title, row.metas.distinctBy { it.id }.take(18), nav::openMeta) { nav.openCatalog(row) }
                     }
                 }
@@ -269,6 +291,8 @@ private fun typeLabel(type: String, view: BrowseView): String = when {
 }
 
 private fun heroFor(view: BrowseView, rows: List<CatalogRow>): List<Meta> {
+    // Anime: Harbor's hero is AniList's trending, on their banners.
+    if (view == BrowseView.Anime) rows.firstOrNull { it.key == "anilist:trending" }?.let { r -> return r.metas.filter { it.background != null }.take(8) }
     val pool = when (view) {
         BrowseView.Home -> {
             // Alternate the first movie and series rows, like Harbor's mixed hero.
@@ -370,7 +394,8 @@ private fun tidyRows(rows: List<CatalogRow>, settings: app.lart.mobile.data.AppS
             metas = row.metas.filter { meta ->
                 val unreleased = settings.hideUnreleased && (meta.year?.toIntOrNull()?.let { it > year } ?: false)
                 val looksAnime = meta.type == "anime" || meta.genres.orEmpty().any { it.equals("anime", true) } || meta.id.substringBefore(':') in setOf("kitsu", "mal", "anilist")
-                val anime = (settings.hideAnime || (settings.animeRoomOnly && !row.key.startsWith("jikan"))) && looksAnime
+                val animeRow = row.key.startsWith("jikan") || row.key.startsWith("lead:") || row.key.startsWith("anilist:") || row.key.startsWith("anime:")
+                val anime = (settings.hideAnime || (settings.animeRoomOnly && !animeRow)) && looksAnime
                 // Harbor hides finished films; a show you have seen once may still have new seasons.
                 val watched = settings.hideWatched && meta.type == "movie" && meta.id in LartDisplay.watchedIds
                 !unreleased && !anime && !watched
@@ -453,5 +478,86 @@ object HomeCache {
         kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
             runCatching { file(context, key).writeText(app.lart.mobile.data.Net.json.encodeToString(serializer, rows)) }
         }
+    }
+}
+
+private class AnimeExtras(val trending: List<Meta>, val top100: List<Meta>, val yours: List<Pair<String, List<Meta>>>, val recommended: List<Meta>)
+
+/**
+ * The Anime page in Harbor's order (anime.tsx): Top Picks for You and Recommended for you,
+ * then (after your tracker lists) your AniList lists, Trending and Top 100 on AniList, Award
+ * Winning Anime, and MyAnimeList's rows. Top Airing on MAL feeds Top Picks, as in Harbor.
+ */
+private fun animePage(context: android.content.Context, mal: List<CatalogRow>, x: AnimeExtras, watched: Set<String>): List<CatalogRow> {
+    val topAiring = mal.firstOrNull { it.title == "Top Airing on MAL" }
+    val malRows = mal.filter { it !== topAiring }
+    val picks = app.lart.mobile.data.AnimeRows.topPicks(
+        topAiring?.metas.orEmpty() + mal.firstOrNull { it.title == "Most Popular on MAL" }?.metas.orEmpty() + x.trending,
+        watched,
+    )
+    val onPage = (malRows + listOf(CatalogRow("t", "", x.trending, "series"), CatalogRow("p", "", x.top100, "series"))).flatMap { it.metas }
+    val awards = app.lart.mobile.data.AnimeRows.awardWinners(context, onPage)
+    fun row(key: String, title: String, metas: List<Meta>) = metas.takeIf { it.size >= 4 }?.let { CatalogRow(key, title, it, "series") }
+    return listOfNotNull(
+        row("lead:top-picks", "Top Picks for You", picks),
+        row("lead:recommended", "Recommended for you", x.recommended),
+    ) + x.yours.mapNotNull { (title, metas) -> row("anilist:${title.hashCode()}", title, metas) } + listOfNotNull(
+        row("anilist:trending", "Trending on AniList", x.trending),
+        row("anilist:top100", "Top 100 on AniList", x.top100),
+        row("anime:awards", "Award Winning Anime", awards),
+    ) + malRows
+}
+
+/** shows/hero-curation.ts: the heading for this part of the day, rotating daily. */
+private val SHOWS_MAST = mapOf(
+    0 to listOf(
+        Triple("Morning Lineup", "Easing into series", "Slow-burn worlds and bright chapters worth opening with coffee."),
+        Triple("Good Morning", "Today's openers", "Series to ease into while the day is still quiet."),
+        Triple("Daybreak", "First-light picks", "Worlds to step into before the inbox catches up."),
+        Triple("AM Picks", "Coffee-and-couch", "Half-hours, anthologies, and a few epics for the morning routine."),
+        Triple("Open the Day", "Series with mileage", "Long-running comforts and new chapters worth pressing play on."),
+        Triple("Quiet Hours", "Slow-burn starts", "Stories that reward your attention before the day gets loud."),
+        Triple("This Morning", "Worth catching up on", "What everyone has been quietly binging this week."),
+    ),
+    1 to listOf(
+        Triple("Afternoon Picks", "Daytime watching", "Easy half-hours and lighter dramas to ride out the afternoon."),
+        Triple("Midday Lineup", "Between meetings", "Episodes you can drop into without losing the thread."),
+        Triple("Afternoon Roll", "Pick up an episode", "Lunch-break comedies and slow-cooker dramas, ready when you are."),
+        Triple("The Long Lunch", "Series to disappear into", "Worlds wide enough for an hour or a whole free afternoon."),
+        Triple("Daylight Watching", "Bright-side series", "Sharp comedies, sunny worlds, and the occasional binge bait."),
+        Triple("Holdover Picks", "Carry it through the day", "Companion series for whatever the afternoon throws at you."),
+        Triple("PM Picks", "Couch hours", "Series for the part of the day that runs on coffee and snacks."),
+    ),
+    2 to listOf(
+        Triple("Tonight", "Tonight's lineup", "Prestige drama, weekly chapters, and series worth disappearing into."),
+        Triple("Prime Time", "What to watch tonight", "Crowd-pleasers, prestige picks, and the kind of series people text about."),
+        Triple("Sundown", "Evening on the couch", "Drop-in chapters and long arcs for the post-dinner stretch."),
+        Triple("Press Play", "Tonight's marquee", "The series that make the rest of the night disappear."),
+        Triple("Tonight's Slate", "Episodes worth the evening", "What's hot this week, what's prestige forever, what's worth the hours."),
+        Triple("Showtime", "Tonight's main event", "Series for the part of the day you actually look forward to."),
+        Triple("Saved for Now", "Tonight's binge bait", "Pilots that pull you in and finales that earn the season."),
+    ),
+    3 to listOf(
+        Triple("Late Night", "After-hours picks", "Dark, immersive, and binge-worthy when the house is quiet."),
+        Triple("Past Midnight", "One more episode", "Series for the part of the night that won't let you sleep."),
+        Triple("Witching Hour", "Late-night chapters", "Pull-you-under stories for the quietest part of the day."),
+        Triple("Lights Out", "Headphone series", "Slow, strange, and absorbing. Best with the lights down low."),
+        Triple("Insomnia Lineup", "Worth the lost hour", "Dense plots and rich worlds for when sleep is not happening."),
+        Triple("Late Show", "After the news", "Quiet dramas, sharp thrillers, and series you save for yourself."),
+        Triple("Night Owl", "While the world's asleep", "Series with the patience to match your late-night hours."),
+    ),
+)
+
+@Composable
+private fun ShowsMast() {
+    val now = java.util.Calendar.getInstance()
+    val hour = now.get(java.util.Calendar.HOUR_OF_DAY)
+    val bucket = when (hour) { in 5..11 -> 0; in 12..16 -> 1; in 17..21 -> 2; else -> 3 }
+    val variants = SHOWS_MAST.getValue(bucket)
+    val (kicker, title, subtitle) = variants[(now.get(java.util.Calendar.DAY_OF_YEAR) + bucket * 3) % variants.size]
+    androidx.compose.foundation.layout.Column(Modifier.padding(horizontal = 16.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+        Text(kicker.uppercase(), color = LartColors.InkSubtle, fontSize = 11.sp, fontWeight = FontWeight.Bold, letterSpacing = 4.sp)
+        Text(title, color = LartColors.Ink, fontSize = 34.sp, lineHeight = 38.sp, fontWeight = FontWeight.Medium, fontFamily = LartFonts.display(LartDisplay.settings.fontPair).takeIf { LartDisplay.settings.fontPair != "inter" } ?: androidx.compose.ui.text.font.FontFamily.Serif)
+        Text(subtitle, color = LartColors.InkMuted, fontSize = 15.sp, lineHeight = 22.sp)
     }
 }

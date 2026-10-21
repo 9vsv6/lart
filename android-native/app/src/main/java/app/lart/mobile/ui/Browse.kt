@@ -400,10 +400,10 @@ fun RankRail(title: String, metas: List<Meta>, onOpen: (Meta) -> Unit) {
 }
 
 @Composable
-fun ContinueWatchingRow(items: List<CwItem>, onOpen: (CwItem) -> Unit, onDismiss: (CwItem) -> Unit) {
+fun ContinueWatchingRow(items: List<CwItem>, onOpen: (CwItem) -> Unit, onDismiss: (CwItem) -> Unit, title: String = "Continue watching") {
     if (items.isEmpty()) return
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        RailHeader("Continue watching", null)
+        RailHeader(title, null)
         LazyRow(contentPadding = PaddingValues(horizontal = 16.dp), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             items(items, key = { it.meta.id }) { item -> CwCard(item, { onOpen(item) }, { onDismiss(item) }) }
         }
