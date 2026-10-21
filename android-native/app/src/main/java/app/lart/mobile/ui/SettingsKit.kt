@@ -121,6 +121,17 @@ fun NavRow(
     selected: Boolean = false,
     expanded: Boolean = false,
     onClick: () -> Unit,
+) = NavRow(androidx.compose.ui.graphics.vector.rememberVectorPainter(icon), label, chevron, selected, expanded, onClick)
+
+/** The same row with one of Harbor's settings icons (res/drawable/set_*). */
+@Composable
+fun NavRow(
+    icon: androidx.compose.ui.graphics.painter.Painter,
+    label: String,
+    chevron: Boolean,
+    selected: Boolean = false,
+    expanded: Boolean = false,
+    onClick: () -> Unit,
 ) {
     val ink = if (selected) LartColors.Ink else LartColors.InkMuted
     Row(

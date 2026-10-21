@@ -276,6 +276,8 @@ data class AppSettings(
     val fontPair: String = "inter",
     /** Fonts you uploaded (paths in the app's storage), for the app and subtitles. */
     val customFonts: List<String> = emptyList(),
+    /** Streaming catalogs you turned on or off (StreamingServices); missing keys use Harbor's default. */
+    val streaming: Map<String, Boolean> = emptyMap(),
     /** Harbor's saved subtitle looks, picked from the style bar in the player. */
     val subLooks: List<SubLook> = SubLook.SEED,
     /** IMDb rating on each episode (OMDb with a key, else TMDB). */

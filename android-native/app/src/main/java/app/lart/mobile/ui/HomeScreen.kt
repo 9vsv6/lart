@@ -365,11 +365,14 @@ private suspend fun buildRows(view: BrowseView, addons: List<Addon>, metaAddons:
 
 /** Harbor's TMDB rows; the first row's hero titles get their logos. */
 private suspend fun tmdbRows(view: BrowseView, key: String): List<CatalogRow> = coroutineScope {
-    val specs = when (view) {
+    val base = when (view) {
         BrowseView.Movies -> HarborRows.movies()
         BrowseView.Shows -> HarborRows.shows()
         else -> HarborRows.home()
     }
+    // Your streaming catalogs (Settings → Streaming services): today's service, after the first rows.
+    val service = HarborRows.serviceRow(LartDisplay.settings, series = view == BrowseView.Shows)
+    val specs = if (service == null) base else base.take(3) + service + base.drop(3)
     specs.mapIndexed { index, spec ->
         async {
             val metas = runCatching { Tmdb.row(key, spec, languages = LartDisplay.settings.homeLanguages) }.getOrDefault(emptyList()).let { list -> if (spec.path == "/movie/now_playing") list.map { it.copy(inTheaters = true) } else list }

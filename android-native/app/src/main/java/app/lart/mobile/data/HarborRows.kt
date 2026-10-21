@@ -24,6 +24,23 @@ object HarborRows {
     private fun discoverMovie(title: String, vararg params: Pair<String, String>) = movie(title, "/discover/movie", params.toMap())
     private fun discoverTv(title: String, vararg params: Pair<String, String>) = tv(title, "/discover/tv", params.toMap())
 
+    /**
+     * daily-rows-catalog.ts "provider": one of your streaming services a day, its popular titles
+     * ("On Netflix, picked for you"). Films on Home and Movies, series on Shows.
+     */
+    fun serviceRow(settings: AppSettings, series: Boolean): Tmdb.RowSpec? {
+        val enabled = StreamingServices.enabled(settings).ifEmpty { return null }
+        val service = enabled[LocalDate.now().dayOfYear % enabled.size]
+        val params = mapOf(
+            "with_watch_providers" to service.providerIds.joinToString("|"),
+            "watch_region" to settings.region.ifEmpty { region },
+            "vote_count.gte" to "80",
+            "sort_by" to "popularity.desc",
+        )
+        val title = "On ${service.name}, picked for you"
+        return if (series) tv(title, "/discover/tv", params) else movie(title, "/discover/movie", params)
+    }
+
     fun home(): List<Tmdb.RowSpec> = listOf(
         movie("Trending This Week", "/trending/movie/week"),
         movie("In Theaters Now", "/movie/now_playing", mapOf("region" to region)),

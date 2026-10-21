@@ -117,6 +117,10 @@ class Repository(private val context: Context) {
     private val _debrid = MutableStateFlow<DebridAccount?>(null)
     val debrid: StateFlow<DebridAccount?> = _debrid.asStateFlow()
 
+    private val _debridKeys = MutableStateFlow<Map<DebridService, String>>(emptyMap())
+    /** Every debrid key saved, one per service, as Harbor's Streaming services page. */
+    val debridKeys: StateFlow<Map<DebridService, String>> = _debridKeys.asStateFlow()
+
     private val _tmdbKey = MutableStateFlow<String?>(null)
     /** The user's own TMDB key; with it, rows and artwork come from TMDB as in Harbor. */
     val tmdbKey: StateFlow<String?> = _tmdbKey.asStateFlow()
@@ -581,20 +585,29 @@ class Repository(private val context: Context) {
     /** Checks the key with the service first, so a typo fails here and not at play time. */
     suspend fun setDebrid(account: DebridAccount): String {
         val name = Debrid.verify(account)
-        context.store.edit {
-            it[KEY_DEBRID_SERVICE] = account.service.name
-            it[KEY_DEBRID_KEY] = account.apiKey
-        }
-        _debrid.value = account
+        saveDebridKeys(_debridKeys.value + (account.service to account.apiKey))
         return name
     }
 
-    suspend fun clearDebrid() {
+    /** Removes one service's key, or every key with no service named. */
+    suspend fun clearDebrid(service: DebridService? = null) {
+        saveDebridKeys(if (service == null) emptyMap() else _debridKeys.value - service)
+    }
+
+    private suspend fun saveDebridKeys(keys: Map<DebridService, String>) {
         context.store.edit {
             it.remove(KEY_DEBRID_SERVICE)
             it.remove(KEY_DEBRID_KEY)
+            if (keys.isEmpty()) it.remove(KEY_DEBRID_KEYS)
+            else it[KEY_DEBRID_KEYS] = Net.json.encodeToString(stringMap, keys.mapKeys { (k, _) -> k.name })
         }
-        _debrid.value = null
+        applyDebridKeys(keys)
+    }
+
+    /** Harbor tries the services in its order; the first one with a key plays. */
+    private fun applyDebridKeys(keys: Map<DebridService, String>) {
+        _debridKeys.value = keys
+        _debrid.value = DebridService.entries.firstNotNullOfOrNull { s -> keys[s]?.let { DebridAccount(s, it) } }
     }
 
     /** Checks the key with TMDB first. */
@@ -793,9 +806,13 @@ class Repository(private val context: Context) {
             val prefs = context.store.data.first()
             val authKey = prefs[KEY_AUTH]
             if (authKey != null) _account.value = Account(authKey, prefs[KEY_EMAIL] ?: "")
-            val service = prefs[KEY_DEBRID_SERVICE]?.let { name -> DebridService.entries.firstOrNull { it.name == name } }
-            val key = prefs[KEY_DEBRID_KEY]
-            if (service != null && !key.isNullOrBlank()) _debrid.value = DebridAccount(service, key)
+            val saved = prefs[KEY_DEBRID_KEYS]?.let { runCatching { Net.json.decodeFromString(stringMap, it) }.getOrNull() }.orEmpty()
+                .mapNotNull { (name, key) -> DebridService.entries.firstOrNull { it.name == name }?.let { it to key } }.toMap()
+            // Older builds kept one key on its own.
+            val legacyService = prefs[KEY_DEBRID_SERVICE]?.let { name -> DebridService.entries.firstOrNull { it.name == name } }
+            val legacyKey = prefs[KEY_DEBRID_KEY]
+            val legacy = if (legacyService != null && !legacyKey.isNullOrBlank()) mapOf(legacyService to legacyKey) else emptyMap()
+            applyDebridKeys(legacy + saved)
             _tmdbKey.value = prefs[KEY_TMDB]?.takeIf { it.isNotBlank() }
             _rpdbKey.value = prefs[KEY_RPDB]?.takeIf { it.isNotBlank() }
             _omdbKey.value = prefs[KEY_OMDB]?.takeIf { it.isNotBlank() }
@@ -820,6 +837,7 @@ class Repository(private val context: Context) {
         val KEY_EMAIL: Preferences.Key<String> = stringPreferencesKey("email")
         val KEY_DEBRID_SERVICE: Preferences.Key<String> = stringPreferencesKey("debridService")
         val KEY_DEBRID_KEY: Preferences.Key<String> = stringPreferencesKey("debridKey")
+        val KEY_DEBRID_KEYS: Preferences.Key<String> = stringPreferencesKey("debridKeys")
         val KEY_PROFILES: Preferences.Key<String> = stringPreferencesKey("profiles")
         val KEY_TMDB: Preferences.Key<String> = stringPreferencesKey("tmdbKey")
         val KEY_RPDB: Preferences.Key<String> = stringPreferencesKey("rpdbKey")

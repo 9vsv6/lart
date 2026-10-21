@@ -15,9 +15,13 @@ import okhttp3.FormBody
 import okhttp3.MultipartBody
 import okhttp3.Request
 
+/** Harbor's five debrid services (settings/streaming-sources-panel/debrid-tab.tsx), in its order. */
 enum class DebridService(val label: String, val tokenPage: String) {
     RealDebrid("Real-Debrid", "https://real-debrid.com/apitoken"),
     TorBox("TorBox", "https://torbox.app/settings"),
+    AllDebrid("AllDebrid", "https://alldebrid.com/apikeys/"),
+    Premiumize("Premiumize", "https://www.premiumize.me/account"),
+    DebridLink("Debrid-Link", "https://debrid-link.com/webapp/apikey"),
 }
 
 data class DebridAccount(val service: DebridService, val apiKey: String)
@@ -43,6 +47,18 @@ object Debrid {
             val data = tbGet(account, "/user/me")["data"]?.jsonObject
             data?.string("email") ?: "Signed in"
         }
+        DebridService.AllDebrid -> {
+            val data = adGet(account, "/v4/user")
+            data["user"]?.jsonObject?.string("username") ?: "Signed in"
+        }
+        DebridService.Premiumize -> {
+            val info = pmCall(Request.Builder().url("$PM/account/info?apikey=${Uri.encode(account.apiKey)}").build())
+            info.string("customer_id") ?: "Signed in"
+        }
+        DebridService.DebridLink -> {
+            val value = dlCall(dlRequest(account, "/account/infos").build())
+            value.string("pseudo") ?: value.string("email") ?: "Signed in"
+        }
     }
 
     suspend fun resolve(account: DebridAccount, stream: Stream): String {
@@ -50,6 +66,9 @@ object Debrid {
         return when (account.service) {
             DebridService.RealDebrid -> realDebrid(account, hash.lowercase(), stream)
             DebridService.TorBox -> torBox(account, hash.lowercase(), stream)
+            DebridService.AllDebrid -> allDebrid(account, hash.lowercase(), stream)
+            DebridService.Premiumize -> premiumize(account, hash.lowercase(), stream)
+            DebridService.DebridLink -> debridLink(account, hash.lowercase(), stream)
         }
     }
 
@@ -178,5 +197,109 @@ object Debrid {
             "/torrents/requestdl?token=${Uri.encode(account.apiKey)}&torrent_id=$torrentId&file_id=${file.id}",
         )
         return link["data"]?.jsonPrimitive?.contentOrNull ?: error(link.string("detail") ?: "TorBox returned no link")
+    }
+
+    // ---- AllDebrid: https://docs.alldebrid.com/ ----
+    // Its cache check is gone (Harbor notes the same), so the magnet is added and given a few
+    // seconds to turn Ready; anything slower counts as not cached and is removed again.
+
+    private const val AD = "https://api.alldebrid.com"
+
+    private fun adRequest(account: DebridAccount, pathAndQuery: String) =
+        Request.Builder().url(AD + pathAndQuery + (if ('?' in pathAndQuery) "&" else "?") + "agent=lart")
+            .header("Authorization", "Bearer ${account.apiKey}")
+
+    /** AllDebrid answers {status, data} or {status: "error", error: {message}}. */
+    private suspend fun adGet(account: DebridAccount, pathAndQuery: String): JsonObject {
+        val body = Net.json.parseToJsonElement(Net.call(adRequest(account, pathAndQuery).build())).jsonObject
+        if (body.string("status") != "success") error(body["error"]?.jsonObject?.string("message") ?: "AllDebrid refused the request")
+        return body["data"]?.jsonObject ?: JsonObject(emptyMap())
+    }
+
+    private suspend fun allDebrid(account: DebridAccount, hash: String, stream: Stream): String {
+        val upload = adGet(account, "/v4/magnet/upload?magnets[]=${Uri.encode(magnet(hash, stream))}")
+        val magnetId = upload["magnets"]?.jsonArray?.firstOrNull()?.jsonObject?.get("id")?.jsonPrimitive?.contentOrNull
+            ?: error("AllDebrid didn't accept the torrent")
+        try {
+            var ready = upload["magnets"]?.jsonArray?.firstOrNull()?.jsonObject?.get("ready")?.jsonPrimitive?.booleanOrNull == true
+            for (attempt in 0 until 6) {
+                if (ready) break
+                delay(1_000)
+                val status = adGet(account, "/v4.1/magnet/status?id=$magnetId")["magnets"]
+                val one = (status as? JsonObject) ?: (status as? JsonArray)?.firstOrNull()?.jsonObject
+                ready = one?.get("statusCode")?.jsonPrimitive?.intOrNull == 4
+            }
+            if (!ready) throw NotCached(DebridService.AllDebrid)
+            // The files come as a tree: {n: name, s: size, l: link} or {n, e: [children]}.
+            val tree = adGet(account, "/v4/magnet/files?id[]=$magnetId")["magnets"]?.jsonArray?.firstOrNull()?.jsonObject?.get("files")
+            val flat = mutableListOf<Pair<TorrentFile, String>>()
+            fun walk(node: kotlinx.serialization.json.JsonElement?, path: String) {
+                (node as? JsonArray)?.forEach { child ->
+                    val o = child.jsonObject
+                    val name = o.string("n").orEmpty()
+                    val link = o.string("l")
+                    if (link != null) flat += TorrentFile(flat.size, "$path$name", o["s"]?.jsonPrimitive?.longOrNull ?: 0) to link
+                    else walk(o["e"], "$path$name/")
+                }
+            }
+            walk(tree, "")
+            val files = flat.map { it.first }
+            val file = pickFile(files, stream) { idx -> files.getOrNull(idx) } ?: error("AllDebrid found no files in this torrent")
+            val unlocked = adGet(account, "/v4/link/unlock?link=${Uri.encode(flat[file.id].second)}")
+            return unlocked.string("link") ?: error("AllDebrid returned no link")
+        } catch (e: Exception) {
+            if (e is NotCached) runCatching { adGet(account, "/v4/magnet/delete?id=$magnetId") }
+            throw e
+        }
+    }
+
+    // ---- Premiumize: https://www.premiumize.me/api ----
+    // directdl answers straight from the cache, without queueing anything.
+
+    private const val PM = "https://www.premiumize.me/api"
+
+    private suspend fun pmCall(request: Request): JsonObject {
+        val body = Net.json.parseToJsonElement(Net.call(request)).jsonObject
+        if (body.string("status") != "success") error(body.string("message") ?: "Premiumize refused the request")
+        return body
+    }
+
+    private suspend fun premiumize(account: DebridAccount, hash: String, stream: Stream): String {
+        val form = FormBody.Builder().add("apikey", account.apiKey).add("src", magnet(hash, stream)).build()
+        val content = runCatching { pmCall(Request.Builder().url("$PM/transfer/directdl").post(form).build()) }
+            .getOrElse { throw NotCached(DebridService.Premiumize) }["content"]?.jsonArray.orEmpty().map { it.jsonObject }
+        if (content.isEmpty()) throw NotCached(DebridService.Premiumize)
+        val files = content.mapIndexed { i, o -> TorrentFile(i, o.string("path").orEmpty(), o["size"]?.jsonPrimitive?.longOrNull ?: 0) }
+        val file = pickFile(files, stream) { idx -> files.getOrNull(idx) } ?: error("Premiumize found no files in this torrent")
+        return content[file.id].string("link") ?: content[file.id].string("stream_link") ?: error("Premiumize returned no link")
+    }
+
+    // ---- Debrid-Link: https://debrid-link.com/api_doc/v2 ----
+
+    private const val DL = "https://debrid-link.com/api/v2"
+
+    private fun dlRequest(account: DebridAccount, path: String) =
+        Request.Builder().url(DL + path).header("Authorization", "Bearer ${account.apiKey}")
+
+    /** Debrid-Link answers {success, value} or {success: false, error}. */
+    private suspend fun dlCall(request: Request): JsonObject {
+        val body = Net.json.parseToJsonElement(Net.call(request)).jsonObject
+        if (body["success"]?.jsonPrimitive?.booleanOrNull != true) error(body.string("error") ?: "Debrid-Link refused the request")
+        return body["value"]?.jsonObject ?: JsonObject(emptyMap())
+    }
+
+    private suspend fun debridLink(account: DebridAccount, hash: String, stream: Stream): String {
+        val form = FormBody.Builder().add("url", magnet(hash, stream)).add("async", "true").build()
+        val added = dlCall(dlRequest(account, "/seedbox/add").post(form).build())
+        val id = added.string("id") ?: error("Debrid-Link didn't accept the torrent")
+        val raw = added["files"]?.jsonArray.orEmpty().map { it.jsonObject }
+        // Cached torrents arrive complete; anything still downloading is removed again.
+        if (raw.isEmpty() || raw.any { (it["downloadPercent"]?.jsonPrimitive?.intOrNull ?: 0) < 100 }) {
+            runCatching { Net.call(dlRequest(account, "/seedbox/$id/remove").delete().build()) }
+            throw NotCached(DebridService.DebridLink)
+        }
+        val files = raw.mapIndexed { i, o -> TorrentFile(i, o.string("name").orEmpty(), o["size"]?.jsonPrimitive?.longOrNull ?: 0) }
+        val file = pickFile(files, stream) { idx -> files.getOrNull(idx) } ?: error("Debrid-Link found no files in this torrent")
+        return raw[file.id].string("downloadUrl") ?: error("Debrid-Link returned no link")
     }
 }

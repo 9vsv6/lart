@@ -36,6 +36,8 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.ui.res.painterResource
+import app.lart.mobile.R
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.material.icons.outlined.DeleteSweep
 import androidx.compose.material.icons.outlined.Storage
@@ -139,66 +141,66 @@ import java.util.Locale
 private enum class Section(
     val label: String,
     val sub: String,
-    val icon: ImageVector,
+    @androidx.annotation.DrawableRes val icon: Int,
     val keywords: String,
     val parts: Set<String>? = null,
 ) {
-    Profiles("Profiles", "The profiles on this device, and who's watching.", Icons.Outlined.Group, "profile who's watching", setOf("Profiles")),
-    Stremio("Stremio", "Your Stremio sign-in: addons and library come from it.", Icons.Outlined.AccountBox, "stremio sign in email password", setOf("Stremio")),
-    Trackers("Trackers", "Trakt, Simkl, AniList, MyAnimeList and Letterboxd.", Icons.Outlined.Sync, "trakt simkl anilist myanimelist mal letterboxd stremboxd scrobble watched comments reviews avatar"),
-    Play("Play", "What Play does, resuming, and which source plays.", Icons.Outlined.PlayCircle, "play button instant manual picker resume start over remember source stalled", setOf("Play")),
-    Engine("Engine", "mpv or Android's player.", Icons.Outlined.Memory, "engine mpv media3 player", setOf("Engine")),
-    Aspect("Aspect", "How the picture fills the screen.", Icons.Outlined.AspectRatio, "aspect ratio fit fill stretch zoom", setOf("Aspect")),
-    Audio("Audio", "Downmix, loudness, sound profiles and volume boost.", Icons.Outlined.VolumeUp, "downmix stereo volume boost loudness sound profile bass night vocal", setOf("Player audio")),
-    OnScreen("On screen", "The player's controls: quality, seek steps, speeds and sleep timer.", Icons.Outlined.SmartScreen, "seek speed sleep lock quality badge volume pop-up", setOf("On screen")),
-    XRay("X-Ray", "The cast, crew and facts from the player.", Icons.Outlined.PersonSearch, "xray x-ray cast crew", setOf("X-Ray")),
-    Intros("Intros", "Skip intros, recaps and credits.", Icons.Outlined.FastForward, "skip intro recap credits theintrodb", setOf("Intros")),
-    UpNext("Up next", "What happens between episodes.", Icons.Outlined.QueuePlayNext, "up next autoplay still watching next episode", setOf("Up next")),
-    Trailers("Trailers", "Trailers in the Home hero and on title pages.", Icons.Outlined.Movie, "trailers hero autoplay audio quality youtube", setOf("Trailers")),
-    Quality("Quality", "Picture quality and hardware decoding (mpv).", Icons.Outlined.Speed, "quality hwdec hardware acceleration decoding", setOf("Quality")),
-    Picture("Picture", "Brightness, contrast, colour and HDR (mpv).", Icons.Outlined.Image, "picture brightness contrast saturation gamma hdr tone mapping", setOf("Picture")),
-    Network("Network", "Buffering for slow connections (mpv).", Icons.Outlined.Wifi, "buffer network slow connection cache", setOf("Network")),
-    MpvConf("mpv.conf", "Your own mpv options.", Icons.Outlined.Code, "mpv options advanced conf", setOf("mpv.conf")),
-    Shaders("Anime Shaders", "Anime4K upscaling.", Icons.Outlined.AutoAwesome, "anime4k shaders upscale", setOf("Anime Shaders")),
-    AppLanguage("App language", "Metadata language, region and translation.", Icons.Outlined.Translate, "display language metadata region translate titles overviews image languages logos", setOf("App language")),
-    AudioLanguage("Audio languages", "Which audio track plays, and the tracks never to pick.", Icons.Outlined.GraphicEq, "audio language dub commentary skip tracks", setOf("Audio languages")),
-    WhatYouSee("Discovery languages", "Home rows by language, your region, and stream languages.", Icons.Outlined.Visibility, "home catalogs languages region favour stream ranking only show streams", setOf("Discovery languages")),
-    SubtitleLanguages("Subtitle languages", "Which subtitles turn on, dual subtitles and choosing a track.", Icons.Outlined.Subtitles, "subtitles languages dual second forced embedded sdh start off choose upgrade indicator", setOf("Subtitle languages")),
-    SubtitleSources("Subtitle sources", "SubDL, Subsource, Wyzie, OpenSubtitles and your addons.", Icons.Outlined.Download, "subdl subsource wyzie opensubtitles api key addons sources", setOf("Subtitle sources")),
-    SubtitleTiming("Subtitle timing", "The sync indicator and nudging subtitle timing.", Icons.Outlined.Timer, "sync timing delay offset indicator", setOf("Subtitle timing")),
-    SubtitleLook("Subtitle style", "Background, outline, colours, font, position and size.", Icons.Outlined.TextFields, "subtitle style size colour color bold position ass font outline background opacity pip", setOf("Subtitle style")),
-    Services("Services", "Your addons and debrid service.", Icons.Outlined.Inventory2, "addons debrid real-debrid torbox services", setOf("Services")),
-    SourcePreferences("Filters", "The safety filter, P2P and how long to wait for addons.", Icons.Outlined.Tune, "safety cam filter torrents p2p timeout wait", setOf("Filters")),
-    Sorting("Sorting", "The order sources come in.", Icons.Outlined.Sort, "order sort ranking addon order", setOf("Sorting")),
-    Picker("Picker", "Source mode and what each source shows.", Icons.Outlined.TouchApp, "picker source mode direct p2p descriptions release name file names", setOf("Picker")),
-    StreamFilters("Stream filters", "Only show sources that match.", Icons.Outlined.FilterList, "filter resolution 4k 1080p remux bluray web hevc av1 hdr cached size"),
-    HomeRows("Home", "The hero and rows on Home.", Icons.Outlined.Home, "home top 10 hero unreleased anime room watched hide catalogs new episodes row continue watching trakt", setOf("Home")),
-    PosterCards("Cards", "What a poster card shows.", Icons.Outlined.GridView, "poster card badge rating award dub watched check watchlist bookmark titles", setOf("Cards")),
-    DetailPages("Detail pages", "Show pages, spoilers, episode cards and community.", Icons.Outlined.Article, "episodes spoilers order description card size trakt comments letterboxd reviews community show pages full descriptions remember season imdb keyless free data", setOf("Detail pages")),
-    Metadata("Metadata", "Where titles, artwork and scores come from.", Icons.Outlined.Storage, "tmdb omdb tvdb thetvdb mdblist fanart rpdb custom posters ratings keys metadata providers"),
-    AiSearchPage("Search", "AI search: describe what you want to watch.", Icons.Outlined.AutoAwesome, "ai search openrouter groq model jina natural language", setOf("Search")),
-    LibraryContent("Library", "Content filters and downloads.", Icons.Outlined.VideoLibrary, "library content filters hide anime downloads delete", setOf("Library")),
-    Theme("Theme & appearance", "Accent colour, poster size and corners.", Icons.Outlined.Palette, "accent colour color theme poster size corner radius", null),
-    Storage("Storage", "Caches, watch positions on this device, and resetting settings.", Icons.Outlined.DeleteSweep, "cache images shaders watch positions reset downloads delete after watching"),
-    Backup("Updates & backup", "Updates, and a copy of your setup.", Icons.Outlined.Backup, "backup restore export import file updates"),
-    About("About", "This build, reporting a problem, and licences.", Icons.Outlined.Info, "version report bug github licences licenses"),
+    Profiles("Profiles", "The profiles on this device, and who's watching.", R.drawable.set_users, "profile who's watching", setOf("Profiles")),
+    Stremio("Stremio", "Your Stremio sign-in: addons and library come from it.", R.drawable.set_play, "stremio sign in email password", setOf("Stremio")),
+    Trackers("Trackers", "Trakt, Simkl, AniList, MyAnimeList and Letterboxd.", R.drawable.set_activity, "trakt simkl anilist myanimelist mal letterboxd stremboxd scrobble watched comments reviews avatar"),
+    Play("When you press Play", "What Play does, resuming, and which source plays.", R.drawable.set_play_start, "play button instant manual picker resume start over remember source stalled", setOf("Play")),
+    Engine("Player engine", "mpv or Android's player.", R.drawable.set_cpu, "engine mpv media3 player", setOf("Engine")),
+    Aspect("Aspect ratio", "How the picture fills the screen.", R.drawable.set_rectangle_horizontal, "aspect ratio fit fill stretch zoom", setOf("Aspect")),
+    Audio("Audio", "Downmix, loudness, sound profiles and volume boost.", R.drawable.set_volume2, "downmix stereo volume boost loudness sound profile bass night vocal", setOf("Player audio")),
+    OnScreen("On-screen controls", "The player's controls: quality, seek steps, speeds and sleep timer.", R.drawable.set_onscreen_controls, "seek speed sleep lock quality badge volume pop-up", setOf("On screen")),
+    XRay("X-Ray", "The cast, crew and facts from the player.", R.drawable.set_scan_eye, "xray x-ray cast crew", setOf("X-Ray")),
+    Intros("Intros", "Skip intros, recaps and credits.", R.drawable.set_fast_forward, "skip intro recap credits theintrodb", setOf("Intros")),
+    UpNext("Up next", "What happens between episodes.", R.drawable.set_list_video, "up next autoplay still watching next episode", setOf("Up next")),
+    Trailers("Trailers", "Trailers in the Home hero and on title pages.", R.drawable.set_clapperboard, "trailers hero autoplay audio quality youtube", setOf("Trailers")),
+    Quality("Video quality", "Picture quality and hardware decoding (mpv).", R.drawable.set_gauge, "quality hwdec hardware acceleration decoding", setOf("Quality")),
+    Picture("Picture adjustments", "Brightness, contrast, colour and HDR (mpv).", R.drawable.set_image, "picture brightness contrast saturation gamma hdr tone mapping", setOf("Picture")),
+    Network("Playback buffering", "Buffering for slow connections (mpv).", R.drawable.set_wifi, "buffer network slow connection cache", setOf("Network")),
+    MpvConf("mpv.conf", "Your own mpv options.", R.drawable.set_file_code, "mpv options advanced conf", setOf("mpv.conf")),
+    Shaders("Anime Shaders", "Anime4K upscaling.", R.drawable.set_sparkles, "anime4k shaders upscale", setOf("Anime Shaders")),
+    AppLanguage("App language", "Metadata language, region and translation.", R.drawable.set_app_language, "display language metadata region translate titles overviews image languages logos", setOf("App language")),
+    AudioLanguage("Audio languages", "Which audio track plays, and the tracks never to pick.", R.drawable.set_audio_lines, "audio language dub commentary skip tracks", setOf("Audio languages")),
+    WhatYouSee("Discovery languages", "Home rows by language, your region, and stream languages.", R.drawable.set_eye, "home catalogs languages region favour stream ranking only show streams", setOf("Discovery languages")),
+    SubtitleLanguages("Subtitle languages", "Which subtitles turn on, dual subtitles and choosing a track.", R.drawable.set_subtitle_languages, "subtitles languages dual second forced embedded sdh start off choose upgrade indicator", setOf("Subtitle languages")),
+    SubtitleSources("Subtitle sources", "SubDL, Subsource, Wyzie, OpenSubtitles and your addons.", R.drawable.set_download, "subdl subsource wyzie opensubtitles api key addons sources", setOf("Subtitle sources")),
+    SubtitleTiming("Subtitle timing", "The sync indicator and nudging subtitle timing.", R.drawable.set_timer, "sync timing delay offset indicator", setOf("Subtitle timing")),
+    SubtitleLook("Subtitle style", "Background, outline, colours, font, position and size.", R.drawable.set_subtitle_style, "subtitle style size colour color bold position ass font outline background opacity pip", setOf("Subtitle style")),
+    Services("Streaming services", "Your addons and debrid service.", R.drawable.set_tv, "addons debrid real-debrid torbox services", setOf("Services")),
+    SourcePreferences("Source preferences", "The safety filter, P2P and how long to wait for addons.", R.drawable.set_source_preferences, "safety cam filter torrents p2p timeout wait", setOf("Filters")),
+    Sorting("Stream sorting", "The order sources come in.", R.drawable.set_arrow_down_up, "order sort ranking addon order", setOf("Sorting")),
+    Picker("Source picker", "Source mode and what each source shows.", R.drawable.set_mouse_pointer_click, "picker source mode direct p2p descriptions release name file names", setOf("Picker")),
+    StreamFilters("Stream filters", "Only show sources that match.", R.drawable.set_filter, "filter resolution 4k 1080p remux bluray web hevc av1 hdr cached size"),
+    HomeRows("Home", "The hero and rows on Home.", R.drawable.set_house, "home top 10 hero unreleased anime room watched hide catalogs new episodes row continue watching trakt", setOf("Home")),
+    PosterCards("Poster cards", "What a poster card shows.", R.drawable.set_layout_grid, "poster card badge rating award dub watched check watchlist bookmark titles", setOf("Cards")),
+    DetailPages("Detail pages", "Show pages, spoilers, episode cards and community.", R.drawable.set_file_text, "episodes spoilers order description card size trakt comments letterboxd reviews community show pages full descriptions remember season imdb keyless free data", setOf("Detail pages")),
+    Metadata("Metadata providers", "Where titles, artwork and scores come from.", R.drawable.set_database, "tmdb omdb tvdb thetvdb mdblist fanart rpdb custom posters ratings keys metadata providers"),
+    AiSearchPage("Search", "AI search: describe what you want to watch.", R.drawable.set_discovery_search, "ai search openrouter groq model jina natural language", setOf("Search")),
+    LibraryContent("Library", "Content filters and downloads.", R.drawable.set_saved_library, "library content filters hide anime downloads delete", setOf("Library")),
+    Theme("Theme & appearance", "Accent colour, poster size and corners.", R.drawable.set_theme_swatches, "accent colour color theme poster size corner radius", null),
+    Storage("Storage", "Caches, watch positions on this device, and resetting settings.", R.drawable.set_hard_drive, "cache images shaders watch positions reset downloads delete after watching"),
+    Backup("Updates & backup", "Updates, and a copy of your setup.", R.drawable.set_arrow_up_circle, "backup restore export import file updates"),
+    About("About", "This build, reporting a problem, and licences.", R.drawable.set_info, "version report bug github licences licenses"),
 }
 
-private enum class Group(val label: String, val section: String, val icon: ImageVector, val children: List<Section>) {
-    Account("Account & sync", "Setup", Icons.Outlined.AccountBox, listOf(Section.Profiles, Section.Stremio, Section.Trackers)),
+private enum class Group(val label: String, val section: String, @androidx.annotation.DrawableRes val icon: Int, val children: List<Section>) {
+    Account("Account & sync", "Setup", R.drawable.set_account_setup, listOf(Section.Profiles, Section.Stremio, Section.Trackers)),
     Playback(
-        "Playback", "Watching", Icons.Outlined.PlayCircle,
+        "Playback", "Watching", R.drawable.set_play,
         listOf(Section.Play, Section.Engine, Section.Aspect, Section.Audio, Section.OnScreen, Section.XRay, Section.Intros, Section.UpNext, Section.Trailers, Section.Quality, Section.Picture, Section.Network, Section.MpvConf, Section.Shaders),
     ),
-    Languages("Languages & subtitles", "Language", Icons.Outlined.Translate, listOf(Section.AppLanguage, Section.AudioLanguage, Section.WhatYouSee, Section.SubtitleLanguages, Section.SubtitleSources, Section.SubtitleTiming, Section.SubtitleLook)),
+    Languages("Languages & subtitles", "Language", R.drawable.set_languages, listOf(Section.AppLanguage, Section.AudioLanguage, Section.WhatYouSee, Section.SubtitleLanguages, Section.SubtitleSources, Section.SubtitleTiming, Section.SubtitleLook)),
     Sources(
-        "Sources & library", "Content", Icons.Outlined.LibraryBooks,
+        "Sources & library", "Content", R.drawable.set_library,
         listOf(Section.Services, Section.SourcePreferences, Section.Sorting, Section.Picker, Section.StreamFilters, Section.HomeRows, Section.PosterCards, Section.DetailPages, Section.Metadata, Section.AiSearchPage, Section.LibraryContent),
     ),
-    Appearance("Appearance", "Look & feel", Icons.Outlined.Palette, listOf(Section.Theme)),
-    System("System", "System", Icons.Outlined.Tune, listOf(Section.Storage)),
-    Updates("Updates & backup", "Updates", Icons.Outlined.Backup, listOf(Section.Backup)),
-    Help("Help & support", "Help", Icons.Outlined.Support, listOf(Section.About)),
+    Appearance("Appearance", "Look & feel", R.drawable.set_palette, listOf(Section.Theme)),
+    System("System", "System", R.drawable.set_sliders_horizontal, listOf(Section.Storage)),
+    Updates("Updates & backup", "Updates", R.drawable.set_arrow_up_circle, listOf(Section.Backup)),
+    Help("Help & support", "Help", R.drawable.set_help_about, listOf(Section.About)),
 }
 
 private fun groupOf(section: Section) = Group.entries.first { section in it.children }
@@ -308,7 +310,7 @@ private fun SettingsRail(repository: Repository, onOpenAddons: () -> Unit, selec
         NavRow(Icons.Outlined.Inventory2, "Addons", chevron = false, onClick = onOpenAddons)
         Group.entries.forEach { entry ->
             val on = entry == selected
-            NavRow(entry.icon, entry.label, chevron = true, selected = on && selectedSection == null, expanded = on) { onOpen(entry, null) }
+            NavRow(painterResource(entry.icon), entry.label, chevron = true, selected = on && selectedSection == null, expanded = on) { onOpen(entry, null) }
             // Harbor's sub-page list: icon and label, the open one highlighted.
             if (on && selectedSection != null) {
                 Column(
@@ -322,7 +324,7 @@ private fun SettingsRail(repository: Repository, onOpenAddons: () -> Unit, selec
                             verticalAlignment = Alignment.CenterVertically,
                             horizontalArrangement = Arrangement.spacedBy(14.dp),
                         ) {
-                            Icon(child.icon, null, tint = if (open) LartColors.Ink else LartColors.InkMuted, modifier = Modifier.size(20.dp))
+                            Icon(painterResource(child.icon), null, tint = if (open) LartColors.Ink else LartColors.InkMuted, modifier = Modifier.size(20.dp))
                             Text(child.label, color = if (open) LartColors.Ink else LartColors.InkMuted, fontSize = 15.5.sp, fontWeight = if (open) FontWeight.SemiBold else FontWeight.Medium)
                         }
                     }
@@ -1056,10 +1058,13 @@ private fun StreamingSection(repository: Repository, settings: AppSettings, set:
     val addons by repository.addons.collectAsState()
     // ---- Services ----
     Part("Services") {
+        // Harbor's Streaming services page: debrid keys, Usenet, then the streaming catalogs.
+        DebridServices(repository)
+        UsenetBlock(repository)
+        val tmdb by repository.tmdbKey.collectAsState()
+        StreamingCatalogs(settings, tmdb != null, set)
         HarborHeading("Addons", "${addons.size} installed: ${addons.joinToString(", ") { it.manifest.name }}")
         HButton(onClick = onOpenAddons) { Text("Manage addons") }
-        DebridCard(repository)
-        Muted("Harbor's home servers (Jellyfin, Emby, Plex) and Easynews aren't in the Android app yet.")
     }
     // ---- Filters ----
     Part("Filters") {
@@ -1078,19 +1083,31 @@ private fun StreamingSection(repository: Repository, settings: AppSettings, set:
     }
     // ---- Sorting ----
     Part("Sorting") {
-        HarborHeading("Result order", "How sources are ordered in the picker.")
+        HarborHeading(
+            "Result order",
+            "Lart ranking puts the best-scoring sources first. Addon order keeps each addon's results in the order it returned them, like the Stremio and Vidi apps. Stream priority below decides which addon leads, in both modes.",
+        )
         CheckList(
             listOf(
-                Triple("lart", "Ranking", "Best first: quality, cached on debrid, your languages, then size."),
-                Triple("addon", "Addon order", "As your addons list them, addon by addon."),
+                Triple("lart", "Lart ranking", "Default. Lart parses and scores every source and surfaces the best quality first."),
+                Triple("addon", "Addon order", "Show each addon's results in the order it returned them, grouped by your addon list. Matches the Stremio and Vidi apps."),
             ),
             settings.streamSort,
         ) { v -> set { it.copy(streamSort = v) } }
+        StreamPriority(repository, addonOrder = settings.streamSort == "addon")
+        HarborHeading(
+            "Aggregator addons",
+            "Using AIOStreams or another aggregator addon? Its own sorting and filtering happen inside the addon before Lart ever sees the results, then Lart applies the stream filter and result order above on top. If results look thinner than expected, keep one side permissive: either relax the addon's internal filters or set Lart's stream filter to Balanced or Off.",
+        )
         Muted("Stream languages that rank higher are set under Languages & subtitles › Discovery languages.")
     }
     // ---- Picker ----
     Part("Picker") {
-        HarborHeading("Source mode", "Which sources the picker opens on.")
+        HarborHeading("Source mode", null)
+        RowText(
+            "Prefer these sources",
+            "Both shows direct, debrid, and peer-to-peer results together. Direct/debrid keeps P2P results out of the way unless nothing else is available. P2P puts them first.",
+        )
         PillChoice(listOf("Both" to "Both", "Direct" to "Direct/debrid", "P2P" to "P2P"), settings.defaultSourceMode) { v -> set { it.copy(defaultSourceMode = v) } }
         HarborHeading("Picker details", "What each source shows.")
         ToggleRow("Show full descriptions", "Each source's whole text, instead of the first lines.", settings.pickerFullDescription) { v -> set { it.copy(pickerFullDescription = v) } }
@@ -1417,56 +1434,6 @@ private fun AboutSection() {
 }
 
 // ---------------- Debrid and API keys ----------------
-
-@Composable
-private fun DebridCard(repository: Repository) {
-    val debrid by repository.debrid.collectAsState()
-    val scope = rememberCoroutineScope()
-    val uriHandler = LocalUriHandler.current
-    var service by remember { mutableStateOf(DebridService.RealDebrid) }
-    var key by remember { mutableStateOf("") }
-    var busy by remember { mutableStateOf(false) }
-    var message by remember { mutableStateOf<String?>(null) }
-
-    val current = debrid
-    SettingsSection(
-        "Debrid",
-        if (current != null) "${current.service.label} is set up. Torrent sources play through it."
-        else "Torrent sources need a debrid service. Paste your API key; it stays on this device.",
-    ) {
-        if (current != null) {
-            message?.let { Muted(it) }
-            HGhostButton(onClick = { scope.launch { repository.clearDebrid(); message = null } }) { Text("Remove") }
-        } else {
-            OptionScale(DebridService.entries.map { it to it.label }, { it == service }) { service = it }
-            HTextField(
-                value = key,
-                onValueChange = { key = it.trim() },
-                label = { Text("${service.label} API key") },
-                singleLine = true,
-                visualTransformation = PasswordVisualTransformation(),
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
-                modifier = Modifier.fillMaxWidth(),
-            )
-            message?.let { Text(it, color = Color(0xFFE57373), fontSize = 14.sp) }
-            Row(horizontalArrangement = Arrangement.spacedBy(10.dp), verticalAlignment = Alignment.CenterVertically) {
-                HButton(
-                    onClick = {
-                        scope.launch {
-                            busy = true
-                            message = runCatching { repository.setDebrid(DebridAccount(service, key)) }
-                                .fold(onSuccess = { "Signed in as $it" }, onFailure = { "That key didn't work: ${it.message}" })
-                            if (repository.debrid.value != null) key = ""
-                            busy = false
-                        }
-                    },
-                    enabled = !busy && key.isNotBlank(),
-                ) { Text(if (busy) "Checking…" else "Save") }
-                HLinkButton(onClick = { uriHandler.openUri(service.tokenPage) }) { Text("Get my key") }
-            }
-        }
-    }
-}
 
 /** One pasted API key: checks it on save, and shows Remove once set. */
 @Composable

@@ -93,8 +93,12 @@ class HarborImport(private val repository: Repository, private val context: Cont
         ).forEach { (h, ours) -> key(h)?.let { repository.setProviderKey(ours, it); keys++ } }
         key("posterBaseUrl")?.let { repository.setProviderKey(ProviderKey.POSTERS, it); keys++ }
         count("API keys", keys)
-        val debrid = key("rdKey")?.let { DebridAccount(DebridService.RealDebrid, it) } ?: key("tbKey")?.let { DebridAccount(DebridService.TorBox, it) }
-        if (debrid != null && repository.debrid.value == null) runCatching { repository.setDebrid(debrid) }.onSuccess { count("debrid account") }
+        // Every debrid key Harbor has, for the services this app doesn't have one for yet.
+        listOf("rdKey" to DebridService.RealDebrid, "tbKey" to DebridService.TorBox, "adKey" to DebridService.AllDebrid, "pmKey" to DebridService.Premiumize, "dlKey" to DebridService.DebridLink)
+            .forEach { (h, service) ->
+                val k = key(h) ?: return@forEach
+                if (service !in repository.debridKeys.value) runCatching { repository.setDebrid(DebridAccount(service, k)) }.onSuccess { count("debrid account") }
+            }
 
         val subLangs = s.strList("preferredSubLangs")
         repository.updatePlayerPrefs { p ->
