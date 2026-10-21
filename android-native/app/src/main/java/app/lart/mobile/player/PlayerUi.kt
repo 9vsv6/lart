@@ -60,6 +60,7 @@ import androidx.compose.material.icons.rounded.Replay10
 import androidx.compose.material.icons.rounded.Replay30
 import androidx.compose.material.icons.rounded.Replay5
 import androidx.compose.material.icons.rounded.SkipNext
+import androidx.compose.material.icons.rounded.Flag
 import androidx.compose.material.icons.rounded.Speed
 import androidx.compose.material.icons.rounded.Subtitles
 import androidx.compose.material.icons.rounded.SwapHoriz
@@ -142,6 +143,8 @@ interface PlayerActions {
     fun changeBrightness(delta: Float): Float
     fun changeVolume(delta: Float): Float
     fun retry()
+    /** Harbor's ad report: the ranges you marked, sent for review; `onDone` says whether it went. */
+    fun reportAd(ranges: List<Pair<Long, Long>>, onDone: (Boolean) -> Unit)
 }
 
 private val Scrim = Color(0xB3000000)
@@ -451,6 +454,7 @@ private fun BottomPills(state: PlayerState, prefs: PlayerPrefs, actions: PlayerA
             app.lart.mobile.data.SkipSegment.Kind.Intro -> prefs.autoSkipIntro
             app.lart.mobile.data.SkipSegment.Kind.Recap -> s.autoSkipRecap
             app.lart.mobile.data.SkipSegment.Kind.Outro -> s.autoSkipOutro
+            app.lart.mobile.data.SkipSegment.Kind.Ad -> s.autoSkipAd
         }
         // Harbor's auto-hide: gone after a while, back whenever the controls show.
         val timedOut = skip != null && s.skipButtonHideSec > 0 && !state.controlsVisible && state.positionMs - skip.startMs > s.skipButtonHideSec * 1_000L
@@ -464,10 +468,87 @@ private fun BottomPills(state: PlayerState, prefs: PlayerPrefs, actions: PlayerA
             state.creditsAtMs > 0 -> state.durationMs - state.creditsAtMs
             else -> 45_000L
         }
-        if (next != null && state.durationMs > 0 && (remaining <= leadMs || state.ended) && (skip == null || !s.showSkipButton)) {
-            UpNext(next, state, actions)
-        }
+        val upNext = next != null && state.durationMs > 0 && (remaining <= leadMs || state.ended) && (skip == null || !s.showSkipButton)
+        if (upNext) UpNext(next!!, state, actions)
+        // Harbor's ad report button: on torrent sources of new releases (or always, if asked), when nothing else sits here.
+        val reportable = s.adSkipEnabled && state.adSource != null && (s.adReportAlwaysShow || state.recentRelease)
+        if (reportable && state.controlsVisible && skip == null && !upNext) AdReportButton(state, actions)
     }
+}
+
+private fun adClock(ms: Long): String {
+    val total = (ms / 1000).coerceAtLeast(0)
+    return if (total >= 3600) "%d:%02d:%02d".format(total / 3600, total / 60 % 60, total % 60) else "%d:%02d".format(total / 60, total % 60)
+}
+
+/** ad-report-button.tsx and ad-report-modal: mark where injected ads start and end, then send them for review. */
+@Composable
+private fun AdReportButton(state: PlayerState, actions: PlayerActions) {
+    var open by remember { mutableStateOf(false) }
+    Box(
+        Modifier.size(44.dp).clip(CircleShape).background(Color(0xCC000000)).border(1.dp, Color(0x33FFFFFF), CircleShape).clickable { open = true },
+        contentAlignment = Alignment.Center,
+    ) { Icon(Icons.Rounded.Flag, "Report an injected ad", tint = Color.White, modifier = Modifier.size(20.dp)) }
+    if (!open) return
+    val ranges = remember { androidx.compose.runtime.mutableStateListOf<Pair<Long, Long>>() }
+    var about by remember { mutableStateOf(false) }
+    var status by remember { mutableStateOf<String?>(null) }
+    var sending by remember { mutableStateOf(false) }
+    androidx.compose.material3.AlertDialog(
+        onDismissRequest = { open = false },
+        containerColor = LartColors.Surface,
+        title = { Text(if (about) "What is this?" else "Report an injected ad", color = Color.White, fontWeight = FontWeight.SemiBold) },
+        text = {
+            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+                if (about) {
+                    Text(
+                        "Some cam and new-release rips have ads spliced into the video itself. When the community has marked one, a Skip button appears. Reports are reviewed before they reach anyone else.",
+                        color = Color(0xCCFFFFFF), fontSize = 14.sp, lineHeight = 20.sp,
+                    )
+                    return@Column
+                }
+                Text(
+                    "Play to where the ad starts and add it, then play to the end and tap Now. You can also type the times. Add more than one if there are several.",
+                    color = Color(0xCCFFFFFF), fontSize = 14.sp, lineHeight = 20.sp,
+                )
+                ranges.forEachIndexed { i, (start, end) ->
+                    Column(Modifier.fillMaxWidth().clip(RoundedCornerShape(10.dp)).background(LartColors.Elevated).padding(12.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                            Text("Starts at ${adClock(start)}", color = Color.White, fontSize = 14.sp, modifier = Modifier.weight(1f))
+                            Text("Now", color = LartColors.Accent, fontSize = 14.sp, fontWeight = FontWeight.SemiBold, modifier = Modifier.clickable { ranges[i] = state.positionMs to end }.padding(6.dp))
+                        }
+                        Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
+                            Text("Ends at ${adClock(end)}", color = Color.White, fontSize = 14.sp, modifier = Modifier.weight(1f))
+                            Text("Now", color = LartColors.Accent, fontSize = 14.sp, fontWeight = FontWeight.SemiBold, modifier = Modifier.clickable { ranges[i] = start to state.positionMs }.padding(6.dp))
+                            Text("Remove", color = Color(0xFFE57373), fontSize = 14.sp, modifier = Modifier.clickable { ranges.removeAt(i) }.padding(6.dp))
+                        }
+                        if (end <= start) Text("The end time has to be after the start.", color = Color(0xFFE57373), fontSize = 13.sp)
+                    }
+                }
+                Text(
+                    "+ Add an ad starting at the current time", color = LartColors.Accent, fontSize = 14.sp, fontWeight = FontWeight.SemiBold,
+                    modifier = Modifier.clickable { ranges += state.positionMs to state.positionMs }.padding(vertical = 6.dp),
+                )
+                status?.let { Text(it, color = Color(0xCCFFFFFF), fontSize = 14.sp) }
+            }
+        },
+        confirmButton = {
+            if (!about) androidx.compose.material3.TextButton(
+                enabled = !sending && ranges.isNotEmpty() && ranges.all { it.second > it.first },
+                onClick = {
+                    sending = true
+                    actions.reportAd(ranges.toList()) { ok ->
+                        sending = false
+                        status = if (ok) "Thanks. Sent for review." else "Could not send. Try again."
+                        if (ok) ranges.clear()
+                    }
+                },
+            ) { Text(if (sending) "Sending..." else "Submit report", color = LartColors.Accent) }
+        },
+        dismissButton = {
+            androidx.compose.material3.TextButton(onClick = { about = !about }) { Text(if (about) "Back" else "What is this?", color = Color(0xCCFFFFFF)) }
+        },
+    )
 }
 
 @Composable

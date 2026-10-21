@@ -42,11 +42,11 @@ import app.lart.mobile.data.StreamHints
 
 /*
  * Harbor's Picker layout choice and its preview (streaming-sources-panel/picker-tab.tsx and
- * picker-layout-preview.tsx), and the Stream badges page (stream-badges-panel/badges-tab.tsx).
+ * picker-layout-preview.tsx).
  */
 
 /** The sample source both previews draw. */
-private val SAMPLE = Stream(
+internal val SAMPLE = Stream(
     url = "https://example.invalid/sample.mkv",
     name = "Source\n4K",
     title = "Sample.Title.2024.2160p.WEB-DL.DV.HDR10.HEVC.DDP5.1.Atmos.mkv\n💾 14.2 GB",
@@ -152,87 +152,6 @@ private fun PickerLayoutPreview(layout: String, modifier: Modifier) {
                         Box(Modifier.size(24.dp).clip(CircleShape).background(LartColors.Accent), contentAlignment = Alignment.Center) {
                             Icon(Icons.Rounded.PlayArrow, null, tint = LartColors.Canvas, modifier = Modifier.size(14.dp))
                         }
-                    }
-                }
-            }
-        }
-    }
-}
-
-/** stream-row-preview.tsx: one stream row as the picker draws it, with the badges as set below. */
-@OptIn(ExperimentalLayoutApi::class)
-@Composable
-private fun StreamRowPreview(settings: AppSettings, caption: String) {
-    Column(Modifier.fillMaxWidth().padding(top = 10.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        Row(
-            Modifier.fillMaxWidth().clip(RoundedCornerShape(16.dp)).background(LartColors.Elevated.copy(alpha = 0.4f))
-                .border(1.dp, LartColors.EdgeSoft, RoundedCornerShape(16.dp)).padding(16.dp),
-            verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(16.dp),
-        ) {
-            Box(Modifier.size(52.dp).clip(RoundedCornerShape(12.dp)).background(LartColors.Raised), contentAlignment = Alignment.Center) {
-                Text("S", color = LartColors.InkMuted, fontSize = 20.sp, fontWeight = FontWeight.Bold)
-            }
-            Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-                Text("Source 4K", color = LartColors.Ink, fontSize = 16.sp, fontWeight = FontWeight.SemiBold)
-                Text(SAMPLE.behaviorHints?.filename.orEmpty(), color = LartColors.InkMuted, fontSize = 14.sp, lineHeight = 19.sp)
-                val kinds = shownBadges(SAMPLE, settings)
-                if (kinds.isNotEmpty()) FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                    kinds.forEach { FormatBadge(it, 24.dp) }
-                }
-            }
-            Box(Modifier.size(52.dp).clip(CircleShape).background(LartColors.Accent), contentAlignment = Alignment.Center) {
-                Icon(Icons.Rounded.PlayArrow, null, tint = Color(0xFF121316), modifier = Modifier.size(26.dp))
-            }
-        }
-        Text(caption, color = LartColors.InkSubtle, fontSize = 13.sp, lineHeight = 18.sp)
-    }
-}
-
-/** badges-tab.tsx: the format chips switch, then every badge to hide or put back. */
-@Composable
-internal fun StreamBadgesPage(settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
-    HarborHeading("Stream format chips", "The little 4K, HDR, codec, and audio chips that ride along each stream in the play picker.")
-    StreamRowPreview(settings, "Every change on this page shows up here first. The badges you hide below stay off rows exactly like this one.")
-    ToggleRow(
-        "Show format chips on stream rows",
-        "The picker tags each stream with resolution, HDR flavor, codec, and audio format. Off hides them all.",
-        settings.showQualityBadge,
-    ) { v -> set { it.copy(showQualityBadge = v) } }
-
-    HarborHeading("Badge art", "Every format badge Lart can show on streams. Pick one to hide it, or pick it again to put it back. Changes apply everywhere badges appear.")
-    val hidden = settings.hiddenBadges
-    if (hidden.isNotEmpty()) Row(
-        Modifier.fillMaxWidth().padding(top = 6.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(14.dp),
-    ) {
-        Icon(Icons.Outlined.Palette, null, tint = LartColors.InkMuted, modifier = Modifier.size(20.dp))
-        RowText("Badges you have changed", if (hidden.size == 1) "1 badge is hidden." else "${hidden.size} badges are hidden.", Modifier.weight(1f))
-        HGhostButton(onClick = { set { it.copy(hiddenBadges = emptySet()) } }) { Text("Show all badges") }
-    }
-    BadgeGroup.entries.forEach { group ->
-        SettingsLabel(group.label, Modifier.padding(top = 14.dp))
-        BoxWithConstraints(Modifier.fillMaxWidth()) {
-            val columns = (maxWidth / 122.dp).toInt().coerceAtLeast(2)
-            Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                BadgeKind.entries.filter { it.group == group }.chunked(columns).forEach { row ->
-                    Row(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                        row.forEach { kind ->
-                            val off = kind.id in hidden
-                            Column(
-                                Modifier.weight(1f).clip(RoundedCornerShape(10.dp)).background(LartColors.Elevated)
-                                    .border(1.dp, if (off) LartColors.Accent.copy(alpha = 0.6f) else LartColors.EdgeSoft, RoundedCornerShape(10.dp))
-                                    .clickable { set { it.copy(hiddenBadges = if (off) it.hiddenBadges - kind.id else it.hiddenBadges + kind.id) } }
-                                    .padding(10.dp),
-                                horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(8.dp),
-                            ) {
-                                Box(Modifier.fillMaxWidth().height(56.dp).clip(RoundedCornerShape(6.dp)).background(LartColors.Canvas), contentAlignment = Alignment.Center) {
-                                    if (off) Icon(Icons.Outlined.VisibilityOff, "Hidden", tint = LartColors.InkSubtle, modifier = Modifier.size(20.dp))
-                                    else FormatBadge(kind, 26.dp)
-                                    if (off) Box(Modifier.align(Alignment.TopEnd).padding(6.dp).size(10.dp).clip(CircleShape).background(LartColors.Accent))
-                                }
-                                Text(kind.label, color = LartColors.Ink, fontSize = 15.5.sp, lineHeight = 20.sp, textAlign = androidx.compose.ui.text.style.TextAlign.Center, modifier = Modifier.fillMaxWidth())
-                            }
-                        }
-                        repeat(columns - row.size) { Spacer(Modifier.weight(1f)) }
                     }
                 }
             }

@@ -159,6 +159,7 @@ private fun PrimaryCard(item: RankedStream, meta: Meta?, fallbackName: String, s
                 Box(Modifier.fillMaxWidth().height(60.dp).background(Brush.verticalGradient(listOf(Color(0xA6000000), Color.Transparent))))
                 Column(Modifier.align(Alignment.TopEnd).padding(8.dp), horizontalAlignment = Alignment.End, verticalArrangement = Arrangement.spacedBy(2.dp)) {
                     badges.take(4).forEach { FormatBadge(it, 19.dp) }
+                    RuleBadges(stream, settings, 19.dp)
                 }
             }
         }
@@ -324,6 +325,7 @@ private fun DrawerRow(item: RankedStream, fallbackName: String, settings: AppSet
             }
             FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
                 shownBadges(stream, settings).forEach { FormatBadge(it, 20.dp, Modifier.align(Alignment.CenterVertically)) }
+                RuleBadges(stream, settings, 20.dp)
                 val summary = summaryParts(stream)
                 if (summary.isNotEmpty()) Text(
                     summary.joinToString(" · "), color = LartColors.InkMuted, fontSize = 12.sp, fontWeight = FontWeight.Medium,

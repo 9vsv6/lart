@@ -25,6 +25,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import app.lart.mobile.LartApp
+import app.lart.mobile.data.AdSkip
 import app.lart.mobile.data.AddonClient
 import app.lart.mobile.data.Meta
 import app.lart.mobile.data.Net
@@ -92,6 +93,8 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
     /** The addon and source playing now, for "keep the same source" and stall switching. */
     private var currentAddonId: String? = null
     private var currentStreamKey: String? = null
+    /** The source as Harbor fingerprints it for ad skip (ih_hash_file), null for direct links. */
+    private var currentSource: String? = null
     private val stalledKeys = mutableSetOf<String>()
     private val ticker = Handler(Looper.getMainLooper())
 
@@ -166,6 +169,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
         state.title = intent.getStringExtra(EXTRA_TITLE).orEmpty().substringBefore(" · ")
         currentAddonId = intent.getStringExtra(EXTRA_ADDON)
         currentStreamKey = intent.getStringExtra(EXTRA_STREAM_KEY)
+        currentSource = intent.getStringExtra(EXTRA_SOURCE)
         showSource()
         autoAdvanced = 0
         anime4kChosenHere = false
@@ -244,6 +248,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
     private fun describe() {
         val meta = meta ?: return
         state.title = meta.name.ifBlank { state.title }
+        state.recentRelease = AdSkip.recentRelease(meta)
         val videos = meta.videos.orEmpty()
         state.isSeries = type != "movie" && videos.isNotEmpty()
         state.episodes = videos
@@ -290,10 +295,14 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
             if (duration > 0 && segmentsFor != state.videoId) {
                 segmentsFor = state.videoId
                 val forVideo = state.videoId
+                val forSource = currentSource
                 lifecycleScope.launch {
                     val found = SkipSegments.find(forVideo, duration)
+                    // Harbor's injected ad skip: ads the community marked in this exact source.
+                    val ads = if (state.settings.adSkipEnabled) AdSkip.segments(AdSkip.contentKey(forVideo), forSource) else emptyList()
                     if (state.videoId == forVideo) {
-                        segments = found
+                        segments = found + ads
+                        state.adSegments = ads
                         state.creditsAtMs = found.firstOrNull { it.kind == SkipSegment.Kind.Outro }?.startMs ?: 0
                     }
                 }
@@ -305,6 +314,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
                 SkipSegment.Kind.Intro -> prefs.autoSkipIntro
                 SkipSegment.Kind.Recap -> settings.autoSkipRecap
                 SkipSegment.Kind.Outro -> settings.autoSkipOutro
+                SkipSegment.Kind.Ad -> settings.autoSkipAd
                 null -> false
             }
             if (active != null && autoSkip && active !in autoSkipped) {
@@ -313,6 +323,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
                 else engine.seekTo(active.endMs)
                 state.hint = when (active.kind) {
                     SkipSegment.Kind.Outro -> "Skipped the credits"
+                    SkipSegment.Kind.Ad -> "Skipped an injected ad"
                     else -> "Skipped ${active.kind.name.lowercase()}"
                 }
                 state.hintIcon = 0
@@ -593,14 +604,24 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
         val mode = Anime4K.Mode.entries.firstOrNull { it.name == prefs.anime4kMode }
             ?.takeIf { anime4kChosenHere || !state.settings.anime4kAnimeOnly || isAnime() }
         anime4kJob?.cancel()
+        // Harbor's More shaders run after Anime4K, in their stage order.
+        val more = state.settings.moreShaders
         if (mode == null) {
-            engine.setShaders(emptyList())
             state.anime4kLoading = false
+            if (more.isEmpty()) {
+                engine.setShaders(emptyList())
+                return
+            }
+            anime4kJob = lifecycleScope.launch {
+                runCatching { MoreShaders.chain(this@PlayerActivity, more, isAnime()) }
+                    .onSuccess { engine.setShaders(it) }
+                    .onFailure { state.hint = "Shaders didn't download: ${it.message?.take(60)}"; state.hintIcon = 0 }
+            }
             return
         }
         state.anime4kLoading = true
         anime4kJob = lifecycleScope.launch {
-            runCatching { Anime4K.shaders(this@PlayerActivity, mode, prefs.anime4kHq) }
+            runCatching { Anime4K.shaders(this@PlayerActivity, mode, prefs.anime4kHq) + MoreShaders.chain(this@PlayerActivity, more, isAnime()) }
                 .onSuccess {
                     engine.setShaders(it)
                     if (state.settings.anime4kIndicator && !anime4kChosenHere) {
@@ -745,6 +766,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
     /** The quality badge beside the title and the source the switcher marks as playing. */
     private fun showSource() {
         state.currentStreamKey = currentStreamKey
+        state.adSource = currentSource
         state.quality = currentStreamKey?.let { key ->
             Ranking.badges(app.lart.mobile.data.Stream(name = key)).firstOrNull { it == "4K" || it.endsWith("p") }
         }
@@ -754,6 +776,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
         headers = ready.stream.behaviorHints?.proxyHeaders?.request.orEmpty()
         currentAddonId = ready.addonId ?: currentAddonId
         currentStreamKey = Playback.streamKey(ready.stream)
+        currentSource = AdSkip.sourceKey(ready.stream)
         showSource()
         if (videoId != state.videoId) stalledKeys.clear()
         begin(videoId, ready.url, startAt)
@@ -862,6 +885,12 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
         audio.setStreamVolume(AudioManager.STREAM_MUSIC, Math.round(volumeLevel.coerceAtMost(1f) * max), 0)
         engine.setVolume(volumeLevel.coerceAtLeast(1f))
         return volumeLevel
+    }
+
+    override fun reportAd(ranges: List<Pair<Long, Long>>, onDone: (Boolean) -> Unit) {
+        val content = AdSkip.contentKey(state.videoId)
+        val source = currentSource
+        lifecycleScope.launch { onDone(AdSkip.report(content, source, ranges)) }
     }
 
     override fun retry() {
@@ -1062,6 +1091,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
         private const val EXTRA_HEADERS = "headers"
         private const val EXTRA_ADDON = "addon"
         private const val EXTRA_STREAM_KEY = "streamKey"
+        private const val EXTRA_SOURCE = "adSource"
         private val headerSerializer = MapSerializer(String.serializer(), String.serializer())
 
         fun intent(context: Context, ready: Ready, type: String, metaId: String, videoId: String, title: String): Intent =
@@ -1073,6 +1103,7 @@ class PlayerActivity : FragmentActivity(), PlayerActions, EngineListener {
                 .putExtra(EXTRA_TITLE, title)
                 .putExtra(EXTRA_ADDON, ready.addonId)
                 .putExtra(EXTRA_STREAM_KEY, Playback.streamKey(ready.stream))
+                .putExtra(EXTRA_SOURCE, AdSkip.sourceKey(ready.stream))
                 .putExtra(EXTRA_HEADERS, Net.json.encodeToString(headerSerializer, ready.stream.behaviorHints?.proxyHeaders?.request.orEmpty()))
     }
 }

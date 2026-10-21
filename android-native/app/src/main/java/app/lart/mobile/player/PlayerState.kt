@@ -92,6 +92,10 @@ class PlayerState {
     var subLoading by mutableStateOf(false)
 
     var skip by mutableStateOf<SkipSegment?>(null)
+    /** Harbor's injected ad skip: the marked ads, this source's fingerprint, and whether the title is new. */
+    var adSegments by mutableStateOf<List<SkipSegment>>(emptyList())
+    var adSource by mutableStateOf<String?>(null)
+    var recentRelease by mutableStateOf(false)
     /** Where the credits start, when the skip databases know; 0 when not. */
     var creditsAtMs by mutableLongStateOf(0)
     /** The active profile's settings, kept current by the activity. */

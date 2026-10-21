@@ -24,6 +24,24 @@ data class StreamFilter(
 }
 
 /**
+ * A custom badge, as Harbor's (src/lib/stream-badges.ts CustomBadgeRule): streams whose text
+ * matches `pattern` get it, drawn from `image` or as a text tag in its colours.
+ */
+@Serializable
+data class BadgeRule(
+    val id: String,
+    val name: String,
+    val pattern: String,
+    val enabled: Boolean = true,
+    val image: String? = null,
+    val tagColor: String? = null,
+    val textColor: String? = null,
+    val borderColor: String? = null,
+    /** filled, outlined, bordered, or "filled and bordered". */
+    val tagStyle: String? = null,
+)
+
+/**
  * A saved subtitle look, as Harbor's style-bar presets (src/lib/player/sub-presets.ts).
  * Size is Harbor's font px (32 is the default); bottom is a fraction of the height.
  */
@@ -269,6 +287,18 @@ data class AppSettings(
     /** Harbor's Stream badges: the format chips on stream rows, and the badge kinds you hid. */
     val showQualityBadge: Boolean = true,
     val hiddenBadges: Set<String> = emptySet(),
+    /** Badge art you picked: badge kind id to an image address (https, or a file Lart saved). */
+    val badgeArt: Map<String, String> = emptyMap(),
+    /** Harbor's custom badge rules: your own badges, matched against each stream's text. */
+    val badgeRules: List<BadgeRule> = emptyList(),
+    /** Harbor's Ad skip tab: community-marked injected ads, the report button, and auto-skip. */
+    val adSkipEnabled: Boolean = false,
+    val adReportAlwaysShow: Boolean = false,
+    val autoSkipAd: Boolean = false,
+    /** Harbor's Motion tab: mpv's frame interpolation. */
+    val motionSmoothing: Boolean = false,
+    /** Harbor's More shaders: the picture shaders turned on (catalog id to the variant picked, "" for the default). */
+    val moreShaders: Map<String, String> = emptyMap(),
     /** Harbor's Trailers tab: trailers in the Home hero and on title pages, their sound and quality. */
     val heroTrailers: Boolean = false,
     val detailTrailerAutoplay: Boolean = false,

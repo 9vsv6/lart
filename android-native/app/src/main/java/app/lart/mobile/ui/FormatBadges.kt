@@ -4,15 +4,29 @@ import androidx.annotation.DrawableRes
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.widthIn
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import app.lart.mobile.R
 import app.lart.mobile.data.AppSettings
+import app.lart.mobile.data.BadgePacks
+import app.lart.mobile.data.BadgeRule
 import app.lart.mobile.data.Ranking
 import app.lart.mobile.data.Stream
+import coil.compose.AsyncImage
 
 /*
  * Harbor's format badges (src/components/format-badge.tsx): the picture for each kind, its
@@ -157,11 +171,53 @@ internal fun streamBadgeKinds(stream: Stream): List<BadgeKind> {
 internal fun shownBadges(stream: Stream, settings: AppSettings): List<BadgeKind> =
     if (!settings.showQualityBadge) emptyList() else streamBadgeKinds(stream).filter { it.id !in settings.hiddenBadges }
 
-/** FormatBadge: the badge picture at a height, as wide as its art needs. */
+internal fun badgeKind(id: String) = BadgeKind.entries.firstOrNull { it.id == id }
+
+/** FormatBadge: the badge picture at a height, as wide as its art needs; art you picked wins. */
 @Composable
-internal fun FormatBadge(kind: BadgeKind, height: Dp, modifier: Modifier = Modifier) {
-    Image(
+internal fun FormatBadge(kind: BadgeKind, height: Dp, modifier: Modifier = Modifier, useOverride: Boolean = true) {
+    val custom = if (useOverride) LartDisplay.settings.badgeArt[kind.id] else null
+    if (custom != null) {
+        AsyncImage(
+            if (custom.startsWith("/")) java.io.File(custom) else custom, kind.label, contentScale = ContentScale.Fit,
+            modifier = modifier.height(height).widthIn(max = height * 3.6f),
+        )
+    } else Image(
         painterResource(kind.art), kind.label, contentScale = ContentScale.Fit,
         modifier = modifier.height(height).widthIn(max = height * 3.6f),
     )
+}
+
+/** Android reads Nuvio's #AARRGGBB as is; CSS variables and bad values fall back. */
+private fun ruleColor(value: String?): Color? =
+    value?.trim()?.takeIf { it.startsWith("#") }?.let { runCatching { Color(android.graphics.Color.parseColor(it)) }.getOrNull() }
+
+/** RuleBadgeChip: a custom badge, its picture, or its name as a tag in the rule's colours. */
+@Composable
+internal fun RuleBadgeChip(rule: BadgeRule, height: Dp, modifier: Modifier = Modifier) {
+    val image = rule.image
+    if (image != null) {
+        AsyncImage(image, rule.name, contentScale = ContentScale.Fit, modifier = modifier.height(height).widthIn(max = height * 3.6f))
+        return
+    }
+    val style = rule.tagStyle ?: "filled"
+    val outline = style == "outlined" || style == "bordered"
+    val background = if (outline) Color.Transparent else ruleColor(rule.tagColor) ?: LartColors.Raised
+    val border = if (style != "filled") ruleColor(rule.borderColor ?: rule.tagColor) else null
+    Text(
+        rule.name.uppercase(), color = ruleColor(rule.textColor) ?: Color.White,
+        fontSize = (height.value * 0.46f).sp, fontWeight = FontWeight.SemiBold, letterSpacing = 0.6.sp, maxLines = 1,
+        modifier = modifier.clip(RoundedCornerShape(6.dp)).background(background)
+            .then(if (border != null) Modifier.border(1.dp, border, RoundedCornerShape(6.dp)) else Modifier)
+            .padding(horizontal = 7.dp, vertical = 2.dp),
+    )
+}
+
+/** RuleBadges: your rules that match, leaving out any that only repeat a format chip already shown. */
+@Composable
+internal fun RuleBadges(stream: Stream, settings: AppSettings, height: Dp) {
+    val matched = remember(stream, settings.badgeRules) { BadgePacks.matching(stream, settings.badgeRules) }
+    if (matched.isEmpty()) return
+    val shown = shownBadges(stream, settings).map { it.id }.toSet()
+    matched.filter { r -> BadgePacks.aliasFor(r.name)?.let { it in shown } != true }.forEach { RuleBadgeChip(it, height) }
 }

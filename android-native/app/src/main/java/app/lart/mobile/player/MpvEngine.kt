@@ -107,6 +107,12 @@ class MpvEngine private constructor(context: Context, private val mpv: MPVLib, p
             if (s.picSaturation != 0) opt("saturation", "${s.picSaturation}")
             if (s.picGamma != 0) opt("gamma", "${s.picGamma}")
             if (s.toneMapping != "auto") opt("tone-mapping", s.toneMapping)
+            // Harbor's Motion smoothing (motion-interp.ts): frames blended to the screen's refresh.
+            if (s.motionSmoothing) {
+                opt("video-sync", "display-resample")
+                opt("interpolation", "yes")
+                opt("tscale", "oversample")
+            }
             opt("ao", "audiotrack,opensles")
             if (s.downmixStereo) opt("audio-channels", "stereo")
             opt("volume-max", "${(s.volumeBoostMax * 100).coerceIn(100, 300)}")

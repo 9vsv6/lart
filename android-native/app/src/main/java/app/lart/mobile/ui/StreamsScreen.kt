@@ -526,9 +526,10 @@ private fun SourceCard(item: RankedStream, wide: Boolean, last: Boolean, setting
 @Composable
 private fun Badges(stream: Stream, settings: app.lart.mobile.data.AppSettings) {
     val kinds = shownBadges(stream, settings)
-    if (kinds.isEmpty()) return
+    if (kinds.isEmpty() && settings.badgeRules.none { it.enabled }) return
     FlowRow(horizontalArrangement = Arrangement.spacedBy(6.dp), verticalArrangement = Arrangement.spacedBy(4.dp), modifier = Modifier.padding(top = 2.dp)) {
         kinds.forEach { FormatBadge(it, 24.dp, Modifier.align(Alignment.CenterVertically)) }
+        RuleBadges(stream, settings, 24.dp)
     }
 }
 

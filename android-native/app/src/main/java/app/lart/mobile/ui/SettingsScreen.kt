@@ -2,6 +2,7 @@ package app.lart.mobile.ui
 
 import androidx.compose.foundation.layout.widthIn
 import androidx.compose.material.icons.automirrored.rounded.ArrowBack
+import androidx.compose.material.icons.automirrored.rounded.KeyboardArrowRight
 import android.widget.Toast
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -145,6 +146,7 @@ private enum class Section(
     val keywords: String,
     val parts: Set<String>? = null,
 ) {
+    Essentials("Essentials", "Four things worth checking once.", R.drawable.set_rocket, "get started essentials basics stremio account metadata engine languages play instant theme"),
     Profiles("Profiles", "The profiles on this device, and who's watching.", R.drawable.set_users, "profile who's watching", setOf("Profiles")),
     Stremio("Stremio", "Your Stremio sign-in: addons and library come from it.", R.drawable.set_play, "stremio sign in email password", setOf("Stremio")),
     Trackers("Trackers", "Trakt, Simkl, AniList, MyAnimeList and Letterboxd.", R.drawable.set_activity, "trakt simkl anilist myanimelist mal letterboxd stremboxd scrobble watched comments reviews avatar"),
@@ -154,6 +156,7 @@ private enum class Section(
     Audio("Audio", "Downmix, loudness, sound profiles and volume boost.", R.drawable.set_volume2, "downmix stereo volume boost loudness sound profile bass night vocal", setOf("Player audio")),
     OnScreen("On-screen controls", "The player's controls: quality, seek steps, speeds and sleep timer.", R.drawable.set_onscreen_controls, "seek speed sleep lock quality badge volume pop-up", setOf("On screen")),
     XRay("X-Ray", "The cast, crew and facts from the player.", R.drawable.set_scan_eye, "xray x-ray cast crew", setOf("X-Ray")),
+    AdSkip("Ad skipping", "Skip injected ads in cam and new-release rips.", R.drawable.set_skip_forward, "ad skip injected ads report cam new release experimental"),
     Intros("Intros", "Skip intros, recaps and credits.", R.drawable.set_fast_forward, "skip intro recap credits theintrodb", setOf("Intros")),
     UpNext("Up next", "What happens between episodes.", R.drawable.set_list_video, "up next autoplay still watching next episode", setOf("Up next")),
     Trailers("Trailers", "Trailers in the Home hero and on title pages.", R.drawable.set_clapperboard, "trailers hero autoplay audio quality youtube", setOf("Trailers")),
@@ -162,6 +165,8 @@ private enum class Section(
     Network("Playback buffering", "Buffering for slow connections (mpv).", R.drawable.set_wifi, "buffer network slow connection cache", setOf("Network")),
     MpvConf("mpv.conf", "Your own mpv options.", R.drawable.set_file_code, "mpv options advanced conf", setOf("mpv.conf")),
     Shaders("Anime Shaders", "Anime4K upscaling.", R.drawable.set_sparkles, "anime4k shaders upscale", setOf("Anime Shaders")),
+    MoreShaders("More shaders", "FSRCNNX, FSR, NIS, RAVU and other picture shaders (mpv).", R.drawable.set_layers, "shaders fsrcnnx fsr nis sgsr ravu nnedi3 ssimsuperres krigbilateral sharpen cas upscale"),
+    Motion("Motion smoothing", "Frame interpolation for smoother camera movement (mpv).", R.drawable.set_waves, "motion smoothing interpolation smooth frames refresh svp"),
     AppLanguage("App language", "Metadata language, region and translation.", R.drawable.set_app_language, "display language metadata region translate titles overviews image languages logos", setOf("App language")),
     AudioLanguage("Audio languages", "Which audio track plays, and the tracks never to pick.", R.drawable.set_audio_lines, "audio language dub commentary skip tracks", setOf("Audio languages")),
     WhatYouSee("Discovery languages", "Home rows by language, your region, and stream languages.", R.drawable.set_eye, "home catalogs languages region favour stream ranking only show streams", setOf("Discovery languages")),
@@ -182,26 +187,31 @@ private enum class Section(
     LibraryContent("Library", "Content filters and downloads.", R.drawable.set_saved_library, "library content filters hide anime downloads delete", setOf("Library")),
     Theme("Theme & appearance", "Accent colour, poster size and corners.", R.drawable.set_theme_swatches, "accent colour color theme poster size corner radius", null),
     StreamBadges("Stream badges", "The format chips on stream rows, and which badges show.", R.drawable.set_badge_check, "badges format chips 4k hdr dolby vision codec audio atmos hide badge art"),
+    BadgeRules("Badge rules", "Your own badges, matched against each stream.", R.drawable.set_badge_rules, "custom rules badge pattern regex release group remaps"),
+    BadgePacks("Badge packs", "Badge packs, import from a link or a file, and export.", R.drawable.set_package, "badge packs import export nuvio json betterformatter gist"),
     Storage("Storage", "Caches, watch positions on this device, and resetting settings.", R.drawable.set_hard_drive, "cache images shaders watch positions reset downloads delete after watching"),
     Backup("Updates & backup", "Updates, and a copy of your setup.", R.drawable.set_arrow_up_circle, "backup restore export import file updates"),
-    About("About", "This build, reporting a problem, and licences.", R.drawable.set_info, "version report bug github licences licenses"),
+    About("About", "This build and reporting a problem.", R.drawable.set_info, "version report bug github"),
+    Support("Support", "Who keeps Lart running, and where to give instead.", R.drawable.set_heart, "support donate elfhosted stremio charity"),
+    Licences("Licences", "Lart's licence, acknowledgements and what it's built on.", R.drawable.set_scale, "licences licenses open source acknowledgements credits mit gpl"),
 }
 
 private enum class Group(val label: String, val section: String, @androidx.annotation.DrawableRes val icon: Int, val children: List<Section>) {
+    GetStarted("Get started", "Setup", R.drawable.set_rocket, listOf(Section.Essentials)),
     Account("Account & sync", "Setup", R.drawable.set_account_setup, listOf(Section.Profiles, Section.Stremio, Section.Trackers)),
     Playback(
         "Playback", "Watching", R.drawable.set_play,
-        listOf(Section.Play, Section.Engine, Section.Aspect, Section.Audio, Section.OnScreen, Section.XRay, Section.Intros, Section.UpNext, Section.Trailers, Section.Quality, Section.Picture, Section.Network, Section.MpvConf, Section.Shaders),
+        listOf(Section.Play, Section.Engine, Section.Aspect, Section.Audio, Section.OnScreen, Section.XRay, Section.AdSkip, Section.Intros, Section.UpNext, Section.Trailers, Section.Quality, Section.Picture, Section.Network, Section.MpvConf, Section.Shaders, Section.MoreShaders, Section.Motion),
     ),
     Languages("Languages & subtitles", "Language", R.drawable.set_languages, listOf(Section.AppLanguage, Section.AudioLanguage, Section.WhatYouSee, Section.SubtitleLanguages, Section.SubtitleSources, Section.SubtitleTiming, Section.SubtitleLook)),
     Sources(
         "Sources & library", "Content", R.drawable.set_library,
         listOf(Section.Services, Section.SourcePreferences, Section.Sorting, Section.Picker, Section.StreamFilters, Section.HomeRows, Section.PosterCards, Section.DetailPages, Section.Metadata, Section.AiSearchPage, Section.LibraryContent),
     ),
-    Appearance("Appearance", "Look & feel", R.drawable.set_palette, listOf(Section.Theme, Section.StreamBadges)),
+    Appearance("Appearance", "Look & feel", R.drawable.set_palette, listOf(Section.Theme, Section.StreamBadges, Section.BadgeRules, Section.BadgePacks)),
     System("System", "System", R.drawable.set_sliders_horizontal, listOf(Section.Storage)),
     Updates("Updates & backup", "Updates", R.drawable.set_arrow_up_circle, listOf(Section.Backup)),
-    Help("Help & support", "Help", R.drawable.set_help_about, listOf(Section.About)),
+    Help("Help & support", "Help", R.drawable.set_help_about, listOf(Section.About, Section.Support, Section.Licences)),
 }
 
 private fun groupOf(section: Section) = Group.entries.first { section in it.children }
@@ -231,6 +241,7 @@ fun SettingsScreen(repository: Repository, onOpenAddons: () -> Unit, onExit: () 
             if (query.isNotEmpty()) query = "" else groupName = ""
         }
 
+        androidx.compose.runtime.CompositionLocalProvider(LocalOpenSection provides { s: Section -> open(groupOf(s), s) }) {
         if (wide && group != null) {
             Row(Modifier.fillMaxSize()) {
                 Column(
@@ -278,6 +289,7 @@ fun SettingsScreen(repository: Repository, onOpenAddons: () -> Unit, onExit: () 
                     }
                 } else GroupContent(group, repository, onOpenAddons, target, horizontal = 16.dp) { target = null }
             }
+        }
         }
     }
 }
@@ -352,7 +364,8 @@ private fun SearchResults(query: String, onOpen: (Section) -> Unit) {
 /** Pages ported whole from Harbor: they open with their own headings, as Harbor's do. */
 private val SELF_TITLED = setOf(
     Section.Services, Section.SourcePreferences, Section.Sorting, Section.Picker, Section.StreamFilters,
-    Section.HomeRows, Section.PosterCards, Section.DetailPages, Section.LibraryContent, Section.AiSearchPage, Section.Theme, Section.StreamBadges,
+    Section.HomeRows, Section.PosterCards, Section.DetailPages, Section.LibraryContent, Section.AiSearchPage, Section.Theme, Section.StreamBadges, Section.BadgeRules, Section.BadgePacks,
+    Section.Essentials, Section.AdSkip, Section.MoreShaders, Section.Motion, Section.Support, Section.Licences,
     Section.Play, Section.Engine, Section.Aspect, Section.Audio, Section.OnScreen, Section.XRay, Section.Intros, Section.UpNext, Section.Trailers,
     Section.Quality, Section.Picture, Section.Network, Section.MpvConf, Section.Shaders,
     Section.AppLanguage, Section.AudioLanguage, Section.WhatYouSee, Section.SubtitleLanguages,
@@ -432,6 +445,14 @@ private fun SectionBody(
             Section.HomeRows, Section.DetailPages, Section.PosterCards, Section.AiSearchPage, Section.LibraryContent -> LibrarySection(repository, settings, set)
             Section.Theme -> AppearanceSection(settings, set)
             Section.StreamBadges -> StreamBadgesPage(settings, set)
+            Section.BadgeRules -> BadgeRulesPage(settings, set)
+            Section.BadgePacks -> BadgePacksPage(settings, set)
+            Section.Essentials -> EssentialsPage(repository, settings, set)
+            Section.AdSkip -> AdSkipPage(settings, set)
+            Section.MoreShaders -> MoreShadersPage(settings, set)
+            Section.Motion -> MotionPage(settings, set)
+            Section.Support -> SupportPage()
+            Section.Licences -> LicencesPage()
             Section.Metadata -> ProvidersSection(repository)
             Section.Storage -> StorageSection(repository, set)
             Section.Backup -> BackupSection(repository)
@@ -1435,11 +1456,85 @@ private fun AboutSection() {
             HGhostButton(onClick = { uriHandler.openUri("https://github.com/9vsv6/lart") }) { Text("Source code") }
         }
     }
-    SettingsSection(
-        "Licences",
-        "Lart includes mpv (libmpv-android, MIT; mpv LGPL), FFmpeg (LGPL/GPL), Jellyfin's Media3 FFmpeg decoder (GPL-3.0), NewPipeExtractor for trailers (GPL-3.0), the Inter, Fraunces, IBM Plex Sans and Plus Jakarta Sans fonts (SIL OFL 1.1) and Harbor's profile pictures, and downloads Anime4K shaders (MIT) on first use. " +
-            "Because of the GPL parts, anyone you share this APK with is entitled to Lart's source code.",
-    ) {}
+}
+
+/** Lets a page open another settings page (Essentials' rows). */
+private val LocalOpenSection = androidx.compose.runtime.staticCompositionLocalOf<(Section) -> Unit> { {} }
+
+/** basics-panel.tsx: four things worth checking once, what Play does, and the theme. */
+@Composable
+private fun EssentialsPage(repository: Repository, settings: AppSettings, set: ((AppSettings) -> AppSettings) -> Unit) {
+    val open = LocalOpenSection.current
+    val account by repository.account.collectAsState()
+    val autoPlay by repository.autoPlay.collectAsState()
+    val tmdb by repository.tmdbKey.collectAsState()
+    val omdb by repository.omdbKey.collectAsState()
+    val rpdb by repository.rpdbKey.collectAsState()
+    val keys by repository.providerKeys.collectAsState()
+    var reveal by remember { mutableStateOf(false) }
+    @Composable
+    fun Line(title: String, body: String, value: String?, onClick: () -> Unit, trailing: @Composable () -> Unit = {}) {
+        RowRule()
+        Row(Modifier.fillMaxWidth().clip(RoundedCornerShape(10.dp)).clickable(onClick = onClick).padding(vertical = 14.dp), verticalAlignment = Alignment.CenterVertically) {
+            RowText(title, body, Modifier.weight(1f).padding(end = 12.dp))
+            trailing()
+            value?.let { Text(it, color = LartColors.InkMuted, fontSize = 15.5.sp, modifier = Modifier.padding(horizontal = 8.dp)) }
+            Icon(androidx.compose.material.icons.Icons.AutoMirrored.Rounded.KeyboardArrowRight, null, tint = LartColors.InkSubtle, modifier = Modifier.size(20.dp))
+        }
+    }
+    HarborHeading("Essentials", "Four things worth checking once.")
+    val email = account?.email
+    Line(
+        "Stremio account",
+        if (email != null) "Signed in as ${if (reveal) email else maskEmail(email)}. Your library, add-ons and watch history sync with Stremio."
+        else "Sign in to sync your library, add-ons and watch history with Stremio.",
+        null, { open(Section.Stremio) },
+    ) {
+        if (email != null) Text(if (reveal) "Hide" else "Show", color = LartColors.InkSubtle, fontSize = 14.sp, modifier = Modifier.clickable { reveal = !reveal }.padding(8.dp))
+    }
+    val metaKeys = listOf(tmdb != null, keys[ProviderKey.FANART] != null, keys[ProviderKey.TVDB] != null, omdb != null, rpdb != null)
+    Line(
+        "Metadata providers",
+        "TMDB, Fanart, TVDB, OMDb and RPDB supply posters, artwork and ratings. Adding your own free keys makes artwork load faster and more completely.",
+        "${metaKeys.count { it }} of ${metaKeys.size}", { open(Section.Metadata) },
+    )
+    Line(
+        "Player engine",
+        "mpv is Lart's player; Android's own (Media3) is lighter on battery. Pick the other one if playback misbehaves.",
+        if (settings.engine == "mpv") "mpv" else "Media3", { open(Section.Engine) },
+    )
+    val langs = settings.streamLanguages
+    Line(
+        "Preferred languages",
+        "Lart puts streams, audio tracks and subtitles in these languages first. Leave it empty to accept anything.",
+        when (langs.size) { 0 -> "Any"; 1 -> langs.first(); else -> "${langs.size} languages" }, { open(Section.WhatYouSee) },
+    )
+
+    HarborHeading("When you press Play", "Pick one. You can change it any time.")
+    RowRule()
+    Row(Modifier.fillMaxWidth().clickable { repository.setAutoPlay(true) }.padding(vertical = 14.dp), verticalAlignment = Alignment.CenterVertically) {
+        RowText("Instant", "Lart picks the best stream it can find and starts playing straight away.", Modifier.weight(1f).padding(end = 12.dp))
+        PickedMark(autoPlay)
+    }
+    RowRule()
+    Row(Modifier.fillMaxWidth().clickable { repository.setAutoPlay(false) }.padding(vertical = 14.dp), verticalAlignment = Alignment.CenterVertically) {
+        RowText("Pick a source", "Lart shows the full list of streams every time so you choose one yourself.", Modifier.weight(1f).padding(end = 12.dp))
+        PickedMark(!autoPlay)
+    }
+
+    HarborHeading("Make it yours", "Colors, posters, fonts and wallpaper.")
+    Line("Theme and appearance", "Your accent colour, poster size and typeface.", null, { open(Section.Theme) }) {
+        Row(Modifier.size(width = 56.dp, height = 32.dp).clip(RoundedCornerShape(6.dp))) {
+            listOf(LartColors.Surface, LartColors.Raised, LartColors.Accent).forEach { Box(Modifier.weight(1f).fillMaxHeight().background(it)) }
+        }
+    }
+}
+
+private fun maskEmail(email: String): String {
+    val local = email.substringBefore('@')
+    val domain = email.substringAfter('@', "")
+    if (domain.isEmpty()) return email
+    return local.take(1) + "*".repeat(maxOf(local.length - 1, 4)) + "@" + domain
 }
 
 // ---------------- Debrid and API keys ----------------

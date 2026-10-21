@@ -14,7 +14,7 @@ import kotlinx.serialization.json.jsonPrimitive
 import kotlinx.serialization.json.longOrNull
 
 data class SkipSegment(val kind: Kind, val startMs: Long, val endMs: Long) {
-    enum class Kind(val label: String) { Intro("Skip intro"), Recap("Skip recap"), Outro("Skip credits") }
+    enum class Kind(val label: String) { Intro("Skip intro"), Recap("Skip recap"), Outro("Skip credits"), Ad("Skip injected ad?") }
 }
 
 /**
