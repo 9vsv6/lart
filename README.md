@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> **Lart has moved back to Harbor.** The Android app is now **Harbor for Android**, on the [`android` branch](https://github.com/9vsv6/Harbor/tree/android/android-native) of [9vsv6/Harbor](https://github.com/9vsv6/Harbor), a fork of [Harborofficial/Harbor](https://github.com/Harborofficial/Harbor). Download it from [9vsv6/Harbor releases](https://github.com/9vsv6/Harbor/releases). This repository is archived; its releases stay downloadable.
+
 <div align="center">
 <a name="readme-top"></a>
 
